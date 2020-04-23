@@ -328,7 +328,7 @@ public class SessionBoundFactory : ISessionBoundFactory
   
 2. Nella sezione `<services>` dichiarare gli endpoint di servizio per la factory e l'oggetto con sessione.  Ciò consente al client di comunicare con gli endpoint di servizio, di acquisire <xref:System.ServiceModel.EndpointAddress10> e di creare il canale con sessione.  
   
- Di seguito è riportato un file di configurazione di esempio con queste impostazioni:The following is an example configuration file with these settings:  
+ Di seguito è riportato un esempio di file di configurazione con queste impostazioni:  
   
 ```xml  
 <configuration>  

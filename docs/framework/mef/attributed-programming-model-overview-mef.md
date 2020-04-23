@@ -341,7 +341,7 @@ Se il costruttore di una parte necessita di un valore importato, tale oggetto no
 
 L'attributo `Import` specifica un requisito necessario per il funzionamento della parte. Se non è possibile soddisfare un'importazione, la composizione della parte avrà esito negativo e la parte non sarà disponibile.
 
-È possibile specificare che un'importazione è *facoltativa* usando la proprietà `AllowDefault` . In questo caso, la composizione avrà esito positivo anche se l'importazione non corrisponde ad alcuna esportazione disponibile e la proprietà importata verrà impostata sul valore predefinito per il tipo di proprietà (`null` per le proprietà dell'oggetto, `false` per i valori booleani o zero per le proprietà numeriche). La classe seguente usa un'importazione facoltativa.
+È possibile specificare che un'importazione è *facoltativa* usando la proprietà `AllowDefault` . In questo caso, la composizione avrà esito positivo anche se l'importazione non corrisponde ad alcuna esportazione disponibile e la proprietà importata verrà impostata sul valore predefinito per il tipo di`null` proprietà (per le `false` proprietà dell'oggetto, per i valori booleani o zero per le proprietà numeriche). La classe seguente usa un'importazione facoltativa.
 
 ```vb
 Public Class MyClass1

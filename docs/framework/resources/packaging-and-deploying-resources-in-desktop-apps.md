@@ -53,7 +53,7 @@ Questo modello presenta diversi vantaggi:
 Quando si includono nel pacchetto le risorse dell'applicazione è necessario denominarle in base alle convenzioni previste dal Common Language Runtime. Il runtime identifica una risorsa in base al nome delle impostazioni cultura. A ogni set di impostazioni cultura viene assegnato un nome univoco, in genere una combinazione di un nome impostazioni cultura di due lettere minuscole associato a una lingua e (se necessario) un nome impostazioni cultura secondarie di due lettere maiuscole associato a un paese o a una regione. Il nome delle impostazioni cultura secondarie segue il nome delle impostazioni cultura ed è separato da un trattino (-). Ad esempio ja-JP corrisponde al giapponese parlato in Giappone, en-US corrisponde all'inglese parlato negli Stati Uniti d'America, de-DE corrisponde al tedesco parlato in Germania, de-AT corrisponde al tedesco parlato in Austria. Vedere la colonna **Language tag** (Tag di lingua) nell'[elenco di nomi di lingua/area geografica supportati da Windows](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). I nomi delle impostazioni cultura seguono lo standard definito da [BCP 47](https://tools.ietf.org/html/bcp47).
 
 > [!NOTE]
-> Esistono alcune eccezioni per i nomi delle `zh-Hans` impostazioni cultura di due lettere, ad esempio per il cinese (semplificato).
+> Esistono alcune eccezioni per i nomi delle impostazioni cultura di due lettere, ad `zh-Hans` esempio per il cinese (semplificato).
 
 > [!NOTE]
 > Per informazioni sulla creazione di file di risorse, vedere [Creazione di file di risorse](creating-resource-files-for-desktop-apps.md) e [Creazione di assembly satellite](creating-satellite-assemblies-for-desktop-apps.md).
@@ -71,7 +71,7 @@ Per migliorare le prestazioni di ricerca, applicare l'attributo <xref:System.Res
 Il processo di fallback per le risorse di .NET Framework include i passaggi seguenti:
 
 > [!TIP]
-> È possibile utilizzare l'elemento [ \<](../configure-apps/file-schema/runtime/relativebindforresources-element.md) di configurazione relativeBindForResources>per ottimizzare il processo di fallback delle risorse e il processo mediante il quale il runtime esegue il probe per gli assembly di risorse. Per altre informazioni vedere la sezione [Ottimizzazione del processo di fallback delle risorse](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
+> Potrebbe essere possibile usare l' [ \<](../configure-apps/file-schema/runtime/relativebindforresources-element.md) elemento di configurazione relativeBindForResources>per ottimizzare il processo di fallback delle risorse e il processo mediante il quale il runtime esegue il probe degli assembly di risorse. Per altre informazioni vedere la sezione [Ottimizzazione del processo di fallback delle risorse](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
 
 1. Il runtime ricerca nella [Global Assembly Cache](../app-domains/gac.md) un assembly corrispondente alle impostazioni cultura richieste per l'applicazione.
 
@@ -116,7 +116,7 @@ Se si verificano le seguenti condizioni, è possibile ottimizzare il processo co
 
 - Il codice dell'applicazione non gestisce l'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.
 
-È possibile ottimizzare il probe per gli assembly satellite `enabled` includendo `true` l'elemento [ \<>relativeBindForResources](../configure-apps/file-schema/runtime/relativebindforresources-element.md) e impostandone l'attributo nel file di configurazione dell'applicazione, come illustrato nell'esempio seguente.
+È possibile ottimizzare il probe per gli assembly satellite includendo l' `enabled` `true` [ \<elemento relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) e impostando il relativo attributo su nel file di configurazione dell'applicazione, come illustrato nell'esempio seguente.
 
 ```xml
 <configuration>
@@ -231,7 +231,7 @@ Vincoli di tempo o di budget potrebbero rendere difficile la creazione di un set
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Risorse nelle app desktop](index.md)
-- [Global Assembly Cache](../app-domains/gac.md)
+- [Risorse nelle applicazioni desktop](index.md)
+- [Global assembly cache](../app-domains/gac.md)
 - [Creazione dei file di risorsa](creating-resource-files-for-desktop-apps.md)
 - [Creazione di assembly satellite](creating-satellite-assemblies-for-desktop-apps.md)

@@ -43,8 +43,8 @@ In un'applicazione costituita interamente da codice gestito Common Language Runt
   
 |Tipo non gestito|Tipo importato|  
 |--------------------|-------------------|  
-|**SafeArray(** *Tipo* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertitoTipo***>**<br /><br /> Priorità = 1, limite inferiore = 0. La dimensione è nota solo se specificata nella firma gestita. Non è possibile effettuare il marshalling delle matrici protette che non hanno priorità = 1 o limite inferiore = 0 come **SZARRAY**.|  
-|*Tipo*  **[]**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertitoTipo***>**<br /><br /> Priorità = 1, limite inferiore = 0. La dimensione è nota solo se specificata nella firma gestita.|  
+|**SAFEARRAY (** *tipo* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType***>**<br /><br /> Priorità = 1, limite inferiore = 0. La dimensione è nota solo se specificata nella firma gestita. Non è possibile effettuare il marshalling delle matrici protette che non hanno priorità = 1 o limite inferiore = 0 come **SZARRAY**.|  
+|*Tipo*  **[]**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType***>**<br /><br /> Priorità = 1, limite inferiore = 0. La dimensione è nota solo se specificata nella firma gestita.|  
   
 ### <a name="safe-arrays"></a>Matrici protette  
  Quando una matrice protetta viene importata da una libreria dei tipi in un assembly .NET, la matrice viene convertita in una matrice unidimensionale di tipo noto (ad esempio, **int**). Le stesse regole di conversione del tipo applicate ai parametri si applicano anche agli elementi della matrice. Una matrice protetta di tipi **BSTR**, ad esempio, diventa una matrice gestita di stringhe e una matrice protetta di varianti diventa una matrice gestita di oggetti. Il tipo di elemento **SAFEARRAY** viene acquisito dalla libreria dei tipi e salvato nel valore **SAFEARRAY** dell'enumerazione <xref:System.Runtime.InteropServices.UnmanagedType>.  
@@ -182,8 +182,8 @@ void New3(ref String ar);
   
 |Tipo di matrice gestita|Esportato come|  
 |------------------------|-----------------|  
-|**tipo di ELEMENT_TYPE_SZARRAY** **\<** *type***>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Il tipo viene specificato nella firma. La priorità è sempre 1, il limite inferiore è sempre 0. La dimensione è sempre nota in fase di esecuzione.|  
-|**ELEMENT_TYPE_ARRAY** **\<** *tipo* **>** **\<** **\<** di *rango* **>**[ *limiti* **>**]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Tipo, priorità e limiti vengono specificati nella firma. La dimensione è sempre nota in fase di esecuzione.|  
+|**ELEMENT_TYPE_SZARRAY** **\<** *Tipo* di ELEMENT_TYPE_SZARRAY**>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Il tipo viene specificato nella firma. La priorità è sempre 1, il limite inferiore è sempre 0. La dimensione è sempre nota in fase di esecuzione.|  
+|**ELEMENT_TYPE_ARRAY** **\<** *type* Tipo **>** **>** *rank* **>** di ELEMENT_TYPE_ARRAY Rank**\<** [ *bounds* ] **\<**|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Tipo, priorità e limiti vengono specificati nella firma. La dimensione è sempre nota in fase di esecuzione.|  
 |**ELEMENT_TYPE_CLASS****\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> Tipo, priorità, limite e dimensione sono sempre noti in fase di esecuzione.|  
   
  Nell'automazione OLE esiste una limitazione relativa alle matrici di strutture contenenti LPSTR o LPWSTR.  È quindi necessario effettuare il marshalling dei campi **String** come **UnmanagedType.BSTR**. In caso contrario, verrà generata un'eccezione.  

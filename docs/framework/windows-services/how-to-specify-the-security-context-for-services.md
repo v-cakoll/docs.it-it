@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Specificare il contesto di sicurezza per i servizi'
+title: 'Procedura: specificare il contesto di sicurezza per i servizi'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, security
@@ -18,7 +18,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053589"
 ---
-# <a name="how-to-specify-the-security-context-for-services"></a>Procedura: Specificare il contesto di sicurezza per i servizi
+# <a name="how-to-specify-the-security-context-for-services"></a>Procedura: specificare il contesto di sicurezza per i servizi
 Per impostazione predefinita, i servizi vengono eseguiti in un contesto di sicurezza diverso rispetto a quello dell'utente connesso. I servizi vengono eseguiti nel contesto dell'account di sistema predefinito, chiamato `LocalSystem`, che concede privilegi di accesso diversi per le risorse di sistema rispetto all'account utente. È possibile modificare questo comportamento per specificare un account utente diverso nell'ambito del quale eseguire il servizio.  
   
  Per impostare il contesto di sicurezza, è necessario modificare la proprietà <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> per il processo in cui viene eseguito il servizio. Questa proprietà consente di impostare il servizio su uno di quattro tipi di account:  

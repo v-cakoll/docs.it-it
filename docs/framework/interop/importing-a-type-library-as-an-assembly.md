@@ -75,10 +75,10 @@ Dopo aver individuato la libreria dei tipi che contiene l'implementazione del ti
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - [Esposizione di componenti COM a .NET Framework](exposing-com-components.md)
 - [Riepilogo della conversione da libreria dei tipi ad assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../tools/tlbimp-exe-type-library-importer.md)
+- [Tlbimp. exe (utilità di importazione della libreria di tipi)](../tools/tlbimp-exe-type-library-importer.md)
 - [Personalizzazione di wrapper standard](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
 - [Uso dei tipi COM nel codice gestito](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Compilazione di un progetto di interoperabilità](compiling-an-interop-project.md)
 - [Distribuzione di una applicazione di interoperabilità](deploying-an-interop-application.md)
 - [Procedura: aggiungere riferimenti alle librerie dei tipi](how-to-add-references-to-type-libraries.md)
-- [Procedura: generare assembly di interoperabilità da librerie dei tipi](how-to-generate-interop-assemblies-from-type-libraries.md)
+- [Procedura: Generare assembly di interoperabilità da librerie dei tipi](how-to-generate-interop-assemblies-from-type-libraries.md)

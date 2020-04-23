@@ -30,7 +30,7 @@ In Common Language Runtime vengono forniti due meccanismi per l'interoperabilit�
 
 Il marshalling di interoperabilità viene usato sia da platform invoke che dall'interoperabilità COM per spostare con precisione gli argomenti dei metodi tra chiamante e chiamato e viceversa, se necessario. Come mostrato nella figura seguente, una chiamata al metodo di platform invoke viene effettuata dal codice gestito al codice non gestito e mai viceversa, ad eccezione del caso in cui sono coinvolte [funzioni di callback](callback-functions.md). Benché il flusso delle chiamate platform invoke possa andare solo dal codice gestito a quello non gestito, il flusso dei dati può essere in entrambe le direzioni, come parametri di input o di output. Le chiamate al metodo di interoperabilità COM possono scorrere in entrambe le direzioni.
 
-![Platform invoke](./media/interop-marshaling/interop-marshaling-invoke-and-com.png "Flusso delle chiamate con i metodi di platform invoke e di interoperabilità COM")
+![Platform Invoke](./media/interop-marshaling/interop-marshaling-invoke-and-com.png "Flusso delle chiamate con i metodi di platform invoke e di interoperabilità COM")
 
 Al livello inferiore, lo stesso servizio di marshalling di interoperabilità viene usato da entrambi i meccanismi. Alcuni tipi di dati sono tuttavia supportati esclusivamente dall'interoperabilità COM o da platform invoke. Per informazioni dettagliate, vedere [Comportamento di marshalling predefinito](default-marshaling-behavior.md).
 
@@ -82,7 +82,7 @@ Per istruzioni sulla selezione esplicita di un modello di apartment, vedere [Thr
 
 ## <a name="marshaling-remote-calls"></a>Marshalling di chiamate remote
 
-Come per il marshalling su diversi apartment, si ricorre al marshalling COM nelle chiamate tra il codice gestito e non gestito ogni volta che gli oggetti si trovano in processi separati. Esempio:
+Come per il marshalling su diversi apartment, si ricorre al marshalling COM nelle chiamate tra il codice gestito e non gestito ogni volta che gli oggetti si trovano in processi separati. Ad esempio:
 
 - Un client COM che richiama un server gestito in un host remoto usa DCOM.
 - Un client gestito che richiama un server COM su un host remoto usa DCOM.
@@ -95,7 +95,7 @@ Nella figura seguente viene illustrato il modo in cui il marshalling di interope
 
 In Common Language Runtime l'identità di riferimenti gestiti e non gestiti viene mantenuta. L'illustrazione riportata di seguito mostra il flusso di riferimenti non gestiti diretti (prima riga) e di riferimenti gestiti diretti (ultima riga) attraverso i limiti dell'host e del processo.
 
-![COM Callable Wrapper e Runtime Callable Wrapper](./media/interop-marshaling/interop-direct-ref-across-process.gif "Passaggio dei riferimenti attraverso i limiti dell'host e del processo")
+![COM callable wrapper e runtime callable wrapper](./media/interop-marshaling/interop-direct-ref-across-process.gif "Passaggio dei riferimenti attraverso i limiti dell'host e del processo")
 
 In questa illustrazione:
 
@@ -119,7 +119,7 @@ Tra i servizi di runtime vengono inoltre forniti servizi remoti gestiti, utilizz
 
 |Titolo|Descrizione|
 |-----------|-----------------|
-|[Comportamento predefinito del marshalling](default-marshaling-behavior.md)|Descrive le regole usate dal servizio di marshalling di interoperabilità per effettuare il marshalling dei dati.|
+|[Comportamento di marshalling predefinito](default-marshaling-behavior.md)|Descrive le regole usate dal servizio di marshalling di interoperabilità per effettuare il marshalling dei dati.|
 |[Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md)|Descrive come dichiarare i parametri dei metodi e passare gli argomenti alle funzioni esportate dalle librerie non gestite.|
 |[Dati di marshalling con interoperabilità COM](marshaling-data-with-com-interop.md)|Descrive come personalizzare i wrapper COM per modificare il comportamento di marshalling.|
 |[Procedura: Eseguire la migrazione di codice gestito da DCOM a WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Descrive come eseguire la migrazione da DCOM a WCF.|
@@ -129,6 +129,6 @@ Tra i servizi di runtime vengono inoltre forniti servizi remoti gestiti, utilizz
 |[Interoperabilità COM avanzata](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Contiene collegamenti per accedere ad altre informazioni sull'inclusione di componenti COM nell'applicazione .NET Framework.|
 |[Considerazioni di progettazione per l'interoperabilità](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|Fornisce suggerimenti per la scrittura di componenti COM integrati.|
 
-## <a name="reference"></a>Reference
+## <a name="reference"></a>Informazioni di riferimento
 
 <xref:System.Runtime.InteropServices?displayProperty=nameWithType>

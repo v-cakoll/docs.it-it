@@ -44,4 +44,4 @@ Ogni computer in cui è installato Common Language Runtime ha una cache di codic
 
 - [Assembly in .NET](../../standard/assembly/index.md)
 - [Uso di assembly e della Global Assembly Cache](working-with-assemblies-and-the-gac.md)
-- [Assembly con nomi sicuri](../../standard/assembly/strong-named.md)
+- [Assembly con nome sicuro](../../standard/assembly/strong-named.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Avviare servizi'
+title: 'Procedura: avviare servizi'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, starting
@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053577"
 ---
-# <a name="how-to-start-services"></a>Procedura: Avviare servizi
+# <a name="how-to-start-services"></a>Procedura: avviare servizi
 
 Dopo l'installazione di un servizio, è necessario avviarlo. Con l'avvio viene chiamato il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> per la classe del servizio. In genere, il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> definisce le operazioni utili che verranno eseguite dal servizio. Dopo l'avvio, un servizio rimane attivo fino a quando non viene sospeso o arrestato manualmente.
 
@@ -37,7 +37,7 @@ Per determinare se un servizio deve essere avviato manualmente o automaticamente
     |Per installare il servizio|Impostare questo valore|
     |----------------------------------|--------------------|
     |Al riavvio del computer|**Automatico**|
-    |Quando un'azione esplicita dell'utente avvia il servizio|**Manual**|
+    |Quando un'azione esplicita dell'utente avvia il servizio|**Manuale**|
 
     > [!TIP]
     > Per impedire del tutto l'avvio del servizio, è possibile impostare la proprietà <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> su **Disabled**. Ciò può essere utile se si prevede di dover riavviare un server più volte e si vuole risparmiare tempo evitando l'avvio dei servizi che verrebbero normalmente avviati.
@@ -49,7 +49,7 @@ Per determinare se un servizio deve essere avviato manualmente o automaticamente
 
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>Per avviare manualmente un servizio da Esplora server
 
-1. In **Esplora server** aggiungere il server desiderato, se non è già elencato. Per altre informazioni, vedere Procedura: accedere e inizializzare Esplora server/Esplora database.
+1. In **Esplora server** aggiungere il server desiderato, se non è già elencato. Per altre informazioni, vedere Procedura: Accedere e inizializzare Esplora server-Esplora database.
 
 2. Espandere il nodo **Servizi** e quindi individuare il servizio che si vuole avviare.
 
@@ -61,7 +61,7 @@ Per determinare se un servizio deve essere avviato manualmente o automaticamente
 
     - In Windows XP e 2000 Professional fare clic con il pulsante destro del mouse su **Risorse del computer** e quindi scegliere **Gestisci**. Nella finestra di dialogo visualizzata espandere il nodo **Servizi e applicazioni**.
 
-      \- oppure -
+      \- - oppure -
 
     - In Windows Server 2003 e Windows 2000 Server fare clic su **Start**, scegliere **Programmi**, fare clic su **Strumenti di amministrazione** e quindi fare clic su **Servizi**.
 

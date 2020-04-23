@@ -11,7 +11,7 @@ ms.locfileid: "82072144"
 ---
 # <a name="introduction-to-azure-and-net"></a>Introduzione ad Azure e .NET
 
-Questo documento offre una panoramica dei concetti chiave e dei servizi con cui gli sviluppatori di .NET devono avere familiarità per iniziare a sviluppare app con i servizi di Azure.This document provides an overview of key concepts and services .NET developers should be familiar with to get started developing apps using Azure services.
+Questo documento fornisce una panoramica dei concetti chiave e dei servizi che gli sviluppatori .NET devono conoscere per iniziare a sviluppare app usando i servizi di Azure.
 
 ## <a name="key-concepts"></a>Concetti chiave
 
@@ -47,9 +47,9 @@ In generale, più l'applicazione predilige i modelli FaaS e PaaS, maggiori sono 
 * [Macchine virtuali di Azure](https://docs.microsoft.com/azure/virtual-machines/): se il servizio app se non soddisfa le proprie esigenze di hosting di un'applicazione esistente a causa di dipendenze specifiche, le macchine virtuali rappresentano il punto di partenza più semplice. Per un'introduzione alle macchine virtuali, ad ASP.NET o WCF, vedere [Deploy an ASP.NET app to an Azure virtual machine](https://tutorials.visualstudio.com/aspnet-vm/intro) (Distribuire un'app ASP.NET in una macchina virtuale di Azure).
 
 > [!TIP]
-> Per altre informazioni sulla scelta di un servizio, vedere Scegliere un servizio di calcolo di [Azure per l'applicazione.](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree)
+> Per altre informazioni sulla scelta di un servizio, vedere scelta di un [servizio di calcolo di Azure per l'applicazione](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree).
 
-## <a name="choose-a-data-storage-service"></a>Scegliere un servizio di archiviazione datiChoose a data storage service
+## <a name="choose-a-data-storage-service"></a>Scegliere un servizio di archiviazione dati
 
 Azure offre diversi servizi per l'archiviazione dei dati in funzione delle proprie esigenze. I servizi dati più comuni per gli sviluppatori .NET sono:
 
@@ -76,6 +76,6 @@ Dopo aver distribuito l'applicazione in Azure, potrebbero verificarsi casi in cu
 ## <a name="next-steps"></a>Passaggi successivi
 
 * [Distribuire la prima app Web ASP.NET Core in Azure](https://docs.microsoft.com/azure/app-service/app-service-web-get-started-dotnet)
-* [Informazioni sull'autenticazione in Azure SDK per .NETLearn about authentication in Azure SDK for .NET](./sdk/authentication.md)
+* [Informazioni sull'autenticazione in Azure SDK per .NET](./sdk/authentication.md)
 * [Diagnosticare gli errori nelle app cloud](https://blogs.msdn.microsoft.com/webdev/2018/02/07/diagnosing-errors-on-your-cloud-apps)
 * Scaricare l'e-book gratuito [Guida introduttiva ad Azure per sviluppatori .NET](https://www.microsoft.com/net/download/thank-you/azure-quick-start-ebook)

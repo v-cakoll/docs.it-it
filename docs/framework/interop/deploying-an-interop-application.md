@@ -36,7 +36,7 @@ Un'applicazione di interoperabilità in genere include un assembly client .NET, 
 ### <a name="private-assemblies"></a>Assembly privati  
  Per installare un assembly da usare privatamente, sia l'eseguibile dell'applicazione che l'assembly di interoperabilità contenente i tipi COM importati devono essere installati nella stessa struttura di directory. La figura seguente illustra un assembly di interoperabilità non firmato che verrà usato privatamente da Client1.exe e Client2.exe, che si trovano in directory dell'applicazione separate. L'assembly di interoperabilità, denominato LOANLib.dll in questo esempio, viene installato due volte.  
   
- ![Struttura di directory e registro di sistema di Windows](./media/deploying-an-interop-application/com-private-deployment.gif "Struttura delle directory e voci del Registro di sistema per una distribuzione privata")  
+ ![Struttura delle directory e Registro di sistema di Windows](./media/deploying-an-interop-application/com-private-deployment.gif "Struttura delle directory e voci del Registro di sistema per una distribuzione privata")  
   
  Tutti i componenti COM associati all'applicazione devono essere installati nel Registro di sistema di Windows. Se Client1.exe e Client2.exe della figura vengono installati in computer diversi, è necessario registrare i componenti COM in entrambi i computer.  
   

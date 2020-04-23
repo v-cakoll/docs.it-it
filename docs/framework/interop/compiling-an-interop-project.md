@@ -30,7 +30,7 @@ I progetti di interoperabilità COM che fanno riferimento a uno o più assembly 
 
  L'incorporamento dei tipi di interoperabilità con Visual Studio è illustrato in [procedura dettagliata: incorporamento di tipi da assembly gestiti in Visual Studio](../../standard/assembly/embed-types-visual-studio.md).
 
- Per fare riferimento a un assembly di interoperabilità con un compilatore da riga di comando e incorporare le informazioni sul tipo nei file eseguibili, usare l'opzione del compilatore-link ( [OpzioniC# del compilatore)](../../csharp/language-reference/compiler-options/link-compiler-option.md) o [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) e specificare il nome dell'assembly di interoperabilità.
+ Per fare riferimento a un assembly di interoperabilità con un compilatore da riga di comando e incorporare le informazioni sui tipi nei file eseguibili, usare l'opzione [-link (opzioni del compilatore C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md) o l'opzione [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) del compilatore e specificare il nome dell'assembly di interoperabilità.
 
 > [!NOTE]
 > Le applicazioni Visual C++ non possono incorporare informazioni sul tipo, ma possono interagire con applicazioni o componenti aggiuntivi in grado di farlo.

@@ -26,4 +26,4 @@ ms.locfileid: "73119760"
 ## <a name="see-also"></a>Vedere anche
 
 - [Uso di assembly e della Global Assembly Cache](working-with-assemblies-and-the-gac.md)
-- [Gacutil.exe (strumento Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)
+- [Gacutil. exe (strumento Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)

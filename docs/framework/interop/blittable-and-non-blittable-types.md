@@ -47,7 +47,7 @@ La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memor
   
 - Matrici unidimensionali di tipi copiabili da BLT, come una matrice di integer. Non è tuttavia copiabile da BLT un tipo contenente una matrice variabile di tipi copiabili da BLT.  
   
-- Tipi di valore formattati contenenti solo tipi copiabili da BLT (e classi, se sottoposti a marshalling come tipi formattati). Per altre informazioni sui tipi di valore formattati, vedere [Marshalling predefinito per i tipi di valore](default-marshaling-behavior.md#default-marshaling-for-value-types).  
+- Tipi di valore formattati contenenti solo tipi copiabili da BLT (e classi, se sottoposti a marshalling come tipi formattati). Per altre informazioni sui tipi di valore formattati, vedere [marshalling predefinito per i tipi di valore](default-marshaling-behavior.md#default-marshaling-for-value-types).  
   
  Non sono copiabili da BLT i riferimenti a oggetti, incluse le matrici di riferimenti a oggetti che invece sono copiabili da BLT. È possibile, ad esempio, definire una struttura copiabile da BLT, ma non un tipo copiabile da BLT contenente una matrice di riferimenti alla struttura.  
   
@@ -60,12 +60,12 @@ La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memor
 |Tipi non copiabili da BLT|Descrizione|  
 |-------------------------|-----------------|  
 |[System.Array](default-marshaling-for-arrays.md)|Viene convertito in una matrice di tipo C o in `SAFEARRAY`.|  
-|[System.Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|Viene convertito in un valore a 1, 2 o 4 byte con `true` pari a 1 o -1.|  
-|[System.Char](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|Viene convertito in un carattere Unicode o ANSI.|  
+|[System. Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|Viene convertito in un valore a 1, 2 o 4 byte con `true` pari a 1 o -1.|  
+|[System. Char](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|Viene convertito in un carattere Unicode o ANSI.|  
 |[System.Class](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|Viene convertito in un'interfaccia di classe.|  
-|[System.Object](default-marshaling-for-objects.md)|Viene convertito in una variante o in un'interfaccia.|  
+|[System. Object](default-marshaling-for-objects.md)|Viene convertito in una variante o in un'interfaccia.|  
 |[System.Mdarray](default-marshaling-for-arrays.md)|Viene convertito in una matrice di tipo C o in `SAFEARRAY`.|  
-|[System.String](default-marshaling-for-strings.md)|Viene convertito in una stringa che termina con un riferimento Null o un BSTR.|  
+|[System. String](default-marshaling-for-strings.md)|Viene convertito in una stringa che termina con un riferimento Null o un BSTR.|  
 |[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|Viene convertito in una struttura con un layout a memoria fissa.|  
 |[System.Szarray](default-marshaling-for-arrays.md)|Viene convertito in una matrice di tipo C o in `SAFEARRAY`.|  
   
@@ -73,4 +73,4 @@ La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memor
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Comportamento predefinito del marshalling](default-marshaling-behavior.md)
+- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)

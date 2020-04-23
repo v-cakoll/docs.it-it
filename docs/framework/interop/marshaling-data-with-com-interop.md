@@ -23,7 +23,7 @@ Grazie all'interoperabilità COM, è possibile usare oggetti COM dal codice gest
  Le sezioni seguenti riportano collegamenti ad argomenti che descrivono i processi per la personalizzazione dei wrapper di interoperabilità quando è possibile o necessario fornire altre informazioni sui tipi al gestore di marshalling.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
-[Procedura: creare manualmente wrapperHow to: Create Wrappers Manually](how-to-create-wrappers-manually.md) Viene descritto come creare manualmente un wrapper COM nel codice sorgente gestito.
+[Procedura: creare wrapper manualmente](how-to-create-wrappers-manually.md) Viene descritto come creare manualmente un wrapper COM nel codice sorgente gestito.
 
  [Procedura: Eseguire la migrazione di codice gestito da DCOM a WCF](how-to-migrate-managed-code-dcom-to-wcf.md)  
  Descrive come eseguire la migrazione di codice gestito DCOM in WCF per la soluzione più sicura.  

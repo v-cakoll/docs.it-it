@@ -116,7 +116,7 @@ struct ObjectHolder {
 
 ## <a name="marshaling-object-to-interface"></a>Marshalling dell'oggetto all'interfaccia
 
-Quando un oggetto viene esposto a COM come interfaccia, tale interfaccia è l'interfaccia di classe del tipo gestito <xref:System.Object> (interfaccia **_Object**). Questa interfaccia viene tipizzata come **IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) o **IUnknown** (**UnmanagedType.IUnknown**) nella libreria dei tipi risultante. I client COM possono richiamare in modo dinamico i membri della classe gestita o eventuali membri implementati dalle classi derivate tramite l'interfaccia **_Object**. Il client può anche chiamare **QueryInterface** per ottenere le altre interfacce implementate in modo esplicito dal tipo gestito.
+Quando un oggetto viene esposto a COM come interfaccia, tale interfaccia è l'interfaccia di classe del tipo gestito <xref:System.Object> (interfaccia **_Object**). Questa interfaccia è tipizzata come **IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) o **IUnknown** (**UnmanagedType. IUnknown**) nella libreria dei tipi risultante. I client COM possono richiamare in modo dinamico i membri della classe gestita o eventuali membri implementati dalle classi derivate tramite l'interfaccia **_Object**. Il client può anche chiamare **QueryInterface** per ottenere le altre interfacce implementate in modo esplicito dal tipo gestito.
 
 ## <a name="marshaling-object-to-variant"></a>Marshalling dell'oggetto alla variante
 
@@ -271,7 +271,7 @@ Quando si effettua il marshalling di una variante a un oggetto, il tipo e a volt
 |**VT_BSTR**|<xref:System.String?displayProperty=nameWithType>|
 |**VT_INT**|<xref:System.Int32?displayProperty=nameWithType>|
 |**VT_UINT**|<xref:System.UInt32?displayProperty=nameWithType>|
-|**VT_ARRAY** &#124; **VT_** \*|<xref:System.Array?displayProperty=nameWithType>|
+|**VT_ARRAY** &#124; **VT_**\*|<xref:System.Array?displayProperty=nameWithType>|
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|
 |**VT_RECORD**|Tipo valore boxed corrispondente.|
 |**VT_VARIANT**|Non supportato.|
@@ -293,7 +293,7 @@ Varianti passate per valore e per riferimento
 
 **Comportamento predefinito per il marshalling di oggetti e varianti per riferimento**
 
-Per propagare le modifiche al chiamante, i parametri devono essere passati per riferimento. È ad esempio possibile usare la parola chiave **ref** in C# (o **ByRef** nel codice gestito di Visual Basic) per passare i parametri per riferimento. In COM i parametri per riferimento vengono passati usando un puntatore, ad esempio una **variante \*** .
+Per propagare le modifiche al chiamante, i parametri devono essere passati per riferimento. È ad esempio possibile usare la parola chiave **ref** in C# (o **ByRef** nel codice gestito di Visual Basic) per passare i parametri per riferimento. In COM i parametri per riferimento vengono passati usando un puntatore, ad esempio una **variante \***.
 
 - Quando si passa un oggetto a COM per riferimento, il gestore di marshalling crea una nuova variante e copia i contenuti del riferimento all'oggetto nella variante prima che venga effettuata la chiamata. La variante viene passata alla funzione non gestita in cui l'utente può modificare i contenuti della variante. Al ritorno dalla chiamata, le modifiche apportate alla variante sul lato non gestito vengono propagate all'oggetto originale. Se il tipo della variante è diverso dal tipo della variante passata alla chiamata, le modifiche vengono propagate a un oggetto di tipo diverso, ovvero il tipo dell'oggetto passato nella chiamata può essere diverso dal tipo dell'oggetto restituito dalla chiamata.
 
@@ -310,18 +310,18 @@ Per propagare le modifiche al chiamante, i parametri devono essere passati per r
 
 La tabella seguente riepiloga le regole di propagazione per varianti e oggetti.
 
-|Da|Per|Modifiche propagate|
+|From|A|Modifiche propagate|
 |----------|--------|-----------------------------|
 |**Variante**  *v*|**Oggetto**  *o*|Never|
 |**Oggetto**  *o*|**Variante**  *v*|Never|
-|**Variante**   ***\****  *pv*|**Oggetto ref**  *o*|Always|
-|**Oggetto ref**  *o*|**Variante**   ***\****  *pv*|Always|
+|**Variante**   ***\****  *PV*|**Oggetto ref**  *o*|Sempre|
+|**Oggetto Ref**  *o*|**Variante**   ***\****  *PV*|Sempre|
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Oggetto**  *o*|Never|
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Oggetto ref**  *o*|Solo se il tipo non è stato modificato.|
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Comportamento predefinito del marshalling](default-marshaling-behavior.md)
+- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)
 - [Tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
 - [Attributi direzionali](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
-- [Copia e blocco](copying-and-pinning.md)
+- [copia e blocco](copying-and-pinning.md)

@@ -49,7 +49,7 @@ Le applicazioni di servizio Windows sono basate su una classe che eredita dalla 
 > [!NOTE]
 > Questi metodi rappresentano gli stati che assume il servizio durante il ciclo di vita. Il servizio passa da uno stato al successivo. Ad esempio, il servizio non risponderà mai a un comando <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> prima della chiamata di <xref:System.ServiceProcess.ServiceBase.OnStart%2A>.  
   
- Esistono vari altri metodi e proprietà interessanti. Sono inclusi:  
+ Esistono vari altri metodi e proprietà interessanti. incluse le seguenti:  
   
 - Metodo <xref:System.ServiceProcess.ServiceBase.Run%2A> nella classe <xref:System.ServiceProcess.ServiceBase>. Questo è il punto di ingresso principale per il servizio. Quando si crea un servizio usando il modello Servizio Windows, il codice viene inserito all'interno del metodo `Main` dell'applicazione per eseguire il servizio. Il codice è simile al seguente:  
   

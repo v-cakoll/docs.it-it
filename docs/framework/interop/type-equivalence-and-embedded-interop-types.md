@@ -31,7 +31,7 @@ Equivalenza del tipo significa che è possibile eseguire il cast di un oggetto C
 
 - I tipi hanno la stessa identità, come descritto nella sezione successiva.
 
-- Entrambi i tipi sono idonei per l'equivalenza del tipo, come descritto nella sezione [Contrassegno dei tipi COM per l'equivalenza del tipo](#marking-com-types-for-type-equivalence).
+- Entrambi i tipi sono idonei per l'equivalenza del tipo, come descritto nella sezione [contrassegno dei tipi com per l'equivalenza del tipo](#marking-com-types-for-type-equivalence) .
 
 ### <a name="type-identity"></a>Identità dei tipi
 

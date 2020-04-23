@@ -110,4 +110,4 @@ Quando viene usata la reflection per il caricamento e l'esecuzione di assembly, 
 - <xref:System.Activator.CreateInstance%2A>
 - <xref:System.Delegate.CreateDelegate%2A>
 - [Procedura: Definire ed eseguire metodi dinamici](how-to-define-and-execute-dynamic-methods.md)
-- [Riflessione](reflection.md)
+- [Reflection](reflection.md)

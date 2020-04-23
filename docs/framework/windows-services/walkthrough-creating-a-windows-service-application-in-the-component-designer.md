@@ -1,5 +1,5 @@
 ---
-title: "Esercitazione: Creare un'app di servizio di Windows"
+title: "Esercitazione: creare un'app di servizio Windows"
 ms.date: 03/27/2019
 dev_langs:
 - csharp
@@ -16,7 +16,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053475"
 ---
-# <a name="tutorial-create-a-windows-service-app"></a>Esercitazione: Creare un'app di servizio di Windows
+# <a name="tutorial-create-a-windows-service-app"></a>Esercitazione: creare un'app di servizio Windows
 
 Questo articolo illustra come creare in Visual Studio un'app di servizio di Windows che scrive messaggi in un log eventi.
 
@@ -26,18 +26,18 @@ Le prime operazioni da effettuare sono la creazione del progetto e l'impostazion
 
 1. Dal menu **File** di Visual Studio scegliere **Nuovo** > **Progetto** (o premere **CTRL**+**MAIUSC**+**N**) per aprire la finestra **Nuovo progetto**.
 
-2. Cercare e selezionare il modello di progetto **Servizio di Windows (.NET Framework)** . Per trovarlo, espandere **Installati** e **Visual C#**  o **Visual Basic** e quindi selezionare **Windows Desktop**. In alternativa, immettere *Servizio di Windows* nella casella di ricerca in alto a destra e premere **Invio**.
+2. Cercare e selezionare il modello di progetto **Servizio di Windows (.NET Framework)**. Per trovarlo, espandere **Installati** e **Visual C# ** o **Visual Basic** e quindi selezionare **Windows Desktop**. In alternativa, immettere *Servizio di Windows* nella casella di ricerca in alto a destra e premere **Invio**.
 
    ![Modello Servizio Windows nella finestra di dialogo Nuovo progetto di Visual Studio](./media/new-project-dialog.png)
 
    > [!NOTE]
-   > Se il modello **Servizio di Windows** non è visualizzato, può essere necessario installare il carico di lavoro **Sviluppo per desktop .NET**:
+   > Se il modello di **servizio Windows** non è visibile, potrebbe essere necessario installare il carico di lavoro sviluppo di applicazioni **desktop .NET** :
    >
    > Nella finestra di dialogo **Nuovo progetto** selezionare **Apri il programma di installazione di Visual Studio** in basso a sinistra. Selezionare il carico di lavoro **Sviluppo per desktop .NET** e quindi selezionare **Modifica**.
 
 3. Per **Nome** immettere *MyNewService* e quindi selezionare **OK**.
 
-   Verrà visualizzata la scheda **Progettazione** (**Service1.cs [Progettazione]** oppure **Service1.vb [Progettazione]** ).
+   Verrà visualizzata la scheda **Progettazione** (**Service1.cs [Progettazione]** oppure **Service1.vb [Progettazione]**).
 
    Il modello di progetto include una classe di componente denominata `Service1` che eredita dalla classe <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Include gran parte del codice del servizio di base, ad esempio il codice per avviare il servizio.
 
@@ -67,7 +67,7 @@ In questa sezione verrà aggiunto un log eventi personalizzato al servizio Windo
 
 1. Dal menu di scelta rapida per **MyNewService.cs** o **MyNewService.vb** in **Esplora soluzioni** scegliere **Visualizza finestra di progettazione**.
 
-2. Nella **Casella degli strumenti** espandere **Componenti** e quindi trascinare il componente **EventLog** nella scheda **Service1.cs [Progettazione]** o **Service1.vb [Progettazione]** .
+2. Nella **Casella degli strumenti** espandere **Componenti** e quindi trascinare il componente **EventLog** nella scheda **Service1.cs [Progettazione]** o **Service1.vb [Progettazione]**.
 
 3. Dal menu di scelta rapida per **MyNewService.cs** o **MyNewService.vb** in **Esplora soluzioni** scegliere **Visualizza codice**.
 
@@ -249,7 +249,7 @@ I servizi segnalano il proprio stato a [Gestione controllo servizi](/windows/des
     ```
 
     > [!NOTE]
-    > Gestione controllo servizi usa i membri `dwWaitHint` e `dwCheckpoint` della [struttura SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) per determinare il tempo di attesa per l'avvio o l'arresto di un servizio di Windows. Se l'esecuzione dei metodi `OnStart` e `OnStop` è prolungata, il servizio può richiedere più tempo chiamando di nuovo `SetServiceStatus` con un valore di `dwCheckPoint` incrementato.
+    > La finestra di dialogo Gestione controllo servizi usa i membri `dwWaitHint` e `dwCheckpoint` della [struttura SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) per determinare il tempo di attesa per l'avvio o l'arresto di un servizio Windows. Se l'esecuzione dei metodi `OnStart` e `OnStop` è prolungata, il servizio può richiedere più tempo chiamando di nuovo `SetServiceStatus` con un valore di `dwCheckPoint` incrementato.
 
 3. Nella classe `MyNewService` dichiarare la funzione [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) usando [platform invoke](../interop/consuming-unmanaged-dll-functions.md):
 
@@ -359,7 +359,7 @@ Prima di eseguire un servizio di Windows, è necessario installarlo, ovvero regi
     > [!IMPORTANT]
     > L'account <xref:System.ServiceProcess.ServiceAccount.LocalSystem> dispone di ampie autorizzazioni, tra cui la possibilità di scrivere nel log eventi. Usare questo account con attenzione, perché potrebbe aumentare il rischio di attacchi da parte di software dannoso. Per altre attività, è opportuno usare l'account <xref:System.ServiceProcess.ServiceAccount.LocalService> che opera come utente senza privilegi nel computer locale e presenta credenziali anonime a tutti i server remoti. Questo esempio non riesce se si tenta di usare l'account <xref:System.ServiceProcess.ServiceAccount.LocalService> perché sono necessarie le autorizzazioni per scrivere nel log eventi.
 
-Per altre informazioni sui programmi di installazione, vedere [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](how-to-add-installers-to-your-service-application.md).
+Per altre informazioni sui programmi di installazione, vedere [procedura: aggiungere programmi di installazione all'applicazione di servizio](how-to-add-installers-to-your-service-application.md).
 
 ## <a name="optional-set-startup-parameters"></a>(Facoltativo) Impostare i parametri di avvio
 
@@ -435,7 +435,7 @@ Ogni servizio di Windows ha una voce del Registro di sistema nella sottochiave *
 
    Questo codice imposta l'origine e il nome del log dell'evento in base ai parametri di avvio specificati dall'utente. Se non vengono specificati argomenti, usa i valori predefiniti.
 
-3. Per specificare gli argomenti della riga di comando, aggiungere il codice seguente alla classe `ProjectInstaller` in **ProjectInstaller.cs** o **ProjectInstaller.vb**:
+3. Per specificare gli argomenti della riga di comando, aggiungere il codice seguente alla `ProjectInstaller` classe in **ProjectInstaller.cs**o **ProjectInstaller. vb**:
 
    ```csharp
    protected override void OnBeforeInstall(IDictionary savedState)
@@ -482,18 +482,18 @@ Una volta compilato il servizio Windows, è possibile installarlo. Per installar
 
     Se il servizio viene installato correttamente, il comando segnala l'esito positivo.
 
-    Se il sistema non riesce a trovare *installutil.exe*, assicurarsi che sia presente nel computer in uso. Questo strumento viene installato con .NET Framework nella cartella *%windir%\Microsoft.NET\Framework[64]\\&lt;versione framework&gt;* . Il percorso predefinito per la versione a 64 bit, ad esempio, è *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
+    Se il sistema non riesce a trovare *installutil.exe*, assicurarsi che sia presente nel computer in uso. Questo strumento viene installato con il .NET Framework alla cartella *%windir%\Microsoft.NET\Framework [64\\&lt;&gt;] versione del Framework*. Il percorso predefinito per la versione a 64 bit, ad esempio, è *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
 
     Se il processo **installutil.exe** ha esito negativo, controllare il log di installazione per determinarne il motivo. Per impostazione predefinita, il log è nella stessa cartella del file eseguibile del servizio. L'installazione può non riuscire se:
     - La classe <xref:System.ComponentModel.RunInstallerAttribute> non è presente nella classe `ProjectInstaller`.
     - L'attributo non è impostato su `true`.
     - La classe `ProjectInstaller` non è definita come `public`.
 
-Per altre informazioni, vedere [Procedura: Installare e disinstallare servizi](how-to-install-and-uninstall-services.md).
+Per altre informazioni, vedere [How to: install and Uninstall Services](how-to-install-and-uninstall-services.md).
 
 ## <a name="start-and-run-the-service"></a>Avviare ed eseguire il servizio
 
-1. In Windows aprire l'app desktop **Servizi**. Premere **Windows**+**R** per aprire la casella **Esegui**, immettere *services.msc* e quindi premere **INVIO** o selezionare **OK**.
+1. In Windows aprire l'app desktop **Servizi**. Premere **Windows**+**R** per aprire la casella **Esegui** , immettere *Services. msc*, quindi premere **invio** o fare clic su **OK**.
 
      Il servizio verrà elencato in **Servizi**, in ordine alfabetico in base al nome visualizzato impostato.
 
@@ -532,7 +532,7 @@ Se l'app del servizio di Windows non è più necessaria, è possibile rimuoverla
     installutil.exe /u MyNewService.exe
     ```
 
-   Se il servizio viene disinstallato correttamente, il comando segnala che il servizio è stato rimosso correttamente. Per altre informazioni, vedere [Procedura: Installare e disinstallare servizi](how-to-install-and-uninstall-services.md).
+   Se il servizio viene disinstallato correttamente, il comando segnala che il servizio è stato rimosso correttamente. Per altre informazioni, vedere [How to: install and Uninstall Services](how-to-install-and-uninstall-services.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-ms.openlocfilehash: d6bbc2648608e9542158e0f281984174447633a4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6ee02a3f27a645f19fd6a327052939586fac4aa9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119729"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645432"
 ---
 # <a name="using-application-domains"></a>Uso dei domini dell'applicazione
 
@@ -36,7 +36,7 @@ Viene descritto come recuperare informazioni di installazione da un dominio dell
 [Procedura: Caricare assembly in un dominio dell'applicazione](how-to-load-assemblies-into-an-application-domain.md)  
 Viene descritto come caricare un assembly in un dominio dell'applicazione.  
   
-[Procedura: Reperire informazioni su tipo e membro da un assembly](../reflection-and-codedom/get-type-member-information.md)  
+[Procedura: reperire informazioni su tipo e membro da un assembly](../reflection-and-codedom/get-type-member-information.md)  
 Viene descritto come recuperare informazioni su un assembly.  
   
 [Creazione di copie replicate di assembly](shadow-copy-assemblies.md)  
@@ -48,7 +48,7 @@ Viene spiegato come è possibile ricevere una notifica della generazione di un'e
 [Risoluzione caricamenti assembly](../../standard/assembly/resolve-loads.md)  
 Vengono offerte indicazioni sull'uso dell'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> per risolvere gli errori di caricamento di assembly.  
   
-## <a name="reference"></a>Reference  
+## <a name="reference"></a>Informazioni di riferimento  
 
 <xref:System.AppDomain>  
 Rappresenta un dominio dell'applicazione. Offre metodi per creare e controllare i domini dell'applicazione.  
@@ -57,13 +57,13 @@ Rappresenta un dominio dell'applicazione. Offre metodi per creare e controllare 
 [Assembly in .NET](../../standard/assembly/index.md)  
 Viene offerta una panoramica delle funzioni svolte dagli assembly.  
   
-[Programmazione con gli assembly](../../standard/assembly/program.md)  
+[Programmazione con gli assembly](../../standard/assembly/index.md)  
 Descrive come creare, firmare e impostare attributi sugli assembly.  
   
 [Creazione di assembly e metodi dinamici](../reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
 Descrive come creare gli assembly dinamici.  
   
-[Domini dell'applicazione](application-domains.md)  
+[Domini applicazione](application-domains.md)  
 Viene fornita una panoramica sui concetti di base relativi ai domini applicazione.  
   
 [Panoramica della reflection](../reflection-and-codedom/reflection.md)  

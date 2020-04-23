@@ -16,7 +16,7 @@ ms.locfileid: "73130090"
 In questa sezione della documentazione sono fornite informazioni sulla programmazione dinamica in .NET Framework.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
- [Riflessione](reflection.md)  
+ [Reflection](reflection.md)  
  Viene descritto come usare la reflection per l'utilizzo di oggetti in fase di esecuzione.  
   
  [Creazione di assembly e metodi dinamici](emitting-dynamic-methods-and-assemblies.md)  
@@ -25,8 +25,8 @@ In questa sezione della documentazione sono fornite informazioni sulla programma
  [Panoramica di Dynamic Language Runtime](dynamic-language-runtime-overview.md)  
  Vengono descritte le funzionalità di Dynamic Language Runtime.  
   
- [Generazione e compilazione dinamica del codice sorgente](dynamic-source-code-generation-and-compilation.md)  
+ [Generazione e compilazione dinamica di codice sorgente](dynamic-source-code-generation-and-compilation.md)  
  Viene descritto come generare e compilare il codice sorgente dinamico.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Guida di sviluppo](../development-guide.md)  
+ [Guida allo sviluppo](../development-guide.md)  

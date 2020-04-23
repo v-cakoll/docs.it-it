@@ -38,10 +38,10 @@ I servizi Microsoft Windows, noti in precedenza come servizi NT, consentono di c
   
  Dopo aver creato e compilato l'applicazione, è possibile installarla eseguendo l'utilità della riga di comando InstallUtil.exe e passando il percorso al file eseguibile del servizio. È quindi possibile usare **Gestione controllo servizi** per avviare, arrestare, sospendere, riprendere e configurare il servizio. Si possono anche eseguire molte delle stesse attività nel nodo **Servizi** in **Esplora server** o tramite la classe <xref:System.ServiceProcess.ServiceController>.  
   
-## <a name="service-applications-vs-other-visual-studio-applications"></a>Applicazioni di servizio a confronto con altre applicazioni di Visual Studio  
+## <a name="service-applications-vs-other-visual-studio-applications"></a>Applicazioni di servizio rispetto ad altre applicazioni di Visual Studio  
  Le applicazioni di servizio funzionano in modo diverso rispetto a molti altri tipi di progetto per vari aspetti:  
   
-- Il file eseguibile compilato creato da un progetto di applicazione di servizio deve essere installato nel server prima che il progetto possa funzionare in modo significativo. Non è possibile eseguire il debug o eseguire un'applicazione di servizio premendo F5 o F11. Non è possibile eseguire immediatamente un servizio o eseguirne il codice istruzione per istruzione. È invece necessario installare e avviare il servizio, quindi collegare un debugger al processo del servizio. Per altre informazioni, vedere [Procedura: Eseguire il debug di applicazioni di servizio di Windows](how-to-debug-windows-service-applications.md).  
+- Il file eseguibile compilato creato da un progetto di applicazione di servizio deve essere installato nel server prima che il progetto possa funzionare in modo significativo. Non è possibile eseguire il debug o eseguire un'applicazione di servizio premendo F5 o F11. Non è possibile eseguire immediatamente un servizio o eseguirne il codice istruzione per istruzione. È invece necessario installare e avviare il servizio, quindi collegare un debugger al processo del servizio. Per altre informazioni, vedere [Procedura: Eseguire il debug di applicazioni di servizio per Windows](how-to-debug-windows-service-applications.md).  
   
 - A differenza di alcuni tipi di progetti, è necessario creare i componenti di installazione per le applicazioni di servizio. I componenti di installazione installano e registrano il servizio nel server e creano una voce per il servizio con **Gestione controllo servizi** di Windows. Per altre informazioni, vedere [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](how-to-add-installers-to-your-service-application.md).  
   
@@ -82,11 +82,11 @@ I servizi Microsoft Windows, noti in precedenza come servizi NT, consentono di c
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Applicazioni di servizi Windows](index.md)
+- [Applicazioni di servizio Windows](index.md)
 - [Architettura di programmazione delle applicazioni di servizio](service-application-programming-architecture.md)
 - [Procedura: creare servizi Windows](how-to-create-windows-services.md)
-- [Procedura: Installare e disinstallare servizi](how-to-install-and-uninstall-services.md)
-- [Procedura: Avviare servizi](how-to-start-services.md)
-- [Procedura: Eseguire il debug di applicazioni di servizio di Windows](how-to-debug-windows-service-applications.md)
-- [Procedura dettagliata: Creazione di un'applicazione di servizio Windows in Progettazione componenti](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+- [Procedura: installare e disinstallare servizi](how-to-install-and-uninstall-services.md)
+- [Procedura: avviare servizi](how-to-start-services.md)
+- [Procedura: eseguire il debug di applicazioni di servizio Windows](how-to-debug-windows-service-applications.md)
+- [Procedura dettagliata: creazione di un'applicazione di servizio Windows in Progettazione componenti](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
 - [Procedura: aggiungere programmi di installazione all'applicazione di servizio](how-to-add-installers-to-your-service-application.md)

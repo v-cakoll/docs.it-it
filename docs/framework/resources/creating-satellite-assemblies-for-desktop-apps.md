@@ -99,11 +99,11 @@ Di seguito è riportato un semplice esempio di tipo "Hello world" che visualizza
   
 3. Aggiungere all'applicazione il supporto per le impostazioni cultura aggiuntive (en-US, fr-FR e ru-RU) come segue:  
   
-    - Per supportare le impostazioni cultura en-US o inglese (Stati Uniti), creare un file di risorse denominato *Greeting. en-US. resx* o *Greeting. en-US. txt*e archiviarlo in una singola stringa denominata `HelloString` il cui valore sia "Hi World!".
+    - Per supportare le impostazioni cultura en-US o inglese (Stati Uniti), creare un file di risorse denominato *Greeting. en-US. resx* o *Greeting. en-US. txt*e archiviarlo in una `HelloString` singola stringa denominata il cui valore sia "Hi World!".
   
-    - Per supportare le impostazioni cultura fr-FR o francese (Francia), creare un file di risorse denominato *Greeting.fr-fr. resx* o *Greeting.fr-fr. txt*e archiviarlo in una singola stringa denominata `HelloString` il cui valore sia "Salut tout le monde!".
+    - Per supportare le impostazioni cultura fr-FR o francese (Francia), creare un file di risorse denominato *Greeting.fr-fr. resx* o *Greeting.fr-fr. txt*e archiviarlo in una singola stringa `HelloString` denominata il cui valore sia "Salut tout le monde!".
   
-    - Per supportare le impostazioni cultura ru-ur o russo (Russia), creare un file di risorse denominato *Greeting.ru-ur. resx* o *Greeting.ru-ru. txt*e archiviarlo in una singola stringa denominata `HelloString` il cui valore sia "Всем привет!".
+    - Per supportare le impostazioni cultura ru-ur o russo (Russia), creare un file di risorse denominato *Greeting.ru-ur. resx* o *Greeting.ru-ru. txt*e archiviarvi una singola stringa denominata `HelloString` il cui valore sia "Всем привет!".
   
 4. Utilizzare [Resgen. exe](../tools/resgen-exe-resource-file-generator.md) per compilare ogni file di risorse di testo o XML in un file con *estensione resources* binario. L'output è un set di file con lo stesso nome file radice dei file con estensione *resx* o *txt* , ma con estensione *Resources* . Se si crea l'esempio con Visual Studio, il processo di compilazione viene gestito automaticamente. Se non si usa Visual Studio, eseguire i comandi seguenti per compilare i file con estensione *resx* in file con *estensione resources* :  
   
@@ -124,7 +124,7 @@ Di seguito è riportato un semplice esempio di tipo "Hello world" che visualizza
     [!code-csharp[Conceptual.Resources.Locating#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)]
     [!code-vb[Conceptual.Resources.Locating#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]
 
-    Se l'applicazione è denominata Example e si esegue la compilazione dalla riga di comando, il comando per il C# compilatore è:
+    Se l'applicazione è denominata Example e si esegue la compilazione dalla riga di comando, il comando per il compilatore C# è:
 
     ```console
     csc Example.cs -res:Greeting.resources
@@ -184,7 +184,7 @@ Il comando *al. exe* seguente crea un assembly satellite con nome sicuro per l'a
 al -target:lib -embed:strings.ja.resources -culture:ja -out:StringLibrary.resources.dll -delay+ -keyfile:PublicKey.snk
 ```
 
-L'opzione **-delay+** specifica che Assembly Linker deve ritardare la firma dell'assembly. L'opzione **-keyfile** specifica il nome del file di chiave che contiene la chiave pubblica da usare per ritardare la firma dell'assembly.
+L'opzione **-delay+** specifica che Assembly Linker deve ritardare la firma dell'assembly. L'opzione **-key file** specifica il nome del file di chiave che contiene la chiave pubblica da usare per ritardare la firma dell'assembly.
 
 ### <a name="re-signing-an-assembly"></a>Nuova firma di un assembly
 
@@ -235,11 +235,11 @@ L'esempio seguente usa un metodo di una libreria di classi .NET Framework per es
 
 5. Aggiungere all'applicazione il supporto per le impostazioni cultura aggiuntive (en-US, fr-FR e ru-RU) come segue:
 
-    - Per supportare le impostazioni cultura "en-US" o inglese (Stati Uniti), creare un file di risorse denominato *Strings. en-US. resx* o *Strings. en-US. txt*e archiviarlo in una singola stringa denominata `Greeting` il cui valore sia "Hello!".
+    - Per supportare le impostazioni cultura "en-US" o inglese (Stati Uniti), creare un file di risorse denominato *Strings. en-US. resx* o *Strings. en-US. txt*e archiviarvi una singola `Greeting` stringa denominata il cui valore sia "Hello!".
 
-    - Per supportare le impostazioni cultura "fr-FR" o francese (Francia), creare un file di risorse denominato *Strings.fr-fr. resx* o *Strings.fr-fr. txt* e archiviarlo in una singola stringa denominata `Greeting` il cui valore è "Bon jour!".
+    - Per supportare le impostazioni cultura "fr-FR" o francese (Francia), creare un file di risorse denominato *Strings.fr-fr. resx* o *Strings.fr-fr. txt* e archiviarvi un'unica stringa `Greeting` denominata il cui valore sia "Bon jour!".
 
-    - Per supportare le impostazioni cultura "ru-ur" o russa (Russia), creare un file di risorse denominato *Strings.ru-ur. resx* o *Strings.ru-ru. txt* e archiviarlo in una singola stringa denominata `Greeting` il cui valore sia "Привет!".
+    - Per supportare le impostazioni cultura "ru-ur" o russa (Russia), creare un file di risorse denominato *Strings.ru-ur. resx* o *Strings.ru-ru. txt* e archiviarvi una singola stringa `Greeting` denominata il cui valore sia "Привет!".
 
 6. Usare [Resgen.exe](../tools/resgen-exe-resource-file-generator.md) per compilare ogni file di risorse testo o XML in un file con estensione resources binario. L'output è un set di file con lo stesso nome file radice dei file con estensione *resx* o *txt* , ma con estensione *Resources* . Se si crea l'esempio con Visual Studio, il processo di compilazione viene gestito automaticamente. Se non si usa Visual Studio, eseguire il comando seguente per compilare i file con estensione *resx* in file con *estensione resources* :
 
@@ -252,7 +252,7 @@ L'esempio seguente usa un metodo di una libreria di classi .NET Framework per es
 7. Compilare il codice sorgente seguente per *StringLibrary. vb* o *StringLibrary.cs* insieme alle risorse per le impostazioni cultura predefinite in un assembly di libreria con firma ritardata denominato *StringLibrary. dll*:
 
     > [!IMPORTANT]
-    > Se per creare l'esempio si usa la riga di comando anziché Visual Studio, è necessario modificare la chiamata al costruttore della classe <xref:System.Resources.ResourceManager> in `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`.
+    > Se si usa la riga di comando anziché Visual Studio per creare l'esempio, è necessario modificare la chiamata al costruttore della <xref:System.Resources.ResourceManager> classe in `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`.
 
     [!code-csharp[Conceptual.Resources.Satellites#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#1)]
     [!code-vb[Conceptual.Resources.Satellites#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#1)]
@@ -320,9 +320,9 @@ L'esempio seguente usa un metodo di una libreria di classi .NET Framework per es
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Creazione del pacchetto e distribuzione delle risorse](packaging-and-deploying-resources-in-desktop-apps.md)
+- [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md)
 - [Ritardo della firma di un assembly](../../standard/assembly/delay-sign.md)
-- [Al.exe (Assembly Linker)](../tools/al-exe-assembly-linker.md)
-- [Sn.exe (strumento Nome sicuro)](../tools/sn-exe-strong-name-tool.md)
-- [Gacutil.exe (strumento Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)
+- [Al. exe (assembly linker)](../tools/al-exe-assembly-linker.md)
+- [Sn. exe (strumento nome sicuro)](../tools/sn-exe-strong-name-tool.md)
+- [Gacutil. exe (strumento Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)
 - [Risorse nelle applicazioni desktop](index.md)

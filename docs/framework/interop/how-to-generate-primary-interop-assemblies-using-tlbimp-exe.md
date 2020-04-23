@@ -35,7 +35,7 @@ Per firmare l'assembly con un nome sicuro, è necessario disporre di una coppia 
 
 ### <a name="to-generate-a-primary-interop-assembly-using-tlbimpexe"></a>Per generare un assembly di interoperabilità primario tramite Tlbimp.exe
 
-1. Al prompt dei comandi, digitare:
+1. Al prompt dei comandi digitare:
 
     **tlbimp** *filetbl*  **/primary /keyfile:** *nomefile* **/out:** *nomeassembly*
 

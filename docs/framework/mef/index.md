@@ -21,9 +21,9 @@ In questo argomento viene fornita una panoramica di Managed Extensibility Framew
 
 ## <a name="what-is-mef"></a>Che cos'è MEF?
 
-Managed Extensibility Framework o MEF è una libreria per la creazione di applicazioni leggere ed estensibili. Consente agli sviluppatori di applicazioni di scoprire e usare le estensioni senza alcuna configurazione. Consente anche agli sviluppatori di estensioni di incapsulare facilmente il codice ed evitare dipendenze rigide fragili. Con MEF è possibile riutilizzare le estensioni non solo all'interno ma anche tra le applicazioni.
+Il Managed Extensibility Framework o MEF è una libreria per la creazione di applicazioni leggere ed estendibili. Consente agli sviluppatori di applicazioni di scoprire e usare le estensioni senza alcuna configurazione. Consente anche agli sviluppatori di estensioni di incapsulare facilmente il codice ed evitare dipendenze rigide fragili. Con MEF è possibile riutilizzare le estensioni non solo all'interno ma anche tra le applicazioni.
 
-## <a name="the-problem-of-extensibility"></a>Il problema dell'estendibilità
+## <a name="the-problem-of-extensibility"></a>Il problema di estendibilità
 
 Si immagini di essere l'architetto di un'applicazione di grandi dimensioni che deve fornire supporto per l'estendibilità. L'applicazione deve includere un numero potenzialmente grande di componenti più piccoli. Inoltre, la creazione e l'esecuzione di tali componenti deve essere gestita dall'applicazione.
 
@@ -37,7 +37,7 @@ Inoltre, i componenti sono incapaci di comunicare fra loro, salvo tramite i cana
 
 Infine, gli sviluppatori dei componenti devono accettare una dipendenza rigida in merito all'assembly che contiene l'interfaccia che implementano. Ciò ostacola l'uso di un componente in più applicazioni e può inoltre far emergere dei problemi quando si crea un framework di test per i componenti.
 
-## <a name="what-mef-provides"></a>Cosa fornisce MEF
+## <a name="what-mef-provides"></a>Funzionalità di MEF
 
 Anziché ricorrere alla registrazione esplicita dei componenti disponibili, MEF offre una funzionalità che consente l'individuazione implicita dei componenti, tramite la *composizione*. Un componente MEF, detto *parte*, specifica in modo dichiarativo sia le proprie dipendenze (dette *importazioni*) sia le funzionalità che rende disponibili (dette *esportazioni*). Quando si crea una parte, il motore di composizione di MEF ne soddisfa le importazioni con le risorse disponibili nelle altre parti.
 
@@ -57,30 +57,30 @@ MEF è parte integrante di .NET Framework 4 ed è disponibile in tutti i contest
 
 Nelle versioni precedenti di .NET Framework è stato introdotto Managed Add-in Framework (MAF), progettato per consentire alle applicazioni di isolare e gestire le estensioni. Rispetto a MEF, MAF si concentra su un livello leggermente più elevato, in particolare sull'isolamento delle estensioni e sul caricamento e scaricamento degli assembly. MEF si concentra invece su individuazione, estensibilità e portabilità. I due framework interoperano agevolmente e una stessa applicazione può trarre vantaggio da entrambi.
 
-## <a name="simplecalculator-an-example-application"></a>SimpleCalculator: un'applicazione di esempio
+## <a name="simplecalculator-an-example-application"></a>SimpleCalculator: applicazione di esempio
 
 Il modo più semplice per vedere le potenzialità di MEF è compilare una semplice applicazione MEF. In questo esempio viene compilata una calcolatrice molto semplice denominata SimpleCalculator. L'obiettivo di SimpleCalculator è creare un'applicazione console che accetta comandi aritmetici di base, nel formato "5+3" o "6-2", e restituisce le risposte corrette. Tramite MEF sarà possibile aggiungere nuovi operatori senza modificare il codice dell'applicazione.
 
-Per scaricare il codice completo per questo esempio, vedere [l'esempio SimpleCalculator (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/simple-calculator-vb/).
+Per scaricare il codice completo per questo esempio, vedere l' [esempio SimpleCalculator (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/simple-calculator-vb/).
 
 > [!NOTE]
 > Più che fornire uno scenario di uso realistico, lo scopo di SimpleCalculator è dimostrare i concetti e la sintassi di MEF. Molte delle applicazioni in grado di sfruttare al meglio la potenza di MEF sono più complesse di SimpleCalculator. Per altri esempi dettagliati, vedere [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef) su GitHub.
 
 - Per iniziare, creare un nuovo progetto di applicazione console in Visual Studio e denominarlo `SimpleCalculator`.
 
-- Aggiungere un riferimento `System.ComponentModel.Composition` all'assembly in cui risiede MEF.
+- Aggiungere un riferimento all' `System.ComponentModel.Composition` assembly in cui si trova MEF.
 
-- Aprire *Module1.vb* o `Imports` *Program.cs* e aggiungere `System.ComponentModel.Composition.Hosting`istruzioni o `using` per `System.ComponentModel.Composition` e . Questi due spazi dei nomi contengono i tipi MEF che saranno necessari per sviluppare un'applicazione estensibile.
+- Aprire *Module1. vb* o *Program.cs* e aggiungere `Imports` istruzioni `using` o per `System.ComponentModel.Composition` e `System.ComponentModel.Composition.Hosting`. Questi due spazi dei nomi contengono i tipi MEF che saranno necessari per sviluppare un'applicazione estensibile.
 
 - Se si usa Visual Basic, aggiungere la parola chiave `Public` alla riga in cui viene dichiarato il modulo `Module1`.
 
-## <a name="composition-container-and-catalogs"></a>Contenitore di composizione e cataloghi
+## <a name="composition-container-and-catalogs"></a>Contenitore e cataloghi di composizione
 
 La base del modello di composizione d MEF è il *contenitore di composizione*. Questo contenitore contiene tutte le parti disponibili ed esegue la composizione, ovvero l'abbinamento tra importazioni ed esportazioni. Il tipo più comune di contenitore di composizione è <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>, usato anche per SimpleCalculator.
 
-Se si utilizza Visual Basic, aggiungere `Program` una classe pubblica denominata in *Module1.vb*.
+Se si usa Visual Basic, aggiungere una classe pubblica denominata `Program` in *Module1. vb*.
 
-Aggiungere la riga `Program` seguente alla classe in *Module1.vb* o *Program.cs*:
+Aggiungere la riga seguente alla `Program` classe in *Module1. vb* o *Program.cs*:
 
 ```vb
 Dim _container As CompositionContainer
@@ -272,7 +272,7 @@ public interface IOperationData
 }
 ```
 
- In questo caso, i metadati per ogni operazione sono il simbolo \*che rappresenta l'operazione, ad esempio , -, e così via. Per rendere disponibile l'operazione di addizione, aggiungere la classe seguente al modulo o allo spazio dei nomi `SimpleCalculator`:
+ In questo caso, i metadati per ogni operazione sono il simbolo che rappresenta tale operazione, ad esempio +,-, \*e così via. Per rendere disponibile l'operazione di addizione, aggiungere la classe seguente al modulo o allo spazio dei nomi `SimpleCalculator`:
 
 ```vb
 <Export(GetType(IOperation))>
@@ -389,7 +389,7 @@ private int FindFirstNonDigit(string s)
 
 A questo punto è possibile compilare ed eseguire il progetto. In Visual Basic, accertarsi di aver aggiunto la parola chiave `Public` a `Module1`. Digitare un'operazione di addizione nella finestra della console, ad esempio "5+3". La calcolatrice restituirà i risultati. Se si usano altri operatori, viene visualizzato un messaggio che indica che l'operazione non è stata criteri.).
 
-## <a name="extending-simplecalculator-using-a-new-class"></a>Estensione di SimpleCalculator tramite una nuova classeExtending SimpleCalculator using a new class
+## <a name="extending-simplecalculator-using-a-new-class"></a>Estensione di SimpleCalculator mediante una nuova classe
 
 Ora che la calcolatrice funziona, risulta facile aggiungere una nuova operazione. Aggiungere la classe seguente al modulo o allo spazio dei nomi `SimpleCalculator`:
 
@@ -419,15 +419,15 @@ class Subtract : IOperation
 
 Compilare ed eseguire il progetto. Digitare un'operazione di sottrazione, ad esempio "5-3". Oltre all'addizione, la calcolatrice supporta ora anche la sottrazione.
 
-## <a name="extending-simplecalculator-using-a-new-assembly"></a>Estensione di SimpleCalculator mediante un nuovo assemblyExtending SimpleCalculator using a new assembly
+## <a name="extending-simplecalculator-using-a-new-assembly"></a>Estensione di SimpleCalculator tramite un nuovo assembly
 
 Benché aggiungere classi al codice sorgente sia abbastanza semplice, MEF offre la possibilità di cercare le parti all'esterno del codice sorgente di un'applicazione. Per dimostrarlo, sarà necessario modificare SimpleCalculator affinché cerchi le parti in una directory, nonché nel proprio assembly, mediante l'aggiunta di <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog>.
 
 Aggiungere al progetto SimpleCalculator una nuova directory denominata `Extensions`. Assicurarsi di aggiungerla a livello di progetto e non a livello di soluzione. Aggiungere quindi alla soluzione un nuovo progetto Libreria di classi denominato `ExtendedOperations`. Il nuovo progetto verrà compilato in un assembly separato.
 
-Aprire Progettazione proprietà progetto per il progetto ExtendedOperations e **Build output path** fare clic **Output path** sulla scheda **Compila** o **Compila** .* .\\*
+Aprire la finestra di progettazione Proprietà progetto per il progetto ExtendedOperations e **Compile** fare clic **sulla scheda Compila o compila.** modificare il percorso dell' **output di compilazione** o il **percorso di output** in modo che punti alla directory Extensions nella directory del progetto SimpleCalculator (*.. \SimpleCalculator\Extensions\\*).
 
- In *Module1.vb* o *Program.cs*aggiungere la `Program` seguente riga al costruttore:
+ In *Module1. vb* o *Program.cs*aggiungere la riga seguente al `Program` Costruttore:
 
 ```vb
 catalog.Catalogs.Add(New DirectoryCatalog("C:\SimpleCalculator\SimpleCalculator\Extensions"))
@@ -437,7 +437,7 @@ catalog.Catalogs.Add(New DirectoryCatalog("C:\SimpleCalculator\SimpleCalculator\
 catalog.Catalogs.Add(new DirectoryCatalog("C:\\SimpleCalculator\\SimpleCalculator\\Extensions"));
 ```
 
-Sostituire il percorso di esempio con il percorso della directory Extensions. Il percorso assoluto è solo a scopo di debug. In un'applicazione di produzione, è necessario utilizzare un percorso relativo.) Il <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> aggiungerà ora tutte le parti trovate in qualsiasi assembly nella directory Extensions al contenitore di composizione.
+Sostituire il percorso di esempio con il percorso della directory Extensions. Il percorso assoluto è solo a scopo di debug. In un'applicazione di produzione è necessario usare un percorso relativo. A <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> questo punto, le parti presenti in tutti gli assembly nella directory Extensions verranno aggiunte al contenitore di composizione.
 
 Nel progetto ExtendedOperations aggiungere i riferimenti a SimpleCalculator e System.ComponentModel.Composition. Nel file di classe ExtendedOperations aggiungere un'istruzione `Imports` o `using` per System.ComponentModel.Composition. In Visual Basic aggiungere anche un'istruzione `Imports` per SimpleCalculator. Quindi, aggiungere la seguente classe al file di classe ExtendedOperations:
 
@@ -483,6 +483,6 @@ In questo argomento sono stati trattati i concetti di base di MEF.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per scaricare il codice completo per questo esempio, vedere [l'esempio SimpleCalculator (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/simple-calculator-vb/).
+Per scaricare il codice completo per questo esempio, vedere l' [esempio SimpleCalculator (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/simple-calculator-vb/).
 
  Per altre informazioni e per esempi di codice, vedere [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef). Per un elenco di tipi MEF, vedere lo spazio dei nomi <xref:System.ComponentModel.Composition?displayProperty=nameWithType>.

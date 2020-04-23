@@ -76,7 +76,7 @@ Gli esempi di linguaggi sviluppati mediante l'uso di DLR includono i seguenti:
 
  ![Panoramica dell'architettura di Dynamic Language Runtime](./media/dlr-archoverview.png "DLR_ArchOverview") Architettura DLR
 
- DLR estende CLR con un set di servizi in grado di supportare in modo più efficiente i linguaggi dinamici. Questi servizi includono:
+ DLR estende CLR con un set di servizi in grado di supportare in modo più efficiente i linguaggi dinamici. Di seguito sono indicati alcuni servizi disponibili:
 
 - Alberi delle espressioni. DLR usa gli alberi delle espressioni per rappresentare la semantica del linguaggio. A questo scopo, DLR ha esteso gli alberi dell'espressione LINQ affinché includano il flusso di controllo, l'assegnazione e altri nodi di modellazione del linguaggio. Per altre informazioni, vedere [Alberi delle espressioni (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) o [Alberi delle espressioni (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
 
@@ -96,4 +96,4 @@ DLR usa i binder nei siti di chiamata per comunicare non solo con .NET Framework
 - [Common Language Runtime](../../standard/clr.md)
 - [Alberi delle espressioni (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
 - [Alberi delle espressioni (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [Procedura dettagliata: Creazione e utilizzo di oggetti dinamici](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [Procedura dettagliata: creazione e utilizzo di oggetti dinamici](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

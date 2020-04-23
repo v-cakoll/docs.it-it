@@ -74,7 +74,7 @@ All'avvio di un dominio applicazione che usa la creazione di copie shadow, si ve
 
 A partire da .NET Framework 4, il comportamento di avvio predefinito consiste nel confrontare direttamente la data e l'ora del file di ogni assembly nella directory dell'applicazione con la data e l'ora della copia nella directory della copia shadow. Se l'assembly è stato aggiornato, viene copiato usando la stessa procedura adottata nelle versioni precedenti di .NET Framework. In caso contrario, viene caricata la copia nella directory della copia shadow.
 
-Il miglioramento delle prestazioni risultante è maggiore per le applicazioni in cui gli assembly non vengono modificati di frequente e le modifiche vengono apportate in genere in un piccolo subset di assembly. Se la maggior parte degli assembly in un'applicazione viene modificata frequentemente, il nuovo comportamento predefinito potrebbe causare una regressione delle prestazioni. È possibile ripristinare il comportamento di avvio delle versioni precedenti di .NET Framework aggiungendo l'[\<elemento shadowCopyVerifyByTimestamp>](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) al file di configurazione con `enabled="false"`.
+Il miglioramento delle prestazioni risultante è maggiore per le applicazioni in cui gli assembly non vengono modificati di frequente e le modifiche vengono apportate in genere in un piccolo subset di assembly. Se la maggior parte degli assembly in un'applicazione viene modificata frequentemente, il nuovo comportamento predefinito potrebbe causare una regressione delle prestazioni. È possibile ripristinare il comportamento di avvio delle versioni precedenti del .NET Framework aggiungendo l' [ \<elemento> shadowCopyVerifyByTimestamp](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) al file di configurazione con `enabled="false"`.
 
 <a name="ObsoleteMethods"></a>
 
@@ -88,4 +88,4 @@ La classe <xref:System.AppDomain> include diversi metodi, ad esempio <xref:Syste
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
-- [\<Elemento shadowCopyVerifyByTimestamp>](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+- [\<Elemento> shadowCopyVerifyByTimestamp](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)

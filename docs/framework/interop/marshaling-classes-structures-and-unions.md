@@ -31,18 +31,18 @@ In .NET Framework classi e strutture sono simili. Entrambe possono avere campi, 
 
 Nella tabella seguente sono elencate le opzioni di marshalling per le classi, le strutture e le unioni con la descrizione dell'utilizzo e un collegamento all'esempio corrispondente di platform invoke.
 
-|Tipo di|Descrizione|Esempio|
+|Type|Descrizione|Esempio|
 |----------|-----------------|------------|
-|Classe per valore.|Passa una classe con membri Integer come parametro in/out, come il case gestito.|[Esempio SysTime](#systime-sample)|
-|Struttura per valore.|Passa le strutture come parametri in.|[Esempio di strutture](#structures-sample)|
-|Struttura per riferimento.|Passa le strutture come parametri in/out.|[Esempio OSInfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|
-|Struttura con strutture annidate (semplificata).|Passa una classe che rappresenta una struttura con strutture annidate nella funzione non gestita. La struttura viene semplificata in una sola grande struttura nel prototipo gestito.|[Esempio FindFile](#findfile-sample)|
+|Classe per valore.|Passa una classe con membri Integer come parametro in/out, come il case gestito.|[SysTime (esempio)](#systime-sample)|
+|Struttura per valore.|Passa le strutture come parametri in.|[Structures (esempio)](#structures-sample)|
+|Struttura per riferimento.|Passa le strutture come parametri in/out.|[OSInfo (esempio)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|
+|Struttura con strutture annidate (semplificata).|Passa una classe che rappresenta una struttura con strutture annidate nella funzione non gestita. La struttura viene semplificata in una sola grande struttura nel prototipo gestito.|[FindFile (esempio)](#findfile-sample)|
 |Struttura con puntatore a un'altra struttura.|Passa una struttura che contiene un puntatore a una seconda struttura come membro.|[Esempio di strutture](#structures-sample)|
-|Matrice di strutture con Integer per valore.|Passa una matrice di strutture che contengono solo Integer come un parametro in/out. È possibile modificare i membri della matrice.|[Esempio di matrici](marshaling-different-types-of-arrays.md)|
+|Matrice di strutture con Integer per valore.|Passa una matrice di strutture che contengono solo Integer come un parametro in/out. È possibile modificare i membri della matrice.|[Arrays (esempio)](marshaling-different-types-of-arrays.md)|
 |Matrice di strutture con Integer e stringhe per riferimento.|Passa una matrice di strutture che contengono Integer e stringhe come un parametro out. La memoria per la matrice viene allocata dalla funzione chiamata.|[Esempio OutArrayOfStructs (](#outarrayofstructs-sample)|
-|Unioni con tipi di valore.|Passa le unioni con tipi di valore (Integer e Double).|[Esempio di unioni](#unions-sample)|
-|Unioni con tipi misti.|Passa unioni con tipi misti (Integer e String).|[Esempio di unioni](#unions-sample)|
-|Valori null nella struttura.|Passa un riferimento null (**Nothing** in Visual Basic) invece di un riferimento a un tipo di valore.|[Esempio HandleRef](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
+|Unioni con tipi di valore.|Passa le unioni con tipi di valore (Integer e Double).|[unioni (esempio)](#unions-sample)|
+|Unioni con tipi misti.|Passa unioni con tipi misti (Integer e String).|[unioni (esempio)](#unions-sample)|
+|Valori null nella struttura.|Passa un riferimento null (**Nothing** in Visual Basic) invece di un riferimento a un tipo di valore.|[HandleRef (esempio)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
 
 ## <a name="structures-sample"></a>Structures (esempio)
 
@@ -100,7 +100,7 @@ Le strutture gestite `MyPerson`,`MyPerson2`, `MyPerson3` e `MyArrayStruct` hanno
 
 - `MyPerson` contiene solo membri stringa. Le stringhe vengono impostate sul formato ANSI dal campo [CharSet](specifying-a-character-set.md), quando viene passato alla funzione non gestita.
 
-- `MyPerson2` contiene un tipo **IntPtr** alla struttura `MyPerson`. Il tipo **IntPtr** sostituisce il puntatore originale alla struttura non gestita poiché nelle applicazioni .NET Framework non vengono usati i puntatori a meno che il codice non sia contrassegnato come **unsafe**.
+- `MyPerson2`contiene un oggetto **IntPtr** per `MyPerson` la struttura. Il tipo **IntPtr** sostituisce il puntatore originale alla struttura non gestita poiché nelle applicazioni .NET Framework non vengono usati i puntatori a meno che il codice non sia contrassegnato come **unsafe**.
 
 - `MyPerson3` contiene `MyPerson` come struttura incorporata. È possibile semplificare una struttura incorporata in un'altra struttura posizionandone gli elementi direttamente nella struttura principale oppure mantenerla incorporata, come accade in questo esempio.
 

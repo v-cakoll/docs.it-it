@@ -57,19 +57,19 @@ Per tener traccia della durata, si suppone che un tipo generico costruito, ad es
 
 Agli assembly ritirabili si applicano le seguenti restrizioni:
 
-- **Riferimenti statici** I tipi in un assembly dinamico ordinario non possono avere riferimenti statici a tipi definiti in un assembly ritirabile. Ad esempio, se si definisce un tipo comune che eredita da un tipo in un assembly ritirabile, viene generata un'eccezione <xref:System.NotSupportedException>. Un tipo in un assembly ritirabile può avere riferimenti statici a un tipo in un altro assembly ritirabile, ma estende la durata dell'assembly di destinazione del riferimento alla durata dell'assembly di origine del riferimento.
+- **Riferimenti statici** I tipi in un assembly dinamico comune non possono avere riferimenti statici a tipi definiti in un assembly ritirabile. Ad esempio, se si definisce un tipo comune che eredita da un tipo in un assembly ritirabile, viene generata un'eccezione <xref:System.NotSupportedException>. Un tipo in un assembly ritirabile può avere riferimenti statici a un tipo in un altro assembly ritirabile, ma estende la durata dell'assembly di destinazione del riferimento alla durata dell'assembly di origine del riferimento.
 
-- **Com interop (interoperabilità)** Nessuna interfaccia COM può essere definita all'interno di un assembly ritirabile e nessuna istanza di tipi all'interno di un assembly ritirabile può essere convertita in oggetti COM. Un tipo in un assembly ritirabile non può fungere da COM Callable Wrapper (CCW) o da Runtime Callable Wrapper (RCW). Tuttavia, i tipi negli assembly ritirabili possono usare oggetti che implementano interfacce COM.
+- **Interoperabilità COM** Non è possibile definire interfacce COM in un assembly ritirabile e nessuna istanza di tipi in un assembly ritirabile può essere convertita in oggetti COM. Un tipo in un assembly ritirabile non può fungere da COM Callable Wrapper (CCW) o da Runtime Callable Wrapper (RCW). Tuttavia, i tipi negli assembly ritirabili possono usare oggetti che implementano interfacce COM.
 
-- **Richiamo piattaforma** I metodi <xref:System.Runtime.InteropServices.DllImportAttribute> che dispongono dell'attributo non verranno compilati quando vengono dichiarati in un assembly ritirabile. Non è possibile usare l'istruzione <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> nell'implementazione di un tipo in un assembly ritirabile e non è possibile eseguire il marshalling di tali tipi in codice non gestito. È comunque possibile effettuare chiamate nel codice nativo tramite un punto di ingresso dichiarato in un assembly non ritirabile.
+- **Platform Invoke** I metodi con l' <xref:System.Runtime.InteropServices.DllImportAttribute> attributo non verranno compilati quando vengono dichiarati in un assembly ritirabile. Non è possibile usare l'istruzione <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> nell'implementazione di un tipo in un assembly ritirabile e non è possibile eseguire il marshalling di tali tipi in codice non gestito. È comunque possibile effettuare chiamate nel codice nativo tramite un punto di ingresso dichiarato in un assembly non ritirabile.
 
-- **Marshaling** Non è possibile effettuare il marshalling degli oggetti (in particolare, delegati) definiti negli assembly ritirabili. Si tratta di una restrizione per tutti i tipi creati temporanei.
+- **Marshalling** Non è possibile effettuare il marshalling degli oggetti, in particolare delegati, definiti negli assembly ritirabili. Si tratta di una restrizione per tutti i tipi creati temporanei.
 
-- **Caricamento dell'assieme** La reflection emit è l'unico meccanismo supportato per il caricamento di assembly ritirabili. Gli assembly caricati con qualsiasi altra forma di caricamento non possono essere scaricati.
+- **Caricamento di assembly** Reflection Emit è l'unico meccanismo supportato per il caricamento di assembly ritirabili. Gli assembly caricati con qualsiasi altra forma di caricamento non possono essere scaricati.
 
-- **Oggetti associati al contestoContext-bound objects** Le variabili statiche di contesto non sono supportate. Non è possibile estendere i tipi in un assembly ritirabile <xref:System.ContextBoundObject>. Tuttavia, il codice negli assembly ritirabili può usare oggetti associati al contesto definiti altrove.
+- **Oggetti associati al contesto** Contesto: le variabili statiche non sono supportate. Non è possibile estendere i tipi in un assembly ritirabile <xref:System.ContextBoundObject>. Tuttavia, il codice negli assembly ritirabili può usare oggetti associati al contesto definiti altrove.
 
-- **Dati statici del threadThread-static data** Le variabili thread-static non sono supportate.
+- **Dati statici dei thread** Le variabili thread-static non sono supportate.
 
 ## <a name="see-also"></a>Vedere anche
 

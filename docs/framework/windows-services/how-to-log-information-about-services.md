@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Registrare informazioni sui servizi'
+title: 'Procedura: registrare informazioni sui servizi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -20,7 +20,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053613"
 ---
-# <a name="how-to-log-information-about-services"></a>Procedura: Registrare informazioni sui servizi
+# <a name="how-to-log-information-about-services"></a>Procedura: registrare informazioni sui servizi
 Per impostazione predefinita, tutti i progetti di servizio di Windows possono interagire con il log eventi dell'applicazione in cui possono scrivere informazioni ed eccezioni. È possibile usare la proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> per indicare se si vuole fornire questa funzionalità nell'applicazione. Per impostazione predefinita, la registrazione è attivata per tutti i servizi creati con il modello di progetto di servizio di Windows. È possibile usare un form statico della classe <xref:System.Diagnostics.EventLog> per scrivere le informazioni sul servizio in un log senza dover creare un'istanza di un componente <xref:System.Diagnostics.EventLog> o registrare manualmente un'origine.  
   
  Il programma di installazione del servizio registra automaticamente ogni servizio nel progetto come origine valida degli eventi con il registro applicazioni sul computer in cui è installato il servizio, quando la registrazione è attivata. Il servizio registra informazioni ogni volta che viene avviato, arrestato, sospeso, riavviato, installato o disinstallato, oltre a registrare tutti gli errori che si verificano. Non è necessario scrivere nessun codice per scrivere voci nel registro quando si usa il comportamento predefinito, perché è il servizio a farlo automaticamente.  

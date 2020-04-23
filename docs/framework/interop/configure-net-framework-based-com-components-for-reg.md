@@ -24,7 +24,7 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
  Questo argomento descrive come associare un manifesto dell'applicazione a un'applicazione, come associare un manifesto del componente a un componente e come incorporare un manifesto del componente in un assembly.  
   
-## <a name="create-an-application-manifest"></a>Creare un manifesto dell'applicazioneCreate an application manifest  
+## <a name="create-an-application-manifest"></a>Creare un manifesto dell'applicazione  
   
 1. Usando un editor XML, creare o modificare il manifesto dell'applicazione di proprietà dell'applicazione COM che interagisce con uno o più componenti gestiti.  
   
@@ -77,9 +77,9 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
 5. Salvare il file manifesto assegnando un nome a questo. Il nome di un manifesto dell'applicazione è costituito dal nome dell'eseguibile dell'assembly seguito dall'estensione manifest. Il nome file del manifesto dell'applicazione per myComApp.exe, ad esempio, è myComApp.exe.manifest.  
   
-Un manifesto dell'applicazione può essere installato nella stessa directory dell'applicazione COM. In alternativa, può essere aggiunto come risorsa al file EXE dell'applicazione. Per ulteriori informazioni, vedere [Informazioni sugli assembly affiancati](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
+Un manifesto dell'applicazione può essere installato nella stessa directory dell'applicazione COM. In alternativa, può essere aggiunto come risorsa al file EXE dell'applicazione. Per ulteriori informazioni, vedere [informazioni sugli assembly affiancati](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
   
-## <a name="create-a-component-manifest"></a>Creare un manifesto del componenteCreate a component manifest  
+## <a name="create-a-component-manifest"></a>Creare un manifesto del componente  
   
 1. Tramite un editor XML, creare un manifesto del componente per descrivere l'assembly gestito.  
   
@@ -170,7 +170,7 @@ Un manifesto dell'applicazione può essere installato nella stessa directory del
   
     `/win32res:myresource.res`  
   
-     Anche `myresource.res` in questo caso, è il nome del file di risorse contenente le risorse incorporate.  
+     Anche in `myresource.res` questo caso, è il nome del file di risorse contenente le risorse incorporate.  
   
 ## <a name="see-also"></a>Vedere anche
 

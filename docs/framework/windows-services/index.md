@@ -27,7 +27,7 @@ Usando Visual Studio o .NET Framework SDK, è possibile creare facilmente serviz
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-[Introduzione alle applicazioni di servizio WindowsIntroduction to Windows Service Applications](introduction-to-windows-service-applications.md)
+[Introduzione alle applicazioni di servizio Windows](introduction-to-windows-service-applications.md)
 
 Offre una panoramica sulle applicazioni servizio Windows, sulla durata di un servizio e sulle differenze tra le applicazioni servizio e altri tipi di progetto comuni.
 

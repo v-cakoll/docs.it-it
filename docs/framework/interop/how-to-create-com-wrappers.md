@@ -39,7 +39,7 @@ In Visual Studio 2005 è possibile aggiungere il wrapper COM come riferimento al
 È ora possibile scrivere codice per accedere all'oggetto COM. È possibile iniziare dichiarando l'oggetto, ad esempio con un'istruzione `Imports` per Visual Basic o con un'istruzione `Using` per C#.
 
 > [!NOTE]
-> Se si desidera programmare i componenti di Microsoft Office, installare [innanzitutto Microsoft Office Primary Interop Assemblies Redistributable](https://www.microsoft.com/Download/details.aspx?id=3508).
+> Se si vuole programmare Microsoft Office componenti, installare prima di tutto gli [assembly di interoperabilità primari Microsoft Office ridistribuibili](https://www.microsoft.com/Download/details.aspx?id=3508).
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Per creare un Runtime Callable Wrapper con gli strumenti di .NET Framework  
   

@@ -45,7 +45,7 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 // Do things with the account here...
 ```
 
-Le stringhe di connessione del servizio vengono usate in altri servizi di Azure, ad esempio [CosmosDB](https://docs.microsoft.com/azure/cosmos-db/), [Cache di Azure per Redis](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)e Bus di [servizio.](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues) È possibile ottenere tali stringhe usando il portale di Azure, l'interfaccia della riga di comando o PowerShell.You can get those strings using the Azure portal, CLI, or PowerShell. È anche possibile usare le librerie di gestione di Azure per .NET per eseguire query nelle risorse per creare stringhe di connessione nel codice.
+Le stringhe di connessione del servizio vengono usate in altri servizi di Azure, ad esempio [CosmosDB](https://docs.microsoft.com/azure/cosmos-db/), [cache di Azure per Redis](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)e il [bus di servizio](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues). È possibile ottenere tali stringhe usando il portale di Azure, l'interfaccia della riga di comando o PowerShell. È anche possibile usare le librerie di gestione di Azure per .NET per eseguire query nelle risorse per creare stringhe di connessione nel codice.
 
 Questo frammento di codice usa le librerie di gestione per creare una stringa di connessione dell'account di archiviazione:
 
@@ -76,7 +76,7 @@ Altre librerie richiedono che l'applicazione venga eseguita con un'[entità serv
 
 Dopo la creazione dell'entità servizio, sono disponibili due opzioni per l'autenticazione nell'entità servizio per la creazione e la gestione delle risorse.
 
-Per entrambe le opzioni è necessario aggiungere i seguenti pacchetti NuGet al progetto.
+Per entrambe le opzioni è necessario aggiungere i pacchetti NuGet seguenti al progetto.
 
 ```powershell
 Install-Package Microsoft.Azure.Management.Fluent

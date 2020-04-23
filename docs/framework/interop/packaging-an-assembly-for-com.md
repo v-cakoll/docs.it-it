@@ -37,9 +37,9 @@ Gli sviluppatori COM possono trarre vantaggio dalle informazioni seguenti sui ti
 
   Le classi gestite che implementano l'interfaccia di classe (interfaccia generata dall'interoperabilità COM) sono soggette a restrizioni di controllo delle versioni.
 
-  Per istruzioni sull'uso dell'interfaccia della classe, vedere [Introduzione all'interfaccia della classe](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).
+  Per linee guida sull'uso dell'interfaccia della classe, vedere [Introduzione all'interfaccia della classe](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).
 
-- Istruzioni di distribuzione
+- Istruzioni per la distribuzione
 
   Gli assembly con nome sicuro firmati da un editore possono essere installati nella Global Assembly Cache. Gli assembly non firmati devono essere installati nel computer dell'utente come assembly privati.
 
@@ -79,7 +79,7 @@ La **classe TypeLibConverter** implementa <xref:System.Runtime.InteropServices.I
 
 ## <a name="assembly-registration-tool"></a>Strumento di registrazione degli assembly
 
-Lo [strumento di registrazione degli assembly (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) può generare e registrare una libreria dei tipi quando si applica l'opzione **/tlb:** . I client COM richiedono l'installazione di librerie dei tipi nel Registro di sistema di Windows. Senza questa opzione, Regasm.exe registra solo i tipi in un assembly, non la libreria dei tipi. Registrare i tipi in un assembly e la registrazione della libreria dei tipi sono due attività distinte.
+Lo [strumento di registrazione degli assembly (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) può generare e registrare una libreria dei tipi quando si applica l'opzione **/tlb:**. I client COM richiedono l'installazione di librerie dei tipi nel Registro di sistema di Windows. Senza questa opzione, Regasm.exe registra solo i tipi in un assembly, non la libreria dei tipi. Registrare i tipi in un assembly e la registrazione della libreria dei tipi sono due attività distinte.
 
 <a name="cpconpackagingassemblyforcomanchor4"></a>
 
@@ -95,6 +95,6 @@ Lo [strumento di installazione dei servizi .NET (Regsvcs.exe)](../tools/regsvcs-
 - [Qualificazione di tipi .NET per l'interoperabilità](../../standard/native-interop/qualify-net-types-for-interoperation.md)
 - [Introduzione all'interfaccia della classe](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
 - [Considerazioni sulla sicurezza degli assembly](../../standard/assembly/security-considerations.md)
-- [Tlbexp.exe (utilità di esportazione della libreria dei tipi)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Tlbexp. exe (utilità di esportazione della libreria di tipi)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Registrazione di assembly presso COM](registering-assemblies-with-com.md)
 - [Procedura: incorporare librerie dei tipi come risorse Win32 nelle applicazioni](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

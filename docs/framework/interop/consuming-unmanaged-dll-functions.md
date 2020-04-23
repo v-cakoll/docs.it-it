@@ -39,7 +39,7 @@ Platform invoke è un servizio che consente al codice gestito di chiamare funzio
   
      [Visual Basic] Usare l'istruzione **Declare** con le parole chiave **Function** e **Lib**. In pochissimi casi, è possibile usare **DllImportAttribute** con le parole chiave **Shared Function**. Questi casi vengono illustrati più avanti in questa sezione.  
   
-     [Cè] Utilizzare **DllImportAttribute** per identificare la DLL e la funzione. Contrassegnare il metodo con i modificatori **static** ed **extern**.  
+     C# Utilizzare **DllImportAttribute** per identificare la dll e la funzione. Contrassegnare il metodo con i modificatori **static** ed **extern**.  
   
      [C++] Usare **DllImportAttribute** per identificare la DLL e la funzione. Contrassegnare il metodo o la funzione wrapper con **extern "C"**.  
   

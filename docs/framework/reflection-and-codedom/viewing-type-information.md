@@ -66,7 +66,7 @@ La classe <xref:System.Type?displayProperty=nameWithType> è fondamentale per la
  [!code-csharp[Conceptual.Types.ViewInfo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source3.cs#3)]
  [!code-vb[Conceptual.Types.ViewInfo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source3.vb#3)]  
   
- L'esempio seguente usa tutte le classi **\*Info** di Reflection con <xref:System.Reflection.BindingFlags> per elencare tutti i membri (costruttori, campi, proprietà, eventi e metodi) della classe specificata, distinguendo tra membri statici e di istanza.  
+ Nell'esempio seguente vengono utilizzate tutte le classi di ** \*informazioni** di <xref:System.Reflection.BindingFlags> Reflection insieme a per elencare tutti i membri (costruttori, campi, proprietà, eventi e metodi) della classe specificata, dividendo i membri in categorie statiche e di istanza.  
   
  [!code-cpp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source4.cpp#4)]
  [!code-csharp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source4.cs#4)]

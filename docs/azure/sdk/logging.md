@@ -1,5 +1,5 @@
 ---
-title: Registrazione con Azure SDK per .NETLogging with the Azure SDK for .NET
+title: Registrazione con Azure SDK per .NET
 description: Informazioni su come abilitare la registrazione con le librerie client di Azure SDK per .NET
 ms.date: 03/20/2020
 ms.custom: azure-sdk-dotnet
@@ -12,65 +12,65 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 03/24/2020
 ms.locfileid: "82071990"
 ---
-# <a name="logging-with-the-azure-sdk-for-net"></a>Registrazione con Azure SDK per .NETLogging with the Azure SDK for .NET
+# <a name="logging-with-the-azure-sdk-for-net"></a>Registrazione con Azure SDK per .NET
 
-Le librerie client di [Azure SDK](https://azure.microsoft.com/downloads/) for .NET includono la possibilità di registrare le operazioni della libreria client. In questo modo è possibile monitorare le richieste di I/O e le risposte che le librerie client stanno effettuando ai servizi di Azure.This allows you to monitor I/O requests and responses that client libraries are making to Azure services. In genere, i log vengono utilizzati per eseguire il debug o diagnosticare problemi di comunicazione. Questo articolo descrive tre approcci per abilitare la registrazione con Azure SDK per .NET:This article describes three approaches to enable logging with the Azure SDK for .NET:
+Le librerie client di [Azure SDK](https://azure.microsoft.com/downloads/) per .NET includono la possibilità di registrare le operazioni della libreria client. In questo modo è possibile monitorare le richieste di I/O e le risposte effettuate dalle librerie client ai servizi di Azure. I log vengono in genere usati per eseguire il debug o diagnosticare i problemi di comunicazione. Questo articolo descrive tre approcci per abilitare la registrazione con Azure SDK per .NET:
 
-- Accedere alla finestra della console
-- Registra nelle tracce di diagnostica .NETLog to .NET diagnostics traces
+- Accedi alla finestra della console
+- Accedi alle tracce di diagnostica .NET
 - Configurare la registrazione personalizzata
 
 > [!IMPORTANT]
-> Questo articolo si applica alle librerie client che usano le versioni più recenti di Azure SDK per .NET. Per verificare se una libreria è supportata, fare riferimento all'elenco delle versioni più recenti di [Azure SDK.](https://azure.github.io/azure-sdk/releases/latest/index.html) Se l'applicazione usa una versione precedente delle librerie client di Azure SDK, fare riferimento a istruzioni specifiche nella documentazione del servizio applicabile.
+> Questo articolo si applica alle librerie client che usano le versioni più recenti di Azure SDK per .NET. Per verificare se una libreria è supportata, vedere l'elenco delle [versioni più recenti di Azure SDK](https://azure.github.io/azure-sdk/releases/latest/index.html). Se l'applicazione usa una versione precedente delle librerie client di Azure SDK, fare riferimento a istruzioni specifiche nella documentazione del servizio applicabile.
 
 ## <a name="log-information"></a>Informazioni sui log
 
-L'SDK registra le informazioni seguenti, sanofizzando la query dei parametri e i valori dell'intestazione per rimuovere i dati personali.
+L'SDK registra le informazioni seguenti, purificando i valori delle intestazioni e delle query dei parametri per rimuovere i dati personali.
 
-Voce del registro richieste HTTP:
+Voce di log richiesta HTTP:
 
 - ID univoco
 - Metodo HTTP
 - URI
 - Intestazioni delle richieste in uscita
 
-Voce del registro risposte HTTP:
+Voce di log della risposta HTTP:
 
 - Durata dell'operazione di I/O (tempo trascorso)
 - ID richiesta
 - Stato codice HTTP
-- Frase motivo HTTP
+- Frase del motivo HTTP
 - Intestazioni della risposta
-- Informazioni sull'errore, se applicabile
+- Informazioni sull'errore, quando applicabile
 
-Per il contenuto di richiesta e risposta:
+Per il contenuto della richiesta e della risposta:
 
-- Flusso di contenuto come testo o byte a seconda dell'intestazione Content-Type.
-     > [! NOTA: la registrazione del contenuto è disabilitata per impostazione predefinita. Per attivarla, `Diagnostics.IsLoggingContentEnabled` `true` impostare su in `ClientOptions`.
+- Flusso di contenuto come testo o byte in base all'intestazione Content-Type.
+     > [! Nota} la registrazione del contenuto è disabilitata per impostazione predefinita. Per abilitarla, impostare `Diagnostics.IsLoggingContentEnabled` su `true` in `ClientOptions`.
 
-I registri eventi vengono restituiti in genere a uno di questi tre livelli:Event logs are output usually at one of these three levels:
+I registri eventi vengono in genere restituiti in uno dei tre livelli seguenti:
 
-- Informazioni sugli eventi di richiesta e risposta
-- Avviso per gli errori
-- Verbose per messaggi dettagliati e registrazione del contenuto
+- Informazioni per eventi di richiesta e risposta
+- Avviso per errori
+- Dettagliato per i messaggi dettagliati e la registrazione del contenuto
 
-## <a name="enable-logging-with-built-in-methods"></a>Abilitare la registrazione con i metodi incorporatiEnable logging with built-in methods
+## <a name="enable-logging-with-built-in-methods"></a>Abilitare la registrazione con i metodi predefiniti
 
-Le librerie client di Azure SDK for .NET registrano [ `EventSource` ](/dotnet/api/system.diagnostics.tracing.eventsource)gli eventi in Event Tracing for Windows (ETW) tramite la classe , che è tipica di .NET. Le origini eventi consentono di usare la registrazione strutturata nel codice dell'applicazione con un overhead di prestazioni minimo. Per accedere a questi registri eventi, è necessario registrare i listener di eventi.
+Le librerie client di Azure SDK per .NET registrano gli eventi Event Tracing for Windows (ETW) tramite la [ `EventSource` classe](/dotnet/api/system.diagnostics.tracing.eventsource), che è tipica per .NET. Le origini eventi consentono di usare la registrazione strutturata nel codice dell'applicazione con un overhead minimo sulle prestazioni. Per ottenere l'accesso a questi registri eventi, è necessario registrare i listener di eventi.
 
-L'SDK `Azure.Core.Diagnostics.AzureEventSourceListener` include la classe (definita nel pacchetto Azure.Core NuGet), che contiene due `CreateConsoleLogger` metodi `CreateTraceLogger`statici che semplificano la registrazione completa per l'applicazione .NET: e . Questi metodi accettano un parametro facoltativo che specifica un livello di log.
+L'SDK include la `Azure.Core.Diagnostics.AzureEventSourceListener` classe (definita nel pacchetto NuGet di Azure. Core), che contiene due metodi statici che semplificano la registrazione completa per l'applicazione `CreateConsoleLogger` .NET `CreateTraceLogger`: e. Questi metodi accettano un parametro facoltativo che specifica un livello di registrazione.
 
-### <a name="log-to-the-console-window"></a>Accedere alla finestra della console
+### <a name="log-to-the-console-window"></a>Accedi alla finestra della console
 
-Un principio di base delle librerie client di Azure SDK for .NET consiste nel semplificare la possibilità di visualizzare log completi in tempo reale. Il `CreateConsoleLogger` metodo consente di inviare i log alla finestra della console con una singola riga di codice:The method allows you to send logs to the console window with a single line of code:
+Un principio fondamentale delle librerie client di Azure SDK per .NET consiste nel semplificare la possibilità di visualizzare i log completi in tempo reale. Il `CreateConsoleLogger` metodo consente di inviare i log alla finestra della console con una sola riga di codice:
 
 ```csharp
 using AzureEventSourceListener listener = AzureEventSourceListener.CreateConsoleLogger();
 ```
 
-### <a name="log-to-diagnostic-traces"></a>Eseguire il log alle tracce diagnosticheLog to diagnostic traces
+### <a name="log-to-diagnostic-traces"></a>Accedi alle tracce di diagnostica
 
-Se si implementano listener di `CreateTraceLogger` traccia, è possibile utilizzare il metodo[`System.Diagnostics.Tracing`](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing)per registrare il meccanismo di traccia eventi .NET standard ( ). Per ulteriori informazioni sull'analisi degli eventi in .NET, vedere [Listener di traccia](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/trace-listeners). In questo esempio viene specificato un livello di log di livello dettagliato:This example specifies a log level of verbose:
+Se si implementano i listener di traccia, è possibile `CreateTraceLogger` usare il metodo per accedere al meccanismo di traccia eventi .NET[`System.Diagnostics.Tracing`](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing)standard (). Per ulteriori informazioni sull'analisi degli eventi in .NET, vedere [listener di traccia](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/trace-listeners). Questo esempio specifica un livello di log dettagliato:
 
 ```csharp
 using AzureEventSourceListener listener = AzureEventSourceListener.CreateTraceLogger(EventLevel.Verbose);
@@ -78,9 +78,9 @@ using AzureEventSourceListener listener = AzureEventSourceListener.CreateTraceLo
 
 ## <a name="configure-custom-logging"></a>Configurare la registrazione personalizzata
 
-Come accennato in precedenza, è necessario registrare i listener di eventi per ricevere messaggi di log da Azure SDK per .NET. Se non si desidera implementare la registrazione completa utilizzando uno dei metodi `AzureEventSourceListener` semplificati sopra descritti, è possibile costruire un'istanza della classe e passarle una funzione di callback scritta. Questo metodo riceverà messaggi di log che è possibile elaborare in modo che sia necessario. Inoltre, quando si costruisce l'istanza, è possibile specificare i livelli di log da includere.
+Come indicato in precedenza, è necessario registrare i listener di eventi per ricevere i messaggi di log da Azure SDK per .NET. Se non si desidera implementare la registrazione completa utilizzando uno dei metodi semplificati descritti in precedenza, è possibile creare un' `AzureEventSourceListener` istanza della classe e passargli una funzione di callback che si scrive. Questo metodo riceverà i messaggi di log che è possibile elaborare, tuttavia è necessario. Inoltre, quando si crea l'istanza di, è possibile specificare i livelli di registrazione da includere.
 
-L'esempio seguente crea un listener di eventi che accede alla console con un messaggio personalizzato e viene filtrato in base agli eventi principali di Azure del livello dettagliato.
+Nell'esempio seguente viene creato un listener di eventi che accede alla console con un messaggio personalizzato e viene filtrato in base agli eventi di Azure core del livello dettagliato.
 
 ```csharp
 using AzureEventSourceListener listener = new AzureEventSourceListener((e, message) =>
@@ -96,7 +96,7 @@ using AzureEventSourceListener listener = new AzureEventSourceListener((e, messa
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Abilitare la registrazione diagnostica per le app nel servizio app di AzureEnable diagnostics logging for apps in Azure App Service](https://docs.microsoft.com/azure/app-service/troubleshoot-diagnostic-logs)
-- Esaminare le opzioni di controllo e registrazione della sicurezza di [AzureReview Azure security logging and auditing](https://docs.microsoft.com/azure/security/fundamentals/log-audit) options
-- Informazioni su come usare i log della [piattaforma AzureLearn](https://docs.microsoft.com/azure/azure-monitor/platform/platform-logs-overview) how to work with Azure platform logs
-- Ulteriori informazioni sulla registrazione e la traccia di [.NET Core](https://docs.microsoft.com/dotnet/core/diagnostics/logging-tracing)
+- [Abilitare la registrazione diagnostica per le app nel servizio app Azure](https://docs.microsoft.com/azure/app-service/troubleshoot-diagnostic-logs)
+- Esaminare [le opzioni di controllo e registrazione sicurezza di Azure](https://docs.microsoft.com/azure/security/fundamentals/log-audit)
+- Informazioni su come usare i [log della piattaforma Azure](https://docs.microsoft.com/azure/azure-monitor/platform/platform-logs-overview)
+- Scopri di più sulla [registrazione e la traccia di .NET Core](https://docs.microsoft.com/dotnet/core/diagnostics/logging-tracing)

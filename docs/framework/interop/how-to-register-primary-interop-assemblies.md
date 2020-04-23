@@ -34,7 +34,7 @@ Usare lo [strumento di registrazione degli assembly (Regasm.exe)](../tools/regas
 
 ## <a name="to-register-a-primary-interop-assembly"></a>Per registrare un assembly di interoperabilità primario
 
-1. Al prompt dei comandi, digitare:
+1. Al prompt dei comandi digitare:
 
      **regasm** *nomeassembly*
 

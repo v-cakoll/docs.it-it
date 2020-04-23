@@ -21,7 +21,7 @@ ms.locfileid: "73119898"
   
 - Il metodo <xref:System.Reflection.Assembly.LoadFrom%2A> della classe <xref:System.Reflection.Assembly> carica un assembly dopo aver specificato il percorso del file. Se gli assembly vengono caricati usando questo metodo viene usato un contesto di caricamento diverso.  
   
-- I metodi <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> e <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> caricano un assembly nel contesto di sola reflection. Gli assembly caricati in questo contesto possono essere esaminati ma non eseguiti. In questo modo è possibile esaminare assembly destinati ad altre piattaforme. Vedere [Procedura: Caricare assembly nel contesto di sola reflection](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+- I metodi <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> e <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> caricano un assembly nel contesto di sola reflection. Gli assembly caricati in questo contesto possono essere esaminati ma non eseguiti. In questo modo è possibile esaminare assembly destinati ad altre piattaforme. Vedere [How to: Load Assemblies into the Reflection-Only Context](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md) (Procedura: Caricare assembly nel contesto di sola reflection).  
   
 > [!NOTE]
 > Il contesto di sola reflection è stata introdotto con .NET Framework versione 2.0.  
@@ -50,5 +50,5 @@ ms.locfileid: "73119898"
 - [Programmazione con i domini dell'applicazione](application-domains.md#programming-with-application-domains)
 - [Reflection](../reflection-and-codedom/reflection.md)
 - [Uso dei domini dell'applicazione](use.md)
-- [Procedura: Caricare assembly nel contesto Reflection-Only](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
+- [Procedura: caricare assembly nel contesto Reflection-Only](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [Domini applicazione e assembly](application-domains.md#application-domains-and-assemblies)

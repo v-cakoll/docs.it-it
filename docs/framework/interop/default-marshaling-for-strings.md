@@ -230,9 +230,9 @@ End Structure
 
 In alcuni casi, è necessario passare un buffer di caratteri a lunghezza fissa nel codice non gestito da modificare. Il semplice passaggio di una stringa non funziona in questo caso perché il chiamato non può modificare il contenuto del buffer passato. Anche se la stringa viene passata per riferimento, non è possibile inizializzare il buffer su una dimensione specifica.
 
-La soluzione consiste nel passare come argomento un buffer <xref:System.Text.StringBuilder> invece di una <xref:System.String>. Il chiamato può dereferenziare e modificare un oggetto `StringBuilder`, purché non venga superata la capacità dell'oggetto `StringBuilder` stesso. È anche possibile inizializzare questo oggetto in base a una lunghezza fissa. Se, ad esempio, si inizializza un buffer `StringBuilder` per una capacità pari a `N`, un buffer di caratteri di dimensione (`N`+1) viene fornito dal gestore di marshalling. Il valore +1 tiene conto del fatto che, a differenza di `StringBuilder`, la stringa non gestita ha una terminazione Null.
+La soluzione consiste nel passare come argomento un buffer <xref:System.Text.StringBuilder> invece di una <xref:System.String>.  Il chiamato può dereferenziare e modificare un oggetto `StringBuilder`, purché non venga superata la capacità dell'oggetto `StringBuilder` stesso. È anche possibile inizializzare questo oggetto in base a una lunghezza fissa. Se, ad esempio, si inizializza un buffer `StringBuilder` per una capacità pari a `N`, un buffer di caratteri di dimensione (`N`+1) viene fornito dal gestore di marshalling. Il valore +1 tiene conto del fatto che, a differenza di `StringBuilder`, la stringa non gestita ha una terminazione Null.
 
-Ad esempio, la funzione API [`GetWindowText`](/windows/desktop/api/winuser/nf-winuser-getwindowtextw)di Windows (definita in *winuser. h*) richiede che il chiamante trasmetta un buffer di caratteri a lunghezza fissa in cui la funzione scrive il testo della finestra. `LpString` punta a un buffer allocato dal chiamante di dimensione `nMaxCount`. Il chiamante deve allocare il buffer e impostare l'argomento `nMaxCount` sulla dimensione del buffer allocato. L'esempio seguente illustra la dichiarazione della funzione `GetWindowText` come definita in *winuser.h*.
+Ad esempio, la funzione [`GetWindowText`](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) API Windows (definita in *winuser. h*) richiede che il chiamante passi un buffer di caratteri a lunghezza fissa in cui la funzione scrive il testo della finestra. `LpString` punta a un buffer allocato dal chiamante di dimensione `nMaxCount`. Il chiamante deve allocare il buffer e impostare l'argomento `nMaxCount` sulla dimensione del buffer allocato. L'esempio seguente illustra la dichiarazione della funzione `GetWindowText` come definita in *winuser.h*.
 
 ```cpp
 int GetWindowText(
@@ -242,7 +242,7 @@ int GetWindowText(
 );
 ```
 
-Il chiamato può dereferenziare e modificare un oggetto `StringBuilder`, purché non venga superata la capacità dell'oggetto `StringBuilder` stesso. L'esempio di codice seguente illustra come inizializzare `StringBuilder` in base a una lunghezza fissa.
+ Il chiamato può dereferenziare e modificare un oggetto `StringBuilder`, purché non venga superata la capacità dell'oggetto `StringBuilder` stesso. L'esempio di codice seguente illustra come inizializzare `StringBuilder` in base a una lunghezza fissa.
 
 ```csharp
 using System;
@@ -287,8 +287,8 @@ End Class
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Comportamento predefinito del marshalling](default-marshaling-behavior.md)
+- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)
 - [Marshalling di stringhe](marshaling-strings.md)
 - [Tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
 - [Attributi direzionali](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
-- [Copia e blocco](copying-and-pinning.md)
+- [copia e blocco](copying-and-pinning.md)

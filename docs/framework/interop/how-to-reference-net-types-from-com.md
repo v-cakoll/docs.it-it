@@ -26,15 +26,15 @@ Dal punto di vista del codice client e server, le differenze tra COM e .NET Fram
   
 ### <a name="to-import-a-library"></a>Per importare una libreria  
   
-- Specificare l'opzione **raw_interfaces_only** nella direttiva **#import**. Esempio:  
+- Specificare l'opzione **raw_interfaces_only** nella direttiva **#import**. Ad esempio:  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
     ```  
   
-     oppure  
+     -oppure-  
   
-- Includere una direttiva #import per Mscorlib.tlb. Esempio:  
+- Includere una direttiva #import per Mscorlib.tlb. Ad esempio:  
   
     ```cpp  
     #import "mscorlib.tlb"  

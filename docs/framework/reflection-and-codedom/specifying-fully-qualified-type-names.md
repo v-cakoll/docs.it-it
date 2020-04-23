@@ -27,7 +27,7 @@ ms.locfileid: "73130023"
 
 ## <a name="grammar-for-type-names"></a>Grammatica per i nomi dei tipi
 
- La grammatica definisce la sintassi di linguaggi formali. La tabella seguente elenca le regole lessicali che descrivono come riconoscere un input valido. I terminali (ovvero gli elementi che non sono ulteriormente riducibili) vengono visualizzati in lettere maiuscole. I non terminali (ovvero gli elementi che sono ulteriormente riducibili) vengono visualizzati in stringhe miste di maiuscole e minuscole o in stringhe tra virgolette singole, ma la virgoletta singola (') non è parte della sintassi stessa. Il carattere barra verticale (&#124;) indica regole che includono sottoregole.
+ La grammatica definisce la sintassi di linguaggi formali. La tabella seguente elenca le regole lessicali che descrivono come riconoscere un input valido. I terminali (ovvero gli elementi che non sono ulteriormente riducibili) vengono visualizzati in lettere maiuscole. I non terminali (ovvero gli elementi che sono ulteriormente riducibili) vengono visualizzati in stringhe miste di maiuscole e minuscole o in stringhe tra virgolette singole, ma la virgoletta singola (') non è parte della sintassi stessa. Il carattere barra verticale (& #124;) indica regole che includono sottoregole.
 
 <!-- markdownlint-disable MD010 -->
 ```antlr
@@ -118,7 +118,7 @@ In un nome di tipo, IDENTIFIER corrisponde a un qualsiasi nome valido determinat
 
 Usare la barra rovesciata (\\) come carattere di escape per separare i token seguenti quando vengono usati come parte di IDENTIFIER.
 
-|Token|Significato|
+|token|Significato|
 |-----------|-------------|
 |\\,|Separatore di assembly.|
 |\\+|Separatore di tipo annidato.|
@@ -126,7 +126,7 @@ Usare la barra rovesciata (\\) come carattere di escape per separare i token seg
 |\\*|Tipo di puntatore.|
 |\\[|Delimitatore delle dimensioni della matrice.|
 |\\]|Delimitatore delle dimensioni della matrice.|
-|\\|Usare la barra rovesciata prima di un punto solo se il punto è usato in una specifica di matrice. I punti in NamespaceSpec non accettano la barra rovesciata.|
+|\\.|Usare la barra rovesciata prima di un punto solo se il punto è usato in una specifica di matrice. I punti in NamespaceSpec non accettano la barra rovesciata.|
 |\\\|Barra rovesciata se necessaria come stringa letterale.|
 
 Si noti che in tutti i componenti TypeSpec, ad eccezione di AssemblyNameSpec, gli spazi sono rilevanti. In AssemblyNameSpec, gli spazi che precedono il separatore ',' sono rilevanti, ma gli spazi dopo il separatore ',' vengono ignorati.
@@ -141,13 +141,13 @@ Se lo spazio dei nomi fosse `Ozzy.Out+Back`, il segno di addizione dovrebbe esse
 
 Le informazioni minime necessarie in una specifica di nome di assembly è il nome testuale (IDENTIFIER) dell'assembly. È possibile far seguire l'IDENTIFIER da un elenco delimitato da virgole di coppie proprietà/valore, come descritto nella tabella seguente. La denominazione dell'IDENTIFIER deve seguire le regole di denominazione dei file. La denominazione dell'IDENTIFIER non fa distinzione tra maiuscole e minuscole.
 
-|Nome della proprietà|Descrizione|Valori consentiti|
+|Nome proprietà|Descrizione|Valori consentiti|
 |-------------------|-----------------|----------------------|
-|**Version**|Numero di versione dell'assembly|*Major.Minor.Build.Revision*, dove *Major*, *Minor*, *Build* e *Revision* sono numeri interi compresi tra 0 e 65535.|
+|**Versione**|Numero di versione dell'assembly|*Major.Minor.Build.Revision*, dove *Major*, *Minor*, *Build* e *Revision* sono numeri interi compresi tra 0 e 65535.|
 |**PublicKey**|Chiave pubblica completa|Valore di stringa della chiave pubblica completa in formato esadecimale. Specificare un riferimento Null (**Nothing** in Visual Basic) per indicare in modo esplicito un assembly privato.|
 |**PublicKeyToken**|Token di chiave pubblica (hash a 8 byte della chiave pubblica completa)|Valore di stringa del token della chiave pubblica in formato esadecimale. Specificare un riferimento Null (**Nothing** in Visual Basic) per indicare in modo esplicito un assembly privato.|
 |**Impostazioni cultura**|Impostazioni cultura dell'assembly|Impostazioni cultura dell'assembly in formato RFC 1766 o "neutral" per gli assembly indipendenti dal linguaggio (non satellite).|
-|**Personalizzato**|BLOB (Binary Large Object, Oggetto binario di grandi dimensioni) personalizzato. Attualmente viene usato solo in assembly generati dal [generatore di immagini native (Ngen)](../tools/ngen-exe-native-image-generator.md).|Stringa personalizzata usata dal generatore di immagini native per notificare alla cache di assembly che l'assembly che si sta installando è un'immagine nativa e deve pertanto essere installato nella cache delle immagini native. Nota anche come stringa zap.|
+|**Impostazione personalizzata**|BLOB (Binary Large Object, Oggetto binario di grandi dimensioni) personalizzato. Attualmente viene usato solo in assembly generati dal [generatore di immagini native (Ngen)](../tools/ngen-exe-native-image-generator.md).|Stringa personalizzata usata dal generatore di immagini native per notificare alla cache di assembly che l'assembly che si sta installando è un'immagine nativa e deve pertanto essere installato nella cache delle immagini native. Nota anche come stringa zap.|
 
 L'esempio seguente illustra un **AssemblyName** per un assembly a nome semplice con le impostazioni cultura predefinite.
 
@@ -212,7 +212,7 @@ Le matrici sono accessibili in reflection specificando l'ordine della matrice:
 
 Si noti che dal punto di vista del runtime, `MyArray[] != MyArray[*]`, ma per le matrici multidimensionali, le due notazioni sono equivalenti. Vale a dire, `Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` restituisce **true**.
 
-Per **ModuleBuilder.GetType**, `MyArray[0..5]` indica una matrice unidimensionale con dimensione pari a 6 e limite inferiore pari a 0. `MyArray[4…]` indica una matrice unidimensionale di dimensioni sconosciute e limite inferiore pari a 4.
+Per **ModuleBuilder. GetType**, `MyArray[0..5]` indica una matrice a dimensione singola con dimensione 6, limite inferiore 0. `MyArray[4…]` indica una matrice unidimensionale di dimensioni sconosciute e limite inferiore pari a 4.
 
 ## <a name="see-also"></a>Vedere anche
 

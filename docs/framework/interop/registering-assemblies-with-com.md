@@ -30,7 +30,7 @@ ms.locfileid: "73113803"
   
 - Global Assembly Cache (l'assembly deve avere un nome sicuro).  
   
-- Directory dell'applicazione. Gli assembly caricati dal percorso dell'applicazione sono accessibili solo da tale applicazione.  
+- directory dell'applicazione. Gli assembly caricati dal percorso dell'applicazione sono accessibili solo da tale applicazione.  
   
 - Percorso specificato con l'opzione **/codebase** in Regasm.exe.  
   

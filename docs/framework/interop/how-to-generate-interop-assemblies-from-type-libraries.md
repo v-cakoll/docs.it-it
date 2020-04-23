@@ -20,7 +20,7 @@ ms.locfileid: "74281794"
   
 ### <a name="to-generate-an-interop-assembly-from-a-type-library"></a>Per generare un assembly di interoperabilità da una libreria dei tipi  
   
-1. Utilizzare il seguente comando:  
+1. Usare il comando seguente:  
   
      **tlbimp** \<*file-libreria-tipi*>  
   

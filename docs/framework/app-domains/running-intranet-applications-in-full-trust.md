@@ -6,12 +6,12 @@ helpviewer_keywords:
 - intranet applications, running in full trust
 - running intranet applications in full trust
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
-ms.openlocfilehash: c93f84dc53abbb86cbfc4ae36e9cdcbe0bd50273
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 33b025fa62343277fc96fc7771587e95f556e7a6
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119750"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645439"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>Esecuzione di applicazioni Intranet in attendibilità totale
 
@@ -23,7 +23,7 @@ Le regole seguenti si applicano agli assembly caricati da un eseguibile su una c
   
 - Gli assembly di librerie devono trovarsi nella stessa cartella dell'assembly eseguibile. Agli assembly che si trovano in una sottocartella o a cui viene fatto riferimento in un percorso diverso non verrà concessa l'attendibilità totale.  
   
-- Se l'eseguibile esegue il caricamento ritardato di un assembly, dovrà usare lo stesso percorso che è stato usato per avviare l'eseguibile. Se ad esempio la condivisione \\\\*network-computer*\\*share* è mappata a una lettera di unità e l'eseguibile viene eseguito da questo percorso, agli assembly caricati dall'eseguibile tramite il percorso di rete non verrà concessa l'attendibilità totale. Per eseguire il caricamento ritardato di un assembly nella zona <xref:System.Security.SecurityZone.MyComputer>, l'eseguibile deve usare il percorso della lettera di unità.  
+- Se l'eseguibile esegue il caricamento ritardato di un assembly, dovrà usare lo stesso percorso che è stato usato per avviare l'eseguibile. Se, ad esempio, si \\ \\esegue il mapping della*condivisione* di rete di condivisione *computer*\\a una lettera di unità e l'eseguibile viene eseguito da tale percorso, agli assembly caricati dall'eseguibile tramite il percorso di rete non verrà concessa l'attendibilità totale. Per eseguire il caricamento ritardato di un assembly nella zona <xref:System.Security.SecurityZone.MyComputer>, l'eseguibile deve usare il percorso della lettera di unità.  
   
 ## <a name="restoring-the-former-intranet-policy"></a>Ripristino dei criteri Intranet precedenti  
 
@@ -37,4 +37,4 @@ Questo nuovo comportamento è quello predefinito per gli assembly Intranet. È p
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione con gli assembly](../../standard/assembly/program.md)
+- [Programmazione con gli assembly](../../standard/assembly/index.md)

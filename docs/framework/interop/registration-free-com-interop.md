@@ -34,7 +34,7 @@ L'interoperabilità COM senza registrazione consente di attivare un componente s
   
     |Tipo di assembly|Sistema operativo|Versione di .NET Framework|  
     |-------------------|----------------------|----------------------------|  
-    |Assembly side-by-side COM|Microsoft Windows XP|Non richiesto|  
+    |Assembly side-by-side COM|Microsoft Windows XP|Non obbligatorio.|  
     |Basato su .NET|Windows XP con SP2|NET Framework versione 1.1 o successiva.|  
   
      La famiglia Windows Server 2003 supporta anche l'interoperabilità COM senza registrazione per gli assembly basati su .NET.  

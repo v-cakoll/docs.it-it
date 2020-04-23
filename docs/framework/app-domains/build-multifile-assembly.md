@@ -99,7 +99,7 @@ In questo articolo viene illustrato come creare un assembly su più file e viene
 
 3. Compilare tutti gli altri moduli, utilizzando le opzioni di compilatore necessarie per indicare gli altri moduli a cui si fa riferimento nel codice. Questo passaggio usa l'opzione del compilatore **/addmodule**.
 
-   Nell'esempio seguente un modulo di codice denominato *client* dispone di un punto di ingresso `Main` metodo che fa riferimento a un metodo nel modulo *Stringer. dll* creato nel passaggio 1.
+   Nell'esempio seguente, un modulo di codice denominato *client* dispone di un metodo `Main` del punto di ingresso che fa riferimento a un metodo nel modulo *Stringer. dll* creato nel passaggio 1.
 
    ```cpp
    #using "Stringer.netmodule"
@@ -207,13 +207,13 @@ In questo articolo viene illustrato come creare un assembly su più file e viene
 
 5. Usare [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md) per creare il file di output contenente il manifesto dell'assembly. In questo file sono contenute informazioni di riferimento per tutti i moduli o le risorse che fanno parte dell'assembly.
 
-    Al prompt dei comandi digitare quanto segue:
+    Al prompt dei comandi digitare il comando seguente:
 
-    **al** \<*nome modulo*> \<*nome modulo*> … **/main:** \<*nome metodo*>  **/out:** \<*nome file*>  **/target:** \<*tipo file di assembly*>
+    **al** \<nome modulo *nome*> \<*modulo*>... **/Main:**\<*nome*> metodo **/out:**\<*nome*> file **/target:**\<*tipo di file di assembly*>
 
     In questo comando gli argomenti *nome modulo* specificano il nome di ogni modulo da includere nell'assembly. L'opzione **/main:** specifica il nome del metodo che corrisponde al punto di ingresso dell'assembly. L'opzione **/out:** specifica il nome del file di output che contiene i metadati dell'assembly. L'opzione **/target:** specifica che l'assembly è un file eseguibile dell'applicazione console (*exe*), un file eseguibile di Windows (con*estensione win*) o un file di libreria (con*estensione LIB*).
 
-    Nell'esempio seguente, *al. exe* crea un assembly che è un eseguibile dell'applicazione console denominato *myAssembly. exe*. L'applicazione è costituita da due moduli denominati *client. netmodule* e *Stringer. netmodule*e il file eseguibile denominato *myAssembly. exe*, che contiene solo i metadati dell'assembly. Il punto di ingresso dell'assembly è il metodo `Main` nella classe `MainClientApp`, che si trova in *client. dll*.
+    Nell'esempio seguente, *al. exe* crea un assembly che è un eseguibile dell'applicazione console denominato *myAssembly. exe*. L'applicazione è costituita da due moduli denominati *client. netmodule* e *Stringer. netmodule*e il file eseguibile denominato *myAssembly. exe*, che contiene solo i metadati dell'assembly. Il punto di ingresso dell'assembly è il `Main` metodo nella classe `MainClientApp`, disponibile in *client. dll*.
 
     ```cmd
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe
@@ -223,7 +223,7 @@ In questo articolo viene illustrato come creare un assembly su più file e viene
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Creazione di assembly](../../standard/assembly/create.md)
+- [Creare assembly](../../standard/assembly/create.md)
 - [Procedura: visualizzare il contenuto dell'assembly](../../standard/assembly/view-contents.md)
 - [Come il runtime individua gli assembly](../deployment/how-the-runtime-locates-assemblies.md)
 - [Assembly su più file](multifile-assemblies.md)

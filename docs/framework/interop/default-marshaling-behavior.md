@@ -42,7 +42,7 @@ BSTR MethodOne (BSTR b) {
  Il runtime usa sempre il metodo **CoTaskMemFree** per liberare memoria. Se la memoria che si sta usando non è stata allocata con il metodo **CoTaskMemAlloc**, è necessario usare un tipo **IntPtr** e liberare la memoria manualmente mediante il metodo appropriato. Analogamente, è possibile fare in modo che la memoria non venga liberata automaticamente in situazioni in cui la memoria non deve mai essere liberata, ad esempio quando si usa la funzione **GetCommandLine** da Kernel32.dll, che restituisce un puntatore alla memoria del kernel. Per informazioni dettagliate su come liberare manualmente la memoria, vedere [Esempio di buffer](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Marshalling predefinito per le classi  
- È possibile effettuare il marshalling delle classi solo tramite l'interoperabilità COM e solo come interfacce. In alcuni casi l'interfaccia usata per il marshalling della classe è nota come interfaccia di classe. Per informazioni sull'override dell'interfaccia della classe con un'interfaccia di propria scelta, vedere [Introduzione all'interfaccia della classe](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).  
+ È possibile effettuare il marshalling delle classi solo tramite l'interoperabilità COM e solo come interfacce. In alcuni casi l'interfaccia usata per il marshalling della classe è nota come interfaccia di classe. Per informazioni sull'override dell'interfaccia di classe con un'interfaccia di propria scelta, vedere [Introduzione all'interfaccia della classe](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).  
   
 ### <a name="passing-classes-to-com"></a>Passaggio di classi a COM  
  Quando una classe gestita viene passata a COM, il marshalling di interoperabilità esegue automaticamente il wrapping della classe con un proxy COM e passa l'interfaccia di classe creata dal proxy alla chiamata al metodo COM. Il proxy delega quindi tutte le chiamate sull'interfaccia di classe all'oggetto gestito. Il proxy espone anche altre interfacce non implementate in modo esplicito dalla classe. Il proxy implementa automaticamente interfacce come **IUnknown** e **IDispatch** per conto della classe.  
@@ -172,7 +172,7 @@ internal class DelegateTest {
   
  Un tipo formattato è un tipo complesso che contiene informazioni che controllano in modo esplicito il layout dei relativi membri in memoria. Le informazioni sul layout dei membri vengono fornite tramite l'attributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>. Il layout può essere uno dei seguenti valori di enumerazione <xref:System.Runtime.InteropServices.LayoutKind>:  
   
-- **LayoutKind.Auto**  
+- **LayoutKind. auto**  
   
      Indica che Common Language Runtime può riordinare i membri del tipo per migliorare l'efficienza. Tuttavia, quando un tipo di valore viene passato al codice non gestito, il layout dei membri è prevedibile. Un tentativo di effettuare automaticamente il marshalling di tale struttura provoca un'eccezione.  
   
@@ -331,7 +331,7 @@ public class Point {
 ### <a name="value-types-used-in-com-interop"></a>Tipi di valore usati nell'interoperabilità COM  
  I tipi formattati possono anche essere passati alle chiamate ai metodi di interoperabilità COM. Quando vengono esportati in una libreria dei tipi, infatti, i tipi di valore vengono convertiti automaticamente in strutture. Come illustrato nell'esempio seguente, il tipo di valore `Point` diventa una definizione di tipo (typedef) con il nome `Point`. Tutti i riferimenti al tipo di valore `Point` in altre posizioni nella libreria dei tipi vengono sostituiti con la definizione di tipo `Point`.  
   
- **Rappresentazione della libreria dei tipi**  
+ **Rappresentazione della libreria di tipi**  
   
 ```cpp  
 typedef struct tagPoint {  
@@ -377,8 +377,8 @@ interface _Graphics {
 |Tipo di valore di sistema|Tipo IDL|  
 |-----------------------|--------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|**Data**|  
-|<xref:System.Decimal?displayProperty=nameWithType>|**Decimale**|  
-|<xref:System.Guid?displayProperty=nameWithType>|**Guid**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**DECIMALE**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  Il codice seguente mostra la definizione dei tipi non gestiti **DATE**, **GUID**, **DECIMAL** e **OLE_COLOR** nella libreria dei tipi Stdole2.  

@@ -66,7 +66,7 @@ CMyClass::MethodThatThrows
 |**COR_E_BADIMAGEFORMAT o ERROR_BAD_FORMAT**|**BadImageFormatException**|  
 |**COR_E_COMEMULATE_ERROR**|**COMEmulateException**|  
 |**COR_E_CONTEXTMARSHAL**|**ContextMarshalException**|  
-|**COR_E_CORE**|**Eccezione CoreException**|  
+|**COR_E_CORE**|**Coreexception**|  
 |**NTE_FAIL**|**CryptographicException**|  
 |**COR_E_DIRECTORYNOTFOUND o ERROR_PATH_NOT_FOUND**|**DirectoryNotFoundException**|  
 |**COR_E_DIVIDEBYZERO**|**DivideByZeroException**|  
@@ -93,7 +93,7 @@ CMyClass::MethodThatThrows
 |**COR_E_MISSINGMETHOD**|**MissingMethodException**|  
 |**COR_E_MULTICASTNOTSUPPORTED**|**MulticastNotSupportedException**|  
 |**COR_E_NOTFINITENUMBER**|**NotFiniteNumberException**|  
-|**E_notimpl**|**NotImplementedException**|  
+|**E_NOTIMPL**|**NotImplementedException**|  
 |**COR_E_NOTSUPPORTED**|**NotSupportedException**|  
 |**COR_E_NULLREFERENCE o E_POINTER**|**NullReferenceException**|  
 |**COR_E_OUTOFMEMORY o**<br /><br /> **E_OUTOFMEMORY**|**OutOfMemoryException**|  
@@ -107,7 +107,7 @@ CMyClass::MethodThatThrows
 |**COR_E_SERIALIZATION**|**SerializationException**|  
 |**COR_E_STACKOVERFLOW o ERROR_STACK_OVERFLOW**|**StackOverflowException**|  
 |**COR_E_SYNCHRONIZATIONLOCK**|**SynchronizationLockException**|  
-|**COR_E_SYSTEM**|**Systemexception**|  
+|**COR_E_SYSTEM**|**SystemException**|  
 |**COR_E_TARGET**|**TargetException**|  
 |**COR_E_TARGETINVOCATION**|**TargetInvocationException**|  
 |**COR_E_TARGETPARAMCOUNT**|**TargetParameterCountException**|  
@@ -130,12 +130,12 @@ CMyClass::MethodThatThrows
   
 |Campo eccezione|Fonte di informazioni da COM|  
 |---------------------|------------------------------------|  
-|**Errorcode**|HRESULT restituito dalla chiamata.|  
+|**ErrorCode**|HRESULT restituito dalla chiamata.|  
 |**HelpLink**|Se **IErrorInfo-> HelpContext** è diverso da zero, la stringa viene formata concatenando **IErrorInfo ->GetHelpFile** e "#" e **IErrorInfo ->GetHelpContext**. In caso contrario, la stringa viene restituita da **IErrorInfo ->GetHelpFile**.|  
 |**InnerException**|Sempre un riferimento null (**Nothing** in Visual Basic).|  
 |**Messaggio**|Stringa restituita da **IErrorInfo->GetDescription**.|  
 |**origine**|Stringa restituita da **IErrorInfo->GetSource**.|  
-|**Stacktrace**|Analisi dello stack.|  
+|**StackTrace**|Analisi dello stack.|  
 |**TargetSite**|Nome del metodo che ha restituito il valore HRESULT in errore.|  
   
  I campi di eccezione, ad esempio **Message**, **Source** e **StackTrace** non sono disponibili per **StackOverflowException**.  

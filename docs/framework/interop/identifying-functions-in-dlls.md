@@ -47,6 +47,6 @@ L'identità di una funzione di una DLL è costituita dagli elementi seguenti:
 
 - [Utilizzo di funzioni di DLL non gestite](consuming-unmanaged-dll-functions.md)
 - [Specifica di un punto di ingresso](specifying-an-entry-point.md)
-- [Creazione di una classe che contenga le funzioni DLL](creating-a-class-to-hold-dll-functions.md)
+- [Creating a Class to Hold DLL Functions](creating-a-class-to-hold-dll-functions.md) (Creazione di una classe contenente funzioni di DLL)
 - [Creazione di prototipi nel codice gestito](creating-prototypes-in-managed-code.md)
 - [Chiamata a una funzione di DLL](calling-a-dll-function.md)

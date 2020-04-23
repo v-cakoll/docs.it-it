@@ -17,7 +17,7 @@ ms.locfileid: "79181305"
 
 Un punto di ingresso identifica la posizione di una funzione in una DLL. All'interno di un progetto gestito, il nome originale o il punto di ingresso ordinale di una funzione di destinazione identifica tale funzione attraverso il limite di interoperabilità. È anche possibile mappare il punto di ingresso a un nome diverso, rinominando in effetti la funzione.  
   
- Di seguito è riportato un elenco dei possibili motivi per rinominare una funzione DLL:  
+ Di seguito è riportato un elenco di possibili motivi per rinominare una funzione di DLL:  
   
 - Evitare l'uso di nomi delle funzioni API con distinzione tra maiuscole e minuscole  
   

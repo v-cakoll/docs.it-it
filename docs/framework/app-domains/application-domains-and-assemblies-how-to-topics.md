@@ -15,7 +15,7 @@ ms.locfileid: "73119982"
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Argomenti relativi alle procedure per domini applicazione e assembly
 Le sezioni seguenti forniscono collegamenti a tutte le procedure contenute nella documentazione concettuale per la programmazione con domini applicazione e assembly.  
   
- **Domini dell'applicazione**  
+ **Domini applicazione**  
   
 - [Procedura: Creare un dominio dell'applicazione](how-to-create-an-application-domain.md)  
   
@@ -25,29 +25,29 @@ Le sezioni seguenti forniscono collegamenti a tutte le procedure contenute nella
   
 - [Procedura: Caricare assembly in un dominio dell'applicazione](how-to-load-assemblies-into-an-application-domain.md)  
   
-- [Procedura: Reperire informazioni su tipo e membro da un assembly](../reflection-and-codedom/get-type-member-information.md)  
+- [Procedura: reperire informazioni su tipo e membro da un assembly](../reflection-and-codedom/get-type-member-information.md)  
   
  **Assembly**  
   
-- [Procedura: Determinare il nome completo di un assembly](../../standard/assembly/find-fully-qualified-name.md)  
+- [Procedura: determinare il nome completo di un assembly](../../standard/assembly/find-fully-qualified-name.md)  
   
 - [Procedura: Compilare un assembly su singolo file](build-single-file-assembly.md)  
   
 - [Procedura: Compilare un assembly su più file](build-multifile-assembly.md)  
   
-- [Procedura: Creare una coppia di chiavi pubblica/privata](../../standard/assembly/create-public-private-key-pair.md)  
+- [Procedura: creare una coppia di chiavi pubblica/privata](../../standard/assembly/create-public-private-key-pair.md)  
   
-- [Procedura: Firmare un assembly con un nome sicuro](../../standard/assembly/sign-strong-name.md)  
+- [Procedura: firmare un assembly con un nome sicuro](../../standard/assembly/sign-strong-name.md)  
   
-- [Procedura: Aggiungere un riferimento a un assembly con nome sicuro](../../standard/assembly/reference-strong-named.md)  
+- [Procedura: aggiungere un riferimento a un assembly con nome sicuro](../../standard/assembly/reference-strong-named.md)  
   
-- [Procedura: Disabilitare la funzionalità che consente di ignorare il nome sicuro](../../standard/assembly/disable-strong-name-bypass-feature.md)  
+- [Procedura: disabilitare la funzionalità che consente di ignorare il nome sicuro](../../standard/assembly/disable-strong-name-bypass-feature.md)  
   
-- [Procedura: Installare un assembly nella Global Assembly Cache](install-assembly-into-gac.md)  
+- [Procedura: installare un assembly nella global assembly cache](install-assembly-into-gac.md)  
   
 - [Procedura: Visualizzare il contenuto della Global Assembly Cache](how-to-view-the-contents-of-the-gac.md)  
   
-- [Procedura: Rimuovere un assembly dalla Global Assembly Cache](how-to-remove-an-assembly-from-the-gac.md)  
+- [Procedura: rimuovere un assembly dalla Global Assembly Cache](how-to-remove-an-assembly-from-the-gac.md)  
   
 - [Procedura: Visualizzare il contenuto dell'assembly](../../standard/assembly/view-contents.md)  
   

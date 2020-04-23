@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-ms.openlocfilehash: 1d5289ce15c213024af576c99fe039f5d6c1a247
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1bdaf3abd39797274236ace4cb2967d2e7d199b2
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130073"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644191"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerazioni sulla sicurezza in relazione alla reflection
 
@@ -59,7 +59,7 @@ Queste regole valgono sempre, indipendentemente dal fatto che l'accesso al membr
 
 Il codice dell'applicazione eseguito dalla riga di comando viene eseguito con attendibilità totale. A condizione che non sia contrassegnato come Transparent, può usare la reflection per accedere a membri critici per la sicurezza. Quando lo stesso codice viene eseguito con attendibilità parziale, ad esempio in un dominio applicazione in modalità sandbox, il livello di attendibilità dell'assembly determina se può accedere o meno a codice critico per la sicurezza: se l'assembly è dotato di un nome sicuro ed è installato nella Global Assembly Cache, si tratta di un assembly attendibile e può chiamare membri critici per la sicurezza. Nel caso non sia attendibile, diventa Transparent anche se non è stato contrassegnato come tale e non può accedere a membri critici per la sicurezza.
 
-Per altre informazioni sul modello di sicurezza in .NET Framework 4.5, vedere [Modifiche della sicurezza](../security/security-changes.md).
+Per altre informazioni sul modello di sicurezza in .NET Framework 4.5, vedere [Modifiche della sicurezza](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).
 
 ## <a name="reflection-and-transparency"></a>Reflection e trasparenza
 
@@ -67,7 +67,7 @@ A partire da .NET Framework 4, Common Language Runtime determina il livello di t
 
 |Livello di sicurezza|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|
 |--------------------|------------------------|----------------------------|---------------------------|
-|Critical|`true`|`false`|`false`|
+|Critico|`true`|`false`|`false`|
 |Critico per la sicurezza|`true`|`true`|`false`|
 |Trasparente|`false`|`false`|`true`|
 
@@ -115,9 +115,9 @@ Per la serializzazione, <xref:System.Security.Permissions.SecurityPermission> co
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [Modifiche della sicurezza](../security/security-changes.md)
+- [Modifiche della sicurezza](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
 - [Sicurezza dall'accesso di codice](../misc/code-access-security.md)
 - [Problemi di sicurezza nella reflection emit](security-issues-in-reflection-emit.md)
 - [Visualizzazione delle informazioni sul tipo](viewing-type-information.md)
 - [Applicazione di attributi](../../standard/attributes/applying-attributes.md)
-- [Accessing Custom Attributes](accessing-custom-attributes.md) (Accesso agli attributi personalizzati)
+- [Accesso ad attributi personalizzati](accessing-custom-attributes.md)

@@ -17,12 +17,12 @@ ms.locfileid: "81243037"
 ---
 # <a name="work-with-resx-files-programmatically"></a>Usare i file con estensione resx a livello di codice
 
-Poiché i file di risorse XML (con estensione resx) devono essere costituiti da codice XML ben definito, comprensivo di un'intestazione che deve seguire uno schema specifico, seguita da dati in coppie nome/valore, la creazione manuale di questi file è soggetta a errori. In alternativa, è possibile creare file con estensione resx a livello di codice usando tipi e membri inclusi nella libreria di classi .NET. La libreria di classi .NET può essere usata anche per recuperare risorse archiviate in file con estensione resx. In questo articolo viene illustrato come utilizzare <xref:System.Resources> i tipi e i membri nello spazio dei nomi per lavorare con i file RESX.
+Poiché i file di risorse XML (con estensione resx) devono essere costituiti da codice XML ben definito, comprensivo di un'intestazione che deve seguire uno schema specifico, seguita da dati in coppie nome/valore, la creazione manuale di questi file è soggetta a errori. In alternativa, è possibile creare file con estensione resx a livello di codice usando tipi e membri inclusi nella libreria di classi .NET. La libreria di classi .NET può essere usata anche per recuperare risorse archiviate in file con estensione resx. Questo articolo illustra come usare i tipi e i membri nello <xref:System.Resources> spazio dei nomi per lavorare con i file resx.
 
-In questo articolo viene illustrato l'utilizzo di file XML (RESX) contenenti risorse. Per informazioni sull'utilizzo di file di risorse <xref:System.Resources.ResourceManager>binari incorporati negli assembly, vedere .
+Questo articolo illustra l'uso di file XML (con estensione resx) che contengono risorse. Per informazioni sull'utilizzo di file di risorse binari che sono stati incorporati negli assembly <xref:System.Resources.ResourceManager>, vedere.
 
 > [!WARNING]
-> Esistono anche modi per usare i file RESX, oltre all'uso a livello di codice. Quando si aggiunge un file di risorse a un progetto di [Visual Studio,](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) Visual Studio fornisce un'interfaccia per la creazione e la gestione di un file RESX e converte automaticamente il file RESX in un file con estensione resources in fase di compilazione. È anche possibile usare un editor di testo per modificare direttamente un file RESX. Prestare comunque attenzione a non modificare le eventuali informazioni binarie archiviate nel file, per evitare di danneggiarlo.
+> Esistono anche modi per usare i file RESX, oltre all'uso a livello di codice. Quando si aggiunge un file di risorse a un progetto di [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) , Visual Studio fornisce un'interfaccia per la creazione e la gestione di un file resx e converte automaticamente il file con estensione resx in un file con estensione resources in fase di compilazione. È anche possibile usare un editor di testo per modificare direttamente un file RESX. Prestare comunque attenzione a non modificare le eventuali informazioni binarie archiviate nel file, per evitare di danneggiarlo.
 
 ## <a name="create-a-resx-file"></a>Creare un file con estensione resx
 
@@ -39,7 +39,7 @@ Il file RESX risultante ha l'intestazione appropriata e un tag `data` per ogni r
 > [!WARNING]
 > Non usare file di risorse per archiviare password, informazioni sensibili per la sicurezza o dati personali.
 
-Nell'esempio seguente viene creato un file con estensione resx denominato CarResources.resx che archivia sei stringhe, un'icona e due oggetti definiti dall'applicazione, ovvero due oggetti `Automobile` . La `Automobile` classe, definita e creata un'istanza nell'esempio, viene contrassegnata con l'attributo <xref:System.SerializableAttribute> .
+Nell'esempio seguente viene creato un file con estensione resx denominato CarResources.resx che archivia sei stringhe, un'icona e due oggetti definiti dall'applicazione, ovvero due oggetti `Automobile` . La `Automobile` classe, che viene definita e di cui viene creata un'istanza nell'esempio, viene <xref:System.SerializableAttribute> contrassegnata con l'attributo.
 
 [!code-csharp[Conceptual.Resources.ResX#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resx/cs/create1.cs#1)]
 [!code-vb[Conceptual.Resources.ResX#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/create1.vb#1)]
@@ -87,5 +87,5 @@ Non è possibile incorporare un file RESX in un eseguibile di runtime o compilar
 ## <a name="see-also"></a>Vedere anche
 
 - [Creazione dei file di risorsa](creating-resource-files-for-desktop-apps.md)
-- [Resgen.exe (generatore di file di risorse)](../tools/resgen-exe-resource-file-generator.md)
-- [Al.exe (Assembly Linker)](../tools/al-exe-assembly-linker.md)
+- [Resgen. exe (Generatore di file di risorse)](../tools/resgen-exe-resource-file-generator.md)
+- [Al. exe (assembly linker)](../tools/al-exe-assembly-linker.md)

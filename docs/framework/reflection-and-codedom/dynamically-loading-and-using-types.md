@@ -64,7 +64,7 @@ End Module
   
  **BindToMethod** restituisce <xref:System.Reflection.MethodBase> da richiamare o un riferimento Null (**Nothing** in Visual Basic) se non è possibile effettuare la chiamata. **MethodBase** restituisce valori non necessariamente compresi tra quelli contenuti nel parametro *match*, sebbene questo sia il caso più frequente.  
   
- Quando sono presenti argomenti ByRef, è possibile che debbano essere restituiti al chiamante. Di conseguenza, **Binder** consentirà al client di eseguire il mapping della matrice di argomenti riportandola alla forma originale se **BindToMethod** ha modificato la matrice di argomenti. A questo scopo, è necessario garantire al chiamante che l'ordine degli argomenti resti inalterato. Quando gli argomenti vengono passati in base al nome, **Binder** riordina la matrice di argomenti, che rappresenta quanto viene visualizzato al chiamante. Per ulteriori informazioni, vedere <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
+ Quando sono presenti argomenti ByRef, è possibile che debbano essere restituiti al chiamante. Di conseguenza, **Binder** consentirà al client di eseguire il mapping della matrice di argomenti riportandola alla forma originale se **BindToMethod** ha modificato la matrice di argomenti. A questo scopo, è necessario garantire al chiamante che l'ordine degli argomenti resti inalterato. Quando gli argomenti vengono passati in base al nome, **Binder** riordina la matrice di argomenti, che rappresenta quanto viene visualizzato al chiamante. Per altre informazioni, vedere <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
   
  Il set di membri disponibili è costituito dai membri definiti nel tipo o in qualsiasi tipo di base. Se si specifica <xref:System.Reflection.BindingFlags>, il set restituito comprenderà membri di qualsiasi accessibilità. Se **BindingFlags.NonPublic** non viene specificato, il binder dovrà applicare le regole di accessibilità. Quando si specifica il flag di associazione **Public** o **NonPublic** è necessario specificare anche il flag di associazione **Instance** o **Static**. In caso contrario non verrà restituito alcun membro.  
   
@@ -101,4 +101,4 @@ End Module
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - [Visualizzazione delle informazioni sul tipo](viewing-type-information.md)
-- [Conversione di tipi in .NET Framework](../../standard/base-types/type-conversion.md)
+- [Conversione dei tipi nel .NET Framework](../../standard/base-types/type-conversion.md)

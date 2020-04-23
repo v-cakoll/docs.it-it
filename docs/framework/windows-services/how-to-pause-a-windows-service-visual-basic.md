@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Sospendere un servizio Windows (Visual Basic)'
+title: 'Procedura: sospendere un servizio Windows (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -17,7 +17,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053602"
 ---
-# <a name="how-to-pause-a-windows-service-visual-basic"></a>Procedura: Sospendere un servizio Windows (Visual Basic)
+# <a name="how-to-pause-a-windows-service-visual-basic"></a>Procedura: sospendere un servizio Windows (Visual Basic)
 Questo esempio usa il componente <xref:System.ServiceProcess.ServiceController> per sospendere l'esecuzione del servizio IIS Admin nel computer locale.  
   
 ## <a name="example"></a>Esempio  
@@ -52,4 +52,4 @@ Questo esempio usa il componente <xref:System.ServiceProcess.ServiceController> 
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
 - <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>
-- [Procedura: Continuare un servizio Windows (Visual Basic)](how-to-continue-a-windows-service-visual-basic.md)
+- [Procedura: continuare un servizio Windows (Visual Basic)](how-to-continue-a-windows-service-visual-basic.md)

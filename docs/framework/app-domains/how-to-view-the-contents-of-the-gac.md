@@ -30,7 +30,7 @@ Per visualizzare un elenco degli assembly nella Global Assembly Cache, aprire [P
 gacutil -l
 ```
 
-oppure
+-oppure-
 
 ```shell
 gacutil /l
@@ -42,4 +42,4 @@ gacutil /l
 ## <a name="see-also"></a>Vedere anche
 
 - [Uso di assembly e della Global Assembly Cache](working-with-assemblies-and-the-gac.md)
-- [Gacutil.exe (strumento Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)
+- [Gacutil. exe (strumento Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)

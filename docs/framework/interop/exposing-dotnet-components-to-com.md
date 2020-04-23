@@ -21,11 +21,11 @@ La scrittura di un tipo .NET e l'utilizzo di tale tipo dal codice non gestito so
 
      Tutti i tipi gestiti, i metodi, le proprietà, i campi e gli eventi che si vuole esporre a COM devono essere pubblici. I tipi devono avere un costruttore senza parametri pubblico, che è l'unico costruttore a poter essere richiamato tramite COM.
 
-- [Applicazione di attributi di interoperabilità](../../standard/native-interop/apply-interop-attributes.md).
+- [Applicazione degli attributi di interoperabilità](../../standard/native-interop/apply-interop-attributes.md).
 
      Gli attributi personalizzati nel codice gestito possono migliorare l'interoperabilità di un componente.
 
-- [Preparazione di un assembly per COM](packaging-an-assembly-for-com.md).
+- Creazione [del pacchetto di un assembly per com](packaging-an-assembly-for-com.md).
 
      Gli sviluppatori COM potrebbero richiedere di riepilogare i passaggi previsti per fare riferimento agli assembly e distribuirli.
 
@@ -37,7 +37,7 @@ La scrittura di un tipo .NET e l'utilizzo di tale tipo dal codice non gestito so
 
      I tipi in un assembly (e le librerie dei tipi) devono essere registrati in fase di progettazione. Se un programma di installazione non registra l'assembly, comunicare agli sviluppatori COM di usare Regasm.exe.
 
-2. [Fare riferimento a tipi .NET da COM](how-to-reference-net-types-from-com.md).
+2. [Fare riferimento a tipi .NET da com](how-to-reference-net-types-from-com.md).
 
      Gli sviluppatori COM possono fare riferimento ai tipi in un assembly usando gli strumenti e le tecniche abituali.
 

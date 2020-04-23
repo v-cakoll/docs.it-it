@@ -14,30 +14,30 @@ ms.locfileid: "82071941"
 
 ## <a name="sdk-downloads"></a>Download dell'SDK
 
-Le librerie di Azure per .NET vengono implementate come [pacchetti NuGet.](https://www.nuget.org/packages?q=windowsazureofficial) Vedere la [Guida di riferimento alle API](/dotnet/api/overview/azure/?view=azure-dotnet) per le istruzioni di installazione organizzate dal servizio di Azure.See the API Reference for installation instructions organized by Azure service.
+Le librerie di Azure per .NET sono implementate come [pacchetti NuGet](https://www.nuget.org/packages?q=windowsazureofficial). Vedere le informazioni di [riferimento sulle API](/dotnet/api/overview/azure/?view=azure-dotnet) per le istruzioni di installazione organizzate dal servizio di Azure.
 
 ## <a name="development-tools"></a>Strumenti di sviluppo
 
-Visual Studio include strumenti per molti servizi di Azure predefiniti. Per alcuni servizi di Azure sono disponibili strumenti o emulatori aggiuntivi, ad esempio [Azure Storage Explorer.](https://azure.microsoft.com/features/storage-explorer/) Se necessario, vedere la documentazione del servizio Azure per eventuali strumenti aggiuntivi.
+Visual Studio include strumenti per molti servizi di Azure predefiniti. Per alcuni servizi di Azure sono disponibili strumenti o emulatori aggiuntivi, ad esempio [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/). Se necessario, vedere la documentazione relativa al servizio di Azure per eventuali altri strumenti.
 
-Queste istruzioni installano l'ambiente di sviluppo di avvio consigliato per il sistema operativo in uso.
+Queste istruzioni installano l'ambiente di sviluppo consigliato per il sistema operativo in uso.
 
 ## <a name="windows"></a>[Windows](#tab/windows)
 
-Le versioni di Visual Studio 2017 e successive sono disponibili per lo sviluppo in Azure.Visual Studio versions 2017 and later have built-in support for Azure development. I passaggi seguenti descrivono l'abilitazione del supporto per lo sviluppo di Azure in Visual Studio.The below steps describe enabling Azure development support in Visual Studio.
+Visual Studio versione 2017 e successive includono il supporto integrato per lo sviluppo in Azure. I passaggi seguenti descrivono l'abilitazione del supporto per lo sviluppo di Azure in Visual Studio.
 
 Per Visual Studio 2015 e versioni precedenti, <a href="vs2015-install.md">seguire queste istruzioni</a>.
 
-### <a name="step-1-download-visual-studio-2019"></a>Passaggio 1: Scaricare Visual Studio 2019Step 1: Download Visual Studio 2019
+### <a name="step-1-download-visual-studio-2019"></a>Passaggio 1: scaricare Visual Studio 2019
 
-È possibile ignorare questo passaggio se è già installato Visual Studio 2019.You can skip this step if you already have Visual Studio 2019 installed.
+È possibile ignorare questo passaggio se si dispone già di Visual Studio 2019 installato.
 
 > [!div class="nextstepaction"]
 > [Scarica Visual Studio 2019](https://www.visualstudio.com/downloads/)
 
 ### <a name="step-2-install-the-two-azure-workloads"></a>Passaggio 2: Installare i due componenti per Azure
 
-Nel programma di installazione di Visual Studio installare Visual Studio (o modificare un'installazione esistente). Assicurarsi che i carichi di lavoro di sviluppo e *ASP.NET sviluppo Web* di *Azure* siano selezionati.
+Nel programma di installazione di Visual Studio installare Visual Studio o modificare un'installazione esistente. Assicurarsi che i carichi di lavoro sviluppo di *Azure* e *ASP.NET e sviluppo Web* siano selezionati.
 
 ### <a name="step-3-develop-with-net-on-azure"></a>Passaggio 3: Sviluppare con .NET in Azure
 

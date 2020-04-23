@@ -1,5 +1,5 @@
 ---
-title: Generazione e compilazione di codice sorgente dinamico
+title: Generazione e compilazione dinamica di codice sorgente
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Code Document Object Model
@@ -29,7 +29,7 @@ La modellazione di codice sorgente indipendente da uno specifico linguaggio si r
   
 .NET Framework include generatori di codice e compilatori di codice per i seguenti linguaggi: <xref:Microsoft.CSharp.CSharpCodeProvider>, <xref:Microsoft.JScript.JScriptCodeProvider> e <xref:Microsoft.VisualBasic.VBCodeProvider>.  
   
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 - [Uso di CodeDOM](using-the-codedom.md)
 
@@ -39,7 +39,7 @@ La modellazione di codice sorgente indipendente da uno specifico linguaggio si r
 
   Viene descritto come generare codice sorgente e compilare il codice generato con un compilatore esterno usando le classi definite nello spazio dei nomi `System.CodeDom.Compiler`.  
   
-- [How to: Create an XML Documentation File Using CodeDOM](how-to-create-an-xml-documentation-file-using-codedom.md) (Procedura: Creare un file di documentazione XML tramite CodeDOM)  
+- [Procedura: creare un file di documentazione XML tramite CodeDOM](how-to-create-an-xml-documentation-file-using-codedom.md)  
 
   Viene descritto come usare CodeDOM per generare codice con commenti di documentazione XML e come compilare il codice generato in modo da creare l'output della documentazione XML.  
   
@@ -47,7 +47,7 @@ La modellazione di codice sorgente indipendente da uno specifico linguaggio si r
 
   Viene descritto come usare CodeDOM per generare una classe contenente campi, proprietà, un metodo, un costruttore e un punto di ingresso.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Informazioni di riferimento  
 
 - <xref:System.CodeDom>  
 

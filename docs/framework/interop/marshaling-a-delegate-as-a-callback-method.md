@@ -53,5 +53,5 @@ In questo esempio, la classe `NativeMethods` contiene prototipi gestiti per i me
 ## <a name="see-also"></a>Vedere anche
 
 - [Esempi vari di marshalling](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))
-- [Tipi di dati platform invoke](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
+- [Tipi di dati Platform Invoke](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [Creazione di prototipi nel codice gestito](creating-prototypes-in-managed-code.md)

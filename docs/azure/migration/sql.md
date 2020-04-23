@@ -30,7 +30,7 @@ Le seguenti sono guide utili per la migrazione, a seconda del servizio usato:
 
 I collegamenti seguenti per contenuti concettuali consentono di comprendere meglio le VM:
 
-* [Disponibilità elevata e ripristino di emergenza per SQL Server nelle macchine virtuali di AzureHigh availability and disaster recovery for SQL Server in Azure Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr)
+* [Disponibilità elevata e ripristino di emergenza per SQL Server in macchine virtuali di Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr)
 * [Procedure consigliate per le prestazioni per SQL Server in Macchine virtuali di Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance)
 * [Modelli di applicazione e strategie di sviluppo per SQL Server in Macchine virtuali di Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-app-patterns-dev-strategies)
 
@@ -38,13 +38,13 @@ I collegamenti seguenti invece offrono utili informazioni sul database SQL di Az
 
 * [Creare e gestire database e server di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases)
 * [Unità di transazione di database (DTU) e unità di transazione di database elastico (eDTU)](https://docs.microsoft.com/azure/sql-database/sql-database-what-is-a-dtu)
-* [Limiti delle risorse del database SQL di AzureAzure SQL Database resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits)
+* [Limiti delle risorse del database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits)
 
 ## <a name="choosing-iaas-or-paas"></a>Scelta di IaaS o di PaaS
 
-Quando si valuta dove eseguire la migrazione del database, determinare se IaaS o PaaS è più appropriato.
+Quando si valuta la posizione in cui eseguire la migrazione del database, determinare se IaaS o PaaS è più appropriato.
 
-**Scegliere SQL Server in macchine virtuali di Azure se:Choose SQL Server in Azure VMs if:**
+**Scegliere SQL Server in macchine virtuali di Azure se:**
 
 * Si prevede di trasferire in modalità lift-and-shift il database e le applicazioni con pochissime o nessuna modifica.
 * Si preferisce avere il controllo completo sul server di database e sulla VM in cui viene eseguito.
@@ -61,12 +61,12 @@ La tabella seguente descrive le differenze tra ogni servizio in base a un set di
 | Scenario | SQL Server in VM di Azure | database SQL di Azure |
 |----------|-------------------------|--------------------|
 | Migrazione | Richiede modifiche minime al database. | Può richiedere modifiche al database se si usano funzionalità non disponibili in Azure SQL, come stabilito da [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595), o se si hanno altre dipendenze, ad esempio eseguibili installati in locale.|
-| Gestione di disponibilità, ripristino e aggiornamenti | La disponibilità e il ripristino vengono configurati manualmente. Gli aggiornamenti possono essere automatizzati con i [set di scalabilità di macchine virtuali](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade). | Gestita automaticamente. |
+| Gestione di disponibilità, ripristino e aggiornamenti | La disponibilità e il ripristino sono configurati manualmente. Gli aggiornamenti possono essere automatizzati con i [set di scalabilità di macchine virtuali](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade). | Gestita automaticamente. |
 | Configurazione del sistema operativo sottostante | Configurazione manuale. | Gestita automaticamente. |
-| Gestione delle dimensioni del database | Supporta fino a 64 TB di spazio di archiviazione per ogni istanza di SQL Server. | Supporta 4 TB di spazio di archiviazione prima di richiedere una partizione orizzontale. |
+| Gestione delle dimensioni del database | Supporta fino a 64 TB di spazio di archiviazione per ogni istanza di SQL Server. | Supporta 4 TB di spazio di archiviazione prima che sia necessaria una partizione orizzontale. |
 | Gestione dei costi | È necessario gestire i costi delle licenze SQL Server, i costi delle licenze Windows Server e i costi delle VM (in base a core, RAM e spazio di archiviazione). | È necessario gestire i costi dei servizi (in base a [eDTU o DTU](https://docs.microsoft.com/azure/sql-database/sql-database-what-is-a-dtu), spazio di archiviazione e numero di database se si usa un pool elastico). È anche necessario gestire il costo dei contratti di servizio. |
 
-Per altre informazioni sulle differenze tra i due, vedere Scegliere un'opzione cloud di SQL Server: Database SQL di Azure o SQL Server in macchine virtuali di Azure.To learn more about the differences between the two, read Choose a cloud SQL Server option: [Azure SQL Database or SQL Server on Azure VMs](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas).
+Per altre informazioni sulle differenze tra le due, vedere scegliere un'opzione di SQL Server Cloud: [database SQL di Azure o SQL Server in macchine virtuali di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas).
 
 ## <a name="faq"></a>Domande frequenti
 
@@ -74,9 +74,9 @@ Per altre informazioni sulle differenze tra i due, vedere Scegliere un'opzione c
 
     Sì. Tutti gli strumenti di Microsoft SQL funzionano con entrambi i servizi. SSRS tuttavia non fa parte del database SQL di Azure ed è consigliabile eseguirlo in una VM di Azure e quindi fare in modo che punti all'istanza del database.
 
-* **Si è verificato un problema sconosciuto. Ci sono strumenti per aiutarti?**
+* **Desidero passare a PaaS, ma non sono certo se il database è compatibile. Sono disponibili strumenti utili?**
 
-    Sì. [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) è uno strumento usato durante la migrazione al database SQL di Azure. Il servizio Migrazione del database di Azure è un servizio di anteprima che è possibile usare per IaaS o PaaS.The [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/) is a preview service that you can use for either IaaS or PaaS.
+    Sì. [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) è uno strumento usato durante la migrazione al database SQL di Azure. Il [servizio migrazione del database di Azure](https://azure.microsoft.com/campaigns/database-migration/) è un servizio di anteprima che è possibile usare sia per IaaS che per PaaS.
 
 * **È possibile stimare i costi?**
 

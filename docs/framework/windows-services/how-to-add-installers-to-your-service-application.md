@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Aggiungere programmi di installazione all'applicazione di servizio"
+title: "Procedura: aggiungere programmi di installazione all'applicazione di servizio"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -18,7 +18,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053644"
 ---
-# <a name="how-to-add-installers-to-your-service-application"></a>Procedura: Aggiungere programmi di installazione all'applicazione di servizio
+# <a name="how-to-add-installers-to-your-service-application"></a>Procedura: aggiungere programmi di installazione all'applicazione di servizio
 Visual Studio include componenti di installazione che consentono di installare le risorse associate alle applicazioni di servizio. I componenti di installazione registrano un singolo servizio nel sistema in cui viene installato e informazione Gestione controllo servizi dell'esistenza del servizio. Quando si lavora con un'applicazione di servizio, è possibile selezionare un collegamento nella finestra Proprietà per aggiungere automaticamente i programmi di installazione appropriati al progetto.  
   
 > [!NOTE]
@@ -29,7 +29,7 @@ Visual Studio include componenti di installazione che consentono di installare l
  Non è necessario codice specifico all'interno dei programmi di installazione per installare correttamente i servizi. Tuttavia, in alcuni casi potrebbe essere necessario modificare il contenuto dei programmi di installazione se è necessario aggiungere funzionalità speciali al processo di installazione.  
   
 > [!NOTE]
-> Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
+> È possibile che le finestre di dialogo e i comandi di menu visualizzati varino da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-add-installers-to-your-service-application"></a>Per aggiungere programmi di installazione all'applicazione di servizio  
   
@@ -37,7 +37,7 @@ Visual Studio include componenti di installazione che consentono di installare l
   
 2. Fare clic sullo sfondo della finestra di progettazione per selezionare il servizio anziché il suo contenuto.  
   
-3. Nella finestra di progettazione fare clic con il pulsante destro del mouse e scegliere **Aggiungi programma di installazione**.  
+3. Con la finestra di progettazione attiva, fare clic con il pulsante destro del mouse su **Aggiungi programma di installazione**.  
   
      Al progetto vengono aggiunti una nuova classe `ProjectInstaller` e due componenti di installazione, <xref:System.ServiceProcess.ServiceProcessInstaller> e <xref:System.ServiceProcess.ServiceInstaller>, quindi i valori delle proprietà per il servizio vengono copiati nei componenti.  
   
@@ -45,7 +45,7 @@ Visual Studio include componenti di installazione che consentono di installare l
   
 5. Per determinare come verrà avviato il servizio, fare clic sul componente <xref:System.ServiceProcess.ServiceInstaller> e impostare la proprietà <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> sul valore appropriato.  
   
-    |Value|Risultato|  
+    |valore|Risultato|  
     |-----------|------------|  
     |<xref:System.ServiceProcess.ServiceStartMode.Manual>|Il servizio deve essere avviato manualmente dopo l'installazione. Per altre informazioni, vedere [Procedura: Avviare servizi](how-to-start-services.md).|  
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|Il servizio verrà avviato automaticamente a ogni riavvio del computer.|  
@@ -63,6 +63,6 @@ Visual Studio include componenti di installazione che consentono di installare l
 ## <a name="see-also"></a>Vedere anche
 
 - [Introduzione alle applicazioni di servizio Windows](introduction-to-windows-service-applications.md)
-- [Procedura: Installare e disinstallare servizi](how-to-install-and-uninstall-services.md)
-- [Procedura: Avviare servizi](how-to-start-services.md)
-- [Procedura: Specificare il contesto di sicurezza per i servizi](how-to-specify-the-security-context-for-services.md)
+- [Procedura: installare e disinstallare servizi](how-to-install-and-uninstall-services.md)
+- [Procedura: avviare servizi](how-to-start-services.md)
+- [Procedura: specificare il contesto di sicurezza per i servizi](how-to-specify-the-security-context-for-services.md)

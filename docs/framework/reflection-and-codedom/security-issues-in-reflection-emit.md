@@ -11,12 +11,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: 11eb4c9bc4ba1b1fe9051a04d12f893e693fb175
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d1b6994f7ee9efa9f6472deffb2f3d869606e182
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180467"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644196"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemi di sicurezza nella reflection emit
 .NET Framework offre tre modalità per creare codice Microsoft Intermediate Language (MSIL), ciascuna con specifici problemi di sicurezza:  
@@ -34,7 +34,7 @@ ms.locfileid: "79180467"
   
 <a name="Dynamic_Assemblies"></a>
 ## <a name="dynamic-assemblies"></a>Assembly dinamici  
- Gli assembly dinamici vengono creati usando gli overload del metodo <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. La maggior parte degli overload di questo metodo sono deprecati in .NET Framework 4 a causa dell'eliminazione dei criteri di sicurezza a livello di computer. (Vedere [Modifiche alla sicurezza](../security/security-changes.md). Gli overload rimanenti possono essere eseguiti da qualsiasi codice, indipendentemente dal livello di attendibilità. Questi overload rientrano in due gruppi: quelli che specificano un elenco di attributi da applicare all'assembly dinamico quando viene creato e quelli che non lo specificano. Se non si specifica il modello di trasparenza per l'assembly, applicando l'attributo <xref:System.Security.SecurityRulesAttribute> durante la creazione, il modello di trasparenza viene ereditato dall'assembly di creazione.  
+ Gli assembly dinamici vengono creati usando gli overload del metodo <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. La maggior parte degli overload di questo metodo sono deprecati in .NET Framework 4 a causa dell'eliminazione dei criteri di sicurezza a livello di computer. Vedere [modifiche della sicurezza](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes). Gli overload rimanenti possono essere eseguiti da qualsiasi codice, indipendentemente dal livello di attendibilità. Questi overload rientrano in due gruppi: quelli che specificano un elenco di attributi da applicare all'assembly dinamico quando viene creato e quelli che non lo specificano. Se non si specifica il modello di trasparenza per l'assembly, applicando l'attributo <xref:System.Security.SecurityRulesAttribute> durante la creazione, il modello di trasparenza viene ereditato dall'assembly di creazione.  
   
 > [!NOTE]
 > Gli attributi applicati all'assembly dinamico dopo averlo creato mediante il metodo <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> non sono effettivi fino a quando l'assembly non viene salvato su disco e caricato di nuovo in memoria.  
@@ -137,7 +137,7 @@ ms.locfileid: "79180467"
   
 <a name="Version_Information"></a>
 ## <a name="version-information"></a>Informazioni sulla versione  
- A partire da .NET Framework 4, i criteri di sicurezza a livello di computer vengono eliminati e la trasparenza della sicurezza diventa il meccanismo di imposizione predefinito. Vedere [Modifiche di sicurezza](../security/security-changes.md).  
+ A partire da .NET Framework 4, i criteri di sicurezza a livello di computer vengono eliminati e la trasparenza della sicurezza diventa il meccanismo di imposizione predefinito. Vedere [Modifiche di sicurezza](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).  
   
  A partire da .NET Framework 2.0 Service Pack 1, non è più necessario usare <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> quando si generano assembly e metodi dinamici. Questo flag è richiesto in tutte le versioni precedenti di .NET Framework.  
   

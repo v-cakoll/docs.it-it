@@ -24,7 +24,7 @@ Il wrapping di una funzione di DLL frequentemente usata in una classe gestita è
   
  Una volta effettuato il wrapping è possibile chiamare i metodi della classe, così come si chiamano i metodi statici di qualsiasi altra classe. Con platform invoke, la funzione esportata sottostante viene gestita automaticamente.  
   
- Quando si progetta una classe gestita che supporti platform invoke, è necessario tenere in considerazione le relazioni tra le classi e le funzioni di DLL. Ad esempio, è possibile eseguire queste operazioni:  
+ Quando si progetta una classe gestita che supporti platform invoke, è necessario tenere in considerazione le relazioni tra le classi e le funzioni di DLL. Ad esempio, è possibile:  
   
 - Dichiarare funzioni di DLL in una classe esistente.  
   

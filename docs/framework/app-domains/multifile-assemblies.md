@@ -10,18 +10,18 @@ helpviewer_keywords:
 - code modules
 - multifile assemblies
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
-ms.openlocfilehash: 8ffb0482ebd01a056d9ffd80a74ec0332e1b8dff
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2a70e45d50763cf99c55cf08600c3c816b4043b7
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119787"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644213"
 ---
 # <a name="multifile-assemblies"></a>Assembly su più file
 
-È possibile creare assembly su più file destinati ai .NET Framework usando compilatori della riga di comando o Visual Studio C++con Visual. Un file all'interno dell'assembly deve contenere il manifesto dell'assembly. Un assembly che avvia un'applicazione deve inoltre contenere un punto di ingresso, ad esempio un `Main` o `WinMain` metodo.
+È possibile creare assembly su più file destinati ai .NET Framework usando compilatori della riga di comando o Visual Studio con Visual C++. Un file all'interno dell'assembly deve contenere il manifesto dell'assembly. Un assembly che avvia un'applicazione deve contenere anche un punto di ingresso, ad esempio `Main` un `WinMain` metodo o.
 
-Si supponga, ad esempio, di disporre di un'applicazione che contiene due moduli di codice, *client.cs* e *Stringer.cs*. *Stringer.cs* crea lo spazio dei nomi `myStringer` a cui fa riferimento il codice in *client.cs*. *Client.cs* contiene il metodo `Main`, ovvero il punto di ingresso dell'applicazione. In questo esempio vengono compilati i due moduli di codice e quindi viene creato un terzo file contenente il manifesto dell'assembly che avvia l'applicazione. Il manifesto dell'assembly fa riferimento ai moduli *client* e *Stringer* .
+Si supponga, ad esempio, di disporre di un'applicazione che contiene due moduli di codice, *client.cs* e *Stringer.cs*. *Stringer.cs* crea lo `myStringer` spazio dei nomi a cui fa riferimento il codice in *client.cs*. *Client.cs* contiene il `Main` metodo, che è il punto di ingresso dell'applicazione. In questo esempio vengono compilati i due moduli di codice e quindi viene creato un terzo file contenente il manifesto dell'assembly che avvia l'applicazione. Il manifesto dell'assembly fa riferimento ai moduli *client* e *Stringer* .
 
 > [!NOTE]
 > Negli assembly su più file può essere presente un solo punto di ingresso, anche se l'assembly include più moduli di codice.
@@ -42,4 +42,4 @@ Una volta creato l'assembly, è possibile firmare il file contenente il manifest
 ## <a name="see-also"></a>Vedere anche
 
 - [Procedura: compilare un assembly su più file](build-multifile-assembly.md)
-- [Programma con assembly](../../standard/assembly/program.md)
+- [Programmare con gli assembly](../../standard/assembly/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare servizi Windows'
+title: 'Procedura: creare servizi Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, creating
@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053662"
 ---
-# <a name="how-to-create-windows-services"></a>Procedura: Creare servizi Windows
+# <a name="how-to-create-windows-services"></a>Procedura: creare servizi Windows
 Quando si crea un servizio, è possibile usare un modello di progetto di Visual Studio denominato **Servizio Windows**. Questo modello esegue automaticamente una buona parte del lavoro facendo riferimento alle classi e agli spazi dei nomi appropriati, impostando l'ereditarietà dalla classe di base per i servizi ed eseguendo l'override di molti metodi, quando occorre.  
   
 > [!WARNING]
@@ -32,7 +32,7 @@ Quando si crea un servizio, è possibile usare un modello di progetto di Visual 
 1. Creare un progetto **Servizio Windows**.  
   
     > [!NOTE]
-    > Per istruzioni sulla scrittura di un servizio senza l'uso del modello, vedere [ Procedura: Scrivere servizi a livello di codice](how-to-write-services-programmatically.md).  
+    > Per istruzioni sulla scrittura di un servizio senza l'uso del modello, vedere [Procedura: Scrivere servizi a livello di codice](how-to-write-services-programmatically.md).  
   
 2. Nella finestra **Proprietà** impostare la proprietà <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> per il servizio.  
   
@@ -49,7 +49,7 @@ Quando si crea un servizio, è possibile usare un modello di progetto di Visual 
     |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True` per indicare che il servizio richiede una notifica alla chiusura del computer su cui viene eseguito, consentendo la chiamata alla routine <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>.|  
     |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|`True` per indicare che il servizio accetta le richieste di sospensione o di ripresa dell'esecuzione; `false` per impedire la sospensione e la ripresa del servizio.|  
     |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` per indicare che il servizio può gestire la notifica delle variazioni dello stato di alimentazione del computer; `false` per impedire al servizio di ricevere notifica di tali modifiche.|  
-    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` per scrivere informazioni nel log eventi dell'applicazione quando il servizio esegue un'operazione; `false` per disabilitare questa funzionalità. Per altre informazioni, vedere [Procedura: Registrare informazioni sui servizi](how-to-log-information-about-services.md). **Nota:**  per impostazione predefinita, la proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> è impostata su `true`.|  
+    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` per scrivere informazioni nel log eventi dell'applicazione quando il servizio esegue un'operazione; `false` per disabilitare questa funzionalità. Per altre informazioni, vedere [Procedura: Registrare informazioni sui servizi](how-to-log-information-about-services.md). **Nota:** Per impostazione predefinita, la proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> è impostata su `true`.|  
   
     > [!NOTE]
     > Quando l'oggetto <xref:System.ServiceProcess.ServiceBase.CanStop%2A> o <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> è impostato su `false`, **Gestione controllo servizi** disabiliterà le opzioni di menu corrispondenti per arrestare, sospendere o continuare il servizio.  
@@ -65,15 +65,15 @@ Quando si crea un servizio, è possibile usare un modello di progetto di Visual 
     > [!NOTE]
     > Non è possibile eseguire un progetto di servizio premendo F5.  
   
-8. Installare il servizio. Per altre informazioni, vedere [Procedura: Installare e disinstallare servizi](how-to-install-and-uninstall-services.md).  
+8. Installare il servizio. Per altre informazioni, vedere [How to: Install and Uninstall Services](how-to-install-and-uninstall-services.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Introduzione alle applicazioni di servizio Windows](introduction-to-windows-service-applications.md)
-- [Procedura: Scrivere servizi a livello di codice](how-to-write-services-programmatically.md)
+- [Procedura: scrivere servizi a livello di codice](how-to-write-services-programmatically.md)
 - [Procedura: aggiungere programmi di installazione all'applicazione di servizio](how-to-add-installers-to-your-service-application.md)
-- [Procedura: Registrare informazioni sui servizi](how-to-log-information-about-services.md)
-- [Procedura: Avviare servizi](how-to-start-services.md)
-- [Procedura: Specificare il contesto di sicurezza per i servizi](how-to-specify-the-security-context-for-services.md)
-- [Procedura: Installare e disinstallare servizi](how-to-install-and-uninstall-services.md)
-- [Procedura dettagliata: Creazione di un'applicazione di servizio Windows in Progettazione componenti](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+- [Procedura: registrare informazioni sui servizi](how-to-log-information-about-services.md)
+- [Procedura: avviare servizi](how-to-start-services.md)
+- [Procedura: specificare il contesto di sicurezza per i servizi](how-to-specify-the-security-context-for-services.md)
+- [Procedura: installare e disinstallare servizi](how-to-install-and-uninstall-services.md)
+- [Procedura dettagliata: creazione di un'applicazione di servizio Windows in Progettazione componenti](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
