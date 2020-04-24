@@ -75,7 +75,7 @@
         - name: Interfaccia ICLRMetadataLocator
           href: iclrmetadatalocator-interface.md
           items:
-            - name: Metodo GetMetadata
+            - name: Metodo GetMetaData
               href: iclrmetadatalocator-getmetadata-method.md
         - name: Interfaccia ICorDebug
           href: icordebug-interface.md
@@ -1608,6 +1608,11 @@
           href: cordebugexceptionobjectstackframe-structure.md
         - name: Struttura CorDebugGuidToTypeMapping
           href: cordebugguidtotypemapping-structure.md
+        - name: Struttura DacpGetModuleAddress
+          href: dacpgetmoduleaddress-structure.md
+          items:
+            - name: 'Metodo DacpGetModuleAddress::Request'
+              href: dacpgetmoduleaddress-request-method.md
         - name: Struttura DacpMethodDescData
           href: dacpmethoddescdata-structure.md
         - name: Struttura DacpModuleData

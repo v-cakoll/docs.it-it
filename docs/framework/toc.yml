@@ -221,6 +221,8 @@
                   href: migration-guide/retargeting/4.5.1-4.7.1.md
                 - name: Da 4.5.1 a 4.7.2
                   href: migration-guide/retargeting/4.5.1-4.7.2.md
+                - name: Da 4.5.1 a 4.8
+                  href: migration-guide/retargeting/4.5.1-4.8.md
                 - name: Da 4.5.2 a 4.6
                   href: migration-guide/retargeting/4.5.2-4.6.md
                 - name: Da 4.5.2 a 4.6.1
@@ -277,6 +279,44 @@
                   href: migration-guide/retargeting/4.7.1-4.8.md
                 - name: Da 4.7.2 a 4.8
                   href: migration-guide/retargeting/4.7.2-4.8.md
+        - name: Mitigazioni del comportamento
+          items:
+            - name: Panoramica
+              href: migration-guide/mitigations.md
+            - name: Implementazioni IMessageFilter.PreFilterMessage personalizzate
+              href: migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md
+            - name: Deserializzare oggetti tra domini di app
+              href: migration-guide/mitigation-deserialization-of-objects-across-app-domains.md
+            - name: Nuovo compilatore JIT a 64 bit
+              href: migration-guide/mitigation-new-64-bit-jit-compiler.md
+            - name: Verifica della presenza dei due punti nel percorso
+              href: migration-guide/mitigation-path-colon-checks.md
+            - name: Normalizzazione del percorso
+              href: migration-guide/mitigation-path-normalization.md
+            - name: Frame PNG in oggetti icona
+              href: migration-guide/mitigation-png-frames-in-icon-objects.md
+            - name: Supporto di tocco e stilo basato su puntatore
+              href: migration-guide/mitigation-pointer-based-touch-and-stylus-support.md
+            - name: Periodo di blocco del pool
+              href: migration-guide/mitigation-pool-blocking-period.md
+            - name: Controllo delle versioni del prodotto
+              href: migration-guide/mitigation-product-versioning.md
+            - name: Serializzazione di caratteri di controllo
+              href: migration-guide/mitigation-serialization-control-characters.md
+            - name: Protocolli TLS
+              href: migration-guide/mitigation-tls-protocols.md
+            - name: Servizi WCF e autenticazione del certificato
+              href: migration-guide/mitigation-wcf-services-and-certificate-authentication.md
+            - name: Layout WPF
+              href: migration-guide/mitigation-wpf-layout.md
+            - name: Rendering di finestre WPF
+              href: migration-guide/mitigation-wpf-window-rendering.md
+            - name: Metodo X509CertificateClaimSet.FindClaims
+              href: migration-guide/mitigation-x509certificateclaimset-findclaims-method.md
+            - name: Convalida di XML Schema
+              href: migration-guide/mitigation-xml-schema-validation.md
+            - name: Separatore di percorsi ZipArchiveEntry.FullName
+              href: migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md
         - name: Compatibilità tra versioni
           href: migration-guide/version-compatibility.md
     - name: Versioni di .NET Framework
