@@ -1,25 +1,25 @@
 - name: Registrazione di informazioni relative all'applicazione
   href: index.md
   items:
-    - name: 'Procedura: scrivere messaggi di log'
+    - name: 'Procedura: Scrivere messaggi di log'
       href: how-to-write-log-messages.md
-    - name: 'Procedura: registrare eccezioni'
+    - name: 'Procedura: Registrare eccezioni'
       href: how-to-log-exceptions.md
-    - name: 'Procedura: registrare messaggi all''avvio o all''arresto dell''applicazione'
+    - name: 'Procedura: Registrare messaggi all''avvio o all''arresto dell''applicazione'
       href: how-to-log-messages-when-the-application-starts-or-shuts-down.md
-    - name: 'Procedura: scrivere nel log eventi di un''applicazione'
+    - name: 'Procedura: Scrivere nel log eventi di un''applicazione'
       href: how-to-write-to-an-application-event-log.md
-    - name: 'Procedura: scrivere informazioni sugli eventi in un file di testo'
+    - name: 'Procedura: Scrivere informazioni sugli eventi in un file di testo'
       href: how-to-write-event-information-to-a-text-file.md
     - name: Utilizzo dei log applicazione
       href: working-with-application-logs.md
-    - name: 'Procedura dettagliata: individuazione della posizione di inserimento delle informazioni con My.Application.Log'
+    - name: 'Procedura dettagliata: Individuazione della posizione di inserimento delle informazioni con My.Application.Log'
       href: walkthrough-determining-where-my-application-log-writes-information.md
-    - name: 'Procedura dettagliata: modifica della posizione di inserimento delle informazioni con My.Application.Log'
+    - name: 'Procedura dettagliata: Modifica della posizione di inserimento delle informazioni con My.Application.Log'
       href: walkthrough-changing-where-my-application-log-writes-information.md
-    - name: 'Procedura dettagliata: filtro dell''output di My.Application.Log'
+    - name: 'Procedura dettagliata: Filtro dell''output di My.Application.Log'
       href: walkthrough-filtering-my-application-log-output.md
-    - name: 'Procedura dettagliata: creazione di listener di log personalizzati'
+    - name: 'Procedura dettagliata: Creazione di listener di log personalizzati'
       href: walkthrough-creating-custom-log-listeners.md
-    - name: 'Risoluzione dei problemi: listener di log'
+    - name: 'Risoluzione dei problemi: Listener di log'
       href: troubleshooting-log-listeners.md
