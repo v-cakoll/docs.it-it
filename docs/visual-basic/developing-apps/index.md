@@ -41,5 +41,5 @@ In questa sezione viene illustrata la documentazione su concetti che riguardano 
  [Guida per programmatori Visual Basic](../../visual-basic/programming-guide/index.md)  
  Illustra gli elementi fondamentali di programmazione con Visual Basic.  
   
- [Visual Basic Language Reference](../../visual-basic/language-reference/index.md)  
+ [Riferimenti al linguaggio Visual Basic](../../visual-basic/language-reference/index.md)  
  Contiene la documentazione di riferimento per il linguaggio Visual Basic.

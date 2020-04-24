@@ -19,7 +19,7 @@ LINQ to XML è il nuovo modello di elaborazione dei dati XML incluso in .NET Fra
   
  Per una descrizione dettagliata sull'uso, vedere [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) e [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md). Per una panoramica del framework LINQ, vedere [LINQ (Language-Integrated Query)- C# ](../../../csharp/programming-guide/concepts/linq/index.md) oppure [LINQ (Language-Integrated Query) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md).  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Xml.Linq>
 - <xref:System.Linq>

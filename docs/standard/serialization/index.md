@@ -28,7 +28,7 @@ La serializzazione è il processo di conversione dello stato di un oggetto in un
   
 - La [serializzazione JSON](system-text-json-overview.md) serializza solo le proprietà pubbliche e non mantiene la fedeltà del tipo. JSON è uno standard aperto che rappresenta una scelta interessante per la condivisione di dati sul Web.
 
-## <a name="reference"></a>Riferimenti
+## <a name="reference"></a>Informazioni di riferimento
 
 <xref:System.Runtime.Serialization>  
 Contiene classi utilizzabili per la serializzazione e la deserializzazione di oggetti.

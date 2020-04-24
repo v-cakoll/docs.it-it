@@ -26,10 +26,10 @@ Indica al compilatore di considerare la prima occorrenza di un avviso come error
   
 |Termine|Definizione|  
 |---|---|  
-|+ &#124; -|Facoltativa. Per impostazione predefinita, l'opzione `-warnaserror-` è attiva. Gli avvisi non impediscono al compilatore di produrre un file di output. Con l'opzione `-warnaserror`, equivalente a `-warnaserror+`, gli avvisi vengono considerati errori.|  
-|`numberList`|Facoltativa. Elenco delimitato da virgole di numeri di ID di avviso a cui si applica l'opzione `-warnaserror`. Se non viene specificato alcun ID di avviso, l'opzione `-warnaserror` si applica a tutti gli avvisi.|  
+|+ &#124; -|Facoltativo. Per impostazione predefinita, l'opzione `-warnaserror-` è attiva. Gli avvisi non impediscono al compilatore di produrre un file di output. Con l'opzione `-warnaserror`, equivalente a `-warnaserror+`, gli avvisi vengono considerati errori.|  
+|`numberList`|Facoltativo. Elenco delimitato da virgole di numeri di ID di avviso a cui si applica l'opzione `-warnaserror`. Se non viene specificato alcun ID di avviso, l'opzione `-warnaserror` si applica a tutti gli avvisi.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'opzione `-warnaserror` considera tutti gli avvisi come errori. Qualsiasi messaggio segnalato di norma come avviso viene invece segnalato come errore. Il compilatore segnala le occorrenze successive dello stesso avviso come avvisi.  
   
  Per impostazione predefinita, l'opzione `-warnaserror-` è attiva, pertanto gli avvisi sono solo informativi. Con l'opzione `-warnaserror`, equivalente a `-warnaserror+`, gli avvisi vengono considerati errori.  
@@ -61,7 +61,7 @@ vbc -warnaserror in.vb
 vbc -warnaserror:42024 t2.vb  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

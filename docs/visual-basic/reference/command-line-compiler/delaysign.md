@@ -23,18 +23,18 @@ Specifica se l'assembly avrà firma completa o parziale.
 -delaysign[+ | -]
 ```
 
-## <a name="arguments"></a>argomenti
+## <a name="arguments"></a>Argomenti
 
 `+` &#124; `-`  
-Parametro facoltativo. Utilizzare `-delaysign-` se si desidera che l'assembly abbia firma completa. Usare `-delaysign+` se si vuole inserire la chiave pubblica nell'assembly e lo spazio riservato per l'hash firmato. Il valore predefinito è `-delaysign-`.
+Facoltativo. Utilizzare `-delaysign-` se si desidera che l'assembly abbia firma completa. Usare `-delaysign+` se si vuole inserire la chiave pubblica nell'assembly e lo spazio riservato per l'hash firmato. Il valore predefinito è `-delaysign-`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'opzione `-delaysign` non ha alcun effetto, a meno che non venga usata con [-filefile](../../../visual-basic/reference/command-line-compiler/keyfile.md) o [-filecontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).
+L' `-delaysign` opzione non ha alcun effetto a meno che non venga usata con [-](../../../visual-basic/reference/command-line-compiler/keyfile.md) [filecontainer o-filecontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).
 
 Quando si richiede un assembly con firma completa, il compilatore genera un hash per il file contenente il manifesto (i metadati dell'assembly) e firma tale hash con la chiave privata. La firma digitale risultante viene archiviata nel file contenente il manifesto. Quando un assembly ha una firma ritardata, il compilatore non calcola e archivia la firma, ma riserva spazio nel file in modo che la firma possa essere aggiunta in un secondo momento.
 
-Utilizzando `-delaysign+`, ad esempio, uno sviluppatore di un'organizzazione può distribuire le versioni di test non firmate di un assembly che i tester possono registrare con la Global Assembly Cache e utilizzare. Al termine dell'operazione sull'assembly, la persona responsabile della chiave privata dell'organizzazione può firmare completamente l'assembly. Questo compartimentazione protegge la chiave privata dell'organizzazione dalla divulgazione, consentendo a tutti gli sviluppatori di lavorare sugli assembly.
+Usando `-delaysign+`, ad esempio, uno sviluppatore di un'organizzazione può distribuire le versioni di test senza segno di un assembly che i tester possono registrare con il global assembly cache e usare. Al termine dell'operazione sull'assembly, la persona responsabile della chiave privata dell'organizzazione può firmare completamente l'assembly. Questo compartimentazione protegge la chiave privata dell'organizzazione dalla divulgazione, consentendo a tutti gli sviluppatori di lavorare sugli assembly.
 
 Per ulteriori informazioni sulla firma di un assembly [, vedere Creazione e utilizzo di assembly con nome sicuro](../../../standard/assembly/create-use-strong-named.md) .
 
@@ -42,11 +42,11 @@ Per ulteriori informazioni sulla firma di un assembly [, vedere Creazione e util
 
 1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.
 
-2. Fare clic sulla scheda **Firma**.
+2. Fare clic sulla scheda **Firma** .
 
 3. Impostare il valore nella casella **solo firma ritardata** .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)

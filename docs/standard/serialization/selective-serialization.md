@@ -31,7 +31,7 @@ Se possibile, rendere non serializzabili gli oggetti che possono contenere dati 
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Serializzazione binaria](binary-serialization.md)
 - [Serializzazione SOAP e XML](xml-and-soap-serialization.md)

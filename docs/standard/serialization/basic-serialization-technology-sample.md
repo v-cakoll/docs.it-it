@@ -11,7 +11,7 @@ ms.locfileid: "71353148"
 ---
 # <a name="basic-serialization-technology-sample"></a>Esempio di tecnologia di serializzazione di base
 
-[Scaricare l'esempio](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)
+[Scaricare un esempio](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)
 
 In questo esempio viene illustrata la capacità di Common Language Runtime di serializzare in un flusso il grafico di un oggetto contenuto in memoria. Per la serializzazione, è possibile utilizzare l'oggetto <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Un elenco collegato, contenente dati, viene serializzato in un flusso di file o deserializzato da tale flusso. In entrambi i casi l'elenco viene visualizzato per consentire di esaminare i risultati. L'elenco collegato è di tipo `LinkedList`, un tipo definito in questo esempio.
 
@@ -42,11 +42,11 @@ Per ulteriori informazioni sulla serializzazione, vedere i commenti nei file di 
   > [!NOTE]
   > L'esempio compila un'applicazione console. Per visualizzare l'output dell'applicazione, è necessario avviarla dalla finestra del prompt dei comandi.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'applicazione di esempio accetta parametri della riga di comando che indicano il test da eseguire. Per serializzare un elenco costituito da 10 nodi in un file denominato **Test.xml** tramite il formattatore SOAP, usare i parametri **sx Test.xml 10**.
 
-Di seguito è riportato un esempio:
+Ad esempio:
 
 ```console
 Serialize.exe -sx Test.xml 10
@@ -54,7 +54,7 @@ Serialize.exe -sx Test.xml 10
 
 Per deserializzare il file **Test.xml** dell'esempio precedente, usare i parametri **dx Test.xml**.
 
-Di seguito è riportato un esempio:
+Ad esempio:
 
 ```console
 Serialize.exe -dx Test.xml
@@ -62,7 +62,7 @@ Serialize.exe -dx Test.xml
 
 Nei due esempi precedenti, la lettera "x" nell'opzione della riga di comando indica che si desidera utilizzare la serializzazione SOAP XML. Per utilizzare la serializzazione binaria, è possibile utilizzare la lettera "b". Se si desidera eseguire la serializzazione con un numero di nodi molto elevato, può essere opportuno reindirizzare l'output della console in un file.
 
-Di seguito è riportato un esempio:
+Ad esempio:
 
 ```console
 Serialize.exe -sb Test.bin 10000 >somefile.txt
@@ -86,7 +86,7 @@ Nell'elenco riportato di seguito vengono descritte in modo sintetico le classi e
 
   - <xref:System.IO.FileStream> - Consente di eseguire la serializzazione e la deserializzazione di elenchi collegati.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.IO>
 - <xref:System.IO.File>

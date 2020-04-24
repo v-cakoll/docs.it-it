@@ -18,13 +18,13 @@ Nelle tabelle seguenti sono elencate le attività associate all'oggetto `My.Comp
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
 
- [Procedura: caricare un fileHow to: Upload a File](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
+ [Procedura: Caricare un file](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
  Illustra come caricare un file e archiviarlo in un percorso remoto tramite `My.Computer.Network`.  
   
- [Procedura: scaricare un fileHow to: Download a File](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
+ [Procedura: Scaricare un file](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
  Illustra come scaricare un file da un percorso remoto tramite `My.Computer.Network`.  
   
- [Procedura: controllare lo stato di connessione](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
+ [Procedura: Controllare lo stato di connessione](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
  Illustra come determinare se il computer ha una connessione di rete funzionante.  
   
 ## <a name="reference"></a>Informazioni di riferimento  

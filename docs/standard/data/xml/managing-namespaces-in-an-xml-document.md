@@ -67,17 +67,17 @@ Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e d
   
 |A|Uso|  
 |--------|---------|  
-|Aggiungere uno spazio dei nomi|Metodo<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>|  
-|Rimuovere uno spazio dei nomi|Metodo<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>|  
+|Aggiungere uno spazio dei nomi|Metodo <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>|  
+|Rimuovere uno spazio dei nomi|Metodo <xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>|  
 |Trovare l'URI per lo spazio dei nomi predefinito|Proprietà <xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A>|  
-|Trovare l'URI per un prefisso dello spazio dei nomi|Metodo<xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A>|  
-|Trovare il prefisso per un URI dello spazio dei nomi|Metodo<xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A>|  
-|Ottenere un elenco di spazi dei nomi nel nodo corrente|Metodo<xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A>|  
+|Trovare l'URI per un prefisso dello spazio dei nomi|Metodo <xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A>|  
+|Trovare il prefisso per un URI dello spazio dei nomi|Metodo <xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A>|  
+|Ottenere un elenco di spazi dei nomi nel nodo corrente|Metodo <xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A>|  
 |Creare l'ambito di uno spazio dei nomi|Metodi <xref:System.Xml.XmlNamespaceManager.PushScope%2A> e <xref:System.Xml.XmlNamespaceManager.PopScope%2A>|  
-|Verificare se un prefisso è definito nell'ambito corrente|Metodo<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>|  
+|Verificare se un prefisso è definito nell'ambito corrente|Metodo <xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>|  
 |Ottenere la tabella dei nomi usata per ricercare i prefissi e gli URI|Proprietà <xref:System.Xml.XmlNamespaceManager.NameTable%2A>|  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Xml.XmlNamespaceManager>
 - [Documenti e dati XML](../../../../docs/standard/data/xml/index.md)

@@ -32,10 +32,10 @@ oppure
   
 |Termine|Definizione|  
 |---|---|  
-|`+` &#124; `-`|Parametro facoltativo. Se si specifica +, o semplicemente `-doc`, il compilatore genera informazioni di documentazione e le inserisce in un file XML. La specifica di `-` equivale a non specificare `-doc`, quindi non vengono create informazione di documentazione.|  
+|`+` &#124; `-`|Facoltativo. Se si specifica +, o semplicemente `-doc`, il compilatore genera informazioni di documentazione e le inserisce in un file XML. La specifica di `-` equivale a non specificare `-doc`, quindi non vengono create informazione di documentazione.|  
 |`file`|Richiesto se è usato `-doc:`. Specifica il file di output XML, popolato con i commenti dai file del codice sorgente della compilazione. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette doppie (" ").|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'opzione `-doc` controlla se il compilatore genera un file XML contenente i commenti della documentazione. Se si usa la sintassi `-doc:file`, il parametro `file` specifica il nome del file XML. Se si usa `-doc` o `-doc+`, il compilatore ottiene il nome del file XML dal file eseguibile o dalla libreria che il compilatore sta creando. Se si usa `-doc-` o non si specifica l'opzione `-doc`, il compilatore non crea un file XML.  
   
  Nei file di codice sorgente, i commenti della documentazione possono precedere le definizioni seguenti:  
@@ -57,7 +57,7 @@ oppure
 ## <a name="example"></a>Esempio  
  Vedere [Documentazione del codice tramite XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md) per un esempio.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Documentazione del codice tramite XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)

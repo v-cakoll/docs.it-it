@@ -131,7 +131,7 @@ namespace ValidationSample
 }
 ```
 
-Di seguito viene indicato il contenuto del file di input, *HeadCount.xml*, da convalidare:
+Di seguito viene descritto il contenuto del file di input, adquestr *. XML*, da convalidare:
 
 ```xml
 <!--Load HeadCount.xdr in SchemaCollection for Validation-->
@@ -154,7 +154,7 @@ Di seguito viene indicato il contenuto del file dello schema XDR, *HeadCount.xdr
 </Schema>
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Xml.XmlValidatingReader.ValidationType%2A>
 - [Compilazione dello schema XmlSchemaCollection](xmlschemacollection-schema-compilation.md)

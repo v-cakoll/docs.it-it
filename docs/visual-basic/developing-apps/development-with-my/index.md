@@ -43,7 +43,7 @@ Visual Basic fornisce nuove funzionalità per lo sviluppo rapido di applicazioni
  [Dipendenza di My dal tipo di progetto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Vengono forniti dettagli sulle caratteristiche di `My` disponibili per i diversi tipi di progetto.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>

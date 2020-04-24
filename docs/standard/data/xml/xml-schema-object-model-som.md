@@ -15,14 +15,14 @@ XML Schema è uno strumento potente e complesso per la creazione e la convalida 
   
  Il modello SOM (Schema Object Model) fornisce un set di classi nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType> che consente di leggere uno schema da un file oppure di creare a livello di codice uno schema in memoria. È quindi possibile attraversare, modificare, compilare, convalidare o scrivere lo schema in un file.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Cenni preliminari sul modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
  Vengono descritti il modello SOM (Schema Object Model) e le funzionalità e le classi fornite.  
   
  [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  Viene descritto come leggere e scrivere schemi XML da file o altre origini.  
   
- [Compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+ [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md)  
  Viene descritto come usare le classi nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType> per compilare schemi XML in memoria.  
   
  [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  

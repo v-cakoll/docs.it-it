@@ -190,7 +190,7 @@ Il risultato della trasformazione di dati XML con il presente foglio di stile è
 <books xmlns:user="urn:books">Book1Book2Book3Book4</books>
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [Trasformazioni XSLT con la classe XslTransform](xslt-transformations-with-the-xsltransform-class.md)

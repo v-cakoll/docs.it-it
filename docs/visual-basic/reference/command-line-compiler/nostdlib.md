@@ -23,22 +23,22 @@ Fa in modo che il compilatore non faccia automaticamente riferimento alle librer
 ```  
   
 ## <a name="remarks"></a>Osservazioni  
- L'opzione `-nostdlib` rimuove il riferimento automatico all'assembly System. dll e impedisce al compilatore di leggere il file Vbc. rsp. Il file Vbc. rsp, che si trova nella stessa directory del file Vbc. exe, fa riferimento agli assembly di .NET Framework di uso comune e importa gli spazi dei nomi `System` e `Microsoft.VisualBasic`.  
+ L' `-nostdlib` opzione rimuove il riferimento automatico all'assembly System. dll e impedisce al compilatore di leggere il file Vbc. rsp. Il file Vbc. rsp, che si trova nella stessa directory del file Vbc. exe, fa riferimento agli assembly di .NET Framework di uso comune e importa `System` gli `Microsoft.VisualBasic` spazi dei nomi e.  
   
 > [!NOTE]
 > Viene sempre fatto riferimento agli assembly mscorlib. dll e Microsoft. VisualBasic. dll.  
   
 > [!NOTE]
-> L'opzione `-nostdlib` non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
+> L' `-nostdlib` opzione non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente compila `T2.vb` senza fare riferimento alle librerie standard. Per rimuovere l'oggetto `My`, è necessario impostare la `_MYTYPE` costante di compilazione condizionale sulla stringa "Empty".  
+ Il codice seguente viene compilato `T2.vb` senza fare riferimento alle librerie standard. Per rimuovere l' `My` oggetto `_MYTYPE` , è necessario impostare la costante di compilazione condizionale sulla stringa "Empty".  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)

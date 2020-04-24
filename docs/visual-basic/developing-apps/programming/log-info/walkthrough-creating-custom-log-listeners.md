@@ -39,13 +39,13 @@ La procedura seguente prevede alcuni semplici passaggi per la creazione di un as
 
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>Per assegnare un nome sicuro all'assembly di listener di log
 
-1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà**dal menu **Progetto** .
+1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà**dal menu **progetto** .
 
 2. Fare clic sulla scheda **Firma** .
 
 3. Selezionare la casella **Firma assembly** .
 
-4. Selezionare ** \<Nuovo>** dall'elenco a discesa Scegli un file di chiave con **nome sicuro.**
+4. Selezionare ** \<nuovo>** dall'elenco **a discesa Scegli un file chiave con nome sicuro** .
 
      Si aprirà la finestra di dialogo **Crea chiave con nome sicuro** .
 
@@ -107,10 +107,10 @@ Con il nome sicuro è possibile aggiungere il listener alla raccolta di listener
 
      Modificare il valore di `SimpleLogStrongName` in modo che sia il nome sicuro del listener.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [Utilizzo dei log applicazione](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Procedura: registrare eccezioni](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Procedura: Registrare eccezioni](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
 - [Procedura: Scrivere messaggi di log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Procedura dettagliata: modifica della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Procedura dettagliata: Modifica della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

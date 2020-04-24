@@ -28,14 +28,14 @@ L'opzione **-refonly** indica che l'output primario della compilazione deve esse
 
 ## <a name="remarks"></a>Osservazioni
 
-Visual Basic supporta l'opzione di `-refonly` a partire dalla versione 15,3.
+Visual Basic supporta l' `-refonly` opzione che inizia con la versione 15,3.
 
 Gli assembly di riferimento sono un tipo speciale di assembly che contiene solo la quantità minima di metadati necessaria per rappresentare la superficie dell'API pubblica della libreria. Sono incluse le dichiarazioni per tutti i membri significativi quando si fa riferimento a un assembly negli strumenti di compilazione, ma si escludono tutte le implementazioni e le dichiarazioni dei membri privati che non hanno alcun impatto osservabile sul contratto API. Per ulteriori informazioni, vedere [assembly di riferimento](../../../standard/assembly/reference-assemblies.md) nella Guida di .NET.
 
-Le opzioni `-refonly` e [`-refout`](refout-compiler-option.md) si escludono reciprocamente.
+Le `-refonly` opzioni [`-refout`](refout-compiler-option.md) e si escludono a vicenda.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [/refout](refout-compiler-option.md)
+- [-refout](refout-compiler-option.md)
 - [Compilatore della riga di comando di Visual Basic](index.md)
 - [Esempi di righe di comando di compilazione](sample-compilation-command-lines.md)

@@ -15,13 +15,13 @@ Il DOM (Document Object Model) XML considera i dati XML come un set standard di 
   
  La classe <xref:System.Xml.XmlDocument> rappresenta un documento XML. Include membri per il recupero e la creazione di tutti gli altri oggetti XML. Usando la classe <xref:System.Xml.XmlDocument> e le classi correlate è possibile costruire documenti XML, caricare e accedere ai dati, modificare i dati e salvare le modifiche.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
-- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)  
+- [XML DOM (Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)  
   
 - [Tipi di nodi XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
   
-- [Gerarchia del modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md)  
+- [Gerarchia del modello a oggetti di documenti XML (Document Object Model, DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md)  
   
 - [Mapping della gerarchia di oggetti in dati XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)  
   
@@ -39,7 +39,7 @@ Il DOM (Document Object Model) XML considera i dati XML come un set standard di 
   
 - [Salvataggio e scrittura di un documento](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)  
   
-- [Selezionare nodi con la navigazione XPath](../../../../docs/standard/data/xml/select-nodes-using-xpath-navigation.md)  
+- [Selezione di nodi utilizzando la navigazione XPath](../../../../docs/standard/data/xml/select-nodes-using-xpath-navigation.md)  
   
 - [Risoluzione di risorse esterne](../../../../docs/standard/data/xml/resolving-external-resources.md)  
   

@@ -258,12 +258,12 @@ public class Order {
 </BookOrderForm>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Serializzazione SOAP e XML](xml-and-soap-serialization.md)
-- [Attributi per il controllo della serializzazione SOAP codificata](attributes-that-control-encoded-soap-serialization.md)
+- [Attributi che controllano la serializzazione SOAP codificata](attributes-that-control-encoded-soap-serialization.md)
 - [Procedura: Serializzare un oggetto come flusso XML con codifica SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
-- [Procedura: Eseguire l'override della serializzazione XML con codifica SOAP](how-to-override-encoded-soap-xml-serialization.md)
+- [Procedura: eseguire l'override della serializzazione XML con codifica SOAP](how-to-override-encoded-soap-xml-serialization.md)
 - [Introduzione alla serializzazione XML](introducing-xml-serialization.md)
-- [Procedura: Serializzare un oggetto](how-to-serialize-an-object.md)
-- [Procedura: deserializzare un oggetto](how-to-deserialize-an-object.md)
+- [Procedura: serializzare un oggetto](how-to-serialize-an-object.md)
+- [Procedura: Deserializzare un oggetto](how-to-deserialize-an-object.md)

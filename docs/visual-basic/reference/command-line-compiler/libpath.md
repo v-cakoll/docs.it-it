@@ -26,10 +26,10 @@ Specifica il percorso degli assembly a cui si fa riferimento.
   
 |Termine|Definizione|  
 |---|---|  
-|`dirList`|Richiesto. Elenco delimitato da punti e virgola di directory per il compilatore da cercare se un assembly a cui si fa riferimento non viene trovato nella directory di lavoro corrente (la directory da cui si richiama il compilatore) o nella directory di sistema del Common Language Runtime. Se il nome della directory contiene uno spazio, racchiudere il nome tra virgolette ("").|  
+|`dirList`|Obbligatorio. Elenco delimitato da punti e virgola di directory per il compilatore da cercare se un assembly a cui si fa riferimento non viene trovato nella directory di lavoro corrente (la directory da cui si richiama il compilatore) o nella directory di sistema del Common Language Runtime. Se il nome della directory contiene uno spazio, racchiudere il nome tra virgolette ("").|  
   
-## <a name="remarks"></a>Note  
- L'opzione `-libpath` specifica il percorso degli assembly a cui fa riferimento l'opzione [-Reference](../../../visual-basic/reference/command-line-compiler/reference.md) .  
+## <a name="remarks"></a>Osservazioni  
+ L' `-libpath` opzione specifica il percorso degli assembly a cui fa riferimento l'opzione [-Reference](../../../visual-basic/reference/command-line-compiler/reference.md) .  
   
  La ricerca dei riferimenti non completi agli assembly viene operata nell'ordine seguente:  
   
@@ -41,22 +41,22 @@ Specifica il percorso degli assembly a cui si fa riferimento.
   
 4. Directory specificate dalla variabile di ambiente LIB.  
   
- L'opzione `-libpath` è additiva; la specifica di più di una volta viene accodata a qualsiasi valore precedente.  
+ L' `-libpath` opzione è additiva; la specifica di più di una volta viene accodata a qualsiasi valore precedente.  
   
- Utilizzare `-reference` per specificare un riferimento a un assembly.  
+ Usare `-reference` per specificare un riferimento a un assembly.  
   
 |Per impostare-LIBPATH in Visual Studio Integrated Development Environment|  
 |---|  
 |1. è stato selezionato un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2. fare clic sulla scheda **riferimenti** .<br />3. fare clic sul pulsante **Percorsi riferimento...** .<br />4. nella finestra di dialogo **Percorsi riferimento** immettere il nome della directory nella casella **cartella:** .<br />5. fare clic su **Aggiungi cartella**.|  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente compila `T2.vb` per creare un file con estensione exe. Il compilatore cerca nella directory di lavoro, nella directory radice dell'unità C: e nella nuova directory degli assembly dell'unità C: per i riferimenti all'assembly.  
+ Il codice seguente esegue la `T2.vb` compilazione per creare un file con estensione exe. Il compilatore cerca nella directory di lavoro, nella directory radice dell'unità C: e nella nuova directory degli assembly dell'unità C: per i riferimenti all'assembly.  
   
 ```console  
 vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Assembly in .NET](../../../standard/assembly/index.md)
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)

@@ -28,7 +28,7 @@ Identifica un file manifesto dell'applicazione Win32 definito dall'utente da inc
 |---|---|  
 |`fileName`|Percorso del file manifesto personalizzato.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Per impostazione predefinita, il compilatore Visual Basic incorpora un manifesto dell'applicazione che specifica un livello di esecuzione richiesto di asInvoker. Crea il manifesto nella stessa cartella in cui viene compilato il file eseguibile, in genere la cartella bin\Debug o bin\Release quando si usa Visual Studio. Se si desidera fornire un manifesto personalizzato, ad esempio per specificare un livello di esecuzione richiesto di highestAvailable o requireAdministrator, utilizzare questa opzione per specificare il nome del file.  
   
 > [!NOTE]
@@ -38,13 +38,13 @@ Identifica un file manifesto dell'applicazione Win32 definito dall'utente da inc
   
  L'applicazione sarà soggetta alla virtualizzazione se si verifica una delle condizioni seguenti:  
   
-1. Usare l'opzione `-nowin32manifest` e non si fornisce un manifesto in un'istruzione di compilazione successiva o come parte di un file di risorse di Windows (res) tramite l'opzione `-win32resource`.  
+1. Usare l' `-nowin32manifest` opzione e non si fornisce un manifesto in un'istruzione di compilazione successiva o come parte di un file di risorse Windows (res) tramite l' `-win32resource` opzione.  
   
 2. Si indica un manifesto personalizzato che non specifica un livello di esecuzione richiesto.  
   
  Visual Studio crea un file manifesto predefinito e lo memorizza nelle directory di debug e versione insieme al file eseguibile. Per visualizzare o modificare il file app. manifest predefinito, fare clic su **Visualizza impostazioni UAC** nella scheda **applicazione** in Progettazione progetti. Per altre informazioni, vedere [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
- È possibile fornire il manifesto dell'applicazione come passaggio di post-compilazione personalizzato o come parte di un file di risorse Win32 utilizzando l'opzione `-nowin32manifest`. Usare la stessa opzione se si vuole che l'applicazione sia sottoposta alla virtualizzazione dei file o del Registro di sistema in Windows Vista. In questo modo si impedisce al compilatore di creare e incorporare un manifesto predefinito nel file PE.  
+ È possibile fornire il manifesto dell'applicazione come passaggio di post-compilazione personalizzato o come parte di un file di risorse Win32 utilizzando `-nowin32manifest` l'opzione. Usare la stessa opzione se si vuole che l'applicazione sia sottoposta alla virtualizzazione dei file o del Registro di sistema in Windows Vista. In questo modo si impedisce al compilatore di creare e incorporare un manifesto predefinito nel file PE.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato il manifesto predefinito inserito dal compilatore Visual Basic in un file PE.  
@@ -66,7 +66,7 @@ Identifica un file manifesto dell'applicazione Win32 definito dall'utente da inc
 </assembly>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-nowin32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)

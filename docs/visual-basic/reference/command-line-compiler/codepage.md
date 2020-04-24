@@ -22,20 +22,20 @@ Specifica la tabella codici da usare per tutti i file del codice sorgente nella 
 -codepage:id  
 ```  
   
-## <a name="arguments"></a>argomenti  
+## <a name="arguments"></a>Argomenti  
   
 |Termine|Definizione|  
 |---|---|  
 |`id`|Obbligatorio. Il compilatore usa la tabella codici specificata da `id` per interpretare la codifica dei file di origine.|  
   
 ## <a name="remarks"></a>Osservazioni  
- Per compilare il codice sorgente salvato con una codifica specifica, è possibile usare `-codepage` per specificare la tabella codici da usare. L'opzione `-codepage` si applica a tutti i file del codice sorgente nella compilazione. Per ulteriori informazioni, vedere [codifica dei caratteri nella .NET Framework](../../../standard/base-types/character-encoding.md).  
+ Per compilare il codice sorgente salvato con una codifica specifica, è possibile `-codepage` usare per specificare la tabella codici da usare. L' `-codepage` opzione si applica a tutti i file del codice sorgente nella compilazione. Per ulteriori informazioni, vedere [codifica dei caratteri nella .NET Framework](../../../standard/base-types/character-encoding.md).  
   
- L'opzione `-codepage` non è necessaria se i file del codice sorgente sono stati salvati usando la tabella codici ANSI corrente, Unicode o UTF-8 con una firma. Per impostazione predefinita, Visual Studio Salva tutti i file del codice sorgente con la tabella codici ANSI corrente, a meno che l'utente non specifichi un'altra codifica nella finestra di dialogo **codifica** . Visual Studio usa la finestra di dialogo **codifica** per aprire i file di codice sorgente salvati con una tabella codici diversa.  
+ L' `-codepage` opzione non è necessaria se i file del codice sorgente sono stati salvati usando la tabella codici ANSI corrente, Unicode o UTF-8 con una firma. Per impostazione predefinita, Visual Studio Salva tutti i file del codice sorgente con la tabella codici ANSI corrente, a meno che l'utente non specifichi un'altra codifica nella finestra di dialogo **codifica** . Visual Studio usa la finestra di dialogo **codifica** per aprire i file di codice sorgente salvati con una tabella codici diversa.  
   
 > [!NOTE]
-> L'opzione `-codepage` non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
+> L' `-codepage` opzione non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)

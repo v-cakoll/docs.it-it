@@ -97,11 +97,11 @@ Uno schema XML può contenere elementi `<xs:import />`, `<xs:include />` e `<xs:
   
  Per altre informazioni sugli elementi `<xs:import />`, `<xs:include />` e `<xs:redefine />` e sulle classi <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> e <xref:System.Xml.Schema.XmlSchemaRedefine>, vedere il documento [W3C XML Schema](https://www.w3.org/XML/Schema) e la documentazione di riferimento sulle classi dello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [Cenni preliminari sul modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md)
 - [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
 - [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
 - [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

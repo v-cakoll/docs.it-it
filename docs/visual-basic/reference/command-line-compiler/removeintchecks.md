@@ -27,13 +27,13 @@ Attiva o disattiva il controllo degli errori di overflow per le operazioni integ
   
 ## <a name="arguments"></a>Argomenti  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |---|---|  
-|`+` &#124; `-`|facoltativo. L'opzione `-removeintchecks-` induce il compilatore a controllare tutti i calcoli Integer per rilevare errori di overflow. Il valore predefinito è `-removeintchecks-`.<br /><br /> Se si specifica `-removeintchecks` o `-removeintchecks+`, il controllo degli errori e i calcoli Integer possono essere più veloci. Tuttavia, senza il controllo degli errori e in caso di overflow delle capacità del tipo di dati, i risultati non corretti possono essere archiviati senza generare un errore.|  
+|`+` &#124; `-`|Facoltativo. L' `-removeintchecks-` opzione fa sì che il compilatore verifichi tutti i calcoli Integer per gli errori di overflow. Il valore predefinito è `-removeintchecks-`.<br /><br /> Specifica `-removeintchecks` o `-removeintchecks+` impedisce il controllo degli errori ed è in grado di eseguire calcoli Integer più velocemente. Tuttavia, senza il controllo degli errori e in caso di overflow delle capacità del tipo di dati, i risultati non corretti possono essere archiviati senza generare un errore.|  
   
 |Per impostare-removeintchecks (in Visual Studio Integrated Development Environment|  
 |---|  
-|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Compila**.<br />3.  Fare clic su **Avanzate** .<br />4.  Modificare il valore della casella di **controllo Rimuovi overflow di Integer** .|  
+|1. è stato selezionato un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2. fare clic sulla scheda **Compila** .<br />3. fare clic sul pulsante **Avanzate** .<br />4. modificare il valore della casella di **controllo Rimuovi overflow di Integer** .|  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente compila `Test.vb` e disattiva il controllo degli errori di overflow di Integer.  
@@ -42,7 +42,7 @@ Attiva o disattiva il controllo degli errori di overflow per le operazioni integ
 vbc -removeintchecks+ test.vb  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

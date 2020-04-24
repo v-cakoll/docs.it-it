@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: caricare un file'
+title: 'Procedura: Caricare un file'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - networks, uploading files
@@ -47,9 +47,9 @@ Il metodo <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> consente di
   
 - Timeout della connessione (<xref:System.TimeoutException>).  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>
-- [Procedura: scaricare un fileHow to: Download a File](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
+- [Procedura: Scaricare un file](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
 - [Procedura: analizzare percorsi di file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

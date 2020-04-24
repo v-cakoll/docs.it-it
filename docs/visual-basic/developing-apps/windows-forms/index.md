@@ -1,5 +1,5 @@
 ---
-title: Nozioni fondamentali relative a Windows Forms Application
+title: Nozioni fondamentali relative alle applicazioni Windows Form
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows applications
@@ -14,7 +14,7 @@ ms.locfileid: "74349155"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Nozioni fondamentali relative alle applicazioni Windows Forms (Visual Basic)
 
-Una parte importante del Visual Basic è la possibilità di creare Windows Forms applicazioni eseguite localmente sui computer degli utenti. È possibile usare Visual Studio per creare l'applicazione e l'interfaccia utente usando Windows Forms. Una Windows Forms Application è basata sulle classi dello spazio dei nomi <xref:System.Windows.Forms>.
+Una parte importante del Visual Basic è la possibilità di creare Windows Forms applicazioni eseguite localmente sui computer degli utenti. È possibile usare Visual Studio per creare l'applicazione e l'interfaccia utente usando Windows Forms. Un Windows Forms Application viene compilato in base alle classi <xref:System.Windows.Forms> dello spazio dei nomi.
 
 ## <a name="designing-windows-forms-applications"></a>Progettazione di applicazioni Windows Forms
 
@@ -40,28 +40,28 @@ Quando un utente esegue un'operazione nel form o in uno dei relativi controlli, 
 
 Windows Forms contiene un'ampia gamma di controlli che è possibile inserire nei form: controlli che visualizzano caselle di testo, pulsanti, caselle di riepilogo a discesa, pulsanti di opzione e persino pagine Web. Per un elenco di tutti i controlli utilizzabili in un modulo, vedere [Controlli da usare in Windows Forms](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md). Se un controllo esistente non dovesse soddisfare le proprie esigenze, Windows Form consente anche di creare controlli personalizzati usando la classe <xref:System.Windows.Forms.UserControl>.
 
-Windows Form dispone di controlli UI completi che simulano le funzionalità delle applicazioni di fascia alta quali Microsoft Office. Utilizzando il <xref:System.Windows.Forms.ToolStrip> e il controllo <xref:System.Windows.Forms.MenuStrip>, è possibile creare barre degli strumenti e menu contenenti testo e immagini, visualizzare sottomenu e ospitare altri controlli, ad esempio caselle di testo e caselle combinate.
+Windows Form dispone di controlli UI completi che simulano le funzionalità delle applicazioni di fascia alta quali Microsoft Office. Con il <xref:System.Windows.Forms.ToolStrip> controllo <xref:System.Windows.Forms.MenuStrip> e è possibile creare barre degli strumenti e menu contenenti testo e immagini, visualizzare sottomenu e ospitare altri controlli, ad esempio caselle di testo e caselle combinate.
 
-Con la finestra di progettazione dei form di Visual Studio con trascinamento della selezione è possibile creare facilmente Windows Forms applicazioni: è sufficiente selezionare i controlli con il cursore e posizionarli nel punto desiderato del form. Nella finestra di progettazione vengono forniti strumenti quali linee della griglia e "linee di allineamento" che semplificano l'allineamento dei controlli. Se si usa Visual Studio o si compila dalla riga di comando, è possibile usare i controlli <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> e <xref:System.Windows.Forms.SplitContainer> per creare layout di form avanzati con tempi e sforzi minimi.
+Con la finestra di progettazione dei form di Visual Studio con trascinamento della selezione è possibile creare facilmente Windows Forms applicazioni: è sufficiente selezionare i controlli con il cursore e posizionarli nel punto desiderato del form. Nella finestra di progettazione vengono forniti strumenti quali linee della griglia e "linee di allineamento" che semplificano l'allineamento dei controlli. Se si usa Visual Studio o si compila dalla riga di comando, è possibile usare i <xref:System.Windows.Forms.FlowLayoutPanel>controlli <xref:System.Windows.Forms.TableLayoutPanel> , <xref:System.Windows.Forms.SplitContainer> e per creare layout di form avanzati con tempi e sforzi minimi.
 
 ### <a name="custom-ui-elements"></a>Elementi dell'interfaccia utente personalizzati
 
-Infine, se è necessario creare elementi dell'interfaccia utente personalizzati, lo spazio dei nomi <xref:System.Drawing> contiene tutte le classi necessarie per eseguire il rendering di righe, cerchi e altre forme direttamente in un form.
+Infine, se è necessario creare elementi dell'interfaccia utente personalizzati, lo <xref:System.Drawing> spazio dei nomi contiene tutte le classi necessarie per eseguire il rendering di righe, cerchi e altre forme direttamente in un form.
 
 Per informazioni dettagliate sull'uso di queste funzionalità, vedere gli argomenti della guida seguenti.
 
-|Per|Vedere|
+|A|Vedere|
 |--------|---------|
 |Creare una nuova Windows Forms Application con Visual Studio|[Esercitazione 1: creare un visualizzatore di immagini](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|
-|Usare i controlli nei moduli|[Procedura: Aggiungere controlli a un Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|Crea grafica con <xref:System.Drawing>|[Introduzione alla programmazione grafica](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|
-|Creare controlli personalizzati|[Procedura: ereditare dalla classe UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
+|Usare i controlli nei moduli|[Procedura: aggiungere controlli a un Windows Form](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
+|Crea grafica con<xref:System.Drawing>|[Introduzione alla programmazione grafica](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|
+|Creare controlli personalizzati|[Procedura: Ereditare dalla classe UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ## <a name="displaying-and-manipulating-data"></a>Visualizzazione e modifica dei dati
 
-Molte applicazioni devono visualizzare i dati da un database, da un file XML, servizi Web XML o altre origini di dati. Windows Forms fornisce un controllo flessibile denominato controllo <xref:System.Windows.Forms.DataGridView> per il rendering di tali dati tabulari in un formato di riga e di colonna tradizionale, in modo che ogni porzione di dati occupi la propria cella. Utilizzando <xref:System.Windows.Forms.DataGridView> è possibile personalizzare l'aspetto delle singole celle, bloccare righe e colonne arbitrarie e visualizzare controlli complessi all'interno delle celle, tra le altre funzionalità.
+Molte applicazioni devono visualizzare i dati da un database, da un file XML, servizi Web XML o altre origini di dati. Windows Forms fornisce un controllo flessibile denominato controllo <xref:System.Windows.Forms.DataGridView> per il rendering di tali dati tabulari in un formato di riga e di colonna tradizionale, in modo che ogni porzione di dati occupi una propria cella. Utilizzando <xref:System.Windows.Forms.DataGridView> è possibile personalizzare l'aspetto delle singole celle, bloccare righe e colonne arbitrarie e visualizzare controlli complessi all'interno delle celle, tra le altre funzionalità.
 
-Il collegamento alle origini dati tramite una rete è un'attività semplice con gli smart client Windows Form. Il componente <xref:System.Windows.Forms.BindingSource>, un nuovo con Windows Forms in Visual Studio 2005 e .NET Framework 2,0, rappresenta una connessione a un'origine dati ed espone metodi per l'associazione dei dati ai controlli, lo spostamento ai record precedenti e successivi, la modifica dei record e il salvataggio delle modifiche nell'origine originale. Il controllo <xref:System.Windows.Forms.BindingNavigator> fornisce un'interfaccia semplice tramite il componente <xref:System.Windows.Forms.BindingSource> per gli utenti per spostarsi tra i record.
+Il collegamento alle origini dati tramite una rete è un'attività semplice con gli smart client Windows Form. Il <xref:System.Windows.Forms.BindingSource> componente, nuovo con Windows Forms in Visual Studio 2005 e .NET Framework 2,0, rappresenta una connessione a un'origine dati ed espone metodi per l'associazione di dati ai controlli, lo spostamento ai record precedenti e successivi, la modifica di record e il salvataggio delle modifiche nell'origine originale. Il controllo <xref:System.Windows.Forms.BindingNavigator> fornisce un'interfaccia semplice tramite il componente <xref:System.Windows.Forms.BindingSource> per gli utenti per spostarsi tra i record.
 
 ### <a name="data-bound-controls"></a>Controlli con associazione a dati
 
@@ -73,10 +73,10 @@ Un altro tipo di data binding che è possibile gestire in Windows Form sono le i
 
 Per informazioni dettagliate sull'uso di queste funzionalità, vedere gli argomenti della guida seguenti.
 
-|Per|Vedere|
+|A|Vedere|
 |--------|---------|
-|Usare il componente <xref:System.Windows.Forms.BindingSource>|[Procedura: associare controlli Windows Forms al componente BindingSource usando la finestra di progettazione](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|Usare le origini dati di ADO.NET|[Procedura: ordinare e filtrare i dati ADO.NET con il componente BindingSource Windows Forms](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Usa il <xref:System.Windows.Forms.BindingSource> componente|[Procedura: associare controlli Windows Form al componente BindingSource utilizzando la finestra di progettazione](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
+|Usare le origini dati di ADO.NET|[Procedura: ordinare e filtrare i dati ADO.NET con il componente BindingSource Windows Form](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Utilizzare la finestra Origini dati|[Procedura dettagliata: visualizzazione di dati in un Windows Form](/visualstudio/data-tools/accessing-data-in-visual-studio)|
 
 ## <a name="deploying-applications-to-client-computers"></a>Distribuzione delle applicazioni ai client
@@ -89,11 +89,11 @@ Quando si aggiorna l'applicazione, vengono pubblicati un nuovo manifesto della d
 
 Per un'introduzione completa a ClickOnce, vedere [sicurezza e distribuzione di ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Per informazioni dettagliate sull'uso di queste funzionalità, vedere gli argomenti della guida seguenti:
 
-|Per|Vedere|
+|A|Vedere|
 |--------|---------|
 |Distribuire un'applicazione con ClickOnce|[Procedura: Pubblicare un'applicazione ClickOnce mediante la Pubblicazione guidata](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Procedura dettagliata: distribuzione manuale di un'applicazione ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
-|Aggiornare una distribuzione ClickOnce|[Procedura: Gestire gli aggiornamenti per un'applicazione ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
-|Gestione della sicurezza con ClickOnce|[Procedura: Abilitare le impostazioni di sicurezza ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
+|Aggiornare una distribuzione ClickOnce|[Procedura: gestire gli aggiornamenti per un'applicazione ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
+|Gestione della sicurezza con ClickOnce|[Procedura: abilitare le impostazioni di sicurezza ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
 
 ## <a name="other-controls-and-features"></a>Altri controlli e funzionalità
 
@@ -101,12 +101,12 @@ Windows Form dispone di altre funzioni che rendono le comuni attività di implem
 
 Per informazioni dettagliate sull'uso di queste funzionalità, vedere gli argomenti della guida seguenti:
 
-|Per|Vedere|
+|A|Vedere|
 |--------|---------|
-|Stampa il contenuto di un form|[Procedura: stampare grafica in Windows Forms](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Procedura: stampare un file di testo con più pagine in Windows Forms](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
-|Altre informazioni sulla sicurezza di Windows Form|[Panoramica della sicurezza in Windows Forms](../../../framework/winforms/security-in-windows-forms-overview.md)|
+|Stampa il contenuto di un form|[Procedura: stampare grafica in Windows Forms](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Procedura: stampare un file di testo con più pagine in Windows Form](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
+|Altre informazioni sulla sicurezza di Windows Form|[Cenni preliminari sulla sicurezza in Windows Form](../../../framework/winforms/security-in-windows-forms-overview.md)|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
 - [Panoramica sui Windows Form](../../../framework/winforms/windows-forms-overview.md)

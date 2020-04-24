@@ -62,7 +62,7 @@ Le seguenti condizioni possono generare un'eccezione:
 
 - Esiste un file di destinazione ma non è possibile accedervi (<xref:System.UnauthorizedAccessException>).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>
 - [Procedura: cercare sottodirectory con un modello specifico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)

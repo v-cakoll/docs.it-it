@@ -17,13 +17,13 @@ ms.locfileid: "74352857"
 In questo argomento vengono forniti i collegamenti alle informazioni sull'utilizzo della libreria di classi .NET Framework.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Introduzione](../../framework/get-started/index.md)  
+ [Per iniziare](../../framework/get-started/index.md)  
  Offre una panoramica completa di .NET Framework, oltre ai collegamenti a risorse aggiuntive.  
   
  [Panoramica della libreria di classi](../../standard/class-library-overview.md)  
  Introduce le classi, le interfacce e i tipi di valore che consentono di velocizzare e ottimizzare il processo di sviluppo e di fornire l'accesso alle funzionalità di sistema.  
   
- [Guida di sviluppo](../../framework/development-guide.md)  
+ [Guida allo sviluppo](../../framework/development-guide.md)  
  Viene fornita una guida a tutte le aree e attività principali per lo sviluppo di applicazioni, tra cui la creazione, la configurazione, il debug, la sicurezza e la distribuzione dell'applicazione. Questo argomento fornisce anche informazioni su programmazione dinamica, interoperabilità, estendibilità, gestione della memoria e Threading.  
   
  [Strumenti](../../framework/tools/index.md)  

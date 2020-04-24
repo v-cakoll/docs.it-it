@@ -30,7 +30,7 @@ Quando un documento XML è in memoria, la rappresentazione concettuale è un alb
   
  L'input è rappresentato in memoria come il seguente albero di nodi con la proprietà del tipo di nodo associata:  
   
- ![albero del nodo di esempio](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
+ ![Albero nodo esempio](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
 Rappresentazione dell'albero dei nodi Book e Title  
   
  L'elemento `book` viene convertito in un oggetto **XmlElement**, l'elemento successivo `title` viene convertito anch'esso in **XmlElement**, mentre il contenuto degli elementi viene convertito in un oggetto **XmlText**. Osservando i metodi e le proprietà **XmlElement**, si può notare che questi sono diversi dai metodi e dalle proprietà disponibili in un oggetto **XmlText**. È quindi fondamentale sapere quale tipo di nodo diventerà il markup XML, perché in base a questo vengono determinate le operazioni che possono essere eseguite.  
@@ -218,6 +218,6 @@ public class Sample
   
  Per aggiungere nuovi nodi al DOM, vedere [Inserimento di nodi in un documento XML](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md). Per rimuovere nodi dal DOM, vedere [Rimozione di nodi, contenuto e valori da un documento XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md). Per modificare il contenuto dei nodi nel DOM, vedere [Modifica di nodi, contenuto e valori in un documento XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML DOM (Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

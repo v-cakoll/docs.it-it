@@ -23,14 +23,14 @@ Indica se un eseguibile a 64 bit o un eseguibile contrassegnato dall'opzione del
   
 ## <a name="arguments"></a>Argomenti  
  `+` &#124; `-`  
- Facoltativa. Per impostazione predefinita, l'opzione è disattivata oppure se si specifica `-highentropyva-`. L'opzione è attiva se si specifica `-highentropyva` o `-highentropyva+`.  
+ Facoltativo. L'opzione è disattivata per impostazione predefinita o `-highentropyva-`se si specifica. L'opzione è attiva se si specifica `-highentropyva` o `-highentropyva+`.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se si specifica questa opzione, le versioni compatibili del kernel di Windows possono usare livelli di entropia più elevati quando il kernel esegue in modo casuale il layout dello spazio degli indirizzi di un processo come parte di ASLR. Se il kernel usa livelli di entropia più elevati, è possibile allocare un numero maggiore di indirizzi alle aree di memoria quali stack e heap. Di conseguenza, è più difficile indovinare la posizione di una determinata area di memoria.  
   
  Quando l'opzione è impostata su on, l'eseguibile di destinazione e tutti i moduli da cui dipende devono essere in grado di gestire valori di puntatore maggiori di 4 gigabyte (GB) quando tali moduli sono in esecuzione come processi a 64 bit.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

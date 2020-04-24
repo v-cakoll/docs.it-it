@@ -249,7 +249,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
   
  Per altre informazioni sulla convalida di documenti XML tramite <xref:System.Xml.Schema.XmlSchemaSet>, vedere [Convalida di XML Schema (XSD) con XmlSchemaSet](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md).  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>
 - <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>

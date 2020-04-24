@@ -33,7 +33,7 @@ Questa sezione include argomenti che descrivono l'oggetto `My.Settings` e le att
 |Salvare i valori delle impostazioni utente aggiornate|[Procedura: Mantenere le impostazioni dell'utente in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
 |Determinare i valori delle impostazioni utente|[Procedura: Leggere le impostazioni dell'applicazione in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Gestione delle impostazioni di un'applicazione (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
 - [Oggetto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md)

@@ -47,7 +47,7 @@ Questa sezione elenca attività associate a creazione, eliminazione, spostamento
  [Procedura: creare un file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
  Illustra come creare un file.  
   
- [Procedura: eliminare un fileHow to: Delete a File](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
+ [Procedura: eliminare un file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
  Illustra come eliminare un file.  
   
  [How to: Find Files with a Specific Pattern](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md) (Procedura: Trovare file con un modello specifico)  
@@ -123,5 +123,5 @@ Questa sezione elenca attività associate a creazione, eliminazione, spostamento
  [Lettura da file](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Elenca le attività associate alla lettura da file.  
   
- [Scrittura nei file](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ [Scrittura su file](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
  Elenca le attività associate alla scrittura di file.

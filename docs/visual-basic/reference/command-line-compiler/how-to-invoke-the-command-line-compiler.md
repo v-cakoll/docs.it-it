@@ -28,9 +28,9 @@ ms.locfileid: "74344265"
 
 3. Richiamare il Prompt dei comandi per gli sviluppatori per Visual Studio.
 
-4. Nella riga di comando digitare `vbc.exe` *sourceFileName* , quindi premere INVIO.
+4. Nella riga di comando digitare `vbc.exe` *sourceFileName* e quindi premere INVIO.
 
-    Ad esempio, se il codice sorgente è stato archiviato in una directory denominata `SourceFiles`, si aprirà il prompt dei comandi e si digitarà `cd SourceFiles` per passare a tale directory. Se la directory contiene un file di origine denominato `Source.vb`, è possibile compilarlo digitando `vbc.exe Source.vb`.
+    Ad esempio, se il codice sorgente è stato archiviato in una directory `SourceFiles`denominata, si aprirà il prompt dei comandi `cd SourceFiles` e il tipo per passare a tale directory. Se la directory contiene un file di origine `Source.vb`denominato, è possibile compilarlo `vbc.exe Source.vb`digitando.
 
 ## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>Per impostare la variabile di ambiente PATH sul compilatore per il prompt dei comandi di Windows
 
@@ -54,11 +54,11 @@ ms.locfileid: "74344265"
 
 1. Dal menu **Start** fare clic sulla cartella **Accessories** , quindi aprire il prompt dei **comandi di Windows**.
 
-2. Nella riga di comando digitare `vbc.exe`*sourceFileName* , quindi premere INVIO.
+2. Nella riga di comando digitare `vbc.exe` *sourceFileName* e quindi premere INVIO.
 
-     Ad esempio, se il codice sorgente è stato archiviato in una directory denominata `SourceFiles`, si aprirà il prompt dei comandi e si digitarà `cd SourceFiles` per passare a tale directory. Se la directory contiene un file di origine denominato `Source.vb`, è possibile compilarlo digitando `vbc.exe Source.vb`.
+     Ad esempio, se il codice sorgente è stato archiviato in una directory `SourceFiles`denominata, si aprirà il prompt dei comandi `cd SourceFiles` e il tipo per passare a tale directory. Se la directory contiene un file di origine `Source.vb`denominato, è possibile compilarlo `vbc.exe Source.vb`digitando.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Compilazione condizionale](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

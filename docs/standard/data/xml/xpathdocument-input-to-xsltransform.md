@@ -37,6 +37,6 @@ StringWriter fs = new StringWriter();
 Xslt.Transform(doc, null, fs, null);  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Implementazione del processore XSLT da parte della classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

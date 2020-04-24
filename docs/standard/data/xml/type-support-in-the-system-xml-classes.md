@@ -26,7 +26,7 @@ In .NET Framework versione 2.0 le classi principali XML sono state migliorate pe
 > [!NOTE]
 > In .NET Framework versione 1.0 era necessario convertire la classe <xref:System.Xml.XmlConvert> tra il tipo XML Schema e il tipo CLR.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Mapping dei tipi di dati XML a tipi di dati CLR](../../../../docs/standard/data/xml/mapping-xml-data-types-to-clr-types.md)  
  Vengono descritti i mapping predefiniti dei tipi di dati XML ai tipi di dati CLR.  
   

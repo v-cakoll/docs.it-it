@@ -26,6 +26,6 @@ La tabella seguente presenta i modi possibili per accedere ai servizi Web a cui 
 |Chiamare un servizio Web|[Oggetto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)|
 |Chiamare un servizio Web in modo asincrono e gestire un evento quando quest'ultimo viene completato|[Procedura: chiamare un servizio Web in modo asincrono](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Oggetto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)

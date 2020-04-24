@@ -13,14 +13,14 @@ ms.locfileid: "75447048"
 
 Per ridurre l'utilizzo della memoria durante la lettura e la scrittura di oggetti di grandi dimensioni, è possibile trasmettere i dati all'interno e all'esterno del database. Questo può essere particolarmente utile quando si analizzano o si trasformano i dati.
 
-Per iniziare, inserire una riga come normale. Utilizzare la funzione SQL `zeroblob()` per allocare spazio nel database in modo che contenga l'oggetto di grandi dimensioni. La funzione `last_insert_rowid()` rappresenta un modo pratico per ottenere il proprio ROWID.
+Per iniziare, inserire una riga come normale. Utilizzare la `zeroblob()` funzione SQL per allocare spazio nel database in modo che contenga l'oggetto di grandi dimensioni. La `last_insert_rowid()` funzione fornisce un modo pratico per ottenere il proprio ROWID.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/StreamingSample/Program.cs?name=snippet_Insert)]
 
-Dopo aver inserito la riga, aprire un flusso per scrivere l'oggetto di grandi dimensioni utilizzando <xref:Microsoft.Data.Sqlite.SqliteBlob>.
+Dopo aver inserito la riga, aprire un flusso per scrivere l'oggetto di grandi <xref:Microsoft.Data.Sqlite.SqliteBlob>dimensioni utilizzando.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/StreamingSample/Program.cs?name=snippet_Write)]
 
-Per trasmettere l'oggetto di grandi dimensioni all'esterno del database, è necessario selezionare il ROWID o uno dei relativi alias, come illustrato qui, oltre alla colonna dell'oggetto large. Se non si seleziona ROWID, l'intero oggetto verrà caricato in memoria. L'oggetto restituito da `GetStream()` sarà una `SqliteBlob` se eseguita correttamente.
+Per trasmettere l'oggetto di grandi dimensioni all'esterno del database, è necessario selezionare il ROWID o uno dei relativi alias, come illustrato qui, oltre alla colonna dell'oggetto large. Se non si seleziona ROWID, l'intero oggetto verrà caricato in memoria. Quando viene eseguita correttamente `GetStream()` , l'oggetto restituito da sarà. `SqliteBlob`
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/StreamingSample/Program.cs?name=snippet_Read)]

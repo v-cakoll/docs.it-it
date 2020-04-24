@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: leggere da file di testo a larghezza fissaHow to: read from fixed-width text Files'
+title: 'Procedura: leggere da file di testo a larghezza fissa'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fixed-width text file
@@ -59,7 +59,7 @@ L'oggetto `TextFieldParser` consente di analizzare in modo facile ed efficace i 
   
 - L'utente non dispone di autorizzazioni sufficienti per accedere al file (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
 - [Procedura: leggere file di testo delimitati da virgola](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)

@@ -34,7 +34,7 @@ I parametri XSLT vengono aggiunti all'elenco <xref:System.Xml.Xsl.XsltArgumentLi
 |`Number`|<xref:System.Double?displayProperty=nameWithType>|XPath|  
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XSLT|  
 |`Node*`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XPath|  
-|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator[]**|XPath|  
+|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator []**|XPath|  
   
  *Questo è equivalente a un set di nodi che contiene un unico nodo.  
   
@@ -66,6 +66,6 @@ I parametri XSLT vengono aggiunti all'elenco <xref:System.Xml.Xsl.XsltArgumentLi
 </order>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

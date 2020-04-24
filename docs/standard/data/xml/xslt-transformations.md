@@ -18,8 +18,8 @@ L'Extensible Stylesheet Language Transformation (XSLT) consente di trasformare i
 > [!NOTE]
 > La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in .NET Framework versione 2.0. La classe <xref:System.Xml.Xsl.XslCompiledTransform> è una nuova implementazione del motore XSLT, che include prestazioni migliori e nuove funzionalità di sicurezza. Si consiglia di creare le applicazioni XSLT usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Uso della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Utilizzo della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)  
  Vengono fornite informazioni sull'utilizzo della classe <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
  [Migrazione dalla classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)  
@@ -31,7 +31,7 @@ L'Extensible Stylesheet Language Transformation (XSLT) consente di trasformare i
  [Trasformazioni XSLT con la classe XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
  Vengono fornite informazioni sull'utilizzo della classe <xref:System.Xml.Xsl.XslTransform>.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Informazioni di riferimento  
  <xref:System.Xml.Xsl.XslCompiledTransform>  
  <xref:System.Xml.Xsl.XsltArgumentList>  
  <xref:System.Xml.Xsl.XsltSettings>  

@@ -2,25 +2,25 @@
 title: Processo di acquisto aziendale
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 95fa421ed44cf2d930fb4b80979d1b8bd9fda5ed
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 93cfc3546fc312f046c4a5e1dd63dfb357f143c4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715218"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182866"
 ---
 # <a name="corporate-purchase-process"></a>Processo di acquisto aziendale
 In questo esempio viene illustrato come creare un semplice processo di acquisto basato su richieste di proposte (RDP) con la selezione automatica della proposta migliore. Vengono combinati gli oggetti <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> e <xref:System.Activities.Statements.ForEach%601>, nonché un'attività personalizzata per creare un flusso di lavoro che rappresenta il processo.
 
  Questo esempio contiene un'applicazione client ASP.NET che consente di interagire con il processo come partecipanti diversi (come il richiedente originale o un particolare fornitore).
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 - Visual Studio 2012.
 
 - [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
 
-## <a name="demonstrates"></a>Dimostrazione
+## <a name="demonstrates"></a>Dimostra
 
 - Attività personalizzate.
 
@@ -36,15 +36,15 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 
 - Rilevamento.
 
-- Hosting di [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in client diversi (applicazioni Web ASP.NET e applicazioni WinForms).
+- Hosting [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in client diversi (applicazioni Web ASP.NET e applicazioni WinForms).
 
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
->   
+>
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>Descrizione del processo  
@@ -54,7 +54,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
   
     1. Il dipendente digita il titolo e la descrizione della RDP.  
   
-    2. Il dipendente seleziona i fornitori a cui desidera richiedere di inviare proposte.  
+    2. Il dipendente seleziona i fornitori che vogliono invitare a inviare proposte.  
   
 2. Il dipendente invia la proposta.  
   
@@ -78,7 +78,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 ## <a name="projects-in-this-sample"></a>Progetti di questo esempio  
  In questo esempio sono contenuti i progetti seguenti.  
   
-|Progetto di|Descrizione|  
+|Progetto|Description|  
 |-------------|-----------------|  
 |Comuni|Oggetti entità usati all'interno del processo (Richiesta di proposta, Fornitore e Proposta del fornitore).|  
 |WfDefinition|Definizione del processo (come programma [!INCLUDE[wf1](../../../../includes/wf1-md.md)]) e dell'host (`PurchaseProcessHost`) usati dalle applicazioni client per la creazione e l'uso di istanze del flusso di lavoro del processo di acquisto.|  
@@ -93,7 +93,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 |IPurchaseProcessHost.cs|Interfaccia per l'host del flusso di lavoro.|  
 |PurchaseProcessHost.cs|Implementazione di un host per il flusso di lavoro. L'host estrae i dettagli dell'esecuzione del flusso di lavoro e viene usato in tutte le applicazioni client per caricare, eseguire e interagire con le istanze del flusso di lavoro `PurchaseProcess`.|  
 |PurchaseProcessWorkflow.cs|Attività che contiene la definizione del flusso di lavoro del processo di acquisto (deriva dall'oggetto <xref:System.Activities.Activity>).<br /><br /> Le attività che derivano dall'oggetto <xref:System.Activities.Activity> compongono la funzionalità assemblando le attività personalizzate esistenti e le attività della libreria di attività di [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. L'assemblaggio di queste attività è il modo più comunemente usato per creare la funzionalità personalizzata.|  
-|WaitForVendorProposal.cs|Questa attività personalizzata deriva dall'oggetto <xref:System.Activities.NativeActivity> e crea un segnalibro denominato che deve essere ripreso in un secondo momento da un fornitore quando invia la proposta.<br /><br /> Le attività che derivano dalla classe <xref:System.Activities.NativeActivity>, come quelle che derivano dalla classe <xref:System.Activities.CodeActivity> creano la funzionalità imperativa eseguendo l'override del metodo <xref:System.Activities.NativeActivity.Execute%2A>, ma dispongono anche dell'accesso a tutta la funzionalità del runtime del flusso di lavoro tramite la classe <xref:System.Activities.ActivityContext> che viene passata al metodo `Execute`. Questo contesto dispone del supporto per la pianificazione e l'annullamento di attività figlio, per l'impostazione di aree di non persistenza (blocchi di esecuzione durante i quali il runtime non rende persistenti i dati del flusso di lavoro, ad esempio all'interno di transazioni atomiche), nonché per gli oggetti <xref:System.Activities.Bookmark> (handle per la ripresa di flussi di lavoro in pausa).|  
+|WaitForVendorProposal.cs|Questa attività personalizzata deriva dall'oggetto <xref:System.Activities.NativeActivity> e crea un segnalibro denominato che deve essere ripreso in un secondo momento da un fornitore quando invia la proposta.<br /><br /> Le attività che derivano dalla classe <xref:System.Activities.NativeActivity>, come quelle che derivano dalla classe <xref:System.Activities.CodeActivity> creano la funzionalità imperativa eseguendo l'override del metodo <xref:System.Activities.NativeActivity.Execute%2A>, ma dispongono anche dell'accesso a tutta la funzionalità del runtime del flusso di lavoro tramite la classe <xref:System.Activities.ActivityContext> che viene passata al metodo `Execute`. Questo contesto dispone del supporto per la pianificazione e l'annullamento di attività figlio, la configurazione di zone senza salvataggio permanente (blocchi di esecuzione durante i quali il runtime non rende persistenti i dati del flusso di lavoro, <xref:System.Activities.Bookmark> ad esempio all'interno di transazioni atomiche) e gli oggetti (handle per la ripresa dei flussi di lavoro in pausa).|  
 |TrackingParticipant.cs|Oggetto <xref:System.Activities.Tracking.TrackingParticipant> che riceve tutti gli eventi di rilevamento e li salva in un file di testo.<br /><br /> I partecipanti del rilevamento vengono aggiunti all'istanza del flusso di lavoro come estensioni.|  
 |XmlWorkflowInstanceStore.cs|Oggetto <xref:System.Runtime.DurableInstancing.InstanceStore> personalizzato che salva le applicazioni flusso di lavoro in file XML.|  
 |XmlPersistenceParticipant.cs|Oggetto <xref:System.Activities.Persistence.PersistenceParticipant> personalizzato che salva un'istanza di richiesta di proposta in un file XML.|  
@@ -102,16 +102,16 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 ### <a name="common"></a>Comuni  
  Nella tabella seguente è contenuta una descrizione delle classi più importanti del progetto Common.  
   
-|Classe|Descrizione|  
+|Classe|Description|  
 |-----------|-----------------|  
-|Console|Fornitore che invia proposte in una richiesta di proposte.|  
+|Vendor|Fornitore che invia proposte in una richiesta di proposte.|  
 |RequestForProposal|Una richiesta di proposte (RDP) è un invito rivolto ai fornitori affinché inviino proposte per una merce o un servizio specifico.|  
 |VendorProposal|Proposta inviata da un fornitore a una RDP concreta.|  
 |VendorRepository|Repository di fornitori. Questa implementazione contiene una raccolta in memoria di istanze del fornitore e di metodi per esporre tali istanze.|  
 |RfpRepository|Repository delle richieste di proposte. Questa implementazione usa Linq to XML per eseguire una query sul file XML di richieste di proposte generato dalla persistenza schematizzata. |  
 |IOHelper|Questa classe gestisce tutti i problemi di I/O (cartelle, percorsi e così via).|  
   
-### <a name="web-client"></a>Client Web di  
+### <a name="web-client"></a>Client Web  
  Nella tabella seguente è contenuta una descrizione delle pagine Web più importanti del progetto WebClient.  
   
 |File|Descrizione|  
@@ -124,7 +124,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 ### <a name="winforms-client"></a>WinFormsClient  
  Nella tabella seguente è contenuta una descrizione dei form più importanti del progetto WinFormsClient.  
   
-|Form|Descrizione|  
+|Form|Description|  
 |-|-|  
 |NewRfp|Crea e invia una nuova richiesta di proposte.|  
 |ShowProposals|Mostra tutte le richieste di proposte attive e completate. **Nota:**  Potrebbe essere necessario fare clic sul pulsante **Aggiorna** nell'interfaccia utente per visualizzare le modifiche apportate alla schermata dopo la creazione o la modifica di una richiesta di proposta.|  
@@ -134,7 +134,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 ### <a name="persistence-files"></a>File di persistenza  
  Nella tabella seguente vengono mostrati i file generati dal provider di persistenza (`XmlPersistenceProvider`) che si trovano nel percorso della cartella temporanea del sistema corrente (tramite il metodo <xref:System.IO.Path.GetTempPath%2A>). Il file di traccia viene creato nel percorso di esecuzione corrente.  
   
-|Nome file|Descrizione|Percorso|  
+|File Name|Description|Path|  
 |-|-|-|  
 |rfps.xml|File XML con tutte le richieste di proposte attive e completate.|<xref:System.IO.Path.GetTempPath%2A>|  
 |[instanceid]|In questo file sono contenute tutte le informazioni su un'istanza del flusso di lavoro.<br /><br /> Questo file viene generato dall'implementazione della persistenza schematizzata (PersistenceParticipant in XmlPersistenceProvider).|<xref:System.IO.Path.GetTempPath%2A>|  

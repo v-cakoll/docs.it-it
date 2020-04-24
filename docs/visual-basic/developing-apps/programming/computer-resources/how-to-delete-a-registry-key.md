@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: eliminare una chiave del Registro di sistema'
+title: 'Procedura: Eliminare una chiave del Registro di sistema'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.DeleteSetting
@@ -48,7 +48,7 @@ ms.locfileid: "74345645"
 
  Le chiamate al Registro di sistema hanno esito negativo se non sono concesse autorizzazioni sufficienti in fase di esecuzione (<xref:System.Security.Permissions.RegistryPermission>) o se, in base a quanto determinato dagli ACL, l'utente non usa l'accesso corretto per la creazione o la scrittura nelle impostazioni. Ad esempio, un'applicazione locale che ha l'autorizzazione di sicurezza dall'accesso di codice potrebbe non avere l'autorizzazione del sistema operativo.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - <xref:Microsoft.Win32.RegistryKey>

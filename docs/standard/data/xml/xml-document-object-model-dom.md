@@ -50,7 +50,7 @@ Gli oggetti **Node** dispongono di un set di metodi e proprietà, oltre a caratt
 
 - La maggior parte dei nodi può presentare più nodi figlio, ovvero quelli al livello immediatamente inferiore. Di seguito viene riportato un elenco di tipi di nodi che possono contenere nodi figlio.
 
-  - **Document**
+  - **Documento**
 
   - **DocumentFragment**
 
@@ -74,7 +74,7 @@ Le API disponibili nelle raccomandazioni W3C DOM Level 1 e Level 2 sono state es
 
 Il DOM è particolarmente utile per la lettura dei dati XML in memoria per modificarne la struttura, per aggiungere o rimuovere nodi o per modificare i dati appartenenti a un nodo come nel testo contenuto da un elemento. Tuttavia, sono disponibili altre classi che sono più rapide del DOM in altri scenari. Per ottenere accesso al flusso XML di tipo forward-only e non memorizzato nella cache, usare **XmlReader** e **XmlWriter**. Se invece è necessario un accesso casuale con un modello a cursore e **XPath**, usare la classe **XPathNavigator**.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Tipi di nodi XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)
 - [Mapping della gerarchia di oggetti in dati XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

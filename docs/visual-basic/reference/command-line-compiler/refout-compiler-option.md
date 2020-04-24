@@ -29,18 +29,18 @@ L'opzione **-refout** specifica un percorso file in cui l'assembly di riferiment
 ## <a name="arguments"></a>Argomenti
 
 `filepath`  
-Percorso e nome del file dell'assembly di riferimento. In genere dovrebbe trovarsi in una sottocartella dell'assembly primario. La convenzione consigliata (usata da MSBuild) consiste nell'inserire l'assembly di riferimento in una sottocartella "ref /" relativa all'assembly primario. Tutte le cartelle nel `filepath` devono esistere; il compilatore non li crea.
+Percorso e nome del file dell'assembly di riferimento. In genere dovrebbe trovarsi in una sottocartella dell'assembly primario. La convenzione consigliata (usata da MSBuild) consiste nell'inserire l'assembly di riferimento in una sottocartella "ref /" relativa all'assembly primario. Tutte le cartelle `filepath` in devono esistere; il compilatore non li crea.
 
 ## <a name="remarks"></a>Osservazioni
 
-Visual Basic supporta l'opzione di `-refout` a partire dalla versione 15,3.
+Visual Basic supporta l' `-refout` opzione che inizia con la versione 15,3.
 
 Gli assembly di riferimento sono un tipo speciale di assembly che contiene solo la quantità minima di metadati necessaria per rappresentare la superficie dell'API pubblica della libreria. Sono incluse le dichiarazioni per tutti i membri significativi quando si fa riferimento a un assembly negli strumenti di compilazione, ma si escludono tutte le implementazioni e le dichiarazioni dei membri privati che non hanno alcun impatto osservabile sul contratto API. Per ulteriori informazioni, vedere [assembly di riferimento](../../../standard/assembly/reference-assemblies.md) nella Guida di .NET.
 
-Le opzioni `-refout` e [`-refonly`](refonly-compiler-option.md) si escludono reciprocamente.
+Le `-refout` opzioni [`-refonly`](refonly-compiler-option.md) e si escludono a vicenda.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [/refonly](refonly-compiler-option.md)
+- [-refonly](refonly-compiler-option.md)
 - [Compilatore della riga di comando di Visual Basic](index.md)
 - [Esempi di righe di comando di compilazione](sample-compilation-command-lines.md)

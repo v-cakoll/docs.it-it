@@ -49,18 +49,18 @@ Oltre a esporre le interfacce che sono esplicitamente implementate da una classe
 
 |Interfaccia|Descrizione|
 |---------------|-----------------|
-|**Idispatch**|Fornisce un meccanismo per l'associazione tardiva al tipo.|
+|**IDispatch**|Fornisce un meccanismo per l'associazione tardiva al tipo.|
 |**IErrorInfo**|Fornisce una descrizione testuale dell'errore, la relativa origine, un file della Guida, un contesto della Guida e il GUID dell'interfaccia che ha definito l'errore (sempre **GUID_NULL** per le classi .NET).|
 |**IProvideClassInfo**|Consente ai client COM di ottenere l'accesso all'interfaccia **ITypeInfo** implementata da una classe gestita. Restituisce `COR_E_NOTSUPPORTED` in .NET Core per i tipi non importati da COM. |
 |**ISupportErrorInfo**|Consente a un client COM di determinare se l'oggetto gestito supporta l'interfaccia **IErrorInfo**. Se sì, consente al client di ottenere un puntatore all'ultimo oggetto eccezione. Tutti i tipi gestiti supportano l'interfaccia **IErrorInfo**.|
 |**ITypeInfo** (solo .NET Framework)|Fornisce per le classi le stesse informazioni sul tipo che fornisce Tlbexp.exe.|
-|**Iunknown**|Fornisce l'implementazione standard dell'interfaccia **IUnknown** con cui il client COM gestisce la durata del CCW e provvede alla coercizione dei tipi.|
+|**IUnknown**|Fornisce l'implementazione standard dell'interfaccia **IUnknown** con cui il client COM gestisce la durata del CCW e provvede alla coercizione dei tipi.|
 
  Le classi gestite possono anche fornire le interfacce COM descritte nella tabella che segue.
 
 |Interfaccia|Descrizione|
 |---------------|-----------------|
-|Interfaccia\_di classe (*classname*)|Interfaccia, esposta dal runtime e non definita esplicitamente, che espone tutte le interfacce, i metodi, le proprietà e i campi pubblici esplicitamente esposti su un oggetto gestito.|
+|Interfaccia della\_classe (*NomeClasse*)|Interfaccia, esposta dal runtime e non definita esplicitamente, che espone tutte le interfacce, i metodi, le proprietà e i campi pubblici esplicitamente esposti su un oggetto gestito.|
 |**IConnectionPoint** e **IConnectionPointContainer**|Interfaccia per oggetti che originano eventi basati su delegati (un'interfaccia per la registrazione di sottoscrittori di eventi).|
 |**IDispatchEx** (solo .NET Framework)|Interfaccia fornita dal runtime se la classe implementa **IExpando**. L'interfaccia **IDispatchEx** è un'estensione dell'interfaccia **IDispatch** che, diversamente da **IDispatch**, consente l'enumerazione, l'aggiunta, l'eliminazione e la chiamata dei membri con distinzione tra maiuscole e minuscole.|
 |**IEnumVARIANT**|Interfaccia per classi Collection che enumera gli oggetti della raccolta se la classe implementa **IEnumerable**.|
@@ -192,7 +192,7 @@ Se l'applicazione richiede chiamate ad associazione anticipata ai metodi dell'in
 <EmbedInteropTypes>True</EmbedInteropTypes>
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
 - [Wrapper COM](com-wrappers.md)

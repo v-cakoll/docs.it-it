@@ -17,9 +17,9 @@ ms.locfileid: "61794940"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>Attributi per il controllo della serializzazione SOAP codificata
 
-Il documento del World Wide Web Consortium (W3C) denominato [SOAP Simple Object Access Protocol () 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/) contiene una sezione facoltativa (sezione 5) che descrive la modalità di codifica dei parametri SOAP. Per ottenere la conformità alla sezione 5 delle specifiche, è necessario usare un set speciale di attributi reperibile nello spazio dei nomi <xref:System.Xml.Serialization>. Applicare tali attributi nel modo appropriato alle classi e ai membri delle classi, quindi utilizzare <xref:System.Xml.Serialization.XmlSerializer> per serializzare le istanze della classe o delle classi.
+Il documento World Wide Web Consortium (W3C) denominato [Simple Object Access Protocol (SOAP) 1,1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/) contiene una sezione facoltativa (sezione 5) che descrive il modo in cui i parametri SOAP possono essere codificati. Per ottenere la conformità alla sezione 5 delle specifiche, è necessario usare un set speciale di attributi reperibile nello spazio dei nomi <xref:System.Xml.Serialization>. Applicare tali attributi nel modo appropriato alle classi e ai membri delle classi, quindi utilizzare <xref:System.Xml.Serialization.XmlSerializer> per serializzare le istanze della classe o delle classi.
 
-Nella seguente tabella sono illustrati gli attributi, dove è possibile applicarli e la loro funzione. Per altre informazioni sull'uso di questi attributi per il controllo della serializzazione XML, vedere [come: Serializzare un oggetto come un Stream XML con codifica SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md) e [come: Eseguire l'override della serializzazione XML con codifica SOAP](how-to-override-encoded-soap-xml-serialization.md).
+Nella seguente tabella sono illustrati gli attributi, dove è possibile applicarli e la loro funzione. Per altre informazioni sull'utilizzo di questi attributi per il controllo della serializzazione XML, vedere [Procedura: Serializzare un oggetto come flusso XML con codifica SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md) e [Procedura: Eseguire l'override della serializzazione XML con codifica SOAP](how-to-override-encoded-soap-xml-serialization.md).
 
 Per altre informazioni sugli attributi, vedere [Attributi](../../../docs/standard/attributes/index.md).
 
@@ -32,12 +32,12 @@ Per altre informazioni sugli attributi, vedere [Attributi](../../../docs/standar
 |<xref:System.Xml.Serialization.SoapIncludeAttribute>|Dichiarazioni della classe derivata pubblica e metodi pubblici per i documenti del linguaggio di descrizione dei servizi Web (WSDL, Web Services Description Language).|Il tipo deve essere incluso durante la generazione degli schemi (per essere riconosciuto se serializzato).|
 |<xref:System.Xml.Serialization.SoapTypeAttribute>|Dichiarazioni di classe pubblica|La classe deve essere serializzata come un tipo XML.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Serializzazione SOAP e XML](xml-and-soap-serialization.md)
-- [Procedura: Serializzare un oggetto come un Stream XML con codifica SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
-- [Procedura: Eseguire l'override della serializzazione XML con codifica SOAP](how-to-override-encoded-soap-xml-serialization.md)
+- [Procedura: Serializzare un oggetto come flusso XML con codifica SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [Procedura: eseguire l'override della serializzazione XML con codifica SOAP](how-to-override-encoded-soap-xml-serialization.md)
 - [Attributi](../../../docs/standard/attributes/index.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Procedura: Serializzare un oggetto](how-to-serialize-an-object.md)
+- [Procedura: serializzare un oggetto](how-to-serialize-an-object.md)
 - [Procedura: Deserializzare un oggetto](how-to-deserialize-an-object.md)

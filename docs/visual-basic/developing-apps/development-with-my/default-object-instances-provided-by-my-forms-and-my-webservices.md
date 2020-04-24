@@ -20,15 +20,15 @@ Gli oggetti [My. Forms](../../../visual-basic/language-reference/objects/my-form
   
 ## <a name="default-instances"></a>Istanze predefinite  
 
- Un'istanza predefinita è un'istanza della classe fornita dal runtime e non è necessario dichiararla e crearne un'istanza utilizzando le istruzioni `Dim` e `New`. Nell'esempio seguente viene illustrato come dichiarare e creare un'istanza di una classe <xref:System.Windows.Forms.Form> denominata `Form1`e come ora è possibile ottenere un'istanza predefinita di questa classe <xref:System.Windows.Forms.Form> tramite `My.Forms`.  
+ Un'istanza predefinita è un'istanza della classe fornita dal runtime e non è necessario dichiararla e crearne un'istanza usando le `Dim` istruzioni e. `New` Nell'esempio <xref:System.Windows.Forms.Form> seguente viene illustrato come dichiarare e creare un'istanza di una classe denominata `Form1`e come ora è possibile ottenere un'istanza predefinita di questa <xref:System.Windows.Forms.Form> classe tramite. `My.Forms`  
   
  [!code-vb[VbVbcnMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#5)]  
   
  [!code-vb[VbVbcnMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#6)]  
   
- L'oggetto `My.Forms` restituisce una raccolta di istanze predefinite per ogni classe `Form` esistente nel progetto. Analogamente, `My.WebServices` fornisce un'istanza predefinita della classe proxy per ogni servizio Web a cui è stato creato un riferimento nell'applicazione.  
+ L' `My.Forms` oggetto restituisce una raccolta di istanze predefinite per ogni `Form` classe esistente nel progetto. Analogamente `My.WebServices` , fornisce un'istanza predefinita della classe proxy per ogni servizio Web a cui è stato creato un riferimento nell'applicazione.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Oggetto My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [Oggetto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)

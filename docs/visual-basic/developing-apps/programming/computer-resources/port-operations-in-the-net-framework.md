@@ -24,7 +24,7 @@ Il modo più semplice per creare un oggetto <xref:System.IO.Ports.SerialPort> co
 
 In questa tabella sono elencate e descritte le enumerazioni principali usate per l'accesso alla porta seriale:
 
-|Enumerazione|Descrizione|
+|Enumerazione|Description|
 |---|---|
 |<xref:System.IO.Ports.Handshake>|Specifica il protocollo di controllo usato per stabilire la comunicazione della porta seriale per un oggetto <xref:System.IO.Ports.SerialPort>.|
 |<xref:System.IO.Ports.Parity>|Specifica il bit di parità per un oggetto <xref:System.IO.Ports.SerialPort>.|
@@ -33,7 +33,7 @@ In questa tabella sono elencate e descritte le enumerazioni principali usate per
 |<xref:System.IO.Ports.SerialPinChange>|Specifica il tipo di modifica eseguita nell'oggetto <xref:System.IO.Ports.SerialPort>.|
 |<xref:System.IO.Ports.StopBits>|Specifica il numero di bit di interruzione usati nell'oggetto <xref:System.IO.Ports.SerialPort>.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - [Accesso alle porte del computer](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)

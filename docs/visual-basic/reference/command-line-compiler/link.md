@@ -37,9 +37,9 @@ oppure
   
 |Termine|Definizione|  
 |---|---|  
-|`fileList`|Richiesto. Elenco di nomi di file di assembly delimitato da virgole. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette.|  
+|`fileList`|Obbligatorio. Elenco di nomi di file di assembly delimitato da virgole. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'opzione `-link`consente di distribuire un'applicazione in cui sono incorporate informazioni sul tipo. L'applicazione può quindi usare i tipi in un assembly di runtime che implementano le informazioni sul tipo incorporate senza dovere far riferimento all'assembly di runtime. Se vengono pubblicate diverse versioni dell'assembly di runtime, l'applicazione che contiene le informazioni sul tipo incorporate può funzionare con le diverse versioni senza che sia necessaria la ricompilazione. Per un esempio, vedere [Procedura dettagliata: incorporamento dei tipi da assembly gestiti](../../../standard/assembly/embed-types-visual-studio.md).  
   
  L'opzione `-link` è particolarmente utile quando si usa l'interoperabilità COM. È possibile incorporare tipi COM in modo che per l'applicazione non sia più necessario un assembly di interoperabilità primario nel computer di destinazione. L'opzione `-link` indica al compilatore di incorporare le informazioni sul tipo COM dall'assembly di interoperabilità a cui si fa riferimento nel codice compilato risultante. Il tipo COM viene identificato dal valore CLSID (GUID). Di conseguenza, l'applicazione può essere eseguita in un computer di destinazione in cui sono stati installati gli stessi tipi COM con gli stessi valori CLSID. Le applicazioni che consentono di automatizzare Microsoft Office costituiscono un valido esempio. Poiché applicazioni come Office mantengono in genere lo stesso valore CLSID in versioni diverse, l'applicazione può usare i tipi COM a cui si fa riferimento purché .NET Framework 4 o versioni successive sia installato nel computer di destinazione e l'applicazione usi metodi, proprietà o eventi inclusi nei tipi COM a cui si fa riferimento.  
@@ -59,7 +59,7 @@ oppure
   
  Usare [-LIBPATH](libpath.md) per specificare la directory in cui si trova uno o più riferimenti ad assembly.  
   
- Analogamente all'opzione del compilatore [-Reference](reference.md) , l'opzione del compilatore `-link` usa il file di risposta vbc. rsp, che fa riferimento a assembly .NET Framework usati di frequente. Usare l'opzione del compilatore [-noconfig](noconfig.md) se non si vuole che il compilatore usi il file Vbc. rsp.  
+ Analogamente all'opzione del compilatore [-Reference](reference.md) , l' `-link` opzione del compilatore usa il file di risposta vbc. rsp, che fa riferimento a assembly .NET Framework di uso frequente. Usare l'opzione del compilatore [-noconfig](noconfig.md) se non si vuole che il compilatore usi il file Vbc. rsp.  
   
  La forma breve di `-link` è `-l`.  
   
@@ -67,7 +67,7 @@ oppure
  Nelle sezioni seguenti vengono descritte le limitazioni all'uso di tipi generici in applicazioni che incorporano tipi di interoperabilità.  
   
 ### <a name="generic-interfaces"></a>Interfacce generiche  
- Le interfacce generiche incorporate da un assembly di interoperabilità non possono essere usate, come illustrato nell'esempio riportato di seguito.  
+ Le interfacce generiche incorporate da un assembly di interoperabilità non possono essere usate, come illustrato nell'esempio seguente.  
   
  [!code-vb[VbLinkCompiler#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#1)]  
   
@@ -83,18 +83,18 @@ oppure
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>Esempio  
- La riga di comando seguente compila il file di origine `OfficeApp.vb` e gli assembly di riferimento da `COMData1.dll` e `COMData2.dll` per produrre `OfficeApp.exe`.  
+ La riga di comando seguente compila il file `OfficeApp.vb` di origine e gli `COMData1.dll` assembly `COMData2.dll` di riferimento `OfficeApp.exe`da e per produrre.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.vb  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](index.md)
-- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../../../standard/assembly/embed-types-visual-studio.md)
+- [Procedura dettagliata: incorporamento dei tipi da assembly gestiti](../../../standard/assembly/embed-types-visual-studio.md)
 - [-Reference (Visual Basic)](reference.md)
 - [-noconfig](noconfig.md)
-- [-libpath](libpath.md)
+- [-LIBPATH](libpath.md)
 - [Esempi di righe di comando di compilazione](sample-compilation-command-lines.md)
 - [Introduzione all'interoperabilità COM](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)

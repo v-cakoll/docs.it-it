@@ -18,13 +18,13 @@ In questo argomento vengono illustrate le opzioni disponibili per l'output di XS
   
  Nella tabella seguente viene descritto il comportamento di ciascun attributo disponibile nell'elemento `xsl:output` se il tipo di output è un flusso o un oggetto <xref:System.IO.TextWriter>.  
   
-|Nome attributo|Comportamento di|  
+|Nome attributo|Comportamento|  
 |--------------------|--------------|  
 |method|Supportato.|  
-|Versione di|Ignorato. La versione è sempre 1.0 per XML e 4.0 per HTML.|  
-|encoding|Ignorato se si invia l'output a un tipo <xref:System.IO.TextWriter>. Viene invece usata la proprietà <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType>.|  
+|version|Ignorato. La versione è sempre 1.0 per XML e 4.0 per HTML.|  
+|codifica|Ignorato se si invia l'output a un tipo <xref:System.IO.TextWriter>. Viene invece usata la proprietà <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType>.|  
 |omit-xml-declaration|Supportato.|  
-|standalone|Supportato.|  
+|autonomi|Supportato.|  
 |doctype-public|Supportato.|  
 |doctype-system|Supportato.|  
 |cdata-section-elements|Supportato.|  
@@ -40,10 +40,10 @@ In questo argomento vengono illustrate le opzioni disponibili per l'output di XS
 #### <a name="xmlwriter"></a>XmlWriter  
  La classe <xref:System.Xml.XmlWriter> consente di scrivere flussi o file XML. È possibile specificare le funzionalità da supportare nell'oggetto <xref:System.Xml.XmlWriter>, incluse le opzioni di output, tramite la classe <xref:System.Xml.XmlWriterSettings> class. La classe <xref:System.Xml.XmlWriter> rappresenta una parte integrante del framework <xref:System.Xml>. Usare questo tipo di output per eseguire la pipeline dei risultati di output in un altro processo XML.  
   
-#### <a name="string"></a>Stringa  
+#### <a name="string"></a>string  
  Usare questo tipo di output per specificare l'URI del file di output.  
   
-#### <a name="stream"></a>Stream  
+#### <a name="stream"></a>STREAM  
  Un flusso è un'astrazione di una sequenza di byte, ad esempio un file, un dispositivo di input/output, una pipe di comunicazione tra processi o un socket TCP/IP. La classe <xref:System.IO.Stream> e le relative classi derivate forniscono una rappresentazione generica di questi diversi tipi di input e output, senza che il programmatore venga a contatto con i dettagli specifici del sistema operativo e con i dispositivi sottostanti.  
   
  Usare questo tipo di output per inviare dati a un tipo <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream> oppure per inviare un flusso di output (`Response.OutputStream`).  
@@ -55,6 +55,6 @@ In questo argomento vengono illustrate le opzioni disponibili per l'output di XS
   
 - Quando si scrivono tag vuoti, viene scritto uno spazio tra l'ultimo carattere del nome dell'elemento e la barra rovesciata, ad esempio `<myElement />`. Questo consente ai browser meno recenti di visualizzare correttamente le pagine HTML generate.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

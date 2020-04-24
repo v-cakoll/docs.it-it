@@ -30,7 +30,7 @@ L'oggetto `My.Computer.FileSystem` offre gli strumenti per l'uso di file e carte
  [Lettura da file](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Vengono elencati gli argomenti relativi all'uso dell'oggetto `My.Computer.FileSystem` per la lettura da file  
   
- [Scrittura nei file](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ [Scrittura su file](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
  Vengono elencati gli argomenti relativi all'uso dell'oggetto `My.Computer.FileSystem` per la scrittura su file  
   
  [Creazione, eliminazione e spostamento di file e directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
@@ -39,7 +39,7 @@ L'oggetto `My.Computer.FileSystem` offre gli strumenti per l'uso di file e carte
  [Analisi dei file di testo con l'oggetto TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
  Viene illustrato come usare il `TextFieldReader` per analizzare i file di testo, ad esempio i log.  
   
- [Codifiche dei file](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
+ [Codifiche di file](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
  Vengono descritte le codifiche dei file e il relativo uso.  
   
  [Procedura dettagliata: Modifica di file e directory in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  

@@ -15,32 +15,32 @@ ms.locfileid: "74330331"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Personalizzazione di progetti ed estensione di oggetti My in Visual Basic
 
-È possibile personalizzare i modelli di progetto per fornire oggetti `My` aggiuntivi. Questo consente agli altri sviluppatori di trovare e usare gli oggetti in modo semplice.
+È possibile personalizzare i modelli di progetto per `My` fornire oggetti aggiuntivi. Questo consente agli altri sviluppatori di trovare e usare gli oggetti in modo semplice.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 - [Estensione dello spazio dei nomi My in Visual Basic](extending-the-my-namespace.md)  
- Viene descritto come aggiungere membri e valori personalizzati allo spazio dei nomi `My` in Visual Basic.
+ Viene descritto come aggiungere membri e valori personalizzati allo `My` spazio dei nomi in Visual Basic.
 - [Assemblaggio e distribuzione delle estensioni My personalizzate](packaging-and-deploying-custom-my-extensions.md)  
- Viene descritto come pubblicare estensioni dello spazio dei nomi `My` personalizzate utilizzando i modelli di Visual Studio.
+ Viene descritto come pubblicare estensioni `My` dello spazio dei nomi personalizzate utilizzando i modelli di Visual Studio.
 - [Estensione del modello di applicazione Visual Basic](extending-the-visual-basic-application-model.md)  
- Viene descritto come specificare estensioni personalizzate per il modello di applicazione eseguendo l'override dei membri della classe <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>.
+ Viene descritto come specificare estensioni personalizzate per il modello di applicazione eseguendo l'override dei membri della <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe.
 - [Personalizzazione degli oggetti disponibili in My](customizing-which-objects-are-available-in-my.md)  
- Viene descritto come controllare quali oggetti `My` sono abilitati impostando la costante di compilazione condizionale \_MYTYPE del progetto.
+ Viene descritto come controllare quali `My` oggetti sono abilitati impostando la costante \_di compilazione condizionale MyType del progetto.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
 - [Sviluppo con My](../development-with-my/index.md)  
- Descrive quali oggetti di `My` sono disponibili in diversi tipi di progetto per impostazione predefinita.
+ Vengono descritti `My` gli oggetti disponibili in diversi tipi di progetto per impostazione predefinita.
 - [Cenni preliminari sul modello di applicazione Visual Basic](../development-with-my/overview-of-the-visual-basic-application-model.md)  
  Viene descritto il modello di Visual Basic per controllare il comportamento delle applicazioni Windows Forms.
 - [Dipendenza di My dal tipo di progetto](../development-with-my/how-my-depends-on-project-type.md)  
- Descrive quali oggetti di `My` sono disponibili in diversi tipi di progetto per impostazione predefinita.
+ Vengono descritti `My` gli oggetti disponibili in diversi tipi di progetto per impostazione predefinita.
 - [Compilazione condizionale](../../programming-guide/program-structure/conditional-compilation.md)  
  Viene illustrato il modo in cui il compilatore utilizza la compilazione condizionale per selezionare sezioni specifiche di codice per compilare ed escludere altre sezioni.
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- Descrive l'oggetto `My` che fornisce proprietà, metodi ed eventi correlati all'applicazione corrente.
+ Descrive l' `My` oggetto che fornisce proprietà, metodi ed eventi correlati all'applicazione corrente.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Sviluppo di applicazioni con Visual Basic](../index.md)

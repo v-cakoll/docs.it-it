@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: leggere da file di testo con più formatiHow to: Read from text files with multiple formats'
+title: 'Procedura: leggere da file di testo con più formati'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, reading from a file
@@ -18,13 +18,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334576"
 ---
-# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>Procedura: leggere da file fext con più formati in Visual BasicHow to: Read from fext files with multiple formats in Visual Basic
+# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>Procedura: leggere da file FEXT con più formati in Visual Basic
 
 L'oggetto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> consente di analizzare in modo facile ed efficace i file di testo strutturati, ad esempio i log. È possibile elaborare un file con più formati usando il metodo `PeekChars` per determinare il formato di ogni riga durante l'analisi del file.
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>Per analizzare un file di testo con più formati
 
-1. Aggiungere un file di testo denominato *testfile.txt* al progetto. Aggiungere il seguente contenuto al file di testo:
+1. Aggiungere un file di testo denominato *TestFile. txt* al progetto. Aggiungere il contenuto seguente al file di testo:
 
     ```text
     Err  1001 Cannot access resource.
@@ -53,7 +53,7 @@ L'oggetto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> consente di analiz
 
 ## <a name="example"></a>Esempio
 
-Di seguito è riportato l'esempio `testfile.txt`completo che legge dal file:
+Di seguito è riportato l'esempio completo che legge dal file `testfile.txt`:
 
  [!code-vb[VbFileIORead#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#8)]
 
@@ -67,7 +67,7 @@ Le seguenti condizioni possono generare un'eccezione:
 - Percorso del file troppo lungo (<xref:System.IO.PathTooLongException>).
 - L'utente non dispone di autorizzazioni sufficienti per accedere al file (<xref:System.UnauthorizedAccessException>).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>

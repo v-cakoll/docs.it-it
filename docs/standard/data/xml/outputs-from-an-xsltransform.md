@@ -22,7 +22,7 @@ Poiché i fogli di stile consentono di determinare il formato di output usando u
 |-----------------------------------------|-------------------|  
 |method="xml"|XML|  
 |method="html"|HTML|  
-|method="text"|Text|  
+|method="text"|Testo|  
   
 > [!NOTE]
 > Nota: quando l'output del metodo `<xsl:output>` è un oggetto <xref:System.Xml.Xsl.XslTransform.Transform%2A> o <xref:System.Xml.XmlReader>, l'istruzione <xref:System.Xml.XmlWriter> viene ignorata.  
@@ -33,7 +33,7 @@ Poiché i fogli di stile consentono di determinare il formato di output usando u
   
 - omit-xml-declaration  
   
-- standalone  
+- autonomi  
   
 - doctype-public  
   
@@ -55,6 +55,6 @@ Poiché i fogli di stile consentono di determinare il formato di output usando u
 ## <a name="escaping-special-characters"></a>Escape dei caratteri speciali  
  Il tag `<xsl:text disable-output-escaping>` viene usato per indicare se deve essere eseguito o meno l'escape dei caratteri speciali in un formato XML (ad esempio, usando `<&lt>` anziché il simbolo `"<"`). L'attributo `disable-output-escaping` viene ignorato durante la trasformazione in un oggetto <xref:System.Xml.XmlReader> o <xref:System.Xml.XmlWriter> e non influisce sui caratteri speciali.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Implementazione del processore XSLT da parte della classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

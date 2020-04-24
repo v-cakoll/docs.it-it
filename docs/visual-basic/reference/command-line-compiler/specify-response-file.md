@@ -1,5 +1,5 @@
 ---
-title: '@ (specifica di un file di risposta)'
+title: '@ (Specifica di un file di risposta)'
 ms.date: 03/13/2018
 helpviewer_keywords:
 - '@ (Specify Response File) compiler option [Visual Basic]'
@@ -24,9 +24,9 @@ Specifica un file che contiene le opzioni del compilatore e i file del codice so
 ## <a name="arguments"></a>Argomenti
 
 `response_file`  
-Obbligatoria. File che elenca le opzioni del compilatore o i file del codice sorgente da compilare. Racchiudere il nome file tra virgolette ("") se contiene uno spazio.
+Obbligatorio. File che elenca le opzioni del compilatore o i file del codice sorgente da compilare. Racchiudere il nome file tra virgolette ("") se contiene uno spazio.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Il compilatore elabora le opzioni del compilatore e i file del codice sorgente specificati in un file di risposta come se fossero stati specificati nella riga di comando.
 
@@ -36,14 +36,14 @@ Per specificare più di un file di risposta in una compilazione, specificare pi�
 @file1.rsp @file2.rsp
 ```
 
-In un file di risposta, più opzioni del compilatore e file del codice sorgente possono essere visualizzati in una sola riga. Una singola specifica dell'opzione del compilatore deve essere visualizzata su una riga (non può estendersi su più righe). I file di risposta possono avere commenti che iniziano con il simbolo `#`.
+In un file di risposta, più opzioni del compilatore e file del codice sorgente possono essere visualizzati in una sola riga. Una singola specifica dell'opzione del compilatore deve essere visualizzata su una riga (non può estendersi su più righe). I file di risposta possono avere commenti che iniziano `#` con il simbolo.
 
 È possibile combinare le opzioni specificate nella riga di comando con le opzioni specificate in uno o più file di risposta. Il compilatore elabora le opzioni del comando mentre le rileva. Pertanto, gli argomenti della riga di comando possono eseguire l'override delle opzioni elencate in precedenza nei file di risposta. Viceversa, le opzioni in un file di risposta sostituiscono le opzioni elencate in precedenza nella riga di comando o in altri file di risposta.
 
-Visual Basic fornisce il file Vbc. rsp, che si trova nella stessa directory del file Vbc. exe. Il file Vbc. RSP è incluso per impostazione predefinita, a meno che non venga utilizzata l'opzione `-noconfig`. Per ulteriori informazioni, vedere [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).
+Visual Basic fornisce il file Vbc. rsp, che si trova nella stessa directory del file Vbc. exe. Il file Vbc. RSP è incluso per impostazione predefinita, a `-noconfig` meno che non venga utilizzata l'opzione. Per ulteriori informazioni, vedere [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).
 
 > [!NOTE]
-> L'opzione `@` non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.
+> L' `@` opzione non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.
 
 ## <a name="example"></a>Esempio
 
@@ -59,13 +59,13 @@ source2.vb
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare l'opzione `@` con il file di risposta denominato `File1.rsp`.
+Nell'esempio seguente viene illustrato come utilizzare l' `@` opzione con il file di risposta `File1.rsp`denominato.
 
 ```console
 vbc @file1.rsp
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)

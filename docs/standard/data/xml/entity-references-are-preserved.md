@@ -22,7 +22,7 @@ Se il riferimento all'entità non viene espanso, ma conservato, il modello DOM (
   
  il modello DOM compila un nodo **XmlEntityReference** quando rileva il riferimento `&publisher;`. Il nodo **XmlEntityReference** contiene nodi figlio copiati dal contenuto della dichiarazione di entità. Nell'esempio di codice precedente è contenuto un testo nella dichiarazione di entità, quindi viene creato un nodo **XmlText** come nodo figlio del nodo del riferimento all'entità.  
   
- ![Struttura ad albero per i riferimenti alle entità mantenute](../../../../docs/standard/data/xml/media/xmlentityref-notexpanded-nodes.gif "xmlentityref_notexpanded_nodes")  
+ ![Struttura ad albero per i riferimenti alle entità conservati](../../../../docs/standard/data/xml/media/xmlentityref-notexpanded-nodes.gif "xmlentityref_notexpanded_nodes")  
 Struttura ad albero per i riferimenti alle entità conservati  
   
  I nodi figlio di **XmlEntityReference** sono copie di tutti i nodi figlio creati dal nodo **XmlEntity** quando è stata rilevata la dichiarazione di entità.  
@@ -32,6 +32,6 @@ Struttura ad albero per i riferimenti alle entità conservati
   
  Per impostazione predefinita, le entità generali, ad esempio `&abc;`, vengono conservate e vengono sempre creati nodi **XmlEntityReference**.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML DOM (Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

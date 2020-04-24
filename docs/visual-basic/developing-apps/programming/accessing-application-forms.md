@@ -29,7 +29,7 @@ L'oggetto `My.Forms` rappresenta un modo semplice di accedere a un'istanza di og
 |Visualizzare i titoli di tutti i moduli aperti dell'applicazione.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
 |Aggiornare la schermata iniziale con informazioni sullo stato all'avvio dell'applicazione.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>

@@ -61,5 +61,5 @@ Questa sezione spiega come eseguire attività che riguardano la scrittura su fil
  [Archiviazione e lettura di dati negli Appunti](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
  Spiega come eseguire attività associate a `My.Computer.Clipboard`, ad esempio la lettura o la scrittura di dati negli Appunti.  
   
- [Codifiche dei file](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
+ [Codifiche di file](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
  Offre una panoramica della codifiche di file.

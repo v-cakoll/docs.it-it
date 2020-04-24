@@ -18,7 +18,7 @@ ms.locfileid: "78159871"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Come qualificare i nomi di elementi XML e di attributi XML
 
-Gli spazi dei nomi XML contenuti in istanze della classe <xref:System.Xml.Serialization.XmlSerializerNamespaces> devono essere conformi alla specifica World Wide Web Consortium (W3C) denominata [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).
+Gli spazi dei nomi XML contenuti nelle istanze <xref:System.Xml.Serialization.XmlSerializerNamespaces> della classe devono essere conformi alla specifica World Wide Web Consortium (W3C) denominata [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).
 
 Gli spazi dei nomi XML forniscono un metodo che consente di qualificare i nomi di elementi XML e attributi XML nei documenti XML. Un nome completo è composto da un prefisso e da un nome locale, separati dal carattere di due punti. Il prefisso funge soltanto da segnaposto ed è mappato a un URI che specifica uno spazio dei nomi. La combinazione dello spazio dei nomi URI gestito a livello universale e del nome locale genera un nome univoco.
 
@@ -162,13 +162,13 @@ public class Price
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Strumento XML Schema Definition e serializzazione XML](the-xml-schema-definition-tool-and-xml-serialization.md)
 - [Introduzione alla serializzazione XML](introducing-xml-serialization.md)
 - [Classe XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
-- [Attributi per il controllo della serializzazione XML](attributes-that-control-xml-serialization.md)
-- [Procedura: Specificare un nome di elemento alternativo per un flusso XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [Procedura: Serializzare un oggetto](how-to-serialize-an-object.md)
-- [Procedura: deserializzare un oggetto](how-to-deserialize-an-object.md)
+- [Attributi che controllano la serializzazione XML](attributes-that-control-xml-serialization.md)
+- [Procedura: specificare un nome di elemento alternativo per un flusso XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Procedura: serializzare un oggetto](how-to-serialize-an-object.md)
+- [Procedura: Deserializzare un oggetto](how-to-deserialize-an-object.md)

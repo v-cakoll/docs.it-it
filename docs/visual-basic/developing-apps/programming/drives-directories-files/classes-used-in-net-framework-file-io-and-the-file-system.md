@@ -60,9 +60,9 @@ Per un elenco più completo, vedere [Panoramica della libreria di classi](../../
 |<xref:System.IO.StringReader?displayProperty=nameWithType>|Legge caratteri da un `String`. L'output può essere un flusso in qualsiasi codifica o una `String`.|  
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Scrive caratteri in una `String`. L'output può essere un flusso in qualsiasi codifica o una `String`.|  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Composing Streams](../../../../standard/io/composing-streams.md)
-- [I/O su file e flusso](../../../../standard/io/index.md)
-- [I/O di file asincrono](../../../../standard/io/asynchronous-file-i-o.md)
+- [Composizione dei flussi](../../../../standard/io/composing-streams.md)
+- [I/O di file e di flussi](../../../../standard/io/index.md)
+- [I/O file asincrono](../../../../standard/io/asynchronous-file-i-o.md)
 - [Nozioni fondamentali sul file system e sulla funzionalità di I/O di file di .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

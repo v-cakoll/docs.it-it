@@ -13,7 +13,7 @@ ms.locfileid: "75710934"
 # <a name="entity-references-are-expanded-and-not-preserved"></a>Riferimenti alle entità espansi e non conservati
 Quando il riferimento a un'entità viene espanso e sostituito dal testo che esso rappresenta, il nodo **XmlEntityReference** non viene creato. Invece, la dichiarazione di entità viene analizzata e i nodi creati dal contenuto della dichiarazione vengono copiati al posto di **XmlEntityReference**. Nell'esempio di `&publisher;`, `&publisher;` non viene quindi salvato, ma viene creato un nodo **XmlText**.  
   
- ![struttura ad albero espansa](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  
+ ![Struttura ad albero espansa](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  
 Struttura ad albero per i riferimenti alle entità espansi  
   
  Le entità carattere, come `B` o `<`, non sono mantenute, ma vengono sempre espanse e rappresentate come nodi di tipo text.  
@@ -38,6 +38,6 @@ Struttura ad albero per i riferimenti alle entità espansi
   
  Se si usa un lettore che non riesce a risolvere le entità, il metodo **Load** genera un'eccezione quando incontra un riferimento all'entità.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML DOM (Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

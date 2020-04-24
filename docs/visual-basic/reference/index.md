@@ -1,5 +1,5 @@
 ---
-title: Riferimento
+title: Informazioni di riferimento
 ms.date: 07/20/2015
 helpviewer_keywords:
 - language reference
@@ -16,7 +16,7 @@ ms.locfileid: "74352883"
 In questa sezione vengono forniti collegamenti a informazioni di riferimento su vari aspetti della programmazione Visual Basic.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
- [Riferimenti per il linguaggio Visual Basic](../../visual-basic/language-reference/index.md)  
+ [Riferimenti al linguaggio Visual Basic](../../visual-basic/language-reference/index.md)  
  Vengono fornite informazioni di riferimento per diversi aspetti del linguaggio Visual Basic.  
   
  [Compilatore della riga di comando di Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  

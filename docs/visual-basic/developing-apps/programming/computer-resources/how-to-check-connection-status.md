@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: controllare lo stato di connessione'
+title: 'Procedura: Controllare lo stato di connessione'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Web connections [Visual Basic]

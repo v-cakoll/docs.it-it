@@ -12,7 +12,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159936"
 ---
-# <a name="add-element-for-schemaimporterextensions"></a>\<aggiungere > elemento per \<schemaImporterExtensions >
+# <a name="add-element-for-schemaimporterextensions"></a>\<aggiungere> elemento per \<schemaImporterExtensions>
 Aggiunge i tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l'esecuzione del mapping dei tipi XSD ai tipi .NET Framework. Per altre informazioni sui file di configurazione, vedere [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md).  
   
  \<configuration>  
@@ -27,7 +27,7 @@ Aggiunge i tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
+ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributes  
   
@@ -37,7 +37,7 @@ Aggiunge i tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l
 |**type**|Obbligatorio. Specifica la classe delle estensioni dello schema da aggiungere. Il valore dell'attributo **type** deve trovarsi su una riga e includere il nome completo del tipo. Quando l'assembly viene inserito nella Global Assembly Cache (GAC) deve includere anche la versione, le impostazioni cultura e il token di chiave pubblica dell'assembly firmato.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- No.  
+ Nessuno.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -60,8 +60,8 @@ Aggiunge i tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
-- [Elemento \<system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)
-- [Elemento \<schemaImporterExtensions>](../../../docs/standard/serialization/schemaimporterextensions-element.md)
+- [\<System. XML. Serialization> elemento](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [\<Elemento> schemaImporterExtensions](../../../docs/standard/serialization/schemaimporterextensions-element.md)

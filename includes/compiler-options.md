@@ -7,4 +7,4 @@ ms.lasthandoff: 10/31/2019
 ms.locfileid: "73198473"
 ---
 
-Ogni opzione del compilatore è disponibile in due forme: **-opzione** e **(opzione)** . La documentazione mostra solo la forma -opzione.
+Ogni opzione del compilatore è disponibile in due forme: **-opzione** e **(opzione)**. La documentazione mostra solo la forma -opzione.

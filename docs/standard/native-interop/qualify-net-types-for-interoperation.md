@@ -21,7 +21,7 @@ Se si vuole esporre i tipi contenuti in un assembly alle applicazioni COM, tener
   
 - Le classi devono implementare le interfacce in modo esplicito.  
   
-     Anche se l'interoperabilità COM fornisce un meccanismo per generare automaticamente un'interfaccia contenente tutti i membri della classe e i membri della relativa classe di base, è decisamente preferibile fornire interfacce esplicite. L'interfaccia generata automaticamente è detta interfaccia di classe. Per informazioni, vedere [Introduzione all'interfaccia della classe](com-callable-wrapper.md#introducing-the-class-interface).  
+     Anche se l'interoperabilità COM fornisce un meccanismo per generare automaticamente un'interfaccia contenente tutti i membri della classe e i membri della relativa classe di base, è decisamente preferibile fornire interfacce esplicite. L'interfaccia generata automaticamente è detta interfaccia di classe. Per le linee guida, vedere [Introduzione all'interfaccia della classe](com-callable-wrapper.md#introducing-the-class-interface).  
   
      Per incorporare le definizioni di interfaccia nel codice, è possibile usare Visual Basic, C# e C++ invece del linguaggio di definizione dell'interfaccia (IDL, Interface Definition Language) o di soluzioni equivalenti. Per informazioni dettagliate sulla sintassi, vedere la documentazione relativa al linguaggio.  
   
@@ -45,7 +45,7 @@ Se si vuole esporre i tipi contenuti in un assembly alle applicazioni COM, tener
   
  Quando si esegue l'esportazione in COM, la gerarchia di ereditarietà di un tipo gestito viene appiattita. Anche il controllo delle versioni varia tra ambiente gestito e ambiente non gestito. I tipi esposti a COM non hanno le stesse caratteristiche di controllo delle versioni degli altri tipi gestiti.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Runtime.InteropServices.ComVisibleAttribute>
 - [Esposizione di componenti .NET Framework a COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

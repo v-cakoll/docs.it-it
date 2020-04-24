@@ -29,7 +29,7 @@ La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato m
   
  dove `msxsl` è un prefisso associato allo spazio dei nomi `urn:schemas-microsoft-com:xslt`.  
   
- L'attributo `language` non è obbligatorio, ma, se specificato, il valore deve essere uno dei seguenti: `C#`, `VB`, `JScript`, `JavaScript`, `VisualBasic`o `CSharp`. Se omesso, il linguaggio viene impostato su JScript. Poiché nel `language-name` non viene fatta distinzione tra maiuscole e minuscole, "JavaScript" e "javascript" si equivalgono.  
+ L' `language` attributo non è obbligatorio, ma se specificato, il relativo valore deve essere uno dei seguenti: `C#`, `VB`, `JScript`, `JavaScript`, `VisualBasic`o `CSharp`. Se omesso, il linguaggio viene impostato su JScript. Poiché nel `language-name` non viene fatta distinzione tra maiuscole e minuscole, "JavaScript" e "javascript" si equivalgono.  
   
  L'attributo `implements-prefix` è obbligatorio. Questo attributo viene usato per dichiarare uno spazio dei nomi e associarlo al blocco di script. Il valore di questo attributo è il prefisso che rappresenta lo spazio dei nomi. È possibile definire lo spazio dei nomi in un punto qualsiasi di un foglio di stile.  
   
@@ -47,7 +47,7 @@ La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato m
   
  È possibile dichiarare le funzioni all'interno dell'elemento `msxsl:script`. Nella tabella seguente sono illustrati gli spazi dei nomi supportati per impostazione predefinita. È possibile usare classi che non sono comprese negli spazi dei nomi elencati. Tuttavia, è necessario che tali classi siano complete.  
   
-|Spazi dei nomi predefiniti|Descrizione|  
+|Spazi dei nomi predefiniti|Description|  
 |------------------------|-----------------|  
 |Sistema|Classe di sistema.|  
 |System.Collection|Classi di raccolte.|  
@@ -229,6 +229,6 @@ public class Sample
 </circles>
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Implementazione del processore XSLT da parte della classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

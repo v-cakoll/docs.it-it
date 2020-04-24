@@ -52,6 +52,6 @@ Il metodo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> accetta tre ti
   
  Per altre informazioni, vedere [Risoluzione delle risorse esterne durante l'elaborazione XSLT](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md).  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

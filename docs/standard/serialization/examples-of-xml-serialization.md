@@ -74,7 +74,7 @@ private void SerializeDataSet(string filename){
 
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>Serializzazione di XmlElement e XmlNode
 
-È anche possibile serializzare le istanze di una classe <xref:System.Xml.XmlElement> o <xref:System.Xml.XmlNode>, come illustrato nell'esempio di codice seguente.
+È anche possibile serializzare le istanze <xref:System.Xml.XmlElement> di <xref:System.Xml.XmlNode> una classe o, come illustrato nell'esempio di codice seguente.
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -369,7 +369,7 @@ In questo esempio, viene serializzata e successivamente deserializzata una class
 
 Il metodo `CreatePO` crea gli oggetti di classe `PurchaseOrder`, `Address` e `OrderedItem` e imposta i valori del campo pubblico. Il metodo costruisce inoltre un'istanza della classe <xref:System.Xml.Serialization.XmlSerializer> utilizzata per serializzare e deserializzare `PurchaseOrder`. Notare che il codice passa il tipo della classe che sarà serializzato al costruttore. Il codice crea anche un `FileStream` usato per scrivere il flusso XML in un documento XML.
 
-Il metodo `ReadPo` è un po' più semplice. Tale metodo crea semplicemente gli oggetti da deserializzare e ne legge i valori. Come per il metodo `CreatePo`, è necessario innanzitutto costruire una <xref:System.Xml.Serialization.XmlSerializer>, passando il tipo della classe da deserializzare al costruttore. Inoltre, per leggere il documento XML è necessaria una classe <xref:System.IO.FileStream>. Per deserializzare gli oggetti, chiamare il metodo <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> con la classe <xref:System.IO.FileStream> come argomento. È necessario eseguire il cast dell'oggetto deserializzato su una variabile oggetto di tipo `PurchaseOrder`. Il codice legge quindi i valori della classe `PurchaseOrder` deserializzata. Notare che è inoltre possibile leggere il file PO.xml creato per visualizzare l'output XML effettivo.
+Il metodo `ReadPo` è un po' più semplice. Tale metodo crea semplicemente gli oggetti da deserializzare e ne legge i valori. Come per il `CreatePo` metodo, è necessario prima costruire un <xref:System.Xml.Serialization.XmlSerializer>oggetto, passando il tipo della classe da deserializzare al costruttore. Inoltre, per leggere il documento XML è necessaria una classe <xref:System.IO.FileStream>. Per deserializzare gli oggetti, chiamare il metodo <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> con la classe <xref:System.IO.FileStream> come argomento. È necessario eseguire il cast dell'oggetto deserializzato su una variabile oggetto di tipo `PurchaseOrder`. Il codice legge quindi i valori della classe `PurchaseOrder` deserializzata. Notare che è inoltre possibile leggere il file PO.xml creato per visualizzare l'output XML effettivo.
 
 ```vb
 Imports System.IO
@@ -767,11 +767,11 @@ L'output XML potrebbe assomigliare agli elementi seguenti.
 </PurchaseOrder>
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Introduzione alla serializzazione XML](introducing-xml-serialization.md)
 - [Controllo della serializzazione XML mediante attributi](controlling-xml-serialization-using-attributes.md)
-- [Attributi per il controllo della serializzazione XML](attributes-that-control-xml-serialization.md)
+- [Attributi che controllano la serializzazione XML](attributes-that-control-xml-serialization.md)
 - [Classe XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
 - [Procedura: serializzare un oggetto](how-to-serialize-an-object.md)
-- [Procedura: deserializzare un oggetto](how-to-deserialize-an-object.md)
+- [Procedura: Deserializzare un oggetto](how-to-deserialize-an-object.md)

@@ -1,7 +1,7 @@
 ---
 title: Panoramica
 ms.date: 12/13/2019
-description: Panoramica di Microsoft.Data.Sqlite
+description: Panoramica di Microsoft. Data. sqlite
 ms.openlocfilehash: e84c68f0615f187e8dea7ab87ac917c0ad796a1c
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
@@ -9,13 +9,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "77543599"
 ---
-# <a name="microsoftdatasqlite-overview"></a>Panoramica di Microsoft.Data.Sqlite
+# <a name="microsoftdatasqlite-overview"></a>Panoramica di Microsoft. Data. sqlite
 
-Microsoft.Data.Sqlite è un provider [di ADO.NET](../../../framework/data/adonet/index.md) leggero per SQLite.Microsoft.Data.Sqlite is a lightweight ADO.NET provider for SQLite. Il provider [Entity Framework Core](/ef/core/) per SQLite si basa su questa libreria. Tuttavia, può anche essere utilizzato in modo indipendente o con altre librerie di accesso ai dati.
+Microsoft. Data. SQLite è un provider [ADO.NET](../../../framework/data/adonet/index.md) leggero per SQLite. Il provider di [Entity Framework Core](/ef/core/) per SQLite si basa su questa libreria. Tuttavia, può anche essere usato in modo indipendente o con altre librerie di accesso ai dati.
 
 ## <a name="installation"></a>Installazione
 
-L'ultima versione stabile è disponibile su [NuGet](https://www.nuget.org/packages/Microsoft.Data.Sqlite).
+La versione stabile più recente è disponibile in [NuGet](https://www.nuget.org/packages/Microsoft.Data.Sqlite).
 
 ### <a name="net-core-cli"></a>[Interfaccia della riga di comando di .NET Core](#tab/netcore-cli)
 
@@ -33,11 +33,11 @@ Install-Package Microsoft.Data.Sqlite
 
 ## <a name="usage"></a>Uso
 
-Questa libreria implementa le astrazioni comuni ADO.NET per connessioni, comandi, lettori dati e così via.
+Questa libreria implementa le astrazioni ADO.NET comuni per le connessioni, i comandi, i lettori di dati e così via.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/HelloWorldSample/Program.cs?name=snippet_HelloWorld)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 * [Stringhe di connessione](connection-strings.md)
 * [Riferimento API](/dotnet/api/?view=msdata-sqlite-3.0)

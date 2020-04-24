@@ -21,7 +21,7 @@ Il Visual Basic compilatore della riga di comando fornisce un'alternativa alla c
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
 Descrive il Visual Basic compilatore della riga di comando, fornito come alternativa alla compilazione di programmi dall'IDE di Visual Studio.

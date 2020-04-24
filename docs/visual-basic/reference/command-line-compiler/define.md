@@ -35,11 +35,11 @@ oppure
   
 |Termine|Definizione|  
 |---|---|  
-|`symbol`|Richiesto. Il simbolo da definire.|  
-|`value`|Parametro facoltativo. Il valore da assegnare a `symbol`. Se `value` è una stringa, deve essere racchiusa tra sequenze di barra rovesciata/virgolette (\\") anziché virgolette. Se non è specificato un valore, è considerato True.|  
+|`symbol`|Obbligatorio. Il simbolo da definire.|  
+|`value`|Facoltativo. Il valore da assegnare a `symbol`. Se `value` è una stringa, deve essere racchiusa tra sequenze di barre rovesciate o virgolette\\(") anziché virgolette. Se non è specificato un valore, è considerato True.|  
   
-## <a name="remarks"></a>Note  
- L'opzione `-define` ha un effetto simile all'uso di una direttiva per il preprocessore `#Const` nel file di origine, ad eccezione del fatto che le costanti definite con `-define` sono pubbliche e si applicano a tutti i file del progetto.  
+## <a name="remarks"></a>Osservazioni  
+ L' `-define` opzione ha un effetto simile all'uso di `#Const` una direttiva per il preprocessore nel file di origine, ad eccezione del `-define` fatto che le costanti definite con sono pubbliche e si applicano a tutti i file nel progetto.  
   
  È possibile usare i simboli creati mediante questa opzione con la direttiva `#If`...`Then`...`#Else` per eseguire la compilazione condizionale dei file di origine.  
   
@@ -56,7 +56,7 @@ oppure
   
  [!code-vb[VbVbalrCompiler#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#45)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Direttive #If...Then...#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)

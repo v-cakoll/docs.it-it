@@ -9,26 +9,26 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: f8ec53323abec7077c69f50fe522338228ceddbb
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 6c0cd7dcebb46b5408079848862ef4da1bb7f0a6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116630"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174667"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Considerazioni su LINQ (WCF Data Services)
 In questo argomento vengono fornite informazioni sul modo in cui le query LINQ vengono composte ed eseguite quando si utilizza il client di WCF Data Services e le limitazioni dell'utilizzo di LINQ per eseguire una query su un servizio dati che implementa l'Open Data Protocol (OData). Per ulteriori informazioni sulla composizione e l'esecuzione di query su un servizio dati basato su OData, vedere [esecuzione di query sul servizio dati](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>Composizione di query LINQ  
- LINQ consente di comporre query per una raccolta di oggetti che implementa <xref:System.Collections.Generic.IEnumerable%601>. Entrambe le **Aggiungi riferimento al servizio** finestra di dialogo in Visual Studio e lo strumento DataSvcUtil. exe vengono utilizzate per generare una rappresentazione di un servizio OData come classe contenitore di entità che eredita da <xref:System.Data.Services.Client.DataServiceContext>, nonché da oggetti che rappresentano le entità restituite nei feed. Questi strumenti generano anche le proprietà per la classe contenitore di entità delle raccolte esposte come feed dal servizio. Ognuna di queste proprietà della classe che incapsula il servizio dati restituisce un elemento <xref:System.Data.Services.Client.DataServiceQuery%601>. Dal momento che la classe <xref:System.Data.Services.Client.DataServiceQuery%601> implementa l'interfaccia <xref:System.Linq.IQueryable%601> definita da LINQ, è possibile comporre una query LINQ per i feed esposti dal servizio dati che vengono convertiti dalla libreria client in un URI di richiesta query inviato al servizio dati in esecuzione.  
+ LINQ consente di comporre query per una raccolta di oggetti che implementa <xref:System.Collections.Generic.IEnumerable%601>. La finestra di dialogo **Aggiungi riferimento al servizio** in Visual Studio e lo strumento DataSvcUtil. exe vengono utilizzati per generare una rappresentazione di un servizio OData come classe contenitore di entità che eredita da <xref:System.Data.Services.Client.DataServiceContext>, nonché per gli oggetti che rappresentano le entità restituite nei feed. Questi strumenti generano anche le proprietà per la classe contenitore di entità delle raccolte esposte come feed dal servizio. Ognuna di queste proprietà della classe che incapsula il servizio dati restituisce un elemento <xref:System.Data.Services.Client.DataServiceQuery%601>. Dal momento che la classe <xref:System.Data.Services.Client.DataServiceQuery%601> implementa l'interfaccia <xref:System.Linq.IQueryable%601> definita da LINQ, è possibile comporre una query LINQ per i feed esposti dal servizio dati che vengono convertiti dalla libreria client in un URI di richiesta query inviato al servizio dati in esecuzione.  
   
 > [!IMPORTANT]
 > Il set di query esprimibile nella sintassi LINQ è più ampio di quelli abilitati nella sintassi URI utilizzata da OData Data Services. Quando non è possibile eseguire il mapping della query a un URI nel servizio dati di destinazione, viene generato un oggetto <xref:System.NotSupportedException>. Per ulteriori informazioni, vedere [metodi LINQ non supportati](linq-considerations-wcf-data-services.md#unsupportedMethods) in questo argomento.  
   
  Nell'esempio seguente viene riportata una query LINQ che restituisce `Orders` con un costo di spedizione maggiore di 30 dollari e ordina i risultati in base alla data di spedizione, partendo da quella più recente:  
   
-[!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]      
-[!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]    
+[!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]
+[!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]
   
  Questa query LINQ viene convertita nell'URI di query seguente che viene eseguito nel servizio dati di [avvio rapido](quickstart-wcf-data-services.md) basato su Northwind:  
   
@@ -36,12 +36,12 @@ In questo argomento vengono fornite informazioni sul modo in cui le query LINQ v
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
 ```  
   
- Per informazioni più generali su LINQ, vedere LINQ ( [Language-Integrated Query C# )](../../../csharp/programming-guide/concepts/linq/index.md) o [LINQ (Language-Integrated Query)-Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md).  
+ Per informazioni più generali su LINQ, vedere LINQ ( [Language-Integrated Query)-C#](../../../csharp/programming-guide/concepts/linq/index.md) o [LINQ (Language-Integrated query)-Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md).  
   
  LINQ consente di comporre query tramite la sintassi di query dichiarativa specifica della lingua, mostrata nell'esempio precedente, e un set di metodi di query noti come operatori di query standard. Una query equivalente a quella dell'esempio precedente può essere composta solo tramite la sintassi basata sul metodo, come indicato nell'esempio seguente:  
   
-[!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqExpressionSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqexpressionspecific)]      
-[!code-vb[Astoria Northwind Client#AddQueryOptionsLinqExpressionSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqexpressionspecific)]    
+[!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqExpressionSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqexpressionspecific)]
+[!code-vb[Astoria Northwind Client#AddQueryOptionsLinqExpressionSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqexpressionspecific)]
   
  Il client WCF Data Services è in grado di convertire entrambi i tipi di query composte in un URI di query ed è possibile estendere una query LINQ aggiungendo i metodi di query a un'espressione di query. Quando si compongono query LINQ aggiungendo la sintassi del metodo a un'espressione di query o un elemento <xref:System.Data.Services.Client.DataServiceQuery%601>, le operazioni vengono aggiunte all'URI della query nell'ordine di chiamata dei metodi. Equivale alla chiamata del metodo <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> per aggiungere ogni opzione di query all'URI della query.  
   
@@ -55,104 +55,104 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 ## <a name="linq-query-examples"></a>Esempi di query LINQ  
  Gli esempi nelle sezioni seguenti illustrano i tipi di query LINQ che possono essere eseguiti su un servizio OData.  
   
-<a name="filtering"></a>   
-### <a name="filtering"></a>Filtro  
+<a name="filtering"></a>
+### <a name="filtering"></a>Filtri  
  Negli esempi di query LINQ in questa sezione vengono filtrati i dati nel feed restituito dal servizio.  
   
  Negli esempi seguenti vengono illustrate query equivalenti che filtrano le entità `Orders` restituite in modo che vengano restituiti solo gli ordini con un costo di spedizione maggiore di $30:  
   
 - Utilizzo della sintassi di query LINQ:  
   
-[!code-csharp[Astoria Northwind Client#LinqWhereClauseSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqwhereclausespecific)]      
-[!code-vb[Astoria Northwind Client#LinqWhereClauseSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqwhereclausespecific)]     
+[!code-csharp[Astoria Northwind Client#LinqWhereClauseSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqwhereclausespecific)]
+[!code-vb[Astoria Northwind Client#LinqWhereClauseSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqwhereclausespecific)]
   
 - Utilizzo dei metodi di query LINQ:  
   
-[!code-csharp[Astoria Northwind Client#LinqWhereMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqwheremethodspecific)]      
-[!code-vb[Astoria Northwind Client#LinqWhereMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqwheremethodspecific)]       
+[!code-csharp[Astoria Northwind Client#LinqWhereMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqwheremethodspecific)]
+[!code-vb[Astoria Northwind Client#LinqWhereMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqwheremethodspecific)]
   
 - Opzione `$filter` della stringa di query:  
   
-[!code-csharp[Astoria Northwind Client#ExplicitQueryWhereMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#explicitquerywheremethodspecific)]      
-[!code-vb[Astoria Northwind Client#ExplicitQueryWhereMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#explicitquerywheremethodspecific)]       
+[!code-csharp[Astoria Northwind Client#ExplicitQueryWhereMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#explicitquerywheremethodspecific)]
+[!code-vb[Astoria Northwind Client#ExplicitQueryWhereMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#explicitquerywheremethodspecific)]
   
  Tutti gli esempi precedenti vengono convertiti nell'URI di query: `http://localhost:12345/northwind.svc/Orders()?$filter=Freight gt 30M`.  
   
-<a name="sorting"></a>   
+<a name="sorting"></a>
 ### <a name="sorting"></a>Ordinamento  
  Negli esempi seguenti vengono illustrate query equivalenti che ordinano i dati restituiti in base al nome dell'azienda e al codice postale, in ordine decrescente:  
   
 - Utilizzo della sintassi di query LINQ:  
   
-[!code-csharp[Astoria Northwind Client#LinqOrderByClauseSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqorderbyclausespecific)]      
-[!code-vb[Astoria Northwind Client#LinqOrderByClauseSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqorderbyclausespecific)]        
+[!code-csharp[Astoria Northwind Client#LinqOrderByClauseSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqorderbyclausespecific)]
+[!code-vb[Astoria Northwind Client#LinqOrderByClauseSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqorderbyclausespecific)]
   
 - Utilizzo dei metodi di query LINQ:  
   
-[!code-csharp[Astoria Northwind Client#LinqOrderByMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqorderbymethodspecific)]      
-[!code-vb[Astoria Northwind Client#LinqOrderByMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqorderbymethodspecific)]        
+[!code-csharp[Astoria Northwind Client#LinqOrderByMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqorderbymethodspecific)]
+[!code-vb[Astoria Northwind Client#LinqOrderByMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqorderbymethodspecific)]
   
 - Opzione `$orderby` della stringa di query:  
   
-[!code-csharp[Astoria Northwind Client#ExplicitQueryOrderByMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#explicitqueryorderbymethodspecific)]      
-[!code-vb[Astoria Northwind Client#ExplicitQueryOrderByMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#explicitqueryorderbymethodspecific)]         
+[!code-csharp[Astoria Northwind Client#ExplicitQueryOrderByMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#explicitqueryorderbymethodspecific)]
+[!code-vb[Astoria Northwind Client#ExplicitQueryOrderByMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#explicitqueryorderbymethodspecific)]
   
  Tutti gli esempi precedenti vengono convertiti nell'URI di query: `http://localhost:12345/northwind.svc/Customers()?$orderby=CompanyName,PostalCode desc`.  
   
-<a name="projection"></a>   
+<a name="projection"></a>
 ### <a name="projection"></a>Proiezione  
  Negli esempi seguenti vengono illustrate query equivalenti che ordinano i dati restituiti dal progetto nel tipo `CustomerAddress` più ristretto:  
   
 - Utilizzo della sintassi di query LINQ:  
   
-[!code-csharp[Astoria Northwind Client#LinqSelectClauseSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqselectclausespecific)]      
-[!code-vb[Astoria Northwind Client#LinqSelectClauseSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqselectclausespecific)]         
+[!code-csharp[Astoria Northwind Client#LinqSelectClauseSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqselectclausespecific)]
+[!code-vb[Astoria Northwind Client#LinqSelectClauseSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqselectclausespecific)]
   
 - Utilizzo dei metodi di query LINQ:  
   
-[!code-csharp[Astoria Northwind Client#LinqSelectMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqselectmethodspecific)]      
-[!code-vb[Astoria Northwind Client#LinqSelectMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqselectmethodspecific)]         
+[!code-csharp[Astoria Northwind Client#LinqSelectMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqselectmethodspecific)]
+[!code-vb[Astoria Northwind Client#LinqSelectMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqselectmethodspecific)]
 
 > [!NOTE]
 > L'opzione di query `$select` non può essere aggiunta a un URI di query tramite il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>. Si consiglia di usare il metodo LINQ <xref:System.Linq.Enumerable.Select%2A> in modo che il client generi l'opzione di query `$select` nell'URI della richiesta.  
   
  Entrambi gli esempi precedenti vengono convertiti nell'URI di query: `"http://localhost:12345/northwind.svc/Customers()?$filter=Country eq 'GerGerm'&$select=CustomerID,Address,City,Region,PostalCode,Country"`.  
   
-<a name="paging"></a>   
+<a name="paging"></a>
 ### <a name="client-paging"></a>Paging del client  
  Negli esempi seguenti vengono illustrate query equivalenti che richiedono una pagina delle entità ordinate che include 25 ordini, ignorando i primi 50 ordini:  
   
 - Applicazione di metodi di query a una query LINQ:  
   
-[!code-csharp[Astoria Northwind Client#LinqSkipTakeMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqskiptakemethodspecific)]      
-[!code-vb[Astoria Northwind Client#LinqSkipTakeMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqskiptakemethodspecific)]     
+[!code-csharp[Astoria Northwind Client#LinqSkipTakeMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqskiptakemethodspecific)]
+[!code-vb[Astoria Northwind Client#LinqSkipTakeMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqskiptakemethodspecific)]
   
 - Opzioni `$skip` e `$top` della stringa di query dell'URI:  
   
-[!code-csharp[Astoria Northwind Client#ExplicitQuerySkipTakeMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#explicitqueryskiptakemethodspecific)]      
-[!code-vb[Astoria Northwind Client#ExplicitQuerySkipTakeMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#explicitqueryskiptakemethodspecific)]     
+[!code-csharp[Astoria Northwind Client#ExplicitQuerySkipTakeMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#explicitqueryskiptakemethodspecific)]
+[!code-vb[Astoria Northwind Client#ExplicitQuerySkipTakeMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#explicitqueryskiptakemethodspecific)]
   
  Entrambi gli esempi precedenti vengono convertiti nell'URI di query: `http://localhost:12345/northwind.svc/Orders()?$orderby=OrderDate desc&$skip=50&$top=25`.  
   
-<a name="expand"></a>   
-### <a name="expand"></a>Expand  
+<a name="expand"></a>
+### <a name="expand"></a>Espandere  
  Quando si esegue una query su un servizio dati OData, è possibile richiedere che le entità correlate all'entità di destinazione della query includano il feed restituito. Il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> viene chiamato su <xref:System.Data.Services.Client.DataServiceQuery%601> per il set di entità indirizzato dalla query LINQ, con il relativo nome del set di entità fornito come parametro `path`. Per ulteriori informazioni, vedere [caricamento di contenuto posticipato](loading-deferred-content-wcf-data-services.md).  
   
  Negli esempi seguenti vengono mostrate modalità equivalenti per usare il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> in una query:  
   
 - Nella sintassi della query LINQ:  
   
-[!code-csharp[Astoria Northwind Client#LinqQueryExpandSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqqueryexpandspecific)]      
+[!code-csharp[Astoria Northwind Client#LinqQueryExpandSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqqueryexpandspecific)]
 [!code-vb[Astoria Northwind Client#LinqQueryExpandSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqqueryexpandspecific)]  
   
 - Con i metodi di query LINQ:  
 
-[!code-csharp[Astoria Northwind Client#LinqQueryExpandMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqqueryexpandmethodspecific)]       
-[!code-vb[Astoria Northwind Client#LinqQueryExpandMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqqueryexpandmethodspecific)]       
+[!code-csharp[Astoria Northwind Client#LinqQueryExpandMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqqueryexpandmethodspecific)]
+[!code-vb[Astoria Northwind Client#LinqQueryExpandMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqqueryexpandmethodspecific)]
 
  Entrambi gli esempi precedenti vengono convertiti nell'URI di query: `http://localhost:12345/northwind.svc/Orders()?$filter=CustomerID eq 'ALFKI'&$expand=Order_Details`.  
   
-<a name="unsupportedMethods"></a>   
+<a name="unsupportedMethods"></a>
 ## <a name="unsupported-linq-methods"></a>Metodi LINQ non supportati  
  La tabella seguente contiene le classi dei metodi LINQ non supportati e non può essere inclusa in una query eseguita su un servizio OData:  
   
@@ -164,9 +164,9 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |Operatori di raggruppamento|Tutti gli operatori di raggruppamento non sono supportati con <xref:System.Data.Services.Client.DataServiceQuery%601>, compresi quelli indicati di seguito:<br /><br /> -   <xref:System.Linq.Enumerable.GroupBy%2A><br />-   <xref:System.Linq.Enumerable.GroupJoin%2A><br /><br /> È necessario eseguire le operazioni di raggruppamento sul client.|  
 |Operatori di aggregazione|Tutti gli operatori di aggregazione non sono supportati con <xref:System.Data.Services.Client.DataServiceQuery%601>, compresi quelli indicati di seguito:<br /><br /> -   <xref:System.Linq.Enumerable.Aggregate%2A><br />-   <xref:System.Linq.Enumerable.Average%2A><br />-   <xref:System.Linq.Enumerable.Count%2A><br />-   <xref:System.Linq.Enumerable.LongCount%2A><br />-   <xref:System.Linq.Enumerable.Max%2A><br />-   <xref:System.Linq.Enumerable.Min%2A><br />-   <xref:System.Linq.Enumerable.Sum%2A><br /><br /> Le operazioni di aggregazione devono essere eseguite sul client o devono essere incapsulate da un'operazione del servizio.|  
 |Operatori di paging|Gli operatori di paging seguenti non sono supportati con <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> -   <xref:System.Linq.Enumerable.ElementAt%2A><br />-   <xref:System.Linq.Enumerable.Last%2A><br />-   <xref:System.Linq.Enumerable.LastOrDefault%2A><br />-   <xref:System.Linq.Enumerable.SkipWhile%2A><br />-   <xref:System.Linq.Enumerable.TakeWhile%2A><br/><br/>**Nota:**  Gli operatori di paging eseguiti in una sequenza vuota restituiscono null.|  
-|Altri operatori|Gli operatori seguenti non sono supportati anche per un <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> - <xref:System.Linq.Enumerable.Empty%2A><br />- <xref:System.Linq.Enumerable.Range%2A><br />- <xref:System.Linq.Enumerable.Repeat%2A><br />- <xref:System.Linq.Enumerable.ToDictionary%2A><br />- <xref:System.Linq.Enumerable.ToLookup%2A>|  
+|Altri operatori|Non sono supportati anche gli operatori seguenti <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> - <xref:System.Linq.Enumerable.Empty%2A><br />- <xref:System.Linq.Enumerable.Range%2A><br />- <xref:System.Linq.Enumerable.Repeat%2A><br />- <xref:System.Linq.Enumerable.ToDictionary%2A><br />- <xref:System.Linq.Enumerable.ToLookup%2A>|  
   
-<a name="supportedExpressions"></a>   
+<a name="supportedExpressions"></a>
 ## <a name="supported-expression-functions"></a>Funzioni di espressione non supportate  
  Sono supportati i metodi e le proprietà CLR (Common Language Runtime) seguenti perché possono essere convertiti in un'espressione di query per l'inclusione nell'URI della richiesta a un servizio OData:  
   
@@ -184,7 +184,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |<xref:System.String.ToUpper>|`string toupper(string p0)`|  
 |<xref:System.String.Trim>|`string trim(string p0)`|  
   
-|Membro <xref:System.DateTime><sup>1</sup>|Funzione OData supportata|  
+|<xref:System.DateTime>Membro<sup>1</sup>|Funzione OData supportata|  
 |-------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
 |<xref:System.DateTime.Day>|`int day(DateTime p0)`|  
 |<xref:System.DateTime.Hour>|`int hour(DateTime p0)`|  
@@ -193,7 +193,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |<xref:System.DateTime.Second>|`int second(DateTime p0)`|  
 |<xref:System.DateTime.Year>|`int year(DateTime p0)`|  
   
- <sup>1</sup> Sono supportate anche le proprietà di data e ora equivalenti di <xref:Microsoft.VisualBasic.DateAndTime?displayProperty=nameWithType> e il metodo di <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> in Visual Basic.  
+ <sup>1</sup> Sono supportate anche le proprietà di data <xref:Microsoft.VisualBasic.DateAndTime?displayProperty=nameWithType> e ora <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> equivalenti di e il metodo in Visual Basic.  
   
 |Membro <xref:System.Math>|Funzione OData supportata|  
 |---------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
@@ -210,7 +210,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  È possibile che il client sia anche in grado di valutare funzioni CLR aggiuntive sul client. Viene generata un'eccezione <xref:System.NotSupportedException> per qualsiasi espressione che non può essere valutata sul client e non può essere convertita in un URI della richiesta valido per la valutazione sul server.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Esecuzione di query sul servizio dati](querying-the-data-service-wcf-data-services.md)
 - [Proiezioni di query](query-projections-wcf-data-services.md)

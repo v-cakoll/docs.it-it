@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: scaricare file'
+title: 'Procedura: Scaricare un file'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - downloading Internet resources [Visual Basic], files
@@ -55,9 +55,9 @@ Le seguenti condizioni possono generare un'eccezione:
   > [!IMPORTANT]
   > Il protocollo FTP utilizzato dal metodo `DownLoadFile` invia informazioni, comprese le password, in testo normale e non deve essere usato per trasmettere informazioni riservate.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:Microsoft.VisualBasic.Devices.Network>
 - <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>
-- [Procedura: caricare un fileHow to: Upload a File](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)
+- [Procedura: Caricare un file](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)
 - [Procedura: analizzare percorsi di file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

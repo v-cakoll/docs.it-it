@@ -61,9 +61,9 @@ La tabella seguente elenca le attività comunemente eseguite con un flusso:
 
 |A|Vedere|
 |---|---|
-|Leggere e scrivere in un file di dati|[Procedura: leggere e scrivere su un file di dati appena creato](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
-|Leggere testo da un file|[Procedura: leggere testo da un file](../../../../standard/io/how-to-read-text-from-a-file.md)|
-|Scrivere testo in un file|[Procedura: Scrivere un testo in un file](../../../../standard/io/how-to-write-text-to-a-file.md)|
+|Leggere e scrivere in un file di dati|[Procedura: Leggere e scrivere in un file di dati appena creato](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
+|Leggere testo da un file|[Procedura: Leggere testo da un file](../../../../standard/io/how-to-read-text-from-a-file.md)|
+|Scrivere testo in un file|[Procedura: Scrivere testo in un file](../../../../standard/io/how-to-write-text-to-a-file.md)|
 |Leggere caratteri da una stringa|[Procedura: Leggere caratteri da una stringa](../../../../standard/io/how-to-read-characters-from-a-string.md)|
 |Scrivere caratteri in una stringa|[Procedura: Scrivere caratteri in una stringa](../../../../standard/io/how-to-write-characters-to-a-string.md)|
 |Crittografare i dati|[Encrypting Data](../../../../standard/security/encrypting-data.md)|
@@ -99,16 +99,16 @@ La tabella seguente elenca le attività comunemente associate all'archiviazione 
 |Eliminare un spazio di memorizzazione isolato|[Procedura: Eliminare gli archivi nello spazio di memorizzazione isolato](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|
 |Creare un file o una directory in un spazio di memorizzazione isolato|[Procedura: Creare file e directory nello spazio di memorizzazione isolato](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|
 |Trovare un file in un spazio di memorizzazione isolato|[Procedura: Trovare file e directory esistenti nello spazio di memorizzazione isolato](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|
-|Leggere o scrivere in un file in un spazio di memorizzazione isolato|[Procedura: leggere e scrivere sui file nello spazio di memorizzazione isolato](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|
+|Leggere o scrivere in un file in un spazio di memorizzazione isolato|[Procedura: Leggere e scrivere sui file nello spazio di memorizzazione isolato](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|
 |Eliminare un file o una directory in un spazio di memorizzazione isolato|[Procedura: Eliminare file e directory nello spazio di memorizzazione isolato](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|
 
 ## <a name="file-events"></a>Eventi di file
 
 Il componente <xref:System.IO.FileSystemWatcher> consente di controllare le modifiche nei file e nelle directory del sistema o in qualsiasi computer a cui si ha accesso dalla rete. Ad esempio, se un file viene modificato, è consigliabile inviare all'utente un avviso che la modifica ha avuto luogo. Quando vengono apportate modifiche, vengono generati uno o più eventi, che vengono archiviati in un buffer e consegnati al componente <xref:System.IO.FileSystemWatcher> per l'elaborazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Composing Streams](../../../../standard/io/composing-streams.md)
-- [I/O su file e flusso](../../../../standard/io/index.md)
-- [I/O di file asincrono](../../../../standard/io/asynchronous-file-i-o.md)
+- [Composizione dei flussi](../../../../standard/io/composing-streams.md)
+- [I/O di file e di flussi](../../../../standard/io/index.md)
+- [I/O file asincrono](../../../../standard/io/asynchronous-file-i-o.md)
 - [Classi utilizzate nel file system e nella funzionalità di I/O di file di .Net Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

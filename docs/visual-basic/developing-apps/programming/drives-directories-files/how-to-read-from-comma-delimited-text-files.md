@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: leggere da file di testo delimitati da virgoleHow to: read from comma-delimited text files'
+title: 'Procedura: leggere da file di testo delimitati da virgole'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], parsing
@@ -56,7 +56,7 @@ L'oggetto `TextFieldParser` consente di analizzare in modo facile ed efficace i 
   
 - L'utente non dispone di autorizzazioni sufficienti per accedere al file (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
 - [Procedura: leggere file di testo a larghezza fissa](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)

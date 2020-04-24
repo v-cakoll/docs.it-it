@@ -27,24 +27,24 @@ Specifica un indirizzo di base predefinito durante la creazione di una DLL.
   
 ## <a name="arguments"></a>Argomenti  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |---|---|  
 |`address`|Obbligatorio. Indirizzo di base per la DLL. Questo indirizzo deve essere specificato come numero esadecimale.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'indirizzo di base predefinito per una DLL viene impostato dal .NET Framework.  
   
  Tenere presente che la parola di ordine inferiore in questo indirizzo viene arrotondata. Se ad esempio si specifica 0x11110001, viene arrotondato a 0x11110000.  
   
- Per completare il processo di firma di una DLL, utilizzare l'opzione `–R` dello strumento per la denominazione sicura (sn. exe).  
+ Per completare il processo di firma di una DLL, utilizzare `–R` l'opzione dello strumento per la denominazione sicura (sn. exe).  
   
  Questa opzione viene ignorata se la destinazione non è una DLL.  
   
 |Per impostare-baseaddress nell'IDE di Visual Studio|  
 |---|  
-|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Compila**.<br />3.  Scegliere **Avanzate**.<br />4.  Modificare il valore nella casella **indirizzo di base dll:** . **Nota:**      **Indirizzo di base dll:** box è di sola lettura, a meno che la destinazione non sia una dll.|  
+|1. è stato selezionato un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2. fare clic sulla scheda **Compila** .<br />3. fare clic su **Avanzate**.<br />4. modificare il valore nella casella **indirizzo di base dll:** . **Nota:**      **Indirizzo di base dll:** box è di sola lettura, a meno che la destinazione non sia una dll.|  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

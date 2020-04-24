@@ -50,7 +50,7 @@ In questo esempio viene creato un file di testo vuoto nel percorso specificato u
   
  Viene generata un'eccezione <xref:System.UnauthorizedAccessException> se l'utente non dispone dell'autorizzazione per creare il file.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.IO>
 - <xref:System.IO.File.Create%2A>

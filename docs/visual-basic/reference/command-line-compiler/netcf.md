@@ -26,30 +26,30 @@ Imposta il compilatore in modo che abbia come destinazione la .NET Compact Frame
 -netcf
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il `-netcf` opzione fa sì che il compilatore Visual Basic abbia come destinazione il .NET Compact Framework anziché il .NET Framework completo. La funzionalità del linguaggio presente solo nella .NET Framework completa è disabilitata.
+L' `-netcf` opzione fa sì che il compilatore di Visual Basic faccia riferimento al .NET Compact Framework anziché al .NET Framework completo. La funzionalità del linguaggio presente solo nella .NET Framework completa è disabilitata.
 
-L'opzione `-netcf` è progettata per essere utilizzata con [-sdkpath (](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Le funzionalità del linguaggio disabilitate da `-netcf` sono le stesse funzionalità del linguaggio non presenti nei file di destinazione `-sdkpath`.
+L' `-netcf` opzione è progettata per essere usata con [-sdkpath (](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Le funzionalità del linguaggio disabilitate da `-netcf` sono le stesse funzionalità del linguaggio non presenti nei file `-sdkpath`assegnati a.
 
 > [!NOTE]
-> L'opzione `-netcf` non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando. L'opzione `-netcf` viene impostata quando viene caricato un progetto di Visual Basic dispositivo.
+> L' `-netcf` opzione non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando. L' `-netcf` opzione viene impostata quando viene caricato un progetto Visual Basic dispositivo.
 
-L'opzione `-netcf` modifica le funzionalità del linguaggio seguenti:
+L' `-netcf` opzione modifica le funzionalità del linguaggio seguenti:
 
-- La parola chiave [End \<keyword > Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md) , che termina l'esecuzione di un programma, è disabilitata. Il programma seguente compila ed esegue senza `-netcf` ma non riesce in fase di compilazione con `-netcf`.
+- La parola chiave [End \<>](../../../visual-basic/language-reference/statements/end-keyword-statement.md) parola chiave Statement, che termina l'esecuzione di un programma, è disabilitata. Il programma seguente compila ed esegue senza `-netcf` ma ha esito negativo in fase `-netcf`di compilazione con.
 
   [!code-vb[VbVbalrCompiler#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/netcf.vb#34)]
 
-- L'associazione tardiva, in tutti i form, è disabilitata. Gli errori in fase di compilazione vengono generati quando si rilevano scenari di associazione tardiva riconosciuti. Il programma seguente compila ed esegue senza `-netcf` ma non riesce in fase di compilazione con `-netcf`.
+- L'associazione tardiva, in tutti i form, è disabilitata. Gli errori in fase di compilazione vengono generati quando si rilevano scenari di associazione tardiva riconosciuti. Il programma seguente compila ed esegue senza `-netcf` ma ha esito negativo in fase `-netcf`di compilazione con.
 
   [!code-vb[VbVbalrCompiler#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#35)]
 
-- I modificatori [auto](../../../visual-basic/language-reference/modifiers/auto.md), [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)e [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) sono disabilitati. La sintassi dell' [istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md) viene anche modificata per `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`. Il codice seguente illustra l'effetto di `-netcf` in una compilazione.
+- I modificatori [auto](../../../visual-basic/language-reference/modifiers/auto.md), [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)e [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) sono disabilitati. La sintassi dell' [istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md) viene inoltre modificata in `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`. Nel codice seguente viene illustrato l'effetto `-netcf` di su una compilazione.
 
   [!code-vb[VbVbalrCompiler#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#36)]
 
-- L'uso di Visual Basic parole chiave 6,0 che sono state rimosse da Visual Basic genera un errore diverso quando si usa `-netcf`. Ciò influiscono sui messaggi di errore per le parole chiave seguenti:
+- L'uso di Visual Basic parole chiave 6,0 che sono state rimosse da Visual Basic `-netcf` genera un errore diverso quando si usa. Ciò influiscono sui messaggi di errore per le parole chiave seguenti:
 
   - `Open`
 
@@ -85,14 +85,14 @@ L'opzione `-netcf` modifica le funzionalità del linguaggio seguenti:
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente compila `Myfile.vb` con il .NET Compact Framework, usando le versioni di mscorlib. dll e Microsoft. VisualBasic. dll disponibili nella directory di installazione predefinita del .NET Compact Framework nell'unità C. In genere, si utilizzerà la versione più recente del .NET Compact Framework.
+Il codice seguente viene compilato `Myfile.vb` con il .NET Compact Framework, usando le versioni di mscorlib. dll e Microsoft. VisualBasic. dll disponibili nella directory di installazione predefinita del .NET Compact Framework nell'unità C. In genere, si utilizzerà la versione più recente del .NET Compact Framework.
 
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
+- [-sdkpath (](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

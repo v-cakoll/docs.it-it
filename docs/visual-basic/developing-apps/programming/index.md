@@ -33,13 +33,13 @@ Questa sezione discute le attività di programmazione da approfondire per la cre
  [Accesso ai servizi Web dell'applicazione](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
  Include documentazione sulla modalità di accesso ai servizi Web a cui fa riferimento l'applicazione mediante l'oggetto `My.WebServices`.  
   
- [Accesso alle impostazioni dell'applicazione](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
+ [Accessing Application Settings](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  Include documentazione sull'accesso alle impostazioni di un'applicazione mediante l'oggetto `My.Settings`.  
   
  [Elaborazione di unità, directory e file](drives-directories-files/index.md)  
  Include documentazione su come accedere al file system mediante l'oggetto `My.Computer.FileSystem`.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Funzionalità del linguaggio Visual Basic](../../../visual-basic/programming-guide/language-features/index.md)
 - [Concetti di programmazione](../../../visual-basic/programming-guide/concepts/index.md)

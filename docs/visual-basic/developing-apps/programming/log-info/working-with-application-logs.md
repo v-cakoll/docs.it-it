@@ -43,13 +43,13 @@ Di seguito è riportato un tipico valore per `BasePath` .
 
 C:\Documents and Settings\\\`username`\Dati applicazioni
 
-I valori di `CompanyName`, `ProductName`e `ProductVersion` provengono dalle informazioni sull'assembly dell'applicazione. Il formato del nome del file di log è *NomeAssembly*.log, dove *NomeAssembly* è il nome file dell'assembly senza estensione. Se sono necessari più file di log, ad esempio quando il log originale non è disponibile quando l'applicazione tenta di `iteration` scrivere nel `Integer`log, il formato per il nome del file di log è *AssemblyName*-*iteration*.log, dove è un positive .
+I valori di `CompanyName`, `ProductName`e `ProductVersion` provengono dalle informazioni sull'assembly dell'applicazione. Il formato del nome del file di log è *NomeAssembly*.log, dove *NomeAssembly* è il nome file dell'assembly senza estensione. Se è necessario più di un file di log, ad esempio quando il log originale non è disponibile quando l'applicazione tenta di scrivere nel log, il formato per il nome del file di log è *AssemblyName*-*Iteration*. log `iteration` , `Integer`dove è un positivo.
 
 È possibile eseguire l'override del comportamento predefinito aggiungendo o modificando i file di configurazione del computer e dell'applicazione. Per altre informazioni, vedere [Procedura dettagliata: modifica della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).
 
 ## <a name="configuring-log-settings"></a>Configurazione delle impostazioni del log
 
-L'oggetto `Log` dispone di un'implementazione predefinita che funziona senza un file di configurazione dell'applicazione, app.config.The object has a default implementation that works without an application configuration file, app.config. Per modificare le impostazioni predefinite, è necessario aggiungere un file di configurazione con le nuove impostazioni. Per altre informazioni, vedere [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
+L' `Log` oggetto ha un'implementazione predefinita che funziona senza un file di configurazione dell'applicazione, app. config. Per modificare i valori predefiniti, è necessario aggiungere un file di configurazione con le nuove impostazioni. Per altre informazioni, vedere [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
 
 Le sezioni della configurazione del log si trovano nel nodo `<system.diagnostics>` all'interno del nodo principale `<configuration>` del file app.config. Le informazioni del log vengono definite in diversi nodi:
 
@@ -106,7 +106,7 @@ Durante la scrittura di dati nel log tenere presente quanto segue:
 
 - **Evitare Denial of Service.** Se nel log dell'applicazione viene scritta una quantità eccessiva di informazioni, il log potrebbe riempirsi o potrebbe essere difficile trovare le informazioni importanti.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [Registrazione di informazioni relative all'applicazione](../../../../visual-basic/developing-apps/programming/log-info/index.md)

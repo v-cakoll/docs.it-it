@@ -13,17 +13,17 @@ ms.locfileid: "75710960"
 # <a name="editing-xml-data-using-xpathnavigator"></a>Modifica di dati XML con XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> fornisce dei metodi per inserire, modificare e rimuovere nodi e valori da un documento XML contenuto in un oggetto <xref:System.Xml.XmlDocument>. Per usare tali metodi, è necessario che l'oggetto <xref:System.Xml.XPath.XPathNavigator> sia modificabile, ovvero che la relativa proprietà <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> sia impostata su true.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Inserire dati XML con XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Inserimento dei dati XML utilizzando XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
  Viene descritto come inserire valori e nodi Attribute, nodi figlio e nodi di pari livello in un oggetto <xref:System.Xml.XmlDocument> usando la classe <xref:System.Xml.XPath.XPathNavigator>.  
   
- [Modificare dati XML con XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)  
+ [Modifica dei dati XML con XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)  
  Viene descritto come modificare nodi e valori in un oggetto <xref:System.Xml.XmlDocument> usando la classe <xref:System.Xml.XPath.XPathNavigator>.  
   
- [Rimuovere dati XML con XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)  
+ [Rimozione di dati XML con XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)  
  Viene descritto come rimuovere nodi e valori da un oggetto <xref:System.Xml.XmlDocument> usando la classe <xref:System.Xml.XPath.XPathNavigator>.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

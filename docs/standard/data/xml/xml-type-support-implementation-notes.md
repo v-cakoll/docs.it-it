@@ -45,6 +45,6 @@ In questo argomento vengono descritti alcuni dettagli sull'implementazione di cu
 ### <a name="xsanyuri-and-systemuri"></a>xs:anyURI e System.Uri  
  Quando un'istanza di `xs:anyURI` che rappresenta un URI relativo viene associata a un tipo <xref:System.Uri>, l'oggetto <xref:System.Uri> non dispone di un URI di base.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Supporto di tipi di dati nelle classi System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

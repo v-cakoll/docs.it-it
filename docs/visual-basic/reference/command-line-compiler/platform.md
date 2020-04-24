@@ -33,7 +33,7 @@ Consente di specificare la versione di Common Language Runtime (CLR) in grado di
 |`anycpu`|Compila l'assembly in modo da essere eseguito su qualsiasi piattaforma. L'applicazione verrà eseguita come applicazione a 32 bit su versioni di Windows a 32 bit e come applicazione a 64 bit su versioni di Windows a 64 bit. Questo flag è il valore predefinito.|  
 |`anycpu32bitpreferred`|Compila l'assembly in modo da essere eseguito su qualsiasi piattaforma. L'applicazione verrà eseguita come applicazione a 32 bit sia nelle versioni di Windows a 32 bit che in quelle a 64 bit. Questo flag è valido solo per i file eseguibili (. EXE) e richiede .NET Framework 4,5.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Per specificare il tipo di processore di destinazione del file di output, usare l'opzione `-platform`.  
   
  In genere, gli assembly .NET Framework scritti in Visual Basic vengono sempre eseguiti, indipendentemente dalla piattaforma. L'elaborazione di alcuni elementi può tuttavia risultare influenzata dalla piattaforma in uso. I casi più comuni sono:  
@@ -81,7 +81,7 @@ Consente di specificare la versione di Common Language Runtime (CLR) in grado di
 vbc -platform:x86 myFile.vb  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [-target (Visual Basic)](target.md)
 - [Compilatore della riga di comando di Visual Basic](index.md)

@@ -45,6 +45,6 @@ La classe **XmlDataDocument** è una classe derivata di **XmlDocument** e contie
   
  Se il caricamento di **DataSet** da **XmlDataDocument** risponde alle proprie esigenze, vedere [Sincronizzazione di Dataset con un documento XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Uso di XML in un set di dati](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [Utilizzo di XML in un dataset](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)

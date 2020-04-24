@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: registrare eccezioni'
+title: 'Procedura: Registrare eccezioni'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions, logging
@@ -44,7 +44,7 @@ ms.locfileid: "74352079"
   
 ### <a name="to-log-an-unhandled-exception"></a>Per registrare un'eccezione non gestita  
   
-1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà**dal menu **Progetto** .  
+1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà**dal menu **progetto** .  
   
 2. Fare clic sulla scheda **Applicazione** .  
   
@@ -66,12 +66,12 @@ ms.locfileid: "74352079"
   
      [!code-vb[VbVbalrMyApplicationLog#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#5)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [Utilizzo dei log applicazione](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
 - [Procedura: Scrivere messaggi di log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Procedura dettagliata: individuazione della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [Procedura dettagliata: modifica della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Procedura dettagliata: Individuazione della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [Procedura dettagliata: Modifica della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

@@ -38,6 +38,6 @@ Il metodo **ImportNode** è il meccanismo con il quale un nodo o un intero sotto
 > [!NOTE]
 > Sebbene sia possibile importare nodi DocumentType, un documento può disporre di un unico DocumentType. Pertanto, una volta importato il tipo di documento, prima di inserirlo nell'albero è necessario verificare che non sia presente alcun tipo di documento nel documento stesso. Per informazioni sulla rimozione dei nodi, vedere [Rimozione di nodi, contenuto e valori da un documento XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md).  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML DOM (Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

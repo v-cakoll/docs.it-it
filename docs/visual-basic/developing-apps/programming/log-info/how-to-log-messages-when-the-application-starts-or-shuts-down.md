@@ -1,5 +1,5 @@
 ---
-title: "Procedura: registrare messaggi all'avvio o all'arresto dell'applicazione"
+title: "Procedura: Registrare messaggi all'avvio o all'arresto dell'applicazione"
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs, shutdown
@@ -22,7 +22,7 @@ ms.locfileid: "74352104"
   
 ### <a name="to-access-the-applications-event-handler-code"></a>Per accedere al codice del gestore eventi dell'applicazione  
   
-1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà**dal menu **Progetto** .  
+1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà**dal menu **progetto** .  
   
 2. Fare clic sulla scheda **Applicazione** .  
   
@@ -60,10 +60,10 @@ ms.locfileid: "74352104"
   
  [!code-vb[VbVbalrMyApplicationLog#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#3)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
-- [Pagina Applicazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [Utilizzo dei log applicazione](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)

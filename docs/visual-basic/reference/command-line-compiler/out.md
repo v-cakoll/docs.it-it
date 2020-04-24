@@ -26,25 +26,25 @@ Specifica il nome del file di output.
   
 |Termine|Definizione|  
 |---|---|  
-|`filename`|Obbligatoria. Nome del file di output creato dal compilatore. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette ("").|  
+|`filename`|Obbligatorio. Nome del file di output creato dal compilatore. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette ("").|  
   
-## <a name="remarks"></a>Note  
- Specificare il nome completo e l'estensione del file da creare. In caso contrario, il file con estensione exe prende il nome dal file del codice sorgente contenente la stored procedure `Sub Main` e il file con estensione dll prende il nome dal primo file di codice sorgente.  
+## <a name="remarks"></a>Osservazioni  
+ Specificare il nome completo e l'estensione del file da creare. In caso contrario, il file con estensione exe prende il nome dal file del codice sorgente contenente la `Sub Main` stored procedure e il file con estensione dll prende il nome dal primo file di codice sorgente.  
   
- Se si specifica un nome di file senza estensione exe o dll, il compilatore aggiunge automaticamente l'estensione, a seconda del valore specificato per l'opzione del compilatore `-target`.  
+ Se si specifica un nome di file senza estensione exe o dll, il compilatore aggiunge automaticamente l'estensione, a seconda del valore specificato per l' `-target` opzione del compilatore.  
   
 |Per impostare il Integrated Development Environment in Visual Studio|  
 |---|  
 |1. è stato selezionato un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2. fare clic sulla scheda **applicazione** .<br />3. modificare il valore nella casella **nome assembly** .|  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente compila `T2.vb` e crea `T2.exe`di file di output.  
+ Il codice seguente compila `T2.vb` e crea il file `T2.exe`di output.  
   
 ```console
 vbc t2.vb -out:t3.exe  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
