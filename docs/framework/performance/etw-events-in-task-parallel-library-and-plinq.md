@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tasks, ETW events
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
-ms.openlocfilehash: 93fcd3215bdcbb30960f19e23ae15f32bb9ddd84
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 61429babf7378b9d271ffd60a6228ae4bfe7a5e5
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716091"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644252"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>Eventi ETW nella libreria TPL (Task Parallel Library) e PLINQ
 
-Sia Task Parallel Library che PLINQ generano eventi Event Trace for Windows (ETW) che è possibile usare per profilare e risolvere i problemi delle applicazioni con strumenti come Windows Performance Analyzer. Tuttavia, nella maggior parte degli scenari, il modo migliore per profilare il codice dell'applicazione parallela consiste nell'usare il [Visualizzatore di concorrenza](/visualstudio/profiling/concurrency-visualizer) in Visual Studio.
+Sia Task Parallel Library che PLINQ generano eventi Event Trace for Windows (ETW) che è possibile usare per profilare e risolvere i problemi delle applicazioni con strumenti come Windows Performance Analyzer. Tuttavia, nella maggior parte degli scenari, il modo migliore per profilare il codice dell'applicazione parallela consiste nell'utilizzare il visualizzatore di concorrenza in Visual Studio.However, in most scenarios, the best way to profile parallel application code is to use the [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer) in Visual Studio.
 
 ## <a name="task-parallel-library-etw-events"></a>Eventi ETW di Task Parallel Library
 
@@ -29,12 +29,12 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>Dati utente
 
-|**Name**|**Type**|**Descrizione**|
+|**Nome**|**Tipo**|**Descrizione**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ID di TaskScheduler che ha avviato il ciclo.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ID dell'attività che ha avviato il ciclo.|
 |ForkJoinContextID|<xref:System.Int32?displayProperty=nameWithType>|Identificatore univoco usato per indicare l'annidamento e le coppie per gli eventi con semantica fork/join.|
-|OperationType|<xref:System.Int32?displayProperty=nameWithType>|Indica il tipo di ciclo:<br /><br /> 1 = ParallelInvoke<br /><br /> 2 = ParallelFor<br /><br /> 3 = ParallelForEach|
+|Tipo operazione|<xref:System.Int32?displayProperty=nameWithType>|Indica il tipo di ciclo:<br /><br /> 1 = ParallelInvoke<br /><br /> 2 = ParallelFor<br /><br /> 3 = ParallelForEach|
 |InclusiveFrom|<xref:System.Int64?displayProperty=nameWithType>|Valore iniziale del contatore di cicli|
 |ExclusiveTo|<xref:System.Int64?displayProperty=nameWithType>|Valore finale del contatore di cicli|
 
@@ -45,7 +45,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>Dati utente
 
-|**Name**|**Type**|**Descrizione**|
+|**Nome**|**Tipo**|**Descrizione**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ID di TaskScheduler che ha avviato il ciclo.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ID dell'attività che ha avviato il ciclo.|
@@ -59,7 +59,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>Dati utente
 
-|**Name**|**Type**|**Descrizione**|
+|**Nome**|**Tipo**|**Descrizione**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ID di TaskScheduler che ha avviato il ciclo.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ID dell'attività che ha avviato il ciclo.|
@@ -75,7 +75,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>Dati utente
 
-|**Name**|**Type**|**Descrizione**|
+|**Nome**|**Tipo**|**Descrizione**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ID di TaskScheduler che ha avviato il ciclo.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ID dell'attività che ha avviato il ciclo.|
@@ -93,7 +93,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>Dati utente
 
-|**Name**|**Type**|**Descrizione**|
+|**Nome**|**Tipo**|**Descrizione**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ID di TaskScheduler che ha avviato il ciclo.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ID dell'attività che ha avviato il ciclo.|
@@ -106,7 +106,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>Dati utente
 
-|**Name**|**Type**|**Descrizione**|
+|**Nome**|**Tipo**|**Descrizione**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ID di TaskScheduler che ha avviato il ciclo.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ID dell'attività che ha avviato il ciclo.|
@@ -114,6 +114,6 @@ EVENT_DESCRIPTOR.Id = 1
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Eventi ETW in .NET Framework](etw-events.md)
+- [ETW Events in the .NET Framework](etw-events.md)
 - [Task Parallel Library (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
-- [Parallel LINQ (PLINQ)](../../standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ)](../../standard/parallel-programming/introduction-to-plinq.md)

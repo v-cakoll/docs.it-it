@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: e045c39240c99777d05ca86ee0a8cd1fa4309c4f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64cb561acd72ff5d4a11fcae7ce59eaad750f74e
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156582"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644363"
 ---
 # <a name="whats-new-in-net-core-22"></a>Novità di .NET Core 2.2
 
@@ -96,6 +96,6 @@ Per altre informazioni, vedere [Host startup hook](https://github.com/dotnet/cor
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Novità di .NET Core](index.md)
+- [Novità di .NET Core 3.1](dotnet-core-3-1.md)
 - [Novità di ASP.NET Core 2.2](/aspnet/core/release-notes/aspnetcore-2.2)
 - [Nuove funzionalità di EF Core 2.2](/ef/core/what-is-new/ef-core-2.2)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-ms.openlocfilehash: 8e60bdaedb403237383c4655e728443747af29e6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9877c1a4e86d035b614bf421364e3281878f0d8f
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400092"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645585"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 
@@ -73,7 +73,7 @@ al sources options
 |**/commercio[marchio]:**`text`|Specifica una stringa per il campo **Marchio** dell'assembly. Se `text` contiene uno spazio, racchiudere la stringa tra virgolette doppie (" "). Questa stringa è un attributo personalizzato dell'assembly ed è visualizzabile mediante reflection.<br /><br /> Se non si specifica **/win32res**, l'opzione **/trademark** viene visualizzata in Esplora file come risorsa **Marchio** Win32.<br /><br /> Se text è una stringa vuota, la risorsa **Marchio** Win32 viene visualizzata come spazio singolo.<br /><br /> Se si specifica **/win32res**, **/trademark** non influisce sulle informazioni della risorsa Win32.<br /><br /> È possibile specificare questa opzione anche come attributo personalizzato (<xref:System.Reflection.AssemblyTrademarkAttribute>) nel codice sorgente di qualsiasi modulo MSIL.|
 |**/v[ersion]:**`version`|Specifica le informazioni sulla versione dell'assembly. Il formato della stringa `major`di versione è . `minor`. `build`. `revision`. Il valore predefinito è 0.The default value is 0.<br /><br /> Se si specifica **/version**, è necessario specificare anche `major`. Se si specifica `major` e `minor`, è possibile specificare un asterisco (\*) per `build`. In questo caso il valore `build` coinciderà con il numero dei giorni trascorsi dal 1 gennaio 2000, ora locale, e il valore `revision` sarà uguale alla metà del numero dei secondi trascorsi dalla mezzanotte del giorno corrente, ora locale.<br /><br /> Se si specifica `major`, `minor` e `build`, è possibile specificare un asterisco per `revision`. In questo caso, il valore `revision` sarà uguale alla metà del numero dei secondi trascorsi dalla mezzanotte del giorno corrente, ora locale.<br /><br /> Le stringhe di versione valide sono pertanto le seguenti:<br /><br /> X<br /><br /> X.X<br /><br /> X.X.\*<br /><br /> X.X.X<br /><br /> X.X.X.\*<br /><br /> X.X.X.X<br /><br /> dove X è una costante di tipo Unsigned Short diversa da 65535 (0-65534).<br /><br /> Se non si specifica **/win32res**, l'opzione **/version** viene usata come risorsa **Versione assembly** Win32.<br /><br /> Se non si specificano **/win32res**, **/productversion** e **/fileversion**, l'opzione **/version** viene usata per le risorse **Versione assembly**, Versione file e **Versione prodotto** Win32.<br /><br /> Se si specifica **/win32res**, **/version** non influisce sulle informazioni della risorsa Win32.<br /><br /> È possibile specificare questa opzione anche come attributo personalizzato (<xref:System.Reflection.AssemblyVersionAttribute>) nel codice sorgente di qualsiasi modulo MSIL.|
 |**/win32icon:**`filename`|Inserisce nell'assembly un file icona (.ico). Il file .ico determina l'aspetto desiderato del file di output in Esplora File.|
-|**/win32res:** `filename`|Inserisce nel file di output una risorsa Win32 (file .res). È possibile creare un file di risorse Win32 usando il Compilatore di risorse. Il Compilatore di risorse viene richiamato quando si compila un programma Visual C++. Dal file .rc viene creato un file .res.|
+|**/win32res:**`filename`|Inserisce nel file di output una risorsa Win32 (file .res). È possibile creare un file di risorse Win32 usando il Compilatore di risorse. Il Compilatore di risorse viene richiamato quando si compila un programma Visual C++. Dal file .rc viene creato un file .res.|
 |`@filename`|Specifica un file di risposta contenente i comandi *Al.exe.*<br /><br /> Nel file di risposta i comandi possono essere disposti uno per riga oppure tutti sulla stessa riga, separati da uno o più spazi.|
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|
 
@@ -176,5 +176,5 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 - [Strumenti](index.md)
 - [*Sn.exe* (strumento Nome sicuro)](sn-exe-strong-name-tool.md)
 - [*Gacutil.exe* (strumento Global Assembly Cache)](gacutil-exe-gac-tool.md)
-- [Programmazione con gli assembly](../../standard/assembly/program.md)
+- [Programmazione con gli assembly](../../standard/assembly/index.md)
 - [Prompt dei comandi](developer-command-prompt-for-vs.md)

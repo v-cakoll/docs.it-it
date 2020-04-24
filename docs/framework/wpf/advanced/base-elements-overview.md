@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: 7d52d951d4fa4df83bbcca6b4cb479e18e532d2a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f6519675ebf3624152e1077e7582f04e38b1dce9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141628"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644045"
 ---
 # <a name="base-elements-overview"></a>Cenni preliminari sugli elementi di base
 Un'alta percentuale [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] di classi in sono derivate da quattro classi che sono comunemente indicate nella documentazione SDK come le classi dell'elemento di base. Queste classi <xref:System.Windows.UIElement> <xref:System.Windows.FrameworkElement>sono <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkContentElement>, e . La <xref:System.Windows.DependencyObject> classe è anche correlata, perché è <xref:System.Windows.UIElement> una classe base comune di entrambi e<xref:System.Windows.ContentElement>  
@@ -47,7 +47,7 @@ Un'alta percentuale [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptl
   
 - Supporto per l'uso di stili e storyboard. Per ulteriori informazioni, vedere <xref:System.Windows.Style> [Cenni preliminari](../graphics-multimedia/storyboards-overview.md)sugli storyboard .  
   
-- Supporto del data binding. Per ulteriori informazioni, vedere [Cenni preliminari sull'associazione dati](../data/data-binding-overview.md).  
+- Supporto del data binding. Per ulteriori informazioni, vedere [Cenni preliminari sull'associazione dati](../../../desktop-wpf/data/data-binding-overview.md).  
   
 - Supporto per i riferimenti di risorse dinamiche. Per altre informazioni, vedere [Risorse XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
@@ -67,7 +67,7 @@ Un'alta percentuale [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptl
   
 - Supporto per l'uso di stili e storyboard. Per ulteriori informazioni, vedere <xref:System.Windows.Style> e [Cenni preliminari sull'animazione](../graphics-multimedia/animation-overview.md).  
   
-- Supporto del data binding. Per ulteriori informazioni, vedere [Cenni preliminari sull'associazione dati](../data/data-binding-overview.md).  
+- Supporto del data binding. Per ulteriori informazioni, vedere [Cenni preliminari sull'associazione dati](../../../desktop-wpf/data/data-binding-overview.md).  
   
 - Supporto per i riferimenti di risorse dinamiche. Per altre informazioni, vedere [Risorse XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
@@ -99,6 +99,6 @@ Un'alta percentuale [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptl
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Controls.Control>
-- [Cenni preliminari sulle proprietà di dipendenza](dependency-properties-overview.md)
+- [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md)
 - [Panoramica della creazione di controlli](../controls/control-authoring-overview.md)
 - [Architettura WPF](wpf-architecture.md)

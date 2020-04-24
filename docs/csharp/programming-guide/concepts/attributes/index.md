@@ -1,12 +1,12 @@
 ---
 title: Attributi (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 62424163303417746a67707d9ef34185954db316
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 0379bb76cf18ff836bd14aafb9cb97c30aee8ec7
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389545"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645480"
 ---
 # <a name="attributes-c"></a>Attributi (C#)
 
@@ -81,7 +81,7 @@ Nella tabella seguente sono elencati i possibili valori di `target`.
 
 È necessario specificare il valore di destinazione `field` per applicare un attributo al campo sottostante creato per una [proprietà implementata automaticamente](../../../properties.md).
 
-Nell'esempio seguente viene illustrato come applicare attributi ad assembly e moduli. Per altre informazioni, vedere [Attributi comuni (C#)](common-attributes.md).
+Nell'esempio seguente viene illustrato come applicare attributi ad assembly e moduli. Per altre informazioni, vedere [Attributi comuni (C#)](../../../language-reference/attributes/global.md).
 
 ```csharp
 using System;
@@ -120,7 +120,7 @@ Per altre informazioni, vedere:
 - [Creazione di attributi personalizzati (C#)](creating-custom-attributes.md)  
 - [Accessing Attributes by Using Reflection (C#)](accessing-attributes-by-using-reflection.md) (Accesso agli attributi con reflection (C#))  
 - [Come creare un'unione C/C](how-to-create-a-c-cpp-union-by-using-attributes.md)  
-- [Attributi comuni (C#)](common-attributes.md)  
+- [Attributi comuni (C#)](../../../language-reference/attributes/global.md)  
 - [Informazioni sul chiamante (C#)](../../../language-reference/attributes/caller-information.md)  
 
 ## <a name="see-also"></a>Vedere anche

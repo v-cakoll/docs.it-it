@@ -2,12 +2,12 @@
 title: Come viene specificata la versione del runtime di .NET Core e di .NET Core SDK
 description: Questo articolo illustra come viene specificata la versione di .NET Core SDK e del runtime di .NET Core (simile al Versionamento Semantico).
 ms.date: 07/26/2018
-ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f166a6dfc1c9127eb629365efd628855489a60cb
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75777326"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644387"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Panoramica di come viene specificata la versione di .NET Core
 
@@ -106,8 +106,8 @@ Ogni versione di .NET Core implementa una versione di .NET Standard. L'implement
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Quadri di destinazione](../../standard/frameworks.md)
-- [Pacchetti di distribuzione di .NET Core](../build/distribution-packaging.md)
+- [Framework di destinazione](../../standard/frameworks.md)
+- [Creazione di pacchetti di distribuzione di .NET Core](../distribution-packaging.md)
 - [.NET Core Support Lifecycle Fact Sheet (Scheda informativa sul ciclo di supporto per .NET Core)](https://dotnet.microsoft.com/platform/support/policy)
 - [Associazione della versione di .NET Core 2+](https://github.com/dotnet/designs/issues/3)
 - [Immagini Docker per .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/)

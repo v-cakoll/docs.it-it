@@ -4,12 +4,12 @@ description: Usare un gestore di pacchetti per installare .NET Core SDK e runtim
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: cfe28d04edfac97938612537986498636c141be0
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 2e45698d6b87499a54a25b6779ec1a767a2ece6b
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134300"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645386"
 ---
 # <a name="debian-9-package-manager---install-net-core"></a>Debian 9 Gestione pacchetti - Installare .NET Core
 
@@ -19,12 +19,12 @@ In questo articolo viene descritto come utilizzare un gestore di pacchetti per i
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Registrare la chiave Microsoft e il feed
+## <a name="add-microsoft-repository-key-and-feed"></a>Aggiungere la chiave e il feed del repository Microsoft
 
 Prima di installare .NET, è necessario:
 
-- Registrare la chiave Microsoft.
-- Registrare l'archivio prodotti.
+- Aggiungere la chiave di firma del pacchetto Microsoft all'elenco delle chiavi attendibili.
+- Aggiungere il repository al gestore di pacchetti.
 - Installare le dipendenze necessarie.
 
 Questa operazione deve essere eseguita una volta sola per ogni computer.
@@ -40,7 +40,7 @@ sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 ```
 
-## <a name="install-the-net-core-sdk"></a>Installare .NET Core SDK.
+## <a name="install-the-net-core-sdk"></a>Installare .NET Core SDK
 
 Aggiornare i prodotti disponibili per l'installazione, quindi installare .NET Core SDK. Nel terminale, eseguire i seguenti comandi.
 

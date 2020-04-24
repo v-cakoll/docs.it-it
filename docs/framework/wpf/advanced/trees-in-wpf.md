@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 696772da1ebee405493f2ff0e1481daf93d08ec7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aed4350f1a7084b7894a70ac9d6d00cf25b39e34
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187026"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646205"
 ---
 # <a name="trees-in-wpf"></a>Strutture ad albero in WPF
 In molte tecnologie gli elementi e i componenti sono organizzati in una struttura ad albero in cui gli sviluppatori modificano direttamente i nodi degli oggetti nell'albero per influire sul rendering o sul comportamento di un'applicazione. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] usa anche molte metafore correlate alla struttura ad albero per definire le relazioni tra gli elementi del programma. In genere gli sviluppatori WPF possono creare un'applicazione nel codice o definire parti dell'applicazione in XAML usando come riferimento concettuale la metafora della struttura ad albero di oggetti, ma chiameranno un'API specifica o useranno un markup specifico a tale scopo anziché un'API di modifica della struttura ad albero di oggetti generica simile a quella usata nel modello DOM XML. WPFWPF espone due classi helper che <xref:System.Windows.LogicalTreeHelper> forniscono una visualizzazione metafora ad albero e <xref:System.Windows.Media.VisualTreeHelper>. Nella documentazione di WPF vengono inoltre usati i termini struttura ad albero visuale e albero logico, in quanto tali strutture ad albero sono utili per la comprensione del comportamento di alcune funzionalità chiave di WPF. In questo argomento viene definito il contenuto della struttura ad albero visuale e dell'albero logico, viene illustrato come tali alberi sono correlati a un concetto generale di struttura ad albero di oggetti e introduce <xref:System.Windows.LogicalTreeHelper> e <xref:System.Windows.Media.VisualTreeHelper>s.  
@@ -37,7 +37,7 @@ In molte tecnologie gli elementi e i componenti sono organizzati in una struttur
   
  Tuttavia, l'albero logico non è l'intero oggetto grafico esistente per l'interfaccia utente dell'applicazione in fase di esecuzione, anche con gli elementi di sintassi implicita XAML fattorizzati. La ragione principale di questo è immagini e modelli. Si consideri <xref:System.Windows.Controls.Button>ad esempio il file . L'albero logico <xref:System.Windows.Controls.Button> segnala l'oggetto e anche la relativa stringa `Content`. Nella struttura ad albero di oggetti di runtime, tuttavia, questo pulsante è molto più complesso. In particolare, il pulsante viene visualizzato solo <xref:System.Windows.Controls.Button> sullo schermo come quando è stato applicato un modello di controllo specifico. Gli oggetti visivi che provengono da un <xref:System.Windows.Controls.Border> modello applicato (ad esempio il modello definito dal grigio scuro intorno al pulsante visivo) non vengono segnalati nell'albero logico, anche se si sta esaminando l'albero logico durante la fase di esecuzione (ad esempio la gestione di un evento di input dall'interfaccia utente visibile e quindi la lettura dell'albero logico). Per trovare gli oggetti visivi del modello, è invece necessario esaminare la struttura ad albero visuale.  
   
- Per altre informazioni sul mapping tra la sintassi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e l'oggetto grafico creato e sulla sintassi implicita in XAML, vedere [Descrizione dettagliata della sintassi XAML](xaml-syntax-in-detail.md) o [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md).  
+ Per altre informazioni sul mapping tra la sintassi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e l'oggetto grafico creato e sulla sintassi implicita in XAML, vedere [Descrizione dettagliata della sintassi XAML](xaml-syntax-in-detail.md) o [Cenni preliminari su XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).  
   
 <a name="tree_property_inheritance_event_routing"></a>
 ### <a name="the-purpose-of-the-logical-tree"></a>Scopo dell'albero logico  

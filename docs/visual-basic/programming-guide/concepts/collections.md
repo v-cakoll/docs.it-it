@@ -2,12 +2,12 @@
 title: Raccolte
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: ba16d04e781bcf69356b1f603d92e104816a0860
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 232b9ec7b5975092e73daf0a7384fa816f55f72f
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400827"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646336"
 ---
 # <a name="collections-visual-basic"></a>Raccolte (Visual Basic)
 
@@ -536,7 +536,7 @@ End Class
 
 <a name="BKMK_Iterators"></a>
 
-## <a name="iterators"></a>Iteratori
+## <a name="iterators"></a>Iterators
 
 Un *iteratore* viene usato per eseguire un'iterazione personalizzata in una raccolta. Un iteratore può essere un metodo o una funzione di accesso `get`. Un iteratore utilizza un [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) istruzione per restituire ogni elemento della raccolta uno alla volta.
 
@@ -574,7 +574,7 @@ End Function
 - [Concetti di programmazione (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
 - [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/introduction-to-plinq.md)
 - [Raccolte e strutture di dati](../../../standard/collections/index.md)
 - [Selezione di una classe Collection](../../../standard/collections/selecting-a-collection-class.md)
 - [Confronti e ordinamenti all'interno delle raccolte](../../../standard/collections/comparisons-and-sorts-within-collections.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [.NET Framework], code access security
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
-ms.openlocfilehash: 08d708e8f98bd2fe06757df3033a512e2fe1f3c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 352fa41cb9d3136f853b068d0101a6dcab5dfd7c
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400057"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645766"
 ---
 # <a name="code-access-security-basics"></a>Nozioni fondamentali sulla sicurezza per l’accesso al codice
 
@@ -53,7 +53,7 @@ La sicurezza per l'accesso al codice non elimina la possibilità di errori umani
 La sintassi di sicurezza dichiarativa utilizza [gli attributi](../../standard/attributes/index.md) per inserire le informazioni di sicurezza nei [metadati](../../standard/metadata-and-self-describing-components.md) del codice. Gli attributi possono essere inseriti a livello di assembly, classe o membro, per indicare il tipo di richiesta, la domanda o l'override che si vuole usare. Le richieste vengono usate in applicazioni destinate a Common Language Runtime per informare il sistema di sicurezza runtime sulle autorizzazioni necessarie o non necessarie per l'applicazione. Le richieste e gli override vengono usati nelle librerie per proteggere le risorse dai chiamanti o per eseguire l'override del comportamento di sicurezza predefinito.
 
 > [!NOTE]
-> In .NET Framework 4 sono state apportate importanti modifiche al modello di sicurezza e alla terminologia di .NET Framework. Per ulteriori informazioni su queste modifiche, vedere [Modifiche alla sicurezza](../security/security-changes.md).
+> In .NET Framework 4 sono state apportate importanti modifiche al modello di sicurezza e alla terminologia di .NET Framework. Per ulteriori informazioni su queste modifiche, vedere [Modifiche alla sicurezza](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).
 
 Per usare le chiamate di sicurezza dichiarativa, è necessario inizializzare i dati dello stato dell'oggetto di autorizzazione in modo che rappresenti la forma specifica di autorizzazione necessaria. Ciascuna autorizzazione incorporata dispone di un attributo a cui viene passata un'enumerazione <xref:System.Security.Permissions.SecurityAction> per descrivere il tipo di operazione di protezione che si vuole eseguire. Tuttavia, le autorizzazioni accettano anche i propri parametri esclusivi.
 
@@ -166,4 +166,4 @@ Se si vuole che l'applicazione esegua un'operazione che richiede l'accesso a cod
 - [Sicurezza dall'accesso di codiceCode Access Security](code-access-security.md)
 - [Nozioni fondamentali sulla sicurezza per l’accesso al codice](code-access-security-basics.md)
 - [Attributi](../../standard/attributes/index.md)
-- [Metadati e componenti auto-descrittivi](../../standard/metadata-and-self-describing-components.md)
+- [Metadati e componenti autodescrittivi](../../standard/metadata-and-self-describing-components.md)

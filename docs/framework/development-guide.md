@@ -4,19 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 0500e11d2897cfa7392cc8280a0b69c5e2fc515f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 665c7843fc4a46348619bde46a8d527dfed321e4
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79181624"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645993"
 ---
-# <a name="net-framework-development-guide"></a>Guida di sviluppo per .NET Framework
+# <a name="net-framework-development-guide"></a>Guida allo sviluppo di .NET Framework
+
 Questa sezione descrive come creare, configurare, sottoporre a debug, proteggere e distribuire app .NET Framework. In questa sezione vengono fornite informazioni sulle aree tecnologiche, ad esempio programmazione dinamica, interoperabilità, estendibilità, gestione della memoria e threading.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Concetti di base sulle applicazioni](../standard/application-essentials.md)  
- Vengono fornite informazioni sulle attività per lo sviluppo di app di base, quali programmazione con assembly e domini applicazione, uso di attributi, formattazione e tipi di base di analisi, uso di raccolte, gestione di eventi ed eccezioni, uso di file, flussi di dati e generics.  
+## <a name="in-this-section"></a>Contenuto della sezione
   
  [Dati e modellazione](./data/index.md)  
  Vengono fornite informazioni su come accedere ai dati mediante ADO.NET, LINQ (Language Integrated Query), WCF Data Services e XML.  
@@ -49,7 +48,7 @@ Questa sezione descrive come creare, configurare, sottoporre a debug, proteggere
  [Sicurezza](../standard/security/index.md)  
  Vengono fornite informazioni sulle classi e sui servizi in .NET Framework che semplificano lo sviluppo di app sicure.  
   
- [Debug, traccia e profilatura](./debug-trace-profile/index.md)  
+ [Debug, tracciatura e profilatura](./debug-trace-profile/index.md)  
  Viene illustrato come eseguire test, ottimizzare e profilare le app .NET Framework e l'ambiente dell'app. Questa sezione include informazioni per amministratori e sviluppatori.  
   
  [Sviluppo per piattaforme multiple](../standard/cross-platform/index.md)  

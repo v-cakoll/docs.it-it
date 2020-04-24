@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 2326520039085beb5f5294e23db67b67f9d7d7da
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: a6ab5463cc28aa590454ae1304714d3d12ee7c6b
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243271"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646128"
 ---
 # <a name="control-authoring-overview"></a>Cenni preliminari sulla creazione di controlli
 
@@ -38,7 +38,7 @@ In precedenza, per ottenere un'esperienza personalizzata da un controllo esisten
 
 - **Trigger.** A <xref:System.Windows.Trigger> consente di modificare dinamicamente l'aspetto e il comportamento di un controllo senza creare un nuovo controllo. Si supponga, ad <xref:System.Windows.Controls.ListBox> esempio, di disporre di più <xref:System.Windows.Controls.ListBox> controlli nell'applicazione e di voler che gli elementi in ognuno di essi siano in grassetto e in rosso quando vengono selezionati. Il primo istinto potrebbe essere quello <xref:System.Windows.Controls.ListBox> di creare <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> una classe che eredita da ed eseguire l'override del metodo per <xref:System.Windows.Controls.ListBoxItem> modificare l'aspetto dell'elemento selezionato, ma un approccio migliore consiste nell'aggiungere un trigger a uno stile di un che modifica l'aspetto dell'elemento selezionato. Un trigger consente di modificare i valori delle proprietà o di eseguire determinate azioni in base al valore di una proprietà. Oggetto <xref:System.Windows.EventTrigger> consente di eseguire azioni quando si verifica un evento.
 
-Per altre informazioni su stili, modelli e trigger, vedere [Applicazione di stili e modelli](styling-and-templating.md).
+Per altre informazioni su stili, modelli e trigger, vedere [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 In genere, se il controllo rispecchia la funzionalità di un controllo esistente, ma si vuole che abbia un aspetto diverso, valutare innanzitutto la possibilità di usare uno dei metodi descritti in questa sezione per modificare l'aspetto del controllo esistente.
 

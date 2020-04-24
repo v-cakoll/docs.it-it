@@ -3,21 +3,21 @@ title: <sessionSecurityTokenCache>
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: e949b16f76f20191b84bbbbb6e8b019d913316f0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a0db10ceb75a470dbf799d717b2059355dd104bb
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251839"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646071"
 ---
 # <a name="sessionsecuritytokencache"></a>\<sessionSecurityTokenCache>
 Registra una cache per i token di sessione con un servizio o una raccolta di gestori di token di sicurezza.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> identityConfiguration**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<memorizza nella cache >** ](caches.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> sessionSecurityTokenCache**  
+[**\<>di configurazione**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>system.identityModel**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<>di identitàConfigurazione**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>nella cache**](caches.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>sessionSecurityTokenCache**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,23 +35,23 @@ Registra una cache per i token di sessione con un servizio o una raccolta di ges
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributi  
+### <a name="attributes"></a>Attributes  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |type|Tipo che deriva dalla <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> classe.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuna  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<caches>](caches.md)|Registra le cache utilizzate da un servizio o da una raccolta di gestori di token di sicurezza.|  
+|[\<>nella cache](caches.md)|Registra le cache usate da un servizio o da una raccolta di gestori di token di sicurezza.|  
   
 ## <a name="example"></a>Esempio  
- Nel codice XML seguente viene illustrata la configurazione di una cache personalizzata per i token di<xref:System.IdentityModel.Tokens.SessionSecurityToken>sicurezza della sessione (). La configurazione è ricavata `ClaimsAwareWebFarm` dall'esempio. Per ulteriori informazioni su questo esempio, vedere [indice di esempio di codice WIF](../../../security/wif-code-sample-index.md).  
+ Nel codice XML seguente viene illustrata la configurazione<xref:System.IdentityModel.Tokens.SessionSecurityToken>di una cache personalizzata per il contenimento dei token di sicurezza della sessione ( ). La configurazione viene `ClaimsAwareWebFarm` ricavata dall'esempio. Per ulteriori informazioni su questo esempio, vedere [Indice dell'esempio](https://docs.microsoft.com/previous-versions/dotnet/framework/security/wif-code-sample-index)di codice WIF .  
   
 ```xml  
 <caches>  

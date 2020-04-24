@@ -3,12 +3,12 @@ title: Introduzione a .NET
 description: Introduzione alla famiglia di tecnologie .NET.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: ecdbdf13aa64de0f07b09eb73953e64d66755bb0
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 64b9b0402631d34adc7ebd3bf8f7bc13416026b0
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635955"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646286"
 ---
 # <a name="welcome-to-net"></a>Introduzione a .NET
 
@@ -33,7 +33,7 @@ Seguire anche gli eventi .NET più recenti:
 
 Per informazioni sulle funzionalità più recenti aggiunte alle implementazioni di .NET e sui linguaggi supportati, vedere gli articoli seguenti:
 
-- [Novità di .NET Core](core/whats-new/index.md)
+- [Novità di .NET Core 3.1](core/whats-new/dotnet-core-3-1.md)
 - [Novità di .NET Framework](framework/whats-new/index.md)
 - [Novità di C#](csharp/whats-new/index.md)
 - [Novità in Visual Basic](visual-basic/getting-started/whats-new.md)
@@ -66,7 +66,7 @@ Questa documentazione è completamente [open source](https://github.com/dotnet/d
 
 - [Home di .NET Core](https://github.com/dotnet/core)
 - [Runtime di .NET Core](https://github.com/dotnet/runtime)
-- [.NET Core SDK](https://github.com/dotnet/sdk)
+- [ASP.NET Core SDK](https://github.com/dotnet/sdk)
 - [Piattaforma del compilatore Roslyn (C# e Visual Basic) e strumenti IDE](https://github.com/dotnet/roslyn)
 - [Compilatore F# e strumenti IDE](https://github.com/dotnet/fsharp)
 - [Windows Form](https://github.com/dotnet/winforms)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: 9bbd2c3cdca9b2eaee268738bf99189b0be78eba
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 0e8be9b1d12d40f8135d21abe9dd6cb0b63bb2d8
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635737"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646398"
 ---
 # <a name="types-of-isolation"></a>Tipi di isolamento
 L'accesso allo spazio di memorizzazione isolato è sempre limitato all'utente che l'ha creata. Per implementare questo tipo di isolamento, Common Language Runtime usa la stessa nozione di identità utente riconosciuta dal sistema operativo, ovvero l'identità associata al processo in cui è in esecuzione il codice quando viene aperto lo spazio di memorizzazione. Sebbene sia un'identità utente autenticata, è possibile che con la rappresentazione l'identità dell'utente corrente venga modificata dinamicamente.  
@@ -32,7 +32,7 @@ L'accesso allo spazio di memorizzazione isolato è sempre limitato all'utente ch
   
 - L'identità del dominio rappresenta l'evidenza dell'applicazione, che nel caso di un'applicazione Web può coincidere con l'URL completo. Per il codice su shell, l'identità del dominio può essere basata sul percorso di directory dell'applicazione. Se ad esempio il file eseguibile viene eseguito dal percorso C:\Office\MyApp.exe, l'identità del dominio sarà C:\Office\MyApp.exe.  
   
-- L'identità dell'assembly è l'evidenza dell'assembly. Può derivare da una firma digitale crittografica, che può corrispondere al [nome sicuro](../assembly/strong-named.md) dell'assembly, all'editore dell'assembly oppure all'identità del relativo URL. Se un assembly dispone sia di un'identità fornita dal nome sicuro sia di un'identità fornita dall'editore, verrà usata quella fornita dall'editore. Se l'assembly proviene da Internet e non è firmato, verrà usata invece l'identità dell'URL. Per altre informazioni sugli assembly e sui nomi sicuri, vedere [Programmazione con gli assembly](/dotnet/standard/assembly/index).  
+- L'identità dell'assembly è l'evidenza dell'assembly. Può derivare da una firma digitale crittografica, che può corrispondere al [nome sicuro](../assembly/strong-named.md) dell'assembly, all'editore dell'assembly oppure all'identità del relativo URL. Se un assembly dispone sia di un'identità fornita dal nome sicuro sia di un'identità fornita dall'editore, verrà usata quella fornita dall'editore. Se l'assembly proviene da Internet e non è firmato, verrà usata invece l'identità dell'URL. Per altre informazioni sugli assembly e sui nomi sicuri, vedere [Programmazione con gli assembly](../assembly/index.md).  
   
 - Gli spazi di memorizzazione roaming si spostano con gli utenti che dispongono di un profilo di utente roaming. I file vengono scritti in una directory di rete e scaricati su qualsiasi computer a cui l'utente accede. Per altre informazioni sui profili di utente roaming, vedere <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
   

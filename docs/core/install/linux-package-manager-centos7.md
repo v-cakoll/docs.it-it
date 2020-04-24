@@ -4,12 +4,12 @@ description: Usa un gestore di pacchetti per installare .NET Core SDK e runtime 
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: d6cec51422dc59b7f667e36001b7db4742b53a6f
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: f8c4115b9d85edc36809f0daed5f6825149c8411
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134342"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645408"
 ---
 # <a name="centos-7-package-manager---install-net-core"></a>CentOS 7 Gestione pacchetti - Installare .NET Core
 
@@ -19,12 +19,12 @@ In questo articolo viene descritto come utilizzare un gestore di pacchetti per i
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Registrare la chiave Microsoft e il feed
+## <a name="add-microsoft-repository-key-and-feed"></a>Aggiungere la chiave e il feed del repository Microsoft
 
 Prima di installare .NET, è necessario:
 
-- Registrare la chiave Microsoft.
-- Registrare l'archivio prodotti.
+- Aggiungere la chiave di firma del pacchetto Microsoft all'elenco delle chiavi attendibili.
+- Aggiungere il repository al gestore di pacchetti.
 - Installare le dipendenze necessarie.
 
 Questa operazione deve essere eseguita una volta sola per ogni computer.
@@ -35,7 +35,7 @@ Aprire un terminale ed eseguire il comando seguente.
 sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
 ```
 
-## <a name="install-the-net-core-sdk"></a>Installare .NET Core SDK.
+## <a name="install-the-net-core-sdk"></a>Installare .NET Core SDK
 
 Aggiornare i prodotti disponibili per l'installazione, quindi installare .NET Core SDK. Nel terminale, eseguire il seguente comando.
 

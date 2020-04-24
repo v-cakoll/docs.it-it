@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-ms.openlocfilehash: facb9ebebd9ce1904886a946277185ac2c2e4bc4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 9381873faa8cca1accf95d823f5183a218d28813
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463916"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646421"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Esercitazione: Creare la prima applicazione WPF in Visual Studio 2019Tutorial: Create your first WPF application in Visual Studio 2019
 
@@ -358,7 +358,7 @@ Nella figura seguente vengono illustrati gli elementi dell'interfaccia utente ag
 
 ## <a name="style-controls"></a>Controlli di stile
 
-L'aspetto di vari elementi è spesso lo stesso per tutti gli elementi dello stesso tipo in un'interfaccia utente. L'interfaccia utente usa [gli stili](../controls/styling-and-templating.md) per rendere gli aspetti riutilizzabili su più elementi. La riusabilità degli stili consente di semplificare la creazione e la gestione di XAML. In questa sezione vengono sostituiti con gli stili gli attributi per elemento definiti nei passaggi precedenti.
+L'aspetto di vari elementi è spesso lo stesso per tutti gli elementi dello stesso tipo in un'interfaccia utente. L'interfaccia utente usa [gli stili](../../../desktop-wpf/fundamentals/styles-templates-overview.md) per rendere gli aspetti riutilizzabili su più elementi. La riusabilità degli stili consente di semplificare la creazione e la gestione di XAML. In questa sezione vengono sostituiti con gli stili gli attributi per elemento definiti nei passaggi precedenti.
 
 1. Aprire *Application.xaml* o *App.xaml*.
 
@@ -481,7 +481,7 @@ Nella figura seguente vengono `ExpenseIt` illustrate entrambe le pagine dell'app
 In questa procedura dettagliata sono state illustrate diverse tecniche per la creazione di un'interfaccia utente tramite Windows Presentation Foundation (WPF). A questo punto dovresti avere una conoscenza di base dei blocchi predefiniti di un'app .NET con associazione a dati. Per altre informazioni sull'architettura WPF e i modelli di programmazione, vedere gli argomenti seguenti:
 
 - [Architettura WPFWPF architecture](../advanced/wpf-architecture.md)
-- [Panoramica di XAML (WPF)XAML overview (WPF)](../advanced/xaml-overview-wpf.md)
+- [Panoramica di XAML (WPF)XAML overview (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Panoramica delle proprietà di dipendenzaDependency properties overview](../advanced/dependency-properties-overview.md)
 - [Layout](../advanced/layout.md)
 

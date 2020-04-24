@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 3efc54cea7e10bc21a472a7fa9d4026e305be79a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3a78acee6cf427085e98f14353fc2c0ac65d3d80
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399035"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645344"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>Come verificare che .NET Core sia già installato
 
@@ -163,6 +163,51 @@ Microsoft.NETCore.App 2.2.7 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 Microsoft.NETCore.App 3.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 ```
+
+::: zone-end
+
+## <a name="check-for-install-folders"></a>Verificare la presenza di cartelle di installazione
+
+È possibile che .NET Core sia installato `PATH` ma non aggiunto alla variabile per il sistema operativo o il profilo utente. L'esecuzione dei comandi delle sezioni precedenti potrebbe non funzionare. In alternativa, è possibile verificare l'esistenza delle cartelle di installazione di .NET Core.As an alternative, you can check that the .NET Core install folders exist.
+
+Quando si installa .NET Core da uno script o programma di installazione, questo viene installato in una cartella standard. Gran parte del tempo il programma di installazione o lo script che si sta utilizzando per installare .NET Core offre un'opzione per l'installazione in una cartella diversa. Se si sceglie di eseguire l'installazione in una cartella diversa, regolare l'inizio del percorso della cartella.
+
+::: zone pivot="os-windows"
+
+- **dotnet eseguibile**\
+_C:\\file\\di\\programma dotnet dotnet.exe_
+
+- **SDK di .NET**\
+_C:\\file\\di\\\\programma dotnet sdk\\_
+
+- **Runtime .NET**\
+_C:\\file\\di\\\\programma dotnet\\condiviso di tipo runtime\\_
+
+::: zone-end
+
+::: zone pivot="os-linux"
+
+- **dotnet eseguibile**\
+_/home/utente/condivisione/dotnet/dotnet_
+
+- **SDK di .NET**\
+_/home/utente/condivisione/dotnet/sdk/'version'/_
+
+- **Runtime .NET**\
+_/home/user/share/dotnet/shared/_
+
+::: zone-end
+
+::: zone pivot="os-macos"
+
+- **dotnet eseguibile**\
+_/usr/locale/share/dotnet/dotnet_
+
+- **SDK di .NET**\
+_/usr/locale/condivisione/dotnet/sdk//versione//_
+
+- **Runtime .NET**\
+_/usr/locale/condivisione/dotnet/shared/_
 
 ::: zone-end
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 542e0a84e4c5cfc3750c33fe29cb40d3643e91e3
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: c73a61b8c251b12d5b3dac67535632322779a6af
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80636019"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644061"
 ---
 # <a name="dependency-properties-overview"></a>Panoramica sulle proprietà di dipendenza
 
@@ -123,7 +123,7 @@ L'esempio seguente imposta la proprietà <xref:System.Windows.Controls.ContentCo
 > [!NOTE]
 > I binding vengono considerati come valore locale, per cui se si imposta un altro valore locale, il binding verrà eliminato. Per altri dettagli, vedere [Precedenza del valore della proprietà di dipendenza](dependency-property-value-precedence.md).
 
-Le proprietà di dipendenza, o la classe <xref:System.Windows.DependencyObject>, non supportano <xref:System.ComponentModel.INotifyPropertyChanged> in modo nativo per la generazione di notifiche delle modifiche nel valore della proprietà di origine <xref:System.Windows.DependencyObject> per le operazioni di associazione di dati. Per altre informazioni su come creare proprietà da usare nel data binding, che consentano di segnalare modifiche di una destinazione di data binding, vedere [Panoramica sul data binding](../data/data-binding-overview.md).
+Le proprietà di dipendenza, o la classe <xref:System.Windows.DependencyObject>, non supportano <xref:System.ComponentModel.INotifyPropertyChanged> in modo nativo per la generazione di notifiche delle modifiche nel valore della proprietà di origine <xref:System.Windows.DependencyObject> per le operazioni di associazione di dati. Per altre informazioni su come creare proprietà da usare nel data binding, che consentano di segnalare modifiche di una destinazione di data binding, vedere [Panoramica sul data binding](../../../desktop-wpf/data/data-binding-overview.md).
 
 ### <a name="styles"></a>Stili
 Stili e modelli sono due degli scenari principali che giustificano l'uso delle proprietà di dipendenza. Gli stili sono particolarmente utili per l'impostazione di proprietà che definiscono l'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] dell'applicazione. In genere gli stili vengono definiti come risorse in XAML e interagiscono con il sistema di proprietà in quanto di solito contengono "setter" per proprietà particolari, nonché "trigger" che modificano un valore della proprietà in base al valore in tempo reale per un'altra proprietà.
@@ -134,7 +134,7 @@ Nell'esempio seguente viene creato uno stile <xref:System.Windows.FrameworkEleme
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyle)]
 
-Per altre informazioni, vedere [Applicazione di stili e modelli](../controls/styling-and-templating.md).
+Per altre informazioni, vedere [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 ### <a name="animations"></a>Animations
 Alle proprietà di dipendenza è possibile aggiungere un'animazione. Quando un'animazione viene applicata ed è in esecuzione, il valore a cui è stata aggiunta un'animazione opera a un livello di precedenza superiore rispetto a qualsiasi altro valore (ad esempio un valore locale) della proprietà.

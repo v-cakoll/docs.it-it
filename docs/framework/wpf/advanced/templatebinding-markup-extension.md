@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 8cebbf717f66b072bc84b2068193ff2fe76ea87b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8c631a5a78db90187f0375181d4d4d1832159b7d
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187286"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646176"
 ---
 # <a name="templatebinding-markup-extension"></a>Estensione del markup TemplateBinding
 Collega il valore di una proprietà in un modello di controllo come valore di un'altra proprietà sul controllo basato su modelli.  
@@ -64,7 +64,7 @@ Collega il valore di una proprietà in un modello di controllo come valore di un
 
 - <xref:System.Windows.Style>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Applicazione di stili e modelli](../controls/styling-and-templating.md)
+- [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Panoramica di XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md)
 - [Estensione del markup RelativeSource](relativesource-markupextension.md)

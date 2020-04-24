@@ -4,16 +4,16 @@ description: .NET Core è un'implementazione modulare e ad alte prestazioni di .
 author: richlander
 ms.date: 03/26/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: a20cdda5cbd366d04e7ee9e8df3d1b15d10c1f4a
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: f99b446bbd38b2b814c13afa13ab34cd5c9aa086
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391160"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645520"
 ---
 # <a name="introduction-to-net-core"></a>Introduzione a .NET Core
 
-[.NET Core](about.md) è una piattaforma di sviluppo [open source](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)generica. Puoi creare app .NET Core per processori Windows, macOS e Linux per x64, x86, ARM32 e ARM64 usando più linguaggi di programmazione. Framework e API vengono forniti per [cloud](/aspnet/core/), [IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), [interfaccia utente client](/dotnet/desktop-wpf/overview/index)e machine [learning](/dotnet/machine-learning/).
+[.NET Core](about.md) è una piattaforma di sviluppo [open source](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)generica. Puoi creare app .NET Core per processori Windows, macOS e Linux per x64, x86, ARM32 e ARM64 usando più linguaggi di programmazione. Framework e API vengono forniti per [cloud](/aspnet/core/), [IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), [interfaccia utente client](../desktop-wpf/overview/index.md)e machine [learning](/dotnet/machine-learning/).
 
 [Scaricare .NET Core SDK](https://dotnet.microsoft.com/download) per provare .NET Core nel computer. La versione più recente è [.NET Core 3.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/).
 
@@ -43,7 +43,7 @@ Dovrebbe venire visualizzato l'output seguente.
 Hello World!
 ```
 
-## <a name="contribute"></a>Contribuire
+## <a name="contribute"></a>Collaborazione
 
 .NET Core è una piattaforma aperta. Tutti sono invitati a partecipare.
 

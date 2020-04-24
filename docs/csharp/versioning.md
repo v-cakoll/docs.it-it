@@ -4,12 +4,12 @@ description: Informazioni sul funzionamento del controllo delle versioni in C# e
 ms.date: 01/08/2017
 ms.technology: csharp-advanced-concepts
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 124cce51865f04a555bc121fb6ce18cc95591bdc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc192337e4eaa5f9f1d6509ea8c15deeac34a48c
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156467"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645460"
 ---
 # <a name="versioning-in-c"></a>Controllo delle versioni in C\#
 
@@ -43,7 +43,7 @@ Di seguito sono riportati alcuni aspetti da considerare quando si tenta di gesti
 - Metodi virtuali: quando si trasforma un metodo virtuale in non virtuale nella nuova versione, sarà necessario aggiornare i progetti che eseguono l'override di tale metodo. Questa è una modifica sostanziale di grande impatto ed è fortemente sconsigliata.
 - Firme del metodo: quando si aggiorna il comportamento di un metodo è necessario modificare anche la firma, è invece necessario creare un overload in modo che il codice che chiama in tale metodo continuerà a funzionare.
 È sempre possibile modificare la firma del metodo precedente per chiamare la firma del nuovo metodo in modo che l'implementazione resti coerente.
-- [Attributo Obsolete](programming-guide/concepts/attributes/common-attributes.md#Obsolete): è possibile usare questo attributo nel codice per specificare le classi o i membri di classe deprecati che potrebbero essere rimossi nelle versioni future. Ciò consente di predisporre meglio gli sviluppatori che usano la libreria a eventuali modifiche di rilievo.
+- [Attributo Obsolete](language-reference/attributes/general.md#obsolete-attribute): è possibile usare questo attributo nel codice per specificare le classi o i membri di classe deprecati che potrebbero essere rimossi nelle versioni future. Ciò consente di predisporre meglio gli sviluppatori che usano la libreria a eventuali modifiche di rilievo.
 - Argomenti di metodo facoltativi: se si rendono obbligatori argomenti di metodo che in precedenza erano facoltativi o si modifica il valore predefinito degli argomenti, tutto il codice che non specifica tali argomenti dovrà essere aggiornato.
 
 > [!NOTE]

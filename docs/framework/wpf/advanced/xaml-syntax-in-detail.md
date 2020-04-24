@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: dbff4bed59c8d1e861555676578b52528e2aebbe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5f8bb862ce443fd7397036b10f69cda65a6960bc
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186179"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646151"
 ---
 # <a name="xaml-syntax-in-detail"></a>Descrizione dettagliata della sintassi XAML
 In questo argomento vengono definiti i termini utilizzati per descrivere gli elementi della sintassi XAML. Questi termini vengono usati frequentemente nella parte restante di questa documentazione, sia per la documentazione WPF in modo specifico che per gli altri framework che usano XAML o i concetti XAML di base abilitati dal supporto del linguaggio XAML a livello di System.Xaml. Questo argomento si espande sulla terminologia di base introdotta nell'argomento [Cenni preliminari su XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).  
@@ -130,7 +130,7 @@ In questo argomento vengono definiti i termini utilizzati per descrivere gli ele
   
  È inoltre possibile assegnare un nome a qualsiasi evento da qualsiasi oggetto accessibile tramite lo spazio dei nomi predefinito utilizzando *typeName*. nome parzialmente qualificato *dell'evento;* questa sintassi supporta l'associazione di gestori per gli eventi indirizzati in cui il gestore è destinato a gestire il routing degli eventi dagli elementi figlio, ma l'elemento padre non dispone anche di tale evento nella relativa tabella dei membri. Questa sintassi è simile a una sintassi dell'evento associato, ma l'evento qui non è un vero evento associato. Si fa invece riferimento a un evento con un nome completo. Per ulteriori informazioni, vedere [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md).  
   
- Per alcuni scenari, i nomi delle proprietà vengono talvolta forniti come valore di un attributo, anziché come nome dell'attributo. Tale nome di proprietà può includere anche qualificatori, ad esempio la proprietà specificata nel form *ownerType*. *dependencyPropertyName*. Questo scenario è comune quando si scrivono stili o modelli in XAML. Le regole di elaborazione per i nomi di proprietà fornite come valore di attributo sono diverse e sono regolate dal tipo della proprietà impostata o dai comportamenti di particolari sottosistemi WPFWPF. Per informazioni dettagliate, consultate [Applicazione di stili e modelli.](../controls/styling-and-templating.md)  
+ Per alcuni scenari, i nomi delle proprietà vengono talvolta forniti come valore di un attributo, anziché come nome dell'attributo. Tale nome di proprietà può includere anche qualificatori, ad esempio la proprietà specificata nel form *ownerType*. *dependencyPropertyName*. Questo scenario è comune quando si scrivono stili o modelli in XAML. Le regole di elaborazione per i nomi di proprietà fornite come valore di attributo sono diverse e sono regolate dal tipo della proprietà impostata o dai comportamenti di particolari sottosistemi WPFWPF. Per informazioni dettagliate, consultate [Applicazione di stili e modelli.](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   
  Un altro utilizzo per i nomi delle proprietà è quando un valore di attributo descrive una relazione proprietà-proprietà. Questa funzionalità viene utilizzata per l'associazione dati <xref:System.Windows.PropertyPath> e per le destinazioni dello storyboard ed è abilitata dalla classe e dal relativo convertitore di tipi. Per una descrizione più completa della semantica di ricerca, vedere [Sintassi XAML PropertyPath](propertypath-xaml-syntax.md).  
   
@@ -173,7 +173,7 @@ In questo argomento vengono definiti i termini utilizzati per descrivere gli ele
   
  Nelle pagine di riferimento .NET per i tipi di raccolta, questa sintassi con l'omissione intenzionale dell'elemento oggetto per una raccolta è occasionalmente indicata nelle sezioni della sintassi XAML come Sintassi di raccolta implicita.  
   
- Ad eccezione dell'elemento radice, ogni elemento oggetto in un file XAML annidato come elemento figlio di un altro elemento è in realtà un elemento che è uno o entrambi i seguenti casi: un membro di una proprietà di raccolta implicita del relativo elemento padre o un elemento che specifica il valore della proprietà di contenuto XAML per l'elemento padre (le proprietà di contenuto XAML verranno illustrate in una sezione successiva). In altre parole, la relazione degli elementi padre e degli elementi figlio in una pagina di markup è in realtà un singolo oggetto alla radice e ogni elemento oggetto sotto la radice è una singola istanza che fornisce un valore di proprietà dell'elemento padre o uno degli elementi all'interno di un Insieme che è anche un valore della proprietà di tipo raccolta dell'elemento padre. Questo concetto a radice singola è comune con XML ed è spesso rafforzato <xref:System.Windows.Markup.XamlReader.Load%2A>nel comportamento delle API che caricano XAML, ad esempio .  
+ Ad eccezione dell'elemento radice, ogni elemento oggetto in un file XAML annidato come elemento figlio di un altro elemento è in realtà un elemento che è uno o entrambi i casi seguenti: un membro di una proprietà di raccolta implicita del relativo elemento padre o un elemento che specifica il valore della proprietà di contenuto XAML per l'elemento padre (le proprietà di contenuto XAML verranno illustrate in una sezione successiva). In altre parole, la relazione degli elementi padre e degli elementi figlio in una pagina di markup è in realtà un singolo oggetto alla radice e ogni elemento oggetto sotto la radice è una singola istanza che fornisce un valore di proprietà dell'elemento padre o uno degli elementi all'interno di una raccolta che è anche un valore della proprietà di tipo raccolta dell'elemento padre. Questo concetto a radice singola è comune con XML ed è spesso rafforzato <xref:System.Windows.Markup.XamlReader.Load%2A>nel comportamento delle API che caricano XAML, ad esempio .  
   
  L'esempio seguente è una sintassi con<xref:System.Windows.Media.GradientStopCollection>l'elemento oggetto per un insieme ( ) specificato in modo esplicito.  
   
@@ -227,7 +227,7 @@ In questo argomento vengono definiti i termini utilizzati per descrivere gli ele
   
 <a name="content_properties_and_collection_syntax_combined"></a>
 ## <a name="content-properties-and-collection-syntax-combined"></a>Combinazione di proprietà di contenuto e sintassi per raccolte  
- Per accettare più di un singolo elemento oggetto come contenuto, il tipo della proprietà di contenuto deve essere in modo specifico un tipo di raccolta. Analogamente alla sintassi degli elementi proprietà per i tipi di raccolta, un processore XAML deve identificare i tipi che sono tipi di raccolta. Se un elemento ha una proprietà di contenuto XAML e il tipo della proprietà di contenuto XAML è una raccolta, non è necessario specificare il tipo di raccolta implicita nel markup come elemento oggetto e la proprietà di contenuto XAML non deve essere specificata come proprietà Elemento. Pertanto, il modello di contenuto apparente nel markup può ora avere più di un elemento figlio assegnato come contenuto. Di seguito è riportata la sintassi del contenuto per una <xref:System.Windows.Controls.Panel> classe derivata. Tutte <xref:System.Windows.Controls.Panel> le classi derivate stabiliscono che la proprietà di contenuto XAML è <xref:System.Windows.Controls.Panel.Children%2A>, che richiede un valore di tipo <xref:System.Windows.Controls.UIElementCollection>.  
+ Per accettare più di un singolo elemento oggetto come contenuto, il tipo della proprietà di contenuto deve essere in modo specifico un tipo di raccolta. Analogamente alla sintassi degli elementi proprietà per i tipi di raccolta, un processore XAML deve identificare i tipi che sono tipi di raccolta. Se un elemento ha una proprietà di contenuto XAML e il tipo della proprietà di contenuto XAML è una raccolta, non è necessario specificare il tipo di raccolta implicita nel markup come elemento oggetto e la proprietà di contenuto XAML non deve essere specificata come elemento proprietà. Pertanto, il modello di contenuto apparente nel markup può ora avere più di un elemento figlio assegnato come contenuto. Di seguito è riportata la sintassi del contenuto per una <xref:System.Windows.Controls.Panel> classe derivata. Tutte <xref:System.Windows.Controls.Panel> le classi derivate stabiliscono che la proprietà di contenuto XAML è <xref:System.Windows.Controls.Panel.Children%2A>, che richiede un valore di tipo <xref:System.Windows.Controls.UIElementCollection>.  
   
  [!code-xaml[XAMLOvwSupport#SyntaxContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page5.xaml#syntaxcontent)]  
   
@@ -316,8 +316,8 @@ In questo argomento vengono definiti i termini utilizzati per descrivere gli ele
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica di XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [Funzionalità del linguaggio dello spazio dei nomi XAML (x:)](../../../desktop-wpf/xaml-services/namespace-language-features.md)
+- [Spazio dei nomi XAML (x:) Funzionalità del linguaggio](../../../desktop-wpf/xaml-services/namespace-language-features.md)
 - [Estensioni XAML WPF](wpf-xaml-extensions.md)
-- [Cenni preliminari sulle proprietà di dipendenza](dependency-properties-overview.md)
+- [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md)
 - [TypeConverter e XAML](typeconverters-and-xaml.md)
 - [Classi XAML e personalizzate per WPF](xaml-and-custom-classes-for-wpf.md)

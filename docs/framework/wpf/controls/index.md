@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: 2ec8c0a99f4e2431aed0d8c24168b7329de669f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2aab0fc8adaf17a8e9820a6269a740ef09540cda
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187525"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646479"
 ---
 # <a name="controls"></a>Controlli
 <a name="introduction"></a>
@@ -54,7 +54,7 @@ ms.locfileid: "79187525"
   
  [!code-xaml[ControlsOverview#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   
- È inoltre possibile applicare uno stile solo a determinati controlli di un tipo specifico assegnando un tasto allo stile e specificando tale chiave nella `Style` proprietà del controllo.  Per ulteriori informazioni sugli stili, consultate [Applicazione di stili e modelli.](styling-and-templating.md)  
+ È inoltre possibile applicare uno stile solo a determinati controlli di un tipo specifico assegnando un tasto allo stile e specificando tale chiave nella `Style` proprietà del controllo.  Per ulteriori informazioni sugli stili, consultate [Applicazione di stili e modelli.](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   
 ### <a name="creating-a-controltemplate"></a>Creazione di un ControlTemplate  
  A <xref:System.Windows.Style> consente di impostare le proprietà su più controlli alla volta, <xref:System.Windows.Controls.Control> ma a volte è <xref:System.Windows.Style>possibile personalizzare l'aspetto di un oltre le operazioni che è possibile eseguire creando un oggetto . Le classi che <xref:System.Windows.Controls.Control> ereditano <xref:System.Windows.Controls.ControlTemplate>dalla classe dispongono di <xref:System.Windows.Controls.Control>un oggetto , che definisce la struttura e l'aspetto di un oggetto . La <xref:System.Windows.Controls.Control.Template%2A> proprietà <xref:System.Windows.Controls.Control> di un è public, <xref:System.Windows.Controls.Control> <xref:System.Windows.Controls.ControlTemplate> in modo da poter dare un che è diverso da quello predefinito. È spesso possibile <xref:System.Windows.Controls.ControlTemplate> specificare <xref:System.Windows.Controls.Control> un nuovo oggetto anziché ereditare <xref:System.Windows.Controls.Control>da un controllo per personalizzare l'aspetto di un oggetto .  
@@ -99,7 +99,7 @@ ms.locfileid: "79187525"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Applicazione di stili e modelli](styling-and-templating.md)
+- [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Controlli per categoria](controls-by-category.md)
 - [Libreria di controlli](control-library.md)
 - [Cenni preliminari sui modelli di dati](../data/data-templating-overview.md)

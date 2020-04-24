@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f56ba7d68be107e697d3f732767f0a5f11c1a622
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249695"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644223"
 ---
 # <a name="whats-new-in-net-framework"></a>Novità di .NET Framework
 
@@ -695,7 +695,7 @@ In .NET Framework 4.7 sono stati aggiunti i metodi `ImportParameters(ECParameter
 
 **Supporto migliorato per i caratteri di controllo da DataContractJsonSerializer**
 
-In .NET Framework 4.7 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> serializza i caratteri di controllo in conformità con lo standard ECMAScript 6. Questo comportamento è abilitato per impostazione predefinita per le applicazioni che usano .NET Framework 4.7 ed è una funzionalità che prevede il consenso esplicito per le applicazioni eseguite in .NET Framework 4.7, ma destinate a una versione precedente di .NET Framework. Per altre informazioni, vedere [Reindirizzamento delle modifiche in .NET Framework versione 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+In .NET Framework 4.7.NET Framework 4.7, la <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> classe serializza i caratteri di controllo in conformità con lo standard ECMAScript 6. Questo comportamento è abilitato per impostazione predefinita per le applicazioni destinate a .NET Framework 4.7 ed è una funzionalità di consenso esplicito per le applicazioni in esecuzione in .NET Framework 4.7 ma destinate a una versione precedente di .NET Framework. Per altre informazioni, vedere la sezione [Compatibilità delle](../migration-guide/application-compatibility.md) applicazioni.
 
 <a name="net47" />
 
@@ -768,11 +768,11 @@ In .NET Framework 4.7 WPF include i miglioramenti seguenti:
 
 **Supporto per lo stack di tocco/stilo basato sui messaggi basato sui messaggi WM_POINTER Windows**
 
-È ora possibile scegliere di usare uno stack di tocco/stilo basato sui [messaggi WM_POINTER](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) invece che su WISP (Windows Ink Services Platform). È una funzionalità di .NET Framework che prevede il consenso esplicito. Per altre informazioni, vedere [Reindirizzamento delle modifiche in .NET Framework versione 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+È ora possibile scegliere di usare uno stack di tocco/stilo basato sui [messaggi WM_POINTER](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) invece che su WISP (Windows Ink Services Platform). Si tratta di una funzionalità di consenso esplicito in .NET Framework. Per altre informazioni, vedere la sezione [Compatibilità delle](../migration-guide/application-compatibility.md) applicazioni.
 
 **Nuova implementazione per le API di stampa WPF**
 
-Le API di stampa di WPF nella classe <xref:System.Printing.PrintQueue?displayProperty=nameWithType> chiamano l'[API di gestione del pacchetto dei documenti di stampa](/windows/desktop/printdocs/tailored-app-printing-api) invece dell'[API di stampa XPS](/windows/desktop/printdocs/xps-printing) deprecata. Per l'impatto di questa modifica sulla compatibilità delle applicazioni, vedere [Reindirizzamento delle modifiche in .NET Framework versione 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+Le API di stampa di WPF nella classe <xref:System.Printing.PrintQueue?displayProperty=nameWithType> chiamano l'[API di gestione del pacchetto dei documenti di stampa](/windows/desktop/printdocs/tailored-app-printing-api) invece dell'[API di stampa XPS](/windows/desktop/printdocs/xps-printing) deprecata. Per l'impatto di questa modifica sulla compatibilità delle applicazioni, vedere la sezione [Compatibilità delle](../migration-guide/application-compatibility.md) applicazioni.
 
 <a name="v462" />
 
@@ -1308,7 +1308,7 @@ SqlClient ora offre automaticamente connessioni più veloci a un gruppo di dispo
 
 Windows Presentation Foundation include molti miglioramenti e cambiamenti.
 
-**Prestazioni migliorate**
+**prestazioni migliorate**
 
 Il ritardo di attivazione degli eventi tocco è stato risolto in .NET Framework 4.6.1. Inoltre, l'inserimento di un controllo <xref:System.Windows.Controls.RichTextBox> non blocca più il thread di rendering durante l'input veloce.
 
