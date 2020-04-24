@@ -1,20 +1,24 @@
 ### YamlMime:Landing
 title: Documentazione di .NET
-summary: Scopri di più su .NET, una piattaforma per sviluppatori open source per la creazione di molti tipi diversi di applicazioni.
+summary: Informazioni su .NET, una piattaforma per sviluppatori open source per la creazione di molti tipi diversi di applicazioni.
 metadata:
   title: Documentazione di .NET
-  description: Scopri di più su .NET, una piattaforma per sviluppatori open source per la creazione di molti tipi diversi di applicazioni.
+  description: Informazioni su .NET, una piattaforma per sviluppatori open source per la creazione di molti tipi diversi di applicazioni.
   ms.topic: landing-page
-  ms.date: 03/27/2020
-  ms.openlocfilehash: 5984996b59cfb89e5f165bf966722093c0992eea
-  ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+  ms.date: 04/22/2020
+  ms.openlocfilehash: 67fa6bb8c14ef3fad05b4874553a9ce75f811833
+  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 04/03/2020
-  ms.locfileid: "80636080"
+  ms.lasthandoff: 04/24/2020
+  ms.locfileid: "82135815"
 landingContent:
 - title: Informazioni su .NET
   linkLists:
+  - linkListType: download
+    links:
+    - text: Scarica .NET SDK
+      url: https://dotnet.microsoft.com/download
   - linkListType: overview
     links:
     - text: Panoramica di .NET
@@ -47,15 +51,15 @@ landingContent:
       url: serialization/system-text-json-overview.md
   - linkListType: how-to-guide
     links:
-    - text: 'Serializzare e deserializzare JSON usando CSerialize and deserialize JSON using C #'
+    - text: 'Serializzare e deserializzare JSON con C #'
       url: serialization/system-text-json-how-to.md
-    - text: Eseguire la migrazione da Newtonsoft.Json a System.Text.JsonMigrate from Newtonsoft.Json to System.Text.Json
+    - text: Eseguire la migrazione da Newtonsoft. JSON a System. Text. JSON
       url: serialization/system-text-json-migrate-from-newtonsoft-how-to.md
-    - text: Scrivere convertitori personalizzati per la serializzazione JSONWrite custom converters for JSON serialization
+    - text: Scrivere convertitori personalizzati per la serializzazione JSON
       url: serialization/system-text-json-converters-how-to.md
   - linkListType: sample
     links:
-    - text: Esempi di serializzazione XMLExamples of XML serialization
+    - text: Esempi di serializzazione XML
       url: serialization/examples-of-xml-serialization.md
 - title: Formattare e convertire date, numeri e stringhe
   linkLists:
@@ -67,15 +71,15 @@ landingContent:
       url: base-types/standard-date-and-time-format-strings.md
     - text: Formattazione composita
       url: base-types/composite-formatting.md
-    - text: Convertire le ore tra fusi orari
+    - text: Conversione degli orari tra fusi orari
       url: datetime/converting-between-time-zones.md
-    - text: Tagliare e rimuovere caratteri dalle stringhe
+    - text: Tagliare e rimuovere i caratteri dalle stringhe
       url: base-types/trimming.md
     - text: Espressioni regolari in .NET
       url: base-types/regular-expressions.md
   - linkListType: how-to-guide
     links:
-    - text: Convertire stringhe in DateTime
+    - text: Converte le stringhe in DateTime
       url: base-types/parsing-datetime.md
     - text: Aggiungere zeri iniziali a un numero
       url: base-types/how-to-pad-a-number-with-leading-zeros.md
@@ -95,9 +99,9 @@ landingContent:
     links:
     - text: Convenzioni di denominazione
       url: design-guidelines/general-naming-conventions.md
-    - text: Convenzioni relative alle maiuscole
+    - text: Convenzioni per l'uso di maiuscole e minuscole
       url: design-guidelines/capitalization-conventions.md
-- title: Utilizzare eventi ed eccezioni
+- title: Usare eventi ed eccezioni
   linkLists:
   - linkListType: concept
     links:
@@ -107,9 +111,9 @@ landingContent:
       url: events/index.md
   - linkListType: how-to-guide
     links:
-    - text: Usare un blocco try-catch per intercettare le eccezioniUse a try-catch block to catch exceptions
+    - text: Usare un blocco try-catch per rilevare le eccezioni
       url: exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md
-    - text: Generare e consumare eventi
+    - text: Generare e utilizzare eventi
       url: events/how-to-raise-and-consume-events.md
 - title: I/O di file e di flussi
   linkLists:
@@ -117,7 +121,7 @@ landingContent:
     links:
     - text: I/O di file e di flussi
       url: io/index.md
-    - text: Formati dei percorsi di file in Windows
+    - text: Formati di percorso del file in Windows
       url: io/file-path-formats.md
   - linkListType: how-to-guide
     links:
@@ -129,13 +133,13 @@ landingContent:
       url: io/how-to-compress-and-extract-files.md
     - text: Aprire un file di log e accodare informazioni
       url: io/how-to-open-and-append-to-a-log-file.md
-- title: Gestire l'utilizzo della memoria
+- title: Gestisci utilizzo memoria
   linkLists:
   - linkListType: concept
     links:
-    - text: Nozioni fondamentali sull'operazione di Garbage Collection
+    - text: Nozioni fondamentali su Garbage Collection
       url: garbage-collection/fundamentals.md
-    - text: Implementare un metodo DisposeImplement a Dispose method
+    - text: Implementare un metodo Dispose
       url: garbage-collection/implementing-dispose.md
 - title: Informazioni sulla programmazione parallela
   linkLists:
@@ -155,5 +159,5 @@ landingContent:
     links:
     - text: Scrivere un semplice programma parallelo usando Parallel.ForEach
       url: parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md
-    - text: Restituire un valore da un'attivitàReturn a value from a task
+    - text: Restituire un valore da un'attività
       url: parallel-programming/how-to-return-a-value-from-a-task.md
