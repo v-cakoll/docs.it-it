@@ -119,8 +119,8 @@
       href: programming-guide/types/index.md
     - name: Tipi riferimento nullable
       href: nullable-references.md
-    - name: Aggiornare le firme dell'API per usare i riferimenti nullable
-      href: nullable-attributes.md
+    - name: Scegliere una strategia per l'abilitazione dei tipi riferimento nullable
+      href: nullable-migration-strategies.md
     - name: Spazi dei nomi
       href: programming-guide/namespaces/index.md
     - name: Tipi di base
@@ -1200,6 +1200,8 @@
               href: programming-guide/xmldoc/exception.md
             - name: <include>
               href: programming-guide/xmldoc/include.md
+            - name: <inheritdoc>
+              href: programming-guide/xmldoc/inheritdoc.md
             - name: <list>
               href: programming-guide/xmldoc/list.md
             - name: <para>
