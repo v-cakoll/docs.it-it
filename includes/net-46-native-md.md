@@ -6,4 +6,4 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65671135"
 ---
-<span data-ttu-id="fbfac-101">Disponibile a partire dalla versione 4.6, solo in .NET Native</span><span class="sxs-lookup"><span data-stu-id="fbfac-101">Available since 4.6, .NET Native only</span></span>
+<span data-ttu-id="97796-101">Disponibile a partire dalla versione 4.6, solo in .NET Native</span><span class="sxs-lookup"><span data-stu-id="97796-101">Available since 4.6, .NET Native only</span></span>
