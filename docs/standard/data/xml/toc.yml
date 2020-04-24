@@ -170,19 +170,19 @@
                   href: script-blocks-using-msxsl-script.md
             - name: Errori XSLT risolvibili
               href: recoverable-xslt-errors.md
-            - name: 'Procedura: trasformare un frammento di nodo'
+            - name: 'Procedura: Trasformare un frammento di nodo'
               href: how-to-transform-a-node-fragment.md
         - name: Migrazione dalla classe XslTransform
           href: migrating-from-the-xsltransform-class.md
           items:
-            - name: 'Procedura: migrare il codice XslTransform'
+            - name: 'Procedura: Eseguire la migrazione del codice XslTransform'
               href: how-to-migrate-your-xsltransform-code.md
         - name: Considerazioni sulla sicurezza XSLT
           href: xslt-security-considerations.md
         - name: Compilatore XSLT (xsltc.exe)
           href: xslt-compiler-xsltc-exe.md
           items:
-            - name: 'Procedura: eseguire una trasformazione XSLT utilizzando un assembly'
+            - name: 'Procedura: Eseguire una trasformazione XSLT con un assembly'
               href: how-to-perform-an-xslt-transformation-by-using-an-assembly.md
         - name: Trasformazioni XSLT con la classe XslTransform
           href: xslt-transformations-with-the-xsltransform-class.md
