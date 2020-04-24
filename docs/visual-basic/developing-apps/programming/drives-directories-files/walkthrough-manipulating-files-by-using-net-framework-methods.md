@@ -38,17 +38,17 @@ Avviare Visual Studio e iniziare il progetto creando un modulo che l'utente può
 
 2. Nel riquadro **Nuovo progetto** fare clic su **Applicazione Windows**.
 
-3. Nella **Name** casella Nome `MyDiary` digitare e fare clic su **OK**.
+3. Nella casella **nome** Digitare `MyDiary` e fare clic su **OK**.
 
-     Visual Studio aggiunge il progetto a **Esplora soluzioni**e viene aperto **Progettazione Windows Form** .
+     Visual Studio aggiunge il progetto a **Esplora soluzioni**e il **Progettazione Windows Form** viene aperto.
 
 4. Aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.
 
 |**Oggetto**|**Proprietà**|**Valore**|
 |---|---|---|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`Submit`<br /><br /> **Invia voce**|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`Clear`<br /><br /> **Cancella voce**|
-|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Testo**<br /><br /> **Multiline**|`Entry`<br /><br /> **Immettere un valore.**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Text**|`Submit`<br /><br /> **Invia voce**|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Text**|`Clear`<br /><br /> **Cancella voce**|
+|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Text**<br /><br /> **Multiline**|`Entry`<br /><br /> **Immettere un valore.**<br /><br /> `False`|
 
 ## <a name="writing-to-the-file"></a>Scrivere nel file
 
@@ -96,9 +96,9 @@ Per questa sezione della procedura, aggiungere i controlli della tabella seguent
 |Controllo|Proprietà|Valori|
 |-------------|----------------|------------|
 |<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Visibile**<br /><br /> **Dimensione**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`Display`<br /><br /> **Schermo**|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`GetEntries`<br /><br /> **Ottieni voci**|
-|<xref:System.Windows.Forms.ComboBox>|**Nome**<br /><br /> **Testo**<br /><br /> **Abilitato**|`PickEntries`<br /><br /> **Seleziona una voce**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Text**|`Display`<br /><br /> **Schermo**|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Text**|`GetEntries`<br /><br /> **Ottieni voci**|
+|<xref:System.Windows.Forms.ComboBox>|**Nome**<br /><br /> **Text**<br /><br /> **Attivata**|`PickEntries`<br /><br /> **Seleziona una voce**<br /><br /> `False`|
 
 ### <a name="to-populate-the-combo-box"></a>Per popolare la casella combinata
 
@@ -124,9 +124,9 @@ Aggiungere i controlli della tabella seguente al form e impostare i valori corri
 
 |Controllo|Proprietà|Valori|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**<br /><br /> **Abilitato**|`DeleteEntry`<br /><br /> **Elimina voce**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**<br /><br /> **Abilitato**|`EditEntry`<br /><br /> **Modifica voce**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**<br /><br /> **Abilitato**|`SubmitEdit`<br /><br /> **Invia modifica**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Text**<br /><br /> **Attivata**|`DeleteEntry`<br /><br /> **Elimina voce**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Text**<br /><br /> **Attivata**|`EditEntry`<br /><br /> **Modifica voce**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Text**<br /><br /> **Attivata**|`SubmitEdit`<br /><br /> **Invia modifica**<br /><br /> `False`|
 
 ### <a name="to-enable-deletion-and-modification-of-entries"></a>Per abilitare l'eliminazione e la modifica delle voci
 
@@ -150,9 +150,9 @@ Aggiungere i controlli della tabella seguente al form e impostare i valori corri
 
      [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]
 
-Per testare il codice, premere F5 per compilare l'applicazione. Fare clic su **Ottieni voci**, selezionare una voce e quindi fare clic su **Visualizza**. La voce viene visualizzata nell'oggetto `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Fare clic su **Modifica voce**. La voce viene visualizzata nell'oggetto `Entry`<xref:System.Windows.Forms.TextBox>. Modificare la voce `Entry` <xref:System.Windows.Forms.TextBox> nel campo e fare clic su **Invia modifica**. Aprire il file `MyDiary.txt` per confermare la correzione. Ora selezionare una voce e fare clic su **Elimina voce**. Quando l'oggetto <xref:System.Windows.Forms.MessageBox> chiede una conferma, fare clic su **OK**. Chiudere l'applicazione e aprire `MyDiary.txt` per confermare l'eliminazione.
+Per testare il codice, premere F5 per compilare l'applicazione. Fare clic su **Ottieni voci**, selezionare una voce e quindi fare clic su **Visualizza**. La voce viene visualizzata nell'oggetto `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Fare clic su **Modifica voce**. La voce viene visualizzata nell'oggetto `Entry`<xref:System.Windows.Forms.TextBox>. Modificare la voce in `Entry` <xref:System.Windows.Forms.TextBox> e fare clic su **Invia modifica**. Aprire il file `MyDiary.txt` per confermare la correzione. Ora selezionare una voce e fare clic su **Elimina voce**. Quando l'oggetto <xref:System.Windows.Forms.MessageBox> chiede una conferma, fare clic su **OK**. Chiudere l'applicazione e aprire `MyDiary.txt` per confermare l'eliminazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamWriter>

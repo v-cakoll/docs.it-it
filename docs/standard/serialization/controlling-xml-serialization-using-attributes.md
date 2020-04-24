@@ -27,7 +27,7 @@ ms.locfileid: "80248043"
 Gli attributi possono essere utilizzati per controllare la serializzazione XML di un oggetto o per creare un flusso XML alternativo dallo stesso set di classi. Per altri dettagli sulla creazione di un flusso XML alternativo, vedere [Procedura: Specificare un nome di elemento alternativo per un flusso XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 > [!NOTE]
-> Se il codice XML generato deve essere conforme alla sezione 5 del documento W3C (Simple Object Web Consortium) [denominata Simple Object Access Protocol (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), utilizzare gli attributi elencati in [Attributes That Control Encoded SOAP Serialization](attributes-that-control-encoded-soap-serialization.md).
+> Se il codice XML generato deve essere conforme alla sezione 5 del documento World Wide Web Consortium (W3C) denominato [Simple Object Access Protocol (SOAP) 1,1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), utilizzare gli attributi elencati negli [attributi che controllano la serializzazione SOAP codificata](attributes-that-control-encoded-soap-serialization.md).
 
 Per impostazione predefinita, un nome di elemento XML è determinato dal nome della classe o del membro. In una classe semplice denominata `Book` un campo denominato `ISBN` produrrà un tag di elemento XML \<ISBN>, come illustra l'esempio riportato di seguito.
 
@@ -241,7 +241,7 @@ Un'istanza serializzata potrebbe assomigliare agli elementi seguenti.
 </Group>
 ```
 
-Un altro modo per differenziare i due flussi XML è quello di utilizzare lo strumento XML Schema Definition per generare i file del documento XML Schema (XSD) dal codice compilato. Per ulteriori informazioni sull'utilizzo dello strumento, vedere [Lo strumento XML Schema Definition e la serializzazione XML.](the-xml-schema-definition-tool-and-xml-serialization.md) Quando al campo non viene applicato alcun attributo, lo schema descrive l'elemento nel modo seguente.
+Un altro modo per differenziare i due flussi XML è quello di utilizzare lo strumento XML Schema Definition per generare i file del documento XML Schema (XSD) dal codice compilato. Per ulteriori informazioni sull'utilizzo dello strumento, vedere [lo strumento XML Schema Definition e la serializzazione XML](the-xml-schema-definition-tool-and-xml-serialization.md). Quando al campo non viene applicato alcun attributo, lo schema descrive l'elemento nel modo seguente.
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />
@@ -315,10 +315,10 @@ Al contrario, se si fosse dovuta serializzare un'istanza della classe, nel docum
 
 Potrebbero presentarsi delle situazioni in cui un campo o una proprietà pubblica non necessitano della serializzazione. Ad esempio, un campo o una proprietà possono essere utilizzati per contenere metadati. In tali casi, applicare <xref:System.Xml.Serialization.XmlIgnoreAttribute> al campo o alla proprietà e <xref:System.Xml.Serialization.XmlSerializer> permetterà di ignorarli.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Attributi per il controllo della serializzazione XML](attributes-that-control-xml-serialization.md)
-- [Attributi per il controllo della serializzazione SOAP codificata](attributes-that-control-encoded-soap-serialization.md)
+- [Attributi che controllano la serializzazione XML](attributes-that-control-xml-serialization.md)
+- [Attributi che controllano la serializzazione SOAP codificata](attributes-that-control-encoded-soap-serialization.md)
 - [Introduzione alla serializzazione XML](introducing-xml-serialization.md)
 - [Esempi di serializzazione XML](examples-of-xml-serialization.md)
 - [Procedura: specificare un nome di elemento alternativo per un flusso XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)

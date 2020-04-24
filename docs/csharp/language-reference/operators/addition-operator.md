@@ -1,6 +1,6 @@
 ---
 title: + Operatori + e += - Riferimenti per C#
-ms.date: 05/24/2019
+ms.date: 04/23/2020
 f1_keywords:
 - +_CSharpKeyword
 - +=_CSharpKeyword
@@ -13,26 +13,26 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: cafd07f4b4aefdcc4b43750d61c155fe3d65aa46
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18364d80b8117fd4074c2c4231eac07c76829bb3
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399301"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135737"
 ---
 # <a name="-and--operators-c-reference"></a>Operatori + e += (Riferimenti per C#)
 
-Gli `+` `+=` operatori e sono supportati dai tipi numerici [integrali](../builtin-types/integral-numeric-types.md) e [a virgola mobile](../builtin-types/floating-point-numeric-types.md) incorporati, dal tipo [stringa](../builtin-types/reference-types.md#the-string-type) e dai tipi [delegati.](../builtin-types/reference-types.md#the-delegate-type)
+Gli `+` operatori `+=` e sono supportati dai tipi numerici [integrali](../builtin-types/integral-numeric-types.md) e a [virgola mobile](../builtin-types/floating-point-numeric-types.md) incorporati, dal tipo di [stringa](../builtin-types/reference-types.md#the-string-type) e dai tipi [delegati](../builtin-types/reference-types.md#the-delegate-type) .
 
 Per informazioni sull'operatore aritmetico `+`, vedere le sezioni [Operatori più e meno unari](arithmetic-operators.md#unary-plus-and-minus-operators) e [Operatore di addizione +](arithmetic-operators.md#addition-operator-) dell'articolo [Operatori aritmetici](arithmetic-operators.md).
 
 ## <a name="string-concatenation"></a>Concatenazione di stringhe
 
-Quando uno o entrambi gli operandi sono di tipo [stringa](../builtin-types/reference-types.md#the-string-type), l'operatore `+` concatena le rappresentazioni di stringa dei due operandi:
+Quando uno o entrambi gli operandi sono di tipo [stringa](../builtin-types/reference-types.md#the-string-type), l' `+` operatore concatena le rappresentazioni di stringa dei relativi operandi (la rappresentazione di stringa `null` di è una stringa vuota):
 
 [!code-csharp-interactive[string concatenation](snippets/AdditionOperator.cs#AddStrings)]
 
-A partire da C , [l'interpolazione](../tokens/interpolated.md) di stringhe fornisce un modo più pratico per formattare le stringhe:Beginning with C's 6, string interpolation provides a more convenient way to format strings:
+A partire da C# 6, l' [interpolazione di stringhe](../tokens/interpolated.md) rappresenta un modo più pratico per formattare le stringhe:
 
 [!code-csharp-interactive[string interpolation](snippets/AdditionOperator.cs#UseStringInterpolation)]
 
@@ -42,7 +42,7 @@ Per gli operandi con lo stesso tipo [delegato](../builtin-types/reference-types.
 
 [!code-csharp-interactive[delegate combination](snippets/AdditionOperator.cs#AddDelegates)]
 
-Per eseguire la rimozione del delegato, utilizzare [ `-` l'operatore](subtraction-operator.md#delegate-removal).
+Per eseguire la rimozione dei delegati, usare l' [ `-` operatore](subtraction-operator.md#delegate-removal).
 
 Per altre informazioni sui tipi delegate, vedere [Delegati](../../programming-guide/delegates/index.md).
 
@@ -76,11 +76,11 @@ Un tipo definito dall'utente può eseguire l'[overload](operator-overloading.md)
 
 Per altre informazioni, vedere le sezioni [Operatore + unario](~/_csharplang/spec/expressions.md#unary-plus-operator) e [Operatore addizione](~/_csharplang/spec/expressions.md#addition-operator) della [specifica del linguaggio C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Informazioni di riferimento su C#](../index.md)
 - [Operatori C#](index.md)
 - [Come concatenare più stringhe](../../how-to/concatenate-multiple-strings.md)
 - [Events](../../programming-guide/events/index.md)
 - [Operatori aritmetici](arithmetic-operators.md)
-- [- e - - operatori](subtraction-operator.md)
+- [operatori-and-=](subtraction-operator.md)

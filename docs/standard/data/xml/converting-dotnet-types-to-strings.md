@@ -20,10 +20,10 @@ Per convertire un tipo .NET Framework in una stringa, usare il metodo **ToString
 |Single.NegativeInfinity|"-INF"|  
 |Double.PositiveInfinity|"INF"|  
 |Double.NegativeInfinity|"-INF"|  
-|DateTime|Il formato è yyyy-MM-ddTHH:mm:sszzzzzz e i relativi subset.|  
+|Datetime|Il formato è yyyy-MM-ddTHH:mm:sszzzzzz e i relativi subset.|  
 |TimeSpan|Il formato è PnYnMnTnHnMnSad esempio, `P2Y10M15DT10H30M20S` corrisponde a una durata di 2 anni, 10 mesi, 15 giorni, 10 ore, 30 minuti e 20 secondi.|  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Conversione dei tipi di dati XML](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
 - [Conversione delle stringhe in tipi di dati di .NET Framework](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)

@@ -86,11 +86,11 @@ Gli errori di convalida sono gestiti dal tipo <xref:System.Xml.Schema.Validation
 
  Per gli esempi che illustrano il tipo <xref:System.Xml.Schema.ValidationEventHandler>, vedere "Convalida di un documento XML durante il caricamento nel DOM" e "Convalida di un documento XML nel DOM" riportati in precedenza.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XmlReader>
 - <xref:System.Xml.Schema.ValidationEventHandler>
 - <xref:System.Xml.XmlReaderSettings>
-- [Elaborare dati XML con il modello DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)
-- [Uso di schemi XML](../../../../docs/standard/data/xml/working-with-xml-schemas.md)
+- [Elaborazione di dati XML con il modello DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)
+- [Utilizzo di schemi XML](../../../../docs/standard/data/xml/working-with-xml-schemas.md)

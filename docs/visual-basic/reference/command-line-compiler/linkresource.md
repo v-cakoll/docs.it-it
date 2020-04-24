@@ -33,33 +33,33 @@ oppure
   
 ## <a name="arguments"></a>Argomenti  
  `filename`  
- Obbligatoria. File di risorse da collegare all'assembly. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette ("").  
+ Obbligatorio. File di risorse da collegare all'assembly. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette ("").  
   
  `identifier`  
- Facoltativa. Nome logico della risorsa. Nome usato per caricare la risorsa. L'impostazione predefinita corrisponde al nome del file. Facoltativamente, è possibile specificare se il file è pubblico o privato nel manifesto dell'assembly, ad esempio: `-linkres:filename.res,myname.res,public`. Per impostazione predefinita, `filename` è pubblico nell'assembly.  
+ Facoltativo. Nome logico della risorsa. Nome usato per caricare la risorsa. L'impostazione predefinita corrisponde al nome del file. Facoltativamente, è possibile specificare se il file è pubblico o privato nel manifesto dell'assembly, ad esempio: `-linkres:filename.res,myname.res,public`. Per impostazione predefinita `filename` , è Public nell'assembly.  
   
-## <a name="remarks"></a>Note  
- L'opzione `-linkresource` non incorpora il file di risorse nel file di output. per eseguire questa operazione, usare l'opzione `-resource`.  
+## <a name="remarks"></a>Osservazioni  
+ L' `-linkresource` opzione non incorpora il file di risorse nel file di output. usare l' `-resource` opzione per eseguire questa operazione.  
   
- L'opzione `-linkresource` richiede una delle opzioni `-target` diverse da `-target:module`.  
+ L' `-linkresource` opzione richiede una delle `-target` opzioni diverse da. `-target:module`  
   
- Se `filename` è un file di risorse .NET Framework creato, ad esempio da [Resgen. exe (Generatore di file di risorse)](../../../framework/tools/resgen-exe-resource-file-generator.md) o dall'ambiente di sviluppo, è possibile accedervi con membri nello spazio dei nomi <xref:System.Resources>. Per ulteriori informazioni, vedere <xref:System.Resources.ResourceManager>. Per accedere a tutte le altre risorse in fase di esecuzione, usare i metodi che iniziano con `GetManifestResource` nella classe <xref:System.Reflection.Assembly>.  
+ Se `filename` è un file di risorse .NET Framework creato, ad esempio da [Resgen. exe (Generatore di file di risorse)](../../../framework/tools/resgen-exe-resource-file-generator.md) o nell'ambiente di sviluppo, è possibile accedervi con i membri <xref:System.Resources> nello spazio dei nomi. Per ulteriori informazioni, vedere <xref:System.Resources.ResourceManager>. Per accedere a tutte le altre risorse in fase di esecuzione, usare i metodi `GetManifestResource` che iniziano <xref:System.Reflection.Assembly> con nella classe.  
   
  Il nome del file può essere qualsiasi formato di file. Può ad esempio risultare opportuno rendere una DLL nativa parte dell'assembly in modo che possa essere installata nella Global Assembly Cache e che sia possibile accedervi dal codice gestito nell'assembly.  
   
  La forma breve di `-linkresource` è `-linkres`.  
   
 > [!NOTE]
-> L'opzione `-linkresource` non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
+> L' `-linkresource` opzione non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente compila `in.vb` e collega a file di risorse `rf.resource`.  
+ Il codice seguente compila `in.vb` e collega a un file `rf.resource`di risorse.  
   
 ```console  
 vbc -linkresource:rf.resource in.vb  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

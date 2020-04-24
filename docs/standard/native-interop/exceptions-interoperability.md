@@ -20,11 +20,11 @@ L'interoperabilità delle eccezioni del codice non gestito è supportata solo ne
 
 ## <a name="setjmplongjmp-behaviors"></a>Comportamenti setjmp/longjmp
 
-L'interoperabilità con funzioni `setjmp` e `longjmp` C non è supportato. Non è possibile usare `longjmp` per ignorare i frame gestiti.
+L'interoperabilità con `setjmp` le funzioni C e `longjmp` non è supportata. Non è possibile `longjmp` usare per ignorare i frame gestiti.
 
 Per ulteriori informazioni, vedere la [documentazione di longjmp](https://docs.microsoft.com/cpp/c-runtime-library/reference/longjmp).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Eccezioni](index.md)
 - [Interoperabilità con librerie native](https://www.mono-project.com/docs/advanced/pinvoke/#runtime-exception-propagation)

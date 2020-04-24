@@ -51,7 +51,7 @@ Il metodo `My.Computer.FileSystem.MoveFile` consente di spostare un file in una 
   
 - L'utente non ha le autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>
 - [Procedura: rinominare un file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)

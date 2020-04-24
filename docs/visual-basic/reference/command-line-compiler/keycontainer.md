@@ -24,14 +24,14 @@ Specifica il nome di un contenitore di chiavi per una coppia di chiavi allo scop
   
 ## <a name="arguments"></a>Argomenti  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |---|---|  
 |`container`|Obbligatorio. File contenitore contenente la chiave. Racchiudere il nome file tra virgolette ("") se il nome contiene uno spazio.|  
   
-## <a name="remarks"></a>Note  
- Il compilatore crea il componente condivisibile inserendo una chiave pubblica nel manifesto dell'assembly e firmando l'assembly finale con la chiave privata. Per generare un file di chiave, digitare `sn -k file` nella riga di comando. L'opzione `-i` installa la coppia di chiavi in un contenitore. Per ulteriori informazioni, vedere [sn. exe (strumento nome sicuro)](../../../framework/tools/sn-exe-strong-name-tool.md).  
+## <a name="remarks"></a>Osservazioni  
+ Il compilatore crea il componente condivisibile inserendo una chiave pubblica nel manifesto dell'assembly e firmando l'assembly finale con la chiave privata. Per generare un file di chiave, digitare `sn -k file` nella riga di comando. L' `-i` opzione installa la coppia di chiavi in un contenitore. Per ulteriori informazioni, vedere [sn. exe (strumento nome sicuro)](../../../framework/tools/sn-exe-strong-name-tool.md).  
   
- Se si compila con `-target:module`, il nome del file di chiave viene mantenuto nel modulo e incorporato nell'assembly creato quando si compila un assembly con [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
+ Se si esegue la `-target:module`compilazione con, il nome del file di chiave viene mantenuto nel modulo e incorporato nell'assembly creato quando si compila un assembly con [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
   
  Questa opzione può essere specificata anche come attributo personalizzato <xref:System.Reflection.AssemblyKeyNameAttribute> nel codice sorgente di qualsiasi modulo MSIL (Microsoft Intermediate Language).  
   
@@ -40,16 +40,16 @@ Specifica il nome di un contenitore di chiavi per una coppia di chiavi allo scop
  Per ulteriori informazioni sulla firma di un assembly [, vedere Creazione e utilizzo di assembly con nome sicuro](../../../standard/assembly/create-use-strong-named.md) .  
   
 > [!NOTE]
-> L'opzione `-keycontainer` non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
+> L' `-keycontainer` opzione non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente compila il file di origine `Input.vb` e specifica un contenitore di chiavi.  
+ Il codice seguente compila il file `Input.vb` di origine e specifica un contenitore di chiavi.  
   
 ```console  
 vbc -keycontainer:key1 input.vb  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Assembly in .NET](../../../standard/assembly/index.md)
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)

@@ -17,7 +17,7 @@ Lo spazio dei nomi <xref:System.Xml?displayProperty=nameWithType> fornisce una r
   
  Nelle sezioni riportate seguenti viene descritta la funzionalità della classe <xref:System.Xml.XPath.XPathNavigator> in base alla classe che la restituisce.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Lettura di dati XML con XPathDocument e XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
  Viene illustrato come creare un oggetto di sola lettura della classe <xref:System.Xml.XPath.XPathDocument> per leggere un documento XML, nonché come creare un oggetto modificabile della classe <xref:System.Xml.XmlDocument> per leggere e modificare un documento XML. Nell'argomento viene inoltre illustrato come restituire un oggetto <xref:System.Xml.XPath.XPathNavigator> da ogni classe per esplorare e modificare un documento XML.  
   
@@ -33,9 +33,9 @@ Lo spazio dei nomi <xref:System.Xml?displayProperty=nameWithType> fornisce una r
  [Convalida dello schema con XPathNavigator](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
  Vengono illustrati i metodi di valutazione del contenuto XML in un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Elaborare dati XML con il modello DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)
+- [Elaborazione di dati XML con il modello DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)

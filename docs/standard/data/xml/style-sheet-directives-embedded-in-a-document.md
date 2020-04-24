@@ -35,6 +35,6 @@ Poiché `<?xml:stylesheet?>` contiene un segno di due punti, viene violata la re
 
 Secondo la raccomandazione W3C (World Wide Web Consortium) [Associating Style Sheets with XML documents Version 1.0](https://www.w3.org/TR/xml-stylesheet/), l'istruzione di elaborazione per associare un foglio di stile XSL a un documento XML è `<?xml-stylesheet?>`, con un trattino al posto del segno di due punti.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Modello DOM (Document Object Mode) XML](xml-document-object-model-dom.md)
+- [XML DOM (Document Object Model)](xml-document-object-model-dom.md)

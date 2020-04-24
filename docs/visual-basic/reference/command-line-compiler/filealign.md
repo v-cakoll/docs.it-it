@@ -29,16 +29,16 @@ Specifica la posizione di allineamento per le sezioni del file di output.
  `number`  
  Obbligatorio. Valore che specifica l'allineamento delle sezioni nel file di output. I valori validi sono 512, 1024, 2048, 4096 e 8192. I valori sono in byte.  
   
-## <a name="remarks"></a>Note  
- È possibile usare l'opzione `-filealign` per specificare l'allineamento delle sezioni nel file di output. Le sezioni sono blocchi di memoria contigua in un file eseguibile portabile (PE) che contiene il codice o i dati. L'opzione `-filealign` consente di compilare l'applicazione con un allineamento non standard. per la maggior parte degli sviluppatori non è necessario usare questa opzione.  
+## <a name="remarks"></a>Osservazioni  
+ È possibile usare l' `-filealign` opzione per specificare l'allineamento delle sezioni nel file di output. Le sezioni sono blocchi di memoria contigua in un file eseguibile portabile (PE) che contiene il codice o i dati. L' `-filealign` opzione consente di compilare l'applicazione con un allineamento non standard. per la maggior parte degli sviluppatori non è necessario usare questa opzione.  
   
- Ogni sezione è allineata a un limite che corrisponde a un multiplo del valore `-filealign`. Non vi è alcun valore predefinito fisso. Se non si specifica `-filealign`, il compilatore sceglie un valore predefinito in fase di compilazione.  
+ Ogni sezione è allineata a un limite che corrisponde a un `-filealign` multiplo del valore. Non vi è alcun valore predefinito fisso. Se `-filealign` non viene specificato, il compilatore sceglie un valore predefinito in fase di compilazione.  
   
  Specificando le dimensioni della sezione, è possibile modificare le dimensioni del file di output. La modifica delle dimensioni della sezione può essere utile per i programmi che verranno eseguiti su dispositivi di piccole dimensioni.  
   
 > [!NOTE]
-> L'opzione `-filealign` non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
+> L' `-filealign` opzione non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)

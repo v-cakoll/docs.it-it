@@ -29,24 +29,24 @@ Inserisce un file di risorse Win32 nel file di output.
  `filename`  
  Nome del file di risorse da aggiungere al file di output. Racchiudere il nome file tra virgolette ("") se contiene uno spazio.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  È possibile creare un file di risorse Win32 con il compilatore di risorse di Microsoft Windows (RC).  
   
- Una risorsa Win32 può contenere informazioni sulla versione o sulla bitmap (icona) che consentono di identificare l'applicazione in **Esplora file**. Se non si specifica `-win32resource`, il compilatore genera informazioni sulla versione in base alla versione dell'assembly. Le opzioni `-win32resource` e `-win32icon` si escludono a vicenda.  
+ Una risorsa Win32 può contenere informazioni sulla versione o sulla bitmap (icona) che consentono di identificare l'applicazione in **Esplora file**. Se non si specifica `-win32resource`, il compilatore genera le informazioni sulla versione in base alla versione dell'assembly. Le opzioni `-win32resource` e `-win32icon` si escludono reciprocamente.  
   
  Vedere [-linkresource ((Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) per fare riferimento a un file di risorse .NET Framework o [-Resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) per alleghire un file di risorse .NET Framework.  
   
 > [!NOTE]
-> L'opzione `-win32resource` non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
+> L' `-win32resource` opzione non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente compila `In.vb` e connette un file di risorse Win32, `Rf.res`:  
+ Il codice seguente compila `In.vb` e connette un file di risorse Win32: `Rf.res`  
   
 ```console  
 vbc -win32resource:rf.res in.vb  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -23,6 +23,6 @@ Il modello DOM XML supporta pienamente lo spazio dei nomi. Sono supportati solo 
   
 - Se viene rilevato un carattere di due punti, il nome viene diviso in due parti, in base alla posizione del primo carattere di due punti. Il prefisso è impostato sulla stringa prima dei due punti e il nome locale è impostato sulla stringa dopo i due punti. Per i metodi che non accettano un valore NamespaceURI, quest'ultimo non è risolto e rimane impostato su una stringa vuota. In caso contrario, il NamespaceURI viene impostato sulla stringa passata al metodo. Se il prefisso non è definito, il metodo **Save** e le proprietà **InnerXml** e **OuterXml** danno origine a un errore.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML DOM (Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

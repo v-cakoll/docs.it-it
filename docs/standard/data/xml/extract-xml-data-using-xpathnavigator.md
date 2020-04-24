@@ -160,7 +160,7 @@ book.Close();
   
  Nell'esempio il file `books.xml`, trovato prima in questo argomento, viene considerato come input.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

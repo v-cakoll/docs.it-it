@@ -65,12 +65,12 @@ document.Load("books.xml");
   
  Nella tabella seguente viene descritto il valore della proprietà <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> per ogni classe.  
   
-|Implementazione di <xref:System.Xml.XPath.IXPathNavigable>|Valore di <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A>|  
+|Implementazione di <xref:System.Xml.XPath.IXPathNavigable>|<xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> Valore|  
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Xml.XPath.XPathDocument>|`false`|  
 |<xref:System.Xml.XmlDocument>|`true`|  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

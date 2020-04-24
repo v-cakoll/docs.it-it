@@ -26,9 +26,9 @@ Specifica la modalità con cui vengono confrontate le stringhe.
 -optioncompare:{binary | text}
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-È possibile specificare `-optioncompare` in uno dei due formati seguenti: `-optioncompare:binary` per utilizzare i confronti di stringhe binarie e `-optioncompare:text` per utilizzare i confronti tra stringhe di testo. Per impostazione predefinita, il compilatore USA `-optioncompare:binary`.
+È possibile specificare `-optioncompare` in uno dei due formati seguenti `-optioncompare:binary` : per usare i confronti di `-optioncompare:text` stringhe binarie e per usare i confronti di stringhe di testo. Per impostazione predefinita, il compilatore `-optioncompare:binary`utilizza.
 
 In Microsoft Windows la tabella codici corrente determina l'ordinamento binario. Un ordinamento binario tipico è il seguente:
 
@@ -58,12 +58,12 @@ Il codice seguente compila `ProjFile.vb` e usa i confronti di stringhe binarie.
 vbc -optioncompare:binary projFile.vb
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [-OptionExplicit (](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
+- [-OptionStrict (](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [-optioninfer (](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Istruzione Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)
 - [Impostazioni predefinite di Visual Basic, Progetti, finestra di dialogo Opzioni](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

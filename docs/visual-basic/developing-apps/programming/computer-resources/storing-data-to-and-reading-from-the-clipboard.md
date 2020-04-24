@@ -1,5 +1,5 @@
 ---
-title: Memorizzazione e lettura di dati dagli Appunti
+title: Archiviazione e lettura di dati negli Appunti
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard, storing data to (My.Computer.Clipboard)
@@ -73,10 +73,10 @@ Gli Appunti possono essere usati per archiviare i dati, ad esempio testo e immag
 > [!IMPORTANT]
 > Dal momento che gli Appunti sono accessibili da altri utenti, non usarli per archiviare informazioni sensibili, ad esempio password o dati riservati.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>
 - <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>
 - <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>
-- [Procedura: leggere dati oggetto da un file XMLHow to: Read Object Data from an XML File](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
-- [Procedura: scrivere dati oggetto in un file XMLHow to: Write Object Data to an XML File](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+- [Procedura: leggere i dati di un oggetto da un file XML](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
+- [Procedura: scrivere dati oggetto in un file XML](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)

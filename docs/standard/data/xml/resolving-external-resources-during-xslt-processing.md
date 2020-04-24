@@ -21,8 +21,8 @@ Durante una trasformazione XSLT si presentano vari casi in cui può essere neces
   
 |Attività XSLT|Scopo per il quale viene usato XmlResolver|  
 |---------------|--------------------------------------|  
-|Compilare il foglio di stile.|Risolvere l'URI del foglio di stile.<br /><br /> e<br /><br /> Risolvere i riferimenti URI negli elementi `xsl:import` o `xsl:include`.|  
-|Eseguire il foglio di stile.|Risolvere l'URI del documento di contesto.<br /><br /> e<br /><br /> Risolvere i riferimenti URI in qualsiasi funzione `document()` XSLT.|  
+|Compilare il foglio di stile.|Risolvere l'URI del foglio di stile.<br /><br /> -e-<br /><br /> Risolvere i riferimenti URI negli elementi `xsl:import` o `xsl:include`.|  
+|Eseguire il foglio di stile.|Risolvere l'URI del documento di contesto.<br /><br /> -e-<br /><br /> Risolvere i riferimenti URI in qualsiasi funzione `document()` XSLT.|  
   
  I metodi <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> e <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> includono overload che accettano un oggetto <xref:System.Xml.XmlResolver> come argomento. Se non viene specificato alcun tipo <xref:System.Xml.XmlResolver>, viene usato un tipo predefinito <xref:System.Xml.XmlUrlResolver> senza credenziali.  
   
@@ -42,7 +42,7 @@ Durante una trasformazione XSLT si presentano vari casi in cui può essere neces
  [!code-csharp[XslCompiledTransform.Load#11](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Load/CS/Xslt_Load_v2.cs#11)]
  [!code-vb[XslCompiledTransform.Load#11](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Load/VB/Xslt_Load_v2.vb#11)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
 - <xref:System.Xml.Xsl.XsltSettings>

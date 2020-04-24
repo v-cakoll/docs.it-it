@@ -23,11 +23,11 @@ Evita la visualizzazione del banner sul copyright e dei messaggi informativi dur
 -nologo  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se si specifica `-nologo`, il compilatore non visualizza un banner sul copyright. Per impostazione predefinita, l'opzione `-nologo` non è attiva.  
   
 > [!NOTE]
-> L'opzione `-nologo` non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
+> L' `-nologo` opzione non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente compila `T2.vb` e non visualizza un banner sul copyright.  
@@ -36,7 +36,7 @@ Evita la visualizzazione del banner sul copyright e dei messaggi informativi dur
 vbc -nologo t2.vb  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

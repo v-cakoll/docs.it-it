@@ -27,6 +27,6 @@ Se un documento XML viene caricato usando il metodo <xref:System.Xml.XmlDocument
   
  Per impostazione predefinita, il metodo <xref:System.Xml.XmlDocument.Load%2A> non verifica se l'XML è valido usando la DTD o la convalida dello schema. Verifica solo che l'XML sia in formato corretto. Affinché avvenga la convalida, è necessario creare un tipo <xref:System.Xml.XmlReader> usando la classe <xref:System.Xml.XmlReaderSettings>. La classe <xref:System.Xml.XmlReader> consente di applicare la convalida usando una DTD o uno schema XSD (Schema definition language). La proprietà <xref:System.Xml.ValidationType> della classe <xref:System.Xml.XmlReaderSettings> consente di determinare se l'istanza <xref:System.Xml.XmlReader> applica la convalida. Per altre informazioni sulla convalida dei dati XML, vedere la sezione Note della pagina di riferimento <xref:System.Xml.XmlReader>.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML DOM (Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

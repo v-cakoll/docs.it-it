@@ -114,7 +114,7 @@ L'esempio di codice completo è disponibile in <xref:System.Xml.XmlDocument.Crea
 
 È anche possibile creare un nodo **XmlAttribute** e usare i metodi **InsertBefore** o **InsertAfter** per inserirlo nella posizione appropriata nella raccolta. Se è già presente un attributo con lo stesso nome nella raccolta di attributi, il nodo **XmlAttribute** esistente viene rimosso dalla raccolta e il nuovo nodo **XmlAttribute** viene inserito. Questa operazione viene eseguita come nel metodo **SetAttribute**. Questi metodi accettano come parametro un nodo esistente come punto di riferimento per eseguire **InsertBefore** e **InsertAfter**. Se non viene fornito un nodo di riferimento che indica dove inserire il nuovo nodo, per impostazione predefinita il metodo **InsertAfter** inserirà il nuovo nodo all'inizio della raccolta. Se non viene fornito alcun nodo di riferimento, la posizione predefinita di **InsertBefore** è alla fine della raccolta.
 
-Se è stato creato un **XmlNamedNodeMap** di attributi, è possibile aggiungere un attributo in base al nome usando il metodo <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>. Per altre informazioni, vedere [Raccolte di nodi in NamedNodeMaps e NodeLists](node-collections-in-namednodemaps-and-nodelists.md).
+Se è stato creato un **XmlNamedNodeMap** di attributi, è possibile aggiungere un attributo in base al <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A> nome usando il metodo. Per altre informazioni, vedere [Raccolte di nodi in NamedNodeMaps e NodeLists](node-collections-in-namednodemaps-and-nodelists.md).
 
 ## <a name="default-attributes"></a>Attributi predefiniti
 
@@ -124,6 +124,6 @@ Se si crea un elemento in cui è dichiarato un attributo predefinito, nel DOM (D
 
 Il valore del nodo di un attributo diviene i nodi figlio dell'attributo stesso. Esistono solo due tipi di nodi figlio validi: i nodi **XmlText** e i nodi **XmlEntityReference** . Si tratta di nodi figlio perché vengono elaborati come tali da metodi come **FirstChild** e **LastChild**. Questa distinzione di un attributo con nodi figlio è importante quando si tenta di rimuovere attributi o nodi figlio degli attributi. Per altre informazioni, vedere [Rimozione di attributi da un nodo di elemento nel DOM](removing-attributes-from-an-element-node-in-the-dom.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Modello DOM (Document Object Mode) XML](xml-document-object-model-dom.md)
+- [XML DOM (Document Object Model)](xml-document-object-model-dom.md)

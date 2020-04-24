@@ -11,7 +11,7 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710674"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Modifica di nodi, contenuto e valori in un documento XML
-Sono disponibili molti modi per modificare i nodi e il contenuto in un documento. Procedi così:  
+Sono disponibili molti modi per modificare i nodi e il contenuto in un documento. È possibile:  
   
 - Modificare il valore dei nodi usando la proprietà <xref:System.Xml.XmlNode.Value%2A>.  
   
@@ -31,9 +31,9 @@ Sono disponibili molti modi per modificare i nodi e il contenuto in un documento
 |CDATASection|Contenuto di CDATASection.|  
 |Commento|Contenuto del commento.|  
 |ProcessingInstruction|Contenuto eccetto la destinazione.|  
-|Testo|Contenuto del testo.|  
+|Testo|Il contenuto del testo.|  
 |XmlDeclaration|Il contenuto della dichiarazione, esclusi i markup `<?xml` e `?>`.|  
-|Whitespace|Il valore dello spazio vuoto. È possibile impostare il valore in modo che sia uno dei quattro caratteri di spazio vuoto XML riconosciuti: spazio, tabulazione, ritorno a capo o avanzamento riga.|  
+|Spazi vuoti|Il valore dello spazio vuoto. È possibile impostare il valore in modo che sia uno dei quattro caratteri di spazio vuoto XML riconosciuti: spazio, tabulazione, ritorno a capo o avanzamento riga.|  
 |SignificantWhitespace|Il valore dello spazio vuoto significativo. È possibile impostare il valore in modo che sia uno dei quattro caratteri di spazio vuoto XML riconosciuti: spazio, tabulazione, ritorno a capo o avanzamento riga.|  
   
  Qualsiasi tipo di nodo non elencato nella tabella non è un tipo di nodo valido in base al quale impostare il valore. Se si imposta un valore su qualsiasi altro tipo di nodo, viene generato un tipo <xref:System.InvalidOperationException>.  
@@ -44,6 +44,6 @@ Sono disponibili molti modi per modificare i nodi e il contenuto in un documento
   
  L'aggiunta o la rimozione di un figlio in sola lettura da un nodo che può essere modificato è un'operazione valida. Ma se si tenta di modificare il nodo in sola lettura, viene generato un tipo <xref:System.InvalidOperationException>. Un esempio di questa situazione è la modifica dei nodi figlio di un nodo <xref:System.Xml.XmlEntityReference>. Poiché i nodi figlio sono in sola lettura, non possono essere modificati e se si tenta di modificarli, viene generato un tipo <xref:System.InvalidOperationException>.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML DOM (Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

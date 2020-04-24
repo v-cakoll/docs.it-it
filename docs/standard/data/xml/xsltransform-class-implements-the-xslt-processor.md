@@ -80,7 +80,7 @@ Per altre informazioni sui livelli di sicurezza, sul parametro Evidence e su com
 
 Per altre informazioni sui livelli di sicurezza, sul parametro Evidence e su come questi influiscono sulla funzione `document()`, vedere [Risoluzione di fogli di stile e documenti XSLT esterni](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md).
 
-Insieme al foglio di stile è possibile fornire vari parametri di input. È inoltre possibile usare il foglio di stile per chiamare le funzioni sugli oggetti di estensione. Sia i parametri che gli oggetti di estensione vengono forniti al foglio di stile mediante la classe <xref:System.Xml.Xsl.XsltArgumentList>. Per altre informazioni sul <xref:System.Xml.Xsl.XsltArgumentList>, vedere <xref:System.Xml.Xsl.XsltArgumentList>.
+Insieme al foglio di stile è possibile fornire vari parametri di input. È inoltre possibile usare il foglio di stile per chiamare le funzioni sugli oggetti di estensione. Sia i parametri che gli oggetti di estensione vengono forniti al foglio di stile mediante la classe <xref:System.Xml.Xsl.XsltArgumentList>. Per altre informazioni su <xref:System.Xml.Xsl.XsltArgumentList>, vedere <xref:System.Xml.Xsl.XsltArgumentList>.
 
 ## <a name="recommended-secure-use-of-xsltransform-class"></a>Uso protetto consigliato per la classe XslTransform
 
@@ -235,7 +235,7 @@ Nella tabella seguente vengono illustrati i metodi obsoleti e quelli nuovi per i
 
 La proprietà <xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> è obsoleta in .NET Framework versione 1.1. Al suo posto è possibile usare i nuovi overload <xref:System.Xml.Xsl.XslTransform.Transform%2A> con un oggetto <xref:System.Xml.XmlResolver>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [Trasformazioni XSLT con la classe XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)

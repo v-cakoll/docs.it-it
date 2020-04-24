@@ -33,7 +33,7 @@ Le funzionalità VTS vengono abilitate durante l'utilizzo di <xref:System.Runtim
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
-## <a name="feature-list"></a>Elenco delle funzionalità
+## <a name="feature-list"></a>Elenco di funzionalità
 
 Il set di funzionalità comprende quanto segue:
 
@@ -280,7 +280,7 @@ Per essere certi che un tipo sia compatibile con i motori di serializzazione fut
 - Impostare sempre la proprietà **VersionAdded** sull'attributo **OptionalFieldAttribute** in modo corretto.
 - Evitare controlli di versione sottoposti a branching.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.SerializableAttribute>
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>

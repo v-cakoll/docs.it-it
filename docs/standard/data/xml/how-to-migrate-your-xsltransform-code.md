@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: migrare il codice XslTransform'
+title: 'Procedura: Eseguire la migrazione del codice XslTransform'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710843"
 ---
-# <a name="how-to-migrate-your-xsltransform-code"></a>Procedura: migrare il codice XslTransform
+# <a name="how-to-migrate-your-xsltransform-code"></a>Procedura: Eseguire la migrazione del codice XslTransform
 Le nuove classi XSLT sono state progettate in modo analogo alle classi esistenti. La classe <xref:System.Xml.Xsl.XslCompiledTransform> sostituisce la classe <xref:System.Xml.Xsl.XslTransform>. I fogli di stile vengono compilati usando il metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>. Le trasformazioni vengono eseguite usando il metodo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>. Nelle procedure seguenti vengono illustrate le attività comuni di XSLT e viene eseguito un confronto del codice usando la classe <xref:System.Xml.Xsl.XslTransform> e la classe <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
 ### <a name="to-transform-a-file-and-output-to-a-uri"></a>Per trasformare un file e un output in un URI  
@@ -91,7 +91,7 @@ Le nuove classi XSLT sono state progettate in modo analogo alle classi esistenti
      [!code-csharp[XML_Migration#18](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#18)]
      [!code-vb[XML_Migration#18](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#18)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Migrazione dalla classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)
-- [Uso della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+- [Utilizzo della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

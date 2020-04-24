@@ -56,7 +56,7 @@ La figura seguente illustra il processo per accedere a oggetti COM tramite Runti
 |**IDispatchEx** (solo .NET Framework) |Se la classe implementa **IDispatchEx**, l'oggetto RCW implementa **IExpando**. L'interfaccia **IDispatchEx** è un'estensione dell'interfaccia **IDispatch** che, diversamente da **IDispatch**, consente l'enumerazione, l'aggiunta, l'eliminazione e la chiamata dei membri con distinzione tra maiuscole e minuscole.|  
 |**IEnumVARIANT**|Consente di trattare come raccolte i tipi COM che supportano l'enumerazione.|  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Wrapper COM](com-wrappers.md)
 - [COM Callable Wrapper](com-callable-wrapper.md)

@@ -17,13 +17,13 @@ Quando si usa Microsoft. Data. sqlite con [elegante](https://stackexchange.githu
 
 I nomi dei parametri SQLite fanno distinzione tra maiuscole e minuscole. Verificare che i nomi di parametro usati in SQL corrispondano al caso delle proprietà dell'oggetto anonimo. Il problema [#18861](https://github.com/dotnet/efcore/issues/18861) potrebbe migliorare questa esperienza.
 
-L'utilizzo del prefisso `@` è previsto anche per i parametri. Gli altri prefissi non funzioneranno.
+Il prefisso è previsto anche per i `@` parametri. Gli altri prefissi non funzioneranno.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DapperSample/Program.cs?name=snippet_Parameter)]
 
 ## <a name="data-types"></a>Tipi di dati
 
-Elegante legge i valori usando l'indicizzatore SqliteDataReader. Il tipo restituito di questo indicizzatore è Object, il che significa che restituirà solo valori Long, Double, String o byte []. Per ulteriori informazioni, vedere [tipi di dati](types.md). L'elegante gestisce la maggior parte delle conversioni tra questi e altri tipi primitivi. Sfortunatamente, non gestisce `DateTimeOffset`, `Guid`o `TimeSpan`. Creare gestori di tipi se si vuole usare questi tipi nei risultati.
+Elegante legge i valori usando l'indicizzatore SqliteDataReader. Il tipo restituito di questo indicizzatore è Object, il che significa che restituirà solo valori Long, Double, String o byte []. Per ulteriori informazioni, vedere [tipi di dati](types.md). L'elegante gestisce la maggior parte delle conversioni tra questi e altri tipi primitivi. Sfortunatamente, non gestisce `DateTimeOffset`, `Guid`o. `TimeSpan` Creare gestori di tipi se si vuole usare questi tipi nei risultati.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DapperSample/Program.cs?name=snippet_TypeHandlers)]
 
@@ -31,7 +31,7 @@ Non dimenticare di aggiungere i gestori di tipi prima di eseguire una query.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DapperSample/Program.cs?name=snippet_AddTypeHandlers)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 * [Tipi di dati](types.md)
 * [Limitazioni asincrone](async.md)

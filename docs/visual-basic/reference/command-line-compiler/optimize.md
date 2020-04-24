@@ -25,20 +25,20 @@ Abilita o Disabilita le ottimizzazioni del compilatore.
   
 ## <a name="arguments"></a>Argomenti  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |---|---|  
-|`+` &#124; `-`|facoltativo. L'opzione `-optimize-` Disabilita le ottimizzazioni del compilatore. L'opzione `-optimize+` Abilita le ottimizzazioni. Per impostazione predefinita, le ottimizzazioni sono disabilitate.|  
+|`+` &#124; `-`|Facoltativo. L' `-optimize-` opzione Disabilita le ottimizzazioni del compilatore. L' `-optimize+` opzione consente le ottimizzazioni. Per impostazione predefinita, le ottimizzazioni sono disabilitate.|  
   
-## <a name="remarks"></a>Note  
- Le ottimizzazioni del compilatore consentono di ridurre le dimensioni del file di output rendendolo più veloce ed efficiente. Tuttavia, poiché le ottimizzazioni generano una riorganizzazione del codice nel file di output, `-optimize+` può rendere difficoltoso il debug.  
+## <a name="remarks"></a>Osservazioni  
+ Le ottimizzazioni del compilatore consentono di ridurre le dimensioni del file di output rendendolo più veloce ed efficiente. Tuttavia, poiché le ottimizzazioni generano una riorganizzazione del codice nel file di `-optimize+` output, può rendere difficile il debug.  
   
- Tutti i moduli generati con `-target:module` per un assembly devono usare le stesse impostazioni `-optimize` dell'assembly. Per ulteriori informazioni, vedere [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).  
+ Tutti i moduli generati `-target:module` con per un assembly devono usare le `-optimize` stesse impostazioni dell'assembly. Per ulteriori informazioni, vedere [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).  
   
- È possibile combinare le opzioni `-optimize` e `-debug`.  
+ È possibile combinare le `-optimize` opzioni `-debug` e.  
   
 |Per impostare-optimize in Visual Studio Integrated Development Environment|  
 |---|  
-|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.<br />     <br />2.  Fare clic sulla scheda **Compila**.<br />3.  Fare clic su **Avanzate** .<br />4.  Modificare la casella di controllo **Abilita ottimizzazioni** .|  
+|1. è stato selezionato un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.<br />     <br />2. fare clic sulla scheda **Compila** .<br />3. fare clic sul pulsante **Avanzate** .<br />4. modificare la casella di controllo **Abilita ottimizzazioni** .|  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente compila `T2.vb` e Abilita le ottimizzazioni del compilatore.  
@@ -47,7 +47,7 @@ Abilita o Disabilita le ottimizzazioni del compilatore.
 vbc t2.vb -optimize  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)

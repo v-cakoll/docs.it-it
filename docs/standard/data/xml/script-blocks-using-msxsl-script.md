@@ -66,7 +66,7 @@ La classe <xref:System.Xml.Xsl.XslCompiledTransform> supporta lo script incorpor
 ### <a name="importing-namespaces-and-assemblies"></a>Importazione di spazi dei nomi e assembly  
  La classe <xref:System.Xml.Xsl.XslCompiledTransform> contiene un set predefinito di assembly e di spazi dei nomi che è supportato per impostazione predefinita dall'elemento `msxsl:script`. Tuttavia, è possibile usare le classi e i membri appartenenti a uno spazio dei nomi che non è presente nell'elenco predefinito importando l'assembly e lo spazio dei nomi nel blocco `msxsl:script`.  
   
-#### <a name="assemblies"></a>Assemblies  
+#### <a name="assemblies"></a>Assembly  
  Per impostazione predefinita, viene fatto riferimento ai due assembly seguenti:  
   
 - System.dll  
@@ -92,7 +92,7 @@ La classe <xref:System.Xml.Xsl.XslCompiledTransform> supporta lo script incorpor
 #### <a name="namespaces"></a>Spazi dei nomi  
  Per impostazione predefinita sono inclusi i seguenti spazi dei nomi:  
   
-- System  
+- Sistema  
   
 - System.Collection  
   
@@ -146,7 +146,7 @@ La classe <xref:System.Xml.Xsl.XslCompiledTransform> supporta lo script incorpor
 </circles>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [Generazione e compilazione dinamica di codice sorgente](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

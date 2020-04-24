@@ -33,9 +33,9 @@ La proprietà **XmlResolver** di **XmlDocument** viene usata dalla classe **XmlD
   
 |XmlResolver, proprietà|Funzione|Note|  
 |--------------------------|--------------|-----------|  
-|Nello scenario semi-trusted è possibile impostare la proprietà **XmlResolver** solo su null.|Verrà creata un'istanza di **XmlUrlResolver** con credenziali **null** e verrà usata dal documento **XmlDocument** nella risoluzione dei nomi di file, nell'individuazione delle DTD, delle entità e degli schemi esterni. Le credenziali **null** verranno usate per la modifica dei nodi.|Il comportamento è identico a quello che si verifica quando la proprietà **XmlResolver** non viene impostata, bensì lasciata nello stato predefinito.<br /><br /> **XmlDocument** consente di usare autorizzazioni anonime per tutte le azioni.|  
+|Nello scenario semi-trusted è possibile impostare la proprietà **XmlResolver** solo su null.|Verrà creata un'istanza di un **XmlUrlResolver** con credenziali **null** e verrà utilizzato da **XmlDocument** durante la risoluzione dei nomi di file, l'individuazione di DTD, entità e schemi esterni e le credenziali **null** verranno utilizzate per la modifica dei nodi.|Il comportamento è identico a quello che si verifica quando la proprietà **XmlResolver** non viene impostata, bensì lasciata nello stato predefinito.<br /><br /> **XmlDocument** consente di usare autorizzazioni anonime per tutte le azioni.|  
 |La proprietà è impostata su **null** (**Nothing** in Microsoft Visual Basic .NET).|Non è supportata alcuna funzionalità che richiede una risorsa esterna, ad esempio l'individuazione di uno schema esterno o di una DTD. Le entità esterne non verranno risolte e non saranno supportate le funzionalità di modifica, quali l'inserimento di nodi di entità che richiedono la risoluzione.|Quando la proprietà è **null**, il comportamento è identico, indipendentemente dal fatto che **XmlDocument** sia completamente attendibile o semi-trusted.|  
-|La proprietà non viene impostata, ma rimane nello stato predefinito.|Verrà creata un'istanza di **XmlUrlResolver** con credenziali **null** e verrà usata dal documento **XmlDocument** nella risoluzione dei nomi di file, nell'individuazione delle DTD, delle entità e degli schemi esterni. Le credenziali **null** verranno usate per la modifica dei nodi.|**XmlDocument** consente di usare autorizzazioni anonime per tutte le azioni.|  
+|La proprietà non viene impostata, ma rimane nello stato predefinito.|Verrà creata un'istanza di un **XmlUrlResolver** con credenziali **null** e verrà utilizzato da **XmlDocument** durante la risoluzione dei nomi di file, l'individuazione di DTD, entità e schemi esterni e le credenziali **null** verranno utilizzate per la modifica dei nodi.|**XmlDocument** consente di usare autorizzazioni anonime per tutte le azioni.|  
   
  Il contenuto della tabella si applica al metodo **XmlDocument.Load** quando l'input di **Load** è **XmlReader** e **XmlDocument** è semi-trusted.  
   
@@ -50,6 +50,6 @@ La proprietà **XmlResolver** di **XmlDocument** viene usata dalla classe **XmlD
   
  Per altre informazioni, vedere la sezione Note della pagina di riferimento <xref:System.Xml.XmlResolver>.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML DOM (Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

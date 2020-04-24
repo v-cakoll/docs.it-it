@@ -94,12 +94,12 @@ La classe <xref:System.Xml.XPath.XPathNavigator> offre due set di metodi di navi
 > [!NOTE]
 > La classe <xref:System.Xml.XPath.XPathNavigator> restituisce i nodi dello spazio dei nomi in ordine inverso rispetto al documento. Pertanto, il metodo <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> essenzialmente consente uno spostamento all'ultimo nodo dello spazio dei nomi nell'ambito corrente.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
 - [Elaborazione di dati XML con il modello di dati XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
 - [Navigazione del set di nodi con XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)
-- [Estrarre dati XML con XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)
+- [Estrazione di dati XML con XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)
 - [Accesso a dati XML fortemente tipizzati con XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

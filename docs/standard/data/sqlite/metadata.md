@@ -15,21 +15,21 @@ Sono disponibili due API per il recupero dei metadati in ADO.NET. Uno Recupera i
 
 ## <a name="query-result-metadata"></a>Metadati risultati query
 
-È possibile recuperare i metadati relativi ai risultati di una query usando il metodo <xref:Microsoft.Data.Sqlite.SqliteDataReader.GetSchemaTable%2A> su `SqliteDataReader`. Il <xref:System.Data.DataTable> restituito contiene le colonne seguenti:
+È possibile recuperare i metadati relativi ai risultati di una query usando <xref:Microsoft.Data.Sqlite.SqliteDataReader.GetSchemaTable%2A> il metodo `SqliteDataReader`in. L'oggetto <xref:System.Data.DataTable> restituito contiene le colonne seguenti:
 
-| Colonna             | Tipo di    | Descrizione                                                               |
+| Colonna             | Type    | Description                                                               |
 | ------------------ | ------- | ------------------------------------------------------------------------- |
 | `AllowDBNull`      | Boolean | True se la colonna di origine può essere NULL.                                    |
-| `BaseCatalogName`  | Stringa  | Nome del database della colonna di origine. Sempre NULL per le espressioni.    |
-| `BaseColumnName`   | Stringa  | Nome senza alias della colonna di origine. Sempre NULL per le espressioni.    |
-| `BaseSchemaName`   | Stringa  | Sempre NULL. SQLite non supporta gli schemi.                              |
-| `BaseServerName`   | Stringa  | Percorso del file di database specificato nella stringa di connessione.         |
-| `BaseTableName`    | Stringa  | Nome della tabella della colonna di origine. Sempre NULL per le espressioni.       |
-| `ColumnName`       | Stringa  | Nome o alias della colonna nel set di risultati.                        |
+| `BaseCatalogName`  | string  | Nome del database della colonna di origine. Sempre NULL per le espressioni.    |
+| `BaseColumnName`   | string  | Nome senza alias della colonna di origine. Sempre NULL per le espressioni.    |
+| `BaseSchemaName`   | string  | Sempre NULL. SQLite non supporta gli schemi.                              |
+| `BaseServerName`   | string  | Percorso del file di database specificato nella stringa di connessione.         |
+| `BaseTableName`    | string  | Nome della tabella della colonna di origine. Sempre NULL per le espressioni.       |
+| `ColumnName`       | string  | Nome o alias della colonna nel set di risultati.                        |
 | `ColumnOrdinal`    | Int32   | Numero ordinale della colonna nel set di risultati.                              |
 | `ColumnSize`       | Int32   | Sempre-1. Questo può cambiare nelle versioni future di `Microsoft.Data.Sqlite`.   |
-| `DataType`         | Tipo di    | Tipo di dati .NET predefinito della colonna.                                 |
-| `DataTypeName`     | Stringa  | Tipo di dati SQLite della colonna.                                       |
+| `DataType`         | Type    | Tipo di dati .NET predefinito della colonna.                                 |
+| `DataTypeName`     | string  | Tipo di dati SQLite della colonna.                                       |
 | `IsAliased`        | Boolean | True se il nome della colonna è associato a un alias nel set di risultati.                     |
 | `IsAutoIncrement`  | Boolean | True se la colonna Origin è stata creata con la parola chiave AutoIncrement.     |
 | `IsExpression`     | Boolean | True se la colonna ha origine da un'espressione nella query.            |
@@ -72,7 +72,7 @@ FROM sqlite_master AS t,
 WHERE t.type = 'table';
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 * [Archiviazione dello schema del database SQL](https://www.sqlite.org/fileformat.html#storage_of_the_sql_database_schema)
 * [Istruzioni PRAGMA](https://www.sqlite.org/pragma.html)

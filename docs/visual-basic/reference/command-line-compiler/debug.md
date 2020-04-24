@@ -34,14 +34,14 @@ oppure
 
 |Termine|Definizione|
 |---|---|
-|`+` &#124; `-`|Parametro facoltativo. Se si specifica `+` o `-debug`, il compilatore genera le informazioni di debug e le inserisce in un file con estensione pdb. La specifica di `-` ha lo stesso effetto della mancata specifica di `-debug`.|
-|`full` &#124; `pdbonly`|Parametro facoltativo. Specifica il tipo di informazioni di debug generate dal compilatore. Se non si specifica `-debug:pdbonly`, il valore predefinito è `full`, che consente di aggiungere un debugger al programma in esecuzione. L'argomento `pdbonly` consente il debug del codice sorgente quando il programma viene avviato nel debugger, ma Visualizza il codice in linguaggio assembly solo quando il programma in esecuzione è collegato al debugger.|
+|`+` &#124; `-`|Facoltativo. Se `+` si `-debug` specifica o, il compilatore genera informazioni di debug e le inserisce in un file con estensione pdb. La `-` specifica di ha lo stesso effetto di `-debug`non specificare.|
+|`full` &#124; `pdbonly`|Facoltativo. Specifica il tipo di informazioni di debug generate dal compilatore. Se non si specifica `-debug:pdbonly`, il valore predefinito è `full`, che consente di aggiungere un debugger al programma in esecuzione. L' `pdbonly` argomento consente il debug del codice sorgente quando il programma viene avviato nel debugger, ma Visualizza il codice in linguaggio assembly solo quando il programma in esecuzione è collegato al debugger.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Usare questa opzione per creare build di debug. Se non si specifica `-debug`, `-debug+`o `-debug:full`, non sarà possibile eseguire il debug del file di output del programma.
 
-Per impostazione predefinita, le informazioni di debug non vengono emesse (`-debug-`). Per creare informazioni di debug, specificare `-debug` o `-debug+`.
+Per impostazione predefinita, le informazioni di debug non vengono`-debug-`emesse (). Per creare informazioni di debug, `-debug` specificare `-debug+`o.
 
 Per informazioni su come configurare le prestazioni di debug di un'applicazione, vedere [Semplificazione del debug di un'immagine](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).
 
@@ -51,13 +51,13 @@ Per informazioni su come configurare le prestazioni di debug di un'applicazione,
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente vengono inserite le informazioni di debug nel file di output `App.exe`.
+Nell'esempio seguente vengono inserite le informazioni di debug `App.exe`nel file di output.
 
 ```console
 vbc -debug -out:app.exe test.vb
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)

@@ -1,27 +1,32 @@
 ---
 title: Modifiche di rilievo della crittografia
-description: Vengono elencate le modifiche di rilievo correlate alla crittografia in .NET Core.
-ms.date: 02/10/2020
-ms.openlocfilehash: c25eefa8e3ee01ed7a1df4ec4aa9225f2c347a4d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+description: Elenca le modifiche di rilievo correlate alla crittografia in .NET Core.
+ms.date: 04/22/2020
+ms.openlocfilehash: 66049473083d87b4c84408f35a04193a4563c2b3
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449219"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135601"
 ---
 # <a name="cryptography-breaking-changes"></a>Modifiche di rilievo della crittografia
 
-In questa pagina sono documentate le seguenti modifiche di rilievo:
+In questa pagina sono documentate le modifiche di rilievo seguenti:
 
 | Modifica | Versione introdotta |
 | - | :-: |
-| [Il valore predefinito di EnvelopedCms è la crittografia AES-256EnvelopedCms defaults to AES-256 encryption](#envelopedcms-defaults-to-aes-256-encryption) | 3.0 |
-| [Le dimensioni minime per la generazione di chiavi RSAOpenSsl sono aumentate](#minimum-size-for-rsaopenssl-key-generation-has-increased) | 3.0 |
-| [.NET Core 3.0 preferisce OpenSSL 1.1.x a OpenSSL 1.0.x](#net-core-30-prefers-openssl-11x-to-openssl-10x) | 3.0 |
+| [La sintassi di avvio del certificato ATTENDIBILe non è più supportata in Linux](#begin-trusted-certificate-syntax-no-longer-supported-for-root-certificates-on-linux) | 3.0 |
+| [Il valore predefinito di EnvelopedCms è AES-256 Encryption](#envelopedcms-defaults-to-aes-256-encryption) | 3.0 |
+| [Dimensioni minime per la generazione della chiave RSAOpenSsl aumentata](#minimum-size-for-rsaopenssl-key-generation-has-increased) | 3.0 |
+| [.NET Core 3,0 preferisce OpenSSL 1.1. x a OpenSSL 1.0. x](#net-core-30-prefers-openssl-11x-to-openssl-10x) | 3.0 |
 | [Migliore convalida degli argomenti nel costruttore Pkcs8PrivateKeyInfo](#better-argument-validation-in-the-pkcs8privatekeyinfo-constructor) | 3.0 |
-| [Il parametro booleano di SignedCms.ComputeSignature è rispettato](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
+| [Il parametro booleano di SignedCms. ComputeSignature è rispettato](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
 
 ## <a name="net-core-30"></a>.NET Core 3.0
+
+[!INCLUDE [begin-trusted-cert-linux](~/includes/core-changes/cryptography/3.0/begin-trusted-cert-linux.md)]
+
+***
 
 [!INCLUDE[EnvelopedCms defaults to AES-256 encryption](~/includes/core-changes/cryptography/3.0/envelopedcms-defaults-to-aes256.md)]
 

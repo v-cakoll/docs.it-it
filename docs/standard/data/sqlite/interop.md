@@ -17,7 +17,7 @@ Nell'esempio seguente viene illustrato come chiamare `sqlite3_trace` per scriver
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/InteropSample/Program.cs?name=snippet_Trace)]
 
-Nell'esempio seguente viene illustrata la chiamata di `sqlite3_stmt_status` per vedere il numero di passaggi della macchina virtuale SQLite di un'istruzione SQL compilata in:
+Nell'esempio seguente viene illustrata `sqlite3_stmt_status` la chiamata al metodo per vedere il numero di passaggi di una macchina virtuale SQLite compilati in:
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/InteropSample/Program.cs?name=snippet_StatementStatus)]
 

@@ -24,16 +24,16 @@ Compila i file del codice sorgente in tutte le directory figlio della directory 
   
 ## <a name="arguments"></a>Argomenti  
  `dir`  
- facoltativo. La directory in cui si vuole che abbia inizio la ricerca. Se non specificato, la ricerca inizia nella directory del progetto.  
+ Facoltativo. La directory in cui si vuole che abbia inizio la ricerca. Se non specificato, la ricerca inizia nella directory del progetto.  
   
  `file`  
  Obbligatorio. I file da cercare. È consentito l'utilizzo di caratteri jolly.  
   
-## <a name="remarks"></a>Note  
- È possibile usare caratteri jolly in un nome file per compilare tutti i file corrispondenti nella directory del progetto senza usare `-recurse`. Se non viene specificato alcun nome file di output, il compilatore basa il nome del file di output sul primo file di input elaborato. Si tratta in genere del primo file nell'elenco di file compilato quando viene visualizzato in ordine alfabetico. Per questo motivo, è preferibile specificare un file di output usando l'opzione `-out`.  
+## <a name="remarks"></a>Osservazioni  
+ È possibile usare caratteri jolly in un nome file per compilare tutti i file corrispondenti nella directory del progetto senza `-recurse`usare. Se non viene specificato alcun nome file di output, il compilatore basa il nome del file di output sul primo file di input elaborato. Si tratta in genere del primo file nell'elenco di file compilato quando viene visualizzato in ordine alfabetico. Per questo motivo, è preferibile specificare un file di output usando `-out` l'opzione.  
   
 > [!NOTE]
-> L'opzione `-recurse` non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
+> L' `-recurse` opzione non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
   
 ## <a name="example"></a>Esempio  
  Il comando seguente compila tutti i file di Visual Basic nella directory corrente.  
@@ -42,13 +42,13 @@ Compila i file del codice sorgente in tutte le directory figlio della directory 
 vbc *.vb  
 ```  
   
- Il comando seguente compila tutti i file di Visual Basic nella directory `Test\ABC` e in tutte le directory sottostanti, quindi genera `Test.ABC.dll`.  
+ Il comando seguente compila tutti i file di Visual Basic nella `Test\ABC` directory e in tutte le directory sottostanti, quindi `Test.ABC.dll`genera.  
   
 ```console
 vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)

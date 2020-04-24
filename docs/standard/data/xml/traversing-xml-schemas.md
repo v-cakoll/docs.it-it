@@ -22,7 +22,7 @@ L'attraversamento di uno schema XML mediante l'API del modello SOM (Schema Objec
 
 Le seguenti proprietà della classe <xref:System.Xml.Schema.XmlSchema> forniscono l'accesso alla raccolta degli elementi globali aggiunti a XML Schema.
 
-|Gli|Tipo di oggetto archiviato nella raccolta o nella matrice|
+|Proprietà|Tipo di oggetto archiviato nella raccolta o nella matrice|
 |--------------|---------------------------------------------------|
 |<xref:System.Xml.Schema.XmlSchema.Elements%2A>|<xref:System.Xml.Schema.XmlSchemaElement>|
 |<xref:System.Xml.Schema.XmlSchema.Attributes%2A>|<xref:System.Xml.Schema.XmlSchemaAttribute>|
@@ -67,12 +67,12 @@ Se è un tipo semplice o un tipo complesso definito dall'utente, il tipo della p
 
 Nell'esempio di codice dell'argomento [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md) è stata usata la raccolta <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> per aggiungere l'attributo `CustomerId` all'elemento `Customer`. Questa è una proprietà precedente alla compilazione dello schema. La proprietà PSCI corrispondente è la raccolta <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>, che contiene tutti gli attributi del tipo complesso, inclusi quelli ereditati tramite una derivazione del tipo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [Cenni preliminari sul modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md)
 - [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
 - [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
 - [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Post-Schema-Validation Infoset (PSVI)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [Post-Schema Compilation Infoset (PSCI, infoset sulla compilazione post-schema)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

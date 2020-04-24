@@ -179,7 +179,7 @@ End Class
   
  Gli oggetti vengono ricostruiti dall'interno all'esterno; durante la deserializzazione, i metodi di chiamata possono avere effetti collaterali indesiderati, poiché i metodi chiamati potrebbero fare riferimento a riferimenti a oggetti che non sono stati deserializzati al momento dell'esecuzione della chiamata. Se la classe in fase di deserializzazione implementa <xref:System.Runtime.Serialization.IDeserializationCallback>, il metodo <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%2A> viene chiamato automaticamente dopo la deserializzazione dell'intero oggetto grafico. In questa fase, tutti gli oggetti figlio a cui si fa riferimento sono stati ripristinati pienamente. Una tabella hash è un esempio tipico di una classe difficile da deserializzare senza l'utilizzo del listener di eventi. È facile recuperare le coppie chiave/valore durante la deserializzazione, tuttavia aggiungere nuovamente tali oggetti alla tabella hash può provocare problemi, poiché non c'è nessuna garanzia che le classi derivate dalla tabella hash siano state deserializzate. I metodi di chiamata su una tabella hash in questa fase non sono pertanto consigliabili.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Serializzazione binaria](binary-serialization.md)
 - [Serializzazione SOAP e XML](xml-and-soap-serialization.md)

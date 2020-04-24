@@ -30,7 +30,7 @@ Quando un oggetto deriva da `MarshalByRefObject`, viene passato un riferimento a
  [Serializzazione binaria](../../../docs/standard/serialization/binary-serialization.md)  
  Descrive il meccanismo della serializzazione binaria incluso nel Common Language Runtime.  
   
- \ [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
+ [Servizi remoti .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
  Vengono descritti i diversi metodi di comunicazione disponibili in .NET Framework per le comunicazioni remote.  
   
  [Serializzazione SOAP e XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)  

@@ -26,11 +26,11 @@ Impedisce al compilatore di visualizzare codice per avvisi ed errori relativi al
 -quiet
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, l'opzione `-quiet` non è attiva. Quando il compilatore segnala un errore o un avviso correlato alla sintassi, restituisce anche la riga dal codice sorgente. Per le applicazioni che analizzano l'output del compilatore, potrebbe essere più pratico per il compilatore restituire solo il testo della diagnostica.
 
-Nell'esempio seguente `Module1` restituisce un errore che include il codice sorgente quando viene compilato senza `-quiet`.
+Nell'esempio seguente viene `Module1` restituito un errore che include il codice sorgente quando viene compilato `-quiet`senza.
 
 ```vb
 Module Module1
@@ -56,7 +56,7 @@ E:\test\t2.vb(3) : error BC30451: Name 'x' is not declared.
 ```
 
 > [!NOTE]
-> L'opzione `-quiet` non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.
+> L' `-quiet` opzione non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.
 
 ## <a name="example"></a>Esempio
 
@@ -66,7 +66,7 @@ Il codice seguente compila `T2.vb` e non Visualizza il codice per la diagnostica
 vbc -quiet t2.vb
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

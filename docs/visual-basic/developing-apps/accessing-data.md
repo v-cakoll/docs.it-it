@@ -30,22 +30,22 @@ Include collegamenti agli argomenti che descrivono come usare LINQ con Visual Ba
 [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)  
 Include informazioni su [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]. Include esempi di programmazione.  
 
-[Strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+[Strumenti di LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
 Include collegamenti agli argomenti che illustrano come creare un modello di oggetto [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) nelle applicazioni.
 
-[Uso dei set di dati nelle applicazioni a più livelli](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
+[Usare i set di impostazioni in applicazioni a più livelli](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
 Include collegamenti agli argomenti che illustrano come creare applicazioni dati a più livelli.
 
 [Aggiungere nuove connessioni](/visualstudio/data-tools/add-new-connections)  
 Include collegamenti alle pagine che illustrano come connettere le applicazioni ai dati con gli strumenti di progettazione e gli oggetti di connessione ADO.NET tramite Visual Studio.
 
-[Uso di set di dati in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
+[Strumenti per set di dati in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
 Include collegamenti alle pagine che descrivono come caricare dati nei set di dati e come eseguire le istruzioni SQL e le stored procedure.  
 
 [Associare controlli ai dati in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)  
 Include collegamenti alle pagine che illustrano come visualizzare dati in Windows Form tramite i controlli associati ai dati.
 
-[Modifica di dati nei set di dati](/visualstudio/data-tools/edit-data-in-datasets)  
+[Modificare i dati nei set di dati](/visualstudio/data-tools/edit-data-in-datasets)  
 Include collegamenti alle pagine che descrivono come manipolare i dati nelle tabelle dati di un set di dati.  
 
 [Convalida dei dati nei set di dati](/visualstudio/data-tools/validate-data-in-datasets)  

@@ -15,7 +15,7 @@ Per definire la struttura di un documento XML, oltre alle relazioni dei suoi ele
   
  Per altre informazioni su XML, vedere [W3C XML 1.0 Recommendation](https://www.w3.org/TR/REC-xml/) (Consigli su W3C XML 1.0). Per altre informazioni sullo schema XML, vedere i consigli in [W3C XML Schema Part 1: Structures Recommendation](https://www.w3.org/TR/xmlschema-1/) (Schema W3C XML, parte 1: consigli sulle strutture) e [W3C XML Schema Part 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/) (Schema W3C XML, parte 2: consigli sui tipi di dati).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
  Viene illustrato il modello SOM (Schema Object Model) nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType>, che fornisce un set di classi che consente di leggere lo schema XSD da un file oppure di creare a livello di codice uno schema in memoria.  
   
@@ -28,7 +28,7 @@ Per definire la struttura di un documento XML, oltre alle relazioni dei suoi ele
  [Inferenza di uno schema XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
  Viene illustrato come usare la classe <xref:System.Xml.Schema.XmlSchemaInference> per inferire uno schema XSD dalla struttura di un documento XML.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Informazioni di riferimento  
  <xref:System.Xml.Schema.XmlSchemaSet> &#124; <xref:System.Xml.Schema.XmlSchemaInference> &#124; <xref:System.Xml.XmlReader>  
   
 ## <a name="related-sections"></a>Sezioni correlate  

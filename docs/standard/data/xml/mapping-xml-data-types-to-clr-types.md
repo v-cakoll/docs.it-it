@@ -76,6 +76,6 @@ Nella tabella seguente viene descritto il mapping predefinito tra i tipi di dati
 |Nodo commento|<xref:System.Xml.XPath.XPathNavigator>|
 |Nodo istruzione di elaborazione|<xref:System.Xml.XPath.XPathNavigator>|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Supporto di tipi di dati nelle classi System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

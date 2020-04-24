@@ -1,14 +1,14 @@
 ---
 title: Eseguire join raggruppati (LINQ in C#)
 description: Informazioni su come eseguire join raggruppati usando LINQ in C#.
-ms.date: 12/01/2016
+ms.date: 04/22/2020
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
-ms.openlocfilehash: dfb75b55336d8ca486d5f10b187e955d20cd06fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 740a861da7dfb9653a874d5baf67eeb2030555b4
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "61689138"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135750"
 ---
 # <a name="perform-grouped-joins"></a>Eseguire join raggruppati
 
@@ -18,6 +18,9 @@ Ad esempio, una classe o una tabella di database relazionale denominata `Student
 
 > [!NOTE]
 > Ogni elemento della prima raccolta viene visualizzato nel set di risultati di un join di gruppo indipendentemente dal fatto che gli elementi correlati vengano trovati nella seconda raccolta. Nel caso in cui non venga trovato alcun elemento correlato, la sequenza di elementi correlati per l'elemento è vuota. Il selettore del risultato ha pertanto accesso a ogni elemento della prima raccolta. È diverso dal selettore del risultato in un join non di gruppo, che non può accedere a elementi della prima raccolta che non hanno corrispondenza nella seconda raccolta.
+
+> [!WARNING]
+> <xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType>non ha equivalenti diretti in termini di database relazionali tradizionali. Tuttavia, questo metodo implementa un superset di Inner join e left outer join. Entrambe queste operazioni possono essere scritte in base a un join raggruppato. Per ulteriori informazioni, vedere [operazioni di join](../programming-guide/concepts/linq/join-operations.md) e [Entity Framework Core, GroupJoin](https://docs.microsoft.com/ef/core/querying/complex-query-operators#groupjoin).
 
 Il primo esempio in questo articolo illustra come eseguire un join di gruppo. Il secondo esempio descrive come usare un join di gruppo per creare elementi XML.
 
@@ -33,10 +36,10 @@ I join di gruppo sono ideali per la creazione di XML tramite LINQ to XML. L'esem
 
 [!code-csharp[CsLINQProgJoining#6](~/samples/snippets/csharp/concepts/linq/how-to-perform-grouped-joins_2.cs)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Linq.Enumerable.Join%2A>
 - <xref:System.Linq.Enumerable.GroupJoin%2A>
 - [Eseguire inner join](perform-inner-joins.md)
-- [Eseguire outer join a sinistra](perform-left-outer-joins.md)
+- [Eseguire left outer join](perform-left-outer-joins.md)
 - [Tipi anonimi](../programming-guide/classes-and-structs/anonymous-types.md)

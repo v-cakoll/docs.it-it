@@ -20,6 +20,6 @@ Il metodo **CreateEntityReference** consente di creare un nuovo nodo **XmlEntity
   
  Anche se **XmlDataDocument** è una classe derivata di **XmlDocument**, **XmlDataDocument** non supporta la creazione di riferimenti alle entità, perché gli elementi figlio di **EntityReference** sono di sola lettura. I nodi figlio di un nodo **EntityReference** possono interessare più di un'area. In tal caso, la parte di riga associata all'area contenente una parte di **EntityReference** sarà di sola lettura.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML DOM (Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

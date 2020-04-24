@@ -34,7 +34,7 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
 1. Scegliere **Nuovo progetto** dal menu **File**.  
   
-     Viene visualizzata la finestra di dialogo **Nuovo progetto**.  
+     Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
 2. Nel riquadro **Modelli installati** espandere **Visual Basic**, quindi fare clic su **Windows**. Nel riquadro **Modelli** al centro scegliere **Windows Forms Application**.  
   
@@ -47,9 +47,9 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
     |Controllo|Proprietà|valore|  
     |-------------|--------------|-----------|  
     |**ListBox**|**Nome**|`filesListBox`|  
-    |**Pulsante**|**Nome**<br /><br /> **Testo**|`browseButton`<br /><br /> **Sfoglia**|  
-    |**Pulsante**|**Nome**<br /><br /> **Testo**|`examineButton`<br /><br /> **Esamina**|  
-    |**Casella**|**Nome**<br /><br /> **Testo**|`saveCheckBox`<br /><br /> **Salva risultati**|  
+    |**Pulsante**|**Nome**<br /><br /> **Text**|`browseButton`<br /><br /> **Sfoglia**|  
+    |**Pulsante**|**Nome**<br /><br /> **Text**|`examineButton`<br /><br /> **Esamina**|  
+    |**Casella**|**Nome**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **Salva risultati**|  
     |**FolderBrowserDialog**|**Nome**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Per selezionare una cartella ed elencare file di una cartella  
@@ -162,7 +162,7 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
  [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>

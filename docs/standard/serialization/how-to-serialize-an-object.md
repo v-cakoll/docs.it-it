@@ -50,7 +50,7 @@ Per serializzare un oggetto, creare prima l'oggetto da serializzare e impostarne
     myWriter.Close();  
     ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Introduzione alla serializzazione XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Procedura: deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Procedura: Deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

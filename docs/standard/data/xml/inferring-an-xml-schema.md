@@ -15,7 +15,7 @@ Viene descritto come usare la classe <xref:System.Xml.Schema.XmlSchemaInference>
   
  La classe <xref:System.Xml.Schema.XmlSchemaInference> SOM nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType> consente di inferire uno schema XSD (XML Schema Definition Language) dalla struttura di un documento XML. La classe <xref:System.Xml.Schema.XmlSchemaInference> genera uno schema XML in grado di convalidare il documento XML.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
  Viene descritto come usare la classe <xref:System.Xml.Schema.XmlSchemaInference> per inferire uno schema dalla struttura di un documento XML.  
   
@@ -25,7 +25,7 @@ Viene descritto come usare la classe <xref:System.Xml.Schema.XmlSchemaInference>
  [Regole per l'inferenza di tipi semplici](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)  
  Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> inferisce il tipo di dati per attributi ed elementi.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
 - [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)

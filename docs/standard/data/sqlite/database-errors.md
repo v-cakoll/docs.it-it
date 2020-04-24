@@ -1,5 +1,5 @@
 ---
-title: Errori di database
+title: Errori del database
 ms.date: 12/13/2019
 description: Viene descritto il modo in cui gli errori e i ritiri del database vengono gestiti dalla libreria.
 ms.openlocfilehash: 9a613b6f94a89dc40e627c14f46836be77080035
@@ -9,16 +9,16 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75447272"
 ---
-# <a name="database-errors"></a>Errori di database
+# <a name="database-errors"></a>Errori del database
 
-<xref:Microsoft.Data.Sqlite.SqliteException> viene generata quando viene rilevato un errore SQLite. Il messaggio viene fornito da SQLite. Le proprietà `SqliteErrorCode` e `SqliteExtendedErrorCode` contengono il [codice di risultato](https://www.sqlite.org/rescode.html) SQLite dell'errore.
+<xref:Microsoft.Data.Sqlite.SqliteException>viene generata quando viene rilevato un errore SQLite. Il messaggio viene fornito da SQLite. Le `SqliteErrorCode` proprietà `SqliteExtendedErrorCode` e contengono il [codice di risultato](https://www.sqlite.org/rescode.html) SQLite dell'errore.
 
 Gli errori possono essere rilevati ogni volta che Microsoft. Data. sqlite interagisce con la libreria SQLite nativa. Nell'elenco seguente vengono illustrati gli scenari comuni in cui possono verificarsi errori:
 
 * Apertura di una connessione.
 * Inizio di una transazione.
 * Esecuzione di un comando.
-* Chiamata del metodo <xref:Microsoft.Data.Sqlite.SqliteDataReader.NextResult%2A>.
+* Tramite chiamata a <xref:Microsoft.Data.Sqlite.SqliteDataReader.NextResult%2A>.
 
 Valutare attentamente il modo in cui l'app gestirà questi errori.
 
@@ -42,7 +42,7 @@ Microsoft. Data. sqlite a volte deve creare un oggetto comando implicito. Ad ese
 connection.DefaultTimeout = 60;
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 * [Codici di errore SQLite](https://www.sqlite.org/rescode.html)
 * [Blocco di file in SQLite](https://www.sqlite.org/lockingv3.html)

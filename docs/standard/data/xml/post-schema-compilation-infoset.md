@@ -21,7 +21,7 @@ Nel documento [World Wide Web Consortium (W3C) XML Schema Recommendation](https:
   
  Il modello SOM è il modello a oggetti che rappresenta gli infoset di convalida pre-schema e di compilazione post-schema. Include le classi nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType>. Tutte le proprietà di lettura e scrittura delle classi nello spazio dei nomi <xref:System.Xml.Schema> appartengono all'infoset sulla convalida pre-schema, mentre tutte le proprietà delle classi nello spazio dei nomi <xref:System.Xml.Schema> appartengono all'infoset sulla compilazione post-schema. L'eccezione a questa regola è rappresentata dalle seguenti proprietà, che sono proprietà sia di infoset di convalida pre-schema sia di infoset di compilazione post-schema.  
   
-|Classe|Gli|  
+|Classe|Proprietà|  
 |-----------|--------------|  
 |<xref:System.Xml.Schema.XmlSchemaObject>|<xref:System.Xml.Schema.XmlSchemaObject.Parent%2A>|  
 |<xref:System.Xml.Schema.XmlSchema>|<xref:System.Xml.Schema.XmlSchema.AttributeFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.BlockDefault%2A>, <xref:System.Xml.Schema.XmlSchema.ElementFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.FinalDefault%2A>, <xref:System.Xml.Schema.XmlSchema.TargetNamespace%2A>|  
@@ -38,6 +38,6 @@ Nel documento [World Wide Web Consortium (W3C) XML Schema Recommendation](https:
  [!code-csharp[PsciSample#1](../../../../samples/snippets/csharp/VS_Snippets_Data/PsciSample/CS/PsciSample.cs#1)]
  [!code-vb[PsciSample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/PsciSample/VB/PsciSample.vb#1)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

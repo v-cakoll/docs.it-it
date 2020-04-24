@@ -24,8 +24,8 @@ L'elenco sopra riportato non esaurisce tutti i potenziali scenari e situazioni i
 > [!NOTE]
 > La maggior parte degli esempi riportati in questa sezione viene presentata per tutte e tre le piattaforme supportate in .NET Core (Windows, Linux e macOS). Per alcuni esempi brevi e illustrativi, tuttavia, verrà presentata solo la versione che usa nomi file ed estensioni Windows, come "dll" per le librerie. Questo non significa che le funzionalità illustrate non siano disponibili in Linux o macOS. La scelta dipende solo da motivi di praticità.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Platform Invoke (P/Invoke)](pinvoke.md)
-- [Marshalling dei tipiType marshaling](type-marshaling.md)
+- [Marshalling dei tipi](type-marshaling.md)
 - [Procedure consigliate di interoperabilità nativa](best-practices.md)

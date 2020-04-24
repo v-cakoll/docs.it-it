@@ -80,7 +80,7 @@ In questo argomento viene descritto come usare la classe <xref:System.Xml.Schema
 ## <a name="schemas-that-cannot-be-refined"></a>Schemi che non possono essere ridefiniti  
  Esistono costrutti di schemi W3C XML che il processo XSD (XML Schema definition language) <xref:System.Xml.Schema.XmlSchemaInference> non è in grado di gestire se si tratta di ridefinire un tipo e viene quindi generata un'eccezione. Un esempio è un tipo particolarmente complesso il cui compositor di livello principale è diverso da una sequenza. Nel SOM (Schema Object Model), ciò corrisponde a un tipo <xref:System.Xml.Schema.XmlSchemaComplexType> la cui proprietà <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> non è un'istanza del tipo <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
 - [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

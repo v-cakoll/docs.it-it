@@ -15,11 +15,11 @@ La maggior parte dei database ha un sottolinguaggio procedurale di SQL che è po
 
 ## <a name="scalar-functions"></a>Funzioni scalari
 
-Le funzioni scalari restituiscono un singolo valore scalare per ogni riga di una query. Definire nuove funzioni scalari ed eseguire l'override di quelle predefinite usando <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateFunction%2A>.
+Le funzioni scalari restituiscono un singolo valore scalare per ogni riga di una query. Definire nuove funzioni scalari ed eseguire l'override di quelle predefinite <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateFunction%2A>usando.
 
-Per un elenco di parametri e tipi restituiti supportati per l'argomento `func`, vedere [tipi di dati](types.md) .
+Per [Data types](types.md) un elenco di parametri e tipi restituiti supportati per l' `func` argomento, vedere tipi di dati.
 
-Se si specifica l'argomento `state`, il valore passerà a ogni chiamata della funzione. Usare questa operazione per evitare chiusure.
+Se si `state` specifica l'argomento, il valore passerà a ogni chiamata della funzione. Usare questa operazione per evitare chiusure.
 
 Specificare `isDeterministic` se la funzione è deterministica per consentire a SQLite di usare ottimizzazioni aggiuntive durante la compilazione delle query.
 
@@ -31,7 +31,7 @@ Nell'esempio seguente viene illustrato come aggiungere una funzione scalare per 
 
 Gli operatori SQLite seguenti vengono implementati dalle funzioni scalari corrispondenti. La definizione di queste funzioni scalari nell'app sostituirà il comportamento di questi operatori.
 
-| ??          | Funzione      |
+| Operatore          | Funzione      |
 | ----------------- | ------------- |
 | X GLOB Y          | Glob (Y, X)    |
 | X COME Y          | like (Y, X)    |
@@ -45,35 +45,35 @@ Nell'esempio seguente viene illustrato come definire la funzione regexp per abil
 
 ## <a name="aggregate-functions"></a>Funzioni di aggregazione
 
-Le funzioni di aggregazione restituiscono un singolo valore aggregato per tutte le righe di una query. Definire ed eseguire l'override di funzioni di aggregazione utilizzando <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateAggregate%2A>.
+Le funzioni di aggregazione restituiscono un singolo valore aggregato per tutte le righe di una query. Definire ed eseguire l'override di <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateAggregate%2A>funzioni di aggregazione tramite.
 
-L'argomento `seed` specifica lo stato iniziale del contesto. Usare questo per evitare anche le chiusure.
+L' `seed` argomento specifica lo stato iniziale del contesto. Usare questo per evitare anche le chiusure.
 
-L'argomento `func` viene richiamato una volta per ogni riga. Usare il contesto per accumulare un risultato finale. Restituisce il contesto. Questo modello consente al contesto di essere un tipo valore o non modificabile.
+L' `func` argomento viene richiamato una volta per ogni riga. Usare il contesto per accumulare un risultato finale. Restituisce il contesto. Questo modello consente al contesto di essere un tipo valore o non modificabile.
 
-Se non viene specificato alcun `resultSelector`, come risultato viene utilizzato lo stato finale del contesto. Ciò consente di semplificare la definizione di funzioni quali SUM e count che devono solo incrementare un numero ogni riga e restituirla.
+Se non `resultSelector` si specifica alcun oggetto, viene utilizzato lo stato finale del contesto come risultato. Ciò consente di semplificare la definizione di funzioni quali SUM e count che devono solo incrementare un numero ogni riga e restituirla.
 
 Specificare `resultSelector` per calcolare il risultato finale dal contesto dopo l'iterazione in tutte le righe.
 
-Per un elenco dei tipi di parametro supportati per l'argomento `func` e i tipi restituiti per `resultSelector`, vedere [tipi di dati](types.md) .
+Per [Data types](types.md) un elenco dei tipi di parametro supportati per l'argomento e `func` i tipi restituiti per `resultSelector`, vedere tipi di dati.
 
-Se la funzione è deterministica, specificare `isDeterministic` per consentire a SQLite di usare ottimizzazioni aggiuntive durante la compilazione delle query.
+Se la funzione è deterministica, `isDeterministic` specificare per consentire a SQLite di usare ottimizzazioni aggiuntive durante la compilazione delle query.
 
 Nell'esempio seguente viene definita una funzione di aggregazione per calcolare la deviazione standard di una colonna.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/AggregateFunctionSample/Program.cs?name=snippet_CreateAggregate)]
 
-## <a name="errors"></a>Errori di
+## <a name="errors"></a>Errors
 
 Se una funzione definita dall'utente genera un'eccezione, il messaggio viene restituito a SQLite. SQLite genera quindi un errore e Microsoft. Data. sqlite genererà una Sqliteexception. Per ulteriori informazioni, vedere [errori del database](database-errors.md).
 
-Per impostazione predefinita, il codice di errore SQLite di errore verrà SQLITE_ERROR (o 1). È tuttavia possibile modificarlo generando un <xref:Microsoft.Data.Sqlite.SqliteException> nella funzione con la <xref:Microsoft.Data.Sqlite.SqliteException.SqliteErrorCode> desiderata specificata.
+Per impostazione predefinita, il codice di errore SQLite di errore verrà SQLITE_ERROR (o 1). È tuttavia possibile modificarlo generando un oggetto <xref:Microsoft.Data.Sqlite.SqliteException> nella funzione con l'oggetto desiderato. <xref:Microsoft.Data.Sqlite.SqliteException.SqliteErrorCode>
 
 ## <a name="debugging"></a>Debug
 
 SQLite chiama direttamente l'implementazione. Ciò consente di aggiungere punti di interruzione che si attivano mentre SQLite sta valutando le query. L'esperienza di debug .NET completa è disponibile per semplificare la creazione di funzioni definite dall'utente.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 * [Tipi di dati](types.md)
 * [Funzioni di base di SQLite](https://www.sqlite.org/lang_corefunc.html)

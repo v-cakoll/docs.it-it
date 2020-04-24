@@ -19,32 +19,32 @@ Sono definiti discretionary i comportamenti, elencati nella [versione 1.0 della 
 
 Pertanto, nella tabella seguente sono elencati, per ognuno dei comportamenti discrezionali consentiti da W3C, i comportamenti discrezionali implementati per l'implementazione .NET Framework della classe <xref:System.Xml.Xsl.XslTransform> e la sezione della raccomandazione W3C relativa a XSLT 1.0 in cui viene trattato questo problema.
 
-|Problema|Comportamento di|Sezione|
+|Problema|Comportamento|Sezione|
 |-------------|--------------|-------------|
-|Nodo di tipo text corrispondente sia a `xsl:strip-space` sia a `xsl:preserve-space`.|Ripristina|3.4|
-|Nodo di origine corrispondente a più di una regola dei modelli.|Ripristina|5.5|
-|Un URI dello spazio dei nomi è dichiarato come alias per più URI dello spazio dei nomi, tutti con la stessa precedenza di importazione.|Ripristina|7.1.1|
+|Nodo di tipo text corrispondente sia a `xsl:strip-space` sia a `xsl:preserve-space`.|Recupera|3.4|
+|Nodo di origine corrispondente a più di una regola dei modelli.|Recupera|5.5|
+|Un URI dello spazio dei nomi è dichiarato come alias per più URI dello spazio dei nomi, tutti con la stessa precedenza di importazione.|Recupera|7.1.1|
 |L'attributo del nome in `xsl:attribute` e `xsl:element` generato da un modello del valore dell'attributo non è un nome completo valido (QName).|Generazione di eccezione|7.1.12 e 7.1.3|
-|Aggiunta di un attributo a un elemento dopo che al nodo dell'elemento sono già stati aggiunti nodi figlio.|Ripristina|7.1.3|
-|Aggiunta di un attributo in una posizione diversa da un nodo Element.|Ripristina|7.1.3|
-|L'istanza del contenuto dell'elemento `xsl:attribute` creata non è un nodo di tipo text.|Ripristina|7.1.3|
-|Due set di attributi hanno la stessa precedenza di importazione e lo stesso nome espanso. Entrambi hanno lo stesso attributo e non sono presenti altri set di attributi contenenti l'attributo comune, con lo stesso nome e con un'importanza superiore.|Ripristina|7.1.4|
-|`xsl:processing-instruction` non restituisce un nome senza due punti (NCName), né una destinazione dell'istruzione di elaborazione.|Ripristina|7.3|
-|La creazione di un'istanza del contenuto `xsl:processing-instruction` crea nodi diversi da quelli di testo.|Ripristina|7.3|
-|I risultati della creazione di un'istanza del contenuto di `xsl:processing-instruction` contengono la stringa "`?>`".|Ripristina|7.3|
-|I risultati della creazione di un'istanza del contenuto di `xsl:comment` contengono la stringa "--" o terminano con "-".|Ripristina|7.4|
-|I risultati della creazione di un'istanza del contenuto di `xsl:comment` creano nodi diversi da quelli di testo.|Ripristina|7.4|
-|Il modello all'interno di un elemento di associazione della variabile restituisce un nodo Attribute o un nodo dello spazio dei nomi.|Ripristina|11.2|
+|Aggiunta di un attributo a un elemento dopo che al nodo dell'elemento sono già stati aggiunti nodi figlio.|Recupera|7.1.3|
+|Aggiunta di un attributo in una posizione diversa da un nodo Element.|Recupera|7.1.3|
+|L'istanza del contenuto dell'elemento `xsl:attribute` creata non è un nodo di tipo text.|Recupera|7.1.3|
+|Due set di attributi hanno la stessa precedenza di importazione e lo stesso nome espanso. Entrambi hanno lo stesso attributo e non sono presenti altri set di attributi contenenti l'attributo comune, con lo stesso nome e con un'importanza superiore.|Recupera|7.1.4|
+|`xsl:processing-instruction` non restituisce un nome senza due punti (NCName), né una destinazione dell'istruzione di elaborazione.|Recupera|7.3|
+|La creazione di un'istanza del contenuto `xsl:processing-instruction` crea nodi diversi da quelli di testo.|Recupera|7.3|
+|I risultati della creazione di un'istanza del contenuto di `xsl:processing-instruction` contengono la stringa "`?>`".|Recupera|7.3|
+|I risultati della creazione di un'istanza del contenuto di `xsl:comment` contengono la stringa "--" o terminano con "-".|Recupera|7.4|
+|I risultati della creazione di un'istanza del contenuto di `xsl:comment` creano nodi diversi da quelli di testo.|Recupera|7.4|
+|Il modello all'interno di un elemento di associazione della variabile restituisce un nodo Attribute o un nodo dello spazio dei nomi.|Recupera|11.2|
 |Si verifica un errore durante il recupero della risorsa dall'URI passato nella funzione del documento.|Generazione di eccezione|12.1|
 |Il riferimento all'URI nella funzione del documento contiene un identificatore di frammento e si verifica un errore nell'elaborazione di tale identificatore.|Generazione di eccezione|12.1|
-|Esistono più attributi con lo stesso nome che non sono denominati `cdata-section-elements` in `xls:output` e tali attributi hanno la stessa precedenza di importazione.|Ripristina|16|
-|Il processore non supporta il valore di codifica dei caratteri fornito nell'attributo `encoding` dell'elemento `xsl:output`.|Ripristina|16.1|
+|Esistono più attributi con lo stesso nome che non sono denominati `cdata-section-elements` in `xls:output` e tali attributi hanno la stessa precedenza di importazione.|Recupera|16|
+|Il processore non supporta il valore di codifica dei caratteri fornito nell'attributo `encoding` dell'elemento `xsl:output`.|Recupera|16.1|
 |L'attributo `disable-output-escaping` viene usato per un nodo di tipo text che a sua volta viene usato per creare un elemento diverso da un nodo di tipo text nell'albero risultato.|L'attributo `disable-output-escaping` viene ignorato|16.4|
 |Conversione di un frammento di albero risultato in un numero o stringa, se il frammento contiene un nodo di tipo text con l'escape dell'output abilitato.|Ignorato|16.4|
 |L'escape dell'output è disabilitato per i caratteri che non possono essere rappresentati nella codifica usata dal processore XSLT per l'output.|Ignorato|16.4|
-|Aggiunta di un nodo dello spazio dei nomi a un elemento dopo che a tale elemento sono stati aggiunti elementi figlio o attributi.|Ripristina|Errata e25|
-|`xsl:number` è un valore NaN, infinito o minore di 0,5.|Ripristina|Errata e24|
-|Il secondo set di nodi dell'argomento della funzione del documento è vuoto e il riferimento all'URI è relativo.|Ripristina|Errata e14|
+|Aggiunta di un nodo dello spazio dei nomi a un elemento dopo che a tale elemento sono stati aggiunti elementi figlio o attributi.|Recupera|Errata e25|
+|`xsl:number` è un valore NaN, infinito o minore di 0,5.|Recupera|Errata e24|
+|Il secondo set di nodi dell'argomento della funzione del documento è vuoto e il riferimento all'URI è relativo.|Recupera|Errata e14|
 
 Le sezioni Errata si trovano in [XSL Transformations (XSLT) Version 1.0 Specification Errata](https://www.w3.org/1999/11/REC-xslt-19991116-errata/) W3C.
 
@@ -54,7 +54,7 @@ Alcuni comportamenti sono caratteristici solo dell'implementazione della classe 
 
 ## <a name="xslsort"></a>xsl:sort
 
-Nella raccomandazione W3C XSLT 1.0 (informazioni in lingua inglese) sono contenute alcune osservazioni relative a come eseguire un ordinamento usando le trasformazioni. Ad esempio:
+Nella raccomandazione W3C XSLT 1.0 (informazioni in lingua inglese) sono contenute alcune osservazioni relative a come eseguire un ordinamento usando le trasformazioni. ovvero:
 
 - Due processori XSLT possono essere conformi, ma potrebbero eseguire l'ordinamento ordinare in maniera differente.
 
@@ -73,11 +73,11 @@ La tabella seguente mostra il comportamento di ordinamento implementato per ogni
 
 Nella tabella seguente sono riportate le funzionalità la cui implementazione è facoltativa per un processore XSLT e che vengono implementate nella classe <xref:System.Xml.Xsl.XslTransform>.
 
-|Caratteristica|Posizione del riferimento|Note|
+|Funzionalità|Posizione del riferimento|Note|
 |-------------|------------------------|-----------|
 |Attributo `disable-output-escaping` sui tag `<xsl:text...>` e `<xsl:value-of...>`.|Raccomandazione W3C XSLT 1.0,<br /><br /> Sezione 16.4|L'attributo `disable-output-escaping` viene ignorato quando gli elementi `xsl:text` o `xsl:value-of` sono usati in un elemento `xsl:comment`, `xsl:processing-instruction`, o `xsl:attribute`.<br /><br /> I frammenti di albero risultato, che contengono testo e l'output di testo di cui è stato eseguito l'escape, non sono supportati.<br /><br /> L'attributo disable-output-escaping viene ignorato durante l'esecuzione di una trasformazione in un oggetto <xref:System.Xml.XmlReader> o <xref:System.Xml.XmlWriter>.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [Implementazione del processore XSLT da parte della classe XslTransform](xsltransform-class-implements-the-xslt-processor.md)

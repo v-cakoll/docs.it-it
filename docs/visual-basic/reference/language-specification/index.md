@@ -23,9 +23,9 @@ Questo sito contiene la [specifica Visual Basic 11](../../../../_vblang/spec/int
 
 Le segnalazioni dei problemi relativi alla specifica devono essere create nell'archivio [dotnet/vblang](https://github.com/dotnet/vblang/issues). In alternativa, se si è interessati a correggere eventuali errori riscontrati, è possibile inviare una [richiesta pull](https://github.com/dotnet/vblang/pulls) allo stesso repository.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Riferimenti per il linguaggio Visual Basic](../../../visual-basic/language-reference/index.md)
+- [Riferimenti al linguaggio Visual Basic](../../../visual-basic/language-reference/index.md)
 
 >[!div class="step-by-step"]
->[Successivo](../../../../_vblang/spec/introduction.md)
+>[Avanti](../../../../_vblang/spec/introduction.md)

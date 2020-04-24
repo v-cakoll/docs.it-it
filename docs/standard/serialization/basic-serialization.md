@@ -92,7 +92,7 @@ public class MyStuff : MyObject
   
  Benché utile, l'utilizzo dell'attributo [Serializable](xref:System.SerializableAttribute) presenta alcune limitazioni, come dimostrato in precedenza. Fare riferimento alle [Linee guida relative alla serializzazione](serialization-guidelines.md) per informazioni sul momento in cui è opportuno contrassegnare una classe per la serializzazione. La serializzazione non può essere aggiunta a una classe dopo essere stata compilata.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Serializzazione binaria](binary-serialization.md)
 - [Serializzazione SOAP e XML](xml-and-soap-serialization.md)

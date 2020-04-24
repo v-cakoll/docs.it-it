@@ -11,7 +11,7 @@ ms.locfileid: "80588367"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Strumento per la generazione di serializzatori XML (Sgen.exe)
 
-Il generatore di serializzatori XML crea un assembly di serializzazione XML per i tipi in un assembly specificato. L'assembly di serializzazione migliora <xref:System.Xml.Serialization.XmlSerializer> le prestazioni di avvio di un oggetto quando serializza o deserializza gli oggetti dei tipi specificati.
+Il generatore di serializzatori XML crea un assembly di serializzazione XML per i tipi in un assembly specificato. L'assembly di serializzazione migliora le prestazioni di <xref:System.Xml.Serialization.XmlSerializer> avvio di una classe durante la serializzazione o la deserializzazione di oggetti dei tipi specificati.
   
 ## <a name="syntax"></a>Sintassi
 
@@ -22,29 +22,29 @@ sgen [options]
 ```
   
 > [!TIP]
-> Affinché gli strumenti di .NET Framework `Path` `Include`funzionino `Lib` correttamente, è necessario impostare correttamente le variabili di ambiente , e . attraverso l'esecuzione di SDKVars.bat, che si trova nella directory \<SDK>\v2.0\Bin. SDKVars.bat deve essere eseguito in ogni shell di comandi.
+> Per il corretto funzionamento degli strumenti di .NET Framework, è necessario `Path`impostare `Include`correttamente le `Lib` variabili di ambiente, e. attraverso l'esecuzione di SDKVars.bat, che si trova nella directory \<SDK>\v2.0\Bin. SDKVars.bat deve essere eseguito in ogni shell di comandi.
   
 ## <a name="parameters"></a>Parametri  
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |**/a\[ssembly\]:**_nomefile_|Genera il codice di serializzazione per tutti i tipi contenuti nell'assembly o nell'eseguibile specificato da *nomefile*. È possibile indicare un solo nome file. Se questo argomento viene ripetuto, verrà utilizzato l'ultimo nome file.|  
-|**/c\[ompiler\]:**_opzioni_|Specifica l'opzione da passare al compilatore C#. Tutte le opzioni di csc.exe vengono supportate dopo essere state passate al compilatore. Questa opzione può essere utilizzata per specificare che l'assembly deve essere firmato e per indicare il file di chiave.|  
+|**/c\[ompiler\]:**_Opzioni_|Specifica l'opzione da passare al compilatore C#. Tutte le opzioni di csc.exe vengono supportate dopo essere state passate al compilatore. Questa opzione può essere utilizzata per specificare che l'assembly deve essere firmato e per indicare il file di chiave.|  
 |**/d\[ebug\]**|Genera un'immagine utilizzabile con un debugger.|  
-|**/f\[Orce\]**|Impone la sovrascrittura di un assembly esistente con lo stesso nome. Il valore predefinito è **false**.|  
+|**/f\[forza\]**|Impone la sovrascrittura di un assembly esistente con lo stesso nome. Il valore predefinito è **false**.|  
 |**/help o /?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
-|**/k\[eep\]**|Impedisce l'eliminazione dei file di origine generati e di altri file temporanei al termine della compilazione nell'assembly di serializzazione. Questa opzione può essere utilizzata per determinare se lo strumento genera codice di serializzazione per un determinato tipo.|  
+|**Eni\[/k\]**|Impedisce l'eliminazione dei file di origine generati e di altri file temporanei al termine della compilazione nell'assembly di serializzazione. Questa opzione può essere utilizzata per determinare se lo strumento genera codice di serializzazione per un determinato tipo.|  
 |**/n\[ologo\]**|Elimina la visualizzazione del messaggio di avvio Microsoft.|  
-|**/o\[\]ut :**_percorso_|Specifica la directory in cui salvare l'assembly generato. **Nota:** il nome dell'assembly generato è composto dal nome dell'assembly di input e da "xmlSerializers.dll".|  
-|**/p\[aquisidi\]**|Genera codice di serializzazione solo per i tipi proxy del servizio Web XML.|  
-|**/r\[eference\]:** file di_assembly_|Specifica gli assembly a cui fanno riferimento i tipi che richiedono la serializzazione XML. Accetta più file di assembly separati da virgole.|  
-|**/s\[ilent (ilent)\]**|Evita la visualizzazione dei messaggi di operazione riuscita.|  
-|**/t\[ype :\]digitare**_type_|Genera codice di serializzazione solo per il tipo specificato.|  
+|**/o\[UT\]:**_percorso_|Specifica la directory in cui salvare l'assembly generato. **Nota:** il nome dell'assembly generato è composto dal nome dell'assembly di input e da "xmlSerializers.dll".|  
+|**/p\[roxytypes\]**|Genera codice di serializzazione solo per i tipi proxy del servizio Web XML.|  
+|**/r\[eference\]:**_AssemblyFiles_|Specifica gli assembly a cui fanno riferimento i tipi che richiedono la serializzazione XML. Accetta più file di assembly separati da virgole.|  
+|**/s\[ilent\]**|Evita la visualizzazione dei messaggi di operazione riuscita.|  
+|**/t\[IPO\]:**_tipo_|Genera codice di serializzazione solo per il tipo specificato.|  
 |**/v\[erbose\]**|Visualizza output dettagliato per il debug. Elenca i tipi dell'assembly di destinazione che non possono essere serializzati con <xref:System.Xml.Serialization.XmlSerializer>.|  
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
 ## <a name="remarks"></a>Osservazioni  
- Quando lo strumento per la generazione di serializzatori XML non viene utilizzato, un oggetto <xref:System.Xml.Serialization.XmlSerializer> genera codice e un assembly di serializzazione per ogni tipo ogni volta che viene eseguita un'applicazione. Per migliorare le prestazioni dell'avvio della serializzazione XML, utilizzare lo strumento Sgen.exe per generare tali assembly in anticipo. Tali assembly potranno quindi essere distribuiti insieme all'applicazione.  
+ Quando lo strumento per la generazione di serializzatori XML non viene utilizzato, un oggetto <xref:System.Xml.Serialization.XmlSerializer> genera codice e un assembly di serializzazione per ogni tipo ogni volta che viene eseguita un'applicazione. Per migliorare le prestazioni dell'avvio della serializzazione XML, utilizzare lo strumento Sgen. exe per generare in anticipo tali assembly. Tali assembly potranno quindi essere distribuiti insieme all'applicazione.  
   
  Lo strumento per la generazione di serializzatori XML può inoltre migliorare le prestazioni dei client che utilizzano i proxy del servizio Web XML per comunicare con i server, in quanto il processo di serializzazione non influisce sulle prestazioni quando il tipo viene caricato per la prima volta.  
   
@@ -61,7 +61,7 @@ sgen Data.dll
   
  Il codice che deve serializzare e deserializzare i tipi in Data.dll può fare riferimento all'assembly Data.XmlSerializers.dll.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Strumenti](../../../docs/framework/tools/index.md)
 - [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

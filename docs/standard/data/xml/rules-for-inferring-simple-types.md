@@ -22,27 +22,27 @@ Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> infer
   
  Nella tabella seguente sono elencati i tipi che possono essere inferiti per lo schema risultante.  
   
-|Tipo semplice|Descrizione|  
+|Tipo semplice|Description|  
 |-----------------|-----------------|  
 |boolean|True, false, 0, 1.|  
 |byte|Numeri interi nell'intervallo compreso tra -128 e 127.|  
 |unsignedByte|Numeri interi nell'intervallo compreso tra 0 e 255.|  
 |short|Numeri interi nell'intervallo compreso tra -32768 e 32767.|  
 |unsignedShort|Numeri interi nell'intervallo compreso tra 0 e 65535.|  
-|int|Numeri interi nell'intervallo compreso tra -2147483648 e 2147483647.|  
+|INT|Numeri interi nell'intervallo compreso tra -2147483648 e 2147483647.|  
 |unsignedInt|Numeri interi nell'intervallo compreso tra 0 e 4294967295.|  
-|(long)|Numeri interi nell'intervallo compreso tra -9223372036854775808 e 9223372036854775807.|  
+|long|Numeri interi nell'intervallo compreso tra -9223372036854775808 e 9223372036854775807.|  
 |unsignedLong|Numeri interi nell'intervallo compreso tra 0 e 18446744073709551615.|  
-|numero intero|Un numero finito di cifre che può essere preceduto dal prefisso "-".|  
+|integer|Un numero finito di cifre che può essere preceduto dal prefisso "-".|  
 |decimal|Valori numerici che contengono da 0 a 28 cifre di precisione.|  
-|mobile|Decimali eventualmente seguiti da "E" o "e", quindi da un numero intero che rappresenta l'esponente. I valori decimali possono essere compresi tra -16777216 e 16777216 I valori dell'esponente tra –149 e 104.<br /><br /> Il tipo float consente ai valori speciali di rappresentare i valori infinito e quelli non numerici. I valori speciali per float sono i seguenti: 0, -0, INF - INF, NaN.|  
-|doppio|Analogo a float, ad eccezione del fatto che i valori decimali possono essere compresi tra -9007199254740992 e 9007199254740992 e i valori dell'esponente tra –1075 e 970.<br /><br /> Il tipo double consente ai valori speciali di rappresentare i valori infinito e quelli non numerici. I valori speciali per float sono i seguenti: 0, -0, INF - INF, NaN.|  
+|float|Decimali eventualmente seguiti da "E" o "e", quindi da un numero intero che rappresenta l'esponente. I valori decimali possono essere compresi tra -16777216 e 16777216 I valori dell'esponente tra –149 e 104.<br /><br /> Il tipo float consente ai valori speciali di rappresentare i valori infinito e quelli non numerici. I valori speciali per float sono i seguenti: 0, -0, INF - INF, NaN.|  
+|double|Analogo a float, ad eccezione del fatto che i valori decimali possono essere compresi tra -9007199254740992 e 9007199254740992 e i valori dell'esponente tra –1075 e 970.<br /><br /> Il tipo double consente ai valori speciali di rappresentare i valori infinito e quelli non numerici. I valori speciali per float sono i seguenti: 0, -0, INF - INF, NaN.|  
 |duration|Formato della durata W3C.|  
 |dateTime|Formato dateTime W3C.|  
 |time|Formato di ora W3C.|  
-|date|I valori relativi agli anni sono compresi tra 0001 e 9999.|  
+|Data|I valori relativi agli anni sono compresi tra 0001 e 9999.|  
 |gYearMonth|Formato dell'anno e del mese gregoriano W3C.|  
-|string|Uno o più caratteri Unicode.|  
+|stringa|Uno o più caratteri Unicode.|  
   
 ## <a name="type-promotion"></a>Promozione tipo  
  La classe <xref:System.Xml.Schema.XmlSchemaInference> esamina i valori di attributi ed elementi singolarmente. Quando i valori vengono rilevati, viene inferito il tipo più restrittivo e senza segno. Se è stato inferito un tipo per un attributo o elemento ed è stato rilevato un nuovo valore che non corrisponde al tipo inferito, quest'ultimo viene promosso a un nuovo tipo applicabile sia al tipo inferito che al nuovo valore. Durante la promozione del tipo inferito, la classe <xref:System.Xml.Schema.XmlSchemaInference> valuta i valori precedenti.  
@@ -67,14 +67,14 @@ Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> infer
 
 Di seguito sono riportati gli attributi di definizione dello schema che vengono ignorati durante l'inferenza dello schema.  
   
-|Attributo|Descrizione|  
+|Attributo|Description|  
 |---------------|-----------------|  
 |`xsi:type`|Se viene rilevato un elemento con `xsi:type` specificato, l'attributo `xsi:type` viene ignorato.|  
 |`xsi:nil`|Se viene rilevato un elemento con un attributo `xsi:nil`, la dichiarazione dell'elemento nello schema inferito presenta il valore `nillable="true"`. Un elemento con un attributo `xsi:nil` impostato su `true` non può contenere elementi figlio.|  
 |`xsi:schemaLocation`|Se rilevato, l'attributo `xsi:schemaLocation` viene ignorato.|  
 |`xsi:noNamespaceSchemaLocation`|Se rilevato, l'attributo `xsi:noNamespaceSchemaLocation` viene ignorato.|  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
 - [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)

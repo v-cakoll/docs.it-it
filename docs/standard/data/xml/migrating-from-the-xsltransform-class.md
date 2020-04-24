@@ -21,14 +21,14 @@ Nelle sezioni seguenti vengono descritte alcune delle principali differenze tra 
 
 ## <a name="performance"></a>Prestazioni
 
-La classe <xref:System.Xml.Xsl.XslCompiledTransform> presenta numerosi miglioramenti a livello di prestazioni. Il nuovo processore XSLT consente di compilare il foglio di stile XSLT in un formato comune intermedio analogamente a ciò che esegue CLR (Common Language Runtime) per altri linguaggi di programmazione. Una volta compilato, il foglio di stile può essere memorizzato nella cache e usato nuovamente.
+La classe <xref:System.Xml.Xsl.XslCompiledTransform> presenta numerosi miglioramenti a livello di prestazioni. Il nuovo processore XSLT consente di compilare il foglio di stile XSLT in un formato comune intermedio analogamente a ciò che esegue CLR (Common Language Runtime) per altri linguaggi di programmazione. Una volta compilato, il foglio di stile può essere memorizzato nella cache e riusato.
 
 Inoltre, la classe <xref:System.Xml.Xsl.XslCompiledTransform> include altre ottimizzazioni che rendono molto più veloce la classe <xref:System.Xml.Xsl.XslTransform>.
 
 > [!NOTE]
 > Sebbene le prestazioni complessive della classe <xref:System.Xml.Xsl.XslCompiledTransform> siano migliori rispetto alla classe <xref:System.Xml.Xsl.XslTransform>, l'esecuzione del metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> della classe <xref:System.Xml.Xsl.XslCompiledTransform> potrebbe risultare più lenta di quella del metodo <xref:System.Xml.Xsl.XslTransform.Load%2A> della classe <xref:System.Xml.Xsl.XslTransform> la prima volta che tale metodo viene chiamato su una trasformazione. Questa situazione si verifica perché il file XSLT deve essere compilato prima del caricamento. Per altre informazioni, vedere il post di blog seguente: [XslCompiledTransform Slower than XslTransform?](https://docs.microsoft.com/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform) (XslCompiledTransform è più lento di XslTransform?)
 
-## <a name="security"></a>Sicurezza -
+## <a name="security"></a>Sicurezza
 
 Per impostazione predefinita, la classe <xref:System.Xml.Xsl.XslCompiledTransform> disabilita il supporto per la funzione `document()` di XSLT e per lo script incorporato. Queste funzionalità possono essere abilitate creando un oggetto <xref:System.Xml.Xsl.XsltSettings> in cui le funzionalità sono abilitate e passandolo al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>. Nell'esempio seguente viene illustrato come abilitare lo scripting ed eseguire una trasformazione XSLT.
 
@@ -37,7 +37,7 @@ Per impostazione predefinita, la classe <xref:System.Xml.Xsl.XslCompiledTransfor
 
 Per altre informazioni, vedere [Considerazioni sulla sicurezza XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md).
 
-## <a name="new-features"></a>Nuove funzioni e caratteristiche
+## <a name="new-features"></a>Nuove funzionalità
 
 ### <a name="temporary-files"></a>File temporanei
 
@@ -125,7 +125,7 @@ Alla classe <xref:System.Xml.Xsl.XslCompiledTransform> è stato aggiunto il supp
 
 - Funzioni di estensione XPath correlate allo schema: queste funzioni non sono supportate in modalità nativa da <xref:System.Xml.Xsl.XslCompiledTransform>. Tuttavia, possono essere implementate come funzioni di estensione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [Uso della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+- [Utilizzo della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

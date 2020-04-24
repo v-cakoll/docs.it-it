@@ -69,7 +69,7 @@ In questo documento vengono elencate le linee guida da tenere presenti quando si
      [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]
      [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
-     L'oggetto <xref:System.Runtime.Serialization.OnDeserializedAttribute> è l'attributo di callback più comunemente utilizzato. Gli altri attributi della famiglia sono <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute>e <xref:System.Runtime.Serialization.OnSerializedAttribute>. Tali attributi possono essere utilizzati rispettivamente per contrassegnare callback eseguiti prima della deserializzazione, prima della serializzazione e dopo la serializzazione.  
+     L'oggetto <xref:System.Runtime.Serialization.OnDeserializedAttribute> è l'attributo di callback più comunemente utilizzato. Gli altri attributi della famiglia sono <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute>e. <xref:System.Runtime.Serialization.OnSerializedAttribute> Tali attributi possono essere utilizzati rispettivamente per contrassegnare callback eseguiti prima della deserializzazione, prima della serializzazione e dopo la serializzazione.  
   
 4. Considerare l'utilizzo di <xref:System.Runtime.Serialization.KnownTypeAttribute> per indicare tipi concreti da utilizzare in caso di deserializzazione di un oggetto grafico complesso.  
   
@@ -137,11 +137,11 @@ In questo documento vengono elencate le linee guida da tenere presenti quando si
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Uso di contratti di dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Serializzatore dei contratti di dati](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
-- [Tipi supportati dal serializzatore dei contratti di dati](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Serializzatore dei contratti dati](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
+- [Types Supported by the Data Contract Serializer](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [Serializzazione binaria](binary-serialization.md)
 - [Servizi remoti .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [Serializzazione SOAP e XML](xml-and-soap-serialization.md)

@@ -13,7 +13,7 @@ ms.locfileid: "75447167"
 
 Microsoft. Data. SQLite è destinato .NET Standard 2,0 ed è supportato in Novell. La tabella seguente illustra le piattaforme per cui il bundle SQLitePCLRaw predefinito fornisce file binari SQLite nativi. Vedere [versioni personalizzate di SQLite](custom-versions.md) per informazioni dettagliate sull'uso di un bundle diverso o per fornire file binari SQLite nativi.
 
-| Platform | File binari SQLite |
+| Piattaforma | File binari SQLite |
 | --- | --- |
 | **Xamarin.Android** | — |
 | &nbsp;&nbsp;&nbsp;&nbsp;`arm64-v8a` | ✔ |
@@ -21,7 +21,7 @@ Microsoft. Data. SQLite è destinato .NET Standard 2,0 ed è supportato in Novel
 | &nbsp;&nbsp;&nbsp;&nbsp;`x86` | ✔ |
 | &nbsp;&nbsp;&nbsp;&nbsp;`x86_64` | ✔ |
 | **Xamarin.iOS** | ✔ |
-| **Xamarin.Mac** | ✔ |
+| **Novell. Mac** | ✔ |
 | **Novell. TVOS** | ✔ |
 | **UWP** | — |
 | &nbsp;&nbsp;&nbsp;&nbsp;`arm` | ✔ |
@@ -41,7 +41,7 @@ Per inizializzare il bundle, aggiungere la seguente riga di codice all'app prima
 SQLitePCL.Batteries_V2.Init();
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 * [Limitazioni asincrone](async.md)
-* [Versioni personalizzate di SQLite](custom-versions.md)
+* [Versioni di SQLite personalizzate](custom-versions.md)

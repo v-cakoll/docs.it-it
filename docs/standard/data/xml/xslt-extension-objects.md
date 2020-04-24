@@ -36,7 +36,7 @@ Gli oggetti di estensione vengono usati per estendere la funzionalità dei fogli
   
 3. Passare l'oggetto <xref:System.Xml.Xsl.XsltArgumentList> al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [Considerazioni sulla sicurezza XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md)

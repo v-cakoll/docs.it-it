@@ -36,7 +36,7 @@ ms.locfileid: "74333954"
   
 ## <a name="related-sections"></a>Sezioni correlate  
 
- [Struttura del programma e convenzioni di scrittura del codice](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
+ [Struttura del programma e convenzioni del codice](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  Offre le linee guida relative alla struttura fisica e all'aspetto dei programmi.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  

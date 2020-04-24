@@ -48,18 +48,18 @@ Microsoft. Data. SQLite ha un numero molto inferiore di parole chiave per la [st
 
 | Parola chiave          | Alternativa                                         |
 | ---------------- | --------------------------------------------------- |
-| Dimensioni cache       | Invia `PRAGMA cache_size = <pages>`                  |
+| Dimensione cache (%):       | Invia`PRAGMA cache_size = <pages>`                  |
 | Timeout predefinito  | Usare la proprietà DefaultTimeout in SqliteConnection |
 | FailIfMissing    | Utilizzare `Mode=ReadWrite`.                                |
 | FullUri          | Usare la parola chiave dell'origine dati                         |
-| Modalità Journal     | Invia `PRAGMA journal_mode = <mode>`                 |
-| Formato legacy    | Invia `PRAGMA legacy_file_format = 1`                |
-| Numero massimo di pagine   | Invia `PRAGMA max_page_count = <pages>`              |
-| Dimensioni pagina        | Invia `PRAGMA page_size = <bytes>`                   |
+| Modalità Journal     | Invia`PRAGMA journal_mode = <mode>`                 |
+| Formato legacy    | Invia`PRAGMA legacy_file_format = 1`                |
+| Numero massimo di pagine   | Invia`PRAGMA max_page_count = <pages>`              |
+| Dimensioni pagina        | Invia`PRAGMA page_size = <bytes>`                   |
 | Sola lettura        | Utilizzare `Mode=ReadOnly`.                                 |
-| Synchronous      | Invia `PRAGMA synchronous = <mode>`                  |
-| URI              | Usare la parola chiave dell'origine dati                         |
-| UseUTF16Encoding | Invia `PRAGMA encoding = 'UTF-16'`                   |
+| Sincrono      | Invia`PRAGMA synchronous = <mode>`                  |
+| Uri              | Usare la parola chiave dell'origine dati                         |
+| UseUTF16Encoding | Invia`PRAGMA encoding = 'UTF-16'`                   |
 
 ## <a name="authorization"></a>Autorizzazione
 
@@ -73,7 +73,7 @@ Microsoft. Data. SQLite non contiene alcuna API che espone le notifiche di modif
 
 Microsoft. Data. SQLite non dispone di alcuna API per la creazione di moduli di tabella virtuale. Usare [#13823](https://github.com/dotnet/efcore/issues/13823) di problema per fornire commenti e suggerimenti su questa funzionalità.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 * [Tipi di dati](types.md)
 * [Stringhe di connessione](connection-strings.md)

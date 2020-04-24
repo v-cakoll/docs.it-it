@@ -24,14 +24,14 @@ Specifica la classe o il modulo che contiene la procedura `Sub Main`.
   
 ## <a name="arguments"></a>Argomenti  
  `location`  
- Obbligatoria. Nome della classe o del modulo che contiene la procedura `Sub Main` da chiamare all'avvio del programma. Il formato può essere **Main: module** o **-Main: Namespace. Module**.  
+ Obbligatorio. Nome della classe o del modulo che contiene la `Sub Main` stored procedure da chiamare all'avvio del programma. Il formato può essere **Main: module** o **-Main: Namespace. Module**.  
   
 ## <a name="remarks"></a>Osservazioni  
- Usare questa opzione quando si crea un file eseguibile o un programma eseguibile di Windows. Se l'opzione **-Main** viene omessa, il compilatore cerca un `Sub Main` condiviso valido in tutti i moduli e le classi pubbliche.  
+ Usare questa opzione quando si crea un file eseguibile o un programma eseguibile di Windows. Se l'opzione **-Main** viene omessa, il compilatore cerca una condivisione `Sub Main` valida in tutti i moduli e le classi pubbliche.  
   
- Per una descrizione delle diverse forme della procedura `Main`, vedere la [procedura principale in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) .  
+ Per una descrizione delle diverse forme della `Main` procedura, vedere la [procedura principale in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) .  
   
- Quando `location` è una classe che eredita da <xref:System.Windows.Forms.Form>, il compilatore fornisce una procedura di `Main` predefinita che avvia l'applicazione se la classe non dispone di `Main` routine. In questo modo è possibile compilare il codice dalla riga di comando creata nell'ambiente di sviluppo.  
+ Quando `location` è una classe che eredita da <xref:System.Windows.Forms.Form>, il compilatore fornisce una routine `Main` predefinita che avvia l'applicazione se la classe non `Main` ha routine. In questo modo è possibile compilare il codice dalla riga di comando creata nell'ambiente di sviluppo.  
   
  [!code-vb[VbVbalrCompiler#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#16)]  
   
@@ -46,15 +46,15 @@ Specifica la classe o il modulo che contiene la procedura `Sub Main`.
 4. Modificare il valore nella casella **oggetto di avvio** .  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente compila `T2.vb` e `T3.vb`, specificando che la procedura `Sub Main` sarà disponibile nella classe `Test2`.  
+ Il codice seguente `T2.vb` compila e `T3.vb`, specificando che la `Sub Main` stored procedure verrà trovata nella `Test2` classe.  
   
 ```console
 vbc t2.vb t3.vb -main:Test2  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Procedura principale in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [Routine Main in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

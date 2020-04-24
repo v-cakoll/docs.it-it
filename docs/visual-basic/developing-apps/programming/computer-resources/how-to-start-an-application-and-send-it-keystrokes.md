@@ -1,5 +1,5 @@
 ---
-title: "Procedura: avviare un'applicazione e inviarle sequenze di tasti - Visual BasicHow to: start an Application and send it Keystrokes - Visual Basic"
+title: "Procedura: avviare un'applicazione e inviarle sequenze di tasti Visual Basic"
 ms.date: 10/23/2019
 helpviewer_keywords:
 - keystrokes, sending
@@ -16,7 +16,7 @@ ms.locfileid: "72919396"
 ---
 # <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>Procedura: avviare un'applicazione e inviarle sequenze di tasti (Visual Basic)
 
-In questo <xref:Microsoft.VisualBasic.Interaction.Shell%2A> esempio viene utilizzato il metodo per avviare l'applicazione Notepad e quindi viene stampata una frase inviando sequenze di tasti utilizzando il metodo [My.Computer.Keyboard.SendKeys](xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A) .
+In questo esempio viene <xref:Microsoft.VisualBasic.Interaction.Shell%2A> utilizzato il metodo per avviare l'applicazione blocco note e quindi viene stampata una frase inviando sequenze di tasti utilizzando il metodo [My. computer. Keyboard. SendKeys](xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A) .
 
 ## <a name="example"></a>Esempio
 
@@ -24,7 +24,7 @@ In questo <xref:Microsoft.VisualBasic.Interaction.Shell%2A> esempio viene utiliz
 
 ## <a name="robust-programming"></a>Programmazione efficiente
 
-Se <xref:System.ArgumentException> non è possibile trovare l'identificatore di processo richiesto, viene generata un'eccezione.  
+Se <xref:System.ArgumentException> non è possibile trovare un'applicazione con l'identificatore di processo richiesto, viene generata un'eccezione.  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework
 

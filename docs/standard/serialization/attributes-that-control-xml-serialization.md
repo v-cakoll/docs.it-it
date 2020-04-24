@@ -43,11 +43,11 @@ ms.locfileid: "61794966"
   
  Per controllare la serializzazione XML con codifica SOAP, vedere [Attributi che controllano la serializzazione con codifica SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Serializzazione SOAP e XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Controllo della serializzazione XML mediante attributi](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [Procedura: Specificare un nome di elemento alternativo per un Stream XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [Procedura: Serializzare un oggetto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Procedura: specificare un nome di elemento alternativo per un flusso XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Procedura: serializzare un oggetto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [Procedura: Deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

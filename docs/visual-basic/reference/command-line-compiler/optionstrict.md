@@ -26,19 +26,19 @@ Applica una semantica dei tipi rigorosa per limitare le conversioni implicite de
 -optionstrict[:custom]
 ```
 
-## <a name="arguments"></a>argomenti
+## <a name="arguments"></a>Argomenti
 
 `+` &#124; `-`  
-Parametro facoltativo. L'opzione `-optionstrict+` limita la conversione implicita di tipi. Il valore predefinito per questa opzione è `-optionstrict-`. L'opzione `-optionstrict+` corrisponde a `-optionstrict`. È possibile utilizzare entrambi per la semantica di tipo permissivo.
+Facoltativo. L' `-optionstrict+` opzione limita la conversione implicita di tipi. Il valore predefinito per questa opzione `-optionstrict-`è. L' `-optionstrict+` opzione è uguale a `-optionstrict`. È possibile utilizzare entrambi per la semantica di tipo permissivo.
 
 `custom`  
 Obbligatorio. Avvisa quando la semantica del linguaggio strict non viene rispettata.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Quando `-optionstrict+` è attivo, possono essere eseguite in modo implicito solo le conversioni verso un tipo più ampio. Le conversioni implicite di tipi più restrittivi, ad esempio l'assegnazione di un oggetto di tipo `Decimal` a un oggetto di tipo Integer, vengono segnalate come errori.
+Quando `-optionstrict+` è attivo, è possibile effettuare in modo implicito solo le conversioni verso un tipo più ampio. Le conversioni implicite di tipi più piccoli, ad esempio l' `Decimal` assegnazione di un oggetto tipo a un oggetto di tipo Integer, vengono segnalate come errori.
 
-Per generare avvisi per le conversioni implicite di tipi più restrittivi, utilizzare `-optionstrict:custom`. Utilizzare `-nowarn:numberlist` per ignorare avvisi e `-warnaserror:numberlist` specifici per considerare determinati avvisi come errori.
+Per generare avvisi per le conversioni implicite di tipi più restrittivi, usare `-optionstrict:custom`. Utilizzare `-nowarn:numberlist` per ignorare determinati avvisi e `-warnaserror:numberlist` considerare determinati avvisi come errori.
 
 ### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Per impostare-optionstrict (nell'IDE di Visual Studio
 
@@ -54,18 +54,18 @@ Vedere [istruzione Option Strict](../../../visual-basic/language-reference/state
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente compila `Test.vb` usando la semantica di tipo strict.
+Il codice seguente viene compilato `Test.vb` usando la semantica di tipo strict.
 
 ```console
 vbc -optionstrict+ test.vb
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [-OptionCompare (](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [-OptionExplicit (](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
+- [-optioninfer (](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)
 - [-warnaserror (Visual Basic)](../../../visual-basic/reference/command-line-compiler/warnaserror.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

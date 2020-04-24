@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Raccolta di elenchi
-  ms.openlocfilehash: ab709b6b30b5a173e2faf08b577e4d7a3d9a9034
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: b0a967ea2e5212887d617e76b4ecb445cfbb8b55
+  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 03/14/2020
-  ms.locfileid: "73969420"
+  ms.lasthandoff: 04/24/2020
+  ms.locfileid: "82135932"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: Prendere decisioni usando l'istruzione if
   durationInMinutes: 4
   content: >
-    Eseguire il codice seguente nella finestra interattiva. Selezionare il **pulsante Attiva modalità messa a fuoco.** Quindi, digitare il seguente blocco di codice nella finestra interattiva e selezionare **Esegui**:
+    Eseguire il codice seguente nella finestra interattiva. Selezionare il pulsante **Attiva modalità messa a fuoco** . Quindi, digitare il blocco di codice seguente nella finestra interattiva e selezionare **Esegui**:
 
 
     ```csharp
@@ -38,7 +38,7 @@ items:
     ```
 
 
-    Se si esegue questa operazione nell'ambiente, è necessario seguire le istruzioni per la [versione locale.](branches-and-loops-local.md)
+    Se si esegue questa operazione nell'ambiente in uso, è consigliabile seguire invece le istruzioni per la [versione locale](branches-and-loops-local.md) .
 
 
     Modificare la dichiarazione di `b` in modo che la somma sia minore di 10:
@@ -51,7 +51,7 @@ items:
     ```
 
 
-    Selezionare nuovamente il pulsante **Esegui.** Dato che la risposta è minore a 10, non viene visualizzato nulla. La **condizione** testata è false. Non esiste codice da eseguire perché è stato scritto solo uno dei possibili rami per un'istruzione `if`, ovvero il ramo true.
+    Selezionare di nuovo il pulsante **Esegui** . Dato che la risposta è minore a 10, non viene visualizzato nulla. La **condizione** testata è false. Non esiste codice da eseguire perché è stato scritto solo uno dei possibili rami per un'istruzione `if`, ovvero il ramo true.
 
 
     > [!TIP]
@@ -61,7 +61,7 @@ items:
     > Questo esercizio sarà utile per imparare la struttura del codice C#.
 
 
-    Questo primo esempio dimostra le potenzialità di `if` e dei tipi booleani. Un *valore booleano* è una variabile `true` che `false`può avere uno dei due valori seguenti: o . C# definisce un tipo speciale, `bool` per le variabili booleane. L'istruzione `if` controlla il valore di un `bool`. Quando il valore è `true`, viene eseguita l'istruzione che segue `if`. In caso contrario, l'istruzione viene ignorata.
+    Questo primo esempio dimostra le potenzialità di `if` e dei tipi booleani. Un *valore booleano* è una variabile che può avere uno dei due `true` valori `false`seguenti: o. C# definisce un tipo speciale, `bool` per le variabili booleane. L'istruzione `if` controlla il valore di un `bool`. Quando il valore è `true`, viene eseguita l'istruzione che segue `if`. In caso contrario, l'istruzione viene ignorata.
 
 
     Questo processo di controllo delle condizioni ed esecuzione di istruzioni in base a queste condizioni offre molte potenzialità. L'esplorazione continua nelle prossime lezioni.
@@ -150,13 +150,13 @@ items:
     Questo codice esegue le stesse operazioni di ciclo `while` e `do` già usate. L'istruzione `for` è composta da tre parti che ne controllano il funzionamento.
 
 
-    La prima parte è **for initializer**: `int counter = 0;` dichiara che `counter` è la `0`variabile di ciclo e imposta il valore iniziale su .
+    La prima parte è l' **inizializzatore for**: `int counter = 0;` dichiara che `counter` è la variabile del ciclo e imposta il valore iniziale su `0`.
 
 
-    La parte centrale è `counter < 10` la condizione `for` **for**: dichiara che questo ciclo continua a essere eseguito finché il valore di counter è minore di 10.
+    La parte intermedia è la **condizione for**: `counter < 10` dichiara che questo `for` ciclo continua a essere eseguito fino a quando il valore del contatore è minore di 10.
 
 
-    La parte finale è `counter++` `for` **l'iteratore for**: specifica come modificare la variabile di ciclo dopo l'esecuzione del blocco che segue l'istruzione . In questo caso, specifica che `counter` deve essere incrementato di 1 a ogni esecuzione del blocco.
+    La parte finale è l' **iteratore for**: `counter++` specifica come modificare la variabile del ciclo dopo l'esecuzione del blocco dopo `for` l'istruzione. In questo caso, specifica che `counter` deve essere incrementato di 1 a ogni esecuzione del blocco.
 
 
     Sperimentare da soli questi elementi. Eseguire queste prove:
@@ -173,6 +173,9 @@ items:
     > [!NOTE]
 
     > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
+- title: Cicli annidati creati
+  durationInMinutes: 10
+  content: "Un `while`ciclo `do` , `for` o può essere annidato all'interno di un altro ciclo per creare una matrice utilizzando la combinazione di ogni elemento del ciclo esterno con ogni elemento del ciclo interno. A questo scopo, è necessario compilare un set di coppie alfanumeriche per rappresentare righe e colonne.\n\nUn `for` ciclo può generare le righe:\n\n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  Console.WriteLine($\"The row is {row}\");\n}\n```\n\nUn altro ciclo può generare le colonne:\n\n```csharp\nfor (char column = 'a'; column < 'k'; column++)\n{\n  Console.WriteLine($\"The column is {column}\");\n}\n```\n\nÈ possibile annidare un ciclo all'interno dell'altro per formare coppie:\n  \n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  for (char column = 'a'; column < 'k'; column++)\n  {\n    Console.WriteLine($\"The cell is ({row}, {column})\");\n  }\n}\n```\n\nÈ possibile osservare che il ciclo esterno viene incrementato una volta per ogni esecuzione completa del ciclo interno. Invertire l'annidamento di righe e colonne e visualizzare le modifiche per se stessi.\n"
 - title: Combinare rami e cicli
   durationInMinutes: 12
   content: >
@@ -221,7 +224,7 @@ items:
     > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - title: Congratulazioni!
   content: >-
-    È stata completata l'esercitazione interattiva "Rami e cicli". È possibile selezionare il collegamento di **raccolta elenco** riportato di seguito per avviare la successiva esercitazione interattiva oppure visitare il [sito .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare .NET Core SDK, creare un progetto nel computer e continuare a eseguire la codifica. La sezione "Passaggi successivi" riporta a queste esercitazioni.
+    È stata completata l'esercitazione interattiva "Rami e cicli". È possibile selezionare il collegamento **elenco raccolta** seguente per avviare la successiva esercitazione interattiva. in alternativa, è possibile visitare il [sito .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare il .NET Core SDK, creare un progetto nel computer e rimanere codificati. La sezione "passaggi successivi" riporta a queste esercitazioni.
 
 
     Maggiori informazioni su questi concetti sono disponibili in questi argomenti:

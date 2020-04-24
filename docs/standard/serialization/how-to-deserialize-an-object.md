@@ -46,7 +46,7 @@ Quando si deserializza un oggetto, il formato di trasporto determina se verrà c
     var myObject = (MySerializableClass) mySerializer.Deserialize(myFileStream)
     ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Introduzione alla serializzazione XML](introducing-xml-serialization.md)
 - [Procedura: serializzare un oggetto](how-to-serialize-an-object.md)

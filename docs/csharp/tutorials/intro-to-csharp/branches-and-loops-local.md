@@ -3,22 +3,22 @@ title: Rami e cicli - Esercitazione introduttiva su C#
 description: In questa esercitazione su rami e cicli si scriverà codice C# per esplorare la sintassi del linguaggio che supporta cicli e diramazioni condizionali per eseguire ripetutamente istruzioni.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d8c10a7462b7c27c5353aee6d957732a8d161015
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73739132"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135945"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Informazioni sulla logica condizionale con istruzioni per rami e cicli
 
 Questa esercitazione descrive come scrivere codice che esamina le variabili e modifica il percorso di esecuzione in base a queste variabili. Verranno descritte le procedure per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice. L'esercitazione contiene una serie di lezioni che esplorano i costrutti per rami e cicli in C#. Queste lezioni presentano le nozioni fondamentali del linguaggio C#.
 
-Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione di .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Windows, Linux o macOS. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
+Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene le istruzioni per configurare l'ambiente di sviluppo locale in Windows, Linux o MacOS. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
 
 ## <a name="make-decisions-using-the-if-statement"></a>Prendere decisioni usando l'istruzione `if`
 
-Creare una directory denominata *branches-tutorial*. Assicurarsi che la directory corrente ed eseguire il comando seguente:
+Creare una directory denominata *branches-tutorial*. Rendere la directory corrente ed eseguire il comando seguente:
 
 ```dotnetcli
 dotnet new console -n BranchesAndLoops -o .
@@ -235,11 +235,11 @@ for (int index = 0; index < 10; index++)
 
 Questo codice esegue le stesse operazioni di ciclo `while` e `do` già usate. L'istruzione `for` è composta da tre parti che ne controllano il funzionamento.
 
-La prima parte è **for initializer**: `int index = 0;` dichiara che `index` è la `0`variabile di ciclo e imposta il valore iniziale su .
+La prima parte è l' **inizializzatore for**: `int index = 0;` dichiara che `index` è la variabile del ciclo e imposta il valore iniziale su `0`.
 
-La parte centrale è `index < 10` la condizione `for` **for**: dichiara che questo ciclo continua a essere eseguito finché il valore di counter è minore di 10.
+La parte intermedia è la **condizione for**: `index < 10` dichiara che questo `for` ciclo continua a essere eseguito fino a quando il valore del contatore è minore di 10.
 
-La parte finale è `index++` `for` **l'iteratore for**: specifica come modificare la variabile di ciclo dopo l'esecuzione del blocco che segue l'istruzione . In questo caso, specifica che `index` deve essere incrementato di 1 a ogni esecuzione del blocco.
+La parte finale è l' **iteratore for**: `index++` specifica come modificare la variabile del ciclo dopo l'esecuzione del blocco dopo `for` l'istruzione. In questo caso, specifica che `index` deve essere incrementato di 1 a ogni esecuzione del blocco.
 
 Sperimentare da soli questi elementi. Eseguire queste prove:
 
@@ -247,6 +247,42 @@ Sperimentare da soli questi elementi. Eseguire queste prove:
 - Cambiare la condizione in modo che si interrompa in corrispondenza di un valore diverso.
 
 Al termine, passare alla prossima lezione che prevede la scrittura di codice per usare quanto finora appreso.
+
+## <a name="created-nested-loops"></a>Cicli annidati creati
+
+Un `while`ciclo `do` , `for` o può essere annidato all'interno di un altro ciclo per creare una matrice utilizzando la combinazione di ogni elemento del ciclo esterno con ogni elemento del ciclo interno. A questo scopo, è necessario compilare un set di coppie alfanumeriche per rappresentare righe e colonne.
+
+Un `for` ciclo può generare le righe:
+
+```csharp
+for (int row = 1; row < 11; row++)
+{
+    Console.WriteLine($"The row is {row}");
+}
+```
+
+Un altro ciclo può generare le colonne:
+
+```csharp
+for (char column = 'a'; column < 'k'; column++)
+{
+    Console.WriteLine($"The column is {column}");
+}
+```
+
+È possibile annidare un ciclo all'interno dell'altro per formare coppie:
+
+```csharp
+for (int row = 1; row < 11; row++)
+{
+    for (char column = 'a'; column < 'k'; column++)
+    {
+        Console.WriteLine($"The cell is ({row}, {column})");
+    }
+}
+```
+
+È possibile osservare che il ciclo esterno viene incrementato una volta per ogni esecuzione completa del ciclo interno. Invertire l'annidamento di righe e colonne e visualizzare le modifiche per se stessi.
 
 ## <a name="combine-branches-and-loops"></a>Combinare rami e cicli
 
