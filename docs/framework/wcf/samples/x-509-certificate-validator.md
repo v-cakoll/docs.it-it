@@ -2,18 +2,18 @@
 title: Validator del certificato X.509
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: 628e4e12e1eafb6101503a59e3393777f9c30989
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: ba73381bb6211dcbd1ddad1457f9ae8611008d43
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424631"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141205"
 ---
 # <a name="x509-certificate-validator"></a>Validator del certificato X.509
 
 In questo esempio viene illustrato come implementare un validator del certificato X.509 personalizzato. Questo processo è utile nei casi in cui nessuna delle convalide incorporate del certificato X.509 è appropriata ai requisiti dell'applicazione. In questo esempio viene mostrato un servizio che dispone di un validator personalizzato che accetta certificati autocertificati. Il client utilizza tale certificato per l'autenticazione nel servizio.
 
-Nota: Poiché chiunque può costruire un certificato autorilasciato il validator personalizzato utilizzato dal servizio è meno sicuro rispetto al comportamento predefinito fornito dal ChainTrust X509CertificateValidationMode. Le implicazioni di sicurezza di questa scelta devono essere considerate attentamente prima di utilizzare questa logica di convalida nel codice di produzione.
+Nota: poiché chiunque può costruire un certificato autocertificato, il validator personalizzato utilizzato dal servizio è meno affidabile del comportamento predefinito fornito da ChainTrust X509CertificateValidationMode. Le implicazioni di sicurezza di questa scelta devono essere considerate attentamente prima di utilizzare questa logica di convalida nel codice di produzione.
 
 In sintesi, nell'esempio viene illustrato in che modo eseguire le operazioni seguenti:
 
@@ -23,7 +23,7 @@ In sintesi, nell'esempio viene illustrato in che modo eseguire le operazioni seg
 
 - Il server viene autenticato tramite il certificato X.509 del server.
 
-Il servizio espone un solo endpoint per comunicare con il servizio che viene definito mediante il file di configurazione App.config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione è configurata con una classe standard `wsHttpBinding` che usa per impostazione predefinita `WSSecurity` e l'autenticazione del certificato client. Il comportamento del servizio specifica la modalità personalizzata per la convalida dei certificati X.509 client insieme al tipo di classe del validator. Il comportamento specifica inoltre il certificato server mediante l'elemento serviceCertificate. Il certificato del server deve contenere lo stesso valore per il `SubjectName` come il `findValue` nel [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
+Il servizio espone un singolo endpoint per la comunicazione con il servizio, definito utilizzando il file di configurazione app. config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione viene configurata con `wsHttpBinding` uno standard che usa `WSSecurity` per impostazione predefinita e l'autenticazione del certificato client. Il comportamento del servizio specifica la modalità personalizzata per la convalida dei certificati X.509 client insieme al tipo di classe del validator. Il comportamento specifica inoltre il certificato server mediante l'elemento serviceCertificate. Il certificato del server deve contenere lo stesso valore per l' `SubjectName` oggetto `findValue` nel [ \<>ServiceCertificate ](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
 ```xml
   <system.serviceModel>
@@ -242,6 +242,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
        customCertificateValidatorType =
 "Microsoft.ServiceModel.Samples. CustomX509CertificateValidator, service" />
    </clientCertificate>
+   </serviceCredentials>
    ...
   </behavior>
  </serviceBehaviors>
@@ -304,22 +305,22 @@ Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch
 
 #### <a name="to-set-up-and-build-the-sample"></a>Per impostare e compilare l'esempio
 
-1. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+1. Per compilare la soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 2. Per eseguire l'esempio su un solo computer o tra computer diversi, seguire le istruzioni indicate di seguito.
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Per eseguire l'esempio nello stesso computer
 
-1. Eseguire Setup. bat dalla cartella di installazione dell'esempio all'interno di un prompt dei comandi di Visual Studio 2012 aperta con privilegi di amministratore. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.
+1. Eseguire Setup. bat dalla cartella di installazione dell'esempio all'interno di un prompt dei comandi di Visual Studio 2012 aperto con privilegi di amministratore. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.
 
     > [!IMPORTANT]
-    > Il file batch Setup. bat è progettato per essere eseguito dal Prompt dei comandi un Visual Studio 2012. Variabile di ambiente PATH impostata all'interno di punti di Prompt dei comandi di Visual Studio 2012 per la directory che contiene file eseguibili richiesti dallo script Setup. bat.
+    > Il file batch Setup. bat è progettato per essere eseguito da un prompt dei comandi di Visual Studio 2012. La variabile di ambiente PATH impostata nel prompt dei comandi di Visual Studio 2012 punta alla directory che contiene i file eseguibili richiesti dallo script Setup. bat.
 
 2. Avviare Service.exe da service\bin.
 
 3. Avviare Client.exe da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.
 
-4. Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+4. Se il client e il servizio non sono in grado di comunicare, vedere [Suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 #### <a name="to-run-the-sample-across-computers"></a>Per eseguire l'esempio tra più computer
 
@@ -331,29 +332,29 @@ Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch
 
 4. Copiare i file di programma del client nella directory del client sul computer relativo e i file Setup.bat, Cleanup.bat e ImportServiceCert.bat nel client.
 
-5. Nel server, eseguire `setup.bat service` in un prompt dei comandi sviluppatori per Visual Studio aperto con privilegi di amministratore. In esecuzione `setup.bat` con il `service` argomento consente di creare un certificato di servizio con il nome di dominio completo del computer ed esportare il certificato di servizio in un file denominato CER.
+5. Sul server, eseguire `setup.bat service` in un prompt dei comandi per gli sviluppatori per Visual Studio aperto con privilegi di amministratore. Quando `setup.bat` si esegue `service` con l'argomento viene creato un certificato del servizio con il nome di dominio completo del computer e il certificato del servizio viene esportato in un file denominato Service. cer.
 
-6. Modifica Service.exe.config per riflettere il nuovo nome del certificato (nelle `findValue` attributo la [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) che corrisponde al nome di dominio completo del computer. Modificare anche il nome del computer nel \<service > /\<baseAddresses > elemento da localhost al nome completo del computer del servizio.
+6. Modificare Service. exe. config per riflettere il nuovo nome del certificato (nell' `findValue` attributo in [ \<ServiceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), che corrisponde al nome di dominio completo del computer. Modificare anche il nome del computer nell' \<elemento Service>\</baseAddresses> da localhost al nome completo del computer del servizio.
 
 7. Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.
 
-8. Nel client, eseguire `setup.bat client` in un prompt dei comandi sviluppatori per Visual Studio aperto con privilegi di amministratore. Quando si esegue `setup.bat` con l'argomento `client` viene creato un certificato client denominato client.com che viene esportato in un file denominato Client.cer.
+8. Sul client, eseguire `setup.bat client` in un prompt dei comandi per gli sviluppatori per Visual Studio aperto con privilegi di amministratore. Quando si esegue `setup.bat` con l'argomento `client` viene creato un certificato client denominato client.com che viene esportato in un file denominato Client.cer.
 
 9. Nel file Client.exe.config presente nel computer client modificare il valore dell'indirizzo della definizione dell'endpoint in base al nuovo indirizzo del servizio. Tale operazione viene eseguita sostituendo localhost con il nome di dominio completo del server.
 
 10. Copiare il file Client.cer dalla directory del client nella directory del servizio sul server.
 
-11. Sul client, eseguire Importservicecert. bat in un prompt dei comandi di per gli sviluppatori per Visual Studio aperto con privilegi di amministratore. In questo modo viene importato il certificato del servizio dal file Service.cer nell'archivio CurrentUser - TrustedPeople.
+11. Sul client, eseguire ImportServiceCert. bat in un Prompt dei comandi per gli sviluppatori per Visual Studio aperto con privilegi di amministratore. In questo modo viene importato il certificato del servizio dal file Service.cer nell'archivio CurrentUser - TrustedPeople.
 
-12. Nel server, eseguire importclientcert. bat in un prompt dei comandi di per gli sviluppatori per Visual Studio aperto con privilegi di amministratore. In questo modo viene importato il certificato del client dal file Client.cer nell'archivio LocalMachine - TrustedPeople.
+12. Sul server, eseguire ImportClientCert. bat in un Prompt dei comandi per gli sviluppatori per Visual Studio aperto con privilegi di amministratore. In questo modo viene importato il certificato del client dal file Client.cer nell'archivio LocalMachine - TrustedPeople.
 
 13. Sul computer server avviare Service.exe dalla finestra del prompt dei comandi.
 
-14. Sul computer client avviare Client.exe da una finestra del prompt dei comandi. Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+14. Sul computer client avviare Client.exe da una finestra del prompt dei comandi. Se il client e il servizio non sono in grado di comunicare, vedere [Suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 #### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio
 
 1. Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio. In questo modo i certificati server e client vengono rimossi dall'archivio certificati.
 
 > [!NOTE]
-> Questo script non rimuove i certificati del servizio da un client quando si esegue l'esempio tra più computer. Se è stato eseguito gli esempi di Windows Communication Foundation (WCF) che utilizzano certificati in più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati nell'archivio CurrentUser - TrustedPeople. A tale scopo, usare il comando seguente: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+> Questo script non rimuove i certificati del servizio da un client quando si esegue l'esempio tra più computer. Se sono stati eseguiti esempi Windows Communication Foundation (WCF) che usano certificati tra computer, assicurarsi di cancellare i certificati del servizio installati nell'archivio CurrentUser-TrustedPeople. Per eseguire questa operazione, usare il seguente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

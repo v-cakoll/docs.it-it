@@ -4,12 +4,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: 1f0d513e8bfd1668ee548315597385c555d374ef
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: b89969f212da6ac90d0fb0d1bf388626e136b92e
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135776"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158593"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Linee guida per l'utilizzo di Memory\<T> e Span\<T>
 
@@ -23,7 +23,7 @@ Poiché i buffer possono essere passati tra le API e dato che i buffer sono in a
 
 - **Proprietà**. Il proprietario di un'istanza del buffer è responsabile della gestione della durata, inclusa l'eliminazione definitiva del buffer quando non è più in uso. Tutti i buffer hanno un solo proprietario. Il proprietario è in genere il componente che ha creato il buffer o che ha ricevuto il buffer da una factory. La proprietà può anche essere trasferita. Il **componente A** può cedere il controllo del buffer al **componente-B** e a quel punto il **componente A** non può più usare il buffer e il **componente B ** diventa responsabile dell'eliminazione definitiva del buffer quando non è più in uso.
 
-- A **consumo**. Il consumer di un'istanza del buffer è autorizzato a usare l'istanza del buffer leggendo da tale istanza e forse anche scrivendo in tale istanza. I buffer possono avere un solo consumer alla volta, a meno che non venga fornito un meccanismo di sincronizzazione esterno. Si noti che il consumer di un buffer attivo non è necessariamente il proprietario del buffer.
+- A **consumo**. Il consumer di un'istanza del buffer è autorizzato a usare l'istanza del buffer leggendo da tale istanza e forse anche scrivendo in tale istanza. I buffer possono avere un solo consumer alla volta, a meno che non venga fornito un meccanismo di sincronizzazione esterno. Il consumer attivo di un buffer non è necessariamente il proprietario del buffer.
 
 - **Lease**. Il lease è il periodo di tempo per cui un particolare componente è autorizzato a essere il consumer del buffer.
 
@@ -110,7 +110,7 @@ Dato che un blocco di memoria ha un proprietario, ma è destinato a essere passa
 
 - Anche se il funzionamento basato sull'allocazione dello stack di <xref:System.Span%601> consente di ottimizzare le prestazioni e rende <xref:System.Span%601> il tipo preferito per operare su un blocco di memoria, <xref:System.Span%601> diventa soggetto ad alcune restrizioni significative. È importante sapere quando usare <xref:System.Span%601> e quando usare <xref:System.Memory%601>.
 
-Di seguito sono riportati alcuni consigli per usare correttamente <xref:System.Memory%601> e i tipi correlati. Si noti che le linee guida valide per <xref:System.Memory%601> e <xref:System.Span%601> si applicano anche a <xref:System.ReadOnlyMemory%601> e <xref:System.ReadOnlySpan%601>, se non diversamente indicato in modo esplicito.
+Di seguito sono riportati alcuni consigli per usare correttamente <xref:System.Memory%601> e i tipi correlati. Il materiale sussidiario <xref:System.Memory%601> applicabile <xref:System.Span%601> a e si <xref:System.ReadOnlyMemory%601> applica <xref:System.ReadOnlySpan%601> anche a e, a meno che non si noti esplicitamente diversamente.
 
 **#1 di regole: per un'API sincrona,\<utilizzare Span t> anziché\<Memory t> come parametro, se possibile.**
 

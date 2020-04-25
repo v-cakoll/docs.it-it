@@ -2,16 +2,16 @@
 title: Comando dotnet restore
 description: Informazioni sul ripristino delle dipendenze e degli strumenti specifici per il progetto tramite il comando dotnet-restore.
 ms.date: 02/27/2020
-ms.openlocfilehash: 3deef68a9bcee389a52291c72e7e1a1019a739fd
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: cc8f374468ba95baccf058ac0b0a0175672cdf01
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102788"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158307"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
-**Questo articolo si applica a:** ✔️ .NET Core 2.1 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
@@ -32,22 +32,32 @@ dotnet restore -h|--help
 
 ## <a name="description"></a>Descrizione
 
-Il comando `dotnet restore` usa NuGet per ripristinare le dipendenze e gli strumenti specifici del progetto definiti nel file di progetto. Per impostazione predefinita, il ripristino delle dipendenze e degli strumenti viene eseguito in parallelo.
+Il comando `dotnet restore` usa NuGet per ripristinare le dipendenze e gli strumenti specifici del progetto definiti nel file di progetto.  Nella maggior parte dei casi, non è necessario usare in modo `dotnet restore` esplicito il comando, poiché un ripristino NuGet viene eseguito in modo implicito se necessario quando si eseguono i comandi seguenti:
+
+- [`dotnet new`](dotnet-new.md)
+- [`dotnet build`](dotnet-build.md)
+- [`dotnet build-server`](dotnet-build-server.md)
+- [`dotnet run`](dotnet-run.md)
+- [`dotnet test`](dotnet-test.md)
+- [`dotnet publish`](dotnet-publish.md)
+- [`dotnet pack`](dotnet-pack.md)
+
+In alcuni casi potrebbe essere scomodo eseguire il ripristino NuGet implicito con questi comandi. È ad esempio necessario che alcuni sistemi automatizzati, come i sistemi di compilazione, chiamino `dotnet restore` in modo esplicito per controllare quando si verifica il ripristino in modo che possano controllare l'utilizzo della rete. Per evitare il ripristino NuGet implicito, è possibile usare `--no-restore` il flag con uno di questi comandi per disabilitare il ripristino implicito.
 
 ### <a name="specify-feeds"></a>Specificare i feed
 
-Per ripristinare le dipendenze, NuGet necessita dei feed in cui si trovano i pacchetti. I feed vengono forniti in genere tramite il file di configurazione *nuget.config*. Quando è installato .NET Core SDK, viene fornito un file di configurazione predefinito. Per specificare feed aggiuntivi, effettuate una delle seguenti operazioni:
+Per ripristinare le dipendenze, NuGet necessita dei feed in cui si trovano i pacchetti. I feed vengono forniti in genere tramite il file di configurazione *nuget.config*. Quando viene installato il .NET Core SDK, viene fornito un file di configurazione predefinito. Per specificare feed aggiuntivi, effettuare una delle operazioni seguenti:
 
-- Creare il proprio file *nuget.config* nella directory del progetto. Per altre informazioni, vedere [Configurazioni comuni](/nuget/consume-packages/configuring-nuget-behavior) di NuGet e [differenze di nuget.config](#nugetconfig-differences) più avanti in questo articolo.
-- Utilizzare `dotnet nuget` comandi [`dotnet nuget add source`](dotnet-nuget-add-source.md)come .
+- Creare il proprio file *NuGet. config* nella directory del progetto. Per altre informazioni, vedere [configurazioni di NuGet comuni](/nuget/consume-packages/configuring-nuget-behavior) e [differenze di NuGet. config](#nugetconfig-differences) più avanti in questo articolo.
+- Usare `dotnet nuget` i comandi come [`dotnet nuget add source`](dotnet-nuget-add-source.md).
 
-È possibile eseguire l'override dei `-s` feed *nuget.config* con l'opzione.
+È possibile eseguire l'override dei feed *NuGet. config* con l' `-s` opzione.
 
-Per informazioni su come utilizzare i feed autenticati, vedere [Utilizzo di pacchetti da feed autenticati](/nuget/consume-packages/consuming-packages-authenticated-feeds).
+Per informazioni sull'utilizzo dei feed autenticati, vedere Utilizzo [di pacchetti da feed autenticati](/nuget/consume-packages/consuming-packages-authenticated-feeds).
 
-### <a name="package-cache"></a>Cache dei pacchetti
+### <a name="global-packages-folder"></a>Cartella pacchetti globali
 
-Per le dipendenze è possibile specificare dove vengono inseriti i pacchetti ripristinati durante l'operazione di ripristino usando l'argomento `--packages`. Se questa destinazione non viene specificata, viene usata la cache predefinita dei pacchetti NuGet che si trova nella directory `.nuget/packages` della directory home dell'utente in tutti i sistemi operativi. Ad esempio, */home/user1* in Linux o *C:\Utenti\user1* in Windows.
+Per le dipendenze è possibile specificare dove vengono inseriti i pacchetti ripristinati durante l'operazione di ripristino, usando l'argomento `--packages`. Se questa destinazione non viene specificata, viene usata la cache predefinita dei pacchetti NuGet che si trova nella directory `.nuget/packages` della directory home dell'utente in tutti i sistemi operativi. Ad esempio, */home/user1* in Linux o *C:\Utenti\user1* in Windows.
 
 ### <a name="project-specific-tooling"></a>Strumenti specifici del progetto
 
@@ -63,29 +73,13 @@ Esistono tre impostazioni specifiche che `dotnet restore` ignora:
 
   I reindirizzamenti di binding non funzionano con elementi `<PackageReference>` e .NET Core supporta solo elementi `<PackageReference>` per i pacchetti NuGet.
 
-- [Soluzione](/nuget/schema/nuget-config-file#solution-section)
+- [soluzione](/nuget/schema/nuget-config-file#solution-section)
 
   Questa impostazione è specifica di Visual Studio e non può essere applicata a .NET Core. .NET Core non usa un file `packages.config` ma usa invece elementi `<PackageReference>` per i pacchetti NuGet.
 
 - [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
 
   Questa impostazione non può essere applicata perché [NuGet non supporta ancora la verifica multipiattaforma](https://github.com/NuGet/Home/issues/7939) di pacchetti attendibili.
-
-## <a name="implicit-restore"></a>Ripristino implicito
-
-Il `dotnet restore` comando viene eseguito in modo implicito se necessario quando si eseguono i seguenti comandi:
-
-- [`dotnet new`](dotnet-new.md)
-- [`dotnet build`](dotnet-build.md)
-- [`dotnet build-server`](dotnet-build-server.md)
-- [`dotnet run`](dotnet-run.md)
-- [`dotnet test`](dotnet-test.md)
-- [`dotnet publish`](dotnet-publish.md)
-- [`dotnet pack`](dotnet-pack.md)
-
-Nella maggior parte dei casi, non `dotnet restore` è necessario utilizzare in modo esplicito il comando.
-
-In alcuni casi, potrebbe non essere appropriato eseguire `dotnet restore` in modo implicito. È ad esempio necessario che alcuni sistemi automatizzati, come i sistemi di compilazione, chiamino `dotnet restore` in modo esplicito per controllare quando si verifica il ripristino in modo che possano controllare l'utilizzo della rete. Per impedire l'esecuzione implicita di `dotnet restore`, è possibile usare il flag `--no-restore` con uno di questi comandi per disabilitare il ripristino implicito.
 
 ## <a name="arguments"></a>Argomenti
 
@@ -109,7 +103,7 @@ In alcuni casi, potrebbe non essere appropriato eseguire `dotnet restore` in mod
 
 - **`--force-evaluate`**
 
-  Forza il ripristino per rivalutare tutte le dipendenze anche se esiste già un file di blocco.
+  Forza il ripristino per rivalutare tutte le dipendenze anche se un file di blocco esiste già.
 
 - **`-h|--help`**
 
@@ -125,7 +119,7 @@ In alcuni casi, potrebbe non essere appropriato eseguire `dotnet restore` in mod
 
 - **`--lock-file-path <LOCK_FILE_PATH>`**
 
-  Percorso di output in cui viene scritto il file di blocco del progetto. Per impostazione predefinita, si tratta di *PROJECT_ROOT,packages.lock.json*.
+  Percorso di output in cui viene scritto il file di blocco del progetto. Per impostazione predefinita, questo valore è *PROJECT_ROOT \Packages.Lock.JSON*.
 
 - **`--locked-mode`**
 
@@ -153,7 +147,7 @@ In alcuni casi, potrebbe non essere appropriato eseguire `dotnet restore` in mod
 
 - **`--use-lockfile`**
 
-  Consente di generare e utilizzare il file di blocco del progetto con il ripristino.
+  Consente la generazione e l'utilizzo del file di blocco del progetto con il ripristino.
 
 - **`-v|--verbosity <LEVEL>`**
 
@@ -167,25 +161,25 @@ In alcuni casi, potrebbe non essere appropriato eseguire `dotnet restore` in mod
   dotnet restore
   ```
 
-- Ripristinare le dipendenze `app1` e gli strumenti per il progetto disponibili nel percorso specificato:Restore dependencies and tools for the project found in the given path:
+- Ripristinare le dipendenze e gli `app1` strumenti per il progetto trovato nel percorso specificato:
 
   ```dotnetcli
   dotnet restore ~/projects/app1/app1.csproj
   ```
 
-- Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente utilizzando il percorso del file fornito come origine:
+- Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente usando il percorso del file fornito come origine:
 
   ```dotnetcli
   dotnet restore -s c:\packages\mypackages
   ```
 
-- Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente utilizzando i due percorsi di file forniti come origini:
+- Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente usando i due percorsi di file forniti come origini:
 
   ```dotnetcli
   dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages
   ```
 
-- Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente che mostra l'output dettagliato:Restore dependencies and tools for the project in the current directory showing detailed output:
+- Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente che mostra l'output dettagliato:
 
   ```dotnetcli
   dotnet restore --verbosity detailed

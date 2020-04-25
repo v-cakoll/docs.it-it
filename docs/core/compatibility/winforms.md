@@ -1,46 +1,56 @@
 ---
-title: Modifiche di rilievo di Windows Form
-description: Vengono elencate le modifiche di rilievo in Windows Form per .NET Core.
+title: Windows Forms modifiche di rilievo
+description: Elenca le modifiche di rilievo apportate Windows Forms per .NET Core.
 ms.date: 01/08/2020
-ms.openlocfilehash: 25c568a8a0092a9c4874419c64c7dcebea4dce9e
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 75d369c7fb999da81a50fe46716e125c3840eb7a
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888126"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158437"
 ---
-# <a name="breaking-changes-in-windows-forms"></a>Modifiche di rilievo in Windows FormBreaking changes in Windows Forms
+# <a name="breaking-changes-in-windows-forms"></a>Modifiche di rilievo in Windows Forms
 
-Il supporto di Windows Form è stato aggiunto a .NET Core nella versione 3.0.Windows Forms support was added to .NET Core in version 3.0. In questo articolo vengono elencate le modifiche di rilievo per Windows Form dalla versione di .NET Core in cui sono state introdotte. Se si sta aggiornando un'app Windows Form da .NET Framework o da una versione precedente di .NET Core (3.0 o versione successiva), questo articolo è applicabile all'utente.
+È stato aggiunto il supporto Windows Forms a .NET Core nella versione 3,0. Questo articolo elenca le modifiche di rilievo per Windows Forms dalla versione di .NET Core in cui sono state introdotte. Se si sta aggiornando un'app Windows Forms da .NET Framework o da una versione precedente di .NET Core (3,0 o versione successiva), questo articolo è applicabile all'utente.
 
-In questa pagina sono documentate le seguenti modifiche di rilievo:
+In questa pagina sono documentate le modifiche di rilievo seguenti:
 
 | Modifica | Versione introdotta |
 | - | :-: |
-| [API WinForms ora generano ArgumentNullException](#winforms-apis-now-throw-argumentnullexception) | 5.0 |
+| [Rimossi controlli barra di stato](#removed-status-bar-controls) | 5.0 |
+| [I metodi WinForms ora generano ArgumentException](#winforms-methods-now-throw-argumentexception) | 5.0 |
+| [I metodi WinForms ora generano ArgumentNullException](#winforms-methods-now-throw-argumentnullexception) | 5.0 |
 | [Controlli rimossi](#removed-controls) | 3.1 |
-| [Evento CellFormatting non generato se è visualizzata la descrizione comando](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3.1 |
-| [Control.DefaultFont modificato in Segoe UI 9 pt](#default-control-font-changed-to-segoe-ui-9-pt) | 3.0 |
+| [Evento CellFormatting non generato se viene visualizzata la descrizione comando](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3.1 |
+| [Control. DefaultFont modificato in Segoe UI 9 PT](#default-control-font-changed-to-segoe-ui-9-pt) | 3.0 |
 | [Modernizzazione di FolderBrowserDialog](#modernization-of-the-folderbrowserdialog) | 3.0 |
-| [SerializableAttribute rimosso da alcuni tipi di Windows Form](#serializableattribute-removed-from-some-windows-forms-types) | 3.0 |
+| [SerializableAttribute rimosso da alcuni tipi di Windows Forms](#serializableattribute-removed-from-some-windows-forms-types) | 3.0 |
 | [Opzione di compatibilità AllowUpdateChildControlIndexForTabControls non supportata](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported) | 3.0 |
-| [Opzione di compatibilità DomainUpDown.UseLegacyScrolling non supportata](#domainupdownuselegacyscrolling-compatibility-switch-not-supported) | 3.0 |
+| [Opzione di compatibilità DomainUpDown. UseLegacyScrolling non supportata](#domainupdownuselegacyscrolling-compatibility-switch-not-supported) | 3.0 |
 | [Opzione di compatibilità DoNotLoadLatestRichEditControl non supportata](#donotloadlatestricheditcontrol-compatibility-switch-not-supported) | 3.0 |
-| [L'opzione di compatibilità DoNotSupportSelectAllShortcutInMultilineTextBox non è supportata](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported) | 3.0 |
-| [Non è supportata l'opzione di compatibilità DontSupportReentrantFilterMessage](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported) | 3.0 |
-| [EnableVisualStyleValidation opzione di compatibilità non supportata](#enablevisualstylevalidation-compatibility-switch-not-supported) | 3.0 |
+| [Opzione di compatibilità DoNotSupportSelectAllShortcutInMultilineTextBox non supportata](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported) | 3.0 |
+| [Opzione di compatibilità DontSupportReentrantFilterMessage non supportata](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported) | 3.0 |
+| [Opzione di compatibilità EnableVisualStyleValidation non supportata](#enablevisualstylevalidation-compatibility-switch-not-supported) | 3.0 |
 | [Opzione di compatibilità UseLegacyContextMenuStripSourceControlValue non supportata](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported) | 3.0 |
 | [Opzione di compatibilità UseLegacyImages non supportata](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
-| [Modifica dell'accesso per AccessibleObject.RuntimeIDFirstItem](#change-of-access-for-accessibleobjectruntimeidfirstitem) | 3.0 |
-| [API duplicate rimosse da Windows Form](#duplicated-apis-removed-from-windows-forms) | 3.0 |
+| [Modifica dell'accesso per AccessibleObject. RuntimeIDFirstItem](#change-of-access-for-accessibleobjectruntimeidfirstitem) | 3.0 |
+| [API duplicate rimosse da Windows Forms](#duplicated-apis-removed-from-windows-forms) | 3.0 |
 
-## <a name="net-50"></a>.NET 5.0 (informazioni in base alle persone)
+## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [winforms-deprecated-controls](../../../includes/core-changes/windowsforms/5.0/winforms-deprecated-controls.md)]
+
+***
+
+[!INCLUDE [invalid-args-cause-argumentexception](../../../includes/core-changes/windowsforms/5.0/invalid-args-cause-argumentexception.md)]
+
+***
 
 [!INCLUDE [null-args-cause-argumentnullexception](../../../includes/core-changes/windowsforms/5.0/null-args-cause-argumentnullexception.md)]
 
 ***
 
-## <a name="net-core-31"></a>.NET Core 3.1
+## <a name="net-core-31"></a>.NET Core 3,1
 
 [!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/3.1/remove-controls-3.1.md)]
 
@@ -104,6 +114,6 @@ In questa pagina sono documentate le seguenti modifiche di rilievo:
 
 ***
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Convertire un'app Windows Form in .NET Core](../porting/winforms.md)
+- [Trasferire un'app Windows Forms a .NET Core](../porting/winforms.md)

@@ -2,12 +2,12 @@
 title: Contesto dell'istanza durevole
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 3ff4cbcf7a6007339d98820384f5e2d4164d1b0b
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 604a617dc03bf06b71fe3019b58b2161216ee3e0
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711933"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141191"
 ---
 # <a name="durable-instance-context"></a>Contesto dell'istanza durevole
 
@@ -122,7 +122,7 @@ if (isFirstMessage)
 }
 ```
 
-Queste implementazioni del canale vengono quindi aggiunte al runtime del canale WCF dalla classe `DurableInstanceContextBindingElement` e `DurableInstanceContextBindingElementSection` classe in modo appropriato. Per ulteriori informazioni sugli elementi di associazione e le sezioni degli elementi di associazione, vedere la documentazione di esempio sul canale [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) .
+Queste implementazioni del `DurableInstanceContextBindingElement` canale vengono quindi aggiunte al runtime del canale WCF dalla classe e `DurableInstanceContextBindingElementSection` dalla classe in modo appropriato. Per ulteriori informazioni sugli elementi di associazione e le sezioni degli elementi di associazione, vedere la documentazione di esempio sul canale [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) .
 
 ## <a name="service-model-layer-extensions"></a>Estensioni del livello del modello di servizio
 
@@ -234,13 +234,13 @@ L'infrastruttura necessaria per leggere e scrivere istanze dall'archiviazione pe
 
 Come primo passaggio di questo processo è necessario salvare l'ID del contesto che è stato trasferito sul InstanceContext attuale utilizzando il livello del canale. InstanceContext è un componente di runtime che funge da collegamento tra il Dispatcher WCF e l'istanza del servizio. Può essere utilizzato per fornire stati e comportamenti aggiuntivi all'istanza del servizio. È essenziale, perché nella comunicazione con sessione l'ID del contesto viene inviato solo con il primo messaggio.
 
-WCF consente di estendere il componente runtime di InstanceContext aggiungendo un nuovo stato e un nuovo comportamento usando il modello di oggetto estensibile. Il modello a oggetti estendibile viene usato in WCF per estendere le classi di runtime esistenti con nuove funzionalità o per aggiungere nuove funzionalità di stato a un oggetto. Nel modello di oggetto estensibile sono disponibili tre interfacce: IExtensibleObject\<T >, IExtension\<T > e IExtensionCollection\<T >:
+WCF consente di estendere il componente runtime di InstanceContext aggiungendo un nuovo stato e un nuovo comportamento usando il modello di oggetto estensibile. Il modello a oggetti estendibile viene usato in WCF per estendere le classi di runtime esistenti con nuove funzionalità o per aggiungere nuove funzionalità di stato a un oggetto. Nel modello di oggetto estensibile sono disponibili tre interfacce,\<IExtensibleObject t>,\<IExtension t> e IExtensionCollection\<t>:
 
-- L'interfaccia IExtensibleObject\<T > è implementata da oggetti che consentono le estensioni che ne personalizzano la funzionalità.
+- L'interfaccia\<IExtensibleObject T> è implementata da oggetti che consentono le estensioni che ne personalizzano la funzionalità.
 
-- L'interfaccia IExtension\<T > viene implementata da oggetti che sono estensioni di classi di tipo T.
+- L'interfaccia\<IExtension T> viene implementata da oggetti che sono estensioni di classi di tipo T.
 
-- L'interfaccia IExtensionCollection\<T > è una raccolta di IExtensions che consente di recuperare IExtensions in base al tipo.
+- L'interfaccia\<IExtensionCollection T> è una raccolta di IExtensions che consente di recuperare IExtensions in base al tipo.
 
 È pertanto necessario creare una classe InstanceContextExtension che implementi l'interfaccia IExtension e definisca lo stato necessario per salvare l'ID del contesto. Questa classe fornisce inoltre lo stato per memorizzare la gestione archivi utilizzata. Una volta salvato il nuovo stato, non sarà possibile modificarlo. Lo stato viene pertanto fornito e salvato nell'istanza che viene generata in quel momento e vi si potrà accedere soltanto utilizzando le proprietà di sola lettura.
 
@@ -351,13 +351,13 @@ Per riassumere, questo esempio ha prodotto un canale che abilita il protocollo d
 
 Rimane da trovare un modo per salvare l'istanza del servizio nell'archivio permanente. Come illustrato precedentemente, esiste già la funzionalità necessaria per salvare lo stato in un'implementazione `IStorageManager`. A questo punto è necessario integrare questa operazione con il runtime WCF. È necessario un altro attributo applicabile ai metodi della classe di implementazione del servizio. Questo attributo va applicato ai metodi che modificano lo stato dell'istanza del servizio.
 
-La classe `SaveStateAttribute` implementa questa funzionalità. Implementa inoltre `IOperationBehavior` classe per modificare il runtime WCF per ogni operazione. Quando un metodo è contrassegnato con questo attributo, il runtime WCF richiama il metodo `ApplyBehavior` mentre viene costruito il `DispatchOperation` appropriato. In questa implementazione del metodo c'è una sola riga di codice:
+La classe `SaveStateAttribute` implementa questa funzionalità. Implementa `IOperationBehavior` inoltre la classe per modificare il runtime WCF per ogni operazione. Quando un metodo è contrassegnato con questo attributo, il runtime WCF richiama il `ApplyBehavior` metodo mentre viene costruito l' `DispatchOperation` oggetto appropriato. In questa implementazione del metodo c'è una sola riga di codice:
 
 ```csharp
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);
 ```
 
-Questa istruzione crea un'istanza di tipo `OperationInvoker` e la assegna alla proprietà `Invoker` dell'elemento `DispatchOperation` che viene generato. La classe `OperationInvoker` è un wrapper per l'invoker dell'operazione predefinita creato per `DispatchOperation`. Questa classe implementa l'interfaccia `IOperationInvoker` . Nell'implementazione del metodo `Invoke` la chiamata al metodo effettiva viene delegata all'invoker dell'operazione interna. Tuttavia, prima di restituire i risultati la gestione archivi in `InstanceContext` viene utilizzata per salvare l'istanza del servizio.
+Questa istruzione crea un'istanza di tipo `OperationInvoker` e la assegna alla proprietà `Invoker` dell'elemento `DispatchOperation` che viene generato. La classe `OperationInvoker` è un wrapper per l'invoker dell'operazione predefinita creato per `DispatchOperation`. La classe implementa l'interfaccia `IOperationInvoker`. Nell'implementazione del metodo `Invoke` la chiamata al metodo effettiva viene delegata all'invoker dell'operazione interna. Tuttavia, prima di restituire i risultati la gestione archivi in `InstanceContext` viene utilizzata per salvare l'istanza del servizio.
 
 ```csharp
 object result = innerOperationInvoker.Invoke(instance,
@@ -401,6 +401,7 @@ public class ShoppingCart : IShoppingCart
 type="Microsoft.ServiceModel.Samples.DurableInstanceContextBindingElementSection, DurableInstanceContextExtension, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"/>
    </bindingElementExtensions>
  </extensions>
+</system.serviceModel>
 ```
 
 È ora possibile utilizzare l'elemento di associazione con un'associazione personalizzata, proprio come gli altri elementi di associazione standard:
@@ -418,7 +419,7 @@ type="Microsoft.ServiceModel.Samples.DurableInstanceContextBindingElementSection
 </bindings>
 ```
 
-## <a name="conclusion"></a>Conclusione
+## <a name="conclusion"></a>Conclusioni
 
 In questo esempio viene illustrato come creare un canale del protocollo personalizzato e come personalizzare il comportamento del servizio per abilitarlo.
 
@@ -457,6 +458,6 @@ Press ENTER to shut down client
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`

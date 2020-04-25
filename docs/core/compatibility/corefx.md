@@ -2,12 +2,12 @@
 title: Modifiche di rilievo della libreria di classi base
 description: Elenca le modifiche di rilievo nelle librerie .NET di base.
 ms.date: 09/20/2019
-ms.openlocfilehash: 841003fdb114042466cc15b4846e133cf37de85c
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: bc80f27a8a98890a93ad3b99e09ea7ea380d506c
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135646"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158477"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Modifiche di rilievo nelle librerie .NET Core
 
@@ -22,7 +22,7 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 | [Modifiche al comportamento di analisi e formattazione a virgola mobile](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
 | [Le operazioni di analisi a virgola mobile non hanno più esito negativo o generano OverflowException](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception) | 3.0 |
 | [InvalidAsynchronousStateException spostato in un altro assembly](#invalidasynchronousstateexception-moved-to-another-assembly) | 3.0 |
-| [NET Core 3,0 segue le procedure consigliate Unicode per la sostituzione di sequenze di byte UTF-8 in formato non valido](#net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences) | 3.0 |
+| [La sostituzione di sequenze di byte UTF-8 in formato non corretto segue le linee guida Unicode](#replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines) | 3.0 |
 | [TypeDescriptionProviderAttribute spostato in un altro assembly](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
 | [ZipArchiveEntry non gestisce più gli archivi con dimensioni di voce incoerenti](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
 | [Tipo di eccezione del serializzatore JSON modificato da Jsonexception a NotSupportedException](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | 3.0 |

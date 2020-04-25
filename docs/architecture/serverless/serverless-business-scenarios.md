@@ -4,12 +4,12 @@ description: Impara a usare senza server un approccio pratico accedendo ad esemp
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/17/2020
-ms.openlocfilehash: 5c2ee70b86fbc9a54d2a532eaa3d7509f23825df
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 3cb3b73325fccc327ccf17f7298048f2eeb3577a
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135659"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158450"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Scenari di business serverless e casi d'uso
 
@@ -93,13 +93,13 @@ Questo esempio è una funzione generica`.csx` (file) che può essere usata per c
 
 ## <a name="serverless-for-mobile"></a>Senza server per dispositivi mobili
 
-Funzioni di Azure è facile da implementare e gestire e accessibile tramite HTTP. Sono un ottimo modo per implementare un'API per un'applicazione per dispositivi mobili. Microsoft offre ottimi strumenti multipiattaforma per iOS, Android e Windows con Novell. Di conseguenza, Novell e funzioni di Azure operano insieme. Questo articolo illustra come implementare una funzione di Azure nel portale Web di Azure o in Visual Studio inizialmente e creare un client multipiattaforma con Novell. Forms, in esecuzione in Android, iOS e Windows.
+Funzioni di Azure è facile da implementare e gestire e accessibile tramite HTTP. Sono un ottimo modo per implementare un'API per un'applicazione per dispositivi mobili. Microsoft offre ottimi strumenti multipiattaforma per iOS, Android e Windows con Novell. Di conseguenza, Novell e funzioni di Azure operano insieme. Questo articolo illustra come implementare una funzione di Azure nella portale di Azure o in Visual Studio inizialmente e creare un client multipiattaforma con Novell. Forms in esecuzione in Android, iOS e Windows.
 
 [Implementazione di una semplice funzione di Azure con un client Novell. Forms](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
 
 ## <a name="serverless-messaging"></a>Messaggistica senza server
 
-Questo esempio illustra come usare il modello di fan-out Durable Functions ' per caricare un numero arbitrario di messaggi in un numero qualsiasi di sessioni/partizioni. È destinato a bus di servizio, Hub eventi o code di archiviazione. L'esempio aggiunge anche la possibilità di utilizzare tali messaggi con un'altra funzione di Azure e di caricare i dati temporali risultanti in un altro hub eventi. I dati vengono quindi inseriti in servizi di analisi come Azure Esplora dati.
+Questo esempio illustra come usare il modello di fan-out di Durable Functions per caricare un numero arbitrario di messaggi in un numero qualsiasi di sessioni/partizioni. È destinato a bus di servizio, Hub eventi o code di archiviazione. L'esempio aggiunge anche la possibilità di utilizzare tali messaggi con un'altra funzione di Azure e di caricare i dati temporali risultanti in un altro hub eventi. I dati vengono quindi inseriti in servizi di analisi come Azure Esplora dati.
 
 [Produrre e utilizzare messaggi tramite il bus di servizio, Hub eventi e le code di archiviazione con funzioni di Azure](https://docs.microsoft.com/samples/azure-samples/durable-functions-producer-consumer/product-consume-messages-az-functions/)
 
