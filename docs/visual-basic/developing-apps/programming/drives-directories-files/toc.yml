@@ -1,5 +1,5 @@
 - name: 'Elaborazione di unità, directory e file'
-  href: processing.md
+  href: index.md
   items:
     - name: Accesso ai file con Visual Basic
       href: file-access.md

@@ -295,7 +295,7 @@
           href: linq-to-xml-for-xpath-users.md
           items:
             - name: Confronto tra XPath e LINQ to XML
-              href: comparison-of-xpath-and-linq-to-xml.md
+              href: ../../../../csharp/programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md
             - name: 'Procedura: Trovare un elemento figlio (XPath-LINQ to XML)'
               href: how-to-find-a-child-element-xpath-linq-to-xml.md
             - name: 'Procedura: Trovare un elenco di elementi figlio (XPath-LINQ to XML)'
