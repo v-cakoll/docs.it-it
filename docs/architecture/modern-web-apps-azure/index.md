@@ -4,18 +4,18 @@ description: Una guida che offre linee guida end-to-end sulla compilazione di ap
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/4/2019
-ms.openlocfilehash: 18449ea02b7f9e89744a0f3088f80b7a51a807da
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 6ae5de0381c8796faee74abd40f688214ab13211
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987894"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199963"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Progettare applicazioni Web moderne con ASP.NET Core e Azure
 
-![Immagine di copertina del manuale Architect Modern Web Applications.](./media/index/web-application-guide-cover-image.png)
+![Book Cover image of the Architect Modern Web Applications guide.](./media/index/web-application-guide-cover-image.png)
 
-**EDITION v3.1** - Aggiornato per ASP.NET Core 3.1
+**Edizione v 3.1** -aggiornata alla ASP.NET Core 3,1
 
 PUBBLICATO DA
 
@@ -27,7 +27,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2020 da Microsoft Corporation
+Copyright © 2020 di Microsoft Corporation
 
 Tutti i diritti sono riservati. Nessuna parte del contenuto di questo libro può essere riprodotta o trasmessa in qualsiasi forma o con qualsiasi mezzo, senza il permesso scritto dell'editore.
 
@@ -39,7 +39,7 @@ Microsoft e i marchi elencati nella pagina Web relativa ai marchi all'indirizzo 
 
 Mac e macOS sono marchi registrati di Apple Inc.
 
-Il logo Docker whale è un marchio registrato di Docker, Inc.
+Il logo Docker Whale è un marchio registrato di Docker, Inc. usato dall'autorizzazione.
 
 Tutti gli altri marchi e logo appartengono ai rispettivi proprietari.
 
@@ -83,9 +83,9 @@ La compilazione di applicazioni Web con ASP.NET Core, ospitato in Azure, offre m
 
 ## <a name="purpose"></a>Scopo
 
-Questa guida fornisce indicazioni end-to-end sulla creazione di applicazioni Web monolitiche usando ASP.NET Core e Azure.This guide provides end-to-end guidance on building *monolithic* web applications using ASP.NET Core and Azure. In questo contesto "monolitico" si riferisce al fatto che queste applicazioni vengono distribuite come una singola unità, non come una raccolta di applicazioni e servizi che interagiscono tra loro.
+Questa guida fornisce indicazioni end-to-end sulla creazione di applicazioni Web *monolitiche* con ASP.NET Core e Azure. In questo contesto "monolitico" si riferisce al fatto che queste applicazioni vengono distribuite come una singola unità, non come una raccolta di applicazioni e servizi che interagiscono tra loro.
 
-Questa guida è complementare [ai "_Microservizi .NET. Architettura per le applicazioni .NET containerizzate_"](../microservices/index.md) che si concentra maggiormente su Docker, Microservices e distribuzione di contenitori per ospitare applicazioni aziendali.
+Questa guida è complementare [ai_microservizi .NET. Architettura per le applicazioni .NET in contenitori_"](../microservices/index.md), che è incentrata su Docker, microservizi e sulla distribuzione di contenitori per ospitare le applicazioni aziendali.
 
 ### <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori
 
@@ -102,7 +102,7 @@ Un'altra parte minore dei destinatari di questa guida è costituita da responsab
 
 ## <a name="how-you-can-use-this-guide"></a>Come usare questa guida
 
-Questa guida è stata condensata in un documento relativamente piccolo, incentrato sulla compilazione di applicazioni Web con tecnologie .NET moderne e Microsoft Azure. Per questo motivo, può essere letta interamente per ottenere nozioni di base per la comprensione di tali applicazioni e delle considerazioni tecniche associate. La guida, insieme all'applicazione di esempio, può essere usata anche come punto di partenza o riferimento. Usare l'applicazione di esempio associata come modello per le applicazioni oppure per determinare come organizzare le parti che compongono l'applicazione. Tornare ai principi e alla trattazione di questa guida riguardo ad architettura, opzioni tecnologiche e considerazioni sulle decisioni per soppesare queste scelte per l'applicazione.
+Questa guida è stata ridotta in un documento relativamente piccolo incentrato sulla creazione di applicazioni Web con tecnologie .NET moderne e Azure. Per questo motivo, può essere letta interamente per ottenere nozioni di base per la comprensione di tali applicazioni e delle considerazioni tecniche associate. La guida, insieme all'applicazione di esempio, può essere usata anche come punto di partenza o riferimento. Usare l'applicazione di esempio associata come modello per le applicazioni oppure per determinare come organizzare le parti che compongono l'applicazione. Tornare ai principi e alla trattazione di questa guida riguardo ad architettura, opzioni tecnologiche e considerazioni sulle decisioni per soppesare queste scelte per l'applicazione.
 
 È possibile inoltrare questa guida al team per aiutarlo ad acquisire una comprensione di base di queste considerazioni e opportunità. Facendo sì che tutti usino un insieme comune di termini e di principi sottostanti, si garantisce l'applicazione coerente di modelli e procedure architetturali.
 

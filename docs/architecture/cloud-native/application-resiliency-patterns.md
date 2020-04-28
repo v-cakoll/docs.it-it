@@ -2,12 +2,12 @@
 title: Modelli di resilienza delle applicazioni
 description: Architettura di app .NET cloud native per Azure | Modelli di resilienza delle applicazioni
 ms.date: 06/30/2019
-ms.openlocfilehash: 13811efaa88e0bd2824add1c8712b78b18d46375
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6805603f349578655b2535c7346af368c5ce1841
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087756"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199690"
 ---
 # <a name="application-resiliency-patterns"></a>Modelli di resilienza delle applicazioni
 
@@ -54,9 +54,9 @@ Nella figura precedente è stato implementato un modello di ripetizione dei tent
 
 ## <a name="circuit-breaker-pattern"></a>Modello di interruttore
 
-Sebbene il modello di ripetizione dei tentativi possa aiutare a recuperare una richiesta coinvolta in un errore parziale, in alcuni casi gli errori possono essere causati da eventi imprevisti che richiedono più tempo per la risoluzione. La gravità di questi errori può variare, da una perdita parziale di connettività a un errore generale di un servizio. In questi casi, è inutile che un'applicazione ritenti continuamente un'operazione che potrebbe non riuscire.
+Sebbene il modello di ripetizione dei tentativi possa aiutare a recuperare una richiesta coinvolta in un errore parziale, in alcuni casi gli errori possono essere causati da eventi imprevisti che richiedono più tempo per la risoluzione. Questi errori possono variare, in base alla gravità, dalla perdita parziale della connettività alla totale interruzione di un servizio. In questi casi, è inutile che un'applicazione ritenti continuamente un'operazione che potrebbe non riuscire.
 
-Per peggiorare le cose, l'esecuzione di operazioni continue di ripetizione su un servizio che non risponde può comportare uno scenario di attacco di tipo Denial of Service autonomo, in cui il servizio viene sottoposto a chiamate continue esaurite, ad esempio memoria, thread e database connessioni, causando un errore in parti non correlate del sistema che utilizzano le stesse risorse.
+Per peggiorare le cose, l'esecuzione di operazioni di ripetizione continua su un servizio che non risponde può comportare uno scenario di attacco di tipo Denial of Service autonomo, in cui il servizio viene sottoposto a chiamate continue che esauriscono le risorse, ad esempio memoria, thread e connessioni di database, causando un errore in parti non correlate del sistema che usano le stesse risorse.
 
 In queste situazioni è preferibile che l'operazione abbia esito negativo immediatamente e tenti di richiamare il servizio solo se è probabile che abbia esito positivo.
 
@@ -74,4 +74,4 @@ La resilienza dell'applicazione è un must per la gestione di operazioni richies
 
 >[!div class="step-by-step"]
 >[Precedente](resiliency.md)
->[Successivo](infrastructure-resiliency-azure.md)
+>[successivo](infrastructure-resiliency-azure.md)

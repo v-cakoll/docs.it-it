@@ -1,16 +1,16 @@
 ---
-title: Architettura delle applicazioni .NET native cloud per AzureArchitecting Cloud Native .NET Applications for Azure
-description: Guida per la creazione di applicazioni native nel cloud sfruttando contenitori, microservizi e funzionalità senza server di Azure.A guide for building cloud-native applications leveraging containers, microservices, and serverless features of Azure.
+title: Architettura di applicazioni .NET cloud native per Azure
+description: Guida per la creazione di applicazioni native del cloud che sfruttano contenitori, microservizi e funzionalità senza server di Azure.
 author: ardalis
-ms.date: 03/07/2019
-ms.openlocfilehash: cf3be07f0d37aacf4f0252ef2f4d922b7be93eee
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 04/23/2020
+ms.openlocfilehash: ebef97fb355cbf682b37ee441a19fbbfdd2d0dc3
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989064"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199820"
 ---
-# <a name="architecting-cloud-native-net-applications-for-azure"></a>Architettura delle applicazioni .NET native cloud per AzureArchitecting Cloud Native .NET Applications for Azure
+# <a name="architecting-cloud-native-net-applications-for-azure"></a>Architettura di applicazioni .NET cloud native per Azure
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -38,35 +38,41 @@ Microsoft e i marchi elencati nella pagina Web relativa ai marchi all'indirizzo 
 
 Mac e macOS sono marchi registrati di Apple Inc.
 
-Il logo Docker whale è un marchio registrato di Docker, Inc.
+Il logo Docker Whale è un marchio registrato di Docker, Inc. usato dall'autorizzazione.
 
 Tutti gli altri marchi e logo appartengono ai rispettivi proprietari.
 
 Autori:
 
-> **Steve "ardalis" Smith** - Software Architect e Trainer - [Ardalis.com](https://ardalis.com)
+> **Rob Vettor**, Principal Cloud System Architect/IP architect- [thinkingincloudnative.com](http://thinkingincloudnative.com/about/), Microsoft
 >
-> **Rob Vettor** - Microsoft - Principal Cloud System Architect/IP Architect - [thinkingincloudnative.com](http://thinkingincloudnative.com/about/)
+> **Steve "ardalis" Smith**, Software Architect e Trainer- [Ardalis.com](https://ardalis.com)
 
 Partecipanti e revisori:
 
-> **Cesar De la Torre**, Principal Program Manager, .NET team, Microsoft
+> **Cesar de la Torre**, responsabile del programma principale, team di .NET, Microsoft
 >
-> **Nish Anil**, Senior Program Manager, team di .NET, Microsoft
+> **Nitura Anil**, Senior Program Manager, team di .NET, Microsoft
+>
+> **Jeremy somiglianza**, Senior Program Manager, team di .NET, Microsoft
+>
+> **Cecil Phillip**, senior cloud Advocate, Microsoft
+
+Altre informazioni su eShopOnContainers
 
 Editor:
 
-> **Maira Wenzel**, Sr. Content Developer, Team .NET, Microsoft
+> **Maira Wenzel**, Program Manager, team di .NET, Microsoft
 
 ## <a name="who-should-use-this-guide"></a>Destinatari della guida
 
-Il pubblico di questa guida è composto principalmente da sviluppatori, responsabili dello sviluppo e architetti interessati a imparare a creare applicazioni progettate per il cloud.
+I destinatari di questa guida sono principalmente sviluppatori, lead di sviluppo e architetti che sono interessati ad apprendere come creare applicazioni progettate per il cloud.
 
-Un pubblico secondario è un pubblico tecnico che prevede di scegliere se creare le proprie applicazioni utilizzando un approccio cloud-native.
+Un pubblico secondario è costituito da Decision Maker tecnici che pianificano di scegliere se compilare le proprie applicazioni usando un approccio nativo per il cloud.
 
 ## <a name="how-you-can-use-this-guide"></a>Come usare questa guida
 
-Questa guida inizia definendo cloud nativo e introducendo un'applicazione di riferimento creata utilizzando principi e tecnologie native cloud. Al di là di questi primi due capitoli, il resto del libro è suddiviso in capitoli specifici incentrati su argomenti comuni alla maggior parte delle applicazioni native nel cloud. È possibile passare a uno qualsiasi di questi capitoli per informazioni sugli approcci nativi al cloud:
+Questa guida inizia definendo cloud native e introducendo un'applicazione di riferimento compilata usando principi e tecnologie native del cloud. Oltre a questi primi due capitoli, il resto del libro è suddiviso in capitoli specifici che riguardano argomenti comuni alla maggior parte delle applicazioni native del cloud. È possibile passare a uno di questi capitoli per ottenere informazioni sugli approcci nativi del cloud per:
 
 - Accesso ai dati e ai dati
 - Modelli di comunicazione
@@ -76,7 +82,7 @@ Questa guida inizia definendo cloud nativo e introducendo un'applicazione di rif
 - Identità e sicurezza
 - DevOps
 
-Questa guida è disponibile sia in formato PDF che online. Sentitevi liberi di inoltrare questo documento o collegamenti alla sua versione online al vostro team per contribuire a garantire una comprensione comune di questi argomenti. La maggior parte di questi argomenti beneficiano di una comprensione coerente dei principi e dei modelli sottostanti, nonché dei compromessi coinvolti nelle decisioni relative a questi argomenti. Il nostro obiettivo con questo documento è quello di dotare i team e i loro leader delle informazioni di cui hanno bisogno per prendere decisioni ben informate per l'architettura, lo sviluppo e l'hosting delle loro applicazioni.
+Questa guida è disponibile sia in formato PDF che in linea. È possibile inviare questo documento o collegamenti alla relativa versione online al team per garantire una conoscenza comune di questi argomenti. La maggior parte di questi argomenti trae vantaggio da una comprensione coerente dei principi e dei modelli sottostanti, nonché dei compromessi che interessano le decisioni correlate a questi argomenti. Il nostro obiettivo di questo documento è quello di dotare i team e i loro leader con le informazioni necessarie per prendere decisioni ben informate per l'architettura, lo sviluppo e l'hosting delle proprie applicazioni.
 
 >[!div class="step-by-step"]
 >[Avanti](introduction.md)
