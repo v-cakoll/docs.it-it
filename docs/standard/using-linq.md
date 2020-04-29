@@ -1,6 +1,6 @@
 ---
 title: LINQ (Language Integrated Query)
-description: Informazioni su come LINQ fornisce funzionalità di query a livello di linguaggio e un'API per C ' c'è e Visual Basic come un modo per scrivere codice espressivo e dichiarativo.
+description: Informazioni su come LINQ fornisce funzionalità di query a livello di linguaggio e un'API a C# e Visual Basic come modo per scrivere codice dichiarativo espressivo.
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -9,18 +9,18 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: eafd8f78c3d8de1ba064021111f869571d5a570f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76872f3ba3ed5106a4cb5bfdd918ae607acc092d
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160326"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507520"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
 ## <a name="what-is-it"></a>Che cos'è?
 
-LINQLINQ fornisce funzionalità di query a livello di linguaggio e un'API di funzione di [ordine superiore](https://en.wikipedia.org/wiki/Higher-order_function) per C .
+LINQ fornisce funzionalità di query a livello di linguaggio e un'API di [funzione di ordine superiore](https://en.wikipedia.org/wiki/Higher-order_function) a C# e Visual Basic come modo per scrivere codice dichiarativo espressivo.
 
 Sintassi di query a livello di linguaggio:
 
@@ -161,7 +161,7 @@ La risposta a questa domanda è **no** se...
 
 ## <a name="essential-samples"></a>Esempi significativi
 
-Per un elenco completo di esempi di LINQ, vedere [101 LINQ Samples](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b) (101 esempi di LINQ).
+Per un elenco completo di esempi di LINQ, vedere [101 LINQ Samples](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/) (101 esempi di LINQ).
 
 Di seguito una rapida dimostrazione di alcune delle parti essenziali di LINQ. Non è affatto una dimostrazione completa, poiché LINQ offre molte più funzionalità rispetto a quanto viene illustrato di seguito.
 
@@ -354,7 +354,7 @@ End Function
 
 PLINQ o Parallel LINQ è un motore di esecuzione parallela per le espressioni LINQ. In altre parole, un'espressione LINQ può essere facilmente parallelizzata su un numero qualsiasi di thread. Questa operazione viene eseguita chiamando `AsParallel()`, che precede l'espressione.
 
-Valutare gli aspetti seguenti:
+Considerare quanto segue:
 
 ```csharp
 public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> facebookUsers)
@@ -394,6 +394,6 @@ I processi basati su CPU parallelizzabili che possono essere espressi facilmente
 
 ## <a name="further-resources"></a>Altre risorse:
 
-* [101 esempi di LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-* [Linqpad](https://www.linqpad.net/), un ambiente di gioco di gioco e motore di query di database per C
+* [101 esempi di LINQ](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/)
+* [LINQPad](https://www.linqpad.net/), un ambiente Playground e un motore di query di database per C#/F #/Visual Basic
 * [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), un e-book per scoprire come implementare LINQ-to-objects

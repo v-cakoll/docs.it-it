@@ -4,12 +4,12 @@ description: Informazioni su come eseguire la migrazione di un'app Windows Prese
 author: mjrousos
 ms.date: 09/12/2019
 ms.author: mikerou
-ms.openlocfilehash: f52005e7c8a6312b8c4e09a950f1f635af1894e4
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: ccd2fc5a49d9c2d31c693e48099732614b568c7b
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "82071311"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507455"
 ---
 # <a name="migrating-wpf-apps-to-net-core"></a>Migrazione di app WPF a .NET Core
 
@@ -162,7 +162,7 @@ In base a questo report e all'analisi delle dipendenze NuGet precedente, sembra 
 
 Se l'app non usa il nuovo [formato di file di progetto in stile SDK](../../core/tools/csproj.md), sarà necessario un nuovo file di progetto per la destinazione di .NET Core. È possibile sostituire il file csproj esistente o, se si preferisce che il progetto esistente rimanga intatto nello stato corrente, è possibile aggiungere un nuovo file csproj destinato a .NET Core. È possibile compilare versioni dell'app per .NET Framework e .NET Core con un singolo file di progetto in stile SDK con [multi-targeting](../../standard/library-guidance/cross-platform-targeting.md) (specificando `<TargetFrameworks>` più destinazioni).
 
-Per creare il nuovo file di progetto, è possibile creare un nuovo progetto WPF in Visual Studio o usare `dotnet new wpf` il comando in una directory temporanea per generare il file di progetto e quindi copiarlo o rinominarlo nella posizione corretta. È disponibile anche uno strumento creato dalla community, [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017), che consente di automatizzare parte della migrazione dei file di progetto. Lo strumento è utile, ma necessita ancora di un uomo per esaminare i risultati per assicurarsi che tutti i dettagli della migrazione siano corretti. Una particolare area che lo strumento non gestisce in modo ottimale è la migrazione dei pacchetti NuGet dai file *packages. config* . Se lo strumento viene eseguito in un file di progetto che usa ancora un file *packages. config* per fare riferimento ai pacchetti NuGet `<PackageReference>` , eseguirà automaticamente la migrazione `<PackageReference>` agli elementi, ma aggiungerà elementi per *tutti* i pacchetti anziché solo quelli di primo livello. Se è già stata eseguita la migrazione`<PackageReference>` a elementi con Visual Studio (come è stato fatto in questo esempio), lo strumento può essere utile per il resto della conversione. Come Scott Hanselr consiglia nel [suo post di Blog sulla migrazione dei file csproj](https://www.hanselman.com/blog/UpgradingAnExistingNETProjectFilesToTheLeanNewCSPROJFormatFromNETCore.aspx), il porting manuale è educativo e fornisce risultati migliori se si dispone solo di alcuni progetti da trasferire. Tuttavia, se si esegue il porting di dozzine o centinaia di file di progetto, uno strumento come [CsprojToVs2017] può essere una guida.
+Per creare il nuovo file di progetto, è possibile creare un nuovo progetto WPF in Visual Studio o usare `dotnet new wpf` il comando in una directory temporanea per generare il file di progetto e quindi copiarlo o rinominarlo nella posizione corretta. È disponibile anche uno strumento creato dalla community, [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017), che consente di automatizzare parte della migrazione dei file di progetto. Lo strumento è utile, ma necessita ancora di un uomo per esaminare i risultati per assicurarsi che tutti i dettagli della migrazione siano corretti. Una particolare area che lo strumento non gestisce in modo ottimale è la migrazione dei pacchetti NuGet dai file *packages. config* . Se lo strumento viene eseguito in un file di progetto che usa ancora un file *packages. config* per fare riferimento ai pacchetti NuGet `<PackageReference>` , eseguirà automaticamente la migrazione `<PackageReference>` agli elementi, ma aggiungerà elementi per *tutti* i pacchetti anziché solo quelli di primo livello. Se è già stata eseguita la migrazione`<PackageReference>` a elementi con Visual Studio (come è stato fatto in questo esempio), lo strumento può essere utile per il resto della conversione. Come Scott Hanselr consiglia nel [suo post di Blog sulla migrazione dei file csproj](https://www.hanselman.com/blog/UpgradingAnExistingNETProjectFilesToTheLeanNewCSPROJFormatFromNETCore.aspx), il porting manuale è educativo e fornisce risultati migliori se si dispone solo di alcuni progetti da trasferire. Tuttavia, se si esegue il porting di dozzine o centinaia di file di progetto, uno strumento come [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) può essere una guida.
 
 Per creare un nuovo file di progetto per l'esempio Bean trader, `dotnet new wpf` eseguire in una directory temporanea e spostare il file con *estensione csproj* generato nella cartella *BeanTraderClient* e rinominarlo **BeanTraderClient. Core. csproj**.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: ec5d4c088d3a954a4670891e3bb115c73e6cfdcf
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 3b95a322377e82249a0375af589df74c658fcbf4
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242764"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507416"
 ---
 # <a name="numerics-in-net"></a>Valori numerici in .NET
 
@@ -30,7 +30,7 @@ ms.locfileid: "81242764"
 |----------|----------------------|--------------------|-------------------|-------------------|  
 |<xref:System.Byte?displayProperty=nameWithType>|Senza segno|1|0|255|  
 |<xref:System.Int16?displayProperty=nameWithType>|Firmato|2|-32,768|32.767|  
-|<xref:System.Int32?displayProperty=nameWithType>|Firmato|4|-2,147,483,648|2.147.483.647|  
+|<xref:System.Int32?displayProperty=nameWithType>|Firmato|4|-2,147,483,648|2\.147.483.647|  
 |<xref:System.Int64?displayProperty=nameWithType>|Firmato|8|-9,223,372,036,854,775,808|9,223,372,036,854,775,807|  
 |<xref:System.SByte?displayProperty=nameWithType>|Firmato|1|-128|127|  
 |<xref:System.UInt16?displayProperty=nameWithType>|Senza segno|2|0|65.535|  
@@ -60,11 +60,11 @@ La struttura <xref:System.Numerics.BigInteger?displayProperty=nameWithType> è u
   
 I tipi <xref:System.Single> e <xref:System.Double> supportano entrambi valori speciali che rappresentano un valore non numerico e infinito. Ad esempio, il tipo <xref:System.Double> fornisce questi valori: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> e <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>. Per testare questi valori speciali, è necessario usare i metodi <xref:System.Double.IsNaN%2A?displayProperty=nameWithType>, <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>, <xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType> e <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType>.
 
-Ogni tipo a virgola mobile supporta un set di operatori aritmetici standard. La classe <xref:System.Math?displayProperty=nameWithType> fornisce metodi per un set più ampio di funzioni matematiche. .NET Core 2.0 e <xref:System.MathF?displayProperty=nameWithType> versioni successive include la classe <xref:System.Single> , che fornisce metodi che accettano argomenti del tipo.
+Ogni tipo a virgola mobile supporta un set di operatori aritmetici standard. La classe <xref:System.Math?displayProperty=nameWithType> fornisce metodi per un set più ampio di funzioni matematiche. .NET Core 2,0 e versioni successive include <xref:System.MathF?displayProperty=nameWithType> la classe, che fornisce metodi che accettano argomenti del <xref:System.Single> tipo.
 
 È anche possibile operare sui singoli bit dei valori <xref:System.Double> e <xref:System.Single> usando la classe <xref:System.BitConverter?displayProperty=nameWithType>. La struttura <xref:System.Decimal?displayProperty=nameWithType> dispone di metodi specifici, <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> e <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29>, che consentono di operare sui singoli bit di un valore decimale, nonché di un set di metodi specifici per l'esecuzione di altre operazioni matematiche.
   
-I <xref:System.Double> <xref:System.Single> tipi e sono destinati ad essere utilizzati per valori che, per loro natura, sono imprecisi (ad esempio, la distanza tra due stelle) e per applicazioni in cui non è richiesto un alto grado di precisione e un piccolo errore di arrotondamento. Utilizzare <xref:System.Decimal?displayProperty=nameWithType> il tipo per i casi in cui è richiesta una maggiore precisione e gli errori di arrotondamento devono essere ridotti al minimo.
+I <xref:System.Double> tipi <xref:System.Single> e sono destinati a essere utilizzati per i valori che, per loro natura, sono imprecisi, ad esempio la distanza tra due stelle, e per le applicazioni in cui non è necessario un livello elevato di precisione e un errore di arrotondamento ridotto. Usare il <xref:System.Decimal?displayProperty=nameWithType> tipo per i casi in cui è necessaria una maggiore precisione ed è necessario ridurre al minimo gli errori di arrotondamento.
 
 > [!NOTE]
 > Il tipo <xref:System.Decimal> non elimina la necessità di arrotondamento. Piuttosto, riduce al minimo gli errori dovuti all'arrotondamento.
@@ -92,6 +92,8 @@ Tra i tipi .NET abilitati per SIMD sono inclusi i seguenti:
   > Il tipo <xref:System.Numerics.Vector%601> non è incluso in .NET Framework. È necessario installare il pacchetto NuGet [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors) per ottenere l'accesso a questo tipo.
   
 I tipi abilitati per SIMD vengono implementati in modo da poter essere usati con hardware non abilitato per SIMD in compilatori JIT. Per poter trarre vantaggio dalle istruzioni SIMD, le app a 64 bit devono essere eseguite dal runtime che usa il compilatore RyuJIT, che è incluso in .NET Core e in .NET Framework 4.6 e versioni successive. Aggiunge il supporto per SIMD quando i processori di destinazione sono a 64 bit.
+
+Per altre informazioni, vedere [usare i tipi numerici accelerati SIMD](simd.md).
 
 ## <a name="see-also"></a>Vedere anche
 

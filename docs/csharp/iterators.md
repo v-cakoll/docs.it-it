@@ -1,21 +1,21 @@
 ---
-title: Iteratori
+title: Iterators
 description: Informazioni su come usare gli iteratori C# predefiniti e come creare metodi iteratori personalizzati.
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 1933ecf83e9fa234f9b88c815d8ab527997c97f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: efa755c2243c18fb51b653abccb2bfc702bbc055
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399616"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507377"
 ---
-# <a name="iterators"></a>Iteratori
+# <a name="iterators"></a>Iterators
 
 Quasi tutti i programmi che vengono scritti avranno la necessità di eseguire un'iterazione in una raccolta. Si scriverà il codice che esamina ogni elemento in una raccolta.
 
-Si creeranno anche metodi iteratori, cioè metodi che producono un iteratore per gli elementi di quella classe. Essi possono essere usati per le azioni seguenti:
+Si creeranno anche metodi iteratori che sono metodi che producono un iteratore (ovvero un oggetto che attraversa un contenitore, in particolare gli elenchi) per gli elementi di tale classe. Essi possono essere usati per le azioni seguenti:
 
 + Esecuzione di un'azione su ogni elemento in una raccolta.
 + Enumerazione di una raccolta personalizzata.

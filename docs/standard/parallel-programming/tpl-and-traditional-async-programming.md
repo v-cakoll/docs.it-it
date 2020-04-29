@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-ms.openlocfilehash: 27766c10d0624b5eda8256a3211662036a1b16b3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e71c609b500bc6771c405cfb6f4ac14923cc3939
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139944"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507546"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>Task Parallel Library e programmazione asincrona .NET Framework tradizionale
 .NET Framework offre i due modelli standard seguenti per eseguire operazioni asincrone di solo I/O e di solo calcolo:  
@@ -115,7 +115,7 @@ ms.locfileid: "73139944"
  [!code-vb[FromAsync#09](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#09)]  
   
 ## <a name="using-the-streamextensions-sample-code"></a>Uso del codice di esempio StreamExtensions  
- Nel file Streamextensions.cs, disponibile in [Samples for Parallel Programming with the .NET Framework 4](https://code.msdn.microsoft.com/ParExtSamples) (Esempi di programmazione parallela con .NET Framework 4), sono contenute diverse implementazioni di riferimento che usano oggetti Task per l'I/O asincrono di file e di rete.  
+ Il file *Streamextensions.cs* , nel repository [.NET standard Parallel Extensions Extras](/samples/dotnet/samples/parallel-programming-extensions-extras-cs/) , contiene diverse implementazioni di riferimento che `Task` usano oggetti per l'I/O di file e di rete asincroni.
   
 ## <a name="see-also"></a>Vedere anche
 

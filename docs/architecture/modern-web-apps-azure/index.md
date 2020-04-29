@@ -4,12 +4,12 @@ description: Una guida che offre linee guida end-to-end sulla compilazione di ap
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/4/2019
-ms.openlocfilehash: 6ae5de0381c8796faee74abd40f688214ab13211
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 936a068507116033ad178f26e77945f30f70387e
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199963"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507193"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Progettare applicazioni Web moderne con ASP.NET Core e Azure
 
@@ -50,6 +50,12 @@ Author (Autore):
 Editor:
 
 > **Maira Wenzel**
+
+## <a name="action-links"></a>Collegamenti all'azione
+
+- Questo e-book è disponibile anche in formato PDF (solo versione in lingua inglese [)](https://aka.ms/webappebook)
+
+- Clonare/biforcare l'applicazione [di riferimento eShopOnWeb su GitHub](https://github.com/dotnet-architecture/eShopOnWeb)
 
 ## <a name="introduction"></a>Introduzione
 

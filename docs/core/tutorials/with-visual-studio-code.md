@@ -2,13 +2,13 @@
 title: Introduzione a C# e Visual Studio Code
 description: Informazioni su come creare la prima applicazione .NET Core in C# ed eseguirne il debug tramite Visual Studio Code.
 author: kendrahavens
-ms.date: 12/05/2018
-ms.openlocfilehash: 6722b97cee5ca3672c9dddece6e61f4d13de05a9
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.date: 04/23/2020
+ms.openlocfilehash: 3dd7c4602fbb27e29bad977f8d3df34b6061bc23
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805823"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506894"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introduzione a C# e Visual Studio Code
 
@@ -22,39 +22,28 @@ ms.locfileid: "80805823"
 
 ## <a name="hello-world"></a>Hello World
 
-Si inizia con un semplice programma "Hello World" in .NET Core:
+Inizia a usare un semplice programma "Hello World" in .NET Core:
 
 1. Aprire un progetto:
 
     - Aprire Visual Studio Code.
-    - Fare clic sull'icona Esplora nel menu a sinistra e quindi fare clic su **Apri cartella**.
-    - Selezionare**Cartella di apertura** **file** > dal menu principale per aprire la cartella in cui si desidera inserire il progetto in C, quindi fare clic su **Seleziona cartella**. Ai fini di questo esempio, viene creata una cartella per il progetto denominato *HelloWorld*.
+    - Selezionare **file** > **Apri cartella** dal menu principale.
+    - Creare una cartella denominata *HelloWorld*, quindi fare clic su **Seleziona cartella**. Per impostazione predefinita, il nome della cartella diventa il nome del progetto e il nome dello spazio dei nomi. Si aggiungerà il codice più avanti nell'esercitazione che presuppone che lo spazio `HelloWorld`dei nomi del progetto sia.
 
-      ![Cartella aperta di Visual Studio Code](media/with-visual-studio-code/vs-code-open-folder.png)
-
-2. Inizializzare un progetto C#:
+1. Inizializzare un progetto C#:
 
     - Aprire il terminale da Visual Studio Code selezionando **Visualizza** > **terminale** dal menu principale.
-    - Nella finestra del terminale digitare `dotnet new console`.
-    - Questo comando consente di creare un file *di Program.cs* nella cartella con un semplice programma "Hello World" già scritto, insieme a un file di progetto di C, denominato *HelloWorld.csproj*.
+    - Nella finestra del terminale immettere `dotnet new console`.
+
+      Questo comando crea un file *Program.cs* nella cartella con un semplice programma "Hello World" già scritto insieme a un file di progetto C# denominato *HelloWorld. csproj*.
 
       ![Comando new di dotnet](media/with-visual-studio-code/dotnet-new-command.png)
 
-3. Risolvere le risorse di compilazione:
+1. Eseguire il programma "Hello World":
 
-    - Per **.NET Core 1.x** digitare `dotnet restore`. L'esecuzione di `dotnet restore` consente di accedere ai pacchetti .NET Core necessari per la compilazione del progetto.
-
-      ![Comando restore di dotnet](media/with-visual-studio-code/dotnet-restore-command.png)
-
-      [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
-
-4. Eseguire il programma "Hello World":
-
-    - Digitare `dotnet run`.
+    - Nella finestra del terminale immettere `dotnet run`.
 
       ![Comando run di dotnet](media/with-visual-studio-code/dotnet-run-command.png)
-
-Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) o [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu), è anche possibile guardare una breve esercitazione video.
 
 ## <a name="debug"></a>Debug
 
@@ -62,26 +51,26 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
 
     ![Aprire il file Program.cs](media/with-visual-studio-code/open-program-cs.png)
 
-2. Visual Studio Code dovrebbe chiedere di aggiungere le risorse mancanti per compilare l'app ed eseguirne il debug. Selezionare **Sì**.
+1. Visual Studio Code richiede di aggiungere le risorse mancanti per compilare ed eseguire il debug dell'app. Selezionare **Sì**.
 
     ![Richiesta delle risorse mancanti](media/with-visual-studio-code/missing-assets.png)
 
-3. Per aprire la visualizzazione Debug, fare clic sull'icona Debug nel menu di sinistra.
+1. Per aprire la visualizzazione Debug, fare clic sull'icona Debug nel menu di sinistra.
 
     ![Aprire la scheda Debug in Visual Studio Code](media/with-visual-studio-code/open-debug-tab.png)
 
-4. Individuare la freccia verde nella parte superiore del riquadro. Assicurarsi che nell'elenco a discesa accanto ad esso sia selezionato **.NET Core Launch (console).**
+1. Individuare la freccia verde nella parte superiore del riquadro. Verificare che nell'elenco a discesa accanto sia selezionato **Avvia .NET Core (console)** .
 
     ![Selezione di .NET Core in Visual Studio Code](media/with-visual-studio-code/select-net-core.png)
 
-5. Aggiungere un punto di interruzione al progetto facendo clic sul **margine dell'editor**, ovvero lo spazio a sinistra dei numeri di riga nell'editor accanto alla riga 9, oppure spostare il cursore di testo sulla riga 9 e premere <kbd>F9</kbd>.
+1. Aggiungere un punto di interruzione al progetto facendo clic sul **margine dell'editor**, ovvero lo spazio a sinistra dei numeri di riga nell'editor accanto alla riga 9, oppure spostare il cursore di testo sulla riga 9 e premere <kbd>F9</kbd>.
 
     ![Impostazione di un punto di interruzione](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
-6. Per avviare il debug, premere <kbd>F5</kbd> o selezionare la freccia verde. Il debugger interrompe l'esecuzione del programma quando raggiunge il punto di interruzione impostato nel passaggio precedente.
-    - Durante il debug, è possibile visualizzare le variabili locali nel riquadro in alto a sinistra o utilizzare la console di debug.
+1. Per avviare il debug, premere <kbd>F5</kbd> o fare clic sulla freccia verde. Il debugger interrompe l'esecuzione del programma quando raggiunge il punto di interruzione impostato nel passaggio precedente.
+    - Durante il debug è possibile visualizzare le variabili locali nel riquadro superiore sinistro o usare la console di debug.
 
-7. Selezionare la freccia blu in alto per continuare il debug oppure fare clic sul quadrato rosso per arrestarlo.
+1. Selezionare la freccia blu in alto per continuare il debug oppure fare clic sul quadrato rosso per arrestarlo.
 
     ![Esecuzione e debug in Visual Studio Code](media/with-visual-studio-code/run-debug-vs-code.png)
 
@@ -90,9 +79,9 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
 
 ## <a name="add-a-class"></a>Aggiungere una classe
 
-1. Per aggiungere una nuova classe, fare clic con il pulsante destro del mouse in VSCode Explorer e selezionare **Nuovo file**. Verrà aggiunto un nuovo file alla cartella aperta in VSCode.
-2. Assegnare un nome al file *MyClass.cs*. È necessario salvarlo con l'estensione `.cs` alla fine in modo che venga riconosciuto come file csharp.
-3. Aggiungere il codice seguente per creare la prima classe. Assicurarsi di includere lo spazio dei nomi corretto in modo da potervi fare riferimento dal file *di Program.cs:*
+1. Per aggiungere una nuova classe, fare clic con il pulsante destro del mouse su VSCode Explorer sotto *Program.cs* e scegliere **nuovo file**. Verrà aggiunto un nuovo file alla cartella aperta in VSCode.
+1. Assegnare al file il nome *MyClass.cs*. È necessario salvarlo con l'estensione `.cs` alla fine in modo che venga riconosciuto come file csharp.
+1. Aggiungere il codice seguente per creare la prima classe.
 
     ``` csharp
     using System;
@@ -109,7 +98,7 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
     }
     ```
 
-4. Chiamare la nuova classe dal metodo principale in Program.cs aggiungendo il codice seguente:Call your new class from your main method in *Program.cs* by adding the code below:
+1. Chiamare la nuova classe dal `Main` metodo sostituendo il codice in *Program.cs* con il codice seguente:
 
     ```csharp
     using System;
@@ -127,13 +116,15 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
     }
     ```
 
-5. Salvare le modifiche ed eseguire nuovamente il programma. Verrà visualizzato il nuovo messaggio con la stringa aggiunta.
+1. Salvare le modifiche.
+
+1. Eseguire di nuovo il programma.
 
     ```dotnetcli
     dotnet run
     ```
 
-    Si ottiene l'output seguente:
+    Il nuovo messaggio viene visualizzato con la stringa accodata.
 
     ```console
     Hello World! Happy coding!
@@ -143,7 +134,7 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Non sono più disponibili gli asset necessari per compilare ed eseguire il debug di C# in Visual Studio Code. Ildebugger indica "Nessuna configurazione".
 
-L'estensione C# di Visual Studio Code può generare gli asset necessari per compilare ed eseguire il debug. Visual Studio Code chiederà di generarli alla prima apertura di un progetto C#. Se gli asset non sono stati generati, è comunque possibile eseguire questo comando aprendo il riquadro comandi (**Visualizza > Riquadro comandi**) e digitando "> .NET: generare gli asset per la compilazione e il debug". Se si seleziona questa opzione, vengono generati i file di configurazione *.vscode*, *launch.json*e *tasks.json* necessari.
+L'estensione C# di Visual Studio Code può generare gli asset necessari per compilare ed eseguire il debug. Visual Studio Code chiederà di generarli alla prima apertura di un progetto C#. Se gli asset non sono stati generati, è comunque possibile eseguire questo comando aprendo il riquadro comandi (**Visualizza > Riquadro comandi**) e digitando "> .NET: generare gli asset per la compilazione e il debug". Selezionando questa operazione vengono generati i file di configurazione *. VSCODE*, *Launch. JSON*e *Tasks. JSON* necessari.
 
 ## <a name="see-also"></a>Vedere anche
 

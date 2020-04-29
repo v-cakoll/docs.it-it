@@ -4,44 +4,44 @@ titleSuffix: ''
 description: Informazioni sulle tecnologie di .NET Framework che non sono disponibili in .NET Core
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: 65e465f78b55270b42532eb7e8803f48c048ec3c
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: f95205330837551085b8f58dfbdfcd702356c98f
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739137"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506831"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Tecnologie di .NET Framework non disponibili in .NET Core
 
-Diverse tecnologie disponibili per le librerie .NET Framework non sono disponibili per l'utilizzo con .NET Core, ad esempio AppDomains, Remoting, Code Access Security (CAS), Security Transparency e System.EnterpriseServices. Se le librerie si basano su una o più di queste tecnologie, prendere in considerazione gli approcci alternativi descritti di seguito. Per ulteriori informazioni sulla compatibilità delle API, vedere Modifiche di rilievo di [.NET Core .NET Core](../compatibility/breaking-changes.md).
+Diverse tecnologie disponibili per le librerie .NET Framework non sono disponibili per l'uso con .NET Core, ad esempio AppDomain, comunicazione remota, sicurezza dall'accesso di codice (CAS), trasparenza della sicurezza e System. EnterpriseServices. Se le librerie si basano su una o più di queste tecnologie, prendere in considerazione gli approcci alternativi descritti di seguito. Per altre informazioni sulla compatibilità delle API, vedere [modifiche di rilievo di .NET Core](../compatibility/breaking-changes.md).
 
-Il fatto che un'API o una tecnologia non sia attualmente implementata non implica che sia intenzionalmente non supportata. Cercare nei repository GitHub per .NET Core per vedere se un particolare problema che si verifica è in base alla progettazione. Se non si trova un indicatore di questo tipo, presentare un problema nel [repository dotnet/runtime](https://github.com/dotnet/runtime/issues) per richiedere API e tecnologie specifiche. I problemi relativi alla conversione delle richieste sono contrassegnati con l'etichetta [da porta a core.](https://github.com/dotnet/runtime/labels/port-to-core)
+Il fatto che un'API o una tecnologia non sia attualmente implementata non implica che sia intenzionalmente non supportata. Eseguire una ricerca nei repository GitHub per .NET Core per verificare se un particolare problema riscontrato è stato progettato. Se non si trova un indicatore di questo tipo, archiviare un problema nel [repository DotNet/Runtime](https://github.com/dotnet/runtime/issues) per richiedere API e tecnologie specifiche.
 
 ## <a name="appdomains"></a>AppDomain
 
-I domini applicazione (AppDomain) consentono di isolare le app l'una dall'altra. Gli appDomain richiedono il supporto runtime e sono in genere costosi. La creazione di domini app aggiuntivi non è supportata e non è prevista l'aggiunta di questa funzionalità in futuro. Per l'isolamento del codice, usare processi o contenitori separati come alternativa. Per caricare dinamicamente <xref:System.Runtime.Loader.AssemblyLoadContext> gli assembly, utilizzare la classe .
+I domini applicazione (AppDomain) consentono di isolare le app l'una dall'altra. Per gli AppDomain è necessario il supporto in fase di esecuzione e sono generalmente costosi. La creazione di domini di app aggiuntivi non è supportata e non sono previsti piani per aggiungere questa funzionalità in futuro. Per l'isolamento del codice, usare processi o contenitori distinti come alternativa. Per caricare in modo dinamico gli assembly, <xref:System.Runtime.Loader.AssemblyLoadContext> utilizzare la classe.
 
-Per semplificare la migrazione di codice da .NET Framework, .NET Core espone parte della superficie dell'API <xref:System.AppDomain>. Alcune delle API funzionano normalmente, (ad esempio <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), alcuni membri non eseguono alcuna operazione (ad esempio, <xref:System.AppDomain.SetCachePath%2A>) e alcuni generano <xref:System.PlatformNotSupportedException> (ad esempio, <xref:System.AppDomain.CreateDomain%2A>). Controllare i tipi utilizzati rispetto [ `System.AppDomain` all'origine](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs) di riferimento nel [repository GitHub dotnet/runtime](https://github.com/dotnet/runtime). Assicurarsi di selezionare il ramo che corrisponde alla versione implementata.
+Per semplificare la migrazione di codice da .NET Framework, .NET Core espone parte della superficie dell'API <xref:System.AppDomain>. Alcune delle API funzionano normalmente, (ad esempio <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), alcuni membri non eseguono alcuna operazione (ad esempio, <xref:System.AppDomain.SetCachePath%2A>) e alcuni generano <xref:System.PlatformNotSupportedException> (ad esempio, <xref:System.AppDomain.CreateDomain%2A>). Controllare i tipi usati rispetto all' [ `System.AppDomain` origine di riferimento](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs) nel [repository GitHub DotNet/Runtime](https://github.com/dotnet/runtime). Assicurarsi di selezionare il ramo che corrisponde alla versione implementata.
 
 ## <a name="remoting"></a>Comunicazione remota
 
 L'architettura dei servizi remoti di .NET è stata identificata come problematica. Questi servizi vengono usati per le comunicazioni tra AppDomain, non più supportate. Per i servizi remoti è richiesto anche il supporto del runtime, costoso da gestire. Per questi motivi, i servizi remoti di .NET non sono supportati in .NET Core e non è prevista l'aggiunta del supporto in futuro.
 
-Per la comunicazione tra i processi, considerare i meccanismi di comunicazione tra processi <xref:System.IO.Pipes> (IPC) come alternativa ai servizi remoti, ad esempio la classe o la <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> classe.
+Per la comunicazione tra processi, prendere in considerazione i meccanismi di comunicazione interprocesso (IPC) come alternativa alla comunicazione remota <xref:System.IO.Pipes> , ad esempio <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> la classe o la classe.
 
-Per le comunicazioni tra computer, usare una soluzione basata su rete in alternativa. Preferibilmente, usare un protocollo di testo normale con basso overhead, come HTTP. Il [server Web Kestrel](/aspnet/core/fundamentals/servers/kestrel), ovvero il server Web usato da ASP.NET Core, rappresenta un'opzione praticabile in questo caso. Considerare inoltre <xref:System.Net.Sockets> l'utilizzo per scenari tra computer basati sulla rete. Per informazioni su altre opzioni, vedere [.NET Open Source Developer Projects: Messaging](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging) (Progetti di sviluppo open source .NET: Messaggistica).
+Per le comunicazioni tra computer, usare una soluzione basata su rete in alternativa. Preferibilmente, usare un protocollo di testo normale con basso overhead, come HTTP. Il [server Web Kestrel](/aspnet/core/fundamentals/servers/kestrel), ovvero il server Web usato da ASP.NET Core, rappresenta un'opzione praticabile in questo caso. Si consiglia inoltre di <xref:System.Net.Sockets> utilizzare per gli scenari tra computer basati su rete. Per informazioni su altre opzioni, vedere [.NET Open Source Developer Projects: Messaging](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging) (Progetti di sviluppo open source .NET: Messaggistica).
 
 ## <a name="code-access-security-cas"></a>Sicurezza dall'accesso di codice (CAS, Code Access Security)
 
 Il sandboxing, che si basa sul runtime o sul framework per vincolare le risorse usate o eseguite da un'applicazione gestita o una libreria, [non è supportato in .NET Framework](../../framework/misc/code-access-security.md) e pertanto non è supportato neanche in .NET Core. Esistono troppi casi in .NET Framework e nel runtime in cui si verifica un'elevazione dei privilegi per continuare a considerare la sicurezza dall'accesso di codice come limite di sicurezza. La sicurezza dall'accesso di codice, inoltre, rende l'implementazione più complicata e spesso ha implicazioni a livello di prestazioni della correttezza per le applicazioni che non intendono usare questo meccanismo di sicurezza.
 
-Utilizzare i limiti di sicurezza forniti dal sistema operativo, ad esempio virtualizzazione, contenitori o account utente, per l'esecuzione di processi con il set minimo di privilegi.
+Usare i limiti di sicurezza forniti dal sistema operativo, ad esempio la virtualizzazione, i contenitori o gli account utente, per l'esecuzione di processi con il set minimo di privilegi.
 
 ## <a name="security-transparency"></a>Trasparenza della sicurezza
 
 Analogamente alla sicurezza dall'accesso di codice, la trasparenza della sicurezza separa il codice in modalità sandbox dal codice critico per la sicurezza in modalità dichiarativa, ma [non è più supportata come limite di sicurezza](../../framework/misc/security-transparent-code.md). Questa funzionalità è ampiamente usata da Silverlight.
 
-Utilizzare i limiti di sicurezza forniti dal sistema operativo, ad esempio la virtualizzazione, i contenitori o gli account utente, per l'esecuzione di processi con il set minimo di privilegi.
+Usare i limiti di sicurezza forniti dal sistema operativo, ad esempio la virtualizzazione, i contenitori o gli account utente, per l'esecuzione di processi con il minor set di privilegi.
 
 ## <a name="systementerpriseservices"></a>System.EnterpriseServices
 

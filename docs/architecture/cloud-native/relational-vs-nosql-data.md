@@ -3,12 +3,12 @@ title: Modelli di data mining relazionali Dati NoSQL
 description: Informazioni sui dati relazionali e NoSQL nelle applicazioni native del cloud
 author: robvet
 ms.date: 01/22/2020
-ms.openlocfilehash: c074be0c973156c1757b97ffc727711d5dd072af
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: a2561b0abfc1975badfafeeb4fa2f2c6429814be
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199983"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507364"
 ---
 # <a name="relational-vs-nosql-data"></a>Modelli di data mining relazionali Dati NoSQL
 
@@ -226,7 +226,7 @@ Azure Cosmos DB offre cinque [modelli di coerenza](https://docs.microsoft.com/az
 
 **Figura 5-16**: Descrizione del livello di coerenza Cosmos DB
 
-Nell'articolo relativo [alla lettura dei livelli di coerenza Cosmos DB illustrati](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/), Microsoft Cloud Developer Advocate Jeremy somiglianza fornisce un'ottima spiegazione dei cinque modelli.
+Nell'articolo relativo [alla gestione dei livelli di coerenza Cosmos DB illustrati](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)in questo articolo, Jeremy Likness fornisce una spiegazione eccellente dei cinque modelli.
 
 ### <a name="partitioning"></a>Partizionamento
 
