@@ -488,7 +488,11 @@
     - name: Raccolte thread-safe
       href: collections/thread-safe/
 - name: Valori numerici in .NET
-  href: numerics.md
+  items:
+    - name: Panoramica
+      href: numerics.md
+    - name: Tipi abilitati per SIMD
+      href: simd.md
 - name: 'Date, ore e fusi orari'
   href: datetime/
 - name: Events
