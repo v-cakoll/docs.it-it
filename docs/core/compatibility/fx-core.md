@@ -3,12 +3,12 @@ title: Modifiche di rilievo-.NET Framework a .NET Core
 titleSuffix: ''
 description: Elenca le modifiche di rilievo da .NET Framework a .NET Core.
 ms.date: 12/18/2019
-ms.openlocfilehash: 6a6cbffed5a54e3683832da54d408d77bb553cf1
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: df5907e05c6a2aed478d64cc40c5d6f051f92f96
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135627"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595702"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Modifiche di rilievo per la migrazione da .NET Framework a .NET Core
 
@@ -22,6 +22,7 @@ Se si esegue la migrazione di un'app da .NET Framework a .NET Core, le modifiche
 - [Modificare il valore predefinito di UseShellExecute](#change-in-default-value-of-useshellexecute)
 - [UnauthorizedAccessException generata da FileSystemInfo. Attributes](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
 - [Gestione delle eccezioni di stato del processo danneggiato non supportata](#handling-corrupted-state-exceptions-is-not-supported)
+- [Le Proprietà UriBuilder non precedono più caratteri iniziali](#uribuilder-properties-no-longer-prepend-leading-characters)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -36,6 +37,10 @@ Se si esegue la migrazione di un'app da .NET Framework a .NET Core, le modifiche
 ***
 
 [!INCLUDE [corrupted-state-exceptions](~/includes/core-changes/corefx/1.0/corrupted-state-exceptions.md)]
+
+***
+
+[!INCLUDE [uribuilder-behavior-changes](../../../includes/core-changes/corefx/1.0/uribuilder-behavior-changes.md)]
 
 ***
 
@@ -133,7 +138,7 @@ Se si esegue la migrazione di un'app da .NET Framework a .NET Core, le modifiche
 
 ***
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [API che generano sempre eccezioni in .NET Core](unsupported-apis.md)
 - [Tecnologie di .NET Framework non disponibili in .NET Core](../porting/net-framework-tech-unavailable.md)

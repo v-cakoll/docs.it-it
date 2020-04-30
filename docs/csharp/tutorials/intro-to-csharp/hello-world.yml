@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 6e3742991820a8805b3c9b57767079940899d8fc
-  ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+  ms.openlocfilehash: 77180064f810cf70b1ec0ef3d72bbd9005b78a47
+  ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 03/18/2020
-  ms.locfileid: "79507009"
+  ms.lasthandoff: 04/30/2020
+  ms.locfileid: "82595910"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: Eseguire il primo programma C#
   durationInMinutes: 2
   content: >
-    Eseguire il codice seguente nella finestra interattiva. Selezionare il **pulsante Attiva modalità messa a fuoco.** Quindi, digitare il seguente blocco di codice nella finestra interattiva e selezionare **Esegui**:
+    Eseguire il codice seguente nella finestra interattiva. Selezionare il pulsante **Attiva modalità messa a fuoco** . Quindi, digitare il blocco di codice seguente nella finestra interattiva e selezionare **Esegui**:
 
 
     ```csharp
@@ -96,7 +96,7 @@ items:
     ```
 
 
-    Selezionare di nuovo **Esegui** per visualizzare i risultati.
+    Selezionare **Esegui** di nuovo per visualizzare i risultati.
 
 
     Finora è stato usato `+` per creare nuove stringhe da stringhe **variabili** e **costanti**. Esiste un modo migliore.
@@ -118,7 +118,7 @@ items:
     ```
 
 
-    Selezionare di nuovo **Esegui** per visualizzare i risultati. Anziché "Hello {aFriend}", il messaggio deve essere "Hello Maira".
+    Selezionare **Esegui** di nuovo per visualizzare i risultati. Anziché "Hello {aFriend}", il messaggio deve essere "Hello Maira".
 
 
     > [!NOTE]
@@ -167,7 +167,7 @@ items:
 - title: Altre operazioni sulle stringhe
   durationInMinutes: 5
   content: >
-    È stato utilizzato **method**un <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>metodo , , per stampare i messaggi. Un **metodo** è un blocco di codice che implementa un'azione. I metodi hanno un nome, quindi sono accessibili.
+    È stato utilizzato un **Metodo**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, per stampare messaggi. Un **metodo** è un blocco di codice che implementa un'azione. I metodi hanno un nome, quindi sono accessibili.
 
 
     Si supponga che le stringhe contengano spazi iniziali o finali che non si vuole visualizzare. È quindi necessario **tagliare** gli spazi dalle stringhe.
@@ -197,6 +197,9 @@ items:
     Console.WriteLine($"[{trimmedGreeting}]");
 
     ```
+
+
+    Le parentesi quadre `[` e `]` consentono di visualizzare i `Trim`metodi, `TrimStart` e `TrimEnd` . Le parentesi quadre mostrano dove spazi vuoti inizia e termina.
 
 
     Questo esempio mette in rilievo un paio di concetti importanti correlati all'uso delle stringhe. I metodi che operano sulle stringhe restituiscono nuovi oggetti stringa, anziché apportare le modifiche sul posto. Si può notare che ogni chiamata di uno qualsiasi dei metodi `Trim` restituisce una nuova stringa, ma non modifica il messaggio originale.
@@ -250,7 +253,7 @@ items:
     ```
 
 
-    Il metodo <xref:System.String.Contains%2A> restituisce un valore **booleano** che indica se la stringa di ricerca è stata trovata. Un valore **booleano** archivia un valore `true` o `false`. Quando vengono visualizzati come output di `True` `False`testo, vengono in maiuscolo rispettivamente: e , . In una lezione successiva verranno fornite ulteriori informazioni sui valori **booleani**.
+    Il metodo <xref:System.String.Contains%2A> restituisce un valore **booleano** che indica se la stringa di ricerca è stata trovata. Un valore **booleano** archivia un valore `true` o `false`. Quando vengono visualizzati come output di testo, sono in `True` maiuscolo `False`: rispettivamente e. In una lezione successiva verranno fornite ulteriori informazioni sui valori **booleani**.
 
 
     ***Esercizio***
@@ -296,7 +299,7 @@ items:
 
     > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    È stata completata l'esercitazione introduttiva "Hello C#". È possibile selezionare il collegamento **numeri in C ,** di seguito per avviare la successiva esercitazione interattiva, oppure è possibile visitare il sito [.NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare .NET Core SDK, creare un progetto nel computer e continuare a codificare. La sezione "Passaggi successivi" riporta a queste esercitazioni.
+    È stata completata l'esercitazione introduttiva "Hello C#". Per avviare la prossima esercitazione interattiva, è possibile selezionare il collegamento **numeri in C#. in** alternativa, è possibile visitare il [sito .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare il .NET Core SDK, creare un progetto nel computer e rimanere codifica. La sezione "passaggi successivi" riporta a queste esercitazioni.
 
 
     Altre informazioni sul tipo `string`:

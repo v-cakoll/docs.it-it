@@ -1,17 +1,17 @@
 ---
 title: Comando dotnet pack
 description: Il comando dotnet pack consente di creare pacchetti NuGet per il progetto .NET Core.
-ms.date: 02/14/2020
-ms.openlocfilehash: 2df096a088a177b77256b5d717f31e185507b249
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.date: 04/28/2020
+ms.openlocfilehash: 26a8581f55a8dc9e61aa52e62ed94c73eefd3e03
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102814"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595754"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**Questo articolo si applica a:** ✔️ .NET Core 2.x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
@@ -32,19 +32,19 @@ dotnet pack -h|--help
 
 ## <a name="description"></a>Descrizione
 
-Il comando `dotnet pack` consente di compilare il progetto e creare pacchetti NuGet. Il risultato di questo comando è un pacchetto NuGet, ovvero un file *con estensione nupkg.*
+Il comando `dotnet pack` consente di compilare il progetto e creare pacchetti NuGet. Il risultato di questo comando è un pacchetto NuGet, ovvero un file con *estensione nupkg* .
 
-Se si desidera generare un pacchetto che contiene i simboli di debug, sono disponibili due opzioni:If you want to generate a package that contains the debug symbols, you have two options available:
+Se si desidera generare un pacchetto che contiene i simboli di debug, sono disponibili due opzioni:
 
-- `--include-symbols`- crea il pacchetto simboli.
-- `--include-source`- crea il pacchetto `src` di simboli con una cartella all'interno contenente i file di origine.
+- `--include-symbols`-Crea il pacchetto di simboli.
+- `--include-source`-Crea il pacchetto di simboli con una `src` cartella all'interno di che contiene i file di origine.
 
 Le dipendenze NuGet del progetto compresso vengono aggiunte al file con estensione *nuspec*, in modo da poter essere risolte durante l'installazione del pacchetto. I riferimenti da progetto a progetto non sono inseriti all'interno del progetto. Attualmente è necessario disporre di un pacchetto per ogni progetto se sono presenti dipendenze da progetto a progetto.
 
 Per impostazione predefinita, `dotnet pack` compila prima il progetto. Se si vuole evitare questo comportamento, passare l'opzione `--no-build`. Questa opzione è in genere utile negli scenari di compilazione di integrazione continua (CI, Continuous Integration) in cui si sa che il codice è stato compilato in precedenza.
 
 > [!NOTE]
-> In alcuni casi, la compilazione implicita non può essere eseguita. Ciò può `GeneratePackageOnBuild` verificarsi quando è impostato, per evitare una dipendenza ciclica tra le destinazioni di compilazione e di gruppo. La compilazione può anche avere esito negativo se è presente un file bloccato o un altro problema.
+> In alcuni casi, non è possibile eseguire la compilazione implicita. Questo problema può verificarsi `GeneratePackageOnBuild` quando è impostato, per evitare una dipendenza ciclica tra le destinazioni di compilazione e di Pack. La compilazione può anche avere esito negativo se è presente un file bloccato o un altro problema.
 
 È possibile aggiungere proprietà MSBuild al comando `dotnet pack` per il processo di compressione. Per altre informazioni, vedere [NuGet metadata properties](csproj.md#nuget-metadata-properties) (Proprietà dei metadati NuGet) e [MSBuild Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference) (Informazioni di riferimento sulla riga di comando di MSBuild). La sezione [Esempi](#examples) illustra come usare l'opzione di MSBuild -p per due diversi scenari.
 
@@ -64,13 +64,13 @@ Per impostazione predefinita, non è possibile creare un pacchetto dei progetti 
 
 `PROJECT | SOLUTION`
 
-  Progetto o soluzione da comprimere. Si tratta di un percorso a un [file csproj](csproj.md), un file di soluzione o una directory. Se non specificato, il comando cerca nella directory corrente un file di progetto o di soluzione.
+  Progetto o soluzione da comprimere. Si tratta di un percorso di un [file csproj](csproj.md), di un file di soluzione o di una directory. Se non specificato, il comando Cerca nella directory corrente un file di progetto o di soluzione.
 
 ## <a name="options"></a>Opzioni
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  Definisce la configurazione di compilazione. L'impostazione predefinita `Debug`per la maggior parte dei progetti è , ma è possibile eseguire l'override delle impostazioni di configurazione della compilazione nel progetto.
+  Definisce la configurazione di compilazione. Il valore predefinito per la maggior `Debug`parte dei progetti è, ma è possibile eseguire l'override delle impostazioni di configurazione della build nel progetto.
 
 - **`--force`**
 
@@ -82,11 +82,11 @@ Per impostazione predefinita, non è possibile creare un pacchetto dei progetti 
 
 - **`--include-source`**
 
-  Include i simboli di debug NuGet pacchetti oltre ai normali pacchetti NuGet nella directory di output. I file di origine `src` sono inclusi nella cartella all'interno del pacchetto di simboli.
+  Include i pacchetti NuGet dei simboli di debug oltre ai pacchetti NuGet normali nella directory di output. I file di origine sono inclusi nella `src` cartella all'interno del pacchetto di simboli.
 
 - **`--include-symbols`**
 
-  Include i simboli di debug NuGet pacchetti oltre ai normali pacchetti NuGet nella directory di output.
+  Include i pacchetti NuGet dei simboli di debug oltre ai pacchetti NuGet normali nella directory di output.
 
 - **`--interactive`**
 
@@ -172,14 +172,20 @@ Per impostazione predefinita, non è possibile creare un pacchetto dei progetti 
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-- Comprimere il progetto e usare un runtime specifico (Windows 10) per l'operazione di ripristino:Pack the project and use a specific runtime (Windows 10) for the restore operation:
+- Comprimere il progetto e usare un runtime specifico (Windows 10) per l'operazione di ripristino:
 
   ```dotnetcli
   dotnet pack --runtime win10-x64
   ```
 
-- Comprimere il progetto usando un [file con estensione nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
+- Comprimere il progetto usando un file con *estensione NuSpec* :
 
   ```dotnetcli
   dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
   ```
+
+  Per informazioni sull'utilizzo `NuspecFile`di, `NuspecBasePath`e `NuspecProperties`, vedere le risorse seguenti:
+  
+  - [Creazione di un pacchetto con un file .nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)
+  - [Punti di estensione avanzati per la creazione di pacchetti personalizzati](https://docs.microsoft.com/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
+  - [Proprietà globali](https://docs.microsoft.com/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)

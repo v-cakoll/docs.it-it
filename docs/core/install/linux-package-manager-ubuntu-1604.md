@@ -1,21 +1,21 @@
 ---
-title: Installare .NET Core nel gestore di pacchetti Ubuntu 16.04 - .NET CoreInstall .NET Core on Ubuntu 16.04 package manager - .NET Core
-description: Usare un gestore di pacchetti per installare .NET Core SDK e runtime in Ubuntu 16.04.Use a package manager to install .NET Core SDK and runtime on Ubuntu 16.04.
+title: Installare .NET Core in Ubuntu 16,04 Package Manager-.NET Core
+description: Usare uno Gestione pacchetti per installare .NET Core SDK e Runtime in Ubuntu 16,04.
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: 13aa23cb82b2e135ea818aed8d2a7e0e25366afd
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 140a9fea8229944f2a78fdc209b9d93830b24a9d
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645645"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595642"
 ---
-# <a name="ubuntu-1604-package-manager---install-net-core"></a>Ubuntu 16.04 Gestione pacchetti - Installare .NET Core
+# <a name="ubuntu-1604-package-manager---install-net-core"></a>Gestione pacchetti Ubuntu 16,04-installare .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-In questo articolo viene descritto come utilizzare un gestore di pacchetti per installare .NET Core in Ubuntu 16.04.This article describes how to use a package manager to install .NET Core on Ubuntu 16.04.
+Questo articolo descrive come usare un gestore di pacchetti per installare .NET Core in Ubuntu 16,04.
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
@@ -23,22 +23,22 @@ In questo articolo viene descritto come utilizzare un gestore di pacchetti per i
 
 Prima di installare .NET, è necessario:
 
-- Aggiungere la chiave di firma del pacchetto Microsoft all'elenco delle chiavi attendibili.
-- Aggiungere il repository al gestore di pacchetti.
+- Aggiungere la chiave di firma del pacchetto Microsoft all'elenco di chiavi attendibili.
+- Aggiungere il repository a gestione pacchetti.
 - Installare le dipendenze necessarie.
 
 Questa operazione deve essere eseguita una volta sola per ogni computer.
 
-Aprire un terminale ed eseguire i seguenti comandi.
+Aprire un terminale ed eseguire i comandi seguenti.
 
 ```bash
 wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-## <a name="install-the-net-core-sdk"></a>Installare .NET Core SDK
+## <a name="install-the-net-core-sdk"></a>Installare il .NET Core SDK
 
-Aggiornare i prodotti disponibili per l'installazione, quindi installare .NET Core SDK. Nel terminale, eseguire i seguenti comandi.
+Aggiornare i prodotti disponibili per l'installazione, quindi installare il .NET Core SDK. Nel terminale eseguire i comandi seguenti.
 
 ```bash
 sudo apt-get update
@@ -48,11 +48,11 @@ sudo apt-get install dotnet-sdk-3.1
 ```
 
 > [!IMPORTANT]
-> Se viene visualizzato un messaggio di errore simile a Impossibile individuare il **pacchetto dotnet-sdk-3.1,** vedere la sezione [Risoluzione dei problemi relativi al gestore](#troubleshoot-the-package-manager) di pacchetti.
+> Se viene visualizzato un messaggio di errore simile a **non è possibile individuare il pacchetto dotnet-SDK-3,1**, vedere la sezione [risolvere i problemi relativi a gestione pacchetti](#troubleshoot-the-package-manager) .
 
-## <a name="install-the-aspnet-core-runtime"></a>Installare il runtime di ASP.NET CoreInstall the ASP.NET Core runtime
+## <a name="install-the-aspnet-core-runtime"></a>Installare il runtime di ASP.NET Core
 
-Aggiornare i prodotti disponibili per l'installazione, quindi installare il runtime di ASP.NET Core. Nel terminale, eseguire i seguenti comandi.
+Aggiornare i prodotti disponibili per l'installazione, quindi installare il ASP.NET Core Runtime. Nel terminale eseguire i comandi seguenti.
 
 ```bash
 sudo apt-get update
@@ -62,11 +62,11 @@ sudo apt-get install aspnetcore-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> Se viene visualizzato un messaggio di errore simile a Impossibile individuare il **pacchetto aspnetcore-runtime-3.1,** vedere la sezione [Risoluzione dei problemi relativi al gestore](#troubleshoot-the-package-manager) di pacchetti.
+> Se viene visualizzato un messaggio di errore simile a **non è possibile individuare il pacchetto aspnetcore-runtime-3,1**, vedere la sezione [risolvere i problemi relativi a gestione pacchetti](#troubleshoot-the-package-manager) .
 
 ## <a name="install-the-net-core-runtime"></a>Installare il runtime di .NET Core
 
-Aggiornare i prodotti disponibili per l'installazione, quindi installare il runtime di .NET Core.Update the products available for installation, then install the .NET Core runtime. Nel terminale, eseguire i seguenti comandi.
+Aggiornare i prodotti disponibili per l'installazione, quindi installare il runtime di .NET Core. Nel terminale eseguire i comandi seguenti.
 
 ```bash
 sudo apt-get update
@@ -76,19 +76,19 @@ sudo apt-get install dotnet-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> Se viene visualizzato un messaggio di errore simile **a Impossibile individuare il pacchetto dotnet-runtime-3.1**, vedere la sezione [Risoluzione dei problemi relativi al gestore](#troubleshoot-the-package-manager) di pacchetti .
+> Se viene visualizzato un messaggio di errore simile a **non è possibile individuare il pacchetto dotnet-runtime-3,1**, vedere la sezione [risolvere i problemi relativi a gestione pacchetti](#troubleshoot-the-package-manager) .
 
 ## <a name="how-to-install-other-versions"></a>Come installare altre versioni
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
-## <a name="troubleshoot-the-package-manager"></a>Risolvere i problemi relativi al gestore di pacchettiTroubleshoot the package manager
+## <a name="troubleshoot-the-package-manager"></a>Risolvere i problemi relativi a gestione pacchetti
 
-In questa sezione vengono fornite informazioni sugli errori comuni che possono verificarsi durante l'utilizzo di Gestione pacchetti per installare .NET Core.This section provides information on common errors you may get while using the package manager to install .NET Core.
+Questa sezione fornisce informazioni sugli errori comuni che possono verificarsi durante l'uso di gestione pacchetti per installare .NET Core.
 
 ### <a name="unable-to-locate"></a>Impossibile individuare
 
-Se viene visualizzato un messaggio di errore simile **a Impossibile individuare il pacchetto .**
+Se viene visualizzato un messaggio di errore simile a **non è possibile individuare il pacchetto {il pacchetto .NET Core}**, eseguire i comandi seguenti.
 
 ```bash
 sudo dpkg --purge packages-microsoft-prod && sudo dpkg -i packages-microsoft-prod.deb
@@ -96,11 +96,11 @@ sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
 
-Se il sistema non funziona, è possibile eseguire un'installazione manuale con i seguenti comandi.
+Se questa operazione non funziona, è possibile eseguire un'installazione manuale con i comandi seguenti.
 
 ```bash
 sudo apt-get install -y gpg
-wget -O- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
+wget -O - https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
 wget https://packages.microsoft.com/config/ubuntu/16.04/prod.list
 sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
@@ -111,6 +111,6 @@ sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
 
-### <a name="failed-to-fetch"></a>Impossibile recuperare
+### <a name="failed-to-fetch"></a>Non è stato possibile recuperare
 
 [!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]
