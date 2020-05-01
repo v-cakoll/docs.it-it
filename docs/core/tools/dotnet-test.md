@@ -1,17 +1,17 @@
 ---
 title: Comando dotnet test
 description: Il comando dotnet test viene usato per eseguire unit test in un determinato progetto.
-ms.date: 02/27/2020
-ms.openlocfilehash: 69b8101f9b1052f4726dce8a86234da99f5dc89c
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.date: 04/29/2020
+ms.openlocfilehash: a8218b6596601069b89a60ad018adf89a1f47cf6
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102743"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624891"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
-**Questo articolo si applica a:** ✔️ .NET Core 2.1 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
@@ -37,7 +37,7 @@ dotnet test -h|--help
 
 ## <a name="description"></a>Descrizione
 
-Il comando `dotnet test` viene usato per eseguire unit test in un determinato progetto. Il comando `dotnet test` avvia l'applicazione console di esecuzione dei test specificati per un progetto. L'applicazione di esecuzione dei test esegue i test definiti per un framework di unit test (ad esempio MSTest, NUnit o xUnit) e segnala l'esito positivo o negativo di ogni test. Se tutti i test hanno esito positivo, il test runner restituisce 0 come codice di uscita. Se invece i test hanno esito negativo, restituisce 1. L'applicazione di esecuzione dei test e la libreria di unit test sono disponibili come pacchetti NuGet e vengono ripristinati come dipendenze ordinarie per il progetto.
+Il comando `dotnet test` viene usato per eseguire unit test in un determinato progetto. Il comando `dotnet test` avvia l'applicazione console di esecuzione dei test specificati per un progetto. L'applicazione di esecuzione dei test esegue i test definiti per un framework di unit test (ad esempio MSTest, NUnit o xUnit) e segnala l'esito positivo o negativo di ogni test. Se tutti i test hanno esito positivo, il test runner restituisce 0 come codice di uscita. Se invece i test hanno esito negativo, restituisce 1. Per i progetti multitargeting, i test vengono eseguiti per ogni Framework di destinazione. L'applicazione di esecuzione dei test e la libreria di unit test sono disponibili come pacchetti NuGet e vengono ripristinati come dipendenze ordinarie per il progetto.
 
 I progetti di test specificano l'applicazione di esecuzione dei test usando un normale elemento `<PackageReference>`, come illustrato nel file di progetto di esempio seguente:
 
@@ -61,7 +61,7 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
 - **`--blame`**
 
-  Esegue i test in modalità di segnalazione degli errori. Questa opzione è utile per isolare i test problematici che causano l'arresto anomalo dell'host di test. Crea un file di output nella directory corrente denominato *Sequence.xml* che acquisisce l'ordine di esecuzione dei test prima dell'arresto anomalo.
+  Esegue i test in modalità di segnalazione degli errori. Questa opzione è utile per isolare i test problematici che provocano l'arresto anomalo dell'host di test. Crea un file di output nella directory corrente denominato *Sequence.xml* che acquisisce l'ordine di esecuzione dei test prima dell'arresto anomalo.
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -73,11 +73,11 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-  Abilita la modalità diagnostica per la piattaforma di test e scrive i messaggi di diagnostica nel file specificato.
+  Abilita la modalità di diagnostica per la piattaforma di test e scrive messaggi di diagnostica nel file specificato.
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Cerca i file binari di test per un [framework](../../standard/frameworks.md)specifico.
+  Cerca i file binari di test per un [Framework](../../standard/frameworks.md)specifico.
 
 - **`--filter <EXPRESSION>`**
 
@@ -93,15 +93,15 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
 - **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
-  Specifica un logger per i risultati di test. A differenza di `-l "console;v=d"` MSBuild, dotnet test non accetta `-l "console;verbosity=detailed"`abbreviazioni: anziché utilizzare .
+  Specifica un logger per i risultati di test. Diversamente da MSBuild, il test DotNet non accetta abbreviazioni: invece `-l "console;v=d"` di `-l "console;verbosity=detailed"`usare.
 
 - **`--no-build`**
 
-  Non compila il progetto di test prima dell'esecuzione. Imposta anche in modo `--no-restore` implicito il - flag.
+  Non compila il progetto di test prima dell'esecuzione. Viene inoltre impostato in modo implicito `--no-restore` il flag-.
 
 - **`--nologo`**
 
-  Eseguire test senza visualizzare il banner Microsoft TestPlatform. Disponibile a partire da .NET Core 3.0 SDK.
+  Esegui test senza visualizzare il banner Microsoft TestPlatform. Disponibile a partire da .NET Core 3.0 SDK.
 
 - **`--no-restore`**
 
@@ -109,19 +109,22 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Directory in cui trovare i file binari da eseguire. Se non specificata, il percorso predefinito è `./bin/<configuration>/<framework>/`.  Per i progetti con più `TargetFrameworks` framework di destinazione (tramite la proprietà), è inoltre necessario definire `--framework` quando si specifica questa opzione.
+  Directory in cui trovare i file binari da eseguire. Se non specificata, il percorso predefinito è `./bin/<configuration>/<framework>/`.  Per i progetti con più framework di destinazione (tramite `TargetFrameworks` la proprietà), è necessario definire `--framework` anche quando si specifica questa opzione. `dotnet test`eseguire sempre i test dalla directory di output. È possibile usare <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> per utilizzare gli asset di test nella directory di output.
 
 - **`-r|--results-directory <PATH>`**
 
-  Directory in cui verranno inseriti i risultati del test. Se la directory specificata non esiste, viene creata. Il valore `TestResults` predefinito si trova nella directory che contiene il file di progetto.
+  Directory in cui verranno inseriti i risultati del test. Se la directory specificata non esiste, viene creata. Il valore predefinito `TestResults` è la directory che contiene il file di progetto.
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  Tempo di esecuzione di destinazione per cui eseguire il test.
+  Runtime di destinazione di cui eseguire il test.
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  Il file `.runsettings` da usare per l'esecuzione dei test. [Configurare unit test usando un file `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
+  Il file `.runsettings` da usare per l'esecuzione dei test. Si noti che `TargetPlatform` l'elemento (x86 | x64) non ha alcun `dotnet test`effetto per. Per eseguire test destinati a x86, installare la versione x86 di .NET Core. Il bit di *dotnet. exe* che si trova nel percorso è quello che verrà usato per l'esecuzione dei test. Per ulteriori informazioni, vedere le risorse seguenti:
+
+  - [Configurare unit test usando un file `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
+  - [Configurare un agente di test](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)
 
 - **`-t|--list-tests`**
 
@@ -131,13 +134,13 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
   Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Il valore predefinito è `minimal`. Per altre informazioni, vedere <xref:Microsoft.Build.Framework.LoggerVerbosity>.
 
-- **`RunSettings`** Argomenti
+- **`RunSettings`** argomenti
 
-  Gli argomenti `RunSettings` vengono passati come configurazioni per il test. Gli argomenti vengono specificati come coppie `[name]=[value]` dopo "-- ". Si noti lo spazio dopo --. Per separare più coppie `[name]=[value]`, viene usato uno spazio.
+  Gli argomenti vengono passati `RunSettings` come configurazioni per il test. Gli argomenti vengono specificati come coppie `[name]=[value]` dopo "-- ". Si noti lo spazio dopo --. Per separare più coppie `[name]=[value]`, viene usato uno spazio.
 
   Esempio: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-  Per ulteriori informazioni, vedere [Passaggio di argomenti RunSettings tramite riga di comando](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
+  Per ulteriori informazioni, vedere [passaggio di argomenti runsettings tramite la riga di comando](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
 
 ## <a name="examples"></a>Esempi
 
@@ -153,13 +156,13 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
   dotnet test ~/projects/test1/test1.csproj
   ```
 
-- Eseguire i test nel progetto nella directory corrente e generare un file dei risultati del test nel formato trx:
+- Eseguire i test nel progetto nella directory corrente e generare un file dei risultati del test nel formato TRX:
 
   ```dotnetcli
   dotnet test --logger trx
   ```
 
-- Eseguire i test nel progetto nella directory corrente e registrare con livello di dettaglio dettagliato nella console:
+- Eseguire i test nel progetto nella directory corrente e accedere con un livello di dettaglio dettagliato alla console:
 
   ```dotnetcli
   dotnet test --logger "console;verbosity=detailed"
@@ -204,6 +207,6 @@ Per altre informazioni ed esempi sull'uso del filtro degli unit test selettivi, 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Quadri e obiettivi](../../standard/frameworks.md)
+- [Framework e destinazioni](../../standard/frameworks.md)
 - [Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)
-- [Passaggio di argomenti runsettings tramite riga di comandoPassing runsettings arguments through commandline](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)
+- [Passaggio di argomenti runsettings tramite la riga di comando](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 772f37f1fc7446eae66f0cd0f12adb5e2e41997d
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 2a8db2882968dbcbe6a8868ab6fe1c128c94a41f
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595949"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624878"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! operatore (null-perdonatore) (riferimenti per C#)
 
@@ -20,7 +20,7 @@ Disponibile in C# 8,0 e versioni successive, l'operatore `!` unario di suffisso 
 L'operatore che perdona i valori null non ha alcun effetto in fase di esecuzione. Influisce solo sull'analisi del flusso statico del compilatore modificando lo stato null dell'espressione. In fase di esecuzione, `x!` l'espressione restituisce il risultato dell'espressione `x`sottostante.
 
 > [!NOTE]
-> In C# 8 l'operatore che perdona i valori null interagisce con gli [operatori condizionali null](member-access-operators.md#null-conditional-operators--and-) in modo imprevisto. L'espressione `x?.y!.z` viene analizzata come `(x?.y)!.z`. A causa di questa `z` interpretazione viene valutata `x` anche `null`se è, che può produrre <xref:System.NullReferenceException>un.
+> In C# 8, l'operatore che perdona i valori null termina l'elenco delle operazioni [condizionali null](member-access-operators.md#null-conditional-operators--and-) precedenti. Ad esempio, l'espressione `x?.y!.z` viene analizzata come `(x?.y)!.z`. A causa di questa interpretazione `z` , viene valutato anche `x` se `null`è, che può produrre un <xref:System.NullReferenceException>.
 
 Per ulteriori informazioni sulla funzionalità dei tipi di riferimento Nullable, vedere [tipi di riferimento Nullable](../builtin-types/nullable-reference-types.md).
 

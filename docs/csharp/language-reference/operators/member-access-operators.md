@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 86c8cce79e447bee638e1c5c7cb2fdbc64f630f3
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 37a6cb7cd32a9d60607aec51b1994e4717c5349a
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595897"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624865"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Operatori di accesso ai membri ed espressioni (riferimenti per C#)
 
@@ -139,7 +139,7 @@ Nell'esempio precedente, se non `??` si usa l'operatore, `numbers?.Length < 2` r
 L'operatore di accesso ai membri condizionale Null `?.` è anche noto come operatore Elvis.
 
 > [!NOTE]
-> In C# 8, gli operatori condizionali null interagiscono con l' [operatore che perdona i valori null](null-forgiving.md) in modo imprevisto. Ad esempio, l'espressione `x?.y!.z` viene analizzata come `(x?.y)!.z`. A causa di questa interpretazione `z` , viene valutato anche `x` se `null`è, che può produrre un <xref:System.NullReferenceException>.
+> In C# 8, l' [operatore che perdona i valori null](null-forgiving.md) termina l'elenco delle operazioni condizionali null precedenti. Ad esempio, l'espressione `x?.y!.z` viene analizzata come `(x?.y)!.z`. A causa di questa interpretazione `z` , viene valutato anche `x` se `null`è, che può produrre un <xref:System.NullReferenceException>.
 
 ### <a name="thread-safe-delegate-invocation"></a>Chiamata a delegati thread-safe
 
