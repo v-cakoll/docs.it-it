@@ -2,15 +2,16 @@
 title: Estensione della funzionalità di traccia
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: ad46f09c69e94146f9e1569eb506cb350a2a9307
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: e61265210640d2b801ad55b9dc5a357cc4f161a7
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141243"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728386"
 ---
-# <a name="extending-tracing"></a>Estensione della funzionalità di traccia
-In questo esempio viene illustrato come estendere la funzionalità di traccia di Windows Communication Foundation (WCF) scrivendo tracce di attività definite dall'utente nel codice client e del servizio. In questo modo l'utente può creare attività di traccia e raggruppare le tracce in unità logiche di lavoro. È anche possibile correlare le attività tramite trasferimenti (all'interno dello stesso endpoint) e propagazione (attraverso diversi endpoint). In questo esempio la traccia è abilitata sia per il client che per il servizio. Per ulteriori informazioni su come abilitare la traccia nei file di configurazione del client e del servizio, vedere [traccia e registrazione dei messaggi](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
+# <a name="extend-tracing"></a>Estendi traccia
+
+In questo esempio viene illustrato come estendere la funzionalità di traccia di Windows Communication Foundation (WCF) scrivendo tracce di attività definite dall'utente nel codice client e del servizio. La scrittura di tracce di attività definite dall'utente consente all'utente di creare attività di traccia e raggruppare le tracce in unità logiche di lavoro. È anche possibile correlare le attività tramite trasferimenti (all'interno dello stesso endpoint) e propagazione (attraverso diversi endpoint). In questo esempio la traccia è abilitata sia per il client che per il servizio. Per ulteriori informazioni su come abilitare la traccia nei file di configurazione del client e del servizio, vedere [traccia e registrazione dei messaggi](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
   
  Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
@@ -29,8 +30,8 @@ In questo esempio viene illustrato come estendere la funzionalità di traccia di
 ## <a name="tracing-and-activity-propagation"></a>Traccia e propagazione delle attività  
  La traccia attività definita dall'utente consente all'utente di creare proprie attività di traccia per raggruppare le tracce in unità logiche di lavoro, correlare le attività tramite trasferimenti e propagazione e ridurre il costo delle prestazioni della traccia WCF (ad esempio, il costo dello spazio su disco di un file di log).  
   
-### <a name="adding-custom-sources"></a>Aggiunta di origini personalizzate  
- Le tracce definite dall'utente possono essere aggiunte sia al codice del client che al codice del servizio. L'aggiunta di origini di traccia ai file di configurazione del client o del servizio consente di registrare e visualizzare queste tracce personalizzate nello [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Nell'esempio di codice seguente viene illustrato come aggiungere un'origine di traccia definita dall'utente denominata `ServerCalculatorTraceSource` al file di configurazione.  
+### <a name="add-custom-sources"></a>Aggiungere origini personalizzate  
+ Le tracce definite dall'utente possono essere aggiunte sia al codice del client che al codice del servizio. L'aggiunta di origini di traccia ai file di configurazione del client o del servizio consente la registrazione e la visualizzazione di queste tracce personalizzate nello [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Nell'esempio di codice seguente viene illustrato come aggiungere un'origine di traccia definita dall'utente denominata `ServerCalculatorTraceSource` al file di configurazione.  
   
 ```xml  
 <system.diagnostics>  
@@ -67,7 +68,7 @@ In questo esempio viene illustrato come estendere la funzionalità di traccia di
 ....
 ```  
   
-### <a name="correlating-activities"></a>Correlazione di attività  
+### <a name="correlate-activities"></a>Correlare le attività  
  Per correlare direttamente le attività attraverso gli endpoint, l'attributo `propagateActivity` deve essere impostato su `true` nell'origine di traccia `System.ServiceModel`. Inoltre, per propagare le tracce senza passare attraverso le attività WCF, è necessario disattivare la traccia attività ServiceModel. Tutto ciò è illustrato nell'esempio di codice seguente.  
   
 > [!NOTE]
@@ -85,10 +86,10 @@ In questo esempio viene illustrato come estendere la funzionalità di traccia di
 </system.diagnostics>  
 ```  
   
-### <a name="lessening-performance-cost"></a>Riduzione del costo in termini di prestazioni  
- La disattivazione di `ActivityTracing` nell'origine di traccia `System.ServiceModel` genera un file di traccia che contiene solo le tracce di attività definite dall'utente, senza includere le tracce di attività ServiceModel. Di conseguenza, le dimensioni del file di log risulteranno molto più piccole. Tuttavia, la possibilità di correlare le tracce di elaborazione WCF viene persa.  
+### <a name="lessen-performance-cost"></a>Ridurre il costo delle prestazioni  
+ La disattivazione di `ActivityTracing` nell'origine di traccia `System.ServiceModel` genera un file di traccia che contiene solo le tracce di attività definite dall'utente, senza includere le tracce di attività ServiceModel. L'esclusione delle tracce di attività ServiceModel comporta un file di log molto più piccolo. Tuttavia, la possibilità di correlare le tracce di elaborazione WCF viene persa.  
   
-##### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
+## <a name="set-up-build-and-run-the-sample"></a>Configurare, compilare ed eseguire l'esempio  
   
 1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
@@ -96,6 +97,6 @@ In questo esempio viene illustrato come estendere la funzionalità di traccia di
   
 3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Monitoraggio](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

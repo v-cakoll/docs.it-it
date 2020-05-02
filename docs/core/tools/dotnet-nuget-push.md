@@ -3,16 +3,16 @@ title: Comando dotnet nuget push
 description: Il comando dotnet nuget push effettua il push di un pacchetto nel server e lo pubblica.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 96f8d008c8306a0782d5149360a24bb4097a1ec4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 8b0437d7f4ada2b56af50e30717d131668c21f7e
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463524"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728348"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-**Questo articolo si applica a:** ✔️ .NET Core 2.x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
@@ -33,6 +33,8 @@ dotnet nuget push -h|--help
 ## <a name="description"></a>Descrizione
 
 Il comando `dotnet nuget push` effettua il push di un pacchetto nel server e lo pubblica. Il comando di push usa dettagli del server e delle credenziali presenti nel file di configurazione NuGet o nella catena di file di configurazione del sistema. Per altre informazioni sui file di configurazione, vedere [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior) (Configurazione del comportamento di NuGet). La configurazione predefinita di NuGet si ottiene caricando *%AppData%\NuGet\NuGet.config* (Windows) o *$HOME/.local/share* (Linux/macOS) e quindi caricando qualsiasi file *nuget.config* o *.nuget\nuget.config* dalla directory radice dell'unità nella directory corrente.
+
+Il comando effettua il push di un pacchetto esistente. Non crea un pacchetto. Per creare un pacchetto, usare [`dotnet pack`](dotnet-pack.md).
 
 ## <a name="arguments"></a>Argomenti
 
@@ -76,7 +78,7 @@ Il comando `dotnet nuget push` effettua il push di un pacchetto nel server e lo 
 
 - **`--skip-duplicate`**
 
-  Quando si esegue il push di più pacchetti in un server HTTP(S), considera qualsiasi risposta 409 Conflict come un avviso in modo che il push possa continuare. Disponibile da .NET Core 3.1 SDK.
+  Quando si esegue il push di più pacchetti in un server HTTP (S), tratta qualsiasi risposta di conflitto 409 come un avviso, in modo che il push possa continuare. Disponibile a partire da .NET Core 3,1 SDK.
 
 - **`-sk|--symbol-api-key <API_KEY>`**
 
@@ -92,13 +94,13 @@ Il comando `dotnet nuget push` effettua il push di un pacchetto nel server e lo 
 
 ## <a name="examples"></a>Esempi
 
-- Esegue il push di *foo.nupkg* all'origine push predefinita, specificando una chiave API:
+- Eseguire il push di *foo. nupkg* nell'origine push predefinita, specificando una chiave API:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-- Spingere *foo.nupkg* al server NuGet ufficiale, specificando una chiave API:
+- Eseguire il push di *foo. nupkg* nel server NuGet ufficiale, specificando una chiave API:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
@@ -110,25 +112,25 @@ Il comando `dotnet nuget push` effettua il push di un pacchetto nel server e lo 
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-- Effettua il push di *foo.nupkg* all'origine push predefinita:
+- Eseguire il push di *foo. nupkg* all'origine push predefinita:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
-- Effettua il push di *foo.symbols.nupkg* all'origine simboli predefinita:
+- Eseguire il push di *foo. symbols. nupkg* all'origine simboli predefinita:
 
   ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
-- Esegue il push di *foo.nupkg* all'origine push predefinita, specificando un timeout di 360 secondi:
+- Eseguire il push di *foo. nupkg* all'origine push predefinita, specificando un timeout di 360 secondi:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
-- Effettua il push di tutti i file con estensione *nupkg* presenti nella directory corrente all'origine push predefinita:
+- Eseguire il push di tutti i file con *estensione nupkg* nella directory corrente all'origine push predefinita:
 
   ```dotnetcli
   dotnet nuget push *.nupkg
@@ -138,8 +140,17 @@ Il comando `dotnet nuget push` effettua il push di un pacchetto nel server e lo 
   > Il mancato funzionamento di questo comando può dipendere da un bug che era presente nelle versioni precedenti del SDK (.NET Core 2.1 SDK e versioni precedenti).
   > Per risolvere questo problema, aggiornare la versione del SDK oppure eseguire il comando seguente: `dotnet nuget push **/*.nupkg`
 
-- Esegue il push di tutti i file *.nupkg* anche se una risposta 409 Conflict viene restituita da un server HTTP(S):
+- Eseguire il push di tutti i file con *estensione nupkg* anche se una risposta di conflitto 409 viene restituita da un server http (S):
 
   ```dotnetcli
   dotnet nuget push *.nupkg --skip-duplicate
   ```
+
+- Eseguire il push di tutti i file con *estensione nupkg* nella directory corrente in una directory di feed locale:
+
+  ```dotnetcli
+  dotnet nuget push *.nupkg -s c:\mydir
+  ```
+
+  Questo comando non archivia i pacchetti in una struttura di cartelle gerarchica, consigliata per ottimizzare le prestazioni. Per ulteriori informazioni, vedere [feed locali](//nuget/hosting-packages/local-feeds).
+  

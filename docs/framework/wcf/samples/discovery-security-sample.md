@@ -2,12 +2,12 @@
 title: Esempio di sicurezza di individuazione
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 94de324469d0d649a184dec5847e1a5c4cbba2cc
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 44022ee756f189347aaec606427ecb3c4c5ffa95
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141162"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728416"
 ---
 # <a name="discovery-security-sample"></a>Esempio di sicurezza di individuazione
 
@@ -16,7 +16,7 @@ La specifica Discovery non richiede che gli endpoint che partecipano al processo
  Il canale personalizzato viene applicato sullo stack di canali esistente per gli endpoint di individuazione e degli annunci. In questo modo, per ogni messaggio inviato viene applicata un'intestazione di firma. La firma viene verificata nei messaggi ricevuti e quando non corrisponde oppure quando i messaggi non presentano una firma, i messaggi vengono eliminati. Nell'esempio per firmare e verificare i messaggi vengono usati i certificati.  
   
 ## <a name="discussion"></a>Discussione  
- WCF è molto estensibile e offre agli utenti la possibilità di personalizzare i canali nel modo desiderato. Nell'esempio viene implementato un elemento di associazione protetta dell'individuazione che consente la compilazione di canali sicuri. I canali sicuri verificano le firme dei messaggi e vengono applicati sullo stack corrente.  
+ WCF è estendibile e consente agli utenti di personalizzare i canali nel modo desiderato. Nell'esempio viene implementato un elemento di associazione protetta dell'individuazione che consente la compilazione di canali sicuri. I canali sicuri verificano le firme dei messaggi e vengono applicati sullo stack corrente.  
   
  L'elemento di associazione protetta compila le channel factory e i listener di canale sicuri.  
   
@@ -40,7 +40,7 @@ La specifica Discovery non richiede che gli endpoint che partecipano al processo
   
  Per calcolare la firma, nell'esempio vengono determinati gli elementi della firma espansi. Viene creata una firma XML (`SignedInfo`) usando il prefisso dello spazio dei nomi `ds`, come richiesto dalla specifica WS-Discovery. Al corpo e a tutte le intestazioni presenti negli spazi dei nomi di individuazione e indirizzamento viene fatto riferimento nella firma, impedendone pertanto l'alterazione. Ogni elemento a cui viene fatto riferimento viene trasformato usando la canonizzazione esclusivahttp://www.w3.org/2001/10/xml-exc-c14n# () e quindi viene calcolato un valore digest SHA-1 (http://www.w3.org/2000/09/xmldsig#sha1 ). In base a tutti gli elementi a cui viene fatto riferimento e ai relativi valori di digest, il valore della firmahttp://www.w3.org/2000/09/xmldsig#rsa-sha1 viene calcolato usando l'algoritmo RSA ().  
   
- I messaggi vengono firmati con un certificato specificato dal client. Il percorso e il nome dell'archivio, nonché il nome del soggetto del certificato devono essere specificati al momento della creazione dell'elemento di associazione. `KeyId` nella firma compressa rappresenta l'identificatore di chiave del token di firma e corrisponde all'identificatore di chiave del soggetto (SKI, Subject Key Identifier) del token di firma oppure (se l'identificatore SKI non esiste) a un hash SHA-1 della chiave pubblica del token di firma.  
+ I messaggi vengono firmati con un certificato specificato dal client. Il percorso dell'archivio, il nome e il nome del soggetto del certificato devono essere specificati quando viene creato l'elemento di associazione. `KeyId` nella firma compressa rappresenta l'identificatore di chiave del token di firma e corrisponde all'identificatore di chiave del soggetto (SKI, Subject Key Identifier) del token di firma oppure (se l'identificatore SKI non esiste) a un hash SHA-1 della chiave pubblica del token di firma.  
   
 ## <a name="secure-channel-listener"></a>Listener del canale protetto  
  Il listener del canale protetto crea l'input o i canali duplex che verificano la firma compatta nei messaggi ricevuti. Per verificare la firma, l'elemento `KeyId` specificato nella firma compatta allegata al messaggio viene usato per selezionare un certificato nell'archivio specificato. Se il messaggio non presenta una firma o il controllo della firma ha esito negativo, i messaggi vengono eliminati. Per usare l'associazione protetta, nell'esempio viene definita una factory che crea gli oggetti <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> e <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> personalizzati a cui è stato aggiunto l'elemento di individuazione dell'associazione protetta. Questi endpoint sicuri possono essere usati nei listener degli annunci di individuazione e nei servizi individuabili.  

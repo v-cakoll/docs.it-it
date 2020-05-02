@@ -2,12 +2,12 @@
 title: Contesto dell'istanza durevole
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 604a617dc03bf06b71fe3019b58b2161216ee3e0
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: d70617fef7ebe0a94e22e858ee403d5d4f1840e3
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141191"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728401"
 ---
 # <a name="durable-instance-context"></a>Contesto dell'istanza durevole
 
@@ -18,9 +18,9 @@ In questo esempio viene illustrato come personalizzare il runtime di Windows Com
 
 Questo esempio prevede l'estensione del livello del canale e del livello del modello di servizio di WCF. È pertanto necessario comprendere i concetti sottostanti prima di entrare nei dettagli dell'implementazione.
 
-I contesti dell'istanza durevoli si trovano spesso in situazioni del mondo reale. Ad esempio, un'applicazione di carrello degli acquisti ha la possibilità di sospendere gli acquisti a metà strada e continuarli un altro giorno. Quando si visita il carrello degli acquisti il giorno successivo, il contesto originale viene ripristinato. È importante notare che l'applicazione di carrello degli acquisti (sul server) non mantiene l'istanza del carrello degli acquisti mentre si è disconnessi. Invece, lo stato viene salvato in un archivio durevole e viene utilizzato per generare una nuova istanza del contesto ripristinato. Pertanto l'istanza del servizio che può essere utile allo stesso contesto non corrisponde all'istanza precedente (ovvero, non ha lo stesso indirizzo di memoria).
+I contesti dell'istanza durevoli si trovano spesso in situazioni del mondo reale. Un'applicazione del carrello acquisti, ad esempio, ha la possibilità di sospendere la spesa a metà e di continuare in un altro giorno. Quando si visita il carrello degli acquisti il giorno successivo, il contesto originale viene ripristinato. È importante notare che l'applicazione di carrello degli acquisti (sul server) non mantiene l'istanza del carrello degli acquisti mentre si è disconnessi. Invece, lo stato viene salvato in un archivio durevole e viene utilizzato per generare una nuova istanza del contesto ripristinato. Pertanto l'istanza del servizio che può essere utile allo stesso contesto non corrisponde all'istanza precedente (ovvero, non ha lo stesso indirizzo di memoria).
 
-Il contesto dell'istanza durevole è reso possibile da un piccolo protocollo che consente al client e al servizio di scambiare un ID del contesto. Questo ID del contesto viene creato sul client e trasmesso al servizio. Quando viene creata l'istanza del servizio, il runtime del servizio tenta di caricare lo stato salvato che corrisponde a questo ID del contesto da un'archiviazione permanente (per impostazione predefinita corrisponde a un database SQL Server 2005). Se non ci sono stati disponibili, la nuova istanza è dotata di uno stato predefinito. L'implementazione del servizio utilizza un attributo personalizzato per contrassegnare le operazioni che modificano il runtime del servizio, in modo che la fase di esecuzione possa salvare l'istanza del servizio dopo averle richiamate.
+Il contesto dell'istanza durevole è reso possibile da un piccolo protocollo che consente al client e al servizio di scambiare un ID del contesto. Questo ID del contesto viene creato sul client e trasmesso al servizio. Quando viene creata l'istanza del servizio, il runtime del servizio tenta di caricare lo stato salvato che corrisponde a questo ID del contesto da un'archiviazione permanente (per impostazione predefinita corrisponde a un database SQL Server 2005). Se non è disponibile alcuno stato, la nuova istanza avrà lo stato predefinito. L'implementazione del servizio utilizza un attributo personalizzato per contrassegnare le operazioni che modificano il runtime del servizio, in modo che la fase di esecuzione possa salvare l'istanza del servizio dopo averle richiamate.
 
 Dalla descrizione precedente è possibile individuare i due passaggi necessari per raggiungere l'obiettivo:
 
@@ -28,11 +28,11 @@ Dalla descrizione precedente è possibile individuare i due passaggi necessari p
 
 2. Modificare il comportamento locale del servizio per implementare la logica dell'istanza personalizzata.
 
-Poiché il primo passaggio influisce sul messaggio in transito, deve essere implementato come canale personalizzato e associato al livello del canale. Il secondo passaggio influisce solo sul comportamento locale del servizio e pertanto può essere implementato estendendo vari punti di estensibilità del servizio. Nelle prossime sezioni verranno illustrate tutte queste estensioni.
+Poiché la prima nell'elenco influiscono sui messaggi in transito, è necessario implementarla come canale personalizzato e associarla al livello del canale. Il secondo passaggio influisce solo sul comportamento locale del servizio e pertanto può essere implementato estendendo vari punti di estensibilità del servizio. Nelle prossime sezioni verranno illustrate tutte queste estensioni.
 
 ## <a name="durable-instancecontext-channel"></a>Canale InstanceContext durevole
 
-La prima cosa da notare è l'estensione del livello del canale. Il primo passaggio per creare un canale personalizzato consiste nel decidere la struttura della comunicazione del canale. Poiché viene introdotto un nuovo protocollo di rete, è necessario che il canale funzioni con tutti gli altri canali dello stack di canali. È pertanto necessario che supporti tutti i modelli di scambio dei messaggi. Tuttavia, la funzionalità principale del canale rimane la stessa, indipendentemente dalla struttura della comunicazione. Più specificamente, deve scrivere l'ID del contesto ai messaggi dal client e leggere questo ID del contesto dai messaggi dal servizio, per poi passarlo ai livelli superiori. Per questa ragione, viene creata una classe `DurableInstanceContextChannelBase` che rappresenta la classe di base astratta per tutte le implementazioni dei canali del contesto dell'istanza durevole. Questa classe contiene le funzioni comuni di gestione del computer di stato e due membri protetti per applicare e leggere le informazioni di contesto a e da i messaggi.
+La prima cosa da notare è l'estensione del livello del canale. Il primo passaggio per creare un canale personalizzato consiste nel decidere la struttura della comunicazione del canale. Quando viene introdotto un nuovo protocollo wire, il canale dovrebbe funzionare con quasi tutti gli altri canali nello stack dei canali. È pertanto necessario che supporti tutti i modelli di scambio dei messaggi. Tuttavia, la funzionalità principale del canale rimane la stessa, indipendentemente dalla struttura della comunicazione. Più specificamente, deve scrivere l'ID del contesto ai messaggi dal client e leggere questo ID del contesto dai messaggi dal servizio, per poi passarlo ai livelli superiori. Per questa ragione, viene creata una classe `DurableInstanceContextChannelBase` che rappresenta la classe di base astratta per tutte le implementazioni dei canali del contesto dell'istanza durevole. Questa classe contiene le funzioni comuni di gestione del computer di stato e due membri protetti per applicare e leggere le informazioni di contesto a e da i messaggi.
 
 ```csharp
 class DurableInstanceContextChannelBase
@@ -51,7 +51,7 @@ class DurableInstanceContextChannelBase
 
 Questi due metodi si avvalgono delle implementazioni `IContextManager` per scrivere e leggere l'ID del contesto a o da il messaggio. (`IContextManager` è un'interfaccia personalizzata utilizzata per definire il contratto per tutti i gestori del contesto). Il canale può includere l'ID del contesto in un'intestazione SOAP personalizzata o in un'intestazione HTTP del cookie. Ogni implementazione dei gestori di contesto eredita dalla classe `ContextManagerBase` che contiene le funzionalità comuni per tutti i gestori del contesto. Il metodo `GetContextId` in questa classe viene utilizzato per originare l'ID del contesto dal client. Quando un ID del contesto viene originato per la prima volta, questo metodo lo salva in un file di testo il cui nome è costituito dall'indirizzo endpoint remoto (i caratteri del nome file non validi degli URI tipici sono sostituiti con il carattere @).
 
-In un secondo momento, quando l'ID del contesto è necessario allo stesso endpoint remoto, il metodo verifica se esiste un file appropriato. Se esiste, il metodo legge l'ID del contesto e termina. In caso contrario, restituisce un ID del contesto appena generato e lo salva in un file. Nella configurazione predefinita, questi file sono posizionati in una directory chiamata ContextStore che risiede nella directory temp dell'utente corrente. Questo percorso è tuttavia configurabile tramite l'elemento di associazione.
+In un secondo momento, quando l'ID del contesto è necessario allo stesso endpoint remoto, il metodo verifica se esiste un file appropriato. Se esiste, il metodo legge l'ID del contesto e termina. In caso contrario, restituisce un ID del contesto appena generato e lo salva in un file. Con la configurazione predefinita, questi file vengono inseriti in una directory denominata ContextStore, che risiede nella directory temporanea dell'utente corrente. Questo percorso è tuttavia configurabile tramite l'elemento di associazione.
 
 Il meccanismo utilizzato per trasportare l'ID del contesto è configurabile. Può essere scritto nell'intestazione HTTP del cookie o in un'intestazione SOAP personalizzata. Se si utilizza l'intestazione SOAP personalizzata, è possibile utilizzare questo protocollo con i protocolli non HTTP (ad esempio, TCP o Named pipe). Le due classi `MessageHeaderContextManager` e `HttpCookieContextManager` implementano queste due opzioni.
 
@@ -87,9 +87,9 @@ Il metodo `ApplyContext` viene richiamato dai canali di invio. Inserisce l'ID de
 message.Properties.Add(DurableInstanceContextUtility.ContextIdProperty, contextId);
 ```
 
-Prima di procedere, è importante comprendere l'utilizzo della raccolta `Properties` nella classe `Message`. In genere, questa raccolta `Properties` viene utilizzata quando si passano dati dai livelli inferiore a quelli superiori dal livello del canale. In questo modo i dati desiderati possono essere forniti ai livelli superiori in modo coerente, indipendentemente dai dettagli del protocollo. In altre parole, il livello del canale può inviare e ricevere l'ID del contesto come intestazione SOAP o come intestazione HTTP del cookie. Ma non è necessario che i livelli superiori conoscano questi dettagli, perché il livello del canale rende disponibili queste informazioni nella raccolta `Properties`.
+Prima di procedere, è importante comprendere l'utilizzo della raccolta `Properties` nella classe `Message`. In genere, questa raccolta `Properties` viene utilizzata quando si passano dati dai livelli inferiore a quelli superiori dal livello del canale. In questo modo i dati desiderati possono essere forniti ai livelli superiori in modo coerente, indipendentemente dai dettagli del protocollo. In altre parole, il livello del canale può inviare e ricevere l'ID del contesto come intestazione SOAP o intestazione HTTP del cookie. Ma non è necessario che i livelli superiori conoscano questi dettagli, perché il livello del canale rende disponibili queste informazioni nella raccolta `Properties`.
 
-Una volta sistemata la classe `DurableInstanceContextChannelBase` tutte e dieci le interfacce necessarie (IOutputChannel, IInputChannel, IOutputSessionChannel, IInputSessionChannel, IRequestChannel, IReplyChannel, IRequestSessionChannel, IReplySessionChannel, IDuplexChannel, IDuplexSessionChannel) devono essere implementate. Queste interfacce presentano tutti i modelli di scambio di messaggi disponibili (datagramma, simplex, duplex e le varianti con sessione). Ognuna di queste implementazioni eredita la classe di base descritta precedentemente e chiama i metodi `ApplyContext` e `ReadContextId` in modo appropriato. Ad esempio, `DurableInstanceContextOutputChannel`, il quale implementa l'interfaccia IOutputChannel, chiama il metodo `ApplyContext` da ogni metodo che invia i messaggi.
+Una volta sistemata la classe `DurableInstanceContextChannelBase` tutte e dieci le interfacce necessarie (IOutputChannel, IInputChannel, IOutputSessionChannel, IInputSessionChannel, IRequestChannel, IReplyChannel, IRequestSessionChannel, IReplySessionChannel, IDuplexChannel, IDuplexSessionChannel) devono essere implementate. Sono simili a tutti i modelli di scambio dei messaggi disponibili (datagramma, simplex, duplex e varianti con sessione). Ognuna di queste implementazioni eredita la classe di base descritta in precedenza `ApplyContext` e `ReadContextId` chiama e in modo appropriato. Ad esempio, `DurableInstanceContextOutputChannel`, il quale implementa l'interfaccia IOutputChannel, chiama il metodo `ApplyContext` da ogni metodo che invia i messaggi.
 
 ```csharp
 public void Send(Message message, TimeSpan timeout)
@@ -100,7 +100,7 @@ public void Send(Message message, TimeSpan timeout)
 }
 ```
 
-Invece `DurableInstanceContextInputChannel`, il quale implementa l'interfaccia `IInputChannel`, chiama il metodo `ReadContextId` da ogni metodo che riceve i messaggi.
+D'altra parte, `DurableInstanceContextInputChannel` che implementa l' `IInputChannel` interfaccia, chiama il `ReadContextId` metodo in ogni metodo che riceve i messaggi.
 
 ```csharp
 public Message Receive(TimeSpan timeout)
@@ -136,7 +136,7 @@ public interface IStorageManager
 }
 ```
 
-La classe `SqlServerStorageManager` contiene l'implementazione `IStorageManager` predefinita. Nel metodo `SaveInstance` l'oggetto specificato viene serializzato utilizzando XmlSerializer e viene salvato nel database SQL Server.
+La classe `SqlServerStorageManager` contiene l'implementazione `IStorageManager` predefinita. Nel `SaveInstance` metodo, l'oggetto specificato viene serializzato utilizzando XmlSerializer e viene salvato nel database SQL Server.
 
 ```csharp
 XmlSerializer serializer = new XmlSerializer(state.GetType());
@@ -171,7 +171,7 @@ using (SqlConnection connection = new SqlConnection(GetConnectionString()))
 }
 ```
 
-Nel metodo `GetInstance` i dati serializzati vengono letti per un ID del contesto specificato e l'oggetto costruito da questo contesto viene restituito al chiamante.
+Nel `GetInstance` metodo, i dati serializzati vengono letti per un determinato ID di contesto e l'oggetto costruito da esso viene restituito al chiamante.
 
 ```csharp
 object data;
@@ -282,7 +282,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
 
 Come descritto precedentemente, l'ID del contesto viene letto dalla raccolta `Properties` della classe `Message` e passato al costruttore della classe dell'estensione. Questo dimostra che le informazioni possono essere scambiate tra i livelli in modo coerente.
 
-Il successivo passaggio consiste nell'eseguire l'override del processo di creazione dell'istanza di servizio. WCF consente di implementare comportamenti di creazione di istanze personalizzati e di associarli al runtime utilizzando l'interfaccia IInstanceProvider. La nuova classe `InstanceProvider` viene implementata per eseguire quel processo. Il tipo di servizio previsto dal provider di istanze viene accettato nel costruttore. In un secondo momento viene utilizzato per creare nuove istanze. Nell'implementazione `GetInstance` un'istanza di una gestione archivi viene creata cercando un'istanza persistente. Se restituisce `null`, viene creata una nuova istanza del tipo di servizio e viene restituita al chiamante.
+Il successivo passaggio consiste nell'eseguire l'override del processo di creazione dell'istanza di servizio. WCF consente di implementare comportamenti di creazione di istanze personalizzati e di associarli al runtime utilizzando l'interfaccia IInstanceProvider. La nuova classe `InstanceProvider` viene implementata per eseguire quel processo. Il tipo di servizio previsto dal provider di istanze è accettato nel costruttore. In un secondo momento viene utilizzato per creare nuove istanze. Nell' `GetInstance` implementazione di viene creata un'istanza di un gestore di archiviazione che cerca un'istanza salvata in modo permanente. Se restituisce `null`, viene creata un'istanza di una nuova istanza del tipo di servizio e viene restituita al chiamante.
 
 ```csharp
 public object GetInstance(InstanceContext instanceContext, Message message)
@@ -302,11 +302,11 @@ public object GetInstance(InstanceContext instanceContext, Message message)
 }
 ```
 
-Il successivo passaggio consiste nell'installare le classi `InstanceContextExtension`,  `InstanceContextInitializer` e `InstanceProvider` nel runtime del modello di servizi. È possibile utilizzare un attributo personalizzato per contrassegnare le classi di implementazione del servizio perché installino il comportamento. `DurableInstanceContextAttribute` contiene l'implementazione per questo attributo e implementa l'interfaccia `IServiceBehavior` per estendere l'intero runtime del servizio.
+Il passaggio importante successivo consiste nell'installare le `InstanceContextExtension`classi `InstanceContextInitializer`, e `InstanceProvider` nel runtime del modello di servizio. È possibile utilizzare un attributo personalizzato per contrassegnare le classi di implementazione del servizio perché installino il comportamento. `DurableInstanceContextAttribute` contiene l'implementazione per questo attributo e implementa l'interfaccia `IServiceBehavior` per estendere l'intero runtime del servizio.
 
-Questa classe è dotata di una proprietà che accetta il tipo della gestione archivi da utilizzare. In questo modo l'implementazione consente agli utenti di specificare la propria implementazione `IStorageManager` come parametro di questo attributo.
+Questa classe è dotata di una proprietà che accetta il tipo della gestione archivi da utilizzare. In questo modo, l'implementazione consente agli utenti di specificare la propria `IStorageManager` implementazione come parametro di questo attributo.
 
-Nell'implementazione `ApplyDispatchBehavior` viene verificato il `InstanceContextMode` dell'attributo `ServiceBehavior` attuale. Se questa proprietà è impostata su Singleton, non è possibile abilitare la creazione di istanze durevoli e viene generata un'eccezione `InvalidOperationException` per notificare l'host.
+Nell' `ApplyDispatchBehavior` implementazione di, l' `InstanceContextMode` oggetto dell'attributo `ServiceBehavior` corrente viene verificato. Se questa proprietà è impostata su Singleton, non è possibile abilitare la creazione di istanze durevoli e viene generata un'eccezione `InvalidOperationException` per notificare l'host.
 
 ```csharp
 ServiceBehaviorAttribute serviceBehavior =
@@ -351,13 +351,13 @@ Per riassumere, questo esempio ha prodotto un canale che abilita il protocollo d
 
 Rimane da trovare un modo per salvare l'istanza del servizio nell'archivio permanente. Come illustrato precedentemente, esiste già la funzionalità necessaria per salvare lo stato in un'implementazione `IStorageManager`. A questo punto è necessario integrare questa operazione con il runtime WCF. È necessario un altro attributo applicabile ai metodi della classe di implementazione del servizio. Questo attributo va applicato ai metodi che modificano lo stato dell'istanza del servizio.
 
-La classe `SaveStateAttribute` implementa questa funzionalità. Implementa `IOperationBehavior` inoltre la classe per modificare il runtime WCF per ogni operazione. Quando un metodo è contrassegnato con questo attributo, il runtime WCF richiama il `ApplyBehavior` metodo mentre viene costruito l' `DispatchOperation` oggetto appropriato. In questa implementazione del metodo c'è una sola riga di codice:
+La classe `SaveStateAttribute` implementa questa funzionalità. Implementa `IOperationBehavior` inoltre la classe per modificare il runtime WCF per ogni operazione. Quando un metodo è contrassegnato con questo attributo, il runtime WCF richiama il `ApplyBehavior` metodo mentre viene costruito l' `DispatchOperation` oggetto appropriato. In questa implementazione del metodo è presente una sola riga di codice:
 
 ```csharp
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);
 ```
 
-Questa istruzione crea un'istanza di tipo `OperationInvoker` e la assegna alla proprietà `Invoker` dell'elemento `DispatchOperation` che viene generato. La classe `OperationInvoker` è un wrapper per l'invoker dell'operazione predefinita creato per `DispatchOperation`. La classe implementa l'interfaccia `IOperationInvoker`. Nell'implementazione del metodo `Invoke` la chiamata al metodo effettiva viene delegata all'invoker dell'operazione interna. Tuttavia, prima di restituire i risultati la gestione archivi in `InstanceContext` viene utilizzata per salvare l'istanza del servizio.
+Questa istruzione crea un'istanza di tipo `OperationInvoker` e la assegna alla proprietà `Invoker` dell'elemento `DispatchOperation` che viene generato. La classe `OperationInvoker` è un wrapper per l'invoker dell'operazione predefinita creato per `DispatchOperation`. La classe implementa l'interfaccia `IOperationInvoker`. Nell'implementazione `Invoke` del metodo, la chiamata al metodo effettiva viene delegata all'invoker dell'operazione interna. Tuttavia, prima di restituire i risultati la gestione archivi in `InstanceContext` viene utilizzata per salvare l'istanza del servizio.
 
 ```csharp
 object result = innerOperationInvoker.Invoke(instance,
@@ -374,7 +374,7 @@ return result;
 
 ## <a name="using-the-extension"></a>Utilizzo dell'estensione
 
-Le estensioni del livello del canale e del livello del modello di servizio vengono eseguite e ora possono essere utilizzate nelle applicazioni WCF. È necessario che i servizi aggiungano il canale allo stack di canali utilizzando un'associazione personalizzata e che contrassegnino quindi le classi di implementazione del servizio con gli attributi appropriati.
+Le estensioni del livello del canale e del livello del modello di servizio vengono eseguite e ora possono essere utilizzate nelle applicazioni WCF. I servizi devono aggiungere il canale nello stack dei canali utilizzando un'associazione personalizzata e quindi contrassegnare le classi di implementazione del servizio con gli attributi appropriati.
 
 ```csharp
 [DurableInstanceContext]

@@ -2,15 +2,15 @@
 title: ASP.NET Core modifiche di rilievo
 titleSuffix: ''
 description: Elenca le modifiche di rilievo in ASP.NET Core.
-ms.date: 04/28/2020
+ms.date: 04/29/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 454735028f8c0923b99e85ade30f498f13dd6cab
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 63d39b1aa6e46b6bcbeb5a409efacac01dea4262
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507144"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728326"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core modifiche di rilievo
 
@@ -41,6 +41,7 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 - [HTTP: browser navigava sullostesso sito modifiche che influiscano sull'autenticazione](#http-browser-samesite-changes-impact-authentication)
 - [HTTP: DefaultHttpContext estensibilità rimosso](#http-defaulthttpcontext-extensibility-removed)
 - [HTTP: HeaderNames campi modificati in ReadOnly statico](#http-headernames-constants-changed-to-static-readonly)
+- [HTTP: HttpClient istanze create dai codici di stato IHttpClientFactory log Integer](#http-httpclient-instances-created-by-ihttpclientfactory-log-integer-status-codes)
 - [HTTP: modifiche dell'infrastruttura del corpo della risposta](#http-response-body-infrastructure-changes)
 - [HTTP: alcuni cookie navigava sullostesso sito valori predefiniti modificati](#http-some-cookie-samesite-defaults-changed-to-none)
 - [HTTP: i/o sincrono disabilitato per impostazione predefinita](#http-synchronous-io-disabled-in-all-servers)
@@ -54,6 +55,7 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 - [Gheppio: intestazioni del trailer della richiesta spostate in una nuova raccolta](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Gheppio: modifiche ai livelli di astrazione del trasporto](#kestrel-transport-abstractions-removed-and-made-public)
 - [Localizzazione: API contrassegnate come obsolete](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
+- [Localizzazione: classe ResourceManagerWithCultureStringLocalizer e membro dell'interfaccia WithCulture rimossi](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [Registrazione: classe DebugLogger creata internamente](#logging-debuglogger-class-made-internal)
 - [MVC: suffisso asincrono azione controller rimosso](#mvc-async-suffix-trimmed-from-controller-action-names)
 - [MVC: JsonResult spostato in Microsoft. AspNetCore. Mvc. Core](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
@@ -87,7 +89,15 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 
 ***
 
+[!INCLUDE[HTTP: HttpClient instances created by IHttpClientFactory log integer status codes](~/includes/core-changes/aspnetcore/5.0/http-httpclient-instances-log-integer-status-codes.md)]
+
+***
+
 [!INCLUDE[HTTP: Kestrel and IIS BadHttpRequestException types marked obsolete and replaced](~/includes/core-changes/aspnetcore/5.0/http-badhttprequestexception-obsolete.md)]
+
+***
+
+[!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
 
 ***
 

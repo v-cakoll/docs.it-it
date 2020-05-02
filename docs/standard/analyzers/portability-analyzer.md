@@ -4,12 +4,12 @@ description: Informazioni su come usare lo strumento .NET Portability Analyzer p
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: ef6173fe5da798c1fff5d2eb723a91875905e400
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 8d019bef5fddac9f7c3d93e416cea061905c82ff
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507533"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728450"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -27,14 +27,14 @@ Dopo aver convertito il progetto in modo che sia destinato alla nuova piattaform
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>Come usare .NET Portability Analyzer
 
-Per iniziare a usare .NET Portability Analyzer in Visual Studio, è prima necessario scaricare l'estensione da [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) e installarla. Funziona in Visual Studio 2017 e versioni successive. È possibile configurarlo in Visual Studio tramite **analisi** > **Portability Analyzer** e selezionare le piattaforme di destinazione, ovvero le piattaforme/versioni .NET che si desidera valutare i gap di portabilità rispetto alla piattaforma/versione con cui viene compilato l'assembly corrente.
+Per iniziare a usare .NET Portability Analyzer in Visual Studio, è prima necessario scaricare l'estensione da [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) e installarla. Funziona in Visual Studio 2017 e versioni successive. È possibile configurarlo in Visual Studio tramite **analizza** > **le impostazioni di Portability Analyzer** e selezionare le piattaforme di destinazione, ovvero le piattaforme .NET e le versioni di cui si vuole valutare i gap di portabilità rispetto alla piattaforma/versione con cui viene compilato l'assembly corrente.
 
 ![Screenshot di Portability Analyzer.](./media/portability-analyzer/portability-screenshot.png)
 
 È anche possibile usare l'applicazione console ApiPort, scaricandola dal [repository ApiPort](https://aka.ms/apiportdownload). È possibile usare l'opzione di comando `listTargets` per visualizzare l'elenco di destinazioni disponibili e quindi selezionare le piattaforme di destinazione specificando l'opzione di comando `-t` o `--target`.
 
 ### <a name="analyze-portability"></a>Analizzare la portabilità
-Per analizzare l'intero progetto in Visual Studio, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e selezionare **Analyze Assembly Portability** (Analizza portabilità dell'assembly). In caso contrario, accedere al menu **Analizza** e selezionare **Analyze Assembly Portability** (Analizza portabilità assembly). Da qui selezionare il file eseguibile o DLL del progetto.
+Per analizzare l'intero progetto in Visual Studio, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e selezionare **Analyze Assembly Portability** (Analizza portabilità dell'assembly). In caso contrario, accedere al menu **Analizza** e selezionare **Analyze Assembly Portability** (Analizza portabilità assembly). Da qui selezionare il file eseguibile o la DLL del progetto.
 
 ![Screenshot di Portability Analyzer da Esplora soluzioni.](./media/portability-analyzer/portability-solution-explorer.png)
 
@@ -67,7 +67,7 @@ La sezione dei **Dettagli** del report elenca le API mancanti da una delle piatt
 - Target member (Membro di destinazione): il metodo manca da una piattaforma di destinazione
 - Assembly name (Nome dell'assembly): assembly .NET Framework in cui deve trovarsi l'API mancante.
 - Ognuna delle piattaforme di destinazione selezionate è una colonna, ad esempio ".NET Core": il valore "non supportato" indica che l'API non è supportata in questa piattaforma di destinazione.
-- Recommended Changes (Modifiche consigliate): API o tecnologia consigliata a cui passare. Questo campo è attualmente vuoto o non aggiornato per molte API. A causa dell'elevato numero di API, è molto difficile tenerlo aggiornato. È in corso l'esame di soluzioni alternative che consentano di offrire informazioni utili ai clienti.
+- Modifiche consigliate: l'API o la tecnologia consigliata per passare a. Attualmente, questo campo è vuoto o non aggiornato per molte API. A causa dell'elevato numero di API, abbiamo una sfida significativa per mantenerla aggiornata. Stiamo esaminando soluzioni alternative per fornire informazioni utili ai clienti.
 
 #### <a name="missing-assemblies"></a>Assembly mancanti
 
