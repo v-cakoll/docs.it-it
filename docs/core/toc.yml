@@ -4,7 +4,7 @@
   href: introduction.md
 - name: Panoramica di .NET Core
   href: about.md
-- name: Installazione
+- name: Installazione di
   items:
     - name: Panoramica
       href: install/index.md
@@ -14,6 +14,8 @@
       href: install/runtime.md
     - name: Sistema operativo e dipendenze supportati
       href: install/dependencies.md
+    - name: Rimuovere runtime e SDK non aggiornati
+      href: install/remove-runtime-sdk-versions.md
     - name: Gestire i modelli .NET
       href: install/templates.md
     - name: Problemi di notarizzazione macOS
@@ -36,6 +38,8 @@
           href: install/linux-package-manager-debian10.md
         - name: Debian 9
           href: install/linux-package-manager-debian9.md
+        - name: Fedora 32
+          href: install/linux-package-manager-fedora32.md
         - name: Fedora 31
           href: install/linux-package-manager-fedora31.md
         - name: Fedora 30
@@ -68,7 +72,7 @@
       href: whats-new/dotnet-core-2-1.md
     - name: Novità di .NET Core 2.0
       href: whats-new/dotnet-core-2-0.md
-- name: Modifiche di rilievo
+- name: Modifiche che causano un'interruzione
   displayName: app compatibility
   href: compatibility/
 - name: Esercitazioni
@@ -130,7 +134,7 @@
   items:
     - name: Panoramica
       href: project-sdk/overview.md
-    - name: Informazioni di riferimento
+    - name: Riferimento
       items:
         - name: Microsoft.NET.Sdk
           href: project-sdk/msbuild-props.md
@@ -144,7 +148,7 @@
   items:
     - name: Panoramica
       href: tools/index.md
-    - name: Informazioni di riferimento
+    - name: Riferimento
       items:
         - name: dotnet
           href: tools/dotnet.md
@@ -280,7 +284,7 @@
       href: additional-tools/dotnet-svcutil.xmlserializer-guide.md
     - name: Generazione serializzatore XML
       href: additional-tools/xml-serializer-generator.md
-- name: Distribuzione dell'applicazione
+- name: Distribuzione delle applicazioni
   items:
     - name: Panoramica
       href: deploying/index.md
@@ -356,7 +360,7 @@
       href: ../desktop-wpf/migration/convert-project-from-net-framework.md
     - name: Convertire progetti C++/CLI
       href: porting/cpp-cli.md
-- name: Testing unità
+- name: Unit test
   href: testing/index.md
   items:
     - name: Panoramica
@@ -393,8 +397,6 @@
       href: versions/index.md
     - name: Scelta della versione di .NET Core
       href: versions/selection.md
-    - name: Rimuovere runtime e SDK non aggiornati
-      href: versions/remove-runtime-sdk-versions.md
 - name: Catalogo RID (Runtime Identifier)
   href: rid-catalog.md
 - name: Gestione e caricamento delle dipendenze
