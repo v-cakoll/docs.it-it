@@ -7,12 +7,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework]
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
-ms.openlocfilehash: f7dd78b889129998dee31a22f5dd23325613b8ea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b8671f2bd278e9e6153476d742f43150a4f6e3e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73092023"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795612"
 ---
 # <a name="unmanaged-api-reference"></a>Riferimenti alle API non gestite
 Questa sezione include informazioni sulle API non gestite che possono essere usate da applicazioni correlate a codice gestito, ad esempio host di runtime, compilatori, disassembler, soluzioni di offuscamento, debugger e profiler.  
@@ -51,14 +51,14 @@ Questa sezione include informazioni sulle API non gestite che possono essere usa
  [Profilatura](./profiling/index.md)  
  Viene descritta l'API di profilatura, che consente a un profiler di monitorare l'esecuzione di un programma da parte di CLR.  
   
- [Denominazione forte](./strong-naming/index.md)  
+ [Denominazione sicura](./strong-naming/index.md)  
  Viene descritta l'API di denominazione sicura, che consente a un client di amministrare la firma con nome sicuro per gli assembly.  
 
- [Contatori delle prestazioni e WMI](wmi/index.md)  
+ [WMI e contatori delle prestazioni](wmi/index.md)  
  Descrive le API che eseguono il wrapping di chiamate in librerie di Strumentazione gestione Windows (WMI).
   
  [Funzioni helper Tlbexp](./tlbexp/index.md)  
  Vengono descritte le due funzioni di supporto e un'interfaccia usata dall'utilità di esportazione della libreria dei tipi (Tlbexp.exe) durante il processo di conversione da assembly a libreria dei tipi.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Guida di sviluppo](../../../docs/framework/development-guide.md)  
+ [Guida allo sviluppo](../development-guide.md)  

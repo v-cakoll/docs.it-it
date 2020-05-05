@@ -9,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: e16eb098db4bce115a5f1e043829eb272c952860
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ecbe73593e5b8b87909499f6fff7e865e29b1ec8
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79153698"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796041"
 ---
 # <a name="supportedruntime-element"></a>\<elemento> supportedRuntime
 
@@ -41,7 +41,7 @@ Specifica la versione di Common Language Runtime e, facoltativamente, la version
 
 Se l' ** \<elemento>supportedRuntime** non è presente nel file di configurazione dell'applicazione, viene utilizzata la versione del runtime utilizzata per compilare l'applicazione.
 
-L' ** \<elemento>supportedRuntime** deve essere usato da tutte le applicazioni compilate con la versione 1,1 o successive del runtime. Le applicazioni compilate per supportare solo la versione 1,0 del runtime devono usare l' [ \<elemento requiredRuntime>](../startup/requiredruntime-element.md) .
+L' ** \<elemento>supportedRuntime** deve essere usato da tutte le applicazioni compilate con la versione 1,1 o successive del runtime. Le applicazioni compilate per supportare solo la versione 1,0 del runtime devono usare l' [ \<elemento requiredRuntime>](requiredruntime-element.md) .
 
 > [!NOTE]
 > Se si usa la funzione [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) per specificare il file di configurazione, è necessario usare `<requiredRuntime>` l'elemento per tutte le versioni del runtime. L' `<supportedRuntime>` elemento viene ignorato quando si utilizza [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
@@ -51,7 +51,7 @@ Per le app che supportano le versioni di runtime da .NET Framework 1.1 a 3.5, qu
 Se il ** \<>elemento supportedRuntime** con l' `sku` attributo è presente nel file di configurazione e la versione .NET Framework installata è inferiore alla versione supportata specificata, l'esecuzione dell'applicazione non riesce e viene visualizzato un messaggio che richiede di installare la versione supportata. In caso contrario, l'applicazione tenterà di eseguire su qualsiasi versione installata, ma potrebbe comportarsi in modo imprevisto se non è completamente compatibile con tale versione. Per le differenze di compatibilità tra le versioni di .NET Framework, vedere [compatibilità delle applicazioni nella .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/application-compatibility). È pertanto consigliabile includere questo elemento nel file di configurazione dell'applicazione per semplificare la diagnostica degli errori. Il file di configurazione generato automaticamente da Visual Studio quando si crea un nuovo progetto lo contiene già.
   
 > [!NOTE]
-> Se l'applicazione utilizza percorsi di attivazione legacy, ad esempio la [funzione CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), e si desidera che tali percorsi attivino la versione 4 di CLR anziché una versione precedente o se l'applicazione viene compilata con il .NET Framework 4 ma ha una dipendenza da un assembly in modalità mista compilato con una versione precedente del .NET Framework, non è sufficiente specificare il .NET Framework 4 nell'elenco dei runtime supportati. Inoltre, nell' [ \<elemento> di avvio](../startup/startup-element.md) nel file di configurazione, è necessario impostare l' `useLegacyV2RuntimeActivationPolicy` attributo su `true`. Tuttavia, l'impostazione di questo `true` attributo su significa che tutti i componenti compilati con le versioni precedenti del .NET Framework vengono eseguiti usando il .NET Framework 4 invece dei runtime con cui sono stati compilati.
+> Se l'applicazione utilizza percorsi di attivazione legacy, ad esempio la [funzione CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), e si desidera che tali percorsi attivino la versione 4 di CLR anziché una versione precedente o se l'applicazione viene compilata con il .NET Framework 4 ma ha una dipendenza da un assembly in modalità mista compilato con una versione precedente del .NET Framework, non è sufficiente specificare il .NET Framework 4 nell'elenco dei runtime supportati. Inoltre, nell' [ \<elemento> di avvio](startup-element.md) nel file di configurazione, è necessario impostare l' `useLegacyV2RuntimeActivationPolicy` attributo su `true`. Tuttavia, l'impostazione di questo `true` attributo su significa che tutti i componenti compilati con le versioni precedenti del .NET Framework vengono eseguiti usando il .NET Framework 4 invece dei runtime con cui sono stati compilati.
 
 È inoltre consigliabile testare l'applicazione con tutte le versioni di .NET Framework in cui possono essere eseguite.
 
@@ -109,8 +109,8 @@ L'esempio seguente illustra come specificare la versione di runtime in un file d
 
 L'elemento può essere utilizzato nel file di configurazione dell'applicazione.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Schema delle impostazioni di avvio](../startup/index.md)
+- [Schema delle impostazioni di avvio](index.md)
 - [Schema del file di configurazione](../index.md)
 - [In-Process Side-by-Side Execution](../../../deployment/in-process-side-by-side-execution.md) (Esecuzione side-by-side In-Process)

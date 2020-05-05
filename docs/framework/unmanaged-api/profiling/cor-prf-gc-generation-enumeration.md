@@ -38,7 +38,7 @@ typedef enum {
   
 ## <a name="members"></a>Members  
   
-|Membro|Descrizione|  
+|Membro|Description|  
 |------------|-----------------|  
 |`COR_PRF_GC_GEN_0`|L'oggetto viene archiviato come generazione 0.|  
 |`COR_PRF_GC_GEN_1`|L'oggetto viene archiviato come generazione 1.|  
@@ -64,6 +64,6 @@ typedef enum {
   
  **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Enumerazioni di profilatura](profiling-enumerations.md)

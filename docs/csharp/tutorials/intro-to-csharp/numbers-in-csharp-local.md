@@ -1,30 +1,30 @@
 ---
 title: Numeri in C# - Esercitazione introduttiva su C#
-description: Vengono illustrati i tipi numerici, con le proprietà e i metodi, in C#.
+description: Impara a usare C# esplorando i tipi numerici, i loro usi, le proprietà e i metodi.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 7e9af4b3b859f74d7e92ff10b3964ddd59d2473b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3dc2a5afc6321da45351525a632f586cb84bf7fe
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156545"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794611"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Modificare numeri a virgola mobile e integrali in C\#
 
 Questa esercitazione presenta in modo interattivo i tipi numerici in C#. Si scriveranno piccole quantità di codice, quindi si compilerà ed eseguirà tale codice. L'esercitazione contiene una serie di lezioni che esplorano numeri e operazioni matematiche in C#. Queste lezioni presentano le nozioni fondamentali del linguaggio C#.
 
-Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione di .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Windows, Linux o macOS. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
+Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene le istruzioni per configurare l'ambiente di sviluppo locale in Windows, Linux o MacOS. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
 
 ## <a name="explore-integer-math"></a>Esplorare le operazioni matematiche su interi
 
-Creare una directory denominata *numbers-quickstart*. Assicurarsi che la directory corrente ed eseguire il comando seguente:
+Creare una directory denominata *numbers-quickstart*. Rendere la directory corrente ed eseguire il comando seguente:
 
 ```dotnetcli
 dotnet new console -n NumbersInCSharp -o .
 ```
 
-Aprire *Program.cs* nell'editor preferito e sostituire la riga `Console.WriteLine("Hello World!");` con quanto segue:
+Aprire *Program.cs* nell'editor preferito e sostituire la riga `Console.WriteLine("Hello World!");` con il codice seguente:
 
 ```csharp
 int a = 18;
@@ -35,7 +35,7 @@ Console.WriteLine(c);
 
 Eseguire questo codice digitando `dotnet run` nella finestra di comando.
 
-Questa è una delle operazioni matematiche fondamentali su interi. Il `int` tipo rappresenta un **numero intero**, un numero intero zero, positivo o negativo. Per l'addizione si usa il simbolo `+`. Altre operazioni matematiche comuni per gli interi includono:
+È stata rilevata una delle operazioni matematiche fondamentali con numeri interi. Il `int` tipo rappresenta un **intero**, un numero intero zero, positivo o negativo. Per l'addizione si usa il simbolo `+`. Altre operazioni matematiche comuni per gli interi includono:
 
 - `-` per la sottrazione
 - `*` per la moltiplicazione
@@ -60,13 +60,13 @@ Console.WriteLine(c);
 
 Eseguire questo codice digitando `dotnet run` nella finestra di comando.
 
-È anche possibile sperimentare eseguendo più operazioni matematiche nella stessa riga. Provare, esempio, `c = a + b - 12 * 17;`. È consentita la combinazione di variabili e numeri costanti.
+È anche possibile provare a scrivere più operazioni matematiche nella stessa riga, se si preferisce. Provare, esempio, `c = a + b - 12 * 17;`. È consentita la combinazione di variabili e numeri costanti.
 
 > [!TIP]
 > Mentre si impara a usare C# (o qualsiasi linguaggio di programmazione) sicuramente si commetteranno errori durante la scrittura del codice. Il **compilatore** troverà questi errori e li segnalerà. Quando l'output contiene messaggi di errore, esaminare attentamente il codice di esempio e il codice nella finestra per scoprire che cosa correggere.
 > Questo esercizio sarà utile per imparare la struttura del codice C#.
 
-Il primo passaggio è stato completato. Prima di iniziare la sezione successiva, è necessario spostare il codice corrente in un metodo separato. In questo modo sarà più semplice iniziare a lavorare con un nuovo esempio. Rinominare il metodo `Main` in `WorkingWithIntegers` e scrivere un nuovo metodo `Main` che chiama `WorkingWithIntegers`. Al termine, il codice dovrebbe essere simile al seguente:When you finish, your code should look like this:
+Il primo passaggio è stato completato. Prima di iniziare la sezione successiva, è necessario spostare il codice corrente in un metodo separato. In questo modo sarà più semplice iniziare a lavorare con un nuovo esempio. Rinominare il metodo `Main` in `WorkingWithIntegers` e scrivere un nuovo metodo `Main` che chiama `WorkingWithIntegers`. Al termine, il codice dovrebbe essere simile al seguente:
 
 ```csharp
 using System;
@@ -113,7 +113,7 @@ Impostare come commento la chiamata a `WorkingWithIntegers()`. L'output risulter
 //WorkingWithIntegers();
 ```
 
-`//` avvia un **commento** in C#. Un commento è un testo che si vuole conservare nel codice sorgente senza eseguirlo come codice. Il compilatore non genera codici eseguibili da commenti.
+`//` avvia un **commento** in C#. Un commento è un testo che si vuole conservare nel codice sorgente senza eseguirlo come codice. Il compilatore non genera alcun codice eseguibile dai commenti.
 
 Il linguaggio C# stabilisce un ordine di precedenza per le diverse operazioni matematiche, con regole coerenti con quelle della matematica.
 La moltiplicazione e la divisione hanno la precedenza rispetto ad addizione e sottrazione.
@@ -158,7 +158,7 @@ Console.WriteLine(h);
 Digitare di nuovo `dotnet run` per visualizzare i risultati.
 
 Prima di continuare, tutto il codice scritto in questa sezione verrà inserito in un nuovo metodo. Chiamare il nuovo metodo `OrderPrecedence`.
-Si otterranno risultati simili a questi:
+È necessario scrivere un codice simile al seguente:
 
 ```csharp
 using System;
@@ -255,13 +255,13 @@ Si noti che la risposta è molto vicina all'intero minimo (negativo). È uguale 
 L'operazione di addizione **ha causato l'overflow** dei valori consentiti per gli interi.
 La risposta è un numero negativo molto grande, poiché un overflow "ritorna a capo" proseguendo dal valore intero più grande possibile a quello più piccolo.
 
-Esistono altri tipi numerici con limiti e precisione diversi che è possibile usare quando il tipo `int` non soddisfa le proprie esigenze. Questi tipi verranno presentati nelle prossime lezioni.
+Esistono altri tipi numerici con limiti e precisione diversi che è possibile usare quando il tipo `int` non soddisfa le proprie esigenze. Verranno ora esaminati gli altri tipi.
 
 Ancora una volta il codice scritto in questa sezione verrà spostato in un metodo separato. Denominarlo `TestLimits`.
 
 ## <a name="work-with-the-double-type"></a>Usare il tipo double
 
-Il tipo numerico `double` rappresenta un numero a virgola mobile a precisione doppia. Questi termini potrebbero risultare sconosciuti. Un numero **a virgola mobile** è utile per rappresentare numeri non integrali, con ordine di grandezza molto grande o molto piccolo. Il termine **precisione doppia** indica che questi numeri vengono archiviati con una maggiore precisione rispetto alla **precisione singola**. Nei computer moderni è più comune usare i numeri a precisione doppia rispetto ai numeri a precisione singola.
+Il tipo numerico `double` rappresenta un numero a virgola mobile a precisione doppia. Questi termini potrebbero risultare sconosciuti. Un numero **a virgola mobile** è utile per rappresentare numeri non integrali, con ordine di grandezza molto grande o molto piccolo. La **precisione doppia** è un termine relativo che descrive il numero di cifre binarie usate per archiviare il valore. I numeri a **doppia precisione** hanno due volte il numero di cifre binarie come **precisione singola**. Nei computer moderni è più comune usare la precisione doppia rispetto ai numeri a precisione singola. I numeri a **precisione singola** vengono dichiarati utilizzando la `float` parola chiave.
 Per iniziare a esplorare questo tipo, Aggiungere il codice seguente e visualizzare il risultato:
 
 ```csharp
@@ -299,17 +299,17 @@ double third = 1.0 / 3.0;
 Console.WriteLine(third);
 ```
 
-Si sa che `0.3` periodico non è esattamente identico a `1/3`.
+Si sa che `0.3` la ripetizione non è esattamente identica `1/3`a.
 
 ***Esercizio***
 
-Provare altri calcoli con numeri grandi, numeri piccoli, moltiplicazione e divisione usando il tipo `double`. Provare calcoli più complessi.
+Provare altri calcoli con numeri grandi, numeri piccoli, moltiplicazioni e divisioni usando `double` il tipo. Provare calcoli più complessi.
 
 Dopo avere dedicato un po' di tempo all'esercizio, inserire il codice scritto in un nuovo metodo. Denominare il nuovo metodo `WorkWithDoubles`.
 
-## <a name="work-with-fixed-point-types"></a>Usare i tipi a virgola fissa
+## <a name="work-with-decimal-types"></a>Usare i tipi decimali
 
-Sono già stati presentati i tipi numerici di base in C#, ovvero integer e double.  C'è un altro tipo da conoscere, ovvero `decimal`. Il tipo `decimal` ha un intervallo più piccolo, ma maggiore precisione di `double`. Il termine **virgola fissa** significa che il separatore decimale (o punto binario) non si sposta. Esaminare il codice seguente:
+Sono già stati presentati i tipi numerici di base in C#, ovvero integer e double.  Ecco un altro tipo di apprendimento: il `decimal` tipo. Il tipo `decimal` ha un intervallo più piccolo, ma maggiore precisione di `double`. Esaminare il codice seguente:
 
 ```csharp
 decimal min = decimal.MinValue;
@@ -329,22 +329,25 @@ decimal d = 3.0M;
 Console.WriteLine(c / d);
 ```
 
-Il suffisso `M` nei numeri è il modo in cui si indica che una costante deve usare il tipo `decimal`.
+Il suffisso `M` nei numeri è il modo in cui si indica che una costante deve usare il tipo `decimal`. In caso contrario, il compilatore `double` presuppone il tipo.
+
+> [!NOTE]
+> La lettera `M` è stata scelta come lettera più visivamente distinta tra `double` le `decimal` parole chiave e.
 
 Si noti che le operazioni matematiche con il tipo decimal includono più cifre a destra del separatore decimale.
 
 ***Esercizio***
 
-Dopo aver esaminato i diversi tipi numerici, scrivere codice che calcola l'area di un cerchio con raggio di 2,5 cm. Ricordarsi che l'area di un cerchio si calcola moltiplicando il quadrato del raggio per Pi greco. Suggerimento: .NET contiene una costante per Pi greco, <xref:System.Math.PI?displayProperty=nameWithType>, che è possibile usare per tale valore.
+Dopo aver esaminato i diversi tipi numerici, scrivere codice che calcola l'area di un cerchio con raggio di 2,5 cm. Ricordarsi che l'area di un cerchio si calcola moltiplicando il quadrato del raggio per Pi greco. Suggerimento: .NET contiene una costante per Pi greco, <xref:System.Math.PI?displayProperty=nameWithType>, che è possibile usare per tale valore. <xref:System.Math.PI?displayProperty=nameWithType>, come tutte le costanti dichiarate `System.Math` nello spazio dei nomi `double` , è un valore. Per questo motivo, è consigliabile usare `double` anziché `decimal` i valori per questa richiesta di verifica.
 
 Si otterrà una risposta compresa tra 19 e 20.
-È possibile controllare la risposta [esaminando il codice di esempio finito su GitHub](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106).
+È possibile controllare la risposta esaminando [il codice di esempio completato su GitHub](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106).
 
 È anche possibile provare alcune altre formule.
 
 È stata completata la guida introduttiva "Numeri in C#". È possibile continuare con la guida introduttiva [Rami e cicli](branches-and-loops-local.md) nel proprio ambiente di sviluppo.
 
-Negli argomenti seguenti sono disponibili ulteriori informazioni sui numeri in C#:
+È possibile ottenere altre informazioni sui numeri in C# negli articoli seguenti:
 
 - [Tipi numerici integrali](../../language-reference/builtin-types/integral-numeric-types.md)
 - [Tipi numerici a virgola mobile](../../language-reference/builtin-types/floating-point-numeric-types.md)

@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-ms.openlocfilehash: 5c2d997d9006a3f1eb971eac20982b9dd5677ebf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 2d991a7835d22af2c780b020d6884f626908665e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710752"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796171"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Inferenza degli schemi da documenti XML
 In questo argomento viene descritto come usare la classe <xref:System.Xml.Schema.XmlSchemaInference> per inferire uno schema XSD (XML Schema Definition Language) dalla struttura di un documento XML.  
@@ -29,7 +29,7 @@ In questo argomento viene descritto come usare la classe <xref:System.Xml.Schema
     <child>One</child>  
     <child>Two</child>  
 </parent>  
-<parent attribute1="A">  
+<parent attribute1="A" />
 ```  
   
  Nell'esempio precedente, quando viene rilevato l'attributo `attribute1` con un valore uguale a `6` dal processo <xref:System.Xml.Schema.XmlSchemaInference>, si presuppone che sia del tipo `xs:unsignedByte`. Quando viene rilevato il secondo elemento `parent` dal processo <xref:System.Xml.Schema.XmlSchemaInference>, il vincolo viene allentato modificando il tipo in `xs:string`, in quanto il valore dell'attributo `attribute1` è ora uguale a `A`. Analogamente, l'attributo `minOccurs` per tutti gli elementi `child` inferiti nello schema viene allentato impostandolo su `minOccurs="0"`, in quanto il secondo elemento padre non contiene elementi figlio.  
@@ -80,7 +80,7 @@ In questo argomento viene descritto come usare la classe <xref:System.Xml.Schema
 ## <a name="schemas-that-cannot-be-refined"></a>Schemi che non possono essere ridefiniti  
  Esistono costrutti di schemi W3C XML che il processo XSD (XML Schema definition language) <xref:System.Xml.Schema.XmlSchemaInference> non è in grado di gestire se si tratta di ridefinire un tipo e viene quindi generata un'eccezione. Un esempio è un tipo particolarmente complesso il cui compositor di livello principale è diverso da una sequenza. Nel SOM (Schema Object Model), ciò corrisponde a un tipo <xref:System.Xml.Schema.XmlSchemaComplexType> la cui proprietà <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> non è un'istanza del tipo <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
 - [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

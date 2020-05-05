@@ -45,7 +45,7 @@ A partire da C# 7,1, [ `Main` il metodo](../../programming-guide/main-and-comman
 
 Per altre informazioni, vedere la sezione [Espressioni await](~/_csharplang/spec/expressions.md#await-expressions) in [Specifica del linguaggio C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Informazioni di riferimento su C#](../index.md)
 - [Operatori C#](index.md)

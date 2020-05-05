@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 48ab765db7c839ed0dd14df5e6b30f5bd6c0d29b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8082dbd7398b6634b68f1dd2887cd55d6798a5d9
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173536"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795157"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Restrizioni relative all'uso dei livelli di accessibilità (Riferimenti per C#)
 
@@ -22,13 +22,13 @@ public class MyClass: BaseClass {...} // Error
 
 Nella tabella seguente sono riepilogate le restrizioni relative ai livelli di accessibilità dichiarata.
 
-|Context|Osservazioni|
+|Contesto|Osservazioni|
 |-------------|-------------|
 |[Classi](../../programming-guide/classes-and-structs/classes.md)|La classe di base diretta di un tipo di classe deve essere accessibile almeno quanto il tipo di classe.|
 |[Interfacce](../../programming-guide/interfaces/index.md)|Le interfacce di base esplicite di un tipo di interfaccia devono essere accessibili almeno quanto il tipo di interfaccia.|
 |[Delegati](../../programming-guide/delegates/index.md)|Il tipo restituito e i tipi di parametro di un tipo delegato devono essere accessibili almeno quanto il tipo delegato.|
 |[Costanti](../../programming-guide/classes-and-structs/constants.md)|Il tipo di una costante deve essere accessibile almeno quanto la costante.|
-|[Campi](../../programming-guide/classes-and-structs/fields.md)|Il tipo di un campo deve essere accessibile almeno quanto il campo.|
+|[Fields](../../programming-guide/classes-and-structs/fields.md)|Il tipo di un campo deve essere accessibile almeno quanto il campo.|
 |[Metodi](../../programming-guide/classes-and-structs/methods.md)|Il tipo restituito e i tipi di parametro di un metodo devono essere accessibili almeno quanto il metodo.|
 |[Proprietà](../../programming-guide/classes-and-structs/properties.md)|Il tipo di una proprietà deve essere accessibile almeno quanto la proprietà.|
 |[Events](../../programming-guide/events/index.md)|Il tipo di un evento deve essere accessibile almeno quanto l'evento.|
@@ -109,14 +109,14 @@ public class A
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida di riferimento a C](../../language-reference/index.md)
+- [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
-- [Parole chiave di C#](../../language-reference/keywords/index.md)
-- [Modificatori di accesso](../../language-reference/keywords/access-modifiers.md)
-- [Dominio di accessibilità](../../language-reference/keywords/accessibility-domain.md)
-- [Livelli di accessibilità](../../language-reference/keywords/accessibility-levels.md)
+- [Parole chiave di C#](index.md)
+- [Modificatori di accesso](access-modifiers.md)
+- [Dominio di accessibilità](accessibility-domain.md)
+- [Livelli di accessibilità](accessibility-levels.md)
 - [Modificatori di accesso](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [pubblico](../../language-reference/keywords/public.md)
-- [Privato](../../language-reference/keywords/private.md)
-- [Protetto](../../language-reference/keywords/protected.md)
-- [Interno](../../language-reference/keywords/internal.md)
+- [pubblico](public.md)
+- [privata](private.md)
+- [protetto](protected.md)
+- [internal](internal.md)
