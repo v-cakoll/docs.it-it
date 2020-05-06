@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-ms.openlocfilehash: c142b9656af2031b10de239645da76835c435655
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d502b4098016fb14793bccd6feb641e92e3c2611
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789235"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795638"
 ---
 # <a name="cordebuguserstate-enumeration"></a>Enumerazione CorDebugUserState
 Indica lo stato utente di un thread.  
@@ -40,7 +40,7 @@ typedef enum CorDebugUserState {
 } CorDebugUserState;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
@@ -54,19 +54,19 @@ typedef enum CorDebugUserState {
 |`USER_UNSAFE_POINT`|Il thread si trova in un punto non sicuro. Ovvero, il thread si trova in un punto di esecuzione in cui può bloccare Garbage Collection.<br /><br /> Gli eventi di debug possono essere inviati da punti unsafe, ma la sospensione di un thread in un punto non sicuro provocherà molto probabilmente un deadlock finché il thread non verrà ripreso. I punti safe e unsafe sono determinati dall'implementazione JIT (just-in-Time) e Garbage Collection.|  
 |`USER_THREADPOOL`|Il thread viene dal pool di thread.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Lo stato utente di un thread è lo stato che il thread ha quando viene esaminato dal debugger. Un thread può avere una combinazione di stati utente.  
   
  Usare il metodo [ICorDebugThread:: GetUserState](icordebugthread-getuserstate-method.md) per recuperare lo stato utente di un thread.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d680c1c0-16ab-4ccc-9444-39cf8e0e05ee
 topic_type:
 - apiref
-ms.openlocfilehash: 99fc89d1aee6c9f0fbffc193e12ce563e820f268
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: cfbd856c73ab10642a7cf7c16cfb2d70e7fe9756
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789279"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795729"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>Enumerazione CorDebugRecordFormat
 Descrive il formato dei dati in una matrice di byte che contiene informazioni su un evento di debug per le eccezioni native.  
@@ -29,27 +29,27 @@ typedef enum CorDebugRecordFormat {
 } CorDebugRecordFormat;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Description|  
 |------------|-----------------|  
 |`FORMAT_WINDOWS_EXCEPTIONRECORD32`|I dati corrispondono a un record di eccezione Windows a 32 bit.|  
 |`FORMAT_WINDOWS_EXCEPTIONRECORD64`|I dati corrispondono a un record di eccezione Windows a 64 bit.|  
   
-## <a name="remarks"></a>Note  
- Un membro dell'enumerazione `CorDebugRecordFormat` viene passato al metodo [DecodeEvent](icordebugprocess6-decodeevent-method.md) per indicare il formato della matrice di byte nell'argomento `pRecord`.  
+## <a name="remarks"></a>Osservazioni  
+ Un membro dell' `CorDebugRecordFormat` enumerazione viene passato al metodo [DecodeEvent](icordebugprocess6-decodeevent-method.md) per indicare il formato della matrice di byte nell' `pRecord` argomento.  
   
 > [!NOTE]
 > Questa enumerazione è progettata per l'uso solo in scenari di debug di .NET Native.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

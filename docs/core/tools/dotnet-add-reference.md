@@ -13,7 +13,7 @@ ms.locfileid: "82158320"
 
 **Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name
 
 `dotnet add reference`: aggiunge riferimenti da progetto a progetto.
 
@@ -26,7 +26,7 @@ dotnet add [<PROJECT>] reference [-f|--framework <FRAMEWORK>]
 dotnet add reference -h|--help
 ```
 
-## <a name="description"></a>Descrizione
+## <a name="description"></a>Description
 
 Il comando `dotnet add reference` offre un'opzione utile per aggiungere i riferimenti al progetto in un progetto. Dopo l'esecuzione del comando, al file di progetto vengono aggiunti gli elementi `<ProjectReference>`.
 
@@ -38,7 +38,7 @@ Il comando `dotnet add reference` offre un'opzione utile per aggiungere i riferi
 </ItemGroup>
 ```
 
-## <a name="arguments"></a>Argomenti
+## <a name="arguments"></a>Arguments
 
 - **`PROJECT`**
 

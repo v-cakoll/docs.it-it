@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 094dd1227033e167050ad73121b3005a592a0ae4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c3f1fcda8a8a6abc58d35bf37e51485bb3590fa3
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714516"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794637"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Uso dello strumento Microsoft per la generazione di serializzatori XML in .NET Core
 
@@ -26,11 +26,11 @@ In questa esercitazione viene illustrato come usare lo strumento Microsoft per l
 
 Lo [strumento per la generazione di serializzatori XML (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) è la soluzione per .NET Framework, mentre il [pacchetto NuGet Microsoft.XmlSerializer.Generator](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) è la soluzione equivalente per NET Core e .NET Standard. Crea un assembly di serializzazione XML per tipi contenuti in un assembly per migliorare le prestazioni di avvio della serializzazione XML durante la serializzazione o deserializzazione di oggetti di questi tipi usando <xref:System.Xml.Serialization.XmlSerializer>.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare questa esercitazione:
 
-- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) o versione successiva.
+- [.NET Core 2,1 SDK](https://dotnet.microsoft.com/download) o versione successiva.
 - Editor di codice preferito.
 
 > [!TIP]
@@ -50,7 +50,7 @@ dotnet new console
 
 ### <a name="add-a-reference-to-the-microsoftxmlserializergenerator-package-in-the-myapp-project"></a>Aggiungere un riferimento al pacchetto Microsoft.XmlSerializer.Generator nel progetto MyApp
 
-Utilizzare [`dotnet add package`](../tools//dotnet-add-package.md) il comando per aggiungere il riferimento nel progetto.
+Usare il [`dotnet add package`](../tools/dotnet-add-package.md) comando per aggiungere il riferimento nel progetto.
 
 Digitare:
 
@@ -64,7 +64,7 @@ Prima di iniziare, aprire l'editor del codice. Si lavorerà ancora dalla directo
 
 Aprire *MyApp.csproj* nell'editor di testo.
 
-Dopo aver [`dotnet add package`](../tools//dotnet-add-package.md) eseguito il comando, le seguenti righe vengono aggiunte al file di progetto *MyApp.csproj:*
+Dopo aver eseguito [`dotnet add package`](../tools/dotnet-add-package.md) il comando, vengono aggiunte le righe seguenti al file di progetto *MyApp. csproj* :
 
  ```xml
  <ItemGroup>
@@ -112,7 +112,7 @@ dotnet run
 ```
 
 > [!NOTE]
-> [`dotnet run`](../tools/dotnet-run.md)chiama [`dotnet build`](../tools/dotnet-build.md) per garantire che le destinazioni di `dotnet <assembly.dll>` compilazione siano state compilate e quindi chiamate per eseguire l'applicazione di destinazione.
+> [`dotnet run`](../tools/dotnet-run.md)chiama [`dotnet build`](../tools/dotnet-build.md) per assicurarsi che le destinazioni di compilazione siano state compilate e `dotnet <assembly.dll>` quindi chiama per eseguire l'applicazione di destinazione.
 
 > [!IMPORTANT]
 > I comandi e i passaggi illustrati in questa esercitazione per eseguire l'applicazione vengono usati solo durante la fase di sviluppo. Quando si è pronti a distribuire l'app, è opportuno esaminare le diverse [strategie di distribuzione](../deploying/index.md) per le app .NET Core e il comando [`dotnet publish`](../tools/dotnet-publish.md).
@@ -131,5 +131,5 @@ Congratulazioni! Sono state eseguite le attività seguenti:
 ## <a name="related-resources"></a>Risorse correlate
 
 - [Introduzione alla serializzazione XML](../../standard/serialization/introducing-xml-serialization.md)
-- [Come serializzare utilizzando XmlSerializer (C](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [Come serializzare tramite XmlSerializer (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
 - [Procedura: Serializzare tramite XmlSerializer (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)

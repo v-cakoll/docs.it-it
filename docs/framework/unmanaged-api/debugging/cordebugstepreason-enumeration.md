@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-ms.openlocfilehash: 92aee981aca3bac32c0ef264799e486315ca5103
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 288d7bfdf18be5cef032227c537032966fa68df4
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789261"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795703"
 ---
 # <a name="cordebugstepreason-enumeration"></a>Enumerazione CorDebugStepReason
 Indica l'esito di una singola istruzione.  
@@ -38,9 +38,9 @@ typedef enum CorDebugStepReason {
 } CorDebugStepReason;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Description|  
 |------------|-----------------|  
 |`STEP_NORMAL`|Esecuzione di un'istruzione in modo normale completata, all'interno della stessa funzione.|  
 |`STEP_RETURN`|L'esecuzione di un'istruzione continua normalmente, dopo la restituzione della funzione.|  
@@ -50,14 +50,14 @@ typedef enum CorDebugStepReason {
 |`STEP_INTERCEPT`|Il controllo è stato passato a un intercettore.|  
 |`STEP_EXIT`|Il thread è stato terminato prima del completamento del passaggio.|  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

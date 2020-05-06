@@ -2,26 +2,26 @@
 title: Articoli sulla procedura (Guida a C#)
 description: Raccolta di suggerimenti rapidi e brevi esempi di codice evidenziati
 ms.date: 12/20/2017
-ms.openlocfilehash: e6cb657726b82a1710bbcd596fe48037b5c26352
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 81ef8106add757cf3c83aa7dc130f5474b936461
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399322"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794702"
 ---
 # <a name="how-to-c"></a>Procedura (C#)
 
-Nella sezione Procedure della Guida in C, è possibile trovare risposte rapide alle domande più comuni. In alcuni casi gli articoli possono essere elencati in più sezioni. Volevamo semplificarne la ricerca rendendoli disponibili in più percorsi.
+Nella sezione How to della Guida di C# è possibile trovare risposte rapide alle domande più comuni. In alcuni casi gli articoli possono essere elencati in più sezioni. Volevamo semplificarne la ricerca rendendoli disponibili in più percorsi.
 
 ## <a name="general-c-concepts"></a>Concetti generali di C#
 
-Sono disponibili diversi suggerimenti e suggerimenti che sono procedure comuni per gli sviluppatori di C:
+Sono disponibili diversi suggerimenti e consigli che sono procedure comuni per gli sviluppatori C#:
 
 - [Inizializzare oggetti usando un inizializzatore di oggetto](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md).
 - [Informazioni sulle differenze tra il passaggio a un metodo di uno struct e di una classe](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [Usare l'overload degli operatori](../language-reference/operators/operator-overloading.md).
-- [Implementare e chiamare un metodo](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)di estensione personalizzato.
-- Anche i programmatori di C, possono [utilizzare lo `My` spazio dei nomi di Visual Basic](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
+- [Implementare e chiamare un metodo di estensione personalizzato](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
+- Anche i programmatori C# potrebbero voler [usare lo `My` spazio dei nomi da Visual Basic](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
 - [Creare un nuovo metodo per un tipo `enum` usando i metodi di estensione](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ### <a name="class-and-struct-members"></a>Membri di classi e struct
@@ -63,7 +63,7 @@ Potrebbe essere necessario convertire un oggetto in un tipo diverso.
 - [Convertire una stringa in un oggetto `DateTime`](../../standard/base-types/parsing-datetime.md).
 - [Convertire una matrice di byte in un Integer](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md).
 - [Convertire una stringa in un numero](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
-- [Usare i criteri di ricerca e gli operatori `as` e `is` per eseguire il cast sicuro a un tipo diverso](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
+- [Usare i criteri di ricerca e gli operatori `as` e `is` per eseguire il cast sicuro a un tipo diverso](safely-cast-using-pattern-matching-is-and-as-operators.md).
 - [Definire le conversioni di tipi personalizzate](../language-reference/operators/user-defined-conversion-operators.md).
 - [Determinare se un tipo è un tipo di valore nullable](../language-reference/builtin-types/nullable-value-types.md#how-to-identify-a-nullable-value-type).
 - [Eseguire la conversione tra tipi di valore nullable e non nullable](../language-reference/builtin-types/nullable-value-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type).
@@ -103,7 +103,7 @@ Gli eventi offrono un meccanismo per pubblicare o sottoscrivere notifiche.
 LINQ consente di scrivere codice per eseguire query su qualsiasi origine dati che supporta il criterio di espressione di query LINQ. Questi articoli contengono informazioni sul criterio e sull'uso di origini dati diverse.
 
 - [Eseguire la query di una raccolta](../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).
-- [Utilizzare espressioni lambda in una query](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md).
+- [Usare espressioni lambda in una query](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md).
 - [Usare `var` in espressioni di query](../programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
 - [Restituire sottoinsiemi di proprietà degli elementi in una query](../programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md).
 - [Scrivere query con filtro complesso](../programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md).

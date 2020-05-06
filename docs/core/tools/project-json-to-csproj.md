@@ -3,12 +3,12 @@ title: Confronto tra project.json e csproj
 description: Vedere il mapping tra gli elementi project.json e csproj.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: feaa7e9cde7e1aa4dfe94d699b14a018fc728f27
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451105"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794624"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Mapping tra le proprietà di project.json e csproj
 
@@ -52,7 +52,7 @@ Per impostazione predefinita, il nome del file di progetto specifica anche il va
 La proprietà `<AssemblyName>` avrà un valore diverso da `<PackageId>` se la proprietà `buildOptions\outputName` è stata definita in project.json.
 Per altre informazioni, vedere [Altre opzioni comuni di compilazione](#other-common-build-options).
 
-### <a name="version"></a>version
+### <a name="version"></a>Versione
 
 ```json
 {
@@ -486,7 +486,7 @@ Vedere anche [Files](#files).
 ```
 
 Non è disponibile nessuna opzione equivalente per l'elemento `owners` in MSBuild.
-Per `summary`, è possibile `<Description>` utilizzare la proprietà MSBuild, anche se il valore di `summary` non viene [`description`](#other-common-root-level-options) migrato automaticamente a tale proprietà, poiché tale proprietà è mappata all'elemento.
+Per `summary`, è possibile utilizzare la proprietà `<Description>` MSBuild, anche se il valore di `summary` non viene migrato automaticamente a tale proprietà, poiché tale proprietà è mappata all' [`description`](#other-common-root-level-options) elemento.
 
 ## <a name="scripts"></a>script
 
@@ -675,4 +675,4 @@ Per altre informazioni, vedere [Including content in a package](/nuget/schema/ms
 
 ## <a name="see-also"></a>Vedere anche
 
-- [High-level overview of changes in CLI](../tools/cli-msbuild-architecture.md) (Panoramica generale sulle modifiche nell'interfaccia della riga di comando)
+- [High-level overview of changes in CLI](cli-msbuild-architecture.md) (Panoramica generale sulle modifiche nell'interfaccia della riga di comando)

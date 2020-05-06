@@ -2,12 +2,12 @@
 title: Novità di C# 8,0-Guida a C#
 description: Panoramica delle nuove funzionalità disponibili in C# 8.0.
 ms.date: 04/07/2020
-ms.openlocfilehash: c29041972bf7ff608b73ddc9ea3cfcd253905a49
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 8935660d175cc3ee404ee374e3a58fc47d283771
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200080"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794572"
 ---
 # <a name="whats-new-in-c-80"></a>Novità di C# 8.0
 
@@ -96,7 +96,7 @@ Per ulteriori informazioni, vedere la [ `readonly` sezione membri di istanza](..
 
 È ora possibile aggiungere membri alle interfacce e fornire un'implementazione per tali membri. Questa funzionalità del linguaggio consente agli autori di API di aggiungere metodi a un'interfaccia nelle versioni più recenti senza compromettere l'origine o la compatibilità binaria con le implementazioni esistenti di tale interfaccia. Le implementazioni esistenti *ereditano* l'implementazione predefinita. Questa funzionalità supporta anche l'interoperabilità di C# con API destinate ad Android o Swift, che supporta funzionalità simili. I metodi di interfaccia predefiniti consentono inoltre scenari simili alla funzionalità del linguaggio "tratti".
 
-I metodi di interfaccia predefiniti influiscono su molti scenari ed elementi del linguaggio. La prima esercitazione illustra l'[aggiornamento di un'interfaccia con le implementazioni predefinite](../tutorials/default-interface-methods-versions.md). Sono previsti altre esercitazioni e aggiornamenti dei riferimenti in tempo per il rilascio generale.
+I metodi di interfaccia predefiniti interessano molti scenari ed elementi del linguaggio. La prima esercitazione illustra l'[aggiornamento di un'interfaccia con le implementazioni predefinite](../tutorials/default-interface-methods-versions.md). Sono previsti altre esercitazioni e aggiornamenti dei riferimenti in tempo per il rilascio generale.
 
 ## <a name="more-patterns-in-more-places"></a>Più criteri in più posizioni
 

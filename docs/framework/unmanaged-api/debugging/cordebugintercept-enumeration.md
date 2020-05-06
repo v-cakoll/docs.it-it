@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d5b642e-7ef2-428b-a5ae-509c35ed461a
 topic_type:
 - apiref
-ms.openlocfilehash: 8ce48b63a92e84ce92da0dcf35a6242744c1a8c3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 18a5e337b6026a20a95b1c29f3d7bda5187efc66
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778422"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795867"
 ---
 # <a name="cordebugintercept-enumeration"></a>Enumerazione CorDebugIntercept
 Indica i tipi di codice che possono essere intercettati (ovvero in cui è possibile eseguire l'istruzione).  
@@ -38,9 +38,9 @@ typedef enum CorDebugIntercept {
 } CorDebugIntercept;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Description|  
 |------------|-----------------|  
 |`INTERCEPT_NONE`|Non è possibile intercettare alcun codice.|  
 |`INTERCEPT_CLASS_INIT`|Un costruttore non può essere intercettato.|  
@@ -50,17 +50,17 @@ typedef enum CorDebugIntercept {
 |`INTERCEPT_INTERCEPTION`|Non usato.|  
 |`INTERCEPT_ALL`|Tutto il codice può essere intercettato.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Usare il metodo [ICorDebugStepper:: SetInterceptMask](icordebugstepper-setinterceptmask-method.md) per stabilire i tipi di codice che è possibile intercettare.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

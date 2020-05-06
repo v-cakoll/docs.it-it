@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7c0c92fe-8bd2-477f-b307-aca0143732ca
 topic_type:
 - apiref
-ms.openlocfilehash: 34a66a8afa118ecaaaeea0b7b78daaadf1da7509
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e024500ea66dcb42e712e07e976a709401160a27
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778266"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795768"
 ---
 # <a name="cordebugmdaflags-enumeration"></a>Enumerazione CorDebugMDAFlags
 Specifica lo stato del thread su cui è attivato l'assistente al debug gestito.  
@@ -32,23 +32,23 @@ typedef enum CorDebugMDAFlags {
 } CorDebugMDAFlags;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Description|  
 |------------|-----------------|  
 |`MDA_FLAG_SLIP`|Il thread in cui è stato attivato l'assistente al debug gestito è stato slittato dopo l'attivazione dell'assistente al debug gestito.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Quando lo stack di chiamate non descrive più la posizione in cui è stato originariamente generato l'assistente al debug gestito, il thread viene considerato *slittato*. Si tratta di una circostanza insolita dall'esecuzione di un'operazione non valida al momento dell'uscita del thread.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

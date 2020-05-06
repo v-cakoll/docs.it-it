@@ -3,12 +3,12 @@ title: Gestione di spazi dei nomi in un documento XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: 7b219788895ab2f89fa285c2e1b7de62639bfcf9
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 1b3e57c0a8a37574a92d23cf1d623301cc54b984
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160040"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796152"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Gestione di spazi dei nomi in un documento XML
 Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e degli elementi di un documento XML a URI personalizzati e predefiniti. Per creare queste associazioni, è possibile definire i prefissi per gli URI dello spazio dei nomi e usare i prefissi in questione per qualificare i nomi degli attributi e degli elementi nei dati XML. Con gli spazi dei nomi è possibile evitare i conflitti tra i nomi degli elementi e degli attributi e consentire la gestione e la convalida degli elementi e degli attributi con lo stesso nome in modi diversi.  
@@ -25,7 +25,8 @@ Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e d
   
 ```xml  
 <mybook:BOOK xmlns:mybook="http://www.contoso.com/books.dtd">  
-<bb:BOOK xmlns:bb="urn:blueyonderairlines">  
+<bb:BOOK xmlns:bb="urn:blueyonderairlines" />
+</mybook>
 ```  
   
  Per indicare che un elemento fa parte di un determinato spazio dei nomi, aggiungervi il prefisso dello spazio dei nomi. Ad esempio, se un elemento `Author` appartiene allo spazio dei nomi `mybook`, viene dichiarato come `<mybook:Author>`.  
@@ -53,6 +54,8 @@ Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e d
   
 ```xml  
 <BOOK xmlns="http://www.contoso.com/books.dtd">  
+...
+</BOOK>
 ```  
   
 ## <a name="managing-namespaces"></a>Gestione degli spazi dei nomi  
@@ -77,7 +80,7 @@ Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e d
 |Verificare se un prefisso è definito nell'ambito corrente|Metodo <xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>|  
 |Ottenere la tabella dei nomi usata per ricercare i prefissi e gli URI|Proprietà <xref:System.Xml.XmlNamespaceManager.NameTable%2A>|  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Xml.XmlNamespaceManager>
 - [Documenti e dati XML](../../../../docs/standard/data/xml/index.md)

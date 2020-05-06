@@ -2,12 +2,12 @@
 title: Gestione di coppie nome/valore
 ms.date: 07/20/2015
 ms.assetid: 57ac2072-d9f5-432b-84f0-a889c62fd813
-ms.openlocfilehash: ed9c7f0aae2fe646cd723321f45455f89dd7c370
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b8c9487330239e7e6365055d5f08a02f2dbb0e37
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331657"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796145"
 ---
 # <a name="maintaining-namevalue-pairs-visual-basic"></a>Gestione delle coppie nome/valore (Visual Basic)
 In molte applicazioni è necessario gestire informazioni che è preferibile mantenere come coppie nome/valore. Queste informazioni potrebbero essere di configurazione o impostazioni globali. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] include alcuni metodi che consentono di mantenere facilmente coppie nome/valore. È possibile mantenere le informazioni come attributi o come un set di elementi figlio.  
@@ -17,7 +17,7 @@ In molte applicazioni è necessario gestire informazioni che è preferibile mant
 ## <a name="setattributevalue-and-setelementvalue"></a>SetAttributeValue e SetElementValue  
  I due metodi che facilitano il mantenimento delle coppie nome/valore sono <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> e <xref:System.Xml.Linq.XElement.SetElementValue%2A>. Si tratta di metodi contraddistinti da una semantica simile.  
   
- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> possibile aggiungere, modificare o rimuovere gli attributi di un elemento.  
+ <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> può aggiungere, modificare o rimuovere attributi di un elemento.  
   
 - Se si chiama <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> con un nome di un attributo non esistente, il metodo crea un nuovo attributo e lo aggiunge all'elemento specificato.  
   
@@ -25,7 +25,7 @@ In molte applicazioni è necessario gestire informazioni che è preferibile mant
   
 - Se si chiama <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> con un nome di un attributo esistente e si specifica null per il contenuto, l'attributo viene rimosso dal relativo elemento padre.  
   
- <xref:System.Xml.Linq.XElement.SetElementValue%2A> possibile aggiungere, modificare o rimuovere elementi figlio di un elemento.  
+ <xref:System.Xml.Linq.XElement.SetElementValue%2A> può aggiungere, modificare o rimuovere elementi figlio di un elemento.  
   
 - Se si chiama <xref:System.Xml.Linq.XElement.SetElementValue%2A> con un nome di un elemento figlio non esistente, il metodo crea un nuovo elemento e lo aggiunge all'elemento specificato.  
   
@@ -57,7 +57,7 @@ root.SetAttributeValue("DefaultColor", Nothing)
 Console.WriteLine(root)  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```xml  
 <Root Top="22" Left="20" Bottom="122" Right="300" DefaultColor="Color.Red" />  
@@ -91,7 +91,7 @@ root.SetElementValue("DefaultColor", Nothing)
 Console.WriteLine(root)  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```xml  
 <Root>  
@@ -100,7 +100,7 @@ Console.WriteLine(root)
   <Bottom>122</Bottom>  
   <Right>300</Right>  
   <DefaultColor>Color.Red</DefaultColor>  
-</Root>  
+</Root>
 ----  
 <Root>  
   <Top>10</Top>  
@@ -108,14 +108,14 @@ Console.WriteLine(root)
   <Bottom>122</Bottom>  
   <Right>300</Right>  
   <DefaultColor>Color.Red</DefaultColor>  
-</Root>  
-----  
+</Root>
+----
 <Root>  
   <Top>10</Top>  
   <Left>20</Left>  
   <Bottom>122</Bottom>  
   <Right>300</Right>  
-</Root>  
+</Root>
 ```  
   
 ## <a name="see-also"></a>Vedere anche

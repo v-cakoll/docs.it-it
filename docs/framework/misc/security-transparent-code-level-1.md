@@ -9,17 +9,17 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: 8f232a7724ad831818627cbfc2845ea808a3fcfd
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 6f6c6ecd9ecab8c531be971a0e7896994127beb8
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215800"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645738"
 ---
 # <a name="security-transparent-code-level-1"></a>Codice SecurityTransparent, livello 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- La trasparenza consente agli sviluppatori di scrivere in modo più sicuro le librerie .NET Framework che espongono funzionalità a codice parzialmente attendibile. La trasparenza di livello 1 è stata introdotta in .NET Framework versione 2.0 ed è stata usata principalmente solo all'interno di Microsoft. A partire da .NET Framework 4, è possibile usare la [trasparenza di livello 2](security-transparent-code-level-2.md). Tuttavia, la trasparenza di livello 1 è stata mantenuta in modo che sia possibile identificare il codice legacy che deve essere eseguito con le regole di sicurezza precedenti.  
+ La trasparenza consente agli sviluppatori di scrivere in modo più sicuro le librerie .NET Framework che espongono funzionalità a codice parzialmente attendibile. La trasparenza di livello 1 è stata introdotta in .NET Framework versione 2.0 ed è stata usata principalmente solo all'interno di Microsoft. A partire da .NET Framework 4, è possibile usare la [trasparenza di livello 2](security-transparent-code-level-2.md). La trasparenza di livello 1 è tuttavia stata mantenuta per consentire di identificare il codice legacy che deve essere eseguito con regole di sicurezza meno recenti.  
   
 > [!IMPORTANT]
 > È necessario specificare la trasparenza di livello 1 solo per ragioni di compatibilità, ovvero specificare il livello 1 solo per codice sviluppato con .NET Framework 3.5 o versioni precedenti che usa <xref:System.Security.AllowPartiallyTrustedCallersAttribute> o non usa il modello di trasparenza. Usare ad esempio la trasparenza di livello 1 per assembly .NET Framework 2.0 che consentono l'uso di chiamate da chiamanti parzialmente attendibili (APTCA). Per il codice sviluppato per il .NET Framework 4, usare sempre la trasparenza di livello 2.  
@@ -32,7 +32,7 @@ ms.locfileid: "77215800"
   
 - [Esempi di trasparenza della sicurezza](#security_transparency_examples)  
   
-<a name="the_level_1_transparency_model"></a>   
+<a name="the_level_1_transparency_model"></a>
 ## <a name="the-level-1-transparency-model"></a>Modello di trasparenza di livello 1  
  Quando si usa la trasparenza di livello 1, si usa un modello di sicurezza che suddivide il codice in metodi SecurityTransparent, SecuritySafeCritical e SecurityCritical.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "77215800"
   
  Per compatibilità con le versioni precedenti di .NET Framework, tutti i membri non annotati con attributi di trasparenza vengono considerati SecuritySafeCritical. Tutti i tipi non annotati vengono considerati Transparent. Non ci sono regole di analisi statica per convalidare la trasparenza. Potrebbe quindi essere necessario eseguire il debug degli errori di trasparenza in fase di esecuzione.  
   
-<a name="transparency_attributes"></a>   
+<a name="transparency_attributes"></a>
 ## <a name="transparency-attributes"></a>Attributi di trasparenza  
  Nella tabella riportata di seguito vengono descritti i tre attributi da usare per annotare il codice per la trasparenza.  
   
-|Attributo|Descrizione|  
+|Attributo|Description|  
 |---------------|-----------------|  
 |<xref:System.Security.SecurityTransparentAttribute>|Consentito solo a livello di assembly. Identifica tutti i tipi e i membri nell'assembly come SecurityTransparent. L'assembly non può contenere codice SecurityCritical.|  
 |<xref:System.Security.SecurityCriticalAttribute>|Se usato a livello di assembly, senza la proprietà <xref:System.Security.SecurityCriticalAttribute.Scope%2A>, identifica tutto il codice nell'assembly come SecurityTransparent per impostazione predefinita, ma indica che l'assembly può contenere codice SecurityCritical.<br /><br /> Se usato a livello di classe, identifica la classe o il metodo come SecurityCritical, ma non i membri della classe. Per impostare tutti i membri come SecurityCritical, impostare la proprietà <xref:System.Security.SecurityCriticalAttribute.Scope%2A> su <xref:System.Security.SecurityCriticalScope.Everything>.<br /><br /> Se usato a livello di membro, l'attributo si applica solo a tale membro.<br /><br /> La classe o il membro identificato come SecurityCritical può eseguire le elevazioni dei privilegi. **Importante:**  Nella trasparenza di livello 1, i tipi e i membri critici per la sicurezza vengono considerati come critici per la sicurezza quando vengono chiamati dall'esterno dell'assembly. È necessario proteggere i tipi e i membri SecurityCritical con una richiesta di collegamento per l'attendibilità totale, per evitare l'elevazione dei privilegi non autorizzata.|  
@@ -78,9 +78,9 @@ ms.locfileid: "77215800"
 |`SecurityCritical(SecurityCriticalScope.Everything)`|Tutti i tipi e i membri sono SecurityCritical.|  
 |`SecurityCritical`|Tutto il codice è Transparent per impostazione predefinita. I singoli tipi e membri possono tuttavia avere altri attributi.|  
   
-<a name="security_transparency_examples"></a>   
+<a name="security_transparency_examples"></a>
 ## <a name="security-transparency-examples"></a>Esempi di trasparenza della sicurezza  
- Per usare le regole di trasparenza di .NET Framework 2.0 (trasparenza di livello 1), usare l'annotazione di assembly seguente:  
+ Per usare le regole di trasparenza di .NET Framework 2.0 (trasparenza di livello 1), usare l'annotazione di assembly seguente:   
   
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level1)]  
@@ -131,4 +131,4 @@ public class B
 ## <a name="see-also"></a>Vedere anche
 
 - [Codice SecurityTransparent, livello 2](security-transparent-code-level-2.md)
-- [Modifiche della sicurezza](../security/security-changes.md)
+- [Modifiche della sicurezza](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
