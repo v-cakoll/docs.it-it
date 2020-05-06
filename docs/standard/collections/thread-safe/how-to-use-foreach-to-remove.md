@@ -1,6 +1,6 @@
 ---
-title: 'Procedura: utilizzare ForEach per rimuovere elementi in un oggetto BlockingCollection'
-ms.date: 03/30/2017
+title: Usare foreach per rimuovere elementi in un oggetto BlockingCollection
+ms.date: 05/04/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -8,16 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, how to enumerate blocking collection
 ms.assetid: 2096103c-22f7-420d-b631-f102bc33a6dd
-ms.openlocfilehash: f9a858dea74be63634f887c4204aefa8ac338ad0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1255fcda89396ea8ff9abf6cf111e6dd9ea5a87d
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711233"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861005"
 ---
-# <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>Procedura: utilizzare ForEach per rimuovere elementi in un oggetto BlockingCollection
+# <a name="use-foreach-to-remove-items-in-a-blockingcollection"></a>Usare foreach per rimuovere elementi in un oggetto BlockingCollection
 
-Oltre a estrarre elementi da un oggetto <xref:System.Collections.Concurrent.BlockingCollection%601> usando il metodo <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> e <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A>, è anche possibile usare [foreach](../../../csharp/language-reference/keywords/foreach-in.md) ([For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) in Visual Basic) per rimuovere gli elementi finché l'aggiunta viene completata e la raccolta è vuota. Questa operazione viene definita *enumerazione mutante* o *enumerazione di consumo* perché, a differenza di un ciclo `foreach` tipico (`For Each`), questo enumeratore modifica la raccolta di origine rimuovendo elementi.
+Oltre a raccogliere elementi da un oggetto <xref:System.Collections.Concurrent.BlockingCollection%601> usando <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> il metodo e <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> , è possibile usare anche [foreach](../../../csharp/language-reference/keywords/foreach-in.md) ([for each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) in Visual Basic) con <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A?displayProperty=nameWithType> per rimuovere gli elementi fino a quando non viene completata l'aggiunta e la raccolta è vuota. Questa operazione viene definita *enumerazione mutante* o *enumerazione di consumo* perché, a differenza di un ciclo `foreach` tipico (`For Each`), questo enumeratore modifica la raccolta di origine rimuovendo elementi.
 
 ## <a name="example"></a>Esempio
 
@@ -28,7 +28,7 @@ L'esempio seguente illustra come rimuovere tutti gli elementi di un oggetto <xre
 
 Questo esempio usa un ciclo `foreach` con il metodo <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A?displayProperty=nameWithType> nel thread di consumo, che rimuove ogni elemento dalla raccolta mentre viene enumerato. <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> limita il numero massimo di elementi presenti nella raccolta in qualsiasi momento. Tale enumerazione della raccolta blocca il thread consumer se non sono disponibili elementi o se la raccolta è vuota. In questo esempio il blocco non rappresenta un problema perché il thread producer aggiunge elementi più velocemente di quanto possano essere usati.
 
-Non esiste alcuna garanzia che gli elementi vengano enumerati nello stesso ordine in cui sono stati aggiunti dai thread producer.
+Restituisce <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A?displayProperty=nameWithType> un oggetto `IEnumerable<T>`, pertanto l'ordine non può essere garantito. Tuttavia, internamente <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> un viene usato come tipo di raccolta sottostante, che consente di rimuovere dalla coda gli oggetti dopo l'ordinamento First-in-First-out (FIFO). Se le chiamate simultanee a <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A?displayProperty=nameWithType> vengono effettuate, saranno competitive. Un elemento utilizzato (rimosso dalla coda) in un'enumerazione non può essere osservato nell'altro.
 
 Per enumerare la raccolta senza modificarla, usare `foreach` (`For Each`) senza il metodo <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A>. Tuttavia, è importante tenere presente che questo tipo di enumerazione rappresenta uno snapshot della raccolta in un momento preciso. Se altri thread aggiungono o rimuovono elementi contemporaneamente mentre si esegue il ciclo, il ciclo potrebbe non rappresentare lo stato effettivo della raccolta.
 

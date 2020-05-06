@@ -8,12 +8,12 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
-ms.openlocfilehash: 85b5a5a630f399d0e036de434365e2e4f8f02dea
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c83bdcca4fab75b4ae94500ceb785b6000cd802a
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793833"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860873"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>Funzione di Silverlight CreateDebuggingInterfaceFromVersion
 Accetta una stringa di versione Common Language Runtime (CLR) restituita dalla [funzione CreateVersionStringFromModule](createversionstringfrommodule-function.md)e restituisce un'interfaccia del debugger corrispondente (in genere, [ICorDebug](icordebug-interface.md)).  
@@ -36,7 +36,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK  
- `ppCordb` fa riferimento a un oggetto valido che implementa l'interfaccia dell' [interfaccia ICorDebug](icordebug-interface.md) .  
+ `ppCordb`fa riferimento a un oggetto valido che implementa l'interfaccia dell' [interfaccia ICorDebug](icordebug-interface.md) .  
   
  E_INVALIDARG  
  `szDebuggeeVersion` o `ppCordb` è null.  
@@ -50,11 +50,11 @@ HRESULT CreateDebuggingInterfaceFromVersion (
  E_FAIL (o altri codici E_ restituiti)  
  Impossibile restituire un' [interfaccia ICorDebug](icordebug-interface.md).  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'interfaccia restituita fornisce funzionalità per connettersi a un CLR nel processo di destinazione ed eseguire il debug del codice gestito eseguito da CLR.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** dbgshim. h  
   

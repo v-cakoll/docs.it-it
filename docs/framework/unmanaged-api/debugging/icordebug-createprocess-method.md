@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-ms.openlocfilehash: cb16bae2dfe151d04c40269a8e6872ecb49b4269
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b9ae2b36bff9b4a6c048a8de99fa7d09350b1401
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789002"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859715"
 ---
 # <a name="icordebugcreateprocess-method"></a>Metodo ICorDebug::CreateProcess
 Avvia un processo e il relativo thread primario sotto il controllo del debugger.  
@@ -52,13 +52,13 @@ HRESULT CreateProcess (
  in Puntatore a una stringa con terminazione null che specifica la riga di comando che deve essere eseguita dal processo avviato. Il nome dell'applicazione (ad esempio, "SomeApp. exe") deve essere il primo argomento.  
   
  `lpProcessAttributes`  
- in Puntatore a una struttura di `SECURITY_ATTRIBUTES` Win32 che specifica il descrittore di sicurezza per il processo. Se `lpProcessAttributes` è null, il processo ottiene un descrittore di sicurezza predefinito.  
+ in Puntatore a una struttura `SECURITY_ATTRIBUTES` Win32 che specifica il descrittore di sicurezza per il processo. Se `lpProcessAttributes` è null, il processo ottiene un descrittore di sicurezza predefinito.  
   
  `lpThreadAttributes`  
- in Puntatore a una struttura di `SECURITY_ATTRIBUTES` Win32 che specifica il descrittore di sicurezza per il thread principale del processo. Se `lpThreadAttributes` è null, il thread ottiene un descrittore di sicurezza predefinito.  
+ in Puntatore a una struttura `SECURITY_ATTRIBUTES` Win32 che specifica il descrittore di sicurezza per il thread principale del processo. Se `lpThreadAttributes` è null, il thread ottiene un descrittore di sicurezza predefinito.  
   
  `bInheritHandles`  
- in Impostare su `true` per indicare che ogni handle ereditabile nel processo chiamante viene ereditato dal processo avviato oppure `false` per indicare che gli handle non vengono ereditati. Gli handle ereditati hanno lo stesso valore e i diritti di accesso degli handle originali.  
+ in Impostare su `true` per indicare che ogni handle ereditabile nel processo chiamante viene ereditato dal processo avviato o `false` per indicare che gli handle non vengono ereditati. Gli handle ereditati hanno lo stesso valore e i diritti di accesso degli handle originali.  
   
  `dwCreationFlags`  
  in Combinazione bit per bit dei [flag di creazione del processo Win32](/windows/win32/procthread/process-creation-flags) che controllano la classe di priorità e il comportamento del processo avviato.  
@@ -70,10 +70,10 @@ HRESULT CreateProcess (
  in Puntatore a una stringa con terminazione null che specifica il percorso completo della directory corrente per il processo. Se questo parametro è null, il nuovo processo avrà la stessa unità e la stessa directory correnti del processo chiamante.  
   
  `lpStartupInfo`  
- in Puntatore a una struttura di `STARTUPINFOW` Win32 che specifica la stazione della finestra, il desktop, gli handle standard e l'aspetto della finestra principale per il processo avviato.  
+ in Puntatore a una struttura `STARTUPINFOW` Win32 che specifica la stazione della finestra, il desktop, gli handle standard e l'aspetto della finestra principale per il processo avviato.  
   
  `lpProcessInformation`  
- in Puntatore a una struttura di `PROCESS_INFORMATION` Win32 che specifica le informazioni di identificazione relative al processo da avviare.  
+ in Puntatore a una struttura `PROCESS_INFORMATION` Win32 che specifica le informazioni di identificazione relative al processo da avviare.  
   
  `debuggingFlags`  
  in Valore dell'enumerazione CorDebugCreateProcessFlags che specifica le opzioni di debug.  
@@ -81,23 +81,23 @@ HRESULT CreateProcess (
  `ppProcess`  
  out Puntatore all'indirizzo di un oggetto ICorDebugProcess che rappresenta il processo.  
   
-## <a name="remarks"></a>Note  
- I parametri di questo metodo sono identici a quelli del metodo Win32 `CreateProcess`.  
+## <a name="remarks"></a>Osservazioni  
+ I parametri di questo metodo sono gli stessi di quelli del metodo Win32 `CreateProcess` .  
   
- Per abilitare il debug in modalità mista non gestita, impostare `dwCreationFlags` su &#124; DEBUG_PROCESS DEBUG_ONLY_THIS_PROCESS. Se si desidera utilizzare solo il debug gestito, non impostare questi flag.  
+ Per abilitare il debug in modalità mista non gestita, `dwCreationFlags` impostare su DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS. Se si desidera utilizzare solo il debug gestito, non impostare questi flag.  
   
- Se il debugger e il processo di cui è in corso il debug (il processo collegato) condividono un'unica console e se viene usato il debug di interoperabilità, è possibile che il processo collegato mantenga i blocchi della console e arresti in corrispondenza di un evento di debug. Il debugger bloccherà quindi qualsiasi tentativo di usare la console. Per evitare questo problema, impostare il flag CREATE_NEW_CONSOLE nel parametro `dwCreationFlags`.  
+ Se il debugger e il processo di cui è in corso il debug (il processo collegato) condividono un'unica console e se viene usato il debug di interoperabilità, è possibile che il processo collegato mantenga i blocchi della console e arresti in corrispondenza di un evento di debug. Il debugger bloccherà quindi qualsiasi tentativo di usare la console. Per evitare questo problema, impostare il flag CREATE_NEW_CONSOLE nel `dwCreationFlags` parametro.  
   
  Il debug di interoperabilità non è supportato in piattaforme Win9x e non x86, ad esempio piattaforme basate su IA-64 e AMD64.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

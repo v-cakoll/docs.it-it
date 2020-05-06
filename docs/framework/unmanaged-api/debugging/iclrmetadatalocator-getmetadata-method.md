@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 704a8893-ac56-43b4-90ea-715f38ccb40e
 topic_type:
 - apiref
-ms.openlocfilehash: 66b3934d000b4f000c368acb1f57c8fc82a5c453
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ad309290319396ff4e74e30d572effeffe802d1d
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793617"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859874"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>Metodo ICLRMetadataLocator::GetMetadata
 Chiamato dai servizi di accesso ai dati di Common Language Runtime (CLR) per recuperare i metadati di un'immagine.  
@@ -59,7 +59,7 @@ HRESULT GetMetadata(
  in Indirizzo RVA (relativo Virtual Address) dei metadati. L'indirizzo è relativo all'indirizzo di base dell'immagine.  
   
  `flags`  
- in Riservato per usi futuri.  
+ [in] Riservato per un utilizzo futuro.  
   
  `bufferSize`  
  in Dimensione del buffer in cui inserire i metadati.  
@@ -70,17 +70,17 @@ HRESULT GetMetadata(
  `dataSize`  
  out Dimensioni dei metadati restituiti.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo è implementato dal writer dell'applicazione di debug.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** ClrData. idl, ClrData. h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

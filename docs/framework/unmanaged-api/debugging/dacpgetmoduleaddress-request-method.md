@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 4dbe6a2c295e5afae1b6761f0c7b695fdb906428
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 1755526636bed6d78663112e4c2ad5ab7c3f731c
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102907"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860846"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>Metodo DacpGetModuleAddress::Request
 
@@ -39,22 +39,22 @@ HRESULT Request(
 ## <a name="parameters"></a>Parametri
 
 `pDataModule`\
-[in] Puntatore al modulo dati di serie.
+in Puntatore al modulo dati di inizializzazione.
 
 ## <a name="remarks"></a>Osservazioni
 
-Questa struttura si trova all'interno del runtime e non viene esposta tramite intestazioni o file di libreria. Per usarlo, il modo più semplice è quello di imitare l'implementazione:
+Questa struttura si trova all'interno del runtime e non viene esposta tramite le intestazioni o i file di libreria. Per usarlo, il modo più semplice consiste nel simulare l'implementazione:
 
-- Restituire il valore ottenuto chiamando il `Request` metodo sul `IXCLRDataModule*` parametro con i seguenti parametri:`((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
+- Restituisce il valore ottenuto dalla chiamata al `Request` metodo sul `IXCLRDataModule*` parametro con i parametri seguenti:`((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md)\
+**Piattaforme:** Vedere i [requisiti di sistema](../../get-started/system-requirements.md)\
 **Intestazione:** Nessuno
-**Biblioteca:** Nessuno
-Versioni di **.NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**Libreria:** Nessuno
+**Versioni .NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Debug](index.md)
-- [DacpGetModuleAddress (struttura)](dacpgetmoduleaddress-structure.md)
+- [Struttura DacpGetModuleAddress](dacpgetmoduleaddress-structure.md)

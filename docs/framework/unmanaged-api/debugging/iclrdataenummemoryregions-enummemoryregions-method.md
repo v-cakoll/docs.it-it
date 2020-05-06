@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22d2e339-f174-40b5-a478-0b744501566f
 topic_type:
 - apiref
-ms.openlocfilehash: f2b2bbe8bcecf71f6d3016fb35dfbf5ba1353aea
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e6cdc924df126e56d2e7c8c9cb8762ee88712fcc
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785631"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860692"
 ---
 # <a name="iclrdataenummemoryregionsenummemoryregions-method"></a>Metodo ICLRDataEnumMemoryRegions::EnumMemoryRegions
 Enumera le aree di memoria specificate.  
@@ -42,22 +42,22 @@ HRESULT EnumMemoryRegions (
  L'enumerazione delle aree di memoria continua anche se il callback indica un errore.  
   
  `miniDumpFlags`  
- in Non utilizzato.  
+ [in] Non utilizzato.  
   
  `clrFlags`  
  in Valore dell'enumerazione [CLRDataEnumMemoryFlags](clrdataenummemoryflags-enumeration.md) che specifica le aree di memoria da enumerare.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo usa l'istanza di [ICLRDataEnumMemoryRegionsCallback](iclrdataenummemoryregionscallback-interface.md) specificata per notificare al chiamante i risultati.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** ClrData. idl, ClrData. h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

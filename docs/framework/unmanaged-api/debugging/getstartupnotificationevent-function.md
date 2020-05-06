@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c94b1b61-045a-4695-bacd-0f18c5acc246
 topic_type:
 - apiref
-ms.openlocfilehash: fb158b35165fb229fc78169e2508679b6749752e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3377dcd5d45ca8e31a57a75bd81366d41837c12c
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122947"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860705"
 ---
 # <a name="getstartupnotificationevent-function"></a>Funzione GetStartupNotificationEvent
 Crea o apre un handle dell'evento che verrà segnalato da qualsiasi CLR (Common Language Runtime) caricato nel processo di destinazione specificato.  
@@ -53,13 +53,13 @@ HRESULT GetStartupNotificationEvent
  E_FAIL (o altri codici E_ restituiti)  
  Non è possibile ottenere l'handle all'evento di notifica di avvio.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Nel sistema operativo Windows `debuggeePID` esegue il mapping a un identificatore di processo del sistema operativo.  
   
  L'evento viene segnalato prima che qualsiasi codice gestito venga eseguito dal CLR che ha segnalato l'evento.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** dbgshim. h  
   
