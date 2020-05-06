@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Rami e cicli in C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: e59462be6e5ed350912849d59aa03604aa10e0e3
-  ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+  ms.openlocfilehash: ac4f7318dc25fef9f612649f2c3f57a5142f3ead
+  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 05/05/2020
-  ms.locfileid: "82794741"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82860940"
 items:
 - durationInMinutes: 1
   content: >
@@ -99,11 +99,6 @@ items:
     > Mentre si impara a usare C# (o qualsiasi linguaggio di programmazione) sicuramente si commetteranno errori durante la scrittura del codice. Il **compilatore** troverà questi errori e li segnalerà. Quando l'output contiene messaggi di errore, esaminare attentamente il codice di esempio e il codice nella finestra interattiva per scoprire cosa correggere.
 
     > Questo esercizio sarà utile per imparare la struttura del codice C#.
-
-
-    > [!NOTE]
-
-    > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - title: Esplorare l'ordine delle operazioni
   durationInMinutes: 7
   content: >
@@ -182,11 +177,6 @@ items:
 
 
     Selezionare **Esegui** di nuovo per visualizzare i risultati.
-
-
-    > [!NOTE]
-
-    > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - title: Esplorare la precisione e i limiti delle operazioni su interi
   durationInMinutes: 5
   content: >
@@ -248,14 +238,9 @@ items:
 
 
     Esistono altri tipi numerici con limiti e precisione diversi che è possibile usare quando il tipo `int` non soddisfa le proprie esigenze. Verranno ora esaminati questi tipi di numeri.
-
-
-    > [!NOTE]
-
-    > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - title: Usare il tipo double
   durationInMinutes: 5
-  content: "Il tipo numerico `double` rappresenta un numero a virgola mobile a precisione doppia. Questi termini potrebbero risultare sconosciuti. Un numero **a virgola mobile** è utile per rappresentare numeri non integrali, con ordine di grandezza molto grande o molto piccolo. La **precisione doppia** è un termine relativo che descrive il numero di cifre binarie usate per archiviare il valore. Il numero a **doppia precisione** ha un numero doppio di cifre binarie come **precisione singola**. Nei computer moderni è più comune usare i numeri a precisione doppia rispetto ai numeri a precisione singola. I numeri a **precisione singola** vengono dichiarati utilizzando la `float` parola chiave.\nPer iniziare a esplorare questo tipo, provare il codice seguente nella finestra interattiva ed esaminare il risultato:\n\n```csharp\ndouble a = 5;\ndouble b = 4;\ndouble c = 2;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\nSi noti che la risposta include la parte decimale del quoziente. Provare ora un'espressione leggermente più complessa con valori double:\n\n```csharp\ndouble a = 19;\ndouble b = 23;\ndouble c = 8;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\nL'intervallo di un valore double è molto maggiore rispetto ai valori integer. Provare il codice seguente nella finestra interattiva:\n\n```csharp\ndouble max = double.MaxValue;\ndouble min = double.MinValue;\nConsole.WriteLine($\"The range of double is {min} to {max}\");\n```\n\nQuesti valori vengono stampati con la notazione scientifica. Il numero a sinistra di `E` rappresenta il significando. Il numero a destra è l'esponente, come potenza di 10.\n\nCome per i numeri decimali in matematica, i valori double in C# possono presentare errori di arrotondamento. Provare questo codice:\n\n```csharp\ndouble third = 1.0 / 3.0;\nConsole.WriteLine(third);\n```\n\nSi sa che `0.3` non `3/10` è esattamente uguale a `1/3`. Analogamente `0.33` , `33/100`è. Questo è più vicino `1/3`a, ma non è ancora esatto. \n\n***Esercizio***\n\nProvare altri calcoli con numeri grandi, numeri piccoli, moltiplicazioni e divisioni usando `double` il tipo.  Provare calcoli più complessi.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: "Il tipo numerico `double` rappresenta un numero a virgola mobile a precisione doppia. Questi termini potrebbero risultare sconosciuti. Un numero **a virgola mobile** è utile per rappresentare numeri non integrali, con ordine di grandezza molto grande o molto piccolo. La **precisione doppia** è un termine relativo che descrive il numero di cifre binarie usate per archiviare il valore. Il numero a **doppia precisione** ha un numero doppio di cifre binarie come **precisione singola**. Nei computer moderni è più comune usare i numeri a precisione doppia rispetto ai numeri a precisione singola. I numeri a **precisione singola** vengono dichiarati utilizzando la `float` parola chiave.\nPer iniziare a esplorare questo tipo, provare il codice seguente nella finestra interattiva ed esaminare il risultato:\n\n```csharp\ndouble a = 5;\ndouble b = 4;\ndouble c = 2;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\nSi noti che la risposta include la parte decimale del quoziente. Provare ora un'espressione leggermente più complessa con valori double:\n\n```csharp\ndouble a = 19;\ndouble b = 23;\ndouble c = 8;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\nL'intervallo di un valore double è molto maggiore rispetto ai valori integer. Provare il codice seguente nella finestra interattiva:\n\n```csharp\ndouble max = double.MaxValue;\ndouble min = double.MinValue;\nConsole.WriteLine($\"The range of double is {min} to {max}\");\n```\n\nQuesti valori vengono stampati con la notazione scientifica. Il numero a sinistra di `E` rappresenta il significando. Il numero a destra è l'esponente, come potenza di 10.\n\nCome per i numeri decimali in matematica, i valori double in C# possono presentare errori di arrotondamento. Provare questo codice:\n\n```csharp\ndouble third = 1.0 / 3.0;\nConsole.WriteLine(third);\n```\n\nSi sa che `0.3` non `3/10` è esattamente uguale a `1/3`. Analogamente `0.33` , `33/100`è. Questo è più vicino `1/3`a, ma non è ancora esatto. \n\n***Esercizio***\n\nProvare altri calcoli con numeri grandi, numeri piccoli, moltiplicazioni e divisioni usando `double` il tipo.  Provare calcoli più complessi.\n"
 - title: Usare i tipi decimali
   durationInMinutes: 8
   content: >
@@ -317,11 +302,6 @@ items:
     Dopo aver esaminato i diversi tipi numerici, scrivere codice che calcola l'area di un cerchio con raggio di 2,5 cm. Ricordarsi che l'area di un cerchio si calcola moltiplicando il quadrato del raggio per Pi greco. Suggerimento: .NET contiene una costante per Pi greco, <xref:System.Math.PI?displayProperty=nameWithType>, che è possibile usare per tale valore. <xref:System.Math.PI?displayProperty=nameWithType>, come tutte le costanti dichiarate `System.Math` nello spazio dei nomi `double` , è un valore. Per questo motivo, è consigliabile usare `double` anziché `decimal` i valori per questa richiesta di verifica.
 
 
-    > [!NOTE]
-
-    > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
-
-
     Si otterrà una risposta compresa tra 19 e 20.
 - title: Completare l'esercizio
   durationInMinutes: 1
@@ -341,11 +321,6 @@ items:
 
 
     È anche possibile provare alcune altre formule.
-
-
-    > [!NOTE]
-
-    > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
     È stata completata l'esercitazione interattiva "Numeri in C#". Per avviare la prossima esercitazione interattiva, è possibile selezionare il collegamento **rami e cicli** . in alternativa, è possibile visitare il [sito .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare il .NET Core SDK, creare un progetto nel computer e seguire la codifica. La sezione "passaggi successivi" riporta a queste esercitazioni.
 
