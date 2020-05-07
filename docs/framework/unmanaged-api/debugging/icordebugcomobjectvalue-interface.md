@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 505a7f6c-d92b-42b4-b539-433f5102ea9b
 topic_type:
 - apiref
-ms.openlocfilehash: ed5b39ed4b2a14c071bf23fb04efbad6834e8a9d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 528db447df4d71d67441b05ad29e6a900c59afbb
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783966"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82892814"
 ---
 # <a name="icordebugcomobjectvalue-interface"></a>Interfaccia ICorDebugComObjectValue
 Fornisce metodi per recuperare le informazioni associate a un Runtime Callable Wrapper (RCW).  
@@ -31,17 +31,17 @@ Fornisce metodi per recuperare le informazioni associate a un Runtime Callable W
 |[Metodo GetCachedInterfacePointers](icordebugcomobjectvalue-getcachedinterfacepointers-method.md)|Ottiene i puntatori dell'interfaccia raw memorizzati nella cache dell'RCW corrente.|  
 |[Metodo GetCachedInterfaceTypes](icordebugcomobjectvalue-getcachedinterfacetypes-method.md)|Fornisce un enumeratore per i tipi di interfaccia a cui è stato assegnato o utilizzato l'oggetto corrente.|  
   
-## <a name="remarks"></a>Note  
- Per verificare se un'istanza di un'interfaccia "ICorDebugValue" rappresenta un RCW, un debugger chiama `QueryInterface` su "ICorDebugValue" con `IID_ICorDebugComObjectValue`.  
+## <a name="remarks"></a>Osservazioni  
+ Per verificare se un'istanza di un'interfaccia "ICorDebugValue" rappresenta un RCW, un debugger chiama `QueryInterface` "ICorDebugValue" con `IID_ICorDebugComObjectValue`.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5ad3d7-e1bb-42af-99bc-471224e3bcaa
 topic_type:
 - apiref
-ms.openlocfilehash: 53d8d219a13f2dade16a338efccf0837f8de0158
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b92c3d3328c657762ed002155ef4947a9292b19e
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784369"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894737"
 ---
 # <a name="icordebugbreakpoint-interface"></a>Interfaccia ICorDebugBreakpoint
 
@@ -29,25 +29,25 @@ Rappresenta un punto di interruzione in una funzione o un punto di controllo su 
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Activate](icordebugbreakpoint-activate-method.md)|Imposta lo stato attivo di questo `ICorDebugBreakpoint`.|  
-|[Metodo IsActive](icordebugbreakpoint-isactive-method.md)|Ottiene un valore che indica se questo `ICorDebugBreakpoint` è attivo.|  
+|[Metodo Activate](icordebugbreakpoint-activate-method.md)|Imposta lo stato attivo di questo `ICorDebugBreakpoint`oggetto.|  
+|[Metodo IsActive](icordebugbreakpoint-isactive-method.md)|Ottiene un valore che indica se l' `ICorDebugBreakpoint` oggetto è attivo.|  
   
-## <a name="remarks"></a>Note  
- I punti di interruzione non supportano direttamente le espressioni condizionali. Se si desidera questa funzionalità, un debugger deve implementarlo sopra `ICorDebugBreakpoint`.  
+## <a name="remarks"></a>Osservazioni  
+ I punti di interruzione non supportano direttamente le espressioni condizionali. Se si desidera una funzionalità di `ICorDebugBreakpoint`questo tipo, un debugger deve implementarlo oltre a.  
   
- L'interfaccia ICorDebugFunctionBreakpoint estende `ICorDebugBreakpoint` per supportare i punti di interruzione all'interno di funzioni.  
+ L'interfaccia ICorDebugFunctionBreakpoint si `ICorDebugBreakpoint` estende per supportare i punti di interruzione all'interno di funzioni.  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b791351-bcc5-4ddd-9cab-eff2f7dd5142
 topic_type:
 - apiref
-ms.openlocfilehash: 3c11a0547ad5acc5613324d7e9d7439d44549dbc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2d075820df534e08bdf4c2b75d36f6a60f979662
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125805"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894100"
 ---
 # <a name="icordebugchainenumnext-method"></a>Metodo ICorDebugChainEnum::Next
 Ottiene il numero specificato di istanze di ICorDebugChain dall'enumerazione, a partire dalla posizione corrente.  
@@ -38,19 +38,19 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametri  
  `celt`  
- in Numero di istanze di `ICorDebugChain` da recuperare.  
+ in Numero di `ICorDebugChain` istanze da recuperare.  
   
  `chains`  
- out Matrice di puntatori, ciascuno dei quali punta a un oggetto `ICorDebugChain` che rappresenta una catena.  
+ out Matrice di puntatori, ciascuno dei quali punta a un `ICorDebugChain` oggetto che rappresenta una catena.  
   
  `pceltFetched`  
- out Puntatore al numero di istanze di `ICorDebugChain` restituite effettivamente. Questo valore può essere null se `celt` è uno.  
+ out Puntatore al numero di `ICorDebugChain` istanze effettivamente restituite. Questo valore può essere null se `celt` è uno.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

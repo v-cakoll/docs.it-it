@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 554284e7-3f6c-4d40-8da5-1c9317fbd484
 topic_type:
 - apiref
-ms.openlocfilehash: 64e697323377d664b7b1e36bbf5931a44465cc51
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40ecc183c32500ad9e88ceb1bfc0528d717430e8
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178963"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894460"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>Metodo ICorDebugChain::GetStackRange
 Ottiene l'intervallo di indirizzi del segmento dello stack per questa catena.  
@@ -36,19 +36,19 @@ HRESULT GetStackRange (
   
 ## <a name="parameters"></a>Parametri  
  `pStart`  
- [fuori] Puntatore a `CORDB_ADDRESS` un valore che è l'indirizzo iniziale del segmento dello stack.  
+ out Puntatore a un `CORDB_ADDRESS` valore che rappresenta l'indirizzo iniziale del segmento dello stack.  
   
  `pEnd`  
- [fuori] Puntatore a `CORDB_ADDRESS` un valore che è l'indirizzo finale del segmento dello stack.  
+ out Puntatore a un `CORDB_ADDRESS` valore che rappresenta l'indirizzo finale del segmento dello stack.  
   
 ## <a name="remarks"></a>Osservazioni  
- L'intervallo numerico è significativo solo per il confronto delle posizioni dello stack frame. Non è possibile fare supposizioni su ciò che viene effettivamente archiviato nello stack.  
+ L'intervallo numerico è significativo solo per il confronto dei percorsi di stack frame. Non è possibile creare presupposti sugli elementi effettivamente archiviati nello stack.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -1,15 +1,15 @@
 ---
-title: Bundle di applicazioni native cloud
+title: Aggregazioni di applicazioni cloud native
 description: Architettura di app .NET cloud native per Azure | Bundle di applicazioni native cloud
 ms.date: 06/30/2019
-ms.openlocfilehash: 0c67035af08d3c337ff027f3742e1ce8a83f8d0f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 6f85ca14ff4d17f9c7a90a9ace51a1448b89fcb3
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183714"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895677"
 ---
-# <a name="cloud-native-application-bundles"></a>Bundle di applicazioni native cloud
+# <a name="cloud-native-application-bundles"></a>Aggregazioni di applicazioni cloud native
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -78,7 +78,8 @@ Anche il formato CNAB è flessibile e può essere usato in qualsiasi cloud. Può
 
 ## <a name="devops-decisions"></a>Decisioni DevOps
 
-Ci sono così tanti strumenti eccezionali nello spazio DevOps di questi giorni, oltre a libri e documenti ancora più fantastici su come ottenere risultati positivi. Un libro preferito per iniziare a usare il percorso DevOps è [il progetto Phoenix](https://www.oreilly.com/library/view/the-phoenix-project/9781457191350/), che segue la trasformazione di una società fittizia da NOOP a DevOps. Un aspetto è determinato da: DevOps non è più un "bello" quando si distribuiscono applicazioni native cloud complesse. È un requisito e deve essere pianificato e rioriginato all'inizio di qualsiasi progetto.
+Ci sono così tanti strumenti eccezionali nello spazio DevOps di questi giorni, oltre a libri e documenti ancora più fantastici su come ottenere risultati positivi. Un libro preferito per iniziare a usare il percorso DevOps è [il progetto Phoenix](https://www.oreilly.com/library/view/the-phoenix-project/9781457191350/), che segue la trasformazione di una società fittizia da NOOP a DevOps. Una cosa da fare è che DevOps non è più un "bello" quando si distribuiscono applicazioni native cloud complesse. È un requisito e deve essere pianificato e rioriginato all'inizio di qualsiasi progetto.
 
 >[!div class="step-by-step"]
 >[Precedente](infrastructure-as-code.md)
+>[successivo](summary.md)

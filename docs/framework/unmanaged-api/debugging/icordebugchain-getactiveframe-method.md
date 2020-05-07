@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36887017-670b-4f21-b406-8fab956f84a3
 topic_type:
 - apiref
-ms.openlocfilehash: 03cb1556ee971124ed4c591f38d9f892fc7df7b0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2f67188539d5ad5523c255fbc663e990e1b8245f
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192150"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894674"
 ---
 # <a name="icordebugchaingetactiveframe-method"></a>Metodo ICorDebugChain::GetActiveFrame
 Ottiene il frame attivo (ovvero, più recente) nella catena.  
@@ -37,16 +37,16 @@ HRESULT GetActiveFrame (
  `ppFrame`  
  out Puntatore all'indirizzo di un oggetto ICorDebugFrame che rappresenta il frame attivo (ovvero il più recente) nella catena.  
   
-## <a name="remarks"></a>Note  
- Se non è disponibile alcun stack frame gestito, `ppFrame` è impostato su null.  
+## <a name="remarks"></a>Osservazioni  
+ Se non è disponibile alcun stack frame gestito `ppFrame` , viene impostato su null.  
   
- Se il frame attivo non è disponibile, la chiamata avrà esito positivo e `ppFrame` sarà null. I frame attivi non saranno disponibili per le catene avviate a causa di CHAIN_ENTER_UNMANAGED e per alcune catene avviate a causa di CHAIN_CLASS_INIT. Vedere l'enumerazione CorDebugChainReason.  
+ Se il frame attivo non è disponibile, la chiamata avrà esito `ppFrame` positivo e sarà null. I frame attivi non saranno disponibili per le catene avviate a causa di CHAIN_ENTER_UNMANAGED e per alcune catene avviate a causa di CHAIN_CLASS_INIT. Vedere l'enumerazione CorDebugChainReason.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08dbd558-bd39-4263-94c2-71e70687aaf0
 topic_type:
 - apiref
-ms.openlocfilehash: 9d1d6d2f506086dd3204053b0b635da2e7cdc87e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: fa22c17ed7d5bcd689f21d2d855d9be7a6a8e164
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783959"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82892803"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>Metodo ICorDebugComObjectValue::GetCachedInterfacePointers
 Ottiene i puntatori di interfaccia raw memorizzati nella cache nel Runtime Callable Wrapper (RCW) corrente.  
@@ -41,21 +41,21 @@ HRESULT GetCachedInterfacePointers(
  in Numero di oggetti di cui devono essere recuperati gli indirizzi.  
   
  `pceltFetched`  
- out Puntatore al numero di valori di `CORDB_ADDRESS` effettivamente restituiti in `ptrs`.  
+ out Puntatore al numero di `CORDB_ADDRESS` valori effettivamente restituiti in. `ptrs`  
   
  `ptrs`  
- Puntatore all'indirizzo iniziale di una matrice di valori `CORDB_ADDRESS` che contengono gli indirizzi degli oggetti dell'interfaccia memorizzati nella cache.  
+ Puntatore all'indirizzo iniziale di una matrice di `CORDB_ADDRESS` valori che contengono gli indirizzi degli oggetti dell'interfaccia memorizzati nella cache.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

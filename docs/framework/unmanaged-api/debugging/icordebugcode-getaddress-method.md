@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cc507cb0-df2e-49c2-b32e-0c3271a8df9a
 topic_type:
 - apiref
-ms.openlocfilehash: df73663f714b0c1c3d3ae5dfb53e8e84196a8f37
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f9b00d5e34300f1ed16eaddff3bf8e877219f910
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125686"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893793"
 ---
 # <a name="icordebugcodegetaddress-method"></a>Metodo ICorDebugCode::GetAddress
 Ottiene l'indirizzo RVA (relativo Virtual Address) del segmento di codice rappresentato da questa interfaccia "ICorDebugCode".  
@@ -38,10 +38,10 @@ HRESULT GetAddress (
  out Puntatore all'RVA del segmento di codice.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3fdf523-274a-449c-920b-9fcb0aed1d97
 topic_type:
 - apiref
-ms.openlocfilehash: 373df8a47bdcbc833ffaea05bb205a63b5f583ec
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 870ac1e62363493989fe638483ea474d648c8c69
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777775"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893312"
 ---
 # <a name="icordebugcode4-interface"></a>Interfaccia ICorDebugCode4
 Fornisce un metodo che consente a un debugger di enumerare le variabili e gli argomenti locali in una funzione.  
@@ -30,19 +30,19 @@ Fornisce un metodo che consente a un debugger di enumerare le variabili e gli ar
 |------------|-----------------|  
 |[Metodo EnumerateVariableHomes](icordebugcode4-enumeratevariablehomes-method.md)|Ottiene un enumeratore per le variabili e gli argomenti locali in una funzione.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

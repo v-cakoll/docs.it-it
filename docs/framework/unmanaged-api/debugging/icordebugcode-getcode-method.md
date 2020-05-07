@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-ms.openlocfilehash: fde76c3b34fcc9f2321f3426d2801b310f681067
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 59a497d203d241bbc6e0f884007d4a401c112073
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178991"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893657"
 ---
 # <a name="icordebugcodegetcode-method"></a>Metodo ICorDebugCode::GetCode
-Ottiene tutto il codice per la funzione specificata, formattato per il disassembly. Questo metodo è stato deprecato in .NET Framework versione 2.0. Utilizzare [invece ICorDebugCode2::GetCodeChunks.](icordebugcode2-getcodechunks-method.md)  
+Ottiene tutto il codice per la funzione specificata, formattato per il disassembly. Questo metodo è stato deprecato nella versione .NET Framework 2,0. Usare invece [ICorDebugCode2:: GetCodeChunks](icordebugcode2-getcodechunks-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,31 +40,31 @@ HRESULT GetCode (
   
 ## <a name="parameters"></a>Parametri  
  `startOffset`  
- [in] Offset dell'inizio della funzione.  
+ in Offset dell'inizio della funzione.  
   
  `endOffset`  
- [in] Offset della fine della funzione.  
+ in Offset della fine della funzione.  
   
  `cBufferAlloc`  
- [in] Dimensione della `buffer` matrice in cui verrà restituito il codice.  
+ in Dimensione della `buffer` matrice in cui verrà restituito il codice.  
   
  `buffer`  
- [fuori] Matrice in cui verrà restituito il codice.  
+ out Matrice nella quale verrà restituito il codice.  
   
  `pcBufferSize`  
- [fuori] Numero di byte restituiti.  
+ out Numero di byte restituiti.  
   
 ## <a name="remarks"></a>Osservazioni  
- Se il codice della funzione è stato suddiviso in più blocchi, vengono concatenati in ordine di offset nativo crescente. I limiti delle istruzioni non vengono controllati.  
+ Se il codice della funzione è stato diviso in più blocchi, viene concatenato in ordine di aumento dell'offset nativo. I limiti delle istruzioni non sono controllati.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- Versioni di **.NET Framework:** 1.1, 1.0  
+ **Versioni .NET Framework:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Vedere anche
 
