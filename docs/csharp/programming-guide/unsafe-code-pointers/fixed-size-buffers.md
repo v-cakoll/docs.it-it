@@ -72,7 +72,7 @@ I buffer a dimensione fissa differiscono dalle matrici normali nei modi seguenti
 - Sono sempre vettori o matrici unidimensionali.
 - La dichiarazione deve includere la lunghezza, ad esempio `fixed char id[8]`. Non è possibile usare `fixed char id[]`.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
 - [Codice unsafe e puntatori](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86f06245-9517-49be-8d8c-ca5deaf34c02
 topic_type:
 - apiref
-ms.openlocfilehash: d0c283232ff8eca1af9f3ff4448fb7f4c81d554f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7bbb49dc6ee9b1d29dd61ccdcfdacb62740133ed
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789039"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860273"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>Metodo ICLRDebuggingLibraryProvider::ProvideLibrary
 
@@ -45,7 +45,7 @@ in Nome del modulo richiesto.
 in Indicatore di data e ora archiviato nell'intestazione del file COFF dei file PE.
 
 `pLibraryProvider` \
-in Il campo `SizeOfImage` archiviato nell'intestazione file facoltativa COFF dei file PE.
+in `SizeOfImage` Campo archiviato nell'intestazione file facoltativa COFF dei file PE.
 
 `hModule` \
 out Handle per il modulo richiesto.
@@ -56,13 +56,13 @@ Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di 
 
 |HRESULT|Descrizione|
 |-------------|-----------------|
-|S_OK|Il metodo è stato eseguito correttamente.|
+|S_OK|Metodo completato correttamente.|
 
 ## <a name="exceptions"></a>Eccezioni
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-`ProvideLibrary` consente al debugger di fornire i moduli necessari per il debug di file CLR specifici, ad esempio mscordbi. dll e mscordacwks. dll. Gli handle del modulo devono rimanere validi fino a quando una chiamata al metodo [ICLRDebugging:: CanUnloadNow](iclrdebugging-canunloadnow-method.md) non indica che possono essere liberati, a quel punto è responsabilità del chiamante liberare gli handle.
+`ProvideLibrary`consente al debugger di fornire i moduli necessari per il debug di file CLR specifici, ad esempio mscordbi. dll e mscordacwks. dll. Gli handle del modulo devono rimanere validi fino a quando una chiamata al metodo [ICLRDebugging:: CanUnloadNow](iclrdebugging-canunloadnow-method.md) non indica che possono essere liberati, a quel punto è responsabilità del chiamante liberare gli handle.
 
 Il debugger può utilizzare qualsiasi mezzo disponibile per individuare o procurare il modulo di debug.
 
@@ -71,15 +71,15 @@ Il debugger può utilizzare qualsiasi mezzo disponibile per individuare o procur
 >
 > Se viene individuato un problema di sicurezza grave in una libreria già rilasciata, ad esempio mscordbi. dll o mscordacwks. dll, è possibile applicare una patch allo shim per riconoscere le versioni non valide dei file. Lo shim può quindi inviare richieste per le versioni con patch dei file e rifiutare le versioni non valide se vengono fornite in risposta a una richiesta. Questa situazione può verificarsi solo se l'utente ha eseguito la correzione a una nuova versione dello shim. Le versioni senza patch rimarranno vulnerabili.
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
 **Intestazione:** CorDebug.idl, CorDebug.h
 
 **Libreria:** CorGuids.lib
 
-**Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
+**Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
 

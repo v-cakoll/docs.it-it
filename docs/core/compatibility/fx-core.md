@@ -2,13 +2,13 @@
 title: Modifiche di rilievo-.NET Framework a .NET Core
 titleSuffix: ''
 description: Elenca le modifiche di rilievo da .NET Framework a .NET Core.
-ms.date: 12/18/2019
-ms.openlocfilehash: df5907e05c6a2aed478d64cc40c5d6f051f92f96
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.date: 05/05/2020
+ms.openlocfilehash: bb18e38fecc0805dfafe6a16c853ae04fd2a2913
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595702"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859950"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Modifiche di rilievo per la migrazione da .NET Framework a .NET Core
 
@@ -54,7 +54,17 @@ Se si esegue la migrazione di un'app da .NET Framework a .NET Core, le modifiche
 
 ***
 
-## <a name="windows-forms"></a>Windows Form
+## <a name="networking"></a>Rete
+
+- [WebClient. CancelAsync non viene sempre annullato immediatamente](#webclientcancelasync-doesnt-always-cancel-immediately)
+
+### <a name="net-core-20"></a>.NET Core 2.0
+
+[!INCLUDE [behavior-change-webclient-cancelasync](../../../includes/core-changes/networking/2.0/behavior-change-webclient-cancelasync.md)]
+
+***
+
+## <a name="windows-forms"></a>Windows Forms
 
 È stato aggiunto il supporto Windows Forms a .NET Core nella versione 3,0. Se si esegue la migrazione di un'app Windows Forms da .NET Framework a .NET Core, le modifiche di rilievo elencate qui potrebbero influire sull'app.
 
