@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e30c29f7-3f19-4081-b572-a731aa14cd44
 topic_type:
 - apiref
-ms.openlocfilehash: 50794e96484432c8b7c203f6b8caa60130068a8c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 24dc55cc9a49c3602829ca627d584c761b4088ce
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122778"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894739"
 ---
 # <a name="icordebugbreakpointactivate-method"></a>Metodo ICorDebugBreakpoint::Activate
-Imposta lo stato attivo di questo `ICorDebugBreakpoint`.  
+Imposta lo stato attivo di questo `ICorDebugBreakpoint`oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,13 +35,13 @@ HRESULT Activate (
   
 ## <a name="parameters"></a>Parametri  
  `bActive`  
- in Impostare questo valore su `true` per specificare lo stato come attivo; in caso contrario, impostare questo valore su `false`.  
+ in Impostare questo valore su `true` per specificare lo stato come attivo; in caso contrario, impostare questo `false`valore su.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

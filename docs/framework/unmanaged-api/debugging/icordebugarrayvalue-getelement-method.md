@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ac3cba5-c282-402e-b7ef-b46634f5176b
 topic_type:
 - apiref
-ms.openlocfilehash: adcb7b5a27f3b8c63dbbb660a23b5c891f84ac46
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7a52e61f41bd1d7f68523dd16f70010ffbba401e
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179014"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895028"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>Metodo ICorDebugArrayValue::GetElement
-Ottiene il valore dell'elemento della matrice specificato.  
+Ottiene il valore dell'elemento di matrice specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,23 +38,23 @@ HRESULT GetElement (
   
 ## <a name="parameters"></a>Parametri  
  `cdim`  
- [in] Numero di dimensioni `ICorDebugArrayValue` di questo oggetto.  
+ in Numero di dimensioni dell' `ICorDebugArrayValue` oggetto.  
   
- Questo valore è anche `indices` la dimensione della matrice perché la sua `ICorDebugArrayValue` dimensione è uguale al numero di dimensioni dell'oggetto.  
+ Questo valore corrisponde anche alla dimensione della `indices` matrice perché la relativa dimensione è uguale al numero di dimensioni dell' `ICorDebugArrayValue` oggetto.  
   
  `indices`  
- [in] Matrice di valori di indice, ognuno dei quali `ICorDebugArrayValue` specifica una posizione all'interno di una dimensione dell'oggetto.  
+ in Matrice di valori di indice, ognuno dei quali specifica una posizione all'interno di una dimensione `ICorDebugArrayValue` dell'oggetto.  
   
- Questo valore non deve essere null.  
+ Questo valore non può essere null.  
   
  `ppValue`  
- [fuori] Puntatore all'indirizzo di un ICorDebugValue oggetto che rappresenta il valore dell'elemento specificato.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugValue che rappresenta il valore dell'elemento specificato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

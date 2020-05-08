@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d657a28-6984-4c5e-8a54-89d20080baff
 topic_type:
 - apiref
-ms.openlocfilehash: ecd4ad31b8dad55e9538642a4dc652341bc84b97
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d9e2236b944137de82bb056820f81014febfcc5f
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784669"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894905"
 ---
 # <a name="icordebugassembly-interface"></a>Interfaccia ICorDebugAssembly
 
@@ -30,24 +30,24 @@ Rappresenta un assembly.
 |Metodo|Descrizione|  
 |------------|-----------------|  
 |[Metodo EnumerateModules](icordebugassembly-enumeratemodules-method.md)|Ottiene un enumeratore per i moduli contenuti nell'assembly.|  
-|[Metodo GetAppDomain](icordebugassembly-getappdomain-method.md)|Ottiene un puntatore a interfaccia per il dominio dell'applicazione che contiene questa istanza di `ICorDebugAssembly`.|  
+|[Metodo GetAppDomain](icordebugassembly-getappdomain-method.md)|Ottiene un puntatore a interfaccia per il dominio dell'applicazione che `ICorDebugAssembly` contiene l'istanza.|  
 |[Metodo GetCodeBase](icordebugassembly-getcodebase-method.md)|Non implementato nella versione corrente del .NET Framework.|  
 |[Metodo GetName](icordebugassembly-getname-method.md)|Ottiene il nome dell'assembly.|  
 |[Metodo GetProcess](icordebugassembly-getprocess-method.md)|Ottiene l'istanza di ICorDebugProcess in cui è in esecuzione l'assembly.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

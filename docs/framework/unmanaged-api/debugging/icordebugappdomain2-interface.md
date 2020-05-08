@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 314d29f3-feb0-4a92-9530-b569c280cc31
 topic_type:
 - apiref
-ms.openlocfilehash: 6f9bcec66ff613d19c1198ac9849ca28c978f537
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1643d91f373ff233540026440ee21aa4c146f3e3
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788949"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895139"
 ---
 # <a name="icordebugappdomain2-interface"></a>Interfaccia ICorDebugAppDomain2
 
@@ -32,19 +32,19 @@ Fornisce metodi per lavorare con matrici, puntatori, puntatori a funzione e tipi
 |[Metodo GetArrayOrPointerType](icordebugappdomain2-getarrayorpointertype-method.md)|Ottiene una matrice del tipo specificato o un puntatore o un riferimento al tipo specificato.|  
 |[GetFunctionPointerType](icordebugappdomain2-getfunctionpointertype-method.md)|Ottiene un puntatore a una funzione con una firma specificata.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

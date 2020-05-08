@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 32c27576-71fa-42ee-8230-67b92913ea08
 topic_type:
 - apiref
-ms.openlocfilehash: 87c43d6f05dffbf10ca1dd9253abfe893db9adf5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 63346c679efc083dea9ab0eaa4f983a5308695f8
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110472"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895246"
 ---
 # <a name="icordebugappdomaingetid-method"></a>Metodo ICorDebugAppDomain::GetId
 Ottiene l'identificatore univoco del dominio dell'applicazione.  
@@ -37,14 +37,14 @@ HRESULT GetID (
  `pId`  
  out Identificatore univoco del dominio dell'applicazione.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'identificatore per il dominio dell'applicazione è univoco all'interno del processo contenitore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
