@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97e493f5-3a62-4ec7-b42f-4af57bf71f57
 topic_type:
 - apiref
-ms.openlocfilehash: 166f6bb50849df8550871958d7034fdf2a841abb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bbf43f3936823b9a8e562cb32cfa2eef08840033
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089121"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895183"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>Metodo ICorDebugAppDomain2::GetArrayOrPointerType
 Ottiene una matrice del tipo specificato o un puntatore o un riferimento al tipo specificato.  
@@ -41,7 +41,7 @@ HRESULT GetArrayOrPointerType (
  in Valore dell'enumerazione CorElementType che specifica il tipo nativo sottostante, ovvero una matrice, un puntatore o un riferimento, da creare.  
   
  `nRank`  
- in Rango (ovvero, numero di dimensioni) della matrice. Se `elementType` specifica un puntatore o un tipo di riferimento, questo valore deve essere 0.  
+ in Rango (ovvero, numero di dimensioni) della matrice. Questo valore deve essere 0 se `elementType` specifica un puntatore o un tipo di riferimento.  
   
  `pTypeArg`  
  in Puntatore a un oggetto ICorDebugType che rappresenta il tipo di matrice, puntatore o riferimento da creare.  
@@ -49,7 +49,7 @@ HRESULT GetArrayOrPointerType (
  `ppType`  
  out Puntatore all'indirizzo di un `ICorDebugType` oggetto che rappresenta la matrice costruita, il tipo di puntatore o il tipo di riferimento.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il valore di *elementType* deve essere uno dei seguenti:  
   
 - ELEMENT_TYPE_PTR  
@@ -61,10 +61,10 @@ HRESULT GetArrayOrPointerType (
  Se il valore di *elementType* è ELEMENT_TYPE_PTR o ELEMENT_TYPE_BYREF, *nRank* deve essere zero.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

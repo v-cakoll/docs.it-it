@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdeda721-b214-4503-a291-c70b68b5f36b
 topic_type:
 - apiref
-ms.openlocfilehash: 5e3619d12b9377a8482254703d3d97d0348a013b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: daf5319f5d57f44cb20ce9f28d3c7b84c7015ff6
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127166"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894913"
 ---
 # <a name="icordebugassemblygetname-method"></a>Metodo ICorDebugAssembly::GetName
-Ottiene il nome dell'assembly rappresentato da questa istanza di `ICorDebugAssembly`.  
+Ottiene il nome dell'assembly rappresentato da questa `ICorDebugAssembly` istanza.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,14 +45,14 @@ HRESULT GetName (
  `szName`  
  out Matrice che archivia il nome.  
   
-## <a name="remarks"></a>Note  
- Il metodo `GetName` restituisce il percorso completo e il nome file dell'assembly.  
+## <a name="remarks"></a>Osservazioni  
+ Il `GetName` metodo restituisce il percorso completo e il nome file dell'assembly.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

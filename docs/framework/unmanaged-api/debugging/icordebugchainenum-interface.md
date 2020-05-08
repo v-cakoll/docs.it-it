@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6639335c-48e1-4e74-a4f3-70a6a0f54af1
 topic_type:
 - apiref
-ms.openlocfilehash: 1f94e2e1f6b376a1998ba4fbcc940147eb16272a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4556ebbd05e0660da14fb59d806c8feb0b45b9bb
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784202"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894221"
 ---
 # <a name="icordebugchainenum-interface"></a>Interfaccia ICorDebugChainEnum
 
@@ -29,21 +29,21 @@ Implementa i metodi ICorDebugEnum ed enumera le matrici ICorDebugChain.
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Next](icordebugchainenum-next-method.md)|Ottiene il numero specificato di istanze di `ICorDebugChain` dall'enumerazione, a partire dalla posizione corrente.|  
+|[Metodo Next](icordebugchainenum-next-method.md)|Ottiene il numero specificato di `ICorDebugChain` istanze dall'enumerazione, a partire dalla posizione corrente.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06fae364-f2c6-4a50-aa7e-3da9f2684dc3
 topic_type:
 - apiref
-ms.openlocfilehash: b98077914d680c908587649fdd517aca9c8dcd40
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 480fec4897dac73594515ba8bc0f0e96ceb79ace
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125434"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82892906"
 ---
 # <a name="icordebugcontrollerdetach-method"></a>Metodo ICorDebugController::Detach
 Scollega il debugger dal dominio del processo o dell'applicazione.  
@@ -31,18 +31,18 @@ Scollega il debugger dal dominio del processo o dell'applicazione.
 HRESULT Detach ();  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il processo o il dominio applicazione continua l'esecuzione normalmente, ma l'oggetto "ICorDebugProcess" o "ICorDebugAppDomain" non è più valido e non si verificheranno ulteriori callback.  
   
  Nel .NET Framework versione 2,0, se è abilitato il debug non gestito, questo metodo avrà esito negativo a causa delle limitazioni del sistema operativo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche

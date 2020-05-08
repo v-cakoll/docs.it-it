@@ -2,12 +2,12 @@
 title: Uso di contenitori e agenti di orchestrazione
 description: Uso dei contenitori Docker e degli agenti di orchestrazione Kubernetes in Azure
 ms.date: 04/13/2020
-ms.openlocfilehash: 3d94433250f02a8df2c27ebc89a101e1e8d15030
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 64c6c0666398d9ccbc87efad18017bf278568fc4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199833"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895555"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Uso di contenitori e agenti di orchestrazione
 
@@ -55,10 +55,29 @@ I contenitori vengono definiti da semplici file basati su testo che diventano el
 
 I contenitori non sono modificabili. Una volta definito un contenitore, è possibile ricrearlo ed eseguirlo esattamente allo stesso modo. Questa immutabilità si presta alla progettazione basata su componenti. Se alcune parti di un'applicazione si evolvono in modo diverso rispetto ad altre, perché ridistribuire l'intera applicazione quando è possibile distribuire solo le parti che cambiano più di frequente? Diverse funzionalità e problematiche trasversali di un'app possono essere suddivise in unità separate. La figura 3-2 Mostra come un'app monolitica può sfruttare i vantaggi di contenitori e microservizi delegando determinate funzionalità o funzionalità. Anche le funzionalità rimanenti nell'app sono state incluse nel contenitore.
 
+I contenitori non sono modificabili. Una volta definito un contenitore, è possibile ricrearlo ed eseguirlo esattamente allo stesso modo. Questa immutabilità si presta alla progettazione basata su componenti. Se alcune parti di un'applicazione si evolvono in modo diverso rispetto ad altre, perché ridistribuire l'intera applicazione quando è possibile distribuire solo le parti che cambiano più di frequente? Diverse funzionalità e problematiche trasversali di un'app possono essere suddivise in unità separate. La figura 3-2 Mostra come un'app monolitica può sfruttare i vantaggi di contenitori e microservizi delegando determinate funzionalità o funzionalità. Anche le funzionalità rimanenti nell'app sono state incluse nel contenitore.
+
 ![Suddivisione di un'app monolitica per l'uso di microservizi nel back-end. ](./media/breaking-up-monolith-with-backend-microservices.png)
  **Figura 3-2**. Suddivisione di un'app monolitica per l'uso di microservizi nel back-end.
 
 Ogni servizio nativo del cloud viene compilato e distribuito in un contenitore separato. Ogni può aggiornare in base alle esigenze. I singoli servizi possono essere ospitati in nodi con risorse appropriate per ogni servizio. L'ambiente in cui viene eseguito ogni servizio non è modificabile, è condiviso tra ambienti di sviluppo, test e produzione e con facilità di controllo delle versioni. L'accoppiamento tra aree diverse dell'applicazione si verifica in modo esplicito come chiamate o messaggi tra servizi, non dipendenze in fase di compilazione all'interno di Monolith. È anche possibile scegliere la tecnologia più adatta a una determinata funzionalità senza richiedere modifiche al resto dell'app.
+
+I servizi in contenitori richiedono la gestione automatica. Non sarebbe possibile amministrare manualmente un ampio set di contenitori distribuiti in modo indipendente. Si considerino, ad esempio, le attività seguenti:
+
+- Come verrà effettuato il provisioning delle istanze di contenitore in un cluster di molti computer?
+- Dopo la distribuzione, in che modo i contenitori rileveranno e comunicheranno tra loro?
+- In che modo i contenitori possono aumentare o ridurre la scalabilità su richiesta?
+- Come è possibile monitorare l'integrità di ogni contenitore?
+- In che modo è possibile proteggere un contenitore da errori hardware e software?
+- Come si aggiornano i contenitori per un'applicazione dinamica senza tempi di inattività?
+
+Gli agenti di orchestrazione dei contenitori indirizzano e automatizzano queste e altre problematiche.
+
+Nel sistema eco-nativo del cloud, Kubernetes è diventato l'agente di orchestrazione del contenitore de facto. Si tratta di una piattaforma open source gestita da cloud native Computing Foundation (CNCF). Kubernetes automatizza la distribuzione, il ridimensionamento e i problemi operativi dei carichi di lavoro in contenitori in un cluster di computer. Tuttavia, l'installazione e la gestione di Kubernetes è notoriamente complessa.
+
+Un approccio molto migliore consiste nell'utilizzare Kubernetes come servizio gestito da un fornitore di cloud. Il cloud di Azure offre una piattaforma Kubernetes completamente gestita denominata [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/). AKS astrae la complessità e il sovraccarico operativo della gestione di Kubernetes. Si usa Kubernetes come servizio cloud; Microsoft si assume la responsabilità di gestirla e supportarla. AKS si integra inoltre strettamente con altri servizi e strumenti di sviluppo di Azure.
+
+AKS è una tecnologia basata su cluster. Un pool di macchine virtuali federate, o nodi, viene distribuito nel cloud di Azure. Insieme formano un ambiente a disponibilità elevata o un cluster. Il cluster viene visualizzato come una singola entità semplice per l'applicazione nativa del cloud. Dietro le quinte, AKS distribuisce i servizi in contenitori in questi nodi seguendo una strategia predefinita che distribuisce il carico in modo uniforme.
 
 I servizi in contenitori richiedono la gestione automatica. Non sarebbe possibile amministrare manualmente un ampio set di contenitori distribuiti in modo indipendente. Si considerino, ad esempio, le attività seguenti:
 
@@ -144,7 +163,7 @@ Se non si è in grado di compilare l'applicazione in base ai principi dell'app a
 
 ## <a name="development-resources"></a>Risorse di sviluppo
 
-Questa sezione presenta un breve elenco di risorse di sviluppo che possono essere utili per iniziare a usare i contenitori e gli agenti di orchestrazione per l'applicazione successiva. Per informazioni aggiuntive su come progettare un'app per l'architettura di microservizi nativa del cloud, vedere l'articolo complementare [per i microservizi .NET di questo libro: architettura per le applicazioni .NET in contenitori](https://aka.ms/microservicesebook).
+Questa sezione presenta un breve elenco di risorse di sviluppo che possono essere utili per iniziare a usare i contenitori e gli agenti di orchestrazione per l'applicazione successiva. Per informazioni aggiuntive su come progettare un'app per l'architettura di microservizi nativa del cloud, vedere l'articolo complementare [per i microservizi .NET di questo libro: architettura per le applicazioni .NET in contenitori](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook).
 
 ### <a name="local-kubernetes-development"></a>Sviluppo Kubernetes locale
 
@@ -219,15 +238,19 @@ Oltre allo sviluppo locale, [Azure Dev Spaces](https://docs.microsoft.com/azure/
 
 Inoltre, in qualsiasi momento è possibile aggiungere il supporto di Docker a un'applicazione ASP.NET Core esistente. Dalla Esplora soluzioni di Visual Studio, fare clic con il pulsante destro del mouse sul progetto e **aggiungere** > il**supporto di Docker**, come illustrato nella figura 3-8.
 
-![Aggiunta del supporto per Docker in Visual Studio](./media/visual-studio-add-docker-support.png)
-
-**Figura 3-8**. Aggiunta del supporto per Docker in Visual Studio
+**Figura 3-8**. Aggiunta del supporto Docker a Visual Studio
 
 È anche possibile aggiungere il supporto dell'orchestrazione del contenitore, illustrato nella figura 3-8. Per impostazione predefinita, l'agente di orchestrazione USA Kubernetes e Helm. Dopo aver scelto l'agente di orchestrazione `azds.yaml` , viene aggiunto un file alla radice del progetto `charts` e viene aggiunta una cartella contenente i grafici Helm usati per configurare e distribuire l'applicazione in Kubernetes. La figura 3-9 Mostra i file risultanti in un nuovo progetto.
 
-![Aggiunta del supporto dell'agente di orchestrazione in Visual Studio](./media/visual-studio-add-orchestrator-support.png)
+È anche possibile aggiungere il supporto dell'orchestrazione del contenitore, illustrato nella figura 3-8. Per impostazione predefinita, l'agente di orchestrazione USA Kubernetes e Helm. Dopo aver scelto l'agente di orchestrazione `azds.yaml` , viene aggiunto un file alla radice del progetto `charts` e viene aggiunta una cartella contenente i grafici Helm usati per configurare e distribuire l'applicazione in Kubernetes. La figura 3-9 Mostra i file risultanti in un nuovo progetto.
 
-**Figura 3-9**. Aggiunta del supporto dell'agente di orchestrazione in Visual Studio
+**Figura 3-9**. Aggiunta del supporto dell'orchestrazione a Visual Studio
+
+### <a name="visual-studio-code-docker-tooling"></a>Strumenti Docker Visual Studio Code
+
+Sono disponibili numerose estensioni per Visual Studio Code che supportano lo sviluppo di Docker.
+
+Microsoft fornisce l' [estensione Docker per Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker). Questa estensione semplifica il processo di aggiunta del supporto del contenitore alle applicazioni. Esegue l'impalcatura dei file necessari, compila le immagini Docker e consente di eseguire il debug dell'app all'interno di un contenitore. L'estensione include una finestra di esplorazione visiva che semplifica l'esecuzione di azioni su contenitori e immagini, ad esempio avvio, arresto, ispezione, rimozione e altro ancora. L'estensione supporta inoltre Docker Compose consentendo di gestire più contenitori in esecuzione come una singola unità.
 
 >[!div class="step-by-step"]
 >[Precedente](scale-applications.md)

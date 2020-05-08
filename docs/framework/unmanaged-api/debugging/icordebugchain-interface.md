@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f671f519-1cb3-4ae5-b9f1-abc5e783459f
 topic_type:
 - apiref
-ms.openlocfilehash: f4bacfe94178ea78b1c3afd15a2e100076c38a84
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6ae0fec0f8de2bbe3862f9f70ed9cf3d32af34c4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777992"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894205"
 ---
 # <a name="icordebugchain-interface"></a>Interfaccia ICorDebugChain
 
@@ -42,20 +42,20 @@ Rappresenta un segmento di uno stack di chiamate fisico o logico.
 |[Metodo GetThread](icordebugchain-getthread-method.md)|Ottiene il thread fisico di cui fa parte questa catena di chiamate.|  
 |[Metodo IsManaged](icordebugchain-ismanaged-method.md)|Ottiene un valore che indica se la catena sta eseguendo codice gestito.|  
   
-## <a name="remarks"></a>Note  
- Gli stack frame in una catena occupano lo spazio dello stack contiguo e condividono lo stesso thread e lo stesso contesto. Una catena può rappresentare catene di codice gestite o non gestite. Un'istanza di `ICorDebugChain` vuota rappresenta una catena di codice non gestita.  
+## <a name="remarks"></a>Osservazioni  
+ Gli stack frame in una catena occupano lo spazio dello stack contiguo e condividono lo stesso thread e lo stesso contesto. Una catena può rappresentare catene di codice gestite o non gestite. Un'istanza `ICorDebugChain` vuota rappresenta una catena di codice non gestita.  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

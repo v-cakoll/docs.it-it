@@ -1,14 +1,14 @@
 ---
 title: Introduzione alle applicazioni cloud native
-description: Scopri di più sull'elaborazione nativa del cloud
+description: Informazioni sul cloud-native computing
 author: robvet
 ms.date: 08/26/2019
-ms.openlocfilehash: c9ffd34ec3deb04abddbbf85a9e5a6ed2b57c8f9
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: e1f7683b6f3722bb91e611f199f2e9ce2bbefc63
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989051"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895527"
 ---
 # <a name="introduction-to-cloud-native-applications"></a>Introduzione alle applicazioni cloud native
 
@@ -16,70 +16,70 @@ ms.locfileid: "80989051"
 
 Un altro giorno, in ufficio, a lavorare su "la prossima grande cosa".
 
-Il tuo cellulare squilla. È il tuo amichevole reclutatore - quello che ti chiama due volte al giorno per nuovi lavori.
+Il cellulare squilla. Si tratta di un Recruiter gentile, ovvero quello che chiama due volte al giorno per i nuovi processi.
 
-Ma questa volta è diverso: start-up, equità, e un sacco di finanziamenti.
+Ma questa volta è diversa: avvio, equità e abbondanza di finanziamenti.
 
-La menzione del cloud e della tecnologia all'avanguardia ti spinge oltre l'edge.
+La menzione della tecnologia cloud e all'avanguardia ti permette di inserirti sul perimetro.
 
-Avanti rapidamente un paio di settimane e ora sei un nuovo dipendente in una sessione di progettazione che progetta un'importante applicazione di e-commerce. Si sta andando a completare con altri siti di e-commerce leader.
+È possibile procedere in modo rapido per alcune settimane e si è ora un nuovo dipendente in una sessione di progettazione che progetta un'applicazione di eCommerce principale. Si prevede di partecipare ad altri siti di eCommerce principali.
 
-Come lo costruirete?
+Come verrà compilato?
 
-Se si seguono le indicazioni degli ultimi 15 anni, molto probabilmente si creerà il sistema illustrato nella Figura 1.1.
+Se si seguono le linee guida degli ultimi 15 anni, probabilmente si creerà il sistema illustrato nella figura 1,1.
 
-![Design monolitico tradizionale](./media/monolithic-design.png)
+![Progettazione monolitica tradizionale](./media/monolithic-design.png)
 
-**Figura 1-1**. Design monolitico tradizionale
+**Figura 1-1**. Progettazione monolitica tradizionale
 
-Si costruisce un'applicazione di base di grandi dimensioni contenente tutta la logica di dominio. Include moduli come Identity, Catalog, Ordering e altro ancora. L'app di base comunica con un database relazionale di grandi dimensioni. Il nucleo espone funzionalità tramite un'interfaccia HTML.
+Si crea un'applicazione principale di grandi dimensioni contenente tutta la logica di dominio. Sono inclusi moduli quali identità, catalogo, ordinamento e altro ancora. L'app principale comunica con un database relazionale di grandi dimensioni. Il nucleo espone la funzionalità tramite un'interfaccia HTML.
 
-Congratulazioni!  Hai appena creato un'applicazione monolitica.
+Congratulazioni!  È stata appena creata un'applicazione monolitica.
 
-Non tutto è male. I monoliti offrono alcuni vantaggi distinti. Ad esempio, sono semplici da...
+Non è tutto negativo. I monoliti offrono alcuni vantaggi distinti. Ad esempio, sono semplici da...
 
 - build
 - test
 - distribuire
-- Risolvere
+- risolvere i problemi
 - scala
 
-Molte app di successo che esistono oggi sono state create come monoliti. L'applicazione è un successo e continua ad evolversi, iterazione dopo iterazione, aggiungendo sempre più funzionalità.
+Molte app riuscite attualmente disponibili sono state create come Monolith. L'app è un hit e continua ad evolversi, iterazione dopo l'iterazione, aggiungendo altre funzionalità.
 
-Ad un certo punto, però, si inizia a sentirsi a disagio. Ti ritrovi a perdere il controllo dell'applicazione. Col passare del tempo, la sensazione diventa più intensa e alla fine si entra in uno stato noto come il ciclo della **paura**.
+A un certo punto, tuttavia, si inizia a provare a disagio. Si perde il controllo dell'applicazione. Con il passare del tempo, la sensazione diventa più intensa e infine si entra in uno stato noto come **ciclo di paura**.
 
-- L'applicazione è diventata così schiacciante complicato che nessuna persona lo capisce.
-- Si teme di apportare modifiche - ogni modifica ha effetti collaterali involontari e costosi.
-- Le nuove funzionalità/correzioni diventano difficili, dispendiose in termini di tempo e costose da implementare.
-- Ogni versione è piccola come richiede una distribuzione completa dell'intera applicazione.
-- Un componente instabile può causare l'arresto anomalo dell'intero sistema.
-- Le nuove tecnologie e i nuovi framework non sono un'opzione.
-- È difficile implementare metodologie di distribuzione agile.
-- L'erosione architettonica si instaede quando la base di codice si deteriora con "casi speciali" senza fine.
-- I consulenti ti dicono di riscriverlo.
+- L'app è diventata talmente complicata che nessuno lo riconosce.
+- Si temono di apportare modifiche. ogni modifica presenta effetti collaterali indesiderati e costosi.
+- Le nuove funzionalità e correzioni diventano difficili da implementare e dispendiose in termini di tempo.
+- Ogni versione può richiedere una distribuzione completa dell'intera applicazione.
+- Un componente instabile può arrestarsi in modo anomalo nell'intero sistema.
+- Le nuove tecnologie e i Framework non sono un'opzione.
+- È difficile implementare le metodologie di distribuzione agile.
+- L'erosione dell'architettura imposta in, in quanto la codebase si deteriora con "casi speciali" senza terminazione.
+- I consulenti indicano di riscriverlo.
 
-Molte organizzazioni hanno affrontato il ciclo della paura monolitica adottando un approccio cloud-native alla costruzione di sistemi. Nella figura 1-2 è illustrato lo stesso sistema creato applicando tecniche e procedure native nel cloud.
+Molte organizzazioni hanno affrontato il ciclo di paure monolitico adottando un approccio nativo al cloud per la creazione di sistemi. La figura 1-2 Mostra lo stesso sistema creato applicando tecniche e procedure native del cloud.
 
-![Progettazione nativa cloud](./media/cloud-native-design.png)
+![Progettazione nativa del cloud](./media/cloud-native-design.png)
 
 **Figura 1-2**. Progettazione nativa del cloud
 
-Si noti come l'applicazione viene scomposta in un set di piccoli microservizi isolati. Ogni servizio è indipendente e incapsula il proprio codice, i dati e le dipendenze. Ognuno viene distribuito in un contenitore software e gestito da un agente di orchestrazione del contenitore. Invece di un database relazionale di grandi dimensioni, ogni servizio è proprietario di un proprio archivio dati, il cui tipo varia in base alle esigenze dei dati. Si noti come alcuni servizi dipendono da un database relazionale, ma altri su database NoSQL.Note how some services depend on a relational database, but other on NoSQL databases. Un servizio archivia il proprio stato in una cache distribuita. Si noti il modo in cui tutto il traffico viene instradato tramite un servizio gateway API responsabile del routing del traffico ai servizi back-end principali e dell'applicazione di molti problemi trasversali. Ancora più importante, l'applicazione sfrutta appieno le funzionalità di scalabilità e resilienza presenti nelle moderne piattaforme cloud.
+Si noti il modo in cui l'applicazione è scomposta in un set di microservizi isolati di piccole dimensioni. Ogni servizio è indipendente e incapsula il proprio codice, i dati e le dipendenze. Ogni viene distribuito in un contenitore software e gestito da un agente di orchestrazione dei contenitori. Invece di un database relazionale di grandi dimensioni, ogni servizio è proprietario del proprio archivio dati, il tipo di che varia in base alle esigenze dei dati. Si noti che alcuni servizi dipendono da un database relazionale, ma altri nei database NoSQL. Un servizio archivia lo stato in una cache distribuita. Si noti il modo in cui tutto il traffico viene indirizzato attraverso un servizio gateway API responsabile del routing del traffico ai servizi back-end di base e dell'applicazione di molte problematiche trasversali. In particolare, l'applicazione sfrutta appieno le funzionalità di scalabilità e resilienza disponibili nelle piattaforme cloud moderne.
 
-### <a name="cloud-native-computing"></a>Cloud-native computing
+### <a name="cloud-native-computing"></a>Elaborazione nativa del cloud
 
-Hmm... Abbiamo appena usato il termine,*"Cloud Native".* Per prima cosa pensavi: "Che cosa significa esattamente?" Un'altra parola d'ordine del settore inventata dai fornitori di software per commercializzare più roba?"
+OK... Abbiamo appena usato il termine "*cloud native*". Il primo pensiero potrebbe essere "che cosa significa esattamente?" Un'altra parola d'altro settore inventata dai fornitori di software per commercializzare più cose? "
 
-Fortunatamente è molto diverso e spero che questo libro vi aiuterà a convincervi.
+Fortunatamente è molto diverso e speriamo che questo libro consenta di convincerlo.
 
-In breve tempo, cloud native è diventato una tendenza trainante nel settore del software. È un nuovo modo di pensare alla creazione di sistemi complessi di grandi dimensioni, un approccio che sfrutta appieno le moderne pratiche, tecnologie e infrastruttura cloud per lo sviluppo software. L'approccio cambia il modo in cui progetti, implementi, distribuisci e operativizzi i sistemi.
+Nell'arco di un breve periodo di tempo, cloud native è diventato una tendenza di guida nel settore del software. Si tratta di un nuovo modo per considerare la creazione di sistemi complessi e di grandi dimensioni, un approccio che sfrutta appieno le moderne procedure di sviluppo del software, le tecnologie e l'infrastruttura cloud. L'approccio modifica la modalità di progettazione, implementazione, distribuzione e rendere operativo dei sistemi.
 
-A differenza del continuo hype che guida il nostro settore, il cloud native è "*per davvero*". Si consideri la [Cloud Native Computing Foundation](https://www.cncf.io/) (CNCF), un consorzio di oltre 300 grandi aziende con una carta per rendere il cloud-native computing oniquo attraverso la tecnologia e gli stack cloud. Come uno dei gruppi open source più influenti, ospita molti dei progetti open source in più rapida crescita in GitHub. Includono progetti come [Kubernetes](https://kubernetes.io/), [Prometheus](https://prometheus.io/), [Helm](https://helm.sh/), [Envoy](https://www.envoyproxy.io/)e [gRPC](https://grpc.io/).
+A differenza dell'hype continuo che guida il nostro settore, il cloud nativo è "*per la realtà*". Si consideri il [cloud native Computing Foundation](https://www.cncf.io/) (CNCF), un consorzio di oltre 300 aziende principali con una carta per rendere il computer nativo dal cloud onnipresente tra tecnologie e stack cloud. In qualità di uno dei gruppi open source più influenti, ospita molti dei progetti open source più veloci, in GitHub. Sono inclusi progetti come [Kubernetes](https://kubernetes.io/), [Prometeo](https://prometheus.io/), [Helm](https://helm.sh/), [inviato](https://www.envoyproxy.io/)e [gRPC](https://grpc.io/).
 
-Il CNCF promuove un ecosistema di neutralità open source e vendor. Seguendo questo vantaggio, presentiamo principi, modelli e best practice indipendenti dal cloud che sono indipendenti dalla tecnologia. Allo stesso tempo, vengono illustrati i servizi e l'infrastruttura disponibili nel cloud di Microsoft Azure per la costruzione di sistemi nativi cloud.
+Il CNCF promuove un ecosistema di Open Source e neutralità del fornitore. In seguito, vengono presentati i principi, i modelli e le procedure consigliate native del cloud, indipendenti dalla tecnologia. Allo stesso tempo, verranno illustrati i servizi e l'infrastruttura disponibili nel cloud Microsoft Azure per la creazione di sistemi nativi del cloud.
 
-Quindi, che cosa è esattamente Cloud Native? Siedi, rilassati e lascia che ti aiutiamo a esplorare questo nuovo mondo.
+Che cos'è esattamente il cloud nativo? Torna indietro, rilassati e ti aiuteremo a esplorare questo nuovo mondo.
 
 >[!div class="step-by-step"]
->[Successivo](index.md)
->[precedente](definition.md)
+>[Precedente](index.md)
+>[successivo](definition.md)

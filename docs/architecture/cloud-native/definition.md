@@ -3,12 +3,12 @@ title: Definizione di cloud nativo
 description: Informazioni sui pilastri fondamentali che forniscono il fondamento per i sistemi nativi del cloud
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: ba11cb1cf0d9d7ef9734ad49aee1df22f285fc4c
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 33977ff736fc5cbfcf86ed6479e8d0b927b87a63
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199781"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895610"
 ---
 # <a name="defining-cloud-native"></a>Definizione del cloud nativo
 
@@ -34,9 +34,9 @@ Di seguito sono riportate alcune società che hanno implementato queste tecniche
 
 | Company | Esperienza |
 | :-------- | :-------- |
-| [Netflix](https://www.infoq.com/news/2013/06/netflix/) | In produzione sono presenti oltre 600 servizi. Distribuisce un centinaio di volte al giorno. |
-| [Uber](https://eng.uber.com/micro-deploy/) | Sono presenti oltre 1000 servizi archiviati nell'ambiente di produzione. Distribuisce diverse migliaia di build ogni settimana. |
-| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | In produzione sono presenti 300 servizi. Apporta circa 1.000 modifiche al giorno. |
+| [Netflix](https://www.infoq.com/news/2013/06/netflix/) | In produzione sono presenti oltre 600 servizi. Distribuisce centinaia di volte al giorno. |
+| [Uber](https://eng.uber.com/micro-deploy/) | In produzione sono presenti oltre 1000 servizi. Distribuisce diverse migliaia di volte ogni settimana. |
+| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | In produzione sono presenti 300 servizi. Distribuisce 1.000 volte al giorno. |
 
 Come si può vedere, Netflix, Uber e WeChat espongono sistemi costituiti da centinaia di microservizi indipendenti. Questo stile di architettura consente loro di rispondere rapidamente alle condizioni di mercato. Possono aggiornare immediatamente piccole aree di un'applicazione dinamica e complessa e ridimensionare singolarmente le aree in base alle esigenze.
 
@@ -79,7 +79,7 @@ Nella tabella seguente viene evidenziata la metodologia a dodici fattori:
 |    |  Fattore | Spiegazione  |
 | :-------- | :-------- | :-------- |
 | 1 | Codebase | Una singola codebase per ogni microservizio, archiviato nel proprio repository. Con il controllo della versione, è possibile eseguire la distribuzione in più ambienti (QA, staging, produzione). |
-| 2 | Dependencies | Ogni microservizio isola e impacchetta le proprie dipendenze, accettando le modifiche senza alcun effetto sull'intero sistema. |
+| 2 | Dipendenze | Ogni microservizio isola e impacchetta le proprie dipendenze, accettando le modifiche senza alcun effetto sull'intero sistema. |
 | 3 | Configurazioni  | Le informazioni di configurazione vengono spostate al di fuori del microservizio ed esternalizzate tramite uno strumento di gestione della configurazione all'esterno del codice. La stessa distribuzione può propagarsi tra gli ambienti con la configurazione corretta applicata.  |
 | 4 | Servizi di supporto | Le risorse ausiliarie (archivi dati, cache, broker di messaggi) devono essere esposte tramite un URL indirizzabile. Questa operazione separa la risorsa dall'applicazione, consentendo l'interscambiabilità.  |
 | 5 | Compilazione, versione, esecuzione | Ogni versione deve applicare una rigorosa separazione tra le fasi di compilazione, rilascio ed esecuzione. Ogni deve essere contrassegnato con un ID univoco e supportare la possibilità di eseguire il rollback. I sistemi di integrazione continua/recapito continuo moderni contribuiscono a soddisfare questo principio. |
@@ -95,7 +95,7 @@ Nel libro, [oltre all'app a dodici](https://content.pivotal.io/blog/beyond-the-
 
 |    |  Nuovo fattore | Spiegazione  |
 | :-------- | :-------- | :-------- |
-| 13 | Prima API | Rendere tutto un servizio. Si supponga che il codice venga utilizzato da un client front-end, un gateway o un altro servizio. |
+| 13 | API First | Rendere tutto un servizio. Si supponga che il codice venga utilizzato da un client front-end, un gateway o un altro servizio. |
 | 14 | Telemetria | In una workstation è possibile ottenere visibilità approfondita dell'applicazione e del relativo comportamento. Nel cloud non è necessario. Assicurarsi che la progettazione includa la raccolta di dati di monitoraggio, specifici del dominio e integrità/sistema. |
 | 15 | Autenticazione/autorizzazione  | Implementare l'identità dall'inizio. Prendere in considerazione le funzionalità [RBAC (controllo degli accessi in base al ruolo)](https://docs.microsoft.com/azure/role-based-access-control/overview) disponibili nei cloud pubblici.  |
 
@@ -167,7 +167,7 @@ In precedenza nel capitolo è stata confrontata un'applicazione di eCommerce cre
 
 - Ogni microservizio può essere ridimensionato in modo indipendente. Anziché ridimensionare l'intera applicazione come singola unità, è possibile scalare solo i servizi che richiedono una maggiore potenza di elaborazione o la larghezza di banda di rete. Questo approccio con granularità fine per la scalabilità consente un maggiore controllo del sistema e consente di ridurre i costi complessivi quando si ridimensionano le parti del sistema, non tutti gli elementi.
 
-Una guida di riferimento eccellente per comprendere i microservizi è [microservizi .NET: architettura per le applicazioni .NET in contenitori](https://docs.microsoft.com/dotnet/standard/microservices-architecture/). Il libro approfondisce la progettazione e l'architettura di microservizi. È un complemento per un' [architettura di riferimento del microservizio con stack completo](https://github.com/dotnet-architecture/eShopOnContainers) disponibile come download gratuito da Microsoft.
+Una guida di riferimento eccellente per comprendere i microservizi è [microservizi .NET: architettura per le applicazioni .NET in contenitori](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook). Il libro approfondisce la progettazione e l'architettura di microservizi. È un complemento per un' [architettura di riferimento del microservizio con stack completo](https://github.com/dotnet-architecture/eShopOnContainers) disponibile come download gratuito da Microsoft.
 
 ### <a name="developing-microservices"></a>Sviluppo di microservizi
 

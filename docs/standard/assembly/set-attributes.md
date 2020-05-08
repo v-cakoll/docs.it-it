@@ -11,10 +11,10 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 0e4e2e595ed4f95511bd23ab0ed00139f71b2c8b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73740477"
 ---
 # <a name="set-assembly-attributes"></a>Impostare gli attributi dell'assembly
@@ -35,11 +35,11 @@ Tre attributi, insieme a un nome sicuro (se disponibile), consentono di determin
 
 Nella tabella seguente vengono descritti gli attributi relativi alla versione e alle impostazioni cultura.
 
-|Attributi relativi all'identità dell'assembly|Descrizione|
+|Attributi relativi all'identità dell'assembly|Description|
 |---------------------------------|-----------------|
 |<xref:System.Reflection.AssemblyCultureAttribute>|Campo elenco in cui vengono indicate le impostazioni cultura supportate dall'assembly. È possibile specificare anche l'indipendenza dalle impostazioni cultura per l'assembly, indicando che nell'assembly sono presenti le risorse per le impostazioni cultura predefinite. **Nota:** tutti gli assembly il cui attributo "Culture" non è impostato su Null vengono considerati dal runtime come assembly satellite. e sono soggetti alle regole di associazione degli assembly satellite. Per ulteriori informazioni, vedere [come il runtime individua gli assembly](../../framework/deployment/how-the-runtime-locates-assemblies.md).|
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Valore che consente di impostare gli attributi relativi all'assembly, indicando ad esempio se è consentita l'esecuzione affiancata di più versioni.|
-|<xref:System.Reflection.AssemblyVersionAttribute>|Valore numerico in formato *principale*.*secondario*.*build*.*revisione* (ad esempio, 2.4.0.0). Questo valore viene usato da Common Language Runtime per eseguire operazioni di associazione in assembly con nome sicuro. **Nota:** se l'attributo <xref:System.Reflection.AssemblyInformationalVersionAttribute> non viene applicato a un assembly, il numero di versione specificato dall'attributo <xref:System.Reflection.AssemblyVersionAttribute> viene usato dalle proprietà  <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|
+|<xref:System.Reflection.AssemblyVersionAttribute>|Valore numerico in formato *principale*.*secondario*.*build*.*revisione* (ad esempio, 2.4.0.0). Questo valore viene usato da Common Language Runtime per eseguire operazioni di associazione in assembly con nome sicuro. **Nota:**  Se l' <xref:System.Reflection.AssemblyInformationalVersionAttribute> attributo non viene applicato a un assembly, il numero di versione specificato dall' <xref:System.Reflection.AssemblyVersionAttribute> attributo viene usato dalle proprietà <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>e <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> .|
 
 Nel seguente esempio di codice viene mostrato come applicare a un assembly gli attributi relativi alla versione e alle impostazioni cultura.
 
@@ -68,7 +68,7 @@ Nel seguente esempio di codice viene mostrato come applicare a un assembly gli a
 
 Gli attributi informativi consentono di fornire informazioni aggiuntive relative alla società o al prodotto per un assembly. Nella tabella seguente vengono descritti gli attributi informativi che è possibile applicare a un assembly.
 
-|Attributo informativo|Descrizione|
+|Attributo informativo|Description|
 |-----------------------------|-----------------|
 |<xref:System.Reflection.AssemblyCompanyAttribute>|Valore stringa in cui viene specificato un nome di società.|
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|Valore stringa in cui vengono specificate informazioni relative al copyright.|
@@ -83,7 +83,7 @@ Gli attributi informativi consentono di fornire informazioni aggiuntive relative
 
 Gli attributi relativi al manifesto dell'assembly consentono di fornire informazioni nel manifesto dell'assembly, inclusi il titolo, la descrizione, l'alias predefinito e la configurazione. Nella tabella seguente vengono descritti gli attributi relativi al manifesto dell'assembly.
 
-|Attributo relativo al manifesto dell'assembly|Descrizione|
+|Attributo relativo al manifesto dell'assembly|Description|
 |---------------------------------|-----------------|
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Valore stringa che indica la configurazione dell'assembly, ad esempio finale o di debug. Questo valore non viene usato da Common Language Runtime.|
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Valore stringa in cui viene specificato l'alias predefinito che verrà usato dagli assembly contenenti riferimenti all'assembly corrente. Questo valore consente di fornire un nome descrittivo nel caso in cui il nome dell'assembly non sia descrittivo, ma corrisponda ad esempio a un valore GUID. È inoltre possibile usare questo valore come forma abbreviata del nome completo dell'assembly.|
@@ -94,7 +94,7 @@ Gli attributi relativi al manifesto dell'assembly consentono di fornire informaz
 
 Gli attributi relativi al nome sicuro consentono di impostare un nome sicuro per un assembly. Nella tabella seguente vengono descritti gli attributi relativi al nome sicuro.
 
-|Attributo nome sicuro|Descrizione|
+|Attributo nome sicuro|Description|
 |----------------------------|-----------------|
 |<xref:System.Reflection.AssemblyDelaySignAttribute>|Valore booleano che indica che viene usato il ritardo della firma.|
 |<xref:System.Reflection.AssemblyKeyFileAttribute>|Valore stringa che indica il nome del file contenente la chiave pubblica (se si usa il ritardo della firma) o la chiave pubblica e privata passate come parametro al costruttore di questo attributo. Si noti che il nome del file è relativo al percorso del file di output ( *exe* o *dll*), non al percorso del file di origine.|
@@ -119,4 +119,4 @@ Nell'esempio di codice seguente vengono illustrati gli attributi da applicare qu
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Creazione di assembly](create.md)
+- [Creare assembly](create.md)

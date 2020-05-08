@@ -2,14 +2,14 @@
 title: Dipendenze e librerie .NET
 description: Procedure consigliate per la gestione delle dipendenze NuGet nelle librerie .NET.
 ms.date: 10/02/2018
-ms.openlocfilehash: 6a260b54c45a0cd231059ab3bc6f2707ef7fb20e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 265e92e86d22c778f65476e7f1383d32e4964655
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76731486"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895701"
 ---
-# <a name="dependencies"></a>Dependencies
+# <a name="dependencies"></a>Dipendenze
 
 Il modo principale per aggiungere dipendenze a una libreria .NET consiste nel fare riferimento ai pacchetti NuGet. I riferimenti ai pacchetti NuGet consentono di riutilizzare rapidamente e di sfruttare le funzionalità già scritte, ma possono causare problemi per gli sviluppatori .NET. La corretta gestione delle dipendenze è importante per evitare che le modifiche apportate in altre librerie .NET impediscano il funzionamento della libreria .NET in uso e viceversa.
 
@@ -17,7 +17,7 @@ Il modo principale per aggiungere dipendenze a una libreria .NET consiste nel fa
 
 In un progetto .NET è comune la presenza di più versioni di un pacchetto nel relativo albero delle dipendenze. Ad esempio, un'app dipende da due pacchetti NuGet, ognuno dei quali dipende da versioni diverse dello stesso pacchetto. Nel grafo delle dipendenze dell'app è ora presente una dipendenza a rombo.
 
-![Dipendenza da diamante](./media/dependencies/diamond-dependency.png "Dipendenza da diamante")
+![Dipendenza Diamond](./media/dependencies/diamond-dependency.png "Dipendenza Diamond")
 
 In fase di compilazione NuGet analizza tutti i pacchetti da cui un progetto dipende, incluse le dipendenze delle dipendenze. Quando vengono rilevate più versioni di un pacchetto, vengono valutate le regole per scegliere un pacchetto. È necessario unificare i pacchetti perché l'esecuzione affiancata di versioni diverse di un assembly nella stessa applicazione è problematica in .NET.
 
@@ -40,7 +40,7 @@ Un riferimento a un pacchetto specifica l'intervallo di pacchetti validi consent
 <PackageReference Include="ExamplePackage" Version="1.0" />
 ```
 
-Le regole usate da NuGet per la risoluzione delle dipendenze sono [complesse](/nuget/consume-packages/dependency-resolution), ma NuGet cerca sempre la versione più bassa applicabile. NuGet privilegia la versione più bassa applicabile rispetto all'uso della versione più alta disponibile perché la più bassa presenta meno problemi di compatibilità.
+Le regole utilizzate da NuGet per la risoluzione delle dipendenze sono [complesse](/nuget/consume-packages/dependency-resolution), ma NuGet per [impostazione predefinita](/nuget/consume-packages/install-use-packages-visual-studio#install-and-update-options) cerca la versione più bassa applicabile. NuGet privilegia la versione più bassa applicabile rispetto all'uso della versione più alta disponibile perché la più bassa presenta meno problemi di compatibilità.
 
 A causa della regola di ricerca della versione più bassa applicabile da parte di NuGet, non è necessario inserire una versione superiore o un intervallo esatto nei riferimenti ai pacchetti per evitare di ottenere la versione più recente. NuGet cerca già di trovare la versione più bassa e più compatibile.
 
@@ -54,13 +54,13 @@ A causa della regola di ricerca della versione più bassa applicabile da parte d
 
 I limiti superiori per la versione provocano un errore di NuGet in caso di conflitto. Ad esempio, una libreria accetta esattamente la versione 1.0, mentre un'altra libreria richiede la versione 2.0 o successiva. Sebbene nella versione 2.0 potrebbero essere state introdotte modifiche che causano un'interruzione, una dipendenza di versione rigida o con un limite superiore garantisce la generazione di un errore.
 
-![Conflitto di dipendenza dei diamanti](./media/dependencies/diamond-dependency-conflict.png "Conflitto di dipendenza dei diamanti")
+![Conflitto tra dipendenze Diamond](./media/dependencies/diamond-dependency-conflict.png "Conflitto tra dipendenze Diamond")
 
-❌NON hanno riferimenti al pacchetto NuGet senza una versione minima.
+❌NON avere riferimenti a pacchetti NuGet senza una versione minima.
 
-❌AVOID NuGet riferimenti al pacchetto che richiedono una versione esatta.
+❌EVITARE i riferimenti ai pacchetti NuGet che richiedono una versione esatta.
 
-❌AVOID NuGet riferimenti al pacchetto con un limite superiore di versione.
+❌EVITARE i riferimenti ai pacchetti NuGet con un limite superiore della versione.
 
 ## <a name="nuget-shared-source-packages"></a>Pacchetti di codice sorgente condiviso NuGet
 
@@ -68,7 +68,7 @@ Un modo per ridurre le dipendenze esterne dei pacchetti NuGet consiste nel fare 
 
 I pacchetti di codice sorgente condiviso sono ideali per includere funzionalità di piccola entità. Ad esempio, un pacchetto di codice sorgente condiviso di metodi helper per l'esecuzione di chiamate HTTP.
 
-![Pacchetto di origine condiviso](./media/dependencies/shared-source-package.png "Pacchetto di origine condiviso")
+![Pacchetto di origine condivisa](./media/dependencies/shared-source-package.png "Pacchetto di origine condivisa")
 
 ```xml
 <PackageReference Include="Microsoft.Extensions.Buffers.Testing.Sources" PrivateAssets="All" Version="1.0" />
@@ -86,16 +86,16 @@ I pacchetti di codice sorgente condiviso presentano alcune limitazioni. È possi
 
 > Questa impostazione indica a NuGet che il pacchetto deve essere usato solo in fase di sviluppo e non deve essere esposto come dipendenza pubblica.
 
-❌NON avere tipi di pacchetti di origine condivisi nell'API pubblica.
+❌NON hanno tipi di pacchetti di origine condivisi nell'API pubblica.
 
 > I tipi di codice sorgente condiviso vengono compilati nell'assembly di riferimento e non possono essere scambiati tra assembly diversi. Ad esempio, un tipo `IRepository` di codice sorgente condiviso in un progetto è un tipo diverso dallo stesso oggetto `IRepository` di codice sorgente condiviso in un altro progetto. I tipi nei pacchetti di codice sorgente condiviso devono avere visibilità `internal`.
 
-❌NON pubblicare pacchetti di origine condivisi per NuGet.org.
+❌NON pubblicare pacchetti di origine condivisi in NuGet.org.
 
 > I pacchetti di codice sorgente condiviso contengono codice sorgente e possono essere usati solo da progetti con lo stesso tipo di linguaggio. Ad esempio, un pacchetto di codice sorgente condiviso C# non può essere usato da un'applicazione F#.
 >
 > Pubblicare i pacchetti di codice sorgente condiviso in un [feed locale o MyGet](./publish-nuget-package.md) per usarli internamente all'interno del progetto.
 
 >[!div class="step-by-step"]
->[Successivo](nuget.md)
->[precedente](sourcelink.md)
+>[Precedente](nuget.md)
+>[successivo](sourcelink.md)

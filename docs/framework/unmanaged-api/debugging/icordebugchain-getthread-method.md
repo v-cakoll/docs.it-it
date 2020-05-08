@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b3390319-6366-418c-ba80-b552ac4dfc1e
 topic_type:
 - apiref
-ms.openlocfilehash: b964d58bddb174da38fc8988ec807fd3129b5fcf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 28b54026c8743f31a420e164944f60709e2e271b
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123818"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894361"
 ---
 # <a name="icordebugchaingetthread-method"></a>Metodo ICorDebugChain::GetThread
 Ottiene il thread fisico di cui fa parte questa catena di chiamate.  
@@ -38,10 +38,10 @@ HRESULT GetThread (
  out Puntatore a un oggetto ICorDebugThread che rappresenta il thread fisico di cui fa parte questa catena di chiamate.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

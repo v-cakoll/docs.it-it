@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f9f62b9-113a-4a98-8f9b-b593cef27b03
 topic_type:
 - apiref
-ms.openlocfilehash: e51ee2e4d44af547c82a21a782121976d07118c5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 94672c88864efc431acde8f29e406f4fbbc644ee
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124722"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894554"
 ---
 # <a name="icordebugchaingetreason-method"></a>Metodo ICorDebugChain::GetReason
 Ottiene il motivo per la genesi della catena chiamante.  
@@ -38,10 +38,10 @@ HRESULT GetReason (
  out Puntatore a un valore (combinazione bit per bit) dell'enumerazione CorDebugChainReason che indica il motivo della Genesi della catena chiamante.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

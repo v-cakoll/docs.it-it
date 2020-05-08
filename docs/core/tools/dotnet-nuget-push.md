@@ -3,12 +3,12 @@ title: Comando dotnet nuget push
 description: Il comando dotnet nuget push effettua il push di un pacchetto nel server e lo pubblica.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 8b0437d7f4ada2b56af50e30717d131668c21f7e
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 1e7831de4c041591b3602e405418f89f1d1d27d1
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728348"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895461"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -30,13 +30,13 @@ dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output]
 dotnet nuget push -h|--help
 ```
 
-## <a name="description"></a>Descrizione
+## <a name="description"></a>Description
 
 Il comando `dotnet nuget push` effettua il push di un pacchetto nel server e lo pubblica. Il comando di push usa dettagli del server e delle credenziali presenti nel file di configurazione NuGet o nella catena di file di configurazione del sistema. Per altre informazioni sui file di configurazione, vedere [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior) (Configurazione del comportamento di NuGet). La configurazione predefinita di NuGet si ottiene caricando *%AppData%\NuGet\NuGet.config* (Windows) o *$HOME/.local/share* (Linux/macOS) e quindi caricando qualsiasi file *nuget.config* o *.nuget\nuget.config* dalla directory radice dell'unità nella directory corrente.
 
 Il comando effettua il push di un pacchetto esistente. Non crea un pacchetto. Per creare un pacchetto, usare [`dotnet pack`](dotnet-pack.md).
 
-## <a name="arguments"></a>Argomenti
+## <a name="arguments"></a>Arguments
 
 - **`ROOT`**
 
@@ -152,5 +152,4 @@ Il comando effettua il push di un pacchetto esistente. Non crea un pacchetto. Pe
   dotnet nuget push *.nupkg -s c:\mydir
   ```
 
-  Questo comando non archivia i pacchetti in una struttura di cartelle gerarchica, consigliata per ottimizzare le prestazioni. Per ulteriori informazioni, vedere [feed locali](//nuget/hosting-packages/local-feeds).
-  
+  Questo comando non archivia i pacchetti in una struttura di cartelle gerarchica, consigliata per ottimizzare le prestazioni. Per ulteriori informazioni, vedere [feed locali](/nuget/hosting-packages/local-feeds).  

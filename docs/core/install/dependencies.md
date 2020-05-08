@@ -3,14 +3,14 @@ title: Dipendenze di .NET Core SDK e Runtime-.NET Core
 description: Informazioni dettagliate sui prerequisiti per l'architettura del sistema operativo e della CPU per installare il .NET Core SDK e il runtime in Windows, Linux e macOS.
 author: leecow
 ms.author: leecow
-ms.date: 12/04/2019
+ms.date: 04/30/2020
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 42765d4402dfa17d4e962b2ecaf7a83e91853c76
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 280aa1431686ff99257580bb024a84b1e57f85c0
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140985"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895480"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>Dipendenze e requisiti di .NET Core
 
@@ -290,6 +290,24 @@ Per le app .NET Core che usano l'assembly *System. Drawing. Common* , è necessa
 
 > [!WARNING]
 > La maggior parte delle versioni di CentOS e Fedora include una versione precedente di libgdiplus. È possibile installare una versione recente di libgdiplus aggiungendo il repository mono al sistema. Per altre informazioni, vedere <https://www.mono-project.com/download/stable/>.
+
+### <a name="alpine"></a>Alpine
+
+Per le distribuzioni Alpine è necessario installare le librerie seguenti:
+
+- ICU-libs (questa operazione non è necessaria se la globalizzazione è disabilitata)
+- krb5-libs
+- libcurl
+- libintl
+- libssl 1.1 (per Alpine 3,9 o versione successiva) o libssl 1.0 (per quelli meno recenti)
+- libstdc++
+- lttng-ust
+- numactl (facoltativo, utile solo per i dispositivi con NUMA abilitato)
+- zlib
+
+Per le app .NET Core che usano l'assembly *System. Drawing. Common* , è necessaria anche la dipendenza seguente:
+
+- libgdiplus (è disponibile solo nel repository Edge/testing)
 
 ::: zone-end
 

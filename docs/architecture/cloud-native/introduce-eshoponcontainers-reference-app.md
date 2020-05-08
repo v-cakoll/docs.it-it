@@ -2,12 +2,12 @@
 title: Introduzione all'app di riferimento per eShopOnContainers
 description: Introduzione all'app di riferimento per i microservizi nativi del cloud eShopOnContainers per ASP.NET Core e Azure.
 ms.date: 06/30/2019
-ms.openlocfilehash: 0d55f248acbc34bcc76d38987d7e1d537cf6065a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8d4ad982716a07613ebbef6668afab69d5a8b4f6
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087251"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895533"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>Introduzione all'app di riferimento per eShopOnContainers
 
@@ -25,15 +25,15 @@ Prima di iniziare questo capitolo, è consigliabile scaricare l' [applicazione d
 
 Iniziamo con una verifica delle funzionalità e dei requisiti dell'applicazione. L'applicazione eShopOnContainers rappresenta uno Store online che vende vari prodotti fisici, ad esempio magliette e tazze da caffè. Se in precedenza è stato acquistato qualcosa online, l'esperienza di utilizzo dello Store dovrebbe essere relativamente familiare. Di seguito sono riportate alcune delle funzionalità di base implementate dallo Store:
 
-- Elenca elementi del catalogo
+- Elencare gli elementi del catalogo
 - Filtra elementi per tipo
 - Filtra elementi per marchio
 - Aggiungere elementi al carrello acquisti
 - Modificare o rimuovere elementi dal Cestino
 - Checkout
 - Registrare un account
-- Accedi
-- Esci
+- Accesso
+- Disconnessione
 - Verifica ordini
 
 L'applicazione presenta anche i requisiti non funzionali seguenti:
@@ -70,8 +70,8 @@ Il codice è organizzato per supportare i diversi microservizi e, all'interno di
 
 ## <a name="understanding-microservices"></a>Informazioni sui microservizi
 
-Questo libro è incentrato sulle applicazioni native del cloud create con la tecnologia Azure. Per altre informazioni sulle procedure consigliate per i microservizi e su come progettare applicazioni basate su microservizi, vedere il libro complementare, [microservizi .NET: architettura per le applicazioni .NET in contenitori](https://dotnet.microsoft.com/learn/aspnet/microservices-architecture). Il libro è disponibile online, in formato PDF o eReader.
+Questo libro è incentrato sulle applicazioni native del cloud create con la tecnologia Azure. Per altre informazioni sulle procedure consigliate per i microservizi e su come progettare applicazioni basate su microservizi, vedere il libro complementare, [microservizi .NET: architettura per le applicazioni .NET in contenitori](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook).
 
 >[!div class="step-by-step"]
 >[Precedente](candidate-apps.md)
->[Successivo](map-eshoponcontainers-azure-services.md)
+>[successivo](map-eshoponcontainers-azure-services.md)

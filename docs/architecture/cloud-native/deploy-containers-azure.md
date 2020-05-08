@@ -2,12 +2,12 @@
 title: Distribuzione di contenitori in Azure
 description: Distribuzione di contenitori in Azure con Azure Container Registry, servizio Azure Kubernetes e Azure Dev Spaces.
 ms.date: 04/13/2020
-ms.openlocfilehash: 6238460c6129583c34e6b328c38ed9042f32f3d6
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 57a4739d39b8ad022d699d54255f56f16d305440
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199560"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895607"
 ---
 # <a name="deploying-containers-in-azure"></a>Distribuzione di contenitori in Azure
 
@@ -93,7 +93,7 @@ Come per la maggior parte delle risorse in Azure, è possibile creare un cluster
 Queste informazioni sono sufficienti per iniziare. Come parte del processo di creazione nella portale di Azure, è anche possibile configurare le opzioni per le seguenti funzionalità del cluster:
 
 - Scalabilità
-- Autenticazione
+- Authentication
 - Rete
 - Monitoraggio
 - Tag
@@ -108,8 +108,8 @@ Gli sviluppatori condividono un'istanza in esecuzione (sviluppo) in un cluster A
 
 Per comprendere il valore di Azure Dev Spaces, è possibile condividere questa citazione da Gabe Monroy, lead PM dei contenitori all'Microsoft Azure:
 
-> Si supponga di essere un nuovo dipendente che tenta di correggere un bug in un'applicazione di microservizi complessi costituita da dozzine di componenti, ognuno con la propria configurazione e servizi di supporto. Per iniziare, è necessario configurare l'ambiente di sviluppo locale in modo che possa simulare la produzione, inclusa la configurazione dell'IDE, la creazione della catena di strumenti, le dipendenze dei servizi in contenitori, un ambiente Kubernetes locale, simulazioni per i servizi di supporto e altro ancora. Con il tempo necessario per configurare l'ambiente di sviluppo, la correzione del primo bug potrebbe richiedere giorni.
-> In alternativa, è possibile usare gli spazi di sviluppo e AKS.
+> "Immaginiamo di essere un nuovo dipendente che tenta di correggere un bug in un'applicazione di microservizi complessa costituita da dozzine di componenti, ognuno con la propria configurazione e servizi di supporto. Per iniziare, è necessario configurare l'ambiente di sviluppo locale in modo che possa simulare la produzione, inclusa la configurazione dell'IDE, la creazione della catena di strumenti, le dipendenze dei servizi in contenitori, un ambiente Kubernetes locale, simulazioni per i servizi di supporto e altro ancora. Con il tempo necessario per configurare l'ambiente di sviluppo, la correzione del primo bug potrebbe richiedere giorni.
+> In alternativa, è possibile usare gli spazi di sviluppo e AKS ".
 
 Il processo per lavorare con Azure Dev Spaces prevede i passaggi seguenti:
 

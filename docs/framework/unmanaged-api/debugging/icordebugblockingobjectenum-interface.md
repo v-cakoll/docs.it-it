@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 208e5c2d-3f3f-404e-8b3c-7cccc14ddb16
 topic_type:
 - apiref
-ms.openlocfilehash: be1e1cd0d38ad71de43478af5565bb1ac98a8c0d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 8be4332da77c3fbf4229a3fbeb9ba835a7a13eee
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778007"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894802"
 ---
 # <a name="icordebugblockingobjectenum-interface"></a>Interfaccia ICorDebugBlockingObjectEnum
 Fornisce un enumeratore per un elenco di strutture [CorDebugBlockingObject](cordebugblockingobject-structure.md) . Questa interfaccia è una sottoclasse dell'interfaccia ICorDebugEnum.  
@@ -30,20 +30,20 @@ Fornisce un enumeratore per un elenco di strutture [CorDebugBlockingObject](cord
 |------------|-----------------|  
 |[Metodo Next](icordebugblockingobjectenum-next-method.md)|Enumera un elenco di strutture [CorDebugBlockingObject](cordebugblockingobject-structure.md) .|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Ogni struttura `CorDebugBlockingObject` rappresenta un oggetto che blocca un thread.  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

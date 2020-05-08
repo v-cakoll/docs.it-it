@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: fffe5616-0896-4426-ab5e-21869b514883
 topic_type:
 - apiref
-ms.openlocfilehash: 2d3f8360a1fb1164fd4e26f85246251409bee376
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 44bb98f54debb129f951cc388fea81ca0f17b20c
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788953"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895316"
 ---
 # <a name="icordebugterminate-method"></a>Metodo ICorDebug::Terminate
-Termina l'oggetto `ICorDebug`.  
+Termina l' `ICorDebug` oggetto.  
   
 > [!NOTE]
-> `Terminate` non devono essere chiamati fino a quando non viene ricevuto un callback [ICorDebugManagedCallback:: ExitProcess](icordebugmanagedcallback-exitprocess-method.md) per tutti i processi di cui è in corso il debug.  
+> `Terminate`non deve essere chiamato fino a quando non viene ricevuto un callback [ICorDebugManagedCallback:: ExitProcess](icordebugmanagedcallback-exitprocess-method.md) per tutti i processi di cui è in corso il debug.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,17 +34,17 @@ Termina l'oggetto `ICorDebug`.
 HRESULT Terminate ();  
 ```  
   
-## <a name="remarks"></a>Note  
- `Terminate` necessario chiamare quando l'oggetto `ICorDebug` non è più necessario.  
+## <a name="remarks"></a>Osservazioni  
+ `Terminate`deve essere chiamato quando l' `ICorDebug` oggetto non è più necessario.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
