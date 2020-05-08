@@ -72,7 +72,7 @@
           href: monitoring-azure-kubernetes.md
         - name: Monitoraggio di Azure
           href: azure-monitor.md
-    - name: Identità
+    - name: identità
       href: identity.md
       items:
         - name: Autenticazione e autorizzazione nelle app cloud native
@@ -81,7 +81,7 @@
           href: azure-active-directory.md
         - name: Identity Server
           href: identity-server.md
-    - name: Sicurezza
+    - name: Security
       href: security.md
       items:
         - name: Sicurezza di Azure per le app cloud native
@@ -93,3 +93,5 @@
           href: infrastructure-as-code.md
         - name: Aggregazioni di applicazioni cloud native
           href: application-bundles.md
+    - name: Riepilogo
+      href: summary.md
