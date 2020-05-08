@@ -3,12 +3,12 @@ title: Concetti e modello a oggetti di .NET Compiler Platform SDK
 description: Questa panoramica include le informazioni di base necessarie per utilizzare in modo efficiente l'SDK del compilatore .NET. Vengono presentati i livelli dell'API, i tipi principali coinvolti e il modello a oggetti generale.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: e563260e21fb8807017db90ff63e30fec0415a48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 529ce6fbdef22964251c8b22abbd5d8aadab633d
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156961"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975940"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Informazioni sul modello di .NET Compiler Platform SDK
 
@@ -53,7 +53,7 @@ Il ciclo Read–Eval–Print (REPL) interattivo di C# usa queste API. Il ciclo R
 
 ### <a name="workspaces-apis"></a>API delle aree di lavoro
 
-Il livello delle aree di lavoro contiene l'API Workspace, ovvero il punto di partenza per eseguire l'analisi del codice e il refactoring su intere soluzioni. Consente di organizzare tutte le informazioni sui progetti in una soluzione in unico modello a oggetti, offrendo accesso diretto ai modelli a oggetti del livello del compilatore senza la necessità di analizzare i file, configurare le opzioni o gestire le dipendenze da progetto a progetto.
+Il livello delle aree di lavoro contiene l'API Workspace, ovvero il punto di partenza per eseguire l'analisi del codice e il refactoring su intere soluzioni. Consente di organizzare tutte le informazioni sui progetti in una soluzione in un unico modello a oggetti, offrendo accesso diretto ai modelli a oggetti del livello del compilatore senza la necessità di analizzare i file, configurare le opzioni o gestire le dipendenze da progetto a progetto.
 
 Inoltre, il livello delle aree di lavoro espone un set di API usate durante l'implementazione di strumenti di analisi del codice e refactoring che operano all'interno di un ambiente host come l'IDE di Visual Studio. Sono esempi le API Trova tutti i riferimenti, Formattazione e Generazione codice.
 

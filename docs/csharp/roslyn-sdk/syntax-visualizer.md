@@ -3,12 +3,12 @@ title: Esplorare il codice con il visualizzatore di sintassi Roslyn in Visual St
 description: Il visualizzatore di sintassi è uno strumento visivo che consente di esaminare i modelli che .NET Compiler Platform SDK genera per il codice.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 27e5a1f0b31dd2af2ac779223538b03cdb4db0c5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c7a34fda909bd044a9e65a8353d5626b533730e3
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156987"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975927"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Esplorare il codice con il visualizzatore di sintassi Roslyn in Visual Studio
 
@@ -20,7 +20,7 @@ Per acquisire familiarità con i concetti usati in .NET Compiler Platform SDK, l
 
 ## <a name="syntax-visualizer"></a>Visualizzatore di sintassi
 
-Il visualizzatore di **sintassi** consente l'ispezione dell'albero della sintassi per il file di codice di Visual Basic o di C, nella finestra dell'editor attivo corrente all'interno dell'IDE di Visual Studio. Il visualizzatore può essere avviato facendo clic su **Visualizza** > altro**visualizzatore di sintassi****di Windows** > .  È anche possibile usare la barra degli strumenti **Avvio veloce** nell'angolo in alto a destra. Digitare "syntax" per visualizzare il comando che apre il **visualizzatore di sintassi**.
+Il **Syntax Visualizer** consente di controllare l'albero della sintassi per il file di codice C# o Visual Basic nella finestra dell'editor attiva corrente all'interno dell'IDE di Visual Studio. Il visualizzatore può essere avviato facendo clic su **Visualizza** > **altre** > **Syntax Visualizer**di Windows.  È anche possibile usare la barra degli strumenti **Avvio veloce** nell'angolo in alto a destra. Digitare "syntax" per visualizzare il comando che apre il **visualizzatore di sintassi**.
 
 Questo comando apre il visualizzatore di sintassi sotto forma di finestra degli strumenti mobile. Se non si apre una finestra dell'editore del codice, l'area visualizzata è vuota, come illustrato nella figura seguente.
 
@@ -28,11 +28,11 @@ Questo comando apre il visualizzatore di sintassi sotto forma di finestra degli 
 
 Ancorare questa finestra degli strumenti in una posizione appropriata all'interno di Visual Studio, ad esempio sul lato sinistro. Il visualizzatore offre le informazioni sul file di codice corrente.
 
-Creare un nuovo progetto utilizzando il comando **File** > **Nuovo progetto.** È possibile creare un progetto di Visual Basic o di C. Quando Visual Studio apre il file di codice principale di questo progetto, il visualizzatore ne visualizza l'albero della sintassi. È possibile aprire qualsiasi file esistente di Visual Basic in questa istanza di Visual Studio e il visualizzatore visualizza l'albero della sintassi di tale file. Se in Visual Studio sono aperti più file di codice, viene visualizzato l'albero della sintassi del file di codice attualmente attivo, vale a dire il file di codice con lo stato attivo.
+Creare un nuovo progetto usando il comando **file** > **nuovo progetto** . È possibile creare un progetto Visual Basic o C#. Quando Visual Studio apre il file di codice principale di questo progetto, il visualizzatore ne visualizza l'albero della sintassi. È possibile aprire qualsiasi file C#/Visual Basic esistente in questa istanza di Visual Studio e il Visualizzatore Visualizza l'albero della sintassi del file. Se in Visual Studio sono aperti più file di codice, viene visualizzato l'albero della sintassi del file di codice attualmente attivo, vale a dire il file di codice con lo stato attivo.
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="c"></a>[C #](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 ![Visualizzazione di un albero della sintassi di C#](media/syntax-visualizer/visualize-csharp.png)
 
 # <a name="visual-basic"></a>[Visual Basic](#tab/vb)
@@ -49,7 +49,7 @@ Ogni elemento dell'albero indica anche il relativo elemento **span**. L'elemento
 Esistono due modi per esplorare l'albero:
 
 * Espandere o fare clic sugli elementi dell'albero. Il visualizzatore seleziona automaticamente il testo corrispondente allo span dell'elemento nell'editor di codice.
-* Selezionare o fare clic sul testo nell'editor di codice. Nell'esempio precedente di Visual Basic, se si seleziona la riga contenente "Module Module1" nell'editor di codice, il visualizzatore si sposta automaticamente al nodo ModuleStatement corrispondente nella struttura ad albero.
+* Selezionare o fare clic sul testo nell'editor di codice. Nel Visual Basic esempio precedente, se si seleziona la riga contenente "modulo Module1" nell'editor di codice, il visualizzatore passa automaticamente al nodo ModuleStatement corrispondente nell'albero.
 
 Il visualizzatore evidenzia l'elemento nell'albero il cui span corrisponde maggiormente allo span del testo selezionato nell'editor.
 
@@ -61,7 +61,7 @@ Sospendere la digitazione dopo aver digitato `Console.`. L'albero include alcuni
 
 Fare clic con il pulsante destro su un elemento qualsiasi dell'albero e fare clic su **View Directed Syntax Graph** (Visualizza grafico di sintassi diretto).
 
-# <a name="c"></a>[C #](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 Sarà visualizzata una rappresentazione grafica del sottoalbero corrispondente all'elemento selezionato. Provare questi passaggi per il nodo **MethodDeclaration** corrispondente al metodo `Main()` nell'esempio di C#. Il grafico di sintassi visualizzato sarà simile al seguente:
 
@@ -69,13 +69,13 @@ Sarà visualizzata una rappresentazione grafica del sottoalbero corrispondente a
 
 # <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
-Provare lo stesso per il **SubBlock** nodo corrispondente al `Main()` metodo nell'esempio di Visual Basic precedente. Il grafico di sintassi visualizzato sarà simile al seguente:
+Provare lo stesso per il nodo del **sottoblocco** corrispondente al `Main()` metodo nell'esempio di Visual Basic precedente. Il grafico di sintassi visualizzato sarà simile al seguente:
 
 ![Visualizzazione di un grafico della sintassi di Visual Basic](media/syntax-visualizer/visual-basic-syntax-graph.png)
 
 ---
 
-Nel visualizzatore del grafico di sintassi è possibile visualizzare una legenda relativa allo schema colori. È anche possibile passare il puntatore del mouse sui singoli elementi nel grafico di sintassi per visualizzare le proprietà che corrispondono a tale elemento.
+Nel Visualizzatore Graph della sintassi è possibile visualizzare una legenda per lo schema di colorazione. È anche possibile passare il puntatore del mouse sui singoli elementi nel grafico di sintassi per visualizzare le proprietà che corrispondono a tale elemento.
 
 È possibile visualizzare ripetutamente grafici di sintassi per elementi diversi dell'albero. I grafici saranno sempre visualizzati nella stessa finestra all'interno di Visual Studio. Tale finestra può essere ancorata in una posizione appropriata all'interno di Visual Studio in modo che non sia necessario passare da una scheda all'altra per visualizzare un nuovo grafico di sintassi. È spesso consigliabile posizionarla in basso, sotto le finestre dell'editor del codice.
 
@@ -107,7 +107,7 @@ Infine, provare a selezionare **View Constant Value (if any)** (Visualizza valor
 
 L'esempio precedente può essere replicato anche in Visual Basic. Digitare `Dim x As Double = 1 + 1` un file di Visual Basic. Selezionare l'espressione `1 + 1` nella finestra dell'editor del codice. Il visualizzatore evidenzierà il nodo **AddExpression** corrispondente nel visualizzatore. Ripetere i passaggi precedenti per il nodo **AddExpression**. I risultati saranno identici.
 
-Esaminare altro codice in Visual Basic.Examine more code in Visual Basic. Aggiornare il file principale di Visual Basic con il codice seguente:
+Esaminare altro codice in Visual Basic. Aggiornare il file di Visual Basic principale con il codice seguente:
 
 ```vb
 Imports C = System.Console
@@ -131,7 +131,7 @@ Controllare il simbolo che corrisponde a qualsiasi tipo, metodo, proprietà dich
 
 ![Visualizzazione del simbolo per una dichiarazione del metodo](media/syntax-visualizer/method-symbol.png)
 
-Gli esempi di Visual Basic precedenti possono essere facilmente replicati in C . Digitare `using C = System.Console;` invece di `Imports C = System.Console` per l'alias. I passaggi precedenti in C# restituiscono gli stessi risultati nella finestra del visualizzatore.
+Gli esempi precedenti Visual Basic possono essere facilmente replicati in C#. Digitare `using C = System.Console;` invece di `Imports C = System.Console` per l'alias. I passaggi precedenti in C# restituiscono gli stessi risultati nella finestra del visualizzatore.
 
 È possibile eseguire l'ispezione semantica solo sui nodi. Non è disponibile su token o elementi semplici. Non tutti i nodi contengono informazioni semantiche interessanti da controllare. Quando un nodo non contiene informazioni semantiche interessanti, facendo clic su **View \* Symbol (if any)** (Visualizza simbolo se esistente) apparirà una griglia delle proprietà vuota.
 
@@ -139,4 +139,4 @@ Altre informazioni sulle API per l'esecuzione dell'analisi semantica sono dispon
 
 ## <a name="closing-the-syntax-visualizer"></a>Chiusura del visualizzatore di sintassi
 
-È possibile chiudere la finestra del visualizzatore se non si sta usando lo strumento per esaminare il codice sorgente. Il visualizzatore di sintassi aggiorna i dati visualizzati man mano che ci sposta all'interno del codice, modificando l'origine. Lo strumento può rivelarsi di disturbo se non è usato.
+È possibile chiudere la finestra del visualizzatore se non si sta usando lo strumento per esaminare il codice sorgente. Il Visualizzatore di sintassi aggiorna la visualizzazione durante l'esplorazione del codice, la modifica e la modifica dell'origine. Lo strumento può rivelarsi di disturbo se non è usato.

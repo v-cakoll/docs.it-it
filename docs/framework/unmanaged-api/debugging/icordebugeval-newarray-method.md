@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cc79a67d-5368-434d-a943-209db90491b9
 topic_type:
 - apiref
-ms.openlocfilehash: 13ac5379992f4e768b09a03d31591143ba9bf627
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 496a6a7e01dec8aa90ba4e849c431ccd499ef53d
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788716"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976200"
 ---
 # <a name="icordebugevalnewarray-method"></a>Metodo ICorDebugEval::NewArray
 Alloca una nuova matrice del tipo e delle dimensioni dell'elemento specificato.  
@@ -55,11 +55,11 @@ HRESULT NewArray (
  `lowBounds`  
  [in] Facoltativo. Limite inferiore di ogni dimensione della matrice. Se questo valore viene omesso, per ogni dimensione viene utilizzato un limite inferiore pari a zero.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  La matrice viene sempre creata nel dominio applicazione in cui è attualmente in esecuzione il thread.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

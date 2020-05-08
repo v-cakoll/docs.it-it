@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9a1c0b47-6f10-4fcb-844a-4ab2d7990140
 topic_type:
 - apiref
-ms.openlocfilehash: bd6f1b2153404ba4567ef8348ff128b5d475c6fe
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 55888786fdd8ff2b1d5610a74ee729db0d4fcfde
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793496"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976252"
 ---
 # <a name="icordebugevalcreatevalue-method"></a>Metodo ICorDebugEval::CreateValue
 Crea un valore del tipo specificato, con un valore iniziale pari a zero o null.  
@@ -39,7 +39,7 @@ HRESULT CreateValue (
   
 ## <a name="parameters"></a>Parametri  
  `elementType`  
- in Valore dell'enumerazione [CorElementType](../../../../docs/framework/unmanaged-api/metadata/corelementtype-enumeration.md) che specifica il tipo del valore.  
+ in Valore dell'enumerazione [CorElementType](../metadata/corelementtype-enumeration.md) che specifica il tipo del valore.  
   
  `pElementClass`  
  in Puntatore a un oggetto [ICorDebugClass](icordebugclass-interface.md) che specifica la classe del valore, se il tipo non è un tipo primitivo.  
@@ -47,15 +47,15 @@ HRESULT CreateValue (
  `ppValue`  
  out Puntatore all'indirizzo di un oggetto "ICorDebugValue" che rappresenta il valore.  
   
-## <a name="remarks"></a>Note  
- `CreateValue` crea un oggetto `ICorDebugValue` del tipo specificato per l'utilizzo esclusivo in una valutazione di funzione. Questo oggetto valore può essere utilizzato per passare le costanti utente come parametri.  
+## <a name="remarks"></a>Osservazioni  
+ `CreateValue`Crea un `ICorDebugValue` oggetto del tipo specificato per l'utilizzo esclusivo in una valutazione di funzione. Questo oggetto valore può essere utilizzato per passare le costanti utente come parametri.  
   
  Se il tipo del valore è un tipo primitivo, il valore iniziale è zero o null. Usare [ICorDebugGenericValue:: SetValue](icordebuggenericvalue-setvalue-method.md) per impostare il valore di un tipo primitivo.  
   
- Se il valore di `elementType` è ELEMENT_TYPE_CLASS, si ottiene un oggetto "ICorDebugReferenceValue" (restituito in `ppValue`) che rappresenta il riferimento all'oggetto null. È possibile utilizzare questo oggetto per passare valori null a una valutazione di funzione con parametri di riferimento a un oggetto. Non è possibile impostare il `ICorDebugValue` su qualsiasi elemento; rimane sempre null.  
+ Se il valore di `elementType` è ELEMENT_TYPE_CLASS, viene visualizzato un valore "ICorDebugReferenceValue" (restituito `ppValue`in) che rappresenta il riferimento all'oggetto null. È possibile utilizzare questo oggetto per passare valori null a una valutazione di funzione con parametri di riferimento a un oggetto. Non è possibile impostare `ICorDebugValue` su nulla; rimane sempre null.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

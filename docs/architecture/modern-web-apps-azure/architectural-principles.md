@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Prin
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: ffc890bf8cd6b07bd70d8fc7b2b8cfeaf474ae35
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e291888bee25a9c87259560ca4b12635ee73c3c7
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77450271"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975407"
 ---
 # <a name="architectural-principles"></a>Principi architetturali
 
@@ -34,29 +34,29 @@ L'incapsulamento delle classi avviene limitando l'accesso esterno allo stato int
 
 ### <a name="dependency-inversion"></a>Inversione delle dipendenze
 
-La direzione delle dipendenza all'interno dell'applicazione deve puntare verso l'astrazione, non verso i dettagli di implementazione. La maggior parte delle applicazioni vengono scritte in modo che le dipendenze in fase di compilazione scorrano nella direzione della fase di esecuzione. Ciò produce un grafico delle dipendenze dirette. Ovvero, se il modulo A chiama una funzione nel modulo B, che chiama una funzione nel modulo C, in fase di compilazione A dipenderà da B, che dipenderà da C, come illustrato nella Figura 4-1.
+La direzione delle dipendenza all'interno dell'applicazione deve puntare verso l'astrazione, non verso i dettagli di implementazione. La maggior parte delle applicazioni vengono scritte in modo che le dipendenze in fase di compilazione scorrano nella direzione della fase di esecuzione. Ciò produce un grafico delle dipendenze dirette. Ovvero, se il modulo A chiama una funzione nel modulo B, che chiama una funzione nel modulo C, in fase di compilazione a dipenderà da B, che dipenderà da C, come illustrato nella figura 4-1.
 
-![Grafico delle dipendenze dirette](./media/image4-1.png)
+![Grafico dipendenze dirette](./media/image4-1.png)
 
 **Figura 4-1.** Grafico delle dipendenze dirette.
 
 L'applicazione del principio di inversione delle dipendenze consente ad A di chiamare metodi su un'astrazione implementata da B, consentendo ad A di chiamare B in fase di esecuzione, ma a B di dipendere da un'interfaccia controllata da A in fase di compilazione pertanto *invertendo* le dipendenze tipiche della fase di compilazione. In fase di esecuzione, il flusso di esecuzione del programma rimane invariato, ma l'introduzione di interfacce significa che sarà possibile collegare facilmente diverse implementazioni di tali interfacce.
 
-![Grafico delle dipendenze invertite](./media/image4-2.png)
+![Grafico dipendenze invertite](./media/image4-2.png)
 
-**Come grafico 4-2.** Grafico delle dipendenze inverse.
+**Figura 4-2.** Grafico delle dipendenze inverse.
 
-**L'inversione delle** dipendenze è una parte fondamentale della creazione di applicazioni ad accoppiamento ridotto, poiché i dettagli di implementazione possono essere scritti per dipendere e implementare astrazioni di livello superiore, anziché viceversa. Le applicazioni così ottenute sono più testabili, modulari e gestibili. La pratica dell'*inserimento di dipendenze* è resa possibile dall'applicazione del principio di inversione delle dipendenze.
+L' **inversione delle dipendenze** è una parte essenziale della creazione di applicazioni a regime di controllo libero, poiché i dettagli di implementazione possono essere scritti in modo da dipendere da e implementare astrazioni di livello superiore, anziché viceversa. Le applicazioni così ottenute sono più testabili, modulari e gestibili. La pratica dell'*inserimento di dipendenze* è resa possibile dall'applicazione del principio di inversione delle dipendenze.
 
 ### <a name="explicit-dependencies"></a>Dipendenze esplicite
 
-**Le classi e i metodi devono richiedere in modo esplicito gli oggetti in collaborazione di cui necessitano per funzionare correttamente.** I costruttori di classi forniscono alle classi l'opportunità di individuare gli elementi necessari per essere in uno stato valido e per funzionare correttamente. Se si definiscono classi che possono essere costruite e chiamate, ma che funzioneranno correttamente solo se sono presenti determinati componenti globali o dell'infrastruttura, queste classi sono *disoneste* con i loro client. Il contratto del costruttore indica al client che necessita solo degli elementi specificati, o addirittura di nessun elemento se la classe usa semplicemente un costruttore senza parametri, ma in realtà in fase di esecuzione necessita di qualcos'altro.
+**Le classi e i metodi devono richiedere in modo esplicito gli oggetti in collaborazione di cui necessitano per funzionare correttamente.** I costruttori di classi forniscono alle classi l'opportunità di individuare gli elementi necessari per essere in uno stato valido e per funzionare correttamente. Se si definiscono classi che possono essere costruite e chiamate, ma che funzioneranno correttamente solo se sono presenti determinati componenti globali o dell'infrastruttura, queste classi sono *disoneste* con i client. Il contratto del costruttore indica al client che necessita solo degli elementi specificati, o addirittura di nessun elemento se la classe usa semplicemente un costruttore senza parametri, ma in realtà in fase di esecuzione necessita di qualcos'altro.
 
 Se ci si attiene al principio delle dipendenze esplicite, le classi e i metodi comunicano esattamente ai relativi client ciò di cui hanno bisogno per funzionare. Questo rende il codice più autodocumentato e i contratti di codifica di contratti più intuitivi, perché gli utenti saranno sicuri che nel momento in cui forniscono quello che è richiesto sotto forma di metodi o parametri del costruttore, gli oggetti che stanno usando funzioneranno correttamente in fase di esecuzione.
 
 ### <a name="single-responsibility"></a>Singola responsabilità
 
-Il principio di singola responsabilità si applica alla programmazione orientata agli oggetti, ma può anche essere considerato un principio architetturale simile alla separazione dei concetti. Afferma che gli oggetti devono avere una sola responsabilità e un solo motivo per cambiare. Nello specifico, l'unica situazione in cui l'oggetto può cambiare è se il modo in cui svolge la sua unica responsabilità richiede di essere aggiornato. Seguendo questo principio aiuta a produrre sistemi più vagamente accoppiati e modulari, dal momento che molti tipi di nuovo comportamento possono essere implementati come nuove classi, piuttosto che aggiungendo ulteriore responsabilità alle classi esistenti. L'aggiunta di nuove classi è sempre una pratica più sicura rispetto alla modifica delle classi esistenti, dal momento che da queste nuove classi non dipende alcun codice.
+Il principio di singola responsabilità si applica alla programmazione orientata agli oggetti, ma può anche essere considerato un principio architetturale simile alla separazione dei concetti. Afferma che gli oggetti devono avere una sola responsabilità e un solo motivo per cambiare. Nello specifico, l'unica situazione in cui l'oggetto può cambiare è se il modo in cui svolge la sua unica responsabilità richiede di essere aggiornato. Questo principio contribuisce a produrre sistemi modulari e a regime di controllo libero, poiché molti tipi di nuovo comportamento possono essere implementati come nuove classi, anziché aggiungendo responsabilità aggiuntiva alle classi esistenti. L'aggiunta di nuove classi è sempre una pratica più sicura rispetto alla modifica delle classi esistenti, dal momento che da queste nuove classi non dipende alcun codice.
 
 In un'applicazione monolitica, è possibile applicare il principio di singola responsabilità ad alto livello e trasferirlo agli altri livelli dell'applicazione. La responsabilità della presentazione deve rimanere nel progetto dell'interfaccia utente, mentre la responsabilità dell'accesso ai dati deve essere mantenuta all'interno di un progetto di infrastruttura. La logica di business deve essere inclusa nel progetto principale dell'applicazione, dove può essere facilmente testata ed evolvere in modo indipendente da altre responsabilità.
 
@@ -66,7 +66,7 @@ Quando si applica questo principio all'architettura delle applicazioni portandol
 
 ### <a name="dont-repeat-yourself-dry"></a>Don't Repeat Yourself (DRY)
 
-In base al principio DRY, in un'applicazione va evitata la ripetizione di un comportamento relativo a un particolare concetto perché è una frequente fonte di errori. Prima o poi, una modifica dei requisiti comporterà la modifica di questo comportamento e la probabilità che almeno un'istanza di tale comportamento non venga aggiornata determineranno un comportamento incoerente del sistema.
+In base al principio DRY, in un'applicazione va evitata la ripetizione di un comportamento relativo a un particolare concetto perché è una frequente fonte di errori. A un certo punto, una modifica dei requisiti richiederà la modifica di questo comportamento. È probabile che almeno un'istanza del comportamento non venga aggiornata e ciò provocherà un comportamento incoerente del sistema.
 
 Anziché duplicare la logica, è preferibile incapsularla in un costrutto di programmazione. Rendere il costrutto l'unica autorità su questo comportamento e fare in modo che qualsiasi altra parte dell'applicazione che richiede questo comportamento utilizzi il nuovo costrutto.
 
@@ -75,7 +75,7 @@ Anziché duplicare la logica, è preferibile incapsularla in un costrutto di pro
 
 ### <a name="persistence-ignorance"></a>Mancato riconoscimento della persistenza
 
-Il **mancato riconoscimento della persistenza** riguarda i tipi che devono essere resi persistenti ma il cui codice non è influenzato dalla scelta della tecnologia di persistenza. In .NET tali tipi sono a volte definiti Plain Old CLR Object (POCO), in quanto non sono gravati dalla necessità di ereditare da una determinata classe base o di implementare un'interfaccia specifica. Il mancato riconoscimento della persistenza è utile perché consente allo stesso modello di business di essere reso permanente in più modi migliorando la flessibilità dell'applicazione. Le scelte di persistenza potrebbero cambiare nel tempo, da una tecnologia di database a un'altra, o potrebbero essere necessarie forme aggiuntive di persistenza oltre a qualsiasi altra applicazione avviata con (ad esempio, utilizzando una cache Redis o Azure Cosmos DB oltre a un database relazionale).
+Il **mancato riconoscimento della persistenza** riguarda i tipi che devono essere resi persistenti ma il cui codice non è influenzato dalla scelta della tecnologia di persistenza. In .NET tali tipi sono a volte definiti Plain Old CLR Object (POCO), in quanto non sono gravati dalla necessità di ereditare da una determinata classe base o di implementare un'interfaccia specifica. Il mancato riconoscimento della persistenza è utile perché consente allo stesso modello di business di essere reso permanente in più modi migliorando la flessibilità dell'applicazione. È possibile che le opzioni di persistenza cambino nel tempo, da una tecnologia di database a un'altra o da ulteriori forme di persistenza, oltre a qualsiasi altra operazione avviata dall'applicazione, ad esempio l'uso di una cache Redis o Azure Cosmos DB in aggiunta a un database relazionale.
 
 Alcuni esempi di violazioni di questo principio:
 
@@ -95,7 +95,7 @@ Il requisito che le classi presentino una o più funzionalità o uno o più comp
 
 ### <a name="bounded-contexts"></a>Contesti limitati
 
-I **contesti limitati** sono un criterio centrale nell'approccio Domain-driven design. Rappresentano un modo per gestire la complessità in organizzazioni o applicazioni di grandi dimensioni tramite la suddivisione in moduli concettuali separati. Ogni modulo concettuale rappresenta quindi un contesto separato da altri contesti (quindi delimitato) e può evolvere in modo indipendente. Ogni contesto limitato dovrebbe essere idealmente libero di scegliere i nomi per i concetti al suo interno e dovrebbe avere accesso esclusivo al proprio archivio di persistenza.
+I **contesti limitati** sono un criterio centrale nell'approccio Domain-driven design. Rappresentano un modo per gestire la complessità in organizzazioni o applicazioni di grandi dimensioni tramite la suddivisione in moduli concettuali separati. Ogni modulo concettuale rappresenta quindi un contesto separato da altri contesti (di conseguenza, delimitato) e può evolvere in modo indipendente. Ogni contesto limitato dovrebbe essere idealmente libero di scegliere i nomi per i concetti al suo interno e dovrebbe avere accesso esclusivo al proprio archivio di persistenza.
 
 Come minimo, ogni singola applicazione web deve puntare ad essere il proprio contesto limitato, con un archivio di persistenza per il proprio modello di business, piuttosto che condividere un database con altre applicazioni. La comunicazione tra contesti limitati non avviene tramite un database condiviso bensì tramite interfacce di programmazione che consentono la generazione di eventi e logica di business in risposta alle modifiche che si verificano. I contesti limitati sono strettamente mappati a microservizi, anch'essi idealmente implementati come singoli contesti limitati.
 
@@ -105,5 +105,5 @@ Come minimo, ogni singola applicazione web deve puntare ad essere il proprio con
 - [Contesti limitati](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
->[Successivo](choose-between-traditional-web-and-single-page-apps.md)
->[precedente](common-web-application-architectures.md)
+>[Precedente](choose-between-traditional-web-and-single-page-apps.md)
+>[successivo](common-web-application-architectures.md)

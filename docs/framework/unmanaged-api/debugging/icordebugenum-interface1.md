@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-ms.openlocfilehash: cc5598f9cbec4b97bb75f83fb18ccf8742904272
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7575be3f5074243b251c80b8dd5bdbb12e5d50fd
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783014"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976327"
 ---
 # <a name="icordebugenum-interface"></a>Interfaccia ICorDebugEnum
 
@@ -29,13 +29,13 @@ Funge da interfaccia di base astratta per gli enumeratori utilizzati da un'appli
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Clone](icordebugenum-clone-method.md)|Crea una copia di questo oggetto `ICorDebugEnum`.|  
+|[Metodo Clone](icordebugenum-clone-method.md)|Crea una copia dell'oggetto `ICorDebugEnum`.|  
 |[Metodo GetCount](icordebugenum-getcount-method.md)|Ottiene il numero di elementi nell'enumerazione.|  
 |[Metodo Reset](icordebugenum-reset-method.md)|Sposta il cursore all'inizio dell'enumerazione.|  
 |[Metodo Skip](icordebugenum-skip-method.md)|Sposta il cursore verso l'interno dell'enumerazione in base al numero di elementi specificato.|  
   
-## <a name="remarks"></a>Note  
- Gli enumeratori seguenti derivano da `ICorDebugEnum`:  
+## <a name="remarks"></a>Osservazioni  
+ Gli enumeratori seguenti derivano `ICorDebugEnum`da:  
   
 - ICorDebugAppDomainEnum  
   
@@ -82,14 +82,14 @@ Funge da interfaccia di base astratta per gli enumeratori utilizzati da un'appli
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

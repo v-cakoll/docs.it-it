@@ -2,20 +2,23 @@
 title: Comando dotnet vstest
 description: Il comando dotnet vstest consente di compilare un progetto e tutte le relative dipendenze.
 ms.date: 02/27/2020
-ms.openlocfilehash: e8fa94cf12ca2fe5fb99c6e3c1dcdb52185798c0
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: f7db58f4aab59354b8c69ce0371324c23482dafe
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463291"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975394"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
-**Questo articolo si applica a:** ✔️ .NET Core 2.1 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
+
+> [!IMPORTANT]
+> Il `dotnet vstest` comando viene sostituito da `dotnet test`, che ora può essere usato per eseguire assembly. Vedere [`dotnet test`](dotnet-test.md).
 
 ## <a name="name"></a>Nome
 
-`dotnet-vstest`: esegue test dai file specificati.
+`dotnet-vstest`: Esegue i test dagli assembly specificati.
 
 ## <a name="synopsis"></a>Riepilogo
 
@@ -87,7 +90,7 @@ Il comando `dotnet-vstest` esegue l'applicazione della riga di comando `VSTest.C
 
 - **`--Parallel`**
 
-  Eseguire test in parallelo. Per impostazione predefinita, tutti i core presenti nel computer sono disponibili per l'uso. Specificare un numero esplicito `MaxCpuCount` di core `RunConfiguration` impostando la proprietà nel nodo nel file *runsettings.*
+  Eseguire i test in parallelo. Per impostazione predefinita, tutti i core presenti nel computer sono disponibili per l'uso. Specificare un numero esplicito di core impostando la `MaxCpuCount` proprietà nel `RunConfiguration` nodo del file *runsettings* .
 
 - **`--ParentProcessId <PROCESS_ID>`**
 
@@ -115,11 +118,11 @@ Il comando `dotnet-vstest` esegue l'applicazione della riga di comando `VSTest.C
 
 - **`--TestCaseFilter <EXPRESSION>`**
 
-  Esegue test corrispondenti all'espressione specificata. `<EXPRESSION>` è in formato `<property>Operator<value>[|&<EXPRESSION>]`, dove Operator è `=`, `!=` o `~`. L'operatore `~` usa la semantica 'contains' ed è applicabile per le proprietà stringa come `DisplayName`. Le parentesi `()` vengono utilizzate per raggruppare le sottoespressioni. Per ulteriori informazioni, vedere [Filtro TestCase](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md).
+  Esegue test corrispondenti all'espressione specificata. `<EXPRESSION>` è in formato `<property>Operator<value>[|&<EXPRESSION>]`, dove Operator è `=`, `!=` o `~`. L'operatore `~` usa la semantica 'contains' ed è applicabile per le proprietà stringa come `DisplayName`. Per raggruppare le sottoespressioni `()` vengono utilizzate le parentesi. Per altre informazioni, vedere [filtro TestCase](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md).
 
 - **`--Tests <TEST_NAMES>`**
 
-  Esegue test con nomi corrispondenti ai valori specificati. Se si specificano più valori, separarli con virgole.
+  Esegue test con nomi corrispondenti ai valori specificati. Separare più valori con virgole.
 
 - **`-?|--Help`**
 
@@ -135,19 +138,19 @@ Il comando `dotnet-vstest` esegue l'applicazione della riga di comando `VSTest.C
 
 ## <a name="examples"></a>Esempi
 
-Eseguire test in *mytestproject.dll*:
+Eseguire i test in *mytestproject. dll*:
 
 ```dotnetcli
 dotnet vstest mytestproject.dll
 ```
 
-Eseguire test in *mytestproject.dll*, esportando in una cartella personalizzata con nome personalizzato:
+Eseguire i test in *mytestproject. dll*, esportando nella cartella personalizzata con nome personalizzato:
 
 ```dotnetcli
 dotnet vstest mytestproject.dll --logger:"trx;LogFileName=custom_file_name.trx" --ResultsDirectory:custom/file/path
 ```
 
-Eseguire test in *mytestproject.dll* e *myothertestproject.exe*:
+Eseguire i test in *mytestproject. dll* e *myothertestproject. exe*:
 
 ```dotnetcli
 dotnet vstest mytestproject.dll myothertestproject.exe
