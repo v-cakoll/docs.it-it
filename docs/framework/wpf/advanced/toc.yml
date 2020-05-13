@@ -463,18 +463,17 @@
           href: localization-attributes-and-comments.md
         - name: Cenni preliminari sulle funzionalità bidirezionali di WPF
           href: bidirectional-features-in-wpf-overview.md
-        - name: Procedure relative
-          href: globalization-and-localization-how-to-topics.md
+        - name: Procedure
           items:
-            - name: Localizzare un'applicazione
+            - name: Localizzare un'app
               href: how-to-localize-an-application.md
             - name: Usare il layout automatico per creare un pulsante
               href: how-to-use-automatic-layout-to-create-a-button.md
             - name: Usare una griglia per il layout automatico
               href: how-to-use-a-grid-for-automatic-layout.md
-            - name: Usare un oggetto ResourceDictionary per gestire le risorse di tipo stringa localizzabili
+            - name: Usare un oggetto ResourceDictionary per gestire le risorse
               href: how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md
-            - name: Usare risorse in applicazioni localizzabili
+            - name: Usare le risorse in applicazioni localizzabili
               href: how-to-use-resources-in-localizable-applications.md
     - name: Layout
       href: layout.md
