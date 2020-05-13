@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af317171-d66d-4114-89eb-063554c74940
 topic_type:
 - apiref
-ms.openlocfilehash: 6596689af6533bb00f41b0d03805b3383ae8c3cc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2a8200f942405395429db182b7501a07fc1f930a
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792950"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212321"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>Metodo ICorDebugModule3::CreateReaderForInMemorySymbols
 Crea un lettore di simboli di debug per un modulo dinamico.  
@@ -35,7 +35,7 @@ HRESULT CreateReaderForInMemorySymbols (
   
 ## <a name="parameters"></a>Parametri  
  riid  
- in IID dell'interfaccia COM da restituire. Si tratta in genere di un' [interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).  
+ in IID dell'interfaccia COM da restituire. Si tratta in genere di un' [interfaccia ISymUnmanagedReader](../diagnostics/isymunmanagedreader-interface.md).  
   
  ppObj  
  out Puntatore a un puntatore all'interfaccia restituita.  
@@ -53,15 +53,15 @@ HRESULT CreateReaderForInMemorySymbols (
  E_FAIL (o altri codici E_ restituiti)  
  Impossibile creare il lettore.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo può essere usato anche per creare un oggetto lettore di simboli per i moduli in memoria (non dinamici), ma solo dopo che i simboli sono disponibili per la prima volta (indicati dal callback del [Metodo UpdateModuleSymbols](icordebugmanagedcallback-updatemodulesymbols-method.md) ).  
   
  Questo metodo restituisce una nuova istanza di Reader ogni volta che viene chiamata (ad esempio [CComPtrBase:: CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)). Pertanto, il debugger deve memorizzare nella cache il risultato e richiedere una nuova istanza solo quando è possibile che i dati sottostanti siano stati modificati, ovvero quando viene ricevuto un callback del [metodo loadClass](icordebugmanagedcallback-loadclass-method.md) .  
   
  I moduli dinamici non hanno alcun simbolo disponibile fino a quando non è stato caricato il primo tipo (come indicato dal callback del [metodo loadClass](icordebugmanagedcallback-loadclass-method.md) ).  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

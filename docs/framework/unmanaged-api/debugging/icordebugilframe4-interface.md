@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 1e739183-3e05-49e5-846f-4075256e41de
 topic_type:
 - apiref
-ms.openlocfilehash: 7f1c5d7a6fdae3e4c5a66c9aa4a82911105f4597
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d0b1c31d45efea4892182c43c801112530361994
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788496"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213702"
 ---
 # <a name="icordebugilframe4-interface"></a>Interfaccia ICorDebugILFrame4
 [Supportato in .NET Framework 4.5.2 e versioni successive]  
@@ -30,17 +30,17 @@ ms.locfileid: "76788496"
 |[Metodo GetCodeEx](icordebugilframe4-getcodeex-method.md)|Restituisce il codice eseguito da questo stack frame.|  
 |[Metodo GetLocalVariableEx](icordebugilframe4-getlocalvariableex-method.md)|Restituisce il valore di una variabile locale nel frame del linguaggio intermedio.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questi metodi offrono funzionalità oltre a quelle fornite dai metodi [EnumerateLocalVariables](icordebugilframe-enumeratelocalvariables-method.md), [GetCode](icordebugframe-getcode-method.md)e [GetLocalVariable](icordebugilframe-getlocalvariable-method.md) . Ogni metodo include un parametro `flags` che specifica se le variabili locali aggiuntive o il codice definito dalla richiesta ReJIT di un profiler sono visibili.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

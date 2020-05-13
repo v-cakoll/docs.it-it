@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1bca66db-0359-4ae8-846e-e35f7e547e8b
 topic_type:
 - apiref
-ms.openlocfilehash: fa31b8a6cc96935319e9bef3e561790b65e33a87
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 36a485413490045ca49b99fca4fe5d43edc37114
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777583"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213010"
 ---
 # <a name="icordebugheapvalue-interface"></a>Interfaccia ICorDebugHeapValue
 
@@ -30,21 +30,21 @@ Sottoclasse di "ICorDebugValue" che rappresenta un oggetto raccolto dall'Garbage
 |Metodo|Descrizione|  
 |------------|-----------------|  
 |[Metodo CreateRelocBreakpoint](icordebugheapvalue-createrelocbreakpoint-method.md)|Non implementato.|  
-|[Metodo IsValid](icordebugheapvalue-isvalid-method.md)|Ottiene un valore che indica se l'oggetto rappresentato da questo `ICorDebugHeapValue` è valido o è stato recuperato dall'Garbage Collector. Questo metodo è stato deprecato nella versione .NET Framework 2,0.|  
+|[Metodo IsValid](icordebugheapvalue-isvalid-method.md)|Ottiene un valore che indica se l'oggetto rappresentato da `ICorDebugHeapValue` è valido o è stato recuperato dal Garbage Collector. Questo metodo è stato deprecato nella versione .NET Framework 2,0.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

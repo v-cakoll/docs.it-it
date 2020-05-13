@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 34667162-f314-475f-ae1b-ce9cb0fcbb83
 topic_type:
 - apiref
-ms.openlocfilehash: df3ad3fa4ef4eeee7e23ca1629da7a8b8ce09711
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7026d135b02563b6c718be4096d2c5cad9d33cec
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792916"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212282"
 ---
 # <a name="icordebugmodulebreakpoint-interface"></a>Interfaccia ICorDebugModuleBreakpoint
 
@@ -31,19 +31,19 @@ Consente di accedere a moduli specifici. Questa interfaccia è una sottoclasse d
 |------------|-----------------|  
 |[Metodo GetModule](icordebugmodulebreakpoint-getmodule-method.md)|Ottiene un puntatore a interfaccia a un ICorDebugModule che fa riferimento al modulo in cui è impostato il punto di interruzione.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

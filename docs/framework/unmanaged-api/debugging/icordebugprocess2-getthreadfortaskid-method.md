@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 32d54a5b-8ad3-405b-a1b9-0936a3b49d1e
 topic_type:
 - apiref
-ms.openlocfilehash: 11acf997b2efd74bc8394d830f36d3acbd1eef56
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 89be29c770098d92ce3c47f7c45b1bb8580f2edb
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137204"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213517"
 ---
 # <a name="icordebugprocess2getthreadfortaskid-method"></a>Metodo ICorDebugProcess2::GetThreadForTaskID
 Ottiene il thread in cui è in esecuzione l'attività con l'identificatore specificato.  
@@ -41,14 +41,14 @@ HRESULT GetThreadForTaskID (
  `ppThread`  
  out Puntatore all'indirizzo di un oggetto ICorDebugThread2 che rappresenta il thread da recuperare.  
   
-## <a name="remarks"></a>Note  
- L'host può impostare l'identificatore di attività usando il metodo [ICLRTask:: SetTaskIdentifier](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md) .  
+## <a name="remarks"></a>Osservazioni  
+ L'host può impostare l'identificatore di attività usando il metodo [ICLRTask:: SetTaskIdentifier](../hosting/iclrtask-settaskidentifier-method.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

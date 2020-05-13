@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ff3fcd6-38fe-41f8-bfd3-f0ab6c7d77ca
 topic_type:
 - apiref
-ms.openlocfilehash: 6c4262c18e4efcbbca1b3e2a327fec7d4b609a31
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d7ad4a6b25fe6d53ab0b21066345451ae7c22c16
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096921"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213322"
 ---
 # <a name="icordebugmoduleenumnext-method"></a>Metodo ICorDebugModuleEnum::Next
 Ottiene il numero di istanze "ICorDebugModule" specificate da `celt` dall'enumerazione, a partire dalla posizione corrente.  
@@ -38,21 +38,21 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametri  
  `celt`  
- in Numero di istanze di `ICorDebugModule` da recuperare.  
+ in Numero di `ICorDebugModule` istanze da recuperare.  
   
  `modules`  
- out Matrice di puntatori, ciascuno dei quali punta a un oggetto `ICorDebugModule`.  
+ out Matrice di puntatori, ciascuno dei quali punta a un `ICorDebugModule` oggetto.  
   
  `pceltFetched`  
- out Puntatore al numero di istanze di `ICorDebugModule` restituite effettivamente. Questo valore può essere null se `celt` è uno.  
+ out Puntatore al numero di `ICorDebugModule` istanze effettivamente restituite. Questo valore può essere null se `celt` è uno.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche

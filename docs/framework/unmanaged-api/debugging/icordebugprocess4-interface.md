@@ -15,36 +15,36 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 1bdc958f2516bcd7c2eb74312fbf478e6d49535a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcf725ea98fa4351e72cf592f92968ee2233ecb0
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948804"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213582"
 ---
 # <a name="icordebugprocess4-interface"></a>Interfaccia ICorDebugProcess4
 
-Fornisce supporto per dal controllo l'esecuzione del processo.
+Fornisce supporto per il controllo dell'esecuzione out-of-process.
 
 ## <a name="methods"></a>Metodi
 
 | Metodo                                                                 | Descrizione                                                                                             |
 | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| [ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) | Notifica la pipeline ICorDebug che il timeout del debugger di processo è in continua l'esecuzione dell'oggetto del debug. |
+| [ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) | Notifica alla pipeline ICorDebug che il debugger out-of-process sta continuando l'esecuzione del debug. |
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questa interfaccia si trova all'interno del runtime e non è esposte tramite le intestazioni o i file di libreria. Tuttavia, è un'interfaccia COM che deriva da `IUnknown` con GUID `E930C679-78AF-4953-8AB7-B0AABF0F9F80` che può essere ottenuto tramite i normali meccanismi di COM.
+Questa interfaccia si trova all'interno del runtime e non viene esposta tramite le intestazioni o i file di libreria. Tuttavia, si tratta di un'interfaccia COM che deriva da `IUnknown` con GUID `E930C679-78AF-4953-8AB7-B0AABF0F9F80` che è possibile ottenere tramite i normali meccanismi com.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
-**Intestazione:** nessuno
+**Intestazione:** Nessuno
 
-**Libreria:** nessuno
+**Libreria:** Nessuno
 
-**Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
+**Versioni .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
 

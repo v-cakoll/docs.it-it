@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0500854e-2121-43d9-a028-64312da35258
 topic_type:
 - apiref
-ms.openlocfilehash: 63f7bf8c09480b9ce2cfb8eb8dc66e4a6133ef8f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 33a68d11a8d17e46533b4f83bbf87aafe171e612
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777479"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212399"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>Metodo ICorDebugManagedCallback::ControlCTrap
 Notifica al debugger che la combinazione di tasti CTRL + C è intrappolata nel processo di cui è in corso il debug.  
@@ -39,22 +39,22 @@ HRESULT ControlCTrap (
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|Descrizione|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Il debugger gestirà la trap CTRL + C.|  
 |S_FALSE|Il debugger non gestirà la trap CTRL + C.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Tutti i domini applicazione all'interno del processo vengono arrestati per questo callback.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

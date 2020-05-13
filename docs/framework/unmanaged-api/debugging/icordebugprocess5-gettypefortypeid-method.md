@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0eed5a8-fa6d-4818-bd00-7babcea30325
 topic_type:
 - apiref
-ms.openlocfilehash: bb25c9235e4fcded5c230d2d417b9d41bbdd9b19
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ea7f7a9d4589e4f08b1b1e20b4d073bb5f822714
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792333"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212763"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>Metodo ICorDebugProcess5::GetTypeForTypeID
 Converte un identificatore di tipo in un valore ICorDebugType.  
@@ -41,17 +41,17 @@ HRESULT GetTypeForTypeID(
  `ppType`  
  out Puntatore all'indirizzo di un oggetto ICorDebugType.  
   
-## <a name="remarks"></a>Note  
- In alcuni casi, i metodi che restituiscono un identificatore di tipo possono restituire un valore null `COR_TYPEID`. Se questo valore viene passato come argomento `id`, il `GetTypeForTypeID` metodo avrà esito negativo e restituirà `E_FAIL`.  
+## <a name="remarks"></a>Osservazioni  
+ In alcuni casi, i metodi che restituiscono un identificatore di tipo possono restituire un `COR_TYPEID` valore null. Se questo valore viene passato come `id` argomento, il `GetTypeForTypeID` metodo avrà esito negativo e restituirà `E_FAIL` .  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

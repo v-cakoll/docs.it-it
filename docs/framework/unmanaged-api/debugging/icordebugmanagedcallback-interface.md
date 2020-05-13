@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b47f1d61-c7dc-4196-b926-0b08c94f7041
 topic_type:
 - apiref
-ms.openlocfilehash: 9a33b90bf39103756ab4fd07157739633997fb61
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: cb2b69c5e6dfed4e0cb4e4e324c4ec6ad664f3e7
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788393"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212750"
 ---
 # <a name="icordebugmanagedcallback-interface"></a>Interfaccia ICorDebugManagedCallback
 Fornisce metodi per l'elaborazione dei callback del debugger.  
@@ -28,7 +28,7 @@ Fornisce metodi per l'elaborazione dei callback del debugger.
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Break](icordebugmanagedcallback-break-method.md)|Notifica al debugger quando viene eseguita un'istruzione <xref:System.Reflection.Emit.OpCodes.Break> nel flusso di codice.|  
+|[Metodo Break](icordebugmanagedcallback-break-method.md)|Notifica al debugger quando <xref:System.Reflection.Emit.OpCodes.Break> viene eseguita un'istruzione nel flusso di codice.|  
 |[Metodo Breakpoint](icordebugmanagedcallback-breakpoint-method.md)|Notifica al debugger quando viene rilevato un punto di interruzione.|  
 |[Metodo BreakpointSetError](icordebugmanagedcallback-breakpointseterror-method.md)|Notifica al debugger che la Common Language Runtime (CLR) non è stata in grado di associare accuratamente un punto di interruzione impostato prima della compilazione JIT (just-in-Time) di una funzione.|  
 |[Metodo ControlCTrap](icordebugmanagedcallback-controlctrap-method.md)|Notifica al debugger che la combinazione di tasti CTRL + C è bloccata nel processo di cui è in corso il debug.|  
@@ -36,7 +36,7 @@ Fornisce metodi per l'elaborazione dei callback del debugger.
 |[Metodo CreateProcess](icordebugmanagedcallback-createprocess-method.md)|Notifica al debugger il momento in cui un processo è stato collegato o avviato per la prima volta.|  
 |[Metodo CreateThread](icordebugmanagedcallback-createthread-method.md)|Notifica al debugger che un thread ha avviato l'esecuzione del codice gestito.|  
 |[Metodo DebuggerError](icordebugmanagedcallback-debuggererror-method.md)|Notifica al debugger che si è verificato un errore durante il tentativo di gestire un evento da CLR.|  
-|[Metodo EditAndContinueRemap](icordebugmanagedcallback-editandcontinueremap-method.md)|Deprecato. Notifica al debugger che è stato inviato un evento di modifica del mapping all'IDE.|  
+|[Metodo EditAndContinueRemap](icordebugmanagedcallback-editandcontinueremap-method.md)|Operazione deprecata. Notifica al debugger che è stato inviato un evento di modifica del mapping all'IDE.|  
 |[Metodo EvalComplete](icordebugmanagedcallback-evalcomplete-method.md)|Notifica al debugger che la valutazione è stata completata.|  
 |[Metodo EvalException](icordebugmanagedcallback-evalexception-method.md)|Notifica al debugger che una valutazione è stata terminata con un'eccezione non gestita.|  
 |[Metodo Exception](icordebugmanagedcallback-exception-method.md)|Notifica al debugger che è stata generata un'eccezione dal codice gestito.|  
@@ -46,8 +46,8 @@ Fornisce metodi per l'elaborazione dei callback del debugger.
 |[Metodo LoadAssembly](icordebugmanagedcallback-loadassembly-method.md)|Notifica al debugger che un assembly CLR è stato caricato correttamente.|  
 |[Metodo LoadClass](icordebugmanagedcallback-loadclass-method.md)|Notifica al debugger che è stata caricata una classe.|  
 |[Metodo LoadModule](icordebugmanagedcallback-loadmodule-method.md)|Notifica al debugger che un modulo CLR è stato caricato correttamente.|  
-|[Metodo LogMessage](icordebugmanagedcallback-logmessage-method.md)|Notifica al debugger che un thread gestito da CLR ha chiamato un metodo nella classe <xref:System.Diagnostics.EventLog> per registrare un evento.|  
-|[Metodo LogSwitch](icordebugmanagedcallback-logswitch-method.md)|Notifica al debugger che un thread gestito da CLR ha chiamato un metodo nella classe <xref:System.Diagnostics.Switch> per creare, modificare o eliminare un'opzione di debug/traccia.|  
+|[Metodo LogMessage](icordebugmanagedcallback-logmessage-method.md)|Notifica al debugger che un thread gestito da CLR ha chiamato un metodo nella <xref:System.Diagnostics.EventLog> classe per registrare un evento.|  
+|[Metodo LogSwitch](icordebugmanagedcallback-logswitch-method.md)|Notifica al debugger che un thread gestito da CLR ha chiamato un metodo nella <xref:System.Diagnostics.Switch> classe per creare, modificare o eliminare un'opzione di debug/traccia.|  
 |[Metodo NameChange](icordebugmanagedcallback-namechange-method.md)|Notifica al debugger che il nome di un dominio dell'applicazione o di un thread è stato modificato.|  
 |[Metodo StepComplete](icordebugmanagedcallback-stepcomplete-method.md)|Notifica al debugger il completamento di un passaggio.|  
 |[Metodo UnloadAssembly](icordebugmanagedcallback-unloadassembly-method.md)|Notifica al debugger che è stato scaricato un assembly CLR.|  
@@ -55,24 +55,24 @@ Fornisce metodi per l'elaborazione dei callback del debugger.
 |[Metodo UnloadModule](icordebugmanagedcallback-unloadmodule-method.md)|Notifica al debugger che un modulo CLR (DLL) è stato scaricato.|  
 |[Metodo UpdateModuleSymbols](icordebugmanagedcallback-updatemodulesymbols-method.md)|Notifica al debugger che i simboli per un modulo CLR sono stati modificati.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Tutti i callback vengono serializzati, chiamati nello stesso thread e chiamati con il processo nello stato SYNCHRONIZED.  
   
- Ogni implementazione di callback deve chiamare [ICorDebugController:: continue](icordebugcontroller-continue-method.md) per riprendere l'esecuzione. Se `ICorDebugController::Continue` non viene chiamato prima che il callback venga restituito, il processo resterà interrotto e non si verificheranno ulteriori callback di evento fino a quando non viene chiamato `ICorDebugController::Continue`.  
+ Ogni implementazione di callback deve chiamare [ICorDebugController:: continue](icordebugcontroller-continue-method.md) per riprendere l'esecuzione. Se `ICorDebugController::Continue` non viene chiamato prima che il callback venga restituito, il processo resterà interrotto e non si verificheranno ulteriori callback di evento fino a quando non `ICorDebugController::Continue` viene chiamato.  
   
  Un debugger deve implementare [ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md) se esegue il debug di applicazioni .NET Framework versione 2,0. Un'istanza di `ICorDebugManagedCallback` o `ICorDebugManagedCallback2` viene passata come oggetto callback a [ICorDebug:: SetManagedHandler](icordebug-setmanagedhandler-method.md).  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

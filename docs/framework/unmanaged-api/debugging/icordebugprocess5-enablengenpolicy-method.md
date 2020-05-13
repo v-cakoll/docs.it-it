@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b8e15ca-3c72-4685-a937-da4c739cb9e9
 topic_type:
 - apiref
-ms.openlocfilehash: 9497bea9b7cc5eb98876c923858dbcbc6adf9d07
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: fa3cbfee0359b8477f9efe88fe72837b86611bf7
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792456"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212802"
 ---
 # <a name="icordebugprocess5enablengenpolicy-method"></a>Metodo ICorDebugProcess5::EnableNGENPolicy
 Imposta un valore che determina il modo in cui un'applicazione carica immagini native durante l'esecuzione in un debugger gestito.  
@@ -37,19 +37,19 @@ HRESULT EnableNGENPolicy(
  `ePolicy`  
  in Costante [CorDebugNGenPolicy](cordebugngenpolicy-enumeration.md) che determina il modo in cui un'applicazione carica immagini native durante l'esecuzione in un debugger gestito.  
   
-## <a name="remarks"></a>Note  
- Se il criterio è impostato correttamente, il metodo restituisce `S_OK`. Se `ePolicy` non è compreso nell'intervallo dei valori enumerati definiti da [CorDebugNGenPolicy](cordebugngenpolicy-enumeration.md), il metodo restituisce `E_INVALIDARG` e la chiamata al metodo non ha alcun effetto. Se non è possibile aggiornare i criteri del generatore di immagini native (Ngen. exe), il metodo restituisce `E_FAIL`.  
+## <a name="remarks"></a>Osservazioni  
+ Se il criterio è impostato correttamente, il metodo restituisce `S_OK` . Se non `ePolicy` è compreso nell'intervallo dei valori enumerati definiti da [CorDebugNGenPolicy](cordebugngenpolicy-enumeration.md), il metodo restituisce `E_INVALIDARG` e la chiamata al metodo non ha effetto. Se non è possibile aggiornare i criteri del generatore di immagini native (Ngen. exe), il metodo restituisce `E_FAIL` .  
   
- Il metodo `ICorDebugProcess5::EnableNGenPolicy` può essere chiamato in qualsiasi momento durante il ciclo di vita del processo. Il criterio è attivo per tutti i moduli caricati dopo l'impostazione dei criteri.  
+ Il `ICorDebugProcess5::EnableNGenPolicy` metodo può essere chiamato in qualsiasi momento durante il ciclo di vita del processo. Il criterio è attivo per tutti i moduli caricati dopo l'impostazione dei criteri.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

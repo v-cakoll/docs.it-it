@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 71aee5f3-5e10-44fa-be69-6d8a475f2c14
 topic_type:
 - apiref
-ms.openlocfilehash: 76aaeef93028b2ff9526601450d7e11f918e063d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a819ca33df962774e69dac0609df1fff2fbdecd3
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792194"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213660"
 ---
 # <a name="icordebugprocess7-interface"></a>Interfaccia ICorDebugProcess7
 [Supportato in .NET Framework 4.5.2 e versioni successive]  
@@ -28,16 +28,16 @@ ms.locfileid: "76792194"
 |------------|-----------------|  
 |[Metodo SetWriteableMetadataUpdateMode](icordebugprocess7-setwriteablemetadataupdatemode-method.md)|Imposta un valore che determina in che modo il debugger gestisce gli aggiornamenti in memoria ai metadati all'interno del processo di destinazione.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

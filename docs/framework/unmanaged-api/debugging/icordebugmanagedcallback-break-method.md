@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7d78a301-82b3-43b2-9d65-3cda3285ae97
 topic_type:
 - apiref
-ms.openlocfilehash: efc9de050e34867c14f8e85e091e2b959c30f213
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f70a88df00d15729a6bde06b49417b6439f7c0ec
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122590"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212464"
 ---
 # <a name="icordebugmanagedcallbackbreak-method"></a>Metodo ICorDebugManagedCallback::Break
 
-Notifica al debugger quando viene eseguita un'istruzione <xref:System.Reflection.Emit.OpCodes.Break> nel flusso di codice.
+Notifica al debugger quando <xref:System.Reflection.Emit.OpCodes.Break> viene eseguita un'istruzione nel flusso di codice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -45,13 +45,13 @@ in Puntatore a un oggetto ICorDebugThread che rappresenta il thread che contiene
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
 **Intestazione:** CorDebug.idl, CorDebug.h
 
 **Libreria:** CorGuids.lib
 
-**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
 

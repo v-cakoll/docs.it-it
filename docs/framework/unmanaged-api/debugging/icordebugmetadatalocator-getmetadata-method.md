@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9b0ff22-54db-45eb-9cc3-508000a3141d
 topic_type:
 - apiref
-ms.openlocfilehash: 43f3c1dd866b98bff51b375a11e28727e41d3ead
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d9269339e8e2ae8d00da701b015aa30cd51cbef3
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793056"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213374"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>Metodo ICorDebugMetaDataLocator::GetMetaData
 Chiede al debugger di restituire il percorso completo di un modulo i cui metadati sono necessari per completare un'operazione richiesta dal debugger.  
@@ -41,7 +41,7 @@ HRESULT GetMetaData(
   
 ## <a name="parameters"></a>Parametri  
  `wszImagePath`  
- [in] Stringa con terminazione null che rappresenta il percorso completo del file. Se il percorso completo non è disponibile, il nome e l'estensione del file (*nomefile*. *estensione*).  
+ [in] Stringa con terminazione null che rappresenta il percorso completo del file. Se il percorso completo non è disponibile, il nome e l'estensione del file (*nomefile*.* estensione*).  
   
  `dwImageTimeStamp`  
  [in] Timestamp dalle intestazioni del file PE dell'immagine. Questo parametro può essere potenzialmente utilizzato per la ricerca di un server di simboli ([symsrv](/windows/desktop/debug/using-symsrv)).  
@@ -60,27 +60,27 @@ HRESULT GetMetaData(
  `wszPathBuffer`  
  [out] Puntatore a un buffer in cui il debugger copierà il percorso completo del file che contiene i metadati richiesti.  
   
- Il flag `ofReadOnly` dall'enumerazione [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) viene usato per richiedere l'accesso in sola lettura ai metadati in questo file.  
+ Il `ofReadOnly` flag dell'enumerazione [CorOpenFlags](../metadata/coropenflags-enumeration.md) viene usato per richiedere l'accesso in sola lettura ai metadati in questo file.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo. Tutti gli altri HRESULT di errore indicano che il file non è recuperabile.  
   
-|HRESULT|Descrizione|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|Il metodo è stato eseguito correttamente. `wszPathBuffer` contiene il percorso completo del file ed è con terminazione null.|  
+|S_OK|Metodo completato correttamente. `wszPathBuffer` contiene il percorso completo del file ed è con terminazione null.|  
 |E_NOT_SUFFICIENT_BUFFER|Le dimensioni correnti di `wszPathBuffer` non sono sufficienti a contenere il percorso completo. In questo caso, `pcchPathBuffer` contiene il numero necessario di `WCHAR`s, incluso il carattere di terminazione null e `GetMetaData` viene chiamato una seconda volta con le dimensioni del buffer richiesto.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se `wszImagePath` contiene un percorso completo di un modulo da un dump, specifica il percorso dal computer in cui è stato recuperato il dump. Il file può non esistere in questa posizione oppure un file errato con lo stesso nome può essere archiviato nel percorso.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

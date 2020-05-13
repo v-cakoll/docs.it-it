@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cf7b7cfa-1c4b-4d8c-be70-4f9ed15a788b
 topic_type:
 - apiref
-ms.openlocfilehash: 43982ebb634843c0130c3321aa84c90b84e8c786
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b00be90316598e458f01f6cd440d0ad0a2e79c50
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793305"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212360"
 ---
 # <a name="icordebugmanagedcallback2-interface"></a>Interfaccia ICorDebugManagedCallback2
-Fornisce metodi che supportano la gestione delle eccezioni del debugger e assistenti al debug gestito. `ICorDebugManagedCallback2` è un'estensione logica dell'interfaccia [ICorDebugManagedCallback](icordebugmanagedcallback-interface.md) .  
+Fornisce metodi che supportano la gestione delle eccezioni del debugger e assistenti al debug gestito. `ICorDebugManagedCallback2`è un'estensione logica dell'interfaccia [ICorDebugManagedCallback](icordebugmanagedcallback-interface.md) .  
   
 ## <a name="methods"></a>Metodi  
   
@@ -37,25 +37,25 @@ Fornisce metodi che supportano la gestione delle eccezioni del debugger e assist
 |[Metodo FunctionRemapOpportunity](icordebugmanagedcallback2-functionremapopportunity-method.md)|Notifica al debugger che l'esecuzione del codice ha raggiunto un punto di sequenza in una versione precedente di una funzione modificata.|  
 |[Metodo MDANotification](icordebugmanagedcallback2-mdanotification-method.md)|Fornisce la notifica che l'esecuzione del codice ha rilevato un messaggio assistente al debug gestito (MDA).|  
   
-## <a name="remarks"></a>Note  
- L'interfaccia `ICorDebugManagedCallback2` estende l'interfaccia `ICorDebugManagedCallback` per gestire i nuovi eventi di debug introdotti nella versione .NET Framework 2,0.  
+## <a name="remarks"></a>Osservazioni  
+ L' `ICorDebugManagedCallback2` interfaccia estende l' `ICorDebugManagedCallback` interfaccia per gestire i nuovi eventi di debug introdotti nella versione .NET Framework 2,0.  
   
- Un debugger deve implementare `ICorDebugManagedCallback2` se esegue il debug .NET Framework applicazioni 2,0. Un'istanza di `ICorDebugManagedCallback` o `ICorDebugManagedCallback2` viene passata come oggetto callback a [ICorDebug:: SetManagedHandler](icordebug-setmanagedhandler-method.md).  
+ Un debugger deve implementare `ICorDebugManagedCallback2` se esegue il debug di applicazioni .NET Framework 2,0. Un'istanza di `ICorDebugManagedCallback` o `ICorDebugManagedCallback2` viene passata come oggetto callback a [ICorDebug:: SetManagedHandler](icordebug-setmanagedhandler-method.md).  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interfacce di debug](debugging-interfaces.md)
 - [Interfaccia ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

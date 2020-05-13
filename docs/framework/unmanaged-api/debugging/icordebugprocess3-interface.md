@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ced9c82e-d7b0-4806-a151-98b6611d3097
 topic_type:
 - apiref
-ms.openlocfilehash: 28d1d426276e9654c2122f03fb64735b7e67f44f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 826736d2db7aa1e618a2e5fe0655cedad9556b17
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792481"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213439"
 ---
 # <a name="icordebugprocess3-interface"></a>Interfaccia ICorDebugProcess3
 Controlla le notifiche di debugger personalizzate.  
@@ -30,20 +30,20 @@ Controlla le notifiche di debugger personalizzate.
 |------------|-----------------|  
 |[Metodo SetEnableCustomNotification](icordebugprocess3-setenablecustomnotification-method.md)|Abilita e Disabilita le notifiche personalizzate del debugger del tipo specificato.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questa interfaccia estende logicamente le interfacce ICorDebugProcess e ICorDebugProcess2.  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

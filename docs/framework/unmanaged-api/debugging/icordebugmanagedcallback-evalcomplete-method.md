@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f74ab4eb-cd1b-407c-a66d-8ec0d85647f3
 topic_type:
 - apiref
-ms.openlocfilehash: d29f4095a1d615285f4c4ff30e36b91404036949
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0431b54997c9889e2b3206392e86e4dcde45ffb3
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788405"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212451"
 ---
 # <a name="icordebugmanagedcallbackevalcomplete-method"></a>Metodo ICorDebugManagedCallback::EvalComplete
 Notifica al debugger che la valutazione è stata completata.  
@@ -45,14 +45,14 @@ HRESULT EvalComplete (
  `pEval`  
  in Puntatore a un oggetto ICorDebugEval che rappresenta il codice che ha eseguito la valutazione.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

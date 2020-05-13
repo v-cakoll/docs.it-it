@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e95d7cb-144d-4ccf-8a69-d605f4744be2
 topic_type:
 - apiref
-ms.openlocfilehash: 7923008eecb9011bead685fbbb7f05f81f12329b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 646b2661148e38f3c918fc18fce5c9cd0b1134a1
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138584"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213023"
 ---
 # <a name="icordebuggenericvaluegetvalue-method"></a>Metodo ICorDebugGenericValue::GetValue
 Copia il valore di questo generico nel buffer specificato.  
@@ -38,10 +38,10 @@ HRESULT GetValue (
  out Puntatore al valore rappresentato da questo oggetto ICorDebugGenericValue. Il valore può essere un tipo semplice o un tipo di riferimento, ovvero un puntatore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f759f87a-18ae-4c1a-8300-29b803432d0a
 topic_type:
 - apiref
-ms.openlocfilehash: 683c2853ea2ed43e61eb666ec56619cb58cde273
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a6aff37a480460bfed7064d59b4c5276daf3207c
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129501"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212503"
 ---
 # <a name="icordebugmodulegettoken-method"></a>Metodo ICorDebugModule::GetToken
 Ottiene il token per la voce della tabella per questo modulo.  
@@ -35,20 +35,20 @@ HRESULT GetToken(
   
 ## <a name="parameters"></a>Parametri  
  `pToken`  
- out Puntatore al token `mdModule` che fa riferimento ai metadati del modulo.  
+ out Puntatore al `mdModule` token che fa riferimento ai metadati del modulo.  
   
-## <a name="remarks"></a>Note  
- Il token può essere passato alle interfacce di importazione dei metadati [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), [IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)e [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) .  
+## <a name="remarks"></a>Osservazioni  
+ Il token può essere passato alle interfacce di importazione dei metadati [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), [IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)e [IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Metadati](../../../../docs/framework/unmanaged-api/metadata/index.md)
+- [Metadati](../metadata/index.md)

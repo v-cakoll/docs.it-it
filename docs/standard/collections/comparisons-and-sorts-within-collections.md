@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: 932a5abfaf2a6cc972e84cbc3d6b930cdd716f71
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 8e4530063f14211688e5ef2d2ec4ed7e4834cdf1
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728177"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212967"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Confronti e ordinamenti all'interno delle raccolte
 
@@ -28,7 +28,7 @@ Le raccolte in genere usano un operatore di uguaglianza e/o un confronto di ordi
 <a name="BKMK_Checkingforequality"></a>
 ## <a name="check-for-equality"></a>Verifica uguaglianza
 
-I metodi come `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A>e `Remove` usano un confronto di uguaglianza per gli elementi della raccolta. Se la raccolta è generica, viene verificata l'uguaglianza degli elementi secondo le istruzioni seguenti:
+I metodi come `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A>e `Remove` usano un confronto di uguaglianza per gli elementi della raccolta. Se la raccolta è generica, gli elementi vengono confrontati per verificarne l'uguaglianza secondo le linee guida seguenti:
 
 - Se il tipo T implementa l'interfaccia generica <xref:System.IEquatable%601> , il confronto di uguaglianza è il metodo <xref:System.IEquatable%601.Equals%2A> di tale interfaccia.
 
@@ -47,7 +47,7 @@ L'operatore di confronto predefinito si basa su almeno uno degli oggetti confron
 
 - Se il tipo T implementa l'interfaccia non generica <xref:System.IComparable?displayProperty=nameWithType> , l'operatore di confronto predefinito è il metodo <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> di tale interfaccia.
 
-- Se il tipo T non implementa alcuna interfaccia, non sarà presente nessun operatore di confronto predefinito e sarà necessario fornire in modo esplicito un delegato di confronto un o operatore di confronto.
+- Se il tipo T non implementa alcuna interfaccia, non esiste alcun operatore di confronto predefinito ed è necessario fornire in modo esplicito un delegato di confronto o di confronto.
 
 Per fornire i confronti espliciti, alcuni metodi accettano un'implementazione **IComparer** come parametro. Ad esempio, il metodo <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> accetta un'implementazione <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> .
 

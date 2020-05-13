@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a48261ed-700b-41c9-8cb4-18c526546603
 topic_type:
 - apiref
-ms.openlocfilehash: 6bf73a4be40f1fbd8e9d37477907001604e8e4a6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 081852f91f243c4a979e2969220e71bd10c8c56b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128826"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212885"
 ---
 # <a name="icordebugprocessgetthread-method"></a>Metodo ICorDebugProcess::GetThread
 Ottiene il thread del processo con l'ID del thread del sistema operativo (OS) specificato.  
@@ -41,10 +41,10 @@ HRESULT GetThread(
  out Puntatore all'indirizzo di un oggetto ICorDebugThread che rappresenta il thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

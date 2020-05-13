@@ -1,5 +1,5 @@
 ---
-title: Metodo ICorDebugProcess4::ProcessStateChangedICorDebugProcess4::ProcessStateChanged Method
+title: ICorDebugProcess4::P metodo rocessStateChanged
 ms.date: 02/07/2019
 api_name:
 - ICorDebugProcess4::ProcessStateChanged
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: a6f36f5b86b4fa58ce2a4ef4aa23d527f797a5a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 910c411d2c63ce2c6cf262e28e08546657dc2a4c
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178635"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213569"
 ---
-# <a name="icordebugprocess4processstatechanged-method"></a>Metodo ICorDebugProcess4::ProcessStateChangedICorDebugProcess4::ProcessStateChanged Method
+# <a name="icordebugprocess4processstatechanged-method"></a>ICorDebugProcess4::P metodo rocessStateChanged
 
 Notifica alla pipeline ICorDebug che il debugger out-of-process sta continuando l'esecuzione del debug.
 
@@ -37,21 +37,21 @@ HRESULT ProcessStateChanged(
 ## <a name="parameters"></a>Parametri
 
  `eChange`\
-[in] Membro [dell'enumerazione CorDebugStateChange](cordebugstatechange-enumeration.md) che descrive una modifica nello stato di esecuzione del processo.
+in Membro dell' [enumerazione CorDebugStateChange](cordebugstatechange-enumeration.md) che descrive una modifica nello stato di esecuzione del processo.
 
 ## <a name="remarks"></a>Osservazioni
 
-Il metodo fornito fa `ICorDebugProcess4` parte dell'interfaccia e corrisponde al quarto slot della tabella dei metodi virtuali.
+Il metodo fornito fa parte dell' `ICorDebugProcess4` interfaccia e corrisponde al quarto slot della tabella del metodo virtuale.
 
 ## <a name="requirements"></a>Requisiti
 
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
  **Intestazione:** Nessuno
 
- **Biblioteca:** Nessuno
+ **Libreria:** Nessuno
 
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
 

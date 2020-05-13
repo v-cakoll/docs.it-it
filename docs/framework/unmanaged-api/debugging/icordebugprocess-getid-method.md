@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0ba8453-fa7e-4c14-93e5-335409cd4a47
 topic_type:
 - apiref
-ms.openlocfilehash: ae0c23e3d48df6add8951a6d90029185a99bb323
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8cd40ffb60bf837a9aa3b0db34892350a05964d7
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128837"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213283"
 ---
 # <a name="icordebugprocessgetid-method"></a>Metodo ICorDebugProcess::GetID
 Ottiene l'ID del sistema operativo (OS) del processo.  
@@ -36,10 +36,10 @@ HRESULT GetID([out] DWORD *pdwProcessId);
  out ID univoco del processo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

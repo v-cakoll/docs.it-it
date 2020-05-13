@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e619eae4-3ac3-4c37-bba4-55e59989b9cb
 topic_type:
 - apiref
-ms.openlocfilehash: e0e4bfb3f7adb0242456dfc3a4703ca56f118476
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0f6fe5d7eb5926d48809bb6490ba75df9d4a5033
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138160"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213153"
 ---
 # <a name="icordebugfunctionbreakpointgetoffset-method"></a>Metodo ICorDebugFunctionBreakpoint::GetOffset
 Ottiene l'offset del punto di interruzione all'interno della funzione.  
@@ -38,10 +38,10 @@ HRESULT GetOffset (
  out Puntatore all'offset del punto di interruzione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
