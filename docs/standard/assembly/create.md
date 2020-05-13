@@ -1,5 +1,6 @@
 ---
 title: Creare assembly
+description: Informazioni sulla creazione di assembly con file singolo o su più file usando un IDE, ad esempio Visual Studio, oppure i compilatori e gli strumenti forniti dal Windows SDK.
 ms.date: 08/19/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], creating
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
-ms.openlocfilehash: 81fffb2b2e1d56d6068bf6f663a13fad6968a383
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3e17d6a066d937a161135b8b03c3f9258f3586b0
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73740515"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378517"
 ---
 # <a name="create-assemblies"></a>Creare assembly
 
@@ -42,12 +43,12 @@ Quando si raggruppano moduli di codice e risorse negli assembly, sono disponibil
 
      Raggruppare moduli contenenti tipi la cui visibilità deve essere limitata allo stesso assembly.
 
-Quando si rendono disponibili assembly di Common Language Runtime per le applicazioni COM non gestite, è necessario tenere presenti alcune considerazioni speciali. Per ulteriori informazioni sull'utilizzo di codice non gestito, vedere Esporre i [componenti di .NET Framework a COM](../../framework/interop/exposing-dotnet-components-to-com.md).
+Quando si rendono disponibili assembly Common Language Runtime alle applicazioni COM non gestite, è necessario tenere presenti alcune considerazioni speciali. Per ulteriori informazioni sull'utilizzo di codice non gestito, vedere [esporre componenti .NET Framework a com](../../framework/interop/exposing-dotnet-components-to-com.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Controllo delle versioni degli assembly](versioning.md)
-- [Procedura: compilare un assembly a file singoloHow to: Build a single-file assembly](../../framework/app-domains/build-single-file-assembly.md)
-- [Procedura: compilare un assembly su più fileHow to: Build a multifile assembly](../../framework/app-domains/build-multifile-assembly.md)
+- [Procedura: Creare un assembly su singolo file](../../framework/app-domains/build-single-file-assembly.md)
+- [Procedura: Creare un assembly su più file](../../framework/app-domains/build-multifile-assembly.md)
 - [Come il runtime individua gli assembly](../../framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Assembly su più file](../../framework/app-domains/multifile-assemblies.md)

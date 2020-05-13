@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 99e8c8d7-a1c0-47c8-9dbd-03e0b2bcb4d5
 topic_type:
 - apiref
-ms.openlocfilehash: 9d5047b1d44f836d10b659f18cf885eba3b0e973
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8b778c0880040f5ffd639a445fd5663ce493219
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139825"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379091"
 ---
 # <a name="icordebugreferencevalueisnull-method"></a>Metodo ICorDebugReferenceValue::IsNull
-Ottiene un valore che indica se questo ICorDebugReferenceValue è un valore null, nel qual caso il `ICorDebugReferenceValue` non punta a un oggetto.  
+Ottiene un valore che indica se questo ICorDebugReferenceValue è un valore null, nel qual caso `ICorDebugReferenceValue` non fa riferimento a un oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,13 +35,13 @@ HRESULT IsNull (
   
 ## <a name="parameters"></a>Parametri  
  `pbNull`  
- out Puntatore a un valore booleano che viene `true` se l'oggetto `ICorDebugReferenceValue` è null; in caso contrario, `pbNull` è `false`.  
+ out Puntatore a un valore booleano che è `true` se l' `ICorDebugReferenceValue` oggetto è null; in caso contrario, `pbNull` è `false` .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

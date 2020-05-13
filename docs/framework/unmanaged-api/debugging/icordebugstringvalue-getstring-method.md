@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b94bda7-09ee-435d-91b9-c4e31af1896c
 topic_type:
 - apiref
-ms.openlocfilehash: e23133176cbd703a58c92f9bf1ead530b0bbb8a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c154d4ad561e0bd9d82adaca77d2e30f11a5237
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178504"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379659"
 ---
 # <a name="icordebugstringvaluegetstring-method"></a>Metodo ICorDebugStringValue::GetString
 Ottiene la stringa a cui fa riferimento questo ICorDebugStringValue.  
@@ -41,16 +41,16 @@ HRESULT GetString (
  [in] Dimensione della matrice `szString`.  
   
  `pcchString`  
- [fuori] Puntatore al numero di caratteri `szString` restituiti nella matrice.  
+ out Puntatore al numero di caratteri restituiti nella `szString` matrice.  
   
  `szString`  
- [fuori] Matrice in cui viene archiviata la stringa recuperata.  
+ out Matrice che archivia la stringa recuperata.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

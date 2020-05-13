@@ -4,12 +4,12 @@ description: Informazioni su come creare componenti dell'interfaccia utente riut
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 79fb2338a981389c3750e884ce6606351c84738a
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 1a5f6b63143c4fd7a276219b9c4877e9e355c996
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506766"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378325"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Crea componenti dell'interfaccia utente riutilizzabili con blazer
 
@@ -28,7 +28,7 @@ Blazer supporta anche l'incapsulamento dell'interfaccia utente tramite i *compon
 
 Razor è un linguaggio di modelli di markup leggero basato su HTML e C#. Con Razor è possibile passare senza interruzioni tra markup e codice C# per definire la logica di rendering dei componenti. Quando viene compilato il file con *estensione Razor* , la logica di rendering viene acquisita in modo strutturato in una classe .NET. Il nome della classe compilata è tratto dal nome del file *Razor* . Lo spazio dei nomi viene tratto dallo spazio dei nomi predefinito per il progetto e il percorso della cartella oppure è possibile specificare in modo esplicito lo spazio dei nomi usando la `@namespace` direttiva. altre informazioni sulle direttive Razor sono disponibili di seguito.
 
-La logica di rendering di un componente viene creata usando il normale markup HTML con la logica dinamica aggiunta con C#. Il `@` carattere viene usato per la transizione a C#. Razor è in genere intelligente per capire quando è stato eseguito il passaggio al codice HTML. Il componente seguente, ad esempio, esegue il `<p>` rendering di un tag con l'ora corrente:
+La logica di rendering di un componente viene creata usando il normale markup HTML con la logica dinamica aggiunta con C#. Il `@` carattere viene usato per la transizione a C#. Razor è in genere intelligente per capire quando è stato eseguito il passaggio al codice HTML. Il componente seguente, ad esempio, esegue il rendering di un `<p>` tag con l'ora corrente:
 
 ```razor
 <p>@DateTime.Now</p>
@@ -69,7 +69,7 @@ Le direttive Razor, come le direttive nei Web Form ASP.NET, controllano molti as
 - Spazi dei nomi importati
 - Route
 
-Le direttive Razor iniziano con `@` il carattere e vengono in genere usate all'inizio di una nuova riga all'inizio del file. Ad esempio, la `@namespace` direttiva definisce lo spazio dei nomi del componente:
+Le direttive Razor iniziano con il `@` carattere e vengono in genere usate all'inizio di una nuova riga all'inizio del file. Ad esempio, la `@namespace` direttiva definisce lo spazio dei nomi del componente:
 
 ```razor
 @namespace MyComponentNamespace
@@ -106,7 +106,7 @@ Nella tabella seguente vengono riepilogati i vari attributi per le direttive Raz
 |`@key`       |Specifica una chiave che deve essere usata dall'algoritmo diffing per mantenere gli elementi in una raccolta.|`<DetailsEditor @key="person" Details="person.Details" />`|
 |`@ref`       |Acquisisce un riferimento all'elemento Component o HTML|`<MyDialog @ref="myDialog" />`|
 
-I vari attributi di direttiva usati da Blazer`@onclick`( `@bind`, `@ref`, e così via) sono descritti nelle sezioni seguenti e nei capitoli successivi.
+I vari attributi di direttiva usati da Blazer ( `@onclick` ,, `@bind` `@ref` e così via) sono descritti nelle sezioni seguenti e nei capitoli successivi.
 
 Molte delle sintassi usate nei file *. aspx* e *. ascx* hanno sintassi parallele in Razor. Di seguito è riportato un semplice confronto delle sintassi per ASP.NET Web Forms e Razor.
 
@@ -116,9 +116,9 @@ Molte delle sintassi usate nei file *. aspx* e *. ascx* hanno sintassi parallele
 |Blocchi di codice                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
 |Espressioni<br>(Codificata in HTML)|`<%: %>`            |`<%:DateTime.Now %>` |Implicita`@`<br>Esplicita`@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
 |Commenti                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
-|Associazione dati                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
+|Data binding                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
 
-Per aggiungere membri alla classe del componente Razor, utilizzare la `@code` direttiva. Questa tecnica è simile all'uso di `<script runat="server">...</script>` un blocco in una pagina o in un controllo utente Web Form ASP.NET.
+Per aggiungere membri alla classe del componente Razor, utilizzare la `@code` direttiva. Questa tecnica è simile all'uso di un `<script runat="server">...</script>` blocco in una pagina o in un controllo utente Web form ASP.NET.
 
 ```razor
 @code {
@@ -145,10 +145,10 @@ Oltre al normale HTML, i componenti possono usare anche altri componenti come pa
 
 A differenza dei Web Form ASP.NET, componenti in Blazer:
 
-- Non usare un prefisso di elemento (ad esempio `asp:`,).
+- Non usare un prefisso di elemento (ad esempio, `asp:` ).
 - Non richiedere la registrazione nella pagina o in *Web. config*.
 
-Si pensi ai componenti Razor come se fossero tipi .NET, perché si tratta esattamente di ciò che si tratta. Se viene fatto riferimento all'assembly contenente il componente, il componente sarà disponibile per l'utilizzo. Per portare lo spazio dei nomi del componente nell'ambito, `@using` applicare la direttiva:
+Si pensi ai componenti Razor come se fossero tipi .NET, perché si tratta esattamente di ciò che si tratta. Se viene fatto riferimento all'assembly contenente il componente, il componente sarà disponibile per l'utilizzo. Per portare lo spazio dei nomi del componente nell'ambito, applicare la `@using` direttiva:
 
 ```razor
 @using MyComponentLib
@@ -156,7 +156,7 @@ Si pensi ai componenti Razor come se fossero tipi .NET, perché si tratta esatta
 <Counter />
 ```
 
-Come illustrato nei progetti Blazer predefiniti, è comune inserire `@using` le direttive in un file *_Imports. Razor* , in modo che vengano importate in tutti i file con *estensione Razor* nella stessa directory e nelle directory figlio.
+Come illustrato nei progetti Blazer predefiniti, è comune inserire le `@using` direttive in un file *_Imports. Razor* , in modo che vengano importate in tutti i file con *estensione Razor* nella stessa directory e nelle directory figlio.
 
 Se lo spazio dei nomi per un componente non è incluso nell'ambito, è possibile specificare un componente usando il nome completo del tipo, come è possibile in C#:
 
@@ -166,9 +166,9 @@ Se lo spazio dei nomi per un componente non è incluso nell'ambito, è possibile
 
 ## <a name="component-parameters"></a>Parametri del componente
 
-In ASP.NET Web Form è possibile eseguire il flusso di parametri e dati ai controlli usando proprietà pubbliche. Queste proprietà possono essere impostate nel markup usando gli attributi o impostate direttamente nel codice. I componenti Blazer funzionano in modo simile, anche se le proprietà del componente devono essere contrassegnate `[Parameter]` con l'attributo per essere considerati parametri del componente.
+In ASP.NET Web Form è possibile eseguire il flusso di parametri e dati ai controlli usando proprietà pubbliche. Queste proprietà possono essere impostate nel markup usando gli attributi o impostate direttamente nel codice. I componenti Blazer funzionano in modo simile, anche se le proprietà del componente devono essere contrassegnate con l' `[Parameter]` attributo per essere considerati parametri del componente.
 
-Il componente `Counter` seguente definisce un parametro del componente `IncrementAmount` denominato che può essere usato per specificare la quantità che `Counter` deve essere incrementata ogni volta che si fa clic sul pulsante.
+Il `Counter` componente seguente definisce un parametro del componente denominato `IncrementAmount` che può essere usato per specificare la quantità che `Counter` deve essere incrementata ogni volta che si fa clic sul pulsante.
 
 ```razor
 <h1>Counter</h1>
@@ -218,7 +218,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-In blazer è possibile registrare i gestori per gli eventi dell'interfaccia utente DOM direttamente usando gli attributi di `@on{event}`direttiva del modulo. Il `{event}` segnaposto rappresenta il nome dell'evento. Ad esempio, è possibile ascoltare i clic del pulsante come segue:
+In blazer è possibile registrare i gestori per gli eventi dell'interfaccia utente DOM direttamente usando gli attributi di direttiva del modulo `@on{event}` . Il `{event}` segnaposto rappresenta il nome dell'evento. Ad esempio, è possibile ascoltare i clic del pulsante come segue:
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -231,7 +231,7 @@ In blazer è possibile registrare i gestori per gli eventi dell'interfaccia uten
 }
 ```
 
-I gestori di eventi possono accettare un argomento facoltativo specifico dell'evento per fornire altre informazioni sull'evento. Gli eventi del mouse, ad esempio, `MouseEventArgs` possono assumere un argomento, ma non è obbligatorio.
+I gestori di eventi possono accettare un argomento facoltativo specifico dell'evento per fornire altre informazioni sull'evento. Gli eventi del mouse, ad esempio, possono assumere un `MouseEventArgs` argomento, ma non è obbligatorio.
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -253,7 +253,7 @@ Anziché fare riferimento a un gruppo di metodi per un gestore eventi, è possib
 }
 ```
 
-I gestori di eventi possono essere eseguiti in modo sincrono o asincrono. Ad esempio, il gestore `OnClick` eventi seguente viene eseguito in modo asincrono:
+I gestori di eventi possono essere eseguiti in modo sincrono o asincrono. Ad esempio, il `OnClick` gestore eventi seguente viene eseguito in modo asincrono:
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -266,7 +266,7 @@ I gestori di eventi possono essere eseguiti in modo sincrono o asincrono. Ad ese
 }
 ```
 
-Una volta gestito un evento, viene eseguito il rendering del componente per tenere conto di eventuali modifiche dello stato dei componenti. Con i gestori eventi asincroni, il rendering del componente viene eseguito subito dopo il completamento dell'esecuzione del gestore. Il rendering del componente viene eseguito *nuovamente* dopo `Task` il completamento dell'oggetto asincrono. Questa modalità di esecuzione asincrona consente di eseguire il rendering di un'interfaccia utente appropriata `Task` mentre l'oggetto asincrono è ancora in corso.
+Una volta gestito un evento, viene eseguito il rendering del componente per tenere conto di eventuali modifiche dello stato dei componenti. Con i gestori eventi asincroni, il rendering del componente viene eseguito subito dopo il completamento dell'esecuzione del gestore. Il rendering del componente viene eseguito *nuovamente* dopo il completamento dell'oggetto asincrono `Task` . Questa modalità di esecuzione asincrona consente di eseguire il rendering di un'interfaccia utente appropriata mentre l'oggetto asincrono `Task` è ancora in corso.
 
 ```razor
 <button @onclick="ShowMessage">Get message</button>
@@ -296,7 +296,7 @@ Una volta gestito un evento, viene eseguito il rendering del componente per tene
 }
 ```
 
-I componenti possono anche definire i propri eventi definendo un parametro component di tipo `EventCallback<TValue>`. I callback di evento supportano tutte le varianti dei gestori eventi dell'interfaccia utente DOM: argomenti facoltativi, sincroni o asincroni, gruppi di metodi o espressioni lambda.
+I componenti possono anche definire i propri eventi definendo un parametro component di tipo `EventCallback<TValue>` . I callback di evento supportano tutte le varianti dei gestori eventi dell'interfaccia utente DOM: argomenti facoltativi, sincroni o asincroni, gruppi di metodi o espressioni lambda.
 
 ```razor
 <button class="btn btn-primary" @onclick="OnClick">Click me!</button>
@@ -307,7 +307,7 @@ I componenti possono anche definire i propri eventi definendo un parametro compo
 }
 ```
 
-## <a name="data-binding"></a>Associazione dati
+## <a name="data-binding"></a>Data binding
 
 Blazer fornisce un meccanismo semplice per associare i dati di un componente dell'interfaccia utente allo stato del componente. Questo approccio è diverso dalle funzionalità di ASP.NET Web Forms per l'associazione dei dati dalle origini dati ai controlli dell'interfaccia utente. Si tratterà di gestire i dati di origini dati diverse nella sezione relativa alla gestione [dei dati](data.md) .
 
@@ -321,7 +321,7 @@ Per creare un data binding bidirezionale da un componente dell'interfaccia utent
 }
 ```
 
-Quando viene eseguito il rendering del componente, il valore della casella di controllo viene impostato sul valore `isChecked` del campo. Quando l'utente attiva o imposta la casella di `onchange` controllo, viene generato l' `isChecked` evento e il campo viene impostato sul nuovo valore. In `@bind` questo caso la sintassi è equivalente al markup seguente:
+Quando viene eseguito il rendering del componente, il valore della casella di controllo viene impostato sul valore del `isChecked` campo. Quando l'utente attiva o imposta la casella di controllo, `onchange` viene generato l'evento e il `isChecked` campo viene impostato sul nuovo valore. `@bind`In questo caso la sintassi è equivalente al markup seguente:
 
 ```razor
 <input value="@isChecked" @onchange="(UIChangeEventArgs e) => isChecked = e.Value" />
@@ -367,9 +367,9 @@ Password: <input
 }
 ```
 
-Per concatenare un data binding a un elemento dell'interfaccia utente sottostante, impostare il valore e gestire l'evento direttamente sull'elemento dell'interfaccia `@bind` utente anziché utilizzare l'attributo.
+Per concatenare un data binding a un elemento dell'interfaccia utente sottostante, impostare il valore e gestire l'evento direttamente sull'elemento dell'interfaccia utente anziché utilizzare l' `@bind` attributo.
 
-Per eseguire l'associazione a un parametro component, `@bind-{Parameter}` utilizzare un attributo per specificare il parametro al quale si desidera eseguire il binding.
+Per eseguire l'associazione a un parametro component, utilizzare un `@bind-{Parameter}` attributo per specificare il parametro al quale si desidera eseguire il binding.
 
 ```razor
 <PasswordBox @bind-Password="password" />
@@ -381,9 +381,9 @@ Per eseguire l'associazione a un parametro component, `@bind-{Parameter}` utiliz
 
 ## <a name="state-changes"></a>Modifiche stato
 
-Se lo stato del componente è stato modificato all'esterno di un normale evento dell'interfaccia utente o di un callback di evento, il componente deve segnalare manualmente che è necessario eseguire nuovamente il rendering. Per segnalare che lo stato di un componente è stato modificato, `StateHasChanged` chiamare il metodo sul componente.
+Se lo stato del componente è stato modificato all'esterno di un normale evento dell'interfaccia utente o di un callback di evento, il componente deve segnalare manualmente che è necessario eseguire nuovamente il rendering. Per segnalare che lo stato di un componente è stato modificato, chiamare il `StateHasChanged` metodo sul componente.
 
-Nell'esempio seguente un componente Visualizza un messaggio da un `AppState` servizio che può essere aggiornato da altre parti dell'app. Il componente registra il `StateHasChanged` proprio metodo con `AppState.OnChange` l'evento in modo che il componente venga sottoposto a rendering ogni volta che il messaggio viene aggiornato.
+Nell'esempio seguente un componente Visualizza un messaggio da un `AppState` servizio che può essere aggiornato da altre parti dell'app. Il componente registra il proprio `StateHasChanged` metodo con l' `AppState.OnChange` evento in modo che il componente venga sottoposto a rendering ogni volta che il messaggio viene aggiornato.
 
 ```csharp
 public class AppState
@@ -395,7 +395,7 @@ public class AppState
 
     public void UpdateMessage(string message)
     {
-        shortlist.Add(itinerary);
+        Message = message;
         NotifyStateChanged();
     }
 
@@ -418,7 +418,7 @@ public class AppState
 
 ## <a name="component-lifecycle"></a>Ciclo di vita componente
 
-Il framework ASP.NET Web Forms include metodi del ciclo di vita ben definiti per moduli, pagine e controlli. Il controllo seguente, ad esempio, implementa i gestori eventi per `Init`gli `Load`eventi del `UnLoad` ciclo di vita, e:
+Il framework ASP.NET Web Forms include metodi del ciclo di vita ben definiti per moduli, pagine e controlli. Il controllo seguente, ad esempio, implementa i gestori eventi per gli eventi del ciclo di vita `Init` , `Load` e `UnLoad` :
 
 *Counter.ascx.cs*
 
@@ -433,11 +433,11 @@ public partial class Counter : System.Web.UI.UserControl
 
 I componenti Blazer hanno anche un ciclo di vita ben definito. Il ciclo di vita di un componente può essere utilizzato per inizializzare lo stato del componente e implementare i comportamenti dei componenti avanzati.
 
-Tutti i metodi del ciclo di vita dei componenti di Blazer hanno versioni sincrone e asincrone. Il rendering del componente è sincrono. Non è possibile eseguire la logica asincrona come parte del rendering dei componenti. Tutte le logiche asincrone devono essere eseguite come parte `async` di un metodo del ciclo di vita.
+Tutti i metodi del ciclo di vita dei componenti di Blazer hanno versioni sincrone e asincrone. Il rendering del componente è sincrono. Non è possibile eseguire la logica asincrona come parte del rendering dei componenti. Tutte le logiche asincrone devono essere eseguite come parte di un metodo del ciclo di vita `async` .
 
 ### <a name="oninitialized"></a>OnInitialized
 
-I `OnInitialized` metodi `OnInitializedAsync` e vengono usati per inizializzare il componente. Un componente viene in genere inizializzato dopo il primo rendering. Dopo l'inizializzazione di un componente, è possibile eseguirne il rendering più volte prima di eliminarlo. Il `OnInitialized` metodo è simile all' `Page_Load` evento nei controlli e nelle pagine Web Form ASP.NET.
+I `OnInitialized` `OnInitializedAsync` metodi e vengono usati per inizializzare il componente. Un componente viene in genere inizializzato dopo il primo rendering. Dopo l'inizializzazione di un componente, è possibile eseguirne il rendering più volte prima di eliminarlo. Il `OnInitialized` metodo è simile all' `Page_Load` evento nei controlli e nelle pagine Web Form ASP.NET.
 
 ```csharp
 protected override void OnInitialized() { ... }
@@ -446,7 +446,7 @@ protected override async Task OnInitializedAsync() { await ... }
 
 ### <a name="onparametersset"></a>OnParametersSet
 
-I `OnParametersSet` metodi `OnParametersSetAsync` e vengono chiamati quando un componente ha ricevuto parametri dal relativo elemento padre e il valore viene assegnato alle proprietà. Questi metodi vengono eseguiti dopo l'inizializzazione *del componente e ogni volta che il componente viene*sottoposto a rendering.
+I `OnParametersSet` `OnParametersSetAsync` metodi e vengono chiamati quando un componente ha ricevuto parametri dal relativo elemento padre e il valore viene assegnato alle proprietà. Questi metodi vengono eseguiti dopo l'inizializzazione *del componente e ogni volta che il componente viene*sottoposto a rendering.
 
 ```csharp
 protected override void OnParametersSet() { ... }
@@ -455,7 +455,7 @@ protected override async Task OnParametersSetAsync() { await ... }
 
 ### <a name="onafterrender"></a>OnAfterRender
 
-I `OnAfterRender` metodi `OnAfterRenderAsync` e vengono chiamati dopo che un componente ha terminato il rendering. A questo punto vengono popolati i riferimenti a elementi e componenti (altre informazioni sui concetti seguenti). L'interattività con il browser è abilitata a questo punto. Le interazioni con l'esecuzione DOM e JavaScript possono avere luogo in modo sicuro.
+I `OnAfterRender` `OnAfterRenderAsync` metodi e vengono chiamati dopo che un componente ha terminato il rendering. A questo punto vengono popolati i riferimenti a elementi e componenti (altre informazioni sui concetti seguenti). L'interattività con il browser è abilitata a questo punto. Le interazioni con l'esecuzione DOM e JavaScript possono avere luogo in modo sicuro.
 
 ```csharp
 protected override void OnAfterRender(bool firstRender)
@@ -476,11 +476,11 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 
 `OnAfterRender`e `OnAfterRenderAsync` *non vengono chiamati durante il prerendering sul server*.
 
-Il `firstRender` parametro è `true` la prima volta che il componente viene sottoposto a rendering; in caso contrario, il `false`relativo valore è.
+Il `firstRender` parametro è `true` la prima volta che il componente viene sottoposto a rendering; in caso contrario, il relativo valore è `false` .
 
 ### <a name="idisposable"></a>IDisposable
 
-I componenti di Blazer `IDisposable` possono implementare per eliminare le risorse quando il componente viene rimosso dall'interfaccia utente. Un componente Razor può implementare `IDispose` usando la `@implements` direttiva:
+I componenti di Blazer possono implementare `IDisposable` per eliminare le risorse quando il componente viene rimosso dall'interfaccia utente. Un componente Razor può implementare `IDispose` usando la `@implements` direttiva:
 
 ```razor
 @using System
@@ -500,7 +500,7 @@ I componenti di Blazer `IDisposable` possono implementare per eliminare le risor
 
 In ASP.NET Web Forms è normale modificare un'istanza del controllo direttamente nel codice facendo riferimento al relativo ID. In blazer è anche possibile acquisire e modificare un riferimento a un componente, anche se è molto meno comune.
 
-Per acquisire un riferimento a un componente in blazer, `@ref` usare l'attributo Directive. Il valore dell'attributo deve corrispondere al nome di un campo impostabile con lo stesso tipo del componente a cui si fa riferimento.
+Per acquisire un riferimento a un componente in blazer, usare l' `@ref` attributo Directive. Il valore dell'attributo deve corrispondere al nome di un campo impostabile con lo stesso tipo del componente a cui si fa riferimento.
 
 ```razor
 <MyLoginDialog @ref="loginDialog" ... />
@@ -525,13 +525,13 @@ I componenti di Blazer possono acquisire riferimenti a un elemento. A differenza
 
 ## <a name="templated-components"></a>Componenti basati su modelli
 
-In ASP.NET Web Forms è possibile creare *controlli basati su modelli*. I controlli basati su modelli consentono allo sviluppatore di specificare una parte del codice HTML usato per eseguire il rendering di un controllo contenitore. I meccanismi di creazione di controlli server basati su modelli sono complessi, ma consentono scenari avanzati per il rendering dei dati in modo personalizzabile dall'utente. Esempi di controlli basati su modelli `Repeater` includono `DataList`e.
+In ASP.NET Web Forms è possibile creare *controlli basati su modelli*. I controlli basati su modelli consentono allo sviluppatore di specificare una parte del codice HTML usato per eseguire il rendering di un controllo contenitore. I meccanismi di creazione di controlli server basati su modelli sono complessi, ma consentono scenari avanzati per il rendering dei dati in modo personalizzabile dall'utente. Esempi di controlli basati su modelli includono `Repeater` e `DataList` .
 
-I componenti Blazer possono anche essere basati su modelli definendo parametri del componente `RenderFragment` di `RenderFragment<T>`tipo o. Un `RenderFragment` oggetto rappresenta un blocco di markup Razor di cui è possibile eseguire il rendering tramite il componente. Un `RenderFragment<T>` è un blocco di markup Razor che accetta un parametro che può essere specificato quando viene eseguito il rendering del frammento di rendering.
+I componenti Blazer possono anche essere basati su modelli definendo parametri del componente di tipo `RenderFragment` o `RenderFragment<T>` . Un oggetto `RenderFragment` rappresenta un blocco di markup Razor di cui è possibile eseguire il rendering tramite il componente. Un `RenderFragment<T>` è un blocco di markup Razor che accetta un parametro che può essere specificato quando viene eseguito il rendering del frammento di rendering.
 
 ### <a name="child-content"></a>Contenuto figlio
 
-I componenti di Blazer possono acquisire il contenuto figlio `RenderFragment` come ed eseguire il rendering del contenuto come parte del rendering dei componenti. Per acquisire il contenuto figlio, definire un parametro del componente `RenderFragment` di tipo e `ChildContent`denominarlo.
+I componenti di Blazer possono acquisire il contenuto figlio come `RenderFragment` ed eseguire il rendering del contenuto come parte del rendering dei componenti. Per acquisire il contenuto figlio, definire un parametro del componente di tipo `RenderFragment` e denominarlo `ChildContent` .
 
 *ChildContentComponent. Razor*
 
@@ -556,7 +556,7 @@ Un componente padre può quindi fornire contenuto figlio utilizzando la normale 
 
 ### <a name="template-parameters"></a>Parametri di modelli
 
-Un componente Blazer basato su modelli può anche definire più parametri Component di `RenderFragment` tipo `RenderFragment<T>`o. Il parametro per un `RenderFragment<T>` oggetto può essere specificato quando viene richiamato. Per specificare un parametro di tipo generico per un componente, usare `@typeparam` la direttiva Razor.
+Un componente Blazer basato su modelli può anche definire più parametri Component di tipo `RenderFragment` o `RenderFragment<T>` . Il parametro per un oggetto `RenderFragment<T>` può essere specificato quando viene richiamato. Per specificare un parametro di tipo generico per un componente, usare la `@typeparam` direttiva Razor.
 
 *SimpleListView. Razor*
 
@@ -584,7 +584,7 @@ Un componente Blazer basato su modelli può anche definire più parametri Compon
 }
 ```
 
-Quando si usa un componente basato su modelli, è possibile specificare i parametri del modello usando gli elementi figlio che corrispondono ai nomi dei parametri. Gli argomenti del componente `RenderFragment<T>` di tipo passati come elementi hanno un parametro `context`implicito denominato. È possibile modificare il nome di questo parametro di implementazione utilizzando `Context` l'attributo nell'elemento figlio. È possibile specificare parametri di tipo generico usando un attributo che corrisponda al nome del parametro di tipo. Il parametro di tipo verrà dedotto se possibile:
+Quando si usa un componente basato su modelli, è possibile specificare i parametri del modello usando gli elementi figlio che corrispondono ai nomi dei parametri. Gli argomenti del componente di tipo `RenderFragment<T>` passati come elementi hanno un parametro implicito denominato `context` . È possibile modificare il nome di questo parametro di implementazione utilizzando l' `Context` attributo nell'elemento figlio. È possibile specificare parametri di tipo generico usando un attributo che corrisponda al nome del parametro di tipo. Il parametro di tipo verrà dedotto se possibile:
 
 ```razor
 <SimpleListView Items="messages" TItem="string">
@@ -609,7 +609,7 @@ L'output di questo componente è simile al seguente:
 
 ## <a name="code-behind"></a>Code-behind
 
-Un componente Blazer viene in genere creato in un singolo file *Razor* . Tuttavia, è anche possibile separare il codice e il markup usando un file code-behind. Per usare un file di componente, aggiungere un file C# che corrisponda al nome del file del componente, ma con estensione *CS* aggiunto (*Counter.Razor.cs*). Usare il file C# per definire una classe di base per il componente. È possibile assegnare un nome alla classe di base, ma è comune denominare la classe come la classe Component, ma con un' `Base` estensione aggiunta (`CounterBase`). La classe basata su componenti deve anche derivare `ComponentBase`da. Quindi, nel file del componente Razor aggiungere la `@inherits` direttiva per specificare la classe di base per il componente (`@inherits CounterBase`).
+Un componente Blazer viene in genere creato in un singolo file *Razor* . Tuttavia, è anche possibile separare il codice e il markup usando un file code-behind. Per usare un file di componente, aggiungere un file C# che corrisponda al nome del file del componente, ma con estensione *CS* aggiunto (*Counter.Razor.cs*). Usare il file C# per definire una classe di base per il componente. È possibile assegnare un nome alla classe di base, ma è comune denominare la classe come la classe Component, ma con un' `Base` estensione aggiunta ( `CounterBase` ). La classe basata su componenti deve anche derivare da `ComponentBase` . Quindi, nel file del componente Razor aggiungere la `@inherits` direttiva per specificare la classe di base per il componente ( `@inherits CounterBase` ).
 
 *Counter. Razor*
 
@@ -637,12 +637,12 @@ public class CounterBase : ComponentBase
 }
 ```
 
-La visibilità dei membri del componente nella classe base deve essere `protected` o `public` essere visibile alla classe Component.
+La visibilità dei membri del componente nella classe base deve essere o essere `protected` `public` visibile alla classe Component.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
 Il precedente non è un trattamento esaustivo di tutti gli aspetti dei componenti di Blazer. Per ulteriori informazioni su come [creare e utilizzare ASP.NET Core componenti Razor](/aspnet/core/blazor/components), vedere la documentazione di Blazer.
 
 >[!div class="step-by-step"]
->[Precedente](app-startup.md)
->[successivo](pages-routing-layouts.md)
+>[Precedente](app-startup.md) 
+> [Avanti](pages-routing-layouts.md)

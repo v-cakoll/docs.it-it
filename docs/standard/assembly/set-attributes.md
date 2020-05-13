@@ -1,5 +1,6 @@
 ---
 title: Impostare gli attributi dell'assembly
+description: È possibile impostare gli attributi di assembly per un assembly .NET, inclusi l'identità dell'assembly, l'informativa, il manifesto dell'assembly e gli attributi del nome sicuro.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], attributes
@@ -10,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 0e4e2e595ed4f95511bd23ab0ed00139f71b2c8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e3a077dcd1b62a4676a3ac6492a90e38c548e41b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73740477"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378640"
 ---
 # <a name="set-assembly-attributes"></a>Impostare gli attributi dell'assembly
 
@@ -39,7 +40,7 @@ Nella tabella seguente vengono descritti gli attributi relativi alla versione e 
 |---------------------------------|-----------------|
 |<xref:System.Reflection.AssemblyCultureAttribute>|Campo elenco in cui vengono indicate le impostazioni cultura supportate dall'assembly. È possibile specificare anche l'indipendenza dalle impostazioni cultura per l'assembly, indicando che nell'assembly sono presenti le risorse per le impostazioni cultura predefinite. **Nota:** tutti gli assembly il cui attributo "Culture" non è impostato su Null vengono considerati dal runtime come assembly satellite. e sono soggetti alle regole di associazione degli assembly satellite. Per ulteriori informazioni, vedere [come il runtime individua gli assembly](../../framework/deployment/how-the-runtime-locates-assemblies.md).|
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Valore che consente di impostare gli attributi relativi all'assembly, indicando ad esempio se è consentita l'esecuzione affiancata di più versioni.|
-|<xref:System.Reflection.AssemblyVersionAttribute>|Valore numerico in formato *principale*.*secondario*.*build*.*revisione* (ad esempio, 2.4.0.0). Questo valore viene usato da Common Language Runtime per eseguire operazioni di associazione in assembly con nome sicuro. **Nota:**  Se l' <xref:System.Reflection.AssemblyInformationalVersionAttribute> attributo non viene applicato a un assembly, il numero di versione specificato dall' <xref:System.Reflection.AssemblyVersionAttribute> attributo viene usato dalle proprietà <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>e <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> .|
+|<xref:System.Reflection.AssemblyVersionAttribute>|Valore numerico in formato *principale*.*secondario*.*build*.*revisione* (ad esempio, 2.4.0.0). Questo valore viene usato da Common Language Runtime per eseguire operazioni di associazione in assembly con nome sicuro. **Nota:**  Se l' <xref:System.Reflection.AssemblyInformationalVersionAttribute> attributo non viene applicato a un assembly, il numero di versione specificato dall' <xref:System.Reflection.AssemblyVersionAttribute> attributo viene usato dalle <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> proprietà, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> .|
 
 Nel seguente esempio di codice viene mostrato come applicare a un assembly gli attributi relativi alla versione e alle impostazioni cultura.
 

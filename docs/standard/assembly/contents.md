@@ -1,17 +1,18 @@
 ---
 title: Contenuto degli assembly
+description: Questo articolo descrive il contenuto di un assembly .NET, che può includere metadati dell'assembly, metadati del tipo, codice MSIL e risorse.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework]
 - assemblies [.NET Core]
 - single-file assemblies
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
-ms.openlocfilehash: bee9d5422ec3101b2486f233ae0816ae3643f4e7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94df452162ed7290fab7fa267d2624e6d844a587
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75345580"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378564"
 ---
 # <a name="assembly-contents"></a>Contenuto degli assembly
 
@@ -23,15 +24,15 @@ Per grandi linee, un assembly statico è costituito da quattro elementi:
 
 - Il codice Microsoft Intermediate Language (MSIL) che implementa i tipi. Viene generato dal compilatore da uno o più file di codice sorgente.
 
-- Un set di [risorse](../../framework/resources/index.md).  
+- Set di [risorse](../../framework/resources/index.md).  
 
 Il manifesto dell'assembly è il solo elemento obbligatorio, ma il corretto funzionamento dell'assembly dipende anche dalla presenza di tipi o risorse.
 
-Nella figura seguente vengono illustrati questi elementi raggruppati in un singolo file fisico:The following illustration shows these elements grouped into a single physical file:
+Nella figura seguente vengono illustrati questi elementi raggruppati in un singolo file fisico:
 
-![Un assembly a file singolo denominato MyAssembly.dll](./media/contents/single-file-assembly.gif)
+![Assembly A file singolo denominato myAssembly. dll](./media/contents/single-file-assembly.gif)
 
-Durante la progettazione del codice sorgente, si prendono decisioni esplicite su come partizionare la funzionalità dell'applicazione in uno o più file. Quando si progetta codice .NET, si prenderanno decisioni simili su come partizionare la funzionalità in uno o più assembly.
+Quando si progetta il codice sorgente, si prendono decisioni esplicite su come partizionare le funzionalità dell'applicazione in uno o più file. Quando si progetta il codice .NET, è possibile prendere decisioni simili su come partizionare le funzionalità in uno o più assembly.
 
 ## <a name="see-also"></a>Vedere anche
 

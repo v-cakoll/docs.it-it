@@ -1,5 +1,6 @@
 ---
 title: Considerazioni sulla sicurezza degli assembly
+description: Quando si compila un assembly .NET, è possibile specificare le autorizzazioni necessarie per l'esecuzione dell'assembly. Questo articolo illustra gli assembly con nome sicuro e gli strumenti di firma.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], security
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-ms.openlocfilehash: 77c9f9131b556e0b8fa639cd723bf1ca8cd6602e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7f897241b121cf1bd52d02ee5f487aeafafc3cb0
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73972301"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378653"
 ---
 # <a name="assembly-security-considerations"></a>Considerazioni sulla sicurezza degli assembly
 Quando si compila un assembly, è possibile specificare l'insieme di autorizzazioni che verranno richieste per consentirne l'esecuzione. Se sussistano o meno le autorizzazioni per l'utilizzo di un assembly lo si evince dalle evidenze.  
@@ -42,7 +43,7 @@ Quando si compila un assembly, è possibile specificare l'insieme di autorizzazi
   
  In fase di caricamento, l'evidenza dell'assembly viene utilizzata come input per i criteri di sicurezza. I criteri di sicurezza vengono stabiliti dall'azienda e dall'amministratore dei computer, così come dalle impostazioni adottate dallo stesso utente, e determinano l'insieme di autorizzazioni concesse a tutto il codice gestito che viene eseguito sul computer. È possibile stabilire criteri di sicurezza basati sull'autore dell'assembly (se questo dispone di una firma generata da uno strumento firma digitale), sul sito Web e la zona (come è definita in Internet Explorer) da cui è stato effettuato il download dell'assembly o sul nome sicuro dell'assembly. L'amministratore di un computer può ad esempio stabilire criteri di sicurezza che consentono a tutto il codice scaricato da un sito Web e firmato da una determinata azienda di software di accedere al database presente su un computer, ma non di scrivere sul disco rigido.  
   
-## <a name="strong-named-assemblies-and-signing-tools"></a>Assembly con nome sicuro e strumenti di firma  
+## <a name="strong-named-assemblies-and-signing-tools"></a>Assembly con nome sicuro e strumenti per la firma  
 
  > [!WARNING]
  > Non usare i nomi sicuri per la sicurezza, poiché forniscono solo un'identità univoca.
@@ -62,6 +63,6 @@ Quando si compila un assembly, è possibile specificare l'insieme di autorizzazi
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Assembly con nome sicuro](strong-named.md)
+- [Assembly con nomi sicuri](strong-named.md)
 - [Assembly in .NET](index.md)
-- [SignTool.exe (strumento per la firma)](../../framework/tools/signtool-exe.md)
+- [SignTool. exe (strumento per la firma)](../../framework/tools/signtool-exe.md)

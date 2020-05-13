@@ -1,5 +1,6 @@
 ---
 title: Come deserializzare un oggetto utilizzando XmlSerializer
+description: Informazioni su come deserializzare un oggetto. Il formato di trasporto determina se creare un oggetto Stream o file.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-ms.openlocfilehash: c24ba466a208fe5abdbf565169c41c4ee3f47482
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: e08ae0d77539219223650fd3bcbd1bcee4df2739
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559898"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379108"
 ---
 # <a name="how-to-deserialize-an-object-using-xmlserializer"></a>Come deserializzare un oggetto utilizzando XmlSerializer
 
@@ -46,7 +47,7 @@ Quando si deserializza un oggetto, il formato di trasporto determina se verrà c
     var myObject = (MySerializableClass) mySerializer.Deserialize(myFileStream)
     ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Introduzione alla serializzazione XML](introducing-xml-serialization.md)
 - [Procedura: serializzare un oggetto](how-to-serialize-an-object.md)

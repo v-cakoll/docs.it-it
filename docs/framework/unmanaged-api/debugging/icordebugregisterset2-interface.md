@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7fbccbf-3b6b-4db8-a96d-768e1cb6b1a6
 topic_type:
 - apiref
-ms.openlocfilehash: 161358fab9a4601e7b718321273d493bd84a3228
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: f989f1c1f29c63af54ff125f4ad1aaa2bcee6757
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792016"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378205"
 ---
 # <a name="icordebugregisterset2-interface"></a>Interfaccia ICorDebugRegisterSet2
 Estende le funzionalità dell'interfaccia [ICorDebugRegisterSet](icordebugregisterset-interface.md) per le piattaforme hardware con più di 64 registri.  
@@ -32,19 +32,19 @@ Estende le funzionalità dell'interfaccia [ICorDebugRegisterSet](icordebugregist
 |[Metodo GetRegistersAvailable](icordebugregisterset2-getregistersavailable-method.md)|Ottiene una matrice di byte che fornisce una bitmap dei registri disponibili.|  
 |[Metodo SetRegisters](icordebugregisterset2-setregisters-method.md)|Non implementato nella versione .NET Framework 2,0.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

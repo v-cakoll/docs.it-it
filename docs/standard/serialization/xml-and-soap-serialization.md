@@ -1,5 +1,6 @@
 ---
 title: Serializzazione SOAP e XML
+description: In questa panoramica viene illustrata la serializzazione XML, che può essere utilizzata per serializzare oggetti in flussi XML conformi alla specifica SOAP.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SOAP, XML serialization
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-ms.openlocfilehash: dcb2ed1703473be582a12f430d2e051d8a420230
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 6b7d6f59694a28207758fa7772781eed073917e4
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588380"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379536"
 ---
 # <a name="xml-and-soap-serialization"></a>Serializzazione SOAP e XML
 
@@ -26,7 +27,7 @@ La serializzazione XML può essere utilizzata anche per serializzare oggetti nei
 
 Per serializzare o deserializzare oggetti, utilizzare la classe <xref:System.Xml.Serialization.XmlSerializer>. Per creare le classi da serializzare, utilizzare lo strumento XML Schema Definition.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Serializzazione binaria](binary-serialization.md)
 - [Servizi Web XML creati con ASP.NET e client di servizi Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))

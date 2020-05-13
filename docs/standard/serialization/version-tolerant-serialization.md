@@ -1,5 +1,6 @@
 ---
 title: Serializzazione indipendente dalla versione
+description: Il .NET Framework 2,0 introduce la serializzazione a tolleranza di versione, un set di funzionalità che semplificano la modifica dei tipi serializzabili.
 ms.date: 08/08/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: 9886e2f20ef7954b01ea1f46a9eabdb9ea2cc12d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 87bdc0f0328e7a75477672432c0944818dbef244
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348439"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380086"
 ---
 # <a name="version-tolerant-serialization"></a>Serializzazione indipendente dalla versione
 
@@ -280,7 +281,7 @@ Per essere certi che un tipo sia compatibile con i motori di serializzazione fut
 - Impostare sempre la proprietà **VersionAdded** sull'attributo **OptionalFieldAttribute** in modo corretto.
 - Evitare controlli di versione sottoposti a branching.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.SerializableAttribute>
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>

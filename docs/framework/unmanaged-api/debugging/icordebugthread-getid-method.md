@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1de4584-92df-42f3-9da4-fca03a1c6821
 topic_type:
 - apiref
-ms.openlocfilehash: 48d2af96b50bf77347256b3d5860405e460a09d3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d01936481ec139757566d5b96cb95ea887cb8c20
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133444"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378061"
 ---
 # <a name="icordebugthreadgetid-method"></a>Metodo ICorDebugThread::GetID
 Ottiene l'identificatore del sistema operativo corrente della parte attiva di ICorDebugThread.  
@@ -37,14 +37,14 @@ HRESULT GetID (
  `pdwThreadId`  
  out Identificatore del thread.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'identificatore del sistema operativo può essere modificato durante l'esecuzione di un processo e può essere un valore diverso per diverse parti del thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

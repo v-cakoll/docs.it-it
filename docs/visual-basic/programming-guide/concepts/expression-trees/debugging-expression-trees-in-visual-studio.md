@@ -2,31 +2,31 @@
 title: Debug degli alberi delle espressioni in Visual Studio
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: c6c44d079ab0854b2325b82d3569280752da32fb
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 2c4b1fec389a8ee168b890339ce11af596581cbc
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266833"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378818"
 ---
-# <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Debug di strutture ad albero dell'espressione in Visual Studio (Visual Basic)Debugging Expression Trees in Visual Studio (Visual Basic)
+# <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Debug degli alberi delle espressioni in Visual Studio (Visual Basic)
 È possibile analizzare la struttura e il contenuto degli alberi delle espressioni durante il debug delle applicazioni. Per una rapida panoramica della struttura dell'albero delle espressioni, è possibile usare la proprietà `DebugView`, che rappresenta gli alberi delle espressioni [usando una sintassi speciale](debugview-syntax.md). Si noti che `DebugView` è disponibile solo in modalità di debug.  
 
-![Screenshot della visualizzazione Debug della struttura ad albero dell'espressione.](media/debugging-expression-trees-in-visual-studio/debugview-visual-basic.png)
+![Screenshot della DebugView dell'albero delle espressioni.](media/debugging-expression-trees-in-visual-studio/debugview-visual-basic.png)
 
 Dato che `DebugView` è una stringa, è possibile usare il [Visualizzatore testo incorporato](https://docs.microsoft.com/visualstudio/debugger/view-strings-visualizer#open-a-string-visualizer) per visualizzarla su più righe, selezionando **Visualizzatore testo** dall'icona della lente di ingrandimento accanto all'etichetta `DebugView`.
 
- ![Screenshot del visualizzatore di testo applicato ai risultati di DebugView.](media/debugging-expression-trees-in-visual-studio/string-visualizer-vb.png)
+ ![Screenshot del Visualizzatore di testo applicato ai risultati di DebugView.](media/debugging-expression-trees-in-visual-studio/string-visualizer-vb.png)
 
 In alternativa, è possibile installare e usare [un visualizzatore personalizzato](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data) per gli alberi delle espressioni, ad esempio:
 
-- [Readable Expressions](https://github.com/agileobjects/ReadableExpressions) ([licenza MIT](https://github.com/agileobjects/ReadableExpressions/blob/master/LICENSE.md), disponibile in [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1232914.ReadableExpressionsVisualizers)) esegue il rendering dell'albero delle espressioni come codice C#:
+- Le [espressioni leggibili](https://github.com/agileobjects/ReadableExpressions) ([licenza mit](https://github.com/agileobjects/ReadableExpressions/blob/master/LICENSE.md), disponibili all' [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1232914.ReadableExpressionsVisualizers)), eseguono il rendering dell'albero delle espressioni come codice C# con tema, con varie opzioni di rendering:
 
-  ![Screenshot del visualizzatore Espressioni leggibili.](media/debugging-expression-trees-in-visual-studio/readable-expressions-visualizer.png)
+  ![Screenshot del Visualizzatore espressioni leggibili.](media/debugging-expression-trees-in-visual-studio/readable-expressions-visualizer.png)
 
-- [Visualizzatore albero delle](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) espressioni ([licenza MIT](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE)), fornisce una visualizzazione grafica della struttura ad albero delle espressioni, delle relative proprietà e degli oggetti correlati. e può eseguire il rendering della struttura ad albero dell'espressione utilizzando il codice Visual Basic:
+- Il [Visualizzatore dell'albero delle espressioni](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) ([licenza mit](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE)) fornisce una visualizzazione grafica dell'albero delle espressioni, delle relative proprietà e degli oggetti correlati. e possono eseguire il rendering dell'albero delle espressioni usando Visual Basic codice:
 
-  ![Screenshot del visualizzatore ExpressionToString.](media/debugging-expression-trees-in-visual-studio/expression-to-string-visualizer-vb.png)
+  ![Screenshot del Visualizzatore ExpressionToString.](media/debugging-expression-trees-in-visual-studio/expression-to-string-visualizer-vb.png)
 
 ### <a name="to-open-a-visualizer-for-an-expression-tree"></a>Per aprire un visualizzatore per un albero delle espressioni  
   
@@ -43,4 +43,4 @@ In alternativa, è possibile installare e usare [un visualizzatore personalizzat
 - [Alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
 - [Debug in Visual Studio](/visualstudio/debugger/debugger-feature-tour)
 - [Creare visualizzatori personalizzati](/visualstudio/debugger/create-custom-visualizers-of-data)
-- [`DebugView`Sintassi](debugview-syntax.md)
+- [`DebugView`sintassi](debugview-syntax.md)

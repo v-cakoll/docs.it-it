@@ -2,12 +2,12 @@
 title: Metodo ICorDebugSymbolProvider::GetMergedAssemblyRecords
 ms.date: 03/30/2017
 ms.assetid: cc4c510d-550d-4941-af34-81987caf3425
-ms.openlocfilehash: 6a537a88bd4ab666eff8b5dda994da96bfcc5e52
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b7d26fa80a7a8ebe7b4606b914c8cd09c52df1e4
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791616"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379630"
 ---
 # <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>Metodo ICorDebugSymbolProvider::GetMergedAssemblyRecords
 Ottiene i record dei simboli per tutti gli assembly sottoposti a merge.  
@@ -32,19 +32,19 @@ HRESULT GetMergedAssemblyRecords(
  `pRecords`  
  Puntatore a una matrice di oggetti [Metodo icordebugmergedassemblyrecord](icordebugmergedassemblyrecord-interface.md) .  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 > [!NOTE]
 > Questo metodo è disponibile solo con .NET Native.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

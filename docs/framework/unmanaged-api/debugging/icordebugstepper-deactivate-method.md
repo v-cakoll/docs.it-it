@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 855f4199-b62d-40ce-998e-1eb4a1772142
 topic_type:
 - apiref
-ms.openlocfilehash: 1d75897e00c36bd5c484e837ee68e54443168e77
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 760f69baf311cf320e9c358ba1c45c942934f1a5
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131758"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379402"
 ---
 # <a name="icordebugstepperdeactivate-method"></a>Metodo ICorDebugStepper::Deactivate
 Fa in modo che questo ICorDebugStepper cancelli il comando dell'ultimo passaggio ricevuto.  
@@ -31,14 +31,14 @@ Fa in modo che questo ICorDebugStepper cancelli il comando dell'ultimo passaggio
 HRESULT Deactivate ();  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Un nuovo comando di esecuzione può essere emesso dopo che il comando per il passaggio ricevuto più di recente è stato annullato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

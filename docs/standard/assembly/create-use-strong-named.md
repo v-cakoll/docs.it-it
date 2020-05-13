@@ -1,5 +1,6 @@
 ---
 title: Creare e usare gli assembly con nome sicuro
+description: Questo articolo illustra il processo di firma di un assembly in .NET con un nome sicuro e successivamente facendovi riferimento con tale nome.
 ms.date: 08/19/2019
 helpviewer_keywords:
 - strong-name bypass feature
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-ms.openlocfilehash: 18a0b7d657290835a34c705513d0d7a4ccbfc61c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 79c8cf2c21210fd80392a8aacf92840c11a36e43
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75738682"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378524"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Creare e usare gli assembly con nome sicuro
 
@@ -29,7 +30,7 @@ Un nome sicuro è costituito dall'identità dell'assembly, corrispondente al nom
 Gli assembly con nome sicuro possono usare solo tipi da altri assembly con nome sicuro. In caso contrario, l'integrità dell'assembly con nome sicuro risulterebbe compromessa.
 
 > [!NOTE]
-> Sebbene .NET Core supporti gli assembly con nome sicuro e tutti gli assembly nella libreria .NET Core siano firmati, la maggior parte degli assembly di terze parti non necessita di nomi sicuri. Per altre informazioni, vedere Firma con nome sicuro in [GitHub.For](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md) more information, see Strong Name Signing on GitHub.
+> Sebbene .NET Core supporti assembly con nome sicuro e tutti gli assembly nella libreria .NET Core siano firmati, la maggior parte degli assembly di terze parti non necessita di nomi sicuri. Per altre informazioni, vedere [firma con nome sicuro](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md) su GitHub.
 
 ## <a name="strong-name-scenario"></a>Scenario con nome sicuro
 
@@ -64,18 +65,18 @@ Questa funzionalità si applica a qualsiasi assembly firmato con un nome sicuro 
 
 - Non ha firma ritardata.
 
-Questa funzionalità può essere disabilitata per singole applicazioni o per un computer. Vedere [Procedura: disattivare la funzionalità di bypass](disable-strong-name-bypass-feature.md)con nome sicuro .
+Questa funzionalità può essere disabilitata per singole applicazioni o per un computer. Vedere [procedura: disabilitare la funzionalità di bypass con nome sicuro](disable-strong-name-bypass-feature.md).
 
 ## <a name="related-topics"></a>Argomenti correlati
 
 |Titolo|Descrizione|
 |-----------|-----------------|
 |[Procedura: Creare una coppia di chiavi pubblica/privata](create-public-private-key-pair.md)|Descrive come creare una coppia di chiavi crittografiche per la firma di un assembly.|
-|[Procedura: firmare un assembly con un nome sicuroHow to: Sign an assembly with a strong name](sign-strong-name.md)|Descrive come creare un assembly con nome sicuro.|
+|[Procedura: firmare un assembly con un nome sicuro](sign-strong-name.md)|Descrive come creare un assembly con nome sicuro.|
 |[Denominazione sicura avanzata](enhanced-strong-naming.md)|Descrive i miglioramenti apportati ai nomi sicuri in .NET Framework 4.5.|
-|[Procedura: fare riferimento a un assembly con nome sicuroHow to: Reference a strong-named assembly](reference-strong-named.md)|Descrive come fare riferimento a tipi o risorse in un assembly con nome sicuro in fase di compilazione o di esecuzione.|
-|[Procedura: disabilitare la funzionalità di bypass con nome sicuroHow to: Disable the strong-name bypass feature](disable-strong-name-bypass-feature.md)|Descrive come disabilitare la funzionalità che consente di ignorare la convalida delle firme con nome sicuro. Questa funzionalità può essere disabilitata per tutte le applicazioni o per applicazioni specifiche.|
+|[Procedura: fare riferimento a un assembly con nome sicuro](reference-strong-named.md)|Descrive come fare riferimento a tipi o risorse in un assembly con nome sicuro in fase di compilazione o di esecuzione.|
+|[Procedura: disabilitare la funzionalità di bypass con nome sicuro](disable-strong-name-bypass-feature.md)|Descrive come disabilitare la funzionalità che consente di ignorare la convalida delle firme con nome sicuro. Questa funzionalità può essere disabilitata per tutte le applicazioni o per applicazioni specifiche.|
 |[Creare assembly](create.md)|Offre una panoramica degli assembly a file singolo e su più file.|
-|[Come ritardare la firma di un assembly in Visual StudioHow to delay sign an assembly in Visual Studio](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Descrive come firmare un assembly con un nome sicuro dopo la creazione dell'assembly.|
-|[Sn.exe (strumento Nome sicuro)](../../framework/tools/sn-exe-strong-name-tool.md)|Descrive lo strumento incluso in .NET Framework che permette di creare assembly con nomi sicuri. In questo strumento sono disponibili opzioni per la gestione delle chiavi nonché per la generazione e la verifica delle firme.|
-|[Al.exe (linker assembly)](../../framework/tools/al-exe-assembly-linker.md)|Descrive lo strumento incluso in .NET Framework che genera un file contenente un manifesto dell'assembly da moduli o file di risorse.|
+|[Come ritardare la firma di un assembly in Visual Studio](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Descrive come firmare un assembly con un nome sicuro dopo la creazione dell'assembly.|
+|[Sn. exe (strumento nome sicuro)](../../framework/tools/sn-exe-strong-name-tool.md)|Descrive lo strumento incluso in .NET Framework che permette di creare assembly con nomi sicuri. In questo strumento sono disponibili opzioni per la gestione delle chiavi nonché per la generazione e la verifica delle firme.|
+|[Al.exe (Assembly Linker)](../../framework/tools/al-exe-assembly-linker.md)|Descrive lo strumento incluso in .NET Framework che genera un file contenente un manifesto dell'assembly da moduli o file di risorse.|

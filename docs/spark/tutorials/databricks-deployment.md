@@ -1,21 +1,21 @@
 ---
 title: Distribuire un'applicazione .NET per Apache Spark in Databricks
 description: Informazioni su come distribuire un'applicazione .NET per Apache Spark in Databricks.
-ms.date: 01/23/2020
+ms.date: 05/11/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3b00823034cbcb271cb7e169df40122f1144462a
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 228ddd59023dbd9d63ff392764fb36441a6af23a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895722"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379851"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Esercitazione: distribuire un'applicazione .NET per Apache Spark a databricks
 
 Questa esercitazione illustra come distribuire un'app nel cloud tramite Azure Databricks, una piattaforma di analisi basata su Apache Spark con installazione con un clic, flussi di lavoro semplificati e un'area di lavoro interattiva che consente la collaborazione.
 
-In questa esercitazione si apprenderà come:
+In questa esercitazione verranno illustrate le procedure per:
 
 > [!div class="checklist"]
 >
@@ -79,15 +79,15 @@ In questa sezione viene creata un'area di lavoro di Azure Databricks usando il p
    pip3 install databricks-cli
    ```
 
-3. Dopo aver installato l'interfaccia della riga di comando di databricks, aprire un nuovo prompt dei `databricks`comandi ed eseguire il comando. Se viene visualizzato un **errore di comando interno o esterno**, verificare che sia stato aperto un nuovo prompt dei comandi.
+3. Dopo aver installato l'interfaccia della riga di comando di databricks, aprire un nuovo prompt dei comandi ed eseguire il comando `databricks` . Se viene visualizzato un **errore di comando interno o esterno**, verificare che sia stato aperto un nuovo prompt dei comandi.
 
 ## <a name="set-up-azure-databricks"></a>Configurare Azure Databricks
 
 Ora che è stata installata l'interfaccia della riga di comando di databricks, è necessario configurare i dettagli di autenticazione.
 
-1. Eseguire il comando dell'interfaccia della riga `databricks configure --token`di comando di databricks.
+1. Eseguire il comando dell'interfaccia della riga di comando di databricks `databricks configure --token` .
 
-2. Dopo aver eseguito il comando configure, viene richiesto di immettere un host. L'URL dell'host usa il formato: **https://< \location>. azuredatabricks.NET**. Se, ad esempio, si seleziona **eastus2** durante la creazione del servizio Azure Databricks, l' **https://eastus2.azuredatabricks.net**host sarà.
+2. Dopo aver eseguito il comando configure, viene richiesto di immettere un host. L'URL dell'host usa il formato: **https://< \location>. azuredatabricks.NET**. Se, ad esempio, si seleziona **eastus2** durante la creazione del servizio Azure Databricks, l'host sarà **https://eastus2.azuredatabricks.net** .
 
 3. Dopo l'immissione dell'host, viene richiesto di immettere un token. Nella portale di Azure selezionare **Avvia area di lavoro** per avviare l'area di lavoro Azure Databricks.
 
@@ -115,7 +115,7 @@ A questo punto dovrebbe essere possibile accedere a tutti i cluster di Azure Dat
 
    Creare un nuovo file denominato **DB-init.sh** nel computer locale e incollare il contenuto di [DB-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) disponibile in GitHub.
 
-   Nel file appena creato impostare la `DOTNET_SPARK_RELEASE` variabile su. `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz` Lasciare invariato il resto del file *DB-init.sh* .
+   Nel file appena creato impostare la `DOTNET_SPARK_RELEASE` variabile su `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz` . Lasciare invariato il resto del file *DB-init.sh* .
 
 > [!Note]
 > Se si usa Windows, verificare che le terminazioni di riga negli script *Install-Worker.sh* e *DB-init.sh* siano di tipo UNIX (LF). È possibile modificare le terminazioni riga tramite editor di testo come blocco note + + e Atom.
@@ -188,7 +188,7 @@ L'app viene eseguita in Azure Databricks tramite un processo che esegue **Spark-
 
 1. Passare al processo e selezionare **modifica** per configurare il cluster del processo.
 
-2. Impostare il cluster su **Spark 2.4.1**. Quindi, selezionare **Opzioni** > avanzate**script init**. Impostare percorso script init come `dbfs:/spark-dotnet/db-init.sh`.
+2. Impostare il cluster su **Spark 2.4.1**. Quindi, selezionare **Opzioni avanzate**  >  **script init**. Impostare percorso script init come `dbfs:/spark-dotnet/db-init.sh` .
 
    ![Configurare il cluster Spark in Azure Databricks](./media/databricks-deployment/cluster-config.png)
 

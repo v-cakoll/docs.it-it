@@ -1,5 +1,6 @@
 ---
 title: Strumento XML Schema Definition e serializzazione XML
+description: Lo strumento XML Schema Definition genera file di classe C# o Visual Basic per uno schema XSD e genera una XML Schema da una libreria o da un file eseguibile.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Xsd.exe
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - XML Schema Definition tool
 - serialization, XML Schema Definition tool
 ms.assetid: 3c03f855-f931-47ff-bbc6-50c0367a16e4
-ms.openlocfilehash: b51b9a0112893d9a7838155f4af051e7079c8cdd
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 258e66643dae64aec7280419911f5ac9193a2ada
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588384"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380109"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>Strumento XML Schema Definition e serializzazione XML
 
-Lo strumento XML Schema Definition ([xsd. exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)viene installato insieme agli strumenti .NET Framework come parte del Software Development Kit (SDK) di Windows&reg; . Lo strumento è progettato principalmente per due scopi:  
+Lo strumento XML Schema Definition ([xsd. exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)viene installato insieme agli strumenti .NET Framework come parte del &reg; Software Development Kit (SDK) di Windows. Lo strumento è progettato principalmente per due scopi:  
   
 - Per generare file di classe C# o Visual Basic conformi a uno schema XML Schema Definition Language (XSD) specifico. Lo strumento prende uno schema XML come argomento e restituisce un file contenente un numero di classi che, se serializzate con <xref:System.Xml.Serialization.XmlSerializer>, risultano conformi allo schema. Per informazioni su come usare lo strumento per generare classi conformi a uno schema specifico, vedere [Procedura: Usare lo strumento XML Schema Definition per generare classi e documenti XML Schema](../../../docs/standard/serialization/xml-schema-def-tool-gen.md).  
   
@@ -24,7 +25,7 @@ Lo strumento XML Schema Definition ([xsd. exe)](../../../docs/standard/serializa
   
 Per ulteriori informazioni sull'utilizzo dello strumento, vedere [strumento XML Schema Definition (XSD. exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Data.DataSet>
 - [Introduzione alla serializzazione XML](../../../docs/standard/serialization/introducing-xml-serialization.md)

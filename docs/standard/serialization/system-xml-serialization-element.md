@@ -1,17 +1,18 @@
 ---
 title: Elemento <system.xml.serialization>
+description: Questo articolo descrive l'elemento <System. XML. Serialization>, che è l'elemento di livello principale per il controllo della serializzazione XML.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - system.xml.serialization element
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-ms.openlocfilehash: 02027a238bc9a2f82963ea841584d2bb3c6446c6
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 1e66220004d561f937d03c506e6f30db4ccc635b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410538"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380121"
 ---
 # <a name="systemxmlserialization-element"></a>\<Elemento system.xml.serialization>
 
@@ -31,9 +32,9 @@ L'elemento di primo livello per il controllo della serializzazione XML. Per altr
 
 Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attributi
 
-Nessuno.
+No.
 
 ### <a name="child-elements"></a>Elementi figlio
 
@@ -66,11 +67,11 @@ Nell'esempio di codice riportato di seguito viene illustrato come specificare la
 </system.xml.serialization>
 ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
 - [Schema del file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<Elemento> dateTimeSerialization](../../../docs/standard/serialization/datetimeserialization-element.md)
 - [\<Elemento> schemaImporterExtensions](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-- [\<aggiungere> elemento per \<schemaImporterExtensions>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [\<aggiungere> elemento per \< schemaImporterExtensions>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)

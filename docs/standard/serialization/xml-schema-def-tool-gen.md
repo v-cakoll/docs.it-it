@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: utilizzare lo strumento XML Schema Definition per generare classi e documenti di XML Schema.'
+description: Viene illustrato come utilizzare lo strumento XML Schema Definition per generare un XML Schema che descrive una classe o per generare la classe definita da un XML Schema.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generating XML classes using XML Schema Definition tool
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 2bbdced0f984b653a58afba9685683e8c0891271
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 21ce4ad846e21a328ba199f6253bd259be9d932b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389792"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379531"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Procedura: utilizzare lo strumento XML Schema Definition per generare classi e documenti di XML Schema.
 Lo strumento XML Schema Definition (Xsd.exe) consente di generare un XML Schema che descrive una classe o di generare la classe definita da un XML Schema. Le procedure descritte di seguito mostrano come eseguire queste operazioni.
 
 Lo strumento XML Schema Definition (XSD. exe) si trova in genere nel percorso seguente: \
-_C:\\programmi (x86)\\Microsoft SDK\\Windows\\{Version}\\bin\\NetFx {Version} Tools\\_
+_C: \\ programmi (x86) \\ Microsoft SDK \\ Windows \\ {version} \\ bin \\ NetFx {Version} Tools\\_
 
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>Per generare classi conformi a uno schema specifico  
   
@@ -30,7 +31,7 @@ _C:\\programmi (x86)\\Microsoft SDK\\Windows\\{Version}\\bin\\NetFx {Version} To
     xsd mySchema.xsd  
     ```  
   
-     Lo strumento è in grado di elaborare solo schemi che fanno riferimento alla specifica XML del World Wide Web Consortium del 16 marzo 2001. In altre parole, lo spazio dei nomi dello schema XMLhttp://www.w3.org/2001/XMLSchemadeve essere "", come illustrato nell'esempio seguente.  
+     Lo strumento è in grado di elaborare solo schemi che fanno riferimento alla specifica XML del World Wide Web Consortium del 16 marzo 2001. In altre parole, lo spazio dei nomi dello schema XML deve essere " http://www.w3.org/2001/XMLSchema ", come illustrato nell'esempio seguente.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -55,7 +56,7 @@ _C:\\programmi (x86)\\Microsoft SDK\\Windows\\{Version}\\bin\\NetFx {Version} To
   
      Lo schema (o gli schemi) sarà scritto, a partire dal nome "schema0.xsd."  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Data.DataSet>
 - [Strumento XML Schema Definition e serializzazione XML](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)

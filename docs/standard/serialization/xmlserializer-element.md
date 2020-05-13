@@ -1,17 +1,18 @@
 ---
 title: <xmlSerializer> Elemento
+description: L' <xmlSerializer> elemento specifica se è stato eseguito un ulteriore controllo dello stato di XmlSerializer.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <xmlSerializer> element
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-ms.openlocfilehash: b83ecda30bba8af1f3175eb6ad08593b07a80e6c
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 68037959893ec307a896ea86d21e40a9d7aa824c
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249539"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380029"
 ---
 # <a name="xmlserializer-element"></a>\<Elemento> XmlSerializer
 Specifica se effettuare un controllo aggiuntivo dello stato di avanzamento di <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -28,7 +29,7 @@ Specifica se effettuare un controllo aggiuntivo dello stato di avanzamento di <x
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Description|  
 |---------------|-----------------|  
@@ -36,7 +37,7 @@ Specifica se effettuare un controllo aggiuntivo dello stato di avanzamento di <x
 |**useLegacySerializationGeneration**|Specifica se <xref:System.Xml.Serialization.XmlSerializer> usa la generazione legacy di serializzazione che genera assembly scrivendo un codice C# in un file e quindi compilandola in un assembly. Il valore predefinito è **false**.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -60,7 +61,7 @@ Specifica se effettuare un controllo aggiuntivo dello stato di avanzamento di <x
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [\<System. XML. Serialization> elemento](../../../docs/standard/serialization/system-xml-serialization-element.md)

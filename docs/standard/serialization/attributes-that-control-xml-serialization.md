@@ -1,5 +1,6 @@
 ---
 title: Attributi per il controllo della serializzazione XML
+description: Questo articolo contiene gli attributi che è possibile applicare alle classi e ai membri delle classi per controllare il modo in cui XmlSerializer serializza o deserializza un'istanza di una classe.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - classes, serializing
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-ms.openlocfilehash: 0d1aee4650ea29083348af482e445011289e9581
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a269e1f3e8fd6e982db3c241c113f471134f9d3
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794966"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378453"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>Attributi per il controllo della serializzazione XML
 È possibile applicare gli attributi riportati nella seguente tabella alle classi e ai membri delle classi per controllare le modalità di serializzazione o deserializzazione di un'istanza della classe da parte di <xref:System.Xml.Serialization.XmlSerializer>. Per comprendere in che modo gli attributi controllano la serializzazione XML, vedere [Controllo della serializzazione XML mediante attributi](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md).  
@@ -43,7 +44,7 @@ ms.locfileid: "61794966"
   
  Per controllare la serializzazione XML con codifica SOAP, vedere [Attributi che controllano la serializzazione con codifica SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Serializzazione SOAP e XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c55e35d9-f9aa-4268-94b5-dce44c61acf2
 topic_type:
 - apiref
-ms.openlocfilehash: 64f6bc9abb8105cdfa942c2aaca71994e8a91765
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: f2850e6c9cbb2250a08ab4a0e34c69e377d3a23d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791407"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83375845"
 ---
 # <a name="icordebugthread3createstackwalk-method"></a>Metodo ICorDebugThread3::CreateStackWalk
 Crea un oggetto [ICorDebugStackWalk](icordebugstackwalk-interface.md) per il thread il cui stack si vuole rimuovere.  
@@ -38,24 +38,24 @@ HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
   
-|HRESULT|Descrizione|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|Creazione dell'oggetto `ICorDebugStackWalk` completata.|  
-|E_FAIL|L'oggetto `ICorDebugStackWalk` non è stato creato.|  
+|S_OK|`ICorDebugStackWalk`Creazione dell'oggetto completata.|  
+|E_FAIL|L' `ICorDebugStackWalk` oggetto non è stato creato.|  
   
 ## <a name="exceptions"></a>Eccezioni  
   
-## <a name="remarks"></a>Note  
- Se il metodo `CreateStackWalk` ha esito positivo, il contesto dell'oggetto `ICorDebugStackWalk` restituito viene impostato sul contesto corrente del thread.  
+## <a name="remarks"></a>Osservazioni  
+ Se il `CreateStackWalk` metodo ha esito positivo, il `ICorDebugStackWalk` contesto dell'oggetto restituito viene impostato sul contesto corrente del thread.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

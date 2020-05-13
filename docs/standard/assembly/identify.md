@@ -1,20 +1,21 @@
 ---
-title: 'Procedura: determinare se un file è un assemblyHow to: Determine if a file is an assembly'
+title: 'Procedura: determinare se un file è un assembly'
+description: Questo articolo illustra come determinare se un file è un assembly .NET, sia manualmente che a livello di codice.
 ms.date: 08/19/2019
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 1d66c0c166724f195a3cafd9bcbe3c7414c08ebb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb1bcfa50ec380f10ab67cc47331f91dc3e4b32d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159507"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380139"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly"></a>Procedura: determinare se un file è un assemblyHow to: Determine if a file is an assembly
+# <a name="how-to-determine-if-a-file-is-an-assembly"></a>Procedura: determinare se un file è un assembly
 
-Un file è un assembly unicamente nei casi in cui è gestito e include nei metadati una voce assembly. Per ulteriori informazioni sugli assembly e sui metadati, vedere [Manifesto dell'assembly](manifest.md).  
+Un file è un assembly unicamente nei casi in cui è gestito e include nei metadati una voce assembly. Per ulteriori informazioni sugli assembly e sui metadati, vedere [manifesto dell'assembly](manifest.md).  
   
 ## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Procedura: Determinare se un file è un assembly in modo manuale  
   
@@ -22,7 +23,7 @@ Un file è un assembly unicamente nei casi in cui è gestito e include nei metad
   
 2. Caricare il file che si desidera testare.  
   
-3. Se **ILDASM** segnala che il file non è un file eseguibile portabile (PE, portable executable), tale file non è un assembly. Per ulteriori informazioni, vedere l'argomento [Procedura: visualizzare il contenuto dell'assieme](view-contents.md).  
+3. Se **ILDASM** segnala che il file non è un file eseguibile portabile (PE, portable executable), tale file non è un assembly. Per ulteriori informazioni, vedere l'argomento [procedura: visualizzare il contenuto dell'assembly](view-contents.md).  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Procedura: Determinare se un file è un assembly a livello di codice  
   
@@ -94,6 +95,6 @@ Il metodo <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> carica il fil
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Reflection.AssemblyName>
-- [Guida alla programmazione in C](../../csharp/programming-guide/index.md)
-- [Concetti di programmazione (Visual Basic)Programming concepts (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)
+- [Guida per programmatori C#](../../csharp/programming-guide/index.md)
+- [Concetti di programmazione (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)
 - [Assembly in .NET](index.md)

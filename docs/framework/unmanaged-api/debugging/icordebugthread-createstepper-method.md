@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4657443f-dd12-431b-a648-175c23f13c83
 topic_type:
 - apiref
-ms.openlocfilehash: d1b058aef66ed32c2cadcc3cfd72320dd8eb7729
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a74d32478bc88ee634fa5ff9b61ac2059bc8e302
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133587"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379713"
 ---
 # <a name="icordebugthreadcreatestepper-method"></a>Metodo ICorDebugThread::CreateStepper
 Crea un oggetto ICorDebugStepper che consente l'esecuzione di un'istruzione alla volta nel frame attivo di ICorDebugThread.  
@@ -35,18 +35,18 @@ HRESULT CreateStepper (
   
 ## <a name="parameters"></a>Parametri  
  `ppStepper`  
- out Puntatore all'indirizzo di un `ICorDebugStepper` oggetto che consente di scorrere il frame attivo del thread.  
+ out Puntatore all'indirizzo di un `ICorDebugStepper` oggetto che consente l'esecuzione di un'istruzione alla volta nel frame attivo del thread.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il frame attivo può essere codice non gestito.  
   
- È necessario utilizzare l'interfaccia `ICorDebugStepper` per eseguire l'esecuzione dell'istruzione effettiva.  
+ `ICorDebugStepper`È necessario utilizzare l'interfaccia per eseguire l'esecuzione dell'istruzione effettiva.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

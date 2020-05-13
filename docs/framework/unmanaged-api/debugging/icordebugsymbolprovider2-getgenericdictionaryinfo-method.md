@@ -2,12 +2,12 @@
 title: Metodo ICorDebugSymbolProvider2::GetGenericDictionaryInfo
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-ms.openlocfilehash: 02ecaf56e845680472f42c04f3978e54e7a69272
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a6c32b72c5924399aeb13d56ddf9242fe7990f35
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791499"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379318"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>Metodo ICorDebugSymbolProvider2::GetGenericDictionaryInfo
 
@@ -24,9 +24,9 @@ HRESULT GetGenericDictionaryInfo(
 ## <a name="parameters"></a>Parametri
 
 `ppMemoryBuffer`\
-out Puntatore all'indirizzo di un oggetto [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md) contenente la mappa del dizionario generico. Per altre informazioni, vedere la sezione Osservazioni.
+out Puntatore all'indirizzo di un oggetto [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md) contenente la mappa del dizionario generico. Per ulteriori informazioni, vedere le sezione Note.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 > [!NOTE]
 > Questo metodo è disponibile solo con .NET Native.
@@ -75,15 +75,15 @@ Il formato di ogni elemento delle informazioni sull'heap è il seguente:
 
 L'inclusione della lunghezza per ogni elemento dell'heap consente un ordinamento semplice della sezione della directory senza influire sull'heap.
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
 **Intestazione:** CorDebug.idl, CorDebug.h
 
 **Libreria:** CorGuids.lib
 
-**Versioni .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
+**Versioni .NET Framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
 

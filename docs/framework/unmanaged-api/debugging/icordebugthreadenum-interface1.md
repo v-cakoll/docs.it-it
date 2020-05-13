@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 796de687-7dd4-4b7b-a10b-8bf22dc7779f
 topic_type:
 - apiref
-ms.openlocfilehash: 6de2cb7c1a1423c5bd38a6f2e5d01c39166ab119
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 82a7689bb1848d89f5dee4482d8dc7685c9c5b5c
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791325"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378329"
 ---
 # <a name="icordebugthreadenum-interface"></a>Interfaccia ICorDebugThreadEnum
 Implementa i metodi ICorDebugEnum ed enumera le matrici di ICorDebugThread.  
@@ -28,21 +28,21 @@ Implementa i metodi ICorDebugEnum ed enumera le matrici di ICorDebugThread.
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Next](icordebugthreadenum-next-method.md)|Ottiene il numero specificato di istanze di `ICorDebugThread` dall'enumerazione, a partire dalla posizione corrente.|  
+|[Metodo Next](icordebugthreadenum-next-method.md)|Ottiene il numero specificato di `ICorDebugThread` istanze dall'enumerazione, a partire dalla posizione corrente.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

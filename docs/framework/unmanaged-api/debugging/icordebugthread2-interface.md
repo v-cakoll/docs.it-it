@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 678f89f9-cce7-46d1-af87-5e989abaa93c
 topic_type:
 - apiref
-ms.openlocfilehash: fdaad46b739721ff95b712d4b6461a793ae0a480
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a7a8d96548704f223f05826af79a4e227bdfab06
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791423"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379837"
 ---
 # <a name="icordebugthread2-interface"></a>Interfaccia ICorDebugThread2
 Funge da estensione logica per l'interfaccia ICorDebugThread.  
@@ -29,24 +29,24 @@ Funge da estensione logica per l'interfaccia ICorDebugThread.
 |Metodo|Descrizione|  
 |------------|-----------------|  
 |[Metodo GetActiveFunctions](icordebugthread2-getactivefunctions-method.md)|Ottiene una matrice di istanze di COR_ACTIVE_FUNCTION che contengono dati sulle funzioni attive nei frame di un thread.|  
-|[Metodo GetConnectionID](icordebugthread2-getconnectionid-method.md)|Ottiene un identificatore di connessione per questo `ICorDebugThread2`.|  
-|[Metodo GetTaskID](icordebugthread2-gettaskid-method.md)|Ottiene un identificatore di attività per questo `ICorDebugThread2`.|  
-|[Metodo GetVolatileOSThreadID](icordebugthread2-getvolatileosthreadid-method.md)|Ottiene l'identificatore del thread del sistema operativo per questo `ICorDebugThread2`.|  
+|[Metodo GetConnectionID](icordebugthread2-getconnectionid-method.md)|Ottiene un identificatore di connessione per l'oggetto `ICorDebugThread2` .|  
+|[Metodo GetTaskID](icordebugthread2-gettaskid-method.md)|Ottiene un identificatore di attività per questo oggetto `ICorDebugThread2` .|  
+|[Metodo GetVolatileOSThreadID](icordebugthread2-getvolatileosthreadid-method.md)|Ottiene l'identificatore del thread del sistema operativo per l'oggetto `ICorDebugThread2` .|  
 |[Metodo InterceptCurrentException](icordebugthread2-interceptcurrentexception-method.md)|Consente a un debugger di intercettare l'eccezione corrente su un thread.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
