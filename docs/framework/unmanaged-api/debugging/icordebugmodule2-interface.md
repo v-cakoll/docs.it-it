@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0847e64f-fdbe-4c96-8168-da20fdc84d80
 topic_type:
 - apiref
-ms.openlocfilehash: 32774aacecf3e56510bc6f0670538a44fde794c9
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7b98302985d9d54599ea8ea2e01dc2503c468d58
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792981"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210228"
 ---
 # <a name="icordebugmodule2-interface"></a>Interfaccia ICorDebugModule2
 
@@ -30,24 +30,24 @@ Funge da estensione logica per l'interfaccia ICorDebugModule.
 |Metodo|Descrizione|  
 |------------|-----------------|  
 |[Metodo ApplyChanges](icordebugmodule2-applychanges-method.md)|Applica le modifiche nei metadati e le modifiche nel codice MSIL (Microsoft Intermediate Language) al processo in esecuzione.|  
-|[Metodo GetJITCompilerFlags](icordebugmodule2-getjitcompilerflags-method.md)|Ottiene i flag che controllano la compilazione JIT (just-in-Time) per questo `ICorDebugModule2`.|  
+|[Metodo GetJITCompilerFlags](icordebugmodule2-getjitcompilerflags-method.md)|Ottiene i flag che controllano la compilazione JIT (just-in-Time) per questo oggetto `ICorDebugModule2` .|  
 |[Metodo ResolveAssembly](icordebugmodule2-resolveassembly-method.md)|Risolve l'assembly a cui fa riferimento il token di metadati specificato.|  
-|[Metodo SetJITCompilerFlags](icordebugmodule2-setjitcompilerflags-method.md)|Imposta i flag che controllano la compilazione JIT per questo `ICorDebugModule2`.|  
-|[Metodo SetJMCStatus](icordebugmodule2-setjmcstatus-method.md)|Imposta lo stato del Just My Code (JMC) di tutti i metodi di tutte le classi di questo `ICorDebugModule2` sul valore specificato, ad eccezione di quelli nella matrice `pTokens`, che imposta sul valore opposto.|  
+|[Metodo SetJITCompilerFlags](icordebugmodule2-setjitcompilerflags-method.md)|Imposta i flag che controllano la compilazione JIT per questo oggetto `ICorDebugModule2` .|  
+|[Metodo SetJMCStatus](icordebugmodule2-setjmcstatus-method.md)|Imposta lo stato del Just My Code (JMC) di tutti i metodi di tutte le classi in questo `ICorDebugModule2` oggetto sul valore specificato, ad eccezione di quelli nella `pTokens` matrice, che imposta sul valore opposto.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -2,12 +2,12 @@
 title: Metodo ICorDebugProcess6::EnableVirtualModuleSplitting
 ms.date: 03/30/2017
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
-ms.openlocfilehash: 8ad15d11ce81323b30434b3db98259a74a198f29
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac61ffc553191aa70bdf5c04822a25b1074c2099
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178564"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209357"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>Metodo ICorDebugProcess6::EnableVirtualModuleSplitting
 Abilita o disabilita la suddivisione dei moduli virtuali.  
@@ -30,7 +30,7 @@ HRESULT EnableVirtualModuleSplitting(
 > [!NOTE]
 > Questo metodo è disponibile solo con .NET Native.  
   
- In qualsiasi momento è possibile chiamare questo metodo e modificare il valore di `enableSplitting`. Non provoca modifiche funzionali con stato in un oggetto [ICorDebug](icordebug-interface.md) , oltre alla modifica del comportamento dei metodi elencati nella [suddivisione del modulo virtuale e delle API di debug non gestite](#APIs) al momento della chiamata. L'uso dei moduli virtuali ha effetti negativi sulle prestazioni quando si chiamano questi metodi. Inoltre, la memorizzazione nella cache in memoria significativa dei metadati virtualizzati potrebbe essere necessaria per implementare correttamente le API [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) e tali cache possono essere mantenute anche dopo che la suddivisione del modulo virtuale è stata disattivata.  
+ In qualsiasi momento è possibile chiamare questo metodo e modificare il valore di `enableSplitting`. Non provoca modifiche funzionali con stato in un oggetto [ICorDebug](icordebug-interface.md) , oltre alla modifica del comportamento dei metodi elencati nella [suddivisione del modulo virtuale e delle API di debug non gestite](#APIs) al momento della chiamata. L'uso dei moduli virtuali ha effetti negativi sulle prestazioni quando si chiamano questi metodi. Inoltre, la memorizzazione nella cache in memoria significativa dei metadati virtualizzati potrebbe essere necessaria per implementare correttamente le API [IMetaDataImport](../metadata/imetadataimport-interface.md) e tali cache possono essere mantenute anche dopo che la suddivisione del modulo virtuale è stata disattivata.  
   
 ## <a name="terminology"></a>Terminologia  
  Nella descrizione della suddivisione dei moduli virtuali vengono usati i seguenti termini:  
@@ -44,7 +44,7 @@ HRESULT EnableVirtualModuleSplitting(
  moduli normali  
  I moduli non uniti durante la compilazione. Non corrispondono né ai moduli del contenitore né ai moduli secondari.  
   
- I moduli del contenitore e i moduli secondari sono rappresentati dagli oggetti dell'interfaccia ICorDebugModule. Tuttavia, il comportamento dell'interfaccia è leggermente diverso in ogni caso, come descritto nella \<sezione> della sezione x-ref a.  
+ I moduli del contenitore e i moduli secondari sono rappresentati dagli oggetti dell'interfaccia ICorDebugModule. Tuttavia, il comportamento dell'interfaccia è leggermente diverso in ogni caso, come descritto nella sezione> della sezione \< x-ref a.  
   
 ## <a name="modules-and-assemblies"></a>Moduli e assembly  
  Gli assembly a più moduli non sono supportati per gli scenari di unione degli assembly, quindi esiste una relazione uno a uno tra un modulo e un assembly. Ogni oggetto ICorDebugModule, a prescindere che rappresenti un modulo del contenitore o un modulo secondario, ha un oggetto corrispondente ICorDebugAssembly. Il metodo [ICorDebugModule:: GetAssembly](icordebugmodule-getassembly-method.md) esegue la conversione dal modulo all'assembly. Per eseguire il mapping nell'altra direzione, il metodo [ICorDebugAssembly:: EnumerateModules](icordebugassembly-enumeratemodules-method.md) enumera solo 1 modulo. In questo caso l'assembly e il modulo formano una coppia strettamente collegata, quindi i termini assembly e modulo sono quasi del tutto intercambiabili.  
@@ -99,10 +99,10 @@ HRESULT EnableVirtualModuleSplitting(
 |[ICorDebugClass::GetModule](icordebugclass-getmodule-method.md)|Restituisce il modulo secondario in cui questa classe è stata definita in origine.|Restituisce il modulo del contenitore a cui questa classe è stata unita.|  
 |ICorDebugModuleDebugEvent::GetModule|Restituisce il modulo del contenitore caricato. I moduli secondari non vengono associati a eventi di caricamento a prescindere da questa impostazione.|Restituisce il modulo del contenitore caricato.|  
 |[ICorDebugAppDomain::EnumerateAssemblies](icordebugappdomain-enumerateassemblies-method.md)|Restituisce un elenco di assembly secondari e normali. Non sono inclusi assembly del contenitore. **Nota:**  Se nell'assembly del contenitore mancano i simboli, nessuno dei relativi assembly secondari verrà enumerato. Se mancano i simboli in qualsiasi assembly normale, l'enumerazione potrebbe essere eseguita.|Restituisce un elenco di assembly del contenitore e normali; non sono inclusi assembly secondari. **Nota:**  Se nell'assembly normale mancano i simboli, è possibile che venga enumerata o meno.|  
-|[ICorDebugCode:: GetCode](icordebugcode-getcode-method.md) (quando si fa riferimento solo al codice il)|Restituisce IL, valido in un'immagine di assembly pre-merge. In particolare, quando i tipi a cui si fa riferimento non sono definiti nel modulo virtuale che contiene IL, gli eventuali token di metadati inline corrispondono correttamente a TypeRef o MemberRef. Questi token TypeRef o MemberRef possono essere cercati nell'oggetto [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) per l'oggetto ICorDebugModule virtuale corrispondente.|Restituisce IL nell'immagine di assembly post-unione.|  
+|[ICorDebugCode:: GetCode](icordebugcode-getcode-method.md) (quando si fa riferimento solo al codice il)|Restituisce IL, valido in un'immagine di assembly pre-merge. In particolare, quando i tipi a cui si fa riferimento non sono definiti nel modulo virtuale che contiene IL, gli eventuali token di metadati inline corrispondono correttamente a TypeRef o MemberRef. Questi token TypeRef o MemberRef possono essere cercati nell'oggetto [IMetaDataImport](../metadata/imetadataimport-interface.md) per l'oggetto ICorDebugModule virtuale corrispondente.|Restituisce IL nell'immagine di assembly post-unione.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
@@ -110,7 +110,7 @@ HRESULT EnableVirtualModuleSplitting(
   
  **Versioni .NET Framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia ICorDebugProcess6](icordebugprocess6-interface.md)
 - [Interfacce di debug](debugging-interfaces.md)

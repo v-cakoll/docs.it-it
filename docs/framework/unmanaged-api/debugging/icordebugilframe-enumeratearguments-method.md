@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00ac81e2-a774-422a-bd88-54a4b3c99f73
 topic_type:
 - apiref
-ms.openlocfilehash: d74c5a6f966201c8ca9d2854de2e9986e7f1d0fa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3945b1dea62dc0616d669356faf60f0d09cfb084
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131034"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210306"
 ---
 # <a name="icordebugilframeenumeratearguments-method"></a>Metodo ICorDebugILFrame::EnumerateArguments
 Ottiene un enumeratore per gli argomenti in questo frame.  
@@ -37,14 +37,14 @@ HRESULT EnumerateArguments (
  `ppValueEnum`  
  out Puntatore all'indirizzo di un oggetto ICorDebugValueEnum che rappresenta l'enumeratore per gli argomenti in questo frame.  
   
-## <a name="remarks"></a>Note  
- `EnumerateArguments` ottiene un enumeratore in grado di elencare gli argomenti disponibili nel frame di chiamata rappresentato da questo oggetto ICorDebugILFrame. L'elenco includerà gli argomenti [vararg](/cpp/windows/vararg) (ovvero un numero variabile di argomenti) e gli argomenti che non sono `vararg`.  
+## <a name="remarks"></a>Osservazioni  
+ `EnumerateArguments`Ottiene un enumeratore in grado di elencare gli argomenti disponibili nel frame di chiamata rappresentato da questo oggetto ICorDebugILFrame. L'elenco includerà gli argomenti [vararg](/cpp/windows/vararg) (ovvero un numero variabile di argomenti) e gli argomenti che non lo sono `vararg` .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

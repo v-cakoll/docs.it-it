@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66fcd2b8-ac66-414b-83a8-75a925e17772
 topic_type:
 - apiref
-ms.openlocfilehash: 406468fc6e2b68e8c8e1dfbd0f0f18cce3f013ab
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c901e21521e941c51939958175a5316808890e9f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794450"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208616"
 ---
 # <a name="icordebughandlevalue-interface"></a>Interfaccia ICorDebugHandleValue
 
@@ -29,23 +29,23 @@ Sottoclasse di ICorDebugReferenceValue che rappresenta un valore di riferimento 
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Dispose](icordebughandlevalue-dispose-method.md)|Rilascia l'handle a cui fa riferimento questo oggetto `ICorDebugHandleValue` senza rilasciare esplicitamente il puntatore all'interfaccia.|  
-|[Metodo GetHandleType](icordebughandlevalue-gethandletype-method.md)|Ottiene un valore CorDebugHandleType che descrive il tipo di handle a cui fa riferimento questo `ICorDebugHandleValue`.|  
+|[Metodo Dispose](icordebughandlevalue-dispose-method.md)|Rilascia l'handle a cui fa riferimento questo `ICorDebugHandleValue` oggetto senza rilasciare in modo esplicito il puntatore all'interfaccia.|  
+|[Metodo GetHandleType](icordebughandlevalue-gethandletype-method.md)|Ottiene un valore CorDebugHandleType che descrive il tipo di handle a cui fa riferimento questo oggetto `ICorDebugHandleValue` .|  
   
-## <a name="remarks"></a>Note  
- Un oggetto `ICorDebugReferenceValue` viene invalidato da un'operazione break nell'esecuzione del codice sottoposto a debug. Un `ICorDebugHandleValue` mantiene il riferimento tramite interruzioni e continuazioni, fino a quando non viene rilasciato in modo esplicito.  
+## <a name="remarks"></a>Osservazioni  
+ Un `ICorDebugReferenceValue` oggetto viene invalidato da un'operazione break nell'esecuzione del codice sottoposto a debug. Un oggetto `ICorDebugHandleValue` mantiene il riferimento tramite interruzioni e continuazioni, fino a quando non viene rilasciato in modo esplicito.  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

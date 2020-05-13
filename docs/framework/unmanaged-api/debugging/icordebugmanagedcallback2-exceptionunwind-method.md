@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aaf5938d-179c-4eaa-8d35-8523a4fadded
 topic_type:
 - apiref
-ms.openlocfilehash: 482afd09ce370fb1247864b9ac2032ee7e3a1dca
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 8f66369d3ac5ddcfe38fe579cac728eb3a250165
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788283"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205631"
 ---
 # <a name="icordebugmanagedcallback2exceptionunwind-method"></a>Metodo ICorDebugManagedCallback2::ExceptionUnwind
 Fornisce una notifica di stato durante il processo di rimozione dell'eccezione.  
@@ -49,19 +49,19 @@ HRESULT ExceptionUnwind (
  `dwFlags`  
  in Valore dell'enumerazione [CorDebugExceptionFlags](cordebugexceptionflags-enumeration.md) che specifica informazioni aggiuntive sull'eccezione.  
   
-## <a name="remarks"></a>Note  
- `ExceptionUnwind` viene chiamato in diversi punti durante la fase di rimozione del processo di gestione delle eccezioni. `ExceptionUnwind` può essere chiamato più volte durante la rimozione di una singola eccezione.  
+## <a name="remarks"></a>Osservazioni  
+ `ExceptionUnwind`viene chiamato in diversi punti durante la fase di rimozione del processo di gestione delle eccezioni. `ExceptionUnwind`può essere chiamato più volte durante la rimozione di una singola eccezione.  
   
- Se `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, il puntatore all'istruzione si troverà nel frame foglia del thread, in corrispondenza del punto di sequenza precedente (le istruzioni potrebbero essere diverse prima di) l'istruzione che ha generato l'eccezione.  
+ Se `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, il puntatore all'istruzione si troverà nel frame foglia del thread, in corrispondenza del punto di sequenza precedente, che può essere costituito da diverse istruzioni prima, dall'istruzione che ha generato l'eccezione.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

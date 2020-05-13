@@ -3,12 +3,12 @@ title: Confronto tra project.json e csproj
 description: Vedere il mapping tra gli elementi project.json e csproj.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: feaa7e9cde7e1aa4dfe94d699b14a018fc728f27
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: a997b48f645ed58d15610a68aee7c67411f9763f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794624"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205838"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Mapping tra le proprietà di project.json e csproj
 
@@ -38,7 +38,7 @@ Il nuovo formato, \*.csproj, è un formato basato su XML. L'esempio seguente ill
 }
 ```
 
-Non più supportata. In csproj è determinato dal nome del file di progetto, che in genere corrisponde al nome della directory. Ad esempio: `MyProjectName.csproj`.
+Non più supportata. In csproj è determinato dal nome del file di progetto, che in genere corrisponde al nome della directory. Ad esempio, `MyProjectName.csproj`
 
 Per impostazione predefinita, il nome del file di progetto specifica anche il valore delle proprietà `<AssemblyName>` e `<PackageId>`.
 
@@ -52,7 +52,7 @@ Per impostazione predefinita, il nome del file di progetto specifica anche il va
 La proprietà `<AssemblyName>` avrà un valore diverso da `<PackageId>` se la proprietà `buildOptions\outputName` è stata definita in project.json.
 Per altre informazioni, vedere [Altre opzioni comuni di compilazione](#other-common-build-options).
 
-### <a name="version"></a>Versione
+### <a name="version"></a>version
 
 ```json
 {
@@ -179,7 +179,7 @@ Usare la proprietà `TargetFrameworks` per definire l'elenco dei framework di de
 </PropertyGroup>
 ```
 
-Si noti che il valore `<RuntimeFrameworkVersion>` nel progetto migrato è determinato dalla versione dell'SDK installato.
+Il `<RuntimeFrameworkVersion>` valore nel progetto migrato è determinato dalla versione dell'SDK installata.
 
 ### <a name="top-level-dependencies"></a>Dipendenze di livello superiore
 
@@ -485,8 +485,7 @@ Vedere anche [Files](#files).
 </PropertyGroup>
 ```
 
-Non è disponibile nessuna opzione equivalente per l'elemento `owners` in MSBuild.
-Per `summary`, è possibile utilizzare la proprietà `<Description>` MSBuild, anche se il valore di `summary` non viene migrato automaticamente a tale proprietà, poiché tale proprietà è mappata all' [`description`](#other-common-root-level-options) elemento.
+Non è disponibile nessuna opzione equivalente per l'elemento `owners` in MSBuild. Per `summary` , è possibile usare la `<Description>` Proprietà MSBuild. Il valore di `summary` non viene migrato automaticamente a tale proprietà, dal momento che tale proprietà è mappata all' [`description`](#other-common-root-level-options) elemento.
 
 ## <a name="scripts"></a>script
 
@@ -499,7 +498,7 @@ Per `summary`, è possibile utilizzare la proprietà `<Description>` MSBuild, an
 }
 ```
 
-Gli equivalenti in MSBuild sono i [target](/visualstudio/msbuild/msbuild-targets):
+Gli equivalenti in MSBuild sono [targets](/visualstudio/msbuild/msbuild-targets):
 
 ```xml
 <Target Name="MyPreCompileTarget" BeforeTargets="Build">
@@ -528,7 +527,7 @@ Gli equivalenti in MSBuild sono i [target](/visualstudio/msbuild/msbuild-targets
 }
 ```
 
-Tutte le impostazioni in questo gruppo, ad eccezione della proprietà "System.GC.Server", vengono inserite in un file denominato *runtimeconfig.template.json* nella cartella del progetto, con le opzioni elevate all'oggetto radice durante il processo di migrazione:
+Tutte le impostazioni in questo gruppo, ad eccezione della `System.GC.Server` proprietà, vengono inserite in un file denominato *runtimeconfig. template. JSON* nella cartella del progetto, con le opzioni sollevate dall'oggetto radice durante il processo di migrazione:
 
 ```json
 {
@@ -541,7 +540,7 @@ Tutte le impostazioni in questo gruppo, ad eccezione della proprietà "System.GC
 }
 ```
 
-La proprietà "System.GC.Server" viene migrata nel file csproj:
+`System.GC.Server`Viene eseguita la migrazione della proprietà nel file csproj:
 
 ```xml
 <PropertyGroup>
@@ -569,7 +568,7 @@ La proprietà "System.GC.Server" viene migrata nel file csproj:
 }
 ```
 
-Non supportato in csproj. È invece necessario creare e includere i file di contenuto nel file *.nuspec*.
+Non supportato in csproj. Al contrario, creare file di contenuto di inclusione nel file con *estensione NuSpec* .
 Per altre informazioni, vedere [Including content files](/nuget/schema/nuspec#including-content-files) (Includere i file di contenuto).
 
 ## <a name="files"></a>files
@@ -621,8 +620,7 @@ In MSBuild, questa operazione viene eseguita tramite [items](/visualstudio/msbui
 ```
 
 > [!NOTE]
-> Molti dei [criteri GLOB](https://en.wikipedia.org/wiki/Glob_(programming)) predefiniti vengono aggiunti automaticamente da .NET Core SDK.
-> Per altre informazioni, vedere [Default Compile Item Values](https://aka.ms/sdkimplicititems) (Valori predefiniti degli elementi di compilazione).
+> Molti dei [criteri GLOB](https://en.wikipedia.org/wiki/Glob_(programming)) predefiniti vengono aggiunti automaticamente da .NET Core SDK. Per ulteriori informazioni, vedere la pagina relativa alla [compilazione predefinita](../project-sdk/overview.md#default-compilation-includes).
 
 Tutti gli elementi `ItemGroup` di MSBuild supportano `Include`, `Exclude` e `Remove`.
 

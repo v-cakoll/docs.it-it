@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 689e7f28-20c1-4d5c-9baa-17441cd63a88
 topic_type:
 - apiref
-ms.openlocfilehash: 6ea2b24d37f56a5cb9e6b3dea0d666c8acc719dc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 39b4e7e5123447a36254b55b6168c80e48c8dcab
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091036"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205455"
 ---
 # <a name="icordebugframecreatestepper-method"></a>Metodo ICorDebugFrame::CreateStepper
 Ottiene un oggetto stepper che consente al debugger di eseguire operazioni di esecuzione dei progressi rispetto a questo ICorDebugFrame.  
@@ -37,14 +37,14 @@ HRESULT CreateStepper (
  `ppStepper`  
  out Puntatore all'indirizzo di un oggetto ICorDebugStepper che consente al debugger di eseguire operazioni di esecuzione dei progressi rispetto al frame corrente.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se il frame non è attivo, l'oggetto stepper dovrà in genere tornare al frame prima del completamento del passaggio.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

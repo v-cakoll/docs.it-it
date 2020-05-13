@@ -1,19 +1,19 @@
 ---
 title: Script dotnet-install
-description: Informazioni sugli script di installazione di dotnet per installare .NET Core SDK e il runtime condiviso.
-ms.date: 01/23/2020
-ms.openlocfilehash: 591413a17db577560bd0324995066c8ea7a35895
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+description: Informazioni sugli script DotNet-install per installare il .NET Core SDK e il runtime condiviso.
+ms.date: 04/30/2020
+ms.openlocfilehash: 6728708ac5154f558954b46a22a434b05a548e84
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463670"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205920"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Riferimento agli script dotnet-install
 
 ## <a name="name"></a>Nome
 
-`dotnet-install.ps1` | `dotnet-install.sh`- Script utilizzato per installare .NET Core SDK e il runtime condiviso.
+`dotnet-install.ps1` | `dotnet-install.sh`: Script usato per installare il .NET Core SDK e il runtime condiviso.
 
 ## <a name="synopsis"></a>Riepilogo
 
@@ -44,9 +44,9 @@ dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
 dotnet-install.sh --help
 ```
 
-## <a name="description"></a>Descrizione
+## <a name="description"></a>Description
 
-Gli `dotnet-install` script vengono utilizzati per eseguire un'installazione non amministrativa di .NET Core SDK, che include l'interfaccia della riga di comando di .NET Core e il runtime condiviso.
+Gli `dotnet-install` script vengono usati per eseguire un'installazione non amministrativa del .NET Core SDK, che include il interfaccia della riga di comando di .NET Core e il runtime condiviso.
 
 Si consiglia di utilizzare la versione stabile degli script:
 
@@ -61,7 +61,9 @@ Per impostazione predefinita, lo script aggiunge il percorso di installazione a 
 
 Prima di eseguire lo script, installare le [dipendenze](../install/dependencies.md) necessarie.
 
-È possibile installare una versione specifica usando l'argomento `-Version|--version`. La versione deve essere specificata come versione in `2.1.0`tre parti, ad esempio ). Se non viene fornita, viene usata la versione `latest`.
+È possibile installare una versione specifica usando l'argomento `-Version|--version`. La versione deve essere specificata come versione a tre parti (ad esempio, `2.1.0` ). Se non viene fornita, viene usata la versione `latest`.
+
+Gli script di installazione non aggiornano il registro di sistema in Windows. Scaricano semplicemente i file binari compressi e li copiano in una cartella. Se si vogliono aggiornare i valori delle chiavi del registro di sistema, usare i programmi di installazione di .NET Core.
 
 ## <a name="options"></a>Opzioni
 
@@ -80,7 +82,7 @@ Prima di eseguire lo script, installare le [dipendenze](../install/dependencies.
   - `Current`: versione più recente.
   - `LTS`: canale di supporto a lungo termine (versione supportata più recente).
   - Versione in due parti nel formato X.Y che rappresenta una versione specifica, ad esempio `2.1` o `3.0`.
-  - Nome ramo: ad `release/3.1.1xx` `master` esempio, o (per i rilasci notturni). Utilizzare questa opzione per installare una versione da un canale di anteprima. Utilizzare il nome del canale come elencato in [Programmi di installazione e binari](https://github.com/dotnet/core-sdk#installers-and-binaries).
+  - Nome del ramo: ad esempio `release/3.1.1xx` o `master` (per le versioni notturne). Usare questa opzione per installare una versione da un canale di anteprima. Usare il nome del canale come elencato in [programmi di installazione e file binari](https://github.com/dotnet/core-sdk#installers-and-binaries).
 
   Il valore predefinito è `LTS`. Per altre informazioni sui canali di supporto per .NET, vedere la pagina [.NET Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) (Criteri di supporto per .NET).
 
@@ -102,7 +104,7 @@ Prima di eseguire lo script, installare le [dipendenze](../install/dependencies.
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 
-  Specifica un percorso a un file [global.json](global-json.md) che verrà utilizzato per determinare la versione dell'SDK. Il file *global.json* deve `sdk:version`avere un valore per .
+  Specifica il percorso di un file [Global. JSON](global-json.md) che verrà usato per determinare la versione dell'SDK. Il file *Global. JSON* deve avere un valore per `sdk:version` .
 
 - **`-NoCdn|--no-cdn`**
 
@@ -110,15 +112,15 @@ Prima di eseguire lo script, installare le [dipendenze](../install/dependencies.
 
 - **`-NoPath|--no-path`**
 
-  Se impostata, la cartella di installazione non viene esportata nel percorso per la sessione corrente. Per impostazione predefinita, lo script modifica il percorso, che rende l'interfaccia della riga di comando di .NET Core disponibile immediatamente dopo l'installazione.
+  Se impostata, la cartella di installazione non viene esportata nel percorso per la sessione corrente. Per impostazione predefinita, lo script modifica il percorso, rendendo il interfaccia della riga di comando di .NET Core disponibile subito dopo l'installazione.
 
 - **`-ProxyAddress`**
 
-  Se impostata, il programma di installazione usa il proxy durante le richieste Web. (Valido solo per Windows.)
+  Se impostata, il programma di installazione usa il proxy durante le richieste Web. (Valido solo per Windows).
 
 - **`ProxyUseDefaultCredentials`**
 
-  Se impostata, il programma di installazione usa le credenziali dell'utente corrente quando si usa l'indirizzo proxy. (Valido solo per Windows.)
+  Se impostata, il programma di installazione usa le credenziali dell'utente corrente quando si usa l'indirizzo proxy. (Valido solo per Windows).
 
 - **`-Runtime|--runtime <RUNTIME>`**
 
@@ -130,14 +132,14 @@ Prima di eseguire lo script, installare le [dipendenze](../install/dependencies.
 
 - **`--runtime-id <RID>`**
 
-  Specifica [l'identificatore](../rid-catalog.md) di runtime per il quale vengono installati gli strumenti. Utilizzare `linux-x64` per Linux portatile. (Valido solo per Linux/macOS.)
+  Specifica l' [identificatore di runtime](../rid-catalog.md) per il quale vengono installati gli strumenti. Usare `linux-x64` per Linux portatile. (Valido solo per Linux/macOS).
 
 - **`-SharedRuntime|--shared-runtime`**
 
   > [!NOTE]
   > Questo parametro è obsoleto e potrebbe essere rimosso in una versione futura dello script. L'alternativa consigliata è l'opzione `-Runtime|--runtime`.
 
-  Installa solo i bit del runtime condiviso, non l'intero SDK. Questa opzione equivale a `-Runtime|--runtime dotnet`specificare .
+  Installa solo i bit del runtime condiviso, non l'intero SDK. Questa opzione equivale a specificare `-Runtime|--runtime dotnet` .
 
 - **`-SkipNonVersionedFiles|--skip-non-versioned-files`**
 
@@ -177,7 +179,7 @@ Prima di eseguire lo script, installare le [dipendenze](../install/dependencies.
   ./dotnet-install.sh --channel LTS
   ```
 
-- Installare la versione più recente dal canale 3.1 nel percorso specificato:
+- Installare la versione più recente dal canale 3,1 nel percorso specificato:
 
   Windows:
 

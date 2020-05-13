@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 27967230-144f-40d3-9e23-961d0241abd9
 topic_type:
 - apiref
-ms.openlocfilehash: 887d207aea3de9296107c041816606b2f5947406
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a089831c39c36b0f8a0c7746e95a96e4ddfc5d9
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124026"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209396"
 ---
 # <a name="icordebugfunctiongetclass-method"></a>Metodo ICorDebugFunction::GetClass
 Ottiene un oggetto ICorDebugClass che rappresenta la classe di cui questa funzione è membro.  
@@ -35,13 +35,13 @@ HRESULT GetClass (
   
 ## <a name="parameters"></a>Parametri  
  `ppClass`  
- out Puntatore all'indirizzo del `ICorDebugClass` oggetto che rappresenta la classe, o null, se questa funzione non è un membro di una classe.  
+ out Puntatore all'indirizzo dell' `ICorDebugClass` oggetto che rappresenta la classe o null se questa funzione non è un membro di una classe.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

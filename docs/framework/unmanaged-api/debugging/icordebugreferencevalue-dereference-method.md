@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5ec8cf76-3deb-4ce6-9a49-77a4c35d80b9
 topic_type:
 - apiref
-ms.openlocfilehash: 6bb2a6b68a3c6e981a2d6c833d3f44d4c836bd23
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7c64823e1a5c519eb74b508af093afeb1132e608
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124006"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210085"
 ---
 # <a name="icordebugreferencevaluedereference-method"></a>Metodo ICorDebugReferenceValue::Dereference
 Ottiene l'oggetto a cui si fa riferimento.  
@@ -37,14 +37,14 @@ HRESULT Dereference (
  `ppValue`  
  out Puntatore all'indirizzo di un ICorDebugValue che rappresenta l'oggetto a cui fa riferimento questo oggetto ICorDebugReferenceValue.  
   
-## <a name="remarks"></a>Note  
- L'oggetto `ICorDebugValue` è valido solo se il relativo riferimento non è ancora stato disabilitato.  
+## <a name="remarks"></a>Osservazioni  
+ L' `ICorDebugValue` oggetto è valido solo se il relativo riferimento non è ancora stato disabilitato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -5,25 +5,25 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 089d5d7c7a95e2de4629f53255d9d9790fd5508a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7bcc7e68810c97142cebca7595266a0e4a69ed51
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705392"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207942"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Controllo delle versioni con le parole chiave Override e New (Guida per programmatori C#)
 Il linguaggio C# è progettato in modo che il controllo delle versioni tra le classi [di base](../../language-reference/keywords/base.md) e le classi derivate in diverse librerie possa svilupparsi e mantenere la compatibilità con le versioni precedenti. Ciò significa ad esempio che l'introduzione di un nuovo membro in una classe [di base](../../language-reference/keywords/class.md) con lo stesso nome di un membro in una classe derivata è completamente supportata da C# e non causa comportamenti imprevisti. Significa inoltre che una classe deve dichiarare in modo esplicito se un metodo deve eseguire l'override di un metodo ereditato o se si tratta di un nuovo metodo che consente di nascondere un metodo ereditato con nome simile.  
   
  In C# le classi derivate possono contenere metodi con lo stesso nome dei metodi delle classi di base.  
-  
-- Il metodo della classe di base deve essere definito come [virtuale](../../language-reference/keywords/virtual.md).  
-  
+
 - Se il metodo della classe derivata non è preceduto dalle parole chiave [new](../../language-reference/keywords/new-modifier.md) o [override](../../language-reference/keywords/override.md), il compilatore genera un avviso e il metodo si comporta come se fosse presente la parola chiave `new`.  
   
 - Se il metodo della classe derivata è preceduto dalla parola chiave `new`, il metodo è definito come indipendente dal metodo della classe di base.  
   
 - Se il metodo della classe derivata è preceduto dalla parola chiave `override`, gli oggetti della classe derivata chiameranno tale metodo anziché il metodo della classe di base.  
+
+- Per applicare la `override` parola chiave al metodo nella classe derivata, il metodo della classe base deve essere definito come [Virtual](../../language-reference/keywords/virtual.md).
   
 - Il metodo della classe di base può essere chiamato dall'interno della classe derivata usando la parola chiave `base`.  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8c6d2089-4dbb-4715-b9e9-2a4491c8c9ce
 topic_type:
 - apiref
-ms.openlocfilehash: a0b70078dee88b270d8361aa9bddcb7d80df1db1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d5109043a8601d7997f52e88ea472644f1b9ca03
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129465"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208785"
 ---
 # <a name="icordebugmodule2setjmcstatus-method"></a>Metodo ICorDebugModule2::SetJMCStatus
-Imposta lo stato del Just My Code (JMC) di tutti i metodi di tutte le classi di questo ICorDebugModule2 sul valore specificato, ad eccezione di quelli nella matrice `pTokens`, che imposta sul valore opposto.  
+Imposta lo stato del Just My Code (JMC) di tutti i metodi di tutte le classi di questo ICorDebugModule2 sul valore specificato, ad eccezione di quelli nella `pTokens` matrice, che imposta sul valore opposto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,26 +37,26 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>Parametri  
  `bIsJustMycode`  
- in Impostare su `true` se il codice deve essere sottoposto a debug; in caso contrario, impostare su `false`.  
+ in Impostare su `true` se è necessario eseguire il debug del codice; in caso contrario, impostare su `false` .  
   
  `cTokens`  
  [in] Dimensione della matrice `pTokens`.  
   
  `pTokens`  
- in Matrice di valori di `mdToken`, ciascuno dei quali fa riferimento a un metodo per il quale lo stato del JMC è impostato su.`bIsJustMycode`.  
+ in Matrice di `mdToken` valori, ognuno dei quali fa riferimento a un metodo che avrà lo stato JMC impostato su! `bIsJustMycode` .  
   
-## <a name="remarks"></a>Note  
- Lo stato JMC di ogni metodo specificato nella matrice `pTokens` viene impostato sull'opposto del valore `bIsJustMycode`. Lo stato di tutti gli altri metodi in questo modulo è impostato sul valore `bIsJustMycode`.  
+## <a name="remarks"></a>Osservazioni  
+ Lo stato JMC di ogni metodo specificato nella `pTokens` matrice è impostato sull'opposto del `bIsJustMycode` valore. Lo stato di tutti gli altri metodi in questo modulo è impostato sul `bIsJustMycode` valore.  
   
- Il metodo `SetJMCStatus` Cancella tutte le impostazioni JMC precedenti in questo modulo.  
+ Il `SetJMCStatus` metodo cancella tutte le impostazioni JMC precedenti in questo modulo.  
   
- Il metodo `SetJMCStatus` restituisce un HRESULT S_OK se tutte le funzioni sono state impostate correttamente. Restituisce un HRESULT CORDBG_E_FUNCTION_NOT_DEBUGGABLE se alcune funzioni contrassegnate come `true` non sono sottoponibili a debug.  
+ Il `SetJMCStatus` metodo restituisce un S_OK HRESULT se tutte le funzioni sono state impostate correttamente. Restituisce un CORDBG_E_FUNCTION_NOT_DEBUGGABLE HRESULT se alcune funzioni contrassegnate non sono sottoponibili a `true` debug.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

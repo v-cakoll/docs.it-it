@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5396c4c3-4ec3-4e3a-a38d-d65b21f0a2fc
 topic_type:
 - apiref
-ms.openlocfilehash: c6c1fa12248b9ff871e4a62a1a3584f688f2a921
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d49992b1f4b25586f6171a51b351a25d453560f2
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781493"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212152"
 ---
 # <a name="icordebugmanagedcallback2functionremapcomplete-method"></a>Metodo ICorDebugManagedCallback2::FunctionRemapComplete
 Notifica al debugger che l'esecuzione del codice è cambiata a una nuova versione di una funzione modificata.  
@@ -45,17 +45,17 @@ HRESULT FunctionRemapComplete (
  `pFunction`  
  in Puntatore a un oggetto ICorDebugFunction che rappresenta la versione della funzione attualmente in esecuzione nel thread.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questo callback offre al debugger un'opportunità per ricreare eventuali stepper che in precedenza erano disponibili.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

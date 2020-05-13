@@ -11,25 +11,25 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: 80e0bf641c46eb1461769f5a85950982258c78f5
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: d5e51e86c4c37c882c8a061e60d2d21587d0d3d0
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559422"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212204"
 ---
 # <a name="globalization-and-localization"></a>Globalizzazione e localizzazione
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre un supporto completo per lo sviluppo di applicazioni internazionali.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]fornisce supporto completo per lo sviluppo di applicazioni internazionali.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica della globalizzazione e localizzazione WPF](wpf-globalization-and-localization-overview.md)  
  [Globalizzazione per WPF](globalization-for-wpf.md)  
  [Cenni preliminari sull'utilizzo del layout automatico](use-automatic-layout-overview.md)  
  [Attributi e commenti di localizzazione](localization-attributes-and-comments.md)  
- [Panoramica sulle funzionalità bidirezionali di WPF](bidirectional-features-in-wpf-overview.md)  
- [Procedure relative alle proprietà](globalization-and-localization-how-to-topics.md)  
+ [Cenni preliminari sulle funzionalità bidirezionali di WPF](bidirectional-features-in-wpf-overview.md)  
+ [Procedure relative](how-to-localize-an-application.md)  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Globalization>  
   
  <xref:System.Windows.FrameworkElement.FlowDirection%2A>  

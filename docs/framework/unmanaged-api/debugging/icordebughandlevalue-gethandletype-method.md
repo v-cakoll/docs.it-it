@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5e7b12d-835a-4e86-ae2f-d658d4f1c67c
 topic_type:
 - apiref
-ms.openlocfilehash: bc7d99d0ddb443cba227b7bad0cd53edb94c9101
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6eb76ddd6ee8b2a00aac3af9ebf815338d29f194
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138545"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212165"
 ---
 # <a name="icordebughandlevaluegethandletype-method"></a>Metodo ICorDebugHandleValue::GetHandleType
 Ottiene un valore che indica il tipo di handle a cui fa riferimento questo oggetto ICorDebugHandleValue.  
@@ -38,10 +38,10 @@ HRESULT GetHandleType (
  out Puntatore a un valore dell'enumerazione CorDebugHandleType che indica il tipo di questo handle.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

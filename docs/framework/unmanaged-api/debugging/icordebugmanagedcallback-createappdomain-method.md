@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48d410d7-6749-4125-a8fd-f9562c7088e9
 topic_type:
 - apiref
-ms.openlocfilehash: 35ea69d32ee9b994cc0bf91339c798edcd472f44
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 89fba6af9b76f729ca40d4ee63f525611bdf43a9
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788419"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205640"
 ---
 # <a name="icordebugmanagedcallbackcreateappdomain-method"></a>Metodo ICorDebugManagedCallback::CreateAppDomain
 Notifica al debugger che è stato creato un dominio dell'applicazione.  
@@ -41,14 +41,14 @@ HRESULT CreateAppDomain (
  `pAppDomain`  
  in Puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione creato.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

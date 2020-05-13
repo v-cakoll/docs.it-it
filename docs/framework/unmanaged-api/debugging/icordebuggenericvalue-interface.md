@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-ms.openlocfilehash: e60d4b128bf03ff81863e0c95815b2c204807583
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7c5359ddf2c021f77ad1ea0a8579316c3c773fd5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794463"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209786"
 ---
 # <a name="icordebuggenericvalue-interface"></a>Interfaccia ICorDebugGenericValue
 
@@ -32,8 +32,8 @@ Sottoclasse di "ICorDebugValue" che si applica a tutti i valori. Questa interfac
 |[Metodo GetValue](icordebuggenericvalue-getvalue-method.md)|Copia il valore nel buffer specificato.|  
 |[Metodo SetValue](icordebuggenericvalue-setvalue-method.md)|Copia un nuovo valore dal buffer specificato.|  
   
-## <a name="remarks"></a>Note  
- `ICorDebugGenericValue` è un'interfaccia secondaria perché non utilizzabile in remoto.  
+## <a name="remarks"></a>Osservazioni  
+ `ICorDebugGenericValue`è un'interfaccia secondaria perché non utilizzabile in remoto.  
   
  Per i tipi di riferimento, il valore è il riferimento anziché il contenuto del riferimento.  
   
@@ -42,14 +42,14 @@ Sottoclasse di "ICorDebugValue" che si applica a tutti i valori. Questa interfac
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

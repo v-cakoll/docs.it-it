@@ -3,12 +3,12 @@ title: Modifiche di rilievo-.NET Framework a .NET Core
 titleSuffix: ''
 description: Elenca le modifiche di rilievo da .NET Framework a .NET Core.
 ms.date: 05/05/2020
-ms.openlocfilehash: bb18e38fecc0805dfafe6a16c853ae04fd2a2913
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 613c4e41e12be57d5631b347055140a4418e7207
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859950"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206453"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Modifiche di rilievo per la migrazione da .NET Framework a .NET Core
 
@@ -51,6 +51,16 @@ Se si esegue la migrazione di un'app da .NET Framework a .NET Core, le modifiche
 ### <a name="net-core-21"></a>.NET Core 2.1
 
 [!INCLUDE [Boolean parameter of SignedCms.ComputeSignature is respected](~/includes/core-changes/cryptography/2.1/compute-signature-silent-parameter.md)]
+
+***
+
+## <a name="msbuild"></a>MSBuild
+
+- [Modifica del nome del file manifesto della risorsa](#resource-manifest-file-name-change)
+
+### <a name="net-core-30"></a>.NET Core 3.0
+
+[!INCLUDE[Resource file names](~/includes/core-changes/msbuild/3.0/resource-manifest-name.md)]
 
 ***
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-ms.openlocfilehash: e98748b523b948dc002f2ebc4e2e79fc7d659918
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 51d34e68851bc6a60d25f643f63d112396abdc4e
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781598"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209071"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>Metodo ICorDebugManagedCallback2::CreateConnection
 Notifica al debugger che è stata creata una nuova connessione.  
@@ -45,21 +45,21 @@ HRESULT CreateConnection (
  `pConnName`  
  in Puntatore al nome della nuova connessione.  
   
-## <a name="remarks"></a>Note  
- Un callback `CreateConnection` verrà attivato in uno dei seguenti casi:  
+## <a name="remarks"></a>Osservazioni  
+ Un `CreateConnection` callback verrà attivato in uno dei seguenti casi:  
   
-- Quando un debugger si connette a un processo che contiene connessioni. In questo caso, il runtime genererà e invierà un evento `CreateConnection` e un evento [ICorDebugManagedCallback2:: ChangeConnection](icordebugmanagedcallback2-changeconnection-method.md) per ogni connessione nel processo.  
+- Quando un debugger si connette a un processo che contiene connessioni. In questo caso, il runtime genererà e invierà un `CreateConnection` evento e un evento [ICorDebugManagedCallback2:: ChangeConnection](icordebugmanagedcallback2-changeconnection-method.md) per ogni connessione nel processo.  
   
-- Quando un host chiama [ICLRDebugManager:: BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) nell' [API di hosting](../../../../docs/framework/unmanaged-api/hosting/index.md).  
+- Quando un host chiama [ICLRDebugManager:: BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) nell' [API di hosting](../hosting/index.md).  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

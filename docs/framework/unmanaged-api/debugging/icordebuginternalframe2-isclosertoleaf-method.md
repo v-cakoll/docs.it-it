@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-ms.openlocfilehash: 5dd93dcc29ace6573e313f732c45af0dfbb900e1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4a01ccd4e5cb9aadc6a693b2c6ceaff31c114bbc
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76782219"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209890"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>Metodo ICorDebugInternalFrame2::IsCloserToLeaf
-Controlla se il frame interno `this` è più vicino alla foglia rispetto all'oggetto ICorDebugFrame specificato.  
+Controlla se il `this` frame interno è più vicino alla foglia rispetto all'oggetto ICorDebugFrame specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,31 +34,31 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
   
 ## <a name="parameters"></a>Parametri  
  `pFrameToCompare`  
- in Puntatore all'oggetto di confronto `ICorDebugFrame`.  
+ in Puntatore all'oggetto di confronto `ICorDebugFrame` .  
   
  `pIsCloser`  
- [out] `true` se il `this` frame interno è più vicino alla foglia rispetto al frame specificato da `pFrameToCompare`; in caso contrario, `false`.  
+ [out] `true` Se il `this` frame interno è più vicino alla foglia rispetto al frame specificato da `pFrameToCompare` ; in caso contrario, `false` .  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
   
-|HRESULT|Descrizione|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Il confronto è stato eseguito correttamente.|  
 |E_FAIL|Non è stato possibile eseguire il confronto.|  
 |E_INVALIDARG|`pFrameToCompare` o `pIsCloser` è null.|  
   
-## <a name="remarks"></a>Note  
- `IsCloserToLeaf` può essere usato per implementare un criterio per l'interfoliazione di frame interni con altri frame nello stack.  
+## <a name="remarks"></a>Osservazioni  
+ `IsCloserToLeaf`può essere usato per implementare un criterio per l'interfoliazione di frame interni con altri frame nello stack.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,7 +1,7 @@
 ---
 title: Operatori aritmetici - Riferimenti per C#
 description: Informazioni sugli operatori C# che eseguono operazioni di moltiplicazione, divisione, resto, addizione e sottrazione con i tipi numerici.
-ms.date: 03/27/2019
+ms.date: 05/11/2020
 author: pkulikov
 f1_keywords:
 - ++_CSharpKeyword
@@ -27,21 +27,23 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: ea9bf9e065b2953fd20e0503a19d1dc143064c5d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d004ab466bc053ed286d85bcbee2766d8a087286
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738738"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207235"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operatori aritmetici (Riferimenti per C#)
 
 Gli operatori seguenti eseguono operazioni aritmetiche con operandi di tipi numerici:
 
-- Operatori unario [ `++` (incremento),](#increment-operator-) [ `--` (decremento)](#decrement-operator---), [ `+` (più)](#unary-plus-and-minus-operators)e [ `-` (meno)](#unary-plus-and-minus-operators)
-- Operatori binari [ `*` (moltiplicazione)](#multiplication-operator-), [ `/` (divisione)](#division-operator-), [ `%` (resto),](#remainder-operator-) [ `+` (addizione)](#addition-operator-)e [ `-` (sottrazione)](#subtraction-operator--)
+- Operatori unari [ `++` (Increment)](#increment-operator-), [ `--` (Decrement)](#decrement-operator---), [ `+` (Plus)](#unary-plus-and-minus-operators)e [ `-` (meno)](#unary-plus-and-minus-operators)
+- Operatori binari [ `*` (moltiplicazione)](#multiplication-operator-), [ `/` (divisione)](#division-operator-), [ `%` (resto)](#remainder-operator-), [ `+` (addizione)](#addition-operator-)e [ `-` (sottrazione)](#subtraction-operator--)
 
-Tali operatori sono supportati da tutti i tipi [numerici integrali](../builtin-types/integral-numeric-types.md) e [a virgola mobile.](../builtin-types/floating-point-numeric-types.md)
+Questi operatori sono supportati da tutti i tipi numerici [integrali](../builtin-types/integral-numeric-types.md) e a [virgola mobile](../builtin-types/floating-point-numeric-types.md) .
+
+Nel caso dei tipi integrali, gli operatori (ad eccezione degli `++` `--` operatori e) vengono definiti per i `int` `uint` tipi,, `long` e `ulong` . Quando gli operandi sono di altri tipi integrali ( `sbyte` , `byte` , `short` , `ushort` o `char` ), i relativi valori vengono convertiti nel `int` tipo, che è anche il tipo di risultato di un'operazione. Quando gli operandi sono di tipi integrali o a virgola mobile diversi, i relativi valori vengono convertiti nel tipo contenitore più vicino, se tale tipo esiste. Per altre informazioni, vedere la sezione [Promozioni numeriche](~/_csharplang/spec/expressions.md#numeric-promotions) della [specifica del linguaggio C#](~/_csharplang/spec/introduction.md). Gli `++` `--` operatori e sono definiti per tutti i tipi numerici integrali e a virgola mobile e il tipo [char](../builtin-types/char.md) .
 
 ## <a name="increment-operator-"></a>Operatore di incremento ++
 
@@ -85,7 +87,7 @@ L'operatore `+` unario restituisce il valore del proprio operando. L'operatore `
 
 [!code-csharp-interactive[unary plus and minus](snippets/ArithmeticOperators.cs#UnaryPlusAndMinus)]
 
-Il tipo [ulong](../builtin-types/integral-numeric-types.md) non supporta `-` l'operatore unario.
+Il tipo [ULONG](../builtin-types/integral-numeric-types.md) non supporta l'operatore unario `-` .
 
 ## <a name="multiplication-operator-"></a>Operatore di moltiplicazione *
 
@@ -115,7 +117,7 @@ Per i tipi `float`, `double` e `decimal`, il risultato dell'operatore `/` è il 
 
 [!code-csharp-interactive[floating-point division](snippets/ArithmeticOperators.cs#FloatingPointDivision)]
 
-Se uno degli operandi è `decimal`, un altro operando non può essere né `float` né `double`, perché né `float` né `double` è convertibile implicitamente in `decimal`. È necessario convertire esplicitamente l'operando `float` o `double` nel tipo `decimal`. Per ulteriori informazioni sulle conversioni tra tipi numerici, vedere [Conversioni numeriche predefinite](../builtin-types/numeric-conversions.md).
+Se uno degli operandi è `decimal`, un altro operando non può essere né `float` né `double`, perché né `float` né `double` è convertibile implicitamente in `decimal`. È necessario convertire esplicitamente l'operando `float` o `double` nel tipo `decimal`. Per ulteriori informazioni sulle conversioni tra tipi numerici, vedere [conversioni numeriche predefinite](../builtin-types/numeric-conversions.md).
 
 ## <a name="remainder-operator-"></a>Operatore di resto %
 
@@ -137,7 +139,7 @@ Per gli operandi `float` e `double`, il risultato di `x % y` per `x` e `y` finit
 - Il valore assoluto di `z` è il valore prodotto da `|x| - n * |y|` in cui `n` è l'intero più grande possibile, che è minore o uguale a `|x| / |y|` e `|x|` e `|y|` sono i valori assoluti di `x` e `y`, rispettivamente.
 
 > [!NOTE]
-> Questo metodo di calcolo del resto è analogo a quello utilizzato per gli operandi interi, ma diverso dalla specifica IEEE 754. Se è necessaria l'operazione di resto conforme alla specifica IEEE 754, utilizzare il <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> metodo .
+> Questo metodo di calcolo del resto è analogo a quello usato per gli operandi Integer, ma diverso dalla specifica IEEE 754. Se è necessaria l'operazione di resto conforme alla specifica IEEE 754, usare il <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> metodo.
 
 Per informazioni sul comportamento dell'operatore `%` in caso di operandi non finiti, vedere la sezione [Operatore di resto](~/_csharplang/spec/expressions.md#remainder-operator) della [specifica del linguaggio C#](~/_csharplang/spec/introduction.md).
 
@@ -153,7 +155,7 @@ L'operatore di addizione `+` calcola la somma degli operandi:
 
 [!code-csharp-interactive[addition operator](snippets/ArithmeticOperators.cs#Addition)]
 
-È inoltre possibile `+` utilizzare l'operatore per la concatenazione di stringhe e la combinazione di delegati. Per altre informazioni, vedere l'articolo [ `+` operatori and. `+=` ](addition-operator.md)
+È anche possibile usare l' `+` operatore per la concatenazione di stringhe e la combinazione di delegati. Per ulteriori informazioni, vedere l'articolo [ `+` `+=` operatori e](addition-operator.md) .
 
 ## <a name="subtraction-operator--"></a>Operatore di sottrazione -
 
@@ -161,7 +163,7 @@ L'operatore di sottrazione `-` sottrae l'operando di destra dall'operando di sin
 
 [!code-csharp-interactive[subtraction operator](snippets/ArithmeticOperators.cs#Subtraction)]
 
-È inoltre possibile `-` utilizzare l'operatore per delegare la rimozione. Per altre informazioni, vedere l'articolo [ `-` operatori and. `-=` ](subtraction-operator.md)
+È anche possibile usare l' `-` operatore per la rimozione dei delegati. Per ulteriori informazioni, vedere l'articolo [ `-` `-=` operatori e](subtraction-operator.md) .
 
 ## <a name="compound-assignment"></a>Assegnazione composta
 
@@ -187,7 +189,7 @@ A causa delle [promozioni numeriche](~/_csharplang/spec/expressions.md#numeric-p
 
 [!code-csharp-interactive[compound assignment with cast](snippets/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
-È inoltre `+=` possibile `-=` utilizzare gli operatori e per sottoscrivere e annullare la sottoscrizione a un [evento,](../keywords/event.md)rispettivamente. Per ulteriori informazioni, vedere [Come sottoscrivere e annullare la sottoscrizione agli eventi](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+È anche possibile usare `+=` gli `-=` operatori e per sottoscrivere e annullare la sottoscrizione di un [evento](../keywords/event.md), rispettivamente. Per ulteriori informazioni, vedere [come sottoscrivere e annullare la sottoscrizione di eventi](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
 ## <a name="operator-precedence-and-associativity"></a>Precedenza e associatività degli operatori
 
@@ -204,7 +206,7 @@ Usare le parentesi, `()`, per cambiare l'ordine di valutazione imposto dalla pre
 
 [!code-csharp-interactive[precedence and associativity](snippets/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
 
-Per l'elenco completo degli operatori di C, ordinati in base al livello di precedenza, vedere la sezione [Precedenza](index.md#operator-precedence) degli operatori dell'articolo Operatori di [C.](index.md)
+Per l'elenco completo degli operatori C# ordinati in base al livello di precedenza, vedere la sezione [precedenza](index.md#operator-precedence) degli operatori dell'articolo [operatori c#](index.md) .
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>Overflow aritmetico e divisione per zero
 
@@ -235,27 +237,27 @@ Per gli operandi di tipo `decimal`, l'overflow aritmetico genera sempre una <xre
 
 ## <a name="round-off-errors"></a>Errori di arrotondamento
 
-A causa delle limitazioni generali della rappresentazione a virgola mobile dei numeri reali e dell'aritmetica a virgola mobile, potrebbero verificarsi errori di arrotondamento nei calcoli con tipi a virgola mobile. Ossia, il risultato prodotto di un'espressione può essere diverso dal risultato matematico previsto. L'esempio seguente illustra molti di questi casi:
+A causa delle limitazioni generali della rappresentazione a virgola mobile dei numeri reali e dell'aritmetica a virgola mobile, è possibile che si verifichino errori di arrotondamento nei calcoli con tipi a virgola mobile. Ossia, il risultato prodotto di un'espressione può essere diverso dal risultato matematico previsto. L'esempio seguente illustra molti di questi casi:
 
 [!code-csharp-interactive[round-off errors](snippets/ArithmeticOperators.cs#RoundOffErrors)]
 
-Per ulteriori informazioni, vedere le osservazioni nelle pagine di riferimento [System.Double](/dotnet/api/system.double#remarks), [System.Single](/dotnet/api/system.single#remarks)o [System.Decimal](/dotnet/api/system.decimal#remarks) .
+Per ulteriori informazioni, vedere la sezione osservazioni nelle pagine di riferimento [System. Double](/dotnet/api/system.double#remarks), [System. Single](/dotnet/api/system.single#remarks)o [System. Decimal](/dotnet/api/system.decimal#remarks) .
 
 ## <a name="operator-overloadability"></a>Overload degli operatori
 
-Un tipo definito dall'utente può`++` `--`eseguire `+` `-``*`l'overload degli `/`operatori `%` `+`aritmetici `-`unari ( , , , e ) e binary ( , , , , e ). [overload](operator-overloading.md) Quando viene eseguito l'overload di un operatore binario, viene anche eseguito in modo implicito l'overload dell'operatore di assegnazione composta corrispondente. Un tipo definito dall'utente non può eseguire in modo esplicito l'overload di un operatore di assegnazione composta.
+Un tipo definito dall'utente può eseguire l' [Overload](operator-overloading.md) degli `++` operatori aritmetici unari (,, `--` `+` e `-` ) e binari ( `*` ,, `/` `%` , `+` e `-` ). Quando viene eseguito l'overload di un operatore binario, viene anche eseguito in modo implicito l'overload dell'operatore di assegnazione composta corrispondente. Un tipo definito dall'utente non può eseguire in modo esplicito l'overload di un operatore di assegnazione composta.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
 Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguaggio C#](~/_csharplang/spec/introduction.md):
 
-- [Operatori di incremento e decremento suffissi](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators)
-- [Operatori di incremento e decremento dei prefissiPrefix increment and decrement operators](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators)
+- [Operatori di incremento e decremento suffisso](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators)
+- [Operatori di incremento e decremento in forma prefissa](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators)
 - [Operatore più unario](~/_csharplang/spec/expressions.md#unary-plus-operator)
 - [Operatore meno unario](~/_csharplang/spec/expressions.md#unary-minus-operator)
 - [Operatore di moltiplicazione](~/_csharplang/spec/expressions.md#multiplication-operator)
 - [Operatore di divisione](~/_csharplang/spec/expressions.md#division-operator)
-- [Operatore di residuo](~/_csharplang/spec/expressions.md#remainder-operator)
+- [Operatore resto](~/_csharplang/spec/expressions.md#remainder-operator)
 - [Operatore addizione](~/_csharplang/spec/expressions.md#addition-operator)
 - [Operatore di sottrazione](~/_csharplang/spec/expressions.md#subtraction-operator)
 - [Assegnazione composta](~/_csharplang/spec/expressions.md#compound-assignment)

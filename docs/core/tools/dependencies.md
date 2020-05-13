@@ -6,18 +6,18 @@ no-loc:
 - dotnet remove package
 - dotnet list package
 ms.date: 02/25/2020
-ms.openlocfilehash: 3e1d807ea69e66e31b277a92cd6a1dc0e76531b5
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: b77acc7d4f03a45784f753d3daaa9810f110a6ac
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795547"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205945"
 ---
 # <a name="manage-dependencies-in-net-core-applications"></a>Gestire le dipendenze nelle applicazioni .NET Core
 
 Questo articolo illustra come aggiungere e rimuovere dipendenze modificando il file di progetto o usando l'interfaccia della riga di comando.
 
-## <a name="the-packagereference-element"></a>Elemento \<> PackageReference
+## <a name="the-packagereference-element"></a>\<Elemento> PackageReference
 
 L' `<PackageReference>` elemento del file di progetto ha la struttura seguente:
 
@@ -36,11 +36,11 @@ Usare le condizioni per aggiungere una dipendenza disponibile solo in una destin
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-La dipendenza nell'esempio precedente sarà valida solo se la compilazione è in corso per la destinazione specificata. `$(TargetFramework)` Nella condizione è una proprietà di MSBuild che viene impostata nel progetto. Per la maggior parte delle applicazioni .NET Core comuni, non è necessario eseguire questa operazione.
+La dipendenza nell'esempio precedente sarà valida solo se la compilazione è in corso per la destinazione specificata. `$(TargetFramework)`Nella condizione è una proprietà di MSBuild che viene impostata nel progetto. Per la maggior parte delle applicazioni .NET Core comuni, non è necessario eseguire questa operazione.
 
 ## <a name="add-a-dependency-by-editing-the-project-file"></a>Aggiungere una dipendenza modificando il file di progetto
 
-Per aggiungere una dipendenza, aggiungere un `<PackageReference>` elemento all'interno `<ItemGroup>` di un elemento. È possibile aggiungere a un esistente `<ItemGroup>` o crearne uno nuovo. Nell'esempio seguente viene usato il progetto di applicazione console predefinito creato da `dotnet new console`:
+Per aggiungere una dipendenza, aggiungere un `<PackageReference>` elemento all'interno di un `<ItemGroup>` elemento. È possibile aggiungere a un esistente `<ItemGroup>` o crearne uno nuovo. Nell'esempio seguente viene usato il progetto di applicazione console predefinito creato da `dotnet new console` :
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
@@ -66,7 +66,7 @@ dotnet add package Microsoft.EntityFrameworkCore
 
 ## <a name="remove-a-dependency-by-editing-the-project-file"></a>Rimuovere una dipendenza modificando il file di progetto
 
-Per rimuovere una dipendenza, rimuovere il `<PackageReference>` relativo elemento dal file di progetto.
+Per rimuovere una dipendenza, rimuovere il relativo `<PackageReference>` elemento dal file di progetto.
 
 ## <a name="remove-a-dependency-by-using-the-cli"></a>Rimuovere una dipendenza usando l'interfaccia della riga di comando
 
@@ -78,5 +78,5 @@ dotnet remove package Microsoft.EntityFrameworkCore
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Riferimenti ai pacchetti nei file di progetto](../project-sdk/msbuild-props.md#reference-properties)
+* [Riferimenti ai pacchetti nei file di progetto](../project-sdk/msbuild-props.md#reference-properties-and-items)
 * [dotnet list packagecomando](dotnet-remove-package.md)

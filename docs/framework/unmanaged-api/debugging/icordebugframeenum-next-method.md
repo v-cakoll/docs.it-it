@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bc96acb-6179-4328-a447-cda562ce9e98
 topic_type:
 - apiref
-ms.openlocfilehash: ff74a9849b74b8a8e6b8c03f1fc4e7c7eee1ec14
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4652e4b34d614ad3b7b852925fcc63309bdd1498
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124052"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209461"
 ---
 # <a name="icordebugframeenumnext-method"></a>Metodo ICorDebugFrameEnum::Next
 Ottiene il numero specificato di istanze di ICorDebugFrame, a partire dalla posizione corrente.  
@@ -38,19 +38,19 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametri  
  `celt`  
- in Numero di istanze di `ICorDebugFrame` da recuperare.  
+ in Numero di `ICorDebugFrame` istanze da recuperare.  
   
  `frames`  
- out Matrice di puntatori, ciascuno dei quali punta a un oggetto `ICorDebugFrame`.  
+ out Matrice di puntatori, ciascuno dei quali punta a un `ICorDebugFrame` oggetto.  
   
  `pceltFetched`  
- out Puntatore al numero di istanze di `ICorDebugFrame` restituite effettivamente. Questo valore può essere null se `celt` è uno.  
+ out Puntatore al numero di `ICorDebugFrame` istanze effettivamente restituite. Questo valore può essere null se `celt` è uno.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

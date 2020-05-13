@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da278a29-dc2e-4bf7-96ce-801bdc4d7025
 topic_type:
 - apiref
-ms.openlocfilehash: b7a33fd6e2178e0e9188b81f516b231702fb6460
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6b598352f734cf47514a82de1d0fca65d430a9ab
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122719"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209968"
 ---
 # <a name="icordebuginternalframegetframetype-method"></a>Metodo ICorDebugInternalFrame::GetFrameType
 Ottiene il tipo del frame interno.  
@@ -35,16 +35,16 @@ HRESULT GetFrameType (
   
 ## <a name="parameters"></a>Parametri  
  `pType`  
- out Puntatore a un valore dell'enumerazione CorDebugInternalFrameType che indica il tipo di frame interno rappresentato da questo oggetto `ICorDebugInternalFrame`.  
+ out Puntatore a un valore dell'enumerazione CorDebugInternalFrameType che indica il tipo di frame interno rappresentato da questo `ICorDebugInternalFrame` oggetto.  
   
-## <a name="remarks"></a>Note  
- Il tipo di frame interno non sarà mai STUBFRAME_NONE. I debugger devono ignorare normalmente i tipi di frame interni non riconosciuti.  
+## <a name="remarks"></a>Osservazioni  
+ Il tipo di frame interno non verrà mai STUBFRAME_NONE. I debugger devono ignorare normalmente i tipi di frame interni non riconosciuti.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: b7934e5def202760ab05d363ee5fcda5d012ca72
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2fd0237556f877af64708674f00e9efddf95869
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124585"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209643"
 ---
 # <a name="net-class-libraries"></a>Librerie di classi .NET
 
@@ -32,11 +32,11 @@ Le librerie specifiche della piattaforma sono state il primo tipo di libreria di
 
 ## <a name="portable-class-libraries"></a>Librerie di classi portabili
 
-Le librerie portabili sono supportate su più implementazioni di .NET. Anche queste librerie possono dipendere da un tipo di ambiente di esecuzione che è tuttavia un ambiente sintetico, vale a dire un ambiente nato dall'intersezione di una serie di implementazioni di .NET concrete. Le API esposte e i presupposti della piattaforma sono pertanto un sottoinsieme di ciò che avrebbe a disposizione una libreria specifica della piattaforma.
+Le librerie portabili sono supportate su più implementazioni di .NET. Possono comunque assumere dipendenze da un ambiente di esecuzione noto, tuttavia, l'ambiente è un oggetto sintetico generato dall'intersezione di un set di implementazioni .NET concrete. Le API esposte e i presupposti della piattaforma sono un subset degli elementi disponibili per una libreria specifica della piattaforma.
 
-Quando si crea una libreria portabile,è necessario scegliere una configurazione per la piattaforma. I set di piattaforme da supportare sono ad esempio .NET Framework 4.5+, Windows Phone 8.0+. Più piattaforme si decide di supportare, minore sarà il numero di API e di presupposti della piattaforma possibili e più basso sarà il denominatore comune. All'inizio questa caratteristica può creare confusione, poiché si può pensare che aver più piattaforme sia spesso la soluzione migliore. In realtà si capirà poi che le API disponibili diminuiranno se si sceglie di supportare più piattaforme.
+Quando si crea una libreria portabile,è necessario scegliere una configurazione per la piattaforma. La configurazione della piattaforma è il set di piattaforme che è necessario supportare, ad esempio .NET Framework 4.5 +, Windows Phone 8.0 +. Più piattaforme si decide di supportare, minore sarà il numero di API e di presupposti della piattaforma possibili e più basso sarà il denominatore comune. Questa caratteristica può creare confusione in primo luogo, perché le persone spesso pensano "più è meglio", ma si scopre che più piattaforme supportate hanno come risultato un minor numero di API disponibili.
 
-Molti sviluppatori di librerie hanno scelto di usare le librerie portabili anziché creare librerie specifiche della piattaforma partendo da un'unica origine e applicando direttive di compilazione condizionale. Esistono [diversi approcci](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) per accedere alle funzionalità specifiche della piattaforma in librerie portabili. La tecnica [bait-and-switch](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) è l'approccio più adottato.
+Molti sviluppatori di librerie hanno scelto di usare le librerie portabili anziché creare librerie specifiche della piattaforma partendo da un'unica origine e applicando direttive di compilazione condizionale. Esistono [diversi approcci](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) per accedere alle funzionalità specifiche della piattaforma in librerie portabili. La tecnica bait-and-switch è l'approccio più adottato.
 
 ## <a name="net-standard-class-libraries"></a>Librerie di classi .NET Standard
 
@@ -57,8 +57,8 @@ Le piattaforme seguenti supportano le librerie di .NET Standard:
 * Windows Phone
 * Windows Phone Silverlight
 
-Per altre informazioni, vedere l'argomento [.NET Standard](net-standard.md).
+Per altre informazioni, vedere [.NET Standard](net-standard.md).
 
 ## <a name="mono-class-libraries"></a>Librerie di classi Mono
 
-Mono supporta le librerie di classi, inclusi i tre tipi di libreria descritti in precedenza. A ragione, Mono è stato spesso considerato un'implementazione multipiattaforma di Microsoft .NET Framework. In parte perché le librerie .NET Framework specifiche della piattaforma potevano essere eseguite in fase di esecuzione Mono senza modifiche o ricompilazione. Questa caratteristica esisteva prima che fossero create le librerie di classi portabili. Tali librerie risultano quindi una scelta obbligata per consentire la portabilità binaria tra .NET Framework e Mono, nonostante funzionasse solo in una direzione.
+Le librerie di classi sono supportate in mono, inclusi i tre tipi di librerie descritte in precedenza. Mono è stato spesso visualizzato (correttamente) come implementazione multipiattaforma di .NET Framework. In parte perché le librerie .NET Framework specifiche della piattaforma potevano essere eseguite in fase di esecuzione Mono senza modifiche o ricompilazione. Questa caratteristica esisteva prima che fossero create le librerie di classi portabili. Tali librerie risultano quindi una scelta obbligata per consentire la portabilità binaria tra .NET Framework e Mono, nonostante funzionasse solo in una direzione.

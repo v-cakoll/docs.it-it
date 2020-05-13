@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e2fd423-f643-4c27-ba5f-41b5ebc3b416
 topic_type:
 - apiref
-ms.openlocfilehash: 01c7cb2e4359a477c26f995602dbf29668e567c0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d715f5842bb7f75da5311d34bf7d4596f0801a92
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131016"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210280"
 ---
 # <a name="icordebugilframegetargument-method"></a>Metodo ICorDebugILFrame::GetArgument
 Ottiene il valore dell'argomento specificato in questo stack frame MSIL (Microsoft Intermediate Language).  
@@ -39,16 +39,16 @@ HRESULT GetArgument (
  in Indice dell'argomento in questo stack frame MSIL.  
   
  `ppValue`  
- out Puntatore all'indirizzo di un oggetto ICorDebugValue che rappresenta il valore recuperato.  
+ [out] Un puntatore all'indirizzo di un oggetto ICorDebugValue che rappresenta il valore recuperato.  
   
-## <a name="remarks"></a>Note  
- Il metodo `GetArgument` può essere utilizzato in un stack frame MSIL o in un frame compilato JIT (just-in-Time).  
+## <a name="remarks"></a>Osservazioni  
+ Il `GetArgument` metodo può essere usato in un stack frame MSIL o in un frame compilato just-in-time (JIT).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

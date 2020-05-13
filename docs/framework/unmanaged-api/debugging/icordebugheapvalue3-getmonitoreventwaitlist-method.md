@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 035a9035-ac66-4953-b48a-99652b42b7fe
 topic_type:
 - apiref
-ms.openlocfilehash: 15900fab59d172ada67d8aefeab698e1b44f808e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 923e9b0821788143fff59eafe10d1802583df7a6
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794387"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210423"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>Metodo ICorDebugHeapValue3::GetMonitorEventWaitList
 Fornisce un elenco ordinato di thread accodati per l'evento associato a un blocco di monitoraggio.  
@@ -40,15 +40,15 @@ HRESULT GetMonitorEventWaitList (
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
   
-|HRESULT|Descrizione|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|The list is not empty.|  
 |S_FALSE|L'elenco è vuoto.|  
   
 ## <a name="exceptions"></a>Eccezioni  
   
-## <a name="remarks"></a>Note  
- Il primo thread nell'elenco è il primo thread rilasciato dalla chiamata successiva a <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>. Il thread successivo nell'elenco viene rilasciato nella chiamata seguente e così via.  
+## <a name="remarks"></a>Osservazioni  
+ Il primo thread nell'elenco è il primo thread rilasciato dalla chiamata successiva a <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType> . Il thread successivo nell'elenco viene rilasciato nella chiamata seguente e così via.  
   
  Se l'elenco non è vuoto, questo metodo restituisce S_OK. Se l'elenco è vuoto, il metodo restituisce S_FALSE; in questo caso, l'enumerazione è ancora valida, anche se è vuota.  
   
@@ -58,14 +58,14 @@ HRESULT GetMonitorEventWaitList (
   
  Se si verifica un errore in modo che non possa essere determinato quale, se presente, i thread sono in attesa del monitoraggio, il metodo restituisce un valore HRESULT che indica un errore.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

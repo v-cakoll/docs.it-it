@@ -2,12 +2,12 @@
 title: Metodo ICorDebugLoadedModule::GetName
 ms.date: 03/30/2017
 ms.assetid: 88c304d5-edaa-4c0e-a8e1-144e8a76877e
-ms.openlocfilehash: 628f85f3045533ead7ace47b11573a0b1a46df46
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4a0c4e99f23dc949b0bbaa8bbda35cff1537cf3c
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76782041"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209864"
 ---
 # <a name="icordebugloadedmodulegetname-method"></a>Metodo ICorDebugLoadedModule::GetName
 Ottiene il nome del modulo caricato.  
@@ -33,19 +33,19 @@ HRESULT GetName(
  `szName`  
  [out] Matrice di caratteri che contiene il nome del modulo caricato.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 > [!NOTE]
 > Questo metodo è disponibile solo con .NET Native.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

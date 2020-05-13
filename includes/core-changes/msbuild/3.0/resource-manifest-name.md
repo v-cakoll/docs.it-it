@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 16ee73bfc0ab33b04ea3e2fa6d0eec521a9b8634
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f24a29a00a1bff34a452c43716d76bf72ef277b5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78968071"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206220"
 ---
-### <a name="resource-manifest-file-names"></a>Nomi dei file manifesto delle risorse
+### <a name="resource-manifest-file-name-change"></a>Modifica del nome del file manifesto della risorsa
 
-A partire da .NET Core 3.0, il nome del file manifesto della risorsa generato è stato modificato.
+A partire da .NET Core 3,0, nel caso predefinito, MSBuild genera un nome di file manifesto diverso per i file di risorse.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -16,72 +16,30 @@ A partire da .NET Core 3.0, il nome del file manifesto della risorsa generato è
 
 #### <a name="change-description"></a>Descrizione modifica:
 
-Prima di .NET Core 3.0, quando i metadati [DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile) venivano impostati per un file di risorse (*.resx*) nel file di progetto MSBuild, il nome del manifesto generato era *Namespace.Classname.resources*. Quando [DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile) non è stato impostato, il nome del manifesto generato è *Namespace.Classname.FolderPathRelativeToRoot.Culture.resources*.
+Prima di .NET Core 3,0, se `LogicalName` `ManifestResourceName` `DependentUpon` per un elemento nel file di progetto non è stato specificato alcun metadati, o `EmbeddedResource` , MSBuild ha generato un nome di file manifesto nel criterio `<RootNamespace>.<ResourceFilePathFromProjectRoot>.resources` . Se `RootNamespace` non è definito nel file di progetto, per impostazione predefinita viene impostato il nome del progetto. Ad esempio, il nome del manifesto generato per un file di risorse denominato *Form1. resx* nella directory del progetto radice è *MyProject. Form1. resources*.
 
-A partire da .NET Core 3.0, quando un file *resx* viene collocato con un file di origine con lo stesso nome, ad esempio nelle app Windows Form, il nome del manifesto della risorsa viene generato dal nome completo del primo tipo nel file di origine. Ad esempio, se *Type.cs* è collocato tra *Type.resx*, il nome del manifesto generato è *Namespace.Classname.resources*. Tuttavia, se si modifica uno `EmbeddedResource` degli attributi della proprietà per il file *RESX,* il nome del file manifesto generato potrebbe essere diverso:
+A partire da .NET Core 3,0, se un file di risorse è posizionato con un file di origine con lo stesso nome, ad esempio *Form1. resx* e *Form1.cs*, MSBuild usa le informazioni sul tipo del file di origine per generare il nome del file manifesto nel modello `<Namespace>.<ClassName>.resources` . Lo spazio dei nomi e il nome della classe vengono estratti dal primo tipo nel file di origine con percorso condiviso. Ad esempio, il nome del manifesto generato per un file di risorse denominato *Form1. resx* che si trova in un file di origine denominato *Form1.cs* è *MyNamespace. Form1. resources*. La cosa importante da notare è che la prima parte del nome file è diversa rispetto alle versioni precedenti di .NET Core (*MyNamespace* anziché *MyProject*).
 
-- Se `LogicalName` l'attributo nella `EmbeddedResource` proprietà è impostato, tale valore viene utilizzato come nome del file manifesto della risorsa.
+> [!NOTE]
+> Se si dispone `LogicalName` di `ManifestResourceName` metadati, o `DependentUpon` specificati in un `EmbeddedResource` elemento nel file di progetto, questa modifica non influisce sul file di risorse.
 
-  Esempi:
-
-  ```xml
-  <EmbeddedResource Include="X.resx" LogicalName="SomeName.resources" />
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" LogicalName="SomeName.resources" />
-  ```
-
-  **Nome del file manifesto**di risorsa generato : *SomeName.resources* (indipendentemente dal nome del file *RESX* o dalle impostazioni cultura o da qualsiasi altro metadati).
-
-- Se `LogicalName` non è impostato, ma l'attributo `ManifestResourceName` della proprietà è impostato, il `EmbeddedResource` relativo valore, combinato con l'estensione di file *resources*, viene utilizzato come nome del file manifesto della risorsa.
-
-  Esempi:
-
-  ```xml
-  <EmbeddedResource Include="X.resx" ManifestResourceName="SomeName" />
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" ManifestResourceName="SomeName.fr-FR" />
-  ```
-
-  **Nome del file manifesto della risorsa generato**: *SomeName.resources* o *SomeName.fr-FR.resources*.
-
-- Se le regole precedenti non sono `DependentUpon` valide `EmbeddedResource` e l'attributo dell'elemento è impostato su un file di origine, il nome del tipo della prima classe nel file di origine viene utilizzato nel nome del file manifesto della risorsa. Più specificamente, il nome del file generato è *Namespace.Classname\[. Cultura].resources*.
-
-  Esempi:
-
-  ```xml
-  <EmbeddedResource Include="X.resx" DependentUpon="MyTypes.cs">
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" DependentUpon="MyTypes.cs">
-  ```
-
-  Nome del manifesto della **risorsa generato:** *Namespace.Classname.resources* `Namespace.Classname` o *Namespace.Classname.fr-FR.resources* (dove è il nome della prima classe *nellMyTypes.cs*).
-
-- Se le regole precedenti non `EmbeddedResourceUseDependentUponConvention` `true` sono applicabili, è (l'impostazione predefinita per .NET Core) e c'è un file di origine collocato con un file *RESX* con lo stesso nome di file di base, il file *RESX* viene reso dipendente dal file di origine corrispondente e il nome generato è lo stesso della regola precedente. Si tratta della regola "impostazioni predefinite" per i progetti .NET Core.This is the "default settings" rule for .NET Core projects.
-  
-  Esempi:
-  
-  I file *MyTypes.cs* e *MyTypes.resx* o *MyTypes.fr-FR.resx* sono presenti nella stessa cartella.
-  
-  Nome del manifesto della **risorsa generato:** *Namespace.Classname.resources* `Namespace.Classname` o *Namespace.Classname.fr-FR.resources* (dove è il nome della prima classe *nellMyTypes.cs*).
-
-- Se nessuna delle regole precedenti è applicabile, il nome del file manifesto della risorsa generato è *RootNamespace.RelativePathWithDotsForSlashes.\[ Cultura.] risorse*. Il percorso relativo è `Link` il `EmbeddedResource` valore dell'attributo dell'elemento se è impostato. In caso contrario, il `Identity` percorso relativo è il valore dell'attributo dell'elemento. `EmbeddedResource` In Visual Studio, questo è il percorso dalla radice del progetto al file in Esplora soluzioni.
+Questa modifica di rilievo è stata introdotta con l'aggiunta della `EmbeddedResourceUseDependentUponConvention` proprietà ai progetti .NET Core. Per impostazione predefinita, i file di risorse non sono elencati in modo esplicito in un file di progetto .NET Core, quindi non hanno `DependentUpon` metadati per specificare come assegnare un nome al file con *estensione resources* generato. Quando `EmbeddedResourceUseDependentUponConvention` è impostato su `true` , ovvero il valore predefinito, MSBuild cerca un file di origine con percorso condiviso ed estrae uno spazio dei nomi e un nome di classe da tale file. Se si imposta `EmbeddedResourceUseDependentUponConvention` su `false` , MSBuild genera il nome del manifesto in base al comportamento precedente, che combina `RootNamespace` e il percorso del file relativo.
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Se non si è soddisfatti dei nomi di manifesto generati, è possibile:If you're insatisfied with the generated manifest names, you can:
+Nella maggior parte dei casi, non è richiesta alcuna azione da parte dello sviluppatore e l'app dovrebbe continuare a funzionare. Tuttavia, se questa modifica interrompe l'app, è possibile eseguire una delle operazioni seguenti:
 
-- Modificare i metadati del file di risorse in base a una delle regole di denominazione descritte in precedenza.
+- Modificare il codice in modo che preveda il nuovo nome del manifesto.
 
-- `EmbeddedResourceUseDependentUponConvention` Impostare `false` su nel file di progetto per rifiutare completamente esplicitamente la nuova convenzione:
+- Rifiutare esplicitamente la nuova convenzione di denominazione impostando `EmbeddedResourceUseDependentUponConvention` su `false` nel file di progetto.
 
-   ```xml
-   <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
-   ```
+  ```xml
+  <PropertyGroup>
+    <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
+  </PropertyGroup>
+  ```
 
-   > [!NOTE]
-   > Se `LogicalName` sono `ManifestResourceName` presenti gli attributi or, i relativi valori verranno comunque utilizzati per il nome del file generato.
-
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 MSBuild
 

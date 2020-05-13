@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed4c6458-0435-44fc-8e78-8ba00be362f2
 topic_type:
 - apiref
-ms.openlocfilehash: 4cd03895b4e33c3e42c71acca12eaf950fc9a145
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 972a981188c36236b81f3da17c09abeeb1e32857
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138551"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212191"
 ---
 # <a name="icordebuggenericvaluesetvalue-method"></a>Metodo ICorDebugGenericValue::SetValue
 Copia un nuovo valore dal buffer specificato.  
@@ -37,14 +37,14 @@ HRESULT SetValue (
  `pFrom`  
  in Puntatore al buffer da cui copiare il valore.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Per i tipi di riferimento, il valore è il riferimento, non il contenuto.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

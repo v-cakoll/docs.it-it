@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5cf5056-da4d-4629-914d-afe42a5393df
 topic_type:
 - apiref
-ms.openlocfilehash: 7a27b8ec512498c7bf817aca36267c37d8070a4c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1f1e42cd929d2d6282d282cf62dce00104b3a925
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788573"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210241"
 ---
 # <a name="icordebugilframe-interface"></a>Interfaccia ICorDebugILFrame
 
@@ -39,20 +39,20 @@ Rappresenta una stack frame di codice MSIL (Microsoft Intermediate Language). Qu
 |[Metodo GetStackValue](icordebugilframe-getstackvalue-method.md)|Non implementato.|  
 |[Metodo SetIP](icordebugilframe-setip-method.md)|Imposta il puntatore all'istruzione per la posizione di offset specificata nel codice MSIL.|  
   
-## <a name="remarks"></a>Note  
- L'interfaccia `ICorDebugILFrame` è un'interfaccia ICorDebugFrame specializzata. Viene usato per i frame di codice MSIL o per i frame compilati JIT (just-in-Time). I frame compilati tramite JIT implementano sia l'interfaccia `ICorDebugILFrame` che l'interfaccia ICorDebugNativeFrame.  
+## <a name="remarks"></a>Osservazioni  
+ L' `ICorDebugILFrame` interfaccia è un'interfaccia ICorDebugFrame specializzata. Viene usato per i frame di codice MSIL o per i frame compilati JIT (just-in-Time). I frame compilati tramite JIT implementano l'interfaccia `ICorDebugILFrame` e l'interfaccia ICorDebugNativeFrame.  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30a39d79-1f10-4328-9c5d-094ed824e2ba
 topic_type:
 - apiref
-ms.openlocfilehash: 263124db75abdc058d26ffb606a13fc711aed8bf
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1953a3e0492e4cfcdaea761b68ea22cf5a4a8ed7
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792293"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205525"
 ---
 # <a name="icordebugprocess5-interface"></a>Interfaccia ICorDebugProcess5
 Estende l'interfaccia ICorDebugProcess per supportare l'accesso all'heap gestito, per fornire informazioni su Garbage Collection di oggetti gestiti e per determinare se un debugger carica immagini dalla cache delle immagini native locali dell'applicazione.  
@@ -28,7 +28,7 @@ Estende l'interfaccia ICorDebugProcess per supportare l'accesso all'heap gestito
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo EnableNGENPolicy](icordebugprocess5-enablengenpolicy-method.md)|Imposta un valore che determina il modo in cui un'applicazione carica immagini native durante l'esecuzione in un debugger gestito.|  
+|[Metodo EnableNGenPolicy](icordebugprocess5-enablengenpolicy-method.md)|Imposta un valore che determina il modo in cui un'applicazione carica immagini native durante l'esecuzione in un debugger gestito.|  
 |[Metodo EnumerateGCReferences](icordebugprocess5-enumerategcreferences-method.md)|Ottiene un enumeratore per tutti gli oggetti che devono essere sottoposti a Garbage Collection in un processo.|  
 |[Metodo EnumerateHandles](icordebugprocess5-enumeratehandles-method.md)|Ottiene un enumeratore per gli handle di oggetto in un processo.|  
 |[Metodo EnumerateHeap](icordebugprocess5-enumerateheap-method.md)|Ottiene un enumeratore per gli oggetti nell'heap gestito.|  
@@ -41,20 +41,20 @@ Estende l'interfaccia ICorDebugProcess per supportare l'accesso all'heap gestito
 |[Metodo GetTypeID](icordebugprocess5-gettypeid-method.md)|Ottiene l'identificatore del tipo per l'oggetto in corrispondenza di un indirizzo specificato.|  
 |[Metodo GetTypeLayout](icordebugprocess5-gettypelayout-method.md)|Ottiene informazioni sul layout di un oggetto in memoria in base al relativo identificatore di tipo.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questa interfaccia estende logicamente le interfacce ICorDebugProcess, ICorDebugProcess2 e [ICorDebugProcess3](icordebugprocess3-interface.md) .  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata remota, da un altro computer o da un altro processo.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

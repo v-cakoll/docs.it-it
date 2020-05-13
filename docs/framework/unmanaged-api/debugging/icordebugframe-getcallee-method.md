@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92d8136d-0436-4c7e-a6b2-80765f892a0d
 topic_type:
 - apiref
-ms.openlocfilehash: b83dec65e1dd4fc610be3190e8126e6d9d38a6e8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 51ac10f936db129282720f2bcae8729f56735b59
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121219"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205374"
 ---
 # <a name="icordebugframegetcallee-method"></a>Metodo ICorDebugFrame::GetCallee
 Ottiene un puntatore all'oggetto ICorDebugFrame nella catena corrente chiamato da questo frame.  
@@ -38,10 +38,10 @@ HRESULT GetCallee (
  out Puntatore all'indirizzo di un `ICorDebugFrame` oggetto che rappresenta il frame chiamato. Questo valore è null se il frame chiamante è il frame più interno nella catena corrente.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
