@@ -15,30 +15,30 @@ helpviewer_keywords:
 ms.assetid: 855f4199-b62d-40ce-998e-1eb4a1772142
 topic_type:
 - apiref
-ms.openlocfilehash: 1d75897e00c36bd5c484e837ee68e54443168e77
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 760f69baf311cf320e9c358ba1c45c942934f1a5
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131758"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379402"
 ---
-# <a name="icordebugstepperdeactivate-method"></a><span data-ttu-id="fa0bb-102">Metodo ICorDebugStepper::Deactivate</span><span class="sxs-lookup"><span data-stu-id="fa0bb-102">ICorDebugStepper::Deactivate Method</span></span>
-<span data-ttu-id="fa0bb-103">Fa in modo che questo ICorDebugStepper cancelli il comando dell'ultimo passaggio ricevuto.</span><span class="sxs-lookup"><span data-stu-id="fa0bb-103">Causes this ICorDebugStepper to cancel the last step command that it received.</span></span>  
+# <a name="icordebugstepperdeactivate-method"></a><span data-ttu-id="ed5a4-102">Metodo ICorDebugStepper::Deactivate</span><span class="sxs-lookup"><span data-stu-id="ed5a4-102">ICorDebugStepper::Deactivate Method</span></span>
+<span data-ttu-id="ed5a4-103">Fa in modo che questo ICorDebugStepper cancelli il comando dell'ultimo passaggio ricevuto.</span><span class="sxs-lookup"><span data-stu-id="ed5a4-103">Causes this ICorDebugStepper to cancel the last step command that it received.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fa0bb-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="fa0bb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed5a4-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ed5a4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Deactivate ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="fa0bb-105">Note</span><span class="sxs-lookup"><span data-stu-id="fa0bb-105">Remarks</span></span>  
- <span data-ttu-id="fa0bb-106">Un nuovo comando di esecuzione può essere emesso dopo che il comando per il passaggio ricevuto più di recente è stato annullato.</span><span class="sxs-lookup"><span data-stu-id="fa0bb-106">A new stepping command may be issued after the most recently received step command has been canceled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ed5a4-105">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="ed5a4-105">Remarks</span></span>  
+ <span data-ttu-id="ed5a4-106">Un nuovo comando di esecuzione può essere emesso dopo che il comando per il passaggio ricevuto più di recente è stato annullato.</span><span class="sxs-lookup"><span data-stu-id="ed5a4-106">A new stepping command may be issued after the most recently received step command has been canceled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fa0bb-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="fa0bb-107">Requirements</span></span>  
- <span data-ttu-id="fa0bb-108">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fa0bb-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ed5a4-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ed5a4-107">Requirements</span></span>  
+ <span data-ttu-id="ed5a4-108">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ed5a4-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fa0bb-109">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fa0bb-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ed5a4-109">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ed5a4-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="fa0bb-110">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fa0bb-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ed5a4-110">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ed5a4-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fa0bb-111">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fa0bb-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="ed5a4-111">**Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ed5a4-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
