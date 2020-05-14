@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb9ea96c-5b58-4655-8104-094fc8b393b8
 topic_type:
 - apiref
-ms.openlocfilehash: 2bb6fee00bb99555bc19f35e1250880cc3985f7f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 980f563d3b11fbfcce48b6d7c05275af520e14f1
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790932"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396497"
 ---
 # <a name="icordebugvariablehomeenumnext-method"></a>ICorDebugVariableHomeEnum:: Next (metodo)
 Ottiene il numero specificato di istanze di [ICorDebugVariableHome](icordebugvariablehome-interface.md) che contengono informazioni sulle variabili e gli argomenti locali in una funzione.  
@@ -50,22 +50,22 @@ HRESULT Next(
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|Il metodo è stato eseguito correttamente.|  
-|`S_FALSE`|Il numero effettivo di istanze recuperate, come riflesso in `pceltFetched`, è inferiore al numero di istanze richieste.|  
+|`S_OK`|Metodo completato correttamente.|  
+|`S_FALSE`|Il numero effettivo di istanze recuperate, come riflesso in `pceltFetched` , è inferiore al numero di istanze richieste.|  
   
-## <a name="remarks"></a>Note  
- Il metodo [ICorDebugVariableHomeEnum:: Next](icordebugvariablehomeenum-next-method.md) recupera un massimo di `celt` oggetti a partire dalla posizione corrente dell'enumeratore. Quando il metodo restituisce un risultato, `pceltFetched` contiene il numero effettivo di oggetti recuperati.  
+## <a name="remarks"></a>Commenti  
+ Il metodo [ICorDebugVariableHomeEnum:: Next](icordebugvariablehomeenum-next-method.md) recupera un massimo di `celt` oggetti a partire dalla posizione corrente dell'enumeratore. Quando il metodo viene restituito, `pceltFetched` contiene il numero effettivo di oggetti recuperati.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Interfaccia ICorDebugVariableHomeEnum](icordebugvariablehomeenum-interface.md)
 - [Interfaccia ICorDebugVariableHome](icordebugvariablehome-interface.md)

@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Prin
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: e291888bee25a9c87259560ca4b12635ee73c3c7
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: a3444071abae89780304a9687e486f3842283a33
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975407"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396239"
 ---
 # <a name="architectural-principles"></a>Principi architetturali
 
@@ -22,9 +22,9 @@ ms.locfileid: "82975407"
 
 ### <a name="separation-of-concerns"></a>Separazione delle problematiche
 
-Un principio guida per lo sviluppo di applicazioni è **la separazione dei concetti**. In base a questo principio, deve esistere una separazione a livello di software in funzione delle operazioni eseguite. Ad esempio, si consideri un'applicazione che include la logica per l'identificazione di elementi importanti da visualizzare all'utente e la formattazione specifica di tali elementi per renderli più evidenti. Il comportamento responsabile della scelta degli elementi da formattare dovrebbe essere mantenuto separato dal comportamento responsabile della formattazione vera e propria degli elementi, poiché si tratta di concetti distinti e solo casualmente correlati tra loro.
+Un principio guida per lo sviluppo di applicazioni è **la separazione dei concetti**. In base a questo principio, deve esistere una separazione a livello di software in funzione delle operazioni eseguite. Ad esempio, si consideri un'applicazione che include la logica per l'identificazione di elementi importanti da visualizzare all'utente e la formattazione specifica di tali elementi per renderli più evidenti. Il comportamento responsabile della scelta degli elementi da formattare deve essere mantenuto separato dal comportamento responsabile della formattazione degli elementi, poiché questi comportamenti sono problemi distinti che sono strettamente correlati tra loro.
 
-Dal punto di vista della progettazione, è possibile costruire in modo logico le applicazioni rispettando questo principio e separando il comportamento di business principale dalla logica dell'interfaccia utente e dell'infrastruttura. Idealmente, le regole e la logica di business dovrebbero risiedere in un progetto separato e autonomo rispetto agli altri progetti dell'applicazione. Ciò garantisce che il modello di business sia facile da testare e possa evolvere senza essere strettamente associato a dettagli di implementazione di basso livello. La separazione dei compiti è un fattore chiave nella scelta di utilizzare i livelli nelle architetture delle applicazioni.
+A livello di architettura, le applicazioni possono essere compilate logicamente per seguire questo principio separando il comportamento aziendale principale dall'infrastruttura e dalla logica dell'interfaccia utente. Idealmente, le regole e la logica di business dovrebbero risiedere in un progetto separato e autonomo rispetto agli altri progetti dell'applicazione. Questa separazione garantisce che il modello aziendale sia facile da testare e possa evolvere senza essere strettamente associato a dettagli di implementazione di basso livello. La separazione dei compiti è un fattore chiave nella scelta di utilizzare i livelli nelle architetture delle applicazioni.
 
 ### <a name="encapsulation"></a>Incapsulamento
 
@@ -34,7 +34,7 @@ L'incapsulamento delle classi avviene limitando l'accesso esterno allo stato int
 
 ### <a name="dependency-inversion"></a>Inversione delle dipendenze
 
-La direzione delle dipendenza all'interno dell'applicazione deve puntare verso l'astrazione, non verso i dettagli di implementazione. La maggior parte delle applicazioni vengono scritte in modo che le dipendenze in fase di compilazione scorrano nella direzione della fase di esecuzione. Ciò produce un grafico delle dipendenze dirette. Ovvero, se il modulo A chiama una funzione nel modulo B, che chiama una funzione nel modulo C, in fase di compilazione a dipenderà da B, che dipenderà da C, come illustrato nella figura 4-1.
+La direzione delle dipendenza all'interno dell'applicazione deve puntare verso l'astrazione, non verso i dettagli di implementazione. La maggior parte delle applicazioni viene scritta in modo che le dipendenze in fase di compilazione scorrano nella direzione dell'esecuzione del runtime, producendo un grafico delle dipendenze dirette. Ovvero, se il modulo A chiama una funzione nel modulo B, che chiama una funzione nel modulo C, in fase di compilazione a dipenderà da B, che dipenderà da C, come illustrato nella figura 4-1.
 
 ![Grafico dipendenze dirette](./media/image4-1.png)
 
@@ -52,7 +52,7 @@ L' **inversione delle dipendenze** è una parte essenziale della creazione di ap
 
 **Le classi e i metodi devono richiedere in modo esplicito gli oggetti in collaborazione di cui necessitano per funzionare correttamente.** I costruttori di classi forniscono alle classi l'opportunità di individuare gli elementi necessari per essere in uno stato valido e per funzionare correttamente. Se si definiscono classi che possono essere costruite e chiamate, ma che funzioneranno correttamente solo se sono presenti determinati componenti globali o dell'infrastruttura, queste classi sono *disoneste* con i client. Il contratto del costruttore indica al client che necessita solo degli elementi specificati, o addirittura di nessun elemento se la classe usa semplicemente un costruttore senza parametri, ma in realtà in fase di esecuzione necessita di qualcos'altro.
 
-Se ci si attiene al principio delle dipendenze esplicite, le classi e i metodi comunicano esattamente ai relativi client ciò di cui hanno bisogno per funzionare. Questo rende il codice più autodocumentato e i contratti di codifica di contratti più intuitivi, perché gli utenti saranno sicuri che nel momento in cui forniscono quello che è richiesto sotto forma di metodi o parametri del costruttore, gli oggetti che stanno usando funzioneranno correttamente in fase di esecuzione.
+Se ci si attiene al principio delle dipendenze esplicite, le classi e i metodi comunicano esattamente ai relativi client ciò di cui hanno bisogno per funzionare. Seguendo il principio, il codice è più autodocumentato e i contratti di codifica sono più semplici da usare, poiché gli utenti considereranno attendibile che, purché forniscano gli elementi necessari sotto forma di parametri del metodo o del costruttore, gli oggetti che stanno utilizzando si comporteranno correttamente in fase di esecuzione.
 
 ### <a name="single-responsibility"></a>Singola responsabilità
 
@@ -60,13 +60,13 @@ Il principio di singola responsabilità si applica alla programmazione orientata
 
 In un'applicazione monolitica, è possibile applicare il principio di singola responsabilità ad alto livello e trasferirlo agli altri livelli dell'applicazione. La responsabilità della presentazione deve rimanere nel progetto dell'interfaccia utente, mentre la responsabilità dell'accesso ai dati deve essere mantenuta all'interno di un progetto di infrastruttura. La logica di business deve essere inclusa nel progetto principale dell'applicazione, dove può essere facilmente testata ed evolvere in modo indipendente da altre responsabilità.
 
-Quando si applica questo principio all'architettura delle applicazioni portandolo fino all'endpoint logico, si ottengono i microservizi. Ogni microservizio deve avere una singola responsabilità. Se si presenta la necessità di estendere il comportamento di un sistema, è preferibile farlo aggiungendo ulteriori microservizi, anziché aggiungendo responsabilità a un microservizio esistente.
+Quando questo principio viene applicato all'architettura dell'applicazione e viene portato al relativo endpoint logico, si ottengono microservizi. Ogni microservizio deve avere una singola responsabilità. Se si presenta la necessità di estendere il comportamento di un sistema, è preferibile farlo aggiungendo ulteriori microservizi, anziché aggiungendo responsabilità a un microservizio esistente.
 
 [Altre informazioni sull'architettura dei microservizi](https://aka.ms/MicroservicesEbook)
 
 ### <a name="dont-repeat-yourself-dry"></a>Don't Repeat Yourself (DRY)
 
-In base al principio DRY, in un'applicazione va evitata la ripetizione di un comportamento relativo a un particolare concetto perché è una frequente fonte di errori. A un certo punto, una modifica dei requisiti richiederà la modifica di questo comportamento. È probabile che almeno un'istanza del comportamento non venga aggiornata e ciò provocherà un comportamento incoerente del sistema.
+L'applicazione deve evitare di specificare un comportamento correlato a un particolare concetto in più posizioni, perché questa pratica è una fonte frequente di errori. A un certo punto, una modifica dei requisiti richiederà la modifica di questo comportamento. È probabile che almeno un'istanza del comportamento non venga aggiornata e che il sistema si comporti in modo incoerente.
 
 Anziché duplicare la logica, è preferibile incapsularla in un costrutto di programmazione. Rendere il costrutto l'unica autorità su questo comportamento e fare in modo che qualsiasi altra parte dell'applicazione che richiede questo comportamento utilizzi il nuovo costrutto.
 
@@ -105,5 +105,5 @@ Come minimo, ogni singola applicazione web deve puntare ad essere il proprio con
 - [Contesti limitati](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
->[Precedente](choose-between-traditional-web-and-single-page-apps.md)
->[successivo](common-web-application-architectures.md)
+>[Precedente](choose-between-traditional-web-and-single-page-apps.md) 
+> [Avanti](common-web-application-architectures.md)

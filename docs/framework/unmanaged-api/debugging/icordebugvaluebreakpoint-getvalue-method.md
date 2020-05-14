@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52a73654-bc47-48b6-b2b1-a4456b10140c
 topic_type:
 - apiref
-ms.openlocfilehash: 5924a3914c7fe04413b4a6744bce263b56165d78
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cc4e1a236f429894fe7ec304b9ccfd3bf717c188
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140225"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397006"
 ---
 # <a name="icordebugvaluebreakpointgetvalue-method"></a>Metodo ICorDebugValueBreakpoint::GetValue
 Ottiene un puntatore a interfaccia a un oggetto "ICorDebugValue" che rappresenta il valore dell'oggetto in cui è impostato il punto di interruzione.  
@@ -35,15 +35,15 @@ HRESULT GetValue (
   
 ## <a name="parameters"></a>Parametri  
  `ppValue`  
- out Puntatore all'indirizzo di un oggetto `ICorDebugValue`.  
+ out Puntatore all'indirizzo di un `ICorDebugValue` oggetto.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche

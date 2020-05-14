@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 87af9661-b59d-4077-aabf-d59fb8673602
 topic_type:
 - apiref
-ms.openlocfilehash: c6285c244f3949b3814b875a01336532d0d7e49c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cae8ae374186e4bb9a022c11f7edab3c07ff3fa7
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137107"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395861"
 ---
 # <a name="icordebugvaluecreatebreakpoint-method"></a>Metodo ICorDebugValue::CreateBreakpoint
-Il metodo `CreateBreakpoint` non è attualmente implementato.  
+Il `CreateBreakpoint` metodo non è attualmente implementato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,12 +34,12 @@ HRESULT CreateBreakpoint (
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche

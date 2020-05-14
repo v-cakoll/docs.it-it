@@ -2,12 +2,12 @@
 title: Implementazione di letture/query in un microservizio CQRS
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Riconoscere l'implementazione del lato query di CQRS nel microservizio degli ordini in eShopOnContainers con Dapper.
 ms.date: 10/08/2018
-ms.openlocfilehash: 49f42a5035bab38f800f3ec5ea24b01fde0d2964
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 4b789bb3fb465c17c5c4445a1d3dc9dffa47a152
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988752"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396267"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementare le letture/query in un microservizio CQRS
 
@@ -15,7 +15,7 @@ Per le operazioni di lettura/query, il microservizio degli ordini dall'applicazi
 
 L'approccio è semplice, come illustrato nella figura 7-3. L'interfaccia API viene implementata dai controller API Web usando qualsiasi infrastruttura, ad esempio un micro ORM (Object Relational Mapper) come Dapper, e restituendo ViewModel dinamici a seconda delle esigenze delle applicazioni dell'interfaccia utente.
 
-![Diagramma che mostra query di alto livello sul lato nel CQRS semplificato.](./media/cqrs-microservice-reads/simple-approach-cqrs-queries.png)
+![Diagramma che mostra le query di alto livello sul lato CQRS semplificato.](./media/cqrs-microservice-reads/simple-approach-cqrs-queries.png)
 
 **Figura 7-3**. L'approccio più semplice per le query in un microservizio CQRS
 
@@ -23,7 +23,7 @@ L'approccio più semplice per il lato query in un approccio CQRS semplificato pu
 
 Visto che si tratta di un approccio semplice, il codice necessario per il lato di query (ad esempio il codice che usa un micro ORM come [Dapper](https://github.com/StackExchange/Dapper)) può essere implementato [nello stesso progetto API Web](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs). La figura 7-4 mostra un esempio. Le query sono definite nel progetto di microservizio **Ordering.API** all'interno della soluzione eShopOnContainers.
 
-![Screenshot della cartella Query del progetto Ordering.API.](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
+![Screenshot della cartella query del progetto ordering. API.](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
 **Figura 7-4**. Query nel microservizio degli ordini in eShopOnContainers
 
@@ -41,9 +41,9 @@ I ViewModel possono essere tipi statici definiti nelle classi, oppure possono es
 
 Dapper è un progetto open source (originalmente creato da Sam Saffron) e fa parte dei blocchi predefiniti usati nell'[Overflow dello stack](https://stackoverflow.com/). Per usare Dapper, è sufficiente installarlo con il [pacchetto NuGet Dapper](https://www.nuget.org/packages/Dapper), come illustrato nella figura riportata di seguito:
 
-![Screenshot del pacchetto Dapper nella visualizzazione pacchetti NuGet.](./media/cqrs-microservice-reads/drapper-package-nuget.png)
+![Screenshot del pacchetto elegante nella visualizzazione pacchetti NuGet.](./media/cqrs-microservice-reads/drapper-package-nuget.png)
 
-È anche necessario aggiungere un'istruzione Using, in modo che il codice abbia accesso ai metodi di estensione di Dapper.
+È anche necessario aggiungere una `using` direttiva in modo che il codice abbia accesso ai metodi di estensione.
 
 Quando si usa Dapper nel codice, si usa direttamente la classe <xref:System.Data.SqlClient.SqlConnection> disponibile nello spazio dei nomi <xref:System.Data.SqlClient>. Usando il metodo QueryAsync e altri metodi di estensione che estendono la classe <xref:System.Data.SqlClient.SqlConnection> è possibile eseguire query in modo semplice e ad alte prestazioni.
 
@@ -93,13 +93,13 @@ L'aspetto importante è che, usando un tipo dinamico, la raccolta dei dati resti
 
 ### <a name="viewmodel-as-predefined-dto-classes"></a>ViewModel come classi DTO predefinite
 
-**Pro:** avere classi ViewModel predefinite statiche, come "contratti" basati su classi DTO esplicite, è sicuramente migliore per le API pubbliche ma anche per i microservizi a lungo termine, anche se vengono utilizzate solo dalla stessa applicazione.
+**Vantaggi**: le classi ViewModel predefinite statiche, ad esempio "contratti" basati su classi DTO esplicite, sono decisamente migliori per le API pubbliche, ma anche per i microservizi a lungo termine, anche se vengono usati solo dalla stessa applicazione.
 
 Se si vogliono specificare i tipi di risposta per Swagger, è necessario usare le classi DTO esplicite come tipo restituito. Di conseguenza, le classi DTO predefinite consentono di offrire informazioni più complete da Swagger. In tal modo, la documentazione e la compatibilità delle API migliora durante il loro utilizzo.
 
 **Svantaggi:** come indicato in precedenza, durante il suo aggiornamento, il codice richiede alcuni ulteriori passaggi per aggiornare le classi DTO.
 
-*Suggerimenti basati sulla nostra esperienza:* nelle query implementate nel microservizio degli ordini in eShopOnContainers, abbiamo iniziato a sviluppare usando ViewModel dinamici perché era molto semplice e agile nelle prime fasi di sviluppo. Ma, una volta che lo sviluppo è stato stabilizzato, abbiamo scelto di eseguire il refactoring delle API e utilizzare DTO statici o predefiniti per il ViewModels, perché è più chiaro per i consumatori del microservizio conoscere i tipi DTO espliciti, utilizzati come "contratti".
+*Suggerimenti basati sulla nostra esperienza:* nelle query implementate nel microservizio degli ordini in eShopOnContainers, abbiamo iniziato a sviluppare usando ViewModel dinamici perché era molto semplice e agile nelle prime fasi di sviluppo. Tuttavia, una volta che lo sviluppo è stato stabilizzato, abbiamo scelto di effettuare il refactoring delle API e di usare dto statici o predefiniti per i ViewModel, perché è più chiaro per i consumer di microservizi sapere i tipi di DTO espliciti, usati come "contratti".
 
 Nell'esempio seguente, è possibile visualizzare in che modo la query restituisce dati usando una classe DTO ViewModel esplicita: la classe OrderSummary.
 
@@ -177,7 +177,7 @@ Si tratta di un altro motivo per cui i tipi restituiti espliciti sono migliori r
 
 Nella figura seguente, è possibile vedere in che modo l'interfaccia utente di Swagger mostra le informazioni ResponseType.
 
-![Screenshot della pagina dell'interfaccia utente di Swagger per l'API di ordinazione.](./media/cqrs-microservice-reads/swagger-ordering-http-api.png)
+![Screenshot della pagina dell'interfaccia utente di spavalderia per l'API di ordinamento.](./media/cqrs-microservice-reads/swagger-ordering-http-api.png)
 
 **Figura 7-5.** Interfaccia utente di Swagger che mostra i tipi di risposta e i possibili codici di stato HTTP da un'API Web
 
@@ -188,12 +188,12 @@ Nella figura seguente, è possibile vedere in che modo l'interfaccia utente di S
 - **Dapper**  
  <https://github.com/StackExchange/dapper-dot-net>
 
-- **Julie Lerman. Punti dati - Dapper, Entity Framework e applicazioni ibride (articolo sulla rivista MSDN)**  
+- **Julie Lerman. Punti dati-app elegante, Entity Framework e ibride (articolo di MSDN Magazine)**  
   <https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps>
 
-- **ASP.NET pagine principali della Guida dell'API Web tramite Swagger**  
+- **ASP.NET Core pagine della Guida dell'API Web con spavalderia**  
   <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>
 
 >[!div class="step-by-step"]
->[Successivo](eshoponcontainers-cqrs-ddd-microservice.md)
->[precedente](ddd-oriented-microservice.md)
+>[Precedente](eshoponcontainers-cqrs-ddd-microservice.md) 
+> [Avanti](ddd-oriented-microservice.md)

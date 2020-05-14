@@ -1,5 +1,5 @@
 ---
-title: Metodo IXCLRDataProcess::EnumMethodInstanceByAddressIXCLRDataProcess::EnumMethodInstanceByAddress Method
+title: 'Metodo IXCLRDataProcess:: EnumMethodInstanceByAddress'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EnumMethodInstanceByAddress Method
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: afc5fc377dd45d5e8d4d2d7b3385ca0524df69e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f3800a5980304394dd648111fe23a3bb0890c575
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176656"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395115"
 ---
-# <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>Metodo IXCLRDataProcess::EnumMethodInstanceByAddressIXCLRDataProcess::EnumMethodInstanceByAddress Method
+# <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>Metodo IXCLRDataProcess:: EnumMethodInstanceByAddress
 
 Enumera le istanze del metodo di questo processo a partire da un offset di indirizzo.
 
@@ -40,21 +40,21 @@ HRESULT EnumMethodInstanceByAddress(
 ## <a name="parameters"></a>Parametri
 
 `handle`\
-[in] Handle per l'enumerazione delle istanze del metodo.
+in Handle per l'enumerazione delle istanze del metodo.
 
 `mod`\
-[fuori] Istanza del metodo enumerato.
+out Istanza del metodo enumerata.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Il metodo fornito fa `IXCLRDataProcess` parte dell'interfaccia e corrisponde al 28esimo slot della tabella dei metodi virtuali.
+Il metodo fornito fa parte dell' `IXCLRDataProcess` interfaccia e corrisponde al ventinovesimo slot della tabella del metodo virtuale.
 
 ## <a name="requirements"></a>Requisiti
 
 **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
-**Intestazione:** Nessuno **libreria:** nessuna versione di **.NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**Intestazione:** Nessuna **libreria:** nessuna **.NET Framework versioni:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Enumerazione CLRDataSourceType](clrdatasourcetype-enumeration.md)
 - [Debug](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f5ef94dd-dfee-49d3-a398-b110f8906dd8
 topic_type:
 - apiref
-ms.openlocfilehash: 09394acb07b8595f99d9ecc873eb0985cdd79316
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: db1721fed6414310556ceac493275e069a781ac8
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134588"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397135"
 ---
 # <a name="icordebugvalueenumnext-method"></a>Metodo ICorDebugValueEnum::Next
 Ottiene il numero specificato di istanze "ICorDebugValue" dall'enumerazione, a partire dalla posizione corrente.  
@@ -38,21 +38,21 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametri  
  `celt`  
- in Numero di istanze di `ICorDebugValue` da recuperare.  
+ in Numero di `ICorDebugValue` istanze da recuperare.  
   
  `values`  
- out Matrice di puntatori, ciascuno dei quali punta a un oggetto `ICorDebugValue`.  
+ out Matrice di puntatori, ciascuno dei quali punta a un `ICorDebugValue` oggetto.  
   
  `pceltFetched`  
- out Puntatore al numero di istanze di `ICorDebugValue` restituite effettivamente. Questo valore può essere null se `celt` è uno.  
+ out Puntatore al numero di `ICorDebugValue` istanze effettivamente restituite. Questo valore può essere null se `celt` è uno.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche

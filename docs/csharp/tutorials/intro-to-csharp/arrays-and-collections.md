@@ -3,18 +3,18 @@ title: Usare raccolte - Esercitazione introduttiva su C#
 description: Imparare a usare C# esplorando la raccolta List in questa esercitazione.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 554a4601157a7d4b873c22a46ee72b6601fc36d7
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: c99f5582702120db238de1206de42d964837cdbd
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635660"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396888"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Informazioni su come gestire le raccolte dati tramite il tipo di elenco generico
 
 Questa esercitazione introduttiva offre un'introduzione al linguaggio C# e i concetti di base relativi alla classe <xref:System.Collections.Generic.List%601>.
 
-Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione di .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Windows, Linux o macOS. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
+Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene le istruzioni per configurare l'ambiente di sviluppo locale in Windows, Linux o MacOS. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
 
 ## <a name="a-basic-list-example"></a>Esempio di elenco di base
 
@@ -86,7 +86,7 @@ Salvare il file e digitare di nuovo `dotnet run` per visualizzare i risultati.
 
 ## <a name="search-and-sort-lists"></a>Eseguire ricerche negli elenchi e ordinarli
 
-In questi esempi vengono usati elenchi relativamente piccoli, ma le applicazioni reali creano spesso elenchi con molti più elementi, a volte anche migliaia. Per trovare elementi in raccolte di tali dimensioni, è necessario avere la possibilità di eseguire ricerche nell'elenco. Il metodo <xref:System.Collections.Generic.List%601.IndexOf%2A> cerca un elemento e ne restituisce l'indice. Aggiungere questo codice in fondo al metodo `Main`:
+In questi esempi vengono usati elenchi relativamente piccoli, ma le applicazioni reali creano spesso elenchi con molti più elementi, a volte anche migliaia. Per trovare elementi in raccolte di tali dimensioni, è necessario avere la possibilità di eseguire ricerche nell'elenco. Il metodo <xref:System.Collections.Generic.List%601.IndexOf%2A> cerca un elemento e ne restituisce l'indice. Se l'elemento non è presente nell'elenco, `IndexOf` restituisce `-1` . Aggiungere questo codice in fondo al metodo `Main`:
 
 ```csharp
 var index = names.IndexOf("Felipe");
@@ -111,7 +111,7 @@ else
 }
 ```
 
-Gli elementi in un elenco possono anche essere ordinati. Il metodo <xref:System.Collections.Generic.List%601.Sort%2A> ordina tutti gli elementi nell'elenco in base all'ordine normale (alfabetico nel caso delle stringhe). Aggiungere questo codice in fondo al metodo `Main`:
+Gli elementi in un elenco possono anche essere ordinati. Il <xref:System.Collections.Generic.List%601.Sort%2A> metodo ordina in ordine normale tutti gli elementi dell'elenco (in ordine alfabetico per le stringhe). Aggiungere questo codice in fondo al metodo `Main`:
 
 ```csharp
 names.Sort();
@@ -123,7 +123,7 @@ foreach (var name in names)
 
 Salvare il file e digitare `dotnet run` per provare quest'ultima versione.
 
-Prima di iniziare la sezione successiva, è necessario spostare il codice corrente in un metodo separato. In questo modo sarà più semplice iniziare a lavorare con un nuovo esempio. Rinominare il metodo `Main` in `WorkingWithStrings` e scrivere un nuovo metodo `Main` che chiama `WorkingWithStrings`. Al termine, il codice dovrebbe risultare simile al seguente:
+Prima di iniziare la sezione successiva, è necessario spostare il codice corrente in un metodo separato. In questo modo sarà più semplice iniziare a lavorare con un nuovo esempio. Rinominare il metodo `Main` in `WorkingWithStrings` e scrivere un nuovo metodo `Main` che chiama `WorkingWithStrings`. Al termine, il codice dovrebbe essere simile al seguente:
 
 ```csharp
 using System;
@@ -230,4 +230,4 @@ A ogni iterazione del ciclo, gli ultimi due interi nell'elenco vengono sommati e
 
 Complimenti, è stata completata questa esercitazione dedicata agli elenchi. È possibile continuare con l'esercitazione [Introduzione alle classi](introduction-to-classes.md) nell'ambiente di sviluppo.
 
-Per ulteriori informazioni sull'utilizzo del `List` tipo, vedere l'articolo della guida di [.NET](../../../standard/index.yml) sulle [raccolte](../../../standard/collections/index.md). Questo argomento include anche informazioni su molti altri tipi di raccolta.
+Per altre informazioni sull'uso del `List` tipo, vedere l'articolo della [Guida di .NET](../../../standard/index.yml) sulle [raccolte](../../../standard/collections/index.md). Questo argomento include anche informazioni su molti altri tipi di raccolta.

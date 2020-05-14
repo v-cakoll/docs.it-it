@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 376fb03f-f1ef-4107-baa4-4d9d55884862
 topic_type:
 - apiref
-ms.openlocfilehash: e90952a92c408762a98a2bfcb91b6aeb72052df1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0e480db953131d7771e493a8f367154a7d17dada
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791215"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396634"
 ---
 # <a name="icordebugtype2-interface"></a>Interfaccia ICorDebugType2
 Estende l'interfaccia ICorDebugType per recuperare l'identificatore di tipo di un tipo di base o di un tipo complesso (definito dall'utente).  
@@ -30,7 +30,7 @@ Estende l'interfaccia ICorDebugType per recuperare l'identificatore di tipo di u
 |------------|-|  
 |[Metodo GetTypeID](icordebugtype2-gettypeid-method.md)|Ottiene un [COR_TYPEID](cor-typeid-structure.md) per questo tipo.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
  Questa interfaccia è un'estensione logica dell'interfaccia ICorDebugType.  
   
 > [!NOTE]
@@ -52,15 +52,15 @@ pType2->GetTypeID(&id);
 // now we can use existing APIs to get information about this COR_TYPEID  
 ```  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Interfacce di debug](debugging-interfaces.md)

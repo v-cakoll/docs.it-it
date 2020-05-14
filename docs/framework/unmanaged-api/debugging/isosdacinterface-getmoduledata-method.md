@@ -1,5 +1,5 @@
 ---
-title: Metodo ISOSDacInterface::GetModuleData
+title: 'Metodo ISOSDacInterface:: GetModuleData'
 ms.date: 02/01/2019
 api.name:
 - ISOSDacInterface::GetModuleData Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 97b297def9fba329ff6d9573f7b2e7cc811273f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 14e0eb812c84a0042150345d039451adf178caf1
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764715"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396915"
 ---
-# <a name="isosdacinterfacegetmoduledata-method"></a>Metodo ISOSDacInterface::GetModuleData
+# <a name="isosdacinterfacegetmoduledata-method"></a>Metodo ISOSDacInterface:: GetModuleData
 
-Recupera i dati corrispondenti al modulo caricato in un determinato indirizzo.
+Recupera i dati corrispondenti al modulo caricato a un indirizzo specificato.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,23 +40,23 @@ HRESULT GetModuleData(
 ## <a name="parameters"></a>Parametri
 
 `moduleAddr`\
-[in] L'indirizzo del modulo per recuperare informazioni per.
+in Indirizzo del modulo per il quale recuperare le informazioni.
 
 `data`\
-[out] Il [DacpModuleData struttura](dacpmoduledata-structure.md) per contenere le informazioni del modulo caricato.
+out [Struttura DacpModuleData](dacpmoduledata-structure.md) che consente di conservare le informazioni del modulo caricato.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Il metodo specificato fa parte di `ISOSDacInterface` interfaccia e corrisponde al 13 slot della tabella di metodo virtuale.
+Il metodo fornito fa parte dell' `ISOSDacInterface` interfaccia e corrisponde al quattordicesimo slot della tabella del metodo virtuale.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Intestazione:** nessuno  
-**Libreria:** nessuno  
-**Versioni di .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+**Intestazione:** Nessuno  
+**Libreria:** Nessuno  
+**Versioni .NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Debug](index.md)
 - [Interfaccia ISOSDacInterface](isosdacinterface-interface.md)

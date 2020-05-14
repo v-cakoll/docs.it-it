@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f025c2e5-3f6c-4be8-9ffe-c8b214617dfe
 topic_type:
 - apiref
-ms.openlocfilehash: a6f93ec3c7ffe415c41dcf094dbde2f0a08969f6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 75a165e2fd517f36d779a934a5bdd9c41956411a
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790992"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396757"
 ---
 # <a name="icordebugvariablehomegetoffset-method"></a>Metodo ICorDebugVariableHome:: GetOffset
 Ottiene l'offset dal registro di base per una variabile.  
@@ -45,15 +45,15 @@ HRESULT GetOffset(
 |`S_OK`|La variabile si trova in una posizione di memoria relativa al registro.|  
 |`E_FAIL`|La variabile non si trova in una posizione di memoria relativa al registro.|  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Interfaccia ICorDebugVariableHome](icordebugvariablehome-interface.md)

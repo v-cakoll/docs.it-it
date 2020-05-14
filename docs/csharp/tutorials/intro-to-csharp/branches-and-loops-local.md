@@ -3,12 +3,12 @@ title: Rami e cicli - Esercitazione introduttiva su C#
 description: In questa esercitazione su rami e cicli si scriverà codice C# per esplorare la sintassi del linguaggio che supporta cicli e diramazioni condizionali per eseguire ripetutamente istruzioni.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: d8c10a7462b7c27c5353aee6d957732a8d161015
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: d67cfe359634783bb542e9ac34df52a095b45c20
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135945"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396886"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Informazioni sulla logica condizionale con istruzioni per rami e cicli
 
@@ -48,9 +48,9 @@ Digitare di nuovo `dotnet run`. Dato che la risposta è minore a 10, non viene v
 > [!TIP]
 > Mentre si impara a usare C# (o qualsiasi linguaggio di programmazione) sicuramente si commetteranno errori durante la scrittura del codice. Il compilatore troverà e segnalerà gli errori. Esaminare attentamente l'output dell'errore e il codice che ha generato l'errore. L'errore del compilatore consente in genere di trovare il problema.
 
-Questo primo esempio dimostra le potenzialità di `if` e dei tipi booleani. Un valore *booleano* è una variabile che può avere uno di due valori: `true` o `false`. C# definisce un tipo speciale, `bool` per le variabili booleane. L'istruzione `if` controlla il valore di un `bool`. Quando il valore è `true`, viene eseguita l'istruzione che segue `if`. In caso contrario, l'istruzione viene ignorata.
+Questo primo esempio dimostra le potenzialità di `if` e dei tipi booleani. Un valore *booleano* è una variabile che può avere uno di due valori: `true` o `false`. C# definisce un tipo speciale, `bool` per le variabili booleane. L'istruzione `if` controlla il valore di un `bool`. Quando il valore è `true`, viene eseguita l'istruzione che segue `if`. In caso contrario, viene ignorato.
 
-Questo processo di controllo delle condizioni ed esecuzione di istruzioni in base a queste condizioni offre molte potenzialità.
+Questo processo di verifica delle condizioni ed esecuzione di istruzioni basate su tali condizioni è potente.
 
 ## <a name="make-if-and-else-work-together"></a>Usare insieme if ed else
 
@@ -72,7 +72,7 @@ L'istruzione che segue la parola chiave `else` viene eseguita solo quando la con
 > Nel linguaggio C# i rientri o gli spazi vuoti non sono significativi.
 > L'istruzione che segue la parola chiave `if` o `else` verrà eseguita in base alla condizione. Tutti gli esempi in questa esercitazione seguono una procedura comune che prevede il rientro delle righe in base al flusso di controllo delle istruzioni.
 
-Dato che il rientro non è significativo, è necessario usare `{` e `}` per indicare quando si vuole includere più di un'istruzione nel blocco con esecuzione condizionale. I programmatori C# usano in genere le parentesi graffe in tutte le clausole `if` e `else`. L'esempio seguente è identico a quello appena creato. Modificare il codice precedente in modo che corrisponda al codice seguente:
+Poiché il rientro non è significativo, è necessario usare `{` e `}` per indicare quando si desidera che più di un'istruzione faccia parte del blocco eseguito in modo condizionale. I programmatori C# usano in genere le parentesi graffe in tutte le clausole `if` e `else`. L'esempio seguente è identico a quello creato dall'utente. Modificare il codice precedente in modo che corrisponda al codice seguente:
 
 ```csharp
 int a = 5;
@@ -127,7 +127,7 @@ else
 
 Modificare i valori di `a`, `b` e `c` e passare da `&&` a `||` per esplorare. Si otterranno più informazioni sul funzionamento degli operatori `&&` e `||`.
 
-Il primo passaggio è stato completato. Prima di iniziare la sezione successiva, è necessario spostare il codice corrente in un metodo separato. In questo modo sarà più semplice iniziare a lavorare con un nuovo esempio. Rinominare il metodo `Main` in `ExploreIf` e scrivere un nuovo metodo `Main` che chiama `ExploreIf`. Al termine, il codice dovrebbe risultare simile al seguente:
+Il primo passaggio è stato completato. Prima di iniziare la sezione successiva, è necessario spostare il codice corrente in un metodo separato. In questo modo sarà più semplice iniziare a lavorare con un nuovo esempio. Rinominare il metodo `Main` in `ExploreIf` e scrivere un nuovo metodo `Main` che chiama `ExploreIf`. Al termine, il codice dovrebbe essere simile al seguente:
 
 ```csharp
 using System;
@@ -187,7 +187,7 @@ Impostare come commento la chiamata a `ExploreIf()`. L'output risulterà in ques
 //ExploreIf();
 ```
 
-`//` avvia un **commento** in C#. Un commento è un testo che si vuole conservare nel codice sorgente senza eseguirlo come codice. Il compilatore non genera codici eseguibili da commenti.
+`//` avvia un **commento** in C#. Un commento è un testo che si vuole conservare nel codice sorgente senza eseguirlo come codice. Il compilatore non genera alcun codice eseguibile dai commenti.
 
 ## <a name="use-loops-to-repeat-operations"></a>Usare i cicli per ripetere le operazioni
 
@@ -209,7 +209,7 @@ Questo esempio include un altro operatore nuovo. I caratteri `++` dopo la variab
 > [!IMPORTANT]
 > Assicurarsi che la condizione del ciclo `while` passi a false quando si esegue il codice. In caso contrario, si crea un **ciclo infinito** in cui il programma non termina mai. Tale situazione non è illustrata in questo esempio, perché è necessario forzare l'uscita dal programma usando **CTRL+C** o in altro modo.
 
-Il ciclo `while` testa la condizione prima di eseguire il codice dopo `while`. Il ciclo `do` ... `while` esegue prima il codice e poi controlla la condizione, Il ciclo do while è illustrato nel codice riportato di seguito:
+Il ciclo `while` testa la condizione prima di eseguire il codice dopo `while`. Il ciclo `do` ... `while` esegue prima il codice e poi controlla la condizione, Il ciclo *do while* è illustrato nel codice seguente:
 
 ```csharp
 int counter = 0;
@@ -233,24 +233,26 @@ for (int index = 0; index < 10; index++)
 }
 ```
 
-Questo codice esegue le stesse operazioni di ciclo `while` e `do` già usate. L'istruzione `for` è composta da tre parti che ne controllano il funzionamento.
+Il codice precedente esegue le stesse operazioni del `while` ciclo e del `do` ciclo già usato. L'istruzione `for` è composta da tre parti che ne controllano il funzionamento.
 
-La prima parte è l' **inizializzatore for**: `int index = 0;` dichiara che `index` è la variabile del ciclo e imposta il valore iniziale su `0`.
+La prima parte è l' **inizializzatore for**: `int index = 0;` dichiara che `index` è la variabile del ciclo e imposta il valore iniziale su `0` .
 
 La parte intermedia è la **condizione for**: `index < 10` dichiara che questo `for` ciclo continua a essere eseguito fino a quando il valore del contatore è minore di 10.
 
-La parte finale è l' **iteratore for**: `index++` specifica come modificare la variabile del ciclo dopo l'esecuzione del blocco dopo `for` l'istruzione. In questo caso, specifica che `index` deve essere incrementato di 1 a ogni esecuzione del blocco.
+La parte finale è l' **iteratore for**: `index++` specifica come modificare la variabile del ciclo dopo l'esecuzione del blocco dopo l' `for` istruzione. In questo caso, specifica che `index` deve essere incrementato di 1 a ogni esecuzione del blocco.
 
-Sperimentare da soli questi elementi. Eseguire queste prove:
+Sperimentare. Provare ognuna delle varianti seguenti:
 
 - Cambiare l'inizializzatore in modo che inizi da un valore diverso.
 - Cambiare la condizione in modo che si interrompa in corrispondenza di un valore diverso.
 
 Al termine, passare alla prossima lezione che prevede la scrittura di codice per usare quanto finora appreso.
 
+Esiste un'altra istruzione di ciclo che non è trattata in questa esercitazione: l' `foreach` istruzione. L' `foreach` istruzione ripete la relativa istruzione per ogni elemento di una sequenza di elementi. Viene spesso usato con le *raccolte*, quindi viene trattato nell'esercitazione successiva.
+
 ## <a name="created-nested-loops"></a>Cicli annidati creati
 
-Un `while`ciclo `do` , `for` o può essere annidato all'interno di un altro ciclo per creare una matrice utilizzando la combinazione di ogni elemento del ciclo esterno con ogni elemento del ciclo interno. A questo scopo, è necessario compilare un set di coppie alfanumeriche per rappresentare righe e colonne.
+Un `while` `do` ciclo, o `for` può essere annidato all'interno di un altro ciclo per creare una matrice utilizzando la combinazione di ogni elemento del ciclo esterno con ogni elemento del ciclo interno. A questo scopo, è necessario compilare un set di coppie alfanumeriche per rappresentare righe e colonne.
 
 Un `for` ciclo può generare le righe:
 
@@ -298,7 +300,7 @@ Sperimentare e quindi controllare i risultati. Verrà visualizzata una risposta 
 
 È possibile continuare con l'esercitazione [Matrici e raccolte](arrays-and-collections.md) nel proprio ambiente di sviluppo.
 
-Maggiori informazioni su questi concetti sono disponibili in questi argomenti:
+Per altre informazioni su questi concetti, vedere questi articoli:
 
 - [Istruzioni if ed else](../../language-reference/keywords/if-else.md)
 - [Istruzione while](../../language-reference/keywords/while.md)

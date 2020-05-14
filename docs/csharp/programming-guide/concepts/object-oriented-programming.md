@@ -1,13 +1,13 @@
 ---
 title: Programmazione orientata a oggetti (C#)
-ms.date: 02/08/2020
+ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 2b6be3384f76fa210c2b52c55ecf9bd865df43a6
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 541d1a2581a3241f35fc8478040c007b6581e3b2
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200093"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396680"
 ---
 # <a name="object-oriented-programming-c"></a>Programmazione orientata a oggetti (C#)
 
@@ -58,7 +58,7 @@ public class SampleClass
 }
 ```
 
-Le proprietà `get` dispongono `set` di funzioni di accesso e, che forniscono un maggiore controllo sulla modalità di impostazione o di restituzione dei valori.
+Le proprietà dispongono `get` di `set` funzioni di accesso e, che forniscono un maggiore controllo sulla modalità di impostazione o di restituzione dei valori.
 
 C# consente di creare un campo privato per archiviare il valore della proprietà o usare proprietà implementate automaticamente che creano automaticamente questo campo in background e forniscono la logica di base per le routine della proprietà.
 
@@ -89,10 +89,9 @@ class SampleClass
 
 La maggior parte delle proprietà dispone di metodi o di routine per impostare e ottenere il valore della proprietà. È possibile, tuttavia, creare proprietà di sola lettura o di sola scrittura per impedirne la modifica o la lettura. In C#, è possibile omettere il metodo della proprietà `get` o `set`. Tuttavia, le proprietà implementate automaticamente non possono essere di sola scrittura. Le proprietà implementate automaticamente di sola lettura possono essere impostate nei costruttori della classe che lo contiene.
 
-Per altre informazioni, vedi:
+Per altre informazioni, vedere:
 
 - [get](../../language-reference/keywords/get.md)
-
 - [set](../../language-reference/keywords/set.md)
 
 #### <a name="methods"></a>Metodi
@@ -104,7 +103,7 @@ Per definire un metodo di una classe:
 ```csharp
 class SampleClass
 {
-    public int sampleMethod(string sampleParam)
+    public int SampleMethod(string sampleParam)
     {
         // Insert code here
     }
@@ -116,13 +115,13 @@ Una classe può disporre di diverse implementazioni, o *overload*, dello stesso 
 Per essere in rapporto di overload con un metodo:
 
 ```csharp
-public int sampleMethod(string sampleParam) {}
-public int sampleMethod(int sampleParam) {}
+public int SampleMethod(string sampleParam) { }
+public int SampleMethod(int sampleParam) { }
 ```
 
 Nella maggior parte dei casi si dichiara un metodo all'interno di una definizione della classe. C#, tuttavia, supporta anche i *metodi di estensione* che consentono di aggiungere metodi a una classe esistente al di fuori della definizione effettiva della classe.
 
-Per altre informazioni, vedi:
+Per altre informazioni, vedere:
 
 - [Metodi](../classes-and-structs/methods.md)
 - [Metodi di estensione](../classes-and-structs/extension-methods.md)
@@ -151,14 +150,12 @@ Viene utilizzato un finalizzatore per distruggere le istanze delle classi. In .N
 
 Per altre informazioni sui finalizzatori e sull'operazione di Garbage Collection in .NET Framework, vedere [Garbage Collection](../../../standard/garbage-collection/index.md).
 
-#### <a name="events"></a>Events
+#### <a name="events"></a>Eventi
 
 Tramite gli eventi una classe o un oggetto sono in grado di segnalare ad altre classi o oggetti una situazione di interesse. La classe che invia o genera l'evento è chiamata *editore* e le classi che ricevono o gestiscono l'evento sono chiamate *sottoscrittori*. Per altre informazioni sugli eventi e sulla loro generazione e gestione, vedere [Eventi](../../../standard/events/index.md).
 
 - Per dichiarare un evento in una classe, usare la parola chiave [event](../../language-reference/keywords/event.md).
-
 - Per generare un evento, richiamare il delegato dell'evento.
-
 - Per sottoscrivere un evento, utilizzare l'operatore `+=`. Per annullare la sottoscrizione a un evento utilizzare l'operatore `-=`:
 
 #### <a name="nested-classes"></a>Classi annidate
@@ -187,14 +184,14 @@ Tutte le classi e i membri della classe possono specificare il livello di access
 
 Sono disponibili i seguenti modificatori di accesso:
 
-|Modificatore di C#|Definizione|
-|------------------|----------------|
-|[pubblico](../../language-reference/keywords/public.md)|Il tipo o il membro è accessibile da altro codice nello stesso assembly o in un altro assembly che vi fa riferimento.|
-|[privata](../../language-reference/keywords/private.md)|Il tipo o il membro è accessibile solo dal codice nella stessa classe.|
-|[protetto](../../language-reference/keywords/protected.md)|Il tipo o il membro è accessibile solo dal codice nella stessa classe o in una classe derivata.|
-|[internal](../../language-reference/keywords/internal.md)|Il tipo o il membro è accessibile dal codice nello stesso assembly ma non da un altro assembly.|
-|[protected internal](../../language-reference/keywords/protected-internal.md)|Il tipo o il membro è accessibile dal codice nello stesso assembly o da una classe derivata in un altro assembly.|
-|[privato protetto](../../language-reference/keywords/private-protected.md)|Il tipo o membro è accessibile solo dal codice nella stessa classe o in una classe derivata all'interno dell'assembly della classe di base.|
+| Modificatore di C# | Definizione |
+|--|--|
+| [public](../../language-reference/keywords/public.md) | Il tipo o il membro è accessibile da altro codice nello stesso assembly o in un altro assembly che vi fa riferimento. |
+| [private](../../language-reference/keywords/private.md) | Il tipo o il membro è accessibile solo dal codice nella stessa classe. |
+| [protected](../../language-reference/keywords/protected.md) | Il tipo o il membro è accessibile solo dal codice nella stessa classe o in una classe derivata. |
+| [internal](../../language-reference/keywords/internal.md) | Il tipo o il membro è accessibile dal codice nello stesso assembly ma non da un altro assembly. |
+| [protected internal](../../language-reference/keywords/protected-internal.md) | Il tipo o il membro è accessibile dal codice nello stesso assembly o da una classe derivata in un altro assembly. |
+| [protetto privato](../../language-reference/keywords/private-protected.md) | Il tipo o membro è accessibile solo dal codice nella stessa classe o in una classe derivata all'interno dell'assembly della classe di base. |
 
 Per altre informazioni, vedere [Modificatori di accesso](../classes-and-structs/access-modifiers.md).
 
@@ -212,18 +209,21 @@ Dopo avere creato un'istanza di una classe, è possibile assegnare i valori alle
 // Set a property value.
 sampleObject.sampleProperty = "Sample String";
 // Call a method.
-sampleObject.sampleMethod();
+sampleObject.SampleMethod();
 ```
 
 Per assegnare i valori alle proprietà durante il processo di creazione dell'istanza della classe, utilizzare gli inizializzatori di oggetto:
 
 ```csharp
 // Set a property value.
-SampleClass sampleObject = new SampleClass
-    { FirstProperty = "A", SecondProperty = "B" };
+var sampleObject = new SampleClass
+{
+    FirstProperty = "A",
+    SecondProperty = "B"
+};
 ```
 
-Per altre informazioni, vedi:
+Per altre informazioni, vedere:
 
 - [Operatore New](../../language-reference/operators/new-operator.md)
 - [Inizializzatori di oggetto e di raccolta](../classes-and-structs/object-and-collection-initializers.md)
@@ -259,8 +259,11 @@ Per creare un'istanza di un tipo anonimo:
 
 ```csharp
 // sampleObject is an instance of a simple anonymous type.
-var sampleObject =
-    new { FirstProperty = "A", SecondProperty = "B" };
+var sampleObject = new
+{
+    FirstProperty = "A",
+    SecondProperty = "B"
+};
 ```
 
 Per altre informazioni, vedere [Tipi anonimi](../classes-and-structs/anonymous-types.md).
@@ -275,7 +278,7 @@ L'ereditarietà permette di creare una nuova classe che riutilizza, estende e mo
 Per ereditare da una classe base:
 
 ```csharp
-class DerivedClass:BaseClass {}
+class DerivedClass:BaseClass { }
 ```
 
 Per impostazione predefinita, tutte le classi possono essere ereditate. Tuttavia, è possibile specificare se una classe non deve essere utilizzata come classe base oppure creare una classe utilizzabile solo come classe base.
@@ -292,11 +295,10 @@ Per specificare che una classe può essere utilizzata solo come classe base e ch
 public abstract class B { }
 ```
 
-Per altre informazioni, vedi:
+Per altre informazioni, vedere:
 
 - [sealed](../../language-reference/keywords/sealed.md)
-
-- [astratta](../../language-reference/keywords/abstract.md)
+- [abstract](../../language-reference/keywords/abstract.md)
 
 ### <a name="overriding-members"></a>Override di membri
 
@@ -304,12 +306,12 @@ Per impostazione predefinita, in una classe derivata vengono ereditati tutti i m
 
 I seguenti modificatori consentono di controllare le modalità di override di proprietà e metodi:
 
-|Modificatore di C#|Definizione|
-|------------------|----------------|
-|[virtuale](../../language-reference/keywords/virtual.md)|Consente a un membro della classe di essere sottoposto a override in una classe derivata.|
-|[override](../../language-reference/keywords/override.md)|Esegue l'override di un membro virtuale (sottoponibile a override) definito nella classe base.|
-|[astratta](../../language-reference/keywords/abstract.md)|Richiede che un membro della classe venga sottoposto a override nella classe derivata.|
-|[Modificatore new](../../language-reference/keywords/new-modifier.md)|Nasconde un membro ereditato da una classe base.|
+| Modificatore di C# | Definizione |
+|--|--|
+| [virtuale](../../language-reference/keywords/virtual.md) | Consente a un membro della classe di essere sottoposto a override in una classe derivata. |
+| [override](../../language-reference/keywords/override.md) | Esegue l'override di un membro virtuale (sottoponibile a override) definito nella classe base. |
+| [abstract](../../language-reference/keywords/abstract.md) | Richiede che un membro della classe venga sottoposto a override nella classe derivata. |
+| [Modificatore new](../../language-reference/keywords/new-modifier.md) | Nasconde un membro ereditato da una classe base. |
 
 ## <a name="interfaces"></a>Interfacce
 
@@ -320,7 +322,7 @@ Per definire un'interfaccia:
 ```csharp
 interface ISampleInterface
 {
-    void doSomething();
+    void DoSomething();
 }
 ```
 
@@ -329,7 +331,7 @@ Per implementare un'interfaccia in una classe:
 ```csharp
 class SampleClass : ISampleInterface
 {
-    void ISampleInterface.doSomething()
+    void ISampleInterface.DoSomething()
     {
         // Method implementation.
     }
@@ -354,15 +356,14 @@ public class SampleGeneric<T>
 Per creare un'istanza di una classe generica:
 
 ```csharp
-SampleGeneric<string> sampleObject = new SampleGeneric<string>();
+var sampleObject = new SampleGeneric<string>();
 sampleObject.Field = "Sample string";
 ```
 
-Per altre informazioni, vedi:
+Per altre informazioni, vedere:
 
-- [Generics](../../../standard/generics/index.md)
-
-- [Generics](../generics/index.md)
+- [Generics in .NET](../../../standard/generics/index.md)
+- [Generics - Guida per programmatori C#](../generics/index.md)
 
 ## <a name="delegates"></a>Delegati
 
@@ -383,10 +384,11 @@ Per creare un riferimento a un metodo che corrisponde alla firma specificata dal
 class SampleClass
 {
     // Method that matches the SampleDelegate signature.
-    public static void sampleMethod(string message)
+    public static void SampleMethod(string message)
     {
         // Add code here.
     }
+
     // Method that instantiates the delegate.
     void SampleDelegate()
     {
@@ -398,6 +400,6 @@ class SampleClass
 
 Per ulteriori informazioni, vedere l'articolo della Guida alla programmazione sui [delegati](../delegates/index.md) e l'articolo di riferimento per il linguaggio sulla parola chiave [delegate](../../language-reference/builtin-types/reference-types.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Guida per programmatori C#](../index.md)

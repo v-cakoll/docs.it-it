@@ -2,12 +2,12 @@
 title: Summary
 description: Riepilogo delle conclusioni principali dell'architettura di app .NET native del cloud per Azure per la guida/e-book.
 ms.date: 04/29/2020
-ms.openlocfilehash: 97f20771aae73ed88d2dadefa7ba89d64eb62fcd
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 8cad8df1f69e159caf88d3ee119278dff8726385
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82899696"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395326"
 ---
 # <a name="summary"></a>Summary
 
@@ -17,11 +17,11 @@ In sintesi, di seguito sono riportate alcune importanti conclusioni di questa gu
 
 - ** [Cloud native Computing Foundation](https://www.cncf.io/) (CNCF)** è un consorzio open source influente di oltre 300 aziende principali. È responsabile di guidare l'adozione di un calcolo nativo del cloud tra tecnologie e stack cloud.
 
-- Le **linee guida CNCF** consigliano che le applicazioni native del cloud abbraccino sei pilastri importanti, come illustrato nella figura 12-1:
+- Le **linee guida CNCF** consigliano che le applicazioni native del cloud abbraccino sei pilastri importanti, come illustrato nella figura 11-1:
 
   ![Pilastri di base nativi del cloud](./media/cloud-native-foundational-pillars.png)
 
-  **Figura 12-1**. Pilastri di base nativi del cloud
+  **Figura 11-1**. Pilastri di base nativi del cloud
 
 - Questi pilastri nativi del cloud includono:
   - Il cloud e il modello di servizio sottostante
@@ -45,7 +45,7 @@ In sintesi, di seguito sono riportate alcune importanti conclusioni di questa gu
 
 - La **resilienza** è la capacità del sistema di reagire agli errori e rimane comunque funzionante. I sistemi nativi cloud adottano l'architettura distribuita in cui l'errore è inevitabile. Le applicazioni devono essere create per rispondere in modo elegante a un errore e tornare rapidamente a uno stato completamente funzionante.
 
-- Le **reti mesh di servizi** sono un livello di infrastruttura configurabile con funzionalità predefinite per gestire la comunicazione dei servizi e altre complicazioni incrociate. Disaccoppiano le responsabilità trasversali dal codice aziendale. Queste responsabilità si spostano in un proxy del servizio. Definito come `Sidecar pattern`, il proxy viene distribuito in un processo separato per garantire l'isolamento dal codice business.
+- Le **reti mesh di servizi** sono un livello di infrastruttura configurabile con funzionalità predefinite per gestire la comunicazione dei servizi e altre complicazioni incrociate. Disaccoppiano le responsabilità trasversali dal codice aziendale. Queste responsabilità si spostano in un proxy del servizio. Definito come `Sidecar pattern` , il proxy viene distribuito in un processo separato per garantire l'isolamento dal codice business.
 
 - L' **osservabilità** è una considerazione di progettazione fondamentale per le applicazioni native del cloud. Poiché i servizi vengono distribuiti in un cluster di nodi, la registrazione centralizzata, il monitoraggio e gli avvisi, diventano obbligatori. Monitoraggio di Azure è una raccolta di strumenti basati sul cloud progettati per fornire visibilità sullo stato del sistema.
 

@@ -1,19 +1,19 @@
 ---
 title: Implementazione del livello di persistenza dell'infrastruttura con Entity Framework Core
-description: Architettura dei microservizi .NET per le applicazioni .NET con contenitori Esplorare i dettagli di implementazione per il livello di persistenza dell'infrastruttura, usando Entity Framework Core.Explore the implementation details for the infrastructure persistence layer, using Entity Framework Core.
+description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Esplorare i dettagli di implementazione per il livello di persistenza dell'infrastruttura usando Entity Framework Core.
 ms.date: 01/30/2020
-ms.openlocfilehash: 7ab3be0d6a5affda478f7ec8f6c356571e304759
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: c91980504b0f9de859c6d211f3a1f47435b2d3cc
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805486"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396262"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementare il livello di persistenza dell'infrastruttura con Entity Framework Core
 
 Quando si usano database relazionali come SQL Server, Oracle o PostgreSQL, uno degli approcci consigliati consiste nell'implementare il livello di persistenza basato su Entity Framework. Entity Framework supporta LINQ e fornisce oggetti fortemente tipizzati per il modello, oltre alla persistenza semplificata nel database.
 
-Entity Framework è da tempo incluso in .NET Framework. Quando si usa .NET Core, è necessario usare anche Entity Framework Core, che viene eseguito in Windows o Linux in modo analogo a .NET Core. EF Core è una riscrittura completa di Entity Framework che viene implementata con un footprint molto più piccolo e importanti miglioramenti nelle prestazioni.
+Entity Framework è da tempo incluso in .NET Framework. Quando si usa .NET Core, è necessario usare anche Entity Framework Core, che viene eseguito in Windows o Linux in modo analogo a .NET Core. EF Core è una riscrittura completa di Entity Framework implementata con un footprint molto più piccolo e importanti miglioramenti delle prestazioni.
 
 ## <a name="introduction-to-entity-framework-core"></a>Introduzione a Entity Framework Core
 
@@ -26,13 +26,13 @@ Dal momento che nella documentazione Microsoft è già disponibile un'introduzio
 - **Entity Framework Core** \
   [https://docs.microsoft.com/ef/core/](/ef/core/)
 
-- **Introduzione a ASP.NET Core ed Entity Framework Core con Visual Studio** \
+- **Introduzione a ASP.NET Core e Entity Framework Core con Visual Studio** \
   [https://docs.microsoft.com/aspnet/core/data/ef-mvc/](/aspnet/core/data/ef-mvc/)
 
 - **Classe DbContext** \
   [https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext](xref:Microsoft.EntityFrameworkCore.DbContext)
 
-- **Confronto tra EF Core & EF6.x** \
+- **Confrontare EF Core & EF6. x** \
   [https://docs.microsoft.com/ef/efcore-and-ef6/index](/ef/efcore-and-ef6/index)
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Infrastruttura in Entity Framework Core dal punto di vista della progettazione basata su dominio
@@ -78,7 +78,7 @@ public class Order : Entity
 }
 ```
 
-È `OrderItems` possibile accedere alla proprietà solo `IReadOnlyCollection<OrderItem>`in sola lettura utilizzando . Questo tipo è di sola lettura ed è quindi protetto dai normali aggiornamenti esterni.
+`OrderItems`È possibile accedere alla proprietà solo in modalità di sola lettura tramite `IReadOnlyCollection<OrderItem>` . Questo tipo è di sola lettura ed è quindi protetto dai normali aggiornamenti esterni.
 
 Entity Framework Core offre un modo per eseguire il mapping del modello di dominio al database fisico senza "contaminare" il modello di dominio. Si tratta di codice .NET POCO puro, dal momento che l'azione di mapping viene implementata nel livello di persistenza. In tale azione di mapping è necessario configurare il mapping tra campi e database. Nell'esempio seguente del metodo `OnModelCreating` della classe `OrderingContext` e `OrderEntityTypeConfiguration`, la chiamata a `SetPropertyAccessMode` indica a Entity Framework Core di accedere alla proprietà `OrderItems` tramite il relativo campo.
 
@@ -110,14 +110,14 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 }
 ```
 
-Quando si utilizzano campi `OrderItem` anziché proprietà, l'entità `List<OrderItem>` viene mantenuta come se avesse una proprietà. Tale entità espone comunque una singola funzione di accesso, ovvero il metodo `AddOrderItem` per aggiungere nuovi elementi all'ordine. Di conseguenza, il comportamento e i dati sono strettamente legati tra loro e saranno coerenti in tutto il codice dell'applicazione che usa il modello di dominio.
+Quando si utilizzano campi anziché proprietà, l' `OrderItem` entità viene mantenute come se disponesse di una `List<OrderItem>` Proprietà. Tale entità espone comunque una singola funzione di accesso, ovvero il metodo `AddOrderItem` per aggiungere nuovi elementi all'ordine. Di conseguenza, il comportamento e i dati sono strettamente legati tra loro e saranno coerenti in tutto il codice dell'applicazione che usa il modello di dominio.
 
 ## <a name="implement-custom-repositories-with-entity-framework-core"></a>Implementare repository personalizzati con Entity Framework Core
 
 A livello di implementazione, un repository è semplicemente una classe che contiene codice per la persistenza dei dati coordinato da un'unità di lavoro (DBContext in Entity Framework Core) durante l'esecuzione degli aggiornamenti, come illustrato nella classe seguente:
 
 ```csharp
-// using statements...
+// using directives...
 namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositories
 {
     public class BuyerRepository : IBuyerRepository
@@ -154,7 +154,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 }
 ```
 
-L'interfaccia `IBuyerRepository` proviene dal livello del modello di dominio come contratto. L'implementazione del repository viene però effettuata a livello di persistenza e infrastruttura.
+L' `IBuyerRepository` interfaccia deriva dal livello del modello di dominio sotto forma di contratto. L'implementazione del repository viene però effettuata a livello di persistenza e infrastruttura.
 
 L'elemento DbContext di Entity Framework attraversa il costruttore tramite il modello di inserimento delle dipendenze. È condiviso tra più repository nello stesso ambito della richiesta HTTP, grazie alla relativa durata predefinita (`ServiceLifetime.Scoped`) nel contenitore IoC (che può essere anche impostato in modo esplicito con `services.AddDbContext<>`).
 
@@ -168,17 +168,17 @@ I metodi di query effettivi per ottenere i dati da inviare al livello di present
 
 ### <a name="using-a-custom-repository-versus-using-ef-dbcontext-directly"></a>Uso di un repository personalizzato invece di usare direttamente DbContext di Entity Framework
 
-La classe DbContext di Entity Framework è basata sui modelli di unità di lavoro e repository e può essere utilizzata direttamente dal codice, ad esempio da un controller MVC ASP.NET Core. I modelli Unit of Work e Repository generano il codice più semplice, come nel microservizio del catalogo CRUD in eShopOnContainers. Nei casi in cui si vuole che il codice sia il più semplice possibile è consigliabile usare direttamente la classe DbContext, come fanno molti sviluppatori.
+La classe Entity Framework DbContext è basata sull'unità di modelli di lavoro e di repository e può essere usata direttamente dal codice, ad esempio da un controller MVC ASP.NET Core. I modelli di unità di lavoro e di repository generano il codice più semplice, come nel microservizio Catalogo CRUD in eShopOnContainers. Nei casi in cui si vuole che il codice sia il più semplice possibile è consigliabile usare direttamente la classe DbContext, come fanno molti sviluppatori.
 
-L'implementazione di repository personalizzati offre però diversi vantaggi quando si implementano microservizi o applicazioni più complesse. I modelli Unit of Work e Repository hanno lo scopo di incapsulare il livello di persistenza dell'infrastruttura in modo che venga disaccoppiato dai livelli dell'applicazione e del modello di dominio. L'implementazione di questi schemi può facilitare l'uso di repository fittizi che simulano l'accesso al database.
+L'implementazione di repository personalizzati offre però diversi vantaggi quando si implementano microservizi o applicazioni più complesse. I modelli di unità di lavoro e di repository sono progettati per incapsulare il livello di persistenza dell'infrastruttura in modo che sia separato dai livelli dell'applicazione e del modello di dominio. L'implementazione di questi schemi può facilitare l'uso di repository fittizi che simulano l'accesso al database.
 
-Nella figura 7-18, è possibile vedere le differenze tra non utilizzare repository (utilizzando direttamente eF DbContext) rispetto all'utilizzo di repository, che rende più semplice simulare tali repository.
+Nella figura 7-18 è possibile vedere le differenze tra l'uso di repository (usando direttamente EF DbContext) e i repository, che semplificano la simulazione di questi repository.
 
-![Diagramma che mostra i componenti e il flusso di dati nei due repository.](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
+![Diagramma che mostra i componenti e il flusso di Dataflow nei due repository.](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
 
 **Figura 7-18**. Uso di repository personalizzati anziché una semplice classe DbContext
 
-Figura 7-18 mostra che l'utilizzo di un repository personalizzato aggiunge un livello di astrazione che può essere utilizzato per facilitare il test prendendo in giro il repository. Per il comportamento fittizio è possibile scegliere tra diverse alternative. È possibile applicare il comportamento fittizio solo ai repository oppure a un'intera unità di lavoro. In genere è sufficiente applicare il comportamento fittizio solo ai repository e non è necessario ricorrere alle tecniche complesse per astrarre e applicare il comportamento fittizio a un'intera unità di lavoro.
+La figura 7-18 Mostra che l'uso di un repository personalizzato aggiunge un livello di astrazione che può essere usato per semplificare il test simulando il repository. Per il comportamento fittizio è possibile scegliere tra diverse alternative. È possibile applicare il comportamento fittizio solo ai repository oppure a un'intera unità di lavoro. In genere è sufficiente applicare il comportamento fittizio solo ai repository e non è necessario ricorrere alle tecniche complesse per astrarre e applicare il comportamento fittizio a un'intera unità di lavoro.
 
 Più avanti, quando verrà trattato il livello dell'applicazione, verrà illustrato il funzionamento del modello di inserimento delle dipendenze in ASP.NET Core e verrà spiegato come implementarlo quando si usano i repository.
 
@@ -219,7 +219,7 @@ La modalità di creazione di un'istanza di DbContext non deve essere configurata
 
 ## <a name="the-repository-instance-lifetime-in-your-ioc-container"></a>Durata dell'istanza del repository nel contenitore IoC
 
-In modo analogo, la durata del repository deve in genere essere impostata come ambito (InstancePerLifetimeScope in Autofac). Può anche essere temporanea (InstancePerDependency in Autofac), ma se si usa la durata inclusa nell'ambito il servizio risulterà più efficiente in termini di memoria.
+In modo analogo, la durata del repository deve essere in genere impostata come ambito (InstancePerLifetimeScope in Autofac). Può anche essere temporanea (InstancePerDependency in Autofac), ma se si usa la durata inclusa nell'ambito il servizio risulterà più efficiente in termini di memoria.
 
 ```csharp
 // Registering a Repository in Autofac IoC container
@@ -228,22 +228,22 @@ builder.RegisterType<OrderRepository>()
     .InstancePerLifetimeScope();
 ```
 
-L'utilizzo della durata singleton per il repository potrebbe causare gravi problemi di concorrenza quando il DbContext è impostato sulla durata con ambito (InstancePerLifetimeScope) (durata predefinita per un DBContext).
+L'uso della durata singleton per il repository può causare gravi problemi di concorrenza quando la DbContext è impostata sulla durata dell'ambito (InstancePerLifetimeScope) (durata predefinita per un DBContext).
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Implementazione del repository e dei modelli di unità di lavoro in un'applicazione MVC ASP.NET** \
+- **Implementazione dei modelli di repository e unità di lavoro in un'applicazione MVC ASP.NET** \
   <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
-- **Jonathan Allen. Strategie di implementazione per il modello di repository con Entity Framework, Dapper e catena** \
+- **Jonathan Allen. Strategie di implementazione per il modello di repository con Entity Framework, elegante e Chain** \
   <https://www.infoq.com/articles/repository-implementation-strategies>
 
-- **Cesar de la Torre. Confronto ASP.NET durate del servizio contenitore IoC di base con gli ambiti dell'istanza del contenitore IoC Autofac** \
+- **Cesar de la Torre. Confronto ASP.NET Core durate del servizio contenitore IoC con gli ambiti dell'istanza del contenitore IoC Autofac** \
   <https://devblogs.microsoft.com/cesardelatorre/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/>
 
 ## <a name="table-mapping"></a>Mapping tabella
 
-Il mapping di tabella consente di identificare i dati di tabella per i quali eseguire query dal database e che devono essere salvati nel database. In precedenza, è stato spiegato come usare entità di dominio, ad esempio un dominio order o product, per generare uno schema di database correlato. Entity Framework si basa principalmente sul concetto di *convenzioni*. I convegni riguardano domande come "Quale sarà il nome di una tabella?" o "Qual è la proprietà della chiave primaria?" Le convenzioni sono in genere basate su nomi convenzionali. Ad esempio, è tipico che la chiave primaria `Id`sia una proprietà che termina con .
+Il mapping di tabella consente di identificare i dati di tabella per i quali eseguire query dal database e che devono essere salvati nel database. In precedenza, è stato spiegato come usare entità di dominio, ad esempio un dominio order o product, per generare uno schema di database correlato. Entity Framework si basa principalmente sul concetto di *convenzioni*. Le convenzioni risolvono domande come "quale sarà il nome di una tabella?" o "quale proprietà è la chiave primaria?" Le convenzioni sono in genere basate sui nomi convenzionali. Ad esempio, è tipico che la chiave primaria sia una proprietà che termina con `Id` .
 
 Per convenzione, ogni entità viene configurata in modo da eseguire il mapping a una tabella con lo stesso nome della proprietà `DbSet<TEntity>` che espone l'entità nel contesto derivato. Se per l'entità specificata non viene definito un valore `DbSet<TEntity>`, viene usato il nome di classe.
 
@@ -339,7 +339,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 }
 ```
 
-È possibile impostare tutti i mapping `OnModelCreating` dell'API Fluent all'interno dello stesso metodo, ma è consigliabile partizionare tale codice e avere più classi di configurazione, una per entità, come illustrato nell'esempio. Soprattutto per i modelli di grandi dimensioni, è consigliabile disporre di classi di configurazione separate per la configurazione di tipi di entità diversi.
+È possibile impostare tutti i mapping API Fluent nello stesso `OnModelCreating` metodo, ma è consigliabile partizionare il codice e avere più classi di configurazione, una per entità, come illustrato nell'esempio. In particolare per i modelli di grandi dimensioni, è consigliabile disporre di classi di configurazione separate per la configurazione di tipi di entità diversi.
 
 Il codice nell'esempio mostra alcuni mapping e dichiarazioni esplicite. Le convenzioni di Entity Framework Core eseguono però automaticamente molti di questi mapping, di conseguenza il codice effettivo necessario potrebbe essere ridotto.
 
@@ -357,7 +357,7 @@ L'algoritmo Hi/Lo descrive un meccanismo per il recupero di un batch di ID univo
 
 - Genera un identificatore leggibile, a differenza delle tecniche che usano GUID.
 
-EF Core supporta [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) con il `UseHiLo` metodo, come illustrato nell'esempio precedente.
+EF Core supporta [Hilo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) con il `UseHiLo` metodo, come illustrato nell'esempio precedente.
 
 ### <a name="map-fields-instead-of-properties"></a>Eseguire il mapping di campi anziché di proprietà
 
@@ -422,7 +422,7 @@ public abstract class BaseSpecification<T> : ISpecification<T>
 }
 ```
 
-La specifica seguente carica una singola entità carrello dato l'ID del carrello o l'ID dell'acquirente a cui appartiene il carrello. Si [caricherà con](/ef/core/querying/related-data) entusiasmo `Items` la collezione del cesto.
+La specifica seguente carica una singola entità basket in base all'ID del carrello o all'ID dell'acquirente a cui appartiene il carrello. Verrà [caricata con entusiasmo](/ef/core/querying/related-data) la raccolta del carrello `Items` .
 
 ```csharp
 // SAMPLE QUERY SPECIFICATION IMPLEMENTATION
@@ -470,28 +470,28 @@ public IEnumerable<T> List(ISpecification<T> spec)
 
 Oltre a incapsulare la logica di filtro, la specifica è in grado di indicare la forma dei dati da restituire, incluse le proprietà da popolare.
 
-Anche se non è `IQueryable` consigliabile tornare da un repository, è perfettamente bene usarli all'interno del repository per creare un set di risultati. È possibile vedere questo approccio utilizzato nel `IQueryable` metodo List precedente, che usa espressioni intermedie per creare l'elenco di inclusioni della query prima di eseguire la query con i criteri della specifica nell'ultima riga.
+Sebbene non sia consigliabile tornare `IQueryable` da un repository, è possibile usarli all'interno del repository per creare un set di risultati. È possibile osservare questo approccio usato nel metodo List precedente, che usa espressioni intermedie `IQueryable` per creare l'elenco di inclusioni della query prima di eseguire la query con i criteri della specifica sull'ultima riga.
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Mappatura tabelle** \
+- **Mapping tabella** \
   [https://docs.microsoft.com/ef/core/modeling/relational/tables](/ef/core/modeling/relational/tables)
 
-- **Usare HiLo per generare chiavi con Entity Framework CoreUse HiLo to generate keys with Entity Framework Core** \
+- **Usare HiLo per generare chiavi con Entity Framework Core** \
   <https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/>
 
-- **Campi di backup** \
+- **Campi sottoposti a backup** \
   [https://docs.microsoft.com/ef/core/modeling/backing-field](/ef/core/modeling/backing-field)
 
-- **Steve Smith. Raccolte incapsulate in Entity Framework CoreEncapsulated Collections in Entity Framework Core** \
+- **Steve Smith. Raccolte incapsulate in Entity Framework Core** \
   <https://ardalis.com/encapsulated-collections-in-entity-framework-core>
 
-- **Proprietà ombra** \
+- **Proprietà Shadow** \
   [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
 
-- **Il modello Specification** \
+- **Modello di specifica** \
   <https://deviq.com/specification-pattern/>
 
 > [!div class="step-by-step"]
-> [Successivo](infrastructure-persistence-layer-design.md)
-> [precedente](nosql-database-persistence-infrastructure.md)
+> [Precedente](infrastructure-persistence-layer-design.md) 
+>  [Avanti](nosql-database-persistence-infrastructure.md)

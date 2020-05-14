@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a247c792-45e1-4538-9e1f-b46acca4a463
 topic_type:
 - apiref
-ms.openlocfilehash: 906ca2540e421953b3ce39300aa7b2376f789929
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 467ba53f90081f0c3499fb22acab96b5e380a3f4
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137106"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395836"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>Metodo ICorDebugValue::GetAddress
 Ottiene l'indirizzo di questo oggetto "ICorDebugValue", che è in fase di debug.  
@@ -35,18 +35,18 @@ HRESULT GetAddress (
   
 ## <a name="parameters"></a>Parametri  
  `pAddress`  
- out Puntatore a un oggetto `CORDB_ADDRESS` che specifica l'indirizzo di questo oggetto valore.  
+ out Puntatore a un `CORDB_ADDRESS` oggetto che specifica l'indirizzo di questo oggetto valore.  
   
-## <a name="remarks"></a>Note  
- Se il valore non è disponibile, viene restituito 0 (zero). Questo problema può verificarsi se il valore è almeno parzialmente in registri o archiviato in un handle di Garbage Collector (`GCHandle`).  
+## <a name="remarks"></a>Commenti  
+ Se il valore non è disponibile, viene restituito 0 (zero). Questo problema può verificarsi se il valore è almeno parzialmente in registri o archiviato in un handle di Garbage Collector ( `GCHandle` ).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87277e1a-1595-4729-9e25-d1c3ac18ce5f
 topic_type:
 - apiref
-ms.openlocfilehash: 28e41106ffcaf1ed2ed87166e641bb5e5f447e47
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: fb198782bb91a8301507fd6cadcffb0378230f0e
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791025"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396575"
 ---
 # <a name="icordebugvariablehomegetliverange-method"></a>Metodo IcorDebugVariableHome:: GetLiveRange
 Ottiene l'intervallo nativo su cui questa variabile è attiva.  
@@ -41,15 +41,15 @@ HRESULT GetLiveRange(
  `pEndOffset`  
  out Offset logico immediatamente dopo il punto in cui la variabile è l'ultima volta in tempo reale.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Interfaccia ICorDebugVariableHome](icordebugvariablehome-interface.md)

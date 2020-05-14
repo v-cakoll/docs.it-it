@@ -4,12 +4,12 @@ ms.date: 03/10/2017
 helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
-ms.openlocfilehash: 55847aceb9fdf032ba533b82ee59be53761fa2c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bffbc026e8f7937db91d42b7a06a5b7bba3bc2f8
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712949"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396146"
 ---
 # <a name="using-static-directive-c-reference"></a>Direttiva using static (Riferimenti per C#)
 
@@ -25,7 +25,7 @@ La direttiva `using static` si applica a qualsiasi tipo che includa membri stati
 
 La direttiva `using static` è stata introdotta in C# 6.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Quando si chiama un membro statico si fornisce in genere il nome del tipo e il nome del membro. Immettere ripetutamente lo stesso nome di tipo per chiamare i membri del tipo può generare codice troppo dettagliato e incomprensibile. Ad esempio, la seguente definizione di una classe `Circle` fa riferimento a un numero di membri della classe <xref:System.Math>.
 
@@ -47,12 +47,12 @@ L'esempio seguente usa la direttiva `using static` per rendere i membri statici 
 
 [!code-csharp[using-static#3](~/samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
 
-Nell'esempio la direttiva `using static` può anche essere stata applicata al tipo <xref:System.Double>. In questo caso sarebbe stato possibile chiamare il metodo <xref:System.Double.TryParse(System.String,System.Double@)> senza specificare un nome di tipo. Ciò crea tuttavia codice meno leggibile, poiché è necessario controllare le istruzioni `using static` per quale metodo `TryParse` di tipo numerico viene chiamato.
+Nell'esempio la direttiva `using static` può anche essere stata applicata al tipo <xref:System.Double>. In questo caso sarebbe stato possibile chiamare il metodo <xref:System.Double.TryParse(System.String,System.Double@)> senza specificare un nome di tipo. Tuttavia, in questo modo viene creato codice meno leggibile, poiché diventa necessario controllare le `using static` direttive per determinare quale metodo del tipo numerico `TryParse` viene chiamato.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [using (direttiva)](using-directive.md)
-- [Guida di riferimento a C](../index.md)
+- [direttiva using](using-directive.md)
+- [Riferimenti per C#](../index.md)
 - [Parole chiave di C#](index.md)
 - [Uso degli spazi dei nomi](../../programming-guide/namespaces/using-namespaces.md)
 - [Spazi dei nomi](../../programming-guide/namespaces/index.md)

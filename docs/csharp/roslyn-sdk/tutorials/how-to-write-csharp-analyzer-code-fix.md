@@ -3,12 +3,12 @@ title: 'Esercitazione: compilare il primo analizzatore con correzione del codice
 description: In questa esercitazione vengono fornite istruzioni dettagliate per creare un analizzatore e una correzione del codice con .NET Compiler Platform SDK (API Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: d6c3ddff288bf114e1c257ae77ebf3a419913990
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 23ebf4befc75e08592890d85f2dda51251f59cd6
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895444"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396287"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Esercitazione: compilare il primo analizzatore con correzione del codice
 
@@ -148,7 +148,7 @@ if (localDeclaration.Modifiers.Any(SyntaxKind.ConstKeyword))
 
 Infine, è necessario verificare che la variabile possa essere `const`. In altre parole, occorre verificare che non venga mai assegnata dopo l'inizializzazione.
 
-Si eseguiranno alcune analisi semantiche usando <xref:Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext>. Verrà usato l'argomento `context` per determinare se la dichiarazione di variabile locale può essere resa `const`. Un <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> oggetto rappresenta tutte le informazioni semantiche in un singolo file di origine. Per altre informazioni, vedere l'articolo relativo ai [modelli semantici](../work-with-semantics.md). Si userà <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> per eseguire l'analisi del flusso dei dati nell'istruzione della dichiarazione locale. Sarà quindi possibile usare i risultati di questa analisi del flusso di dati per assicurarsi che non venga mai eseguita la scrittura di un nuovo valore nella variabile locale. Chiamare il metodo di estensione <xref:Microsoft.CodeAnalysis.ModelExtensions.GetDeclaredSymbol%2A> per recuperare <xref:Microsoft.CodeAnalysis.ILocalSymbol> per la variabile e verificare che non sia contenuto nella raccolta <xref:Microsoft.CodeAnalysis.DataFlowAnalysis.WrittenOutside%2A?displayProperty=nameWithType> dell'analisi del flusso di dati. Aggiungere il codice seguente alla fine del metodo `AnalyzeNode`:
+Si eseguiranno alcune analisi semantiche usando <xref:Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext>. Verrà usato l'argomento `context` per determinare se la dichiarazione di variabile locale può essere resa `const`. Un oggetto <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> rappresenta tutte le informazioni semantiche in un singolo file di origine. Per altre informazioni, vedere l'articolo relativo ai [modelli semantici](../work-with-semantics.md). Si userà <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> per eseguire l'analisi del flusso dei dati nell'istruzione della dichiarazione locale. Sarà quindi possibile usare i risultati di questa analisi del flusso di dati per assicurarsi che non venga mai eseguita la scrittura di un nuovo valore nella variabile locale. Chiamare il metodo di estensione <xref:Microsoft.CodeAnalysis.ModelExtensions.GetDeclaredSymbol%2A> per recuperare <xref:Microsoft.CodeAnalysis.ILocalSymbol> per la variabile e verificare che non sia contenuto nella raccolta <xref:Microsoft.CodeAnalysis.DataFlowAnalysis.WrittenOutside%2A?displayProperty=nameWithType> dell'analisi del flusso di dati. Aggiungere il codice seguente alla fine del metodo `AnalyzeNode`:
 
 ```csharp
 // Perform data flow analysis on the local declaration.
@@ -235,7 +235,7 @@ Formattare la nuova dichiarazione in modo che corrisponda alle regole di formatt
 
 [!code-csharp[Format the new declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FormatLocal  "Format the new declaration")]
 
-È necessario un nuovo spazio dei nomi per il codice. Aggiungere la seguente istruzione `using` all'inizio del file:
+È necessario un nuovo spazio dei nomi per il codice. Aggiungere la `using` direttiva seguente all'inizio del file:
 
 ```csharp
 using Microsoft.CodeAnalysis.Formatting;
@@ -497,7 +497,7 @@ Può sembrare necessaria una notevole quantità di codice, ma non è così. Sost
 
 [!code-csharp[Replace Var designations](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceVar "Replace a var designation with the explicit type")]
 
-È necessario aggiungerne un'istruzione `using` per usare il tipo <xref:Microsoft.CodeAnalysis.Simplification.Simplifier>:
+È necessario aggiungere una `using` direttiva per usare il <xref:Microsoft.CodeAnalysis.Simplification.Simplifier> tipo:
 
 ```csharp
 using Microsoft.CodeAnalysis.Simplification;

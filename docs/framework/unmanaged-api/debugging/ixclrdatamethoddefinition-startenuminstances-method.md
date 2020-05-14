@@ -1,5 +1,5 @@
 ---
-title: Metodo IXCLRDataMethodDefinition::StartEnumInstances
+title: 'Metodo IXCLRDataMethodDefinition:: StartEnumInstances'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodDefinition::StartEnumInstances Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 89473f2a6a3da73ee5d172a3700bdb4d624278ff
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 84e0ad392c5fee8377115427482d80543454fff3
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756291"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397202"
 ---
-# <a name="ixclrdatamethoddefinitionstartenuminstances-method"></a>Metodo IXCLRDataMethodDefinition::StartEnumInstances
+# <a name="ixclrdatamethoddefinitionstartenuminstances-method"></a>Metodo IXCLRDataMethodDefinition:: StartEnumInstances
 
-Fornisce un handle per l'enumerazione delle istanze di metodo per un determinato `IXCLRDataAppDomain`.
+Fornisce un handle per l'enumerazione delle istanze del metodo per un oggetto specificato `IXCLRDataAppDomain` .
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,23 +40,23 @@ HRESULT StartEnumInstances(
 ## <a name="parameters"></a>Parametri
 
 `appDomain`\
-[in] Un dominio di applicazione per l'enumerazione.
+in AppDomain per l'enumerazione.
 
 `handle`\
-[out] Handle per l'enumerazione delle istanze.
+out Handle per l'enumerazione delle istanze.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Il metodo specificato fa parte di `IXCLRDataMethodDefinition` interfaccia e corrisponde al terzo slot della tabella di metodo virtuale.
+Il metodo fornito fa parte dell' `IXCLRDataMethodDefinition` interfaccia e corrisponde al quinto slot della tabella del metodo virtuale.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Intestazione:** nessuno  
-**Libreria:** nessuno  
-**Versioni di .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+**Intestazione:** Nessuno  
+**Libreria:** Nessuno  
+**Versioni .NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Enumerazione CLRDataSourceType](clrdatasourcetype-enumeration.md)
 - [Debug](index.md)

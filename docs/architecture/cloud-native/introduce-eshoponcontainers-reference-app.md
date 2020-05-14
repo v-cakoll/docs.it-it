@@ -2,12 +2,12 @@
 title: Introduzione all'app di riferimento per eShopOnContainers
 description: Introduzione all'app di riferimento per i microservizi nativi del cloud eShopOnContainers per ASP.NET Core e Azure.
 ms.date: 06/30/2019
-ms.openlocfilehash: 8d4ad982716a07613ebbef6668afab69d5a8b4f6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b97b62268db1d9990f762d9769233ad72551c226
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895533"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395393"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>Introduzione all'app di riferimento per eShopOnContainers
 
@@ -32,8 +32,8 @@ Iniziamo con una verifica delle funzionalità e dei requisiti dell'applicazione.
 - Modificare o rimuovere elementi dal Cestino
 - Checkout
 - Registrare un account
-- Accesso
-- Disconnessione
+- Accedi
+- Disconnetti
 - Verifica ordini
 
 L'applicazione presenta anche i requisiti non funzionali seguenti:
@@ -50,7 +50,7 @@ L'applicazione presenta anche i requisiti non funzionali seguenti:
 
 L'applicazione eShopOnContainers è accessibile da client Web o per dispositivi mobili che accedono all'applicazione tramite HTTPS destinata all'applicazione server MVC ASP.NET Core o a un gateway API appropriato. I gateway API offrono diversi vantaggi, ad esempio la separazione dei servizi back-end dai singoli client front-end e la migliore sicurezza. L'applicazione usa anche un modello correlato noto come backend per i front-end (BFF), che consiglia di creare gateway API distinti per ogni client front-end. L'architettura di riferimento Mostra come suddividere i gateway API a seconda che la richiesta provenga da un client Web o per dispositivi mobili.
 
-La funzionalità dell'applicazione è suddivisa in diversi microservizi distinti. Sono disponibili servizi responsabili dell'autenticazione e dell'identità, che elencano gli articoli del catalogo dei prodotti, gestiscono gli acquisti degli utenti e impostano ordini. Ognuno di questi servizi distinti dispone di un proprio archivio permanente. Si noti che non esiste un singolo archivio dati master con cui tutti i servizi interagiscono. Al contrario, il coordinamento e la comunicazione tra i servizi vengono eseguiti in base alle esigenze e tramite l'uso di un bus di messaggi.
+La funzionalità dell'applicazione è suddivisa in diversi microservizi distinti. Sono disponibili servizi responsabili dell'autenticazione e dell'identità, che elencano gli articoli del catalogo dei prodotti, gestiscono gli acquisti degli utenti e impostano ordini. Ognuno di questi servizi distinti dispone di un proprio archivio permanente. Non esiste un singolo archivio dati master con cui tutti i servizi interagiscono. Al contrario, il coordinamento e la comunicazione tra i servizi vengono eseguiti in base alle esigenze e tramite l'uso di un bus di messaggi.
 
 Ognuno dei diversi microservizi è progettato in modo diverso in base ai singoli requisiti. Questo significa che lo stack di tecnologie potrebbe variare, anche se tutti sono compilati con .NET Core e progettati per il cloud. I servizi più semplici forniscono l'accesso CRUD (create-Read-Update-Delete) di base agli archivi dati sottostanti, mentre i servizi più avanzati usano approcci e modelli di progettazione basati su dominio per gestire la complessità aziendale.
 
@@ -73,5 +73,5 @@ Il codice è organizzato per supportare i diversi microservizi e, all'interno di
 Questo libro è incentrato sulle applicazioni native del cloud create con la tecnologia Azure. Per altre informazioni sulle procedure consigliate per i microservizi e su come progettare applicazioni basate su microservizi, vedere il libro complementare, [microservizi .NET: architettura per le applicazioni .NET in contenitori](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook).
 
 >[!div class="step-by-step"]
->[Precedente](candidate-apps.md)
->[successivo](map-eshoponcontainers-azure-services.md)
+>[Precedente](candidate-apps.md) 
+> [Avanti](map-eshoponcontainers-azure-services.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3ff2ad2a-da5a-461b-8627-1a8eba49df9c
 topic_type:
 - apiref
-ms.openlocfilehash: c6f20b0f7927d79ee56b5b6962137d668dc048d1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d036ddf353aa3a622ade05e1e2daa7f170d28f63
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791110"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396770"
 ---
 # <a name="icordebugvalue2-interface"></a>Interfaccia ICorDebugValue2
 Estende l'interfaccia "ICorDebugValue" per fornire supporto per gli oggetti "ICorDebugType".  
@@ -28,23 +28,23 @@ Estende l'interfaccia "ICorDebugValue" per fornire supporto per gli oggetti "ICo
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo GetExactType](icordebugvalue2-getexacttype-method.md)|Ottiene un puntatore a interfaccia a un oggetto `ICorDebugType` che rappresenta l'<xref:System.Type> di questo valore.|  
+|[Metodo GetExactType](icordebugvalue2-getexacttype-method.md)|Ottiene un puntatore a interfaccia a un `ICorDebugType` oggetto che rappresenta l'oggetto <xref:System.Type> di questo valore.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Interfacce di debug](debugging-interfaces.md)
 

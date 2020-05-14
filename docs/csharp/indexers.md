@@ -4,12 +4,12 @@ description: Informazioni sugli indicizzatori C# e su come implementano propriet
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 8e583b8a7cedab61ea6fdd56587608907610b6b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e9b1cb18157982f068f1c1e4546e637f2bd707cb
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79145684"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394691"
 ---
 # <a name="indexers"></a>Indicizzatori
 
@@ -313,7 +313,7 @@ public class HistoricalWeatherData
 
 Questo esempio crea un indicizzatore che esegue il mapping di dati meteo a due diversi argomenti: una città (rappresentata da un valore `string`) e una data (rappresentata da un valore `DateTime`). Per l'archiviazione interna vengono usate due classi `Dictionary` che rappresentano il dizionario bidimensionale. L'API public non rappresenta più l'archiviazione sottostante. Le funzionalità del linguaggio relative agli indicizzatori consentono di creare un'interfaccia public che rappresenta l'astrazione, anche se l'archiviazione sottostante deve usare tipi di raccolta principale diversi.
 
-Due parti del codice potrebbero risultare poco chiare per alcuni sviluppatori. Queste due istruzioni `using`:
+Due parti del codice potrebbero risultare poco chiare per alcuni sviluppatori. Queste due `using` direttive:
 
 ```csharp
 using DateMeasurements = System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>;
@@ -323,10 +323,10 @@ using CityDataMeasurements = System.Collections.Generic.Dictionary<string, Syste
 creano un *alias* per un tipo generico costruito. Queste istruzioni consentono al codice successivo di usare i nomi `DateMeasurements` e `CityDateMeasurements`, più descrittivi, anziché la costruzione generica di `Dictionary<DateTime, Measurements>` e `Dictionary<string, Dictionary<DateTime, Measurements> >`.
 Questo costrutto richiede però l'uso di nomi completi di tipo sul lato destro del segno `=`.
 
-La seconda tecnica consiste nel rimuovere le parti relative all'ora di qualsiasi oggetto `DateTime` usato per effettuare l'indicizzazione all'interno delle raccolte. .NET non include un tipo di sola data.
+La seconda tecnica consiste nel rimuovere le parti relative all'ora di qualsiasi oggetto `DateTime` usato per effettuare l'indicizzazione all'interno delle raccolte. .NET non include un tipo di solo data.
 Gli sviluppatori usano il tipo `DateTime`, ma usano la proprietà `Date` per assicurarsi che tutti gli oggetti `DateTime` di quel giorno siano uguali.
 
 ## <a name="summing-up"></a>Conclusioni
 
 È necessario creare indicizzatori ogni volta che all'interno di una classe è presente un elemento analogo a una proprietà e tale proprietà rappresenta non un singolo valore, ma una raccolta di valori in cui ogni singolo elemento è identificato da un set di argomenti. Tali argomenti consentono di identificare in modo univoco un elemento della raccolta a cui fare riferimento.
-Gli indicizzatori estendono il concetto di [proprietà](properties.md), in cui un membro viene trattato come un elemento di dati dall'esterno della classe, ma come un metodo all'interno. Gli indicizzatori consentono agli argomenti di individuare un singolo elemento all'interno di una proprietà che rappresenta un set di elementi.
+Gli indicizzatori estendono il concetto di [Proprietà](properties.md), in cui un membro viene considerato come un elemento dati dall'esterno della classe, ma come un metodo all'interno. Gli indicizzatori consentono agli argomenti di individuare un singolo elemento all'interno di una proprietà che rappresenta un set di elementi.

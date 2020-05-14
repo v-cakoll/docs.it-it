@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88989482-a09f-4bd0-9adb-16f47b0291fd
 topic_type:
 - apiref
-ms.openlocfilehash: ba61df045caa117acae3756eb879cf67d0791222
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5f95202bd0c8c5045c10378068ae83cad3d93fdd
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791056"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396459"
 ---
 # <a name="icordebugvalueenum-interface"></a>Interfaccia ICorDebugValueEnum
 Implementa i metodi "ICorDebugEnum" ed enumera le matrici "ICorDebugValue".  
@@ -28,22 +28,22 @@ Implementa i metodi "ICorDebugEnum" ed enumera le matrici "ICorDebugValue".
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Next](icordebugvalueenum-next-method.md)|Ottiene il numero specificato di istanze di `ICorDebugValue` dall'enumerazione, a partire dalla posizione corrente.|  
+|[Metodo Next](icordebugvalueenum-next-method.md)|Ottiene il numero specificato di `ICorDebugValue` istanze dall'enumerazione, a partire dalla posizione corrente.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Interfacce di debug](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 229437e3-1465-4bd8-8846-9804b2488133
 topic_type:
 - apiref
-ms.openlocfilehash: 8d6e130981693268ae5c2cd615036b84ca8ed2d8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 36c5c674f3cdf867107b9ee85a5befadc9246d78
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790703"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396311"
 ---
 # <a name="icorpublishappdomaingetid-method"></a>Metodo ICorPublishAppDomain::GetID
 Ottiene l'identificatore univoco per questo [ICorPublishAppDomain](icorpublishappdomain-interface.md).  
@@ -37,18 +37,18 @@ HRESULT GetID (
  `puId`  
  out Puntatore all'identificatore del dominio dell'applicazione.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
  L'identificatore è univoco solo nell'ambito del processo contenitore.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorPub. idl, CorPub. h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Interfaccia ICorPublishAppDomain](icorpublishappdomain-interface.md)
