@@ -1,0 +1,15 @@
+- name: Modernizzazione di app desktop in Windows 10 con .NET Core 3.1
+  href: index.md
+  items:
+    - name: Motivi per scegliere applicazioni desktop moderne
+      href: why-modern-applications.md
+    - name: Quali sono le novità di .NET Core per desktop?
+      href: whats-new-dotnet-core.md
+    - name: Migrazione di applicazioni desktop moderne
+      href: migrate-modern-applications.md
+    - name: Migrazione a Windows 10
+      href: windows-migration.md
+    - name: Esempio di migrazione a .NET Core 3.1
+      href: example-migration-core.md
+    - name: Distribuzione di applicazioni desktop moderne
+      href: deploy-modern-applications.md
