@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fd3a34c-d176-46e9-9996-fb1646cff9b0
 topic_type:
 - apiref
-ms.openlocfilehash: 50f41bb55b7c3dc45646a465032074ce90be0abf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d465f830fa73016c3cf3f7df3a4a4d0c42bc0980
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444516"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615501"
 ---
 # <a name="isymunmanagedreadergetuserentrypoint-method"></a>Metodo ISymUnmanagedReader::GetUserEntryPoint
 Restituisce il metodo specificato come punto di ingresso utente per il modulo, se disponibile. Questo metodo, ad esempio, potrebbe essere il metodo principale dell'utente anziché gli stub generati dal compilatore prima del metodo Main.  
@@ -44,4 +44,4 @@ HRESULT GetUserEntryPoint (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [Interfaccia ISymUnmanagedReader](isymunmanagedreader-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 71f362a9-8fe2-47ce-9302-05a645cf3d7d
 topic_type:
 - apiref
-ms.openlocfilehash: e01698d2d8491b2496bb664c13dca97964cd1481
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 031bfc3d7fcd9f1f04e616e460cb3201813eae55
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136941"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616554"
 ---
 # <a name="corlaunchapplication-function"></a>Funzione CorLaunchApplication
 Avvia l'applicazione nel percorso di rete specificato, utilizzando i manifesti specificati e altri dati dell'applicazione.  
@@ -43,7 +43,7 @@ HRESULT CorLaunchApplication (
   
 ## <a name="parameters"></a>Parametri  
  `dwClickOnceHost`  
- in Valore dell'enumerazione [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) che specifica il tipo di host che sta avviando l'applicazione.  
+ in Valore dell'enumerazione [HOST_TYPE](host-type-enumeration.md) che specifica il tipo di host che sta avviando l'applicazione.  
   
  `pwzAppFullName`  
  in Nome completo dell'applicazione in fase di avvio.  
@@ -64,14 +64,14 @@ HRESULT CorLaunchApplication (
  out Puntatore alle informazioni sul processo in cui è stata caricata l'applicazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funzioni di hosting CLR deprecate](deprecated-clr-hosting-functions.md)

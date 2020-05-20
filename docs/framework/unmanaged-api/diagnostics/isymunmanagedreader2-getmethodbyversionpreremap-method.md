@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d144ed4-bdb0-4cac-960c-cb90f4dca173
 topic_type:
 - apiref
-ms.openlocfilehash: 2063856389b122b150a2d2744169a4a567592287
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b12ecfdaf7c90589ce2e96b39f7437444cb91b09
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446444"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615423"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>Metodo ISymUnmanagedReader2::GetMethodByVersionPreRemap
 Ottiene un metodo del lettore di simboli, dato un token del metodo e un numero di versione di modifica e continuazione. I numeri di versione iniziano da 1 e vengono incrementati ogni volta che il metodo viene modificato in seguito a un'operazione di modifica e continuazione.  
@@ -42,7 +42,7 @@ HRESULT GetMethodByVersionPreRemap(
  in Versione del metodo.  
   
  `pRetVal`  
- out Puntatore all'interfaccia [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) restituita.  
+ out Puntatore all'interfaccia [ISymUnmanagedMethod](isymunmanagedmethod-interface.md) restituita.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
@@ -52,4 +52,4 @@ HRESULT GetMethodByVersionPreRemap(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedReader2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+- [Interfaccia ISymUnmanagedReader2](isymunmanagedreader2-interface.md)

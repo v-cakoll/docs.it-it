@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: f1f2fab1-400b-488f-95f2-d49c4fca3556
 topic_type:
 - apiref
-ms.openlocfilehash: 4c914e00987053b1c1e9e00bf8e54632175e1de8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6bbf8366054c58543444a4b710a687198f365e6e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178167"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617191"
 ---
 # <a name="getrealprocaddress-function"></a>Funzione GetRealProcAddress
-Ottiene l'indirizzo della funzione specificata esportata dall'ultima versione installata di Common Language Runtime (CLR).  
+Ottiene l'indirizzo della funzione specificata esportata dalla versione installata più recente del Common Language Runtime (CLR).  
   
- Questa funzione è stata deprecata in .NET Framework 4.  
+ Questa funzione è stata deprecata nel .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,29 +37,29 @@ HRESULT GetRealProcAddress (
   
 ## <a name="parameters"></a>Parametri  
  `pwszProcName`  
- [in] Nome della funzione.  
+ in Nome della funzione.  
   
  `ppv`  
- [fuori] Posizione che riceve un puntatore all'indirizzo della funzione.  
+ out Posizione che riceve un puntatore all'indirizzo della funzione.  
   
 ## <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce codici di errore COM (Component Object Model) standard, come definito in WinError.h, oltre ai seguenti valori definiti in CorError.h.  
+ Questo metodo restituisce i codici di errore standard Component Object Model (COM), come definito in WinError. h, oltre ai valori seguenti definiti in CorError. h.  
   
-|Codice restituito|Descrizione|  
+|Codice restituito|Description|  
 |-----------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
 |E_POINTER|`ppv` non è valido.|  
 |CLR_E_SHIM_RUNTIMEEXPORT|La funzione non viene esportata dal runtime.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Biblioteca:** Mscoree  
+ **Libreria:** MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funzioni di hosting CLR deprecate](deprecated-clr-hosting-functions.md)

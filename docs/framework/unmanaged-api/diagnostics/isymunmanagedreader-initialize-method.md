@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f0dd2fe-7df7-464e-91f4-5518c586bb5f
 topic_type:
 - apiref
-ms.openlocfilehash: ca34d1d84d6f9960d021c35566f8412df321464d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 07d2de5d12fd769cb5cce243d9e721bb6fc185a7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429741"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615475"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>Metodo ISymUnmanagedReader::Initialize
 Inizializza il lettore di simboli con l'interfaccia dell'utilità di importazione dei metadati a cui verrà associato questo Reader, insieme al nome file del modulo.  
@@ -43,7 +43,7 @@ HRESULT Initialize (
  in Interfaccia dell'utilità di importazione dei metadati a cui verrà associato il lettore.  
   
  `filename`  
- in Nome file del modulo. In alternativa, è possibile usare il parametro `pIStream`.  
+ in Nome file del modulo. In alternativa, è possibile usare il `pIStream` parametro.  
   
  `searchPath`  
  in Percorso in cui eseguire la ricerca. Questo parametro è facoltativo.  
@@ -54,12 +54,12 @@ HRESULT Initialize (
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
-## <a name="remarks"></a>Note  
- È necessario specificare solo uno dei parametri `filename` o `pIStream`, non entrambi. Il parametro `searchPath` è facoltativo.  
+## <a name="remarks"></a>Osservazioni  
+ È necessario specificare solo uno dei `filename` `pIStream` parametri o, non entrambi. `searchPath` è facoltativo.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [Interfaccia ISymUnmanagedReader](isymunmanagedreader-interface.md)

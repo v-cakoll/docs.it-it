@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: dc1e2235-e721-4cb2-a0b8-6b0c030d7bab
 topic_type:
 - apiref
-ms.openlocfilehash: 4eb878b61b72378bc6870af7f2cd09f0b6943b13
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ff7e7b299d185b8db263d2076c1e075b87b487fc
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136507"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616398"
 ---
 # <a name="destroyiceefilegen-function"></a>Funzione DestroyICeeFileGen
-Elimina definitivamente un oggetto [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) .  
+Elimina definitivamente un oggetto [ICeeFileGen](iceefilegen-class.md) .  
   
  Questa funzione è stata deprecata nel .NET Framework 4.  
   
@@ -38,23 +38,23 @@ HRESULT DestroyICeeFileGen (
   
 ## <a name="parameters"></a>Parametri  
  `ceeFileGen`  
- in Oggetto `ICeeFileGen` da eliminare definitivamente.  
+ in `ICeeFileGen`Oggetto da eliminare definitivamente.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce i codici di errore COM standard.  
   
-## <a name="remarks"></a>Note  
- `DestroyICeeFileGen` Elimina l'oggetto `ICeeFileGen` creato dalla funzione [CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) .  
+## <a name="remarks"></a>Osservazioni  
+ `DestroyICeeFileGen`Elimina definitivamente l' `ICeeFileGen` oggetto creato dalla funzione [CreateICeeFileGen](createiceefilegen-function.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** ICeeFileGen. h  
   
  **Libreria:** MSCorPE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funzioni di hosting CLR deprecate](deprecated-clr-hosting-functions.md)

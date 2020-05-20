@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a13ec8a6-8e18-4acb-8054-77f5b1a0e0b9
 topic_type:
 - apiref
-ms.openlocfilehash: b24f8ed4f5e2c6e0022f5599f2ab8c44a30a561a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 969d74933e908674225684a2e77d5c4804b86122
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129271"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615644"
 ---
 # <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a>Metodo ICLRErrorReportingManager::GetBucketParametersForCurrentException
 Ottiene il bucket Watson per l'eccezione corrente nel thread chiamante.  
@@ -37,17 +37,17 @@ HRESULT GetBucketParametersForCurrentException(
   
 ## <a name="parameters"></a>Parametri  
  `pParams`  
- out Puntatore a una struttura [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) che contiene i dati di errore per l'eccezione.  
+ out Puntatore a una struttura [BucketParameters](bucketparameters-structure.md) che contiene i dati di errore per l'eccezione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICLRErrorReportingManager](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [Interfaccia ICLRErrorReportingManager](iclrerrorreportingmanager-interface.md)

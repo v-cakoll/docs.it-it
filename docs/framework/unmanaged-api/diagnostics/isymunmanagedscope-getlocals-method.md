@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 17c45f15-8c44-44da-b070-f902077b36e4
 topic_type:
 - apiref
-ms.openlocfilehash: bf932b63973f93c56883f099ddaadd9d1519f337
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0acd31d85504688427cace0222a657885035c537
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446324"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615384"
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a>Metodo ISymUnmanagedScope::GetLocals
 Ottiene le variabili locali definite in questo ambito.  
@@ -37,10 +37,10 @@ HRESULT GetLocals(
   
 ## <a name="parameters"></a>Parametri  
  `cLocals`  
- in `ULONG32` che indica le dimensioni della matrice di `locals`.  
+ in Oggetto `ULONG32` che indica la dimensione della `locals` matrice.  
   
  `pcLocals`  
- out Puntatore a un `ULONG32` che riceve la dimensione del buffer necessario per contenere le variabili locali.  
+ out Puntatore a un oggetto `ULONG32` che riceve le dimensioni del buffer necessarie per contenere le variabili locali.  
   
  `locals`  
  out Matrice che riceve le variabili locali.  
@@ -53,4 +53,4 @@ HRESULT GetLocals(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [Interfaccia ISymUnmanagedScope](isymunmanagedscope-interface.md)

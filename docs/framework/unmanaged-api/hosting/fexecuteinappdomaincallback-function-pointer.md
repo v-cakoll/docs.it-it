@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2709f18f-3eee-497f-bc33-3ab7a485599b
 topic_type:
 - apiref
-ms.openlocfilehash: 970468bc2f50144c62c6e3cbcf9c00c2027f7663
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6fd7a19d9fc77b43bbceb1b5e5399a455429e700
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138174"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616151"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>Puntatore alla funzione FExecuteInAppDomainCallback
 Punta a una funzione chiamata dall'Common Language Runtime (CLR) per eseguire codice gestito.  
@@ -41,14 +41,14 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
  L'allocazione e la durata della memoria sono controllate dal chiamante (ovvero CLR). Non si tratta di una memoria heap gestita da CLR.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** MSCorWks. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funzioni di hosting CLR deprecate](deprecated-clr-hosting-functions.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2f09cd37-bf3a-4cc5-87b0-adc42a7eed31
 topic_type:
 - apiref
-ms.openlocfilehash: 1f40f27651d2d75cf2c3e4d7d1c21e1f47d402af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 23d68e8e4bbd87779e3b49f0c40f5a5ab9f5124f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178186"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617217"
 ---
 # <a name="getcorversion-function"></a>Funzione GetCORVersion
-Restituisce il numero di versione di Common Language Runtime (CLR) in esecuzione nel processo corrente.  
+Restituisce il numero di versione del Common Language Runtime (CLR) in esecuzione nel processo corrente.  
   
- Questa funzione è stata deprecata in .NET Framework 4.  
+ Questa funzione è stata deprecata nel .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,23 +39,23 @@ HRESULT GetCORVersion (
   
 ## <a name="parameters"></a>Parametri  
  `pbuffer`  
- Puntatore a un buffer in cui CLR restituisce una stringa che specifica la versione del runtime attualmente caricata nel processo. La stringa restituita ha lo stesso formato delle stringhe passate a [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), ad esempio "v1.0.1216". Se il runtime non è ancora stato caricato nel processo, la funzione restituisce le informazioni di directory appropriate per la versione più recente del runtime installata nel computer.  
+ Puntatore a un buffer in cui CLR restituisce una stringa che specifica la versione del Runtime attualmente caricata nel processo. La stringa restituita assume lo stesso formato delle stringhe passate a [CorBindToRuntimeEx](corbindtoruntimeex-function.md), ad esempio, "v 1.0.1216". Se il runtime non è ancora stato caricato nel processo, la funzione restituisce le informazioni di directory appropriate per la versione più recente del runtime installato nel computer.  
   
  `cchBuffer`  
- Il numero di`WCHAR`caratteri (s) `pbuffer`che possono essere contenuti in .  
+ Numero di caratteri `WCHAR` che possono essere conservati in `pbuffer` .  
   
  `dwLength`  
- Puntatore al numero di caratteri `pbuffer`effettivamente restituiti in . Se `pbuffer` è un puntatore null, il runtime restituisce E_POINTER. Se il numero di caratteri è `pbuffer` maggiore della lunghezza di , il runtime restituisce ERROR_INSUFFICIENT_BUFFER.  
+ Puntatore al numero di caratteri effettivamente restituiti in `pbuffer` . Se `pbuffer` è un puntatore null, il runtime restituisce E_POINTER. Se il numero di caratteri è maggiore della lunghezza di `pbuffer` , il runtime restituisce ERROR_INSUFFICIENT_BUFFER.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Biblioteca:** Mscoree  
+ **Libreria:** MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funzioni di hosting CLR deprecate](deprecated-clr-hosting-functions.md)

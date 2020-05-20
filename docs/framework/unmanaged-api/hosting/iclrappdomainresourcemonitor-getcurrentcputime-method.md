@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ebc9cc33-fcd6-4cae-9ecb-ea21c51874e6
 topic_type:
 - apiref
-ms.openlocfilehash: de57fec05c338e51d0691ccfa0d0bffb334848de
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b411190ff36410c1d293f1e48b31975be8a13aee
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126793"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616034"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentcputime-method"></a>Metodo ICLRAppDomainResourceMonitor::GetCurrentCpuTime
 Ottiene il tempo totale del processore utilizzato da tutti i thread durante l'esecuzione nel dominio dell'applicazione corrente, dal momento in cui è stato creato il dominio dell'applicazione.  
@@ -41,27 +41,27 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|Descrizione|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
 |COR_E_APPDOMAINUNLOADED|Il dominio applicazione è stato scaricato o non esiste.|  
-|E_FAIL|Il monitoraggio delle risorse del dominio applicazione non è abilitato.<br /><br /> oppure<br /><br /> Tutti gli altri errori.|  
+|E_FAIL|Il monitoraggio delle risorse del dominio applicazione non è abilitato.<br /><br /> -oppure-<br /><br /> Tutti gli altri errori.|  
   
-## <a name="remarks"></a>Note  
- Questo metodo è l'equivalente non gestito della proprietà <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> gestita.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo è l'equivalente non gestito della <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> proprietà gestita.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Metahost. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICLRAppDomainResourceMonitor](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Monitoraggio delle risorse del dominio dell'applicazione](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
-- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [Interfaccia ICLRAppDomainResourceMonitor](iclrappdomainresourcemonitor-interface.md)
+- [Interfacce di hosting](hosting-interfaces.md)
+- [Monitoraggio delle risorse del dominio applicazione](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
+- [Hosting](index.md)

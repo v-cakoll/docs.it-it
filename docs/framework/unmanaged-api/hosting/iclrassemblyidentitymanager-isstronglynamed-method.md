@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 954bd386-2076-4d00-9d46-38c728aa9cab
 topic_type:
 - apiref
-ms.openlocfilehash: 288620eba867160e13a5ebee501a9afcf5623cce
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d388f366671f50c3dcb3bd9d387300dd1bbb168f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126655"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615904"
 ---
 # <a name="iclrassemblyidentitymanagerisstronglynamed-method"></a>Metodo ICLRAssemblyIdentityManager::IsStronglyNamed
 Ottiene un valore che indica se l'assembly specificato ha un nome sicuro.  
@@ -39,11 +39,11 @@ RESULT IsStronglyNamed (
  in Dati di identità dell'assembly canonico opaco dell'assembly da valutare.  
   
  `pbIsStronglyNamed`  
- [out] `true`, se l'assembly a cui fa riferimento il parametro `pwzAssemblyIdentity` ha un nome sicuro; in caso contrario, `false`.  
+ [out] `true` , se l'assembly a cui fa riferimento il `pwzAssemblyIdentity` parametro ha un nome sicuro; in caso contrario, `false` .  
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|Descrizione|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Il metodo è stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
@@ -53,14 +53,14 @@ RESULT IsStronglyNamed (
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [Interfaccia ICLRAssemblyIdentityManager](iclrassemblyidentitymanager-interface.md)

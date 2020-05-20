@@ -3,12 +3,12 @@ title: Che cos'è il generatore di modelli e come funziona?
 description: Come usare il generatore di modelli di ML.NET per eseguire automaticamente il training di un modello di Machine Learning
 ms.date: 03/25/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 9cf66455109908ebd9fc10e62cf4f067609b57d9
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 4afdbfd1682a30647b09d05d51a5c73c214fe2bd
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344777"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616930"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Che cos'è il generatore di modelli e come funziona?
 
@@ -36,11 +36,11 @@ Uno scenario è una descrizione del tipo di previsione che si vuole eseguire usa
 
 ### <a name="which-machine-learning-scenario-is-right-for-me"></a>Quale scenario di Machine Learning è adatto alle mie esigenze?
 
-In Model Builder, è necessario selezionare uno scenario. Il tipo di scenario dipende dal tipo di stima che si sta tentando di eseguire.
+In Generatore di modelli è necessario selezionare uno scenario. Il tipo di scenario dipende dal tipo di stima che si sta tentando di eseguire.
 
 #### <a name="text-classification"></a>Classificazione del testo
 
-La classificazione viene utilizzata per classificare i dati in categorie.
+La classificazione viene utilizzata per categorizzare i dati in categorie.
 
 ![Diagramma che mostra esempi di classificazione binaria, tra cui il rilevamento delle frodi, la mitigazione dei rischi e lo screening delle applicazioni](media/binary-classification-examples.png)
 
@@ -54,37 +54,37 @@ La regressione viene usata per prevedere i numeri.
 
 #### <a name="image-classification"></a>Classificazione di immagini
 
-La classificazione delle immagini può essere utilizzata per identificare immagini di diverse categorie. Ad esempio, diversi tipi di terreno o animali o difetti di produzione.
+È possibile usare la classificazione delle immagini per identificare immagini di diverse categorie. Ad esempio, diversi tipi di terreno o animali o difetti di produzione.
 
 È possibile utilizzare lo scenario di classificazione delle immagini se si dispone di un set di immagini e si desidera classificare le immagini in categorie diverse.
 
 #### <a name="recommendation"></a>Recommendation
 
-Lo scenario di raccomandazione prevede un elenco di elementi suggeriti per un determinato utente, in base a quanto simili i loro like e antipatie sono ad altri utenti'.
+Lo scenario di raccomandazione prevede un elenco di elementi consigliati per un determinato utente, in base alla somiglianza e alle dispiacenze di altri utenti.
 
-È possibile utilizzare lo scenario di raccomandazione quando si dispone di un insieme di utenti e di un insieme di "prodotti", ad esempio articoli da acquistare, film, libri o programmi TV, insieme a un insieme di "valutazioni" di tali prodotti da parte di un insieme di utenti.
+È possibile utilizzare lo scenario di raccomandazione quando si dispone di un set di utenti e un set di "prodotti", ad esempio articoli da acquistare, filmati, libri o programmi TELEVISIVi, insieme a un set di "classificazioni" degli utenti di questi prodotti.
 
 ## <a name="environment"></a>Environment
 
-È possibile eseguire il training del modello di apprendimento automatico in un modo in locale nel computer o nel cloud in Azure.You can train your machine learning model locally on your machine or in the cloud on Azure.
+È possibile eseguire il training del modello di Machine Learning localmente nel computer o nel cloud in Azure.
 
-Quando si esegue il training in locale, si lavora entro i vincoli delle risorse del computer (CPU, memoria e disco). Quando si esegue il training nel cloud, è possibile aumentare le risorse per soddisfare le esigenze dello scenario, in particolare per set di dati di grandi dimensioni.
+Quando si esegue il training in locale, si lavora nei vincoli delle risorse del computer (CPU, memoria e disco). Quando si esegue il training nel cloud, è possibile ridimensionare le risorse per soddisfare le esigenze dello scenario, soprattutto per i set di impostazioni di grandi dimensioni.
 
-La formazione locale è supportata per tutti gli scenari.
+Il training locale è supportato per tutti gli scenari.
 
-Il training di Azure è supportato per la classificazione delle immagini.
+La formazione di Azure è supportata per la classificazione delle immagini.
 
-## <a name="data"></a>Dati
+## <a name="data"></a>Data
 
-Dopo aver scelto lo scenario, Model Builder richiede di fornire un set di dati. I dati vengono usati per il training, la valutazione e la scelta del modello più adatto per lo scenario.
+Una volta scelto lo scenario, generatore di modelli richiede di fornire un set di dati. I dati vengono usati per il training, la valutazione e la scelta del modello più adatto per lo scenario.
 
 ![Diagramma che illustra i passaggi del generatore di modelli](media/model-builder-steps.png)
 
-Model Builder supporta set di dati in formato .tsv, .csv, .txt, così come il formato di database SQL. Se si dispone di un file con `,`estensione `;` `/t` txt, le colonne devono essere separate da o e il file deve avere una riga di intestazione.
+Il generatore di modelli supporta i set di dati nei formati TSV, CSV, txt, oltre al formato del database SQL. Se si dispone di un file con estensione txt, le colonne devono essere separate da `,` `;` o `/t` e il file deve contenere una riga di intestazione.
 
-Se il set di dati è costituito `.jpg` `.png`da immagini, i tipi di file supportati sono e .
+Se il set di dati è costituito da immagini, i tipi di file supportati sono `.jpg` e `.png` .
 
-Per ulteriori informazioni, consultate Caricare dati di [training in Model Builder.](how-to-guides/load-data-model-builder.md)
+Per altre informazioni, vedere [caricare i dati di training in Generatore di modelli](how-to-guides/load-data-model-builder.md).
 
 ### <a name="choose-the-output-to-predict-label"></a>Scegliere l'output da prevedere (etichetta)
 
@@ -107,15 +107,15 @@ L'etichetta è il prezzo storico della casa per la riga dei valori dei metri qua
 
 Se non sono ancora disponibili dati, provare uno dei set di dati seguenti:
 
-|Scenario|Esempio|Dati|Etichetta|Funzionalità|
+|Scenario|Esempio|Data|Etichetta|Caratteristiche|
 |-|-|-|-|-|
-|Classificazione|Prevedere le anomalie di vendita|[dati di vendita dei prodotti](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Vendita dei prodotti|Month|
-||Prevedere il sentiment dei commenti del sito Web|[dati dei commenti del sito Web](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etichetta (0 con sentiment negativo, 1 con sentiment positivo)|Commento, anno|
-||Prevedere transazioni fraudolente con carta di credito|[dati della carta di credito](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Classe (1 quando fraudolento, 0 in caso contrario)|Quantità, V1-V28 (caratteristiche anonime)|
-||Prevedere il tipo di problema in un repository GitHubPredict the type of issue in a GitHub repository|[dati del problema di GitHub](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Area|Titolo, descrizione|
-|Stima del valore|Prevedere il prezzo tariffario del taxi|[dati delle tariffe dei taxi](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Tariffe|Tempo della corsa, distanza|
-|Classificazione di immagini|Prevedere la categoria di un problema|[immagini floreali](http://download.tensorflow.org/example_images/flower_photos.tgz)|Il tipo di fiore: margherita, tarassaco, rose, girasoli, tulipani|I dati dell'immagine stessa|
-|Recommendation|Prevedi i film che piaceranno a qualcuno|[valutazioni dei film](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip)|Utenti, Film|Classificazioni|
+|Classificazione|Stimare le anomalie di vendita|[dati di vendita dei prodotti](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Vendita dei prodotti|Month|
+||Stimare i sentimenti dei commenti del sito Web|[dati dei commenti del sito Web](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etichetta (0 con sentiment negativo, 1 con sentiment positivo)|Commento, anno|
+||Stimare le transazioni della carta di credito fraudolente|[dati della carta di credito](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Classe (1 quando fraudolento, 0 in caso contrario)|Quantità, V1-V28 (caratteristiche anonime)|
+||Prevedere il tipo di problema in un repository GitHub|[dati del problema di GitHub](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Area|Titolo, descrizione|
+|Stima del valore|Stimare il prezzo della tariffa di taxi|[dati delle tariffe dei taxi](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Tariffe|Tempo della corsa, distanza|
+|Classificazione di immagini|Stimare la categoria di un fiore |[immagini floreali](http://download.tensorflow.org/example_images/flower_photos.tgz)|Tipo di fiore: Daisy, Dandelion, Roses, girasoli, tulipani|Dati dell'immagine|
+|Recommendation|Prevedere i film che un utente vuole|[classificazioni film](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip)|Utenti, filmati|Classificazioni|
 
 ## <a name="train"></a>Eseguire il training
 
@@ -129,61 +129,61 @@ Poiché il generatore di modelli usa Il Machine Learning automatico (AutoML), no
 
 ### <a name="how-long-should-i-train-for"></a>Per quanto tempo è consigliabile eseguire il training?
 
-Model Builder utilizza AutoML per esplorare più modelli per trovare il modello più performante.
+Il generatore di modelli USA AutoML per esplorare più modelli per trovare il modello con le prestazioni migliori.
 
-Periodi di allenamento più lunghi consentono ad AutoML di esplorare più modelli con una gamma più ampia di impostazioni.
+I periodi di training più lunghi consentono a AutoML di esplorare più modelli con una gamma più ampia di impostazioni.
 
-La tabella seguente riepiloga il tempo medio impiegato per ottenere buone prestazioni per un gruppo di set di dati di esempio, in un computer locale.
+La tabella seguente riepiloga il tempo medio necessario per ottenere prestazioni ottimali per una suite di set di impostazioni di esempio, in un computer locale.
 
-|Dimensioni set di dati|Tempo medio per allenarsi|
+|Dimensioni del set di dati|Tempo medio per il training|
 |------------|---------------------|
-|0 - 10 MB|10 sec|
-|Da 10 a 100 MB|10 min|
-|100 - 500 MB|30 min|
-|500 - 1 GB|60 min|
-|1 GB di lavoro|Più di 3 ore|
+|0-10 MB|10 sec|
+|10-100 MB|10 min|
+|100-500 MB|30 min|
+|500-1 GB|60 min|
+|1 GB +|3 + ore|
 
-Questi numeri sono solo una guida. L'esatta durata della formazione dipende da:
+Questi numeri sono solo una guida. La lunghezza esatta del training dipende da:
 
-- il numero di feature (colonne) utilizzate come input per il modello
-- il tipo di colonne
-- l'attività ML
+- il numero di funzioni (colonne) utilizzate come input per il modello
+- tipo di colonne
+- attività ML
 - le prestazioni della CPU, del disco e della memoria del computer utilizzato per il training
 
 ## <a name="evaluate"></a>Valutazione
 
-La valutazione è il processo di misurazione della qualità del modello. Model Builder usa il modello sottoposto a training per eseguire stime con nuovi dati di test e quindi misura l'efficacia delle stime.
+La valutazione è il processo di misurazione della qualità del modello. Il generatore di modelli utilizza il modello sottoposto a training per eseguire stime con nuovi dati di test e quindi misura la qualità delle stime.
 
 Il generatore di modelli suddivide i dati di training in un set di training e un set di test. I dati di training (80%) vengono usati per eseguire il training del modello, mentre i dati di test (20%) vengono usati per la valutazione del modello.
 
-### <a name="how-do-i-understand-my-model-performance"></a>Come posso capire le prestazioni del mio modello?
+### <a name="how-do-i-understand-my-model-performance"></a>Ricerca per categorie comprendere le prestazioni del modello?
 
-Uno scenario esegue il mapping a un'attività di apprendimento automatico. Ogni attività di ML dispone di un proprio set di metriche di valutazione.
+Uno scenario è mappato a un'attività di machine learning. Ogni attività ML dispone di un proprio set di metriche di valutazione.
 
 #### <a name="value-prediction"></a>Stima del valore
 
-La metrica predefinita per i problemi di stima del valore è RSquared, il valore degli intervalli RSquared compresi tra 0 e 1. 1 è il miglior valore possibile o in altre parole più vicino è il valore di RSquared a 1 migliore sarà l'esecuzione del modello.
+La metrica predefinita per i problemi di stima del valore è RSquared, il valore di RSquared è compreso tra 0 e 1. 1 è il miglior valore possibile o, in altre parole, più il valore di RSquared è più vicino a 1 migliore sarà l'esecuzione del modello.
 
-Altre metriche segnalate, ad esempio perdita assoluta, perdita quadrata e perdita RMS, sono metriche aggiuntive, che possono essere usate per comprendere le prestazioni del modello e confrontarlo con altri modelli di stima del valore.
+Altre metriche segnalate come la perdita assoluta, la perdita quadrata e la perdita di RMS sono metriche aggiuntive, che possono essere usate per comprendere il modo in cui il modello esegue e il confronto con altri modelli di stima del valore.
 
 #### <a name="classification-2-categories"></a>Classificazione (2 categorie)
 
-La metrica predefinita per i problemi di classificazione è l'accuratezza. Precisione definisce la proporzione di stime corrette che il modello sta facendo sul set di dati di test. Più vicino al 100% o 1,0 meglio è.
+La metrica predefinita per i problemi di classificazione è l'accuratezza. L'accuratezza definisce la percentuale di stime corrette che il modello sta eseguendo sul set di dati di test. Il più vicino a 100% o 1,0 è migliore.
 
-Altre metriche segnalate come AUC (Area sotto la curva), che misura il vero tasso positivo rispetto al tasso di falsi positivi dovrebbe essere maggiore di 0,50 per i modelli per essere accettabili.
+Altre metriche segnalate, ad esempio AUC (area sotto la curva), che misura il vero tasso positivo rispetto a. il tasso di falsi positivi deve essere maggiore di 0,50 per i modelli in modo che siano accettabili.
 
-Metriche aggiuntive come il punteggio F1 possono essere utilizzate per controllare il bilanciamento tra Precisione e Richiamo.
+Metriche aggiuntive, come il Punteggio F1, possono essere usate per controllare il saldo tra precisione e richiamo.
 
-#### <a name="classification-3-categories"></a>Classificazione (più di 3 categorie)
+#### <a name="classification-3-categories"></a>Classificazione (3 + categorie)
 
-La metrica predefinita per la classificazione multiclasse è Precisione micro. Più il Micro Accuracy è vicino al 100% o 1.0 meglio è.
+La metrica predefinita per la classificazione multiclasse è la precisione Micro. Maggiore è il modo in cui l'accuratezza Micro è più vicina al 100% o 1,0.
 
-Un'altra metrica importante per la classificazione multiclasse è l'accuratezza macro, simile alla Precisione Micro, più è meglio è. Un buon modo per pensare a questi due tipi di precisione è:
+Un'altra metrica importante per la classificazione multiclasse è l'accuratezza della macro, analogamente alla micro-precisione, più vicina a 1,0, migliore è. Un modo efficace per considerare questi due tipi di accuratezza è:
 
-- Micro-precisione: con quale frequenza un biglietto in entrata viene classificato nella squadra giusta?
-- Macro-precisione: Per una squadra media, con quale frequenza un biglietto in entrata è corretto per la propria squadra?
+- Micro-precisione: con quale frequenza un ticket in arrivo viene Classificato al team appropriato?
+- Accuratezza macro: per un team medio, con quale frequenza un ticket in ingresso è corretto per il proprio team?
 
-### <a name="more-information-on-evaluation-metrics"></a>Ulteriori informazioni sulle metriche di valutazione
+### <a name="more-information-on-evaluation-metrics"></a>Altre informazioni sulle metriche di valutazione
 
 Per altre informazioni, vedere [Metriche di valutazione dei modelli](resources/metrics.md).
 
@@ -191,7 +191,7 @@ Per altre informazioni, vedere [Metriche di valutazione dei modelli](resources/m
 
 Se il punteggio delle prestazioni del modello non è quello desiderato, è possibile:
 
-- Eseguire il training per un periodo di tempo più lungo. Con più tempo, il motore di apprendimento automatico sperimenta più algoritmi e impostazioni.
+- Eseguire il training per un periodo di tempo più lungo. Con più tempo, il motore di Machine Learning automatico sperimenta più algoritmi e impostazioni.
 
 - Aggiungere altri dati. A volte la quantità di dati non è sufficiente per eseguire il training di un modello di Machine Learning di qualità elevata.
 

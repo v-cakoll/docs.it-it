@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 20bdf8ff-2d15-4c64-8950-6888f642d6c0
 topic_type:
 - apiref
-ms.openlocfilehash: 6904271ed90cf733b9221178927bc680d76b58a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a3a6c07a9cace0ac9834cdb05925a301285204c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176578"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615319"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>Metodo ISymUnmanagedSourceServerModule::GetSourceServerData
-Restituisce i dati del server di origine per il modulo. Il chiamante deve `CoTaskMemFree`liberare risorse utilizzando .  
+Restituisce i dati del server di origine per il modulo. Il chiamante deve liberare risorse tramite `CoTaskMemFree` .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,17 +35,17 @@ HRESULT GetSourceServerData(
   
 ## <a name="parameters"></a>Parametri  
  `pDataByteCount`  
- [fuori] Puntatore a `ULONG32` un che riceve la dimensione, in byte, dei dati del server di origine.  
+ out Puntatore a un oggetto `ULONG32` che riceve le dimensioni, in byte, dei dati del server di origine.  
   
  `ppData`  
- [fuori] Puntatore al valore `pDataByteCount` restituito.  
+ out Puntatore al `pDataByteCount` valore restituito.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedSourceServerModule](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)
+- [Interfaccia ISymUnmanagedSourceServerModule](isymunmanagedsourceservermodule-interface.md)

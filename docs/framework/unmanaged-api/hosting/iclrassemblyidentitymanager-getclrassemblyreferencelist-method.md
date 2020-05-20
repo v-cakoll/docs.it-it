@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cb5ffae5-287b-4a87-9ca8-7ce3ae0601b7
 topic_type:
 - apiref
-ms.openlocfilehash: 54c11e78438ae97e1fc0c715c9161361784b3be6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7f09cb2264b21fdfbc892069f2c2f0a963b131f8
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126725"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615969"
 ---
 # <a name="iclrassemblyidentitymanagergetclrassemblyreferencelist-method"></a>Metodo ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList
-Ottiene un puntatore a interfaccia a un'istanza di [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) dall'elenco fornito di identità di assembly parziali.  
+Ottiene un puntatore a interfaccia a un'istanza di [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) dall'elenco fornito di identità di assembly parziali.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,14 +40,14 @@ HRESULT  GetCLRAssemblyReferenceList (
  in Una matrice di stringhe con terminazione null nel formato "nome, proprietà = valore..." che specificano un elenco di identità di assembly parziali.  
   
  `dwNumOfReferences`  
- in Numero di elementi in `ppwzAssemblyReferences`.  
+ in Numero di elementi in `ppwzAssemblyReferences` .  
   
  `ppReferenceList`  
- out Puntatore a un'interfaccia a un oggetto `ICLRAssemblyReferenceList` contenente i dati di identità dell'assembly per l'elenco di assembly specificato in `ppwzAssemblyReferences`.  
+ out Puntatore di interfaccia a un `ICLRAssemblyReferenceList` oggetto che contiene i dati di identità dell'assembly per l'elenco di assembly specificato in `ppwzAssemblyReferences` .  
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|Descrizione|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Il metodo è stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
@@ -57,15 +57,15 @@ HRESULT  GetCLRAssemblyReferenceList (
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [Interfaccia ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [Interfaccia ICLRAssemblyIdentityManager](iclrassemblyidentitymanager-interface.md)
+- [Interfaccia ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 01f9a59b-7679-4d42-9ced-4a8981625c3d
 topic_type:
 - apiref
-ms.openlocfilehash: 64e0c466edcd8863244e6ed184c18422b5f66875
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 88e81779fc9c20c506f3b0aa11ac2da3958dfe86
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178272"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616697"
 ---
 # <a name="cor_gc_thread_stats-structure"></a>Struttura COR_GC_THREAD_STATS
-Contiene statistiche per thread relative alla procedura di Garbage Collection.  
+Contiene statistiche per thread che riguardano Garbage Collection.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,26 +33,26 @@ typedef struct _COR_GC_THREAD_STATS {
 } COR_GC_THREAD_STATS;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Membro|Description|  
 |------------|-----------------|  
-|`PerThreadAllocation`|Numero di byte di memoria allocati nel `COR_GC_THREAD_STATS` thread associato all'istanza corrente. Questo numero viene cancellato a zero ogni volta che si verifica un'operazione di Garbage Collection di generazione zero.|  
-|`Flags`|Numero di byte promossi a una generazione superiore durante l'operazione di Garbage Collection più recente.|  
+|`PerThreadAllocation`|Numero di byte di memoria allocata nel thread associato all' `COR_GC_THREAD_STATS` istanza corrente. Questo numero viene cancellato a zero ogni volta che viene generato un Garbage Collection di generazione zero.|  
+|`Flags`|Numero di byte promossi a una generazione più elevata nel Garbage Collection più recente.|  
   
 ## <a name="remarks"></a>Osservazioni  
- [ICLRTask::GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md) accetta un parametro di output di tipo `COR_GC_THREAD_STATS`.  
+ [ICLRTask:: GetMemStats](iclrtask-getmemstats-method.md) accetta un parametro di output di tipo `COR_GC_THREAD_STATS` .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** GCHost.idl  
+ **Intestazione:** GCHost. idl  
   
- **Biblioteca:** Incluso come risorsa in MSCorEE.dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strutture di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [Interfaccia IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [Strutture di hosting](hosting-structures.md)
+- [Interfaccia IHostTask](ihosttask-interface.md)

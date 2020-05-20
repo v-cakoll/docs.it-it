@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 392e9009-40ef-40e3-ad4d-7ce93a989e78
 topic_type:
 - apiref
-ms.openlocfilehash: 62fcdb60b83c88738ebe2e39455b8eae60fb705e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a73c0731c79dea3a0c411fe27a864ec9ac4e20b2
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126773"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616021"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>Metodo ICLRAppDomainResourceMonitor::GetCurrentSurvived
 Ottiene il numero di byte esclusi dall'ultimo blocco completo Garbage Collection e a cui fa riferimento il dominio applicazione corrente.  
@@ -47,28 +47,28 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
   
-|HRESULT|Descrizione|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
 |COR_E_APPDOMAINUNLOADED|Il dominio applicazione è stato scaricato o non esiste.|  
   
-## <a name="remarks"></a>Note  
- Le statistiche vengono aggiornate solo dopo un Garbage Collection di blocco completo; ovvero una raccolta che include tutte le generazioni e che interrompe l'applicazione mentre si verifica la raccolta. Ad esempio, l'overload del metodo <xref:System.GC.Collect?displayProperty=nameWithType> esegue una raccolta di blocco completa. Il Garbage Collection simultaneo si verifica in background e non blocca l'applicazione.  
+## <a name="remarks"></a>Osservazioni  
+ Le statistiche vengono aggiornate solo dopo un Garbage Collection di blocco completo; ovvero una raccolta che include tutte le generazioni e che interrompe l'applicazione mentre si verifica la raccolta. Ad esempio, l' <xref:System.GC.Collect?displayProperty=nameWithType> Overload del metodo esegue una raccolta di blocco completa. Il Garbage Collection simultaneo si verifica in background e non blocca l'applicazione.  
   
- Il metodo `GetCurrentSurvived` è l'equivalente non gestito della proprietà <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> gestita.  
+ Il `GetCurrentSurvived` metodo è l'equivalente non gestito della <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> proprietà gestita.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Metahost. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICLRAppDomainResourceMonitor](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [Monitoraggio delle risorse del dominio dell'applicazione](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
-- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [Interfaccia ICLRAppDomainResourceMonitor](iclrappdomainresourcemonitor-interface.md)
+- [Monitoraggio delle risorse del dominio applicazione](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
+- [Interfacce di hosting](hosting-interfaces.md)
+- [Hosting](index.md)

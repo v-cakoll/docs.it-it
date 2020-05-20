@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c84f4846-9bc8-44a4-9a76-e39106d6d8b2
 topic_type:
 - apiref
-ms.openlocfilehash: b3674c4058dba2f6185418b55b35eefb14c312f6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6ffab3b2f81680404f870cfd63ae5125173a346c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431231"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615514"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>Metodo ISymUnmanagedReader::GetSymbolStoreFileName
 Fornisce il nome file su disco dell'archivio dei simboli.  
@@ -37,10 +37,10 @@ HRESULT GetSymbolStoreFileName (
   
 ## <a name="parameters"></a>Parametri  
  `cchName`  
- in Dimensioni del buffer `szName`.  
+ in Dimensioni del `szName` buffer.  
   
  `pcchName`  
- out Puntatore alla variabile che riceve la lunghezza del nome restituito in `szName`, inclusa la terminazione null.  
+ out Puntatore alla variabile che riceve la lunghezza del nome restituito in `szName` , inclusa la terminazione null.  
   
  `szName`  
  out Puntatore alla variabile che riceve il nome file dell'archivio dei simboli.  
@@ -53,4 +53,4 @@ HRESULT GetSymbolStoreFileName (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [Interfaccia ISymUnmanagedReader](isymunmanagedreader-interface.md)

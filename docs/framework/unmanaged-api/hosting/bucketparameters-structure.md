@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9432487e-f276-45d6-9a13-9a68024dbd46
 topic_type:
 - apiref
-ms.openlocfilehash: 4d9de489bdeb0ab506f56ff08f4afb4cf6d0ab4f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7037065be138c369b847e7f86de7b46fc5ae601a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178284"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616879"
 ---
 # <a name="bucketparameters-structure"></a>Struttura BucketParameters
 Archivia il nome del tipo di un evento e i parametri per l'eccezione corrente associata all'evento.  
@@ -34,21 +34,21 @@ typedef struct _BucketParameters {
 } BucketParameters;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Membro|Description|  
 |------------|-----------------|  
-|`fInited`|`true`, se il resto di questa struttura è valido; in `false`caso contrario, .|  
+|`fInited`|`true`Se il resto della struttura è valido; in caso contrario, `false` .|  
 |`pszEventTypeName`|Nome del tipo di evento.|  
 |`pszParams`|Matrice di stringhe, ognuna delle quali specifica un parametro per l'eccezione corrente associata all'evento.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.idl  
+ **Intestazione:** MSCorEE. idl  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strutture di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Strutture di hosting](hosting-structures.md)

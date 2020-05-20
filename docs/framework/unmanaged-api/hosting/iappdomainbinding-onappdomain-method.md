@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b419dcc9-e8aa-484b-af0d-0f40358edb99
 topic_type:
 - apiref
-ms.openlocfilehash: 37c02b878cd52034603ab6cafe4d8aaca594cbe9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2d5dbd003d0ea5decae0025d47e6bd5c1fb1ed4a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126879"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617074"
 ---
 # <a name="iappdomainbindingonappdomain-method"></a>Metodo IAppDomainBinding::OnAppDomain
 Chiamato dal Common Language Runtime (CLR) per notificare all'host che è stato creato un dominio dell'applicazione.  
@@ -38,14 +38,14 @@ HRESULT OnAppDomain (
  in Puntatore a un oggetto dell'interfaccia [IUnknown](/cpp/atl/iunknown) che rappresenta il nuovo dominio applicazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IAppDomainBinding](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-interface.md)
+- [Interfaccia IAppDomainBinding](iappdomainbinding-interface.md)

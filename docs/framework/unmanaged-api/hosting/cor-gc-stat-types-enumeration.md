@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fc51d6db-f7f8-408b-b93d-c166fc712c99
 topic_type:
 - apiref
-ms.openlocfilehash: b0fbc462283ef1577de8100e60fd09caa53db539
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cca393ae34144787ab7800baec7c58209394f30e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131920"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616716"
 ---
 # <a name="cor_gc_stat_types-enumeration"></a>Enumerazione COR_GC_STAT_TYPES
 Specifica le statistiche da registrare per un Garbage Collection.  
@@ -33,24 +33,24 @@ typedef enum {
 } COR_GC_STAT_TYPES;  
 ```  
   
-## <a name="remarks"></a>Note  
- Questa enumerazione specifica quali statistiche nella struttura [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) devono essere impostate dal metodo [ICLRGCManager:: GetStatistics](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) .  
+## <a name="remarks"></a>Osservazioni  
+ Questa enumerazione specifica quali statistiche della struttura [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) devono essere impostate dal metodo [ICLRGCManager:: GetStatistics](iclrgcmanager-getstats-method.md) .  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
-|Member|Descrizione|  
+|Membro|Description|  
 |------------|-----------------|  
 |`COR_GC_COUNTS`|Registra il numero di operazioni di Garbage Collection eseguite per ogni generazione.|  
 |`COR_GC_MEMORYUSAGE`|Registra l'utilizzo della memoria e le statistiche delle dimensioni del Garbage Collection.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** GCHost. idl, GCHost. h  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Struttura COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
-- [Enumerazioni di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Struttura COR_GC_STATS](cor-gc-stats-structure.md)
+- [Enumerazioni di hosting](hosting-enumerations.md)

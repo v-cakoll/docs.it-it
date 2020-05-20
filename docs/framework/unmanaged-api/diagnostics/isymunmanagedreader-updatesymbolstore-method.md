@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4a17d723-86b9-4f27-bd0d-b70c3259011c
 topic_type:
 - apiref
-ms.openlocfilehash: e052d9b7b2abd57b176dfe3b00afac626d422c58
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ccc787aa1c820a486d9a513055c9c9834b90bd1a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446462"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615436"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>Metodo ISymUnmanagedReader::UpdateSymbolStore
 Aggiorna l'archivio dei simboli esistente con un archivio dei simboli delta. Questo metodo viene usato negli scenari di modifica e continuazione per aggiornare l'archivio simboli in modo che corrisponda ai Delta al file eseguibile portabile originale (PE).  
   
 > [!NOTE]
-> È necessario specificare solo uno dei parametri `filename` o `pIStream`, non entrambi. Se viene specificato `filename`, l'archivio dei simboli verrà aggiornato con i simboli presenti in tale file. Se `pIStream` viene specificato, l'archivio verrà aggiornato con i dati del <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
+> È necessario specificare solo uno dei `filename` parametri o `pIStream` , non entrambi. Se `filename` si specifica, l'archivio dei simboli verrà aggiornato con i simboli presenti in tale file. Se `pIStream` si specifica, l'archivio verrà aggiornato con i dati del <xref:System.Runtime.InteropServices.ComTypes.IStream> .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +41,7 @@ HRESULT UpdateSymbolStore (
  in Nome del file che contiene l'archivio dei simboli.  
   
  `pIStream`  
- in Il flusso di file, usato come alternativa al parametro `filename`.  
+ in Flusso di file, usato come alternativa al `filename` parametro.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
@@ -51,4 +51,4 @@ HRESULT UpdateSymbolStore (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [Interfaccia ISymUnmanagedReader](isymunmanagedreader-interface.md)
