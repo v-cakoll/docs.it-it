@@ -2,12 +2,12 @@
 title: Metodo ISymUnmanagedAsyncMethodPropertiesWriter::DefineCatchHandlerILOffset
 ms.date: 03/30/2017
 ms.assetid: 92af7896-2201-408d-8b1b-23e28001eeac
-ms.openlocfilehash: b108c8c87d3afdbfacb569ab501274e5c45c2e2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 58dde2fcce3f4bf578907171e5b575c30c678cfc
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129181"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441773"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefinecatchhandleriloffset-method"></a>Metodo ISymUnmanagedAsyncMethodPropertiesWriter::DefineCatchHandlerILOffset
 Imposta l'offset il per il gestore catch generato dal compilatore che esegue il wrapping di un metodo asincrono.  
@@ -22,7 +22,7 @@ HRESULT DefineCatchHandlerILOffset(    [in] ULONG32 catchHandlerOffset);
   
 ## <a name="parameters"></a>Parametri  
   
-|Parametro|Descrizione|  
+|Parametro|Description|  
 |---------------|-----------------|  
 |`catchHandlerOffset`||  
   
@@ -34,4 +34,4 @@ HRESULT DefineCatchHandlerILOffset(    [in] ULONG32 catchHandlerOffset);
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedAsyncMethodPropertiesWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)
+- [Interfaccia ISymUnmanagedAsyncMethodPropertiesWriter](isymunmanagedasyncmethodpropertieswriter-interface.md)

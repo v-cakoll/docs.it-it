@@ -1,5 +1,6 @@
 ---
 title: Implementazione del modello asincrono basato su attività
+description: Questo articolo illustra come implementare il modello asincrono basato su attività. È possibile usarlo per implementare operazioni asincrone con associazione di calcolo e I/O.
 ms.date: 06/14/2017
 dev_langs:
 - csharp
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-ms.openlocfilehash: e09ed853598dcbb13cc8dc3fe963276e4b5e974d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 7d031bab6ba0a4420062eff107aeb1262d9b3b40
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739644"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421228"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementazione del modello asincrono basato su attività
 È possibile implementare il modello asincrono basato su attività (TAP) in i tre modi: con i compilatori C# e Visual Basic in Visual Studio, manualmente oppure con una combinazione dei primi due. Le sezioni seguenti illustrano in dettaglio ogni metodo. È possibile usare il modello TAP per implementare operazioni asincrone di calcolo e di I/O. La sezione [Carichi di lavoro](#workloads) illustra ogni tipo di operazione.
@@ -24,7 +25,7 @@ ms.locfileid: "81739644"
 ## <a name="generating-tap-methods"></a>Generazione di metodi TAP
 
 ### <a name="using-the-compilers"></a>Uso dei compilatori
-A partire da .NET Framework 4.5, qualsiasi metodo con la parola chiave `async` (`Async` in Visual Basic) viene considerato un metodo asincrono e i compilatori C# e Visual Basic eseguono le trasformazioni necessarie per implementare il metodo in modo asincrono tramite TAP. Un metodo asincrono deve restituire un oggetto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Nel secondo caso, il corpo della funzione deve restituire un oggetto `TResult` e il compilatore garantisce che il risultato sia reso disponibile tramite l'oggetto attività risultante. Allo stesso modo, viene effettuato il marshalling di qualsiasi eccezione gestita all'interno del corpo del metodo per l'attività di output, per far sì che l'attività risultante termini con lo stato <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType>. L'eccezione a questa <xref:System.OperationCanceledException> regola è quando un (o tipo derivato) non <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> viene gestito, nel qual caso l'attività risultante termina nello stato.
+A partire da .NET Framework 4.5, qualsiasi metodo con la parola chiave `async` (`Async` in Visual Basic) viene considerato un metodo asincrono e i compilatori C# e Visual Basic eseguono le trasformazioni necessarie per implementare il metodo in modo asincrono tramite TAP. Un metodo asincrono deve restituire un oggetto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Nel secondo caso, il corpo della funzione deve restituire un oggetto `TResult` e il compilatore garantisce che il risultato sia reso disponibile tramite l'oggetto attività risultante. Allo stesso modo, viene effettuato il marshalling di qualsiasi eccezione gestita all'interno del corpo del metodo per l'attività di output, per far sì che l'attività risultante termini con lo stato <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType>. L'eccezione a questa regola è quando un <xref:System.OperationCanceledException> (o un tipo derivato) non viene gestito, nel qual caso l'attività risultante termina nello <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> stato.
 
 ### <a name="generating-tap-methods-manually"></a>Generazione manuale di metodi TAP
 È possibile implementare il modello TAP manualmente per un controllo migliore sull'implementazione. Il compilatore si basa sull'area di superficie esposta dallo spazio dei nomi <xref:System.Threading.Tasks?displayProperty=nameWithType> e i tipi di supporto nello spazio dei nomi <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>. Per implementare autonomamente il modello TAP, creare un oggetto <xref:System.Threading.Tasks.TaskCompletionSource%601>, eseguire l'operazione asincrona e, al completamento, chiamare il metodo <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> o <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> oppure la versione `Try` di uno di questi metodi. Quando si implementa un metodo TAP manualmente, è necessario completare l'attività risultante al completamento dell'operazione asincrona rappresentata. Ad esempio:

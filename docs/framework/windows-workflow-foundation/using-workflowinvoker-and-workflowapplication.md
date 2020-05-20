@@ -1,16 +1,17 @@
 ---
 title: Utilizzo di WorkflowInvoker e WorkflowApplication
+description: Questo articolo descrive l'hosting del flusso di lavoro con WorkflowInvoker e WorkflowApplication in Windows Workflow Foundation.
 ms.date: 03/30/2017
 ms.assetid: cd0e583c-a3f9-4fa2-b247-c7b3368c48a7
-ms.openlocfilehash: 5d09fc3c902b1993b32edf3e9f92393433281636
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 50ad291bc73818092e7a08d489d6860636f9c379
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182696"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421319"
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Utilizzo di WorkflowInvoker e WorkflowApplication
-Windows Workflow Foundation (WF) fornisce diversi metodi di hosting dei flussi di lavoro. <xref:System.Activities.WorkflowInvoker> offre un modo semplice per richiamare un flusso di lavoro come se fosse una chiamata a un metodo e può essere usato solo per i flussi di lavoro che non usano la persistenza. <xref:System.Activities.WorkflowApplication> fornisce un modello più dettagliato per l'esecuzione di flussi di lavoro che include la notifica degli eventi del ciclo di vita, il controllo di esecuzione, la ripresa del segnalibro e la persistenza. <xref:System.ServiceModel.Activities.WorkflowServiceHost> fornisce il supporto per le attività di messaggistica e viene principalmente usato con i servizi flusso di lavoro. In questo argomento viene illustrato l'hosting del flusso di lavoro con <xref:System.Activities.WorkflowInvoker> e <xref:System.Activities.WorkflowApplication>. Per ulteriori informazioni sull'hosting dei flussi di lavoro con <xref:System.ServiceModel.Activities.WorkflowServiceHost>, vedere Workflow [Services](../wcf/feature-details/workflow-services.md) e Hosting Workflow Services [Overview](../wcf/feature-details/hosting-workflow-services-overview.md).  
+Windows Workflow Foundation (WF) fornisce diversi metodi di hosting dei flussi di lavoro. <xref:System.Activities.WorkflowInvoker> offre un modo semplice per richiamare un flusso di lavoro come se fosse una chiamata a un metodo e può essere usato solo per i flussi di lavoro che non usano la persistenza. <xref:System.Activities.WorkflowApplication> fornisce un modello più dettagliato per l'esecuzione di flussi di lavoro che include la notifica degli eventi del ciclo di vita, il controllo di esecuzione, la ripresa del segnalibro e la persistenza. <xref:System.ServiceModel.Activities.WorkflowServiceHost> fornisce il supporto per le attività di messaggistica e viene principalmente usato con i servizi flusso di lavoro. In questo argomento viene illustrato l'hosting del flusso di lavoro con <xref:System.Activities.WorkflowInvoker> e <xref:System.Activities.WorkflowApplication>. Per ulteriori informazioni sull'hosting di flussi di lavoro con <xref:System.ServiceModel.Activities.WorkflowServiceHost> , vedere Panoramica dei servizi [flusso](../wcf/feature-details/workflow-services.md) di lavoro e [hosting dei servizi flusso di lavoro](../wcf/feature-details/hosting-workflow-services-overview.md).  
   
 ## <a name="using-workflowinvoker"></a>Uso di WorkflowInvoker  
  L'oggetto <xref:System.Activities.WorkflowInvoker> fornisce un modello per l'esecuzione di un flusso di lavoro come se si trattasse di una chiamata al metodo. Per richiamare un flusso di lavoro tramite l'oggetto <xref:System.Activities.WorkflowInvoker>, chiamare il metodo <xref:System.Activities.WorkflowInvoker.Invoke%2A> e passare la definizione del flusso di lavoro da richiamare. In questo esempio viene richiamata un'attività <xref:System.Activities.Statements.WriteLine> tramite l'oggetto <xref:System.Activities.WorkflowInvoker>.  
@@ -60,14 +61,14 @@ Windows Workflow Foundation (WF) fornisce diversi metodi di hosting dei flussi d
  [!code-csharp[CFX_WorkflowApplicationExample#30](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#30)]  
   
 ### <a name="retrieving-output-arguments-of-a-workflow"></a>Recupero degli argomenti di output di un flusso di lavoro  
- Quando un flusso di lavoro viene completato, qualsiasi argomento di output può essere recuperato nel gestore <xref:System.Activities.WorkflowApplication.Completed%2A> eseguendo l'accesso al dizionario <xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType>. Nell'esempio seguente viene ospitato un flusso di lavoro tramite <xref:System.Activities.WorkflowApplication>. Un'istanza <xref:System.Activities.WorkflowApplication> viene costruita utilizzando una `DiceRoll` definizione del flusso di lavoro costituita da una singola attività. L'attività `DiceRoll` dispone di due argomenti di output che rappresentano i risultati dell'operazione di lancio dei dadi. Quando il flusso di lavoro viene completato, gli output vengono recuperati nel gestore <xref:System.Activities.WorkflowApplication.Completed%2A>.  
+ Quando un flusso di lavoro viene completato, qualsiasi argomento di output può essere recuperato nel gestore <xref:System.Activities.WorkflowApplication.Completed%2A> eseguendo l'accesso al dizionario <xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType>. Nell'esempio seguente viene ospitato un flusso di lavoro tramite <xref:System.Activities.WorkflowApplication>. Un' <xref:System.Activities.WorkflowApplication> istanza viene costruita utilizzando una definizione del flusso di lavoro costituita da una singola `DiceRoll` attività. L'attività `DiceRoll` dispone di due argomenti di output che rappresentano i risultati dell'operazione di lancio dei dadi. Quando il flusso di lavoro viene completato, gli output vengono recuperati nel gestore <xref:System.Activities.WorkflowApplication.Completed%2A>.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#130](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#130)]  
   
  [!code-csharp[CFX_WorkflowApplicationExample#21](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#21)]  
   
 > [!NOTE]
-> Gli oggetti <xref:System.Activities.WorkflowApplication> e <xref:System.Activities.WorkflowInvoker> accettano un dizionario di argomenti di input e restituiscono un dizionario di argomenti `out`. Questi parametri, proprietà e valori restituiti del dizionario sono di tipo `IDictionary<string, object>`. L'istanza effettiva della classe di dizionario passata può essere qualsiasi classe che implementa `IDictionary<string, object>`. In questi esempi, viene usato `Dictionary<string, object>`. Per ulteriori informazioni sui <xref:System.Collections.Generic.IDictionary%602> <xref:System.Collections.Generic.Dictionary%602>dizionari, vedere e .  
+> Gli oggetti <xref:System.Activities.WorkflowApplication> e <xref:System.Activities.WorkflowInvoker> accettano un dizionario di argomenti di input e restituiscono un dizionario di argomenti `out`. Questi parametri, proprietà e valori restituiti del dizionario sono di tipo `IDictionary<string, object>`. L'istanza effettiva della classe di dizionario passata può essere qualsiasi classe che implementa `IDictionary<string, object>`. In questi esempi, viene usato `Dictionary<string, object>`. Per ulteriori informazioni sui dizionari, vedere <xref:System.Collections.Generic.IDictionary%602> e <xref:System.Collections.Generic.Dictionary%602> .  
   
 ### <a name="passing-data-into-a-running-workflow-using-bookmarks"></a>Passaggio di dati in un flusso di lavoro in esecuzione tramite i segnalibri  
  I segnalibri consentono a un'attività di attendere passivamente la relativa ripresa, nonché di passare i dati a un'istanza del flusso di lavoro in esecuzione. Se un'attività sta attendendo dei dati, può creare un oggetto <xref:System.Activities.Bookmark> e registrare un metodo callback da chiamare quando l'oggetto <xref:System.Activities.Bookmark> viene ripreso, come mostrato nell'esempio seguente.  
@@ -85,13 +86,13 @@ Windows Workflow Foundation (WF) fornisce diversi metodi di hosting dei flussi d
  L'esempio di codice seguente è simile al precedente, ad eccezione del fatto che i segnalibri attivi vengono enumerati prima che venga ripreso il segnalibro. Il flusso di lavoro viene avviato e, una volta creato l'oggetto <xref:System.Activities.Bookmark> e reso inattivo il flusso di lavoro, viene chiamato il metodo <xref:System.Activities.WorkflowApplication.GetBookmarks%2A>. Quando il flusso di lavoro viene completato, l'output seguente viene visualizzato nella console.  
   
  **Come ti chiami?**  
-**NomeSegnalibro: NomeUtente - ProprietarioDisplayName: ReadLine**
-**Steve**
-**Hello, Steve**
+**BookmarkName: nomeutente-OwnerDisplayName: ReadLine** 
+ **Steve** 
+ **Salve, Steve**
 
 [!code-csharp[CFX_WorkflowApplicationExample#14](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#14)]  
   
- Nell'esempio di codice seguente viene esaminato l'oggetto <xref:System.Activities.WorkflowApplicationIdleEventArgs> passato nel gestore <xref:System.Activities.WorkflowApplication.Idle%2A> di un'istanza <xref:System.Activities.WorkflowApplication>. In questo esempio il flusso di lavoro che diventa inattivo dispone di un oggetto <xref:System.Activities.Bookmark> denominato `EnterGuess`, di proprietà di un'attività denominata `ReadInt`. Questo esempio di codice è basato su [Procedura: Esecuzione](how-to-run-a-workflow.md)di un flusso di lavoro , che fa parte dell'esercitazione [introduttiva](getting-started-tutorial.md). Se il gestore <xref:System.Activities.WorkflowApplication.Idle%2A> nel passaggio indicato viene modificato per contenere il codice da questo esempio, viene visualizzato l'output seguente.  
+ Nell'esempio di codice seguente viene esaminato l'oggetto <xref:System.Activities.WorkflowApplicationIdleEventArgs> passato nel gestore <xref:System.Activities.WorkflowApplication.Idle%2A> di un'istanza <xref:System.Activities.WorkflowApplication>. In questo esempio il flusso di lavoro che diventa inattivo dispone di un oggetto <xref:System.Activities.Bookmark> denominato `EnterGuess`, di proprietà di un'attività denominata `ReadInt`. Questo esempio di codice è basato su [procedura: eseguire un flusso di lavoro](how-to-run-a-workflow.md), che fa parte dell' [esercitazione Introduzione](getting-started-tutorial.md). Se il gestore <xref:System.Activities.WorkflowApplication.Idle%2A> nel passaggio indicato viene modificato per contenere il codice da questo esempio, viene visualizzato l'output seguente.  
   
  **BookmarkName: EnterGuess - OwnerDisplayName: ReadInt**
 

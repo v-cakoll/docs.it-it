@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cbaca4e1-4473-459b-ba34-f1f59ce7c0ba
 topic_type:
 - apiref
-ms.openlocfilehash: 924feaeb91b42404461ad5d276c0cb77279d4dc4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2dd70693528904459a34689dbad944c65c971254
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449287"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441643"
 ---
 # <a name="isymunmanagedconstantgetname-method"></a>Metodo ISymUnmanagedConstant::GetName
 Ottiene il nome della costante.  
@@ -37,10 +37,10 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parametri  
  `cchName`  
- in Lunghezza del buffer a cui punta il parametro `szName`.  
+ in Lunghezza del buffer a cui punta il `szName` parametro.  
   
  `pcchName`  
- out Puntatore a un `ULONG32` che riceve la dimensione, in caratteri, del buffer necessario per contenere il nome, inclusa la terminazione null.  
+ out Puntatore a un oggetto `ULONG32` che riceve la dimensione, in caratteri, del buffer necessario per contenere il nome, inclusa la terminazione null.  
   
  `szName`  
  out Il buffer in cui è archiviato il nome.  
@@ -53,6 +53,6 @@ HRESULT GetName(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedConstant](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
-- [Metodo GetSignature](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)
-- [Metodo GetValue](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)
+- [Interfaccia ISymUnmanagedConstant](isymunmanagedconstant-interface.md)
+- [Metodo GetSignature](isymunmanagedconstant-getsignature-method.md)
+- [Metodo GetValue](isymunmanagedconstant-getvalue-method.md)

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 708c681a98113a406249a360c2fc81087e5b97f8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ebb689eee4a89a70e81d8f9d958e7826c3b3421b
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790431"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420955"
 ---
 # <a name="ixclrdatamethoddefinition-interface"></a>Interfaccia IXCLRDataMethodDefinition
 
@@ -34,20 +34,20 @@ Di seguito sono riportati alcuni dei metodi disponibili nell'interfaccia.
 
 | Metodo                                                                                                                          | Descrizione                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| [StartEnumInstances](ixclrdatamethoddefinition-startenuminstances-method.md) | Fornisce un handle per l'enumerazione delle istanze del metodo per un determinato `IXCLRDataAppDomain`. |
+| [StartEnumInstances](ixclrdatamethoddefinition-startenuminstances-method.md) | Fornisce un handle per l'enumerazione delle istanze del metodo per un oggetto specificato `IXCLRDataAppDomain` . |
 | [EnumInstance](ixclrdatamethoddefinition-enuminstance-method.md)             | Enumera le istanze di questa definizione di metodo.                                         |
 | [EndEnumInstances](ixclrdatamethoddefinition-endenuminstances-method.md)     | Rilascia le risorse utilizzate dagli iteratori interni utilizzati durante l'enumerazione dell'istanza.         |
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questa interfaccia si trova all'interno del runtime e non viene esposta tramite le intestazioni o i file di libreria. Tuttavia, si tratta di un'interfaccia COM che deriva da `IUnknown` con GUID `AAF60008-FB2C-420b-8FB1-42D244A54A97` che possono essere ottenuti tramite i normali meccanismi COM.
+Questa interfaccia si trova all'interno del runtime e non viene esposta tramite le intestazioni o i file di libreria. Tuttavia, si tratta di un'interfaccia COM che deriva da `IUnknown` con GUID `AAF60008-FB2C-420b-8FB1-42D244A54A97` che è possibile ottenere tramite i normali meccanismi com.
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
 **Intestazione:** Nessuno  
 **Libreria:** Nessuno  
-**Versioni .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Versioni .NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vedere anche
 

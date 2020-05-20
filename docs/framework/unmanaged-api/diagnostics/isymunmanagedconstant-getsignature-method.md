@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3eb41151-a228-43e3-ba8f-e6dd3ceb8542
 topic_type:
 - apiref
-ms.openlocfilehash: 401dfbea0da309db24f3052f462daa66e8bbef4a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 332d60418c744a9391c7c0afc20248c2239b090c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449262"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441620"
 ---
 # <a name="isymunmanagedconstantgetsignature-method"></a>Metodo ISymUnmanagedConstant::GetSignature
 Ottiene la firma della costante.  
@@ -37,10 +37,10 @@ HRESULT GetSignature(
   
 ## <a name="parameters"></a>Parametri  
  `cSig`  
- in Lunghezza del buffer a cui punta il parametro `pcSig`.  
+ in Lunghezza del buffer a cui punta il `pcSig` parametro.  
   
  `pcSig`  
- out Puntatore a un `ULONG32` che riceve la dimensione, in caratteri, del buffer necessario per contenere la firma.  
+ out Puntatore a un oggetto `ULONG32` che riceve la dimensione, in caratteri, del buffer necessario per contenere la firma.  
   
  `sig`  
  out Buffer in cui è archiviata la firma.  
@@ -53,6 +53,6 @@ HRESULT GetSignature(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedConstant](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
-- [Metodo GetName](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
-- [Metodo GetValue](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)
+- [Interfaccia ISymUnmanagedConstant](isymunmanagedconstant-interface.md)
+- [Metodo GetName](isymunmanagedconstant-getname-method.md)
+- [Metodo GetValue](isymunmanagedconstant-getvalue-method.md)

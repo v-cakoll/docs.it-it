@@ -1,13 +1,14 @@
 ---
 title: Libreria attività incorporata di .NET Framework 4.5
+description: Questo articolo descrive la nuova libreria di attività con funzionalità espanse che fa parte di .NET Framework 4,5.
 ms.date: 03/30/2017
 ms.assetid: e559e87b-6aed-491d-9546-e92bcec16fdf
-ms.openlocfilehash: 6d47c36a55829684a0eefb2a560e65f7b91462a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ce4420759512ec3adfff70bf0c365014d96ec7b
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786009"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421488"
 ---
 # <a name="net-framework-45-built-in-activity-library"></a>Libreria attività incorporata di .NET Framework 4.5
 
@@ -33,4 +34,4 @@ ms.locfileid: "61786009"
 
 - [Migrazione](migration-activity-in-wf.md)
 
-Le attività nella libreria attività incorporata possono essere composte nei flussi di lavoro o usate insieme all'attività personalizzate. Le attività nella libreria di attività incorporata sono sealed; non sono progettate per essere usate per creare nuove funzionalità mediante l'ereditarietà.
+Le attività nella libreria di attività incorporata possono essere composte in flussi di lavoro o utilizzate insieme a attività personalizzate. Le attività nella libreria di attività incorporata sono sealed; non sono progettate per essere usate per creare nuove funzionalità mediante l'ereditarietà.

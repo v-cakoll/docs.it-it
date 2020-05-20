@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ef83bd2-3d8e-499e-8a12-d9d6fd6ced30
 topic_type:
 - apiref
-ms.openlocfilehash: a0cccc0adfc666cc8e373bc1f89c8f6f97068fde
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4a23e9aa259f430c0d0579657952fc6aba4c307c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449308"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441656"
 ---
 # <a name="isymunmanagedbinder3getreaderfromcallback-method"></a>Metodo ISymUnmanagedBinder3::GetReaderFromCallback
-Consente all'utente di implementare o fornire tramite callback un `IID_IDiaReadExeAtRVACallback` o `IID_IDiaReadExeAtOffsetCallback` per ottenere le informazioni della directory di debug dalla memoria.  
+Consente all'utente di implementare o fornire tramite callback un oggetto `IID_IDiaReadExeAtRVACallback` o `IID_IDiaReadExeAtOffsetCallback` per ottenere le informazioni della directory di debug dalla memoria.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,13 +48,13 @@ HRESULT GetReaderFromCallback(
  in Puntatore al percorso di ricerca.  
   
  `searchPolicy`  
- in Valore dell'enumerazione [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) che specifica i criteri da utilizzare durante la ricerca di un lettore di simboli.  
+ in Valore dell'enumerazione [CorSymSearchPolicyAttributes](corsymsearchpolicyattributes-enumeration.md) che specifica i criteri da utilizzare durante la ricerca di un lettore di simboli.  
   
  `callback`  
  in Puntatore alla funzione di callback.  
   
  `pRetVal`  
- out Puntatore impostato sull'interfaccia [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) restituita.  
+ out Puntatore impostato sull'interfaccia [ISymUnmanagedReader](isymunmanagedreader-interface.md) restituita.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
@@ -64,4 +64,4 @@ HRESULT GetReaderFromCallback(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedBinder3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+- [Interfaccia ISymUnmanagedBinder3](isymunmanagedbinder3-interface.md)

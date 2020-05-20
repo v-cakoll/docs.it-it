@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c5566ab-4ec7-4b61-9753-839bb90ae78c
 topic_type:
 - apiref
-ms.openlocfilehash: b8e72745eff09c6707afe5a5f20a1ddf38b239ae
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3ac8bb3a20ce82b734a572832a9cbb75fa2568c4
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448622"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441903"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>Metodo ISymENCUnmanagedMethod::GetSourceExtentInDocument
 Ottiene la riga iniziale più piccola e la riga finale più grande per il metodo in un documento specifico.  
@@ -39,10 +39,10 @@ HRESULT GetSourceExtentInDocument(
  in Puntatore al documento.  
   
  `pstartLine`  
- out Puntatore a un `ULONG32` che riceve la riga iniziale.  
+ out Puntatore a un oggetto `ULONG32` che riceve la riga iniziale.  
   
  `pendLine`  
- out Puntatore a un `ULONG32` che riceve la riga finale.  
+ out Puntatore a un oggetto `ULONG32` che riceve la riga finale.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
@@ -52,4 +52,4 @@ HRESULT GetSourceExtentInDocument(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymENCUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [Interfaccia ISymENCUnmanagedMethod](isymencunmanagedmethod-interface.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: dd92dcaf-403c-464d-a254-21594985dddd
 topic_type:
 - apiref
-ms.openlocfilehash: 756ba2e71ca2e3e817a0a8b89165bb807368c1f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 97b9fa537fdd9147d6d9eda036013add5393e33c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449337"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441708"
 ---
 # <a name="isymunmanagedbinder2getreaderforfile2-method"></a>Metodo ISymUnmanagedBinder2::GetReaderForFile2
 Data un'interfaccia di metadati e un nome file, restituisce l'interfaccia [ISymUnmanagedReader](isymunmanagedreader-interface.md) corretta che leggerà i simboli di debug associati al modulo.  
   
- Questo metodo fornisce una ricerca più completa del file del database di programma (PDB) rispetto al metodo [ISymUnmanagedBinder:: GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) .  
+ Questo metodo fornisce una ricerca più completa del file del database di programma (PDB) rispetto al metodo [ISymUnmanagedBinder:: GetReaderForFile](isymunmanagedbinder-getreaderforfile-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +49,7 @@ HRESULT GetReaderForFile2(
  in Puntatore al percorso di ricerca.  
   
  `searchPolicy`  
- in Valore dell'enumerazione [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) che specifica i criteri da utilizzare durante la ricerca di un lettore di simboli.  
+ in Valore dell'enumerazione [CorSymSearchPolicyAttributes](corsymsearchpolicyattributes-enumeration.md) che specifica i criteri da utilizzare durante la ricerca di un lettore di simboli.  
   
  `pRetVal`  
  out Puntatore impostato sull'interfaccia [ISymUnmanagedReader](isymunmanagedreader-interface.md) restituita.  
@@ -61,9 +61,9 @@ HRESULT GetReaderForFile2(
  **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="remarks"></a>Osservazioni  
- Questa versione del metodo può cercare il file PDB in aree diverse da destra accanto al modulo. I criteri di ricerca possono essere controllati combinando [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md). `AllowReferencePathAccess | AllowSymbolServerAccess`, ad esempio, Cerca il PDB accanto al file eseguibile e in un server di simboli, ma non esegue una query sul Registro di sistema o usa il percorso nel file eseguibile. Se viene specificato il parametro `searchPath`, viene sempre eseguita la ricerca di tali directory.  
+ Questa versione del metodo può cercare il file PDB in aree diverse da destra accanto al modulo. I criteri di ricerca possono essere controllati combinando [CorSymSearchPolicyAttributes](corsymsearchpolicyattributes-enumeration.md). Ad esempio, `AllowReferencePathAccess | AllowSymbolServerAccess` Cerca il PDB accanto al file eseguibile e in un server di simboli, ma non esegue una query sul Registro di sistema o usa il percorso nel file eseguibile. Se `searchPath` viene specificato il parametro, verrà sempre eseguita la ricerca di tali directory.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedBinder2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
-- [Metodo GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)
+- [Interfaccia ISymUnmanagedBinder2](isymunmanagedbinder2-interface.md)
+- [Metodo GetReaderForFile](isymunmanagedbinder-getreaderforfile-method.md)

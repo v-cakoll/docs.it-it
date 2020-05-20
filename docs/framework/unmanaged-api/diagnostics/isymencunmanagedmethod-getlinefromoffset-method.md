@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc09bad2-fb34-4d13-a521-6ec7b1a1d915
 topic_type:
 - apiref
-ms.openlocfilehash: 94a571a4bc01b805387aebe5a6e23bad0b735313
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d9a7b18e90a3038c1ffb634ccc7315143875c809
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448647"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441916"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>Metodo ISymENCUnmanagedMethod::GetLineFromOffset
-Ottiene le informazioni sulla riga associate a un offset. Se il parametro offset (`dwOffset`) non è un punto di sequenza, questo metodo ottiene le informazioni sulla riga associate all'offset precedente.  
+Ottiene le informazioni sulla riga associate a un offset. Se il parametro offset ( `dwOffset` ) non è un punto di sequenza, questo metodo ottiene le informazioni sulla riga associate all'offset precedente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,22 +39,22 @@ HRESULT GetLineFromOffset(
   
 ## <a name="parameters"></a>Parametri  
  `dwOffset`  
- in `ULONG32` che contiene l'offset.  
+ in Oggetto `ULONG32` che contiene l'offset.  
   
  `pline`  
- out Puntatore a un `ULONG32` che riceve la riga.  
+ out Puntatore a un oggetto `ULONG32` che riceve la riga.  
   
  `pcolumn`  
- out Puntatore a un `ULONG32` che riceve la colonna.  
+ out Puntatore a un oggetto `ULONG32` che riceve la colonna.  
   
  `pendLine`  
- out Puntatore a un `ULONG32` che riceve la riga finale.  
+ out Puntatore a un oggetto `ULONG32` che riceve la riga finale.  
   
  `pendColumn`  
- out Puntatore a un `ULONG32` che riceve la colonna finale.  
+ out Puntatore a un oggetto `ULONG32` che riceve la colonna finale.  
   
  `pdwStartOffset`  
- out Puntatore a un `ULONG32` che riceve il punto di sequenza associato.  
+ out Puntatore a un oggetto `ULONG32` che riceve il punto di sequenza associato.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
@@ -64,4 +64,4 @@ HRESULT GetLineFromOffset(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymENCUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [Interfaccia ISymENCUnmanagedMethod](isymencunmanagedmethod-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d1dc41b-8aa2-4889-bb00-1cbccc00c123
 topic_type:
 - apiref
-ms.openlocfilehash: 3ae48df9e66890161c1aef944d37b0a279939d56
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 8d958e949612b502ab218f5c6b75779174d34e19
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790547"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421085"
 ---
 # <a name="icorpublishprocess-interface"></a>Interfaccia ICorPublishProcess
 Fornisce metodi che accedono alle informazioni da visualizzare su un processo.  
@@ -28,19 +28,19 @@ Fornisce metodi che accedono alle informazioni da visualizzare su un processo.
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo EnumAppDomains](icorpublishprocess-enumappdomains-method.md)|Ottiene un'istanza di [ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md) che contiene i domini applicazione nel processo a cui fa riferimento questo `ICorPublishProcess`.|  
-|[Metodo GetDisplayName](icorpublishprocess-getdisplayname-method.md)|Ottiene il percorso completo dell'eseguibile per il processo a cui fa riferimento questo `ICorPublishProcess`.|  
-|[Metodo GetProcessID](icorpublishprocess-getprocessid-method.md)|Ottiene l'identificatore del sistema operativo per il processo a cui fa riferimento questo `ICorPublishProcess`.|  
-|[Metodo IsManaged](icorpublishprocess-ismanaged-method.md)|Ottiene un valore che indica se il processo a cui viene fatto riferimento da questo `ICorPublishProcess` è noto per l'esecuzione di codice gestito.|  
+|[Metodo EnumAppDomains](icorpublishprocess-enumappdomains-method.md)|Ottiene un'istanza di [ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md) che contiene i domini applicazione nel processo a cui fa riferimento questo oggetto `ICorPublishProcess` .|  
+|[Metodo GetDisplayName](icorpublishprocess-getdisplayname-method.md)|Ottiene il percorso completo dell'eseguibile per il processo a cui fa riferimento questo oggetto `ICorPublishProcess` .|  
+|[Metodo GetProcessID](icorpublishprocess-getprocessid-method.md)|Ottiene l'identificatore del sistema operativo per il processo a cui fa riferimento questo oggetto `ICorPublishProcess` .|  
+|[Metodo IsManaged](icorpublishprocess-ismanaged-method.md)|Ottiene un valore che indica se il processo a cui fa riferimento questo oggetto `ICorPublishProcess` è noto per l'esecuzione di codice gestito.|  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorPub. idl, CorPub. h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

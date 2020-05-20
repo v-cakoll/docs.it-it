@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e33265be-c25d-4145-ad02-c3e89d6f26c1
 topic_type:
 - apiref
-ms.openlocfilehash: 69c7e6c465de5b8185a86b3de6e5c29f902a1d1f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 85f00698f42f120b209cca14f293a58ae4c65f6f
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440875"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442033"
 ---
 # <a name="inotifysink2onsynccallenter-method"></a>Metodo INotifySink2::OnSyncCallEnter
 Viene richiamato quando si immette una chiamata.  
@@ -38,7 +38,7 @@ HRESULT OnSyncCallEnter
   
 ## <a name="parameters"></a>Parametri  
  `in_CallID`  
- in ID della chiamata immessa. Vedere [struttura CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ in ID della chiamata immessa. Vedere [struttura CALL_ID](call-id-structure.md).  
   
  `in_pBuffer`  
  in Buffer di chiamata.  
@@ -54,6 +54,6 @@ HRESULT OnSyncCallEnter
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [Interfaccia INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [Interfaccia INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [Interfaccia INotifySink2](inotifysink2-interface.md)
+- [Interfaccia INotifySource2](inotifysource2-interface.md)
+- [Interfaccia INotifyConnection2](inotifyconnection2-interface.md)

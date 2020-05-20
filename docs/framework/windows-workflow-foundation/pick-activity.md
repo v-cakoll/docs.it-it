@@ -1,18 +1,19 @@
 ---
 title: Attività di selezione
+description: In Workflow Foundation, l'attività Pick semplifica la modellazione di un set di trigger di eventi seguiti dai relativi gestori corrispondenti.
 ms.date: 03/30/2017
 ms.assetid: b3e49b7f-0285-4720-8c09-11ae18f0d53e
-ms.openlocfilehash: 672de5fd3df5e8dde6c54118503bf2a11353b116
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb59dc20919ed2d30a48f920ad154d4b0d99c41f
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182898"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421462"
 ---
 # <a name="pick-activity"></a>Attività di selezione
-L'attività <xref:System.Activities.Statements.Pick> semplifica la modellazione di un set di trigger di eventi seguiti dai relativi gestori corrispondenti.  Un'attività <xref:System.Activities.Statements.Pick> contiene una raccolta di attività <xref:System.Activities.Statements.PickBranch> in cui ogni attività <xref:System.Activities.Statements.PickBranch> è un'associazione tra un'attività <xref:System.Activities.Statements.PickBranch.Trigger%2A> e un'attività <xref:System.Activities.Statements.PickBranch.Action%2A>.  In fase di esecuzione, i trigger per tutti i rami vengono eseguiti in parallelo.  Quando un trigger viene completato, viene eseguita l'azione corrispondente e tutti gli altri trigger vengono annullati.  Il comportamento [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] <xref:System.Activities.Statements.Pick> dell'attività è simile all'attività <xref:System.Workflow.Activities.ListenActivity> di .NET Framework 3.5.  
+L'attività <xref:System.Activities.Statements.Pick> semplifica la modellazione di un set di trigger di eventi seguiti dai relativi gestori corrispondenti.  Un'attività <xref:System.Activities.Statements.Pick> contiene una raccolta di attività <xref:System.Activities.Statements.PickBranch> in cui ogni attività <xref:System.Activities.Statements.PickBranch> è un'associazione tra un'attività <xref:System.Activities.Statements.PickBranch.Trigger%2A> e un'attività <xref:System.Activities.Statements.PickBranch.Action%2A>.  In fase di esecuzione, i trigger per tutti i rami vengono eseguiti in parallelo.  Quando un trigger viene completato, viene eseguita l'azione corrispondente e tutti gli altri trigger vengono annullati.  Il comportamento dell' [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] <xref:System.Activities.Statements.Pick> attività è simile all'attività .NET Framework 3,5 <xref:System.Workflow.Activities.ListenActivity> .  
   
- La schermata seguente dell'esempio SDK [Utilizzo dell'attività Pick](./samples/using-the-pick-activity.md) mostra un'attività Pick con due rami.  Un ramo dispone di un trigger denominato **Read input**, ovvero un'attività personalizzata che legge l'input dalla riga di comando. L'altro ramo dispone di un trigger di attività <xref:System.Activities.Statements.Delay>. Se l'attività di **input** <xref:System.Activities.Statements.Delay> Lettura riceve i <xref:System.Activities.Statements.Delay> dati prima del termine dell'attività, Delay verrà annullato e verrà scritto un messaggio di saluto nella console.  In caso contrario, se l'attività **Read input** non riceve dati nel tempo assegnato, sarà annullata e sulla console verrà scritto un messaggio di timeout.  Si tratta di un modello comune usato per aggiungere un timeout a qualsiasi azione.  
+ La schermata seguente dell'esempio SDK [Utilizzo dell'attività Pick](./samples/using-the-pick-activity.md) mostra un'attività Pick con due rami.  Un ramo dispone di un trigger denominato **Read input**, ovvero un'attività personalizzata che legge l'input dalla riga di comando. L'altro ramo dispone di un trigger di attività <xref:System.Activities.Statements.Delay>. Se l'attività **Leggi input** riceve dati prima del <xref:System.Activities.Statements.Delay> completamento dell'attività, il <xref:System.Activities.Statements.Delay> ritardo verrà annullato e verrà scritto un messaggio di saluto nella console.  In caso contrario, se l'attività **Read input** non riceve dati nel tempo assegnato, sarà annullata e sulla console verrà scritto un messaggio di timeout.  Si tratta di un modello comune usato per aggiungere un timeout a qualsiasi azione.  
   
  ![Attività di selezione](./media/pick-activity/pick-activity-two-branches.jpg)  
   

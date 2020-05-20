@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 72560de9777b2d826418e63b4a4fcccf1e4fa8b9
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: ae1ef2a3c8cf9e042ab9ab233ed993f8e36b2fce
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396473"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420942"
 ---
 # <a name="ixclrdatamethoddefinitionenuminstance-method"></a>Metodo IXCLRDataMethodDefinition:: EnumInstance
 
@@ -45,18 +45,18 @@ HRESULT EnumInstance(
 `instance`\
 out Istanza enumerata.
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Il metodo fornito fa parte dell' `IXCLRDataMethodDefinition` interfaccia e corrisponde al sesto slot della tabella del metodo virtuale.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
 **Intestazione:** Nessuno  
 **Libreria:** Nessuno  
 **Versioni .NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Enumerazione CLRDataSourceType](clrdatasourcetype-enumeration.md)
 - [Debug](index.md)

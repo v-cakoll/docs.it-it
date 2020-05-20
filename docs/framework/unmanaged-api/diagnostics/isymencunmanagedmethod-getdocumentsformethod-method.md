@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd6ccde5-d578-48d8-abed-b474fbd48d13
 topic_type:
 - apiref
-ms.openlocfilehash: 97f0d81c389ffd0bd8a69df2ca39322d726f98bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89be772ee3d8a6fc5acb74d5ebe6d3c691764f89
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176630"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441955"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>Metodo ISymENCUnmanagedMethod::GetDocumentsForMethod
 Ottiene i documenti in cui questo metodo contiene righe.  
@@ -36,20 +36,20 @@ HRESULT GetDocumentsForMethod(
   
 ## <a name="parameters"></a>Parametri  
  `cDocs`  
- [in] Lunghezza del buffer a `pcDocs`cui punta .  
+ in Lunghezza del buffer a cui punta `pcDocs` .  
   
  `pcDocs`  
- [fuori] Puntatore a `ULONG32` un che riceve la dimensione, in caratteri, del buffer necessario per contenere i documenti.  
+ out Puntatore a un oggetto `ULONG32` che riceve la dimensione, in caratteri, del buffer necessario per contenere i documenti.  
   
  `documents`  
- [in] Buffer che contiene i documenti.  
+ in Buffer che contiene i documenti.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo; in caso contrario, un codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymENCUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [Interfaccia ISymENCUnmanagedMethod](isymencunmanagedmethod-interface.md)

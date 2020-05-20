@@ -1,13 +1,14 @@
 ---
 title: Processo di approvazione dei documenti
+description: In questo esempio vengono illustrate molte funzionalità di Windows Workflow Foundation e Windows Communication Foundation in uno scenario di processo di approvazione del documento.
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: cee43aff991f9482de7b3172174eb0e786ec1fe6
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 18b4f978e9234daf22395f0d2f6f0889d0edf966
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710840"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421410"
 ---
 # <a name="document-approval-process"></a>Processo di approvazione dei documenti
 
@@ -18,7 +19,7 @@ In questo esempio viene illustrato l'utilizzo di molte funzionalità di Windows 
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) ed [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`
 
@@ -90,7 +91,7 @@ Dal punto di vista dell'applicazione di gestione delle approvazioni, il processo
 
 2. Per compilare la soluzione, premere CTRL+MAIUSC+B.
 
-3. Per eseguire la soluzione, avviare l'applicazione di gestione delle approvazioni facendo clic con il pulsante destro del mouse sul progetto ApprovalManager nel **Esplora soluzioni** e scegliendo **debug**->**Avvia** nuova istanza dal menu di scelta rapida.
+3. Per eseguire la soluzione, avviare l'applicazione di gestione delle approvazioni facendo clic con il pulsante destro del mouse sul progetto ApprovalManager nel **Esplora soluzioni** e scegliendo **debug** -> **Avvia** nuova istanza dal menu di scelta rapida.
 
     Attendere l'output del responsabile per sapere che è pronta.
 
@@ -140,7 +141,7 @@ Dal punto di vista dell'applicazione di gestione delle approvazioni, il processo
 
 6. Nel client `UserType1` selezionare il tipo di approvazione singola dal menu a discesa e digitare un nome e il contenuto del documento. Fare clic su **Richiedi approvazione**.
 
-7. Nei client `UserType2` viene visualizzato un documento in attesa di approvazione. Selezionarlo e premere **approva**, il documento viene passato al client `UserType3`.
+7. Nei client `UserType2` viene visualizzato un documento in attesa di approvazione. Selezionarlo e premere **approva**, il documento viene passato al `UserType3` client.
 
     Se il documento viene approvato dal primo quorum `UserType2`, il documento viene passato al client `UserType3`.
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cc1a823a-3ff3-4a33-b641-96edc93d2b17
 topic_type:
 - apiref
-ms.openlocfilehash: 057b901337ded7b5336ef673624d8d6c827c8932
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d096101189d52401c407a4108c9c81e201d3f30d
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448665"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441942"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethodcount-method"></a>Metodo ISymENCUnmanagedMethod::GetDocumentsForMethodCount
 Ottiene il numero di documenti in cui questo metodo contiene righe.  
@@ -34,7 +34,7 @@ HRESULT GetDocumentsForMethodCount(
   
 ## <a name="parameters"></a>Parametri  
  `pRetVal`  
- out Puntatore a un `ULONG32` che riceve le dimensioni del buffer necessarie per contenere i documenti.  
+ out Puntatore a un oggetto `ULONG32` che riceve le dimensioni del buffer necessarie per contenere i documenti.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
@@ -44,4 +44,4 @@ HRESULT GetDocumentsForMethodCount(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymENCUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [Interfaccia ISymENCUnmanagedMethod](isymencunmanagedmethod-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1680ec06-4ab0-447e-93ad-cdb8693fde5c
 topic_type:
 - apiref
-ms.openlocfilehash: bd62fb38352022f69c45d2a5921973cfbec1c6e4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b68a9ec1e8fee4fdecd2114af28c75c4a236cb3a
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790597"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421146"
 ---
 # <a name="icorpublishenumskip-method"></a>Metodo ICorPublishEnum::Skip
 Sposta il cursore verso l'interno dell'enumerazione in base al numero di elementi specificato.  
@@ -37,14 +37,14 @@ HRESULT Skip (
  `celt`  
  in Numero di elementi in base ai quali spostare il cursore avanti.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorPub. idl, CorPub. h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

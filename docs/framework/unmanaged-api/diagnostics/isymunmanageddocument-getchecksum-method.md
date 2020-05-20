@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bc881b3-e2ce-48a7-ad69-17eaaa304120
 topic_type:
 - apiref
-ms.openlocfilehash: 52e1fc20fbe1d8709c21cacde926cf8bebb49425
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 543bd208e5492460435663c32f276472a763f613
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449209"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441097"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>Metodo ISymUnmanagedDocument::GetCheckSum
 Ottiene il checksum.  
@@ -36,7 +36,7 @@ HRESULT GetCheckSum(
   
 ## <a name="parameters"></a>Parametri  
  `cData`  
- in Lunghezza del buffer fornito dal parametro `data`  
+ in Lunghezza del buffer fornito dal `data` parametro.  
   
  `pcData`  
  out Dimensioni e lunghezza del checksum, in byte.  
@@ -49,4 +49,4 @@ HRESULT GetCheckSum(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [Interfaccia ISymUnmanagedDocument](isymunmanageddocument-interface.md)

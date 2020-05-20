@@ -1,18 +1,19 @@
 ---
 title: Variabili e argomenti
+description: Questo articolo descrive le variabili, che rappresentano l'archiviazione di dati e gli argomenti, che rappresentano il flusso di dati da e verso un'attività in Workflow Foundation.
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: f975f46a1858d204d12588f7570b7ea5a365e650
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 47b8a7bddc8c3a9a8427bcb3e93760a63e5fa976
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182687"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421306"
 ---
 # <a name="variables-and-arguments"></a>Variabili e argomenti
-In Windows Workflow Foundation (WF), le variabili rappresentano l'archiviazione di dati e argomenti rappresentano il flusso di dati all'esterno e all'esterno di un'attività. Un'attività dispone di un set di argomenti che costituiscono la firma dell'attività. Inoltre, un'attività può gestire un elenco di variabili a cui uno sviluppatore può aggiungere o rimuovere variabili durante la progettazione di un flusso di lavoro. Un argomento viene associato usando un'espressione che restituisce un valore.  
+In Windows Workflow Foundation (WF) le variabili rappresentano l'archiviazione di dati e gli argomenti rappresentano il flusso di dati all'interno e all'esterno di un'attività. Un'attività dispone di un set di argomenti che costituiscono la firma dell'attività. Inoltre, un'attività può gestire un elenco di variabili a cui uno sviluppatore può aggiungere o rimuovere variabili durante la progettazione di un flusso di lavoro. Un argomento viene associato usando un'espressione che restituisce un valore.  
   
-## <a name="variables"></a>variables  
+## <a name="variables"></a>Variabili  
  Le variabili sono percorsi di archiviazione per i dati e vengono dichiarate come parte della definizione di un flusso di lavoro. Le variabili accettano valori in fase di esecuzione che vengono poi archiviati come parte dello stato di un'istanza del flusso di lavoro. Una definizione di variabile specifica il tipo di variabile e, facoltativamente, il nome. Nel codice seguente viene mostrato come dichiarare una variabile, assegnarvi un valore usando un'attività <xref:System.Activities.Statements.Assign%601>, quindi come visualizzare il relativo valore nella console usando un'attività <xref:System.Activities.Statements.WriteLine>.  
   
 ```csharp  
@@ -58,7 +59,7 @@ Variable<string> var = new Variable<string>
 ## <a name="variable-scoping"></a>Ambito di variabili  
  La durata di una variabile in fase di esecuzione corrisponde alla durata dell'attività che la dichiara. Quando un'attività viene completata, le relative variabili vengono pulite e non possono essere più usate come riferimento.  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>Arguments  
  Gli autori di attività usano gli argomenti per definire la modalità in cui i dati fluiscono all'interno e all'esterno di un'attività. Ogni argomento ha una direzione specificata: <xref:System.Activities.ArgumentDirection.In>, <xref:System.Activities.ArgumentDirection.Out> o <xref:System.Activities.ArgumentDirection.InOut>.  
   
  L'esecuzione del flusso di lavoro assicura le seguenti garanzie relativamente agli intervalli di spostamento dei dati all'interno e all'esterno di attività:  
@@ -141,4 +142,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- Per ulteriori informazioni sull'utilizzo di argomenti, variabili ed espressioni nel codice, vedere Creazione di flussi di [lavoro, attività ed espressioni mediante codice imperativo](authoring-workflows-activities-and-expressions-using-imperative-code.md) [e argomenti obbligatori e gruppi](required-arguments-and-overload-groups.md)di overload .
+ Per ulteriori informazioni sull'utilizzo di argomenti, variabili ed espressioni nel codice, vedere [creazione di flussi di lavoro, attività ed espressioni tramite codice imperativo](authoring-workflows-activities-and-expressions-using-imperative-code.md) e [argomenti obbligatori e gruppi di overload](required-arguments-and-overload-groups.md).

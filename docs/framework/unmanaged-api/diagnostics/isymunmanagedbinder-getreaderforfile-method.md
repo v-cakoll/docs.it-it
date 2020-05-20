@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 46c06258-831e-47c8-a50a-8650af6b637e
 topic_type:
 - apiref
-ms.openlocfilehash: 94cda16466ea5a3d35a478a2ae80281e9414f719
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c4416e8e4395c4e1967155310d12a1eb68c42d83
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449354"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441734"
 ---
 # <a name="isymunmanagedbindergetreaderforfile-method"></a>Metodo ISymUnmanagedBinder::GetReaderForFile
 Data un'interfaccia di metadati e un nome file, restituisce l'interfaccia [ISymUnmanagedReader](isymunmanagedreader-interface.md) corretta che leggerà i simboli di debug associati al modulo.  
   
- Questo metodo consente di aprire il file del database di programma (PDB) solo se è accanto al file eseguibile. Questa modifica è stata apportata per motivi di sicurezza. Se è necessaria una ricerca più completa per il file PDB, usare il metodo [ISymUnmanagedBinder2:: GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) .  
+ Questo metodo consente di aprire il file del database di programma (PDB) solo se è accanto al file eseguibile. Questa modifica è stata apportata per motivi di sicurezza. Se è necessaria una ricerca più completa per il file PDB, usare il metodo [ISymUnmanagedBinder2:: GetReaderForFile2](isymunmanagedbinder2-getreaderforfile2-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,5 +58,5 @@ HRESULT GetReaderForFile(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
-- [Metodo GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)
+- [Interfaccia ISymUnmanagedBinder](isymunmanagedbinder-interface.md)
+- [Metodo GetReaderForFile2](isymunmanagedbinder2-getreaderforfile2-method.md)

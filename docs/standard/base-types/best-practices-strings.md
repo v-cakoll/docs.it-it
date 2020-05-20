@@ -18,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: e633b6c1d03a3d1cd70e277395da10f70f315f16
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 0fb7ec8d9de8fae7a0443984511e538d38d93c7a
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523980"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441006"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Procedure consigliate per l'uso delle stringhe in .NET
 
@@ -56,7 +56,7 @@ Evitare le operazioni seguenti quando si usano le stringhe:
 
 Molti dei metodi di modifica delle stringhe in .NET sono di tipo overload. In genere, uno o più overload accettano le impostazioni predefinite, mentre altri accettano le impostazioni non predefinite, specificando invece una determinata procedura di confronto o modifica delle stringhe. La maggior parte dei metodi che non si basano sulle impostazioni predefinite include un parametro di tipo <xref:System.StringComparison>, che corrisponde a un'enumerazione che specifica in modo esplicito le regole per il confronto tra stringhe in base alle impostazioni cultura e alle maiuscole e minuscole. La tabella seguente descrive i membri dell'enumerazione <xref:System.StringComparison> .
 
-|Membro StringComparison|Descrizione|
+|Membro StringComparison|Description|
 |-----------------------------|-----------------|
 |<xref:System.StringComparison.CurrentCulture>|Esegue un confronto con distinzione tra maiuscole e minuscole usando le impostazioni cultura correnti.|
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Esegue un confronto senza distinzione tra maiuscole e minuscole usando le impostazioni cultura correnti.|
@@ -131,12 +131,12 @@ Questo confronto può causare problemi significativi se le impostazioni cultura 
 [!code-csharp[Conceptual.Strings.BestPractices#12](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/turkish1.cs#12)]
 [!code-vb[Conceptual.Strings.BestPractices#12](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/turkish1.vb#12)]
 
-In questo caso, poiché "file:" deve essere interpretato come un identificatore non linguistico e indipendente dalle impostazioni cultura, il codice deve invece essere scritto come illustrato nell'esempio seguente:In this case, because "file:" is meant to be interpreted as a non-linguistic, culture-insensitive identifier, the code should instead be written as shown in the following example:
+In questo caso, poiché "file:" deve essere interpretato come un identificatore non linguistico, indipendente dalle impostazioni cultura, il codice deve essere scritto come illustrato nell'esempio seguente:
 
 [!code-csharp[Conceptual.Strings.BestPractices#13](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/turkish1.cs#13)]
 [!code-vb[Conceptual.Strings.BestPractices#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/turkish1.vb#13)]
 
-### <a name="ordinal-string-operations"></a>Operazioni sulle stringhe ordinali
+### <a name="ordinal-string-operations"></a>Operazioni di stringa ordinali
 
 La specifica del valore <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> o <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> in una chiamata al metodo indica un confronto non linguistico in cui le funzionalità dei linguaggi naturali vengono ignorate. I metodi richiamati con questi valori <xref:System.StringComparison> basano le decisioni relative alle operazioni di stringa su confronti di byte semplici invece che sull'utilizzo di maiuscole e minuscole o di tabelle di equivalenza parametrizzate dalle impostazioni cultura. In molti casi, questo approccio risulta più adatto per l'interpretazione desiderata delle stringhe e rende il codice più veloce e affidabile.
 
@@ -147,12 +147,12 @@ Le stringhe in .NET possono contenere caratteri null incorporati. Una delle diff
 > [!IMPORTANT]
 > Anche se i metodi di confronto tra stringhe ignorano i caratteri null incorporati, i metodi di ricerca di stringhe come <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>e <xref:System.String.StartsWith%2A?displayProperty=nameWithType> li prendono in considerazione.
 
-Nell'esempio seguente viene eseguito un confronto dipendente dalle impostazioni cultura della stringa "Aa" con una stringa simile che contiene diversi caratteri null incorporati tra "A" e "a" e viene illustrato come le due stringhe sono considerate uguali:
+Nell'esempio seguente viene eseguito un confronto con distinzione delle impostazioni cultura della stringa "AA" con una stringa simile che contiene diversi caratteri null incorporati tra "A" e "a" e Mostra in che modo le due stringhe vengono considerate uguali:
 
 [!code-csharp[Conceptual.Strings.BestPractices#19](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/embeddednulls1.cs#19)]
  [!code-vb[Conceptual.Strings.BestPractices#19](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls1.vb#19)]
 
-Tuttavia, le stringhe non sono considerate uguali quando si utilizza il confronto ordinale, come illustrato nell'esempio seguente:However, the strings are not considered equal when you use ordinal comparison, as the following example shows:
+Tuttavia, le stringhe non sono considerate uguali quando si usa il confronto ordinale, come illustrato nell'esempio seguente:
   
 [!code-csharp[Conceptual.Strings.BestPractices#20](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/embeddednulls2.cs#20)]
 [!code-vb[Conceptual.Strings.BestPractices#20](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls2.vb#20)]
@@ -176,7 +176,7 @@ Questi confronti sono comunque molto rapidi.
 
 La semantica ordinale è l'impostazione predefinita per gli overload <xref:System.String.Equals%2A?displayProperty=nameWithType> che non includono un argomento <xref:System.StringComparison> (incluso l'operatore di uguaglianza). In ogni caso, si consiglia di chiamare un overload con un parametro <xref:System.StringComparison> .
 
-### <a name="string-operations-that-use-the-invariant-culture"></a>operazioni sulle stringhe che utilizzano le impostazioni cultura invarianti
+### <a name="string-operations-that-use-the-invariant-culture"></a>operazioni di stringa che usano la lingua inglese
 
 I confronti con la lingua inglese usano la proprietà <xref:System.Globalization.CultureInfo.CompareInfo%2A> restituita dalla proprietà statica <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> . Questo comportamento è uguale in tutti i sistemi. Converte i caratteri al di fuori dell'intervallo in quelli che considera caratteri equivalenti in lingua inglese. Questo criterio può essere utile per gestire il comportamento di un set di stringhe nelle impostazioni cultura, ma spesso produce risultati imprevisti.
 
@@ -197,16 +197,16 @@ In realtà la lingua inglese ha poche proprietà che la rendono utile per il con
 
 ## <a name="choosing-a-stringcomparison-member-for-your-method-call"></a>Scelta di un membro StringComparison per la chiamata al metodo
 
-Nella tabella seguente viene descritto il mapping <xref:System.StringComparison> dal contesto di stringa semantica a un membro di enumerazione:The following table outlines the mapping from semantic string context to a enumeration member:
+La tabella seguente illustra il mapping tra il contesto di stringa semantico e un <xref:System.StringComparison> membro di enumerazione:
 
-|Data|Comportamento|System.StringComparison corrispondente<br /><br /> value|
+|Data|Comportamento|System.StringComparison corrispondente<br /><br /> Valore|
 |----------|--------------|-----------------------------------------------------|
 |Identificatori interni con distinzione tra maiuscole e minuscole.<br /><br /> Identificatori con distinzione tra maiuscole e minuscole in standard come XML e HTTP.<br /><br /> Impostazioni relative alla sicurezza con distinzione tra maiuscole e minuscole.|Identificatore non linguistico, con una corrispondenza esatta dei byte.|<xref:System.StringComparison.Ordinal>|
 |Identificatori interni senza distinzione tra maiuscole e minuscole.<br /><br /> Identificatori senza distinzione tra maiuscole e minuscole in standard come XML e HTTP.<br /><br /> Percorsi di file.<br /><br /> Chiavi e valori del Registro di sistema.<br /><br /> Variabili di ambiente.<br /><br /> Identificatori di risorse (ad esempio, nomi di handle).<br /><br /> Impostazioni relative alla sicurezza senza distinzione tra maiuscole e minuscole.|Identificatore non linguistico, in cui la distinzione tra maiuscole e minuscole non è rilevante. In particolare, dati archiviati nella maggior parte dei servizi di sistema Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|
 |Alcuni dati persistenti e linguisticamente rilevanti.<br /><br /> Visualizzazione di dati linguistici che richiedono un ordinamento fisso.|Dati indipendenti dalle impostazioni cultura, ma ancora linguisticamente rilevanti.|<xref:System.StringComparison.InvariantCulture><br /><br /> -oppure-<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
 |Dati visualizzati dall'utente.<br /><br /> La maggior parte dell'input utente.|Dati che richiedono personalizzazioni linguistiche locali.|<xref:System.StringComparison.CurrentCulture><br /><br /> -oppure-<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
 
-## <a name="common-string-comparison-methods-in-net"></a>Metodi comuni di confronto tra stringhe in .NETCommon string comparison methods in .NET
+## <a name="common-string-comparison-methods-in-net"></a>Metodi comuni per il confronto tra stringhe in .NET
 
 Le sezioni seguenti descrivono i metodi più comuni per il confronto tra stringhe.
 
@@ -295,7 +295,7 @@ Se i dati vengono conservati e spostati nelle impostazioni cultura e l'ordinamen
 [!code-csharp[Conceptual.Strings.BestPractices#9](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#9)]
 [!code-vb[Conceptual.Strings.BestPractices#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#9)]
 
-### <a name="collections-example-hashtable-constructor"></a>Esempio di raccolte: costruttore Hashtable
+### <a name="collections-example-hashtable-constructor"></a>Esempio di raccolte: Costruttore Hashtable
 
 L'esecuzione dell'hashing nelle stringhe fornisce un secondo esempio di operazione interessata dal modo in cui vengono confrontate le stringhe.
 
@@ -317,18 +317,20 @@ Per specificare in modo esplicito che una stringa deve essere formattata usando 
 
 - Quando si usano i metodi <xref:System.String.Format%2A?displayProperty=nameWithType> e `ToString`, chiamare un overload con un parametro `provider`, ad esempio <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> o <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> e passarlo alla proprietà <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>, un'istanza di <xref:System.Globalization.CultureInfo> che rappresenta il valore desiderato delle impostazioni cultura, o proprietà <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType>.
 
-- Per la concatenazione di stringhe, non consentire al compilatore di eseguire tutte le conversioni implicite. In alternativa, eseguire una conversione esplicita tramite la chiamata a un overload di `ToString` che abbia un parametro `provider`. Ad esempio, il compilatore usa in modo implicito le impostazioni cultura correnti durante la conversione di un valore <xref:System.Double> in una stringa nel codice C# seguente:
+- Per la concatenazione di stringhe, non consentire al compilatore di eseguire tutte le conversioni implicite. In alternativa, eseguire una conversione esplicita tramite la chiamata a un overload di `ToString` che abbia un parametro `provider`. Il compilatore, ad esempio, utilizza in modo implicito le impostazioni cultura correnti durante <xref:System.Double> la conversione di un valore in una stringa nel codice seguente:
 
-  [!code-csharp[Implicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#1)]
+  [!code-csharp[Implicit String Conversion](./snippets/best-practices-strings/csharp/tostring/Program.cs#1)]
+  [!code-vb[Implicit String Conversion](./snippets/best-practices-strings/vb/tostring/Program.vb#1)]
 
-  In alternativa, è possibile specificare esplicitamente le impostazioni cultura le cui convenzioni di formattazione vengono usate nella conversione chiamando il metodo <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType>, come nel caso del codice C# seguente:
+  In alternativa, è possibile specificare in modo esplicito le impostazioni cultura le cui convenzioni di formattazione vengono utilizzate nella conversione chiamando il <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType> metodo, come il codice seguente:
 
-  [!code-csharp[Explicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#2)]
+  [!code-csharp[Explicit String Conversion](./snippets/best-practices-strings/csharp/tostring/Program.cs#2)]
+  [!code-vb[Implicit String Conversion](./snippets/best-practices-strings/vb/tostring/Program.vb#2)]
 
 - Per l'interpolazione di stringhe, anziché assegnare una stringa interpolata a un'istanza di <xref:System.String>, assegnarla a un'istanza di <xref:System.FormattableString>. È quindi possibile chiamare il metodo <xref:System.FormattableString.ToString?displayProperty=nameWithType> per produrre una stringa di risultato che rifletta le convenzioni delle impostazioni cultura correnti, oppure è possibile chiamare il metodo <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> per produrre una stringa di risultato che rifletta le convenzioni delle impostazioni cultura specificate. È anche possibile passare la stringa formattabile al metodo statico <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> per produrre una stringa di risultato che rifletta le convenzioni delle impostazioni cultura inglese non dipendenti da paese/area geografica. Questo approccio viene illustrato nell'esempio seguente: L'output dell'esempio riflette le impostazioni cultura correnti en-US.
 
-  [!code-csharp[String interpolation](~/samples/snippets/standard/base-types/string-practices/cs/formattable.cs)]
-  [!code-vb[String interpolation](~/samples/snippets/standard/base-types/string-practices/vb/formattable.vb)]
+  [!code-csharp[String interpolation](./snippets/best-practices-strings/csharp/formattable/Program.cs)]
+  [!code-vb[String interpolation](./snippets/best-practices-strings/vb/formattable/Program.vb)]
 
 È possibile conservare i dati non di tipo stringa come dati binari o formattati. Se si sceglie di salvarli come dati formattati, è necessario chiamare un overload del metodo di formattazione che include un parametro `provider` e passare la proprietà <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> . La lingua inglese fornisce un formato coerente per i dati formattati, indipendente dalle impostazioni cultura e dal computer. Al contrario, conservare i dati formattati con impostazioni cultura diverse dalla lingua inglese presenta diverse limitazioni:
 
@@ -341,7 +343,7 @@ L'esempio seguente illustra la limitazione della portabilità causata dall'uso d
 [!code-csharp[Conceptual.Strings.BestPractices#21](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/persistence.cs#21)]
 [!code-vb[Conceptual.Strings.BestPractices#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]
 
-Tuttavia, se <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> si <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> sostituisce la <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>proprietà con nelle chiamate a e , i dati di data e ora persistenti vengono ripristinati correttamente, come illustrato nell'output seguente:
+Tuttavia, se si sostituisce la <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> proprietà con <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> nelle chiamate a <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> e <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> , i dati di data e ora salvati vengono ripristinati correttamente, come illustrato nell'output seguente:
 
 ```console
 06.05.1758 21:26

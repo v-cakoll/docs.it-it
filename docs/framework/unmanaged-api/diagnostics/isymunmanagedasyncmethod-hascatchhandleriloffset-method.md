@@ -2,15 +2,15 @@
 title: Metodo ISymUnmanagedAsyncMethod::HasCatchHandlerILOffset
 ms.date: 03/30/2017
 ms.assetid: a9ce105c-6495-49ab-b0e5-903a48ebadb3
-ms.openlocfilehash: 8a538d4b821ea0aeef040fecc34ff3e23e2af59e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 52a9f6fa8cabf4f78a5a30a2c3b3588814f9a5c0
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123785"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441825"
 ---
 # <a name="isymunmanagedasyncmethodhascatchhandleriloffset-method"></a>Metodo ISymUnmanagedAsyncMethod::HasCatchHandlerILOffset
-Vedere il [Metodo DefineCatchHandlerILOffset](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md).  
+Vedere il [Metodo DefineCatchHandlerILOffset](isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -20,7 +20,7 @@ HRESULT HasCatchHandlerILOffset(    [out, retval] BOOL* pRetVal);
   
 ## <a name="parameters"></a>Parametri  
   
-|Parametro|Descrizione|  
+|Parametro|Description|  
 |---------------|-----------------|  
 |`pRetVal`||  
   
@@ -32,4 +32,4 @@ HRESULT HasCatchHandlerILOffset(    [out, retval] BOOL* pRetVal);
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedAsyncMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)
+- [Interfaccia ISymUnmanagedAsyncMethod](isymunmanagedasyncmethod-interface.md)

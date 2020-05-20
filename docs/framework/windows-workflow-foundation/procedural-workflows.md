@@ -1,19 +1,20 @@
 ---
 title: Flussi di lavoro procedurali
+description: In Workflow Foundation, i flussi di lavoro procedurali usano metodi di controllo del flusso simili a quelli presenti nei linguaggi procedurali.
 ms.date: 03/30/2017
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
-ms.openlocfilehash: d1edd73b2276d0a3918b61c8da2d04769d09e7c8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 97664c1352928e7d05c2ed15fc118dd21474cfc3
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956109"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421436"
 ---
 # <a name="procedural-workflows"></a>Flussi di lavoro procedurali
 Nei flussi di lavoro procedurali vengono usati metodi di controllo del flusso simili a quelli dei linguaggi procedurali. Tra questi costrutti sono inclusi `While` e `If`. Questi flussi di lavoro possono essere creati liberamente usando altre attività di controllo del flusso quale <xref:System.Activities.Statements.Flowchart> e <xref:System.Activities.Statements.Sequence>.  
   
 ## <a name="controlling-execution-flow"></a>Controllo del flusso di esecuzione  
- La libreria di attività del flusso di lavoro dispone di attività per modellare la maggior parte dei metodi di controllo del flusso usati nei linguaggi procedurali, Sono inclusi:  
+ La libreria di attività del flusso di lavoro dispone di attività per modellare la maggior parte dei metodi di controllo del flusso usati nei linguaggi procedurali, Tra queste sono incluse:  
   
 - <xref:System.Activities.Statements.While>  
   
