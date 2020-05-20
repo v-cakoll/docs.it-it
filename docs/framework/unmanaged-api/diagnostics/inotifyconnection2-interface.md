@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9868cfb3-dd51-4812-bca9-171d7829afe9
 topic_type:
 - apiref
-ms.openlocfilehash: 9d116d2ce986dd163ee7abbdd14002da690893ea
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 08daa26f60ca5935fed73494660426d58f398154
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445487"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442085"
 ---
 # <a name="inotifyconnection2-interface"></a>Interfaccia INotifyConnection2
 Dichiara i metodi per la registrazione e l'annullamento della registrazione di un'origine di notifica della connessione.  
@@ -28,14 +28,14 @@ Dichiara i metodi per la registrazione e l'annullamento della registrazione di u
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo RegisterNotifySource](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|Installa un oggetto origine di notifica specificato.|  
-|[Metodo UnregisterNotifySource](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|Rimuove un oggetto origine notifica specificato dalla connessione.|  
+|[Metodo RegisterNotifySource](inotifyconnection2-registernotifysource-method.md)|Installa un oggetto origine di notifica specificato.|  
+|[Metodo UnregisterNotifySource](inotifyconnection2-unregisternotifysource-method.md)|Rimuove un oggetto origine notifica specificato dalla connessione.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [Interfaccia INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [Interfacce dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Interfaccia INotifySink2](inotifysink2-interface.md)
+- [Interfaccia INotifySource2](inotifysource2-interface.md)
+- [Interfacce dell'archivio dei simboli di diagnostica](diagnostics-symbol-store-interfaces.md)

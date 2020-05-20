@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4789d08f-8683-45d3-ac30-73d48c61e470
 topic_type:
 - apiref
-ms.openlocfilehash: 92e40dbe8892d48dba1c54d9cd16faa409440b24
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b20e18d5f4314a0ab1442ac7bd5c6514e4db85d5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438113"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609482"
 ---
 # <a name="notify_filter-enumeration"></a>Enumerazione NOTIFY_FILTER
-Identifica i callback per le funzioni del debugger. Per ulteriori informazioni, vedere il metodo [INotifySource2:: SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) .  
+Identifica i callback per le funzioni del debugger. Per ulteriori informazioni, vedere il metodo [INotifySource2:: SetNotifyFilter](inotifysource2-setnotifyfilter-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,13 +41,13 @@ enum tagNOTIFY_FILTER
   
 ## <a name="members"></a>Membri  
   
-|Membro|description|  
+|Membro|Description|  
 |------------|-----------------|  
-|`NOTIFY_FILTER_ONSYNCCALLOUT`|Indica che il metodo [INotifySink2:: OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) deve essere richiamato.|  
-|`NOTIFY_FILTER_ONSYNCCALLENTER`|Indica che il metodo [INotifySink2:: OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) deve essere richiamato.|  
-|`NOTIFY_FILTER_ONSYNCCALLEXIT`|Indica che il metodo [INotifySink2:: OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) deve essere richiamato.|  
-|`NOTIFY_FILTER_ONSYNCCALLRETURN`|Indica che il metodo [INotifySink2:: OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) deve essere richiamato.|  
-|`NOTIFY_FILTER_ALLSYNC`|Indica che devono essere richiamati tutti i metodi [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) .|  
+|`NOTIFY_FILTER_ONSYNCCALLOUT`|Indica che il metodo [INotifySink2:: OnSyncCallOut](inotifysink2-onsynccallout-method.md) deve essere richiamato.|  
+|`NOTIFY_FILTER_ONSYNCCALLENTER`|Indica che il metodo [INotifySink2:: OnSyncCallEnter](inotifysink2-onsynccallenter-method.md) deve essere richiamato.|  
+|`NOTIFY_FILTER_ONSYNCCALLEXIT`|Indica che il metodo [INotifySink2:: OnSyncCallExit](inotifysink2-onsynccallexit-method.md) deve essere richiamato.|  
+|`NOTIFY_FILTER_ONSYNCCALLRETURN`|Indica che il metodo [INotifySink2:: OnSyncCallReturn](inotifysink2-onsynccallreturn-method.md) deve essere richiamato.|  
+|`NOTIFY_FILTER_ALLSYNC`|Indica che devono essere richiamati tutti i metodi [INotifySink2](inotifysink2-interface.md) .|  
 |`NOTIFY_FILTER_ALL`|Attiva tutte le notifiche esistenti e future.|  
 |`NOTIFY_FILTER_NONE`|Indica che non deve essere richiamato alcun metodo di notifica.|  
   
@@ -56,4 +56,4 @@ enum tagNOTIFY_FILTER
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [Enumerazioni dell'archivio dei simboli di diagnostica](diagnostics-symbol-store-enumerations.md)

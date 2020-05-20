@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bca92682-ee1e-467f-8fb0-d8d4617f82fe
 topic_type:
 - apiref
-ms.openlocfilehash: 9e441d4ff39632d9381e445ee99249d04539ad87
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 53cc908e0dc8cc5cc980ec365ccac0df4e620cac
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427876"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609768"
 ---
 # <a name="isymunmanagedwriterremaptoken-method"></a>Metodo ISymUnmanagedWriter::RemapToken
 Notifica al writer di simboli che è stato eseguito il mapping di un token di metadati durante la creazione dei metadati. Se il writer di simboli ha archiviato il token precedente nell'archivio dei simboli, deve aggiornare il token archiviato con il nuovo valore oppure salvare la mappa affinché il lettore di simboli corrispondente venga rimappato durante la fase di lettura.  
@@ -38,7 +38,7 @@ HRESULT RemapToken(
  in Token di metadati di cui è stato eseguito il mapping.  
   
  `newToken`  
- in Nuovo token di metadati a cui `oldToken` stato rimappato.  
+ in Nuovo token di metadati a cui `oldToken` è stato nuovamente eseguito il mapping.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
@@ -48,4 +48,4 @@ HRESULT RemapToken(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [Interfaccia ISymUnmanagedWriter](isymunmanagedwriter-interface.md)

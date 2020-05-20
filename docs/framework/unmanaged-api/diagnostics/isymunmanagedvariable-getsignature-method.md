@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78c1ba28-a410-4360-805c-23a95408964a
 topic_type:
 - apiref
-ms.openlocfilehash: 2939d9cf3991a9e0b8f93bb301925b1092eca50e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a3ec0af33f3f1201ce2f6b62291dfc67696fecab
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446042"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610444"
 ---
 # <a name="isymunmanagedvariablegetsignature-method"></a>Metodo ISymUnmanagedVariable::GetSignature
 Ottiene la firma di questa variabile.  
@@ -37,10 +37,10 @@ HRESULT GetSignature(
   
 ## <a name="parameters"></a>Parametri  
  `cSig`  
- in Lunghezza del buffer a cui punta il parametro `sig`.  
+ in Lunghezza del buffer a cui punta il `sig` parametro.  
   
  `pcSig`  
- out Puntatore a un `ULONG32` che riceve la dimensione, in caratteri, del buffer necessario per contenere la firma.  
+ out Puntatore a un oggetto `ULONG32` che riceve la dimensione, in caratteri, del buffer necessario per contenere la firma.  
   
  `sig`  
  out Buffer in cui è archiviata la firma.  
@@ -53,4 +53,4 @@ HRESULT GetSignature(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [Interfaccia ISymUnmanagedVariable](isymunmanagedvariable-interface.md)

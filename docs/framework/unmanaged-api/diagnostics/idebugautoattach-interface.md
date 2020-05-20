@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d4cc51ac-c1d6-41b9-ab8e-ef0073f13241
 topic_type:
 - apiref
-ms.openlocfilehash: 64e9d5e4bf43c8dac39850dafcd58a547191fc99
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8eb1e7baf950e978bd921be20769810619658bc3
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445516"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442111"
 ---
 # <a name="idebugautoattach-interface"></a>Interfaccia IDebugAutoAttach
 Definisce l'interfaccia per la connessione automatica del debugger richiamata dal server.  
@@ -28,11 +28,11 @@ Definisce l'interfaccia per la connessione automatica del debugger richiamata da
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo AutoAttach](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|Esegue la connessione automatica al debugger richiamato dal server.|  
+|[Metodo AutoAttach](idebugautoattach-autoattach-method.md)|Esegue la connessione automatica al debugger richiamato dal server.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** DbgAutoAttach. idl  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Interfacce dell'archivio dei simboli di diagnostica](diagnostics-symbol-store-interfaces.md)

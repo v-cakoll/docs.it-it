@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 416b220f-38d4-48e0-bb49-d2faa7366702
 topic_type:
 - apiref
-ms.openlocfilehash: 6074ec5248d27b1405d2367349904f6630df951b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 09f39d3b6486e2ec3c04c5d1858a85ce56895527
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445989"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610158"
 ---
 # <a name="isymunmanagedwriterabort-method"></a>Metodo ISymUnmanagedWriter::Abort
-Chiude il writer di simboli senza eseguire il commit dei simboli nell'archivio dei simboli. Dopo questa chiamata, il writer di simboli diventa non valido per ulteriori aggiornamenti. Per eseguire il commit dei simboli e chiudere il writer di simboli, usare invece il metodo [ISymUnmanagedWriter:: Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) .  
+Chiude il writer di simboli senza eseguire il commit dei simboli nell'archivio dei simboli. Dopo questa chiamata, il writer di simboli diventa non valido per ulteriori aggiornamenti. Per eseguire il commit dei simboli e chiudere il writer di simboli, usare invece il metodo [ISymUnmanagedWriter:: Close](isymunmanagedwriter-close-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,4 +39,4 @@ HRESULT Abort();
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [Interfaccia ISymUnmanagedWriter](isymunmanagedwriter-interface.md)

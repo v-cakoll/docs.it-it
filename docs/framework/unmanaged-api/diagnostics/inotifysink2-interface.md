@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c1018789-4206-455d-aacc-2d876fc0d0bb
 topic_type:
 - apiref
-ms.openlocfilehash: af50c82974b779b901135795f37e3bd4c8b8c156
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c7afe074afb9b38d6fefa1192799120dbb50b403
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440979"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442059"
 ---
 # <a name="inotifysink2-interface"></a>Interfaccia INotifySink2
 Dichiara i metodi per la notifica del sink.  
@@ -28,16 +28,16 @@ Dichiara i metodi per la notifica del sink.
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|Viene richiamato quando si immette una chiamata.|  
-|[Metodo OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|Viene richiamato quando si esce da una chiamata.|  
-|[Metodo OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|Viene richiamato quando una chiamata è out.|  
-|[Metodo OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|Viene richiamato quando una chiamata restituisce.|  
+|[Metodo OnSyncCallEnter](inotifysink2-onsynccallenter-method.md)|Viene richiamato quando si immette una chiamata.|  
+|[Metodo OnSyncCallExit](inotifysink2-onsynccallexit-method.md)|Viene richiamato quando si esce da una chiamata.|  
+|[Metodo OnSyncCallOut](inotifysink2-onsynccallout-method.md)|Viene richiamato quando una chiamata è out.|  
+|[Metodo OnSyncCallReturn](inotifysink2-onsynccallreturn-method.md)|Viene richiamato quando una chiamata restituisce.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [Interfaccia INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [Interfacce dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Interfaccia INotifyConnection2](inotifyconnection2-interface.md)
+- [Interfaccia INotifySource2](inotifysource2-interface.md)
+- [Interfacce dell'archivio dei simboli di diagnostica](diagnostics-symbol-store-interfaces.md)

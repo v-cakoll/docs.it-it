@@ -2,17 +2,17 @@
 title: Metodo ISymUnmanagedWriter5::MapTokenToSourceSpan
 ms.date: 03/30/2017
 ms.assetid: d0fbbf61-71c6-4fb1-8c9f-d619ca5d7d68
-ms.openlocfilehash: 876804e7b825443116b1f44a02a685a73153915c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f5898cab08f332314fb33684399dcb4f2ff71cc7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121631"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609456"
 ---
 # <a name="isymunmanagedwriter5maptokentosourcespan-method"></a>Metodo ISymUnmanagedWriter5::MapTokenToSourceSpan
 Esegue il mapping del token di metadati specificato all'intervallo di righe di origine specificato nel file di origine specificato.  
   
- Deve essere chiamato tra le chiamate al [Metodo OpenMapTokensToSourceSpans](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-openmaptokenstosourcespans-method.md) e al [Metodo CloseMapTokensToSourceSpans](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-closemaptokenstosourcespans-method.md).  
+ Deve essere chiamato tra le chiamate al [Metodo OpenMapTokensToSourceSpans](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-openmaptokenstosourcespans-method.md) e al [Metodo CloseMapTokensToSourceSpans](isymunmanagedwriter5-closemaptokenstosourcespans-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -22,7 +22,7 @@ HRESULT MapTokenToSourceSpan(    [in] mdToken token,    [in] ISymUnmanagedDocume
   
 ## <a name="parameters"></a>Parametri  
   
-|Parametro|Descrizione|  
+|Parametro|Description|  
 |---------------|-----------------|  
 |`token`||  
 |`document`||  
@@ -39,4 +39,4 @@ HRESULT MapTokenToSourceSpan(    [in] mdToken token,    [in] ISymUnmanagedDocume
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedWriter5](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-interface.md)
+- [Interfaccia ISymUnmanagedWriter5](isymunmanagedwriter5-interface.md)

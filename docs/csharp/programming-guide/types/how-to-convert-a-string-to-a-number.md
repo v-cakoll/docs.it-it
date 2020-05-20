@@ -1,5 +1,5 @@
 ---
-title: Come convertire una stringa in un numero - Guida per programmatori C
+title: Come convertire una stringa in un numero (Guida per programmatori C#)
 ms.date: 02/11/2019
 helpviewer_keywords:
 - conversions [C#]
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 54a4562a5cc493fc287bdf2f6bcf9723557f2a05
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1d4a0f36292acafad409bf666f861b7637cd644
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157039"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442202"
 ---
-# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Come convertire una stringa in un numero (Guida per programmatori C
+# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Come convertire una stringa in un numero (Guida per programmatori C#)
 
-È possibile convertire una [stringa](../../language-reference/builtin-types/reference-types.md) in `Parse` `TryParse` un numero chiamando il`int`metodo `long` `double`o trovato sui vari tipi <xref:System.Convert?displayProperty=nameWithType> numerici ( , , e così via) oppure utilizzando i metodi della classe .  
+È possibile convertire una [stringa](../../language-reference/builtin-types/reference-types.md) in un numero chiamando il `Parse` metodo o `TryParse` trovato nei vari tipi numerici ( `int` ,, `long` `double` e così via) oppure usando i metodi nella <xref:System.Convert?displayProperty=nameWithType> classe.  
   
- Se si dispone di una stringa, è leggermente più efficiente [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)e `Parse` semplice chiamare [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)un `TryParse` metodo (ad esempio, ) o un metodo (ad esempio, ).  L'uso di un metodo <xref:System.Convert> è più utile per gli oggetti generali che implementano <xref:System.IConvertible>.  
+ Se si dispone di una stringa, è leggermente più efficiente e semplice chiamare un `TryParse` Metodo (ad esempio, [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A) ) o un `Parse` Metodo (ad esempio, [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A) ).  L'uso di un metodo <xref:System.Convert> è più utile per gli oggetti generali che implementano <xref:System.IConvertible>.  
   
- È possibile usare i metodi `Parse` o `TryParse` sul tipo numerico che si prevede sia contenuto nella stringa, ad esempio il tipo <xref:System.Int32?displayProperty=nameWithType>.  Il metodo <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> utilizza il metodo <xref:System.Int32.Parse%2A> internamente.  Il `Parse` metodo restituisce il numero convertito; il `TryParse` metodo <xref:System.Boolean> restituisce un valore che indica se la conversione ha avuto esito positivo e restituisce il numero convertito in un [ `out` parametro](../../language-reference/keywords/out.md). Se la stringa non è `Parse` in un formato `TryParse` valido, genera un'eccezione, mentre restituisce `false`. Quando si chiama un metodo `Parse`, è sempre consigliabile usare la gestione delle eccezioni per intercettare <xref:System.FormatException> in caso di esito negativo dell'operazione di analisi.  
+ È possibile usare i metodi `Parse` o `TryParse` sul tipo numerico che si prevede sia contenuto nella stringa, ad esempio il tipo <xref:System.Int32?displayProperty=nameWithType>.  Il metodo <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> utilizza il metodo <xref:System.Int32.Parse%2A> internamente.  Il `Parse` metodo restituisce il numero convertito; il `TryParse` metodo restituisce un <xref:System.Boolean> valore che indica se la conversione è stata eseguita correttamente e restituisce il numero convertito in un [ `out` parametro](../../language-reference/keywords/out.md). Se la stringa non è in un formato valido, `Parse` genera un'eccezione, mentre `TryParse` restituisce `false` . Quando si chiama un metodo `Parse`, è sempre consigliabile usare la gestione delle eccezioni per intercettare <xref:System.FormatException> in caso di esito negativo dell'operazione di analisi.  
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>Chiamata dei metodi Parse e TryParse
 
@@ -50,7 +50,7 @@ Nella tabella seguente sono elencati alcuni dei metodi della classe <xref:System
 |`uint`|<xref:System.Convert.ToUInt32%28System.String%29>|  
 |`ulong`|<xref:System.Convert.ToUInt64%28System.String%29>|  
   
- Nell'esempio riportato di seguito viene chiamato il <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> metodo per convertire una stringa di input in un oggetto [int](../../language-reference/builtin-types/integral-numeric-types.md). Nell'esempio vengono rilevate le due eccezioni più comuni <xref:System.FormatException> <xref:System.OverflowException>che possono essere generate da questo metodo e . Se il numero risultante può essere incrementato senza superare <xref:System.Int32.MaxValue?displayProperty=nameWithType>, l'esempio aggiunge 1 al risultato e visualizza l'output.  
+ Nell'esempio seguente viene chiamato il <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> metodo per convertire una stringa di input in un valore [int](../../language-reference/builtin-types/integral-numeric-types.md). L'esempio rileva le due eccezioni più comuni che possono essere generate da questo metodo, <xref:System.FormatException> e <xref:System.OverflowException> . Se il numero risultante può essere incrementato senza superare <xref:System.Int32.MaxValue?displayProperty=nameWithType>, l'esempio aggiunge 1 al risultato e visualizza l'output.  
   
 [!code-csharp[Parsing with Convert methods](~/samples/snippets/csharp/programming-guide/string-to-number/convert/program.cs)]  
   
@@ -58,4 +58,4 @@ Nella tabella seguente sono elencati alcuni dei metodi della classe <xref:System
 
 - [Tipi](./index.md)
 - [Come determinare se una stringa rappresenta un valore numerico](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
-- [Esempio: Utilità di formattazione di .NET Core WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
+- [Esempio: Utilità di formattazione di .NET Core WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)

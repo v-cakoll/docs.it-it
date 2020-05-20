@@ -2,12 +2,12 @@
 title: Comando dotnet pack
 description: Il comando dotnet pack consente di creare pacchetti NuGet per il progetto .NET Core.
 ms.date: 04/28/2020
-ms.openlocfilehash: 26a8581f55a8dc9e61aa52e62ed94c73eefd3e03
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 00cda2c52a12a7a3aef5f61291120f522536131d
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595754"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442228"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -30,7 +30,7 @@ dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet pack -h|--help
 ```
 
-## <a name="description"></a>Descrizione
+## <a name="description"></a>Description
 
 Il comando `dotnet pack` consente di compilare il progetto e creare pacchetti NuGet. Il risultato di questo comando è un pacchetto NuGet, ovvero un file con *estensione nupkg* .
 
@@ -44,7 +44,7 @@ Le dipendenze NuGet del progetto compresso vengono aggiunte al file con estensio
 Per impostazione predefinita, `dotnet pack` compila prima il progetto. Se si vuole evitare questo comportamento, passare l'opzione `--no-build`. Questa opzione è in genere utile negli scenari di compilazione di integrazione continua (CI, Continuous Integration) in cui si sa che il codice è stato compilato in precedenza.
 
 > [!NOTE]
-> In alcuni casi, non è possibile eseguire la compilazione implicita. Questo problema può verificarsi `GeneratePackageOnBuild` quando è impostato, per evitare una dipendenza ciclica tra le destinazioni di compilazione e di Pack. La compilazione può anche avere esito negativo se è presente un file bloccato o un altro problema.
+> In alcuni casi, non è possibile eseguire la compilazione implicita. Questo problema può verificarsi quando `GeneratePackageOnBuild` è impostato, per evitare una dipendenza ciclica tra le destinazioni di compilazione e di Pack. La compilazione può anche avere esito negativo se è presente un file bloccato o un altro problema.
 
 È possibile aggiungere proprietà MSBuild al comando `dotnet pack` per il processo di compressione. Per altre informazioni, vedere [NuGet metadata properties](csproj.md#nuget-metadata-properties) (Proprietà dei metadati NuGet) e [MSBuild Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference) (Informazioni di riferimento sulla riga di comando di MSBuild). La sezione [Esempi](#examples) illustra come usare l'opzione di MSBuild -p per due diversi scenari.
 
@@ -60,17 +60,17 @@ Per impostazione predefinita, non è possibile creare un pacchetto dei progetti 
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="arguments"></a>Argomenti
+## <a name="arguments"></a>Arguments
 
 `PROJECT | SOLUTION`
 
-  Progetto o soluzione da comprimere. Si tratta di un percorso di un [file csproj](csproj.md), di un file di soluzione o di una directory. Se non specificato, il comando Cerca nella directory corrente un file di progetto o di soluzione.
+  Progetto o soluzione da comprimere. Si tratta di un percorso a un file [csproj](csproj.md), un file vbproj, un file fsproj, un file di soluzione o a una directory. Se non specificato, il comando Cerca nella directory corrente un file di progetto o di soluzione.
 
 ## <a name="options"></a>Opzioni
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  Definisce la configurazione di compilazione. Il valore predefinito per la maggior `Debug`parte dei progetti è, ma è possibile eseguire l'override delle impostazioni di configurazione della build nel progetto.
+  Definisce la configurazione di compilazione. Il valore predefinito per la maggior parte dei progetti è `Debug` , ma è possibile eseguire l'override delle impostazioni di configurazione della build nel progetto.
 
 - **`--force`**
 
@@ -184,7 +184,7 @@ Per impostazione predefinita, non è possibile creare un pacchetto dei progetti 
   dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
   ```
 
-  Per informazioni sull'utilizzo `NuspecFile`di, `NuspecBasePath`e `NuspecProperties`, vedere le risorse seguenti:
+  Per informazioni sull'utilizzo di `NuspecFile` , `NuspecBasePath` e `NuspecProperties` , vedere le risorse seguenti:
   
   - [Creazione di un pacchetto con un file .nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)
   - [Punti di estensione avanzati per la creazione di pacchetti personalizzati](https://docs.microsoft.com/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)

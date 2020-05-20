@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93de56b6-4ae8-4cca-acdc-25a434623509
 topic_type:
 - apiref
-ms.openlocfilehash: 041df959139a0be77f40d6aa5655ff15f93fb26f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 869d7d36ac24bfeee5b2361dd569945ad77eaf7f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427951"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610067"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>Metodo ISymUnmanagedWriter::Initialize2
 Imposta l'interfaccia di emissione dei metadati a cui questo writer verrà associato e imposta il nome del file di output in cui verranno scritti i simboli di debug. Questo metodo consente inoltre di impostare il percorso finale del file del database di programma (PDB).  
@@ -41,16 +41,16 @@ HRESULT Initialize2(
  in Puntatore all'interfaccia di emissione dei metadati.  
   
  `tempfilename`  
- in Puntatore a un `WCHAR` che contiene il nome file in cui vengono scritti i simboli di debug. Se specificato per un writer che non usa i nomi file, il parametro sarà ignorato.  
+ in Puntatore a un oggetto `WCHAR` che contiene il nome file in cui vengono scritti i simboli di debug. Se specificato per un writer che non usa i nomi file, il parametro sarà ignorato.  
   
  `pIStream`  
- in Se specificato, il writer di simboli emette i simboli nella <xref:System.Runtime.InteropServices.ComTypes.IStream> specificata anziché nel file specificato nel parametro `filename`. Il parametro `pIStream` è facoltativo.  
+ in Se specificato, il writer di simboli emette i simboli nell'oggetto specificato <xref:System.Runtime.InteropServices.ComTypes.IStream> anziché nel file specificato nel `filename` parametro. `pIStream` è facoltativo.  
   
  `fFullBuild`  
- [in] `true` se si tratta di una ricompilazione completa; `false` se si tratta di una compilazione incrementale.  
+ [in] `true` Se si tratta di una ricompilazione completa; `false`se si tratta di una compilazione incrementale.  
   
  `finalfilename`  
- in Puntatore a un `WCHAR` che rappresenta la stringa di percorso alla posizione finale del file PDB.  
+ in Puntatore a un oggetto `WCHAR` che rappresenta la stringa di percorso della posizione finale del file PDB.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
@@ -60,5 +60,5 @@ HRESULT Initialize2(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [Metodo Initialize](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize-method.md)
+- [Interfaccia ISymUnmanagedWriter](isymunmanagedwriter-interface.md)
+- [Metodo Initialize](isymunmanagedwriter-initialize-method.md)

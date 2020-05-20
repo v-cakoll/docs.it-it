@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 426f4e4f-e60d-4ad1-b546-a10e3c55c283
 topic_type:
 - apiref
-ms.openlocfilehash: acbd49de7362d9c05a609a2d870af100637e10ab
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ab248c6a624fbed1a6783383566be093c449ff97
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427914"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609885"
 ---
 # <a name="isymunmanagedwriteropennamespace-method"></a>Metodo ISymUnmanagedWriter::OpenNamespace
 Apre un nuovo spazio dei nomi. Chiamare questo metodo prima di definire metodi o variabili che occupano uno spazio dei nomi. Gli spazi dei nomi possono essere annidati.  
@@ -44,5 +44,5 @@ HRESULT OpenNamespace(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [Metodo CloseNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)
+- [Interfaccia ISymUnmanagedWriter](isymunmanagedwriter-interface.md)
+- [Metodo CloseNamespace](isymunmanagedwriter-closenamespace-method.md)
