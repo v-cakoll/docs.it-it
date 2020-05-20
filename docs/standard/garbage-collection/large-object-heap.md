@@ -1,30 +1,31 @@
 ---
 title: Heap oggetti grandi (LOH) in Windows
+description: In questo articolo vengono illustrati gli oggetti di grandi dimensioni, il modo in cui vengono gestiti dal Garbage Collector .NET e le implicazioni sulle prestazioni dell'utilizzo di oggetti di grandi dimensioni.
 ms.date: 05/02/2018
 helpviewer_keywords:
 - large object heap (LOH)"
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: ab9beca58b3d6118bc0f5121b6f5dec71a9f9f36
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: dae8a3690d63d77a47a5cd2e76f210ca8210f058
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102268"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420578"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Heap oggetti grandi nei sistemi Windows
 
-Il Garbage Collector (GC) di .NET divide gli oggetti in oggetti di piccole e grandi dimensioni. Nel caso di un oggetto grande, alcuni attributi associati assumono un'importanza maggiore rispetto a quando sono associati a un oggetto piccolo. Ad esempio, compattarlo&mdash;in questo modo, copiarlo&mdash;in memoria in un altro punto dell'heap può essere costoso. Per questo motivo, il Garbage Collector inserisce oggetti di grandi dimensioni nell'heap oggetti grandi (LOH). In questo articolo viene illustrato che cosa qualifica un oggetto come un oggetto di grandi dimensioni, come vengono raccolti gli oggetti di grandi dimensioni e che tipo di prestazioni implicazioni comporta oggetti di grandi dimensioni impliche.
+Il Garbage Collector .NET (GC) divide gli oggetti in oggetti piccoli e grandi. Nel caso di un oggetto grande, alcuni attributi associati assumono un'importanza maggiore rispetto a quando sono associati a un oggetto piccolo. Ad esempio, la compattazione &mdash; , ovvero la copia in memoria altrove nell'heap, &mdash; può essere costosa. Per questo motivo, il Garbage Collector posiziona oggetti di grandi dimensioni nell'heap degli oggetti grandi (LOH). In questo articolo viene illustrato ciò che qualifica un oggetto come oggetto di grandi dimensioni, la modalità di raccolta di oggetti di grandi dimensioni e il tipo di impatto sulle prestazioni imposto da oggetti di grandi dimensioni.
 
 > [!IMPORTANT]
-> In questo articolo viene illustrato l'heap oggetti grandi in .NET Framework e .NET Core in esecuzione solo su sistemi Windows. Non riguarda l'heap oggetti grandi in esecuzione in implementazioni di .NET su altre piattaforme.
+> Questo articolo illustra l'heap degli oggetti grandi in .NET Framework e .NET Core in esecuzione solo nei sistemi Windows. Non riguarda l'heap oggetti grandi in esecuzione in implementazioni di .NET su altre piattaforme.
 
-## <a name="how-an-object-ends-up-on-the-loh"></a>Come un oggetto finisce sul LOH
+## <a name="how-an-object-ends-up-on-the-loh"></a>Come un oggetto finisce nell'heap oggetti grandi
 
-Se un oggetto è maggiore o uguale a 85.000 byte, viene considerato un oggetto di grandi dimensioni. Questo valore è stato determinato dall'ottimizzazione delle prestazioni. Quando la richiesta di allocazione di un oggetto supera gli 85.000 byte, il runtime destina l'oggetto all'heap oggetti grandi.
+Se un oggetto è di dimensioni maggiori o uguali a 85.000 byte, viene considerato un oggetto di grandi dimensioni. Questo valore è stato determinato dall'ottimizzazione delle prestazioni. Quando la richiesta di allocazione di un oggetto supera gli 85.000 byte, il runtime destina l'oggetto all'heap oggetti grandi.
 
-Per comprendere il significato di questo, è utile esaminare alcuni aspetti fondamentali relativi al Garbage Collector.
+Per comprendere ciò che significa, è utile esaminare alcune nozioni di base sul Garbage Collector.
 
 Il Garbage Collector è un agente di raccolta generazionale. Le generazioni sono tre: generazione 0, generazione 1 e generazione 2. La presenza di 3 generazioni deriva dal fatto che in un'app ottimizzata la maggior parte degli oggetti viene eliminata nella generazione 0. In un'applicazione server, ad esempio, le allocazioni associate a ogni richiesta dovrebbero essere eliminate al termine della richiesta. Le richieste di allocazione durante l'esecuzione raggiungono la generazione 1 e vengono eliminate in questa generazione. In pratica la generazione 1 fa da buffer tra le aree degli oggetti recenti e quelle degli oggetti con durata maggiore.
 
@@ -32,7 +33,7 @@ Gli oggetti piccoli vengono sempre allocati nella generazione 0 e a seconda dell
 
 Gli oggetti grandi appartengono alla generazione 2 perché vengono raccolti solo durante una raccolta di generazione 2. Quando viene raccolta una generazione, vengono raccolte anche le generazioni più giovani corrispondenti. Ad esempio quando si verifica un'operazione GC di generazione 1 vengono raccolte sia la generazione 1 che la generazione 0. Quando si verifica un'operazione GC di generazione 2 viene raccolto l'intero heap. Per questo motivo un'operazione GC di generazione 2 è anche detta *operazione GC completa*. L'articolo cita l'operazione GC di generazione 2 anziché l'operazione GC completa, ma i termini sono intercambiabili.
 
-Le generazioni offrono una visualizzazione logica dell'heap GC. A livello fisico gli oggetti si trovano in segmenti gestiti dell'heap. Un *segmento gestito dell'heap* è una parte di memoria che l'operazione GC riserva nel sistema operativo (chiamando la [funzione VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)) per conto del codice gestito. Quando CLR viene caricato, il Garbage Collector alloca due segmenti di heap iniziali: uno per gli oggetti di piccole dimensioni (l'heap oggetti piccoli o SOH) e uno per gli oggetti di grandi dimensioni (l'heap oggetti grandi).
+Le generazioni offrono una visualizzazione logica dell'heap GC. A livello fisico gli oggetti si trovano in segmenti gestiti dell'heap. Un *segmento gestito dell'heap* è una parte di memoria che l'operazione GC riserva nel sistema operativo (chiamando la [funzione VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)) per conto del codice gestito. Quando viene caricato CLR, il GC alloca due segmenti di heap iniziali: uno per gli oggetti piccoli (l'heap degli oggetti piccoli o SOH) e uno per gli oggetti di grandi dimensioni (heap degli oggetti grandi).
 
 Le richieste di allocazione vengono quindi soddisfatte inserendo gli oggetti gestiti in uno di questi segmenti di heap gestiti. Se l'oggetto ha dimensioni inferiori a 85.000 byte viene inserito in un segmento SOH; in caso contrario viene inserito in un segmento LOH. Man mano che nei segmenti vengono allocati gli oggetti, tali segmenti vengono impegnati (in blocchi più piccoli).
 Per l'heap oggetti piccoli, gli oggetti ancora attivi dopo un'operazione GC vengono promossi alla generazione successiva. Gli oggetti esclusi da una raccolta di generazione 0 sono ora considerati oggetti di generazione 1 e così via. Gli oggetti che raggiungono la generazione di grado superiore si considerano come appartenenti a tale generazione. In altri termini gli oggetti che rimangono nella generazione 2 sono oggetti di generazione 2 e gli oggetti che rimangono nel segmento LOH sono oggetti LOH (raccolti con la generazione 2).
@@ -64,7 +65,7 @@ Figura 3: LOH dopo un'operazione GC di generazione 2
 
 ## <a name="when-is-a-large-object-collected"></a>Quando viene raccolto un oggetto di grandi dimensioni?
 
-In generale, un GC si verifica in una delle seguenti tre condizioni:
+In generale, un catalogo globale si verifica in una delle tre condizioni seguenti:
 
 - L'allocazione supera la soglia della generazione 0 o degli oggetti grandi.
 
@@ -80,7 +81,7 @@ In generale, un GC si verifica in una delle seguenti tre condizioni:
 
   Questo si verifica quando il Garbage Collector riceve una notifica di uso di memoria elevato dal sistema operativo. Se il Garbage Collector rileva condizioni produttive per un'operazione GC di generazione 2, attiva tale operazione.
 
-## <a name="loh-performance-implications"></a>Implicazioni delle prestazioni LOH
+## <a name="loh-performance-implications"></a>Implicazioni relative alle prestazioni di LOH
 
 Le allocazioni nell'heap oggetti grandi influiscono sulle prestazioni nei modi seguenti.
 
@@ -122,7 +123,7 @@ Le allocazioni nell'heap oggetti grandi influiscono sulle prestazioni nei modi s
 
 Fra i tre fattori, i primi due sono in genere più significativi del terzo. Per questo motivo è consigliabile allocare un pool di oggetti grandi da usare più volte anziché allocare oggetti temporanei.
 
-## <a name="collect-performance-data-for-the-loh"></a>Raccogliere i dati sulle prestazioni per il LaOHCollect performance data for the LOH
+## <a name="collect-performance-data-for-the-loh"></a>Raccogliere i dati sulle prestazioni per l'heap oggetti grandi
 
 Prima di raccogliere dati sulle prestazioni per un'area specifica, è necessario aver eseguito le operazioni seguenti:
 
@@ -144,7 +145,7 @@ Per raccogliere dati sulle prestazioni dell'heap oggetti grandi è possibile usa
 
 Questi contatori delle prestazioni sono in genere un buon primo passo nell'analisi dei problemi di prestazioni (anche se Microsoft consiglia l'uso degli [eventi ETW](#etw-events)). Configurare Performance Monitor aggiungendo i contatori desiderati, come illustrato nella figura 4. I contatori importanti per l'heap oggetti grandi sono:
 
-- **Collezioni Gen 2**
+- **Raccolte di generazione 2**
 
    Visualizza il numero di operazioni GC di generazione 2 eseguite dall'avvio del processo. Il contatore viene incrementato alla fine di una raccolta di generazione 2 (denominata anche Garbage Collection completa). Questo contatore visualizza 'ultimo valore osservato.
 
@@ -166,7 +167,7 @@ Figura 4: LOH dopo un'operazione GC di generazione 2
 
 Il Garbage Collector offre vari eventi ETW che favoriscono la comprensione delle operazioni dell'heap e del loro scopo. I post di blog seguenti illustrano come raccogliere e interpretare gli eventi GC con ETW:
 
-- [Eventi ETW GC - 1](https://devblogs.microsoft.com/dotnet/gc-etw-events-1/)
+- [Eventi ETW GC-1](https://devblogs.microsoft.com/dotnet/gc-etw-events-1/)
 
 - [Eventi ETW - GC - 2](https://devblogs.microsoft.com/dotnet/gc-etw-events-2/)
 
@@ -306,10 +307,10 @@ Per verificare se l'heap oggetti grandi è la causa della frammentazione della m
 bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 ```
 
-Questo comando viene interrotto nel debugger e mostra lo stack di chiamate solo se [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) viene chiamato con una dimensione di allocazione maggiore di 8 MB (0x800000).
+Questo comando interrompe il debugger e visualizza lo stack di chiamate solo se [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) viene chiamato con una dimensione di allocazione maggiore di 8MB (0x800000).
 
-In CLR 2.0 la nuova funzionalità *VM Hoarding* (Accumulo in memoria virtuale) può essere utile in situazioni con acquisizione e rilascio frequenti di segmenti, ad esempio nell'heap degli oggetti piccoli e nell'heap degli oggetti grandi. Per impostare VM Hoarding si specifica un flag di avvio chiamato `STARTUP_HOARD_GC_VM` tramite l'API di hosting. Invece di rilasciare i segmenti vuoti per restituirli al sistema operativo, CLR libera la memoria in questi segmenti e li inserisce in un elenco di standby. (Si noti che CLR non esegue questa operazione per i segmenti che sono troppo grandi.) CLR utilizza in seguito tali segmenti per soddisfare le nuove richieste di segmento. Quando l'app torna a richiedere un nuovo segmento, CLR usa un segmento di questo elenco di standby, se è disponibile un segmento abbastanza grande.
+In CLR 2.0 la nuova funzionalità *VM Hoarding* (Accumulo in memoria virtuale) può essere utile in situazioni con acquisizione e rilascio frequenti di segmenti, ad esempio nell'heap degli oggetti piccoli e nell'heap degli oggetti grandi. Per impostare VM Hoarding si specifica un flag di avvio chiamato `STARTUP_HOARD_GC_VM` tramite l'API di hosting. Invece di rilasciare i segmenti vuoti per restituirli al sistema operativo, CLR libera la memoria in questi segmenti e li inserisce in un elenco di standby. Si noti che CLR non esegue questa operazione per segmenti di dimensioni eccessive. CLR usa successivamente tali segmenti per soddisfare le nuove richieste di segmenti. Quando l'app torna a richiedere un nuovo segmento, CLR usa un segmento di questo elenco di standby, se è disponibile un segmento abbastanza grande.
 
-L'accumulo di macchine virtuali è utile anche per le applicazioni che desiderano mantenere i segmenti già acquisiti, ad esempio alcune app server che sono le app dominanti in esecuzione nel sistema, per evitare eccezioni di memoria insufficiente.
+L'accumulo di VM è utile anche per le applicazioni che vogliono mantenere i segmenti già acquisiti, ad esempio alcune app server che sono le app dominanti in esecuzione nel sistema, per evitare eccezioni di memoria insufficiente.
 
 Quando si usa questa funzionalità è consigliabile sottoporre a test accurati l'applicazione, per garantire che l'uso della memoria sia sufficientemente stabile.

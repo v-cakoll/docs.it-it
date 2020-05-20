@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3ef841c2-cade-42ee-ba34-2ef91d6d0879
 topic_type:
 - apiref
-ms.openlocfilehash: 12f31d0bf224e38418818122dad3586ec687b2ad
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5991b0abaedabe2337cd754c7bd19f96c5e9b685
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448584"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420617"
 ---
 # <a name="corsymaddrkind-enumeration"></a>Enumerazione CorSymAddrKind
 Indica il tipo di indirizzo di memoria.  
@@ -42,9 +42,9 @@ typedef enum CorSymAddrKind
 } CorSymAddrKind;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Membro|Description|  
 |------------|-----------------|  
 |`ADDR_IL_OFFSET`|Indica una variabile locale Microsoft Intermediate Language (MSIL) o un indice di parametro.|  
 |`ADDR_NATIVE_RVA`|Indica un indirizzo virtuale relativo in un modulo.|  
@@ -62,4 +62,4 @@ typedef enum CorSymAddrKind
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [Enumerazioni dell'archivio dei simboli di diagnostica](diagnostics-symbol-store-enumerations.md)

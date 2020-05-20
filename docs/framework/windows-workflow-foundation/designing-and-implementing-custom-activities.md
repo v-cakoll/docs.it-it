@@ -1,13 +1,14 @@
 ---
 title: Progettazione e implementazione di attività personalizzate
+description: Questo articolo fornisce le risorse per la creazione di attività personalizzate in Workflow Foundation creando attività composite o creando nuovi tipi di attività.
 ms.date: 03/30/2017
 ms.assetid: 4e30e63d-6e33-4842-a7a4-ce807cef1fad
-ms.openlocfilehash: b0d04572c65fd4e3e0ae96241217c9ae9aa0e2c5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9c184bff9518bb5581f3bf4cd408db224736192b
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915359"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419993"
 ---
 # <a name="designing-and-implementing-custom-activities"></a>Progettazione e implementazione di attività personalizzate
 Le attività personalizzate in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] vengono create assemblando le attività fornite dal sistema nelle attività composte o creando nuovi tipi che derivano dall'oggetto <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> o <xref:System.Activities.NativeActivity>. Contenuto della sezione viene illustrato come creare attività personalizzate con uno dei metodi.  
@@ -15,7 +16,7 @@ Le attività personalizzate in [!INCLUDE[netfx_current_long](../../../includes/n
 > [!IMPORTANT]
 > Le attività personalizzate vengono visualizzate per impostazione predefinita nella finestra di progettazione del flusso di lavoro come un semplice rettangolo con il nome dell'attività. Per fornire una rappresentazione visiva personalizzata dell'attività nella finestra di progettazione del flusso di lavoro è inoltre necessario creare una finestra di progettazione personalizzata. Per altre informazioni, vedere [uso di ActivityDesigner e modelli personalizzati](using-custom-activity-designers-and-templates.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Opzioni di creazione di attività](activity-authoring-options-in-wf.md)  
  Viene illustrata la creazione di stili disponibili in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)].  
   

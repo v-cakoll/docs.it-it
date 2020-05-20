@@ -1,5 +1,5 @@
 ---
-title: Metodo IXCLRDataProcess::EndEnumModules
+title: 'Metodo IXCLRDataProcess:: EndEnumModules'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EndEnumModules Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: de30384b4c12c4fcac3eafe580484685f8a43fa4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a7a23e53f5c2bc7d643046830cf335fec780f11
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775427"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420838"
 ---
-# <a name="ixclrdataprocessendenummodules-method"></a>Metodo IXCLRDataProcess::EndEnumModules
+# <a name="ixclrdataprocessendenummodules-method"></a>Metodo IXCLRDataProcess:: EndEnumModules
 
-Rilascia le risorse usate dagli iteratori interni utilizzati durante l'enumerazione di modulo.
+Rilascia le risorse usate dagli iteratori interni usati durante l'enumerazione del modulo.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,18 +39,18 @@ HRESULT EndEnumModules(
 ## <a name="parameters"></a>Parametri
 
 `handle`\
-[out] Handle per l'enumerazione dei moduli.
+out Handle per l'enumerazione dei moduli.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il metodo specificato fa parte di `IXCLRDataProcess` interfaccia e corrisponde al 26 slot della tabella di metodo virtuale.
+Il metodo fornito fa parte dell' `IXCLRDataProcess` interfaccia e corrisponde allo slot 26 della tabella del metodo virtuale.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
-**Intestazione:** Nessuno **libreria:** Nessuno **versioni di .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
+**Intestazione:** Nessuna **libreria:** nessuna **.NET Framework versioni:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Debug](index.md)
-- [IXCLRDataProcess Interface](ixclrdataprocess-interface.md)
+- [Interfaccia IXCLRDataProcess](ixclrdataprocess-interface.md)

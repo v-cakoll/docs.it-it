@@ -1,5 +1,6 @@
 ---
 title: COM Callable Wrapper
+description: Quando un client COM chiama un oggetto .NET, CLR crea l'oggetto gestito e un COM Callable Wrapper. I client COM chiamano il wrapper per l'oggetto.
 ms.date: 10/23/2018
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-ms.openlocfilehash: 6f2f4055a95dbcea8d7872b5c5fa3ccede8c2c8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c42ea0b5ba4cb01304ceae4ba2d2fc91b629a9b3
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400379"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420526"
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper
 
@@ -60,7 +61,7 @@ Oltre a esporre le interfacce che sono esplicitamente implementate da una classe
 
 |Interfaccia|Descrizione|
 |---------------|-----------------|
-|Interfaccia della\_classe (*NomeClasse*)|Interfaccia, esposta dal runtime e non definita esplicitamente, che espone tutte le interfacce, i metodi, le proprietà e i campi pubblici esplicitamente esposti su un oggetto gestito.|
+|Interfaccia della \_ classe (*NomeClasse*)|Interfaccia, esposta dal runtime e non definita esplicitamente, che espone tutte le interfacce, i metodi, le proprietà e i campi pubblici esplicitamente esposti su un oggetto gestito.|
 |**IConnectionPoint** e **IConnectionPointContainer**|Interfaccia per oggetti che originano eventi basati su delegati (un'interfaccia per la registrazione di sottoscrittori di eventi).|
 |**IDispatchEx** (solo .NET Framework)|Interfaccia fornita dal runtime se la classe implementa **IExpando**. L'interfaccia **IDispatchEx** è un'estensione dell'interfaccia **IDispatch** che, diversamente da **IDispatch**, consente l'enumerazione, l'aggiunta, l'eliminazione e la chiamata dei membri con distinzione tra maiuscole e minuscole.|
 |**IEnumVARIANT**|Interfaccia per classi Collection che enumera gli oggetti della raccolta se la classe implementa **IEnumerable**.|
@@ -192,7 +193,7 @@ Se l'applicazione richiede chiamate ad associazione anticipata ai metodi dell'in
 <EmbedInteropTypes>True</EmbedInteropTypes>
 ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
 - [Wrapper COM](com-wrappers.md)

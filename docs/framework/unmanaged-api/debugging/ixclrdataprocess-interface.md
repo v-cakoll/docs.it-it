@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e7e53615e38d0ab76f9e7c0a753be3c13780057d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a6def8fc10f04b89aa8d8c735025b01f9b6ddfb
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178367"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420760"
 ---
 # <a name="ixclrdataprocess-interface"></a>Interfaccia IXCLRDataProcess
 
-Fornisce metodi per l'esecuzione di query su informazioni su un processo.
+Fornisce metodi per l'esecuzione di query sulle informazioni relative a un processo.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -32,24 +32,24 @@ Fornisce metodi per l'esecuzione di query su informazioni su un processo.
 
 | Metodo                                                                                                                                               | Descrizione                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| [GetAppDomainByUniqueId](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | Ottiene `AppDomain` un oggetto in un processo in base al relativo ID univoco.                                              |
+| [GetAppDomainByUniqueId](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | Ottiene un oggetto `AppDomain` in un processo in base al relativo ID univoco.                                              |
 | [StartEnumModules](ixclrdataprocess-startenummodules-method.md)                                   | Fornisce un handle per enumerare i moduli di un processo.                                        |
 | [EnumModule](ixclrdataprocess-enummodule-method.md)                                               | Enumera i moduli di questo processo.                                                         |
-| [EndEnumModules](ixclrdataprocess-endenummodules-method.md)                                       | Rilascia le risorse utilizzate dagli iteratori interni utilizzati durante l'enumerazione del modulo.               |
-| [StartEnumMethodInstancesByAddress](ixclrdataprocess-startenummethodinstancesbyaddress-method.md) | Fornisce un handle per enumerare le istanze del metodo a `AppDomain` partire da un indirizzo specificato. |
+| [EndEnumModules](ixclrdataprocess-endenummodules-method.md)                                       | Rilascia le risorse usate dagli iteratori interni usati durante l'enumerazione del modulo.               |
+| [StartEnumMethodInstancesByAddress](ixclrdataprocess-startenummethodinstancesbyaddress-method.md) | Fornisce un handle per enumerare le istanze del metodo di a `AppDomain` partire da un indirizzo specificato. |
 | [EnumMethodInstanceByAddress](ixclrdataprocess-enummethodinstancebyaddress-method.md)             | Enumera le istanze del metodo di questo processo a partire da un offset di indirizzo.                  |
 | [EndEnumMethodInstancesByAddress](ixclrdataprocess-endenummethodinstancesbyaddress-method.md)     | Rilascia le risorse utilizzate dagli iteratori interni utilizzati durante l'enumerazione dell'istanza.             |
 
 ## <a name="remarks"></a>Osservazioni
 
-Questa interfaccia si trova all'interno del runtime e non viene esposta tramite intestazioni o file di libreria. Tuttavia, è un'interfaccia COM `IUnknown` che `5c552ab6-fc09-4cb3-8e36-22fa03c798b7` deriva da con GUID che può essere ottenuto tramite i normali meccanismi COM.
+Questa interfaccia si trova all'interno del runtime e non viene esposta tramite le intestazioni o i file di libreria. Tuttavia, si tratta di un'interfaccia COM che deriva da `IUnknown` con GUID `5c552ab6-fc09-4cb3-8e36-22fa03c798b7` che è possibile ottenere tramite i normali meccanismi com.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 **Intestazione:** Nessuno  
-**Biblioteca:** Nessuno  
-**Versioni di .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Libreria:** Nessuno  
+**Versioni .NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vedere anche
 

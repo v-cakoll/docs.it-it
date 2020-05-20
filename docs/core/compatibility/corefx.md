@@ -2,12 +2,12 @@
 title: Modifiche di rilievo della libreria di classi base
 description: Elenca le modifiche di rilievo nelle librerie .NET di base.
 ms.date: 09/20/2019
-ms.openlocfilehash: a2eb4be89d78f50d201272f3449374bc27d8c785
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: ca50123b842c256607d47010dbef9b216ece4661
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859934"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420429"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Modifiche di rilievo nelle librerie .NET Core
 
@@ -38,6 +38,7 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 | [UnauthorizedAccessException generata da FileSystemInfo. Attributes](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1.0 |
 | [Gestione delle eccezioni di stato del processo danneggiato non supportata](#handling-corrupted-state-exceptions-is-not-supported) | 1.0 |
 | [Le Proprietà UriBuilder non precedono più caratteri iniziali](#uribuilder-properties-no-longer-prepend-leading-characters) | 1.0 |
+| [Process. StartInfo genera l'eccezione InvalidOperationException per i processi non avviati](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5,0
 
@@ -128,5 +129,9 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 ***
 
 [!INCLUDE [uribuilder-behavior-changes](../../../includes/core-changes/corefx/1.0/uribuilder-behavior-changes.md)]
+
+***
+
+[!INCLUDE [startinfo-throws-exception](../../../includes/core-changes/corefx/1.0/startinfo-throws-exception.md)]
 
 ***

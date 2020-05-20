@@ -1,16 +1,17 @@
 ---
 title: Come creare ed eseguire un flusso di lavoro a esecuzione prolungata
+description: Questo articolo illustra come creare un'applicazione host Windows Forms che supporta l'avvio e la ripresa di più istanze del flusso di lavoro e la persistenza del flusso di lavoro.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: 10eb4e2947bed9cea89f1cda05272aa3fa0fadaa
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 557b3512e534198d47c0c6f6b0a7c5f92bb71739
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204887"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419551"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Come creare ed eseguire un flusso di lavoro a esecuzione prolungata
 
@@ -33,9 +34,9 @@ Una delle principali funzionalità di Windows Workflow Foundation (WF) è la cap
 
     Selezionare i due file seguenti e fare clic su **Apri**.
 
-    - *SqlWorkflowInstanceStoreLogic. SQL*
+    - *SqlWorkflowInstanceStoreLogic.sql*
 
-    - *SqlWorkflowInstanceStoreSchema. SQL*
+    - *SqlWorkflowInstanceStoreSchema.sql*
 
 3. Scegliere **SqlWorkflowInstanceStoreSchema. SQL** dal menu **finestra** . Verificare che **WF45GettingStartedTutorial** sia selezionato nell'elenco a discesa **database disponibili** e scegliere **Esegui** dal menu **query** .
 
@@ -48,14 +49,14 @@ Una delle principali funzionalità di Windows Workflow Foundation (WF) è la cap
 
 1. Fare clic con il pulsante destro del mouse su **NumberGuessWorkflowHost** in **Esplora soluzioni** e scegliere **Aggiungi riferimento**.
 
-2. Selezionare **assembly** dall'elenco **Aggiungi riferimento** , quindi digitare `DurableInstancing` nella casella **Cerca assembly** . In questo modo gli assembly vengono filtrati ed è più semplice selezionare i riferimenti desiderati.
+2. Selezionare **assembly** dall'elenco **Aggiungi riferimento** e digitare `DurableInstancing` nella casella **Cerca assembly** . In questo modo gli assembly vengono filtrati ed è più semplice selezionare i riferimenti desiderati.
 
 3. Selezionare la casella di controllo accanto a **System. Activities. DurableInstancing** e **System. Runtime. DurableInstancing** dall'elenco **dei risultati della ricerca** , quindi fare clic su **OK**.
 
 ## <a name="to-create-the-workflow-host-form"></a>Per creare il form host del flusso di lavoro
 
 > [!NOTE]
-> Nei passaggi di questa procedura viene descritto come aggiungere e configurare manualmente il form. Se si desidera, è possibile scaricare i file della soluzione per l'esercitazione e aggiungere il form completato al progetto. Per scaricare i file dell'esercitazione, vedere [Windows Workflow Foundation (WF45)-Introduzione esercitazione](https://go.microsoft.com/fwlink/?LinkID=248976). Una volta scaricati i file, fare clic con il pulsante destro del mouse su **NumberGuessWorkflowHost** e scegliere **Aggiungi riferimento**. Aggiungere un riferimento a **System. Windows. Forms** e **System. Drawing**. Questi riferimenti vengono aggiunti automaticamente se si aggiunge un nuovo modulo dal menu **Aggiungi**, **nuovo elemento** , ma è necessario aggiungerlo manualmente durante l'importazione di un modulo. Una volta aggiunti i riferimenti, fare clic con il pulsante destro del mouse su **NumberGuessWorkflowHost** in **Esplora soluzioni** e scegliere **Aggiungi**, **elemento esistente**. Passare alla cartella `Form` nei file di progetto, selezionare **WorkflowHostForm.cs** (o **WorkflowHostForm. vb**) e fare clic su **Aggiungi**. Se si sceglie di importare il form, è possibile passare alla sezione successiva [per aggiungere le proprietà e i metodi helper del modulo](#to-add-the-properties-and-helper-methods-of-the-form).
+> Nei passaggi di questa procedura viene descritto come aggiungere e configurare manualmente il form. Se si desidera, è possibile scaricare i file della soluzione per l'esercitazione e aggiungere il form completato al progetto. Per scaricare i file dell'esercitazione, vedere [Windows Workflow Foundation (WF45)-Introduzione esercitazione](https://go.microsoft.com/fwlink/?LinkID=248976). Una volta scaricati i file, fare clic con il pulsante destro del mouse su **NumberGuessWorkflowHost** e scegliere **Aggiungi riferimento**. Aggiungere un riferimento a **System. Windows. Forms** e **System. Drawing**. Questi riferimenti vengono aggiunti automaticamente se si aggiunge un nuovo modulo dal menu **Aggiungi**, **nuovo elemento** , ma è necessario aggiungerlo manualmente durante l'importazione di un modulo. Una volta aggiunti i riferimenti, fare clic con il pulsante destro del mouse su **NumberGuessWorkflowHost** in **Esplora soluzioni** e scegliere **Aggiungi**, **elemento esistente**. Passare alla `Form` cartella nei file di progetto, selezionare **WorkflowHostForm.cs** (o **WorkflowHostForm. vb**) e fare clic su **Aggiungi**. Se si sceglie di importare il form, è possibile passare alla sezione successiva [per aggiungere le proprietà e i metodi helper del modulo](#to-add-the-properties-and-helper-methods-of-the-form).
 
 1. Fare clic con il pulsante destro del mouse su **NumberGuessWorkflowHost** in **Esplora soluzioni** e scegliere **Aggiungi**, **nuovo elemento**.
 
@@ -73,7 +74,7 @@ Una delle principali funzionalità di Windows Workflow Foundation (WF) è la cap
 
     |Controllo|Proprietà: valore|
     |-------------|---------------------|
-    |**Pulsante**|Nome: NewGame<br /><br /> Località: 13, 13<br /><br /> Dimensioni: 75, 23<br /><br /> Testo: nuovo gioco|
+    |**Button**|Nome: NewGame<br /><br /> Località: 13, 13<br /><br /> Dimensioni: 75, 23<br /><br /> Testo: nuovo gioco|
     |**Etichetta**|Località: 94, 18<br /><br /> Testo: indovinare un numero compreso tra 1 e|
     |**ComboBox**|Nome: NumberRange<br /><br /> DropDownStyle: DropDownList<br /><br /> Elementi: 10, 100, 1000<br /><br /> Località: 228, 12<br /><br /> Dimensioni: 143, 21|
     |**Etichetta**|Località: 13, 43<br /><br /> Testo: tipo di flusso di lavoro|
@@ -90,8 +91,8 @@ Una delle principali funzionalità di Windows Workflow Foundation (WF) è la cap
     |**ComboBox**|Nome: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> Località: 121, 17<br /><br /> Dimensioni: 227, 21|
     |**Etichetta**|Località: 7, 47<br /><br /> Testo: ipotesi|
     |**TextBox**|Nome: indovinare<br /><br /> Località: 50, 44<br /><br /> Dimensioni: 65, 20|
-    |**Pulsante**|Nome: EnterGuess<br /><br /> Località: 121, 42<br /><br /> Dimensioni: 75, 23<br /><br /> Testo: immettere Guess|
-    |**Pulsante**|Nome: QuitGame<br /><br /> Località: 274, 42<br /><br /> Dimensioni: 75, 23<br /><br /> Testo: Quit|
+    |**Button**|Nome: EnterGuess<br /><br /> Località: 121, 42<br /><br /> Dimensioni: 75, 23<br /><br /> Testo: immettere Guess|
+    |**Button**|Nome: QuitGame<br /><br /> Località: 274, 42<br /><br /> Dimensioni: 75, 23<br /><br /> Testo: Quit|
     |**TextBox**|Nome: WorkflowStatus<br /><br /> Località: 10, 73<br /><br /> Più righe: true<br /><br /> ReadOnly: true<br /><br /> Barre di scorrimento: verticali<br /><br /> Dimensioni: 338, 208|
 
 5. Impostare la proprietà **AcceptButton** del form su **EnterGuess**.
@@ -165,7 +166,7 @@ Tramite i passaggi di questa sezione vengono aggiunti proprietà e metodi di sup
     }
     ```
 
-    Nella casella combinata `InstanceId` viene visualizzato un elenco di ID di istanze del flusso di lavoro permanente e la proprietà `WorkflowInstanceId` restituisce il flusso di lavoro attualmente selezionato.
+    La `InstanceId` casella combinata Visualizza un elenco di ID di istanze del flusso di lavoro permanente e la `WorkflowInstanceId` proprietà restituisce il flusso di lavoro attualmente selezionato.
 
 5. Aggiungere un gestore per l'evento `Load` del form. Per aggiungere il gestore, passare alla **visualizzazione progettazione** per il modulo, fare clic sull'icona **eventi** nella parte superiore della finestra **proprietà** , quindi fare doppio clic su **carica**.
 
@@ -212,7 +213,7 @@ Tramite i passaggi di questa sezione vengono aggiunti proprietà e metodi di sup
 
     Durante il caricamento del form, viene configurato `SqlWorkflowInstanceStore`, le caselle combinate dell'intervallo e del tipo di flusso di lavoro vengono impostate sui valori predefiniti e le istanze del flusso di lavoro persistente vengono aggiunte alla casella combinata `InstanceId`.
 
-7. Aggiungere un gestore `SelectedIndexChanged` per `InstanceId`. Per aggiungere il gestore, passare alla **visualizzazione progettazione** per il modulo, selezionare la casella combinata `InstanceId`, fare clic sull'icona **eventi** nella parte superiore della finestra **proprietà** , quindi fare doppio clic su **SelectedIndexChanged**.
+7. Aggiungere un gestore `SelectedIndexChanged` per `InstanceId`. Per aggiungere il gestore, passare alla **visualizzazione progettazione** per il modulo, selezionare la `InstanceId` casella combinata, fare clic sull'icona **eventi** nella parte superiore della finestra **Proprietà** , quindi fare doppio clic su **SelectedIndexChanged**.
 
     ```vb
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged
@@ -321,7 +322,7 @@ Tramite i passaggi di questa sezione vengono aggiunti proprietà e metodi di sup
     }
     ```
 
-    `ListPersistedWorkflows` esegue una query nell'archivio di istanze per le istanze del flusso di lavoro salvate e aggiunge gli ID istanza alla casella combinata `cboInstanceId`.
+    Tramite `ListPersistedWorkflows` viene eseguita una query sull'archivio di istanze per le istanze del flusso di lavoro persistente, quindi vengono aggiunti gli ID istanza alla casella combinata `cboInstanceId`.
 
 10. Aggiungere il seguente metodo `UpdateStatus` e il delegato corrispondente alla classe del form. Tramite questo metodo viene aggiornata la finestra di stato nel form con lo stato del flusso di lavoro attualmente in esecuzione.
 
@@ -432,7 +433,7 @@ Tramite i passaggi di questa sezione vengono aggiunti proprietà e metodi di sup
     wfApp.InstanceStore = store;
     ```
 
-3. Successivamente, creare un'istanza `StringWriter` e aggiungerla alla raccolta `Extensions` dell'istanza `WorkflowApplication`. Quando un `StringWriter` viene aggiunto alle estensioni, acquisisce tutti i `WriteLine` output dell'attività. Quando il flusso di lavoro diventa inattivo, l'output `WriteLine` può essere estratto da `StringWriter` e visualizzato nel form.
+3. Successivamente, creare un'istanza `StringWriter` e aggiungerla alla raccolta `Extensions` dell'istanza `WorkflowApplication`. Quando un oggetto `StringWriter` viene aggiunto alle estensioni, acquisisce tutto l' `WriteLine` output dell'attività. Quando il flusso di lavoro diventa inattivo, l'output `WriteLine` può essere estratto da `StringWriter` e visualizzato nel form.
 
     ```vb
     ' Add a StringWriter to the extensions. This captures the output
@@ -542,7 +543,7 @@ Tramite i passaggi di questa sezione vengono aggiunti proprietà e metodi di sup
     };
     ```
 
-    L'enumerazione <xref:System.Activities.PersistableIdleAction> ha tre valori:<xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist> e <xref:System.Activities.PersistableIdleAction.Unload>. <xref:System.Activities.PersistableIdleAction.Persist> causa la persistenza del flusso di lavoro, ma il flusso di lavoro non viene scaricato. <xref:System.Activities.PersistableIdleAction.Unload> fa in modo che il flusso di lavoro venga mantenuto e scaricato.
+    L'enumerazione <xref:System.Activities.PersistableIdleAction> ha tre valori:<xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist> e <xref:System.Activities.PersistableIdleAction.Unload>. Tramite il campo <xref:System.Activities.PersistableIdleAction.Persist> il flusso di lavoro viene reso persistente, ma non scaricato. <xref:System.Activities.PersistableIdleAction.Unload> rende il flusso di lavoro persistente e lo scarica.
 
     Nell'esempio seguente viene mostrato il metodo `ConfigureWorkflowApplication` completato.
 
@@ -649,7 +650,7 @@ Tramite i passaggi di questa sezione vengono aggiunti proprietà e metodi di sup
 
 ## <a name="to-enable-starting-and-resuming-multiple-workflow-types"></a>Per abilitare l'avvio e la ripresa di più tipi di flussi di lavoro
 
-Per riprendere un'istanza del flusso di lavoro, tramite l'host deve essere fornita la definizione del flusso di lavoro. In questa esercitazione sono disponibili tre tipi di flussi di lavoro e nei passaggi successivi dell'esercitazione vengono introdotte più versioni di questi tipi. `WorkflowIdentity` consente a un'applicazione host di associare le informazioni di identificazione a un'istanza del flusso di lavoro permanente. Nei passaggi di questa sezione viene illustrato come creare una classe di utilità per consentire il mapping dell'identità del flusso di lavoro da un'istanza del flusso di lavoro persistente alla definizione del flusso di lavoro corrispondente. Per ulteriori informazioni su `WorkflowIdentity` e sul controllo delle versioni, vedere [utilizzo di WorkflowIdentity e controllo delle versioni](using-workflowidentity-and-versioning.md).
+Per riprendere un'istanza del flusso di lavoro, tramite l'host deve essere fornita la definizione del flusso di lavoro. In questa esercitazione sono disponibili tre tipi di flussi di lavoro e nei passaggi successivi dell'esercitazione vengono introdotte più versioni di questi tipi. Tramite `WorkflowIdentity` viene fornito un modo per un'applicazione host per associare le informazioni di identificazione con un'istanza del flusso di lavoro persistente. Nei passaggi di questa sezione viene illustrato come creare una classe di utilità per consentire il mapping dell'identità del flusso di lavoro da un'istanza del flusso di lavoro persistente alla definizione del flusso di lavoro corrispondente. Per altre informazioni su `WorkflowIdentity` e sul controllo delle versioni, vedere [uso di WorkflowIdentity e controllo delle versioni](using-workflowidentity-and-versioning.md).
 
 1. Fare clic con il pulsante destro del mouse su **NumberGuessWorkflowHost** in **Esplora soluzioni** e scegliere **Aggiungi**, **classe**. Digitare `WorkflowVersionMap` nella casella **nome** e fare clic su **Aggiungi**.
 
@@ -763,11 +764,11 @@ Per riprendere un'istanza del flusso di lavoro, tramite l'host deve essere forni
     }
     ```
 
-    `WorkflowVersionMap` contiene tre identità del flusso di lavoro che eseguono il mapping alle tre definizioni del flusso di lavoro di questa esercitazione e vengono usate nelle sezioni seguenti quando i flussi di lavoro vengono avviati e ripresi.
+    In `WorkflowVersionMap` sono contenute tre identità del flusso di lavoro tramite cui viene eseguito il mapping alle tre definizioni del flusso di lavoro di questa esercitazione e viene usato nelle sezioni seguenti quando i flussi di lavoro vengono avviati e ripresi.
 
 ## <a name="to-start-a-new-workflow"></a>Per avviare un nuovo flusso di lavoro
 
-1. Aggiungere un gestore `Click` per `NewGame`. Per aggiungere il gestore, passare alla **visualizzazione progettazione** per il form e fare doppio clic su `NewGame`. Viene aggiunto un gestore `NewGame_Click` e si passa alla visualizzazione codice per il form. Ogni volta che l'utente fa clic sul pulsante, viene avviato un nuovo flusso di lavoro.
+1. Aggiungere un gestore `Click` per `NewGame`. Per aggiungere il gestore, passare alla **visualizzazione progettazione** per il form e fare doppio clic su `NewGame` . Viene aggiunto un gestore `NewGame_Click` e si passa alla visualizzazione codice per il form. Ogni volta che l'utente fa clic sul pulsante, viene avviato un nuovo flusso di lavoro.
 
     ```vb
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click
@@ -962,7 +963,7 @@ Per riprendere un'istanza del flusso di lavoro, tramite l'host deve essere forni
 
 ## <a name="to-resume-a-workflow"></a>Per riprendere un flusso di lavoro
 
-1. Aggiungere un gestore `Click` per `EnterGuess`. Per aggiungere il gestore, passare alla **visualizzazione progettazione** per il form e fare doppio clic su `EnterGuess`. Ogni volta che l'utente fa clic sul pulsante, viene ripreso un flusso di lavoro.
+1. Aggiungere un gestore `Click` per `EnterGuess`. Per aggiungere il gestore, passare alla **visualizzazione progettazione** per il form e fare doppio clic su `EnterGuess` . Ogni volta che l'utente fa clic sul pulsante, viene ripreso un flusso di lavoro.
 
     ```vb
     Private Sub EnterGuess_Click(sender As Object, e As EventArgs) Handles EnterGuess.Click
@@ -1174,7 +1175,7 @@ Per riprendere un'istanza del flusso di lavoro, tramite l'host deve essere forni
 
 ## <a name="to-terminate-a-workflow"></a>Per terminare un flusso di lavoro
 
-1. Aggiungere un gestore `Click` per `QuitGame`. Per aggiungere il gestore, passare alla **visualizzazione progettazione** per il form e fare doppio clic su `QuitGame`. Ogni volta che l'utente fa clic sul pulsante, il flusso di lavoro selezionato viene interrotto.
+1. Aggiungere un gestore `Click` per `QuitGame`. Per aggiungere il gestore, passare alla **visualizzazione progettazione** per il form e fare doppio clic su `QuitGame` . Ogni volta che l'utente fa clic sul pulsante, il flusso di lavoro selezionato viene interrotto.
 
     ```vb
     Private Sub QuitGame_Click(sender As Object, e As EventArgs) Handles QuitGame.Click

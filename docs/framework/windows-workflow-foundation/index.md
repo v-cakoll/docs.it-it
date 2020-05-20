@@ -1,19 +1,20 @@
 ---
 title: Windows Workflow Foundation
+description: Questo articolo contiene risorse che descrivono il modello di programmazione, gli esempi e gli strumenti del Windows Workflow Foundation.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WF [WF]
 - Windows Workflow Foundation [WF]
 ms.assetid: 9a23ea6b-d600-483e-89cd-8889cfec5f66
-ms.openlocfilehash: 159af9941e8e44defbdd01ed3c128c8327836f7a
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 177c9edbd25b003129079ee4d758e79841420d54
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141995"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419486"
 ---
 # <a name="windows-workflow-foundation"></a>Windows Workflow Foundation
-This section describes the programming model, samples, and tools of the Windows Workflow Foundation (WF).  
+In questa sezione vengono descritti il modello di programmazione, gli esempi e gli strumenti di Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Guida alla documentazione dei flussi di lavoro di Windows](guide-to-the-documentation.md)  
@@ -26,19 +27,19 @@ This section describes the programming model, samples, and tools of the Windows 
  Vengono descritte le nuove funzionalità di Windows Workflow Foundation in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)].  
   
  [Specifiche delle funzionalità di Windows Workflow Foundation](feature-specifics.md)  
- Describes the new features in Windows Workflow Foundation in .NET Framework 4.
+ Vengono descritte le nuove funzionalità di Windows Workflow Foundation in .NET Framework 4.
   
  [Panoramica dei concetti relativi al flusso di lavoro di Windows](conceptual-overview.md)  
- A set of topics that discusses the larger concepts behind Windows Workflow Foundation.  
+ Un set di argomenti in cui vengono illustrati i concetti più grandi alla base Windows Workflow Foundation.  
   
- [Esercitazione introduttiva](getting-started-tutorial.md)  
- A set of walkthrough topics that introduce you to programming Windows Workflow Foundation applications.  
+ [Esercitazione Introduzione](getting-started-tutorial.md)  
+ Set di argomenti della procedura dettagliata che introducono la programmazione Windows Workflow Foundation applicazioni.  
   
  [Programmazione di Windows Workflow Foundation](programming.md)  
  Set di nozioni di base che è necessario acquisire per diventare programmatori [!INCLUDE[wf1](../../../includes/wf1-md.md)] qualificati.  
   
  [Estensione di Windows Workflow Foundation](extend.md)  
- A set of topics that discusses how to extend or customize Windows Workflow Foundation to suit your needs.  
+ Un set di argomenti in cui viene illustrato come estendere o personalizzare Windows Workflow Foundation in base alle esigenze.  
   
  [Glossario di Windows Workflow Foundation per .NET Framework 4.5](glossary.md)  
  Viene definito un elenco di termini specifici di WF.  

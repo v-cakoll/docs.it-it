@@ -1,5 +1,6 @@
 ---
 title: Applicazione di attributi di interoperabilità
+description: Questo articolo riepiloga gli attributi di interoperabilità COM dello spazio dei nomi System. Runtime. InteropServices, inclusi gli attributi della fase di progettazione e dello strumento di conversione.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - design-time attributes
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: ca104c512641774217de5e270dc50b7393fc5725
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 831f8d79030264ef013a75cd91cb771c9d168576
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159247"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420539"
 ---
 # <a name="applying-interop-attributes"></a>Applicazione di attributi di interoperabilità
 Lo spazio dei nomi <xref:System.Runtime.InteropServices> offre tre categorie di attributi specifici per l'interoperabilità: quelli applicati manualmente in fase di progettazione, quelli applicati dalle API e dagli strumenti di interoperabilità COM durante il processo di conversione e quelli applicati nell'uno o nell'altro modo.  
@@ -28,7 +29,7 @@ Lo spazio dei nomi <xref:System.Runtime.InteropServices> offre tre categorie di 
 ## <a name="design-time-attributes"></a>Attributi della fase di progettazione  
  È possibile intervenire sul risultato del processo di conversione eseguito dalle API e dagli strumenti di interoperabilità COM usando gli attributi in fase di progettazione. La tabella seguente descrive gli attributi che è possibile applicare al codice sorgente gestito. Questi attributi possono essere applicati, in alcuni casi, anche dagli strumenti di interoperabilità COM.  
   
-|Attributo|Description|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.AutomationProxyAttribute>|Specifica se il marshalling del tipo deve essere effettuato mediante il gestore di marshalling di Automazione oppure un proxy e uno stub personalizzati.|  
 |<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>|Controlla il tipo di interfaccia generato per una classe.|  
@@ -56,7 +57,7 @@ Lo spazio dei nomi <xref:System.Runtime.InteropServices> offre tre categorie di 
 ## <a name="conversion-tool-attributes"></a>Attributi degli strumenti di conversione  
  La tabella seguente descrive gli attributi applicati dagli strumenti di interoperabilità COM durante il processo di conversione. Questi attributi non devono essere applicati in fase di progettazione.  
   
-|Attributo|Description|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.ComAliasNameAttribute>|Indica l'alias COM per un tipo di parametro o campo. Può essere usato per parametri, campi o valori restituiti.|  
 |<xref:System.Runtime.InteropServices.ComConversionLossAttribute>|Indica che le informazioni relative a una classe o a un'interfaccia sono andate perse durante l'importazione da una libreria dei tipi a un assembly.|  
@@ -66,7 +67,7 @@ Lo spazio dei nomi <xref:System.Runtime.InteropServices> offre tre categorie di 
 |<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|Contiene i **TYPEFLAGS** importati in origine per questo tipo dalla libreria dei tipi COM.|  
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|Contiene i **VARFLAGS** importati in origine per questa variabile dalla libreria dei tipi COM.|  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.InteropServices>
 - [Esposizione di componenti .NET Framework a COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 03751fa3758c239cb9eea5fe826dff66c1c1605b
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f04ff902743c91147a6f056bca3292ee47952bbd
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249578"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420552"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Indipendenza del linguaggio e componenti indipendenti dal linguaggio
 
@@ -23,7 +23,7 @@ ms.locfileid: "80249578"
 
 È necessario che gli oggetti espongano ai chiamanti solo le funzionalità comuni a tutti i linguaggi, affinché sia garantita un'interazione completa con altri oggetti scritti in uno qualsiasi dei linguaggi. Questo set comune di funzionalità è definito dalle specifiche CLS (Common Language Specification), un set di regole che si applicano agli assembly generati. Le specifiche CLS (Common Language Specification) sono definite nella partizione I, clausole da 7 a 11 dello [standard ECMA-335 di Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
-Se il componente è conforme alle specifiche CLS (Common Language Specification), ne è garantita la conformità a CLS ed è possibile accedervi dal codice negli assembly scritti in qualsiasi linguaggio di programmazione che supporti CLS. È possibile determinare se il componente è conforme alle specifiche CLS (Common Language Specification) in fase di compilazione applicando l'attributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) al codice sorgente. Per ulteriori informazioni, vedere [Attributo CLSCompliantAttribute](#the-clscompliantattribute-attribute).
+Se il componente è conforme alle specifiche CLS (Common Language Specification), ne è garantita la conformità a CLS ed è possibile accedervi dal codice negli assembly scritti in qualsiasi linguaggio di programmazione che supporti CLS. È possibile determinare se il componente è conforme alle specifiche CLS (Common Language Specification) in fase di compilazione applicando l'attributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) al codice sorgente. Per ulteriori informazioni, vedere l' [attributo CLSCompliantAttribute](#the-clscompliantattribute-attribute).
 
 Contenuto dell'articolo:
 
@@ -33,7 +33,7 @@ Contenuto dell'articolo:
 
   * [Convenzioni di denominazione](#naming-conventions)
 
-  * [Conversione dei tipi](#type-conversion)
+  * [Conversione di tipi](#type-conversion)
 
   * [Matrici](#arrays)
 
@@ -68,7 +68,7 @@ Contenuto dell'articolo:
 In questa sezione vengono illustrate le regole per creare un componente conforme a CLS. Per un elenco completo delle regole, vedere la partizione I, clausola 11 dello [standard ECMA-335 di Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 > [!NOTE]
-> Nelle specifiche CLS (Common Language Specification) viene illustrata ciascuna regola per la conformità a CLS applicata ai consumer (sviluppatori che accedono a livello di codice a un componente conforme a CLS), ai framework (sviluppatori che usano un compilatore di linguaggio per creare librerie conformi a CLS) e alle estensioni (sviluppatori che creano uno strumento quale un compilatore di linguaggio o un parser di codice per la creazione di componenti conformi a CLS). Questo articolo è incentrato sulle regole che si applicano ai framework. Si noti, tuttavia, che alcune delle regole che si applicano agli extender possono essere applicate anche agli assembly creati utilizzando [Reflection.Emit](xref:System.Reflection.Emit).
+> Nelle specifiche CLS (Common Language Specification) viene illustrata ciascuna regola per la conformità a CLS applicata ai consumer (sviluppatori che accedono a livello di codice a un componente conforme a CLS), ai framework (sviluppatori che usano un compilatore di linguaggio per creare librerie conformi a CLS) e alle estensioni (sviluppatori che creano uno strumento quale un compilatore di linguaggio o un parser di codice per la creazione di componenti conformi a CLS). Questo articolo è incentrato sulle regole che si applicano ai framework. Si noti, tuttavia, che alcune delle regole applicate alle estensioni possono essere applicate anche agli assembly creati mediante [Reflection. Emit](xref:System.Reflection.Emit).
 
 Per progettare un componente indipendente dal linguaggio, è necessario applicare le regole per la conformità a CLS solo all'interfaccia pubblica del componente. L'implementazione privata non deve essere conforme alla specifica.
 
@@ -165,11 +165,11 @@ Costruttori | [Costruttori](#constructors) | Un costruttore di oggetti non deve 
 Enumerazioni | [Enumerazioni](#enumerations) | Il tipo sottostante di un'enumerazione deve essere un tipo Integer CLS incorporato, il nome del campo deve essere "value__" e il campo deve essere contrassegnato come `RTSpecialName`. |  7
 Enumerazioni | [Enumerazioni](#enumerations) | Sono disponibili due tipi distinti di enumerazioni, indicati dalla presenza o dall'assenza dell'attributo personalizzato [System.FlagsAttribute](xref:System.FlagsAttribute) (vedere la libreria nella partizione IV). Una rappresenta Integer denominati, l'altra flag di bit denominati che possono essere combinati per generare un valore senza nome. Il valore di un oggetto `enum` non è limitato ai valori specifici. |  8
 Enumerazioni | [Enumerazioni](#enumerations) | Il tipo dei campi statici con valori letterali di un'enumerazione deve essere uguale a quello dell'enumerazione stessa. |  9
-Events | [Events](#events) | I metodi che implementano un evento devono essere contrassegnati come `SpecialName` nei metadati. |29
-Events | [Events](#events) | L'accessibilità di un evento e le relative funzioni di accesso devono essere identiche. |30
-Events | [Events](#events) | I metodi `add` e `remove` per un evento devono essere entrambi presenti o entrambi assenti. |31
-Events | [Events](#events) | I `add` `remove` metodi e per un evento accettano ciascuno un parametro il cui tipo definisce il tipo dell'evento e che deve essere derivato da [System.Delegate](xref:System.Delegate). |32
-Events | [Events](#events) | Gli eventi devono essere conformi a un pattern di nome specifico. L'attributo SpecialName indicato nella regola CLS 29 deve essere ignorato nei confronti tra nomi appropriati e deve essere conforme alle regole dell'identificatore.  |33
+Eventi | [Events](#events) | I metodi che implementano un evento devono essere contrassegnati come `SpecialName` nei metadati. |29
+Eventi | [Events](#events) | L'accessibilità di un evento e le relative funzioni di accesso devono essere identiche. |30
+Eventi | [Events](#events) | I metodi `add` e `remove` per un evento devono essere entrambi presenti o entrambi assenti. |31
+Eventi | [Events](#events) | I `add` `remove` metodi e per un evento devono entrambi assumere un parametro il cui tipo definisce il tipo dell'evento e che deve essere derivato da [System. Delegate](xref:System.Delegate). |32
+Eventi | [Events](#events) | Gli eventi devono essere conformi a un pattern di nome specifico. L'attributo SpecialName indicato nella regola CLS 29 deve essere ignorato nei confronti tra nomi appropriati e deve essere conforme alle regole dell'identificatore.  |33
 Eccezioni | [Eccezioni](#exceptions) | Gli oggetti generati devono essere di tipo [System.Exception](xref:System.Exception) o di un tipo che eredita da esso. Ciononostante, i metodi conformi a CLS non sono necessari per bloccare la propagazione di altri tipi di eccezioni. | 40
 Generale | [Regole di conformità a CLS](#cls-compliance-rules) | Le regole CLS sono valide solo per le parti di un tipo che sono accessibili o visibili all'esterno dell'assembly di definizione. | 1
 Generale | [Regole di conformità a CLS](#cls-compliance-rules) | I membri di tipi non conformi a CLS non saranno contrassegnati come conformi a CLS. | 2
@@ -191,10 +191,10 @@ Overload | [Overload](#overloads) | È possibile eseguire l'overload solo di pro
 Overload | [Overload](#overloads) |Le proprietà e i metodi possono essere sottoposti a overload solo in base al numero e ai tipi dei relativi parametri, a eccezione degli operatori di conversione denominati `op_Implicit` e `op_Explicit`, i quali possono essere anche sottoposti a overload in base al relativo tipo restituito. | 38
 Overload | -- | Se due o più metodi conformi a CLS dichiarati in un tipo hanno lo stesso nome e, per un set specifico di creazioni di istanze del tipo, hanno lo stesso parametro e gli stesi tipi restituiti, tutti questi metodi saranno semanticamente equivalenti alle creazioni di istanze del tipo. | 48
 Proprietà | [Proprietà](#properties) | I metodi che implementano i metodi Get e Set di una proprietà devono essere contrassegnati come `SpecialName` nei metadati. | 24
-Proprietà | [Proprietà](#properties) | Le funzioni di accesso di una proprietà devono essere tutte statiche, tutte virtuali o tutte di istanza. | 26
+Proprietà | [Proprietà](#properties) | Le funzioni di accesso di una proprietà devono essere tutte statiche, tutte virtuali o tutte istanze. | 26
 Proprietà | [Proprietà](#properties) | Il tipo di una proprietà deve essere il tipo restituito del metodo Get e il tipo dell'ultimo argomento del metodo Set. I tipi dei parametri della proprietà devono essere i tipi dei parametri per il metodo Get e i tipi di tutti i parametri del metodo Set tranne l'ultimo. Tutti questi tipi devono essere conformi a CLS e non devono essere puntatori gestiti, ossia non devono essere passati per riferimento. | 27
 Proprietà | [Proprietà](#properties) | Le proprietà devono essere conformi a un pattern di nome specifico. L'attributo `SpecialName` indicato nella regola CLS 24 deve essere ignorato nei confronti tra nomi appropriati e deve essere conforme alle regole dell'identificatore. Una proprietà deve disporre di un metodo Get, un metodo Set o di entrambi. | 28
-Conversione di tipi | [Conversione dei tipi](#type-conversion) | Se viene specificato op_Implicit oppure op_Explicit, sarà necessario fornire un metodo alternativo di coercizione. | 39
+Conversione di tipi | [Conversione di tipi](#type-conversion) | Se viene specificato op_Implicit oppure op_Explicit, sarà necessario fornire un metodo alternativo di coercizione. | 39
 Tipi | [Tipi e firme dei membri di tipo](#types-and-type-member-signatures) | I tipi di valore boxed non sono conformi a CLS. | 3
 Tipi | [Tipi e firme dei membri di tipo](#types-and-type-member-signatures) | Tutti i tipi visualizzati in una firma devono essere conformi a CLS. Tutti i tipi che costituiscono un tipo generico con istanze devono essere conformi a CLS. | 11
 Tipi | [Tipi e firme dei membri di tipo](#types-and-type-member-signatures) | I riferimenti tipizzati non sono conformi a CLS. | 14
@@ -315,14 +315,14 @@ Tutti i tipi visualizzati nelle firme dei membri, incluso il tipo restituito di 
 
 In [common type system](common-type-system.md) di .NET Framework è incluso un numero di tipi incorporati supportati direttamente da Common Language Runtime, codificati in particolare nei metadati di un assembly. Di questi tipi intrinseci, i tipi elencati nella tabella seguente sono conformi a CLS.
 
-Tipo conforme a CLS | Descrizione
+Tipo conforme a CLS | Description
 ------------------ | -----------
 [Byte](xref:System.Byte) | Unsigned Integer a 8 bit
 [Int16](xref:System.Int16) | Signed Integer a 16 bit
 [Int32](xref:System.Int32) | Intero con segno a 32 bit
 [Int64](xref:System.Int64) | Intero con segno a 64 bit
 [Singolo](xref:System.Single) | Valore a virgola mobile e precisione singola
-[Doppia](xref:System.Double) | Valore a virgola mobile a precisione doppia
+[Doppio](xref:System.Double) | Valore a virgola mobile a precisione doppia
 [Boolean](xref:System.Boolean) | tipo di valore true o false
 [Char](xref:System.Char) | Unità di codice codificata UTF-16
 [Decimale](xref:System.Decimal) | Numero decimale non a virgola mobile
@@ -331,9 +331,9 @@ Tipo conforme a CLS | Descrizione
 
 I tipi intrinseci elencati nella tabella seguente non sono conformi a CLS.
 
-Tipo non conforme | Descrizione | Alternativa alla conformità a CLS
+Tipo non conforme | Description | Alternativa conforme a CLS
 ------------------ | ----------- | -------------------------
-[Sbyte](xref:System.SByte) | Tipo di dati Signed Integer a 8 bit | [Int16](xref:System.Int16)
+[SByte](xref:System.SByte) | Tipo di dati Signed Integer a 8 bit | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | Intero senza segno a 16 bit | [Int32](xref:System.Int32)
 [UInt32](xref:System.UInt32) | Intero senza segno a 32 bit | [Int64](xref:System.Int64)
 [UInt64](xref:System.UInt64) | Intero senza segno a 64 bit | [Int64](xref:System.Int64) (possibile overflow), [BigInteger](xref:System.Numerics.BigInteger) o [Double](xref:System.Double)
@@ -341,7 +341,7 @@ Tipo non conforme | Descrizione | Alternativa alla conformità a CLS
 
 Nella libreria di classi .NET Framework o in qualsiasi altra libreria di classi possono essere inclusi altri tipi non conformi a CLS; ad esempio:
 
-* Tipi di valore boxed. Nell'esempio C# seguente viene creata una classe con una proprietà pubblica di tipo `int`* denominata `Value`. Poiché `int`* è un tipo di valore boxed, il compilatore lo contrassegna come non conforme alle specifiche CLS.
+* Tipi di valore boxed. Nell'esempio C# seguente viene creata una classe con una proprietà pubblica di tipo `int*` denominata `Value`. Poiché `int*` è un tipo di valore boxed, viene contrassegnato come non conforme a CLS dal compilatore.
 
 ```csharp
 using System;
@@ -2052,19 +2052,19 @@ I costruttori nelle classi e strutture conformi a CLS devono rispettare queste r
 
 Le proprietà nei tipi conformi a CLS devono rispettare queste regole:
 
-* Una proprietà deve disporre di un metodo Set, un metodo Get o di entrambi. In un assembly, questi vengono implementati come metodi speciali, il che significa `get` \_che appariranno come metodi separati `SpecialName` (il getter è denominato *nomeproprietà* e il setter è `set` \_ *propertyname*) contrassegnato come nei metadati dell'assembly. Il compilatore C# applica questa regola automaticamente, senza la necessità di usare l'attributo <xref:System.CLSCompliantAttribute>.
+* Una proprietà deve disporre di un metodo Set, un metodo Get o di entrambi. In un assembly questi vengono implementati come metodi speciali, pertanto verranno visualizzati come metodi separati (il getter è denominato `get` \_ *PropertyName* e il setter è `set` \_ *PropertyName*) contrassegnato come `SpecialName` nei metadati dell'assembly. Il compilatore C# applica questa regola automaticamente, senza la necessità di usare l'attributo <xref:System.CLSCompliantAttribute>.
 
 * Un tipo di proprietà è il tipo restituito del metodo Get della proprietà e l'ultimo argomento del metodo Set. È necessario che questi tipi siano conformi a CLS e gli argomenti non possono essere assegnati alla proprietà per riferimento, cioè non possono essere puntatori gestiti.
 
 * Se una proprietà dispone dei metodi Get e Set, essi devono essere entrambi virtuali, statici o istanze. Il compilatore C# applica automaticamente questa regola tramite la relativa sintassi di definizione della proprietà.
 
-### <a name="events"></a>Events
+### <a name="events"></a>Eventi
 
 Un evento viene definito in base al nome e al relativo tipo. Il tipo di evento è un delegato che viene usato per indicare l'evento. Ad esempio, l'evento `DbConnection.StateChange` è di tipo `StateChangeEventHandler`. Oltre all'evento stesso, vi sono tre metodi con nomi basati sul nome di evento che forniscono l'implementazione dell'evento e sono contrassegnati come `SpecialName` nei metadati dell'assembly:
 
-* Metodo per l'aggiunta di `add`un gestore eventi, denominato _*NomeEvento*. Ad esempio, il metodo di sottoscrizione evento per l'evento `DbConnection.StateChange` è denominato `add_StateChange`.
+* Metodo per l'aggiunta di un gestore eventi, denominato `add` _*EventName*. Ad esempio, il metodo di sottoscrizione evento per l'evento `DbConnection.StateChange` è denominato `add_StateChange`.
 
-* Metodo per la rimozione di `remove`un gestore eventi denominato _*NomeEvento*. Ad esempio, il metodo di rimozione per l'evento `DbConnection.StateChange` è denominato `remove_StateChange`.
+* Metodo per la rimozione di un gestore eventi, denominato `remove` _*EventName*. Ad esempio, il metodo di rimozione per l'evento `DbConnection.StateChange` è denominato `remove_StateChange`.
 
 * Un metodo per indicare che si è verificato l'evento, denominato `raise`\_*EventName*.
 
@@ -2336,7 +2336,7 @@ Public Class Example
 End Class
 ```
 
-### <a name="overloads"></a>Overloads
+### <a name="overloads"></a>Overload
 
 Le specifiche CLS (Common Language Specification) impongono i requisiti seguenti sui membri di overload:
 
@@ -2570,7 +2570,7 @@ Tramite il costruttore o le proprietà di un attributo conforme a CLS possono es
 
 * [Char](xref:System.Char)
 
-* [Doppia](xref:System.Double)
+* [Doppio](xref:System.Double)
 
 * [Int16](xref:System.Int16)
 
@@ -2582,7 +2582,7 @@ Tramite il costruttore o le proprietà di un attributo conforme a CLS possono es
 
 * [Stringa](xref:System.String)
 
-* [Tipo](xref:System.Type)
+* [Type](xref:System.Type)
 
 * Qualsiasi tipo di enumerazione il cui tipo sottostante è `Byte`, `Int16`, `Int32` o `Int64`.
 

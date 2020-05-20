@@ -1,5 +1,6 @@
 ---
 title: Runtime Callable Wrapper
+description: CLR espone oggetti COM tramite un Runtime Callable Wrapper, che gestisce le chiamate tra un client .NET e un oggetto COM.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM interop, COM wrappers
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 0b448379fba965060fdf3bf067e65374f40d1fc2
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 6868c79791d960dd1ae55ab09d4ac3b40ce52655
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156010"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420487"
 ---
 # <a name="runtime-callable-wrapper"></a>Runtime Callable Wrapper
 Common Language Runtime espone gli oggetti COM tramite un proxy denominato Runtime Callable Wrapper (RCW). Benché l'RCW appaia ai client .NET come un normale oggetto, la sua funzione principale consiste nell'effettuare il marshalling tra un client .NET e un oggetto COM.  
@@ -56,7 +57,7 @@ La figura seguente illustra il processo per accedere a oggetti COM tramite Runti
 |**IDispatchEx** (solo .NET Framework) |Se la classe implementa **IDispatchEx**, l'oggetto RCW implementa **IExpando**. L'interfaccia **IDispatchEx** è un'estensione dell'interfaccia **IDispatch** che, diversamente da **IDispatch**, consente l'enumerazione, l'aggiunta, l'eliminazione e la chiamata dei membri con distinzione tra maiuscole e minuscole.|  
 |**IEnumVARIANT**|Consente di trattare come raccolte i tipi COM che supportano l'enumerazione.|  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Wrapper COM](com-wrappers.md)
 - [COM Callable Wrapper](com-callable-wrapper.md)

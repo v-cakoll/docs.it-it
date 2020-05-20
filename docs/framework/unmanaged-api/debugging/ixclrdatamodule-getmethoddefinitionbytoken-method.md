@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: c70920205b27376d453bdd0a13223c6a5569075b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 074949145be588fc34266a9f2ee501caeeffb9d3
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395290"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420877"
 ---
 # <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>Metodo IXCLRDataModule:: GetMethodDefinitionByToken
 
@@ -45,18 +45,18 @@ in Token del metodo.
 `methodDefinition`\
 out Definizione del metodo.
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Il metodo fornito fa parte dell' `IXCLRDataModule` interfaccia e corrisponde allo slot 26 della tabella del metodo virtuale.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
 **Intestazione:** Nessuno  
 **Libreria:** Nessuno  
 **Versioni .NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Debug](index.md)
 - [Interfaccia IXCLRDataModule](ixclrdatamodule-interface.md)

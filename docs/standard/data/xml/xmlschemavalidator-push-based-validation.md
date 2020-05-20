@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
-ms.openlocfilehash: 6a0cc110c2b8bcd97b9f5c16a344db5a63046353
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d5b2fe4325000023acc98580a2a6d014f56fecbd
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709803"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419109"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>Convalida basata sul metodo push di XmlSchemaValidator
 
@@ -440,9 +440,9 @@ Nella tabella seguente vengono descritti la transizione dello stato della classe
 
 |State|Transizione|
 |-----------|----------------|
-|Convalida|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|
+|Validate|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|
 |TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|
-|Elemento|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A><xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Contenuto\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A><xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; \* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A><br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A><xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> \* &#124; di <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> contenuto \* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>|
+|Elemento|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A><xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* ( <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Contenuto \* )? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A><xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A><xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> &#124; di contenuto \* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>|
 |Contenuto|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|
 
 > [!NOTE]
@@ -456,7 +456,7 @@ Nella tabella seguente vengono descritti gli effetti dei segni di punteggiatura 
 |------------|-----------------|
 |&#124;|È possibile chiamare il metodo o lo stato che precede o che segue la barra.|
 |?|Il metodo o lo stato che precede il punto interrogativo è facoltativo. Tuttavia, se viene chiamato, può essere chiamato solo una volta.|
-|*|Il metodo o lo stato che precede il simbolo * è facoltativo e può essere chiamato più di una volta.|
+|\*|Il metodo o lo stato che precede il \* simbolo è facoltativo e può essere chiamato più di una volta.|
 
 ## <a name="validation-context"></a>Contesto di convalida
 

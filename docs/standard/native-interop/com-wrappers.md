@@ -1,5 +1,6 @@
 ---
 title: Wrapper COM
+description: I client COM e gli oggetti .NET interagiscono utilizzando un COM Callable Wrapper e un Runtime Callable Wrapper. CLR crea automaticamente i wrapper.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wrapper classes
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
-ms.openlocfilehash: d647a8cd73fa714e86454687a25501259f894f6d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f1cf84b8f15de1e3bd19a391767f5573f01ff806
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120716"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420513"
 ---
 # <a name="com-wrappers"></a>Wrapper COM
 COM è diverso dal modello a oggetti del runtime .NET per diversi aspetti importanti:  
@@ -31,7 +32,7 @@ COM è diverso dal modello a oggetti del runtime .NET per diversi aspetti import
   
  Nella maggior parte dei casi, l'oggetto CCW o RCW standard generato dal runtime effettua un marshalling adeguato per le chiamate che superano il limite tra COM e il runtime .NET. Usando attributi personalizzati, è possibile, facoltativamente, impostare il modo in cui il runtime rappresenta il codice gestito e non gestito.  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Interoperabilità COM avanzata in .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Runtime Callable Wrapper](runtime-callable-wrapper.md)

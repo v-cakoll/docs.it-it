@@ -1,23 +1,24 @@
 ---
-title: 'Procedura: Creare un flusso di lavoro sequenziale'
+title: 'Procedura: creare un flusso di lavoro sequenziale'
+description: Questo articolo crea un flusso di lavoro che usa sia le attività predefinite, ad esempio l'attività Sequence, che le attività personalizzate.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 61e3f01b1259536ff15d71526e91aef42069722e
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: f80ac471fdcc425504b11b5fb17effa888aa9590
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989700"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419694"
 ---
-# <a name="how-to-create-a-sequential-workflow"></a>Procedura: Creare un flusso di lavoro sequenziale
+# <a name="how-to-create-a-sequential-workflow"></a>Procedura: creare un flusso di lavoro sequenziale
 
-I flussi di lavoro possono essere costruiti da attività incorporate e da attività personalizzate. Questo argomento illustra la creazione di un flusso di lavoro che usa sia attività predefinite, ad <xref:System.Activities.Statements.Sequence> esempio l'attività, che le attività personalizzate della [procedura precedente: Creare un argomento](how-to-create-an-activity.md) di attività. Il flusso di lavoro consente di modellare un gioco per determinare un numero.
+I flussi di lavoro possono essere costruiti da attività incorporate e da attività personalizzate. Questo argomento illustra la creazione di un flusso di lavoro che usa sia attività predefinite, ad esempio l' <xref:System.Activities.Statements.Sequence> attività, che le attività personalizzate dell'argomento [procedura: creare un'attività](how-to-create-an-activity.md) precedente. Il flusso di lavoro consente di modellare un gioco per determinare un numero.
 
 > [!NOTE]
-> Ogni argomento nell'Esercitazione introduttiva dipende dagli argomenti precedenti. Per completare questo argomento, è necessario completare [prima di tutto come: Creare un'attività](how-to-create-an-activity.md).
+> Ogni argomento nell'Esercitazione introduttiva dipende dagli argomenti precedenti. Per completare questo argomento, è necessario completare prima di tutto [procedura: creare un'attività](how-to-create-an-activity.md).
 
 > [!NOTE]
 > Per scaricare una versione completa dell'esercitazione, vedere [Windows Workflow Foundation (WF45) - esercitazione introduttiva](https://go.microsoft.com/fwlink/?LinkID=248976).
@@ -26,7 +27,7 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
 
 1. Fare clic con il pulsante destro del mouse su **NumberGuessWorkflowActivities** in **Esplora soluzioni** e scegliere **Aggiungi**, **nuovo elemento**.
 
-2. Nel nodo **elementi comuni** **installati**selezionare **flusso di lavoro**. Selezionare **attività** dall'elenco **flusso di lavoro** .
+2. Nel nodo **elementi comuni** **installati**selezionare **flusso di lavoro**. Selezionare l'**attività** dall'elenco **Workflow**.
 
 3. Digitare `SequentialNumberGuessWorkflow` nella casella **nome** e fare clic su **Aggiungi**.
 
@@ -44,9 +45,9 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
 
 5. Fare clic su **Crea argomento**.
 
-6. Digitare `Turns` nella casella **nome** che si trova sotto l'argomento appena `MaxNumber` aggiunto, selezionare **esterno** dall'elenco a discesa **direzione** , selezionare **Int32** dall'elenco a discesa **tipo di argomento** , quindi premere INVIO.
+6. Digitare `Turns` nella casella **nome** che si trova sotto l'argomento appena aggiunto `MaxNumber` , selezionare **esterno** dall'elenco a discesa **direzione** , selezionare **Int32** dall'elenco a discesa **tipo di argomento** , quindi premere INVIO.
 
-7. Fare clic su **argomenti** nel lato inferiore sinistro dell'ActivityDesigner per chiudere il riquadro **argomenti** .
+7. Fare clic su **Argomenti** nel riquadro inferiore sinistro dell'area di progettazione dell'attività per chiudere il riquadro **Argomenti**.
 
 8. Fare clic su **variabili** nel lato inferiore sinistro della finestra di progettazione del flusso di lavoro per visualizzare il riquadro **variabili** .
 
@@ -61,11 +62,11 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
 
 12. Digitare `Target` nella casella **nome** , selezionare **Int32** dall'elenco a discesa **tipo di variabile** , quindi premere INVIO per salvare la variabile.
 
-13. Fare clic su **variabili** nel lato inferiore sinistro dell'ActivityDesigner per chiudere il riquadro **variabili** .
+13. Fare clic su **Variabili** nel riquadro inferiore sinistro dell'area di progettazione dell'attività per chiudere il riquadro **Variabili**.
 
 ## <a name="to-add-the-workflow-activities"></a>Per aggiungere le attività del flusso di lavoro
 
-1. Trascinare un'attività **assign** dalla sezione **primitive** della **casella degli strumenti** e rilasciarla nell'attività **Sequence** . Digitare `Target` nella casella **a** e l'espressione seguente nella casella **immettere un' C# espressione** o **immettere un'espressione VB** .
+1. Trascinare un'attività **assign** dalla sezione **primitive** della **casella degli strumenti** e rilasciarla nell'attività **Sequence** . Digitare `Target` nella casella **a** e l'espressione seguente nella casella **immettere un'espressione C#** o **immettere un'espressione VB** .
 
     ```vb
     New System.Random().Next(1, MaxNumber + 1)
@@ -76,7 +77,7 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     ```
 
     > [!TIP]
-    > Se la finestra **casella degli strumenti** non è visualizzata, scegliere **casella degli strumenti** dal menu **Visualizza** .
+    > Se la finestra **Casella degli strumenti** non è visualizzata, selezionare **Casella degli strumenti** dal menu **Visualizza**.
 
 2. Trascinare un'attività **DoWhile** dalla sezione **flusso di controllo** della **casella degli strumenti** e rilasciarla nel flusso di lavoro in modo che si trovi sotto l'attività **assign** .
 
@@ -112,7 +113,7 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     > [!NOTE]
     > Quando si rilascia l'attività **assign** , si noti come la finestra di progettazione del flusso di lavoro aggiunge automaticamente un'attività **Sequence** in modo che contenga sia l'attività **prompt** che l'attività **assign** appena aggiunta.
 
-7. Digitare `Turns` nella casella **a** e `Turns + 1` nella casella **immettere un' C# espressione** o **immettere un'espressione VB** .
+7. Digitare `Turns` nella casella **a** e `Turns + 1` nella casella **immettere un'espressione C#** o **immettere un'espressione VB** .
 
 8. Trascinare un'attività **if** dalla sezione **flusso di controllo** della **casella degli strumenti** e rilasciarla nell'attività **Sequence** in modo che segua l'attività **assign** appena aggiunta.
 
@@ -154,9 +155,9 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
 
 ## <a name="to-build-the-workflow"></a>Per compilare il flusso di lavoro
 
-1. Per compilare la soluzione, premere CTRL+MAIUSC+B.
+1. Premere CTRL+MAIUSC+B per compilare la soluzione.
 
-     Per istruzioni su come eseguire il flusso di lavoro, vedere l'argomento successivo, [procedura: Eseguire un flusso](how-to-run-a-workflow.md)di lavoro. Se è già stata completata la [procedura: Eseguire un passaggio](how-to-run-a-workflow.md) del flusso di lavoro con uno stile di flusso di lavoro diverso e desidera eseguirlo tramite il flusso di lavoro sequenziale da questo passaggio, passare alla sezione [per compilare ed eseguire l'applicazione](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) di [procedura: Eseguire un flusso](how-to-run-a-workflow.md)di lavoro.
+     Per istruzioni su come eseguire il flusso di lavoro, vedere l'argomento successivo [procedura: eseguire un flusso di lavoro](how-to-run-a-workflow.md). Se è già stato completato il passaggio [procedura: eseguire un flusso di lavoro](how-to-run-a-workflow.md) con uno stile di flusso di lavoro diverso e si desidera eseguirlo tramite il flusso di lavoro sequenziale da questo passaggio, passare alla sezione [per compilare ed eseguire l'applicazione](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) di [procedura: eseguire un flusso di lavoro](how-to-run-a-workflow.md).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -164,6 +165,6 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
 - <xref:System.Activities.Statements.FlowDecision>
 - [Programmazione di Windows Workflow Foundation](programming.md)
 - [Progettazione di flussi di lavoro](designing-workflows.md)
-- [Esercitazione introduttiva](getting-started-tutorial.md)
+- [Esercitazione Introduzione](getting-started-tutorial.md)
 - [Procedura: Creare un'attività](how-to-create-an-activity.md)
 - [Procedura: Eseguire un flusso di lavoro](how-to-run-a-workflow.md)

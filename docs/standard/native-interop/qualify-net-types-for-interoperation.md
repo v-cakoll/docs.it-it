@@ -1,5 +1,6 @@
 ---
 title: Qualificazione di tipi .NET per l'interoperabilità COM
+description: Questo articolo fornisce linee guida che consentono di esporre i tipi in un assembly .NET alle applicazioni COM per l'interoperabilità COM.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-ms.openlocfilehash: f0b9bc03225ae3d2365a21fd3b78d09c08d4fc1a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5b122befffbcad39258393462c75ac20431d9136
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091575"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420500"
 ---
 # <a name="qualifying-net-types-for-com-interoperation"></a>Qualificazione di tipi .NET per l'interoperabilità COM
 Se si vuole esporre i tipi contenuti in un assembly alle applicazioni COM, tenere presenti i requisiti di interoperabilità COM in fase di progettazione. Rispettando le linee guida seguenti, è possibile ottenere una facile integrazione tra i tipi gestiti (classi, interfacce, strutture ed enumerazioni) e i tipi COM:  
@@ -45,7 +46,7 @@ Se si vuole esporre i tipi contenuti in un assembly alle applicazioni COM, tener
   
  Quando si esegue l'esportazione in COM, la gerarchia di ereditarietà di un tipo gestito viene appiattita. Anche il controllo delle versioni varia tra ambiente gestito e ambiente non gestito. I tipi esposti a COM non hanno le stesse caratteristiche di controllo delle versioni degli altri tipi gestiti.  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.InteropServices.ComVisibleAttribute>
 - [Esposizione di componenti .NET Framework a COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

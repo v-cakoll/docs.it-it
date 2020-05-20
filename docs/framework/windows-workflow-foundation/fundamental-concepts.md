@@ -1,13 +1,14 @@
 ---
 title: Concetti di base del flusso di lavoro di Windows
+description: In questo articolo vengono descritti alcuni concetti relativi allo sviluppo di flussi di lavoro nel .NET Framework 4.6.1 che potrebbero non essere noti ad alcuni sviluppatori.
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: 730679c892d96ff6de2d02ee1e1afdd52e452439
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 07498241280191fb62a35a559a3391f7148c05b9
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650946"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419889"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Concetti di base del flusso di lavoro di Windows
 Nello sviluppo del flusso di lavoro in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] vengono usati concetti che potrebbero essere nuovi per alcuni sviluppatori. In questo argomento vengono descritti alcuni dei concetti e la relativa implementazione.  
@@ -52,7 +53,7 @@ Nello sviluppo del flusso di lavoro in [!INCLUDE[netfx_current_long](../../../in
  Le attività accedono all'ambiente di runtime del flusso di lavoro tramite la classe derivata <xref:System.Activities.ActivityContext> appropriata, quale <xref:System.Activities.NativeActivityContext> o <xref:System.Activities.CodeActivityContext>. In questo modo possono risolvere argomenti e variabili, pianificare le attività figlio ed eseguire molte altre operazioni.  
   
 ## <a name="services"></a>Servizi  
- I flussi di lavoro rappresentano un modo semplice per implementare e accedere a servizi loosely-coupled usando le attività di messaggistica. Attività di messaggistica sono costruite su WCF e rappresentano il meccanismo principale usato per ottenere i dati dentro e fuori un flusso di lavoro. È possibile comporre insieme attività di messaggistica per modellare qualsiasi tipo di modello di scambio di messaggi desiderato. Per altre informazioni, vedere [attività di messaggistica](../wcf/feature-details/messaging-activities.md). I servizi flusso di lavoro sono ospitati usando la classe <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Per altre informazioni, vedere [Panoramica di servizi flusso di lavoro che ospita](../wcf/feature-details/hosting-workflow-services-overview.md). Per altre informazioni sui servizi del flusso di lavoro vedere [servizi flusso di lavoro](../wcf/feature-details/workflow-services.md)  
+ I flussi di lavoro rappresentano un modo semplice per implementare e accedere a servizi loosely-coupled usando le attività di messaggistica. Le attività di messaggistica sono basate su WCF e rappresentano il meccanismo principale utilizzato per ottenere i dati all'interno e all'esterno di un flusso di lavoro. È possibile comporre insieme attività di messaggistica per modellare qualsiasi tipo di modello di scambio di messaggi desiderato. Per altre informazioni, vedere [attività di messaggistica](../wcf/feature-details/messaging-activities.md). I servizi flusso di lavoro sono ospitati usando la classe <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Per ulteriori informazioni, vedere [Panoramica dei servizi flusso di lavoro di hosting](../wcf/feature-details/hosting-workflow-services-overview.md). Per ulteriori informazioni sui servizi del flusso di lavoro, vedere [Servizi flussi di lavoro](../wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Persistenza, scaricamento e flussi di lavoro con esecuzione prolungata  
  Il flusso di lavoro di Windows semplifica la creazione di programmi reattivi con esecuzione prolungata fornendo:  
