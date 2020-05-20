@@ -1,46 +1,48 @@
 ---
 title: Resilienza cloud nativa
 description: Architettura di app .NET cloud native per Azure | Resilienza nativa del cloud
-ms.date: 06/30/2019
-ms.openlocfilehash: 427405d95534c4467ab519c2188fe88e2f18e2b2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+author: robvet
+ms.date: 05/13/2020
+ms.openlocfilehash: f3aa89e3ae21b13a31f65013b59636b3f931553c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781091"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613772"
 ---
-# <a name="cloud-native-resiliency"></a><span data-ttu-id="8c8f9-103">Resilienza cloud nativa</span><span class="sxs-lookup"><span data-stu-id="8c8f9-103">Cloud-native resiliency</span></span>
+# <a name="cloud-native-resiliency"></a><span data-ttu-id="8076a-103">Resilienza cloud nativa</span><span class="sxs-lookup"><span data-stu-id="8076a-103">Cloud-native resiliency</span></span>
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+<span data-ttu-id="8076a-104">La resilienza è la capacità del sistema di reagire agli errori e rimane comunque funzionante.</span><span class="sxs-lookup"><span data-stu-id="8076a-104">Resiliency is the ability of your system to react to failure and still remain functional.</span></span> <span data-ttu-id="8076a-105">Non si tratta di evitare errori, ma di accettare un errore e costruire i servizi nativi del cloud per rispondervi.</span><span class="sxs-lookup"><span data-stu-id="8076a-105">It's not about avoiding failure, but accepting failure and constructing your cloud-native services to respond to it.</span></span> <span data-ttu-id="8076a-106">Si vuole tornare a uno stato completamente funzionante più rapidamente possibile.</span><span class="sxs-lookup"><span data-stu-id="8076a-106">You want to return to a fully functioning state quickly as possible.</span></span>
 
-<span data-ttu-id="8c8f9-104">La resilienza è la capacità del sistema di reagire agli errori e rimane comunque funzionante.</span><span class="sxs-lookup"><span data-stu-id="8c8f9-104">Resiliency is the ability of your system to react to failure and still remain functional.</span></span> <span data-ttu-id="8c8f9-105">Non è per evitare errori.</span><span class="sxs-lookup"><span data-stu-id="8c8f9-105">It isn't about avoiding failure.</span></span> <span data-ttu-id="8c8f9-106">Tuttavia, l'accettazione di tale errore è inevitabile nei sistemi basati sul cloud e la creazione dell'applicazione per rispondere.</span><span class="sxs-lookup"><span data-stu-id="8c8f9-106">But it's about accepting that failure is inevitable in cloud-based systems and building your application to respond to it.</span></span> <span data-ttu-id="8c8f9-107">L'obiettivo finale della resilienza consiste nel riportare l'applicazione a uno stato completamente funzionante dopo un errore.</span><span class="sxs-lookup"><span data-stu-id="8c8f9-107">The end-goal of resiliency is to return the application to a fully functioning state after a failure.</span></span>
-
-<span data-ttu-id="8c8f9-108">Diversamente dalle tradizionali applicazioni monolitiche, in cui tutto viene eseguito insieme in un unico processo, i sistemi nativi del cloud adottano l'architettura distribuita, come illustrato nella figura 6-1:</span><span class="sxs-lookup"><span data-stu-id="8c8f9-108">Unlike traditional monolithic applications, where everything runs together in a single process, cloud-native systems embrace distributed architecture as shown in Figure 6-1:</span></span>
+<span data-ttu-id="8076a-107">Diversamente dalle tradizionali applicazioni monolitiche, in cui tutto viene eseguito insieme in un unico processo, i sistemi nativi del cloud adottano un'architettura distribuita, come illustrato nella figura 6-1:</span><span class="sxs-lookup"><span data-stu-id="8076a-107">Unlike traditional monolithic applications, where everything runs together in a single process, cloud-native systems embrace a distributed architecture as shown in Figure 6-1:</span></span>
 
 ![Ambiente nativo cloud distribuito](./media/distributed-cloud-native-environment.png)
 
-<span data-ttu-id="8c8f9-110">**Figura 6-1.**</span><span class="sxs-lookup"><span data-stu-id="8c8f9-110">**Figure 6-1.**</span></span> <span data-ttu-id="8c8f9-111">Ambiente nativo cloud distribuito</span><span class="sxs-lookup"><span data-stu-id="8c8f9-111">Distributed cloud-native environment</span></span>
+<span data-ttu-id="8076a-109">**Figura 6-1.**</span><span class="sxs-lookup"><span data-stu-id="8076a-109">**Figure 6-1.**</span></span> <span data-ttu-id="8076a-110">Ambiente nativo cloud distribuito</span><span class="sxs-lookup"><span data-stu-id="8076a-110">Distributed cloud-native environment</span></span>
 
-<span data-ttu-id="8c8f9-112">Nella figura precedente si noti come ogni client, microservizio e [servizio di backup](https://12factor.net/backing-services) basato su cloud viene eseguito come processo separato, in esecuzione su server diversi, tutti comunicanti tramite chiamate basate su rete.</span><span class="sxs-lookup"><span data-stu-id="8c8f9-112">In the previous figure, note how each client, microservice, and cloud-based [backing service](https://12factor.net/backing-services) executes as a separate process, running across different servers, all communicating via network-based calls.</span></span>
+<span data-ttu-id="8076a-111">Nella figura precedente ogni microservizio e [servizio di backup](https://12factor.net/backing-services) basato sul cloud vengono eseguiti in un processo separato, attraverso l'infrastruttura server, comunicando tramite chiamate basate su rete.</span><span class="sxs-lookup"><span data-stu-id="8076a-111">In the previous figure, each microservice and cloud-based [backing service](https://12factor.net/backing-services) execute in a separate process, across server infrastructure, communicating via network-based calls.</span></span>
 
-<span data-ttu-id="8c8f9-113">Quindi, cosa potrebbe andare male?</span><span class="sxs-lookup"><span data-stu-id="8c8f9-113">So, what could go wrong?</span></span>
+<span data-ttu-id="8076a-112">Operando in questo ambiente, un servizio deve essere sensibile a molti problemi diversi:</span><span class="sxs-lookup"><span data-stu-id="8076a-112">Operating in this environment, a service must be sensitive to many different challenges:</span></span>
 
-- <span data-ttu-id="8c8f9-114">[Latenza di rete](https://www.techopedia.com/definition/8553/network-latency)imprevista.</span><span class="sxs-lookup"><span data-stu-id="8c8f9-114">Unexpected [network latency](https://www.techopedia.com/definition/8553/network-latency).</span></span>
-- <span data-ttu-id="8c8f9-115">Errori [temporanei (errori](https://docs.microsoft.com/azure/architecture/best-practices/transient-faults) di connettività di rete temporanei).</span><span class="sxs-lookup"><span data-stu-id="8c8f9-115">[Transient faults](https://docs.microsoft.com/azure/architecture/best-practices/transient-faults) (temporary network connectivity errors).</span></span>
-- <span data-ttu-id="8c8f9-116">Blocco mediante un'operazione sincrona a esecuzione prolungata.</span><span class="sxs-lookup"><span data-stu-id="8c8f9-116">Blocking by a long-running synchronous operation.</span></span>
-- <span data-ttu-id="8c8f9-117">Un processo host che si è arrestato in modo anomalo e verrà riavviato o spostato.</span><span class="sxs-lookup"><span data-stu-id="8c8f9-117">A host process that has crashed and is being restarted or moved.</span></span>
-- <span data-ttu-id="8c8f9-118">Un microservizio di overload che non può rispondere per un breve periodo di tempo.</span><span class="sxs-lookup"><span data-stu-id="8c8f9-118">An overloaded microservice that can't respond for a short time.</span></span>
-- <span data-ttu-id="8c8f9-119">Operazione DevOps in corso, ad esempio un'operazione di aggiornamento o di ridimensionamento.</span><span class="sxs-lookup"><span data-stu-id="8c8f9-119">An in-flight DevOps operation such as an update or scaling operation.</span></span>
-- <span data-ttu-id="8c8f9-120">Operazione dell'agente di orchestrazione, ad esempio lo trasferimento di un servizio da un nodo a un altro.</span><span class="sxs-lookup"><span data-stu-id="8c8f9-120">An Orchestrator operation such as moving a service from one node to another.</span></span>
-- <span data-ttu-id="8c8f9-121">Errori hardware dall'hardware di base.</span><span class="sxs-lookup"><span data-stu-id="8c8f9-121">Hardware failures from commodity hardware.</span></span>
+- <span data-ttu-id="8076a-113">Latenza di rete imprevista: tempo impiegato da una richiesta di servizio per il trasferimento al ricevitore e viceversa.</span><span class="sxs-lookup"><span data-stu-id="8076a-113">Unexpected network latency - the time for a service request to travel to the receiver and back.</span></span>
 
-<span data-ttu-id="8c8f9-122">Quando si distribuiscono servizi distribuiti nell'infrastruttura basata su cloud, i fattori dell'elenco precedente diventano molto reali ed è necessario progettare e sviluppare in modo difensivo per gestirli.</span><span class="sxs-lookup"><span data-stu-id="8c8f9-122">When deploying distributed services into cloud-based infrastructure, the factors from the previous list become very real and you must architect and develop defensively to deal with them.</span></span>
+- <span data-ttu-id="8076a-114">Errori [temporanei](https://docs.microsoft.com/azure/architecture/best-practices/transient-faults) : errori di connettività di rete di breve durata.</span><span class="sxs-lookup"><span data-stu-id="8076a-114">[Transient faults](https://docs.microsoft.com/azure/architecture/best-practices/transient-faults) - short-lived network connectivity errors.</span></span>
 
-<span data-ttu-id="8c8f9-123">In un sistema distribuito su scala ridotta, l'errore sarà meno frequente, ma con l'aumentare delle prestazioni del sistema, è possibile che si verifichino più problemi a un punto in cui un errore parziale diventa il normale funzionamento.</span><span class="sxs-lookup"><span data-stu-id="8c8f9-123">In a small-scale distributed system, failure will be less frequent, but as a system scales up and out, you can expect to experience more of these issues to a point where partial failure becomes normal operation.</span></span>
+- <span data-ttu-id="8076a-115">Blocco mediante un'operazione sincrona a esecuzione prolungata.</span><span class="sxs-lookup"><span data-stu-id="8076a-115">Blockage by a long-running synchronous operation.</span></span>
 
-<span data-ttu-id="8c8f9-124">Pertanto, l'applicazione e l'infrastruttura devono essere resilienti.</span><span class="sxs-lookup"><span data-stu-id="8c8f9-124">Therefore, your application and infrastructure must be resilient.</span></span> <span data-ttu-id="8c8f9-125">Nelle sezioni seguenti verranno illustrate le tecniche difensive che è possibile aggiungere all'applicazione e le funzionalità cloud integrate che è possibile utilizzare per consentire l'uso dell'esperienza utente da parte di Bullet.</span><span class="sxs-lookup"><span data-stu-id="8c8f9-125">In the following sections, we'll explore defensive techniques that you can add to your application and built-in cloud features that you can leverage to help bullet-proof your user's experience.</span></span>
+- <span data-ttu-id="8076a-116">Un processo host che si è arrestato in modo anomalo e verrà riavviato o spostato.</span><span class="sxs-lookup"><span data-stu-id="8076a-116">A host process that has crashed and is being restarted or moved.</span></span>
+
+- <span data-ttu-id="8076a-117">Un microservizio di overload che non può rispondere per un breve periodo di tempo.</span><span class="sxs-lookup"><span data-stu-id="8076a-117">An overloaded microservice that can't respond for a short time.</span></span>
+
+- <span data-ttu-id="8076a-118">Operazione dell'agente di orchestrazione in corso, ad esempio un aggiornamento in sequenza o lo scorrimento di un servizio da un nodo a un altro.</span><span class="sxs-lookup"><span data-stu-id="8076a-118">An in-flight orchestrator operation such as a rolling upgrade or moving a service from one node to another.</span></span>
+
+- <span data-ttu-id="8076a-119">Errori hardware.</span><span class="sxs-lookup"><span data-stu-id="8076a-119">Hardware failures.</span></span>
+
+<span data-ttu-id="8076a-120">Le piattaforme cloud possono rilevare e mitigare molti di questi problemi di infrastruttura.</span><span class="sxs-lookup"><span data-stu-id="8076a-120">Cloud platforms can detect and mitigate many of these infrastructure issues.</span></span> <span data-ttu-id="8076a-121">Il servizio può essere riavviato, ridimensionato e persino ridistribuito in un altro nodo.</span><span class="sxs-lookup"><span data-stu-id="8076a-121">It may restart, scale out, and even redistribute your service to a different node.</span></span>  <span data-ttu-id="8076a-122">Tuttavia, per sfruttare tutti i vantaggi di questa protezione incorporata, è necessario progettare i servizi in modo che reagisca e prosperino in questo ambiente dinamico.</span><span class="sxs-lookup"><span data-stu-id="8076a-122">However, to take full advantage of this built-in protection, you must design your services to react to it and thrive in this dynamic environment.</span></span>
+
+<span data-ttu-id="8076a-123">Nelle sezioni seguenti verranno esaminate le tecniche difensive che il servizio e le risorse cloud gestite possono sfruttare per ridurre al minimo i tempi di inattività e le interruzioni.</span><span class="sxs-lookup"><span data-stu-id="8076a-123">In the following sections, we'll explore defensive techniques that your service and managed cloud resources can leverage to minimize downtime and disruption.</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="8c8f9-126">[Precedente](elastic-search-in-azure.md)
->[Successivo](application-resiliency-patterns.md)</span><span class="sxs-lookup"><span data-stu-id="8c8f9-126">[Previous](elastic-search-in-azure.md)
+><span data-ttu-id="8076a-124">[Precedente](elastic-search-in-azure.md) 
+> [Avanti](application-resiliency-patterns.md)</span><span class="sxs-lookup"><span data-stu-id="8076a-124">[Previous](elastic-search-in-azure.md)
 [Next](application-resiliency-patterns.md)</span></span>
