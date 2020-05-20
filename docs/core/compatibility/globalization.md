@@ -1,24 +1,29 @@
 ---
-title: Globalizzazione delle modifiche di rilievo
-description: Elenca le modifiche di rilievo nella globalizzazione in .NET Core.
+title: Modifiche di rilievo della globalizzazione
+description: Elenca le modifiche di rilievo della globalizzazione in .NET Core.
 ms.date: 04/07/2020
-ms.openlocfilehash: 1436f9e2ec540b0f8b1e710b25c2115646d4e5b4
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 0c3367cb3515c6f473f53be6062b54f2e836b8c5
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888169"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702256"
 ---
-# <a name="globalization-breaking-changes"></a>Globalizzazione delle modifiche di rilievo
+# <a name="globalization-breaking-changes"></a>Modifiche di rilievo della globalizzazione
 
-In questa pagina sono documentate le seguenti modifiche di rilievo:
+In questa pagina sono documentate le modifiche di rilievo seguenti:
 
 | Modifica | Versione introdotta |
 | - | :-: |
-| [StringInfo e TextElementEnumerator sono ora conformi a UAX29](#stringinfo-and-textelementenumerator-are-now-uax29-compliant) | 5.0 |
-| [Le impostazioni locali "C" vengono mappate alle impostazioni locali invarianti](#c-locale-maps-to-the-invariant-locale) | 3.0 |
+| [API di globalizzazione usare le librerie ICU in Windows](#globalization-apis-use-icu-libraries-on-windows) | 5.0 |
+| [StringInfo e TextElementEnumerator ora sono conformi a UAX29](#stringinfo-and-textelementenumerator-are-now-uax29-compliant) | 5.0 |
+| [Le impostazioni locali "C" sono mappate alle impostazioni locali invariabili](#c-locale-maps-to-the-invariant-locale) | 3.0 |
 
-## <a name="net-50"></a>.NET 5.0 (informazioni in base alle persone)
+## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [icu-globalization-api](../../../includes/core-changes/globalization/5.0/icu-globalization-api.md)]
+
+***
 
 [!INCLUDE [uax29-compliant-grapheme-enumeration](../../../includes/core-changes/globalization/5.0/uax29-compliant-grapheme-enumeration.md)]
 

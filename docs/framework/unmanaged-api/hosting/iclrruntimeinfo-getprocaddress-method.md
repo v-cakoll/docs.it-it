@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a7732bfc-689a-4926-88fd-4f81e6f9ed78
 topic_type:
 - apiref
-ms.openlocfilehash: cedda39aeebc62c6bf43f42ae2daf6f6f515fd27
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2690a5c2e7c499d68ef9e903c62bff8f85e72e8e
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120278"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703871"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a>Metodo ICLRRuntimeInfo::GetProcAddress
 Ottiene l'indirizzo di una funzione specificata esportata dalla Common Language Runtime (CLR) associata a questa interfaccia.  
   
- Questo metodo sostituisce la funzione [GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md) .  
+ Questo metodo sostituisce la funzione [GetRealProcAddress](getrealprocaddress-function.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,26 +45,26 @@ HRESULT GetProcAddress(
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
   
-|HRESULT|Descrizione|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
 |E_POINTER|`pszProcName` o `ppProc` è null.|  
 |CLR_E_SHIM_RUNTIMEEXPORT|La funzione specificata non è una funzione esportata.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo fa sì che CLR venga caricato ma non inizializzato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Metahost. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [Interfaccia ICLRRuntimeInfo](iclrruntimeinfo-interface.md)
+- [Interfacce di hosting](hosting-interfaces.md)
+- [Hosting](index.md)

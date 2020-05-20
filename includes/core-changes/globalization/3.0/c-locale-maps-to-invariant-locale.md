@@ -1,37 +1,39 @@
 ---
-ms.openlocfilehash: d35de48dd22003c851cf5dba9e8517ec48b9217b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0551fa086644497c631cd9b6d7058398ff9ccfa
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74567776"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702327"
 ---
-### <a name="c-locale-maps-to-the-invariant-locale"></a>Le impostazioni locali "C" vengono mappate alle impostazioni locali invarianti
+### <a name="c-locale-maps-to-the-invariant-locale"></a>Le impostazioni locali "C" sono mappate alle impostazioni locali invariabili
 
-.NET Core 2.2 e versioni precedenti dipendono dal comportamento di iCU predefinito, che esegue il mapping delle impostazioni locali "C" alle impostazioni locali en_US_POSIX. Il en_US_POSIX impostazioni locali ha un comportamento di confronto indesiderato, perché non supporta i confronti tra stringhe senza distinzione tra maiuscole e minuscole. Poiché alcune distribuzioni Linux impostano le impostazioni locali "C" come impostazioni locali predefinite, gli utenti riscontravano un comportamento imprevisto.
+.NET Core 2,2 e versioni precedenti dipendono dal comportamento ICU predefinito, che esegue il mapping delle impostazioni locali "C" alle impostazioni locali del en_US_POSIX. Le impostazioni locali en_US_POSIX hanno un comportamento indesiderato per le regole di confronto, poiché non supporta confronti tra stringhe senza distinzione tra maiuscole e minuscole. Poiché alcune distribuzioni di Linux impostano le impostazioni locali "C" come impostazioni locali predefinite, si è verificato un comportamento imprevisto per gli utenti.
 
 #### <a name="change-description"></a>Descrizione modifica:
 
-A partire da .NET Core 3.0, il mapping delle impostazioni locali "C" è stato modificato per utilizzare le impostazioni locali invarianti anziché en_US_POSIX. Le impostazioni locali "C" per il mapping invariante vengono applicate anche a Windows per coerenza.
+A partire da .NET Core 3,0, il mapping delle impostazioni locali "C" è stato modificato in modo da usare le impostazioni locali invariabili anziché en_US_POSIX. Le impostazioni locali "C" al mapping invariante vengono applicate anche a Windows per coerenza.
 
-Il mapping di "C" alle impostazioni cultura en_US_POSIX ha causato confusione tra i clienti, poiché en_US_POSIX non supporta le operazioni di ordinamento/ricerca delle stringhe senza distinzione tra maiuscole e minuscole. Poiché le impostazioni locali "C" vengono utilizzate come impostazioni locali predefinite in alcune delle distribuzioni Linux, i clienti hanno sperimentato questo comportamento indesiderato in questi sistemi operativi.
+Il mapping di "C" alle impostazioni cultura en_US_POSIX ha causato confusione del cliente, perché en_US_POSIX non supporta operazioni di ordinamento/ricerca di stringhe senza distinzione tra maiuscole e minuscole. Poiché le impostazioni locali "C" vengono usate come impostazioni locali predefinite in alcune distribuzioni di Linux, i clienti hanno riscontrato questo comportamento indesiderato su questi sistemi operativi.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
 3.0
 
-### <a name="recommended-action"></a>Azione consigliata
+#### <a name="recommended-action"></a>Azione consigliata
 
-Niente di più specifico della consapevolezza di questo cambiamento. Questa modifica interessa solo le applicazioni che utilizzano il mapping delle impostazioni locali "C".
+Niente di più della conoscenza di questa modifica. Questa modifica interessa solo le applicazioni che usano il mapping delle impostazioni locali "C".
 
-### <a name="category"></a>Category
+#### <a name="category"></a>Category
 
 Globalizzazione
 
-### <a name="affected-apis"></a>API interessate
+#### <a name="affected-apis"></a>API interessate
 
-Tutte le regole di confronto e le API delle impostazioni cultura sono interessate da questa modifica.
+Questa modifica ha effetto su tutte le API per le regole di confronto e le impostazioni cultura.
 
 <!--
+
+#### Affected APIs
 
 -->

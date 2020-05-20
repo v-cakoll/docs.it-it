@@ -1,21 +1,21 @@
 ---
 title: Comando dotnet tool install
-description: Il comando dotnet tool install installa lo strumento .NET Core specificato nel computer.
+description: Il comando DotNet tool install installa lo strumento .NET Core specificato nel computer.
 ms.date: 02/14/2020
-ms.openlocfilehash: 723d25caa6009288dbb55d55f173b04d7b983450
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 067f90124833da537370a36934ff212aba7577f3
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463368"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702822"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
-**Questo articolo si applica a:** ✔️ .NET Core 2.1 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
-`dotnet tool install`- Installa lo strumento .NET Core specificato nel computer.- Installs the specified [.NET Core tool](global-tools.md) on your machine.
+`dotnet tool install`-Installa lo [strumento .NET Core](global-tools.md) specificato nel computer.
 
 ## <a name="synopsis"></a>Riepilogo
 
@@ -38,32 +38,32 @@ dotnet tool install <PACKAGE_NAME>
 dotnet tool install -h|--help
 ```
 
-## <a name="description"></a>Descrizione
+## <a name="description"></a>Description
 
-Il `dotnet tool install` comando consente di installare gli strumenti .NET Core nel computer. Per utilizzare il comando, specificare una delle seguenti opzioni di installazione:
+Il `dotnet tool install` comando consente di installare gli strumenti di .NET Core nel computer. Per utilizzare il comando, è necessario specificare una delle opzioni di installazione seguenti:
 
-* Per installare uno strumento globale nel `--global` percorso predefinito, utilizzare l'opzione .
-* Per installare uno strumento globale in `--tool-path` un percorso personalizzato, utilizzare l'opzione .
-* Per installare uno strumento locale, `--global` `--tool-path` omettere le opzioni e .
+* Per installare uno strumento globale nel percorso predefinito, usare l' `--global` opzione.
+* Per installare uno strumento globale in un percorso personalizzato, utilizzare l' `--tool-path` opzione.
+* Per installare uno strumento locale, omettere `--global` le `--tool-path` Opzioni e.
 
-**Gli strumenti locali sono disponibili a partire da .NET Core SDK 3.0.**
+**Gli strumenti locali sono disponibili a partire da .NET Core SDK 3,0.**
 
-Gli strumenti globali vengono installati nelle seguenti `-g` directory `--global` per impostazione predefinita quando si specifica l'opzione o :
+Per impostazione predefinita, gli strumenti globali vengono installati nelle directory seguenti quando si specifica l' `-g` `--global` opzione o:
 
 | OS          | Path                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-Gli strumenti locali vengono aggiunti a un file *tool-manifest.json* in una directory *.config* nella directory corrente. Se non esiste ancora un file manifesto, crearlo eseguendo il comando seguente:
+Gli strumenti locali vengono aggiunti a un file *DotNet-Tools. JSON* in una directory *. config* nella directory corrente. Se un file manifesto non esiste ancora, crearlo eseguendo il comando seguente:
 
 ```dotnetcli
 dotnet new tool-manifest
 ```
 
-Per ulteriori informazioni, consultate [Installare uno strumento locale.](global-tools.md#install-a-local-tool)
+Per ulteriori informazioni, vedere [Install a local Tool](global-tools.md#install-a-local-tool).
 
-## <a name="arguments"></a>Argomenti
+## <a name="arguments"></a>Arguments
 
 - **`PACKAGE_NAME`**
 
@@ -85,7 +85,7 @@ Per ulteriori informazioni, consultate [Installare uno strumento locale.](global
 
 - **`-g|--global`**
 
-  Specifica che l'installazione è a livello utente. Non può essere usata con l'opzione `--tool-path`. Omettendo `--global` entrambi `--tool-path` e specifica un'installazione dello strumento locale.
+  Specifica che l'installazione è a livello utente. Non può essere usata con l'opzione `--tool-path`. Omettendo sia `--global` che `--tool-path` specifica un'installazione dello strumento locale.
 
 - **`-h|--help`**
 
@@ -93,7 +93,7 @@ Per ulteriori informazioni, consultate [Installare uno strumento locale.](global
 
 - **`tool-path <PATH>`**
 
-  Specifica il percorso in cui disinstallare lo strumento globale. Il valore di PATH può essere assoluto o relativo. Se PATH non esiste, il comando tenta di creare la variabile. Omettendo `--global` entrambi `--tool-path` e specifica un'installazione dello strumento locale.
+  Specifica il percorso in cui disinstallare lo strumento globale. Il valore di PATH può essere assoluto o relativo. Se PATH non esiste, il comando tenta di creare la variabile. Omettendo sia `--global` che `--tool-path` specifica un'installazione dello strumento locale.
 
 - **`-v|--verbosity <LEVEL>`**
 
@@ -115,7 +115,7 @@ Per ulteriori informazioni, consultate [Installare uno strumento locale.](global
 
 - **`dotnet tool install dotnetsay --tool-path ~/bin`**
 
-  Installa [dotnetsay](https://www.nuget.org/packages/dotnetsay/) come strumento globale in una directory Linux/macOS specifica.
+  Installa [dotnetsay](https://www.nuget.org/packages/dotnetsay/) come strumento globale in una directory Linux/MacOS specifica.
 
 - **`dotnet tool install -g dotnetsay --version 2.0.0`**
 
@@ -127,6 +127,6 @@ Per ulteriori informazioni, consultate [Installare uno strumento locale.](global
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Strumenti .NET Core](global-tools.md)
-- [Esercitazione: Installare e usare uno strumento globale .NET Core usando l'interfaccia della riga di comando di .NET CoreTutorial: Install and use a .NET Core global tool using the .NET Core CLI](global-tools-how-to-use.md)
-- [Esercitazione: Installare e usare uno strumento locale .NET Core usando l'interfaccia della riga di comando di .NET CoreTutorial: Install and use a .NET Core local tool using the .NET Core CLI](local-tools-how-to-use.md)
+- [Strumenti di .NET Core](global-tools.md)
+- [Esercitazione: installare e usare uno strumento globale .NET Core usando il interfaccia della riga di comando di .NET Core](global-tools-how-to-use.md)
+- [Esercitazione: installare e usare uno strumento locale di .NET Core usando il interfaccia della riga di comando di .NET Core](local-tools-how-to-use.md)

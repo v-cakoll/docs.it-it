@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 7a6b0b15de4295506ff03b8566c06010b918566c
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: ab8d801f3cdcfbeb6de20146754b26e3713d7dd6
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158397"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702491"
 ---
 ### <a name="winforms-methods-now-throw-argumentnullexception"></a>I metodi WinForms ora generano ArgumentNullException
 
-Alcuni Windows Forms metodi generano ora <xref:System.ArgumentNullException> un oggetto per gli argomenti null, in cui <xref:System.NullReferenceException>in precedenza è stato generato un oggetto.
+Alcuni Windows Forms metodi generano ora un oggetto <xref:System.ArgumentNullException> per gli argomenti null, in cui in precedenza è stato generato un oggetto <xref:System.NullReferenceException> .
 
 #### <a name="change-description"></a>Descrizione modifica:
 
-In precedenza, determinati metodi di Windows Forms <xref:System.NullReferenceException> generavano un'eccezione se veniva passato un argomento null. A partire da .NET 5,0, questi metodi generano <xref:System.ArgumentNullException> ora un oggetto per gli argomenti null.
+In precedenza, determinati metodi di Windows Forms generavano un' <xref:System.NullReferenceException> eccezione se veniva passato un argomento null. A partire da .NET 5,0, questi metodi generano ora un oggetto <xref:System.ArgumentNullException> per gli argomenti null.
 
-La generazione <xref:System.ArgumentNullException> di un oggetto è conforme al comportamento del runtime .NET. Consente inoltre di migliorare l'esperienza di debug, comunicando chiaramente che un argomento è null e quale argomento è.
+La generazione di un oggetto è <xref:System.ArgumentNullException> conforme al comportamento del runtime .NET. Consente inoltre di migliorare l'esperienza di debug, comunicando chiaramente che un argomento è null e quale argomento è.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -27,7 +27,7 @@ Se si chiama uno di questi metodi e il codice attualmente rileva un oggetto <xre
 
 #### <a name="category"></a>Category
 
-Windows Form
+Windows Forms
 
 #### <a name="affected-apis"></a>API interessate
 
@@ -45,11 +45,11 @@ A partire da .NET 5,0 Preview 1:
 A partire da .NET 5,0 Preview 2:
 
 - <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl.ApplyCellStyleToEditingControl(System.Windows.Forms.DataGridViewCellStyle)?displayProperty=nameWithType>
-- <xref:System.Windows.Forms.RichTextBox.LoadFile(System.IO.Stream,System.Windows.Forms.RichTextBoxStreamType)?displayProperty=nameWithType>(solo per <xref:System.IO.Stream> il parametro)
+- <xref:System.Windows.Forms.RichTextBox.LoadFile(System.IO.Stream,System.Windows.Forms.RichTextBoxStreamType)?displayProperty=nameWithType>(solo per il <xref:System.IO.Stream> parametro)
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Windows.Forms.Control.ControlCollection.#ctor(System.Windows.Forms.Control)`
 - `M:System.Windows.Forms.TabControl.GetToolTipText(System.Object)`

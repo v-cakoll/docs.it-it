@@ -3,19 +3,20 @@ title: Testing unità in .NET Core e .NET Standard
 description: Questo articolo offre una breve panoramica del testing unità per i progetti .NET Core e .NET Standard.
 author: ardalis
 ms.author: wiwagn
-ms.date: 08/30/2017
-ms.openlocfilehash: 1263bfe337b9d6609c0ca7df70aa299a61a7f1a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 05/18/2020
+zone_pivot_groups: unit-testing-framework-set-one
+ms.openlocfilehash: e15f80b173389cdff86c6e62013e9c0f21171dd6
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78157401"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703100"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Testing unità in .NET Core e .NET Standard
 
 Con .NET Core creare unit test è semplice. Questo articolo include un'introduzione agli unit test e ne descrive le differenze rispetto ad altri tipi di test. Le risorse di collegamento riportate in fondo alla pagina contengono informazioni su come aggiungere un progetto di test alla soluzione. Dopo aver configurato il progetto di test, sarà possibile eseguire gli unit test usando la riga di comando o Visual Studio.
 
-Se si sta testando un progetto **ASP.NET Core,** vedere Test di [integrazione in ASP.NET Core](/aspnet/core/test/integration-tests#test-app-prerequisites).
+Se si sta testando un progetto di **ASP.NET Core** , vedere [test di integrazione in ASP.NET Core](/aspnet/core/test/integration-tests#test-app-prerequisites).
 
 In .NET Core 2.0 e versioni successive è supportato [.NET Standard 2.0](../../standard/net-standard.md), le cui librerie saranno usate per eseguire una dimostrazione degli unit test.
 
@@ -38,27 +39,39 @@ Altre informazioni sul testing unità sono disponibili nei progetti .NET Core:
 
 I progetti di unit test .NET Core sono supportati per i linguaggi seguenti:
 
-- [C #](../../csharp/index.yml)
-- [F #](../../fsharp/index.yml)
+- [C#](../../csharp/index.yml)
+- [F#](../../fsharp/index.yml)
 - [Visual Basic](../../visual-basic/index.yml)
 
-È anche possibile scegliere tra le opzioni seguenti:
+È anche possibile scegliere tra diversi framework di unit test:
 
-- [xUnit](https://xunit.github.io)
+- [xUnit](https://xunit.net/)
 - [NUnit](https://nunit.org)
 - [MSTest](https://github.com/Microsoft/testfx-docs)
 
 Altre informazioni sono disponibili nelle procedure dettagliate seguenti:
 
-- Creare unit test con [*xUnit* e *C#* con l'interfaccia della riga di comando di .NET Core](unit-testing-with-dotnet-test.md).
-- Creare unit test con [*NUnit* e *C#* con l'interfaccia della riga di comando di .NET Core](unit-testing-with-nunit.md).
+:::zone pivot="mstest"
+
 - Creare unit test con [*MSTest* e *C#* con l'interfaccia della riga di comando di .NET Core](unit-testing-with-mstest.md).
-- Creare unit test con [*xUnit* e *F#* con l'interfaccia della riga di comando di .NET Core](unit-testing-fsharp-with-dotnet-test.md).
-- Creare unit test con [*NUnit* e *F#* con l'interfaccia della riga di comando di .NET Core](unit-testing-fsharp-with-nunit.md).
 - Creare unit test con [*MSTest* e *F#* con l'interfaccia della riga di comando di .NET Core](unit-testing-fsharp-with-mstest.md).
-- Creare unit test con [*xUnit* e *Visual Basic* con l'interfaccia della riga di comando di .NET Core](unit-testing-visual-basic-with-dotnet-test.md).
-- Creare unit test con [*NUnit* e *Visual Basic* con l'interfaccia della riga di comando di .NET Core](unit-testing-visual-basic-with-nunit.md).
 - Creare unit test con [*MSTest* e *Visual Basic* con l'interfaccia della riga di comando di .NET Core](unit-testing-visual-basic-with-mstest.md).
+
+:::zone-end
+:::zone pivot="xunit"
+
+- Creare unit test con [*xUnit* e *C#* con l'interfaccia della riga di comando di .NET Core](unit-testing-with-dotnet-test.md).
+- Creare unit test con [*xUnit* e *F#* con l'interfaccia della riga di comando di .NET Core](unit-testing-fsharp-with-dotnet-test.md).
+- Creare unit test con [*xUnit* e *Visual Basic* con l'interfaccia della riga di comando di .NET Core](unit-testing-visual-basic-with-dotnet-test.md).
+
+:::zone-end
+:::zone pivot="nunit"
+
+- Creare unit test con [*NUnit* e *C#* con l'interfaccia della riga di comando di .NET Core](unit-testing-with-nunit.md).
+- Creare unit test con [*NUnit* e *F#* con l'interfaccia della riga di comando di .NET Core](unit-testing-fsharp-with-nunit.md).
+- Creare unit test con [*NUnit* e *Visual Basic* con l'interfaccia della riga di comando di .NET Core](unit-testing-visual-basic-with-nunit.md).
+
+:::zone-end
 
 Altre informazioni sono disponibili negli articoli seguenti:
 
