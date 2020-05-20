@@ -1,17 +1,15 @@
 ---
 title: Introduzione all'app di riferimento per eShopOnContainers
 description: Introduzione all'app di riferimento per i microservizi nativi del cloud eShopOnContainers per ASP.NET Core e Azure.
-ms.date: 06/30/2019
-ms.openlocfilehash: b97b62268db1d9990f762d9769233ad72551c226
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: a6f3defabec809eaf1cb143e2b521904248b74f2
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395393"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613967"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>Introduzione all'app di riferimento per eShopOnContainers
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Microsoft, in collaborazione con gli esperti della community leader, ha prodotto un'applicazione di riferimento per microservizi nativa del cloud completa, eShopOnContainers. Questa applicazione è stata creata per presentare l'uso di .NET Core e Docker e, facoltativamente, di Azure, Kubernetes e Visual Studio, per creare una vetrina online.
 
@@ -32,7 +30,7 @@ Iniziamo con una verifica delle funzionalità e dei requisiti dell'applicazione.
 - Modificare o rimuovere elementi dal Cestino
 - Checkout
 - Registrare un account
-- Accedi
+- Accesso
 - Disconnetti
 - Verifica ordini
 

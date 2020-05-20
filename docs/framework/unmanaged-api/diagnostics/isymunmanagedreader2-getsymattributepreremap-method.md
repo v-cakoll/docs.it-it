@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7580d546-a709-40c5-ad02-aa70d774fd0b
 topic_type:
 - apiref
-ms.openlocfilehash: 4009f8988c90ed090c0cc3d86164af347055722f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e6248aba1c41b2815f2806942d419da869ed94b4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446424"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614916"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>Metodo ISymUnmanagedReader2::GetSymAttributePreRemap
 Ottiene un attributo personalizzato in base al nome. Diversamente dagli attributi personalizzati dei metadati, questi attributi vengono conservati nell'archivio dei simboli.  
@@ -42,13 +42,13 @@ HRESULT GetSymAttributePreRemap(
  in Token di metadati dell'elemento padre.  
   
  `name`  
- in Puntatore a un `WCHAR` che contiene il nome.  
+ in Puntatore a un oggetto `WCHAR` che contiene il nome.  
   
  `cBuffer`  
- in `ULONG32` che indica le dimensioni della matrice di `buffer`.  
+ in Oggetto `ULONG32` che indica la dimensione della `buffer` matrice.  
   
  `pcBuffer`  
- out Puntatore a un `ULONG32` che riceve le dimensioni del buffer necessarie per contenere i byte dell'attributo.  
+ out Puntatore a un oggetto `ULONG32` che riceve le dimensioni del buffer necessarie per contenere i byte dell'attributo.  
   
  `buffer`  
  out Puntatore al buffer che riceve i byte dell'attributo.  
@@ -61,4 +61,4 @@ HRESULT GetSymAttributePreRemap(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedReader2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+- [Interfaccia ISymUnmanagedReader2](isymunmanagedreader2-interface.md)

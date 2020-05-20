@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a8074f1-facc-4a3f-bb9b-d6574fc2fc74
 topic_type:
 - apiref
-ms.openlocfilehash: 9e8139a822c877e70731e18ae5a75b83e6b7578e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 031e9d9434bc655ba8947a2bb6aba56a150e9002
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448961"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614461"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>Metodo ISymUnmanagedMethod::GetParameters
 Ottiene i parametri per questo metodo. I parametri vengono restituiti nell'ordine in cui sono definiti all'interno della firma del metodo.  
@@ -40,7 +40,7 @@ HRESULT GetParameters(
  [in] Dimensione della matrice `params`.  
   
  `pcParams`  
- in Puntatore a un `ULONG32` che riceve la dimensione del buffer necessaria per contenere i parametri.  
+ in Puntatore a un oggetto `ULONG32` che riceve le dimensioni del buffer necessarie per contenere i parametri.  
   
  `params`  
  out Puntatore al buffer che riceve i parametri.  
@@ -53,4 +53,4 @@ HRESULT GetParameters(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [Interfaccia ISymUnmanagedMethod](isymunmanagedmethod-interface.md)

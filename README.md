@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c6dcca8384cbd97a968b77e4bc834afa1f683298
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b90821d0d3495f6006d1d97b3d3377e984c74c5e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895666"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613590"
 ---
 # <a name="net-docs"></a>Documentazione di .NET
 
@@ -12,9 +12,8 @@ ms.locfileid: "82895666"
 
 Questo repository contiene la documentazione concettuale per .NET. Il [sito della documentazione di .NET](https://docs.microsoft.com/dotnet) è costituito da più repository, oltre a quello seguente:
 
-- [Esempi e frammenti di codice](https://github.com/dotnet/samples)
-- [API (riferimento)](https://github.com/dotnet/dotnet-api-docs)
-- [Riferimento di .NET Compiler Platform SDK](https://github.com/dotnet/roslyn-api-docs)
+- [Informazioni di riferimento sulle API](https://github.com/dotnet/dotnet-api-docs)
+- [Informazioni di riferimento su .NET Compiler Platform SDK](https://github.com/dotnet/roslyn-api-docs)
 
 I problemi e le attività per tutti i repository, tranne il repository di riferimento API, sono registrati in questa posizione. Queste risorse sono usate da una grande community. Microsoft fa tutto il possibile per risolvere i problemi in modo tempestivo. Altre informazioni sulle procedure usate per la classificazione e la risoluzione dei problemi sono disponibili nell'argomento relativo ai [criteri per i problemi](issues-policy.md).
 

@@ -1,17 +1,15 @@
 ---
 title: Altre opzioni di distribuzione del contenitore
 description: Altre opzioni di distribuzione del contenitore con Azure
-ms.date: 04/13/2020
-ms.openlocfilehash: 3cae771b3877215a7fc91afd4f406fdfc9ff2771
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: acb022e3d4fd4862c592fa571894e1b8ce17f465
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200002"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613759"
 ---
 # <a name="other-container-deployment-options"></a>Altre opzioni di distribuzione del contenitore
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Oltre al servizio Azure Kubernetes, è anche possibile distribuire contenitori per app Azure servizio per contenitori e istanze di contenitore di Azure.
 
@@ -64,5 +62,5 @@ Istanze di contenitore di Azure offre il modo più rapido per eseguire semplici 
 - [Distribuire un'istanza del contenitore da ACR](https://docs.microsoft.com/azure/container-instances/container-instances-using-azure-container-registry#deploy-with-azure-portal)
 
 >[!div class="step-by-step"]
->[Precedente](scale-containers-serverless.md)
->[successivo](communication-patterns.md)
+>[Precedente](scale-containers-serverless.md) 
+> [Avanti](communication-patterns.md)

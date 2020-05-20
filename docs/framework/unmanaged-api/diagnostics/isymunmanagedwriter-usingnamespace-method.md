@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d746e0a-d158-4983-88da-db0a0856bc0b
 topic_type:
 - apiref
-ms.openlocfilehash: cb0af78092822875204f45ec3dca1484e5b5fc90
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e4348cc59924b65b6c6bb53a9c2a98f1a1161b50
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427460"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614734"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>Metodo ISymUnmanagedWriter::UsingNamespace
 Specifica che il nome dello spazio dei nomi completo specificato viene utilizzato all'interno dell'ambito lessicale attualmente aperto. Lo spazio dei nomi verrà usato in tutti gli ambiti che ereditano dall'ambito attualmente aperto. La chiusura dell'ambito corrente interrompe anche l'uso dello spazio dei nomi.  
@@ -44,4 +44,4 @@ HRESULT UsingNamespace(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [Interfaccia ISymUnmanagedWriter](isymunmanagedwriter-interface.md)

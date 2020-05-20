@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ea9d9af-8709-4a46-872b-f54d9e840088
 topic_type:
 - apiref
-ms.openlocfilehash: da2906187c02bbc7a35c937663e3fc7db1ebda13
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 48c50ac6be6d525676d85578e5a55a27104c180a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433894"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615098"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>Metodo ISymUnmanagedNamespace::GetNamespaces
 Ottiene gli elementi figlio di questo spazio dei nomi.  
@@ -37,10 +37,10 @@ HRESULT GetNamespaces(
   
 ## <a name="parameters"></a>Parametri  
  `cNameSpaces`  
- in `ULONG32` che indica le dimensioni della matrice di `namespaces`.  
+ in Oggetto `ULONG32` che indica la dimensione della `namespaces` matrice.  
   
  `pcNameSpaces`  
- out Puntatore a un `ULONG32` che riceve la dimensione, in caratteri, del buffer necessario per contenere gli spazi dei nomi.  
+ out Puntatore a un oggetto `ULONG32` che riceve la dimensione, in caratteri, del buffer necessario per contenere gli spazi dei nomi.  
   
  `namespaces`  
  out Puntatore al buffer che contiene gli spazi dei nomi.  
@@ -53,4 +53,4 @@ HRESULT GetNamespaces(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [Interfaccia ISymUnmanagedNamespace](isymunmanagednamespace-interface.md)

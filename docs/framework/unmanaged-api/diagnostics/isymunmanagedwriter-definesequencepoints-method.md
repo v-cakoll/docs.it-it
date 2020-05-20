@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64202baf-be6b-40ba-8162-8cc6c0c9b8e1
 topic_type:
 - apiref
-ms.openlocfilehash: 63ba108bc234e566450bb019afc63acb4e75ad1f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8889c412f414f38d1d18d33ec297e82fd052280d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427992"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614799"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>Metodo ISymUnmanagedWriter::DefineSequencePoints
 Definisce un gruppo di punti di sequenza nel metodo corrente. Ogni riga iniziale e colonna iniziale definiscono l'inizio di un'istruzione all'interno di un metodo. Ogni riga finale e colonna finale definiscono la fine di un'istruzione all'interno di un metodo. Le matrici devono essere ordinate in ordine crescente di offset. L'offset viene sempre misurato dall'inizio del metodo, espresso in byte.  
@@ -43,7 +43,7 @@ HRESULT DefineSequencePoints(
  in Oggetto documento per il quale vengono definiti i punti di sequenza.  
   
  `spCount`  
- in `ULONG32` che indica le dimensioni di ognuno dei buffer `offsets`, `lines`, `columns`, `endLines`e `endColumns`.  
+ in Oggetto `ULONG32` che indica le dimensioni di ognuno dei `offsets` buffer, `lines` , `columns` , `endLines` e `endColumns` .  
   
  `offsets`  
  in Offset dei punti di sequenza misurato a partire dall'inizio del metodo.  
@@ -68,4 +68,4 @@ HRESULT DefineSequencePoints(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [Interfaccia ISymUnmanagedWriter](isymunmanagedwriter-interface.md)

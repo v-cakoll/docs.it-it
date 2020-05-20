@@ -2,17 +2,15 @@
 title: Infrastruttura di comunicazione con mesh di servizi
 description: Informazioni su come le tecnologie di servizi Mesh semplificano la comunicazione di microservizi nativa del cloud
 author: robvet
-ms.date: 03/03/2020
-ms.openlocfilehash: 89bc4d307d725e7e31e020ef156c4c5967dd2a1c
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 1b11024cd029433c756812850e2665b7836a13d3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199947"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613687"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>Infrastruttura di comunicazione con mesh di servizi
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 In questo capitolo sono state esaminate le esigenze della comunicazione di microservizi. Abbiamo detto che i team di sviluppo devono essere sensibili al modo in cui i servizi back-end comunicano tra loro. Idealmente, migliore è la comunicazione tra i servizi. Tuttavia, l'elusione non è sempre possibile perché i servizi back-end si basano spesso su un altro per completare le operazioni.
 
@@ -36,7 +34,7 @@ Una rete mesh di servizi gestisce problemi di traffico, comunicazione e rete a l
 
 Nel capitolo 6 vengono approfondite le tecnologie di rete di servizi, inclusa una discussione sulla sua architettura e sulle implementazioni open source disponibili.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 In questo capitolo sono stati illustrati i modelli di comunicazione nativi del cloud. Abbiamo iniziato esaminando il modo in cui i client front-end comunicano con microservizi back-end. Abbiamo parlato delle piattaforme del gateway API e della comunicazione in tempo reale. È stato quindi esaminato il modo in cui i microservizi comunicano con altri servizi back-end. Sono state esaminate sia la comunicazione HTTP sincrona che la messaggistica asincrona tra i servizi. Abbiamo trattato gRPC, una tecnologia imminente nel mondo nativo del cloud. È stata infine introdotta una tecnologia nuova e in rapida evoluzione denominata mesh di servizi in grado di semplificare la comunicazione di microservizi.
 
@@ -73,5 +71,5 @@ Si passa quindi ai dati distribuiti nei sistemi nativi del cloud e ai vantaggi e
 - [Video sulla creazione di servizi gRPC con .NET](https://channel9.msdn.com/Shows/The-Cloud-Native-Show/Building-Microservices-with-gRPC-and-NET)
 
 >[!div class="step-by-step"]
->[Precedente](grpc.md)
->[successivo](distributed-data.md)
+>[Precedente](grpc.md) 
+> [Avanti](distributed-data.md)

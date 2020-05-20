@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64d9b80e-b883-4539-89c7-03573185a1eb
 topic_type:
 - apiref
-ms.openlocfilehash: 8a4d205586921b377147eeab80754e1a0d9e52b0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 39b0c065a324f2b3939467901739f995bc9abbad
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427846"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614760"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>Metodo ISymUnmanagedWriter::SetSymAttribute
 Definisce un attributo personalizzato in base al nome. Questi attributi sono conservati nell'archivio simboli, a differenza degli attributi personalizzati dei metadati.  
@@ -40,10 +40,10 @@ HRESULT SetSymAttribute(
  in Token di metadati per il quale viene definito l'attributo.  
   
  `name`  
- in Puntatore a un `WCHAR` che contiene il nome dell'attributo.  
+ in Puntatore a un oggetto `WCHAR` che contiene il nome dell'attributo.  
   
  `cData`  
- in `ULONG32` che indica le dimensioni della matrice di `data`.  
+ in Oggetto `ULONG32` che indica la dimensione della `data` matrice.  
   
  `data`  
  in Valore dell'attributo.  
@@ -56,4 +56,4 @@ HRESULT SetSymAttribute(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [Interfaccia ISymUnmanagedWriter](isymunmanagedwriter-interface.md)

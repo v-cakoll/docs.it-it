@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e774eefe-858c-4362-8d2d-28ebf2ba1a24
 topic_type:
 - apiref
-ms.openlocfilehash: 73f536b4ab98aa596c2395810cb8b616ffd309e9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ac7559bd5431f45b266602404ddde9081aa2944d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438302"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614695"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>Metodo ISymUnmanagedWriter2::DefineLocalVariable2
-Definisce una singola variabile nell'ambito lessicale corrente. Questo metodo può essere chiamato più volte per una variabile con lo stesso nome che dispone di più case in un ambito. In questo caso, tuttavia, i valori dei parametri `startOffset` e `endOffset` non devono sovrapporsi.  
+Definisce una singola variabile nell'ambito lessicale corrente. Questo metodo può essere chiamato più volte per una variabile con lo stesso nome che dispone di più case in un ambito. In questo caso, tuttavia, i valori dei `startOffset` parametri e `endOffset` non devono sovrapporsi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -76,5 +76,5 @@ HRESULT DefineLocalVariable2(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedWriter2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
-- [Metodo DefineLocalVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
+- [Interfaccia ISymUnmanagedWriter2](isymunmanagedwriter2-interface.md)
+- [Metodo DefineLocalVariable](isymunmanagedwriter-definelocalvariable-method.md)

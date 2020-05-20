@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea7c1617-f3ce-4220-8288-f2b50eaf0f0f
 topic_type:
 - apiref
-ms.openlocfilehash: 98ed5556020b93fb1f31d1dde84690fc33092627
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 091f497024b48589953456e1ea6daf6635738240
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448368"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615085"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>Metodo ISymUnmanagedNamespace::GetVariables
 Restituisce tutte le variabili definite in ambito globale all'interno di questo spazio dei nomi.  
@@ -37,10 +37,10 @@ HRESULT GetVariables(
   
 ## <a name="parameters"></a>Parametri  
  `cVars`  
- in `ULONG32` che indica le dimensioni della matrice di `pVars`.  
+ in Oggetto `ULONG32` che indica la dimensione della `pVars` matrice.  
   
  `pcVars`  
- out Puntatore a un `ULONG32` che riceve la dimensione del buffer necessario per contenere gli spazi dei nomi.  
+ out Puntatore a un oggetto `ULONG32` che riceve la dimensione del buffer necessario per contenere gli spazi dei nomi.  
   
  `pVars`  
  out Puntatore a un buffer che contiene gli spazi dei nomi.  
@@ -53,4 +53,4 @@ HRESULT GetVariables(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [Interfaccia ISymUnmanagedNamespace](isymunmanagednamespace-interface.md)

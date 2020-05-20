@@ -2,17 +2,15 @@
 title: Modelli di comunicazione cloud nativi
 description: Informazioni sui principali problemi di comunicazione del servizio nelle applicazioni native del cloud
 author: robvet
-ms.date: 08/31/2019
-ms.openlocfilehash: b3edc0817fb76ad99a1344b17d600eb747187f86
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 3d678df44b5fef68427846e59f446b7408795625
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895623"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614214"
 ---
 # <a name="cloud-native-communication-patterns"></a>Modelli di comunicazione cloud nativi
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Quando si costruisce un sistema nativo del cloud, la comunicazione diventa una decisione di progettazione significativa. In che modo un'applicazione client front-end comunica con un microservizio back-end? In che modo i microservizi back-end comunicano tra loro? Quali sono i principi, i modelli e le procedure consigliate da considerare quando si implementa la comunicazione nelle applicazioni native del cloud?
 
@@ -49,5 +47,5 @@ Il libro [microservizi .NET: l'architettura per le applicazioni .NET in contenit
 In questo capitolo verranno innanzitutto indirizzate le comunicazioni tra le applicazioni front-end e i microservizi back-end. Verranno quindi esaminati i microservizi back-end che comunicano tra loro. Esamineremo la tecnologia di comunicazione up and gRPC. Infine, verranno esaminati nuovi modelli di comunicazione innovativi con la tecnologia mesh di servizi. Si vedrà anche come il cloud di Azure fornisca diversi tipi di *Servizi* di supporto per supportare la comunicazione nativa del cloud.
 
 >[!div class="step-by-step"]
->[Precedente](other-deployment-options.md)
->[successivo](front-end-communication.md)
+>[Precedente](other-deployment-options.md) 
+> [Avanti](front-end-communication.md)

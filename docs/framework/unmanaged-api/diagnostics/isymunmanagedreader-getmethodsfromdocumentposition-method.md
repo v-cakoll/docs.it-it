@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 83605f1e-e4f3-49e6-859b-f13cad68bb54
 topic_type:
 - apiref
-ms.openlocfilehash: 923a92ea256f79a1b0130b61c4fd99460fda96a0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bba0fc039c403d45e8a5b60f2b0231eb24226280
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441805"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614955"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>Metodo ISymUnmanagedReader::GetMethodsFromDocumentPosition
 Restituisce una matrice di metodi, ognuno dei quali contiene il punto di interruzione nella posizione specificata in un documento.  
@@ -52,10 +52,10 @@ HRESULT GetMethodsFromDocumentPosition (
  [in] Dimensione della matrice `pRetVal`.  
   
  `pcMethod`  
- out Puntatore a una variabile che riceve il numero di elementi restituiti nella matrice `pRetVal`.  
+ out Puntatore a una variabile che riceve il numero di elementi restituiti nella `pRetVal` matrice.  
   
  `pRetVal`  
- out Matrice di puntatori, ciascuno dei quali punta a un oggetto [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) che rappresenta un metodo contenente il punto di interruzione.  
+ out Matrice di puntatori, ciascuno dei quali punta a un oggetto [ISymUnmanagedMethod](isymunmanagedmethod-interface.md) che rappresenta un metodo contenente il punto di interruzione.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
@@ -65,4 +65,4 @@ HRESULT GetMethodsFromDocumentPosition (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [Interfaccia ISymUnmanagedReader](isymunmanagedreader-interface.md)

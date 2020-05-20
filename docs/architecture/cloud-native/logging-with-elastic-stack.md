@@ -1,17 +1,15 @@
 ---
 title: Registrazione con Elastic Stack
 description: Registrazione con Elastic stack, logstash e Kibana
-ms.date: 02/05/2020
-ms.openlocfilehash: 6863c66b63854fe3ecaabe2919beded2926ea64c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: e886141fa691b75b882b5d67eae4ceb242e8089f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448917"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613850"
 ---
 # <a name="logging-with-elastic-stack"></a>Registrazione con Elastic Stack
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Sono disponibili molti strumenti di registrazione centralizzati e i costi variano a seconda del fatto che siano disponibili strumenti Open Source gratuiti per le opzioni più costose. In molti casi, gli strumenti gratuiti sono più efficaci o migliori delle offerte a pagamento. Uno di questi strumenti è costituito da una combinazione di tre componenti Open Source: ricerca elastica, logstash e Kibana.
 
@@ -26,12 +24,12 @@ KUBE_LOGGING_DESTINATION=elasticsearch
 KUBE_ENABLE_NODE_LOGGING=true
 ```
 
-**Figura 7-5**. Variabili di configurazione per Kubernetes
+**Figura 7-5.** Variabili di configurazione per Kubernetes
 
 Verrà installato elasticsearch nel cluster e la destinazione invierà tutti i log del cluster.
 
-![un esempio di dashboard Kibana che mostra i risultati di una query sui log inseriti da Kubernetes](./media/kibana-dashboard.png)
-**figura 7-6**. Esempio di dashboard Kibana che mostra i risultati di una query sui log inseriti da Kubernetes
+![Un esempio di dashboard Kibana che mostra i risultati di una query sui log inseriti da Kubernetes ](./media/kibana-dashboard.png)
+ **Figura 7-6**. Esempio di dashboard Kibana che mostra i risultati di una query sui log inseriti da Kubernetes
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>Quali sono i vantaggi di Elastic stack?
 
@@ -81,7 +79,7 @@ La ricerca elastica è un motore di ricerca potente che può indicizzare i log M
 
 I messaggi di log che sono stati creati per contenere parametri o i cui parametri sono stati divisi tramite l'elaborazione di logstash, possono essere sottoposti a query direttamente perché elasticsearch conserva queste informazioni.
 
-Una query che cerca le prime 10 pagine visitate dal `jill@example.com`, viene visualizzata nella figura 7-9.
+Una query che cerca le prime 10 pagine visitate da `jill@example.com` viene visualizzata nella figura 7-9.
 
 ```
 "query": {
@@ -118,5 +116,5 @@ Un'altra opzione è una nuova [offerta di Elk come servizio annunciata di recent
 - [Installare Elastic stack in Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)
 
 >[!div class="step-by-step"]
->[Precedente](observability-patterns.md)
->[Successivo](monitoring-azure-kubernetes.md)
+>[Precedente](observability-patterns.md) 
+> [Avanti](monitoring-azure-kubernetes.md)

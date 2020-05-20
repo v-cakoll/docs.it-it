@@ -2,17 +2,15 @@
 title: Memorizzazione nella cache in un'applicazione nativa del cloud
 description: Informazioni sulle strategie di memorizzazione nella cache in un'applicazione nativa del cloud.
 author: robvet
-ms.date: 01/22/2020
-ms.openlocfilehash: 2da61a01fc53233d1934df813fcba3b91a495c43
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 05/17/2020
+ms.openlocfilehash: a109db59d7b2005ea97922eef07ae4869e4894a7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794968"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614292"
 ---
 # <a name="caching-in-a-cloud-native-app"></a>Memorizzazione nella cache in un'app nativa del cloud
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 I vantaggi della memorizzazione nella cache sono ben noti. La tecnica funziona copiando temporaneamente i dati a cui si accede di frequente da un archivio dati back-end ad *archiviazione veloce* più vicina all'applicazione. La memorizzazione nella cache è spesso implementata dove...
 
@@ -32,15 +30,15 @@ Prendere in considerazione anche la memorizzazione nella cache per evitare calco
 
 ## <a name="caching-architecture"></a>Architettura di Caching
 
-Le applicazioni cloud native implementano in genere un'architettura di Caching distribuito. La cache è ospitata come [servizio di backup](./definition.md#backing-services)basato sul cloud, separato dai microservizi. La figura 5-20 illustra l'architettura.
+Le applicazioni cloud native implementano in genere un'architettura di Caching distribuito. La cache è ospitata come [servizio di backup](./definition.md#backing-services)basato sul cloud, separato dai microservizi. La figura 5-15 illustra l'architettura.
 
 ![Memorizzazione nella cache in un'app Cloud nativa](media/caching-in-a-cloud-native-app.png)
 
-**Figura 5-19**: memorizzazione nella cache in un'app Cloud nativa
+**Figura 5-15**: memorizzazione nella cache in un'app Cloud nativa
 
 Nella figura precedente si noti come la cache è indipendente e condivisa dai microservizi. In questo scenario, la cache viene richiamata dal [gateway API](./front-end-communication.md). Come illustrato nel capitolo 4, il gateway funge da front-end per tutte le richieste in ingresso. La cache distribuita aumenta la velocità di risposta del sistema restituendo i dati memorizzati nella cache laddove possibile. Inoltre, la separazione della cache dai servizi consente la scalabilità verticale o orizzontale della cache per soddisfare le esigenze di traffico più elevate.
 
-La figura presenta un modello di memorizzazione nella cache comune noto come [modello cache-aside](https://docs.microsoft.com/azure/architecture/patterns/cache-aside). Per una richiesta in ingresso, eseguire prima una query sulla cache (passaggio \#1) per una risposta. Se viene trovato, i dati vengono restituiti immediatamente. Se i dati non esistono nella cache (noto come [mancato riscontro nella cache](https://www.techopedia.com/definition/6308/cache-miss)), viene recuperato da un database locale in un servizio downstream (passaggio \#2). Viene quindi scritto nella cache per richieste future (passaggio \#3) e restituito al chiamante. È necessario prestare attenzione per rimuovere periodicamente i dati memorizzati nella cache, in modo che il sistema rimanga tempestivamente e coerente.
+La figura precedente presenta un modello di memorizzazione nella cache comune noto come [modello cache-aside](https://docs.microsoft.com/azure/architecture/patterns/cache-aside). Per una richiesta in ingresso, eseguire prima una query sulla cache (passaggio \# 1) per una risposta. Se viene trovato, i dati vengono restituiti immediatamente. Se i dati non esistono nella cache (noto come [mancato riscontro nella cache](https://www.techopedia.com/definition/6308/cache-miss)), viene recuperato da un database locale in un servizio downstream (passaggio \# 2). Viene quindi scritto nella cache per le richieste future (passaggio \# 3) e restituito al chiamante. È necessario prestare attenzione per rimuovere periodicamente i dati memorizzati nella cache, in modo che il sistema rimanga tempestivamente e coerente.
 
 Con la crescita di una cache condivisa, potrebbe risultare vantaggioso partizionare i dati tra più nodi. Questa operazione consente di ridurre al minimo i conflitti e migliorare la scalabilità. Molti servizi di memorizzazione nella cache supportano la possibilità di aggiungere e rimuovere in modo dinamico i nodi e di ribilanciare i dati tra le partizioni. Questo approccio prevede in genere il clustering. Il clustering espone una raccolta di nodi federati come una singola cache semplice. Internamente, tuttavia, i dati vengono distribuiti tra i nodi dopo una strategia di distribuzione predefinita che bilancia il carico in modo uniforme.
 
@@ -62,5 +60,5 @@ Per gli scenari avanzati, una copia dei dati memorizzati nella cache può essere
 Cache Redis di Azure è disponibile in diverse configurazioni predefinite e piani tariffari.  Il [livello Premium](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-premium-tier-intro) offre numerose funzionalità di livello aziendale, come il clustering, la persistenza dei dati, la replica geografica e l'isolamento della rete virtuale.
 
 >[!div class="step-by-step"]
->[Precedente](relational-vs-nosql-data.md)
->[Successivo](elastic-search-in-azure.md)
+>[Precedente](relational-vs-nosql-data.md) 
+> [Avanti](elastic-search-in-azure.md)

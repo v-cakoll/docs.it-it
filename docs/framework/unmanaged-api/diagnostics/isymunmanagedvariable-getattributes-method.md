@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80f168af-a6a6-4c8f-b9e6-8a82dc834ed5
 topic_type:
 - apiref
-ms.openlocfilehash: cfc28dfcda7bf4b3d1fc6fe3530a212ee76fadd2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 29869abdd39f61c6c9cb51d6b2be50fa462c5b70
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446082"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615254"
 ---
 # <a name="isymunmanagedvariablegetattributes-method"></a>Metodo ISymUnmanagedVariable::GetAttributes
 Ottiene i flag di attributo per questa variabile.  
@@ -34,7 +34,7 @@ HRESULT GetAttributes(
   
 ## <a name="parameters"></a>Parametri  
  `pRetVal`  
- out Puntatore a un `ULONG32` che riceve gli attributi. Il valore restituito sarà uno dei valori definiti nell'enumerazione [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) .  
+ out Puntatore a un oggetto `ULONG32` che riceve gli attributi. Il valore restituito sarà uno dei valori definiti nell'enumerazione [CorSymVarFlag](corsymvarflag-enumeration.md) .  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
@@ -44,4 +44,4 @@ HRESULT GetAttributes(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [Interfaccia ISymUnmanagedVariable](isymunmanagedvariable-interface.md)

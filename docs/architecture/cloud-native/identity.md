@@ -1,17 +1,15 @@
 ---
-title: identità
+title: Identità
 description: Architettura di app .NET cloud native per Azure | Identità
-ms.date: 09/23/2019
-ms.openlocfilehash: 4cc7c04bf323d2589777df466321f6801f511b6f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 05/13/2020
+ms.openlocfilehash: 9fa48977e58e2ca5a5f3e231372a4791640a85fd
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183049"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614019"
 ---
-# <a name="identity"></a>identità
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="identity"></a>Identità
 
 Per la maggior parte delle applicazioni software è necessario conoscere l'utente o il processo che li chiama. L'utente o il processo che interagisce con un'applicazione è noto come entità di sicurezza e il processo di autenticazione e autorizzazione di tali entità è noto come gestione delle identità o semplicemente come *identità*. Le applicazioni semplici possono includere tutta la loro gestione delle identità all'interno dell'applicazione, ma questo approccio non si adatta perfettamente a molte applicazioni e a molti tipi di entità di sicurezza. Windows supporta l'utilizzo di Active Directory per fornire l'autenticazione e l'autorizzazione centralizzate.
 
@@ -29,8 +27,8 @@ In genere, il servizio token di protezione è responsabile solo dell'autenticazi
 
 ## <a name="references"></a>Riferimenti
 
-- [Piattaforma di identità Microsoft](https://docs.microsoft.com/azure/active-directory/develop/)
+- [Microsoft Identity Platform](https://docs.microsoft.com/azure/active-directory/develop/)
 
 >[!div class="step-by-step"]
->[Precedente](azure-monitor.md)
->[Successivo](authentication-authorization.md)
+>[Precedente](azure-monitor.md) 
+> [Avanti](authentication-authorization.md)

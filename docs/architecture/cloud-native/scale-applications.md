@@ -1,17 +1,15 @@
 ---
 title: Ridimensionamento di applicazioni native del cloud
 description: Ridimensionamento di applicazioni native del cloud con Azure Kubernetes Service e funzioni di Azure per soddisfare le esigenze degli utenti in modo economicamente conveniente.
-ms.date: 04/13/2020
-ms.openlocfilehash: 91d925778e9dfcf8a1ec2486fe8961037409f207
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: d425976eed248461a9c2e4fe03596f9f6dfd2eba
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199940"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613733"
 ---
 # <a name="scaling-cloud-native-applications"></a>Ridimensionamento di applicazioni native del cloud
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Uno dei vantaggi più spesso derivanti dal passaggio a un ambiente di hosting cloud è la scalabilità. La scalabilità o la possibilità per un'applicazione di accettare un carico utente aggiuntivo senza compromettere le prestazioni di ogni utente. Spesso si ottengono suddividendo un'applicazione in piccole parti, ognuna delle quali può essere assegnata a tutte le risorse necessarie. I fornitori di cloud consentono una scalabilità elevata in qualsiasi momento e ovunque nel mondo.
 
@@ -22,5 +20,5 @@ Uno dei vantaggi più spesso derivanti dal passaggio a un ambiente di hosting cl
 - Elaborazione serverless
 
 >[!div class="step-by-step"]
->[Precedente](centralized-configuration.md)
->[successivo](leverage-containers-orchestrators.md)
+>[Precedente](centralized-configuration.md) 
+> [Avanti](leverage-containers-orchestrators.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fab8a58-3883-490f-8b27-64042c90f104
 topic_type:
 - apiref
-ms.openlocfilehash: f6a741df3ea57b5e9b4fa8bc5d304bfedd1d6c15
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5730cdd910257d762230f5e54576d5e0a7ac1adb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428018"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614825"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>Metodo ISymUnmanagedWriter::DefineLocalVariable
-Definisce una singola variabile nell'ambito lessicale corrente. Questo metodo può essere chiamato più volte per una variabile con lo stesso nome che dispone di più case in un ambito. In questo caso, tuttavia, i valori dei parametri `startOffset` e `endOffset` non devono sovrapporsi.  
+Definisce una singola variabile nell'ambito lessicale corrente. Questo metodo può essere chiamato più volte per una variabile con lo stesso nome che dispone di più case in un ambito. In questo caso, tuttavia, i valori dei `startOffset` parametri e `endOffset` non devono sovrapporsi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,13 +43,13 @@ HRESULT DefineLocalVariable(
   
 ## <a name="parameters"></a>Parametri  
  `name`  
- in Puntatore a un `WCHAR` che definisce il nome della variabile locale.  
+ in Puntatore a un oggetto `WCHAR` che definisce il nome della variabile locale.  
   
  `attributes`  
  in Attributi della variabile locale.  
   
  `cSig`  
- in `ULONG32` che indica le dimensioni, in byte, del buffer di `signature`.  
+ in Oggetto `ULONG32` che indica la dimensione, in byte, del `signature` buffer.  
   
  `signature`  
  in Firma della variabile locale.  
@@ -80,6 +80,6 @@ HRESULT DefineLocalVariable(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [Metodo DefineGlobalVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
-- [Metodo DefineLocalVariable2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-definelocalvariable2-method.md)
+- [Interfaccia ISymUnmanagedWriter](isymunmanagedwriter-interface.md)
+- [Metodo DefineGlobalVariable](isymunmanagedwriter-defineglobalvariable-method.md)
+- [Metodo DefineLocalVariable2](isymunmanagedwriter2-definelocalvariable2-method.md)

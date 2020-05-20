@@ -1,17 +1,15 @@
 ---
 title: IdentityServer per le app cloud native
 description: Architettura di app .NET cloud native per Azure | IdentityServer
-ms.date: 06/30/2019
-ms.openlocfilehash: 536a4cbdbdaee47f3a5a0d9f93b2736270d9ea7a
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: 81cce30568becacda29f65f9506398790af321e0
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394872"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614032"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>IdentityServer per applicazioni native del cloud
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 IdentityServer è un server di autenticazione open source che implementa gli standard OpenID Connect (OIDC) e OAuth 2,0 per ASP.NET Core. È progettato per fornire un modo comune per autenticare le richieste a tutte le applicazioni, indipendentemente dal fatto che siano endpoint Web, nativi, per dispositivi mobili o API. IdentityServer può essere utilizzato per implementare l'accesso Single Sign-on (SSO) per più applicazioni e tipi di applicazione. Può essere usato per autenticare gli utenti effettivi tramite moduli di accesso e interfacce utente analoghe, oltre all'autenticazione basata su servizi che in genere comporta il rilascio, la verifica e il rinnovo dei token senza alcuna interfaccia utente. IdentityServer è progettato per essere una soluzione personalizzabile. Ogni istanza viene in genere personalizzata per adattarsi a una singola organizzazione e/o a un set di esigenze delle applicazioni.
 
@@ -42,7 +40,7 @@ IdentityServer fornisce il middleware eseguito all'interno di un'applicazione AS
 - Revoca (revoca dei token)
 - Termina sessione (attiva Single Sign-out in tutte le app)
 
-## <a name="getting-started"></a>Guida introduttiva
+## <a name="getting-started"></a>Introduzione
 
 IdentityServer4 è open source e gratuito. È possibile aggiungerlo alle applicazioni usando i pacchetti NuGet. Il pacchetto principale è [IdentityServer4](https://www.nuget.org/packages/IdentityServer4/) che è stato scaricato più di 4 milioni volte. Il pacchetto di base non include alcun codice dell'interfaccia utente e supporta solo la configurazione in memoria. Per usarlo con un database, è necessario anche un provider di dati come [IdentityServer4. EntityFramework](https://www.nuget.org/packages/IdentityServer4.EntityFramework) che usa Entity Framework Core per archiviare i dati di configurazione e operativi per IdentityServer. Per l'interfaccia utente, è possibile copiare i file dal [repository dell'interfaccia utente di avvio rapido](https://github.com/IdentityServer/IdentityServer4.Quickstart.UI) nell'applicazione ASP.NET Core MVC per aggiungere il supporto per l'accesso e la disconnessione usando il middleware IdentityServer.
 

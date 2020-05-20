@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a85283d8-379c-417a-9736-ddeeef9bcf50
 topic_type:
 - apiref
-ms.openlocfilehash: 1f1bd9c33f24847eae4ff7d26c5b996cd34afb72
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cd5d1f2d59d3e55ba454f23d2e5dd4b1316c0df4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448933"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615176"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>Metodo ISymUnmanagedMethod::GetRanges
 Data una posizione in un documento, restituisce una matrice di coppie di offset di inizio e di fine che corrispondono agli intervalli di MSIL (Microsoft Intermediate Language) che la posizione copre all'interno di questo metodo. La matrice è una matrice di numeri interi e ha il formato [inizio, fine, inizio, fine]. Il numero di coppie di intervalli è la lunghezza della matrice divisa per 2.  
@@ -52,7 +52,7 @@ HRESULT GetRanges(
  [in] Dimensione della matrice `ranges`.  
   
  `pcRanges`  
- out Puntatore a un `ULONG32` che riceve la dimensione del buffer necessario per contenere gli intervalli.  
+ out Puntatore a un oggetto `ULONG32` che riceve la dimensione del buffer necessario per contenere gli intervalli.  
   
  `ranges`  
  out Puntatore al buffer che riceve gli intervalli.  
@@ -65,4 +65,4 @@ HRESULT GetRanges(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [Interfaccia ISymUnmanagedMethod](isymunmanagedmethod-interface.md)

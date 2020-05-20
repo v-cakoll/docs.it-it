@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c6a1f797-dbf4-40f5-ab99-d9b4bfb26148
 topic_type:
 - apiref
-ms.openlocfilehash: 7eea63cae27c08260177dfc7746046b975434611
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: aba551a1973a41a909869316cda07e8d655e9882
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428043"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614838"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>Metodo ISymUnmanagedWriter::DefineField
 Definisce una singola variabile che non si trova all'interno di un metodo. Questo metodo viene utilizzato per determinati campi in classi, campi di bit e così via.  
@@ -51,7 +51,7 @@ HRESULT DefineField(
  in Attributi del campo.  
   
  `cSig`  
- in `ULONG32` che corrisponde alla dimensione, in caratteri, del buffer necessario per contenere la firma del campo.  
+ in Oggetto `ULONG32` che rappresenta la dimensione, in caratteri, del buffer necessario per contenere la firma del campo.  
   
  `signature`  
  in Matrice delle firme dei campi.  
@@ -76,4 +76,4 @@ HRESULT DefineField(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [Interfaccia ISymUnmanagedWriter](isymunmanagedwriter-interface.md)

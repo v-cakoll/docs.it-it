@@ -2,17 +2,15 @@
 title: Dati distribuiti
 description: Confronto tra l'archiviazione dei dati in applicazioni monolitiche e native del cloud.
 author: robvet
-ms.date: 04/24/2020
-ms.openlocfilehash: 8a9f1478f1a46b2367df9372d4adaa3b4c711782
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 2eff37dcc57ae39daac0ba10d10322be5eb4e321
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82204696"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614136"
 ---
 # <a name="distributed-data"></a>Dati distribuiti
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Come è stato illustrato in questo libro, un approccio nativo del cloud cambia la modalità di progettazione, distribuzione e gestione delle applicazioni. Cambia anche la modalità di gestione e archiviazione dei dati.
 
@@ -151,5 +149,5 @@ Per questo modello, si consideri un archivio dati che supporta direttamente il s
 Come per tutti i modelli e le tecnologie, implementare in modo strategico e quando necessario. Sebbene l'origine di eventi possa fornire prestazioni e scalabilità migliorate, si tratta di una riduzione della complessità e di una curva di apprendimento.
 
 >[!div class="step-by-step"]
->[Precedente](service-mesh-communication-infrastructure.md)
->[successivo](relational-vs-nosql-data.md)
+>[Precedente](service-mesh-communication-infrastructure.md) 
+> [Avanti](relational-vs-nosql-data.md)

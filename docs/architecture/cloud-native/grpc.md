@@ -2,17 +2,15 @@
 title: gRPC
 description: Informazioni su gRPC, il suo ruolo in applicazioni native del cloud e su come si differenzia dalla comunicazione RESTful HTTP.
 author: robvet
-ms.date: 03/31/2020
-ms.openlocfilehash: 01dd4c934f0b39041ea377691067edf4dbe20378
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: f34b267d7f5c6b4e593841c80df44d1ccbde95ae
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895559"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614045"
 ---
 # <a name="grpc"></a>gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Fino a questo libro abbiamo incentrato sulla comunicazione [basata su REST](https://docs.microsoft.com/azure/architecture/best-practices/api-design) . Abbiamo visto che REST è uno stile di architettura flessibile che definisce le operazioni basate su CRUD sulle risorse di entità. I client interagiscono con le risorse su HTTP con un modello di comunicazione di tipo richiesta/risposta. Mentre REST è ampiamente implementato, una tecnologia di comunicazione più recente, gRPC, ha raggiunto un notevole slancio nella community nativa del cloud.
 
@@ -39,9 +37,9 @@ gRPC è leggero ed efficiente. Può essere fino a 8x più veloce rispetto alla s
 
 ## <a name="protocol-buffers"></a>Buffer di protocollo
 
-gRPC adotta una tecnologia open source denominata buffer del [protocollo](https://developers.google.com/protocol-buffers/docs/overview). Forniscono un formato di serializzazione estremamente efficiente e indipendente dalla piattaforma per la serializzazione di messaggi strutturati che i servizi inviano tra loro. Usando un linguaggio IDL (Multi-Platform Interface Definition Language), gli sviluppatori definiscono un contratto di servizio per ogni microservizio. Il contratto, implementato come file basato su `.proto` testo, descrive i metodi, gli input e gli output per ogni servizio. Lo stesso file di contratto può essere usato per i client e i servizi gRPC basati su diverse piattaforme di sviluppo.
+gRPC adotta una tecnologia open source denominata buffer del [protocollo](https://developers.google.com/protocol-buffers/docs/overview). Forniscono un formato di serializzazione estremamente efficiente e indipendente dalla piattaforma per la serializzazione di messaggi strutturati che i servizi inviano tra loro. Usando un linguaggio IDL (Multi-Platform Interface Definition Language), gli sviluppatori definiscono un contratto di servizio per ogni microservizio. Il contratto, implementato come file basato su testo `.proto` , descrive i metodi, gli input e gli output per ogni servizio. Lo stesso file di contratto può essere usato per i client e i servizi gRPC basati su diverse piattaforme di sviluppo.
 
-Usando il file proto, il compilatore `protoc`protobuf genera il codice client e del servizio per la piattaforma di destinazione. Il codice include i componenti seguenti:
+Usando il file proto, il compilatore protobuf `protoc` genera il codice client e del servizio per la piattaforma di destinazione. Il codice include i componenti seguenti:
 
 - Oggetti fortemente tipizzati, condivisi dal client e dal servizio, che rappresentano le operazioni del servizio e gli elementi dati per un messaggio.
 - Classe di base fortemente tipizzata con il plumbing di rete necessario che il servizio gRPC remoto può ereditare ed estendere.
@@ -114,5 +112,5 @@ Sebbene si sforzi per separare i microservizi con i modelli di comunicazione asi
 In futuro, gRPC continuerà a ottenere la trazione per i sistemi nativi del cloud. I vantaggi delle prestazioni e la facilità di sviluppo sono molto interessanti. REST, tuttavia, sarà probabilmente da molto tempo. Eccelle per le API esposte pubblicamente e per motivi di compatibilità con le versioni precedenti.
 
 >[!div class="step-by-step"]
->[Precedente](service-to-service-communication.md)
->[successivo](service-mesh-communication-infrastructure.md)
+>[Precedente](service-to-service-communication.md) 
+> [Avanti](service-mesh-communication-infrastructure.md)

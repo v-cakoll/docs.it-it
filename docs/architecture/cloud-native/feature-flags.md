@@ -1,17 +1,16 @@
 ---
-title: Flag funzionalità
+title: Flag di funzionalità
 description: Implementare i flag delle funzionalità nelle applicazioni native del cloud sfruttando app Azure config
-ms.date: 05/03/2020
-ms.openlocfilehash: 72e1bfe777854a74fcac926811caf97e59986146
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+author: robvet
+ms.date: 05/13/2020
+ms.openlocfilehash: 607bd14a415a25b382f550e697542cf749a21772
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83398309"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614071"
 ---
-# <a name="feature-flags"></a>Flag funzionalità
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="feature-flags"></a>Flag di funzionalità
 
 Nel capitolo 1 si è affermato che cloud native è molto di più di velocità e agilità. Gli utenti si aspettano velocità di risposta rapida, funzionalità innovative e nessun tempo di inattività. `Feature flags`sono una tecnica di distribuzione moderna che consente di aumentare l'agilità per le applicazioni native del cloud. Consentono di distribuire nuove funzionalità in un ambiente di produzione, ma limitarne la disponibilità. Con il gesto rapido di un'opzione, è possibile attivare una nuova funzionalità per utenti specifici senza riavviare l'app o distribuire nuovo codice. Separano il rilascio di nuove funzionalità dalla distribuzione del codice.
 

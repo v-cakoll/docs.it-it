@@ -2,19 +2,17 @@
 title: Definizione di cloud nativo
 description: Informazioni sui pilastri fondamentali che forniscono il fondamento per i sistemi nativi del cloud
 author: robvet
-ms.date: 08/20/2019
-ms.openlocfilehash: 33977ff736fc5cbfcf86ed6479e8d0b927b87a63
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: e8b07fe7758d90f6ba97b81d0efa9d2fb5058d49
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895610"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614174"
 ---
 # <a name="defining-cloud-native"></a>Definizione del cloud nativo
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-Interrompi le operazioni e il testo di dieci dei tuoi colleghi. Chiedere loro di definire il termine "cloud native". La possibilità di ottenere otto risposte diverse.
+Interrompi le operazioni e il testo di dieci dei tuoi colleghi. Chiedere loro di definire il termine "cloud native". La possibilità di ottenere dieci risposte diverse.
 
 Il cloud nativo sta per cambiare il modo in cui si pensa alla costruzione di sistemi aziendali critici.
 
@@ -72,7 +70,7 @@ Come progettare un'app nativa del cloud? Come dovrebbe apparire l'architettura? 
 
 Una metodologia ampiamente accettata per la creazione di applicazioni basate sul cloud è l' [applicazione a dodici fattori](https://12factor.net/). Viene descritto un set di principi e procedure che gli sviluppatori seguono per costruire applicazioni ottimizzate per ambienti cloud moderni. Viene fornita particolare attenzione alla portabilità tra ambienti e automazione dichiarativa.
 
-Sebbene sia applicabile a qualsiasi applicazione basata su Web, molti professionisti lo considerano come fondamenta solide per la creazione di app native del cloud. I sistemi basati su questi principi possono distribuire e ridimensionare rapidamente e aggiungere funzionalità per rispondere rapidamente alle modifiche del mercato.
+Sebbene sia applicabile a qualsiasi applicazione basata su Web, molti professionisti considerano dodici fattori come solide basi per la creazione di app native del cloud. I sistemi basati su questi principi possono distribuire e ridimensionare rapidamente e aggiungere funzionalità per rispondere rapidamente alle modifiche del mercato.
 
 Nella tabella seguente viene evidenziata la metodologia a dodici fattori:
 
@@ -83,7 +81,7 @@ Nella tabella seguente viene evidenziata la metodologia a dodici fattori:
 | 3 | Configurazioni  | Le informazioni di configurazione vengono spostate al di fuori del microservizio ed esternalizzate tramite uno strumento di gestione della configurazione all'esterno del codice. La stessa distribuzione può propagarsi tra gli ambienti con la configurazione corretta applicata.  |
 | 4 | Servizi di supporto | Le risorse ausiliarie (archivi dati, cache, broker di messaggi) devono essere esposte tramite un URL indirizzabile. Questa operazione separa la risorsa dall'applicazione, consentendo l'interscambiabilità.  |
 | 5 | Compilazione, versione, esecuzione | Ogni versione deve applicare una rigorosa separazione tra le fasi di compilazione, rilascio ed esecuzione. Ogni deve essere contrassegnato con un ID univoco e supportare la possibilità di eseguire il rollback. I sistemi di integrazione continua/recapito continuo moderni contribuiscono a soddisfare questo principio. |
-| 6 | Processi | Ogni microservizio deve essere eseguito in un processo distinto, isolato da altri servizi in esecuzione. Externalize lo stato richiesto a un servizio di supporto, ad esempio una cache distribuita o un archivio dati. |
+| 6 | Processes | Ogni microservizio deve essere eseguito in un processo distinto, isolato da altri servizi in esecuzione. Externalize lo stato richiesto a un servizio di supporto, ad esempio una cache distribuita o un archivio dati. |
 | 7 | Binding porta | Ogni microservizio deve essere autonomo con le interfacce e le funzionalità esposte sulla relativa porta. In questo modo viene fornito l'isolamento da altri microservizi. |
 | 8 | Concorrenza | I servizi vengono scalati orizzontalmente in un numero elevato di processi identici (copie) identici rispetto alla scalabilità verticale di una singola istanza large nel computer più potente disponibile. |
 | 9 | Disponibilità | Le istanze del servizio devono essere eliminate, prediligendo le startup veloci per aumentare le opportunità di scalabilità e gli arresti normali per lasciare il sistema in uno stato corretto. I contenitori Docker insieme a un agente di orchestrazione soddisfano intrinsecamente questo requisito. |
@@ -91,7 +89,7 @@ Nella tabella seguente viene evidenziata la metodologia a dodici fattori:
 | 11 | Registrazione | Considera i log generati dai microservizi come flussi di eventi. È possibile elaborarli con un aggregatore di eventi e propagarli a strumenti di gestione dei log e di data mining quali monitoraggio di Azure o Splunk e infine l'archiviazione a lungo termine. |
 | 12 | Processi amministrativi | Eseguire attività amministrative/di gestione come processi unidirezionali. Le attività possono includere la pulizia dei dati e il pull delle analisi per un report. Gli strumenti che eseguono queste attività devono essere richiamati dall'ambiente di produzione, ma separatamente dall'applicazione. |
 
-Nel libro, [oltre all'app a dodici](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)fattori, l'autore Kevin Hoffman Details ognuno dei 12 fattori originali (scritti in 2011). Inoltre, il libro offre tre fattori aggiuntivi che riflettono la progettazione di applicazioni cloud moderne di oggi.
+Nel libro, [oltre all'app a dodici](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)fattori, l'autore Kevin Hoffman Details ognuno dei 12 fattori originali (scritti in 2011). Inoltre, discute tre fattori aggiuntivi che riflettono la progettazione di applicazioni cloud moderne di oggi.
 
 |    |  Nuovo fattore | Spiegazione  |
 | :-------- | :-------- | :-------- |
@@ -155,7 +153,7 @@ La figura 1-4 contrasta l'approccio di un'applicazione monolitica con un approcc
 
 Si noti che i microservizi innalzano di livello il principio "un solo codebase, un'applicazione" dall' [applicazione a dodici fattori](https://12factor.net/), descritta in precedenza nel capitolo.
 
-> *Il \#fattore 1 specifica "una singola codebase per ogni microservizio, archiviato nel proprio repository. Con il controllo della versione, è possibile eseguire la distribuzione in più ambienti.*
+> *Il fattore \# 1 specifica "una singola codebase per ogni microservizio, archiviato nel proprio repository. Con il controllo della versione, è possibile eseguire la distribuzione in più ambienti.*
 
 ### <a name="why-microservices"></a>Perché usare i microservizi?
 
@@ -197,7 +195,7 @@ Si noti che ogni contenitore mantiene il proprio set di dipendenze e Runtime, ch
 
 Si noti il modo in cui il modello di contenitore abbraccia il principio "dipendenze" dall' [applicazione a dodici fattori](https://12factor.net/).
 
-> *Il \#fattore 2 specifica che "ogni microservizio isola e impacchetta le proprie dipendenze, accettando le modifiche senza influire sull'intero sistema".*
+> *\#Il fattore 2 specifica che "ogni microservizio isola e impacchetta le proprie dipendenze, accettando le modifiche senza influire sull'intero sistema".*
 
 I contenitori supportano i carichi di lavoro Linux e Windows. Il cloud di Azure accetta entrambi. È interessante notare che si tratta di Linux, non di Windows Server, che è diventato il sistema operativo più diffuso in Azure.
 
@@ -227,7 +225,7 @@ Nella tabella seguente vengono descritte le attività comuni dell'orchestrazione
 | :-------- | :-------- |
 | Pianificazione | Eseguire automaticamente il provisioning delle istanze del contenitore.|
 | Affinità/anti-affinità | Eseguire il provisioning di contenitori vicini o lontani tra loro, in modo da garantire disponibilità e prestazioni. |
-| Monitoraggio dell’integrità | Rilevare e correggere automaticamente gli errori.|
+| Monitoraggio condizioni | Rilevare e correggere automaticamente gli errori.|
 | Failover | Eseguire automaticamente il provisioning dell'istanza non riuscita in computer integri.|
 | Scalabilità | Aggiungere o rimuovere automaticamente un'istanza del contenitore per soddisfare la domanda.|
 | Rete | Gestire una sovrapposizione di rete per la comunicazione del contenitore.|
@@ -236,9 +234,9 @@ Nella tabella seguente vengono descritte le attività comuni dell'orchestrazione
 
 Si noti che gli agenti di orchestrazione adottano i principi di disposizione e di concorrenza dall' [applicazione a dodici fattori](https://12factor.net/), illustrata in precedenza nel capitolo.
 
-> *Il \#fattore 9 specifica che le istanze del servizio devono essere monouso, prediligendo le startup veloci per aumentare le opportunità di scalabilità e gli arresti normali per lasciare il sistema in uno stato corretto. I contenitori Docker insieme a un agente di orchestrazione soddisfano questo requisito ".*
+> *\#Il fattore 9 specifica che le istanze del servizio devono essere monouso, prediligendo le startup veloci per aumentare le opportunità di scalabilità e gli arresti normali per lasciare il sistema in uno stato corretto. I contenitori Docker insieme a un agente di orchestrazione soddisfano questo requisito ".*
 
-> *Il \#fattore 8 specifica che "i servizi vengono scalati orizzontalmente in un numero elevato di piccoli processi identici (copie), anziché eseguire la scalabilità verticale di una singola istanza large nel computer più potente disponibile".*
+> *\#Il fattore 8 specifica che "i servizi vengono scalati orizzontalmente in un numero elevato di piccoli processi identici (copie), anziché eseguire la scalabilità verticale di una singola istanza large nel computer più potente disponibile".*
 
 Sebbene esistano diversi agenti di orchestrazione dei contenitori, [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) è diventato lo standard de facto per il mondo nativo del cloud. Si tratta di una piattaforma portabile, estensibile e open source per la gestione dei carichi di lavoro in contenitori.
 
@@ -258,7 +256,7 @@ I sistemi nativi del cloud dipendono da molte risorse ausiliarie diverse, ad ese
 
 I servizi di supporto promuovono il principio di "senza stato" dall' [applicazione a dodici fattori](https://12factor.net/), illustrata in precedenza nel capitolo.
 
->*Il \#fattore 6* specifica che "ogni microservizio deve essere eseguito nel proprio processo, isolato da altri servizi in esecuzione. Externalize lo stato richiesto a un servizio di supporto, ad esempio una cache distribuita o un archivio dati ".
+>Il *fattore \# 6* specifica che "ogni microservizio deve essere eseguito nel proprio processo, isolato da altri servizi in esecuzione. Externalize lo stato richiesto a un servizio di supporto, ad esempio una cache distribuita o un archivio dati ".
 
 È possibile ospitare i propri servizi di backup, ma in questo esempio si è responsabili della gestione delle licenze, del provisioning e della gestione di tali risorse.
 
@@ -268,9 +266,9 @@ I sistemi nativi del cloud favoriscono i servizi di backup gestiti dai fornitori
 
 Una procedura consigliata consiste nel considerare un servizio di backup come *risorsa collegata*, associato in modo dinamico a un microservizio con informazioni (un URL e credenziali) archiviate in una configurazione esterna. Questa guida è stata digitata nell' [applicazione a dodici fattori](https://12factor.net/), illustrata in precedenza nel capitolo.
 
->*Il \#fattore 4* indica che i servizi di backup devono essere esposti tramite un URL indirizzabile. Questa operazione separa la risorsa dall'applicazione, consentendone l'interscambiabilità. "
+>Il *fattore \# 4* indica che i servizi di backup devono essere esposti tramite un URL indirizzabile. Questa operazione separa la risorsa dall'applicazione, consentendone l'interscambiabilità. "
 
->*Il \#fattore 3* specifica che "le informazioni di configurazione vengono spostate al di fuori del microservizio ed esternalizzate tramite uno strumento di gestione della configurazione all'esterno del codice".
+>Il *fattore \# 3* specifica che "le informazioni di configurazione vengono spostate al di fuori del microservizio ed esternalizzate tramite uno strumento di gestione della configurazione all'esterno del codice".
 
 Con questo modello, è possibile collegare e scollegare un servizio di supporto senza modifiche al codice. È possibile alzare di livello un microservizio da QA a un ambiente di gestione temporanea. È possibile aggiornare la configurazione del microservizio in modo che punti ai servizi di supporto in gestione temporanea e inserire le impostazioni nel contenitore tramite una variabile di ambiente.
 
@@ -298,7 +296,7 @@ In questo articolo, [che cos'è l'infrastruttura come codice](https://docs.micro
 
 L' [applicazione a dodici fattori](https://12factor.net/), descritta in precedenza, richiede passaggi distinti durante la trasformazione del codice completato in un'applicazione in esecuzione.
 
-> *Il \#fattore 5* indica che ogni versione deve applicare una stretta separazione tra le fasi di compilazione, rilascio ed esecuzione. Ogni deve essere contrassegnato con un ID univoco e supportare la possibilità di eseguire il rollback ".
+> Il *fattore \# 5* indica che ogni versione deve applicare una stretta separazione tra le fasi di compilazione, rilascio ed esecuzione. Ogni deve essere contrassegnato con un ID univoco e supportare la possibilità di eseguire il rollback ".
 
 I sistemi di integrazione continua/recapito continuo moderni contribuiscono a soddisfare questo principio. Forniscono passaggi di distribuzione distinti che consentono di garantire un codice coerente e di qualità immediatamente disponibile per gli utenti.
 
@@ -340,5 +338,5 @@ Si definisce la pipeline nel codice in un file YAML insieme al resto del codice 
 Il servizio Azure Pipelines supporta la maggior parte dei provider git e può generare pipeline di distribuzione per le applicazioni scritte nelle piattaforme Linux, macOS o Windows. Include il supporto per Java, .NET, JavaScript, Python, PHP, go, XCode e C++.
 
 >[!div class="step-by-step"]
->[Precedente](introduction.md)
->[successivo](candidate-apps.md)
+>[Precedente](introduction.md) 
+> [Avanti](candidate-apps.md)

@@ -2,17 +2,15 @@
 title: Comunicazione da servizio a servizio
 description: Informazioni sul modo in cui i microservizi nativi del cloud back-end comunicano con altri microservizi back-end.
 author: robvet
-ms.date: 09/09/2019
-ms.openlocfilehash: 556617a9e2df5a4d9ff9adb9d19e714ca94930ea
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: dec06cc28ac177381b882f9e441e19e5c51bd5ad
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895501"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613707"
 ---
 # <a name="service-to-service-communication"></a>Comunicazione da servizio a servizio
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Con il passaggio dal client front-end, ora si affronteranno i microservizi back-end che comunicano tra loro.
 
@@ -50,7 +48,7 @@ L'esecuzione di una richiesta non frequente che esegue una singola chiamata HTTP
 
 **Figura 4-9**. Concatenamento di query HTTP
 
-È certamente possibile immaginare il rischio nella progettazione mostrata nell'immagine precedente. Cosa accade se il \#passaggio 3 ha esito negativo? O il \#passaggio 8 ha esito negativo? Come si esegue il ripristino? Cosa accade se \#il passaggio 6 è lento perché il servizio sottostante è occupato? Come continuare? Anche se tutto funziona correttamente, si può pensare alla latenza utilizzata da questa chiamata, ovvero la somma della latenza di ogni passaggio.
+È certamente possibile immaginare il rischio nella progettazione mostrata nell'immagine precedente. Cosa accade se il passaggio \# 3 ha esito negativo? O il passaggio \# 8 ha esito negativo? Come si esegue il ripristino? Cosa accade se \# il passaggio 6 è lento perché il servizio sottostante è occupato? Come continuare? Anche se tutto funziona correttamente, si può pensare alla latenza utilizzata da questa chiamata, ovvero la somma della latenza di ogni passaggio.
 
 L'elevato livello di accoppiamento nell'immagine precedente suggerisce che i servizi non sono stati modellati in modo ottimale. Behoove al team di rivedere la loro progettazione.
 
@@ -166,7 +164,7 @@ Con la gestione degli eventi, la tecnologia di Accodamento viene spostata *negli
 
 **Figura 4-16**. Architettura degli argomenti
 
-Nella figura precedente, i Publisher inviano messaggi all'argomento. Al termine, i sottoscrittori ricevono messaggi dalle sottoscrizioni. Al centro, l'argomento invia messaggi alle sottoscrizioni in base a un set di *regole*, visualizzate in caselle blu scuro. Le regole fungono da filtro che trasmette messaggi specifici a una sottoscrizione. Qui viene inviato un evento "CreateOrder" alla sottoscrizione \#1 e alla sottoscrizione \#3, ma non alla sottoscrizione \#2. Un evento "OrderCompleted" verrebbe inviato alla sottoscrizione \#2 e alla sottoscrizione \#3.
+Nella figura precedente, i Publisher inviano messaggi all'argomento. Al termine, i sottoscrittori ricevono messaggi dalle sottoscrizioni. Al centro, l'argomento invia messaggi alle sottoscrizioni in base a un set di *regole*, visualizzate in caselle blu scuro. Le regole fungono da filtro che trasmette messaggi specifici a una sottoscrizione. Qui viene inviato un evento "CreateOrder" alla sottoscrizione \# 1 e alla sottoscrizione \# 3, ma non alla sottoscrizione \# 2. Un evento "OrderCompleted" verrebbe inviato alla sottoscrizione \# 2 e alla sottoscrizione \# 3.
 
 Il cloud di Azure supporta due servizi di argomento diversi: gli argomenti del bus di servizio di Azure e Azure EventGrid.
 
@@ -231,5 +229,5 @@ Anziché leggere dalla stessa risorsa, ogni gruppo di consumer viene letto in un
 Per le applicazioni native del cloud che devono trasmettere un numero elevato di eventi, Hub eventi di Azure può essere una soluzione affidabile e conveniente.
 
 >[!div class="step-by-step"]
->[Precedente](front-end-communication.md)
->[successivo](grpc.md)
+>[Precedente](front-end-communication.md) 
+> [Avanti](grpc.md)

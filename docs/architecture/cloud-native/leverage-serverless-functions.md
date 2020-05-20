@@ -1,17 +1,15 @@
 ---
 title: Uso di funzioni serverless
 description: Uso di funzioni senza server e di Azure in applicazioni native del cloud
-ms.date: 04/13/2020
-ms.openlocfilehash: 176499e3cd0349cd689b9d13d1c237a6343d13f3
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 53a0fdd29630b2a4368f3aa37ddfc5f93df10a24
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199742"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613863"
 ---
 # <a name="leveraging-serverless-functions"></a>Uso di funzioni serverless
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Nell'ambito della gestione dei computer fisici per sfruttare le funzionalità del cloud, le vite senza server sono alla fine estremo. L'unica responsabilità è il codice e si paga solo quando viene eseguito il codice. Funzioni di Azure offre un modo per creare funzionalità senza server nelle applicazioni native del cloud.
 
@@ -64,5 +62,5 @@ I provider di servizi cloud fatturano per server in base al tempo di esecuzione 
 Infine, l'uso di funzioni di Azure per le attività dell'applicazione aggiunge complessità. Per prima cosa è consigliabile progettare l'applicazione con un progetto modulare, a regime di controllo libero. Quindi, identificare se i vantaggi offerti da server non sono disponibili per giustificare la complessità aggiuntiva.
 
 >[!div class="step-by-step"]
->[Precedente](leverage-containers-orchestrators.md)
->[successivo](combine-containers-serverless-approaches.md)
+>[Precedente](leverage-containers-orchestrators.md) 
+> [Avanti](combine-containers-serverless-approaches.md)

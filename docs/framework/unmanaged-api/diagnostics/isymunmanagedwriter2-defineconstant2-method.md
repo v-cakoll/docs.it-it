@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd2bc956-7dbe-49fc-a646-daa0d267f2df
 topic_type:
 - apiref
-ms.openlocfilehash: 6600ca7e70ac77ffba0c75812f27d388c354ece6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 70ee853ff657a75dcc4df1454c4354f9d3f8202f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438320"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614721"
 ---
 # <a name="isymunmanagedwriter2defineconstant2-method"></a>Metodo ISymUnmanagedWriter2::DefineConstant2
 Definisce un nome per un valore costante.  
@@ -52,5 +52,5 @@ HRESULT DefineConstant2(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedWriter2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
-- [Metodo DefineConstant](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineconstant-method.md)
+- [Interfaccia ISymUnmanagedWriter2](isymunmanagedwriter2-interface.md)
+- [Metodo DefineConstant](isymunmanagedwriter-defineconstant-method.md)

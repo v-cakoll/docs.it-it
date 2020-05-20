@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d834721-ad8d-439d-b356-c6b4aef022fc
 topic_type:
 - apiref
-ms.openlocfilehash: 3bdc79a6b6d81f6f0998f052f8bea1bf8af55402
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ff888d3e2b86efeea3f4e3d33528f731d85886bf
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446114"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615267"
 ---
 # <a name="isymunmanagedvariablegetaddressfield3-method"></a>Metodo ISymUnmanagedVariable::GetAddressField3
 Ottiene il terzo campo dell'indirizzo per questa variabile. Il suo significato dipende dal tipo di indirizzo.  
@@ -34,7 +34,7 @@ HRESULT GetAddressField3(
   
 ## <a name="parameters"></a>Parametri  
  `pRetVal`  
- out Puntatore a un `ULONG32` che riceve il terzo campo dell'indirizzo.  
+ out Puntatore a un oggetto `ULONG32` che riceve il terzo campo dell'indirizzo.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
@@ -44,7 +44,7 @@ HRESULT GetAddressField3(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
-- [Metodo GetAddressField1](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield1-method.md)
-- [Metodo GetAddressField2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield2-method.md)
-- [Metodo GetAddressKind](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddresskind-method.md)
+- [Interfaccia ISymUnmanagedVariable](isymunmanagedvariable-interface.md)
+- [Metodo GetAddressField1](isymunmanagedvariable-getaddressfield1-method.md)
+- [Metodo GetAddressField2](isymunmanagedvariable-getaddressfield2-method.md)
+- [Metodo GetAddressKind](isymunmanagedvariable-getaddresskind-method.md)

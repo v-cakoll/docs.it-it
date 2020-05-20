@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2dd5098-3e58-4be5-b7a2-e4160b3b505a
 topic_type:
 - apiref
-ms.openlocfilehash: b6cf7293f1d65db1f60301f49ce655c74df3daca
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 20bfb3e48f411524bd4d9798f17dd935595a12bb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448322"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615020"
 ---
 # <a name="isymunmanagedreadergetglobalvariables-method"></a>Metodo ISymUnmanagedReader::GetGlobalVariables
 Restituisce tutte le variabili globali.  
@@ -37,10 +37,10 @@ HRESULT GetGlobalVariables(
   
 ## <a name="parameters"></a>Parametri  
  `cVars`  
- in Lunghezza del buffer a cui punta `pcVars`.  
+ in Lunghezza del buffer a cui punta `pcVars` .  
   
  `pcVars`  
- out Puntatore a un `ULONG32` che riceve la dimensione del buffer necessario per contenere le variabili.  
+ out Puntatore a un oggetto `ULONG32` che riceve le dimensioni del buffer necessarie per contenere le variabili.  
   
  `pVars`  
  out Buffer che contiene le variabili.  
@@ -53,4 +53,4 @@ HRESULT GetGlobalVariables(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [Interfaccia ISymUnmanagedReader](isymunmanagedreader-interface.md)

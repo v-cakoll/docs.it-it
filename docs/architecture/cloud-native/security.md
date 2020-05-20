@@ -1,17 +1,15 @@
 ---
-title: Sicurezza
+title: Security
 description: Architettura di app .NET cloud native per Azure | Sicurezza
-ms.date: 06/30/2019
-ms.openlocfilehash: 848255de70038798417a558543d0b1ea8cff1e37
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 05/13/2020
+ms.openlocfilehash: 9afbc2c960fdd16721e1d3aa7fd01d5c0c1fe2f9
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184771"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613668"
 ---
 # <a name="security"></a>Sicurezza
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Non si tratta di un giorno in cui le notizie non contengono una storia di una società che viene violata o in qualche modo perde i dati dei clienti. Anche i paesi non sono immuni ai problemi creati considerando la sicurezza come un ripensamento. Per anni, le aziende hanno trattato la sicurezza dei dati dei clienti e, di fatto, le loro intere reti come un elemento "bello". I server Windows sono rimasti senza patch, le versioni precedenti di PHP continuavano a funzionare e i database MongoDB rimanevano aperti a livello mondiale.
 
@@ -24,5 +22,5 @@ Anche i governi non sono immuni agli eventi imprevisti. La città di Baltimora �
 In breve, la sicurezza è un'attività grave.
 
 >[!div class="step-by-step"]
->[Precedente](identity-server.md)
->[Successivo](azure-security.md)
+>[Precedente](identity-server.md) 
+> [Avanti](azure-security.md)

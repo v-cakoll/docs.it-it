@@ -1,17 +1,15 @@
 ---
 title: Aggregazioni di applicazioni cloud native
 description: Architettura di app .NET cloud native per Azure | Bundle di applicazioni native cloud
-ms.date: 05/12/2020
-ms.openlocfilehash: c16a9cba1fe31e025532ba98d644114a319bb9de
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: fc6ee96078650dccd2ebeb3e65a0a00c4e05ecdb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395494"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614344"
 ---
 # <a name="cloud-native-application-bundles"></a>Aggregazioni di applicazioni cloud native
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Una proprietà chiave delle applicazioni native del cloud è la possibilità di sfruttare le funzionalità del cloud per velocizzare lo sviluppo. Questa progettazione spesso significa che un'applicazione completa utilizza diversi tipi di tecnologie. Le applicazioni possono essere fornite in contenitori Docker, alcuni servizi possono usare funzioni di Azure, mentre altre parti possono essere eseguite direttamente in macchine virtuali allocate su server metal di grandi dimensioni con accelerazione GPU hardware. Non esistono due applicazioni native del cloud, pertanto è difficile fornire un singolo meccanismo per la spedizione.
 

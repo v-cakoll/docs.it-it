@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8bf3cb62-89bf-4159-ad53-de606aba89e8
 topic_type:
 - apiref
-ms.openlocfilehash: f7993ebc15f95df97a9b45523717f318d8c435ce
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 358f3d3d7c231a2baa9d2c467935ba3a5867e36b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448943"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614474"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>Metodo ISymUnmanagedMethod::GetOffset
 Restituisce l'offset all'interno di questo metodo che corrisponde a una posizione specificata all'interno di un documento.  
@@ -46,7 +46,7 @@ HRESULT GetOffset(
  in Colonna del documento per cui è richiesto l'offset.  
   
  `pRetVal`  
- out Puntatore a un `ULONG32` che riceve gli offset.  
+ out Puntatore a un oggetto `ULONG32` che riceve gli offset.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
@@ -56,4 +56,4 @@ HRESULT GetOffset(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [Interfaccia ISymUnmanagedMethod](isymunmanagedmethod-interface.md)

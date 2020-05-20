@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2a420900-01f1-4461-8777-3a34a6dc1426
 topic_type:
 - apiref
-ms.openlocfilehash: 01ab69b73a7bc4929e2ebd49b3847f8d7c4646a2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25e797fdf563a01ab727f16e7173eec2552eeb27
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448868"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614422"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>Metodo ISymUnmanagedMethod::GetSourceStartEnd
 Ottiene le posizioni del documento iniziale e finale per l'origine di questo metodo. La prima posizione della matrice è l'inizio e la seconda posizione della matrice è la fine.  
@@ -46,7 +46,7 @@ HRESULT GetSourceStartEnd(
  in Colonne iniziali e finali dei documenti di origine corrispondenti.  
   
  `pRetVal`  
- [out] `true` se le posizioni sono state definite; in caso contrario, `false`.  
+ [out] `true` Se le posizioni sono state definite; in caso contrario, `false` .  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
@@ -56,4 +56,4 @@ HRESULT GetSourceStartEnd(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [Interfaccia ISymUnmanagedMethod](isymunmanagedmethod-interface.md)

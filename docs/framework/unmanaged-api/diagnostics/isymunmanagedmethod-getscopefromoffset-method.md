@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d14cf210-81f8-46e1-8b19-6ddec0ba8b11
 topic_type:
 - apiref
-ms.openlocfilehash: 36b1b2394907f242c0e8c5e277c0d1c5b3b02e1b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4eefd019280f501a6ce194e5ce84388e32cc66e1
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448906"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615137"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>Metodo ISymUnmanagedMethod::GetScopeFromOffset
 Ottiene l'ambito lessicale di maggiore inclusione all'interno di questo metodo che racchiude l'offset specificato. Questa operazione può essere utilizzata per avviare le ricerche variabili locali.  
@@ -35,10 +35,10 @@ HRESULT GetScopeFromOffset(
   
 ## <a name="parameters"></a>Parametri  
  `offset`  
- in `ULONG` che contiene l'offset.  
+ in Oggetto `ULONG` che contiene l'offset.  
   
  `pRetVal`  
- out Puntatore impostato sull'interfaccia [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) restituita.  
+ out Puntatore impostato sull'interfaccia [ISymUnmanagedScope](isymunmanagedscope-interface.md) restituita.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
@@ -48,4 +48,4 @@ HRESULT GetScopeFromOffset(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [Interfaccia ISymUnmanagedMethod](isymunmanagedmethod-interface.md)

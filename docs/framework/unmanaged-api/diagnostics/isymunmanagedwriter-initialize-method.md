@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0ebd793-3764-4df0-8f12-0e95f60b9eae
 topic_type:
 - apiref
-ms.openlocfilehash: 6e9ab623d5fe9fcfda2305df078e988a561afdc5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1553e616f60b4f05c06b6457d47454dfb4bc2eb7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427971"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614773"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>Metodo ISymUnmanagedWriter::Initialize
 Imposta l'interfaccia di emissione dei metadati a cui questo writer verrà associato e imposta il nome del file di output in cui verranno scritti i simboli di debug.  
@@ -45,10 +45,10 @@ HRESULT Initialize(
  in Nome file in cui vengono scritti i simboli di debug. Se specificato per un writer che non usa i nomi file, il parametro sarà ignorato.  
   
  `pIStream`  
- in Se specificato, il writer di simboli emetterà i simboli nella <xref:System.Runtime.InteropServices.ComTypes.IStream> specificata anziché nel file specificato nel parametro `filename`. Il parametro `pIStream` è facoltativo.  
+ in Se specificato, il writer di simboli emetterà i simboli nell'oggetto specificato <xref:System.Runtime.InteropServices.ComTypes.IStream> anziché nel file specificato nel `filename` parametro. `pIStream` è facoltativo.  
   
  `fFullBuild`  
- [in] `true` se si tratta di una ricompilazione completa; `false` se si tratta di una compilazione incrementale.  
+ [in] `true` Se si tratta di una ricompilazione completa; `false`se si tratta di una compilazione incrementale.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
@@ -58,5 +58,5 @@ HRESULT Initialize(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [Metodo Initialize2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize2-method.md)
+- [Interfaccia ISymUnmanagedWriter](isymunmanagedwriter-interface.md)
+- [Metodo Initialize2](isymunmanagedwriter-initialize2-method.md)

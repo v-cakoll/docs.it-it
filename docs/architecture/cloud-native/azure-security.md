@@ -1,17 +1,15 @@
 ---
 title: Sicurezza di Azure per app native del cloud
 description: Architettura di app .NET cloud native per Azure | Sicurezza di Azure per le app cloud native
-ms.date: 06/30/2019
-ms.openlocfilehash: 27ef6c8313f1573ca686e8489a84f64a56116fa4
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: a39b64477eb9e896c6603e5609ede653bfee1e07
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394744"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614253"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Sicurezza di Azure per app native del cloud
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Le applicazioni native del cloud possono essere più semplici e più difficili da proteggere rispetto alle applicazioni tradizionali. Sul lato negativo, è necessario proteggere applicazioni più piccole e dedicare maggiore energia per creare l'infrastruttura di sicurezza. La natura eterogenea dei linguaggi di programmazione e degli stili nella maggior parte delle distribuzioni di servizi comporta inoltre la necessità di prestare maggiore attenzione ai bollettini sulla sicurezza di diversi provider.
 

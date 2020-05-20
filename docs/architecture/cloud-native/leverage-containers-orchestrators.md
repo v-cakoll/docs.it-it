@@ -1,17 +1,15 @@
 ---
 title: Uso di contenitori e agenti di orchestrazione
 description: Uso dei contenitori Docker e degli agenti di orchestrazione Kubernetes in Azure
-ms.date: 04/13/2020
-ms.openlocfilehash: 64c6c0666398d9ccbc87efad18017bf278568fc4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 5d0b7f41caecb3422a4416514de2fdd54e94539a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895555"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613903"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Uso di contenitori e agenti di orchestrazione
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 I contenitori e gli agenti di orchestrazione sono progettati per risolvere i problemi comuni agli approcci di distribuzione monolitica.
 
@@ -19,7 +17,7 @@ I contenitori e gli agenti di orchestrazione sono progettati per risolvere i pro
 
 Tradizionalmente, la maggior parte delle applicazioni è stata distribuita come singola unità. Tali applicazioni sono definite monolitiche. Questo approccio generale per la distribuzione di applicazioni come unità singole, anche se sono costituite da più moduli o assembly, è noto come architettura monolitica, come illustrato nella figura 3-1.
 
-![Architettura monolitica.](./media/monolithic-architecture.png)
+![Architettura monolitica.](./media/monolithic-design.png)
 
 **Figura 3-1**. Architettura monolitica.
 
@@ -33,7 +31,7 @@ Le applicazioni monolitiche richiedono una distribuzione completa dell'intera ap
 
 Un'applicazione monolitica è ospitata interamente in una singola istanza del computer, spesso richiedendo hardware ad alta capacità. Se una parte del monolito richiede la scalabilità, un'altra copia dell'intera applicazione deve essere distribuita in un altro computer. Con un Monolith, non è possibile ridimensionare singolarmente i componenti dell'applicazione, perché sono tutti o nulla. Il ridimensionamento di componenti che non richiedono la scalabilità comporta un uso inefficiente e costoso delle risorse.
 
-### <a name="environment"></a>Ambiente
+### <a name="environment"></a>Environment
 
 Le applicazioni monolitiche vengono in genere distribuite in un ambiente host con un sistema operativo preinstallato, un runtime e dipendenze di libreria. Questo ambiente potrebbe non corrispondere a quello in cui l'applicazione è stata sviluppata o testata. Le incoerenze negli ambienti applicativi rappresentano una fonte comune di problemi per le distribuzioni monolitiche.
 
@@ -57,8 +55,9 @@ I contenitori non sono modificabili. Una volta definito un contenitore, è possi
 
 I contenitori non sono modificabili. Una volta definito un contenitore, è possibile ricrearlo ed eseguirlo esattamente allo stesso modo. Questa immutabilità si presta alla progettazione basata su componenti. Se alcune parti di un'applicazione si evolvono in modo diverso rispetto ad altre, perché ridistribuire l'intera applicazione quando è possibile distribuire solo le parti che cambiano più di frequente? Diverse funzionalità e problematiche trasversali di un'app possono essere suddivise in unità separate. La figura 3-2 Mostra come un'app monolitica può sfruttare i vantaggi di contenitori e microservizi delegando determinate funzionalità o funzionalità. Anche le funzionalità rimanenti nell'app sono state incluse nel contenitore.
 
-![Suddivisione di un'app monolitica per l'uso di microservizi nel back-end. ](./media/breaking-up-monolith-with-backend-microservices.png)
- **Figura 3-2**. Suddivisione di un'app monolitica per l'uso di microservizi nel back-end.
+![Suddivisione di un'app monolitica per l'uso di microservizi nel back-end.](./media/cloud-native-design.png)
+
+**Figura 3-2**. Scomposizione di un'app monolitica per l'adozione di microservizi.
 
 Ogni servizio nativo del cloud viene compilato e distribuito in un contenitore separato. Ogni può aggiornare in base alle esigenze. I singoli servizi possono essere ospitati in nodi con risorse appropriate per ogni servizio. L'ambiente in cui viene eseguito ogni servizio non è modificabile, è condiviso tra ambienti di sviluppo, test e produzione e con facilità di controllo delle versioni. L'accoppiamento tra aree diverse dell'applicazione si verifica in modo esplicito come chiamate o messaggi tra servizi, non dipendenze in fase di compilazione all'interno di Monolith. È anche possibile scegliere la tecnologia più adatta a una determinata funzionalità senza richiedere modifiche al resto dell'app.
 
@@ -111,7 +110,7 @@ Kubernetes supporta sia la configurazione dichiarativa che imperativa. L'approcc
 
 I comandi imperativi sono ottimi per l'apprendimento e la sperimentazione interattiva. Tuttavia, è opportuno creare in modo dichiarativo i file manifesto Kubernetes per adottare un'infrastruttura come approccio al codice, fornendo distribuzioni affidabili e ripetibili. Il file manifesto diventa un elemento del progetto e viene usato nella pipeline CI/CD per l'automazione delle distribuzioni Kubernetes.
 
-Se il cluster è già stato configurato usando i comandi imperativi, è possibile esportare un manifesto `kubectl get svc SERVICENAME -o yaml > service.yaml`dichiarativo usando. Questo comando genera un manifesto simile a quello riportato di seguito:
+Se il cluster è già stato configurato usando i comandi imperativi, è possibile esportare un manifesto dichiarativo usando `kubectl get svc SERVICENAME -o yaml > service.yaml` . Questo comando genera un manifesto simile a quello riportato di seguito:
 
 ```yaml
 apiVersion: v1
@@ -139,7 +138,7 @@ status:
   loadBalancer: {}
 ```
 
-Quando si usa la configurazione dichiarativa, è possibile visualizzare in anteprima le modifiche che verranno apportate prima di eseguirne il commit usando `kubectl diff -f FOLDERNAME` la cartella in cui si trovano i file di configurazione. Quando si è certi di voler applicare le modifiche, eseguire `kubectl apply -f FOLDERNAME`. Aggiungere `-R` per elaborare in modo ricorsivo una gerarchia di cartelle.
+Quando si usa la configurazione dichiarativa, è possibile visualizzare in anteprima le modifiche che verranno apportate prima di eseguirne il commit usando la cartella in cui si trovano i `kubectl diff -f FOLDERNAME` file di configurazione. Quando si è certi di voler applicare le modifiche, eseguire `kubectl apply -f FOLDERNAME` . Aggiungere `-R` per elaborare in modo ricorsivo una gerarchia di cartelle.
 
 È anche possibile usare la configurazione dichiarativa con altre funzionalità di Kubernetes, tra cui le distribuzioni. Le distribuzioni dichiarative consentono di gestire versioni, aggiornamenti e scalabilità. Indicano al controller di distribuzione Kubernetes di distribuire nuove modifiche, aumentare il carico o eseguire il rollback a una revisione precedente. Se un cluster è instabile, una distribuzione dichiarativa restituirà automaticamente il cluster allo stato desiderato. Se ad esempio un nodo si arresta in modo anomalo, il meccanismo di distribuzione ridistribuirà una sostituzione per ottenere lo stato desiderato
 
@@ -181,7 +180,7 @@ Che cos'è Minikube? Il progetto Minikube indica che Minikube implementa un clus
 - Abilitazione di CNI (container Network Interface)
 - Dati in ingresso
 
-Dopo l'installazione di Minikube, è possibile iniziare a usarla rapidamente `minikube start` eseguendo il comando, che Scarica un'immagine e avvia il cluster Kubernetes locale. Una volta avviato il cluster, è possibile interagire con esso usando i comandi `kubectl` Kubernetes standard.
+Dopo l'installazione di Minikube, è possibile iniziare a usarla rapidamente eseguendo il `minikube start` comando, che Scarica un'immagine e avvia il cluster Kubernetes locale. Una volta avviato il cluster, è possibile interagire con esso usando i comandi Kubernetes standard `kubectl` .
 
 ### <a name="docker-desktop"></a>Docker Desktop
 
@@ -204,26 +203,26 @@ Visual Studio supporta lo sviluppo di Docker per le applicazioni basate sul Web.
 Quando questa opzione è selezionata, il progetto viene creato con `Dockerfile` nella relativa radice, che può essere usato per compilare e ospitare l'app in un contenitore docker. Un esempio di Dockerfile è illustrato nella figura 3 6. git
 
 ```docker
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-stretch-slim AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0-stretch AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["WebApplication3/WebApplication3.csproj", "WebApplication3/"]
-RUN dotnet restore "WebApplication3/WebApplication3.csproj"
+COPY ["eShopWeb/eShopWeb.csproj", "eShopWeb/"]
+RUN dotnet restore "eShopWeb/eShopWeb.csproj"
 COPY . .
-WORKDIR "/src/WebApplication3"
-RUN dotnet build "WebApplication3.csproj" -c Release -o /app
+WORKDIR "/src/eShopWeb"
+RUN dotnet build "eShopWeb.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "WebApplication3.csproj" -c Release -o /app
+RUN dotnet publish "eShopWeb.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "WebApplication3.dll"]
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "eShopWeb.dll"]
 ```
 
 **Figura 3-6**. Dockerfile generato da Visual Studio
@@ -236,13 +235,17 @@ Il comportamento predefinito quando viene eseguita l'app è configurato anche pe
 
 Oltre allo sviluppo locale, [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) offre un modo pratico per consentire a più sviluppatori di lavorare con le proprie configurazioni Kubernetes all'interno di Azure. Come si può vedere nella figura 3-7, è anche possibile eseguire l'applicazione in Azure Dev Spaces.
 
-Inoltre, in qualsiasi momento è possibile aggiungere il supporto di Docker a un'applicazione ASP.NET Core esistente. Dalla Esplora soluzioni di Visual Studio, fare clic con il pulsante destro del mouse sul progetto e **aggiungere** > il**supporto di Docker**, come illustrato nella figura 3-8.
+Inoltre, in qualsiasi momento è possibile aggiungere il supporto di Docker a un'applicazione ASP.NET Core esistente. Dalla Esplora soluzioni di Visual Studio, fare clic con il pulsante destro del mouse sul progetto e **aggiungere**il  >  **supporto di Docker**, come illustrato nella figura 3-8.
+
+![Aggiunta del supporto per Docker in Visual Studio](./media/visual-studio-add-docker-support.png)
 
 **Figura 3-8**. Aggiunta del supporto Docker a Visual Studio
 
-È anche possibile aggiungere il supporto dell'orchestrazione del contenitore, illustrato nella figura 3-8. Per impostazione predefinita, l'agente di orchestrazione USA Kubernetes e Helm. Dopo aver scelto l'agente di orchestrazione `azds.yaml` , viene aggiunto un file alla radice del progetto `charts` e viene aggiunta una cartella contenente i grafici Helm usati per configurare e distribuire l'applicazione in Kubernetes. La figura 3-9 Mostra i file risultanti in un nuovo progetto.
+È anche possibile aggiungere il supporto dell'orchestrazione del contenitore, illustrato nella figura 3-8. Per impostazione predefinita, l'agente di orchestrazione USA Kubernetes e Helm. Dopo aver scelto l'agente di orchestrazione, `azds.yaml` viene aggiunto un file alla radice del progetto e `charts` viene aggiunta una cartella contenente i grafici Helm usati per configurare e distribuire l'applicazione in Kubernetes. La figura 3-9 Mostra i file risultanti in un nuovo progetto.
 
-È anche possibile aggiungere il supporto dell'orchestrazione del contenitore, illustrato nella figura 3-8. Per impostazione predefinita, l'agente di orchestrazione USA Kubernetes e Helm. Dopo aver scelto l'agente di orchestrazione `azds.yaml` , viene aggiunto un file alla radice del progetto `charts` e viene aggiunta una cartella contenente i grafici Helm usati per configurare e distribuire l'applicazione in Kubernetes. La figura 3-9 Mostra i file risultanti in un nuovo progetto.
+È anche possibile aggiungere il supporto dell'orchestrazione del contenitore, illustrato nella figura 3-8. Per impostazione predefinita, l'agente di orchestrazione USA Kubernetes e Helm. Dopo aver scelto l'agente di orchestrazione, `azds.yaml` viene aggiunto un file alla radice del progetto e `charts` viene aggiunta una cartella contenente i grafici Helm usati per configurare e distribuire l'applicazione in Kubernetes. La figura 3-9 Mostra i file risultanti in un nuovo progetto.
+
+![Aggiunta del supporto dell'agente di orchestrazione in Visual Studio](./media/visual-studio-add-orchestrator-support.png)
 
 **Figura 3-9**. Aggiunta del supporto dell'orchestrazione a Visual Studio
 
@@ -253,5 +256,5 @@ Sono disponibili numerose estensioni per Visual Studio Code che supportano lo sv
 Microsoft fornisce l' [estensione Docker per Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker). Questa estensione semplifica il processo di aggiunta del supporto del contenitore alle applicazioni. Esegue l'impalcatura dei file necessari, compila le immagini Docker e consente di eseguire il debug dell'app all'interno di un contenitore. L'estensione include una finestra di esplorazione visiva che semplifica l'esecuzione di azioni su contenitori e immagini, ad esempio avvio, arresto, ispezione, rimozione e altro ancora. L'estensione supporta inoltre Docker Compose consentendo di gestire più contenitori in esecuzione come una singola unità.
 
 >[!div class="step-by-step"]
->[Precedente](scale-applications.md)
->[successivo](leverage-serverless-functions.md)
+>[Precedente](scale-applications.md) 
+> [Avanti](leverage-serverless-functions.md)

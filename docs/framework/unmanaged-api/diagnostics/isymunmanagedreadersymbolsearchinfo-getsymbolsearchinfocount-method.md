@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4068b6ec-525f-4446-8818-0296178cbd19
 topic_type:
 - apiref
-ms.openlocfilehash: a193c4e9e87616217efc90286032944d05d766c0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a81a5afeec8f97864e1772347c6575b9d09cb176
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446392"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614890"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a>Metodo ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount
 Ottiene un conteggio delle informazioni di ricerca dei simboli.  
@@ -34,7 +34,7 @@ HRESULT GetSymbolSearchInfoCount(
   
 ## <a name="parameters"></a>Parametri  
  `pcSearchInfo`  
- ] out] puntatore a un `ULONG32` che riceve la dimensione del buffer necessario per contenere le informazioni di ricerca.  
+ ] out] puntatore a un oggetto `ULONG32` che riceve le dimensioni del buffer necessarie per contenere le informazioni di ricerca.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
@@ -44,4 +44,4 @@ HRESULT GetSymbolSearchInfoCount(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedReaderSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)
+- [Interfaccia ISymUnmanagedReaderSymbolSearchInfo](isymunmanagedreadersymbolsearchinfo-interface.md)

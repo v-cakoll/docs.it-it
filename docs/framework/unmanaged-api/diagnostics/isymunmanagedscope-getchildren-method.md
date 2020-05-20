@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bed524e-cc48-4bf0-b9fa-25d665e63ddb
 topic_type:
 - apiref
-ms.openlocfilehash: c7e9d2fe94c33127d8b105333ad6dac9d6cc5af6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c6d21f40c260890c9c88dcdfccd7e31161024ba3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446367"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614864"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>Metodo ISymUnmanagedScope::GetChildren
 Ottiene gli elementi figlio di questo ambito.  
@@ -37,10 +37,10 @@ HRESULT GetChildren(
   
 ## <a name="parameters"></a>Parametri  
  `cChildren`  
- in `ULONG32` che indica le dimensioni della matrice di `children`.  
+ in Oggetto `ULONG32` che indica la dimensione della `children` matrice.  
   
  `pcChildren`  
- out Puntatore a un `ULONG32` che riceve la dimensione del buffer necessario per contenere gli elementi figlio.  
+ out Puntatore a un oggetto `ULONG32` che riceve la dimensione del buffer necessario per contenere gli elementi figlio.  
   
  `children`  
  out Matrice di elementi figlio restituita.  
@@ -53,5 +53,5 @@ HRESULT GetChildren(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [Metodo GetParent](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)
+- [Interfaccia ISymUnmanagedScope](isymunmanagedscope-interface.md)
+- [Metodo GetParent](isymunmanagedscope-getparent-method.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f909ac48-3d8f-49fb-a369-e3d9959151cd
 topic_type:
 - apiref
-ms.openlocfilehash: 75d477af7395a9b7d3328b2a5787f810733f3749
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 451cfecde7e14fad9d3fed3367112e1fb59796e5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448883"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615144"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>Metodo ISymUnmanagedMethod::GetSequencePoints
 Ottiene tutti i punti di sequenza all'interno di questo metodo.  
@@ -41,10 +41,10 @@ HRESULT GetSequencePoints(
   
 ## <a name="parameters"></a>Parametri  
  `cPoints`  
- in `ULONG32` che riceve la dimensione delle matrici `offsets`, `documents`, `lines`, `columns`, `endLines`e `endColumns`.  
+ in Oggetto `ULONG32` che riceve le dimensioni delle `offsets` matrici, `documents` , `lines` , `columns` , `endLines` e `endColumns` .  
   
  `pcPoints`  
- out Puntatore a un `ULONG32` che riceve la lunghezza del buffer necessaria per contenere i punti di sequenza.  
+ out Puntatore a un oggetto `ULONG32` che riceve la lunghezza del buffer necessaria per contenere i punti di sequenza.  
   
  `offsets`  
  in Matrice in cui archiviare gli offset MSIL (Microsoft Intermediate Language) dall'inizio del metodo per i punti di sequenza.  
@@ -72,4 +72,4 @@ HRESULT GetSequencePoints(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [Interfaccia ISymUnmanagedMethod](isymunmanagedmethod-interface.md)

@@ -11,18 +11,18 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 2fec7b5c36173bf4a99b35cc2bf9e3ca26354a11
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e0141ceafe4c3450b3f798463ddc62ea79f1b36
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399742"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615215"
 ---
 # <a name="types-c-programming-guide"></a>Tipi (Guida per programmatori C#)
 
 ## <a name="types-variables-and-values"></a>Tipi, variabili e valori
 
-C# è un linguaggio fortemente tipizzato. Ogni variabile e costante ha un tipo, così come ogni espressione che restituisce un valore. Ogni firma del metodo specifica un tipo per ogni parametro di input e per il valore restituito. La libreria di classi .NET definisce un set di tipi numerici predefiniti, nonché tipi più complessi che rappresentano un'ampia gamma di costrutti logici, ad esempio il file system, le connessioni di rete, le raccolte e matrici di oggetti e le date. Un tipico programma C# usa tipi dalla libreria di classi e tipi definiti dall'utente che modellano i concetti specifici del dominio relativo al problema del programma.
+C# è un linguaggio fortemente tipizzato. Ogni variabile e costante ha un tipo, così come ogni espressione che restituisce un valore. Ogni dichiarazione di metodo specifica un nome, un numero di parametri, un tipo e un tipo (valore, riferimento o output) per ogni parametro di input e per il valore restituito. La libreria di classi .NET definisce un set di tipi numerici predefiniti, nonché tipi più complessi che rappresentano un'ampia gamma di costrutti logici, ad esempio il file system, le connessioni di rete, le raccolte e matrici di oggetti e le date. Un tipico programma C# usa tipi dalla libreria di classi e tipi definiti dall'utente che modellano i concetti specifici del dominio relativo al problema del programma.
 
 Le informazioni archiviate in un tipo possono includere quanto segue:
 
@@ -53,23 +53,23 @@ Quando si dichiara una variabile o una costante in un programma, è necessario s
 
 [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]
 
-I tipi di parametri e valori restituiti del metodo sono specificati nella firma del metodo. La firma seguente illustra un metodo che richiede un [int](../../language-reference/builtin-types/integral-numeric-types.md) come argomento di input e restituisce una stringa:
+I tipi di parametri del metodo e i valori restituiti vengono specificati nella dichiarazione di metodo. La firma seguente illustra un metodo che richiede un [int](../../language-reference/builtin-types/integral-numeric-types.md) come argomento di input e restituisce una stringa:
 
 [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]
 
-Una variabile dichiarata non può essere dichiarata una seconda volta con un tipo nuovo e non è possibile assegnare a tale variabile un valore non compatibile con il relativo tipo dichiarato. Ad esempio, non è possibile dichiarare un [int](../../language-reference/builtin-types/integral-numeric-types.md) e quindi assegnargli un valore booleano di `true`. I valori possono tuttavia essere convertiti in altri tipi, ad esempio quando vengono assegnati a nuove variabili o passati come argomenti di metodo. Una *conversione del tipo* che non causa la perdita di dati viene eseguita automaticamente dal compilatore, mentre una conversione che può causare la perdita di dati richiede un *cast* nel codice sorgente.
+Una variabile dichiarata non può essere dichiarata una seconda volta con un tipo nuovo e non è possibile assegnare a tale variabile un valore non compatibile con il relativo tipo dichiarato. Ad esempio, non è possibile dichiarare un valore [int](../../language-reference/builtin-types/integral-numeric-types.md) e quindi assegnargli un valore booleano `true` . I valori possono tuttavia essere convertiti in altri tipi, ad esempio quando vengono assegnati a nuove variabili o passati come argomenti di metodo. Una *conversione del tipo* che non causa la perdita di dati viene eseguita automaticamente dal compilatore, mentre una conversione che può causare la perdita di dati richiede un *cast* nel codice sorgente.
 
 Per altre informazioni, vedere [Cast e conversioni di tipi](./casting-and-type-conversions.md).
 
 ## <a name="built-in-types"></a>Tipi incorporati
 
-Il linguaggio C# offre un set standard di tipi numerici incorporati per rappresentare numeri interi, valori a virgola mobile, espressioni booleane, caratteri di testo, valori decimali e altri tipi di dati. Sono anche disponibili tipi `string` e `object` incorporati, Questi possono essere usati in qualsiasi programma C#. Per l'elenco completo dei tipi incorporati, vedere [Tipi incorporati](../../language-reference/builtin-types/built-in-types.md).
+Il linguaggio C# offre un set standard di tipi numerici incorporati per rappresentare numeri interi, valori a virgola mobile, espressioni booleane, caratteri di testo, valori decimali e altri tipi di dati. Sono anche disponibili tipi `string` e `object` incorporati, Questi possono essere usati in qualsiasi programma C#. Per l'elenco completo dei tipi incorporati, vedere [tipi incorporati](../../language-reference/builtin-types/built-in-types.md).
 
 ## <a name="custom-types"></a>Tipi personalizzati
 
 Usare i costrutti [struct](../../language-reference/builtin-types/struct.md), [class](../../language-reference/keywords/class.md), [interface](../../language-reference/keywords/interface.md) e [enum](../../language-reference/builtin-types/enum.md) per creare tipi personalizzati. La libreria di classi .NET stessa è una raccolta di tipi personalizzati offerti da Microsoft che è possibile usare nelle proprie applicazioni. Per impostazione predefinita, i tipi più comunemente usati nella libreria di classi sono disponibili in qualsiasi programma C#, mentre altri diventano disponibili solo quando si aggiunge in modo esplicito un riferimento di progetto all'assembly in cui sono definiti. Nel momento in cui il compilatore ha un riferimento all'assembly, è possibile dichiarare variabili (e costanti) dei tipi dichiarati nell'assembly in codice sorgente. Per altre informazioni, vedere [Libreria di classi .NET](../../../standard/class-library-overview.md).
 
-## <a name="the-common-type-system"></a>Il sistema di tipo comune
+## <a name="the-common-type-system"></a>Common Type System
 
 È importante tenere presente due aspetti fondamentali del sistema dei tipi in .NET:
 
@@ -113,7 +113,7 @@ Usare la parola chiave [struct](../../language-reference/builtin-types/struct.md
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-Per ulteriori informazioni sugli struct, vedere [Tipi di struttura](../../language-reference/builtin-types/struct.md). Per ulteriori informazioni sui tipi di valore, vedere [Tipi di valore](../../language-reference/builtin-types/value-types.md).
+Per ulteriori informazioni sugli struct, vedere [tipi di struttura](../../language-reference/builtin-types/struct.md). Per ulteriori informazioni sui tipi di valore, vedere [tipi di valore](../../language-reference/builtin-types/value-types.md).
 
 L'altra categoria di tipi valore è [enum](../../language-reference/builtin-types/enum.md). Un tipo enum definisce un set di costanti integrali denominate. L'enumerazione <xref:System.IO.FileMode?displayProperty=nameWithType> nella libreria di classi .NET, ad esempio, contiene un set di valori interi costanti e denominati che specificano come deve essere aperto un file. L'enumerazione deve essere definita come illustrato nell'esempio seguente:
 
@@ -121,7 +121,7 @@ L'altra categoria di tipi valore è [enum](../../language-reference/builtin-type
 
 Il valore della costante `System.IO.FileMode.Create` è 2. I nomi, tuttavia, sono molto più significativi per gli utenti che leggono il codice sorgente e, quindi, è preferibile usare enumerazioni anziché valori letterali numerici costanti. Per altre informazioni, vedere <xref:System.IO.FileMode?displayProperty=nameWithType>.
 
-Tutte le enumerazioni ereditano da <xref:System.Enum?displayProperty=nameWithType>, che eredita da <xref:System.ValueType?displayProperty=nameWithType>. Tutte le regole valide per i tipi struct sono valide anche per le enumerazioni. Per ulteriori informazioni sulle enumerazioni, vedere [Tipi di enumerazione](../../language-reference/builtin-types/enum.md).
+Tutte le enumerazioni ereditano da <xref:System.Enum?displayProperty=nameWithType>, che eredita da <xref:System.ValueType?displayProperty=nameWithType>. Tutte le regole valide per i tipi struct sono valide anche per le enumerazioni. Per altre informazioni sulle enumerazioni, vedere [tipi di enumerazione](../../language-reference/builtin-types/enum.md).
 
 ### <a name="reference-types"></a>Tipi riferimento
 
@@ -148,7 +148,7 @@ I tipi riferimento supportano completamente l'ereditarietà. Quando si crea una 
 
 ## <a name="types-of-literal-values"></a>Tipi di valori letterali
 
-In C# i valori letterali ricevono un tipo dal compilatore. È possibile specificare come deve essere tipizzato un valore letterale numerico aggiungendo una lettera alla fine del numero. Per specificare, ad esempio, che il valore 4.56 deve essere considerato come un tipo float, aggiungere una "f" o una "F" dopo il numero: `4.56f`. Se non viene aggiunta alcuna lettera, il compilatore dedurrà un tipo per il valore letterale. Per ulteriori informazioni sui tipi che possono essere specificati con suffissi di lettera, vedere [Tipi numerici integrali](../../language-reference/builtin-types/integral-numeric-types.md) e [tipi numerici a virgola mobile](../../language-reference/builtin-types/floating-point-numeric-types.md).
+In C# i valori letterali ricevono un tipo dal compilatore. È possibile specificare come deve essere tipizzato un valore letterale numerico aggiungendo una lettera alla fine del numero. Per specificare, ad esempio, che il valore 4.56 deve essere considerato come un tipo float, aggiungere una "f" o una "F" dopo il numero: `4.56f`. Se non viene aggiunta alcuna lettera, il compilatore dedurrà un tipo per il valore letterale. Per ulteriori informazioni sui tipi che è possibile specificare con i suffissi di lettera, vedere [tipi numerici integrali](../../language-reference/builtin-types/integral-numeric-types.md) e [tipi numerici a virgola mobile](../../language-reference/builtin-types/floating-point-numeric-types.md).
 
 Poiché i valori letterali sono tipizzati e tutti i tipi derivano in ultima istanza da <xref:System.Object?displayProperty=nameWithType>, è possibile scrivere e compilare codice come il seguente:
 
@@ -156,7 +156,7 @@ Poiché i valori letterali sono tipizzati e tutti i tipi derivano in ultima ista
 
 ## <a name="generic-types"></a>Tipi generici
 
-Un tipo può essere dichiarato con uno o più *parametri di tipo* che agiscono da segnaposto per il tipo effettivo (*tipo concreto*) che il codice client specifica quando si crea un'istanza del tipo. Questi tipi sono definiti *tipi generici*. Ad esempio, il <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> tipo .NET dispone di un parametro di tipo che per convenzione è assegnato il nome *T*. Quando si crea un'istanza del tipo, si specifica il tipo di oggetti che l'elenco conterrà, ad esempio string:
+Un tipo può essere dichiarato con uno o più *parametri di tipo* che agiscono da segnaposto per il tipo effettivo (*tipo concreto*) che il codice client specifica quando si crea un'istanza del tipo. Questi tipi sono definiti *tipi generici*. Ad esempio, il tipo .NET <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> ha un parametro di tipo a cui per convenzione viene assegnato il nome *T*. Quando si crea un'istanza del tipo, si specifica il tipo degli oggetti che l'elenco conterrà, ad esempio, String:
 
 ```csharp
 List<string> stringList = new List<string>();
@@ -167,19 +167,19 @@ stringList.Add(4);
 
 L'uso del parametro di tipo consente di riutilizzare la stessa classe per contenere qualsiasi tipo di elemento senza dover convertire ogni elemento in [object](../../language-reference/builtin-types/reference-types.md). Le classi di raccolte generiche sono definite *raccolte fortemente tipizzate* perché il compilatore conosce il tipo specifico degli elementi della raccolta e può generare un errore in fase di compilazione se, ad esempio, si prova ad aggiungere un numero intero all'oggetto `stringList` nell'esempio precedente. Per altre informazioni, vedere [Generics](../generics/index.md).
 
-## <a name="implicit-types-anonymous-types-and-nullable-value-types"></a>Tipi impliciti, tipi anonimi e tipi di valori nullable
+## <a name="implicit-types-anonymous-types-and-nullable-value-types"></a>Tipi impliciti, tipi anonimi e tipi di valore Nullable
 
 Come indicato in precedenza, è possibile tipizzare una variabile locale (ma non membri di classe) in modo implicito usando la parola chiave [var](../../language-reference/keywords/var.md). Alla variabile viene comunque assegnato un tipo in fase di compilazione, specificato dal compilatore. Per altre informazioni, vedere [Variabili locali tipizzate in modo implicito](../classes-and-structs/implicitly-typed-local-variables.md).
 
-In alcuni casi non è consigliabile creare un tipo denominato per set semplici di valori correlati che non si intende archiviare o passare fuori dai limiti del metodo. A questo scopo è possibile creare *tipi anonimi*. Per ulteriori informazioni, vedere [Tipi anonimi](../classes-and-structs/anonymous-types.md).
+In alcuni casi non è consigliabile creare un tipo denominato per set semplici di valori correlati che non si intende archiviare o passare fuori dai limiti del metodo. A questo scopo è possibile creare *tipi anonimi*. Per ulteriori informazioni, vedere [tipi anonimi](../classes-and-structs/anonymous-types.md).
 
-I tipi valore comuni non possono avere un valore [null](../../language-reference/keywords/null.md). È tuttavia possibile creare tipi valore nullable aggiungendo `?` dopo il tipo. Ad esempio, `int?` è un tipo `int` che può avere anche il valore [null](../../language-reference/keywords/null.md). I tipi di valore nullable <xref:System.Nullable%601?displayProperty=nameWithType>sono istanze del tipo struct generico. I tipi di valore nullable sono particolarmente utili quando si passano dati da e verso database in cui i valori numerici potrebbero essere null. Per ulteriori informazioni, vedere [Tipi di valore nullable](../../language-reference/builtin-types/nullable-value-types.md).
+I tipi valore comuni non possono avere un valore [null](../../language-reference/keywords/null.md). È tuttavia possibile creare tipi valore nullable aggiungendo `?` dopo il tipo. Ad esempio, `int?` è un tipo `int` che può avere anche il valore [null](../../language-reference/keywords/null.md). I tipi di valore nullable sono istanze del tipo di struct generico <xref:System.Nullable%601?displayProperty=nameWithType> . I tipi di valore nullable sono particolarmente utili quando si passano dati da e verso database in cui i valori numerici potrebbero essere null. Per altre informazioni, vedere [tipi di valore Nullable](../../language-reference/builtin-types/nullable-value-types.md).
 
 ## <a name="related-sections"></a>Sezioni correlate
 
 Per altre informazioni, vedere gli argomenti seguenti:
 
-- [Cast e conversioni di tipi](./casting-and-type-conversions.md)
+- [Cast e conversioni di tipi (C#)](./casting-and-type-conversions.md)
 
 - [Boxing e unboxing](./boxing-and-unboxing.md)
 
@@ -201,7 +201,7 @@ Per altre informazioni, vedere gli argomenti seguenti:
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida di riferimento a C](../../language-reference/index.md)
+- [Riferimenti per C#](../../language-reference/index.md)
 - [Guida per programmatori C#](../index.md)
 - [Conversione dei tipi di dati XML](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [Tipi integrali](../../language-reference/builtin-types/integral-numeric-types.md)

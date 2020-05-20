@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 275ef87b-0b53-49f9-af6b-58506335dc06
 topic_type:
 - apiref
-ms.openlocfilehash: 9aace77c4b3549c033433d4c305b07daa1f7a8c1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9a490299c24f44b59da682f714f4b696fde3cba5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448998"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614513"
 ---
 # <a name="isymunmanagedencupdateupdatemethodlines-method"></a>Metodo ISymUnmanagedENCUpdate::UpdateMethodLines
 Consente di aggiornare le informazioni sulla riga per un metodo che non è stato ricompilato, ma le cui righe sono state spostate in modo indipendente. È consentito un Delta per ogni istruzione.  
@@ -39,10 +39,10 @@ HRESULT UpdateMethodLines(
  in Metadati del token del metodo.  
   
  `pDeltas`  
- in Matrice di valori di `INT32` che indica i Delta per ogni punto di sequenza nel metodo.  
+ in Matrice di `INT32` valori che indica i Delta per ogni punto di sequenza nel metodo.  
   
  `cDeltas`  
- in `ULONG` contenente le dimensioni del parametro di `pDeltas`.  
+ in Oggetto `ULONG` contenente la dimensione del `pDeltas` parametro.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
@@ -52,4 +52,4 @@ HRESULT UpdateMethodLines(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ISymUnmanagedENCUpdate](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [Interfaccia ISymUnmanagedENCUpdate](isymunmanagedencupdate-interface.md)

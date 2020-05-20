@@ -1,17 +1,15 @@
 ---
 title: Modelli di osservabilità
 description: Modelli di osservabilità per le applicazioni native del cloud
-ms.date: 02/05/2020
-ms.openlocfilehash: a821235835b4553760b19887d500a29ca75e133e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: db6a56358923025cbcca9478908474227e5da96d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448521"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613811"
 ---
 # <a name="observability-patterns"></a>Modelli di osservabilità
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Così come i modelli sono stati sviluppati per facilitare il layout del codice nelle applicazioni, esistono modelli per le applicazioni operative in modo affidabile. Sono emersi tre modelli utili per la gestione delle applicazioni: **registrazione**, **monitoraggio**e **avvisi**.
 
@@ -21,20 +19,20 @@ Indipendentemente dall'attenzione, le applicazioni si comportano quasi sempre in
 
 ### <a name="challenges-when-logging-with-cloud-native-applications"></a>Problemi durante la registrazione con applicazioni native del cloud
 
-Nelle applicazioni tradizionali, i file di log vengono in genere archiviati nel computer locale. In realtà, nei sistemi operativi simili a UNIX è definita una struttura di cartelle che contenga tutti i log, in genere in `/var/log`.
+Nelle applicazioni tradizionali, i file di log vengono in genere archiviati nel computer locale. In realtà, nei sistemi operativi simili a UNIX è definita una struttura di cartelle che contenga tutti i log, in genere in `/var/log` .
 
-![la registrazione in un file in un'app monolitica.](./media/single-monolith-logging.png)
-**figura 7-1**. Registrazione in un file in un'app monolitica.
+![Registrazione in un file in un'app monolitica. ](./media/single-monolith-logging.png)
+ **Figura 7-1**. Registrazione in un file in un'app monolitica.
 
 L'utilità di registrazione in un file flat in un singolo computer è notevolmente ridotta in un ambiente cloud. Le applicazioni che producono log potrebbero non avere accesso al disco locale o il disco locale può essere estremamente temporaneo perché i contenitori vengono mescolati intorno ai computer fisici. Anche una semplice scalabilità verticale di applicazioni monolitiche in più nodi può rendere difficile l'individuazione del file di log appropriato basato su file.
 
-![la registrazione ai file in un'app monolitica ridimensionata.](./media/multiple-node-monolith-logging.png)
-**figura 7-2**. Accesso ai file in un'app monolitica ridimensionata.
+![Accesso ai file in un'app monolitica ridimensionata. ](./media/multiple-node-monolith-logging.png)
+ **Figura 7-2**. Accesso ai file in un'app monolitica ridimensionata.
 
 Le applicazioni native del cloud sviluppate usando un'architettura di microservizi presentano anche alcune problemi per i logger basati su file. È ora possibile che le richieste utente si estendano su più servizi che vengono eseguiti in computer diversi e possono includere funzioni senza server senza accesso a una file system locale. Sarebbe molto difficile correlare i log di un utente o di una sessione tra questi numerosi servizi e computer.
 
-![la registrazione in file locali in un'app di microservizi.](./media/local-log-file-per-service.png)
-**figura 7-3**. Registrazione in file locali in un'app di microservizi.
+![Registrazione in file locali in un'app di microservizi. ](./media/local-log-file-per-service.png)
+ **Figura 7-3**. Registrazione in file locali in un'app di microservizi.
 
 Infine, il numero di utenti in alcune applicazioni native del cloud è elevato. Si supponga che ogni utente generi un centinaio di righe di messaggi di log durante l'accesso a un'applicazione. In isolamento, è gestibile, ma si moltiplicano gli utenti di 100.000 e il volume dei log diventa sufficientemente grande che siano necessari strumenti specializzati per supportare l'uso efficace dei log.
 
@@ -57,8 +55,8 @@ A causa dei problemi associati all'uso di log basati su file nelle app native de
 
 È inoltre utile seguire alcune procedure standard per la creazione di registrazioni che si estendono su molti servizi. Ad esempio, la generazione di un [ID di correlazione](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/) all'inizio di un'interazione lunga e la relativa registrazione in ogni messaggio correlato all'interazione, semplifica la ricerca di tutti i messaggi correlati. È sufficiente trovare un solo messaggio ed estrarre l'ID di correlazione per trovare tutti i messaggi correlati. Un altro esempio è garantire che il formato di log sia lo stesso per ogni servizio, indipendentemente dalla lingua o dalla libreria di registrazione utilizzata. Questa standardizzazione rende molto più semplice la lettura dei log. La figura 7-4 illustra il modo in cui un'architettura di microservizi può sfruttare la registrazione centralizzata come parte del proprio flusso di lavoro.
 
-![log da varie origini vengono inseriti in un archivio di log centralizzato.](./media/centralized-logging.png)
-**figura 7-4**. I log da varie origini vengono inseriti in un archivio di log centralizzato.
+![I log da varie origini vengono inseriti in un archivio di log centralizzato. ](./media/centralized-logging.png)
+ **Figura 7-4**. I log da varie origini vengono inseriti in un archivio di log centralizzato.
 
 ## <a name="challenges-with-detecting-and-responding-to-potential-app-health-issues"></a>Problemi di rilevamento e risposta a potenziali problemi di integrità delle app
 
@@ -101,5 +99,5 @@ In genere, tuttavia, un singolo errore 500 non è sufficiente per determinare se
 Uno dei modelli più dannosi per gli avvisi consiste nel generare un numero eccessivo di avvisi per l'analisi da parte degli utenti. I proprietari del servizio diventeranno rapidamente desensibili agli errori che hanno esaminato in precedenza e che risultano benigni. Quindi, quando si verificano errori reali, andranno persi nel rumore di centinaia di falsi positivi. La parabola del [ragazzo che piangeva Wolf](https://en.wikipedia.org/wiki/The_Boy_Who_Cried_Wolf) viene spesso rilasciata agli elementi figlio per avvertire questi rischi. È importante assicurarsi che gli avvisi generati siano indicativi di un problema reale.
 
 >[!div class="step-by-step"]
->[Precedente](monitoring-health.md)
->[Successivo](logging-with-elastic-stack.md)
+>[Precedente](monitoring-health.md) 
+> [Avanti](logging-with-elastic-stack.md)
