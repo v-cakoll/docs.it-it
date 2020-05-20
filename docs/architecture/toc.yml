@@ -15,12 +15,12 @@
       href: microservices/
     - name: 'App serverless: architettura, modelli e implementazione di Azure'
       href: serverless/
+    - name: Architettura di app .NET cloud native per Azure
+      href: cloud-native/
     - name: Modernizzazione di app desktop in Windows 10 con .NET Core 3.1
       href: modernize-desktop/
 - name: E-book in anteprima
   expanded: true
   items:
-    - name: Architettura di app .NET cloud native per Azure
-      href: cloud-native/
     - name: Blazor per sviluppatori Web Forms ASP.NET
       href: blazor-for-web-forms-developers/
