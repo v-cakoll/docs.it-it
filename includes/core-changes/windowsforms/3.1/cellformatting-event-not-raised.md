@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: b736ab743a628fdcbc53c5ee51551e5dad986885
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 4a34a64eba72ea24c1d830566565ce4fbee8e5b7
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888125"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721212"
 ---
-### <a name="cellformatting-event-not-raised-if-tooltip-is-shown"></a>Evento CellFormatting non generato se è visualizzata la descrizione comando
+### <a name="cellformatting-event-not-raised-if-tooltip-is-shown"></a>Evento CellFormatting non generato se viene visualizzata la descrizione comando
 
-Ora <xref:System.Windows.Forms.DataGridView> mostra il testo di una cella e le descrizioni comandi di errore quando si passa con il mouse e quando viene selezionato tramite la tastiera. Se viene visualizzata <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> una descrizione comando, l'evento non viene generato.
+Un oggetto <xref:System.Windows.Forms.DataGridView> Mostra ora le descrizioni comandi di testo e di errore di una cella quando il mouse viene spostato e quando viene selezionato tramite la tastiera. Se viene visualizzata una descrizione comando, l' <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> evento non viene generato.
 
 #### <a name="change-description"></a>Descrizione modifica:
 
-Prima di .NET Core 3.1, un <xref:System.Windows.Forms.DataGridView> oggetto che aveva la <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A> proprietà impostata su `true` mostrava una descrizione comando per il testo di una cella e gli errori quando la cella veniva posizionata da un mouse. Le descrizioni comandi non venivano visualizzate quando una cella è stata selezionata tramite la tastiera (ad esempio, utilizzando il tasto TAB, i tasti di scelta rapida o la navigazione con le frecce). Se l'utente ha modificato una <xref:System.Windows.Forms.DataGridView> cella e quindi, mentre era ancora in modalità di modifica, si è posizionato su una cella per la cui <xref:System.Windows.Forms.DataGridViewCell.ToolTipText> proprietà non era impostata, è stato generato un <xref:System.Windows.Forms.DataGridView.CellFormatting> evento per formattare il testo della cella da visualizzare nella cella.
+Prima di .NET Core 3,1, un oggetto <xref:System.Windows.Forms.DataGridView> con la <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A> proprietà impostata su `true` mostrava una descrizione comando per il testo di una cella ed errori quando la cella veniva posizionata con il mouse. Le descrizioni comandi non sono state visualizzate quando è stata selezionata una cella tramite la tastiera, ad esempio usando il tasto TAB, i tasti di scelta rapida o la navigazione con la freccia. Se l'utente ha modificato una cella e quindi, mentre <xref:System.Windows.Forms.DataGridView> era ancora in modalità di modifica, il puntatore del mouse su una cella che non disponeva della <xref:System.Windows.Forms.DataGridViewCell.ToolTipText> proprietà è <xref:System.Windows.Forms.DataGridView.CellFormatting> stata impostata, è stato generato un evento per formattare il testo della cella per la visualizzazione nella cella.
 
-Per soddisfare gli standard di accessibilità, a <xref:System.Windows.Forms.DataGridView> partire da <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A> .NET `true` Core 3.1, un oggetto che ha la proprietà impostata su Mostra le descrizioni comandi per il testo e gli errori di una cella non solo quando la cella è al passaggio del mouse, ma anche quando viene selezionata tramite la tastiera. Come conseguenza di questa <xref:System.Windows.Forms.DataGridView.CellFormatting> modifica, l'evento *non* viene <xref:System.Windows.Forms.DataGridViewCell.ToolTipText> generato quando le celle <xref:System.Windows.Forms.DataGridView> per i quali non è impostata la proprietà vengono visualizzate al passaggio del mouse mentre l'oggetto è in modalità di modifica. L'evento non viene generato perché il contenuto della cella al passaggio del mouse viene visualizzato come descrizione comando anziché essere visualizzato nella cella.
+Per soddisfare gli standard di accessibilità, a partire da .NET Core 3,1, un oggetto <xref:System.Windows.Forms.DataGridView> la cui <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A> proprietà è impostata su `true` Mostra descrizioni comandi per il testo di una cella ed errori non solo quando la cella viene posizionata, ma anche quando viene selezionata tramite la tastiera. In seguito a questa modifica, l' <xref:System.Windows.Forms.DataGridView.CellFormatting> evento *non* viene generato quando le celle per le quali non è impostato il <xref:System.Windows.Forms.DataGridViewCell.ToolTipText> set di proprietà vengono posizionate mentre <xref:System.Windows.Forms.DataGridView> è in modalità di modifica. L'evento non viene generato perché il contenuto della cella al passaggio del mouse viene visualizzato come descrizione comando anziché essere visualizzato nella cella.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -22,19 +22,19 @@ Per soddisfare gli standard di accessibilità, a <xref:System.Windows.Forms.Data
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Eseguire il refactoring <xref:System.Windows.Forms.DataGridView.CellFormatting> di qualsiasi <xref:System.Windows.Forms.DataGridView> codice che dipende dall'evento mentre l'oggetto è in modalità di modifica.
+Effettuare il refactoring di qualsiasi codice che dipende dall' <xref:System.Windows.Forms.DataGridView.CellFormatting> evento mentre <xref:System.Windows.Forms.DataGridView> è in modalità di modifica.
 
 #### <a name="category"></a>Category
 
-Windows Form
+Windows Forms
 
 #### <a name="affected-apis"></a>API interessate
 
-nessuno
+Nessuno
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 Not detectable via API analysis.
 

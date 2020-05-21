@@ -1,32 +1,32 @@
 ---
-ms.openlocfilehash: 3272dc562981269b868df4ca9d3a5806918aba5f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 55c13aa70a03bcc548ce1d096cca8f40de6cda84
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937099"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83720892"
 ---
-### <a name="dontsupportreentrantfiltermessage-compatibility-switch-not-supported"></a>Non è supportata l'opzione di compatibilità DontSupportReentrantFilterMessage
+### <a name="dontsupportreentrantfiltermessage-compatibility-switch-not-supported"></a>Opzione di compatibilità DontSupportReentrantFilterMessage non supportata
 
-L'opzione `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` di compatibilità, introdotta in .NET Framework 4.6.1, non è supportata in Windows Form in .NET Core 3.0.
+L' `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` opzione di compatibilità, introdotta in .NET Framework 4.6.1, non è supportata in Windows Forms in .NET Core 3,0.
 
 #### <a name="change-description"></a>Descrizione modifica:
 
-A partire da .NET Framework 4.6.1, l'opzione `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` di compatibilità risolve le possibili <xref:System.IndexOutOfRangeException> eccezioni quando il <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> messaggio viene chiamato con un'implementazione personalizzata. <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> Per altre informazioni, vedere [Mitigazione: Implementazioni IMessageFilter.PreFilterMessage personalizzate](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md).
+A partire da .NET Framework 4.6.1, l' `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` opzione di compatibilità risolve le possibili <xref:System.IndexOutOfRangeException> eccezioni quando il <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> messaggio viene chiamato con un' <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> implementazione personalizzata. Per altre informazioni, vedere [Mitigazione: Implementazioni IMessageFilter.PreFilterMessage personalizzate](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md).
 
-In .NET Core `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` l'opzione non è supportata.
+In .NET Core l' `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` opzione non è supportata.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
-3.0 Anteprima 9
+3,0 Preview 9
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Rimuovere l'interruttore. L'opzione non è supportata e non sono disponibili funzionalità alternative.
+Rimuovere l'opzione. L'opzione non è supportata e non è disponibile alcuna funzionalità alternativa.
 
 #### <a name="category"></a>Category
 
-Windows Form
+Windows Forms
 
 #### <a name="affected-apis"></a>API interessate
 
@@ -34,7 +34,7 @@ Windows Form
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Windows.Forms.Application.FilterMessage(System.Windows.Forms.Message)`
 

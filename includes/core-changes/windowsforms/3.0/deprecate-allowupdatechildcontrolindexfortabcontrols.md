@@ -1,40 +1,40 @@
 ---
-ms.openlocfilehash: 7e76c32ddeb50eaf1ee93d7cf3cac7469187cc41
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1c55eab0b968daab7322350e201b49149e63215
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937054"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721160"
 ---
 ### <a name="allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported"></a>Opzione di compatibilità AllowUpdateChildControlIndexForTabControls non supportata
 
-L'opzione `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` di compatibilità è supportata in Windows Form in .NET Framework 4.6 e versioni successive, ma non in Windows Form a partire da .NET Core 3.0.
+L' `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` opzione di compatibilità è supportata in Windows Forms in .NET Framework 4,6 e versioni successive, ma non è supportata in Windows Forms a partire da .NET Core 3,0.
 
 #### <a name="change-description"></a>Descrizione modifica:
 
-In .NET Framework 4.6 e versioni successive, la selezione di una scheda riordina la raccolta di controlli. L'opzione `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` di compatibilità consente a un'applicazione di ignorare questo riordinamento quando questo comportamento non è auspicabile.
+In .NET Framework 4,6 e versioni successive, la selezione di una scheda riordina la raccolta di controlli. L' `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` opzione di compatibilità consente a un'applicazione di ignorare questo riordino quando questo comportamento è indesiderato.
 
-In .NET Core `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` l'opzione non è supportata.
+In .NET Core l' `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` opzione non è supportata.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
-3.0 Anteprima 9
+3,0 Preview 9
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Rimuovere l'interruttore. L'opzione non è supportata e non sono disponibili funzionalità alternative.
+Rimuovere l'opzione. L'opzione non è supportata e non è disponibile alcuna funzionalità alternativa.
 
 #### <a name="category"></a>Category
 
-Windows Form
+Windows Forms
 
 #### <a name="affected-apis"></a>API interessate
 
-- nessuno
+- Nessuno
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis
 

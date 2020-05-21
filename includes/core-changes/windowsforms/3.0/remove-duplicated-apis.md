@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: 0be59258df10aa13920551f011d68bc8efe20b93
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 3dfacadb5127319d4ce27f367803637cfb1ed00f
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888124"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721027"
 ---
-### <a name="duplicated-apis-removed-from-windows-forms"></a>API duplicate rimosse da Windows Form
+### <a name="duplicated-apis-removed-from-windows-forms"></a>API duplicate rimosse da Windows Forms
 
-Un numero di API accidentalmente duplicate <xref:System.Windows.Forms?displayProperty=fullName> nello spazio dei nomi a partire da .NET Core 3.0 Preview 4 sono state rimosse in .NET Core 3.0 RC1.
+Una serie di API duplicate accidentalmente nello <xref:System.Windows.Forms?displayProperty=fullName> spazio dei nomi a partire da .net core 3,0 Preview 4 sono state rimosse in .net core 3,0 RC1.
 
 #### <a name="change-description"></a>Descrizione modifica:
 
-.NET Core 3.0 Preview 4 ha inavvertitamente <xref:System.Windows.Forms?displayProperty=fullName> duplicato un numero <xref:System.ComponentModel.Design?displayProperty=fullName> di tipi nello spazio dei nomi già esistenti nello spazio dei nomi. A partire da .NET Core 3.0 RC1, questi tipi duplicati non sono più disponibili. Nella tabella seguente sono elencati il tipo originale e il tipo duplicato:
+.NET Core 3,0 Preview 4 ha inavvertitamente duplicato un numero di tipi nello <xref:System.Windows.Forms?displayProperty=fullName> spazio dei nomi già esistente nello <xref:System.ComponentModel.Design?displayProperty=fullName> spazio dei nomi. A partire da .NET Core 3,0 RC1, questi tipi duplicati non sono più disponibili. Nella tabella seguente vengono elencati il tipo originale e il tipo duplicato:
 
 > [!div class="mx-tdCol2BreakAll"]
 > |Tipo originale|Tipo duplicato|
@@ -25,23 +25,23 @@ Un numero di API accidentalmente duplicate <xref:System.Windows.Forms?displayPro
 
 #### <a name="version-introduced"></a>Versione introdotta
 
-3.0 RC1
+3,0 RC1
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Aggiornare il codice in modo che faccia riferimento al tipo originale, come illustrato nella colonna **Tipo originale** della tabella.
+Aggiornare il codice in modo che faccia riferimento al tipo originale, come illustrato nella colonna di **tipo originale** della tabella.
 
 #### <a name="category"></a>Category
 
-Windows Form
+Windows Forms
 
 #### <a name="affected-apis"></a>API interessate
 
-- No.
+- Nessuno.
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis.
 

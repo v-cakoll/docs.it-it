@@ -1,40 +1,40 @@
 ---
-ms.openlocfilehash: 9631e64bb403a3fe7b1b91e8ac592b57ce8068d9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bba74f26eafd52b966928835d5003d03af1eabdc
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937101"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721062"
 ---
-### <a name="donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported"></a>L'opzione di compatibilità DoNotSupportSelectAllShortcutInMultilineTextBox non è supportata
+### <a name="donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported"></a>Opzione di compatibilità DoNotSupportSelectAllShortcutInMultilineTextBox non supportata
 
-L'opzione `Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox` di compatibilità, introdotta in .NET Framework 4.6.1, non è supportata in Windows Form in .NET Core 3.0.
+L' `Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox` opzione di compatibilità, introdotta in .NET Framework 4.6.1, non è supportata in Windows Forms in .NET Core 3,0.
 
 #### <a name="change-description"></a>Descrizione modifica:
 
-A partire da .NET Framework 4.6.1, selezionando <xref:System.Windows.Forms.TextBox> il tasto di scelta rapida <kbd>Ctrl</kbd> + <kbd>A</kbd> in un controllo selezionato tutto il testo. In .NET Framework 4.6 e versioni precedenti, la selezione del tasto di scelta rapida <kbd>Ctrl</kbd> + <kbd>A</kbd> non è riuscita a selezionare tutto il testo se la casella [di testo.ShortcutsEnabled](xref:System.Windows.Forms.TextBoxBase.ShortcutsEnabled) e <xref:System.Windows.Forms.TextBox.Multiline?displayProperty=nameWithType> le proprietà sono state entrambe impostate `true`su . L'opzione `Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox` di compatibilità è stata introdotta in .NET Framework 4.6.1 per mantenere il comportamento originale. Per ulteriori informazioni, vedere <xref:System.Windows.Forms.TextBox.ProcessCmdKey%2A?displayProperty=nameWithType>.
+A partire da .NET Framework 4.6.1, selezionando il tasto <kbd>CTRL</kbd>  +  <kbd>un</kbd> tasto di scelta rapida in un controllo è stato <xref:System.Windows.Forms.TextBox> selezionato tutto il testo. In .NET Framework 4,6 e versioni precedenti, selezionando il tasto <kbd>CTRL</kbd>  +  <kbd>un</kbd> tasto di scelta rapida non è stato possibile selezionare tutto il testo se [TextBox. ShortcutsEnabled](xref:System.Windows.Forms.TextBoxBase.ShortcutsEnabled) e le <xref:System.Windows.Forms.TextBox.Multiline?displayProperty=nameWithType> proprietà sono entrambe impostate su `true` . L' `Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox` opzione di compatibilità è stata introdotta in .NET Framework 4.6.1 per mantenere il comportamento originale. Per ulteriori informazioni, vedere <xref:System.Windows.Forms.TextBox.ProcessCmdKey%2A?displayProperty=nameWithType>.
 
-In .NET Core `Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox` l'opzione non è supportata.
+In .NET Core l' `Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox` opzione non è supportata.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
-3.0 Anteprima 9
+3,0 Preview 9
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-Rimuovere l'interruttore. L'opzione non è supportata e non sono disponibili funzionalità alternative.
+Rimuovere l'opzione. L'opzione non è supportata e non è disponibile alcuna funzionalità alternativa.
 
 #### <a name="category"></a>Category
 
-Windows Form
+Windows Forms
 
 #### <a name="affected-apis"></a>API interessate
 
-- nessuno
+- Nessuno
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis
 
