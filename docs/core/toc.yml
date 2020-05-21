@@ -365,32 +365,40 @@
     - name: Convertire progetti C++/CLI
       href: porting/cpp-cli.md
 - name: Unit test
-  href: testing/index.md
+  displayName: 'xUnit,NUnit,MSTest,unit testing,testing'
   items:
     - name: Panoramica
       href: testing/index.md
     - name: Procedure consigliate per gli unit test
       href: testing/unit-testing-best-practices.md
-    - name: 'Unit test C# con xUnit'
-      href: testing/unit-testing-with-dotnet-test.md
-    - name: 'Unit test C# con NUnit'
-      href: testing/unit-testing-with-nunit.md
-    - name: 'Unit test C# con MSTest'
-      href: testing/unit-testing-with-mstest.md
-    - name: 'Unit test F# con xUnit'
-      href: testing/unit-testing-fsharp-with-dotnet-test.md
-    - name: 'Unit test F# con NUnit'
-      href: testing/unit-testing-fsharp-with-nunit.md
-    - name: 'Unit test F# con MSTest'
-      href: testing/unit-testing-fsharp-with-mstest.md
-    - name: Unit test VB con xUnit
-      href: testing/unit-testing-visual-basic-with-dotnet-test.md
-    - name: Unit test VB con NUnit
-      href: testing/unit-testing-visual-basic-with-nunit.md
-    - name: Unit test VB con MSTest
-      href: testing/unit-testing-visual-basic-with-mstest.md
+    - name: xUnit
+      items:
+        - name: 'Testing unità C#'
+          href: testing/unit-testing-with-dotnet-test.md
+        - name: 'Testing unità F#'
+          href: testing/unit-testing-fsharp-with-dotnet-test.md
+        - name: Testing unità VB
+          href: testing/unit-testing-visual-basic-with-dotnet-test.md
+    - name: NUnit
+      items:
+        - name: 'Testing unità C#'
+          href: testing/unit-testing-with-nunit.md
+        - name: 'Testing unità F#'
+          href: testing/unit-testing-fsharp-with-nunit.md
+        - name: Testing unità VB
+          href: testing/unit-testing-visual-basic-with-nunit.md
+    - name: MSTest
+      items:
+        - name: 'Testing unità C#'
+          href: testing/unit-testing-with-mstest.md
+        - name: 'Testing unità F#'
+          href: testing/unit-testing-fsharp-with-mstest.md
+        - name: Testing unità VB
+          href: testing/unit-testing-visual-basic-with-mstest.md
     - name: Eseguire unit test selettivi
       href: testing/selective-unit-tests.md
+    - name: Ordinare unit test
+      href: testing/order-unit-tests.md
     - name: Output pubblicato degli unit test
       href: testing/unit-testing-published-output.md
     - name: Live Unit Testing di progetti .NET Core con Visual Studio
