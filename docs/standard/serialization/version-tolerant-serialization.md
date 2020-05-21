@@ -14,12 +14,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: 87bdc0f0328e7a75477672432c0944818dbef244
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: afc822e1f8873bac069f6634fdf1d4665d392e69
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380086"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762591"
 ---
 # <a name="version-tolerant-serialization"></a>Serializzazione indipendente dalla versione
 
@@ -28,7 +28,7 @@ Nelle versioni 1.0 e 1.1 di .NET Framework, la creazione di tipi serializzabili 
 - Le versioni precedenti di un'applicazione avrebbero generato eccezioni durante la richiesta di deserializzazione delle nuove versioni del tipo obsoleto.
 - Le versioni più recenti di un'applicazione avrebbero generato eccezioni durante la deserializzazione delle versioni precedenti di un tipo con dati mancanti.
 
-La Serializzazione a tolleranza di versione (VTS, Version Tolerant Serialization) è un set di funzionalità introdotto in .NET Framework 2.0 che semplifica, nel tempo, la modifica dei tipi serializzabili. In particolare, le funzionalità VTS vengono abilitate per le classi alle quali è stato applicato l'attributo <xref:System.SerializableAttribute>, inclusi i tipi generici. VTS rende possibile l'aggiunta di nuovi campi a tali classi senza compromettere la compatibilità con le altre versioni del tipo. Per un'applicazione di esempio funzionante, vedere [Esempio di tecnologia di serializzazione indipendente dalla versione](version-tolerant-serialization-technology-sample.md).
+La Serializzazione a tolleranza di versione (VTS, Version Tolerant Serialization) è un set di funzionalità introdotto in .NET Framework 2.0 che semplifica, nel tempo, la modifica dei tipi serializzabili. In particolare, le funzionalità VTS vengono abilitate per le classi alle quali è stato applicato l'attributo <xref:System.SerializableAttribute>, inclusi i tipi generici. VTS rende possibile l'aggiunta di nuovi campi a tali classi senza compromettere la compatibilità con le altre versioni del tipo. Per un'applicazione di esempio funzionante, vedere [Esempio di tecnologia di serializzazione indipendente dalla versione](basic-serialization-technology-sample.md).
 
 Le funzionalità VTS vengono abilitate durante l'utilizzo di <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Inoltre, durante l'utilizzo di <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>, sono abilitate tutte le funzionalità salvo la tolleranza di dati estranei. Per altre informazioni sull'uso di queste classi per la serializzazione, vedere [Serializzazione binaria](binary-serialization.md).
 
