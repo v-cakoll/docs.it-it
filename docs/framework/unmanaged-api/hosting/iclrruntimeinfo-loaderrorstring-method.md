@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 52c543ab-9ef5-4ee7-b836-c0ffc35cd45b
 topic_type:
 - apiref
-ms.openlocfilehash: 20f2041599e85b8df20a7a9cf44680da9f17244e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: da6efae38cd70a68feea56b12e86be23fde7f0cb
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73195935"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762188"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>Metodo ICLRRuntimeInfo::LoadErrorString
 Converte un valore HRESULT in un messaggio di errore appropriato per le impostazioni cultura specificate.  
   
  Questo metodo sostituisce le funzioni seguenti:  
   
-- [LoadStringRC](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
+- [LoadStringRC](loadstringrc-function.md)  
   
-- [LoadStringRCEx](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
+- [LoadStringRCEx](loadstringrcex-function.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +49,7 @@ HRESULT LoadErrorString(
  out Stringa di messaggio associata al valore HRESULT specificato.  
   
  `pcchBuffer`  
- [in, out] Dimensioni del `pwzbuffer` per evitare sovraccarichi del buffer. Se `pwzbuffer` è null, `pcchBuffer` fornisce la dimensione prevista di `pwzbuffer` per consentire la preallocazione.  
+ [in, out] Dimensioni di `pwzbuffer` per evitare sovraccarichi del buffer. Se `pwzbuffer` è null, `pcchBuffer` fornisce le dimensioni previste di `pwzbuffer` per consentire la preallocazione.  
   
  `iLocaleID`  
  in Identificatore delle impostazioni cultura. Per utilizzare le impostazioni cultura predefinite, è necessario specificare-1.  
@@ -64,16 +64,16 @@ HRESULT LoadErrorString(
 |E_INVALIDARG|`pwzBuffer` è null.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Metahost. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [Interfaccia ICLRRuntimeInfo](iclrruntimeinfo-interface.md)
+- [Interfacce di hosting](hosting-interfaces.md)
+- [Hosting](index.md)

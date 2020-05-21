@@ -3,19 +3,19 @@ title: Impostazioni di configurazione della globalizzazione
 description: Informazioni sulle impostazioni della fase di esecuzione che configurano gli aspetti di globalizzazione di un'app .NET Core, ad esempio il modo in cui analizza le date giapponesi.
 ms.date: 05/18/2020
 ms.topic: reference
-ms.openlocfilehash: 2561e66e6d18cb4036b0719f7e34ea66540fe095
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 56228e9a6cb6dbab6a22bdc00d11212e1019776b
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703122"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761967"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>Opzioni di configurazione della fase di esecuzione per la globalizzazione
 
 ## <a name="invariant-mode"></a>Modalità invariante
 
 - Determina se un'app .NET Core viene eseguita in modalità non variant di globalizzazione senza accedere a dati e comportamento specifici delle impostazioni cultura.
-- Impostazione predefinita: eseguire l'app con accesso ai dati culturali ( `false` ).
+- Se si omette questa impostazione, l'app viene eseguita con accesso ai dati culturali. Equivale a impostare il valore su `false` .
 - Per altre informazioni, vedere [modalità invariante per la globalizzazione di .NET Core](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
 
 | | Nome impostazione | Valori |
@@ -53,7 +53,7 @@ File di progetto:
 ## <a name="era-year-ranges"></a>Intervalli di anni dell'era
 
 - Determina se i controlli di intervallo per i calendari che supportano più ere sono rilassati o se le date che superano l'intervallo di date di un'era generano una <xref:System.ArgumentOutOfRangeException> .
-- Impostazione predefinita: i controlli intervallo sono rilassati ( `false` ).
+- Se si omette questa impostazione, i controlli intervallo sono rilassati. Equivale a impostare il valore su `false` .
 - Per altre informazioni, vedere [calendari, ere e intervalli di date: controlli intervallo rilassato](../../standard/datetime/working-with-calendars.md#calendars-eras-and-date-ranges-relaxed-range-checks).
 
 | | Nome impostazione | Valori |
@@ -64,7 +64,7 @@ File di progetto:
 ## <a name="japanese-date-parsing"></a>Analisi della data giapponese
 
 - Determina se una stringa che contiene "1" o "Gannen" come l'anno viene analizzata correttamente o se è supportato solo "1".
-- Impostazione predefinita: analizza le stringhe che contengono "1" o "Gannen" come anno ( `false` ).
+- Se si omette questa impostazione, le stringhe che contengono "1" o "Gannen" come analisi dell'anno hanno esito positivo. Equivale a impostare il valore su `false` .
 - Per altre informazioni, vedere [rappresentare date in calendari con più ere](../../standard/datetime/working-with-calendars.md#represent-dates-in-calendars-with-multiple-eras).
 
 | | Nome impostazione | Valori |
@@ -75,7 +75,7 @@ File di progetto:
 ## <a name="japanese-year-format"></a>Formato dell'anno giapponese
 
 - Determina se il primo anno di un'era del calendario giapponese è formattato come "Gannen" o come numero.
-- Impostazione predefinita: formattare il primo anno come "Gannen" ( `false` ).
+- Se si omette questa impostazione, il primo anno viene formattato come "Gannen". Equivale a impostare il valore su `false` .
 - Per altre informazioni, vedere [rappresentare date in calendari con più ere](../../standard/datetime/working-with-calendars.md#represent-dates-in-calendars-with-multiple-eras).
 
 | | Nome impostazione | Valori |

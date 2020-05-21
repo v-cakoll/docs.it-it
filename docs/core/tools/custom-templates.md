@@ -2,21 +2,24 @@
 title: Modelli personalizzati per dotnet new
 description: Informazioni sui modelli personalizzati per qualsiasi tipo di file o progetto .NET.
 author: thraka
-ms.date: 06/14/2019
-ms.openlocfilehash: 8e1ac4ca21a8a90ad0f7c9bd3dd11281eb4a6e02
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 05/20/2020
+ms.openlocfilehash: 19855c99b240b66dfa819e70d4a1bee5c8ed14ed
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73420874"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761915"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelli personalizzati per dotnet new
 
-[.NET Core SDK](https://dotnet.microsoft.com/download) viene distribuito con molti modelli già installati e pronti per l'uso. Il [ `dotnet new` comando](dotnet-new.md) non è solo il modo di utilizzare un modello, ma anche come installare e disinstallare i modelli. A partire da .NET Core 2.0, è possibile creare modelli personalizzati per qualsiasi tipo di progetto, ad esempio un'app, un servizio, uno strumento o una libreria di classi. È possibile anche creare un modello che restituisce uno o più file indipendenti, ad esempio un file di configurazione.
+[.NET Core SDK](https://dotnet.microsoft.com/download) viene distribuito con molti modelli già installati e pronti per l'uso. Il [ `dotnet new` comando](dotnet-new.md) non è solo la modalità di utilizzo di un modello, ma anche come installare e disinstallare i modelli. A partire da .NET Core 2.0, è possibile creare modelli personalizzati per qualsiasi tipo di progetto, ad esempio un'app, un servizio, uno strumento o una libreria di classi. È possibile anche creare un modello che restituisce uno o più file indipendenti, ad esempio un file di configurazione.
 
-È possibile installare modelli personalizzati da un pacchetto NuGet in qualsiasi feed NuGet, facendo riferimento direttamente a un file *NGet .nupkg* o specificando una directory del file system contenente il modello. Il motore del modello offre funzionalità che consentono di sostituire i valori, includere ed escludere file ed eseguire operazioni di elaborazione personalizzate quando si usa il modello.
+È possibile installare modelli personalizzati da un pacchetto NuGet in qualsiasi feed NuGet, facendo riferimento direttamente a un file NuGet *. nupkg* oppure specificando una file System Directory che contiene il modello. Il motore del modello offre funzionalità che consentono di sostituire i valori, includere ed escludere file ed eseguire operazioni di elaborazione personalizzate quando si usa il modello.
 
-Il motore del modello è open source e il repository del codice online si trova in [dotnet/templating](https://github.com/dotnet/templating/) su GitHub. Visitare il repository [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) per gli esempi di modelli. Più modelli, inclusi i modelli di terze parti, sono disponibili in [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (Modelli disponibili per dotnet new) su GitHub. Per altre informazioni sulla creazione e l'uso di modelli personalizzati, vedere [Come creare modelli personalizzati per dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) e la [wiki del repository GitHub dotnet/templating](https://github.com/dotnet/templating/wiki).
+Il motore del modello è open source e il repository del codice online si trova in [dotnet/templating](https://github.com/dotnet/templating/) su GitHub. Più modelli, inclusi i modelli di terze parti, sono disponibili in [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (Modelli disponibili per dotnet new) su GitHub. Per altre informazioni sulla creazione e l'uso di modelli personalizzati, vedere [Come creare modelli personalizzati per dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) e la [wiki del repository GitHub dotnet/templating](https://github.com/dotnet/templating/wiki).
+
+> [!NOTE]
+> Gli esempi di modelli sono disponibili nel repository GitHub [DotNet/DotNet-template-Samples](https://github.com/dotnet/dotnet-template-samples) . Tuttavia, sebbene questi esempi siano una risorsa efficace per apprendere il funzionamento dei modelli, il repository viene archiviato e non viene più mantenuto. Gli esempi potrebbero non essere aggiornati e non funzionano più.
 
 Per seguire una procedura dettagliata e creare un modello, vedere l'esercitazione [Creare un modello personalizzato per dotnet new](../tutorials/cli-templates-create-item-template.md).
 
@@ -33,7 +36,7 @@ dotnet new --list
 Un modello è costituito dai componenti seguenti:
 
 - File e cartelle di origine.
-- Un file di configurazione (*template.json*).
+- Un file di configurazione (*template. JSON*).
 
 ### <a name="source-files-and-folders"></a>File e cartelle di origine
 

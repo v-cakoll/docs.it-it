@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4517ada3-4417-4ac5-a150-73da7a87c686
 topic_type:
 - apiref
-ms.openlocfilehash: 8c72f58bb65bd862b0625bfa0398b26bad0197e9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 09c80c3a56d86943ebe00e5222bb5452ab44e150
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192078"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762175"
 ---
 # <a name="iclrruntimeinfoloadlibrary-method"></a>Metodo ICLRRuntimeInfo::LoadLibrary
-Carica una libreria di .NET Framework dalla Common Language Runtime (CLR) rappresentata da un'interfaccia [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) .  
+Carica una libreria di .NET Framework dalla Common Language Runtime (CLR) rappresentata da un'interfaccia [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) .  
   
- Questo metodo sostituisce la funzione [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) .  
+ Questo metodo sostituisce la funzione [LoadLibraryShim](loadlibraryshim-function.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,20 +51,20 @@ HRESULT LoadLibrary(
 |E_POINTER|`pwzDllName` o `phndModule` è null.|  
 |E_OUTOFMEMORY|La memoria disponibile non è sufficiente per gestire la richiesta.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo carica solo le DLL incluse nel pacchetto ridistribuibile .NET Framework. Non è in grado di caricare assembly generati dall'utente.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Metahost. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [Interfaccia ICLRRuntimeInfo](iclrruntimeinfo-interface.md)
+- [Interfacce di hosting](hosting-interfaces.md)
+- [Hosting](index.md)

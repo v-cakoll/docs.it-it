@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2edd0a10-77fb-4173-91eb-f2970cc364d0
 topic_type:
 - apiref
-ms.openlocfilehash: 483d647028d1a05ea20ab836730099afe3e09374
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e071f9cba7e991c59bf697647e0e4badea57573a
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127840"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762045"
 ---
 # <a name="iclrvalidator-interface"></a>Interfaccia ICLRValidator
 Fornisce metodi per convalidare immagini PE (Portable Executable) e segnalare errori di convalida.  
@@ -28,20 +28,20 @@ Fornisce metodi per convalidare immagini PE (Portable Executable) e segnalare er
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo FormatEventInfo](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|Ottiene un messaggio dettagliato sull'errore di convalida specificato.|  
-|[Metodo Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|Convalida il file eseguibile portatile o MSIL (Microsoft Intermediate Language) nel file specificato.|  
+|[Metodo FormatEventInfo](iclrvalidator-formateventinfo-method.md)|Ottiene un messaggio dettagliato sull'errore di convalida specificato.|  
+|[Metodo Validate](iclrvalidator-validate-method.md)|Convalida il file eseguibile portatile o MSIL (Microsoft Intermediate Language) nel file specificato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** IValidator. idl, IValidator. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICLRErrorReportingManager](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
-- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Coclasse CLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)
+- [Interfaccia ICLRErrorReportingManager](iclrerrorreportingmanager-interface.md)
+- [Interfacce di hosting](hosting-interfaces.md)
+- [Coclasse CLRRuntimeHost](clrruntimehost-coclass.md)

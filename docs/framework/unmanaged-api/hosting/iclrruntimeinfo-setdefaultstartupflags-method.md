@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 98ae174f-bff0-48f1-9e05-6cb63b451824
 topic_type:
 - apiref
-ms.openlocfilehash: 36851ac4573d0d65caffaa3f82a1f6fc8440a2d0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7d201962976d198372226eb686696fcdccf3eb69
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092745"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762162"
 ---
 # <a name="iclrruntimeinfosetdefaultstartupflags-method"></a>Metodo ICLRRuntimeInfo::SetDefaultStartupFlags
-Imposta i flag di avvio e il file di configurazione host che verranno usati per avviare il Runtime. Questo metodo sostituisce l'utilizzo del parametro `startupFlags` nelle funzioni [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) e [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md) .  
+Imposta i flag di avvio e il file di configurazione host che verranno usati per avviare il Runtime. Questo metodo sostituisce l'utilizzo del `startupFlags` parametro nelle funzioni [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) e [CorBindToRuntimeHost](corbindtoruntimehost-function.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,7 +35,7 @@ HRESULT SetDefaultStartupFlags(
   
 ## <a name="parameters"></a>Parametri  
  `dwStartupFlags`  
- in Flag di avvio dell'host da impostare. Utilizzare gli stessi flag delle funzioni [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) e [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md) .  
+ in Flag di avvio dell'host da impostare. Utilizzare gli stessi flag delle funzioni [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) e [CorBindToRuntimeHost](corbindtoruntimehost-function.md) .  
   
  `pwzHostConfigFile`  
  in Percorso della directory del file di configurazione host da impostare.  
@@ -47,20 +47,20 @@ HRESULT SetDefaultStartupFlags(
 |-------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
   
-## <a name="remarks"></a>Note  
- Un host multithread deve sincronizzare le chiamate a questo metodo. In caso contrario, il thread A può chiamare il metodo `SetStartupFlags` dopo che il thread B completa una chiamata a `SetStartupFlags` e prima che il thread B avvii il Runtime.  
+## <a name="remarks"></a>Osservazioni  
+ Un host multithread deve sincronizzare le chiamate a questo metodo. In caso contrario, il thread A può chiamare il `SetStartupFlags` metodo dopo che il thread b completa una chiamata a `SetStartupFlags` e prima che il thread b avvii il Runtime.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Metahost. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [Interfaccia ICLRRuntimeInfo](iclrruntimeinfo-interface.md)
+- [Interfacce di hosting](hosting-interfaces.md)
+- [Hosting](index.md)

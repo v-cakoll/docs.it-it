@@ -2,12 +2,12 @@
 title: Opzioni di configurazione della fase di esecuzione
 description: Informazioni su come configurare le applicazioni .NET Core usando le impostazioni di configurazione in fase di esecuzione.
 ms.date: 01/21/2020
-ms.openlocfilehash: d49707b93e272f0e527ff536a80140ec98e5c1a8
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 68690689fd4f936e3af76ab647f0b58d8ec6ca27
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506782"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761954"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>Impostazioni di configurazione della fase di esecuzione di .NET Core
 
@@ -20,7 +20,7 @@ ms.locfileid: "82506782"
 > [!NOTE]
 > Questa documentazione è un lavoro in corso. Se si nota che le informazioni presentate in questo documento sono incomplete o non accurate, è possibile [aprire un problema](https://github.com/dotnet/docs/issues) per segnalarlo o [inviare una richiesta pull](https://github.com/dotnet/docs/pulls) per risolvere il problema. Per informazioni sull'invio di richieste pull per il repository DotNet/docs, vedere la guida per i [collaboratori](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute).
 
-.NET Core fornisce i meccanismi seguenti per la configurazione del comportamento dell'applicazione in fase di esecuzione:
+.NET Core fornisce i meccanismi seguenti per configurare il comportamento dell'applicazione in fase di esecuzione:
 
 - Il [file runtimeconfig. JSON](#runtimeconfigjson)
 
@@ -28,7 +28,10 @@ ms.locfileid: "82506782"
 
 - [Variabili di ambiente](#environment-variables)
 
-Alcuni valori di configurazione possono essere impostati anche a livello di codice <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> chiamando il metodo.
+> [!TIP]
+> La configurazione di un'opzione della fase di esecuzione tramite una variabile di ambiente applica l'impostazione a tutte le app .NET Core. La configurazione di un'opzione in fase di esecuzione nel file *runtimeconfig. JSON* o di progetto applica l'impostazione solo a tale applicazione.
+
+Alcuni valori di configurazione possono essere impostati anche a livello di codice chiamando il <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> metodo.
 
 Gli articoli di questa sezione della documentazione sono organizzati in base alla categoria, ad esempio [debug](debugging-profiling.md) e [Garbage Collection](garbage-collector.md). Se applicabile, vengono visualizzate le opzioni di configurazione per i file *runtimeconfig. JSON* , le proprietà MSBuild, le variabili di ambiente e, per i file *app. config* di riferimento incrociato per i progetti .NET Framework.
 
@@ -50,7 +53,7 @@ Specificare le opzioni di configurazione in fase di esecuzione nella sezione **c
 
 ### <a name="example-appnameruntimeconfigjson-file"></a>Esempio [AppName]. runtimeconfig. JSON
 
-Se si posizionano le opzioni nel file JSON di output, nidificarle nella `runtimeOptions` proprietà.
+Se si posizionano le opzioni nel file JSON di output, nidificarle nella `runtimeOptions` Proprietà.
 
 ```json
 {
@@ -71,7 +74,7 @@ Se si posizionano le opzioni nel file JSON di output, nidificarle nella `runtime
 
 ### <a name="example-runtimeconfigtemplatejson-file"></a>Esempio di file runtimeconfig. template. JSON
 
-Se si stanno inserendo le opzioni nel file JSON del modello, omettere `runtimeOptions` la proprietà.
+Se si stanno inserendo le opzioni nel file JSON del modello, omettere la `runtimeOptions` Proprietà.
 
 ```json
 {
@@ -106,13 +109,13 @@ Di seguito è riportato un esempio di file di progetto in stile SDK con propriet
 </Project>
 ```
 
-Le proprietà di MSBuild per la configurazione del comportamento in fase di esecuzione sono indicate nei singoli articoli per ogni area, ad esempio [Garbage Collection](garbage-collector.md).
+Le proprietà di MSBuild per la configurazione del comportamento in fase di esecuzione sono indicate nei singoli articoli per ogni area, ad esempio [Garbage Collection](garbage-collector.md). Sono inoltre elencate nella sezione relativa alla configurazione della fase di [esecuzione](../project-sdk/msbuild-props.md#run-time-configuration-properties) del riferimento alle proprietà di MSBuild per i progetti in stile SDK.
 
 ## <a name="environment-variables"></a>Variabili di ambiente
 
-Le variabili di ambiente possono essere usate per fornire alcune informazioni di configurazione in fase di esecuzione. Le manopole di configurazione specificate come variabili di ambiente in genere hanno il prefisso **COMPlus_**.
+Le variabili di ambiente possono essere usate per fornire alcune informazioni di configurazione in fase di esecuzione. La configurazione di un'opzione della fase di esecuzione tramite una variabile di ambiente applica l'impostazione a tutte le app .NET Core. Le manopole di configurazione specificate come variabili di ambiente in genere hanno il prefisso **COMPlus_**.
 
-È possibile definire le variabili di ambiente dal pannello di controllo di Windows, dalla riga di comando o a livello di <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType> codice chiamando il metodo in entrambi i sistemi basati su Windows e UNIX.
+È possibile definire le variabili di ambiente dal pannello di controllo di Windows, dalla riga di comando o a livello di codice chiamando il <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType> metodo in entrambi i sistemi basati su Windows e UNIX.
 
 Gli esempi seguenti illustrano come impostare una variabile di ambiente dalla riga di comando:
 

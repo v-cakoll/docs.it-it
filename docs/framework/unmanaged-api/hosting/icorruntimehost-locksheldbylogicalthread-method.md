@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3601255-d894-4d7c-b1df-c31334551700
 topic_type:
 - apiref
-ms.openlocfilehash: f6ef7e06d94cb22d266949927cb15105b1602d3a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 265ab5ae03b7b42c4f5f429df5d659d60e55f18e
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139536"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760719"
 ---
 # <a name="icorruntimehostlocksheldbylogicalthread-method"></a>Metodo ICorRuntimeHost::LocksHeldByLogicalThread
 Recupera il numero di blocchi presenti nel thread corrente.  
@@ -40,7 +40,7 @@ HRESULT LocksHeldByLogicalThread(
  out Puntatore al numero di blocchi presenti nel thread corrente.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
@@ -50,4 +50,4 @@ HRESULT LocksHeldByLogicalThread(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [Interfaccia ICorRuntimeHost](icorruntimehost-interface.md)

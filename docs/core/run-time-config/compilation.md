@@ -3,12 +3,12 @@ title: Impostazioni di configurazione della compilazione
 description: Informazioni sulle impostazioni della fase di esecuzione che configurano il funzionamento del compilatore JIT per le app .NET Core.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 4db20ee6d36fe3d3d66f473644b70c02d4e02cb3
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: cfcf9b5fc8d11a4ae35ab9b152f32133cd6930bf
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506844"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762006"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>Opzioni di configurazione della fase di esecuzione per la compilazione
 
@@ -98,7 +98,7 @@ File di progetto:
 - Configura se il compilatore JIT USA Quick JIT sui metodi che contengono cicli.
 - L'abilitazione di Quick JIT for loops può migliorare le prestazioni di avvio. Tuttavia, i cicli con esecuzione prolungata possono rimanere bloccati nel codice meno ottimizzato per lunghi periodi di tempo.
 - Se [JIT rapido](#quick-jit) è disabilitato, questa impostazione non ha alcun effetto.
-- Impostazione predefinita: Disabled (`false`).
+- Se si omette questa impostazione, Quick JIT non viene usato per i metodi che contengono cicli. Equivale a impostare il valore su `false` .
 
 | | Nome impostazione | Valori |
 | - | - | - |
@@ -136,7 +136,7 @@ File di progetto:
 
 - Configura se il runtime di .NET Core usa codice precompilato per le immagini con i dati ReadyToRun disponibili. La disabilitazione di questa opzione impone al runtime il codice del Framework per la compilazione JIT.
 - Per ulteriori informazioni, vedere [ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images).
-- Impostazione predefinita: Enabled`1`().
+- Se si omette questa impostazione, .NET utilizzerà i dati ReadyToRun quando sarà disponibile. Equivale a impostare il valore su `1` .
 
 | | Nome impostazione | Valori |
 | - | - | - |

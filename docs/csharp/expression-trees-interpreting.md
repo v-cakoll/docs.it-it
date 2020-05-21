@@ -4,12 +4,12 @@ description: Informazioni su come scrivere codice per esaminare la struttura di 
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 1283d7d957c72558652b96cb428efd0f071f0184
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5734e1be6b59bfe3eae97f29d1bd91e7e3a3623f
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146008"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761863"
 ---
 # <a name="interpreting-expressions"></a>Interpretazione di espressioni
 
@@ -51,7 +51,7 @@ Iniziamo con l'esempio di addizione presentato nella parte introduttiva di quest
 Expression<Func<int>> sum = () => 1 + 2;
 ```
 
-> Non si usa `var` per dichiarare questo albero delle espressioni e ciò non è possibile perché il lato destro dell'assegnazione è tipizzato in modo implicito. Per comprendere meglio questo meccanismo, leggere [qui](implicitly-typed-lambda-expressions.md).
+> Non si usa `var` per dichiarare questo albero delle espressioni e ciò non è possibile perché il lato destro dell'assegnazione è tipizzato in modo implicito.
 
 Il nodo radice è una `LambdaExpression`. Per ottenere la parte di codice di interesse a destra dell'operatore `=>`, è necessario trovare uno degli elementi figlio della `LambdaExpression`. È possibile farlo con tutte le espressioni in questa sezione. Il nodo padre consente di trovare il tipo restituito della `LambdaExpression`.
 

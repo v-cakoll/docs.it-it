@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 72e38e61-3d56-4ae3-b8f6-0ab7922aaf11
 topic_type:
 - apiref
-ms.openlocfilehash: f43ee6d9a3832fca1766ec27c9f02d1aab2f5b8d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7874424150e0f4e1818ad9c72e31fd584e016829
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127765"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762396"
 ---
 # <a name="icorconfigurationsetgcthreadcontrol-method"></a>Metodo ICorConfiguration::SetGCThreadControl
 Imposta l'interfaccia di callback per la pianificazione di thread per le attività non di runtime che altrimenti verrebbero bloccate per un Garbage Collection.  
@@ -35,20 +35,20 @@ HRESULT SetGCThreadControl (
   
 ## <a name="parameters"></a>Parametri  
  `pGCThreadControl`  
- in Puntatore a un oggetto [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) che notifica all'host la sospensione dei thread per le attività non in fase di esecuzione.  
+ in Puntatore a un oggetto [IGCThreadControl](igcthreadcontrol-interface.md) che notifica all'host la sospensione dei thread per le attività non in fase di esecuzione.  
   
-## <a name="remarks"></a>Note  
- L'host può scegliere all'interno del callback [IGCThreadControl:: ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) se ripianificare un thread.  
+## <a name="remarks"></a>Osservazioni  
+ L'host può scegliere all'interno del callback [IGCThreadControl:: ThreadIsBlockingForSuspension](igcthreadcontrol-threadisblockingforsuspension-method.md) se ripianificare un thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)
+- [Interfaccia ICorConfiguration](icorconfiguration-interface.md)
