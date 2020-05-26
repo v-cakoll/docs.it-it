@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68c4ea19-c47c-45c6-b420-d3a2ba1c2d50
 topic_type:
 - apiref
-ms.openlocfilehash: 64cf6c80ab1cf4b3ca52c60d6e72b54c438f9f4a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f3e7456c3f992527981a15b3b1835e1ca72603ad
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73195844"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83803289"
 ---
 # <a name="ihostsyncmanagercreaterwlockreaderevent-method"></a>Metodo IHostSyncManager::CreateRWLockReaderEvent
 Crea un oggetto evento di reimpostazione manuale per l'implementazione di un blocco del lettore.  
@@ -37,19 +37,19 @@ HRESULT CreateRWLockReaderEvent (
   
 ## <a name="parameters"></a>Parametri  
  `bInitialState`  
- [in] `true`, se `ppEvent` deve essere segnalato. in caso contrario, `false`.  
+ [in] `true` , se `ppEvent` deve essere segnalato; in caso contrario, `false` .  
   
  `cookie`  
  in Cookie da associare al blocco del lettore.  
   
  `ppEvent`  
- out Puntatore all'indirizzo di un'istanza di [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) o null se non è stato possibile creare l'oggetto evento.  
+ out Puntatore all'indirizzo di un'istanza di [IHostManualEvent](ihostmanualevent-interface.md) o null se non è stato possibile creare l'oggetto evento.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`CreateRWLockReaderEvent` ha restituito un esito positivo.|  
+|S_OK|`CreateRWLockReaderEvent`la restituzione è riuscita.|  
 |HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
@@ -57,21 +57,21 @@ HRESULT CreateRWLockReaderEvent (
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|Memoria insufficiente per creare l'oggetto evento richiesto.|  
   
-## <a name="remarks"></a>Note  
- CLR chiama `CreateRWLockReaderEvent` per ottenere un riferimento a un'istanza di `IHostManualEvent` da utilizzare nell'implementazione di un blocco del lettore. L'host può utilizzare il cookie per determinare quali attività sono in attesa del blocco del lettore eseguendo una query sull'interfaccia [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md) .  
+## <a name="remarks"></a>Osservazioni  
+ CLR chiama `CreateRWLockReaderEvent` per ottenere un riferimento a un' `IHostManualEvent` istanza di da utilizzare nell'implementazione di un blocco del lettore. L'host può utilizzare il cookie per determinare quali attività sono in attesa del blocco del lettore eseguendo una query sull'interfaccia [ICLRSyncManager](iclrsyncmanager-interface.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [Interfaccia IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [Interfaccia IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [Interfaccia IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [Interfaccia ICLRSyncManager](iclrsyncmanager-interface.md)
+- [Interfaccia IHostAutoEvent](ihostautoevent-interface.md)
+- [Interfaccia IHostManualEvent](ihostmanualevent-interface.md)
+- [Interfaccia IHostSyncManager](ihostsyncmanager-interface.md)

@@ -14,37 +14,37 @@ helpviewer_keywords:
 ms.assetid: 820330a4-244c-4f67-ab5e-f24b0b3c2080
 topic_type:
 - apiref
-ms.openlocfilehash: 6f7158bcac7ad22647104e2041da959285d2be8f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 428e4cf8997713b08e40d9376c34ae5eee8cfa32
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130486"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804849"
 ---
 # <a name="ihostgcmanager-interface"></a>Interfaccia IHostGCManager
 Fornisce metodi che notificano all'host degli eventi nel meccanismo di Garbage Collection implementato dall'Common Language Runtime (CLR).  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|[Metodo SuspensionEnding](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md)|Notifica all'host che CLR sta riprendendo l'esecuzione delle attività nei thread che sono stati sospesi per un Garbage Collection.|  
-|[Metodo SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md)|Notifica all'host che CLR sta sospendendo l'esecuzione delle attività, per eseguire un Garbage Collection.|  
-|[Metodo ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-threadisblockingforsuspension-method.md)|Notifica all'host che il thread da cui è stata effettuata la chiamata al metodo sta per essere bloccato per un Garbage Collection.|  
+|[Metodo SuspensionEnding](ihostgcmanager-suspensionending-method.md)|Notifica all'host che CLR sta riprendendo l'esecuzione delle attività nei thread che sono stati sospesi per un Garbage Collection.|  
+|[Metodo SuspensionStarting](ihostgcmanager-suspensionstarting-method.md)|Notifica all'host che CLR sta sospendendo l'esecuzione delle attività, per eseguire un Garbage Collection.|  
+|[Metodo ThreadIsBlockingForSuspension](ihostgcmanager-threadisblockingforsuspension-method.md)|Notifica all'host che il thread da cui è stata effettuata la chiamata al metodo sta per essere bloccato per un Garbage Collection.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [Interfaccia ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [Interfaccia IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [Interfaccia IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
-- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfaccia ICLRTask](iclrtask-interface.md)
+- [Interfaccia ICLRTaskManager](iclrtaskmanager-interface.md)
+- [Interfaccia IHostTask](ihosttask-interface.md)
+- [Interfaccia IHostTaskManager](ihosttaskmanager-interface.md)
+- [Interfacce di hosting](hosting-interfaces.md)

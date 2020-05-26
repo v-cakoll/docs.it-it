@@ -2,12 +2,12 @@
 title: Script dotnet-install
 description: Informazioni sugli script DotNet-install per installare il .NET Core SDK e il runtime condiviso.
 ms.date: 04/30/2020
-ms.openlocfilehash: 6728708ac5154f558954b46a22a434b05a548e84
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 9f5cef9cfcca1d8b344021efe803c063a7393f8e
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205920"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802715"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Riferimento agli script dotnet-install
 
@@ -31,7 +31,7 @@ dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
 dotnet-install.ps1 -Help
 ```
 
-Linux/macOs:
+Linux/macOS:
 
 ```bash
 dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
@@ -44,7 +44,7 @@ dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
 dotnet-install.sh --help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrizione
 
 Gli `dotnet-install` script vengono usati per eseguire un'installazione non amministrativa del .NET Core SDK, che include il interfaccia della riga di comando di .NET Core e il runtime condiviso.
 
@@ -100,7 +100,7 @@ Gli script di installazione non aggiornano il registro di sistema in Windows. Sc
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
-  Specifica il percorso di installazione. Se la directory non esiste, verrà creata. Il valore predefinito è *%LocalAppData%\Microsoft\dotnet*. I file binari vengono inseriti direttamente in questa directory.
+  Specifica il percorso di installazione. Se la directory non esiste, verrà creata. Il valore predefinito è *%LocalAppData%\Microsoft\dotnet* in Windows e */usr/share/DotNet* in Linux/MacOS. I file binari vengono inseriti direttamente in questa directory.
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 
