@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d101168-b5e3-49ce-90c7-85cf2db83c4c
 topic_type:
 - apiref
-ms.openlocfilehash: 464093291648d7c5c1f2001fbaef85fcd5d592de
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 049a0ae6d860c7c431d08af8ba4539656b8e5592
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136798"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804579"
 ---
 # <a name="ihostmanualeventreset-method"></a>Metodo IHostManualEvent::Reset
-Reimposta l'istanza corrente di [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) su uno stato non segnalato.  
+Reimposta l'istanza corrente di [IHostManualEvent](ihostmanualevent-interface.md) su uno stato non segnalato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,7 +35,7 @@ HRESULT Reset ();
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`Reset` ha restituito un esito positivo.|  
+|S_OK|`Reset`la restituzione è riuscita.|  
 |HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
@@ -43,18 +43,18 @@ HRESULT Reset ();
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [Interfaccia IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [Interfaccia IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [Interfaccia IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
-- [Interfaccia IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [Interfaccia ICLRSyncManager](iclrsyncmanager-interface.md)
+- [Interfaccia IHostAutoEvent](ihostautoevent-interface.md)
+- [Interfaccia IHostManualEvent](ihostmanualevent-interface.md)
+- [Interfaccia IHostSemaphore](ihostsemaphore-interface.md)
+- [Interfaccia IHostSyncManager](ihostsyncmanager-interface.md)

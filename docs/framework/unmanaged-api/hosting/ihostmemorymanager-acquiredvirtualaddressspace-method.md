@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef2f83c2-127e-4c38-8385-306c03cd2167
 topic_type:
 - apiref
-ms.openlocfilehash: b70454cd1e2d6d38e6ca4d0ea0bd8974963c201c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f5469a6f35826bcb06fe821e3748861dbf3682f3
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136736"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804535"
 ---
 # <a name="ihostmemorymanageracquiredvirtualaddressspace-method"></a>Metodo IHostMemoryManager::AcquiredVirtualAddressSpace
 Notifica all'host che la Common Language Runtime (CLR) ha acquisito la memoria specificata dal sistema operativo.  
@@ -41,18 +41,18 @@ HRESULT AcquiredVirtualAddressSpace(
  `size`  
  in Dimensione, in byte, della memoria.  
   
-## <a name="remarks"></a>Note  
- Il metodo `AcquiredVirtualAddressSpace` è un metodo di callback e deve essere implementato dal writer dell'applicazione host. Viene chiamato da CLR.  
+## <a name="remarks"></a>Osservazioni  
+ Il `AcquiredVirtualAddressSpace` metodo è un metodo di callback e deve essere implementato dal writer dell'applicazione host. Viene chiamato da CLR.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [Interfaccia IHostMemoryManager](ihostmemorymanager-interface.md)

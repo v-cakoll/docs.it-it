@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bba941c2-1c57-46d3-bbf5-5fb92700c490
 topic_type:
 - apiref
-ms.openlocfilehash: d78f81093e61c40eaec334f957d8583eeb593f5e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ca9566168b8aae361af8d61539066624697a2d04
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134809"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805149"
 ---
 # <a name="igchost2setgcstartuplimitsex-method"></a>Metodo IGCHost2::SetGCStartupLimitsEx
 Imposta le dimensioni del segmento e le dimensioni massime per la generazione 0.  
@@ -41,18 +41,18 @@ HRESULT SetGCStartupLimitsEx (
  `MaxGen0Size`  
  in Dimensione massima per la generazione 0.  
   
-## <a name="remarks"></a>Note  
- È possibile specificare i valori che `SetGCStartupLimitsEx` imposta solo prima dell'avvio dell'host. Questi valori non possono essere modificati in un secondo momento.  
+## <a name="remarks"></a>Osservazioni  
+ `SetGCStartupLimitsEx`È possibile specificare i valori impostati solo prima dell'avvio dell'host. Questi valori non possono essere modificati in un secondo momento.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** GCHost. idl, GCHost. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IGCHost2](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)
+- [Interfaccia IGCHost2](igchost2-interface.md)

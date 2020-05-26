@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: Il comando dotnet test viene usato per eseguire unit test in un determinato progetto.
 ms.date: 04/29/2020
-ms.openlocfilehash: ef71e48daa7c4a6f33961d05a2f3def122087b0e
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 22b27007d26c98cff40733ef8d449ce334f87848
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975433"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802684"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -45,7 +45,7 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-Dove `Microsoft.NET.Test.Sdk` è l'host di test `xunit` , è il Framework di test. E `xunit.runner.visualstudio` è un adattatore di test, che consente al Framework xUnit di funzionare con l'host di test.
+Dove `Microsoft.NET.Test.Sdk` è l'host di test, `xunit` è il Framework di test. E `xunit.runner.visualstudio` è un adattatore di test, che consente al Framework xUnit di funzionare con l'host di test.
 
 ### <a name="implicit-restore"></a>Ripristino implicito
 
@@ -66,11 +66,11 @@ Dove `Microsoft.NET.Test.Sdk` è l'host di test `xunit` , è il Framework di tes
 
 - **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
-  Percorso di una directory in cui eseguire la ricerca di altri adattatori di test. Vengono controllati solo i file con `.TestAdapter.dll` *estensione dll* con suffisso. Se non specificato, viene eseguita una ricerca nella directory della *dll* test.
+  Percorso di una directory in cui eseguire la ricerca di altri adattatori di test. Vengono controllati solo i file con *estensione dll* con suffisso `.TestAdapter.dll` . Se non specificato, viene eseguita una ricerca nella directory della *dll* test.
 
 - **`--blame`**
 
-  Esegue i test in modalità di segnalazione degli errori. Questa opzione è utile per isolare i test problematici che provocano l'arresto anomalo dell'host di test. Quando viene rilevato un arresto anomalo del sistema, viene creato `TestResults/<Guid>/<Guid>_Sequence.xml` un file di sequenza in che acquisisce l'ordine dei test eseguiti prima dell'arresto anomalo.
+  Esegue i test in modalità di segnalazione degli errori. Questa opzione è utile per isolare i test problematici che provocano l'arresto anomalo dell'host di test. Quando viene rilevato un arresto anomalo del sistema, viene creato un file di sequenza in `TestResults/<Guid>/<Guid>_Sequence.xml` che acquisisce l'ordine dei test eseguiti prima dell'arresto anomalo.
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -82,7 +82,7 @@ Dove `Microsoft.NET.Test.Sdk` è l'host di test `xunit` , è il Framework di tes
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-  Abilita la modalità di diagnostica per la piattaforma di test e scrive messaggi di diagnostica nel file specificato e nei file accanto. Il processo che registra i messaggi determina quali file vengono creati, ad esempio `*.host_<date>.txt` per il log dell'host di test `*.datacollector_<date>.txt` e per il log dell'agente di raccolta dati.
+  Abilita la modalità di diagnostica per la piattaforma di test e scrive messaggi di diagnostica nel file specificato e nei file accanto. Il processo che registra i messaggi determina quali file vengono creati, ad esempio `*.host_<date>.txt` per il log dell'host di test e `*.datacollector_<date>.txt` per il log dell'agente di raccolta dati.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -102,11 +102,11 @@ Dove `Microsoft.NET.Test.Sdk` è l'host di test `xunit` , è il Framework di tes
 
 - **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
-  Specifica un logger per i risultati di test. Diversamente da MSBuild, il test DotNet non accetta abbreviazioni: invece `-l "console;v=d"` di `-l "console;verbosity=detailed"`usare.
+  Specifica un logger per i risultati di test. Diversamente da MSBuild, il test DotNet non accetta abbreviazioni: invece di `-l "console;v=d"` usare `-l "console;verbosity=detailed"` .
 
 - **`--no-build`**
 
-  Non compila il progetto di test prima dell'esecuzione. Viene inoltre impostato in modo implicito `--no-restore` il flag-.
+  Non compila il progetto di test prima dell'esecuzione. Viene inoltre impostato in modo implicito il `--no-restore` flag-.
 
 - **`--nologo`**
 
@@ -118,11 +118,11 @@ Dove `Microsoft.NET.Test.Sdk` è l'host di test `xunit` , è il Framework di tes
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Directory in cui trovare i file binari da eseguire. Se non specificata, il percorso predefinito è `./bin/<configuration>/<framework>/`.  Per i progetti con più framework di destinazione (tramite `TargetFrameworks` la proprietà), è necessario definire `--framework` anche quando si specifica questa opzione. `dotnet test`eseguire sempre i test dalla directory di output. È possibile usare <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> per utilizzare gli asset di test nella directory di output.
+  Directory in cui trovare i file binari da eseguire. Se non specificata, il percorso predefinito è `./bin/<configuration>/<framework>/`.  Per i progetti con più framework di destinazione (tramite la `TargetFrameworks` proprietà), è necessario definire anche `--framework` quando si specifica questa opzione. `dotnet test`esegue sempre i test dalla directory di output. È possibile usare <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> per utilizzare gli asset di test nella directory di output.
 
 - **`-r|--results-directory <PATH>`**
 
-  Directory in cui verranno inseriti i risultati del test. Se la directory specificata non esiste, viene creata. Il valore predefinito `TestResults` è la directory che contiene il file di progetto.
+  Directory in cui verranno inseriti i risultati del test. Se la directory specificata non esiste, viene creata. Il valore predefinito è `TestResults` la directory che contiene il file di progetto.
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -130,7 +130,7 @@ Dove `Microsoft.NET.Test.Sdk` è l'host di test `xunit` , è il Framework di tes
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  Il file `.runsettings` da usare per l'esecuzione dei test. Si noti che `TargetPlatform` l'elemento (x86 | x64) non ha alcun `dotnet test`effetto per. Per eseguire test destinati a x86, installare la versione x86 di .NET Core. Il bit di *dotnet. exe* che si trova nel percorso è quello che verrà usato per l'esecuzione dei test. Per altre informazioni, vedere le seguenti risorse:
+  Il file `.runsettings` da usare per l'esecuzione dei test. Si noti che l' `TargetPlatform` elemento (x86 | x64) non ha alcun effetto per `dotnet test` . Per eseguire test destinati a x86, installare la versione x86 di .NET Core. Il bit di *dotnet. exe* che si trova nel percorso è quello che verrà usato per l'esecuzione dei test. Per altre informazioni, vedere le seguenti risorse:
 
   - [Configurare unit test usando un file `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
   - [Configurare un agente di test](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)

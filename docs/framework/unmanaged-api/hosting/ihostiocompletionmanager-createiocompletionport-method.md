@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 907a2b43-68db-44a7-acac-89e792e7bb3c
 topic_type:
 - apiref
-ms.openlocfilehash: c3fa8aeebe529564c0ecc4a970f586fffc97ee05
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2b679a9ea427d53d67474a196b5b3ae2c698ea5e
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133872"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804782"
 ---
 # <a name="ihostiocompletionmanagercreateiocompletionport-method"></a>Metodo IHostIoCompletionManager::CreateIoCompletionPort
 Richiede che l'host crei una nuova porta di completamento di I/O.  
@@ -41,7 +41,7 @@ HRESULT CreateIoCompletionPort (
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`CreateIoCompletionPort` ha restituito un esito positivo.|  
+|S_OK|`CreateIoCompletionPort`la restituzione è riuscita.|  
 |HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
@@ -49,19 +49,19 @@ HRESULT CreateIoCompletionPort (
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|Memoria insufficiente per l'allocazione della risorsa richiesta.|  
   
-## <a name="remarks"></a>Note  
- CLR chiama il metodo `CreateIoCompletionPort` per richiedere che l'host crei una nuova porta di completamento I/O. Associa le operazioni di I/O a questa porta tramite una chiamata al metodo [IHostIoCompletionManager:: bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) . L'host riporta lo stato a CLR chiamando [ICLRIoCompletionManager:: OnComplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md).  
+## <a name="remarks"></a>Osservazioni  
+ CLR chiama il `CreateIoCompletionPort` metodo per richiedere che l'host crei una nuova porta di completamento di I/O. Associa le operazioni di I/O a questa porta tramite una chiamata al metodo [IHostIoCompletionManager:: bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) . L'host riporta lo stato a CLR chiamando [ICLRIoCompletionManager:: OnComplete](iclriocompletionmanager-oncomplete-method.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
-- [Interfaccia IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+- [Interfaccia ICLRIoCompletionManager](iclriocompletionmanager-interface.md)
+- [Interfaccia IHostIoCompletionManager](ihostiocompletionmanager-interface.md)

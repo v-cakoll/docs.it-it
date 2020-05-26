@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b9fa8ef74dd4f8070884f6cee4eb2af3082af5e5
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 2bf44ec1657307161c13f88f7d1628b2c930fd05
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394899"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805519"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Esercitazione: rilevare oggetti con ONNX in ML.NET
 
@@ -64,7 +64,7 @@ Ci sono diversi tipi di reti neurali, tra cui i più comuni sono percettrone mul
 
 ### <a name="understand-the-model"></a>Acquisire familiarità con il modello
 
-Il rilevamento di oggetti è un'attività di elaborazione di immagini. Per questo motivo, i modelli di Deep Learning sottoposti a training per risolvere questo problema sono prevalentemente di tipo CNN. Il modello usato in questa esercitazione è il piccolo modello YOLOv2, una versione più compatta del modello YOLOv2 descritto nel documento ["YOLO9000: migliore, più veloce, più forte" di Redmon e Fadhari](https://arxiv.org/pdf/1612.08242.pdf). Il training di Tiny YOLOv2 viene eseguito sul set di dati Pascal VOC ed è costituito da 15 livelli in grado di eseguire stime per 20 diverse classi di oggetti. Poiché il modello Tiny YOLOv2 è una versione ridotta del modello YOLOv2 originale, rappresenta un compromesso tra velocità e accuratezza. I diversi livelli che compongono il modello possono essere visualizzati usando strumenti come Netron. L'esame del modello restituirebbe un mapping delle connessioni tra tutti i livelli che compongono la rete neurale, in cui ogni livello contiene il nome del livello insieme alle dimensioni del rispettivo input/output. Le strutture di dati usate per descrivere gli input e gli output del modello sono note come tensori. I tensori possono essere considerati contenitori che archiviano i dati in N dimensioni. Nel caso di Tiny YOLOv2, il nome del livello di input è `image` e prevede un tensore con dimensioni `3 x 416 x 416`. Il nome del livello di output è `grid` e genera un tensore di output con dimensioni `125 x 13 x 13`.
+Il rilevamento di oggetti è un'attività di elaborazione di immagini. Per questo motivo, i modelli di Deep Learning sottoposti a training per risolvere questo problema sono prevalentemente di tipo CNN. Il modello usato in questa esercitazione è il piccolo modello YOLOv2, una versione più compatta del modello YOLOv2 descritto nel documento: ["YOLO9000: Better, Faster, Stronger" di Redmon e Farhadi](https://arxiv.org/pdf/1612.08242.pdf). Il training di Tiny YOLOv2 viene eseguito sul set di dati Pascal VOC ed è costituito da 15 livelli in grado di eseguire stime per 20 diverse classi di oggetti. Poiché il modello Tiny YOLOv2 è una versione ridotta del modello YOLOv2 originale, rappresenta un compromesso tra velocità e accuratezza. I diversi livelli che compongono il modello possono essere visualizzati usando strumenti come Netron. L'esame del modello restituirebbe un mapping delle connessioni tra tutti i livelli che compongono la rete neurale, in cui ogni livello contiene il nome del livello insieme alle dimensioni del rispettivo input/output. Le strutture di dati usate per descrivere gli input e gli output del modello sono note come tensori. I tensori possono essere considerati contenitori che archiviano i dati in N dimensioni. Nel caso di Tiny YOLOv2, il nome del livello di input è `image` e prevede un tensore con dimensioni `3 x 416 x 416`. Il nome del livello di output è `grid` e genera un tensore di output con dimensioni `125 x 13 x 13`.
 
 ![Livello di input suddiviso in livelli nascosti, quindi livello di output](./media/object-detection-onnx/netron-model-map-layers.png)
 
@@ -448,7 +448,7 @@ Infine, all'esterno del ciclo for iniziale del metodo `FilterBoundingBoxes` rest
 
 [!code-csharp [ReturnFilteredBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L246)]
 
-Ottimo. È ora possibile usare il codice insieme al modello per l'assegnazione dei punteggi.
+interessanti, È ora possibile usare il codice insieme al modello per l'assegnazione dei punteggi.
 
 ## <a name="use-the-model-for-scoring"></a>Usare il modello per l'assegnazione dei punteggi
 

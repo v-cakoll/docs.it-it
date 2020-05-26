@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c8f11b4-35d3-4c39-9bbd-58b896ba5ba6
 topic_type:
 - apiref
-ms.openlocfilehash: 72f7bee79e74c69acff90861ceada8a91afe2157
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 878dba37728734a777d2f95226b60bfbe9aae16a
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134923"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805275"
 ---
 # <a name="idebuggerthreadcontrolstartblockingfordebugger-method"></a>Metodo IDebuggerThreadControl::StartBlockingForDebugger
 Notifica all'host che i servizi di debug stanno per iniziare a bloccare tutti i thread.  
@@ -35,20 +35,20 @@ HRESULT StartBlockingForDebugger (
   
 ## <a name="parameters"></a>Parametri  
  `dwUnused`  
- in Riservato per usi futuri.  
+ [in] Riservato per un utilizzo futuro.  
   
-## <a name="remarks"></a>Note  
- È possibile chiamare il metodo `StartBlockingForDebugger` su un thread runtime.  
+## <a name="remarks"></a>Osservazioni  
+ Il `StartBlockingForDebugger` metodo può essere chiamato su un thread runtime.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IDebuggerThreadControl](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+- [Interfaccia IDebuggerThreadControl](idebuggerthreadcontrol-interface.md)

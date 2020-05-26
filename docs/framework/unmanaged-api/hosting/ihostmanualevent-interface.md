@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 300c2661-b7d1-4c39-b080-9ebdef0fd523
 topic_type:
 - apiref
-ms.openlocfilehash: 8eba189d6dfca3781c28631a72a9af3c037efeda
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7c46f00063cdf9281a5f1080594e8d6dbc6c101e
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136791"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804587"
 ---
 # <a name="ihostmanualevent-interface"></a>Interfaccia IHostManualEvent
 Fornisce l'implementazione dell'host di una rappresentazione di un evento di reimpostazione manuale.  
@@ -28,23 +28,23 @@ Fornisce l'implementazione dell'host di una rappresentazione di un evento di rei
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Reset](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md)|Reimposta l'istanza corrente di `IHostManualEvent` su uno stato non segnalato.|  
-|[Metodo Set](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-set-method.md)|Imposta l'istanza corrente di `IHostManualEvent` su uno stato segnalato.|  
-|[Metodo Wait](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-wait-method.md)|Fa in modo che l'istanza corrente di `IHostManualEvent` attenda fino a quando non è di proprietà o che trascorre un intervallo di tempo specificato.|  
+|[Metodo Reset](ihostmanualevent-reset-method.md)|Reimposta l'istanza corrente `IHostManualEvent` su uno stato non segnalato.|  
+|[Metodo Set](ihostmanualevent-set-method.md)|Imposta l' `IHostManualEvent` istanza corrente su uno stato segnalato.|  
+|[Metodo Wait](ihostmanualevent-wait-method.md)|Fa `IHostManualEvent` in modo che l'istanza corrente attenda fino a quando non è di proprietà o che trascorre un intervallo di tempo specificato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [Interfaccia IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [Interfaccia IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
-- [Interfaccia IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
-- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfaccia ICLRSyncManager](iclrsyncmanager-interface.md)
+- [Interfaccia IHostAutoEvent](ihostautoevent-interface.md)
+- [Interfaccia IHostSemaphore](ihostsemaphore-interface.md)
+- [Interfaccia IHostSyncManager](ihostsyncmanager-interface.md)
+- [Interfacce di hosting](hosting-interfaces.md)

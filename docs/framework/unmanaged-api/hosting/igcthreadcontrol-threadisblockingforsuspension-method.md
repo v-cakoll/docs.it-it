@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed5b5b58-7db7-46b5-9e2c-278db7159cee
 topic_type:
 - apiref
-ms.openlocfilehash: e6534c3085b70b590c2dcc3f50cf0253bd5e6682
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b5f6d7d40274972438a01313bc6aaec475b8e0c6
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134743"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805082"
 ---
 # <a name="igcthreadcontrolthreadisblockingforsuspension-method"></a>Metodo IGCThreadControl::ThreadIsBlockingForSuspension
 Notifica all'host che il thread che sta effettuando la chiamata sta per essere bloccato, ad esempio per un Garbage Collection o un'altra sospensione.  
@@ -31,18 +31,18 @@ Notifica all'host che il thread che sta effettuando la chiamata sta per essere b
 HRESULT ThreadIsBlockingForSuspension ( );  
 ```  
   
-## <a name="remarks"></a>Note  
- L'host può scegliere all'interno del callback `ThreadIsBlockingForSuspension` se ripianificare un thread.  
+## <a name="remarks"></a>Osservazioni  
+ L'host può scegliere all'interno del `ThreadIsBlockingForSuspension` callback se ripianificare un thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)
+- [Interfaccia IGCThreadControl](igcthreadcontrol-interface.md)
