@@ -740,18 +740,6 @@
                                   href: programming-guide/concepts/linq/intermediate-materialization.md
                                 - name: Concatenamento di operatori query standard
                                   href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
-                            - name: 'Esercitazione: Concatenamento di query'
-                              items:
-                                - name: Esecuzione posticipata e valutazione differita in LINQ to XML
-                                  href: programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
-                                - name: Esempio di esecuzione posticipata
-                                  href: programming-guide/concepts/linq/deferred-execution-example.md
-                                - name: Esempio di concatenamento di query
-                                  href: programming-guide/concepts/linq/chaining-queries-example.md
-                                - name: Materializzazione intermedia
-                                  href: programming-guide/concepts/linq/intermediate-materialization.md
-                                - name: Concatenamento di operatori query standard
-                                  href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
                             - name: 'Esercitazione: Manipolazione di contenuto in un documento WordprocessingML'
                               items:
                                 - name: Forma dei documenti WordprocessingML
