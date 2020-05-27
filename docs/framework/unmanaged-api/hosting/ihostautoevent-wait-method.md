@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 535d51c5-9112-401b-8c36-85f35d7ee609
 topic_type:
 - apiref
-ms.openlocfilehash: 0258999bae8b04ddaccf264276d1439b027b4a43
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7baabafc61e14d127ff3f0cdb7453be6f1a2abeb
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73195896"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804966"
 ---
-# <a name="ihostautoeventwait-method"></a><span data-ttu-id="5067e-102">Metodo IHostAutoEvent::Wait</span><span class="sxs-lookup"><span data-stu-id="5067e-102">IHostAutoEvent::Wait Method</span></span>
-<span data-ttu-id="5067e-103">Fa in modo che l'istanza corrente di [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) attenda fino a quando non è di proprietà o non trascorre un intervallo di tempo specificato.</span><span class="sxs-lookup"><span data-stu-id="5067e-103">Causes the current [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instance to wait until it is owned or a specified amount of time elapses.</span></span>  
+# <a name="ihostautoeventwait-method"></a><span data-ttu-id="ba35d-102">Metodo IHostAutoEvent::Wait</span><span class="sxs-lookup"><span data-stu-id="ba35d-102">IHostAutoEvent::Wait Method</span></span>
+<span data-ttu-id="ba35d-103">Fa in modo che l'istanza corrente di [IHostAutoEvent](ihostautoevent-interface.md) attenda fino a quando non è di proprietà o non trascorre un intervallo di tempo specificato.</span><span class="sxs-lookup"><span data-stu-id="ba35d-103">Causes the current [IHostAutoEvent](ihostautoevent-interface.md) instance to wait until it is owned or a specified amount of time elapses.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5067e-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5067e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ba35d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ba35d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Wait (  
@@ -34,37 +34,37 @@ HRESULT Wait (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5067e-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="5067e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ba35d-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="ba35d-105">Parameters</span></span>  
  `dwMilliseconds`  
- <span data-ttu-id="5067e-106">in Il numero di millisecondi di attesa dell'istanza corrente di `IHostAutoEvent` prima della restituzione, se nessun thread o Fiber acquisisce la proprietà.</span><span class="sxs-lookup"><span data-stu-id="5067e-106">[in] The number of milliseconds the current `IHostAutoEvent` instance should wait before returning, if no thread or fiber takes ownership.</span></span>  
+ <span data-ttu-id="ba35d-106">in Il numero di millisecondi di `IHostAutoEvent` attesa dell'istanza corrente prima che venga restituito, se nessun thread o Fiber acquisisce la proprietà.</span><span class="sxs-lookup"><span data-stu-id="ba35d-106">[in] The number of milliseconds the current `IHostAutoEvent` instance should wait before returning, if no thread or fiber takes ownership.</span></span>  
   
  `option`  
- <span data-ttu-id="5067e-107">in Uno dei valori di [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) , che specifica l'azione che l'host deve eseguire se questa operazione si blocca.</span><span class="sxs-lookup"><span data-stu-id="5067e-107">[in] One of the [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) values, specifying the action the host should take if this operation blocks.</span></span>  
+ <span data-ttu-id="ba35d-107">in Uno dei valori [WAIT_OPTION](wait-option-enumeration.md) , che specifica l'azione che l'host deve eseguire se questa operazione si blocca.</span><span class="sxs-lookup"><span data-stu-id="ba35d-107">[in] One of the [WAIT_OPTION](wait-option-enumeration.md) values, specifying the action the host should take if this operation blocks.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5067e-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="5067e-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ba35d-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="ba35d-108">Return Value</span></span>  
   
-|<span data-ttu-id="5067e-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5067e-109">HRESULT</span></span>|<span data-ttu-id="5067e-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="5067e-110">Description</span></span>|  
+|<span data-ttu-id="ba35d-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ba35d-109">HRESULT</span></span>|<span data-ttu-id="ba35d-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ba35d-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="5067e-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="5067e-111">S_OK</span></span>|<span data-ttu-id="5067e-112">`Wait` ha restituito un esito positivo.</span><span class="sxs-lookup"><span data-stu-id="5067e-112">`Wait` returned successfully.</span></span>|  
-|<span data-ttu-id="5067e-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="5067e-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="5067e-114">Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.</span><span class="sxs-lookup"><span data-stu-id="5067e-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="5067e-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="5067e-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="5067e-116">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="5067e-116">The call timed out.</span></span>|  
-|<span data-ttu-id="5067e-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="5067e-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="5067e-118">Il chiamante non è il proprietario del blocco.</span><span class="sxs-lookup"><span data-stu-id="5067e-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="5067e-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="5067e-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="5067e-120">Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="5067e-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="5067e-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="5067e-121">E_FAIL</span></span>|<span data-ttu-id="5067e-122">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="5067e-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="5067e-123">Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="5067e-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="5067e-124">Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="5067e-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="5067e-125">HOST_E_DEADLOCK</span><span class="sxs-lookup"><span data-stu-id="5067e-125">HOST_E_DEADLOCK</span></span>|<span data-ttu-id="5067e-126">L'host ha rilevato un deadlock durante l'intervallo di attesa e ha scelto l'evento rappresentato dall'istanza di `IHostAutoEvent` corrente come vittima del deadlock.</span><span class="sxs-lookup"><span data-stu-id="5067e-126">The host detected a deadlock during the wait interval, and chose the event represented by the current `IHostAutoEvent` instance as the deadlock victim.</span></span>|  
+|<span data-ttu-id="ba35d-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="ba35d-111">S_OK</span></span>|<span data-ttu-id="ba35d-112">`Wait`la restituzione è riuscita.</span><span class="sxs-lookup"><span data-stu-id="ba35d-112">`Wait` returned successfully.</span></span>|  
+|<span data-ttu-id="ba35d-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="ba35d-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="ba35d-114">Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.</span><span class="sxs-lookup"><span data-stu-id="ba35d-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="ba35d-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="ba35d-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="ba35d-116">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="ba35d-116">The call timed out.</span></span>|  
+|<span data-ttu-id="ba35d-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="ba35d-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="ba35d-118">Il chiamante non è il proprietario del blocco.</span><span class="sxs-lookup"><span data-stu-id="ba35d-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="ba35d-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="ba35d-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="ba35d-120">Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="ba35d-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="ba35d-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="ba35d-121">E_FAIL</span></span>|<span data-ttu-id="ba35d-122">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="ba35d-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="ba35d-123">Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="ba35d-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="ba35d-124">Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="ba35d-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="ba35d-125">HOST_E_DEADLOCK</span><span class="sxs-lookup"><span data-stu-id="ba35d-125">HOST_E_DEADLOCK</span></span>|<span data-ttu-id="ba35d-126">L'host ha rilevato un deadlock durante l'intervallo di attesa e ha scelto l'evento rappresentato dall' `IHostAutoEvent` istanza corrente come vittima del deadlock.</span><span class="sxs-lookup"><span data-stu-id="ba35d-126">The host detected a deadlock during the wait interval, and chose the event represented by the current `IHostAutoEvent` instance as the deadlock victim.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5067e-127">Requisiti</span><span class="sxs-lookup"><span data-stu-id="5067e-127">Requirements</span></span>  
- <span data-ttu-id="5067e-128">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5067e-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ba35d-127">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ba35d-127">Requirements</span></span>  
+ <span data-ttu-id="ba35d-128">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ba35d-128">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5067e-129">**Intestazione:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="5067e-129">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ba35d-129">**Intestazione:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="ba35d-129">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="5067e-130">**Libreria:** Incluso come risorsa in MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="5067e-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ba35d-130">**Libreria:** Incluso come risorsa in MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="ba35d-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5067e-131">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5067e-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ba35d-131">**Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ba35d-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5067e-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5067e-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ba35d-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ba35d-132">See also</span></span>
 
-- [<span data-ttu-id="5067e-133">Interfaccia ICLRSyncManager</span><span class="sxs-lookup"><span data-stu-id="5067e-133">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="5067e-134">Interfaccia IHostAutoEvent</span><span class="sxs-lookup"><span data-stu-id="5067e-134">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [<span data-ttu-id="5067e-135">Interfaccia IHostManualEvent</span><span class="sxs-lookup"><span data-stu-id="5067e-135">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [<span data-ttu-id="5067e-136">Interfaccia IHostSyncManager</span><span class="sxs-lookup"><span data-stu-id="5067e-136">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [<span data-ttu-id="ba35d-133">Interfaccia ICLRSyncManager</span><span class="sxs-lookup"><span data-stu-id="ba35d-133">ICLRSyncManager Interface</span></span>](iclrsyncmanager-interface.md)
+- [<span data-ttu-id="ba35d-134">Interfaccia IHostAutoEvent</span><span class="sxs-lookup"><span data-stu-id="ba35d-134">IHostAutoEvent Interface</span></span>](ihostautoevent-interface.md)
+- [<span data-ttu-id="ba35d-135">Interfaccia IHostManualEvent</span><span class="sxs-lookup"><span data-stu-id="ba35d-135">IHostManualEvent Interface</span></span>](ihostmanualevent-interface.md)
+- [<span data-ttu-id="ba35d-136">Interfaccia IHostSyncManager</span><span class="sxs-lookup"><span data-stu-id="ba35d-136">IHostSyncManager Interface</span></span>](ihostsyncmanager-interface.md)
