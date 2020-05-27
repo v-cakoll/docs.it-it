@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fad01d7a-3178-4c8c-9f0a-4641e3701c9b
 topic_type:
 - apiref
-ms.openlocfilehash: 388f227377ddf73fe1297e1c777bb1c0607c13d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 81d6c972b53221ee53cbcf31639d65c30858b48b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177872"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008157"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>Metodo IMetaDataAssemblyEmit::DefineExportedType
 Crea una struttura `ExportedType` che contiene i metadati per il tipo esportato specificato e restituisce il token di metadati associato.  
@@ -39,12 +39,12 @@ HRESULT DefineExportedType (
   
 ## <a name="parameters"></a>Parametri  
  `szName`  
- [in] Nome del tipo da esportare. Per la versione 1.1 di Common Language Runtime, il nome del tipo `TypeDef` esportato deve corrispondere esattamente al nome specificato nel per il tipo.  
+ in Nome del tipo da esportare. Per la versione 1,1 della Common Language Runtime, il nome del tipo esportato deve corrispondere esattamente al nome specificato in `TypeDef` per il tipo.  
   
  `tkImplementation`  
- [in] Token che specifica dove viene implementato il tipo esportato. I valori validi e i relativi significati associati sono:  
+ in Token che specifica la posizione in cui viene implementato il tipo esportato. I valori validi e i significati associati sono:  
   
-- `mdFile`Il tipo viene implementato in un file diverso all'interno di questo assembly.  
+- `mdFile`Il tipo viene implementato in un file diverso all'interno dell'assembly.  
   
 - `mdAssemblyRef`Il tipo viene implementato in un assembly diverso.  
   
@@ -53,26 +53,26 @@ HRESULT DefineExportedType (
 - `mdFileNil`Il tipo si trova nello stesso file del manifesto e non è un tipo annidato.  
   
  `tkTypeDef`  
- [in] Token per i metadati che specifica il tipo da esportare. Questo valore viene `TypeDef` immesso nella tabella del file che implementa il tipo ed è rilevante solo se tale file si trova in questo assembly.  
+ in Token per i metadati che specifica il tipo da esportare. Questo valore viene immesso nella `TypeDef` tabella del file che implementa il tipo ed è pertinente solo se tale file si trova in questo assembly.  
   
  `dwExportedTypeFlags`  
- [in] Combinazione bit per bit di [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) valori di enumerazione che definiscono le impostazioni delle proprietà per il tipo esportato.  
+ in Combinazione bit per bit di valori di enumerazione [CorTypeAttr](cortypeattr-enumeration.md) che definiscono le impostazioni delle proprietà per il tipo esportato.  
   
  `pmdct`  
- [fuori] Puntatore al token di metadati restituito che indica il tipo esportato.  
+ out Puntatore al token di metadati restituito che indica il tipo esportato.  
   
-## <a name="remarks"></a>Osservazioni  
- Una `ExportedType` struttura di metadati deve essere definita per ogni tipo esposto da questo assembly e implementato in un modulo diverso da quello contenente il manifesto.  
+## <a name="remarks"></a>Commenti  
+ È `ExportedType` necessario definire una struttura di metadati per ogni tipo esposto dall'assembly e che viene implementato in un modulo diverso da quello che contiene il manifesto.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforma:** Vedere [requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [Interfaccia IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md)

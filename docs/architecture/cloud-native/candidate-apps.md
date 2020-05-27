@@ -62,7 +62,7 @@ Se l'utente e il team ritengono che un approccio nativo per il cloud sia appropr
 
 La strategia di migrazione corretta dipende dalle priorità dell'organizzazione e dai sistemi di destinazione. Per molti, può essere più conveniente ottimizzare il cloud di un'applicazione monolitica o aggiungere servizi con granularità grossolana a un'app a più livelli. In questi casi, è comunque possibile sfruttare appieno le funzionalità di PaaS cloud come quelle offerte dal servizio app Azure.
 
-## <a name="summary"></a>Summary
+## <a name="summary"></a>Riepilogo
 
 In questo capitolo è stato introdotto il cloud native computing. È stata fornita una definizione insieme alle funzionalità principali che guidano un'applicazione nativa del cloud. Sono stati esaminati i tipi di applicazioni che potrebbero giustificare questo investimento e impegno.
 

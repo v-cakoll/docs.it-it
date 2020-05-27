@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dae07d9b-df51-488c-b17e-52d6e48217bd
 topic_type:
 - apiref
-ms.openlocfilehash: 93dd8c56176890d04d792f3c336492e4f232825b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8c0527a7bc3cde7344bf809dc8e6f5a3fac04852
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442472"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007507"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>Enumerazione CorThreadSafetyOptions
 
@@ -39,18 +39,18 @@ typedef enum CorThreadSafetyOptions {
 
 |Membro|Descrizione|
 |------------|-----------------|
-|`MDThreadSafetyDefault`|Valore predefinito. Uguale a `MDThreadSafetyOff`.|
+|`MDThreadSafetyDefault`|Valore predefinito. Come per `MDThreadSafetyOff`.|
 |`MDThreadSafetyOff`|Indica che non è possibile impostare un blocco di lettura/scrittura.|
 |`MDThreadSafetyOn`|Indica che è possibile impostare un blocco in lettura/scrittura.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
 **Intestazione:** CorHdr. h
 
-**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerazioni dei metadati](metadata-enumerations.md)

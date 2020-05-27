@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7ff90ad-dad8-48e8-917d-4aa9a118cbc8
 topic_type:
 - apiref
-ms.openlocfilehash: 1d58c8c0413346536c3e61e67ca0077c08c2b387
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e8afcb972cab9757458c7032c3678d45c6418fac
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436483"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007572"
 ---
 # <a name="corparamattr-enumeration"></a>Enumerazione CorParamAttr
 Contiene valori che descrivono i metadati di un parametro di metodo.  
@@ -42,25 +42,25 @@ typedef enum CorParamAttr {
 } CorParamAttr;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
 |Membro|Descrizione|  
 |------------|-----------------|  
 |`pdIn`|Specifica che il parametro viene passato alla chiamata al metodo.|  
 |`pdOut`|Specifica che il parametro viene passato dal metodo restituito.|  
-|`pdOptional`|Specifica che il parametro è facoltativo.|  
+|`pdOptional`|Specifica che si tratta di un parametro opzionale.|  
 |`pdReservedMask`|Riservato per uso interno da parte del Common Language Runtime.|  
 |`pdHasDefault`|Specifica che il parametro ha un valore predefinito.|  
 |`pdHasFieldMarshal`|Specifica che il parametro dispone di informazioni di marshalling.|  
-|`pdUnused`|Non usato.|  
+|`pdUnused`|Non utilizzato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. h  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerazioni dei metadati](metadata-enumerations.md)

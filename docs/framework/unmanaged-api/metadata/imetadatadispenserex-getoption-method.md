@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7f794e5-8e25-4d65-850a-7c34fbfce87d
 topic_type:
 - apiref
-ms.openlocfilehash: 816e2f2dc7d4d00f74f67720ee45d7b3483e57fa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 832adacac4a6df9ccf21578538a1c557150f3ba1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177724"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008781"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>Metodo IMetaDataDispenserEx::GetOption
-Ottiene il valore dell'opzione specificata per l'ambito dei metadati corrente. L'opzione controlla la modalità di gestione delle chiamate all'ambito dei metadati corrente.  
+Ottiene il valore dell'opzione specificata per l'ambito dei metadati corrente. L'opzione consente di controllare il modo in cui vengono gestite le chiamate all'ambito dei metadati corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,13 +36,13 @@ HRESULT GetOption (
   
 ## <a name="parameters"></a>Parametri  
  `optionId`  
- [in] Puntatore a un GUID che specifica l'opzione da recuperare. Vedere la sezione Osservazioni per un elenco dei GUID supportati.  
+ in Puntatore a un GUID che specifica l'opzione da recuperare. Vedere la sezione Osservazioni per un elenco di GUID supportati.  
   
  `pValue`  
- [fuori] Valore dell'opzione restituita. Il tipo di questo valore sarà una variante del tipo di opzione specificata.  
+ out Valore dell'opzione restituita. Il tipo di questo valore sarà una variante del tipo dell'opzione specificata.  
   
-## <a name="remarks"></a>Osservazioni  
- Nell'elenco seguente vengono illustrati i GUID supportati per questo metodo. Per le descrizioni, vedere il metodo [IMetaDataDispenserEx::SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) . Se `optionId` non è presente nell'elenco, `E_INVALIDARG`questo metodo restituisce HRESULT , che indica un parametro non corretto.  
+## <a name="remarks"></a>Commenti  
+ Nell'elenco seguente sono illustrati i GUID supportati per questo metodo. Per le descrizioni, vedere il metodo [IMetaDataDispenserEx:: SetOption](imetadatadispenserex-setoption-method.md) . Se `optionId` non è presente nell'elenco, questo metodo restituisce HRESULT `E_INVALIDARG` , che indica un parametro errato.  
   
 - MetaDataCheckDuplicatesFor  
   
@@ -54,20 +54,20 @@ HRESULT GetOption (
   
 - MetaDataErrorIfEmitOutOfOrder  
   
-- MetaDataGenerateTCEAdapter  
+- MetaDataGenerateTCEAdapters  
   
-- MetaDataLinkerOpzioni  
+- MetaDataLinkerOptions  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforma:** Vedere [requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [Interfaccia IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [Interfaccia IMetaDataDispenserEx](imetadatadispenserex-interface.md)
+- [Interfaccia IMetaDataDispenser](imetadatadispenser-interface.md)

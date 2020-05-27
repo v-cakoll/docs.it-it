@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70a32bf3-9051-4f96-ae87-11356d06a073
 topic_type:
 - apiref
-ms.openlocfilehash: 6ad6bbb8a4c69f575bbeba3a297c46e049a97325
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb381a872cbeb787da0c6920f2cdeef434fb33ea
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176045"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008092"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>Metodo IMetaDataAssemblyEmit::SetAssemblyRefProps
 Modifica la struttura dei metadati `AssemblyRef` specificata.  
@@ -42,41 +42,41 @@ HRESULT SetAssemblyRefProps (
   
 ## <a name="parameters"></a>Parametri  
  `ar`  
- [in] Token di metadati `AssemblyRef` che specifica la struttura dei metadati da modificare.  
+ in Token di metadati che specifica la `AssemblyRef` struttura dei metadati da modificare.  
   
  `pbPublicKeyOrToken`  
- [in] Chiave pubblica dell'editore dell'assembly a cui si fa riferimento.  
+ in Chiave pubblica del server di pubblicazione dell'assembly a cui si fa riferimento.  
   
  `cbPublicKeyOrToken`  
- [in] Dimensione in byte `pbPublicKeyOrToken`di .  
+ in Dimensioni in byte di `pbPublicKeyOrToken` .  
   
  `szName`  
- [in] Nome di testo leggibile dell'assembly.  
+ in Nome di testo leggibile dell'assembly.  
   
  `pMetaData`  
- [in] Puntatore a un'istanza assemblyMETADATA che contiene le informazioni sulla versione, sulla piattaforma e sulle impostazioni locali per l'assembly.  
+ in Puntatore a un'istanza di ASSEMBLYMETADATA che contiene le informazioni relative alla versione, alla piattaforma e alle impostazioni locali per l'assembly.  
   
  `pbHashValue`  
- [in] Puntatore ai dati hash associati all'assembly.  
+ in Puntatore ai dati hash associati all'assembly.  
   
  `cbHashValue`  
- [in] Dimensione in byte `pbHashValue`di .  
+ in Dimensioni in byte di `pbHashValue` .  
   
  `dwAssemblyRefFlags`  
- [in] Combinazione bit per bit di [assemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) valori che specificano gli attributi dell'assembly di riferimento.  
+ in Combinazione bit per bit di valori [AssemblyRefFlags](assemblyrefflags-enumeration.md) che specificano gli attributi dell'assembly a cui si fa riferimento.  
   
-## <a name="remarks"></a>Osservazioni  
- Per creare `AssemblyRef` una struttura dei metadati, utilizzare il metodo [IMetaDataAssemblyEmit::DefineAssemblyRef.](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)  
+## <a name="remarks"></a>Commenti  
+ Per creare una `AssemblyRef` struttura di metadati, usare il metodo [IMetaDataAssemblyEmit::D efineassemblyref](imetadataassemblyemit-defineassemblyref-method.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [Interfaccia IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md)

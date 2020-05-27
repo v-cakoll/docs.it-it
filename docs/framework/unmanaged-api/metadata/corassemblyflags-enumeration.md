@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb8db3b6-d81d-49fc-b74c-dbc908a9eab9
 topic_type:
 - apiref
-ms.openlocfilehash: fda890cee5f513ea8cf7e82e710f5451a860c49f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b1a83f07f03ddb17d5c306453cf838101a77ed65
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443916"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007936"
 ---
 # <a name="corassemblyflags-enumeration"></a>Enumerazione CorAssemblyFlags
 Contiene valori che descrivono i metadati applicati alla compilazione di un assembly.  
@@ -53,7 +53,7 @@ typedef enum CorAssemblyFlags {
 } CorAssemblyFlags;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
 |Membro|Descrizione|  
 |------------|-----------------|  
@@ -64,25 +64,25 @@ typedef enum CorAssemblyFlags {
 |`afPA_IA64`|Indica che l'architettura del processore è Itanium (PE32 +).|  
 |`afPA_AMD64`|Indica che l'architettura del processore è AMD x64 (PE32 +).|  
 |`afPA_ARM`|Indica che l'architettura del processore è ARM (PE32).|  
-|`afPA_NoPlatform`|Indica che l'assembly è un assembly di riferimento. ovvero si applica a qualsiasi architettura, ma non può essere eseguita su qualsiasi architettura. Pertanto, il flag corrisponde a `afPA_Mask`.|  
-|`afPA_Specified`|Indica che i flag di architettura del processore devono essere propagati al record `AssemblyRef`.|  
+|`afPA_NoPlatform`|Indica che l'assembly è un assembly di riferimento. ovvero si applica a qualsiasi architettura, ma non può essere eseguita su qualsiasi architettura. Il flag è quindi uguale a `afPA_Mask` .|  
+|`afPA_Specified`|Indica che i flag di architettura del processore devono essere propagati al `AssemblyRef` record.|  
 |`afPA_Mask`|Maschera che descrive l'architettura del processore.|  
 |`afPA_FullMask`|Specifica che è inclusa la descrizione dell'architettura del processore.|  
 |`afPA_Shift`|Indica un conteggio dei turni nei flag di architettura del processore da e verso l'indice.|  
-|`afEnableJITcompileTracking`|Indica il valore corrispondente dalla <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> del <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afDisableJITcompileOptimizer`|Indica il valore corrispondente dalla <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> del <xref:System.Diagnostics.DebuggableAttribute>.|  
+|`afEnableJITcompileTracking`|Indica il valore corrispondente da <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> dell'oggetto <xref:System.Diagnostics.DebuggableAttribute> .|  
+|`afDisableJITcompileOptimizer`|Indica il valore corrispondente da <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> dell'oggetto <xref:System.Diagnostics.DebuggableAttribute> .|  
 |`afRetargetable`|Indica che l'assembly può essere ridestinato in fase di esecuzione a un assembly di un server di pubblicazione diverso.|  
 |`afContentType_Mask`|Maschera che descrive il tipo di contenuto.|  
 |`afContentType_Default`|Indica il tipo di contenuto predefinito.|  
 |`afContentType_WindowsRuntime`|Indica il tipo di contenuto Windows Runtime.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. h  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerazioni dei metadati](metadata-enumerations.md)

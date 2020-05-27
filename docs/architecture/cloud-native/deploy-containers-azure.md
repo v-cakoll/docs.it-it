@@ -82,7 +82,7 @@ Come per la maggior parte delle risorse in Azure, è possibile creare un cluster
 - Sottoscrizione di Azure
 - Resource group
 - Nome del cluster Kubernetes
-- Area
+- Region
 - Versione di Kubernetes
 - Prefisso nome DNS
 - Dimensioni nodo
@@ -91,7 +91,7 @@ Come per la maggior parte delle risorse in Azure, è possibile creare un cluster
 Queste informazioni sono sufficienti per iniziare. Come parte del processo di creazione nella portale di Azure, è anche possibile configurare le opzioni per le seguenti funzionalità del cluster:
 
 - Scalabilità
-- Authentication
+- Autenticazione
 - Rete
 - Monitoraggio
 - Tag

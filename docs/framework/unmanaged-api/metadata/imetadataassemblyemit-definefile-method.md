@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-ms.openlocfilehash: cabd6a47e5d6fc2a4cea87b16d349d9c778b3507
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 61d81c94e3a9c092b5d45791962635c761e8da8a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176058"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008144"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>Metodo IMetaDataAssemblyEmit::DefineFile
 Crea una struttura dei metadati `File` che contiene i metadati per l'assembly a cui fa riferimento questo assembly e restituisce il token di metadati associato.  
@@ -39,32 +39,32 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>Parametri  
  `szName`  
- [in] Nome del file da utilizzare.  
+ in Nome del file da utilizzare.  
   
  `pbHashValue`  
- [in] Puntatore ai dati hash associati all'assembly.  
+ in Puntatore ai dati hash associati all'assembly.  
   
  `cbHashValue`  
- [in] Dimensione in byte `pbHashValue`di .  
+ in Dimensioni in byte di `pbHashValue` .  
   
  `dwFileFlags`  
- [in] Combinazione bit per `FileFlags` bit di valori che specificano le impostazioni delle proprietà.  
+ in Combinazione bit per bit di `FileFlags` valori che specificano le impostazioni delle proprietà.  
   
  `pmdf`  
- [fuori] Puntatore al token `File` restituito.  
+ out Puntatore al `File` token restituito.  
   
-## <a name="remarks"></a>Osservazioni  
- È `File` necessario definire una struttura di metadati per ogni file che faceva parte di questo assembly al momento della compilazione dell'assembly, escluso il file che contiene i metadati.  
+## <a name="remarks"></a>Commenti  
+ È `File` necessario definire una struttura di metadati per ogni file che faceva parte di questo assembly nel momento in cui l'assembly è stato compilato, escluso il file contenente i metadati.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforma:** Vedere [requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [Interfaccia IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-ms.openlocfilehash: dae4a36537eeac58ffb17ebc1b78d935ec807cd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78c192f10f629a0c1316ae7af7fc774819f4de8f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175980"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007481"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>Metodo IMetaDataAssemblyImport::GetFileProps
 Ottiene le proprietà del file con la firma dei metadati specificata.  
@@ -41,35 +41,35 @@ HRESULT GetFileProps (
   
 ## <a name="parameters"></a>Parametri  
  `mdf`  
- [in] Token `mdFile` di metadati che rappresenta il file per il quale ottenere le proprietà.  
+ in `mdFile`Token di metadati che rappresenta il file per il quale ottenere le proprietà.  
   
  `szName`  
- [fuori] Nome semplice del file.  
+ out Nome semplice del file.  
   
  `cchName`  
- [in] La dimensione, in caratteri `szName`ampi, di .  
+ in Dimensione, in caratteri wide, di `szName` .  
   
  `pchName`  
- [fuori] Il numero di caratteri wide `szName`restituiti effettivamente in .  
+ out Numero di caratteri wide effettivamente restituiti in `szName` .  
   
  `ppbHashValue`  
- [fuori] Puntatore al valore hash. Questo è l'hash, utilizzando l'algoritmo SHA-1, del file.  
+ out Puntatore al valore hash. Si tratta dell'hash, usando l'algoritmo SHA-1, del file.  
   
  `pcbHashValue`  
- [fuori] Numero di caratteri wide nel valore hash restituito.  
+ out Numero di caratteri wide nel valore hash restituito.  
   
  `pdwFileFlags`  
- [fuori] Puntatore ai flag che descrivono i metadati applicati a un file. Il valore flags è una combinazione di uno o più [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) valori.  
+ out Puntatore ai flag che descrivono i metadati applicati a un file. Il valore dei flag è una combinazione di uno o più valori [CorFileFlags](corfileflags-enumeration.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforma:** Vedere [requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [Interfaccia IMetaDataAssemblyImport](imetadataassemblyimport-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: 51741aa3a6d965c1e9743081628d8ad62e8fb04e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1836f26af99f91ab1765107573f6b067edd5e95
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176201"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007923"
 ---
 # <a name="corattributetargets-enumeration"></a>Enumerazione CorAttributeTargets
 Specifica gli elementi dell'applicazione ai quali è valido applicare un attributo.  
@@ -58,12 +58,12 @@ typedef enum CorAttributeTargets
 } CorAttributeTargets;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
 |Membro|Descrizione|  
 |------------|-----------------|  
 |`catAssembly`|Attributo applicabile a un assembly.|  
-|`catModule`|L'attributo può essere applicato a un modulo eseguibile portabile (con estensione dll o exe).|  
+|`catModule`|L'attributo può essere applicato a un modulo eseguibile (con estensione dll o exe) portatile.|  
 |`catClass`|Attributo applicabile a una classe.|  
 |`catStruct`|Attributo applicabile a una struttura, ovvero a un tipo valore.|  
 |`catEnum`|Attributo applicabile a un'enumerazione.|  
@@ -79,18 +79,18 @@ typedef enum CorAttributeTargets
 |`catAll`|Attributo applicabile a tutti gli elementi dell'applicazione.|  
 |`catClassMembers`|L'attributo può essere applicato a un membro di una classe.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I `CorAttributeTargets` valori di enumerazione possono essere combinati con un'operazione OR bit per bit per ottenere la combinazione preferita.  
   
- L'enumerazione `CorAttributeTargets` <xref:System.AttributeTargets?displayProperty=nameWithType> gestita è parallela.  
+ `CorAttributeTargets`Parallels l'enumerazione gestita <xref:System.AttributeTargets?displayProperty=nameWithType> .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** CorHdr.h  
+ **Intestazione:** CorHdr. h  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerazioni dei metadati](metadata-enumerations.md)

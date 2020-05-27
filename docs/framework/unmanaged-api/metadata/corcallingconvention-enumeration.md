@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 69156fbf-7219-43bf-b4b8-b13f1a2fcb86
 topic_type:
 - apiref
-ms.openlocfilehash: 9d4690cb6adedc77717e577d409cb52b18b1b5ca
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 310319e8fefe80017c58706e2beaee5eb1e78422
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443829"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007906"
 ---
 # <a name="corcallingconvention-enumeration"></a>Enumerazione CorCallingConvention
 Contiene valori che descrivono i tipi di convenzioni per le chiamate effettuate in codice gestito.  
@@ -62,17 +62,17 @@ typedef enum CorCallingConvention
 |`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Indica una chiamata PInvoke a 64 bit a un metodo che accetta un numero variabile di parametri.|  
 |`IMAGE_CEE_CS_CALLCONV_MAX`|Descrive un valore a 4 bit non valido.|  
 |`IMAGE_CEE_CS_CALLCONV_MASK`|Indica che la convenzione di chiamata è descritta dai quattro bit inferiori.|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Indica che il bit superiore descrive un parametro di `this`.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indica che un parametro di `this` viene descritto in modo esplicito nella firma.|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Indica che il bit superiore descrive un `this` parametro.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indica che un `this` parametro viene descritto in modo esplicito nella firma.|  
 |`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indica una firma del metodo generico con un numero esplicito di argomenti di tipo. Questo precede un numero di parametri normali.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. h  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerazioni dei metadati](metadata-enumerations.md)

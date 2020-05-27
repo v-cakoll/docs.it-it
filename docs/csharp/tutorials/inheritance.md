@@ -4,12 +4,12 @@ description: Informazioni su come usare l'ereditarietà nelle applicazioni e nel
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 78833110db0e4f0382e5c0c6de7c6c8be9a16c8d
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: 8e24ad3e93dcd11f39ae979a3acda4c4ada13dc5
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391149"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007728"
 ---
 # <a name="inheritance-in-c-and-net"></a>Ereditarietà in C# e .NET
 
@@ -17,7 +17,7 @@ Questa esercitazione presenta l'ereditarietà in C#. L'ereditarietà è una cara
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-In questa esercitazione si presuppone che sia stato installato .NET Core SDK. Visita la pagina dei download di [.NET Core](https://dotnet.microsoft.com/download) per scaricarlo. È necessario anche un editor di codice. In questa esercitazione viene usato [Visual Studio Code](https://code.visualstudio.com), ma è possibile usare qualsiasi editor di codice desiderato.
+In questa esercitazione si presuppone che sia stato installato il .NET Core SDK. Visitare la pagina di [download di .NET Core](https://dotnet.microsoft.com/download) per scaricarlo. È necessario anche un editor di codice. In questa esercitazione viene usato [Visual Studio Code](https://code.visualstudio.com), ma è possibile usare qualsiasi editor di codice desiderato.
 
 ## <a name="running-the-examples"></a>Esecuzione degli esempi
 
@@ -58,9 +58,9 @@ Tutti gli altri membri di una classe di base vengono ereditati dalle classi deri
 
 - I membri [pubblici](../language-reference/keywords/public.md) sono visibili nelle classi derivate e fanno parte dell'interfaccia pubblica della classe derivata. I membri pubblici ereditati possono essere chiamati come se fossero definiti nella classe derivata. Nell'esempio seguente la classe `A` definisce un metodo denominato `Method1` e la classe `B` eredita dalla classe `A`. Nell'esempio viene quindi chiamato `Method1` come se fosse un metodo di istanza in `B`.
 
-[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
+  [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-Le classi derivate possono anche eseguire l'*override* dei membri ereditati fornendo un'implementazione alternativa. Per poter eseguire l'override di un membro, il membro nella classe di base deve essere contrassegnato con la parola chiave [virtual](../language-reference/keywords/virtual.md). Per impostazione predefinita, i membri della classe di base non sono contrassegnati come `virtual` e non possono essere sottoposti a override. Se si prova a eseguire l'override di un membro non virtuale, come in questo esempio, viene generato l'errore del compilatore CS0506: "\<member>: impossibile eseguire l'override del membro ereditato \<member> perché non è contrassegnato come virtual, abstract o override.
+Le classi derivate possono anche eseguire l'*override* dei membri ereditati fornendo un'implementazione alternativa. Per poter eseguire l'override di un membro, il membro nella classe di base deve essere contrassegnato con la parola chiave [virtual](../language-reference/keywords/virtual.md). Per impostazione predefinita, i membri della classe di base non sono contrassegnati come `virtual` e non possono essere sottoposti a override. Se si prova a eseguire l'override di un membro non virtuale, viene generato l'errore del compilatore CS0506: "\<member> non può eseguire l'override del membro ereditato \<member> perché non è contrassegnato come virtual, abstract o override".
 
 ```csharp
 public class A
@@ -165,7 +165,7 @@ In questo caso è opportuno non fare affidamento sull'ereditarietà per rapprese
 
 ## <a name="designing-the-base-class-and-derived-classes"></a>Progettazione della classe di base e delle classi derivate
 
-Si esaminerà ora il processo di progettazione della classe di base e delle relative classi derivate. In questa sezione verrà definita una `Publication`classe base, , che rappresenta una pubblicazione di qualsiasi tipo, ad esempio un libro, una rivista, un giornale, un giornale, un articolo e così via. Verrà inoltre definita `Book` una classe che `Publication`deriva da . L'esempio può essere facilmente esteso alla definizione di altre classi derivate, ad esempio `Magazine`, `Journal`, `Newspaper` e `Article`.
+Si esaminerà ora il processo di progettazione della classe di base e delle relative classi derivate. In questa sezione si definirà una classe di base, `Publication` , che rappresenta una pubblicazione di qualsiasi tipo, ad esempio un libro, una rivista, un giornale, un journal, un articolo e così via. Si definirà anche una `Book` classe che deriva da `Publication` . L'esempio può essere facilmente esteso alla definizione di altre classi derivate, ad esempio `Magazine`, `Journal`, `Newspaper` e `Article`.
 
 ### <a name="the-base-publication-class"></a>Classe di base Publication
 
@@ -181,7 +181,7 @@ Per progettare la classe `Publication`, è necessario prendere alcune decisioni 
 
 - Fino a che punto estendere la gerarchia di classi. È necessario decidere se si vuole sviluppare una gerarchia di tre o più classi, anziché semplicemente una classe di base e una o più classi derivate. `Publication` può ad esempio essere una classe di base di `Periodical`, che a sua volta è una classe di base di `Magazine`, `Journal` e `Newspaper`.
 
-  Per questo esempio si userà la piccola gerarchia di una classe `Publication` e di una singola classe derivata `Book`. L'esempio può essere facilmente esteso alla creazione di una serie di classi aggiuntive che derivano da `Publication`, ad esempio `Magazine` e `Article`.
+  Per questo esempio si userà la piccola gerarchia di una classe `Publication` e di una singola classe derivata `Book`. È possibile estendere facilmente l'esempio per creare una serie di classi aggiuntive che derivano da `Publication` , ad esempio `Magazine` e `Article` .
 
 - Se è opportuno creare un'istanza della classe di base. In caso contrario, è necessario applicare alla classe la parola chiave [abstract](../language-reference/keywords/abstract.md). Altrimenti è possibile creare un'istanza della classe `Publication` chiamando il relativo costruttore di classe. Se si prova a creare un'istanza di una classe contrassegnata con la parola chiave `abstract` da una chiamata diretta al costruttore della classe, il compilatore C# genera l'errore CS0144, "Non è possibile creare un'istanza della classe o dell'interfaccia astratta". Se si prova a creare un'istanza della classe usando la reflection, il metodo di reflection genera un'eccezione <xref:System.MemberAccessException>.
 
@@ -191,9 +191,9 @@ Per progettare la classe `Publication`, è necessario prendere alcune decisioni 
 
 - Se le classi derivate devono ereditare l'implementazione della classe di base di un membro specifico, o se possono eseguire l'override dell'implementazione della classe di base, o ancora se devono fornire un'implementazione. La parola chiave [abstract](../language-reference/keywords/abstract.md) si usa per forzare le classi derivate a fornire un'implementazione. Usare la parola chiave [virtual](../language-reference/keywords/virtual.md) per consentire alle classi derivate di eseguire l'override di un metodo della classe di base. Per impostazione predefinita, *non* è possibile eseguire l'override dei metodi definiti nella classe di base.
 
- La classe `Publication` non ha metodi `abstract`, ma la classe stessa è `abstract`.
+  La classe `Publication` non ha metodi `abstract`, ma la classe stessa è `abstract`.
 
-- Se una classe derivata rappresenta la classe finale nella gerarchia di ereditarietà e non può essere usata come classe di base per altre classi derivate. Per impostazione predefinita, qualsiasi classe può essere usata come classe di base. È possibile applicare la parola chiave [sealed](../language-reference/keywords/sealed.md) per indicare che una classe non può essere usata come classe di base per altre classi. Il tentativo di derivazione da una classe sealed genera l'errore del compilatore CS0509, "non può derivare dal tipo sealed \<typeName>".
+- Se una classe derivata rappresenta la classe finale nella gerarchia di ereditarietà e non può essere usata come classe di base per altre classi derivate. Per impostazione predefinita, qualsiasi classe può essere usata come classe di base. È possibile applicare la parola chiave [sealed](../language-reference/keywords/sealed.md) per indicare che una classe non può essere usata come classe di base per altre classi. Se si prova a stabilire una relazione di derivazione da una classe sealed, viene generato l'errore del compilatore CS0509, "non può derivare dal tipo sealed \<typeName>".
 
   Per esempio, contrassegnare la classe derivata come `sealed`.
 

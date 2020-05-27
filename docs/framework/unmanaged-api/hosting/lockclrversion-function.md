@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1318ee37-c43b-40eb-bbe8-88fc46453d74
 topic_type:
 - apiref
-ms.openlocfilehash: 216852f8f051440b2814619b843a1f25013e4042
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 09bcebfdcfea3d5728d404cdb6b5fb170a5432c3
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133768"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008495"
 ---
 # <a name="lockclrversion-function"></a>Funzione LockClrVersion
 Consente all'host di determinare quale versione di Common Language Runtime (CLR) verrà utilizzata all'interno del processo prima di inizializzare in modo esplicito CLR.  
@@ -55,8 +55,8 @@ HRESULT LockClrVersion (
 |S_OK|Metodo completato correttamente.|  
 |E_INVALIDARG|Uno o più argomenti sono null.|  
   
-## <a name="remarks"></a>Note  
- L'host chiama `LockClrVersion` prima di inizializzare CLR. `LockClrVersion` accetta tre parametri, che sono tutti callback di tipo [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md). Questo tipo è definito nel modo seguente.  
+## <a name="remarks"></a>Commenti  
+ L'host chiama `LockClrVersion` prima di inizializzare CLR. `LockClrVersion`accetta tre parametri, che sono tutti callback di tipo [FLockClrVersionCallback](flockclrversioncallback-function-pointer.md). Questo tipo è definito nel modo seguente.  
   
 ```cpp  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
@@ -64,33 +64,33 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
  Durante l'inizializzazione del runtime si verificano i passaggi seguenti:  
   
-1. L'host chiama [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) o una delle altre funzioni di inizializzazione del runtime. In alternativa, l'host potrebbe inizializzare il runtime utilizzando l'attivazione di oggetti COM.  
+1. L'host chiama [CorBindToRuntimeEx](corbindtoruntimeex-function.md) o una delle altre funzioni di inizializzazione del runtime. In alternativa, l'host potrebbe inizializzare il runtime utilizzando l'attivazione di oggetti COM.  
   
-2. Il runtime chiama la funzione specificata dal parametro `hostCallback`.  
+2. Il runtime chiama la funzione specificata dal `hostCallback` parametro.  
   
 3. La funzione specificata da `hostCallback` esegue quindi la sequenza di chiamate seguente:  
   
-    - Funzione specificata dal parametro `pBeginHostSetup`.  
+    - Funzione specificata dal `pBeginHostSetup` parametro.  
   
-    - `CorBindToRuntimeEx` o un'altra funzione di inizializzazione del runtime.  
+    - `CorBindToRuntimeEx`(o un'altra funzione di inizializzazione del Runtime).  
   
-    - [ICLRRuntimeHost:: SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
+    - [ICLRRuntimeHost:: SetHostControl](iclrruntimehost-sethostcontrol-method.md).  
   
-    - [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
+    - [ICLRRuntimeHost:: Start](iclrruntimehost-start-method.md).  
   
-    - Funzione specificata dal parametro `pEndHostSetup`.  
+    - Funzione specificata dal `pEndHostSetup` parametro.  
   
- Tutte le chiamate da `pBeginHostSetup` a `pEndHostSetup` devono essere eseguite su un singolo thread o Fiber, con lo stesso stack logico. Questo thread può essere diverso dal thread sul quale viene chiamato `hostCallback`.  
+ Tutte le chiamate da `pBeginHostSetup` a `pEndHostSetup` devono essere eseguite su un singolo thread o Fiber, con lo stesso stack logico. Questo thread può essere diverso dal thread su cui `hostCallback` viene chiamato il metodo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funzioni di hosting CLR deprecate](deprecated-clr-hosting-functions.md)

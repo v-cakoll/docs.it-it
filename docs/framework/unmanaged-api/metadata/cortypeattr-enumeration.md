@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bede0ec-5fdf-42a2-b5b7-bee64056acb6
 topic_type:
 - apiref
-ms.openlocfilehash: b1586184c91619994ba0dfc9d5dcc277c10f99cf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b6936081ca3dbadb4f802a6856fafb53f6cef3fa
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436454"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008963"
 ---
 # <a name="cortypeattr-enumeration"></a>Enumerazione CorTypeAttr
 Contiene valori che indicano i metadati del tipo.  
@@ -73,7 +73,7 @@ typedef enum CorTypeAttr {
 } CorTypeAttr;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
 |Membro|Descrizione|  
 |------------|-----------------|  
@@ -103,7 +103,7 @@ typedef enum CorTypeAttr {
 |`tdAnsiClass`|Specifica che questo tipo interpreta un LPTSTR come ANSI.|  
 |`tdUnicodeClass`|Specifica che questo tipo interpreta un LPTSTR come Unicode.|  
 |`tdAutoClass`|Specifica che questo tipo interpreta automaticamente un LPTSTR.|  
-|`tdCustomFormatClass`|Specifica che il tipo ha una codifica non standard, come specificato da `CustomFormatMask`.|  
+|`tdCustomFormatClass`|Specifica che il tipo ha una codifica non standard, come specificato da `CustomFormatMask` .|  
 |`tdCustomFormatMask`|Usare questa maschera per ottenere informazioni di codifica non standard per l'interoperabilità nativa. Il significato dei valori di questi due bit non è specificato.|  
 |`tdBeforeFieldInit`|Specifica che il tipo deve essere inizializzato prima del primo tentativo di accesso a un campo statico.|  
 |`tdForwarder`|Specifica che il tipo viene esportato e un server d'avanzamento del tipo.|  
@@ -112,12 +112,12 @@ typedef enum CorTypeAttr {
 |`tdHasSecurity`|Specifica che il tipo è associato alla sicurezza.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. h  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerazioni dei metadati](metadata-enumerations.md)

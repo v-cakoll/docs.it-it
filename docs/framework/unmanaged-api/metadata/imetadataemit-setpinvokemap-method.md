@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6bfd574-1da3-4ba7-82f2-46ca5efcbaba
 topic_type:
 - apiref
-ms.openlocfilehash: 4c68754bc44fe035fd8e7143c52895928beae395
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d34c7a2992a2779b96ec87f1a0175d8fcbce34a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175590"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007793"
 ---
 # <a name="imetadataemitsetpinvokemap-method"></a>Metodo IMetaDataEmit::SetPinvokeMap
-Imposta o modifica le funzionalità della firma PInvoke di un metodo, come definito da una precedente chiamata a [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).  
+Imposta o modifica le funzionalità della firma PInvoke di un metodo, come definito da una chiamata precedente a [IMetaDataEmit::D efinepinvokemap](imetadataemit-definepinvokemap-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,27 +38,27 @@ HRESULT SetPinvokeMap (
   
 ## <a name="parameters"></a>Parametri  
  `tk`  
- [in] Oggetto `mdToken` a cui si applicano le informazioni di mapping.  
+ in Oggetto `mdToken` a cui si applicano le informazioni di mapping.  
   
  `dwMappingFlags`  
- [in] Flag utilizzati da PInvoke per eseguire il mapping. Si tratta di `CorPinvokeMap` una maschera di bit di valori.  
+ in Flag utilizzati da PInvoke per eseguire il mapping. Si tratta di una maschera di maschera di `CorPinvokeMap` valori.  
   
  `szImportName`  
- [in] Nome dell'esportazione di destinazione nella DLL nativa.  
+ in Nome dell'esportazione di destinazione nella DLL nativa.  
   
  `mrImportDLL`  
- [in] Token `mdModuleRef` per la DLL non gestita di destinazione.  
+ in `mdModuleRef`Token per la dll non gestita di destinazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
+ **Libreria:** Usato come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interfaccia IMetaDataEmit](imetadataemit-interface.md)
+- [Interfaccia IMetaDataEmit2](imetadataemit2-interface.md)

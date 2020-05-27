@@ -1,5 +1,5 @@
 ---
-title: CorLocalRefPreservation Enumeration
+title: Enumerazione CorLocalRefPreservation
 ms.date: 03/30/2017
 api_name:
 - CorLocalRefPreservation
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 44757163-1228-4213-a4c4-d4de503cc75d
 topic_type:
 - apiref
-ms.openlocfilehash: 706ea37101f9f961e92d8cef2cf508c1dd0d56c1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 42cb4e76bb77aebcee3b28035635a877513cdc04
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450238"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008989"
 ---
-# <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation Enumeration
+# <a name="corlocalrefpreservation-enumeration"></a>Enumerazione CorLocalRefPreservation
 Contiene valori di flag per il trattamento dei riferimenti locali.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -35,7 +35,7 @@ typedef enum CorLocalRefPreservation
 } CorLocalRefPreservation;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
 |Membro|Descrizione|  
 |------------|-----------------|  
@@ -44,12 +44,12 @@ typedef enum CorLocalRefPreservation
 |`MDPreserveLocalMemberRef`|Conserva i riferimenti ai membri locali.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. h  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerazioni dei metadati](metadata-enumerations.md)

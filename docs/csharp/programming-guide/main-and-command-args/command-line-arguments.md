@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: d6775263e6f1afb227aa263b01d60f5181da74f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c203716d9bb8298c934a999a496793c294949ddb
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093510"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007754"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argomenti della riga di comando (Guida per programmatori C#)
 
@@ -20,11 +20,14 @@ ms.locfileid: "77093510"
 [!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]
 
 > [!NOTE]
-> Per abilitare gli argomenti `Main` della riga di comando nel metodo in `Main` un'applicazione Windows Form, è necessario modificare manualmente la firma di in *program.cs*. Il codice generato da Progettazione Windows Form crea un `Main` senza un parametro di input. È anche possibile usare <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> o <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> per accedere agli argomenti della riga di comando da qualsiasi punto in un'applicazione console o Windows.
+> Per abilitare gli argomenti della riga di comando nel `Main` metodo in una Windows Forms Application, è necessario modificare manualmente la firma di `Main` in *Program.cs*. Il codice generato da Progettazione Windows Form crea un `Main` senza un parametro di input. È anche possibile usare <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> o <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> per accedere agli argomenti della riga di comando da qualsiasi punto in un'applicazione console o Windows.
 
 Il parametro del metodo `Main` è una matrice <xref:System.String> che rappresenta gli argomenti della riga di comando. In genere si determina se gli argomenti esistono eseguendo il test della proprietà `Length`, ad esempio:
 
 [!code-csharp[csProgGuideMain#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#4)]
+
+> [!TIP]
+> La `args` matrice non può essere null. Quindi, è sicuro accedere alla `Length` proprietà senza il controllo null.
 
 È anche possibile convertire gli argomenti stringa in tipi numerici con la classe <xref:System.Convert> o il metodo `Parse`. Ad esempio, l'istruzione seguente converte `string` in un numero `long` con il metodo <xref:System.Int64.Parse%2A>:
 
@@ -62,7 +65,7 @@ Per compilare ed eseguire l'applicazione al prompt dei comandi, seguire questa p
   
      `csc Factorial.cs`  
   
-     Se l'applicazione non contiene errori di compilazione, viene creato un file eseguibile denominato *Factorial.exe.If* your application has no compilation errors, an executable file that's named Factorial.exe is created.
+     Se l'applicazione non presenta errori di compilazione, viene creato un file eseguibile denominato *fattoriale. exe* .
   
 4. Immettere il comando seguente per calcolare il fattoriale di 3:
   
@@ -77,7 +80,7 @@ Per compilare ed eseguire l'applicazione al prompt dei comandi, seguire questa p
 
 - <xref:System.Environment?displayProperty=nameWithType>
 - [Guida per programmatori C#](../index.md)
-- [Main() e argomenti della riga di comando](index.md)
+- [Main () e argomenti della riga di comando](index.md)
 - [Come visualizzare gli argomenti della riga di comando](how-to-display-command-line-arguments.md)
 - [Valori restituiti da Main()](main-return-values.md)
 - [Classi](../classes-and-structs/classes.md)

@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 752e49b4-987c-4c28-a118-1a0c1ed510c5
 topic_type:
 - apiref
-ms.openlocfilehash: 56ae7b7cf3b577bfe41ebd0bdd98e0da68047b44
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8bd0292ddf22453f8892ed8bddd10c2144877097
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176240"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008515"
 ---
 # <a name="loadstringrc-function"></a>Funzione LoadStringRC
 Converte un valore HRESULT in un messaggio di errore utilizzando le impostazioni cultura predefinite del thread corrente.  
   
- Questa funzione è stata deprecata in .NET Framework 4.  
+ Questa funzione è stata deprecata nel .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,35 +42,35 @@ HRESULT LoadStringRC (
  [in] Un HRESULT.  
   
  `szBuffer`  
- [fuori] Buffer che contiene il messaggio di errore al completamento.  
+ out Un buffer che contiene il messaggio di errore al completamento dell'operazione.  
   
  `iMax`  
- [in] Dimensione del buffer dei messaggi di errore.  
+ in Dimensioni del buffer dei messaggi di errore.  
   
  `bQuiet`  
- [in] Ignorato.  
+ in Ignorato.  
   
 ## <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce i codici di errore COM (Component Object Model) standard, come definito in WinError.h, oltre ai valori seguenti.  
+ Questo metodo restituisce i codici di errore standard Component Object Model (COM), come definito in WinError. h, oltre ai valori seguenti.  
   
 |Codice restituito|Descrizione|  
 |-----------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
-|E_INVALIDARG|`szBuffer`è null `iMax` o è zero (0).|  
+|E_INVALIDARG|`szBuffer`è null o `iMax` è zero (0).|  
   
-## <a name="remarks"></a>Osservazioni  
- Se il metodo non `szBuffer` viene completato correttamente, contiene una stringa vuota.  
+## <a name="remarks"></a>Commenti  
+ Se il metodo non viene completato correttamente, `szBuffer` contiene una stringa vuota.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll e Mscorwks.dll. Utilizzare MSCorEE.dll anziché Mscorwks.dll per assicurarsi che sia destinata alla versione corretta di .NET Framework.  
+ **Libreria:** MSCorEE. dll e mscorwks. dll. Utilizzare MSCorEE. dll invece di mscorwks. dll per assicurarsi di avere come destinazione la versione corretta del .NET Framework.  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzione LoadStringRCEx](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)
-- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funzione LoadStringRCEx](loadstringrcex-function.md)
+- [Funzioni di hosting CLR deprecate](deprecated-clr-hosting-functions.md)

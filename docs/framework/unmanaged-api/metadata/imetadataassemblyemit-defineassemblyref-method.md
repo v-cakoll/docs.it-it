@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b284b18-0084-4b3a-912a-5ebe9f29c88b
 topic_type:
 - apiref
-ms.openlocfilehash: c88b7a401a19b1bd0e02edab7ef7bbee1372199e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 612463bca18c23fac0b086adde2d208a0fbc5ae5
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432087"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008170"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>Metodo IMetaDataAssemblyEmit::DefineAssemblyRef
 Crea una struttura `AssemblyRef` che contiene i metadati per l'assembly a cui fa riferimento questo assembly e restituisce il token di metadati associato.  
@@ -42,10 +42,10 @@ HRESULT DefineAssemblyRef (
   
 ## <a name="parameters"></a>Parametri  
  `pbPublicKeyOrToken`  
- in Chiave pubblica del server di pubblicazione dell'assembly a cui si fa riferimento. La funzione helper [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) può essere usata per ottenere l'hash della chiave pubblica da passare come parametro.  
+ in Chiave pubblica del server di pubblicazione dell'assembly a cui si fa riferimento. La funzione helper [StrongNameTokenFromAssembly](../strong-naming/strongnametokenfromassembly-function.md) può essere usata per ottenere l'hash della chiave pubblica da passare come parametro.  
   
  `cbPublicKeyOrToken`  
- in Dimensioni in byte del `pbPublicKeyOrToken`.  
+ in Dimensioni in byte di `pbPublicKeyOrToken` .  
   
  `szName`  
  in Nome di testo leggibile dell'assembly. Questo valore non deve superare i 1024 caratteri.  
@@ -57,28 +57,28 @@ HRESULT DefineAssemblyRef (
  in Dati hash associati all'assembly a cui si fa riferimento. Facoltativa.  
   
  `cbHashValue`  
- in Dimensioni in byte del `pbHashValue`.  
+ in Dimensioni in byte di `pbHashValue` .  
   
  `dwAssemblyRefFlags`  
- in Combinazione bit per bit di valori [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) che influenzano il comportamento del motore di esecuzione.  
+ in Combinazione bit per bit di valori [CorAssemblyFlags](corassemblyflags-enumeration.md) che influenzano il comportamento del motore di esecuzione.  
   
  `pmdar`  
- out Puntatore all'oggetto restituito `AssemblyRef` token di metadati.  
+ out Puntatore al `AssemblyRef` token di metadati restituito.  
   
-## <a name="remarks"></a>Note  
- È necessario definire una `AssemblyRef` struttura dei metadati per ogni assembly a cui fa riferimento questo assembly.  
+## <a name="remarks"></a>Commenti  
+ `AssemblyRef`È necessario definire una struttura di metadati per ogni assembly a cui fa riferimento questo assembly.  
   
  In fase di esecuzione, i dettagli di un assembly a cui viene fatto riferimento vengono passati al resolver dell'assembly, con l'indicazione che rappresentano le informazioni "come compilate". Il resolver dell'assembly applica quindi i criteri.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
  **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [Interfaccia IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md)

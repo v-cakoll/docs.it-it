@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e5912ed8-e4ce-438b-8ea3-d9e4c288d109
 topic_type:
 - apiref
-ms.openlocfilehash: f00fe5bce2f808265add228406dfaa2ccc267545
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 514488c6e0d2e89de0d8ee483def485ec9f3ef25
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176006"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009106"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>Metodo IMetaDataAssemblyImport::EnumExportedTypes
-Enumera i tipi esportati a cui viene fatto riferimento nel manifesto dell'assembly nell'ambito dei metadati corrente.  
+Enumera i tipi esportati a cui si fa riferimento nel manifesto dell'assembly nell'ambito dei metadati corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,33 +38,33 @@ HRESULT EnumExportedTypes (
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] Puntatore all'enumeratore. Deve essere un valore `EnumExportedTypes` null quando il metodo viene chiamato per la prima volta.  
+ [in, out] Puntatore all'enumeratore. Deve essere un valore null quando il `EnumExportedTypes` metodo viene chiamato per la prima volta.  
   
  `rExportedTypes`  
- [fuori] Enumerazione `mdExportedType` dei token di metadati.  
+ out Enumerazione dei `mdExportedType` token di metadati.  
   
  `cMax`  
- [in] Numero massimo `mdExportedType` di token che possono `rExportedTypes` essere inseriti nella matrice.  
+ in Numero massimo di `mdExportedType` token che è possibile inserire nella `rExportedTypes` matrice.  
   
  `pcTokens`  
- [fuori] Il numero `mdExportedType` di token `rExportedTypes`effettivamente inseriti in .  
+ out Numero di `mdExportedType` token effettivamente inseriti in `rExportedTypes` .  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumExportedTypes`restituito con successo.|  
-|`S_FALSE`|Non sono presenti token da enumerare. In questo `pcTokens` caso, è impostato su zero.|  
+|`S_OK`|`EnumExportedTypes`la restituzione è riuscita.|  
+|`S_FALSE`|Nessun token da enumerare. In questo caso, `pcTokens` è impostato su zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforma:** Vedere [requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [Interfaccia IMetaDataAssemblyImport](imetadataassemblyimport-interface.md)
