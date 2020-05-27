@@ -2,16 +2,16 @@
 title: Comando dotnet add package
 description: Il comando 'dotnet add package' offre un'opzione utile per aggiungere un riferimento al pacchetto NuGet in un progetto.
 ms.date: 02/14/2020
-ms.openlocfilehash: 1d57aed59ccd45417c88f9b6a2f9dd768fda9b58
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: bc79fe8adf5f775ddce62f3877a8de945c6a18ab
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102853"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840897"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
-**Questo articolo si applica a:** ✔️ .NET Core 2.x SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
@@ -28,7 +28,7 @@ dotnet add [<PROJECT>] package <PACKAGE_NAME>
 dotnet add package -h|--help
 ```
 
-## <a name="description"></a>Descrizione
+## <a name="description"></a>Description
 
 Il comando `dotnet add package` offre un'opzione utile per aggiungere riferimenti al pacchetto in un file di progetto. Dopo l'esecuzione del comando, viene eseguito un controllo di compatibilità per verificare che il pacchetto sia compatibile con i framework del progetto. Se il controllo ha esito positivo, al file di progetto viene aggiunto un elemento `<PackageReference>` e viene eseguito [dotnet restore](dotnet-restore.md).
 
@@ -91,7 +91,7 @@ Il file *ToDo.csproj* contiene ora un elemento [`<PackageReference>`](/nuget/con
 
 - **`-s|--source <SOURCE>`**
 
-  L'origine del pacchetto NuGet da usare durante l'operazione di ripristino.
+  URI dell'origine del pacchetto NuGet da usare durante l'operazione di ripristino.
 
 - **`-v|--version <VERSION>`**
 

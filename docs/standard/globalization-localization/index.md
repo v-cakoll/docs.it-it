@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-ms.openlocfilehash: eae1c38c2383d13bfb4dab83f2fe9551970b39f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5c601d18d92d9b57781bc8a09f26f0bc3a9216a
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120879"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842010"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalizzazione e localizzazione di applicazioni .NET
 
@@ -50,6 +50,10 @@ Per altre informazioni, vedere la [documentazione sulla globalizzazione](/global
 
 Viene descritta la prima fase di creazione di un'applicazione internazionale, che include la progettazione e la codifica di un'applicazione indipendente dalla lingua e dalle impostazioni cultura.
 
+[Globalizzazione .NET e ICU](globalization-icu.md)
+
+Viene descritto in che modo la globalizzazione di .NET usa [i componenti internazionali per Unicode (ICU)](http://site.icu-project.org/home).
+
 [Revisione della localizzabilità](localizability-review.md)
 
 Viene descritta la seconda fase di creazione di un'applicazione localizzata, che include l'identificazione dei potenziali blocchi stradali per la localizzazione.
@@ -66,7 +70,7 @@ Viene descritto come usare metodi e classi di .NET definiti come dipendenti dall
 
 Vengono forniti alcuni suggerimenti per la globalizzazione, la localizzazione e lo sviluppo di applicazioni ASP.NET internazionali.
 
-## <a name="reference"></a>Informazioni di riferimento
+## <a name="reference"></a>Riferimento
 
 - Spazio dei nomi <xref:System.Globalization?displayProperty=nameWithType>
 
@@ -80,10 +84,10 @@ Vengono forniti alcuni suggerimenti per la globalizzazione, la localizzazione e 
 
    Contiene le classi che rappresentano le codifiche dei caratteri ASCII, ANSI, Unicode e altri tipi di codifiche.
 
-- [Resgen.exe (generatore di file di risorse)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
+- [Resgen. exe (Generatore di file di risorse)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
 
    Viene descritto l'utilizzo di Resgen.exe per convertire i file con estensione txt e resx (formato risorse basato su XML) in file binari con estensione resources di Common Language Runtime.
 
-- [Winres.exe (editor di risorse di Windows Form)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)
+- [Winres. exe (editor di risorse Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)
 
    Viene descritto l'uso di Winres.exe per localizzare i form di Windows Form.

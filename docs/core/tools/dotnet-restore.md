@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Informazioni sul ripristino delle dipendenze e degli strumenti specifici per il progetto tramite il comando dotnet-restore.
 ms.date: 02/27/2020
-ms.openlocfilehash: cc8f374468ba95baccf058ac0b0a0175672cdf01
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 29f81b09a01e689d3f6d86c16b1f134c9fe6b6a0
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158307"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840936"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -30,9 +30,9 @@ dotnet restore [<ROOT>] [--configfile <FILE>] [--disable-parallel]
 dotnet restore -h|--help
 ```
 
-## <a name="description"></a>Descrizione
+## <a name="description"></a>Description
 
-Il comando `dotnet restore` usa NuGet per ripristinare le dipendenze e gli strumenti specifici del progetto definiti nel file di progetto.  Nella maggior parte dei casi, non è necessario usare in modo `dotnet restore` esplicito il comando, poiché un ripristino NuGet viene eseguito in modo implicito se necessario quando si eseguono i comandi seguenti:
+Il comando `dotnet restore` usa NuGet per ripristinare le dipendenze e gli strumenti specifici del progetto definiti nel file di progetto.  Nella maggior parte dei casi, non è necessario usare in modo esplicito il `dotnet restore` comando, poiché un ripristino NuGet viene eseguito in modo implicito se necessario quando si eseguono i comandi seguenti:
 
 - [`dotnet new`](dotnet-new.md)
 - [`dotnet build`](dotnet-build.md)
@@ -42,14 +42,14 @@ Il comando `dotnet restore` usa NuGet per ripristinare le dipendenze e gli strum
 - [`dotnet publish`](dotnet-publish.md)
 - [`dotnet pack`](dotnet-pack.md)
 
-In alcuni casi potrebbe essere scomodo eseguire il ripristino NuGet implicito con questi comandi. È ad esempio necessario che alcuni sistemi automatizzati, come i sistemi di compilazione, chiamino `dotnet restore` in modo esplicito per controllare quando si verifica il ripristino in modo che possano controllare l'utilizzo della rete. Per evitare il ripristino NuGet implicito, è possibile usare `--no-restore` il flag con uno di questi comandi per disabilitare il ripristino implicito.
+In alcuni casi potrebbe essere scomodo eseguire il ripristino NuGet implicito con questi comandi. È ad esempio necessario che alcuni sistemi automatizzati, come i sistemi di compilazione, chiamino `dotnet restore` in modo esplicito per controllare quando si verifica il ripristino in modo che possano controllare l'utilizzo della rete. Per evitare il ripristino NuGet implicito, è possibile usare il `--no-restore` flag con uno di questi comandi per disabilitare il ripristino implicito.
 
 ### <a name="specify-feeds"></a>Specificare i feed
 
 Per ripristinare le dipendenze, NuGet necessita dei feed in cui si trovano i pacchetti. I feed vengono forniti in genere tramite il file di configurazione *nuget.config*. Quando viene installato il .NET Core SDK, viene fornito un file di configurazione predefinito. Per specificare feed aggiuntivi, effettuare una delle operazioni seguenti:
 
 - Creare il proprio file *NuGet. config* nella directory del progetto. Per altre informazioni, vedere [configurazioni di NuGet comuni](/nuget/consume-packages/configuring-nuget-behavior) e [differenze di NuGet. config](#nugetconfig-differences) più avanti in questo articolo.
-- Usare `dotnet nuget` i comandi come [`dotnet nuget add source`](dotnet-nuget-add-source.md).
+- Usare i `dotnet nuget` comandi come [`dotnet nuget add source`](dotnet-nuget-add-source.md) .
 
 È possibile eseguire l'override dei feed *NuGet. config* con l' `-s` opzione.
 
@@ -143,7 +143,7 @@ Esistono tre impostazioni specifiche che `dotnet restore` ignora:
 
 - **`-s|--source <SOURCE>`**
 
-  Specifica un'origine dei pacchetti NuGet da usare durante l'operazione di ripristino. Questa impostazione esegue l'override di tutte le origini specificate nei file *NuGet.config*. È possibile specificare più origini, selezionando questa opzione più volte.
+  Specifica l'URI dell'origine del pacchetto NuGet da usare durante l'operazione di ripristino. Questa impostazione esegue l'override di tutte le origini specificate nei file *NuGet.config*. È possibile specificare più origini, selezionando questa opzione più volte.
 
 - **`--use-lockfile`**
 
@@ -161,7 +161,7 @@ Esistono tre impostazioni specifiche che `dotnet restore` ignora:
   dotnet restore
   ```
 
-- Ripristinare le dipendenze e gli `app1` strumenti per il progetto trovato nel percorso specificato:
+- Ripristinare le dipendenze e gli strumenti per il `app1` progetto trovato nel percorso specificato:
 
   ```dotnetcli
   dotnet restore ~/projects/app1/app1.csproj

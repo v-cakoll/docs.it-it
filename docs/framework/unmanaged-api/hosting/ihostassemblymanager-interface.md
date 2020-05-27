@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dfec05bb-3cd7-4bd5-b396-a4f097c3a636
 topic_type:
 - apiref
-ms.openlocfilehash: d9feeaf5f85d6f84a13e74a893b82c97fdaf023c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8106dd70f6c4099b2246530622f0845f22a0c53f
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124513"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805046"
 ---
 # <a name="ihostassemblymanager-interface"></a>Interfaccia IHostAssemblyManager
 Fornisce metodi che consentono a un host di specificare set di assembly che devono essere caricati dal Common Language Runtime (CLR) o dall'host.  
@@ -28,26 +28,26 @@ Fornisce metodi che consentono a un host di specificare set di assembly che devo
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo GetAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getassemblystore-method.md)|Ottiene un puntatore a interfaccia a un [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md) che rappresenta l'elenco di assembly caricati dall'host.|  
-|[Metodo GetNonHostStoreAssemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)|Ottiene un puntatore a interfaccia a un [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) che rappresenta l'elenco di assembly che l'host prevede venga caricato da CLR.|  
+|[Metodo GetAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getassemblystore-method.md)|Ottiene un puntatore a interfaccia a un [IHostAssemblyStore](ihostassemblystore-interface.md) che rappresenta l'elenco di assembly caricati dall'host.|  
+|[Metodo GetNonHostStoreAssemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)|Ottiene un puntatore a interfaccia a un [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) che rappresenta l'elenco di assembly che l'host prevede venga caricato da CLR.|  
   
-## <a name="remarks"></a>Note  
- Non è necessario che l'host implementi `IHostAssemblyManager` o `IHostAssemblyStore`. Se l'host implementa `IHostAssemblyManager`, deve implementare anche `IHostAssemblyStore`.  
+## <a name="remarks"></a>Osservazioni  
+ L'host non deve implementare `IHostAssemblyManager` o `IHostAssemblyStore` . Se l'host implementa `IHostAssemblyManager` , deve implementare anche `IHostAssemblyStore` .  
   
- Il runtime esegue una query per un `IHostAssemblyManager` chiamando [IHostControl:: GetHostManager](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-gethostmanager-method.md) al momento dell'inizializzazione con una `IID` di IID_IHostAssemblyManager.  
+ Il runtime esegue una query per un oggetto `IHostAssemblyManager` chiamando [IHostControl:: GetHostManager](ihostcontrol-gethostmanager-method.md) al momento dell'inizializzazione con un oggetto `IID` di IID_IHostAssemblyManager.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [Interfaccia IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
-- [Interfaccia IHostControl](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
-- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfaccia ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)
+- [Interfaccia IHostAssemblyStore](ihostassemblystore-interface.md)
+- [Interfaccia IHostControl](ihostcontrol-interface.md)
+- [Interfacce di hosting](hosting-interfaces.md)

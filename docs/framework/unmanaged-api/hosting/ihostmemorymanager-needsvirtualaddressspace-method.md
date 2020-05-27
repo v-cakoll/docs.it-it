@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 71f0eab5-0170-46f8-9f88-1df5abdeb34a
 topic_type:
 - apiref
-ms.openlocfilehash: a3ae474a73f4c8e4b98c4b2bc5d04e55bcae6874
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bb13c7329c558aa92ec65237aa8a9963c82fe1dc
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128660"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804518"
 ---
 # <a name="ihostmemorymanagerneedsvirtualaddressspace-method"></a>Metodo IHostMemoryManager::NeedsVirtualAddressSpace
 Notifica all'host che il Common Language Runtime (CLR) tenterà di utilizzare la memoria specificata.  
@@ -41,20 +41,20 @@ HRESULT NeedsVirtualAddressSpace (
  `size`  
  in Dimensione, in byte, della memoria.  
   
-## <a name="remarks"></a>Note  
- Il metodo `NeedsVirtualAddressSpace` è un metodo di callback e deve essere implementato dal writer dell'applicazione host. Viene chiamato da CLR.  
+## <a name="remarks"></a>Osservazioni  
+ Il `NeedsVirtualAddressSpace` metodo è un metodo di callback e deve essere implementato dal writer dell'applicazione host. Viene chiamato da CLR.  
   
- Se l'host non desidera che CLR utilizzi la memoria specificata, può restituire un valore HRESULT E_OUTOFMEMORY.  
+ Se l'host non desidera che CLR utilizzi la memoria specificata, può restituire un E_OUTOFMEMORY HRESULT.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [Interfaccia IHostMemoryManager](ihostmemorymanager-interface.md)

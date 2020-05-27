@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8176d732-c25c-4520-811d-e3310f339947
 topic_type:
 - apiref
-ms.openlocfilehash: 22ec34c82d0f8e550dfc8941f2c048ebed6cf1d7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d76242eb8539f2e8dffbf39b7eaf595664bdce8e
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133031"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842023"
 ---
 # <a name="ihosttaskmanagergetstackguarantee-method"></a>Metodo IHostTaskManager::GetStackGuarantee
 Ottiene la quantità di spazio dello stack che è garantita come disponibile al termine di un'operazione dello stack, ma prima della chiusura di un processo.  
@@ -38,14 +38,14 @@ HRESULT GetStackGuarantee(
  out Puntatore al numero di byte disponibili.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [Interfaccia IHostTaskManager](ihosttaskmanager-interface.md)

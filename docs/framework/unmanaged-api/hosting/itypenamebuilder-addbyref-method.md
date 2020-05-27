@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3f1b6bc4-6efb-4b90-8be0-b1ba8d856ca0
 topic_type:
 - apiref
-ms.openlocfilehash: b9992ffc8e81356d96dd645faebd5a6d26a12ddd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5afc38cb4406117a7ea59b436e84f7dfbace3887
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124870"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842075"
 ---
 # <a name="itypenamebuilderaddbyref-method"></a>Metodo ITypeNameBuilder::AddByRef
 
@@ -34,14 +34,14 @@ HRESULT AddByRef ( );
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
 **Intestazione:** MSCorEE. h
 
 **Libreria:** Incluso come risorsa in MSCorEE. dll
 
-**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfacce di hosting](hosting-interfaces.md)

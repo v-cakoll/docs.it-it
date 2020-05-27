@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0a21ae28-54bc-4f6e-aaa6-960a22c5f530
 topic_type:
 - apiref
-ms.openlocfilehash: 1d10784ec1a464cf4c9e0c0c66f28984ab672303
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4d12d1dc09c4cc2bed688c750149979991b01461
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127968"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842124"
 ---
 # <a name="itypenamebuilderaddarray-method"></a>Metodo ITypeNameBuilder::AddArray
 Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.  
@@ -34,14 +34,14 @@ HRESULT AddArray (
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfacce di hosting](hosting-interfaces.md)

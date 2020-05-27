@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c89abf5b-1120-4437-8b57-4a99fb3ae7f9
 topic_type:
 - apiref
-ms.openlocfilehash: f7ae4e4cbb757edea242c57720baeb70ced5c428
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1dd5ed4c556a5a4d4425a9c0730cebf22ff1785b
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192063"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804616"
 ---
 # <a name="ihostmallocfree-method"></a>Metodo IHostMAlloc::Free
-Libera la memoria allocata tramite la funzione [Alloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md) .  
+Libera la memoria allocata tramite la funzione [Alloc](ihostmalloc-alloc-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +41,7 @@ HRESULT Free (
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`Free` ha restituito un esito positivo.|  
+|S_OK|`Free`la restituzione è riuscita.|  
 |HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
@@ -49,19 +49,19 @@ HRESULT Free (
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
 |HOST_E_INVALIDOPERATION|È stato effettuato un tentativo di liberare la memoria non allocata tramite l'host.|  
   
-## <a name="remarks"></a>Note  
- Se il `pMem` parametro fa riferimento a un'area di memoria non allocata tramite una chiamata a `Alloc`, l'host deve restituire HOST_E_INVALIDOPERATION.  
+## <a name="remarks"></a>Osservazioni  
+ Se il `pMem` parametro fa riferimento a un'area di memoria non allocata tramite una chiamata a `Alloc` , l'host deve restituire HOST_E_INVALIDOPERATION.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [Interfaccia IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
+- [Interfaccia IHostMemoryManager](ihostmemorymanager-interface.md)
+- [Interfaccia IHostMalloc](ihostmalloc-interface.md)

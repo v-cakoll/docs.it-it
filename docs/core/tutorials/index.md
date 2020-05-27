@@ -4,50 +4,56 @@ description: Seguire le esercitazioni per l'apprendimento di .NET Core per compi
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 84784787465bec43cc460d34ca84e4baa5a15d7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9fb87180bb001a7f54d93c6e95631562103c49e8
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77625934"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840923"
 ---
-# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Scopri .NET Core e gli strumenti di .NET Core SDK esplorando queste esercitazioni
+# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Scopri le esercitazioni su .NET Core e sugli strumenti di .NET Core SDK
 
 Le esercitazioni seguenti includono informazioni e istruzioni sull'uso di .NET Core.
 
-## <a name="create-applications-with-visual-studio"></a>Creare applicazioni con Visual StudioCreate applications with Visual Studio
+## <a name="use-visual-studio"></a>Usare Visual Studio
 
-- [Creare un'applicazione console Hello WorldCreate a Hello World console application](with-visual-studio.md)
-- [Eseguire il debug dell'applicazione Hello World](debugging-with-visual-studio.md)
-- [Pubblicare l'applicazione Hello World](publishing-with-visual-studio.md)
-- [Creare una libreria di classiBuild a class library](library-with-visual-studio.md)
-- [Testare una libreria di classiTest a class library](testing-library-with-visual-studio.md)
-- [Usare una libreria di classiConsume a class library](consuming-library-with-visual-studio.md)
-- [Database Cosmos di Azure: introduzione all'API SQL e a .NET CoreAzure Cosmos DB: Get started with the SQL API and .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [Creare un'app console](with-visual-studio.md)
+- [Creare un'app console F #](../../fsharp/get-started/get-started-visual-studio.md)
+- [Eseguire il debug di un'app](debugging-with-visual-studio.md)
+- [Pubblicare un'app](publishing-with-visual-studio.md)
+- [Creare una libreria di classi](library-with-visual-studio.md)
+- [Unit test di una libreria di classi](testing-library-with-visual-studio.md)
+- [Usare una libreria di classi](consuming-library-with-visual-studio.md)
+- [Installare e usare un pacchetto](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
+- [Creazione e pubblicazione di un pacchetto](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
 
-## <a name="build-applications-with-visual-studio-code"></a>Compilare applicazioni con Visual Studio CodeBuild applications with Visual Studio Code
+## <a name="use-visual-studio-code"></a>Usare Visual Studio Code
 
-- [Per iniziare a usare il codice di Visual Studio e C](with-visual-studio-code.md)
-- [Introduzione a .NET Core su macOS](using-on-macos.md)
+Scegliere queste esercitazioni se si desidera utilizzare Visual Studio Code o un altro editor di codice. Tutti usano l'interfaccia della riga di comando per le attività di sviluppo .NET Core, pertanto tutti possono essere usati con qualsiasi editor di codice.
 
-## <a name="build-applications-with-visual-studio-for-mac"></a>Creare applicazioni con Visual Studio per Mac
+- [Creare un'app console](with-visual-studio-code.md)
+- [Creare un'app console e pubblicarla](cli-create-console-app.md)
+- [Creare un'app console F #](../../fsharp/get-started/get-started-vscode.md)
+- [Creare una libreria e unit test it-macOS](using-on-macos.md)
+- [Installare e usare un pacchetto](/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli)
+- [Creazione e pubblicazione di un pacchetto](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
 
-- [Introduzione all'uso di .NET Core su macOS con Visual Studio per Mac](using-on-mac-vs.md)
-- [Creazione di una soluzione .NET Core completa in macOS con Visual Studio per Mac](using-on-mac-vs-full-solution.md)
+## <a name="use-visual-studio-for-mac"></a>Usare Visual Studio per Mac
 
-## <a name="build-applications-with-the-net-core-cli"></a>Creare applicazioni con l'interfaccia della riga di comando di .NET CoreBuild applications with the .NET Core CLI
+- [Creare un'app console](using-on-mac-vs.md)
+- [Creare una libreria e unit test](using-on-mac-vs-full-solution.md)
+- [Installare e usare un pacchetto](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
-- [Introduzione a .NET Core in Windows/Linux/macOS con l'interfaccia della riga di comando di .NET Core](cli-create-console-app.md)
-- [Organizzazione e test di progetti con l'interfaccia della riga di comando di .NET Core](testing-with-cli.md)
-- [Introduzione a F#](../../fsharp/get-started/get-started-command-line.md)
+## <a name="advanced-topics"></a>Argomenti avanzati
 
-## <a name="other"></a>Altri
-
-- [Testing unità in .NET Core usando il test dotnet](../testing/unit-testing-with-dotnet-test.md)
-- [Testing unità con MSTest e .NET Core](../testing/unit-testing-with-mstest.md)
-- [Sviluppo di librerie con strumenti multipiattaforma](libraries.md)
-- [Hosting di .NET Core da codice nativo](netcore-hosting.md)
+- [Come creare librerie](libraries.md)
+- [Eseguire unit test di un'app con xUnit](testing-with-cli.md)
+- [Unit test con C#/VB/F # con NUnit/xUnit/MSTest](../testing/index.md)
+- [unit test Live con Visual Studio](/visualstudio/test/live-unit-testing-start)
 - [Creare modelli per l'interfaccia della riga di comando](cli-templates-create-item-template.md)
-- [Creare e utilizzare strumenti per l'interfaccia della riga di comando](../tools/global-tools-how-to-create.md)
+- [Creare e usare gli strumenti per l'interfaccia della riga di comando](../tools/global-tools-how-to-create.md)
+- [Creare un'app con i plug-in](creating-app-with-plugin-support.md)
+
+## <a name="create-web-apps"></a>Creare app Web
 
 Per esercitazioni sullo sviluppo di applicazioni Web ASP.NET Core, vedere la [documentazione di ASP.NET Core](/aspnet/core/).
