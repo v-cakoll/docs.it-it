@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-ms.openlocfilehash: a4e9268d292004f447b30c82f1db4d0fe58404fe
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 25fb3278e576ebe4a538379918e868b2e5f87911
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937955"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007871"
 ---
 # <a name="corelementtype-enumeration"></a>Enumerazione CorElementType
 
-Specifica un Common Language Runtime <xref:System.Type>, un modificatore di tipo o informazioni su un tipo in una firma del tipo di metadati.
+Specifica un Common Language Runtime <xref:System.Type> , un modificatore di tipo o informazioni su un tipo in una firma del tipo di metadati.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -77,7 +77,7 @@ typedef enum CorElementType {
 
 ## <a name="members"></a>Membri
 
-|Member|Descrizione|
+|Membro|Descrizione|
 |------------|-----------------|
 |`ELEMENT_TYPE_END`|Per uso interno.|
 |`ELEMENT_TYPE_VOID`|Tipo void.|
@@ -116,36 +116,36 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_SENTINEL`|Modificatore di tipo che è una sentinella per un elenco di un numero variabile di parametri.|
 |`ELEMENT_TYPE_PINNED`|Per uso interno.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-I modificatori di tipo costituiscono la base per la rappresentazione di tipi più complessi. Un valore del modificatore di tipo `CorElementType` viene applicato al valore che lo segue immediatamente nella firma del tipo. Il valore che segue il valore del modificatore di tipo `CorElementType` può essere un valore di tipo semplice `CorElementType`, un token di metadati o un altro valore, come specificato nella tabella seguente.
+I modificatori di tipo costituiscono la base per la rappresentazione di tipi più complessi. Un `CorElementType` valore del modificatore di tipo viene applicato al valore che lo segue immediatamente nella firma del tipo. Il valore che segue il `CorElementType` valore del modificatore di tipo può essere un `CorElementType` valore di tipo semplice, un token di metadati o un altro valore, come specificato nella tabella seguente.
 
 > [!NOTE]
 > Tutti i numeri *(numero, numero*di *argomenti*, *token di metadati*, *rango*, *conteggio*e *limite*) vengono archiviati come numeri interi compressi. Per informazioni dettagliate, vedere l' [Common Language Infrastructure standard ECMA-335-(CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm) nel sito Web ECMA.
 
 |Modificatore di tipo|Formato|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<un valore `CorElementType` >|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<un valore `CorElementType` >|
-|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<un token di metadati `mdTypeDef` >|
-|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<un token di metadati `mdTypeDef` >|
-|`ELEMENT_TYPE_VAR`|Numero \<ELEMENT_TYPE_VAR >|
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<un valore `CorElementType` > \<Rank > \<count1 > \<bound1 >... \<countn > \<|
-|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<un token di metadati `mdTypeDef` > \<numero di argomenti > \<arg1 >... \<argN >|
-|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<firma completa per la funzione, inclusa la convenzione di chiamata >|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<un valore `CorElementType` >|
-|`ELEMENT_TYPE_MVAR`|Numero \<ELEMENT_TYPE_MVAR >|
-|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<un token di metadati `mdTypeRef` o `mdTypeDef` >|
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<un token di metadati `mdTypeRef` o `mdTypeDef` >|
+|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR\<a `CorElementType` value>|
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF\<a `CorElementType` value>|
+|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE\<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS\<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR\<number>|
+|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN>\<boundN>|
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<an `mdTypeDef` metadata token> \<argument Count> \<arg1> ...\<argN>|
+|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR\<complete signature for the function, including calling convention>|
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY\<a `CorElementType` value>|
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR\<number>|
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<a `mdTypeRef` or `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT\<a `mdTypeRef` or `mdTypeDef` metadata token>|
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
 **Intestazione:** CorHdr. h
 
-**Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerazioni dei metadati](metadata-enumerations.md)

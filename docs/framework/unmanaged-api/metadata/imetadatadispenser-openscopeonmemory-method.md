@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 14218249-bdec-48ae-b5fc-9f57f7ca8501
 topic_type:
 - apiref
-ms.openlocfilehash: 492c37540ad68b5b134520218eedc59013c68519
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 69e5e05012d2b44a76a986591ec990f66bf8ae20
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175928"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007325"
 ---
 # <a name="imetadatadispenseropenscopeonmemory-method"></a>Metodo IMetaDataDispenser::OpenScopeOnMemory
-Apre un'area di memoria che contiene metadati esistenti. In altri luogo, questo metodo apre un'area di memoria specificata in cui i dati esistenti vengono considerati come metadati.  
+Apre un'area di memoria contenente i metadati esistenti. Questo metodo apre un'area di memoria specificata in cui i dati esistenti vengono considerati come metadati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,45 +39,45 @@ HRESULT OpenScopeOnMemory (
   
 ## <a name="parameters"></a>Parametri  
  `pData`  
- [in] Puntatore che specifica l'indirizzo iniziale dell'area di memoria.  
+ in Puntatore che specifica l'indirizzo iniziale dell'area di memoria.  
   
  `cbData`  
- [in] Dimensione dell'area di memoria, in byte.  
+ in Dimensioni in byte dell'area di memoria.  
   
  `dwOpenFlags`  
- [in] Valore dell'enumerazione [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) per specificare la modalità (lettura, scrittura e così via) per l'apertura.  
+ in Valore dell'enumerazione [CorOpenFlags](coropenflags-enumeration.md) per specificare la modalità (lettura, scrittura e così via) per l'apertura.  
   
  `riid`  
- [in] IID dell'interfaccia di metadati desiderata da restituire; il chiamante utilizzerà l'interfaccia per importare (leggere) o generare (scrivere) metadati.  
+ in IID dell'interfaccia di metadati desiderata da restituire. il chiamante utilizzerà l'interfaccia per importare (leggere) o creare (scrivere) metadati.  
   
- Il valore `riid` di deve specificare una delle interfacce "import" o "emit". I valori validi sono IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 o IID_IMetaDataImport2.  
+ Il valore di `riid` deve specificare una delle interfacce "Import" o "Emit". I valori validi sono IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 o IID_IMetaDataImport2.  
   
  `ppIUnk`  
- [fuori] Puntatore all'interfaccia restituita.  
+ out Puntatore all'interfaccia restituita.  
   
-## <a name="remarks"></a>Osservazioni  
- La copia in memoria dei metadati può essere interrogata utilizzando metodi da una delle interfacce "import" o aggiunta all'utilizzo di metodi da una delle interfacce "emit".  
+## <a name="remarks"></a>Commenti  
+ La copia in memoria dei metadati può essere sottoposta a query usando i metodi di una delle interfacce di "importazione" oppure aggiunti a usando i metodi di una delle interfacce "Emit".  
   
- Il `OpenScopeOnMemory` metodo è simile al metodo [IMetaDataDispenser::OpenScope,](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) con la differenza che i metadati di interesse esistono già in memoria, anziché in un file su disco.  
+ Il `OpenScopeOnMemory` metodo è simile al metodo [IMetaDataDispenser:: OpenScope](imetadatadispenser-openscope-method.md) , ad eccezione del fatto che i metadati di interesse sono già presenti in memoria, anziché in un file su disco.  
   
- Se l'area di destinazione della memoria non contiene `OpenScopeOnMemory` metadati CLR (Common Language Runtime), il metodo avrà esito negativo.  
+ Se l'area di destinazione della memoria non contiene metadati di Common Language Runtime (CLR), il `OpenScopeOnMemory` metodo avrà esito negativo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforma:** Vedere [requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
-- [Interfaccia IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [Interfaccia IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataDispenser](imetadatadispenser-interface.md)
+- [Interfaccia IMetaDataDispenserEx](imetadatadispenserex-interface.md)
+- [Interfaccia IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md)
+- [Interfaccia IMetaDataAssemblyImport](imetadataassemblyimport-interface.md)
+- [Interfaccia IMetaDataEmit](imetadataemit-interface.md)
+- [Interfaccia IMetaDataEmit2](imetadataemit2-interface.md)
+- [Interfaccia IMetaDataImport](imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](imetadataimport2-interface.md)

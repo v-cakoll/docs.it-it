@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2267d39-69d1-4de1-bf37-f752cafacc71
 topic_type:
 - apiref
-ms.openlocfilehash: ba8da686d1834c81111828e9856525b96f575b93
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dbbfa77ee76770bcf1d662bc5ae179909eaf3b25
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443259"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008287"
 ---
 # <a name="iceegengetstringsection-method"></a>Metodo ICeeGen::GetStringSection
 Ottiene una rappresentazione di stringa della sezione di codice a cui fa riferimento l'handle specificato.  
@@ -40,14 +40,14 @@ HRESULT GetStringSection (
  [in, out] Handle per la sezione di codice.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
  **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [Interfaccia ICeeGen](iceegen-interface.md)

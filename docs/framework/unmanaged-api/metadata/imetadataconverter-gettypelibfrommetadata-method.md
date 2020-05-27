@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 90eab7b3-1fae-4af4-8bce-f7bc0e188a99
 topic_type:
 - apiref
-ms.openlocfilehash: ef573eb9a572c27e685289b2740a55e898be2093
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 79bd8901641ee587e94861c0aec85b812591ea48
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177637"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008417"
 ---
 # <a name="imetadataconvertergettypelibfrommetadata-method"></a>Metodo IMetaDataConverter::GetTypeLibFromMetaData
-Ottiene un puntatore a un'istanza `ITypeLib` che rappresenta la libreria dei tipi con i nomi di libreria e modulo specificati.  
+Ottiene un puntatore a un' `ITypeLib` istanza di che rappresenta la libreria dei tipi con la libreria e i nomi dei moduli specificati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,23 +37,23 @@ HRESULT GetTypeLibFromMetaData (
   
 ## <a name="parameters"></a>Parametri  
  `strModule`  
- [in] Nome del modulo della libreria dei tipi.  
+ in Nome del modulo della libreria dei tipi.  
   
  `strTlbName`  
- [in] Nome della libreria dei tipi.  
+ in Nome della libreria dei tipi.  
   
  `ppITL`  
- [fuori] Puntatore a una posizione che riceve `ITypeLib` l'indirizzo dell'istanza che rappresenta la libreria dei tipi.  
+ out Puntatore a una posizione che riceve l'indirizzo dell'istanza di `ITypeLib` che rappresenta la libreria dei tipi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforma:** Vedere [requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataConverter](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-interface.md)
+- [Interfaccia IMetaDataConverter](imetadataconverter-interface.md)

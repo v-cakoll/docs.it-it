@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 748f1ab2-fbcb-4f55-89ec-8d23d81ebc80
 topic_type:
 - apiref
-ms.openlocfilehash: a8dc09ee9f0f0fd79060bb86c599ab40a285153b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 038e2ec20e5fd01edf9835080e0f7a15ec862fd9
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448766"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008937"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>Enumerazione CorValidatorModuleType
 Specifica il tipo di un modulo.  
@@ -41,25 +41,25 @@ typedef enum
   
 ## <a name="members"></a>Membri  
   
-|Membro|description|  
+|Membro|Descrizione|  
 |------------|-----------------|  
 |`ValidatorModuleTypeInvalid`|Il modulo non è un tipo valido.|  
-|`ValidatorModuleTypeMin`|Valore minimo dell'enumerazione `CorValidatorModuleType`.|  
+|`ValidatorModuleTypeMin`|Valore minimo dell' `CorValidatorModuleType` enumerazione.|  
 |`ValidatorModuleTypePE`|Il modulo è un file eseguibile portabile (PE).|  
 |`ValidatorModuleTypeObj`|Il modulo è un file con estensione obj.|  
 |`ValidatorModuleTypeEnc`|Il modulo è una sessione del debugger di modifica e continuazione.|  
 |`ValidatorModuleTypeIncr`|Il modulo è un modulo che è stato compilato in modo incrementale.|  
-|`ValidatorModuleTypeMax`|Valore massimo dell'enumerazione `CorValidatorModuleType`.|  
+|`ValidatorModuleTypeMax`|Valore massimo dell' `CorValidatorModuleType` enumerazione.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
  **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerazioni dei metadati](metadata-enumerations.md)

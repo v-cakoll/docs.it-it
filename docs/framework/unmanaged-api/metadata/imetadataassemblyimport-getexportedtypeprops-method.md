@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 25ca7623-5a55-4f09-b44a-36b03d142278
 topic_type:
 - apiref
-ms.openlocfilehash: 15b58e01d4ce99f19f510c760819471b84380b45
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 944941c2356cae93ecc85f1714b4b29aefcb50ad
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177763"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008404"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>Metodo IMetaDataAssemblyImport::GetExportedTypeProps
 Ottiene il set di proprietà del tipo esportato con la firma dei metadati specificata.  
@@ -41,35 +41,35 @@ HRESULT GetExportedTypeProps (
   
 ## <a name="parameters"></a>Parametri  
  `mdct`  
- [in] Token `mdExportedType` di metadati che rappresenta il tipo esportato.  
+ in `mdExportedType`Token di metadati che rappresenta il tipo esportato.  
   
  `szName`  
- [fuori] Nome del tipo esportato.  
+ out Nome del tipo esportato.  
   
  `cchName`  
- [in] La dimensione, in caratteri `szName`larghi, di .  
+ in Dimensione, in caratteri wide, di `szName` .  
   
  `pchName`  
- [fuori] Il numero di caratteri di larghezza effettivamente restituiti in`szName`  
+ out Numero di caratteri wide effettivamente restituiti in`szName`  
   
  `ptkImplementation`  
- [fuori] Un `mdFile` `mdAssemblyRef`token `mdExportedType` , , o di metadati che contiene o consente l'accesso alle proprietà del tipo esportato.  
+ out `mdFile` `mdAssemblyRef` `mdExportedType` Token di metadati, o che contiene o consente l'accesso alle proprietà del tipo esportato.  
   
  `ptkTypeDef`  
- [fuori] Puntatore a `mdTypeDef` un token che rappresenta un tipo nel file.  
+ out Puntatore a un `mdTypeDef` token che rappresenta un tipo nel file.  
   
  `pdwExportedTypeFlags`  
- [fuori] Puntatore ai flag che descrivono i metadati applicati al tipo esportato. Il valore flags può essere uno o più [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) valori.  
+ out Puntatore ai flag che descrivono i metadati applicati al tipo esportato. Il valore dei flag può essere uno o più valori [CorTypeAttr](cortypeattr-enumeration.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [Interfaccia IMetaDataAssemblyImport](imetadataassemblyimport-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7cc22562-128c-440a-9147-55ff20f173d7
 topic_type:
 - apiref
-ms.openlocfilehash: ada126b41f1c634f7d8daa58480406ac26f92377
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7b15261d825c1bd5f217c4cecd82ed36a716d0e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177901"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008261"
 ---
 # <a name="iceegengetstring-method"></a>Metodo ICeeGen::GetString
-Ottiene la stringa archiviata in corrispondenza dell'indirizzo virtuale relativo specificato.  
+Ottiene la stringa archiviata nell'indirizzo virtuale relativo specificato.  
   
  Questo metodo è obsoleto e non deve essere utilizzato.  
   
@@ -38,20 +38,20 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>Parametri  
  `RVA`  
- [in] Indirizzo virtuale relativo della stringa da restituire.  
+ in Indirizzo virtuale relativo della stringa da restituire.  
   
  `lpString`  
- [fuori] Stringa restituita.  
+ out Stringa restituita.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [Interfaccia ICeeGen](iceegen-interface.md)

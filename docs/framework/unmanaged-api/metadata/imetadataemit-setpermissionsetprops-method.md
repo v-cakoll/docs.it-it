@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8eaee971-40bf-45e2-a3d8-6e57674213b6
 topic_type:
 - apiref
-ms.openlocfilehash: de4cfdf2a9353eebdebaf4df9e481d06d776ff04
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e6ee1f2f497ef30a5390e7afac55c54705248ed
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177494"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007806"
 ---
 # <a name="imetadataemitsetpermissionsetprops-method"></a>Metodo IMetaDataEmit::SetPermissionSetProps
-Imposta o aggiorna le funzionalità della firma dei metadati di un set di autorizzazioni definito da una precedente chiamata a [IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).  
+Imposta o aggiorna le funzionalità della firma dei metadati di un set di autorizzazioni definito da una chiamata precedente a [IMetaDataEmit::D efinepermissionset](imetadataemit-definepermissionset-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,30 +39,30 @@ HRESULT SetPermissionSetProps (
   
 ## <a name="parameters"></a>Parametri  
  `tk`  
- [in] Token di metadati che rappresenta l'oggetto da decorare.  
+ in Token di metadati che rappresenta l'oggetto da decorare.  
   
  `dwAction`  
- [in] Valore [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) che specifica il tipo di sicurezza dichiarativa da utilizzare.  
+ in Valore [CorDeclSecurity](cordeclsecurity-enumeration.md) che specifica il tipo di sicurezza dichiarativa da usare.  
   
  `pvPermission`  
- [in] BLOB di autorizzazione.  
+ in BLOB di autorizzazioni.  
   
  `cbPermission`  
- [in] Dimensione, in byte, `pvPermission`di .  
+ in Dimensione, in byte, di `pvPermission` .  
   
  `ppm`  
- [fuori] Token `mdPermission` di metadati che rappresenta le autorizzazioni aggiornate.  
+ out `mdPermission`Token di metadati che rappresenta le autorizzazioni aggiornate.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
+ **Libreria:** Usato come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interfaccia IMetaDataEmit](imetadataemit-interface.md)
+- [Interfaccia IMetaDataEmit2](imetadataemit2-interface.md)

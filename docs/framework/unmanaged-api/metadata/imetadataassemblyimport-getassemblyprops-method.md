@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0eaa4aa9-9441-444a-920c-e4b2a2db899e
 topic_type:
 - apiref
-ms.openlocfilehash: dfa900e2184a8c415d75f5702c572b14c4018749
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a90deaf3e9ddf326c6fca558cbb4681fc40e022d
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177791"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009054"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>Metodo IMetaDataAssemblyImport::GetAssemblyProps
 Ottiene il set di proprietà per l'assembly con la firma dei metadati specificata.  
@@ -43,41 +43,41 @@ HRESULT GetAssemblyProps (
   
 ## <a name="parameters"></a>Parametri  
  `mda`  
- [in]. Token `mdAssembly` di metadati che rappresenta l'assembly per il quale ottenere le proprietà.  
+ [in]. `mdAssembly`Token di metadati che rappresenta l'assembly per il quale ottenere le proprietà.  
   
  `ppbPublicKey`  
- [fuori] Puntatore alla chiave pubblica o al token di metadati.  
+ out Puntatore alla chiave pubblica o al token di metadati.  
   
  `pcbPublicKey`  
- [fuori] Numero di byte nella chiave pubblica restituita.  
+ out Numero di byte nella chiave pubblica restituita.  
   
  `pulHashAlgId`  
- [fuori] Puntatore all'algoritmo utilizzato per eseguire l'hashing dei file nell'assembly.  
+ out Puntatore all'algoritmo utilizzato per eseguire l'hashing dei file nell'assembly.  
   
  `szName`  
- [fuori] Nome semplice dell'assembly.  
+ out Nome semplice dell'assembly.  
   
  `cchName`  
- [in] La dimensione, in caratteri `szName`ampi, di .  
+ in Dimensione, in caratteri wide, di `szName` .  
   
  `pchName`  
- [fuori] Il numero di caratteri wide `szName`restituiti effettivamente in .  
+ out Numero di caratteri wide effettivamente restituiti in `szName` .  
   
  `pMetaData`  
- [fuori] Puntatore a una struttura ASSEMBLYMETADATA che contiene i metadati dell'assembly.  
+ out Puntatore a una struttura ASSEMBLYMETADATA che contiene i metadati dell'assembly.  
   
  `pdwAssemblyFlags`  
- [fuori] Flag che descrivono i metadati applicati a un assembly. Questo valore è una combinazione di uno o più [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) valori.  
+ out Flag che descrivono i metadati applicati a un assembly. Questo valore è una combinazione di uno o più valori [CorAssemblyFlags](corassemblyflags-enumeration.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [Interfaccia IMetaDataAssemblyImport](imetadataassemblyimport-interface.md)

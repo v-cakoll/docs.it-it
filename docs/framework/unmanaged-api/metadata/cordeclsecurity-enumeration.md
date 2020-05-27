@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 864f1267-d267-4696-8df7-1f83f8444d6f
 topic_type:
 - apiref
-ms.openlocfilehash: 98183ed02f8821b7c40852de2d040775d30f2518
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ffbc9a10ff48b3dfd59b95c0f6b9ecab80b6a49c
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443739"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007884"
 ---
 # <a name="cordeclsecurity-enumeration"></a>Enumerazione CorDeclSecurity
 Specifica le azioni relative alla sicurezza che possono essere eseguite con la sicurezza dichiarativa.  
@@ -56,7 +56,7 @@ typedef enum CorDeclSecurity {
   
 ## <a name="members"></a>Membri  
   
-|Membro|description|  
+|Membro|Descrizione|  
 |------------|-----------------|  
 |`dclActionMask`|Riservato.|  
 |`dclActionNil`|Riservato.|  
@@ -81,12 +81,12 @@ typedef enum CorDeclSecurity {
 |`dclMaximumValue`|Riservato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. h  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerazioni dei metadati](metadata-enumerations.md)

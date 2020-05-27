@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f0d721e2-b946-426d-8e20-9124bd04e4cb
 topic_type:
 - apiref
-ms.openlocfilehash: 70f76318f51047cb81262f744a6fbed5fe401692
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed8bafd67b5d55a5116111b7721fbdc31c52aca6
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177807"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009096"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>Metodo IMetaDataAssemblyImport::EnumFiles
-Enumera i file a cui viene fatto riferimento nel manifesto dell'assembly corrente.  
+Enumera i file a cui si fa riferimento nel manifesto dell'assembly corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,30 +41,30 @@ HRESULT EnumFiles (
  [in, out] Puntatore all'enumeratore. Deve essere un valore null per la prima chiamata di questo metodo.  
   
  `rFiles`  
- [fuori] Matrice utilizzata per `mdFile` archiviare i token di metadati.  
+ out Matrice utilizzata per archiviare i `mdFile` token dei metadati.  
   
  `cMax`  
- [in] Numero massimo `mdFile` di token che possono `rFiles`essere inseriti in .  
+ in Numero massimo di `mdFile` token che possono essere inseriti in `rFiles` .  
   
  `pcTokens`  
- [fuori] Il numero `mdFile` di token `rFiles`effettivamente inseriti in .  
+ out Numero di `mdFile` token effettivamente inseriti in `rFiles` .  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFiles`restituito con successo.|  
-|`S_FALSE`|Non sono presenti token da enumerare. In questo `pcTokens` caso, è impostato su zero.|  
+|`S_OK`|`EnumFiles`la restituzione è riuscita.|  
+|`S_FALSE`|Nessun token da enumerare. In questo caso, `pcTokens` è impostato su zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [Interfaccia IMetaDataAssemblyImport](imetadataassemblyimport-interface.md)
