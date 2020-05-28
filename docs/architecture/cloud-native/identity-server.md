@@ -2,12 +2,12 @@
 title: IdentityServer per le app cloud native
 description: Architettura di app .NET cloud native per Azure | IdentityServer
 ms.date: 05/13/2020
-ms.openlocfilehash: 81cce30568becacda29f65f9506398790af321e0
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2128001f0d25b1edd795dd9676e0d76018c1fa3a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614032"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144370"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>IdentityServer per applicazioni native del cloud
 
@@ -29,7 +29,7 @@ In genere, le applicazioni devono supportare alcuni o tutti gli scenari seguenti
 
 In ognuno di questi scenari, la funzionalità esposta deve essere protetta da un uso non autorizzato. Come minimo, questa operazione richiede in genere l'autenticazione dell'utente o dell'entità che effettua una richiesta di una risorsa. Questa autenticazione può usare uno dei diversi protocolli comuni, ad esempio SAML2p, WS-Fed o OpenID Connect. La comunicazione con le API USA in genere il protocollo OAuth2 e il relativo supporto per i token di sicurezza. La separazione di queste problematiche cruciali in materia di sicurezza e dei relativi dettagli di implementazione dalle applicazioni stesse garantisce coerenza e miglioramento della sicurezza e della gestibilità. L'outsourcing di queste preoccupazioni a un prodotto dedicato, ad esempio IdentityServer, consente a ogni applicazione di risolvere questi problemi.
 
-IdentityServer fornisce il middleware eseguito all'interno di un'applicazione ASP.NET Core e aggiunge il supporto per OpenID Connect e OAuth2 (vedere le [specifiche supportate](http://docs.identityserver.io/en/latest/intro/specs.html)). Le organizzazioni creeranno una propria app ASP.NET Core usando il middleware IdentityServer per agire come servizio token di sicurezza per tutti i protocolli di sicurezza basati su token. Il middleware IdentityServer espone gli endpoint per supportare le funzionalità standard, tra cui:
+IdentityServer fornisce il middleware eseguito all'interno di un'applicazione ASP.NET Core e aggiunge il supporto per OpenID Connect e OAuth2 (vedere le [specifiche supportate](https://docs.identityserver.io/en/latest/intro/specs.html)). Le organizzazioni creeranno una propria app ASP.NET Core usando il middleware IdentityServer per agire come servizio token di sicurezza per tutti i protocolli di sicurezza basati su token. Il middleware IdentityServer espone gli endpoint per supportare le funzionalità standard, tra cui:
 
 - Autorizza (autenticazione dell'utente finale)
 - Token (richiedere un token a livello di codice)
@@ -95,13 +95,13 @@ IdentityServer ospita anche un sito demo pubblico che può essere usato per test
 
 ## <a name="javascript-clients"></a>Client JavaScript
 
-Molte applicazioni native del Cloud sfruttano le API lato server e le applicazioni a pagina singola rich client (Spa) sul front-end. IdentityServer distribuisce un [client JavaScript](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) ( `oidc-client.js` ) tramite NPM che può essere aggiunto alle Spa per consentire loro di usare IdentityServer per l'accesso, la disconnessione e l'autenticazione basata su token di API Web.
+Molte applicazioni native del Cloud sfruttano le API lato server e le applicazioni a pagina singola rich client (Spa) sul front-end. IdentityServer distribuisce un [client JavaScript](https://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) ( `oidc-client.js` ) tramite NPM che può essere aggiunto alle Spa per consentire loro di usare IdentityServer per l'accesso, la disconnessione e l'autenticazione basata su token di API Web.
 
 ## <a name="references"></a>Riferimenti
 
-- [Documentazione di IdentityServer](http://docs.identityserver.io/en/latest/)
+- [Documentazione di IdentityServer](https://docs.identityserver.io/en/latest/)
 - [Tipi di applicazioni](https://docs.microsoft.com/azure/active-directory/develop/app-types)
-- [Client OIDC JavaScript](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
+- [Client OIDC JavaScript](https://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]
 >[Precedente](azure-active-directory.md) 

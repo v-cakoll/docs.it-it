@@ -2,12 +2,12 @@
 title: Problemi e soluzioni per la gestione dei dati distribuiti
 description: Informazioni sulle problematiche e le soluzioni per la gestione dei dati distribuiti nell'area dei microservizi.
 ms.date: 09/20/2018
-ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b91879e879db293ed61bd5f3c49dc391b9d8f5a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "71834453"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144318"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problemi e soluzioni per la gestione dei dati distribuiti
 
@@ -35,7 +35,7 @@ Questo approccio consente non solo di risolvere il problema originale (come eseg
 
 Tenere presente che questo database centralizzato verrà usato solo per query e report che non richiedono dati in tempo reale. Gli aggiornamenti e le transazioni originali, da usare come fonte affidabile, devono essere presenti nei dati dei microservizi. Per la sincronizzazione dei dati, si può scegliere di usare la comunicazione basata su eventi (illustrata nelle sezioni successive) o altri strumenti di importazione/esportazione dell'infrastruttura di database. Se si usa la comunicazione basata su eventi, il processo di integrazione sarà simile alla procedura di propagazione dei dati descritto in precedenza per le tabelle di query CQRS.
 
-Se però la progettazione dell'applicazione implica l'aggregazione costante di informazioni di più microservizi per le query complesse, questo potrebbe essere un sintomo di una progettazione non appropriata, dal momento che un microservizio deve essere il più possibile isolato da altri microservizi. Sono esclusi i report/analitici che devono sempre utilizzare database centrali con dati a freddo. Questo problema spesso potrebbe essere un motivo per unire i microservizi. È necessario bilanciare l'autonomia dell'evoluzione e la distribuzione di ogni microservizio con dipendenze complesse, coesione e aggregazione dei dati.
+Se però la progettazione dell'applicazione implica l'aggregazione costante di informazioni di più microservizi per le query complesse, questo potrebbe essere un sintomo di una progettazione non appropriata, dal momento che un microservizio deve essere il più possibile isolato da altri microservizi. Questa operazione esclude i report e le analisi che devono sempre usare i database centrali con dati a freddo. Questo problema spesso potrebbe essere un motivo per unire i microservizi. È necessario bilanciare l'autonomia dell'evoluzione e la distribuzione di ogni microservizio con dipendenze complesse, coesione e aggregazione dei dati.
 
 ## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>Problema \#3: Come ottenere la coerenza tra più microservizi
 
@@ -47,7 +47,7 @@ In un'ipotetica versione monolitica di questa applicazione, quando il prezzo vie
 
 Tuttavia, in un'applicazione basata su microservizi le tabelle Product e Basket appartengono ai rispettivi microservizi. Nessun microservizio deve includere tabelle/risorse di archiviazione di proprietà di un altro microservizio nelle proprie transazioni e nemmeno nelle query dirette, come illustrato nella figura 4-9.
 
-![Diagramma che mostra che i dati del database dei microservizi non possono essere condivisi.](./media/distributed-data-management/indepentent-microservice-databases.png)
+![Diagramma che mostra che i dati del database di microservizi non possono essere condivisi.](./media/distributed-data-management/indepentent-microservice-databases.png)
 
 **Figura 4-9**. Un microservizio non può accedere direttamente a una tabella in un altro microservizio
 
@@ -89,24 +89,24 @@ Per altre informazioni sull'uso della comunicazione asincrona, vedere le sezioni
 - **Coerenza finale** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Primer di coerenza dei dati** \
+- **Introduzione alla coerenza dei dati** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Martin Fowler. CQRS (Command and Query Responsibility Segregation)** \
+- **Martin Fowler. CQRS (separazione di responsabilità per query e comandi)** \
   <https://martinfowler.com/bliki/CQRS.html>
 
 - **Vista materializzata** \
   <https://docs.microsoft.com/azure/architecture/patterns/materialized-view>
 
-- **Charles Row. ACID vs BASE: il pH in tcambio dell'elaborazione delle transazioni di database** \
+- **Riga Carlo. ACID rispetto a BASE: il pH di spostamento dell'elaborazione delle transazioni di database** \
   <https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/>
 
-- **Compensazione della transazione** \
+- **Transazione di compensazione** \
   <https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction>
 
-- **Udi Dahan. Composizione orientata al servizio** \
-  <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
+- **UDI. Composizione orientata ai servizi** \
+  <https://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 >[!div class="step-by-step"]
->[Successivo](logical-versus-physical-architecture.md)
->[precedente](identify-microservice-domain-model-boundaries.md)
+>[Precedente](logical-versus-physical-architecture.md) 
+> [Avanti](identify-microservice-domain-model-boundaries.md)

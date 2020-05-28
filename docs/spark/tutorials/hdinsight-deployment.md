@@ -4,18 +4,18 @@ description: Informazioni su come distribuire un'applicazione .NET per Apache Sp
 ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6b8dbe395a5db9631433a5821f5ef2b9ade556f6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: edb876921030f5034d03c821051457ca111855f8
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895688"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144760"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Esercitazione: distribuire un'applicazione .NET per Apache Spark in Azure HDInsight
 
 Questa esercitazione illustra come distribuire .NET per Apache Spark app nel cloud tramite un cluster Azure HDInsight. HDInsight semplifica la creazione e la configurazione di un cluster Spark in Azure poiché i cluster Spark in HDInsight sono compatibili con archiviazione di Azure e Azure Data Lake Storage.
 
-In questa esercitazione si apprenderà come:
+In questa esercitazione verranno illustrate le procedure per:
 
 > [!div class="checklist"]
 >
@@ -59,8 +59,8 @@ Prima di iniziare, eseguire le attività seguenti:
 
     |Proprietà  |Descrizione  |
     |---------|---------|
-    |Subscription  | Dall'elenco a discesa scegliere una delle sottoscrizioni di Azure attive. |
-    |Resource group | Specificare se si vuole creare un nuovo gruppo di risorse o usarne uno esistente. Un gruppo di risorse è un contenitore con risorse correlate per una soluzione Azure. |
+    |Sottoscrizione  | Dall'elenco a discesa scegliere una delle sottoscrizioni di Azure attive. |
+    |Gruppo di risorse | Specificare se si vuole creare un nuovo gruppo di risorse o usarne uno esistente. Un gruppo di risorse è un contenitore con risorse correlate per una soluzione Azure. |
     |Nome cluster | Assegnare un nome al cluster HDInsight Spark.|
     |Location   | Selezionare una posizione per il gruppo di risorse. Il modello usa questa posizione per la creazione del cluster e per l'archiviazione del cluster predefinita. |
     |Tipo di cluster| Selezionare **Spark** come tipo di cluster.|
@@ -69,7 +69,7 @@ Prima di iniziare, eseguire le attività seguenti:
     |Password di accesso al cluster| Immettere una password di accesso. |
     |Nome utente Secure Shell (SSH)| Immettere il nome utente SSH. Per impostazione predefinita, questo account condivide la stessa password dell'account *Nome utente dell'account di accesso del cluster*. |
 
-4. Selezionare **Avanti: archiviazione >>** per continuare con la pagina **archiviazione** . In **Archiviazione** specificare i valori seguenti:
+4. Selezionare **Avanti: Archiviazione >>** per passare alla pagina **Archiviazione**. In **Archiviazione** specificare i valori seguenti:
 
     |Proprietà  |Descrizione  |
     |---------|---------|
@@ -152,7 +152,7 @@ Quando il cluster è in esecuzione e i file sono stati caricati in Azure, si ese
    |---------|---------|
    | Tipo di script |Personalizzato|
    | Nome | Installare il ruolo di lavoro|
-   | URI script Bash |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> Per confermare questo URI, fare clic con il pulsante destro del mouse su install-worker.sh in Azure Storage Explorer e scegliere Proprietà. |
+   | URI script Bash |`https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh` </br> Per confermare questo URI, fare clic con il pulsante destro del mouse su install-worker.sh in Azure Storage Explorer e scegliere Proprietà. |
    | Tipo/i di nodo| Worker|
    | Parametri | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin
 

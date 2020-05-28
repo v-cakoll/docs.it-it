@@ -2,20 +2,20 @@
 title: 'Procedura: pubblicare metadati per un servizio usando un file di configurazione'
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 7ea0a2aa386f747b89f56f21d75a97e4409140a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 179ccf97ce4f5e2aa3e132db7e77c93259d5e4ac
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184877"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144942"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Procedura: pubblicare metadati per un servizio usando un file di configurazione
-Questo è uno dei due argomenti relativi alle procedure che illustrano la pubblicazione di metadati per un servizio Windows Communication Foundation (WCF). Esistono due modi per specificare come un servizio dovrebbe pubblicare metadati: usando un file di configurazione o il codice. In questo argomento viene illustrato come pubblicare metadati per un servizio usando un file di configurazione.  
+Questo è uno dei due argomenti sulle procedure che illustrano la pubblicazione di metadati per un servizio Windows Communication Foundation (WCF). Esistono due modi per specificare come un servizio dovrebbe pubblicare metadati: usando un file di configurazione o il codice. In questo argomento viene illustrato come pubblicare metadati per un servizio usando un file di configurazione.  
   
 > [!CAUTION]
-> In questo argomento viene illustrato come pubblicare metadati in modo non sicuro. Qualsiasi client può recuperare i metadati dal servizio. Se è necessario che il servizio pubblichi i metadati in modo sicuro, vedere [Endpoint dei metadati protetti personalizzato.](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)  
+> In questo argomento viene illustrato come pubblicare metadati in modo non sicuro. Qualsiasi client può recuperare i metadati dal servizio. Se è necessario che il servizio pubblichi metadati in modo sicuro, vedere [endpoint dei metadati protetti personalizzato](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
   
- Per ulteriori informazioni sulla pubblicazione di metadati nel codice, vedere [Procedura: pubblicare metadati per un servizio tramite codice](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). La pubblicazione di metadati consente ai client di recuperare i metadati usando una richiesta GET WS-Transfer o una richiesta HTTP/GET tramite la stringa di query `?wsdl`. Per assicurarsi che il codice funzioni, creare un servizio WCF di base. Per motivi di semplicità, nel codice seguente viene fornito un servizio indipendente di base.  
+ Per altre informazioni sulla pubblicazione di metadati nel codice, vedere [procedura: pubblicare metadati per un servizio usando il codice](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). La pubblicazione di metadati consente ai client di recuperare i metadati usando una richiesta GET WS-Transfer o una richiesta HTTP/GET tramite la stringa di query `?wsdl`. Per assicurarsi che il codice funzioni, creare un servizio WCF di base. Per motivi di semplicità, nel codice seguente viene fornito un servizio indipendente di base.  
   
 ```csharp  
 using System;  
@@ -158,7 +158,7 @@ namespace Metadata.Samples
   
 9. Compilare ed eseguire l'applicazione console.  
   
-10. Utilizzare Internet Explorer per passare all'indirizzohttp://localhost:8001/MetadataSample di base del servizio (in questo esempio) e verificare che la pubblicazione dei metadati sia attivata. Se così non fosse, all'inizio della pagina risultante verrà visualizzato il messaggio: "La pubblicazione dei metadati per il servizio è attualmente disabilitata".  
+10. Utilizzare Internet Explorer per passare all'indirizzo di base del servizio ( `http://localhost:8001/MetadataSample` in questo esempio) e verificare che la pubblicazione dei metadati sia attivata. Se così non fosse, all'inizio della pagina risultante verrà visualizzato il messaggio: "La pubblicazione dei metadati per il servizio è attualmente disabilitata".  
   
 ### <a name="to-use-default-endpoints"></a>Per usare endpoint predefiniti  
   
@@ -182,7 +182,7 @@ namespace Metadata.Samples
      Poiché il servizio ha <xref:System.ServiceModel.Description.ServiceMetadataBehavior> con `httpGetEnabled` impostato su `true`, per il servizio è abilitata la pubblicazione di metadati. Poiché, inoltre, non è stato aggiunto in modo esplicito alcun endpoint, il runtime aggiunge gli endpoint predefiniti. Per altre informazioni su endpoint, associazioni e comportamenti predefiniti, vedere [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) (Configurazione semplificata) e [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md) (Configurazione semplificata per servizi WCF).  
   
 ## <a name="example"></a>Esempio  
- Esempio di codice seguente viene illustrata l'implementazione di un servizio WCF di base e il file di configurazione che pubblica i metadati per il servizio.  
+ Nell'esempio di codice seguente viene illustrata l'implementazione di un servizio WCF di base e il file di configurazione che pubblica i metadati per il servizio.  
   
 ```csharp  
 using System;  
@@ -253,10 +253,10 @@ namespace Metadata.Samples
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
-- [Procedura: ospitare un servizio WCF in un'applicazione gestitaHow to: Host a WCF Service in a Managed Application](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Procedura: ospitare un servizio WCF in un'applicazione gestita](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [Servizio indipendente](../../../../docs/framework/wcf/samples/self-host.md)
 - [Panoramica dell'architettura dei metadati](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [Uso di metadati](../../../../docs/framework/wcf/feature-details/using-metadata.md)

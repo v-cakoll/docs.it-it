@@ -2,12 +2,12 @@
 title: Esempio di sicurezza di individuazione
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 44022ee756f189347aaec606427ecb3c4c5ffa95
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: c6ec9b7e13234b7dae03541eb09ccba98f4cc93a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728416"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144903"
 ---
 # <a name="discovery-security-sample"></a>Esempio di sicurezza di individuazione
 
@@ -38,7 +38,7 @@ La specifica Discovery non richiede che gli endpoint che partecipano al processo
 > [!NOTE]
 > Alla versione 2008 del protocollo Discovery è stato aggiunto `PrefixList`.  
   
- Per calcolare la firma, nell'esempio vengono determinati gli elementi della firma espansi. Viene creata una firma XML (`SignedInfo`) usando il prefisso dello spazio dei nomi `ds`, come richiesto dalla specifica WS-Discovery. Al corpo e a tutte le intestazioni presenti negli spazi dei nomi di individuazione e indirizzamento viene fatto riferimento nella firma, impedendone pertanto l'alterazione. Ogni elemento a cui viene fatto riferimento viene trasformato usando la canonizzazione esclusivahttp://www.w3.org/2001/10/xml-exc-c14n# () e quindi viene calcolato un valore digest SHA-1 (http://www.w3.org/2000/09/xmldsig#sha1 ). In base a tutti gli elementi a cui viene fatto riferimento e ai relativi valori di digest, il valore della firmahttp://www.w3.org/2000/09/xmldsig#rsa-sha1 viene calcolato usando l'algoritmo RSA ().  
+ Per calcolare la firma, nell'esempio vengono determinati gli elementi della firma espansi. Viene creata una firma XML (`SignedInfo`) usando il prefisso dello spazio dei nomi `ds`, come richiesto dalla specifica WS-Discovery. Al corpo e a tutte le intestazioni presenti negli spazi dei nomi di individuazione e indirizzamento viene fatto riferimento nella firma, impedendone pertanto l'alterazione. Ogni elemento a cui viene fatto riferimento viene trasformato usando la canonizzazione esclusiva ( <http://www.w3.org/2001/10/xml-exc-c14n#> ) e quindi viene calcolato un valore digest SHA-1 ( <http://www.w3.org/2000/09/xmldsig#sha1> ). In base a tutti gli elementi a cui viene fatto riferimento e ai relativi valori di digest, il valore della firma viene calcolato usando l'algoritmo RSA ( <http://www.w3.org/2000/09/xmldsig#rsa-sha1> ).  
   
  I messaggi vengono firmati con un certificato specificato dal client. Il percorso dell'archivio, il nome e il nome del soggetto del certificato devono essere specificati quando viene creato l'elemento di associazione. `KeyId` nella firma compressa rappresenta l'identificatore di chiave del token di firma e corrisponde all'identificatore di chiave del soggetto (SKI, Subject Key Identifier) del token di firma oppure (se l'identificatore SKI non esiste) a un hash SHA-1 della chiave pubblica del token di firma.  
   
@@ -72,6 +72,6 @@ La specifica Discovery non richiede che gli endpoint che partecipano al processo
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) ed [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  

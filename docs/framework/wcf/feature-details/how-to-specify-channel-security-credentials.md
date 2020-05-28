@@ -1,16 +1,16 @@
 ---
-title: 'Procedura: Specificare credenziali di sicurezza del canale'
+title: 'Procedura: specificare credenziali di sicurezza del canale'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: e5b2b56da1989b9a7110a1ad3eee814560942c89
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 72fdcd18fba2eabe8255f73acd240e12e57d56ea
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972440"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144708"
 ---
-# <a name="how-to-specify-channel-security-credentials"></a>Procedura: Specificare credenziali di sicurezza del canale
-Il moniker del servizio Windows Communication Foundation (WCF) consente alle applicazioni COM di chiamare i servizi WCF. Per la maggior parte dei servizi WCF è necessario che il client specifichi le credenziali per l'autenticazione e l'autorizzazione. Quando si chiama un servizio WCF da un client WCF, è possibile specificare queste credenziali nel codice gestito o in un file di configurazione dell'applicazione. Quando si chiama un servizio WCF da un'applicazione com, è possibile usare <xref:System.ServiceModel.ComIntegration.IChannelCredentials> l'interfaccia per specificare le credenziali. In questo argomento vengono illustrate varie modalità di specifica delle credenziali mediante l'interfaccia <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
+# <a name="how-to-specify-channel-security-credentials"></a>Procedura: specificare credenziali di sicurezza del canale
+Il moniker del servizio Windows Communication Foundation (WCF) consente alle applicazioni COM di chiamare i servizi WCF. Per la maggior parte dei servizi WCF è necessario che il client specifichi le credenziali per l'autenticazione e l'autorizzazione. Quando si chiama un servizio WCF da un client WCF, è possibile specificare queste credenziali nel codice gestito o in un file di configurazione dell'applicazione. Quando si chiama un servizio WCF da un'applicazione COM, è possibile usare l' <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfaccia per specificare le credenziali. In questo argomento vengono illustrate varie modalità di specifica delle credenziali mediante l'interfaccia <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
   
 > [!NOTE]
 > <xref:System.ServiceModel.ComIntegration.IChannelCredentials> è un'interfaccia basata su IDispatch nella quale non viene visualizzata la funzionalità IntelliSense nell'ambiente Visual Studio.  
@@ -23,11 +23,11 @@ Il moniker del servizio Windows Communication Foundation (WCF) consente alle app
   
 2. Aprire il progetto Message Security.  
   
-3. Aggiungere `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` alla definizione `ICalculator` dell'interfaccia.  
+3. Aggiungere `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` alla `ICalculator` definizione dell'interfaccia.  
   
 4. Aggiungere `bindingNamespace="http://Microsoft.ServiceModel.Samples"` al tag dell'endpoint nel file app. config per il servizio.  
   
-5. Compilare l'esempio di sicurezza dei messaggi ed eseguire Service.exe. Utilizzare Internet Explorer e passare all'URI del servizio (http://localhost:8000/ServiceModelSamples/Service) per verificare che il servizio funzioni correttamente.  
+5. Compilare l'esempio di sicurezza dei messaggi ed eseguire Service.exe. Utilizzare Internet Explorer e passare all'URI del servizio ( `http://localhost:8000/ServiceModelSamples/Service` ) per assicurarsi che il servizio sia funzionante.  
   
 6. Aprire Visual Basic 6.0 e creare un nuovo file standard con estensione exe. Aggiungere un pulsante al form e fare doppio clic su di esso per aggiungere il codice seguente al gestore Click:  
   
@@ -131,10 +131,10 @@ Il moniker del servizio Windows Communication Foundation (WCF) consente alle app
   
      Per altre informazioni sui parametri relativi a questo metodo, vedere <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Federazione](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Procedura: Configurare le credenziali in un Servizio federativo](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Procedura: Creazione di un client federato](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Procedura: configurare le credenziali in un servizio federativo](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Procedura: creare un client federato](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Sicurezza dei messaggi](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
-- [Associazioni e sicurezza](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Associazioni e protezione](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

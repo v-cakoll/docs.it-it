@@ -4,12 +4,12 @@ description: Una guida che offre linee guida end-to-end sulla compilazione di ap
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/4/2019
-ms.openlocfilehash: 936a068507116033ad178f26e77945f30f70387e
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 8eebe9a8e530b244f4596adef1b5e6dd23e305bd
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507193"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144539"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Progettare applicazioni Web moderne con ASP.NET Core e Azure
 
@@ -35,7 +35,7 @@ Questo libro viene fornito "così com'è" ed esprime i punti di vista e le opini
 
  Alcuni esempi usati in questo documento vengono forniti a scopo puramente illustrativo e sono fittizi. Nessuna associazione reale o connessione è intenzionale o può essere desunta.
 
-Microsoft e i marchi elencati nella pagina Web relativa ai marchi all'indirizzo https://www.microsoft.com sono marchi delle società del gruppo Microsoft.
+Microsoft e i marchi elencati nella pagina Web relativa ai marchi all'indirizzo <https://www.microsoft.com> sono marchi delle società del gruppo Microsoft.
 
 Mac e macOS sono marchi registrati di Apple Inc.
 

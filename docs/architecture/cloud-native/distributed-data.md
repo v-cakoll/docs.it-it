@@ -3,12 +3,12 @@ title: Dati distribuiti
 description: Confronto tra l'archiviazione dei dati in applicazioni monolitiche e native del cloud.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 2eff37dcc57ae39daac0ba10d10322be5eb4e321
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 28513f8691c06cf58ed14d57bf7830bb35d94852
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614136"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144396"
 ---
 # <a name="distributed-data"></a>Dati distribuiti
 
@@ -120,7 +120,7 @@ La figura 5-7 illustra un'implementazione del modello CQRS.
 
 **Figura 5-7**. Implementazione di CQRS
 
-Nella figura precedente sono implementati i modelli di query e di comando separati. Ogni operazione di scrittura dei dati viene salvata nell'archivio di scrittura e quindi propagata nell'archivio di lettura. Prestare particolare attenzione al modo in cui il processo di propagazione dei dati opera sul principio della [coerenza finale](http://www.cloudcomputingpatterns.org/eventual_consistency/). Il modello di lettura viene sincronizzato con il modello di scrittura, ma è possibile che si verifichi un ritardo nel processo. Nella sezione successiva verrà illustrata la coerenza finale.
+Nella figura precedente sono implementati i modelli di query e di comando separati. Ogni operazione di scrittura dei dati viene salvata nell'archivio di scrittura e quindi propagata nell'archivio di lettura. Prestare particolare attenzione al modo in cui il processo di propagazione dei dati opera sul principio della [coerenza finale](https://www.cloudcomputingpatterns.org/eventual_consistency/). Il modello di lettura viene sincronizzato con il modello di scrittura, ma è possibile che si verifichi un ritardo nel processo. Nella sezione successiva verrà illustrata la coerenza finale.
 
 Questa separazione consente la scalabilità delle letture e scritture in modo indipendente. Le operazioni di lettura utilizzano uno schema ottimizzato per le query, mentre le Scritture utilizzano uno schema ottimizzato per gli aggiornamenti. Le query di lettura vengono eseguite su dati denormalizzati, mentre la logica di business complessa può essere applicata al modello di scrittura. È anche possibile imporre una sicurezza più stretta sulle operazioni di scrittura rispetto a quelle che espongono le letture.
 

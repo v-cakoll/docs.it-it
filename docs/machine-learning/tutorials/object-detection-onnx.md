@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2bf44ec1657307161c13f88f7d1628b2c930fd05
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 199245aa0017d9232e3c9889c7845c3b9ec9877b
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805519"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144747"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Esercitazione: rilevare oggetti con ONNX in ML.NET
 
@@ -102,7 +102,7 @@ Ora che sono state apprese le nozioni generali su ONNX e sul funzionamento di Ti
 
 1. Copiare la directory `assets` nella directory del progetto *ObjectDetection*. Questa directory e le relative sottodirectory contengono i file di immagine (ad eccezione del modello Tiny YOLOv2, che verrà scaricato e aggiunto nel passaggio successivo) richiesti per questa esercitazione.
 
-1. Scaricare il [modello Tiny YOLOv2](https://onnxzoo.blob.core.windows.net/models/opset_8/tiny_yolov2/tiny_yolov2.tar.gz) da [ONNX Model Zoo](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny_yolov2) e decomprimerlo.
+1. Scaricare il [modello Tiny YOLOv2](https://onnxzoo.blob.core.windows.net/models/opset_8/tiny_yolov2/tiny_yolov2.tar.gz) da [ONNX Model Zoo](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny-yolov2) e decomprimerlo.
 
     Aprire il prompt dei comandi e immettere il comando seguente:
 
@@ -665,7 +665,7 @@ Dopo l'istruzione try-catch aggiungere logica aggiuntiva per indicare che l'esec
 
 [!code-csharp [EndProcessLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L62-L63)]
 
-Ecco fatto!
+L'operazione è stata completata.
 
 ## <a name="results"></a>Risultati
 

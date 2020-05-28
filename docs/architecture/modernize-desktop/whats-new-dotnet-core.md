@@ -2,12 +2,12 @@
 title: Quali sono le novità di .NET Core per desktop?
 description: Informazioni su .NET Core, sulle differenze tra .NET Core e .NET Framework e sulle nuove funzionalità aggiunte.
 ms.date: 05/12/2020
-ms.openlocfilehash: 9ec4f3002dc9d9ea80fd2b6db8095930867a5c65
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b4fc0cb2841fe13b000223aefc5eaf63bd911994
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83423264"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144263"
 ---
 # <a name="whats-new-with-net-core-for-desktop"></a>Quali sono le novità di .NET Core per desktop?
 
@@ -19,7 +19,7 @@ Dal suo avvio nel 2002, .NET Framework si è evoluto negli anni per supportare m
 
 Se la destinazione è solo una di queste piattaforme, è possibile usare questo modello. In molti casi, tuttavia, potrebbe essere necessaria più di una piattaforma di destinazione nella stessa soluzione. Ad esempio, è possibile che l'applicazione disponga di un amministratore desktop, di un sito Web che condivide la logica back-end in esecuzione su un server e anche di un client per dispositivi mobili. In questo caso, è necessaria un'esperienza di codifica unificata che può estendersi a tutte le verticali .NET.
 
-Al momento del rilascio di Windows 8, è Nato il concetto di librerie di classi portabili (classi portabili). In origine, il .NET Framework è stato progettato per il presupposto che venisse sempre distribuito come una singola unità, quindi il [factoring](http://en.wikipedia.org/wiki/Decomposition_(computer_science)) non era un problema. Per affrontare il problema della condivisione del codice tra le verticali, la forza motrice è stata quella di eseguire il refactoring del Framework. Il concetto di contratti è fornire una superficie di attacco dell'API ben fattorizzata. I contratti sono semplicemente assembly su cui si esegue la compilazione e sono progettati con un fattore appropriato per tenere conto delle dipendenze tra di essi.
+Al momento del rilascio di Windows 8, è Nato il concetto di librerie di classi portabili (classi portabili). In origine, il .NET Framework è stato progettato per il presupposto che venisse sempre distribuito come una singola unità, quindi il [factoring](https://wikipedia.org/wiki/Decomposition_(computer_science)) non era un problema. Per affrontare il problema della condivisione del codice tra le verticali, la forza motrice è stata quella di eseguire il refactoring del Framework. Il concetto di contratti è fornire una superficie di attacco dell'API ben fattorizzata. I contratti sono semplicemente assembly su cui si esegue la compilazione e sono progettati con un fattore appropriato per tenere conto delle dipendenze tra di essi.
 
 In questo modo è possibile ragionare sulle differenze di API tra le verticali a livello di assembly, a differenza del livello API singolo precedente. Questo aspetto ha consentito un'esperienza di libreria di classi che può essere destinata a più verticali, note anche come librerie di classi portabili.
 

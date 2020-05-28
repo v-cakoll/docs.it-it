@@ -2,12 +2,12 @@
 title: 'Eventi del dominio: progettazione e implementazione'
 description: Architettura di Microservizi .NET per applicazioni .NET in contenitori | Ottenere un quadro dettagliato degli eventi di dominio, un concetto chiave per stabilire la comunicazione tra le aggregazioni.
 ms.date: 10/08/2018
-ms.openlocfilehash: e03abba66945a6434f6a81eaa9f50d53998f346c
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 630bd0a0b060431e565df98faa77f452e2045fa2
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988716"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144305"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventi del dominio: progettazione e implementazione
 
@@ -47,11 +47,11 @@ Di conseguenza, l'interfaccia del bus di eventi richiede un'infrastruttura che c
 
 Se l'esecuzione di un comando correlato a un'istanza di aggregazione richiede l'esecuzione di regole di dominio aggiuntive su una o più aggregazioni aggiuntive, è necessario progettare e implementare questi effetti collaterali in modo che vengano attivati dagli eventi del dominio. Come illustrato nella figura 7-14 e, in base a uno dei principali casi d'uso, un evento di dominio deve essere usato per propagare le modifiche dello stato tra più aggregazioni all'interno dello stesso modello di dominio.
 
-![Diagramma che mostra un evento di dominio che controlla i dati in un'aggregazione Buyer.Diagram showing a domain event controlling data to a Buyer aggregate.](./media/domain-events-design-implementation/domain-model-ordering-microservice.png)
+![Diagramma che mostra un evento di dominio che controlla i dati a un'aggregazione del buyer.](./media/domain-events-design-implementation/domain-model-ordering-microservice.png)
 
 **Figura 7-14**. Eventi del dominio per garantire la coerenza tra più aggregazioni all'interno dello stesso dominio
 
-Nella figura 7-14 viene illustrato come la coerenza tra le aggregazioni viene ottenuta dagli eventi di dominio. Quando l'utente avvia un ordine, `OrderStarted` Order Aggregate invia un evento di dominio. L'evento di dominio OrderStarted viene gestito dall'aggregazione acquirente per creare un oggetto Buyer nel microservizio di ordinazione, in base alle informazioni utente originali del microservizio di identità (con le informazioni fornite nel comando CreateOrder).
+La figura 7-14 Mostra la coerenza tra le aggregazioni e gli eventi del dominio. Quando l'utente avvia un ordine, l'aggregazione Order Invia un `OrderStarted` evento di dominio. L'evento del dominio OrderStarted viene gestito dall'aggregazione buyer per creare un oggetto buyer nel microservizio degli ordini, in base alle informazioni originali dell'utente del microservizio Identity (con le informazioni fornite nel comando CreateOrder).
 
 In alternativa, la radice di aggregazione può avere una sottoscrizione per gli eventi generati dai membri delle relative aggregazioni (entità figlio). Ad esempio, ogni entità figlio OrderItem può generare un evento quando il prezzo dell'articolo è superiore a un importo specifico o quando la quantità di articoli di prodotto è troppo elevata. La radice di aggregazione può quindi ricevere questi eventi ed eseguire un'aggregazione o un calcolo globale.
 
@@ -61,7 +61,7 @@ La gestione degli eventi del dominio avviene a livello di applicazione. Il livel
 
 Gli eventi del dominio possono essere usati anche per attivare un numero qualsiasi di azioni di applicazioni e, ancor più importante, devono essere aperti ad aumentarle in futuro in modo disgiunto. Ad esempio, quando l'ordine viene avviato è possibile pubblicare un evento del dominio per propagare queste informazioni ad altre aggregazioni o per generare azioni di applicazioni, come le notifiche.
 
-Il punto chiave è il numero aperto di azioni da eseguire al verificarsi di un evento del dominio. Con il tempo le azioni e le regole nel dominio e nell'applicazione aumenteranno. La complessità o il numero di azioni di effetto collaterale quando accade qualcosa aumenterà, ma se `new`il codice è stato accoppiato con "colla" (vale a dire, la creazione di oggetti specifici con ), quindi ogni volta che è necessario aggiungere una nuova azione sarebbe anche necessario modificare il codice di lavoro e testato.
+Il punto chiave è il numero aperto di azioni da eseguire al verificarsi di un evento del dominio. Con il tempo le azioni e le regole nel dominio e nell'applicazione aumenteranno. La complessità o il numero di azioni effetto collaterale quando si verifica un evento aumenterà, ma se il codice è stato associato a "glue" (ovvero creando oggetti specifici con `new` ), ogni volta che è necessario aggiungere una nuova azione è necessario modificare il codice funzionante e testato.
 
 Questa modifica può generare nuovi bug e tale approccio non è conforme al [principio aperto/chiuso](https://en.wikipedia.org/wiki/Open/closed_principle) di [SOLID](https://en.wikipedia.org/wiki/SOLID). Come se non bastasse, la classe originale che orchestra le operazioni aumenterebbe sempre di più, contrariamente al [principio di singola responsabilità (Single Responsibility Principle, SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle).
 
@@ -69,7 +69,7 @@ Se invece si usano gli eventi del dominio, è possibile creare un'implementazion
 
 1. Inviare un comando, ad esempio CreateOrder.
 2. Ricevere il comando in un gestore di comandi.
-   - Eseguire una singola transazione di aggregazione.
+   - Eseguire una singola transazione dell'aggregazione.
    - (Facoltativo) Generare eventi del dominio per gli effetti collaterali, ad esempio OrderStartedDomainEvent.
 3. Gestire gli eventi del dominio (all'interno del processo corrente) che eseguiranno un numero aperto di effetti collaterali in più aggregazioni o azioni di applicazioni. Ad esempio:
    - Verificare o creare l'acquirente e la modalità di pagamento.
@@ -78,13 +78,13 @@ Se invece si usano gli eventi del dominio, è possibile creare un'implementazion
 
 Come illustrato nella figura 7-15, a partire dallo stesso evento di dominio è possibile gestire più azioni relative ad altre aggregazioni nel dominio o azioni di applicazioni aggiuntive che è necessario eseguire tra i microservizi che si connettono con gli eventi di integrazione e il bus di eventi.
 
-![Diagramma che mostra un evento di dominio che passa dati a diversi gestori eventi.](./media/domain-events-design-implementation/aggregate-domain-event-handlers.png)
+![Diagramma che mostra un evento di dominio che passa i dati a diversi gestori eventi.](./media/domain-events-design-implementation/aggregate-domain-event-handlers.png)
 
 **Figura 7-15**. Gestione di più azioni per ogni dominio
 
-Per lo stesso evento possono essere presenti diversi gestori nel livello dell'applicazione, un gestore può risolvere la coerenza tra aggregazioni, un altro può pubblicare un evento di integrazione in modo che possa essere usato da altri microservizi. I gestori eventi sono in genere nel livello dell'applicazione, perché si useranno oggetti dell'infrastruttura come repository o un'API dell'applicazione per il comportamento del microservizio. In questo senso, i gestori di eventi sono simili ai gestori di comandi poiché entrambi fanno parte del livello dell'applicazione. La differenza importante è che un comando deve essere elaborato una sola volta. Un evento del dominio può essere elaborato zero o *n* volte perché può essere ricevuto da più ricevitori o gestori dell'evento con uno scopo diverso per ogni gestore.
+Per lo stesso evento possono essere presenti diversi gestori nel livello dell'applicazione, un gestore può risolvere la coerenza tra aggregazioni, un altro può pubblicare un evento di integrazione in modo che possa essere usato da altri microservizi. I gestori di eventi si trovano in genere a livello di applicazione, perché si useranno oggetti dell'infrastruttura come repository o un'API dell'applicazione per il comportamento del microservizio. In questo senso, i gestori di eventi sono simili ai gestori di comandi poiché entrambi fanno parte del livello dell'applicazione. La differenza importante è che un comando deve essere elaborato una sola volta. Un evento del dominio può essere elaborato zero o *n* volte perché può essere ricevuto da più ricevitori o gestori dell'evento con uno scopo diverso per ogni gestore.
 
-La presenza di un numero aperto di gestori per evento di dominio consente di aggiungere tutte le regole di dominio necessarie, senza influire sul codice corrente. Ad esempio, implementare la regola di business seguente può essere facile come aggiungere alcuni gestori di eventi o anche uno solo:
+La presenza di un numero aperto di gestori per ogni evento di dominio consente di aggiungere tutte le regole di dominio necessarie, senza influire sul codice corrente. Ad esempio, implementare la regola di business seguente può essere facile come aggiungere alcuni gestori di eventi o anche uno solo:
 
 > Quando la quantità totale acquistata da un cliente nello store, con qualsiasi numero di ordini, supera $ 6.000, applicare uno sconto del 10% per ogni nuovo ordine e notificare al cliente questo sconto per gli ordini futuri con un messaggio di posta elettronica.
 
@@ -124,7 +124,7 @@ Nel linguaggio comune del dominio, poiché un evento è qualcosa che si è verif
 
 Come notato in precedenza, una caratteristica importante degli eventi è che, poiché un evento è qualcosa che si è verificato in passato, non deve variare. Di conseguenza la classe deve essere non modificabile. Nel codice precedente le proprietà sono di sola lettura. Non c'è alcun modo di aggiornare l'oggetto, è possibile solo impostarne i valori durante la creazione.
 
-È importante sottolineare qui che se gli eventi di dominio dovessero essere gestiti in modo asincrono, utilizzando una coda che richiedeva la serializzazione e la deserializzazione degli oggetti evento, le proprietà dovrebbero essere "private set" anziché di sola lettura, in modo che il deserializzatore sarebbe in grado di assegnare i valori al momento della dequequequesing. Ciò non è un problema nel microservizio degli ordini, dal momento che la pubblicazione/sottoscrizione dell'evento di dominio viene implementata in modo sincrono tramite MediatR.
+È importante sottolineare che se gli eventi di dominio venissero gestiti in modo asincrono, usando una coda che richiedeva la serializzazione e la deserializzazione degli oggetti evento, le proprietà avrebbero dovuto essere "private set" invece di sola lettura, quindi il deserializzatore sarebbe in grado di assegnare i valori durante la rimozione dalla coda. Ciò non è un problema nel microservizio degli ordini, dal momento che la pubblicazione/sottoscrizione dell'evento di dominio viene implementata in modo sincrono tramite MediatR.
 
 ### <a name="raise-domain-events"></a>Generare eventi di dominio
 
@@ -216,15 +216,15 @@ Una questione controversa è se eseguire una singola transazione tra le aggregaz
 
 > Non è previsto che una regola che si estende sulle aggregazioni venga aggiornata in ogni momento. Tramite l'elaborazione degli eventi, l'elaborazione batch o altri meccanismi di aggiornamento, è possibile risolvere le altre dipendenze in un determinato periodo di tempo. (pagina 128)
 
-Vaughn Vernon dice quanto segue in [Effective Aggregate Design. Parte II: Rendere gli aggregati insieme](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
+Vaughn Vernon afferma quanto segue in una [progettazione di aggregazione efficace. Parte II: creazione di aggregazioni](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)interagiscono:
 
-> Pertanto, se l'esecuzione di un comando in un'istanza di aggregazione richiede \[l'esecuzione di regole di business aggiuntive su una o più aggregazioni, utilizzare la coerenza finale... \] Esiste un modo pratico per supportare la coerenza finale in un modello DDD. Un metodo di aggregazione pubblica un evento del dominio che viene recapitato in tempo a uno o più sottoscrittori asincroni.
+> Pertanto, se l'esecuzione di un comando in un'istanza di aggregazione richiede l'esecuzione di regole business aggiuntive su una o più aggregazioni, utilizzare la coerenza finale \[ ... \] Esiste un modo pratico per supportare la coerenza finale in un modello DDD. Un metodo di aggregazione pubblica un evento del dominio che viene recapitato in tempo a uno o più sottoscrittori asincroni.
 
 Questa spiegazione logica si basa sull'adozione di transazioni con granularità fine anziché su transazioni che si estendono su molte aggregazioni o entità. L'idea è che, nel secondo caso, il numero di blocchi di database sarà notevole nelle applicazioni su larga scala con esigenze di scalabilità. Accettare il fatto che le applicazioni con scalabilità elevata non necessitano di una coerenza transazionale immediata tra più aggregazioni consente di accettare il concetto di coerenza finale. Le modifiche atomiche spesso non sono necessarie per l'azienda e, in ogni caso, è responsabilità degli esperti di dominio indicare se operazioni specifiche necessitano di transazioni atomiche. Se un'operazione richiede sempre una transazione atomica tra più aggregazioni, ci si potrebbe chiedere se l'aggregazione deve essere di dimensione maggiore o non è stata progettata correttamente.
 
 Tuttavia, altri sviluppatori e progettisti come Jimmy Bogard concordano sull'estensione di una singola transazione tra diverse aggregazioni, ma solo quando queste aggregazioni aggiuntive sono correlate agli effetti collaterali per lo stesso comando originale. Ad esempio, in [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/) (Un pattern migliore per gli eventi del dominio) Bogard afferma il concetto seguente:
 
-> In genere, si desidera che gli effetti collaterali di un evento di dominio si verifichino \[all'interno della stessa transazione logica, ma non necessariamente nello stesso ambito di generazione dell'evento di dominio ... \] Appena prima di eseguire il commit della transazione, inviamo i nostri eventi ai rispettivi gestori.
+> In genere, si desidera che gli effetti collaterali di un evento di dominio si verifichino all'interno della stessa transazione logica, ma non necessariamente nello stesso ambito di generazione dell'evento del dominio \[ ... \] Prima di eseguire il commit della transazione, gli eventi vengono recapitati ai rispettivi gestori.
 
 Se si inviano gli eventi del dominio immediatamente *prima* del commit della transazione originale, si vuole che gli effetti collaterali di questi eventi vengano inclusi nella stessa transazione. Ad esempio, se il metodo SaveChanges dell'oggetto DbContext di Entity Framework presenta un errore, la transazione eseguirà il rollback di tutte le modifiche, incluso il risultato di tutte le operazioni degli effetti collaterali implementate dai rispettivi gestori di eventi del dominio. Ciò avviene perché l'ambito della vita dell'oggetto DbContext viene definito come "con ambito" per impostazione predefinita. Pertanto, l'oggetto DbContext viene condiviso tra più oggetti del repository di cui viene creata un'istanza all'interno della stesso grafo di oggetto o ambito. Questo coincide con l'ambito HttpRequest quando si sviluppano app MVC o API Web.
 
@@ -244,11 +244,11 @@ Un approccio è un sistema di messaggistica reale o anche un bus di eventi, poss
 
 Un altro modo per eseguire il mapping degli eventi a più gestori di eventi consiste nell'usare la registrazione di tipi in un contenitore IoC in modo che sia possibile dedurre in modo dinamico dove inviare gli eventi. In altre parole, è necessario sapere quali gestori di eventi devono ricevere un evento specifico. Nella figura 7-16 viene illustrato un approccio semplificato specifico.
 
-![Diagramma che mostra un dispatcher di eventi di dominio che invia eventi ai gestori appropriati.](./media/domain-events-design-implementation/domain-event-dispatcher.png)
+![Diagramma che illustra un dispatcher di eventi del dominio che invia eventi ai gestori appropriati.](./media/domain-events-design-implementation/domain-event-dispatcher.png)
 
 **Figura 7-16**. Dispatcher di eventi del dominio usando IoC
 
-È possibile compilare autonomamente tutto il codice complesso e gli elementi per implementare questo approccio. Tuttavia è possibile anche usare le librerie disponibili come [MediatR](https://github.com/jbogard/MediatR), che usa il contenitore IoC in background. È quindi possibile utilizzare direttamente le interfacce predefinite e i metodi di pubblicazione/spedizione dell'oggetto mediatore.
+È possibile compilare autonomamente tutto il codice complesso e gli elementi per implementare questo approccio. Tuttavia è possibile anche usare le librerie disponibili come [MediatR](https://github.com/jbogard/MediatR), che usa il contenitore IoC in background. È pertanto possibile utilizzare direttamente le interfacce predefinite e i metodi di pubblicazione/distribuzione dell'oggetto Mediator.
 
 Nel codice è necessario prima registrare i tipi di gestori di eventi nel contenitore IoC, come illustrato nell'esempio seguente nel [microservizio per gli ordini eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Infrastructure/AutofacModules/MediatorModule.cs):
 
@@ -342,43 +342,43 @@ Infine, è importante ricordare che a volte è possibile propagare eventi tra pi
 
 Come illustrato, usare gli eventi del dominio per implementare in modo esplicito gli effetti collaterali delle modifiche all'interno del dominio. Per usare la terminologia DDD, usare gli eventi del dominio per implementare in modo esplicito gli effetti collaterali tra una o più aggregazioni. Inoltre, per migliorare la scalabilità e ridurre l'impatto sui blocchi di database, facoltativamente usare la coerenza finale tra le aggregazioni all'interno dello stesso dominio.
 
-L'app di riferimento usa [MediatR](https://github.com/jbogard/MediatR) per propagare gli eventi di dominio in modo sincrono tra le aggregazioni, all'interno di una singola transazione. Tuttavia, è anche possibile usare alcune implementazioni AMQP come [RabbitMQ](https://www.rabbitmq.com/) o [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) per propagare gli eventi di dominio in modo asincrono, usando la coerenza finale ma, come accennato in precedenza, è necessario considerare la necessità di azioni compensative in caso di errori.
+L'app di riferimento USA [Mediator](https://github.com/jbogard/MediatR) per propagare in modo sincrono gli eventi del dominio tra le aggregazioni, all'interno di una singola transazione. Tuttavia, è anche possibile usare un'implementazione di AMQP, ad esempio [RabbitMQ](https://www.rabbitmq.com/) o il [bus di servizio di Azure](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) , per propagare gli eventi del dominio in modo asincrono, usando la coerenza finale, ma, come indicato in precedenza, è necessario prendere in considerazione la necessità di azioni di compensazione in caso di errori.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
 - **Greg Young. Che cos'è un evento di dominio?** \
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf#page=25>
 
-- **Jan Stenberg. Eventi di dominio e coerenza finale** \
+- **Jan Stenberg. Eventi del dominio e coerenza finale** \
   <https://www.infoq.com/news/2015/09/domain-events-consistency>
 
-- **Jimmy Bogard. Un modello di eventi di dominio migliore** \
+- **Jimmy Bogard. Modello di eventi di dominio migliore** \
   <https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/>
 
-- **Vaughn Vernon. Efficace progettazione aggregata Parte II: Rendere gli aggregati insieme** \
+- **Vaughn Vernon. Parte II della progettazione dell'aggregazione efficace: creazione di aggregazioni interagiscono** \
   [https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
-- **Jimmy Bogard. Rafforzamento del dominio: Eventi di dominio** \
+- **Jimmy Bogard. Rafforzamento del dominio: eventi di dominio** \
   <https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>
 
-- **Tony Truong. Esempio di modello di eventi di dominioDomain Events Pattern Example** \
+- **Tony, Esempio di modello di eventi di dominio** \
   <https://www.tonytruong.net/domain-events-pattern-example/>
 
-- **Udi Dahan. Come creare modelli di dominio completamente incapsulatiHow to create fully encapsulated Domain Models** \
-  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
+- **UDI. Come creare modelli di dominio completamente incapsulati** \
+  <https://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
-- **Udi Dahan. Eventi di dominio – Take 2** \
-  <http://udidahan.com/2008/08/25/domain-events-take-2/>
+- **UDI. Eventi del dominio-Take 2** \
+  <https://udidahan.com/2008/08/25/domain-events-take-2/>
 
-- **Udi Dahan. Eventi di dominio – Salvezza** \
-  <http://udidahan.com/2009/06/14/domain-events-salvation/>
+- **UDI. Eventi del dominio-salvezza** \
+  <https://udidahan.com/2009/06/14/domain-events-salvation/>
 
-- **Jan Kronquist. Non pubblicare eventi di dominio, restituiscli!** \
+- **Jan Kronquist. Non pubblicare eventi del dominio, restituirli.** \
   <https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/>
 
-- **Cesar de la Torre. Eventi di dominio e eventi di integrazione nelle architetture DDD e microserviziDomain Events vs.** \
+- **Cesar de la Torre. Eventi del dominio rispetto agli eventi di integrazione nelle architetture DDD e microservizi** \
   <https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
 
 >[!div class="step-by-step"]
->[Successivo](client-side-validation.md)
->[precedente](infrastructure-persistence-layer-design.md)
+>[Precedente](client-side-validation.md) 
+> [Avanti](infrastructure-persistence-layer-design.md)

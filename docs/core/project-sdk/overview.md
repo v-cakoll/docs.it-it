@@ -4,12 +4,12 @@ titleSuffix: ''
 description: Informazioni sugli SDK per progetti .NET Core.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: 88ec1bf2c4917c69b80b997d090219097694d2bc
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 67dede3caabd2967adca22e7563376c761829655
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206055"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144239"
 ---
 # <a name="net-core-project-sdks"></a>SDK per progetti .NET Core
 
@@ -19,10 +19,10 @@ I progetti .NET Core sono associati a un Software Development Kit (SDK). Ogni *S
 
 Per .NET Core sono disponibili gli SDK seguenti:
 
-| ID | Description | Repo|
+| ID | Descrizione | Repo|
 | - | - | - |
-| `Microsoft.NET.Sdk` | .NET Core SDK | https://github.com/dotnet/sdk |
-| `Microsoft.NET.Sdk.Web` | [SDK Web](/aspnet/core/razor-pages/web-sdk) di .NET Core | https://github.com/aspnet/websdk |
+| `Microsoft.NET.Sdk` | .NET Core SDK | <https://github.com/dotnet/sdk> |
+| `Microsoft.NET.Sdk.Web` | [SDK Web](/aspnet/core/razor-pages/web-sdk) di .NET Core | <https://github.com/aspnet/websdk> |
 | `Microsoft.NET.Sdk.Razor` | .NET Core [Razor SDK](/aspnet/core/razor-pages/sdk) |
 | `Microsoft.NET.Sdk.Worker` | SDK del servizio Worker di .NET Core |
 | `Microsoft.NET.Sdk.WindowsDesktop` | .NET Core WinForms e WPF SDK |
@@ -174,7 +174,7 @@ Per utilizzare una destinazione personalizzata nel progetto, aggiungere un `Pack
 
 È possibile configurare la modalità di utilizzo della destinazione personalizzata. Poiché si tratta di una destinazione MSBuild, può dipendere da una destinazione specificata, essere eseguita dopo un'altra destinazione oppure essere richiamata manualmente tramite il `dotnet msbuild -t:<target-name>` comando. Tuttavia, per offrire un'esperienza utente migliore, è possibile combinare gli strumenti per progetto e le destinazioni personalizzate. In questo scenario, lo strumento per progetto accetta qualsiasi parametro necessario e lo traduce nella [`dotnet msbuild`](../tools/dotnet-msbuild.md) chiamata necessaria che esegue la destinazione. È possibile visualizzare un esempio di questo tipo di sinergia nel repository degli [esempi di MVP Summit 2016 Hackathon](https://github.com/dotnet/MVPSummitHackathon2016) nel progetto [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Installare .NET Core](../install/index.md)
 - [Come usare gli SDK di progetto MSBuild](/visualstudio/msbuild/how-to-use-project-sdk)

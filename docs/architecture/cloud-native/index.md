@@ -3,12 +3,12 @@ title: Architettura di applicazioni .NET cloud native per Azure
 description: Guida per la creazione di applicazioni native del cloud che sfruttano contenitori, microservizi e funzionalità senza server di Azure.
 author: ardalis
 ms.date: 05/13/2020
-ms.openlocfilehash: 196671468e56147f714078d1671f44af21bcf327
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: b315f097b1584bd93f694c10f36ee7524d7e020a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840884"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144383"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Architettura di applicazioni .NET cloud native per Azure
 
@@ -34,7 +34,7 @@ Questo libro viene fornito "così com'è" ed esprime i punti di vista e le opini
 
  Alcuni esempi usati in questo documento vengono forniti a scopo puramente illustrativo e sono fittizi. Nessuna associazione reale o connessione è intenzionale o può essere desunta.
 
-Microsoft e i marchi elencati nella [https://www.microsoft.com](https://www.microsoft.com) pagina Web "marchi" sono marchi del gruppo di società Microsoft.
+Microsoft e i marchi elencati nella pagina Web relativa ai marchi all'indirizzo <https://www.microsoft.com> sono marchi delle società del gruppo Microsoft.
 
 Mac e macOS sono marchi registrati di Apple Inc.
 
@@ -44,7 +44,7 @@ Tutti gli altri marchi e logo appartengono ai rispettivi proprietari.
 
 Autori:
 
-> **Rob Vettor**, Principal Cloud System Architect/IP architect- [thinkingincloudnative.com](http://thinkingincloudnative.com/about/), Microsoft
+> **Rob Vettor**, Principal Cloud System Architect/IP architect- [thinkingincloudnative.com](https://thinkingincloudnative.com/about/), Microsoft
 >
 > **Steve "ardalis" Smith**, Software Architect e Trainer- [Ardalis.com](https://ardalis.com)
 
@@ -62,7 +62,7 @@ Editor:
 
 > **Maira Wenzel**, Program Manager, team di .NET, Microsoft
 
-## <a name="version"></a>Version
+## <a name="version"></a>Versione
 
 Questa guida è stata scritta per coprire la versione di **.net core 3,1** insieme a molti aggiornamenti aggiuntivi relativi alla stessa "Wave" delle tecnologie (ovvero, Azure e altre tecnologie di terze parti) in concomitanza con la versione di .net core 3,1.
 

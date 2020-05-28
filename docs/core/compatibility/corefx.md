@@ -2,12 +2,12 @@
 title: Modifiche di rilievo della libreria di classi base
 description: Elenca le modifiche di rilievo nelle librerie .NET di base.
 ms.date: 09/20/2019
-ms.openlocfilehash: ca50123b842c256607d47010dbef9b216ece4661
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 45de0f0d418437cf1677c9a8c7cfc9b6c33a24ef
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420429"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144480"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Modifiche di rilievo nelle librerie .NET Core
 
@@ -18,6 +18,7 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 | Modifica | Versione introdotta |
 | - | :-: |
 | [I metodi CompareGreaterThan SSE e SSE2 gestiscono correttamente gli input NaN](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs) | 5.0 |
+| [Il contatore. CreateCounterSetInstance genera ora InvalidOperationException se l'istanza esiste già](#countersetcreatecountersetinstance-now-throws-invalidoperationexception-if-instance-already-exists) | 5.0 |
 | [API che segnalano ora la versione del prodotto e non la versione del file](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
 | [Le istanze EncoderFallbackBuffer personalizzate non possono eseguire il fallback in modo ricorsivo](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
 | [Modifiche al comportamento di analisi e formattazione a virgola mobile](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
@@ -43,6 +44,10 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 ## <a name="net-50"></a>.NET 5,0
 
 [!INCLUDE [sse-comparegreaterthan-intrinsics](../../../includes/core-changes/corefx/5.0/sse-comparegreaterthan-intrinsics.md)]
+
+***
+
+[!INCLUDE [createcountersetinstance-throws-invalidoperation](../../../includes/core-changes/corefx/5.0/createcountersetinstance-throws-invalidoperation.md)]
 
 ***
 

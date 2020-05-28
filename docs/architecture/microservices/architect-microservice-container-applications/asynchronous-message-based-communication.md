@@ -2,12 +2,12 @@
 title: Comunicazione asincrona basata su messaggi
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | La comunicazione asincrona basata su messaggi è un concetto essenziale nell'architettura dei microservizi, perché è il modo migliore per mantenere i microservizi al contempo indipendenti uno dall'altro e sincronizzati.
 ms.date: 09/20/2018
-ms.openlocfilehash: 84eaf70178cce91a86dae8a55badb0b4ddd6a7c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 476e42ccb39374c2bb50f22e41f60c10c563dc66
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73454228"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144344"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicazione asincrona basata su messaggi
 
@@ -83,16 +83,16 @@ Altri aspetti da considerare quando si usa la comunicazione asincrona sono l'ide
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Messaggi guidati da eventi** \
+- **Messaggistica basata su eventi** \
   <https://soapatterns.org/design_patterns/event_driven_messaging>
 
-- **Pubblica/Sottoscrivi canale** \
+- **Canale di pubblicazione/sottoscrizione** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
-- **Udi Dahan. Chiarito CQRS** \
-  <http://udidahan.com/2009/12/09/clarified-cqrs/>
+- **UDI. CQRS chiarificato** \
+  <https://udidahan.com/2009/12/09/clarified-cqrs/>
 
-- **Separazione responsabilità di comando e query (CQRS)Command and Query Responsibility Segregation (CQRS)** \
+- **Separazione di responsabilità per query e comandi (CQRS)** \
   <https://docs.microsoft.com/azure/architecture/patterns/cqrs>
 
 - **Comunicazione tra contesti delimitati** \
@@ -101,9 +101,9 @@ Altri aspetti da considerare quando si usa la comunicazione asincrona sono l'ide
 - **Coerenza finale** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling** \
+- **Jimmy Bogard. Refactoring per la resilienza: valutazione dell'accoppiamento** \
   <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]
-> [Successivo](communication-in-microservice-architecture.md)
-> [precedente](maintain-microservice-apis.md)
+> [Precedente](communication-in-microservice-architecture.md) 
+>  [Avanti](maintain-microservice-apis.md)
