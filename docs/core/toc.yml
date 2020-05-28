@@ -98,11 +98,6 @@
         - name: Eseguire unit test di una libreria
           href: tutorials/testing-library-with-visual-studio.md
           displayName: 'tutorials, visual studio, vs'
-        - name: Usare una libreria
-          href: tutorials/consuming-library-with-visual-studio.md
-          displayName: 'tutorials, visual studio, vs'
-        - name: Unit test live
-          href: /visualstudio/test/live-unit-testing-start
         - name: Installare e usare un pacchetto
           href: /nuget/quickstart/install-and-use-a-package-in-visual-studio
           displayName: 'tutorials, visual studio, vs'
