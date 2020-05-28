@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: Il comando dotnet test viene usato per eseguire unit test in un determinato progetto.
 ms.date: 04/29/2020
-ms.openlocfilehash: 22b27007d26c98cff40733ef8d449ce334f87848
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: b427954fe0026e6ac96d3bbce2b70b5c44e884e0
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802684"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005375"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -79,6 +79,10 @@ Dove `Microsoft.NET.Test.Sdk` è l'host di test, `xunit` è il Framework di test
 - **`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
   Abilita l'agente di raccolta dati per l'esecuzione dei test. Per altre informazioni, vedere [Monitoraggio e analisi di esecuzioni dei test](https://aka.ms/vstest-collect).
+  
+  Per raccogliere code coverage su qualsiasi piattaforma supportata da .NET Core, installare [copriletto](https://github.com/coverlet-coverage/coverlet/blob/master/README.md) e usare l' `--collect:"XPlat Code Coverage"` opzione.
+
+  In Windows è possibile raccogliere code coverage utilizzando l' `--collect "Code Coverage"` opzione. Questa opzione genera un file con *estensione coverage* , che può essere aperto in Visual Studio 2019 Enterprise. Per ulteriori informazioni, vedere [utilizzare code coverage](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested) e [personalizzare code coverage analysis](/visualstudio/test/customizing-code-coverage-analysis).
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
@@ -171,6 +175,18 @@ Dove `Microsoft.NET.Test.Sdk` è l'host di test, `xunit` è il Framework di test
   dotnet test --logger trx
   ```
 
+- Eseguire i test nel progetto nella directory corrente e generare un file di code coverage (dopo l'installazione di [copriletto](https://github.com/tonerdo/coverlet/blob/master/README.md)):
+
+  ```dotnetcli
+  dotnet test --collect:"XPlat Code Coverage"
+  ```
+
+- Eseguire i test nel progetto nella directory corrente e generare un file di code coverage (solo Windows):
+
+  ```dotnetcli
+  dotnet test --collect "Code Coverage"
+  ```
+
 - Eseguire i test nel progetto nella directory corrente e accedere con un livello di dettaglio dettagliato alla console:
 
   ```dotnetcli
@@ -195,6 +211,7 @@ Dove `Microsoft.NET.Test.Sdk` è l'host di test, `xunit` è il Framework di test
 | -------------- | --------------------------------------------------------------------------------------------------------- |
 | MSTest         | <ul><li>FullyQualifiedName</li><li>Nome</li><li>ClassName</li><li>Priorità</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Tratti</li></ul>                                   |
+| NUnit          | <ul><li>FullyQualifiedName</li><li>Nome</li><li>TestCategory</li><li>Priorità</li></ul>                                   |
 
 `<operator>` descrive la relazione tra la proprietà e il valore:
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9a8178d-be1f-4ad4-abdb-d38470659b82
 topic_type:
 - apiref
-ms.openlocfilehash: 502f5773fc783cad3f19fa8b48226cc252ce3122
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4b083b5225b500fa19ed40cc6550630e155e8c52
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125260"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008690"
 ---
 # <a name="itypenamebuilderclosegenericargument-method"></a>Metodo ITypeNameBuilder::CloseGenericArgument
 Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.  
@@ -32,14 +32,14 @@ HRESULT CloseGenericArgument ( );
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfacce di hosting](hosting-interfaces.md)

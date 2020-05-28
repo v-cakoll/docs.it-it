@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-ms.openlocfilehash: 2807458549db02598ba05f2aa80fa6ea6fbc5a13
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a58e03875ec021b41479085fa9e27a4321ae965e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177699"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004352"
 ---
 # <a name="imetadataemitdefineparam-method"></a>Metodo IMetaDataEmit::DefineParam
-Crea una definizione di parametro con la firma specificata per il metodo a cui fa riferimento il token specificato e ottiene un token per tale definizione di parametro.  
+Crea una definizione di parametro con la firma specificata per il metodo a cui fa riferimento il token specificato e ottiene un token per la definizione del parametro.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,42 +42,42 @@ HRESULT DefineParam (
   
 ## <a name="parameters"></a>Parametri  
  `md`  
- [in] Token per il metodo il cui parametro viene definito.  
+ in Token per il metodo di cui viene definito il parametro.  
   
  `ulParamSeq`  
- [in] Numero di sequenza del parametro.  
+ in Numero di sequenza del parametro.  
   
  `szName`  
- [in] Nome del parametro in Unicode.  
+ in Nome del parametro in formato Unicode.  
   
  `dwParamFlags`  
- [in] Flag per il parametro. Si tratta di `CorParamAttr` una maschera di bit di valori.  
+ in Flag per il parametro. Si tratta di una maschera di maschera di `CorParamAttr` valori.  
   
  `dwCPlusTypeFlag`  
- [in] `ELEMENT_TYPE_` per il valore *\** costante.  
+ [in] `ELEMENT_TYPE_` *\** per il valore costante.  
   
  `pValue`  
- [in] Valore costante per il parametro.  
+ in Valore costante per il parametro.  
   
  `cchValue`  
- [in] La dimensione, in caratteri `pValue`Unicode, di .  
+ in Dimensione, in caratteri Unicode, di `pValue` .  
   
  `ppd`  
- [fuori] Token `mdParamDef` assegnato.  
+ out `mdParamDef`Token assegnato.  
   
-## <a name="remarks"></a>Osservazioni  
- I valori `ulParamSeq` di sequenza iniziano con 1 per i parametri. Un valore restituito ha un numero di sequenza pari a 0.A return value has a sequence number of 0.  
+## <a name="remarks"></a>Commenti  
+ I valori di sequenza in `ulParamSeq` iniziano con 1 per i parametri. Il numero di sequenza di un valore restituito è 0.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
+ **Libreria:** Usato come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interfaccia IMetaDataEmit](imetadataemit-interface.md)
+- [Interfaccia IMetaDataEmit2](imetadataemit2-interface.md)

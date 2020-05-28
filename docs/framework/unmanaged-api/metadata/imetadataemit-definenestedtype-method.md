@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1e994de6-4628-459c-b967-b34be1e9fe4f
 topic_type:
 - apiref
-ms.openlocfilehash: 3b8fd9876563bace52a6088747d1ca4ed26ea872
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b24c2ca6907dfdb63ad934ec30557c246db174c
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175811"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004355"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>Metodo IMetaDataEmit::DefineNestedType
-Crea la firma dei metadati `mdTypeDef` di una definizione di tipo, restituisce un token per tale `tdEncloser` tipo e specifica che il tipo definito è un membro del tipo a cui fa riferimento il parametro.  
+Crea la firma dei metadati di una definizione di tipo, restituisce un `mdTypeDef` token per quel tipo e specifica che il tipo definito è un membro del tipo a cui fa riferimento il `tdEncloser` parametro.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,33 +40,33 @@ HRESULT DefineNestedType (
   
 ## <a name="parameters"></a>Parametri  
  `szTypeDef`  
- [in] Nome del tipo in Unicode.  
+ in Nome del tipo in Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` attributi. Si tratta di `CorTypeAttr` una maschera di bit di valori.  
+ [in] `TypeDef` attributi. Si tratta di una maschera di maschera di `CorTypeAttr` valori.  
   
  `tkExtends`  
- [in] Token della classe base. Si tratta `mdTypeDef` di `mdTypeRef` un o un token.  
+ in Token della classe di base. Si tratta di un `mdTypeDef` token o `mdTypeRef` .  
   
  `rtkImplements`[]  
- [in] Matrice di token che specificano le interfacce implementate da questa classe o interfaccia.  
+ in Matrice di token che specificano le interfacce implementate da questa classe o interfaccia.  
   
  `tdEncloser`  
- [in] Token del tipo di inclusione. L'ultimo elemento della `mdTokenNil`matrice deve essere .  
+ in Token del tipo di inclusione. L'ultimo elemento della matrice deve essere `mdTokenNil` .  
   
  `ptd`  
- [fuori] Token `mdTypeDef` assegnato.  
+ out `mdTypeDef`Token assegnato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
+ **Libreria:** Usato come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interfaccia IMetaDataEmit](imetadataemit-interface.md)
+- [Interfaccia IMetaDataEmit2](imetadataemit2-interface.md)

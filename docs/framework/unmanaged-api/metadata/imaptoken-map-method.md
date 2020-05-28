@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9b4bf2f-1098-43d6-9619-a99b4bda1940
 topic_type:
 - apiref
-ms.openlocfilehash: 428b022ed560648f59798154d5987d382938c280
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 027694cee1b3e4d990796ba31300918f6d859679
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176071"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008196"
 ---
 # <a name="imaptokenmap-method"></a>Metodo IMapToken::Map
 Esegue il mapping di una relazione tra gli assembly utilizzando le firme dei metadati.  
@@ -36,23 +36,23 @@ HRESULT Map (
   
 ## <a name="parameters"></a>Parametri  
  `tkImp`  
- [in] Token di metadati che rappresenta l'oggetto di codice importato.  
+ in Token di metadati che rappresenta l'oggetto di codice importato.  
   
  `tkEmit`  
- [in] Token di metadati che rappresenta l'oggetto di codice generato.  
+ in Token di metadati che rappresenta l'oggetto di codice emesso.  
   
-## <a name="remarks"></a>Osservazioni  
- Quando il rimappatura del token si verifica durante un'unione, l'ambito del token originale viene definito nell'ambito dei metadati importati (origine) e il nuovo token viene definito nell'ambito dei metadati generato (destinazione).  
+## <a name="remarks"></a>Commenti  
+ Quando il mapping del token viene eseguito durante un'operazione di merge, il token originale viene definito nell'ambito dei metadati importati (di origine) e l'ambito del nuovo token viene definito nell'ambito dei metadati generato (destinazione).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)
+- [Interfaccia IMapToken](imaptoken-interface.md)

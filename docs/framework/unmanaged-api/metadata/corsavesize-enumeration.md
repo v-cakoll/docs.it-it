@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: eb95ce39-5688-43c1-a34d-578794b32faa
 topic_type:
 - apiref
-ms.openlocfilehash: 13a4364244f7d0076d77d14c3e3ef161e3872bcb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22a7f87a5803dc185052a5ce7ed427eff9f8fb18
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176136"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009184"
 ---
 # <a name="corsavesize-enumeration"></a>Enumerazione CorSaveSize
 Contiene valori che indicano il livello di precisione richiesto quando si eseguono query relative alla dimensione di un'operazione di salvataggio.  
@@ -34,23 +34,23 @@ typedef enum CorSaveSize {
 } CorSaveSize;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
 |Membro|Descrizione|  
 |------------|-----------------|  
 |`cssAccurate`|Specifica che il valore restituito deve essere esatto.|  
 |`cssQuick`|Specifica che il valore restituito deve essere stimato.|  
-|`cssDiscardTransientCAs`|Specifica che i tipi eliminabili devono essere rimossi.|  
+|`cssDiscardTransientCAs`|Specifica che i tipi scartabili devono essere rimossi.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** CorHdr.h  
+ **Intestazione:** CorHdr. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerazioni dei metadati](metadata-enumerations.md)

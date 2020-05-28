@@ -3,12 +3,12 @@ title: Creare un client REST usando .NET Core
 description: Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 4a3a76d1ec9893c2c3e0353e305a19e59c586fe5
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1d1d1bec8c6602e4fe34fa3ce243423290412736
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420383"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004855"
 ---
 # <a name="rest-client"></a>Client REST
 
@@ -37,10 +37,10 @@ Se si vuole proseguire, è possibile scaricare l'[esempio finale](https://github
 Il primo passaggio consiste nel creare una nuova applicazione. Aprire un prompt dei comandi e creare una nuova directory per l'applicazione, impostandola come directory corrente. Immettere il comando seguente in una finestra della console:
 
 ```dotnetcli
-dotnet new console --name WebApiClient
+dotnet new console --name WebAPIClient
 ```
 
-Questa operazione crea i file iniziali per un'applicazione "Hello World" di base. Il nome del progetto è "WebApiClient". Poiché si tratta di un nuovo progetto, non è presente alcuna dipendenza. La prima esecuzione consente di scaricare il Framework .NET Core, installare un certificato di sviluppo ed eseguire Gestione pacchetti NuGet per ripristinare le dipendenze mancanti.
+Questa operazione crea i file iniziali per un'applicazione "Hello World" di base. Il nome del progetto è "WebAPIClient". Poiché si tratta di un nuovo progetto, non è presente alcuna dipendenza. La prima esecuzione consente di scaricare il Framework .NET Core, installare un certificato di sviluppo ed eseguire Gestione pacchetti NuGet per ripristinare le dipendenze mancanti.
 
 Prima di iniziare ad apportare modifiche, digitare `dotnet run` ([vedere la nota](#dotnet-restore-note)) al prompt dei comandi per eseguire l'applicazione. `dotnet run` esegue automaticamente `dotnet restore` se nell'ambiente mancano dipendenze. Esegue anche `dotnet build` se l'applicazione deve essere ricompilata.
 Dopo l'installazione iniziale, sarà necessario solo eseguire `dotnet restore` o `dotnet build` quando ha senso per il progetto.
@@ -306,7 +306,7 @@ Console.WriteLine(repo.LastPush);
 
 La versione dell'app dovrebbe ora corrispondere all'[esempio completo](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient).
 
-## <a name="conclusion"></a>Conclusione
+## <a name="conclusion"></a>Conclusioni
 
 In questa esercitazione sono state descritte le procedure necessarie per eseguire richieste Web, analizzare i risultati e visualizzare le proprietà dei risultati. Sono stati inoltre aggiunti nuovi pacchetti come dipendenze del progetto e sono state illustrate alcune delle funzionalità del linguaggio C# che supportano tecniche orientate agli oggetti.
 

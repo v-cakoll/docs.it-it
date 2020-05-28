@@ -3,12 +3,12 @@ title: Modelli personalizzati per dotnet new
 description: Informazioni sui modelli personalizzati per qualsiasi tipo di file o progetto .NET.
 author: thraka
 ms.date: 05/20/2020
-ms.openlocfilehash: 19855c99b240b66dfa819e70d4a1bee5c8ed14ed
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 56fcbfbc168143007f0772ce8a12347f7e25e50b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761915"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005316"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelli personalizzati per dotnet new
 
@@ -96,7 +96,7 @@ La cartella *mytemplate* è un pacchetto di modelli installabile. Dopo aver inst
 
 ## <a name="packing-a-template-into-a-nuget-package-nupkg-file"></a>Compressione di un modello in un pacchetto NuGet (file nupkg)
 
-Un modello personalizzato viene compresso in un pacchetto con il comando [dotnet pack](dotnet-pack.md) e un file con estensione *csproj*. In alternativa, è possibile usare [NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) con il comando [nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) e un file con estensione *nuspec*. Per l'uso di NuGet, tuttavia, è necessario .NET Framework su Windows e [Mono](https://www.mono-project.com/) su Linux e MacOS.
+Un modello personalizzato viene compresso in un pacchetto con il comando [dotnet pack](dotnet-pack.md) e un file con estensione *csproj*. In alternativa, è possibile usare [NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) con il comando [nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) e un file con estensione *nuspec*. Tuttavia, NuGet richiede l'.NET Framework in Windows e [mono](https://www.mono-project.com/) in Linux e MacOS.
 
 Il file con estensione *csproj* è leggermente diverso da un file *csproj* di un progetto di codice tradizionale. Si notino le impostazioni seguenti:
 

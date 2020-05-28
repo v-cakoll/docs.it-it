@@ -77,7 +77,7 @@ Nella tabella seguente viene evidenziata la metodologia a dodici fattori:
 |    |  Fattore | Spiegazione  |
 | :-------- | :-------- | :-------- |
 | 1 | Codebase | Una singola codebase per ogni microservizio, archiviato nel proprio repository. Con il controllo della versione, è possibile eseguire la distribuzione in più ambienti (QA, staging, produzione). |
-| 2 | Dipendenze | Ogni microservizio isola e impacchetta le proprie dipendenze, accettando le modifiche senza alcun effetto sull'intero sistema. |
+| 2 | Dependencies | Ogni microservizio isola e impacchetta le proprie dipendenze, accettando le modifiche senza alcun effetto sull'intero sistema. |
 | 3 | Configurazioni  | Le informazioni di configurazione vengono spostate al di fuori del microservizio ed esternalizzate tramite uno strumento di gestione della configurazione all'esterno del codice. La stessa distribuzione può propagarsi tra gli ambienti con la configurazione corretta applicata.  |
 | 4 | Servizi di supporto | Le risorse ausiliarie (archivi dati, cache, broker di messaggi) devono essere esposte tramite un URL indirizzabile. Questa operazione separa la risorsa dall'applicazione, consentendo l'interscambiabilità.  |
 | 5 | Compilazione, versione, esecuzione | Ogni versione deve applicare una rigorosa separazione tra le fasi di compilazione, rilascio ed esecuzione. Ogni deve essere contrassegnato con un ID univoco e supportare la possibilità di eseguire il rollback. I sistemi di integrazione continua/recapito continuo moderni contribuiscono a soddisfare questo principio. |
@@ -225,7 +225,7 @@ Nella tabella seguente vengono descritte le attività comuni dell'orchestrazione
 | :-------- | :-------- |
 | Pianificazione | Eseguire automaticamente il provisioning delle istanze del contenitore.|
 | Affinità/anti-affinità | Eseguire il provisioning di contenitori vicini o lontani tra loro, in modo da garantire disponibilità e prestazioni. |
-| Monitoraggio condizioni | Rilevare e correggere automaticamente gli errori.|
+| Monitoraggio dell’integrità | Rilevare e correggere automaticamente gli errori.|
 | Failover | Eseguire automaticamente il provisioning dell'istanza non riuscita in computer integri.|
 | Scalabilità | Aggiungere o rimuovere automaticamente un'istanza del contenitore per soddisfare la domanda.|
 | Rete | Gestire una sovrapposizione di rete per la comunicazione del contenitore.|

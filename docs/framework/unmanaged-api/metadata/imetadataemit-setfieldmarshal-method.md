@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: be232314-7f69-4855-bfab-63361bd22307
 topic_type:
 - apiref
-ms.openlocfilehash: 1037cd4210605192870d43d88979b89af6536380
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d0066c6590a9e0cf278e036111c2739f7cfaf679
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175655"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84003906"
 ---
 # <a name="imetadataemitsetfieldmarshal-method"></a>Metodo IMetaDataEmit::SetFieldMarshal
-Imposta le informazioni di marshalling PInvoke per il campo, il metodo restituito o il parametro del metodo a cui fa riferimento il token specificato.  
+Imposta le informazioni di marshalling PInvoke per il campo, il ritorno del metodo o il parametro del metodo a cui fa riferimento il token specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,24 +37,24 @@ HRESULT SetFieldMarshal (
   
 ## <a name="parameters"></a>Parametri  
  `tk`  
- [in] Token per l'elemento di dati di destinazione. Si tratta `mdFieldDef` di `mdParamDef` un o un token.  
+ in Token per l'elemento di dati di destinazione. Si tratta di un `mdFieldDef` token o `mdParamDef` .  
   
  `pvNativeType`  
- [in] Firma per il tipo non gestito.  
+ in Firma per il tipo non gestito.  
   
  `cbNativeType`  
- [in] Numero di byte `pvNativeType`in .  
+ in Numero di byte in `pvNativeType` .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
+ **Libreria:** Usato come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interfaccia IMetaDataEmit](imetadataemit-interface.md)
+- [Interfaccia IMetaDataEmit2](imetadataemit2-interface.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 64264238-3b68-4bac-a887-36b552426a6c
 topic_type:
 - apiref
-ms.openlocfilehash: 2ccc038b4420040779dae70f15e3a8827ba94180
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f4d1c2f105abb64bf196d0dd8371c2788c97336e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444112"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005908"
 ---
 # <a name="coinitiee-enumeration"></a>Enumerazione COINITIEE
-Specifica le costanti usate dal [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) durante l'inizializzazione del Common Language Runtime.  
+Specifica le costanti usate dal [CoInitializeEE](../hosting/coinitializeee-function.md) durante l'inizializzazione del Common Language Runtime.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,23 +34,23 @@ typedef enum tagCOINITEE {
 } COINITIEE;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`COINITEE_DEFAULT`|Modalità di inizializzazione predefinita. Il runtime viene inizializzato e viene creata la <xref:System.AppDomain>predefinita.|  
+|`COINITEE_DEFAULT`|Modalità di inizializzazione predefinita. Il runtime viene inizializzato e viene creato il valore predefinito <xref:System.AppDomain> .|  
 |`COINITEE_DLL`|Inizializza per eseguire una DLL gestita.|  
-|`COINITEE_MAIN`|Inizializza per eseguire un file EXE gestito. In questo modo viene inizializzato il runtime, ma non viene creato il <xref:System.AppDomain>predefinito, che viene creato dopo l'immissione della routine principale del file EXE.|  
+|`COINITEE_MAIN`|Inizializza per eseguire un file EXE gestito. In questo modo viene inizializzato il runtime, ma non viene creato il valore predefinito <xref:System.AppDomain> , che viene creato dopo l'immissione della routine principale del file exe.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
  **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerazioni dei metadati](metadata-enumerations.md)

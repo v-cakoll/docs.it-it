@@ -1,100 +1,124 @@
 ---
-title: Creare una libreria di classi .NET Standard in Visual StudioBuild a .NET Standard class library in Visual Studio
-description: Informazioni su come compilare una libreria di classi .NET Standard scritta in Visual Basic o in Visual Basic utilizzando Visual Studio
-ms.date: 12/09/2019
+title: Creare una libreria di classi .NET Standard in Visual Studio
+description: Informazioni su come creare una libreria di classi .NET Standard usando Visual Studio.
+ms.date: 05/21/2020
+dev_langs:
+- csharp
+- vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 748a1499e0c3a4a41613a69b715dbcfbd585bfe3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2afe11ad75fc36a67efed48d56dbafb11bceaf2a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714013"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005255"
 ---
-# <a name="build-a-net-standard-library-in-visual-studio"></a>Creare una libreria .NET Standard in Visual StudioBuild a .NET Standard library in Visual Studio
+# <a name="tutorial-create-a-net-standard-library-in-visual-studio"></a>Esercitazione: creare una libreria di .NET Standard in Visual Studio
 
-La *libreria di classi* definisce tipi e metodi chiamati da un'applicazione. Una libreria di classi destinata a .NET Standard 2.0 consente di chiamare la libreria da qualsiasi implementazione di .NET che supporta tale versione di .NET Standard. Dopo aver completato la libreria di classi, è possibile decidere se si vuole distribuirla come componente di terze parti o se si vuole includerla come componente in bundle con una o più applicazioni.
+La *libreria di classi* definisce tipi e metodi chiamati da un'applicazione. Una libreria di classi destinata a .NET Standard 2,0 consente la chiamata della libreria da qualsiasi implementazione di .NET che supporti tale versione di .NET Standard. Dopo aver completato la libreria di classi, è possibile decidere se si vuole distribuirla come componente di terze parti o se si vuole includerla come componente in bundle con una o più applicazioni.
 
 > [!NOTE]
-> Per un elenco delle versioni di .NET Standard e delle piattaforme supportate, vedere [.NET Standard](../../standard/net-standard.md).
+> Per un elenco delle versioni di .NET Standard e delle piattaforme supportate, vedere [.NET standard](../../standard/net-standard.md).
 
-In questo argomento si creerà una semplice libreria di utilità contenente un solo metodo di gestione delle stringhe, che verrà implementato come [metodo di estensione](../../csharp/programming-guide/classes-and-structs/extension-methods.md), in modo da poter essere chiamato come se fosse un membro della classe <xref:System.String>.
+In questa esercitazione si creerà una semplice libreria di utilità contenente un solo metodo di gestione delle stringhe. Viene implementato come metodo di [estensione](../../csharp/programming-guide/classes-and-structs/extension-methods.md) in modo che sia possibile chiamarlo come se fosse un membro della <xref:System.String> classe.
 
-## <a name="create-a-visual-studio-solution"></a>Creare una soluzione di Visual StudioCreate a Visual Studio solution
+## <a name="prerequisites"></a>Prerequisiti
 
-Iniziare creando una soluzione vuota per inserire il progetto di libreria di classi in. Una soluzione di Visual Studio funge da contenitore per uno o più progetti. Si aggiungeranno altri progetti correlati alla stessa soluzione se si continua con la serie di esercitazioni.
+- [Visual Studio 2019 versione 16,6 o una versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con il carico di lavoro **sviluppo multipiattaforma .NET Core** installato. .NET Core 3,1 SDK viene installato automaticamente quando si seleziona questo carico di lavoro.
+
+  Per ulteriori informazioni, vedere la sezione [install with Visual Studio](../install/sdk.md?pivots=os-windows#install-with-visual-studio) nell'articolo [Install the .NET Core SDK](../install/sdk.md?pivots=os-windows) .
+
+## <a name="create-a-visual-studio-solution"></a>Creare una soluzione di Visual Studio
+
+Iniziare creando una soluzione vuota in cui inserire il progetto libreria di classi. Una soluzione di Visual Studio funge da contenitore per uno o più progetti. Verranno aggiunti altri progetti correlati alla stessa soluzione.
 
 Per creare la soluzione vuota:
 
 1. Aprire Visual Studio.
 
-2. Nella finestra di avvio scegliere **Crea un nuovo progetto.**
+2. Nella finestra Start scegliere **Crea un nuovo progetto**.
 
-3. Nella pagina **Crea un nuovo progetto** immettere la **soluzione** nella casella di ricerca. Scegliere il modello **Soluzione vuota** e quindi **Avanti**.
+3. Nella pagina **Crea un nuovo progetto** immettere **soluzione** nella casella di ricerca. Scegliere il modello di **soluzione vuota** , quindi scegliere **Avanti**.
 
    ![Modello Soluzione vuota in Visual Studio](media/library-with-visual-studio/blank-solution.png)
 
-4. Nella pagina **Configura il nuovo progetto** immettere **ClassLibraryProjects** nella casella **Nome progetto.** Scegliere quindi **Crea,** quindi Crea .
-
-> [!TIP]
-> È anche possibile ignorare questo passaggio e consentire a Visual Studio di creare automaticamente la soluzione quando si crea il progetto nel passaggio successivo. Cercare le opzioni della soluzione nella pagina **Configura il nuovo progetto.**
+4. Nella pagina **Configura nuovo progetto** immettere **ClassLibraryProjects** nella casella **nome progetto** . Scegli quindi **Crea**.
 
 ## <a name="create-a-class-library-project"></a>Creare un progetto di libreria di classi
 
-<!-- markdownlint-disable MD025 -->
+1. Aggiungere un nuovo progetto di libreria di classi .NET Standard denominato "StringLibrary" alla soluzione.
 
-# <a name="c"></a>[C #](#tab/csharp)
+   1. Fare clic con il pulsante destro del mouse sulla soluzione in **Esplora soluzioni** e scegliere **Aggiungi**  >  **nuovo progetto**.
 
-1. Aggiungere alla soluzione un nuovo progetto di libreria di classi .NET Standard di C.NET denominato "StringLibrary".
+   1. Nella pagina **Aggiungi nuovo progetto** immettere **Library** nella casella di ricerca. Scegliere **C#** o **Visual Basic** dall'elenco lingua, quindi scegliere tutte le **piattaforme** dall'elenco piattaforma. Scegliere il modello **libreria di classi (.NET standard)** , quindi fare clic su **Avanti**.
 
-   1. Fare clic con il pulsante destro del mouse sulla soluzione in **Esplora soluzioni** e selezionare **Aggiungi** > **nuovo progetto**.
+   1. Nella pagina **Configura nuovo progetto** immettere **StringLibrary** nella casella **nome progetto** . Quindi scegliere **Crea**.
 
-   1. Nella pagina **Aggiungi un nuovo progetto** immettere la **raccolta** nella casella di ricerca. Scegliere **C 'c'è** dall'elenco linguaggio e quindi scegliere **Tutte le piattaforme** dall'elenco piattaforma . Scegliere il modello Libreria di classi **(.NET Standard)** e quindi scegliere **Avanti**.
-
-   1. Nella pagina **Configura il nuovo progetto** immettere **StringLibrary** nella casella **Nome progetto.** Scegliere quindi **Crea,** quindi Crea .
-
-1. Verificare che la libreria sia destinata alla versione corretta di .NET Standard. Fare clic con il pulsante destro del mouse sul progetto di libreria in **Esplora soluzioni**, quindi scegliere **Proprietà**. La casella di testo Framework di destinazione indica che il progetto è destinato a .NET Standard 2.0.The **Target Framework** text box shows that the project targets .NET Standard 2.0.
+1. Verificare che la libreria sia destinata alla versione corretta di .NET Standard. Fare clic con il pulsante destro del mouse sul progetto di libreria in **Esplora soluzioni**, quindi scegliere **Proprietà**. La casella di testo **Framework di destinazione** indica che il progetto è destinato a .NET standard 2,0.
 
    ![Proprietà del progetto per la libreria di classi](./media/library-with-visual-studio/library-project-properties.png)
 
-1. Nella finestra del codice sostituire il codice con il seguente:
-
-   [!CODE-csharp[ClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/classlib.cs)]
-
-   La libreria `UtilityLibraries.StringLibrary`di classi , `StartsWithUpper`, contiene un metodo denominato . Questo metodo <xref:System.Boolean> restituisce un valore che indica se l'istanza della stringa corrente inizia con un carattere maiuscolo. Lo standard Unicode distingue i caratteri maiuscoli dai minuscoli. Il metodo <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> restituisce `true` se un carattere è maiuscolo.
-
-1. Nella barra dei menu selezionare **Compila** > **soluzione**.
-
-# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
-
-1. Aggiungere alla soluzione un nuovo progetto di libreria di classi Visual Basic .NET Standard denominato "StringLibrary".
-
-   1. Fare clic con il pulsante destro del mouse sulla soluzione in **Esplora soluzioni** e selezionare **Aggiungi** > **nuovo progetto**.
-
-   1. Nella pagina **Aggiungi un nuovo progetto** immettere la **raccolta** nella casella di ricerca. Scegliere **Visual Basic** dall'elenco Linguaggio, quindi scegliere Tutte le **piattaforme** dall'elenco Piattaforma. Scegliere il modello Libreria di classi **(.NET Standard)** e quindi scegliere **Avanti**.
-
-   1. Nella pagina **Configura il nuovo progetto** immettere **StringLibrary** nella casella **Nome progetto.** Scegliere quindi **Crea,** quindi Crea .
-
-1. Verificare che la libreria sia destinata alla versione corretta di .NET Standard. Fare clic con il pulsante destro del mouse sul progetto di libreria in **Esplora soluzioni**, quindi scegliere **Proprietà**. La casella di testo Framework di destinazione indica che il progetto è destinato a .NET Standard 2.0.The **Target Framework** text box shows that the project targets .NET Standard 2.0.
+1. Se si usa Visual Basic, cancellare il testo nella casella di testo **spazio dei nomi radice** .
 
    ![Proprietà del progetto per la libreria di classi](./media/library-with-visual-studio/vb/library-project-properties.png)
 
-1. Nella finestra di dialogo **Proprietà** cancellare il testo nella casella di testo **Spazio dei nomi radice.** Per ogni progetto, Visual Basic crea automaticamente uno spazio dei nomi che corrisponde al nome del progetto. In questa esercitazione si definisce uno [`namespace`](../../visual-basic/language-reference/statements/namespace-statement.md) spazio dei nomi di primo livello usando la parola chiave nel file di codice.
+   Per ogni progetto Visual Basic crea automaticamente uno spazio dei nomi che corrisponde al nome del progetto. In questa esercitazione si definisce uno spazio dei nomi di primo livello usando la [`namespace`](../../visual-basic/language-reference/statements/namespace-statement.md) parola chiave nel file di codice.
 
-1. Nella finestra del codice sostituire il codice con il seguente:
+1. Sostituire il codice nella finestra del codice per *Class1.cs* o *Class1. vb* con il codice seguente e salvare il file. Se la lingua che si desidera utilizzare non è visualizzata, modificare il selettore della lingua nella parte superiore della pagina.
 
-   [!CODE-vb[ClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/stringlibrary.vb)]
+   [!code-csharp[](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/classlib.cs)]
+   [!code-vb[](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/stringlibrary.vb)]
 
-   La libreria `UtilityLibraries.StringLibrary`di classi , `StartsWithUpper`, contiene un metodo denominato . Questo metodo <xref:System.Boolean> restituisce un valore che indica se l'istanza della stringa corrente inizia con un carattere maiuscolo. Lo standard Unicode distingue i caratteri maiuscoli dai minuscoli. Il metodo <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> restituisce `true` se un carattere è maiuscolo.
+   La libreria di classi, `UtilityLibraries.StringLibrary` , contiene un metodo denominato `StartsWithUpper` . Questo metodo restituisce un <xref:System.Boolean> valore che indica se l'istanza di stringa corrente inizia con un carattere maiuscolo. Lo standard Unicode distingue i caratteri maiuscoli dai minuscoli. Il metodo <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> restituisce `true` se un carattere è maiuscolo.
 
-1. Nella barra dei menu selezionare **Compila** > **soluzione**.
+1. Nella barra dei menu selezionare **Compila**  >  **Compila soluzione** per verificare che il progetto venga compilato senza errori.
 
----
+## <a name="add-a-console-app-to-the-solution"></a>Aggiungere un'app console alla soluzione
 
-   Il progetto dovrebbe essere compilato senza errori.
+Utilizzare la libreria di classi in un'applicazione console che richiede all'utente di immettere una stringa e indica se la stringa inizia con un carattere maiuscolo.
+
+1. Aggiungere alla soluzione una nuova applicazione console .NET Core denominata "ShowCase".
+
+   1. Fare clic con il pulsante destro del mouse sulla soluzione in **Esplora soluzioni** e scegliere **Aggiungi**  >  **nuovo progetto**.
+
+   1. Nella pagina **Aggiungi nuovo progetto** immettere **console** nella casella di ricerca. Scegliere **C#** o **Visual Basic** dall'elenco lingua, quindi scegliere tutte le **piattaforme** dall'elenco piattaforma.
+
+   1. Scegliere il modello **app console (.NET Core)** , quindi fare clic su **Avanti**.
+
+   1. Nella pagina **Configura nuovo progetto** immettere **Showcase** nella casella **nome progetto** . Scegli quindi **Crea**.
+
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto **ShowCase** e selezionare **Imposta come progetto di avvio** nel menu di scelta rapida.
+
+   ![Menu di scelta rapida del progetto di Visual Studio per impostare il progetto di avvio](media/library-with-visual-studio/set-startup-project-context-menu.png)
+
+1. Inizialmente, il nuovo progetto di app console non ha accesso alla libreria di classi. Per consentire la chiamata di metodi nella libreria di classi, creare un riferimento di progetto al progetto libreria di classi. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul `ShowCase` nodo **dipendenze** del progetto e scegliere **Aggiungi riferimento al progetto**.
+
+   ![Menu di scelta rapida Aggiungi riferimento in Visual Studio](media/library-with-visual-studio/add-reference-context-menu.png)
+
+1. Nella finestra di dialogo **Gestione riferimenti** selezionare il progetto **StringLibrary** e fare clic su **OK**.
+
+   ![Finestra di dialogo Gestione riferimenti con StringLibrary selezionato](media/library-with-visual-studio/manage-project-references.png)
+
+1. Nella finestra del codice per il file *Program.cs* o *Program. vb* sostituire tutto il codice con il codice seguente.
+
+   [!code-csharp[UsingClassLib#1](~/samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs)]
+   [!code-vb[UsingClassLib#1](~/samples/snippets/core/tutorials/vb-library-with-visual-studio/showcase.vb)]
+
+   Il codice usa la variabile `row` per mantenere il conteggio del numero di righe di dati scritti nella finestra della console. Ogni volta che è maggiore o uguale a 25, il codice Cancella la finestra della console e visualizza un messaggio all'utente.
+
+   Il programma richiede all'utente di immettere una stringa. Indica se la stringa inizia con un carattere maiuscolo. Se l'utente preme il tasto INVIO senza immettere una stringa, l'applicazione termina e la finestra della console si chiude.
+
+1. Se necessario, modificare la barra degli strumenti per compilare la versione di **debug** del progetto `ShowCase`. Compilare ed eseguire il programma selezionando la freccia verde nel pulsante **ShowCase**.
+
+   ![Barra degli strumenti del progetto di Visual Studio con il pulsante debug](media/library-with-visual-studio/visual-studio-project-toolbar.png)
+
+1. Per provare il programma, immettere le stringhe e premere **invio**, quindi premere **invio** per uscire.
+
+   :::image type="content" source="media/library-with-visual-studio/run-showcase.png" alt-text="Finestra della console con presentazione in esecuzione":::
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-La compilazione della libreria è stata completata. Non è tuttavia possibile sapere se funziona come previsto poiché non è stato ancora chiamato uno dei metodi. Il passaggio successivo nello sviluppo della libreria consiste nel testarla.
+In questa esercitazione è stata creata una soluzione, è stato aggiunto un progetto di libreria e è stato aggiunto un progetto di app console che usa la libreria. Nell'esercitazione successiva si aggiunge un progetto di unit test alla soluzione.
 
 > [!div class="nextstepaction"]
-> [Creare un progetto di unit test](testing-library-with-visual-studio.md)
+> [Testare una libreria di .NET Standard con .NET Core in Visual Studio](testing-library-with-visual-studio.md)

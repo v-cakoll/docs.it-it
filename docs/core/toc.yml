@@ -81,59 +81,95 @@
   href: compatibility/
 - name: Esercitazioni
   items:
-    - name: Panoramica
+    - name: Usare Visual Studio
+      items:
+        - name: Creare un'applicazione console
+          href: tutorials/with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: Eseguire il debug di un'app
+          href: tutorials/debugging-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: Pubblicare un'app
+          href: tutorials/publishing-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: Crea una libreria
+          href: tutorials/library-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: Eseguire unit test di una libreria
+          href: tutorials/testing-library-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: Usare una libreria
+          href: tutorials/consuming-library-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: Unit test live
+          href: /visualstudio/test/live-unit-testing-start
+        - name: Installare e usare un pacchetto
+          href: /nuget/quickstart/install-and-use-a-package-in-visual-studio
+          displayName: 'tutorials, visual studio, vs'
+        - name: Creare e pubblicare un pacchetto
+          href: /nuget/quickstart/create-and-publish-a-package-using-visual-studio
+          displayName: 'tutorials, visual studio, vs'
+    - name: Usare Visual Studio Code
+      items:
+        - name: Creare un'applicazione console
+          href: tutorials/with-visual-studio-code.md
+          displayName: 'tutorials, visual studio code, vs code, cli'
+        - name: Creare un'app console e pubblicarla
+          href: tutorials/cli-create-console-app.md
+          displayName: 'tutorials, cli'
+        - name: Creare una libreria e sottoporla a unit test - macOS
+          href: tutorials/using-on-macos.md
+          displayName: 'tutorials, visual studio code, vs code, cli'
+        - name: Installare e usare un pacchetto
+          href: /nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
+          displayName: 'tutorials, cli'
+        - name: Creare e pubblicare un pacchetto
+          href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
+          displayName: tutorials
+    - name: Usare Visual Studio per Mac
+      items:
+        - name: Creare un'applicazione console
+          href: tutorials/using-on-mac-vs.md
+          displayName: tutorials
+        - name: Creare una libreria e sottoporla a unit test
+          href: tutorials/using-on-mac-vs-full-solution.md
+          displayName: tutorials
+        - name: Installare e usare un pacchetto
+          href: /nuget/quickstart/install-and-use-a-package-in-visual-studio-mac
+          displayName: tutorials
+    - name: Argomenti avanzati
+      items:
+        - name: Eseguire unit test di un'app con xUnit
+          href: tutorials/testing-with-cli.md
+          displayName: 'tutorials, cli'
+        - name: Come creare librerie
+          href: tutorials/libraries.md
+        - name: Creare modelli per l'interfaccia della riga di comando
+          items:
+            - name: 1 - Creare un modello di elemento
+              href: tutorials/cli-templates-create-item-template.md
+              displayName: 'tutorials, cli'
+            - name: 2 - Creare un modello di progetto
+              href: tutorials/cli-templates-create-project-template.md
+              displayName: 'tutorials, cli'
+            - name: 3 - Creare un pacchetto modello
+              href: tutorials/cli-templates-create-template-pack.md
+              displayName: 'tutorials, cli'
+        - name: Creare strumenti per l'interfaccia della riga di comando
+          items:
+            - name: 1 - Creare uno strumento
+              displayName: 'tools, tutorials, cli'
+              href: tools/global-tools-how-to-create.md
+            - name: 2 - Usare uno strumento globale
+              displayName: 'tools, tutorials, cli'
+              href: tools/global-tools-how-to-use.md
+            - name: 3 - Usare uno strumento locale
+              href: tools/local-tools-how-to-use.md
+              displayName: 'tools, tutorials, cli'
+        - name: Creare un'app con i plug-in
+          href: tutorials/creating-app-with-plugin-support.md
+    - name: Altre esercitazioni
       href: tutorials/index.md
-    - name: Introduzione a .NET Core con Visual Studio
-      href: tutorials/with-visual-studio.md
-    - name: Introduzione a .NET Core con Visual Studio Code
-      href: tutorials/with-visual-studio-code.md
-    - name: Introduzione all'uso di .NET Core con l'interfaccia della riga di comando
-      href: tutorials/cli-create-console-app.md
-    - name: Introduzione all'uso di .NET Core con Visual Studio Code su macOS
-      href: tutorials/using-on-macos.md
-    - name: Introduzione a .NET Core con Visual Studio per Mac
-      href: tutorials/using-on-mac-vs.md
-    - name: Eseguire il debug di un'applicazione con Visual Studio
-      href: tutorials/debugging-with-visual-studio.md
-    - name: Pubblicare un'applicazione con Visual Studio
-      href: tutorials/publishing-with-visual-studio.md
-    - name: Creare una libreria .NET Standard in Visual Studio
-      href: tutorials/library-with-visual-studio.md
-    - name: Testare una libreria .NET Standard in Visual Studio
-      href: tutorials/testing-library-with-visual-studio.md
-    - name: Utilizzare una libreria .NET Standard in Visual Studio
-      href: tutorials/consuming-library-with-visual-studio.md
-    - name: Creazione di una soluzione .NET Core completa in macOS
-      href: tutorials/using-on-mac-vs-full-solution.md
-    - name: Organizzare e testare progetti con gli strumenti dell'interfaccia della riga di comando di .NET Core
-      href: tutorials/testing-with-cli.md
-    - name: Sviluppare librerie con strumenti multipiattaforma
-      href: tutorials/libraries.md
-    - name: Creare un'app .NET Core con plug-in
-      href: tutorials/creating-app-with-plugin-support.md
-    - name: Sviluppare app ASP.NET Core
-      href: tutorials/aspnet-core.md
-    - name: Ospitare .NET Core da codice nativo
-      href: tutorials/netcore-hosting.md
-    - name: Creare modelli per l'interfaccia della riga di comando
-      items:
-        - name: 1 - Creare un modello di elemento
-          href: tutorials/cli-templates-create-item-template.md
-        - name: 2 - Creare un modello di progetto
-          href: tutorials/cli-templates-create-project-template.md
-        - name: 3 - Creare un pacchetto modello
-          href: tutorials/cli-templates-create-template-pack.md
-    - name: Creare strumenti per l'interfaccia della riga di comando
-      items:
-        - name: 1 - Creare uno strumento
-          displayName: 'tools, tutorials'
-          href: tools/global-tools-how-to-create.md
-        - name: 2 - Usare uno strumento globale
-          displayName: 'tools, tutorials'
-          href: tools/global-tools-how-to-use.md
-        - name: 3 - Usare uno strumento locale
-          href: tools/local-tools-how-to-use.md
-          displayName: 'tools, tutorials'
 - name: SDK per i progetti
   items:
     - name: Panoramica
@@ -441,6 +477,8 @@
   href: distribution-packaging.md
 - name: Esporre componenti di .NET Core a COM
   href: native-interop/expose-components-to-com.md
+- name: Ospitare .NET Core da codice nativo
+  href: tutorials/netcore-hosting.md
 - name: 'Pacchetti, metapacchetti e framework'
   href: packages.md
 - name: Integrazione continua

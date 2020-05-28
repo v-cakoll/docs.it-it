@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 632d4adc-dbc9-4ce8-9397-abc3285c1c69
 topic_type:
 - apiref
-ms.openlocfilehash: ae40d8adaae70ccff6e8058858a506267d58873f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 31be0525c637e50c1161129277d651b56dadfaa3
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133744"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006753"
 ---
 # <a name="modulebindinfo-structure"></a>Struttura ModuleBindInfo
 Fornisce informazioni dettagliate sul modulo a cui si fa riferimento e sull'assembly che la contiene.  
@@ -34,30 +34,30 @@ typedef struct _ModuleBindInfo {
 } ModuleBindInfo;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|`dwAppDomainId`|Identificatore univoco per il `IStream` restituito da una chiamata al metodo [IHostAssemblyStore::P rovidemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md) da cui deve essere caricato il modulo a cui si fa riferimento.|  
+|`dwAppDomainId`|Identificatore univoco dell'oggetto `IStream` restituito da una chiamata al metodo [IHostAssemblyStore::P rovidemodule](ihostassemblystore-providemodule-method.md) da cui deve essere caricato il modulo a cui si fa riferimento.|  
 |`lpAssemblyIdentity`|Identificatore univoco per l'assembly che contiene il modulo a cui si fa riferimento.|  
 |`lpModuleName`|Nome del modulo a cui si fa riferimento.|  
   
-## <a name="remarks"></a>Note  
- `ModuleBindInfo` viene passato come parametro a `IHostAssemblyStore::ProvideModule`. L'host fornisce l'identificatore univoco `dwAppDomainId` al Common Language Runtime (CLR). Dopo che una chiamata al metodo [IHostAssemblyStore::P rovideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) restituisce, il runtime usa l'identificatore per determinare se è stato eseguito il mapping del contenuto della `IStream`. In tal caso, il runtime carica la copia esistente anziché rimappare il flusso. Il runtime usa anche questo identificatore come chiave di ricerca per i flussi restituiti dalle chiamate al metodo `IHostAssemblyStore::ProvideAssembly`. Pertanto, l'identificatore deve essere univoco per le richieste di modulo e per le richieste di assembly.  
+## <a name="remarks"></a>Commenti  
+ `ModuleBindInfo`viene passato come parametro a `IHostAssemblyStore::ProvideModule` . L'host fornisce l'identificatore univoco `dwAppDomainId` al Common Language Runtime (CLR). Dopo che una chiamata al metodo [IHostAssemblyStore::P rovideassembly](ihostassemblystore-provideassembly-method.md) restituisce, il runtime usa l'identificatore per determinare se `IStream` è stato eseguito il mapping del contenuto di. In tal caso, il runtime carica la copia esistente anziché rimappare il flusso. Il runtime usa anche questo identificatore come chiave di ricerca per i flussi restituiti dalle chiamate al `IHostAssemblyStore::ProvideAssembly` metodo. Pertanto, l'identificatore deve essere univoco per le richieste di modulo e per le richieste di assembly.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. idl  
   
  **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strutture di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [Struttura AssemblyBindInfo](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)
-- [Interfaccia ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [Interfaccia ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [Interfaccia IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
+- [Strutture di hosting](hosting-structures.md)
+- [Struttura AssemblyBindInfo](assemblybindinfo-structure.md)
+- [Interfaccia ICLRAssemblyIdentityManager](iclrassemblyidentitymanager-interface.md)
+- [Interfaccia ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)
+- [Interfaccia IHostAssemblyManager](ihostassemblymanager-interface.md)

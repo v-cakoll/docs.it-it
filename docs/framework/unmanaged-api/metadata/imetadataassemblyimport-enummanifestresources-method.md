@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9543b111-5705-40c9-935c-a3ffc7a581aa
 topic_type:
 - apiref
-ms.openlocfilehash: 22141cf46a965c0624c076bd1d86d2624e5a09f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 560a6adf85fab7f421b86cba52224d5b1bfe1089
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176019"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006259"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>Metodo IMetaDataAssemblyImport::EnumManifestResources
-Ottiene un puntatore a un enumeratore per le risorse a cui viene fatto riferimento nel manifesto dell'assembly corrente.  
+Ottiene un puntatore a un enumeratore per le risorse a cui si fa riferimento nel manifesto dell'assembly corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,33 +38,33 @@ HRESULT EnumManifestResources (
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] Puntatore all'enumeratore. Deve essere un valore `EnumManifestResources` null quando il metodo viene chiamato per la prima volta.  
+ [in, out] Puntatore all'enumeratore. Deve essere un valore null quando il `EnumManifestResources` metodo viene chiamato per la prima volta.  
   
  `rManifestResources`  
- [fuori] Matrice utilizzata per `mdManifestResource` archiviare i token di metadati.  
+ out Matrice utilizzata per archiviare i `mdManifestResource` token dei metadati.  
   
  `cMax`  
- [in] Numero massimo `mdManifestResource` di token che possono `rManifestResources`essere inseriti in .  
+ in Numero massimo di `mdManifestResource` token che possono essere inseriti in `rManifestResources` .  
   
  `pcTokens`  
- [fuori] Il numero `mdManifestResource` di token `rManifestResources`effettivamente inseriti in .  
+ out Numero di `mdManifestResource` token effettivamente inseriti in `rManifestResources` .  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumManifestResources`restituito con successo.|  
-|`S_FALSE`|Non sono presenti token da enumerare. In questo `pcTokens` caso, è impostato su zero.|  
+|`S_OK`|`EnumManifestResources`la restituzione è riuscita.|  
+|`S_FALSE`|Nessun token da enumerare. In questo caso, `pcTokens` è impostato su zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [Interfaccia IMetaDataAssemblyImport](imetadataassemblyimport-interface.md)

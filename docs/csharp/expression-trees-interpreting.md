@@ -4,12 +4,12 @@ description: Informazioni su come scrivere codice per esaminare la struttura di 
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 5734e1be6b59bfe3eae97f29d1bd91e7e3a3623f
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: ea205d42b02ea7b38c04cb70d322329cf7c1d495
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761863"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004647"
 ---
 # <a name="interpreting-expressions"></a>Interpretazione di espressioni
 
@@ -22,7 +22,7 @@ Tale progettazione rende la visita di tutti i nodi in un albero delle espression
 Se il tipo di nodo contiene elementi figlio, visitare in modo ricorsivo gli elementi figlio. In ogni nodo figlio, ripetere il processo usato in corrispondenza del nodo radice: determinare il tipo e, se il tipo contiene elementi figlio, visitare ognuno di essi.
 
 ## <a name="examining-an-expression-with-no-children"></a>Analisi di un'espressione senza elementi figlio
-Iniziare visitando ogni nodo in un albero delle espressioni molto semplice.
+Per iniziare, visitare ogni nodo in un albero delle espressioni semplice.
 Ecco il codice che crea un'espressione costante e ne esamina quindi le proprietà:
 
 ```csharp
@@ -53,7 +53,7 @@ Expression<Func<int>> sum = () => 1 + 2;
 
 > Non si usa `var` per dichiarare questo albero delle espressioni e ciò non è possibile perché il lato destro dell'assegnazione è tipizzato in modo implicito.
 
-Il nodo radice è una `LambdaExpression`. Per ottenere la parte di codice di interesse a destra dell'operatore `=>`, è necessario trovare uno degli elementi figlio della `LambdaExpression`. È possibile farlo con tutte le espressioni in questa sezione. Il nodo padre consente di trovare il tipo restituito della `LambdaExpression`.
+Il nodo radice è una `LambdaExpression`. Per ottenere il codice interessante sul lato destro dell' `=>` operatore, è necessario trovare uno degli elementi figlio dell'oggetto `LambdaExpression` . È possibile farlo con tutte le espressioni in questa sezione. Il nodo padre consente di trovare il tipo restituito della `LambdaExpression`.
 
 Per esaminare ogni nodo in questa espressione, è necessario visitare in modo ricorsivo un certo numero di nodi. Ecco una semplice prima implementazione:
 
@@ -215,7 +215,7 @@ public class ConstantVisitor : Visitor
 }
 ```
 
-Questo algoritmo è la base di un algoritmo che può visitare qualsiasi `LambdaExpression` arbitraria. Vi sono molte mancanze, in particolare perché il codice creato cerca soltanto un esempio molto ridotto dei possibili set di nodi dell'albero delle espressioni che potrebbe rilevare. È tuttavia possibile ricavare una certa quantità di informazioni utili dal risultato prodotto. Il caso predefinito nel metodo `Visitor.CreateFromExpression` visualizza un messaggio nella console di errore quando viene rilevato un nuovo tipo di nodo. In questo modo, si sa di dover aggiungere un nuovo tipo di espressione.
+Questo algoritmo è la base di un algoritmo che può visitare qualsiasi `LambdaExpression` arbitraria. Esistono molti buchi, vale a dire che il codice creato Cerca solo un campione molto piccolo dei possibili set di nodi dell'albero delle espressioni che possono verificarsi. È tuttavia possibile ricavare una certa quantità di informazioni utili dal risultato prodotto. Il caso predefinito nel metodo `Visitor.CreateFromExpression` visualizza un messaggio nella console di errore quando viene rilevato un nuovo tipo di nodo. In questo modo, si sa di dover aggiungere un nuovo tipo di espressione.
 
 Quando si esegue questo visitatore nell'espressione di addizione precedente, si ottiene l'output seguente:
 
@@ -262,7 +262,7 @@ Expression<Func<int>> sum5 = () => (1 + (2 + 3)) + 4;
 Si può visualizzare la separazione in due possibili risposte per evidenziare quella più efficace. La prima possibilità rappresenta le espressioni *associative all'operando destro*. La seconda rappresenta le espressioni *associative all'operando sinistro*.
 Il vantaggio di entrambi i formati è che il formato si adatta a qualsiasi numero arbitrario di espressioni di addizione.
 
-Se si esegue questa espressione tramite il visitatore, verrà visualizzato questo output, che verifica che l'espressione di addizione semplice è *associativa all'operando sinistro*.
+Se si esegue questa espressione tramite il visitatore, verrà visualizzato questo output, verificando che l'espressione di addizione semplice sia *associativa a sinistra*.
 
 Per eseguire questo esempio e visualizzare l'albero delle espressioni completo, è stato necessario apportare una modifica all'albero delle espressioni di origine. Quando l'albero delle espressioni contiene tutte le costanti, l'albero risultante contiene semplicemente il valore costante di `10`. Il compilatore esegue tutta l'addizione e riduce l'espressione alla sua forma più semplice. La semplice aggiunta di una variabile nell'espressione è sufficiente per visualizzare l'albero originale:
 
@@ -355,7 +355,7 @@ Expression<Func<int, int>> factorial = (n) =>
 ```
 
 Questo codice rappresenta una possibile implementazione per funzione matematica *fattoriale*. Il modo in cui è stato scritto questo codice consente di evidenziare due limitazioni della creazione degli alberi delle espressioni tramite l'assegnazione di espressioni lambda alle espressioni. In primo luogo, non sono consentite espressioni lambda dell'istruzione. Non è quindi possibile usare cicli, blocchi, istruzioni if / else e altre strutture di controllo comuni in C#. Si è limitati all'uso delle espressioni. In secondo luogo, non è possibile chiamare in modo ricorsivo la stessa espressione.
-Ciò sarebbe possibile se fosse già un delegato, ma non può essere chiamata nella sua forma di albero delle espressioni. Nella sezione relativa alla [creazione di alberi delle espressioni](expression-trees-building.md) verranno illustrate le tecniche per superare queste limitazioni.
+Ciò sarebbe possibile se fosse già un delegato, ma non può essere chiamata nella sua forma di albero delle espressioni. Nella sezione relativa alla [compilazione degli alberi delle espressioni](expression-trees-building.md)verranno illustrate le tecniche per superare queste limitazioni.
 
 In questa espressione si incontrano i nodi di tutti questi tipi:
 
@@ -517,7 +517,7 @@ Anche nell'ultimo esempio viene riconosciuto un sottoinsieme dei possibili tipi 
 È comunque possibile inserire molte espressioni che ne determinerebbero l'esito negativo.
 Un'implementazione completa è inclusa in .NET Standard con il nome <xref:System.Linq.Expressions.ExpressionVisitor> e consente di gestire tutti i possibili tipi di nodo.
 
-Infine, la libreria usata in questo articolo è stata creata per la formazione e dimostrazione. Non è ottimizzata. È stata scritta per rendere le strutture usate molto chiare e per evidenziare le tecniche applicate per visitare i nodi e analizzarne il contenuto. Un'implementazione di produzione presterebbe maggiore attenzione alle prestazioni di quanto è stato fatto qui.
+Infine, la libreria usata in questo articolo è stata creata per la formazione e dimostrazione. Non è ottimizzata. Lo ho scritto per rendere le strutture più chiare e per evidenziare le tecniche usate per visitare i nodi e analizzare i risultati. Un'implementazione di produzione presterebbe maggiore attenzione alle prestazioni di quanto è stato fatto qui.
 
 Anche con queste limitazioni, sarà possibile iniziare a scrivere algoritmi e leggere e comprendere gli alberi delle espressioni.
 

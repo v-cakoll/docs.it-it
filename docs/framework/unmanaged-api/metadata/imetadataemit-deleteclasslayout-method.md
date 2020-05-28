@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 65a4ad49-fa49-4b36-8ed1-76dd6a185ab4
 topic_type:
 - apiref
-ms.openlocfilehash: 00f2aa3364b8b707d4100f8d2574ff3765d106da
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3ef6b89ed6578d77f30d5e53657b962b200b0ed6
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450159"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009321"
 ---
 # <a name="imetadataemitdeleteclasslayout-method"></a>Metodo IMetaDataEmit::DeleteClassLayout
 Elimina definitivamente la firma dei metadati del layout della classe per il tipo rappresentato dal token specificato.  
@@ -35,18 +35,18 @@ HRESULT DeleteClassLayout (
   
 ## <a name="parameters"></a>Parametri  
  `td`  
- in Token di metadati `mdTypeDef` che rappresenta il tipo per il quale verrà eliminato il layout della classe.  
+ in `mdTypeDef`Token di metadati che rappresenta il tipo per il quale verrà eliminato il layout della classe.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
  **Libreria:** Usato come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interfaccia IMetaDataEmit](imetadataemit-interface.md)
+- [Interfaccia IMetaDataEmit2](imetadataemit2-interface.md)

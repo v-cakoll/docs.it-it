@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1de8400-adfe-4a71-b828-a1d0cc1ea505
 topic_type:
 - apiref
-ms.openlocfilehash: 76f18336808e6832b2ded94349efd7948f23a1ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 23f6a301c4c11be92e05dbac0d4f69817d857a28
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175694"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84003951"
 ---
 # <a name="imetadataemitsave-method"></a>Metodo IMetaDataEmit::Save
 Salva tutti i metadati nell'ambito corrente nel file in corrispondenza dell'indirizzo specificato.  
@@ -36,21 +36,21 @@ HRESULT Save (
   
 ## <a name="parameters"></a>Parametri  
  `wzFile`  
- [in] Nome del file in cui salvare. Se questo valore è null, la copia in memoria verrà salvata nell'ultima posizione utilizzata.  
+ in Nome del file in cui salvare. Se questo valore è null, la copia in memoria verrà salvata nell'ultima posizione utilizzata.  
   
  `dwSaveFlags`  
  [in] Riservato. Deve essere zero.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MSCorEE.dll  
+ **Libreria:** Usato come risorsa in MSCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interfaccia IMetaDataEmit](imetadataemit-interface.md)
+- [Interfaccia IMetaDataEmit2](imetadataemit2-interface.md)

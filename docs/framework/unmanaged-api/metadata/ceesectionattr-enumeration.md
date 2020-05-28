@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0db51881-b869-4677-a715-1726a9216489
 topic_type:
 - apiref
-ms.openlocfilehash: 97b28c961f43388679615ac0d5b19c4c69df1e3d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6da8a111f716906e403d85bc0b1a29eba7238100
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444256"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006064"
 ---
 # <a name="ceesectionattr-enumeration"></a>Enumerazione CeeSectionAttr
-Fornisce valori che specificano gli attributi di una sezione per l'utilizzo da parte dell'interfaccia [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) .  
+Fornisce valori che specificano gli attributi di una sezione per l'utilizzo da parte dell'interfaccia [ICeeGen](iceegen-interface.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +39,7 @@ typedef enum  {
   
 ## <a name="members"></a>Membri  
   
-|Membro|description|  
+|Membro|Descrizione|  
 |------------|-----------------|  
 |`sdNone`|La sezione non ha attributi.|  
 |`sdReadOnly`|La sezione contiene dati inizializzati che possono essere letti solo e non aggiornati.|  
@@ -47,14 +47,14 @@ typedef enum  {
 |`sdExecute`|La sezione contiene codice eseguibile che può essere letto ed eseguito.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
  **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerazioni dei metadati](metadata-enumerations.md)

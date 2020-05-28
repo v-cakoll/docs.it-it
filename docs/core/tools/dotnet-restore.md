@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Informazioni sul ripristino delle dipendenze e degli strumenti specifici per il progetto tramite il comando dotnet-restore.
 ms.date: 02/27/2020
-ms.openlocfilehash: 29f81b09a01e689d3f6d86c16b1f134c9fe6b6a0
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 276fad896a6a8a647ed05a9de8c582d463d9ab8f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840936"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005317"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -25,12 +25,12 @@ dotnet restore [<ROOT>] [--configfile <FILE>] [--disable-parallel]
     [--interactive] [--lock-file-path <LOCK_FILE_PATH>] [--locked-mode]
     [--no-cache] [--no-dependencies] [--packages <PACKAGES_DIRECTORY>]
     [-r|--runtime <RUNTIME_IDENTIFIER>] [-s|--source <SOURCE>]
-    [--use-lockfile] [-v|--verbosity <LEVEL>]
+    [--use-lock-file] [-v|--verbosity <LEVEL>]
 
 dotnet restore -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrizione
 
 Il comando `dotnet restore` usa NuGet per ripristinare le dipendenze e gli strumenti specifici del progetto definiti nel file di progetto.  Nella maggior parte dei casi, non è necessario usare in modo esplicito il `dotnet restore` comando, poiché un ripristino NuGet viene eseguito in modo implicito se necessario quando si eseguono i comandi seguenti:
 
@@ -145,7 +145,7 @@ Esistono tre impostazioni specifiche che `dotnet restore` ignora:
 
   Specifica l'URI dell'origine del pacchetto NuGet da usare durante l'operazione di ripristino. Questa impostazione esegue l'override di tutte le origini specificate nei file *NuGet.config*. È possibile specificare più origini, selezionando questa opzione più volte.
 
-- **`--use-lockfile`**
+- **`--use-lock-file`**
 
   Consente la generazione e l'utilizzo del file di blocco del progetto con il ripristino.
 

@@ -1,34 +1,34 @@
 ---
-title: Installare dipendenze ML.NET aggiuntiveInstall extra ML.NET dependencies
-description: Informazioni su come installare le librerie native da cui ML.NET pacchetti dipendono ma non vengono installati con i pacchetti NuGet
+title: Installare dipendenze ML.NET aggiuntive
+description: Informazioni su come installare le librerie native da cui dipendono i pacchetti ML.NET, ma che non vengono installate con i pacchetti NuGet
 ms.date: 04/02/2020
 author: natke
 ms.author: nakersha
 ms.custom: how-to
-ms.openlocfilehash: c427439d0950bfea38f1d6d11af84216e0f1965f
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: c744b42b4b95681de7b0cbeaef338cc890708fd8
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021849"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008430"
 ---
-# <a name="install-extra-mlnet-dependencies"></a>Installare dipendenze ML.NET aggiuntiveInstall extra ML.NET dependencies
+# <a name="install-extra-mlnet-dependencies"></a>Installare dipendenze ML.NET aggiuntive
 
-Nella maggior parte dei casi, in tutti i sistemi operativi, l'installazione di ML.NET è semplice come fare riferimento al pacchetto NuGet appropriato.
+Nella maggior parte dei casi, in tutti i sistemi operativi, l'installazione di ML.NET è semplice quanto il riferimento al pacchetto NuGet appropriato.
 
-```bash
+```dotnetcli
 dotnet add package Microsoft.ML
 ```
 
-In alcuni casi, tuttavia, esistono requisiti di installazione aggiuntivi, in particolare quando sono necessari componenti nativi. In questo documento vengono descritti i requisiti di installazione per tali casi. Le sezioni sono suddivise `Microsoft.ML.*` dal pacchetto NuGet specifico con la dipendenza aggiuntiva.
+In alcuni casi, tuttavia, sono previsti requisiti di installazione aggiuntivi, in particolare quando sono necessari componenti nativi. Questo documento descrive i requisiti di installazione per questi casi. Le sezioni sono suddivise in base al `Microsoft.ML.*` pacchetto NuGet specifico con la dipendenza aggiuntiva.
 
-## <a name="microsoftmltimeseries-microsoftmlautoml"></a>Microsoft.ML.TimeSeries, Microsoft.ML.AutoML
+## <a name="microsoftmltimeseries-microsoftmlautoml"></a>Microsoft. ML. TimeSeries, Microsoft. ML. AutoML
 
-Entrambi questi pacchetti hanno una `Microsoft.ML.MKL.Redist`dipendenza da , `libiomp`che ha una dipendenza da .
+Entrambi i pacchetti hanno una dipendenza da `Microsoft.ML.MKL.Redist` , che ha una dipendenza da `libiomp` .
 
 ### <a name="windows"></a>Windows
 
-Non sono necessarie procedure di installazione aggiuntive. La libreria viene installata quando il pacchetto NuGet viene aggiunto al progetto.
+Non sono necessari passaggi aggiuntivi per l'installazione. La libreria viene installata quando il pacchetto NuGet viene aggiunto al progetto.
 
 ### <a name="linux"></a>Linux
 
@@ -72,7 +72,7 @@ Non sono necessarie procedure di installazione aggiuntive. La libreria viene ins
     sudo apt-get install intel-mkl-64bit-2020.0-088
     ```
 
-    Determinare la posizione`libiomp.so`
+    Determinare il percorso di`libiomp.so`
 
     ```bash
     find /opt -name "libiomp5.so"
@@ -84,7 +84,7 @@ Non sono necessarie procedure di installazione aggiuntive. La libreria viene ins
     /opt/intel/compilers_and_libraries_2020.0.166/linux/compiler/lib/intel64_lin/libiomp5.so
     ```
 
-5. Aggiungere questo percorso al percorso della libreria di caricamento:Add this location to the load library path:
+5. Aggiungere questo percorso al percorso della libreria di caricamento:
 
     ```bash
     sudo ldconfig /opt/intel/compilers_and_libraries_2020.0.166/linux/compiler/lib/intel64_lin

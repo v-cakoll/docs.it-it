@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e5d03cb-97c9-4ff4-8dbd-17d94ee374d3
 topic_type:
 - apiref
-ms.openlocfilehash: 44d1776e2902988353ef4fd58aca20e56203b9da
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3be8a004be752af8a8675a3499bdb6cbfd785840
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442851"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009197"
 ---
 # <a name="corimportoptions-enumeration"></a>Enumerazione CorImportOptions
 Contiene valori di flag che controllano il comportamento durante l'importazione di un assembly esterno all'ambito corrente.  
@@ -42,7 +42,7 @@ typedef enum CorImportOptions {
 } CorImportOptions;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
 |Membro|Descrizione|  
 |------------|-----------------|  
@@ -57,12 +57,12 @@ typedef enum CorImportOptions {
 |`MDImportOptionAllExportedTypes`|Indica che tutti i tipi esportati, inclusi quelli eliminati, devono essere enumerati.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. h  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerazioni dei metadati](metadata-enumerations.md)

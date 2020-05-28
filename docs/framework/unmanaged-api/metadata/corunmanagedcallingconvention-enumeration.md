@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 83058790-160b-4703-a5eb-74b66acbdfa9
 topic_type:
 - apiref
-ms.openlocfilehash: 58d30e71929d314ee36adb9f83270858ff8a161b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b4c521489f38360d45c2cf8ff3780e057299f0b4
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442446"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008950"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>Enumerazione CorUnmanagedCallingConvention
 Specifica le convenzioni di chiamata per il codice non gestito.  
@@ -44,7 +44,7 @@ typedef enum CorUnmanagedCallingConvention {
   
 ## <a name="members"></a>Membri  
   
-|Membro|description|  
+|Membro|Descrizione|  
 |------------|-----------------|  
 |`IMAGE_CEE_UNMANAGED_CALLCONV_C`|Convenzione di chiamata del linguaggio C.|  
 |`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|Convenzione di chiamata standard.|  
@@ -55,16 +55,16 @@ typedef enum CorUnmanagedCallingConvention {
 |`IMAGE_CEE_CS_CALLCONV_THISCALL`|Non usato.|  
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|Non usato.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  CLR non supporta la convenzione di chiamata "Fast" nella versione .NET Framework 1,0.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. h  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumerazioni dei metadati](metadata-enumerations.md)
