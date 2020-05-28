@@ -3,73 +3,111 @@ title: Pubblicare l'applicazione Hello World .NET Core con Visual Studio
 description: Con la pubblicazione viene creato il set di file necessari per eseguire l'applicazione .NET Core.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 12/10/2019
+ms.date: 05/20/2020
+dev_langs:
+- csharp
+- vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: bdd6e28713bdece2bd144e6763bd84d719e91449
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e4ef8c12f3e52faa7cf09058a98abae65b0dcfce
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156634"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005101"
 ---
-# <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a><span data-ttu-id="d1eee-103">Pubblicare l'applicazione Hello World .NET Core con Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d1eee-103">Publish your .NET Core Hello World application with Visual Studio</span></span>
+# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio"></a><span data-ttu-id="aa5f5-103">Esercitazione: pubblicare un'applicazione console .NET Core con Visual Studio</span><span class="sxs-lookup"><span data-stu-id="aa5f5-103">Tutorial: Publish a .NET Core console application with Visual Studio</span></span>
 
-<span data-ttu-id="d1eee-104">In [Create a Hello World application with .NET Core in Visual Studio](with-visual-studio.md)è stata compilata un'applicazione console Hello World.</span><span class="sxs-lookup"><span data-stu-id="d1eee-104">In [Create a Hello World application with .NET Core in Visual Studio](with-visual-studio.md), you built a Hello World console application.</span></span> <span data-ttu-id="d1eee-105">In [Debug dell'applicazione Hello World con Visual Studio](debugging-with-visual-studio.md)è stato testato utilizzando il debugger di Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="d1eee-105">In [Debug your Hello World application with Visual Studio](debugging-with-visual-studio.md), you tested it using the Visual Studio debugger.</span></span> <span data-ttu-id="d1eee-106">A questo punto è sicuro che l'applicazione funziona nel modo previsto ed è possibile pubblicarla in modo che possa essere eseguita da altri utenti.</span><span class="sxs-lookup"><span data-stu-id="d1eee-106">Now that you're sure that it works as expected, you can publish it so that other users can run it.</span></span> <span data-ttu-id="d1eee-107">Con la pubblicazione viene creato il set di file necessari per eseguire l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="d1eee-107">Publishing creates the set of files that are needed to run your application.</span></span> <span data-ttu-id="d1eee-108">Per distribuire i file, copiarli nel computer di destinazione.</span><span class="sxs-lookup"><span data-stu-id="d1eee-108">To deploy the files, copy them to the target machine.</span></span>
+<span data-ttu-id="aa5f5-104">Questa esercitazione illustra come pubblicare un'app console in modo che gli altri utenti possano eseguirla.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-104">This tutorial shows how to publish a console app so that other users can run it.</span></span> <span data-ttu-id="aa5f5-105">Con la pubblicazione viene creato il set di file necessari per eseguire l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-105">Publishing creates the set of files that are needed to run your application.</span></span> <span data-ttu-id="aa5f5-106">Per distribuire i file, copiarli nel computer di destinazione.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-106">To deploy the files, copy them to the target machine.</span></span>
 
-## <a name="publish-the-app"></a><span data-ttu-id="d1eee-109">Pubblicare l'app</span><span class="sxs-lookup"><span data-stu-id="d1eee-109">Publish the app</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="aa5f5-107">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="aa5f5-107">Prerequisites</span></span>
 
-1. <span data-ttu-id="d1eee-110">Verificare che Visual Studio compili la versione di rilascio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="d1eee-110">Make sure that Visual Studio is building the Release version of your application.</span></span> <span data-ttu-id="d1eee-111">Se necessario, modificare la configurazione di compilazione nella barra degli strumenti da **Debug** in **Rilascio**.</span><span class="sxs-lookup"><span data-stu-id="d1eee-111">If necessary, change the build configuration setting on the toolbar from **Debug** to **Release**.</span></span>
+- <span data-ttu-id="aa5f5-108">Questa esercitazione funziona con l'app console creata in [creare un'applicazione console .NET Core in Visual Studio 2019](with-visual-studio.md).</span><span class="sxs-lookup"><span data-stu-id="aa5f5-108">This tutorial works with the console app that you create in [Create a .NET Core console application in Visual Studio 2019](with-visual-studio.md).</span></span>
+
+## <a name="publish-the-app"></a><span data-ttu-id="aa5f5-109">Pubblicare l'app</span><span class="sxs-lookup"><span data-stu-id="aa5f5-109">Publish the app</span></span>
+
+1. <span data-ttu-id="aa5f5-110">Verificare che Visual Studio compili la versione di rilascio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-110">Make sure that Visual Studio is building the Release version of your application.</span></span> <span data-ttu-id="aa5f5-111">Se necessario, modificare la configurazione di compilazione nella barra degli strumenti da **Debug** in **Rilascio**.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-111">If necessary, change the build configuration setting on the toolbar from **Debug** to **Release**.</span></span>
 
    ![Barra degli strumenti Visual Studio con la build di rilascio selezionata](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
-1. <span data-ttu-id="d1eee-113">Fare clic con il pulsante destro del mouse sul progetto **HelloWorld** (non sulla soluzione HelloWorld) e scegliere **Pubblica** dal menu.</span><span class="sxs-lookup"><span data-stu-id="d1eee-113">Right-click on the **HelloWorld** project (not the HelloWorld solution) and select **Publish** from the menu.</span></span> <span data-ttu-id="d1eee-114">È anche possibile selezionare **Pubblica HelloWorld** dal menu **Compila** principale.</span><span class="sxs-lookup"><span data-stu-id="d1eee-114">(You can also select **Publish HelloWorld** from the main **Build** menu.)</span></span>
+1. <span data-ttu-id="aa5f5-113">Fare clic con il pulsante destro del mouse sul progetto **HelloWorld** (non sulla soluzione HelloWorld) e scegliere **pubblica** dal menu.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-113">Right-click on the **HelloWorld** project (not the HelloWorld solution) and select **Publish** from the menu.</span></span>
 
    ![Menu di scelta rapida Pubblica di Visual Studio](media/publishing-with-visual-studio/publish-context-menu.png)
 
-1. <span data-ttu-id="d1eee-116">Nella pagina **Selezionare una destinazione di pubblicazione** selezionare **Cartella**e quindi **Crea profilo**.</span><span class="sxs-lookup"><span data-stu-id="d1eee-116">On the **Pick a publish target** page, select **Folder**, and then select **Create Profile**.</span></span>
+1. <span data-ttu-id="aa5f5-115">Nella scheda **destinazione** della pagina **pubblica** Selezionare **cartella**, quindi fare clic su **Avanti**.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-115">On the **Target** tab of the **Publish** page, select **Folder**, and then select **Next**.</span></span>
 
-   ![Scegliere una destinazione di pubblicazione in Visual StudioPick a publish target in Visual Studio](media/publishing-with-visual-studio/pick-publish-target.png)
+   ![Selezionare una destinazione di pubblicazione in Visual Studio](media/publishing-with-visual-studio/pick-publish-target.png)
 
-1. <span data-ttu-id="d1eee-118">Nella pagina **Pubblica** selezionare **Pubblica**.</span><span class="sxs-lookup"><span data-stu-id="d1eee-118">On the **Publish** page, select **Publish**.</span></span>
+1. <span data-ttu-id="aa5f5-117">Nella scheda **percorso** della pagina **pubblica** Selezionare **fine**.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-117">On the **Location** tab of the **Publish** page, select **Finish**.</span></span>
+
+   ![Scheda percorso pagina di pubblicazione di Visual Studio](media/publishing-with-visual-studio/publish-page-loc-tab.png)
+
+1. <span data-ttu-id="aa5f5-119">Nella scheda **pubblica** della finestra **pubblica** Selezionare **pubblica**.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-119">On the **Publish** tab of the **Publish** window, select **Publish**.</span></span>
 
    ![Finestra Pubblica di Visual Studio](media/publishing-with-visual-studio/publish-page.png)
 
-## <a name="inspect-the-files"></a><span data-ttu-id="d1eee-120">Esaminare i file</span><span class="sxs-lookup"><span data-stu-id="d1eee-120">Inspect the files</span></span>
+## <a name="inspect-the-files"></a><span data-ttu-id="aa5f5-121">Esaminare i file</span><span class="sxs-lookup"><span data-stu-id="aa5f5-121">Inspect the files</span></span>
 
-<span data-ttu-id="d1eee-121">Il processo di pubblicazione crea una distribuzione dipendente dal framework, ovvero un tipo di distribuzione in cui l'applicazione pubblicata viene eseguita su qualsiasi piattaforma supportata da .NET Core con .NET Core installato nel sistema.</span><span class="sxs-lookup"><span data-stu-id="d1eee-121">The publishing process creates a framework-dependent deployment, which is a type of deployment where the published application runs on any platform supported by .NET Core with .NET Core installed on the system.</span></span> <span data-ttu-id="d1eee-122">Gli utenti possono eseguire l'app pubblicata facendo `dotnet HelloWorld.dll` doppio clic sull'eseguibile o eseguendo il comando da un prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="d1eee-122">Users can run the published app by double-clicking the executable or issuing the `dotnet HelloWorld.dll` command from a command prompt.</span></span>
+<span data-ttu-id="aa5f5-122">Il processo di pubblicazione crea una distribuzione dipendente dal Framework, ovvero un tipo di distribuzione in cui l'applicazione pubblicata viene eseguita nel computer in cui è installato il runtime di .NET Core.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-122">The publishing process creates a framework-dependent deployment, which is a type of deployment where the published application runs on machine that has the .NET Core runtime installed.</span></span> <span data-ttu-id="aa5f5-123">Gli utenti possono eseguire l'app pubblicata facendo doppio clic sul file eseguibile o eseguendo il `dotnet HelloWorld.dll` comando da un prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-123">Users can run the published app by double-clicking the executable or issuing the `dotnet HelloWorld.dll` command from a command prompt.</span></span>
 
-<span data-ttu-id="d1eee-123">Nei passaggi seguenti verranno esaminati i file creati dal processo di pubblicazione.</span><span class="sxs-lookup"><span data-stu-id="d1eee-123">In the following steps, you'll look at the files created by the publish process.</span></span>
+<span data-ttu-id="aa5f5-124">Nei passaggi seguenti verranno esaminati i file creati dal processo di pubblicazione.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-124">In the following steps, you'll look at the files created by the publish process.</span></span>
 
-1. <span data-ttu-id="d1eee-124">Aprire un prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="d1eee-124">Open a command prompt.</span></span>
+1. <span data-ttu-id="aa5f5-125">In **Esplora soluzioni**selezionare **Mostra tutti i file**.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-125">In **Solution Explorer**, select **Show all files**.</span></span>
 
-   <span data-ttu-id="d1eee-125">Un modo per aprire un prompt dei comandi consiste nell'immettere **Prompt dei comandi** (o **cmd** in breve) nella casella di ricerca sulla barra delle applicazioni di Windows.</span><span class="sxs-lookup"><span data-stu-id="d1eee-125">One way to open a command prompt is to enter **Command Prompt** (or **cmd** for short) in the search box on the Windows taskbar.</span></span> <span data-ttu-id="d1eee-126">Selezionare l'app desktop **Prompt dei comandi** o premere **INVIO** se è già selezionata nei risultati della ricerca.</span><span class="sxs-lookup"><span data-stu-id="d1eee-126">Select the **Command Prompt** desktop app, or press **Enter** if it's already selected in the search results.</span></span>
+1. <span data-ttu-id="aa5f5-126">Nella cartella del progetto espandere *bin/Release/netcoreapp 3.1/Publish*.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-126">In the project folder, expand *bin/Release/netcoreapp3.1/publish*.</span></span>
 
-1. <span data-ttu-id="d1eee-127">Passare all'applicazione pubblicata nella sottodirectory *bin , Release , netcoreapp3.1 , publish* della directory del progetto dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="d1eee-127">Navigate to the published application in the *bin\Release\netcoreapp3.1\publish* subdirectory of the application's project directory.</span></span>
+   :::image type="content" source="media/publishing-with-visual-studio/published-files-output.png" alt-text="Esplora soluzioni la visualizzazione dei file pubblicati":::
 
-   ![Finestra della console con file pubblicati](media/publishing-with-visual-studio/published-files-output.png)
+   <span data-ttu-id="aa5f5-128">Come illustrato nell'immagine, l'output pubblicato include i file seguenti:</span><span class="sxs-lookup"><span data-stu-id="aa5f5-128">As the image shows, the published output includes the following files:</span></span>
 
-   <span data-ttu-id="d1eee-129">Come illustrato nell'immagine, l'output pubblicato include i seguenti file:</span><span class="sxs-lookup"><span data-stu-id="d1eee-129">As the image shows, the published output includes the following files:</span></span>
+      * <span data-ttu-id="aa5f5-129">*HelloWorld.deps.json*</span><span class="sxs-lookup"><span data-stu-id="aa5f5-129">*HelloWorld.deps.json*</span></span>
 
-      * <span data-ttu-id="d1eee-130">*HelloWorld.deps.json*</span><span class="sxs-lookup"><span data-stu-id="d1eee-130">*HelloWorld.deps.json*</span></span>
+         <span data-ttu-id="aa5f5-130">Si tratta del file delle dipendenze di runtime dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-130">This is the application's runtime dependencies file.</span></span> <span data-ttu-id="aa5f5-131">Definisce i componenti di .NET Core e le librerie (inclusa la libreria a collegamento dinamico che contiene l'applicazione) necessari per eseguire l'app.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-131">It defines the .NET Core components and the libraries (including the dynamic link library that contains your application) needed to run the app.</span></span> <span data-ttu-id="aa5f5-132">Per ulteriori informazioni, vedere [Runtime Configuration Files](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).</span><span class="sxs-lookup"><span data-stu-id="aa5f5-132">For more information, see [Runtime configuration files](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).</span></span>
 
-         <span data-ttu-id="d1eee-131">Questo è il file delle dipendenze di runtime dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="d1eee-131">This is the application's runtime dependencies file.</span></span> <span data-ttu-id="d1eee-132">Definisce i componenti .NET Core e le librerie (inclusa la libreria a collegamento dinamico che contiene l'applicazione) necessari per eseguire l'app.</span><span class="sxs-lookup"><span data-stu-id="d1eee-132">It defines the .NET Core components and the libraries (including the dynamic link library that contains your application) needed to run the app.</span></span> <span data-ttu-id="d1eee-133">Per ulteriori informazioni, consultate File di [configurazione di runtime.](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)</span><span class="sxs-lookup"><span data-stu-id="d1eee-133">For more information, see [Runtime configuration files](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).</span></span>
+      * <span data-ttu-id="aa5f5-133">*HelloWorld.dll*</span><span class="sxs-lookup"><span data-stu-id="aa5f5-133">*HelloWorld.dll*</span></span>
 
-      * <span data-ttu-id="d1eee-134">*HelloWorld.dll*</span><span class="sxs-lookup"><span data-stu-id="d1eee-134">*HelloWorld.dll*</span></span>
+         <span data-ttu-id="aa5f5-134">Si tratta della versione della [distribuzione dipendente dal Framework](../deploying/deploy-with-cli.md#framework-dependent-deployment) dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-134">This is the [framework-dependent deployment](../deploying/deploy-with-cli.md#framework-dependent-deployment) version of the application.</span></span> <span data-ttu-id="aa5f5-135">Per eseguire questa libreria a collegamento dinamico, immettere `dotnet HelloWorld.dll` al prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-135">To execute this dynamic link library, enter `dotnet HelloWorld.dll` at a command prompt.</span></span>
 
-         <span data-ttu-id="d1eee-135">Questa è la versione di [distribuzione dipendente dal framework](../deploying/deploy-with-cli.md#framework-dependent-deployment) dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="d1eee-135">This is the [framework-dependent deployment](../deploying/deploy-with-cli.md#framework-dependent-deployment) version of the application.</span></span> <span data-ttu-id="d1eee-136">Per eseguire questa libreria `dotnet HelloWorld.dll` a collegamento dinamico, immettere al prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="d1eee-136">To execute this dynamic link library, enter `dotnet HelloWorld.dll` at a command prompt.</span></span>
+      * <span data-ttu-id="aa5f5-136">*HelloWorld. exe*</span><span class="sxs-lookup"><span data-stu-id="aa5f5-136">*HelloWorld.exe*</span></span>
 
-      * <span data-ttu-id="d1eee-137">*HelloWorld.exe (informazioni in o là)*</span><span class="sxs-lookup"><span data-stu-id="d1eee-137">*HelloWorld.exe*</span></span>
+         <span data-ttu-id="aa5f5-137">Si tratta della versione [eseguibile dipendente dal Framework](../deploying/deploy-with-cli.md#framework-dependent-executable) dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-137">This is the [framework-dependent executable](../deploying/deploy-with-cli.md#framework-dependent-executable) version of the application.</span></span> <span data-ttu-id="aa5f5-138">Per eseguirlo, immettere `HelloWorld.exe` al prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-138">To run it, enter `HelloWorld.exe` at a command prompt.</span></span>
 
-         <span data-ttu-id="d1eee-138">Si tratta della versione [eseguibile dipendente dal framework](../deploying/deploy-with-cli.md#framework-dependent-executable) dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="d1eee-138">This is the [framework-dependent executable](../deploying/deploy-with-cli.md#framework-dependent-executable) version of the application.</span></span> <span data-ttu-id="d1eee-139">Per eseguirlo, `HelloWorld.exe` immettere al prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="d1eee-139">To run it, enter `HelloWorld.exe` at a command prompt.</span></span>
+      * <span data-ttu-id="aa5f5-139">*HelloWorld.pdb* (facoltativo per la distribuzione)</span><span class="sxs-lookup"><span data-stu-id="aa5f5-139">*HelloWorld.pdb* (optional for deployment)</span></span>
 
-      * <span data-ttu-id="d1eee-140">*HelloWorld.pdb* (facoltativo per la distribuzione)</span><span class="sxs-lookup"><span data-stu-id="d1eee-140">*HelloWorld.pdb* (optional for deployment)</span></span>
+         <span data-ttu-id="aa5f5-140">Questo è il file di simboli di debug.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-140">This is the debug symbols file.</span></span> <span data-ttu-id="aa5f5-141">Non è necessario distribuire tale file insieme all'applicazione, anche se è consigliabile salvarlo nel caso in cui sia necessario eseguire il debug della versione pubblicata dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-141">You aren't required to deploy this file along with your application, although you should save it in the event that you need to debug the published version of your application.</span></span>
 
-         <span data-ttu-id="d1eee-141">Questo è il file di simboli di debug.</span><span class="sxs-lookup"><span data-stu-id="d1eee-141">This is the debug symbols file.</span></span> <span data-ttu-id="d1eee-142">Non è necessario distribuire tale file insieme all'applicazione, anche se è consigliabile salvarlo nel caso in cui sia necessario eseguire il debug della versione pubblicata dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="d1eee-142">You aren't required to deploy this file along with your application, although you should save it in the event that you need to debug the published version of your application.</span></span>
+      * <span data-ttu-id="aa5f5-142">*HelloWorld.runtimeconfig.json*</span><span class="sxs-lookup"><span data-stu-id="aa5f5-142">*HelloWorld.runtimeconfig.json*</span></span>
 
-      * <span data-ttu-id="d1eee-143">*HelloWorld.runtimeconfig.json*</span><span class="sxs-lookup"><span data-stu-id="d1eee-143">*HelloWorld.runtimeconfig.json*</span></span>
+         <span data-ttu-id="aa5f5-143">Questo è il file di configurazione in fase di esecuzione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-143">This is the application's run-time configuration file.</span></span> <span data-ttu-id="aa5f5-144">Identifica la versione di .NET Core per la quale è stata compilata l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-144">It identifies the version of .NET Core that your application was built to run on.</span></span> <span data-ttu-id="aa5f5-145">È anche possibile aggiungere opzioni di configurazione.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-145">You can also add configuration options to it.</span></span> <span data-ttu-id="aa5f5-146">Per altre informazioni, vedere Impostazioni di configurazione della fase di [esecuzione di .NET Core](../run-time-config/index.md#runtimeconfigjson).</span><span class="sxs-lookup"><span data-stu-id="aa5f5-146">For more information, see [.NET Core run-time configuration settings](../run-time-config/index.md#runtimeconfigjson).</span></span>
 
-         <span data-ttu-id="d1eee-144">Questo è il file di configurazione di runtime dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="d1eee-144">This is the application's run-time configuration file.</span></span> <span data-ttu-id="d1eee-145">Identifica la versione di .NET Core per la quale è stata compilata l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="d1eee-145">It identifies the version of .NET Core that your application was built to run on.</span></span> <span data-ttu-id="d1eee-146">È inoltre possibile aggiungere opzioni di configurazione ad esso.</span><span class="sxs-lookup"><span data-stu-id="d1eee-146">You can also add configuration options to it.</span></span> <span data-ttu-id="d1eee-147">Per ulteriori informazioni, vedere Impostazioni di configurazione di [runtime di .NET Core](../run-time-config/index.md#runtimeconfigjson).</span><span class="sxs-lookup"><span data-stu-id="d1eee-147">For more information, see [.NET Core run-time configuration settings](../run-time-config/index.md#runtimeconfigjson).</span></span>
+## <a name="run-the-published-app"></a><span data-ttu-id="aa5f5-147">Eseguire l'app pubblicata</span><span class="sxs-lookup"><span data-stu-id="aa5f5-147">Run the published app</span></span>
 
-## <a name="additional-resources"></a><span data-ttu-id="d1eee-148">Risorse aggiuntive</span><span class="sxs-lookup"><span data-stu-id="d1eee-148">Additional resources</span></span>
+1. <span data-ttu-id="aa5f5-148">In **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla cartella *Publish* e scegliere **Copia percorso completo**.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-148">In **Solution Explorer**, right-click the *publish* folder, and select **Copy Full Path**.</span></span>
 
-- [<span data-ttu-id="d1eee-149">Distribuzione di applicazioni .NET Core</span><span class="sxs-lookup"><span data-stu-id="d1eee-149">.NET Core application deployment</span></span>](../deploying/index.md)
+1. <span data-ttu-id="aa5f5-149">Aprire un prompt dei comandi e passare alla cartella di *pubblicazione* .</span><span class="sxs-lookup"><span data-stu-id="aa5f5-149">Open a command prompt and navigate to the *publish* folder.</span></span> <span data-ttu-id="aa5f5-150">Immettere `cd` e incollare il percorso completo.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-150">Enter `cd` and then paste the full path.</span></span> <span data-ttu-id="aa5f5-151">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="aa5f5-151">For example:</span></span>
+
+   ```
+   cd C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\
+   ```
+
+1. <span data-ttu-id="aa5f5-152">Eseguire l'app usando il file eseguibile:</span><span class="sxs-lookup"><span data-stu-id="aa5f5-152">Run the app by using the executable:</span></span>
+
+   1. <span data-ttu-id="aa5f5-153">Immettere `HelloWorld.exe` e premere INVIO.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-153">Enter `HelloWorld.exe` and press Enter.</span></span>
+
+   1. <span data-ttu-id="aa5f5-154">Immettere un nome in risposta al prompt e premere un tasto qualsiasi per uscire.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-154">Enter a name in response to the prompt, and press any key to exit.</span></span>
+
+1. <span data-ttu-id="aa5f5-155">Eseguire l'app usando il `dotnet` comando:</span><span class="sxs-lookup"><span data-stu-id="aa5f5-155">Run the app by using the `dotnet` command:</span></span>
+
+   1. <span data-ttu-id="aa5f5-156">Immettere `dotnet HelloWorld.dll` e premere INVIO.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-156">Enter `dotnet HelloWorld.dll` and press Enter.</span></span>
+
+   1. <span data-ttu-id="aa5f5-157">Immettere un nome in risposta al prompt e premere un tasto qualsiasi per uscire.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-157">Enter a name in response to the prompt, and press any key to exit.</span></span>
+
+## <a name="additional-resources"></a><span data-ttu-id="aa5f5-158">Risorse aggiuntive</span><span class="sxs-lookup"><span data-stu-id="aa5f5-158">Additional resources</span></span>
+
+- [<span data-ttu-id="aa5f5-159">Distribuzione di applicazioni .NET Core</span><span class="sxs-lookup"><span data-stu-id="aa5f5-159">.NET Core application deployment</span></span>](../deploying/index.md)
+
+## <a name="next-steps"></a><span data-ttu-id="aa5f5-160">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="aa5f5-160">Next steps</span></span>
+
+<span data-ttu-id="aa5f5-161">In questa esercitazione è stata pubblicata un'app console.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-161">In this tutorial, you published a console app.</span></span> <span data-ttu-id="aa5f5-162">Nell'esercitazione successiva verrà creata una libreria di classi.</span><span class="sxs-lookup"><span data-stu-id="aa5f5-162">In the next tutorial, you create a class library.</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="aa5f5-163">Creare una libreria .NET Standard in Visual Studio</span><span class="sxs-lookup"><span data-stu-id="aa5f5-163">Create a .NET Standard library in Visual Studio</span></span>](library-with-visual-studio.md)

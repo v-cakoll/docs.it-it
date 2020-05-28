@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 3c1cb268-57a0-4664-91c7-f6908ff29e32
 topic_type:
 - apiref
-ms.openlocfilehash: 689295610006824be1107577c50376e79551cddc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ac822dda30d697cbbbcacf19eb6a57d1e5fb4c3b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444371"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007949"
 ---
-# <a name="corargtype-enumeration"></a><span data-ttu-id="42ed0-102">Enumerazione CorArgType</span><span class="sxs-lookup"><span data-stu-id="42ed0-102">CorArgType Enumeration</span></span>
-<span data-ttu-id="42ed0-103">Contiene valori che descrivono il tipo nativo di un handle di runtime.</span><span class="sxs-lookup"><span data-stu-id="42ed0-103">Contains values that describe the native type of a runtime handle.</span></span>  
+# <a name="corargtype-enumeration"></a><span data-ttu-id="c35d4-102">Enumerazione CorArgType</span><span class="sxs-lookup"><span data-stu-id="c35d4-102">CorArgType Enumeration</span></span>
+<span data-ttu-id="c35d4-103">Contiene valori che descrivono il tipo nativo di un handle di runtime.</span><span class="sxs-lookup"><span data-stu-id="c35d4-103">Contains values that describe the native type of a runtime handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="42ed0-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="42ed0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c35d4-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c35d4-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorArgType {  
@@ -44,13 +44,13 @@ typedef enum CorArgType {
 } CorArgType;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="42ed0-105">Requisiti</span><span class="sxs-lookup"><span data-stu-id="42ed0-105">Requirements</span></span>  
- <span data-ttu-id="42ed0-106">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="42ed0-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c35d4-105">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c35d4-105">Requirements</span></span>  
+ <span data-ttu-id="c35d4-106">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c35d4-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="42ed0-107">**Intestazione:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="42ed0-107">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="c35d4-107">**Intestazione:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="c35d4-107">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="42ed0-108">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="42ed0-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c35d4-108">**Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c35d4-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="42ed0-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="42ed0-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c35d4-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c35d4-109">See also</span></span>
 
-- [<span data-ttu-id="42ed0-110">Enumerazioni dei metadati</span><span class="sxs-lookup"><span data-stu-id="42ed0-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="c35d4-110">Enumerazioni dei metadati</span><span class="sxs-lookup"><span data-stu-id="c35d4-110">Metadata Enumerations</span></span>](metadata-enumerations.md)
