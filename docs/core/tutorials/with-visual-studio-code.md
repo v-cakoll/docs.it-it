@@ -1,142 +1,124 @@
 ---
-title: Introduzione a C# e Visual Studio Code
-description: Informazioni su come creare la prima applicazione .NET Core in C# ed eseguirne il debug tramite Visual Studio Code.
-author: kendrahavens
-ms.date: 04/23/2020
-ms.openlocfilehash: 3dd7c4602fbb27e29bad977f8d3df34b6061bc23
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+title: Creare un'applicazione console con .NET Core usando Visual Studio Code
+description: Informazioni su come creare un'applicazione console .NET Core usando Visual Studio Code e il interfaccia della riga di comando di .NET Core.
+ms.date: 05/22/2020
+ms.openlocfilehash: 673c4a639a2cab26261b7cdafd5d8e20acfafb94
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506894"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201692"
 ---
-# <a name="get-started-with-c-and-visual-studio-code"></a><span data-ttu-id="aaa37-103">Introduzione a C# e Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="aaa37-103">Get started with C# and Visual Studio Code</span></span>
+# <a name="tutorial-create-a-console-application-with-net-core-using-visual-studio-code"></a><span data-ttu-id="6a649-103">Esercitazione: creare un'applicazione console con .NET Core usando Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="6a649-103">Tutorial: Create a console application with .NET Core using Visual Studio Code</span></span>
 
-<span data-ttu-id="aaa37-104">.NET Core offre una piattaforma veloce e modulare per la creazione di applicazioni eseguibili in Windows, Linux e macOS.</span><span class="sxs-lookup"><span data-stu-id="aaa37-104">.NET Core gives you a fast and modular platform for creating applications that run on Windows, Linux, and macOS.</span></span> <span data-ttu-id="aaa37-105">Usare Visual Studio Code con l'estensione C# per ottenere un'efficace esperienza di programmazione con il supporto completo per IntelliSense C# (completamento intelligente del codice) e debug.</span><span class="sxs-lookup"><span data-stu-id="aaa37-105">Use Visual Studio Code with the C# extension to get a powerful editing experience with full support for C# IntelliSense (smart code completion) and debugging.</span></span>
+<span data-ttu-id="6a649-104">In questa esercitazione viene illustrato come creare ed eseguire un'applicazione console .NET Core utilizzando Visual Studio Code e il interfaccia della riga di comando di .NET Core.</span><span class="sxs-lookup"><span data-stu-id="6a649-104">This tutorial shows how to create and run a .NET Core console application by using Visual Studio Code and the .NET Core CLI.</span></span> <span data-ttu-id="6a649-105">Le attività del progetto, come la creazione, la compilazione e l'esecuzione di un progetto, vengono eseguite usando l'interfaccia della riga di comando, quindi è possibile seguire questa esercitazione con un editor di codice diverso ed eseguire comandi in un terminale, se lo si preferisce.</span><span class="sxs-lookup"><span data-stu-id="6a649-105">Project tasks, such as creating, compiling, and running a project are done by using the CLI, so you can follow this tutorial with a different code editor and run commands in a terminal if you prefer.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="aaa37-106">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="aaa37-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="6a649-106">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="6a649-106">Prerequisites</span></span>
 
-1. <span data-ttu-id="aaa37-107">Installare [Visual Studio Code](https://code.visualstudio.com/).</span><span class="sxs-lookup"><span data-stu-id="aaa37-107">Install [Visual Studio Code](https://code.visualstudio.com/).</span></span>
-2. <span data-ttu-id="aaa37-108">Installare [.NET Core SDK](https://dotnet.microsoft.com/download).</span><span class="sxs-lookup"><span data-stu-id="aaa37-108">Install the [.NET Core SDK](https://dotnet.microsoft.com/download).</span></span>
-3. <span data-ttu-id="aaa37-109">Installare l'[estensione C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) per Visual Studio Code.</span><span class="sxs-lookup"><span data-stu-id="aaa37-109">Install the [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) for Visual Studio Code.</span></span> <span data-ttu-id="aaa37-110">Per altre informazioni su come installare estensioni in Visual Studio Code, vedere [VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery) (Marketplace delle estensioni di Visual Studio Code).</span><span class="sxs-lookup"><span data-stu-id="aaa37-110">For more information about how to install extensions on Visual Studio Code, see [VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery).</span></span>
+1. <span data-ttu-id="6a649-107">[Visual Studio Code](https://code.visualstudio.com/) con l' [estensione C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) installata.</span><span class="sxs-lookup"><span data-stu-id="6a649-107">[Visual Studio Code](https://code.visualstudio.com/) with the [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) installed.</span></span> <span data-ttu-id="6a649-108">Per informazioni su come installare le estensioni in Visual Studio Code, vedere [vs code Marketplace di estensione](https://code.visualstudio.com/docs/editor/extension-gallery).</span><span class="sxs-lookup"><span data-stu-id="6a649-108">For information about how to install extensions on Visual Studio Code, see [VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery).</span></span>
+2. <span data-ttu-id="6a649-109">[.NET Core 3,1 SDK o versione successiva](https://dotnet.microsoft.com/download)</span><span class="sxs-lookup"><span data-stu-id="6a649-109">The [.NET Core 3.1 SDK or later](https://dotnet.microsoft.com/download)</span></span>
 
-## <a name="hello-world"></a><span data-ttu-id="aaa37-111">Hello World</span><span class="sxs-lookup"><span data-stu-id="aaa37-111">Hello World</span></span>
+## <a name="create-the-app"></a><span data-ttu-id="6a649-110">Creare l'app</span><span class="sxs-lookup"><span data-stu-id="6a649-110">Create the app</span></span>
 
-<span data-ttu-id="aaa37-112">Inizia a usare un semplice programma "Hello World" in .NET Core:</span><span class="sxs-lookup"><span data-stu-id="aaa37-112">Get started with a simple "Hello World" program on .NET Core:</span></span>
+1. <span data-ttu-id="6a649-111">Aprire Visual Studio Code.</span><span class="sxs-lookup"><span data-stu-id="6a649-111">Open Visual Studio Code.</span></span>
 
-1. <span data-ttu-id="aaa37-113">Aprire un progetto:</span><span class="sxs-lookup"><span data-stu-id="aaa37-113">Open a project:</span></span>
+1. <span data-ttu-id="6a649-112">Creare un progetto.</span><span class="sxs-lookup"><span data-stu-id="6a649-112">Create a project.</span></span>
 
-    - <span data-ttu-id="aaa37-114">Aprire Visual Studio Code.</span><span class="sxs-lookup"><span data-stu-id="aaa37-114">Open Visual Studio Code.</span></span>
-    - <span data-ttu-id="aaa37-115">Selezionare **file** > **Apri cartella** dal menu principale.</span><span class="sxs-lookup"><span data-stu-id="aaa37-115">Select **File** > **Open Folder** from the main menu.</span></span>
-    - <span data-ttu-id="aaa37-116">Creare una cartella denominata *HelloWorld*, quindi fare clic su **Seleziona cartella**.</span><span class="sxs-lookup"><span data-stu-id="aaa37-116">Create a folder named *HelloWorld*, and click **Select Folder**.</span></span> <span data-ttu-id="aaa37-117">Per impostazione predefinita, il nome della cartella diventa il nome del progetto e il nome dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="aaa37-117">The folder name becomes the project name and the namespace name by default.</span></span> <span data-ttu-id="aaa37-118">Si aggiungerà il codice più avanti nell'esercitazione che presuppone che lo spazio `HelloWorld`dei nomi del progetto sia.</span><span class="sxs-lookup"><span data-stu-id="aaa37-118">You'll add code later in the tutorial that assumes the project namespace is `HelloWorld`.</span></span>
+   1. <span data-ttu-id="6a649-113">Selezionare **file**  >  **Apri cartella** / **Apri...** dal menu principale, creare una cartella *HelloWorld* , quindi fare clic su **Seleziona cartella** / **Apri**.</span><span class="sxs-lookup"><span data-stu-id="6a649-113">Select **File** > **Open Folder**/**Open...** from the main menu, create a *HelloWorld* folder, and click **Select Folder**/**Open**.</span></span>
 
-1. <span data-ttu-id="aaa37-119">Inizializzare un progetto C#:</span><span class="sxs-lookup"><span data-stu-id="aaa37-119">Initialize a C# project:</span></span>
+      <span data-ttu-id="6a649-114">Per impostazione predefinita, il nome della cartella diventa il nome del progetto e il nome dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="6a649-114">The folder name becomes the project name and the namespace name by default.</span></span> <span data-ttu-id="6a649-115">Si aggiungerà il codice più avanti nell'esercitazione che presuppone che lo spazio dei nomi del progetto sia `HelloWorld` .</span><span class="sxs-lookup"><span data-stu-id="6a649-115">You'll add code later in the tutorial that assumes the project namespace is `HelloWorld`.</span></span>
 
-    - <span data-ttu-id="aaa37-120">Aprire il terminale da Visual Studio Code selezionando **Visualizza** > **terminale** dal menu principale.</span><span class="sxs-lookup"><span data-stu-id="aaa37-120">Open the Terminal from Visual Studio Code by selecting **View** > **Terminal** from the main menu.</span></span>
-    - <span data-ttu-id="aaa37-121">Nella finestra del terminale immettere `dotnet new console`.</span><span class="sxs-lookup"><span data-stu-id="aaa37-121">In the terminal window, enter `dotnet new console`.</span></span>
+   1. <span data-ttu-id="6a649-116">Aprire il **terminale** in Visual Studio Code selezionando **Visualizza**  >  **terminale** dal menu principale.</span><span class="sxs-lookup"><span data-stu-id="6a649-116">Open the **Terminal** in Visual Studio Code by selecting **View** > **Terminal** from the main menu.</span></span>
 
-      <span data-ttu-id="aaa37-122">Questo comando crea un file *Program.cs* nella cartella con un semplice programma "Hello World" già scritto insieme a un file di progetto C# denominato *HelloWorld. csproj*.</span><span class="sxs-lookup"><span data-stu-id="aaa37-122">This command creates a *Program.cs* file in your folder with a simple "Hello World" program already written, along with a C# project file named *HelloWorld.csproj*.</span></span>
+      <span data-ttu-id="6a649-117">Il **terminale** verrà aperto con il prompt dei comandi nella cartella *HelloWorld* .</span><span class="sxs-lookup"><span data-stu-id="6a649-117">The **Terminal** opens with the command prompt in the *HelloWorld* folder.</span></span>
 
-      ![Comando new di dotnet](media/with-visual-studio-code/dotnet-new-command.png)
+   1. <span data-ttu-id="6a649-118">Nel **terminale**immettere il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="6a649-118">In the **Terminal**, enter the following command:</span></span>
 
-1. <span data-ttu-id="aaa37-124">Eseguire il programma "Hello World":</span><span class="sxs-lookup"><span data-stu-id="aaa37-124">Run the "Hello World" program:</span></span>
+      ```dotnetcli
+      dotnet new console
+      ```
 
-    - <span data-ttu-id="aaa37-125">Nella finestra del terminale immettere `dotnet run`.</span><span class="sxs-lookup"><span data-stu-id="aaa37-125">In the terminal window, enter `dotnet run`.</span></span>
+<span data-ttu-id="6a649-119">Il modello di applicazione console per .NET Core definisce una classe, `Program` , con un singolo metodo, `Main` , che accetta una <xref:System.String> matrice come argomento.</span><span class="sxs-lookup"><span data-stu-id="6a649-119">The Console Application template for .NET Core defines a class, `Program`, with a single method, `Main`, that takes a <xref:System.String> array as an argument.</span></span> <span data-ttu-id="6a649-120">Il file *Program.cs* contiene il codice seguente:</span><span class="sxs-lookup"><span data-stu-id="6a649-120">The *Program.cs* file has the following code:</span></span>
 
-      ![Comando run di dotnet](media/with-visual-studio-code/dotnet-run-command.png)
+```csharp
+using System;
 
-## <a name="debug"></a><span data-ttu-id="aaa37-127">Debug</span><span class="sxs-lookup"><span data-stu-id="aaa37-127">Debug</span></span>
-
-1. <span data-ttu-id="aaa37-128">Aprire il file *Program.cs* facendo clic su di esso.</span><span class="sxs-lookup"><span data-stu-id="aaa37-128">Open *Program.cs* by clicking on it.</span></span> <span data-ttu-id="aaa37-129">La prima volta che si apre un file C# in Visual Studio Code, [OmniSharp](https://www.omnisharp.net/) viene caricato nell'editor.</span><span class="sxs-lookup"><span data-stu-id="aaa37-129">The first time you open a C# file in Visual Studio Code, [OmniSharp](https://www.omnisharp.net/) loads in the editor.</span></span>
-
-    ![Aprire il file Program.cs](media/with-visual-studio-code/open-program-cs.png)
-
-1. <span data-ttu-id="aaa37-131">Visual Studio Code richiede di aggiungere le risorse mancanti per compilare ed eseguire il debug dell'app.</span><span class="sxs-lookup"><span data-stu-id="aaa37-131">Visual Studio Code prompts you to add the missing assets to build and debug your app.</span></span> <span data-ttu-id="aaa37-132">Selezionare **Sì**.</span><span class="sxs-lookup"><span data-stu-id="aaa37-132">Select **Yes**.</span></span>
-
-    ![Richiesta delle risorse mancanti](media/with-visual-studio-code/missing-assets.png)
-
-1. <span data-ttu-id="aaa37-134">Per aprire la visualizzazione Debug, fare clic sull'icona Debug nel menu di sinistra.</span><span class="sxs-lookup"><span data-stu-id="aaa37-134">To open the Debug view, click on the Debugging icon on the left side menu.</span></span>
-
-    ![Aprire la scheda Debug in Visual Studio Code](media/with-visual-studio-code/open-debug-tab.png)
-
-1. <span data-ttu-id="aaa37-136">Individuare la freccia verde nella parte superiore del riquadro.</span><span class="sxs-lookup"><span data-stu-id="aaa37-136">Locate the green arrow at the top of the pane.</span></span> <span data-ttu-id="aaa37-137">Verificare che nell'elenco a discesa accanto sia selezionato **Avvia .NET Core (console)** .</span><span class="sxs-lookup"><span data-stu-id="aaa37-137">Make sure the drop-down next to it has **.NET Core Launch (console)** selected.</span></span>
-
-    ![Selezione di .NET Core in Visual Studio Code](media/with-visual-studio-code/select-net-core.png)
-
-1. <span data-ttu-id="aaa37-139">Aggiungere un punto di interruzione al progetto facendo clic sul **margine dell'editor**, ovvero lo spazio a sinistra dei numeri di riga nell'editor accanto alla riga 9, oppure spostare il cursore di testo sulla riga 9 e premere <kbd>F9</kbd>.</span><span class="sxs-lookup"><span data-stu-id="aaa37-139">Add a breakpoint to your project by clicking on the **editor margin**, which is the space on the left of the line numbers in the editor, next to line 9, or move the text cursor onto line 9 in the editor and  press <kbd>F9</kbd>.</span></span>
-
-    ![Impostazione di un punto di interruzione](media/with-visual-studio-code/set-breakpoint-vs-code.png)
-
-1. <span data-ttu-id="aaa37-141">Per avviare il debug, premere <kbd>F5</kbd> o fare clic sulla freccia verde.</span><span class="sxs-lookup"><span data-stu-id="aaa37-141">To start debugging, press <kbd>F5</kbd> or select the green arrow.</span></span> <span data-ttu-id="aaa37-142">Il debugger interrompe l'esecuzione del programma quando raggiunge il punto di interruzione impostato nel passaggio precedente.</span><span class="sxs-lookup"><span data-stu-id="aaa37-142">The debugger stops execution of your program when it reaches the breakpoint you set in the previous step.</span></span>
-    - <span data-ttu-id="aaa37-143">Durante il debug è possibile visualizzare le variabili locali nel riquadro superiore sinistro o usare la console di debug.</span><span class="sxs-lookup"><span data-stu-id="aaa37-143">While debugging, you can view your local variables in the top-left pane or use the debug console.</span></span>
-
-1. <span data-ttu-id="aaa37-144">Selezionare la freccia blu in alto per continuare il debug oppure fare clic sul quadrato rosso per arrestarlo.</span><span class="sxs-lookup"><span data-stu-id="aaa37-144">Select the blue arrow at the top to continue debugging, or select the red square at the top to stop.</span></span>
-
-    ![Esecuzione e debug in Visual Studio Code](media/with-visual-studio-code/run-debug-vs-code.png)
-
-> [!TIP]
-> <span data-ttu-id="aaa37-146">Per altre informazioni e per suggerimenti sul debug .NET Core con OmniSharp in Visual Studio Code, vedere [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) (Istruzioni per l'impostazione del debugger .NET Core).</span><span class="sxs-lookup"><span data-stu-id="aaa37-146">For more information and troubleshooting tips on .NET Core debugging with OmniSharp in Visual Studio Code, see [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).</span></span>
-
-## <a name="add-a-class"></a><span data-ttu-id="aaa37-147">Aggiungere una classe</span><span class="sxs-lookup"><span data-stu-id="aaa37-147">Add a class</span></span>
-
-1. <span data-ttu-id="aaa37-148">Per aggiungere una nuova classe, fare clic con il pulsante destro del mouse su VSCode Explorer sotto *Program.cs* e scegliere **nuovo file**.</span><span class="sxs-lookup"><span data-stu-id="aaa37-148">To add a new class, right-click in the VSCode Explorer below *Program.cs* and select **New File**.</span></span> <span data-ttu-id="aaa37-149">Verrà aggiunto un nuovo file alla cartella aperta in VSCode.</span><span class="sxs-lookup"><span data-stu-id="aaa37-149">This adds a new file to the folder you have open in VSCode.</span></span>
-1. <span data-ttu-id="aaa37-150">Assegnare al file il nome *MyClass.cs*.</span><span class="sxs-lookup"><span data-stu-id="aaa37-150">Name your file *MyClass.cs*.</span></span> <span data-ttu-id="aaa37-151">È necessario salvarlo con l'estensione `.cs` alla fine in modo che venga riconosciuto come file csharp.</span><span class="sxs-lookup"><span data-stu-id="aaa37-151">You must save it with a `.cs` extension at the end for it to be recognized as a csharp file.</span></span>
-1. <span data-ttu-id="aaa37-152">Aggiungere il codice seguente per creare la prima classe.</span><span class="sxs-lookup"><span data-stu-id="aaa37-152">Add the following code to create your first class.</span></span>
-
-    ``` csharp
-    using System;
-
-    namespace HelloWorld
+namespace HelloWorld
+{
+    class Program
     {
-        public class MyClass
+        static void Main(string[] args)
         {
-            public string ReturnMessage()
-            {
-                return "Happy coding!";
-            }
+            Console.WriteLine("Hello World!");
         }
     }
-    ```
+}
+```
 
-1. <span data-ttu-id="aaa37-153">Chiamare la nuova classe dal `Main` metodo sostituendo il codice in *Program.cs* con il codice seguente:</span><span class="sxs-lookup"><span data-stu-id="aaa37-153">Call your new class from your `Main` method by replacing the code in *Program.cs* with the following code:</span></span>
+<span data-ttu-id="6a649-121">`Main` è il punto di ingresso dell'applicazione, ovvero il metodo chiamato automaticamente dal runtime quando viene avviata l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="6a649-121">`Main` is the application entry point, the method that's called automatically by the runtime when it launches the application.</span></span> <span data-ttu-id="6a649-122">Gli argomenti della riga di comando forniti all'avvio dell'applicazione sono disponibili nella matrice *args*.</span><span class="sxs-lookup"><span data-stu-id="6a649-122">Any command-line arguments supplied when the application is launched are available in the *args* array.</span></span>
 
-    ```csharp
-    using System;
+<span data-ttu-id="6a649-123">Il modello crea un'applicazione semplice che chiama il <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> metodo per visualizzare "Hello World!"</span><span class="sxs-lookup"><span data-stu-id="6a649-123">The template creates a simple application that calls the <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> method to display "Hello World!"</span></span> <span data-ttu-id="6a649-124">nella finestra della console.</span><span class="sxs-lookup"><span data-stu-id="6a649-124">in the console window.</span></span>
 
-    namespace HelloWorld
-    {
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                var c1 = new MyClass();
-                Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
-            }
-        }
-    }
-    ```
+## <a name="run-the-app"></a><span data-ttu-id="6a649-125">Eseguire l'app</span><span class="sxs-lookup"><span data-stu-id="6a649-125">Run the app</span></span>
 
-1. <span data-ttu-id="aaa37-154">Salvare le modifiche.</span><span class="sxs-lookup"><span data-stu-id="aaa37-154">Save your changes.</span></span>
+<span data-ttu-id="6a649-126">Eseguire il comando seguente nel **terminale**:</span><span class="sxs-lookup"><span data-stu-id="6a649-126">Run the following command in the **Terminal**:</span></span>
 
-1. <span data-ttu-id="aaa37-155">Eseguire di nuovo il programma.</span><span class="sxs-lookup"><span data-stu-id="aaa37-155">Run the program again.</span></span>
+```dotnetcli
+dotnet run
+```
 
-    ```dotnetcli
-    dotnet run
-    ```
+<span data-ttu-id="6a649-127">Il programma Visualizza "Hello World!"</span><span class="sxs-lookup"><span data-stu-id="6a649-127">The program displays "Hello World!"</span></span> <span data-ttu-id="6a649-128">e termina.</span><span class="sxs-lookup"><span data-stu-id="6a649-128">and ends.</span></span>
 
-    <span data-ttu-id="aaa37-156">Il nuovo messaggio viene visualizzato con la stringa accodata.</span><span class="sxs-lookup"><span data-stu-id="aaa37-156">The new message appears with the appended string.</span></span>
+![Comando run di dotnet](media/with-visual-studio-code/dotnet-run-command.png)
 
-    ```console
-    Hello World! Happy coding!
-    ```
+## <a name="enhance-the-app"></a><span data-ttu-id="6a649-130">Migliorare l'app</span><span class="sxs-lookup"><span data-stu-id="6a649-130">Enhance the app</span></span>
 
-## <a name="faq"></a><span data-ttu-id="aaa37-157">Domande frequenti</span><span class="sxs-lookup"><span data-stu-id="aaa37-157">FAQ</span></span>
+<span data-ttu-id="6a649-131">Migliorare l'applicazione per richiedere il nome dell'utente e visualizzarlo insieme alla data e all'ora.</span><span class="sxs-lookup"><span data-stu-id="6a649-131">Enhance the application to prompt the user for their name and display it along with the date and time.</span></span>
 
-### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a><span data-ttu-id="aaa37-158">Non sono più disponibili gli asset necessari per compilare ed eseguire il debug di C# in Visual Studio Code.</span><span class="sxs-lookup"><span data-stu-id="aaa37-158">I'm missing required assets to build and debug C# in Visual Studio Code.</span></span> <span data-ttu-id="aaa37-159">Ildebugger indica "Nessuna configurazione".</span><span class="sxs-lookup"><span data-stu-id="aaa37-159">My debugger says "No Configuration."</span></span>
+1. <span data-ttu-id="6a649-132">Aprire il file *Program.cs* facendo clic su di esso.</span><span class="sxs-lookup"><span data-stu-id="6a649-132">Open *Program.cs* by clicking on it.</span></span>
 
-<span data-ttu-id="aaa37-160">L'estensione C# di Visual Studio Code può generare gli asset necessari per compilare ed eseguire il debug.</span><span class="sxs-lookup"><span data-stu-id="aaa37-160">The Visual Studio Code C# extension can generate assets to build and debug for you.</span></span> <span data-ttu-id="aaa37-161">Visual Studio Code chiederà di generarli alla prima apertura di un progetto C#.</span><span class="sxs-lookup"><span data-stu-id="aaa37-161">Visual Studio Code prompts you to generate these assets when you first open a C# project.</span></span> <span data-ttu-id="aaa37-162">Se gli asset non sono stati generati, è comunque possibile eseguire questo comando aprendo il riquadro comandi (**Visualizza > Riquadro comandi**) e digitando "> .NET: generare gli asset per la compilazione e il debug".</span><span class="sxs-lookup"><span data-stu-id="aaa37-162">If you didn't generate assets then, you can still run this command by opening the Command Palette (**View > Command Palette**) and typing ">.NET: Generate Assets for Build and Debug".</span></span> <span data-ttu-id="aaa37-163">Selezionando questa operazione vengono generati i file di configurazione *. VSCODE*, *Launch. JSON*e *Tasks. JSON* necessari.</span><span class="sxs-lookup"><span data-stu-id="aaa37-163">Selecting this generates the *.vscode*, *launch.json*, and *tasks.json* configuration files that you need.</span></span>
+   <span data-ttu-id="6a649-133">La prima volta che si apre un file C# in Visual Studio Code, [OmniSharp](https://www.omnisharp.net/) viene caricato nell'editor.</span><span class="sxs-lookup"><span data-stu-id="6a649-133">The first time you open a C# file in Visual Studio Code, [OmniSharp](https://www.omnisharp.net/) loads in the editor.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="aaa37-164">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="aaa37-164">See also</span></span>
+   ![Aprire il file Program.cs](media/with-visual-studio-code/open-program-cs.png)
 
-- [<span data-ttu-id="aaa37-165">Setting up Visual Studio Code (Impostazione di Visual Studio Code)</span><span class="sxs-lookup"><span data-stu-id="aaa37-165">Setting up Visual Studio Code</span></span>](https://code.visualstudio.com/docs/setup/setup-overview)
-- [<span data-ttu-id="aaa37-166">Debugging in Visual Studio Code (Debug in Visual Studio Code)</span><span class="sxs-lookup"><span data-stu-id="aaa37-166">Debugging in Visual Studio Code</span></span>](https://code.visualstudio.com/Docs/editor/debugging)
+1. <span data-ttu-id="6a649-135">Selezionare **Sì** quando Visual Studio Code richiede di aggiungere le risorse mancanti per compilare ed eseguire il debug dell'app.</span><span class="sxs-lookup"><span data-stu-id="6a649-135">Select **Yes** when Visual Studio Code prompts you to add the missing assets to build and debug your app.</span></span>
+
+   ![Richiesta delle risorse mancanti](media/with-visual-studio-code/missing-assets.png)
+
+1. <span data-ttu-id="6a649-137">Sostituire il contenuto del `Main` metodo in *Program.cs*, che attualmente è solo la riga che chiama `Console.WriteLine` , con il codice seguente:</span><span class="sxs-lookup"><span data-stu-id="6a649-137">Replace the contents of the `Main` method in *Program.cs*, which is currently just the line that calls `Console.WriteLine`, with the following code:</span></span>
+
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="Snippet1":::
+
+   <span data-ttu-id="6a649-138">Il codice visualizza "What is your name?"</span><span class="sxs-lookup"><span data-stu-id="6a649-138">This code displays "What is your name?"</span></span> <span data-ttu-id="6a649-139">nella finestra della console e attende che l'utente immetta una stringa seguita dal tasto **invio** .</span><span class="sxs-lookup"><span data-stu-id="6a649-139">in the console window and waits until the user enters a string followed by the **Enter** key.</span></span> <span data-ttu-id="6a649-140">Archivia la stringa in una variabile denominata `name` .</span><span class="sxs-lookup"><span data-stu-id="6a649-140">It stores this string in a variable named `name`.</span></span> <span data-ttu-id="6a649-141">Recupera inoltre il valore della proprietà <xref:System.DateTime.Now?displayProperty=nameWithType>, contenente l'ora locale corrente, e lo assegna a una variabile denominata `date`.</span><span class="sxs-lookup"><span data-stu-id="6a649-141">It also retrieves the value of the <xref:System.DateTime.Now?displayProperty=nameWithType> property, which contains the current local time, and assigns it to a variable named `date`.</span></span> <span data-ttu-id="6a649-142">Infine, questi valori vengono visualizzati nella finestra della console.</span><span class="sxs-lookup"><span data-stu-id="6a649-142">Finally, it displays these values in the console window.</span></span>
+
+   <span data-ttu-id="6a649-143">L'oggetto `\n` rappresenta un carattere di nuova riga.</span><span class="sxs-lookup"><span data-stu-id="6a649-143">The `\n` represents a newline character.</span></span>
+
+   <span data-ttu-id="6a649-144">Il segno di dollaro ( `$` ) davanti a una stringa consente di inserire espressioni come i nomi delle variabili tra parentesi graffe nella stringa.</span><span class="sxs-lookup"><span data-stu-id="6a649-144">The dollar sign (`$`) in front of a string lets you put expressions such as variable names in curly braces in the string.</span></span> <span data-ttu-id="6a649-145">Il valore dell'espressione viene inserito nella stringa al posto dell'espressione.</span><span class="sxs-lookup"><span data-stu-id="6a649-145">The expression value is inserted into the string in place of the expression.</span></span> <span data-ttu-id="6a649-146">Questa sintassi è detta [stringhe interpolate](../../csharp/language-reference/tokens/interpolated.md).</span><span class="sxs-lookup"><span data-stu-id="6a649-146">This syntax is referred to as [interpolated strings](../../csharp/language-reference/tokens/interpolated.md).</span></span>
+
+1. <span data-ttu-id="6a649-147">Salvare le modifiche.</span><span class="sxs-lookup"><span data-stu-id="6a649-147">Save your changes.</span></span>
+
+   > [!IMPORTANT]
+   > <span data-ttu-id="6a649-148">In Visual Studio Code, è necessario salvare in modo esplicito le modifiche.</span><span class="sxs-lookup"><span data-stu-id="6a649-148">In Visual Studio Code, you have to explicitly save changes.</span></span> <span data-ttu-id="6a649-149">Diversamente da Visual Studio, le modifiche ai file non vengono salvate automaticamente durante la compilazione e l'esecuzione di un'app.</span><span class="sxs-lookup"><span data-stu-id="6a649-149">Unlike Visual Studio, file changes are not automatically saved when you build and run an app.</span></span>
+
+1. <span data-ttu-id="6a649-150">Eseguire di nuovo il programma:</span><span class="sxs-lookup"><span data-stu-id="6a649-150">Run the program again:</span></span>
+
+   ```dotnetcli
+   dotnet run
+   ```
+
+1. <span data-ttu-id="6a649-151">Per rispondere alla richiesta, immettere un nome e premere il tasto **invio** .</span><span class="sxs-lookup"><span data-stu-id="6a649-151">Respond to the prompt by entering a name and pressing the **Enter** key.</span></span>
+
+   :::image type="content" source="media/debugging-with-visual-studio-code/run-modified-program.png" alt-text="Finestra del terminale con output del programma modificato":::
+
+1. <span data-ttu-id="6a649-153">Premere un tasto qualsiasi per uscire dal programma.</span><span class="sxs-lookup"><span data-stu-id="6a649-153">Press any key to exit the program.</span></span>
+
+## <a name="additional-resources"></a><span data-ttu-id="6a649-154">Risorse aggiuntive</span><span class="sxs-lookup"><span data-stu-id="6a649-154">Additional resources</span></span>
+
+- [<span data-ttu-id="6a649-155">Setting up Visual Studio Code (Impostazione di Visual Studio Code)</span><span class="sxs-lookup"><span data-stu-id="6a649-155">Setting up Visual Studio Code</span></span>](https://code.visualstudio.com/docs/setup/setup-overview)
+
+## <a name="next-steps"></a><span data-ttu-id="6a649-156">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="6a649-156">Next steps</span></span>
+
+<span data-ttu-id="6a649-157">In questa esercitazione è stata creata un'applicazione .NET Core.</span><span class="sxs-lookup"><span data-stu-id="6a649-157">In this tutorial, you created a .NET Core application.</span></span> <span data-ttu-id="6a649-158">Nell'esercitazione successiva si esegue il debug dell'app.</span><span class="sxs-lookup"><span data-stu-id="6a649-158">In the next tutorial, you debug the app.</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="6a649-159">Eseguire il debug di un'applicazione console .NET Core usando Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="6a649-159">Debug a .NET Core console application using Visual Studio Code</span></span>](debugging-with-visual-studio-code.md)
