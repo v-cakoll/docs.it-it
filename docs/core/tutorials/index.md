@@ -4,12 +4,12 @@ description: Seguire le esercitazioni per l'apprendimento di .NET Core per compi
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 9fb87180bb001a7f54d93c6e95631562103c49e8
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 5a33158bdf02c5ac81379cfcdabb2f79230033e2
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840923"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202182"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Scopri le esercitazioni su .NET Core e sugli strumenti di .NET Core SDK
 
@@ -17,7 +17,7 @@ Le esercitazioni seguenti includono informazioni e istruzioni sull'uso di .NET C
 
 ## <a name="use-visual-studio"></a>Usare Visual Studio
 
-- [Creare un'app console](with-visual-studio.md)
+- [Creare un'applicazione console](with-visual-studio.md)
 - [Creare un'app console F #](../../fsharp/get-started/get-started-visual-studio.md)
 - [Eseguire il debug di un'app](debugging-with-visual-studio.md)
 - [Pubblicare un'app](publishing-with-visual-studio.md)
@@ -25,23 +25,24 @@ Le esercitazioni seguenti includono informazioni e istruzioni sull'uso di .NET C
 - [Unit test di una libreria di classi](testing-library-with-visual-studio.md)
 - [Usare una libreria di classi](consuming-library-with-visual-studio.md)
 - [Installare e usare un pacchetto](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
-- [Creazione e pubblicazione di un pacchetto](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
+- [Creare e pubblicare un pacchetto](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
 
 ## <a name="use-visual-studio-code"></a>Usare Visual Studio Code
 
-Scegliere queste esercitazioni se si desidera utilizzare Visual Studio Code o un altro editor di codice. Tutti usano l'interfaccia della riga di comando per le attività di sviluppo .NET Core, pertanto tutti possono essere usati con qualsiasi editor di codice.
+Scegliere queste esercitazioni se si desidera utilizzare Visual Studio Code o un altro editor di codice. Usare l'interfaccia della riga di comando per le attività di sviluppo di .NET Core, quindi è possibile usare tutti gli editor di codice, eccetto l'esercitazione di debug.
 
-- [Creare un'app console](with-visual-studio-code.md)
+- [Creare un'applicazione console](with-visual-studio-code.md)
+- [Eseguire il debug di un'app](debugging-with-visual-studio-code.md)
 - [Creare un'app console e pubblicarla](cli-create-console-app.md)
 - [Creare un'app console F #](../../fsharp/get-started/get-started-vscode.md)
-- [Creare una libreria e unit test it-macOS](using-on-macos.md)
+- [Creare una libreria e sottoporla a unit test - macOS](using-on-macos.md)
 - [Installare e usare un pacchetto](/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli)
-- [Creazione e pubblicazione di un pacchetto](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
+- [Creare e pubblicare un pacchetto](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
 
 ## <a name="use-visual-studio-for-mac"></a>Usare Visual Studio per Mac
 
-- [Creare un'app console](using-on-mac-vs.md)
-- [Creare una libreria e unit test](using-on-mac-vs-full-solution.md)
+- [Creare un'applicazione console](using-on-mac-vs.md)
+- [Creare una libreria e sottoporla a unit test](using-on-mac-vs-full-solution.md)
 - [Installare e usare un pacchetto](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
 ## <a name="advanced-topics"></a>Argomenti avanzati

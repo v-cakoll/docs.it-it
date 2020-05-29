@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 2917a8d9b42d831566855271a2f2110637db586f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b968c599cf061fbd03b7ba8fb19470f6ace11a55
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174472"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202178"
 ---
 # <a name="table-valued-parameters"></a>Parametri con valori di tabella
 I parametri con valori di tabella offrono un modo semplice per effettuare il marshalling di più righe di dati da un'applicazione client di SQL Server senza richiedere più round trip o una logica speciale sul lato server per l'elaborazione dei dati. I parametri con valori di tabella possono essere usati per incapsulare le righe di dati in un'applicazione client e inviare i dati al server in un singolo comando con parametri. Le righe di dati in ingresso vengono archiviate in una variabile di tabella su cui è possibile operare tramite Transact-SQL.  
@@ -25,7 +25,7 @@ I parametri con valori di tabella offrono un modo semplice per effettuare il mar
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Utilizzare parametri con valori di tabella (Motore di database)](/sql/relational-databases/tables/use-table-valued-parameters-database-engine)|Viene descritto come creare e usare parametri con valori di tabella.|  
-|[Tipi di tabella definiti dall'utenteUser-Defined Table Types](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|Vengono descritti i tipi di tabella definiti dall'utente usati per dichiarare parametri con valori di tabella.|  
+|[Tipi di tabella definiti dall'utente](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|Vengono descritti i tipi di tabella definiti dall'utente usati per dichiarare parametri con valori di tabella.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Passaggio di più righe nelle versioni precedenti di SQL Server  
  Prima dell'introduzione dei parametri con valori di tabella in SQL Server 2008, le opzioni per passare più righe di dati a una stored procedure o a un comando SQL con parametri erano limitate. Uno sviluppatore può scegliere tra le opzioni seguenti per passare più righe al server:  
@@ -39,7 +39,7 @@ I parametri con valori di tabella offrono un modo semplice per effettuare il mar
 - Usare il programma di utilità `bcp` o l'oggetto <xref:System.Data.SqlClient.SqlBulkCopy> per caricare molte righe di dati in una tabella. Sebbene questa tecnica sia molto efficiente, non supporta l'elaborazione sul lato server, a meno che i dati non vengano caricati in una tabella temporanea o in una variabile di tabella.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Creazione di tipi di parametri con valori di tabella  
- I parametri con valori di tabella sono basati su strutture di tabella fortemente tipizzate definite tramite istruzioni CREATE TYPE Transact-SQL. Per poter usare i parametri con valori di tabella nelle applicazioni client, è prima necessario creare un tipo di tabella e definire la struttura in SQL Server. Per ulteriori informazioni sulla creazione di tipi di tabella, vedere Tipi di [tabella definiti dall'utente](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)).  
+ I parametri con valori di tabella sono basati su strutture di tabella fortemente tipizzate definite tramite istruzioni CREATE TYPE Transact-SQL. Per poter usare i parametri con valori di tabella nelle applicazioni client, è prima necessario creare un tipo di tabella e definire la struttura in SQL Server. Per ulteriori informazioni sulla creazione di tipi di tabella, vedere [tipi di tabella definiti dall'utente](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)).  
   
  Nell'istruzione seguente viene creato un tipo di tabella denominato CategoryTableType costituito da colonne CategoryID e CategoryName:  
   
@@ -128,7 +128,7 @@ Dim tvpParam As SqlParameter = _
 tvpParam.SqlDbType = SqlDbType.Structured  
 ```  
   
-## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a>Passaggio di un parametro con valori di tabella a una stored procedurePassing a Table-Valued Parameter to a Stored Procedure  
+## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a>Passaggio di un parametro con valori di tabella a una stored procedure  
  In questo esempio viene illustrato come trasferire i dati dei parametri con valori di tabella a una stored procedure. Il codice estrae le righe aggiunte in una nuova <xref:System.Data.DataTable> usando il metodo <xref:System.Data.DataTable.GetChanges%2A>. Il codice definisce quindi un <xref:System.Data.SqlClient.SqlCommand>, impostando la proprietà <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> su <xref:System.Data.CommandType.StoredProcedure>. Il <xref:System.Data.SqlClient.SqlParameter> viene popolato usando il metodo <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> e <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> viene impostato su `Structured`. <xref:System.Data.SqlClient.SqlCommand> viene eseguito quindi usando il metodo <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>.  
   
 ```csharp  
@@ -277,5 +277,5 @@ insertCommand.ExecuteNonQuery()
 - [Configurazione di parametri e tipi di dati dei parametri](../configuring-parameters-and-parameter-data-types.md)
 - [Comandi e parametri](../commands-and-parameters.md)
 - [Parametri DataAdapter](../dataadapter-parameters.md)
-- [Operazioni sui dati di SQL Server in ADO.NET](sql-server-data-operations.md)
+- [SQL Server operazioni sui dati in ADO.NET](sql-server-data-operations.md)
 - [Panoramica di ADO.NET](../ado-net-overview.md)

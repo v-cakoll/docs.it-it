@@ -3,12 +3,12 @@ title: gRPC
 description: Informazioni su gRPC, il suo ruolo in applicazioni native del cloud e su come si differenzia dalla comunicazione RESTful HTTP.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: f34b267d7f5c6b4e593841c80df44d1ccbde95ae
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 35a8325dd82e946d88b09b223287e2871be88ffa
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614045"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201326"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -42,7 +42,7 @@ gRPC adotta una tecnologia open source denominata buffer del [protocollo](https:
 Usando il file proto, il compilatore protobuf `protoc` genera il codice client e del servizio per la piattaforma di destinazione. Il codice include i componenti seguenti:
 
 - Oggetti fortemente tipizzati, condivisi dal client e dal servizio, che rappresentano le operazioni del servizio e gli elementi dati per un messaggio.
-- Classe di base fortemente tipizzata con il plumbing di rete necessario che il servizio gRPC remoto può ereditare ed estendere.
+- Classe base fortemente tipizzata con il plumbing di rete necessario che il servizio gRPC remoto può ereditare ed estendere.
 - Stub client che contiene il plumbing necessario per richiamare il servizio gRPC remoto.
 
 In fase di esecuzione, ogni messaggio viene serializzato come rappresentazione protobuf standard ed è scambiato tra il client e il servizio remoto. Diversamente da JSON o XML, i messaggi protobuf vengono serializzati come byte binari compilati.
@@ -83,7 +83,7 @@ Preferire gRPC per gli scenari seguenti:
 
 Al momento, in questo articolo, gRPC viene usato principalmente con i servizi back-end. La maggior parte dei browser moderni non è in grado di fornire il livello di controllo HTTP/2 richiesto per supportare un client gRPC front-end. Ciò premesso, esiste un' [iniziativa](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/) che consente la comunicazione gRPC dalle app basate su browser compilate con le tecnologie JavaScript o blazer webassembly. [GRPC-Web per .NET](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) consente a un ASP.NET Core app gRPC di supportare le funzionalità di gRPC nelle app del browser:
 
-- Client fortemente tipizzati generati dal codice
+- Client fortemente tipizzati e generati dal codice
 - Compatta messaggi protobuf
 - Streaming Server
 

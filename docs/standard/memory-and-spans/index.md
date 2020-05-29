@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Span<T>
 - buffers"
 - pipeline processing
-ms.openlocfilehash: b61b1dbbedf4658fe113986fbb4a792a2f574534
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c60c08d27c0e41228a15e8acdf01a9af28a23762
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121993"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201960"
 ---
 # <a name="memory--and-span-related-types"></a>Tipi correlati alla memoria e agli intervalli
 
-A partire da .NET Core 2.1, .NET include un numero di tipi correlati che rappresentano un'area contigua fortemente tipizzata di memoria arbitraria. incluse le seguenti:
+A partire da .NET Core 2,1, .NET include una serie di tipi correlati che rappresentano un'area contigua fortemente tipizzata della memoria arbitraria. Tra queste sono incluse:
 
 - <xref:System.Span%601?displayProperty=nameWithType>, un tipo usato per accedere a un'area contigua di memoria. Un'istanza di <xref:System.Span%601> può essere supportata da una matrice di tipo `T`, una classe <xref:System.String>, un buffer allocato con [stackalloc](../../csharp/language-reference/operators/stackalloc.md) o un puntatore alla memoria non gestita. Poiché deve essere allocato nello stack, presenta alcune restrizioni. Un campo in una classe, ad esempio, non può essere di tipo <xref:System.Span%601> e l'intervallo non può essere usato nelle operazioni asincrone.
 
@@ -26,7 +26,7 @@ A partire da .NET Core 2.1, .NET include un numero di tipi correlati che rappres
 
 - <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>, una versione non modificabile della struttura <xref:System.Memory%601>.
 
-- <xref:System.Buffers.MemoryPool%601?displayProperty=nameWithType>, che alloca blocchi fortemente tipizzati di memoria da un pool di memoria a un proprietario. Le istanze di <xref:System.Buffers.IMemoryOwner%601> possono essere noleggiate dal pool chiamando <xref:System.Buffers.MemoryPool%601.Rent%2A?displayProperty=nameWithType> e restituite al pool chiamando <xref:System.Buffers.MemoryPool%601.Dispose?displayProperty=nameWithType>.
+- <xref:System.Buffers.MemoryPool%601?displayProperty=nameWithType>, che alloca i blocchi di memoria fortemente tipizzati da un pool di memoria a un proprietario. Le istanze di <xref:System.Buffers.IMemoryOwner%601> possono essere noleggiate dal pool chiamando <xref:System.Buffers.MemoryPool%601.Rent%2A?displayProperty=nameWithType> e restituite al pool chiamando <xref:System.Buffers.MemoryPool%601.Dispose?displayProperty=nameWithType>.
 
 - <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>, che rappresenta il proprietario di un blocco di memoria e controlla la gestione della durata.
 
@@ -43,7 +43,7 @@ Per altre informazioni, vedere lo spazio dei nomi <xref:System.Buffers?displayPr
 
 ## <a name="working-with-memory-and-span"></a>Uso di memoria e intervalli
 
-Poiché i tipi correlati alla memoria e agli intervalli vengono in genere usati per archiviare i dati in una pipeline di elaborazione, è importante che gli sviluppatori seguano una serie di procedure consigliate quando usano <xref:System.Span%601>, <xref:System.Memory%601> e i tipi correlati. Queste procedure consigliate sono documentate nelle [linee guida all'utilizzo di Memory\<T> e Span\<T>](memory-t-usage-guidelines.md).
+Poiché i tipi correlati alla memoria e agli intervalli vengono in genere usati per archiviare i dati in una pipeline di elaborazione, è importante che gli sviluppatori seguano una serie di procedure consigliate quando usano <xref:System.Span%601>, <xref:System.Memory%601> e i tipi correlati. Queste procedure consigliate sono documentate nelle [ \<T> \<T> linee guida sull'utilizzo di memoria e intervallo](memory-t-usage-guidelines.md).
 
 ## <a name="see-also"></a>Vedere anche
 

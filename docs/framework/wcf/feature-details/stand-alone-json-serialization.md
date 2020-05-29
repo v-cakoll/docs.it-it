@@ -2,12 +2,12 @@
 title: Serializzazione JSON autonoma mediante DataContractJsonSerializer
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 259d5da544262b5cae08e1be9e8ea6e077d5b947
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 6bd075405a3bca0cc64dda90225526096b6fa8e3
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144929"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202400"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>Serializzazione JSON autonoma mediante DataContractJsonSerializer
 
@@ -189,7 +189,7 @@ I tipi elemento come <xref:System.Xml.Linq.XElement> vengono serializzati così 
 
 #### <a name="preserving-type-information"></a>Mantenimento delle informazioni sui tipi
 
-Come già illustrato il polimorfismo è supportato in JSON. con alcune restrizioni. JavaScript è un linguaggio con tipizzazione debole e l'identità del tipo non rappresenta solitamente un problema. Tuttavia, quando si utilizza JSON per le comunicazioni tra un sistema fortemente tipizzato (.NET) e uno con tipizzazione debole (JavaScript), è utile mantenere l'identità del tipo. Ad esempio, i tipi con nomi di contratto dati "Square" e "Circle" derivano da un tipo con nome di contratto dati "Shape". Se "Circle" viene inviato da .NET a JavaScript e viene quindi restituito a un metodo .NET che prevede "Shape", è utile per .NET sapere che l'oggetto in questione è stato originariamente "Circle"; in caso contrario, tutte le informazioni specifiche del tipo derivato (ad esempio il membro dati "radium" in "Circle") potrebbero andare perdute.
+Come già illustrato il polimorfismo è supportato in JSON. con alcune restrizioni. JavaScript è un linguaggio con tipizzazione debole e l'identità del tipo non rappresenta solitamente un problema. Tuttavia, quando si usa JSON per la comunicazione tra un sistema fortemente tipizzato (.NET) e un sistema con tipizzazione debole (JavaScript), è utile mantenere l'identità del tipo. Ad esempio, i tipi con nomi di contratto dati "Square" e "Circle" derivano da un tipo con nome di contratto dati "Shape". Se "Circle" viene inviato da .NET a JavaScript e viene quindi restituito a un metodo .NET che prevede "Shape", è utile per .NET sapere che l'oggetto in questione è stato originariamente "Circle"; in caso contrario, tutte le informazioni specifiche del tipo derivato (ad esempio il membro dati "radium" in "Circle") potrebbero andare perdute.
 
 Per mantenere l'identità del tipo, durante la serializzazione di tipi complessi in JSON può essere aggiunto un suggerimento; il deserializzatore riconosce tale suggerimento e agisce di conseguenza. "Hint di tipo" è una coppia chiave/valore JSON con il nome della chiave " \_ \_ Type" (due caratteri di sottolineatura seguiti dalla parola "Type"). Il valore è rappresentato da una stringa JSON con forma "DataContractName:DataContractNamespace" (tutto il testo che precede i due punti rappresenta il nome). Facendo riferimento all'esempio precedente, "cerchio" può essere serializzato nel modo seguente.
 
@@ -229,7 +229,7 @@ Non è possibile inviare un suggerimento relativo ai tipi a tipi non complessi. 
 
 I suggerimenti relativi al tipo possono aumentare significativamente le dimensioni dei messaggi; un modo per limitare questa conseguenza è quello di utilizzare uno spazio dei nomi del contratto dati più breve, se possibile. Pertanto, le regole seguenti determinano quali suggerimenti relativi al tipo vengono inviati.
 
-- Se si utilizza ASP.NET AJAX, laddove possibile i suggerimenti relativi al tipo vengono sempre inviati, anche se non esiste un'assegnazione di base/derivata (ad esempio, se un Circle è assegnato a un Circle). Ciò è necessario per abilitare completamente il processo di chiamata da un ambiente JSON con tipizzazione debole a un ambiente .NET fortemente tipizzato, senza un imprevista perdita di informazioni.
+- Se si utilizza ASP.NET AJAX, laddove possibile i suggerimenti relativi al tipo vengono sempre inviati, anche se non esiste un'assegnazione di base/derivata (ad esempio, se un Circle è assegnato a un Circle). Questa operazione è necessaria per consentire completamente il processo di chiamata dall'ambiente JSON debolmente tipizzato nell'ambiente .NET fortemente tipizzato senza alcuna perdita di informazioni sorprendente.
 
 - Se si utilizzano i servizi ASP.NET AJAX senza integrazione ASP.NET, i suggerimenti relativi al tipo vengono inviati solamente se esiste un'assegnazione di base/derivata, ossia quando Circle viene assegnato a Shape o a <xref:System.Object>, ma non a Circle. Ciò garantisce che vengano fornite le informazioni minime necessarie per l'implementazione corretta di un client JavaScript, migliorando in tal modo le prestazioni, ma non offre alcuna protezione contro la perdita delle informazioni sui tipi nei client progettati in modo non corretto. Per impedire che si presenti tale problema sul client, evitare di utilizzare le assegnazioni di base/derivate sul server.
 
@@ -293,6 +293,6 @@ Durante la serializzazione dei tipi di dizionario, l'oggetto JSON che contiene i
 
 Il serializzatore XML codifica i nomi delle chiavi che non sono nomi XML validi. Ad esempio, un membro dati con il nome "123" avrebbe un nome codificato, ad esempio " \_ X0031 \_ \_ x0032 \_ \_ x0033 \_ " perché "123" è un nome di elemento XML non valido (inizia con una cifra). Una situazione simile può presentarsi con alcuni set di caratteri internazioni non validi per i nomi XML. Per una spiegazione di questo effetto del codice XML sull'elaborazione JSON, vedere [mapping tra JSON e XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Supporto per JSON e altri formati di trasferimento dati](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

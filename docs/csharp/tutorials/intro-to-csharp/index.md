@@ -3,17 +3,18 @@ title: Introduzione a C# - Esercitazioni interattive
 description: Imparare a usare C# nel browser e introduzione all'ambiente di sviluppo
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: c9fc8dadac373445a5bb132b25ab25676c5230c7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 965fa9dba559b967d3d1ce8d661cd08235c59f70
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007702"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202430"
 ---
 # <a name="introduction-to-c"></a>Introduzione a C\#
 
 Queste sono le esercitazioni di introduzione a C#. Queste lezioni iniziano con codice interattivo che è possibile eseguire nel browser. Prima di iniziare queste lezioni interattive, è possibile apprendere le nozioni di base di C# dalla [serie di video su c# 101](https://aka.ms/dotnet3-csharp) .
 
+<!--markdownlint-disable MD034 -->
 > [!VIDEO https://channel9.msdn.com/Series/CSharp-101/What-is-C/player]
 
 Nella prima lezione vengono spiegati i concetti di C# usando piccoli frammenti di codice. Si apprenderanno le nozioni di base della sintassi di C# e si scoprirà come usare i tipi di dati come stringhe, numeri e valori booleani. Tutte le istruzioni sono interattive e si imparerà a scrivere e a eseguire codice in pochi minuti. Per queste prime lezioni non è richiesta alcuna conoscenza pregressa di programmazione o del linguaggio C#.
@@ -27,7 +28,7 @@ Nella prima lezione vengono spiegati i concetti di C# usando piccoli frammenti d
 
 Tutte le esercitazioni introduttive successive alla lezione relativa a Hello World sono disponibili tramite l'esperienza del browser online o [nell'ambiente di sviluppo locale](local-environment.md). Alla fine di ogni esercitazione, è possibile scegliere se continuare con la successiva lezione online o nel proprio computer. Sono disponibili collegamenti che aiutano a configurare l'ambiente e continuare con l'esercitazione successiva nel computer.
 
-## <a name="hello-world"></a>[Hello world](hello-world.yml)
+## <a name="hello-world"></a>[Salve, mondo](hello-world.yml)
 
 Nell'esercitazione [Hello World](hello-world.yml) verrà creato il programma C# più semplice. Si esaminerà il tipo `string` e verranno illustrate le procedure per lavorare con il testo. È anche possibile usare il percorso su [Microsoft Learn](https://docs.microsoft.com/learn/paths/csharp-first-steps/) o [Jupyter sul Binder](https://mybinder.org/v2/gh/dotnet/try-samples/master?filepath=hello-csharp%2Fhello-world.ipynb).
 

@@ -4,12 +4,12 @@ description: Informazioni sui tipi di base (dati numerici, stringhe e oggetto) i
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 89b5cebdc887db808db8abb1fa9eda34e2bec9e5
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 468482bd1b4f1a5835df9d66ee483edc33c28f61
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205804"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202218"
 ---
 # <a name="types-variables-and-values"></a>Tipi, variabili e valori
 
@@ -66,7 +66,7 @@ Un tipo può essere dichiarato con uno o più *parametri di tipo* che agiscono d
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
-L'uso del parametro di tipo consente di riutilizzare la stessa classe per contenere qualsiasi tipo di elemento senza dover convertire ogni elemento in [object](language-reference/builtin-types/reference-types.md#the-object-type). Le classi di raccolte generiche sono definite *raccolte fortemente tipizzate* perché il compilatore conosce il tipo specifico degli elementi della raccolta e può generare un errore in fase di compilazione se, ad esempio, si prova ad aggiungere un numero intero all'oggetto `strings` nell'esempio precedente. Per altre informazioni, vedere [Generics](programming-guide/generics/index.md).
+L'uso del parametro di tipo consente di riutilizzare la stessa classe per contenere qualsiasi tipo di elemento senza dover convertire ogni elemento in [object](language-reference/builtin-types/reference-types.md#the-object-type). Le classi di raccolte generiche sono denominate *raccolte fortemente tipizzate* perché il compilatore conosce il tipo specifico degli elementi della raccolta e può generare un errore in fase di compilazione se, ad esempio, si tenta di aggiungere un numero intero all' `strings` oggetto nell'esempio precedente. Per altre informazioni, vedere [Generics](programming-guide/generics/index.md).
 
 ## <a name="implicit-types-anonymous-types-and-tuple-types"></a>Tipi impliciti, tipi anonimi e tipi di tupla
 

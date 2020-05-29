@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-ms.openlocfilehash: 5e39670fbb40acb999a243ac86683219f3c89e4f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d6de28694a1fdcd22cc2baa8cff66387c601414c
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180375"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201856"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Management Strongly Typed Class Generator)
 Lo strumento Generatore di classi di gestione fortemente tipizzate consente di generare velocemente una classe gestita ad associazione precoce per una specifica classe WMI (Windows Management Instrumentation, Strumentazione gestita Windows). L'utilizzo della classe generata semplifica la scrittura del codice per l'accesso a un'istanza della classe WMI.  
@@ -43,7 +43,7 @@ WMIClass [options]
 |**/u**  *nomeutente*|Specifica il nome utente da usare per l'accesso a un computer specificato dall'opzione **/m**.|  
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Mgmtclassgen.exe utilizza il metodo <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>. È possibile pertanto utilizzare un provider di codice personalizzato per generare codice in linguaggi gestiti diversi da C#, Visual Basic e JScript.  
   
  Le classi generate sono associate allo schema per il quale sono state generate. Quando lo schema sottostante una classe viene modificato è necessario generare nuovamente la classe se si desidera che essa rispecchi le modifiche dello schema.  
@@ -52,7 +52,7 @@ WMIClass [options]
   
 |Tipo CIM|Tipo di dati incluso nella classe generata|  
 |--------------|--------------------------------------|  
-|CIM_SINT8|**Sbyte**|  
+|CIM_SINT8|**SByte**|  
 |CIM_UINT8|**Byte**|  
 |CIM_SINT16|**Int16**|  
 |CIM_UINT16|**UInt16**|  
@@ -61,14 +61,14 @@ WMIClass [options]
 |CIM_SINT64|**Int64**|  
 |CIM_UINT64|**UInt64**|  
 |CIM_REAL32|**Singolo**|  
-|CIM_REAL64|**Doppia**|  
+|CIM_REAL64|**Double**|  
 |CIM_BOOLEAN|**Boolean**|  
 |CIM_String|**Stringa**|  
 |CIM_DATETIME|**DateTime** o **TimeSpan**|  
 |CIM_REFERENCE|**ManagementPath**|  
 |CIM_CHAR16|**Char**|  
 |CIM_OBJECT|**ManagementBaseObject**|  
-|CIM_IUNKNOWN|**Oggetto**|  
+|CIM_IUNKNOWN|**Object**|  
 |CIM_ARRAY|Matrice degli oggetti precedenti|  
   
  Quando viene generata una classe WMI può accadere quanto segue:  
@@ -83,11 +83,11 @@ WMIClass [options]
   
 - La strumentazione WMI utilizza il termine Singleton per descrivere una classe che può avere una sola istanza. Il costruttore senza parametri per una classe singleton, pertanto, inizializzerà la classe per l'unica istanza della classe.  
   
-- Le proprietà di una classe WMI possono essere oggetti. Quando si genera una classe fortemente tipizzata per questo tipo di classe WMI, valutare di generare classi fortemente tipizzate per i tipi delle proprietà oggetti incorporati. Sarà così possibile eseguire un accesso fortemente tipizzato agli oggetti incorporati. Il codice generato potrebbe non essere in grado di individuare il tipo dell'oggetto incorporato. In tal caso nel codice generato verrà creato un commento che notifica il problema. Sarà quindi possibile modificare il codice generato per tipizzare la proprietà sull'altra classe generata.  
+- Le proprietà di una classe WMI possono essere oggetti. Quando si genera una classe fortemente tipizzata per questo tipo di classe WMI, è consigliabile generare classi fortemente tipizzate per i tipi delle proprietà dell'oggetto incorporato. Ciò consentirà di accedere agli oggetti incorporati in modo fortemente tipizzato. Il codice generato potrebbe non essere in grado di individuare il tipo dell'oggetto incorporato. In tal caso nel codice generato verrà creato un commento che notifica il problema. Sarà quindi possibile modificare il codice generato per tipizzare la proprietà sull'altra classe generata.  
   
 - In WMI il valore dei dati del tipo di dati CIM_DATETIME può rappresentare una specifica data e ora o un intervallo di tempo. Se il valore dei dati rappresenta una data e un'ora, il tipo di dati nella classe generata è **DateTime**. Se il valore dei dati rappresenta un intervallo di tempo, il tipo di dati nella classe generata è **TimeSpan**.  
   
- In alternativa è possibile generare una classe fortemente tipizzata utilizzando l'estensione di gestione per Esplora server di Visual Studio .NET.  
+ In alternativa, è possibile generare una classe fortemente tipizzata utilizzando l'estensione di gestione Esplora server in Visual Studio .NET.  
   
  Per altre informazioni su WMI, vedere l'argomento **Windows Management Instrumentation** (Strumentazione gestione Windows (WMI)) nella documentazione di Platform SDK.  
   

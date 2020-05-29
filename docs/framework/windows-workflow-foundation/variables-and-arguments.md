@@ -3,12 +3,12 @@ title: Variabili e argomenti
 description: Questo articolo descrive le variabili, che rappresentano l'archiviazione di dati e gli argomenti, che rappresentano il flusso di dati da e verso un'attività in Workflow Foundation.
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 47b8a7bddc8c3a9a8427bcb3e93760a63e5fa976
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5cce9931e9b0a37d5fafbfb84527ffd543a0a50f
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421306"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201949"
 ---
 # <a name="variables-and-arguments"></a>Variabili e argomenti
 In Windows Workflow Foundation (WF) le variabili rappresentano l'archiviazione di dati e gli argomenti rappresentano il flusso di dati all'interno e all'esterno di un'attività. Un'attività dispone di un set di argomenti che costituiscono la firma dell'attività. Inoltre, un'attività può gestire un elenco di variabili a cui uno sviluppatore può aggiungere o rimuovere variabili durante la progettazione di un flusso di lavoro. Un argomento viene associato usando un'espressione che restituisce un valore.  
@@ -59,7 +59,7 @@ Variable<string> var = new Variable<string>
 ## <a name="variable-scoping"></a>Ambito di variabili  
  La durata di una variabile in fase di esecuzione corrisponde alla durata dell'attività che la dichiara. Quando un'attività viene completata, le relative variabili vengono pulite e non possono essere più usate come riferimento.  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argomenti  
  Gli autori di attività usano gli argomenti per definire la modalità in cui i dati fluiscono all'interno e all'esterno di un'attività. Ogni argomento ha una direzione specificata: <xref:System.Activities.ArgumentDirection.In>, <xref:System.Activities.ArgumentDirection.Out> o <xref:System.Activities.ArgumentDirection.InOut>.  
   
  L'esecuzione del flusso di lavoro assicura le seguenti garanzie relativamente agli intervalli di spostamento dei dati all'interno e all'esterno di attività:  
@@ -70,7 +70,7 @@ Variable<string> var = new Variable<string>
   
 3. Facoltativamente gli argomenti possono avere il proprio <xref:System.Activities.Argument.EvaluationOrder%2A> specificato. <xref:System.Activities.Argument.EvaluationOrder%2A> è un valore in base zero che specifica l'ordine in cui viene valutato l'argomento. Per impostazione predefinita, l'ordine di valutazione dell'argomento non è specificato e corrisponde al valore <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>. Impostare la proprietà <xref:System.Activities.Argument.EvaluationOrder%2A> su un valore maggiore o uguale a zero per specificare un ordine di valutazione per questo argomento. Windows Workflow Foundation valuta gli argomenti con un ordine di valutazione specificato in ordine crescente. Si noti che gli argomenti con un ordine di valutazione non specificato vengono valutati prima di quelli aventi un ordine di valutazione specificato.  
   
- Un autore di attività può usare un meccanismo fortemente tipizzato per esporre gli argomenti. A tale scopo, vengono dichiarate proprietà di tipo <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> e <xref:System.Activities.InOutArgument%601>. In questo modo un autore di attività può stabilire un contratto specifico sui dati in ingresso o in uscita da un'attività.  
+ Un autore di attività può usare un meccanismo fortemente tipizzato per esporre i relativi argomenti. A tale scopo, vengono dichiarate proprietà di tipo <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> e <xref:System.Activities.InOutArgument%601>. In questo modo un autore di attività può stabilire un contratto specifico sui dati in ingresso o in uscita da un'attività.  
   
 ### <a name="defining-the-arguments-on-an-activity"></a>Definizione di argomenti in un'attività  
  Gli argomenti possono essere definiti in un'attività specificando proprietà di tipo <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> e <xref:System.Activities.InOutArgument%601>. Nel codice seguente viene mostrato come definire gli argomenti per un'attività `Prompt` che include una stringa da visualizzare all'utente e restituisce una stringa che contiene la risposta dell'utente.  

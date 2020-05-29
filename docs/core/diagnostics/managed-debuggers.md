@@ -1,37 +1,37 @@
 ---
-title: Debugger gestiti - .NET CoreManaged debuggers - .NET Core
+title: Debugger gestiti-.NET Core
 description: Panoramica dei debugger gestiti di Visual Studio e Visual Studio Code.
 ms.date: 08/05/2019
-ms.openlocfilehash: 065b1b0fc32eb76b398cb3821c8592a1955c9359
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28cc21980bc78234f7af3b4668e2fa77fbf8ce5b
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715560"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84200864"
 ---
-# <a name="net-core-managed-debuggers"></a>Debugger gestiti .NET Core
+# <a name="net-core-managed-debuggers"></a>Debugger gestiti di .NET Core
 
-I debugger consentono ai programmi di essere sospesi o eseguiti passo dopo passo. Quando è in pausa, lo stato corrente del processo può essere visualizzato. Scorrendo le sezioni chiave, si ottiene la comprensione del codice e del motivo per cui produce il risultato che lo fa.
+I debugger consentono di sospendere o eseguire i programmi in modo dettagliato. Una volta sospesa, è possibile visualizzare lo stato corrente del processo. Esaminando le sezioni chiave, si ottiene la comprensione del codice e il motivo per cui produce il risultato.
 
-Microsoft fornisce debugger per il codice gestito in **Visual Studio** e Visual **Studio Code**.
+Microsoft fornisce i debugger per il codice gestito in **Visual Studio** e **Visual Studio Code**.
 
 ## <a name="visual-studio-managed-debugger"></a>Debugger gestito di Visual Studio
 
-**Visual Studio** è un ambiente di sviluppo integrato con il debugger più completo disponibile. Visual Studio è una scelta eccellente per gli sviluppatori che lavorano su Windows.
+**Visual Studio** è un Integrated Development Environment con il debugger più completo disponibile. Visual Studio è un'ottima scelta per gli sviluppatori che lavorano su Windows.
 
-- [Esercitazione - Debug di un'applicazione .NET Core in Windows con Visual StudioTutorial - Debugging a .NET Core application on Windows with Visual Studio](../tutorials/debugging-with-visual-studio.md)
+- [Esercitazione: debug di un'applicazione .NET Core in Windows con Visual Studio](../tutorials/debugging-with-visual-studio.md)
 
-Mentre Visual Studio è un'applicazione Windows, può comunque essere usato per eseguire il debug di applicazioni Linux e macOS in remoto.
+Mentre Visual Studio è un'applicazione Windows, può comunque essere usato per eseguire il debug remoto di app Linux e macOS.
 
-- [Debug di un'applicazione .NET Core su Linux/OSX con Visual Studio](https://github.com/Microsoft/MIEngine/wiki/Offroad-Debugging-of-.NET-Core-on-Linux---OSX-from-Visual-Studio)
+- [Debug di un'applicazione .NET Core in Linux/OSX con Visual Studio](https://github.com/Microsoft/MIEngine/wiki/Offroad-Debugging-of-.NET-Core-on-Linux---OSX-from-Visual-Studio)
 
- Il debug ASP.NET le app di base richiedono istruzioni leggermente diverse.
+ Il debug di ASP.NET Core app richiede istruzioni leggermente diverse.
 
-- [Debug ASP.NET Core apps in Visual Studio](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications#debug-aspnet-core-apps)
+- [Eseguire il debug di app ASP.NET Core in Visual Studio](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications#debug-aspnet-core-apps)
 
-## <a name="visual-studio-code-managed-debugger"></a>Debugger gestito da Visual Studio Code
+## <a name="visual-studio-code-managed-debugger"></a>Debugger gestito di Visual Studio Code
 
-**Visual Studio Code** è un editor di codice multipiattaforma leggero. Utilizza la stessa implementazione del debugger .NET Core di Visual Studio, ma con un'interfaccia utente semplificata.
+**Visual Studio Code** è un editor di codice multipiattaforma leggero. Usa la stessa implementazione del debugger .NET Core di Visual Studio, ma con un'interfaccia utente semplificata.
 
-- [Esercitazione - Debug di un'applicazione .NET Core con codice di Visual StudioTutorial - Debugging a .NET Core application with Visual Studio Code](../tutorials/with-visual-studio-code.md#debug)
+- [Esercitazione: debug di un'applicazione .NET Core con Visual Studio Code](../tutorials/debugging-with-visual-studio-code.md)
 - [Debugging in Visual Studio Code (Debug in Visual Studio Code)](https://code.visualstudio.com/docs/editor/debugging)

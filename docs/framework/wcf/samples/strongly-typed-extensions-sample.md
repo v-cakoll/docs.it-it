@@ -2,17 +2,18 @@
 title: Esempio di estensioni fortemente tipizzate
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: 3cfbcddfdc7700618d499dd41d3a8c3b629bf550
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 65f14b2c8db7553cb2f14bc7a1fe6f7128f523b6
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183307"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201546"
 ---
 # <a name="strongly-typed-extensions-sample"></a>Esempio di estensioni fortemente tipizzate
+
 Nell'esempio seguente viene utilizzata la classe <xref:System.ServiceModel.Syndication.SyndicationFeed> a scopo esemplificativo. Tuttavia, i modelli illustrati in questo esempio possono essere usati con tutte le classi di diffusione che supportano dati di estensione.  
   
- Il modello a oggetti di diffusione (<xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem> e classi correlate) supporta l'accesso non fortemente tipizzato ai dati dell'estensione utilizzando le proprietà <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> e <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>. Questo esempio illustra come fornire l'accesso fortemente tipizzato ai dati di estensione implementando classi derivate personalizzate di <xref:System.ServiceModel.Syndication.SyndicationFeed> e <xref:System.ServiceModel.Syndication.SyndicationItem> che rendono disponibili alcune estensioni specifiche dell'applicazione come proprietà fortemente tipizzate.  
+ Il modello a oggetti di diffusione (<xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem> e classi correlate) supporta l'accesso non fortemente tipizzato ai dati dell'estensione utilizzando le proprietà <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> e <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>. In questo esempio viene illustrato come fornire un accesso fortemente tipizzato ai dati di estensione implementando classi derivate personalizzate di <xref:System.ServiceModel.Syndication.SyndicationFeed> e <xref:System.ServiceModel.Syndication.SyndicationItem> che rendono disponibili determinate estensioni specifiche dell'applicazione come proprietà fortemente tipizzate.  
   
  Per esempio, viene illustrato come implementare un elemento dell'estensione definito nell'Atom Threading Extensions RFC proposto. Ciò ha mero scopo esemplificativo e questo esempio non va inteso come un'implementazione completa della specifica proposta.  
   
@@ -40,10 +41,10 @@ Nell'esempio seguente viene utilizzata la classe <xref:System.ServiceModel.Syndi
 </entry>  
 ```  
   
- L'elemento `<in-reply-to>` specifica tre`ref`attributi `type` `href`obbligatori ( , e ), consentendo al contempo la presenza di attributi di estensione ed elementi di estensione aggiuntivi.  
+ L' `<in-reply-to>` elemento specifica tre attributi obbligatori ( `ref` , `type` e), `href` consentendo anche la presenza di attributi di estensione ed elementi di estensione aggiuntivi.  
   
 ## <a name="modeling-the-in-reply-to-element"></a>Creazione dell'elemento "in risposta a"  
- In questo esempio, l'elemento `<in-reply-to>` viene modellato come CLR che implementa <xref:System.Xml.Serialization.IXmlSerializable>, che ne abilita l'utilizzo con <xref:System.Runtime.Serialization.DataContractSerializer>. Implementa anche alcuni metodi e proprietà per l'accesso ai dati dell'elemento, come mostra il codice di esempio seguente.  
+ In questo esempio, l'elemento `<in-reply-to>` viene modellato come CLR che implementa <xref:System.Xml.Serialization.IXmlSerializable>, che ne abilita l'utilizzo con <xref:System.Runtime.Serialization.DataContractSerializer>. Implementa anche alcuni metodi e proprietà per accedere ai dati dell'elemento, come illustrato nel codice di esempio seguente.  
   
 ```csharp  
 [XmlRoot(ElementName = "in-reply-to", Namespace = "http://contoso.org/syndication/thread/1.0")]  
@@ -211,7 +212,7 @@ public class ThreadedFeed : SyndicationFeed
 }  
 ```  
   
- La classe `ThreadedItem` eredita da `SyndicationItem` e rende `InReplyToElement` una proprietà fortemente tipizzata. Ciò fornisce accesso conveniente a livello di codice alle estensioni dati `InReplyTo`. Implementa inoltre `TryParseElement` e `WriteElementExtensions` per la lettura e la scrittura dei dati di estensione corrispondenti, come illustrato nel codice seguente.  
+ La classe `ThreadedItem` eredita da `SyndicationItem` e fa `InReplyToElement` come proprietà fortemente tipizzata. Ciò fornisce accesso conveniente a livello di codice alle estensioni dati `InReplyTo`. Implementa inoltre `TryParseElement` e `WriteElementExtensions` per la lettura e la scrittura dei dati di estensione corrispondenti, come illustrato nel codice seguente.  
   
 ```csharp
 public class ThreadedItem : SyndicationItem  
@@ -272,17 +273,17 @@ public class ThreadedItem : SyndicationItem
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Assicurarsi di aver eseguito la procedura di [installazione una tantera per Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Per eseguire l'esempio in una configurazione su un singolo o più computer, seguire le istruzioni in Esecuzione di [Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) Esempi per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) ed [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  

@@ -6,15 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: e6ec30e3c7c2318b199122cd63c7f56584707a98
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: afbfd516ef25eff94a9eed841f313892007c58a1
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78158051"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202344"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Accesso a dati XML fortemente tipizzati con XPathNavigator
-Analogamente a un'istanza del modello di dati XPath versione 2.0, la classe <xref:System.Xml.XPath.XPathNavigator> può contenere dati tipizzati in modo sicuro associati a tipi CLR (Common Language Runtime). In base al modello di dati XPath versione 2.0, solo gli elementi e gli attributi possono contenere dati tipizzati in modo sicuro. La classe <xref:System.Xml.XPath.XPathNavigator> fornisce meccanismi di accesso ai dati di un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> come dati tipizzati in modo sicuro e meccanismi di conversione da un tipo di dati a un altro.  
+Come istanza del modello di dati XPath 2,0, la <xref:System.Xml.XPath.XPathNavigator> classe può contenere dati fortemente tipizzati che vengono mappati ai tipi Common Language Runtime (CLR). In base al modello di dati XPath 2,0, solo gli elementi e gli attributi possono contenere dati fortemente tipizzati. La <xref:System.Xml.XPath.XPathNavigator> classe fornisce i meccanismi per accedere ai dati all'interno di un <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> oggetto o come dati fortemente tipizzati, nonché meccanismi per la conversione da un tipo di dati a un altro.  
   
 ## <a name="type-information-exposed-by-xpathnavigator"></a>Informazioni sul tipo esposte da XPathNavigator  
  Tecnicamente, i dati XML versione 1.0 non dispongono di tipi, a meno che non vengano elaborati tramite una DTD, uno schema XSD (XML Schema Definition Language) o un altro meccanismo. Esistono diverse categorie di informazioni sul tipo che possono essere associate con un elemento o attributo XML.  
@@ -183,7 +183,7 @@ Console.WriteLine("The price of the book has been dropped 20% from {0:C} to {1:C
   
  Per altre informazioni sul mapping dai tipi incorporati nello schema a tipi CLR, vedere [Supporto di tipi di dati nelle classi System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

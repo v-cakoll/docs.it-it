@@ -3,12 +3,12 @@ title: Accesso ai dati XML con XPathNavigator
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
-ms.openlocfilehash: c8466e78458d344a872aac7cdebc155342b13e0f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8cba6e106623169f5575684162bf3be383563275
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711168"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202312"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>Accesso ai dati XML con XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> fornisce metodi per esplorare i nodi, estrarre dati XML e accedere a dati XML tipizzati in modo sicuro in un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>.  
@@ -24,12 +24,12 @@ La classe <xref:System.Xml.XPath.XPathNavigator> fornisce metodi per esplorare i
  Vengono descritti i diversi metodi per l'estrazione dei dati XML da un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>.  
   
  [Accesso a dati XML fortemente tipizzati con XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)  
- Viene descritto l'accesso a dati XML tipizzati in modo sicuro in un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> mediante la classe <xref:System.Xml.XPath.XPathNavigator>.  
+ Descrive l'accesso a dati XML fortemente tipizzati in un <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> oggetto o usando la <xref:System.Xml.XPath.XPathNavigator> classe.  
   
  [Funzioni e variabili definite dall'utente](../../../../docs/standard/data/xml/user-defined-functions-and-variables.md)  
  Viene descritta l'implementazione di una classe <xref:System.Xml.Xsl.XsltContext> personalizzata insieme alle interfacce <xref:System.Xml.Xsl.IXsltContextFunction> e <xref:System.Xml.Xsl.IXsltContextVariable> che supportano le funzioni di estensione e le variabili.  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

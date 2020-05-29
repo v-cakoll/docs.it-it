@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: ee64e53f49e15059c91982f2e64879b9f4c76d78
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 2746c608fb47b94446c5d7e10748ba185d555e7f
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834683"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202335"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Procedura: proteggere endpoint dei metadati
 
@@ -31,7 +31,7 @@ In questo argomento vengono esaminati i passaggi che consentono di creare un end
 
 3. Impostare la proprietà <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> della classe <xref:System.ServiceModel.Description.ServiceMetadataBehavior> su `true`.
 
-4. Impostare la proprietà <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> su un URL appropriato. Se si specifica un indirizzo assoluto, l'URL deve iniziare con lo schema "https://". Se si specifica un indirizzo relativo, è necessario fornire un indirizzo di base HTTPS per l'host del servizio. Se questa proprietà non è impostata, l'indirizzo predefinito è "" o direttamente l'indirizzo di base HTTPS per il servizio.
+4. Impostare la proprietà <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> su un URL appropriato. Si noti che se si specifica un indirizzo assoluto, l'URL deve iniziare con lo schema `https://` . Se si specifica un indirizzo relativo, è necessario fornire un indirizzo di base HTTPS per l'host del servizio. Se questa proprietà non è impostata, l'indirizzo predefinito è "" o direttamente l'indirizzo di base HTTPS per il servizio.
 
 5. Aggiungere l'istanza alla raccolta di comportamenti restituito dalla proprietà <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> della classe <xref:System.ServiceModel.Description.ServiceDescription>, come indicato nel codice seguente.
 
@@ -40,21 +40,21 @@ In questo argomento vengono esaminati i passaggi che consentono di creare un end
 
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-configuration"></a>Per creare un endpoint di metadati HTTPS GET protetto nella configurazione
 
-1. Aggiungere un [\<comportamenti >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento all'elemento [\<system. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) del file di configurazione per il servizio.
+1. Aggiungere un [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento all' [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento del file di configurazione per il servizio.
 
-2. Aggiungere un elemento [\<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) all'elemento [\<behaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) .
+2. Aggiungere un [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) elemento all' [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento.
 
-3. Aggiungere un [\<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento all'elemento `<serviceBehaviors>`.
+3. Aggiungere un [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento all' `<serviceBehaviors>` elemento.
 
 4. Impostare l'attributo `name` dell'elemento `<behavior>` su un valore appropriato. L'attributo `name` è obbligatorio. Nell'esempio seguente viene utilizzato il valore `mySvcBehavior`.
 
-5. Aggiungere un [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) all'elemento `<behavior>`.
+5. Aggiungere un oggetto [\<serviceMetadata>](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) all' `<behavior>` elemento.
 
 6. Impostare l'attributo `httpsGetEnabled` dell'elemento `<serviceMetadata>` su `true`.
 
-7. Impostare l'attributo `httpsGetUrl` dell'elemento `<serviceMetadata>` su un valore appropriato. Se si specifica un indirizzo assoluto, l'URL deve iniziare con lo schema "https://". Se si specifica un indirizzo relativo, è necessario fornire un indirizzo di base HTTPS per l'host del servizio. Se questa proprietà non è impostata, l'indirizzo predefinito è "" o direttamente l'indirizzo di base HTTPS per il servizio.
+7. Impostare l'attributo `httpsGetUrl` dell'elemento `<serviceMetadata>` su un valore appropriato. Si noti che se si specifica un indirizzo assoluto, l'URL deve iniziare con lo schema `https://` . Se si specifica un indirizzo relativo, è necessario fornire un indirizzo di base HTTPS per l'host del servizio. Se questa proprietà non è impostata, l'indirizzo predefinito è "" o direttamente l'indirizzo di base HTTPS per il servizio.
 
-8. Per utilizzare il comportamento con un servizio, impostare l'attributo `behaviorConfiguration` dell'elemento [\<service >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) sul valore dell'attributo Name dell'elemento Behavior. Nella configurazione seguente viene illustrato un esempio completo.
+8. Per utilizzare il comportamento con un servizio, impostare l' `behaviorConfiguration` attributo dell' [\<service>](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) elemento sul valore dell'attributo Name dell'elemento Behavior. Nella configurazione seguente viene illustrato un esempio completo.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -100,7 +100,7 @@ Nel codice di esempio vengono utilizzati gli spazi dei nomi seguenti:
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
-- [Procedura: Configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [Uso di certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Considerazioni sulla sicurezza con i metadati](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [Procedura: configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Considerazioni sulla sicurezza con metadati](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
 - [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -1,25 +1,25 @@
 ---
-title: Novità di F . 4.5 - Guida di F
-description: Ottenere una panoramica delle nuove funzionalità disponibili in F .
+title: 'Novità di F # 4,5-Guida a F #'
+description: 'Ottenere una panoramica delle nuove funzionalità disponibili in F # 4,5.'
 ms.date: 11/27/2019
-ms.openlocfilehash: 560e3dd941f79b76d3b864ba0f6560be154ebc1a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c978c66a4bf231398508cbc1cbb8839228ea8e9
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186127"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202360"
 ---
-# <a name="whats-new-in-f-45"></a>Novità di F .
+# <a name="whats-new-in-f-45"></a>Novità di F # 4,5
 
-Il linguaggio F . Molte di queste funzionalità sono state aggiunte insieme per consentire di scrivere codice efficiente in F , garantendo al contempo che questo codice sia sicuro. In questo modo significa aggiungere alcuni concetti al linguaggio e una quantità significativa di analisi del compilatore quando si utilizzano questi costrutti.
+F # 4,5 aggiunge più miglioramenti al linguaggio F #. Molte di queste funzionalità sono state aggiunte insieme per consentire di scrivere codice efficiente in F # garantendo al tempo stesso che il codice sia sicuro. In questo modo si aggiungono alcuni concetti al linguaggio e una quantità significativa di analisi del compilatore quando si usano questi costrutti.
 
 ## <a name="get-started"></a>Introduzione
 
-Il linguaggio F . 4.5 è disponibile in tutte le distribuzioni di .NET Core e negli strumenti di Visual Studio. Per altre informazioni, [iniziare a usare F.](../get-started/index.md)
+F # 4,5 è disponibile in tutte le distribuzioni di .NET Core e negli strumenti di Visual Studio. Per altre informazioni, [vedere Introduzione a F #](../get-started/index.md) .
 
-## <a name="span-and-byref-like-structs"></a>Span e struct simili a byref
+## <a name="span-and-byref-like-structs"></a>Struct di span e di tipo ByRef
 
-Il <xref:System.Span%601> tipo introdotto in .NET Core consente di rappresentare i buffer in memoria in modo fortemente tipizzato, che è ora consentito in F , a partire da F . L'esempio seguente mostra come riutilizzare una <xref:System.Span%601> funzione che opera su un con diverse rappresentazioni del buffer:The following example shows how you can re-use a function operating on a with different buffer representations:
+Il <xref:System.Span%601> tipo introdotto in .NET Core consente di rappresentare i buffer in memoria in modo fortemente tipizzato, che ora è consentito in f # a partire da f # 4,5. Nell'esempio seguente viene illustrato come è possibile riutilizzare una funzione che opera su un oggetto <xref:System.Span%601> con diverse rappresentazioni del buffer:
 
 ```fsharp
 let safeSum (bytes: Span<byte>) =
@@ -49,26 +49,26 @@ let stackSpan = Span<byte>(mem2, 100)
 safeSum(stackSpan) |> printfn "res = %d"
 ```
 
-Un aspetto importante è che Span e altri struct di [tipo byref](../language-reference/structures.md#byreflike-structs) hanno un'analisi statica molto rigida eseguita dal compilatore che ne limitano l'utilizzo in modi imprevisti. Questo è il compromesso fondamentale tra prestazioni, espressività e sicurezza che viene introdotto in F .
+Un aspetto importante è che span e altri struct di [tipo ByRef](../language-reference/structures.md#byreflike-structs) hanno un'analisi statica molto rigida eseguita dal compilatore che limitano l'utilizzo in modi che potrebbero risultare imprevisti. Questo è il compromesso fondamentale tra prestazioni, espressività e sicurezza introdotte in F # 4,5.
 
-## <a name="revamped-byrefs"></a>Rinnovato darefs
+## <a name="revamped-byrefs"></a>ByRef rinnovati
 
-Prima della versione 4.5, [i Byref](../language-reference/byrefs.md) in F , erano non sicuri e non sono stati validi per numerose applicazioni. Problemi di solidità intorno byrefs sono stati risolti in F .
+Nelle versioni precedenti a F # 4,5, le [ByRef](../language-reference/byrefs.md) in f # non erano sicure e non erano valide per numerose applicazioni. Sono stati risolti i problemi di sonorità relativi ai ByRef in F # 4,5 ed è stata applicata la stessa analisi statica eseguita per gli struct di tipo span e ByRef.
 
-### <a name="inreft-and-outreft"></a>inref<'T> e outref<'T>
+### <a name="inreft-and-outreft"></a>inref< t> e outref<' t>
 
-Per rappresentare la nozione di puntatore gestito di sola lettura, di sola scrittura `inref<'T>` `outref<'T>` e di lettura/scrittura, in Fè 4.5 vengono introdotti rispettivamente i tipi , per rappresentare puntatori di sola lettura e di sola scrittura. Ognuno ha una semantica diversa. Ad esempio, non è `inref<'T>`possibile scrivere in un:
+Per rappresentare la nozione di un puntatore gestito di sola lettura, di sola scrittura e di lettura/scrittura, F # 4,5 introduce `inref<'T>` i `outref<'T>` tipi, rispettivamente per rappresentare i puntatori di sola lettura e di sola scrittura. Ognuna con una semantica diversa. Ad esempio, non è possibile scrivere in un `inref<'T>` :
 
 ```fsharp
 let f (dt: inref<DateTime>) =
     dt <- DateTime.Now // ERROR - cannot write to an inref!
 ```
 
-Per impostazione predefinita, l'inferenza `inref<'T>` del tipo dedurrà i puntatori gestiti come in linea con la natura non modificabile del codice F , a meno che qualcosa non sia già stato dichiarato modificabile. Per rendere un elemento scrivibile, è necessario `mutable` dichiarare un tipo come prima di passare il relativo indirizzo a una funzione o membro che lo modifica. Per ulteriori informazioni, vedere [Byrefs](../language-reference/byrefs.md).
+Per impostazione predefinita, l'inferenza del tipo dedurrà i puntatori gestiti come `inref<'T>` in linea con la natura non modificabile del codice F #, a meno che un elemento non sia già stato dichiarato come modificabile. Per rendere scrivibile un elemento, è necessario dichiarare un tipo come `mutable` prima di passare il relativo indirizzo a una funzione o a un membro che lo manipola. Per ulteriori informazioni, vedere [ByRef](../language-reference/byrefs.md).
 
-## <a name="readonly-structs"></a>Strutture Readonly
+## <a name="readonly-structs"></a>Struct di sola lettura
 
-A partire da F . <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute>
+A partire da F # 4,5, è possibile aggiungere annotazioni a uno struct con l' <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> esempio seguente:
 
 ```fsharp
 [<IsReadOnly; Struct>]
@@ -77,20 +77,20 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-Ciò impedisce di dichiarare un membro modificabile nella struttura e genera metadati che consentono a F e C , di considerarlo come readonly quando utilizzato da un assembly. Per ulteriori informazioni, consultate [Structs ReadOnly](../language-reference/structures.md#readonly-structs).
+Ciò impedisce di dichiarare un membro modificabile nello struct e di emettere metadati che consentono a F # e C# di considerarlo come ReadOnly quando viene utilizzato da un assembly. Per altre informazioni, vedere [struct](../language-reference/structures.md#readonly-structs)di sola lettura.
 
-## <a name="void-pointers"></a>Puntatori Void
+## <a name="void-pointers"></a>Puntatori void
 
-Il `voidptr` tipo viene aggiunto a F .
+Il `voidptr` tipo viene aggiunto a F # 4,5, così come le funzioni seguenti:
 
 * `NativePtr.ofVoidPtr`per convertire un puntatore void in un puntatore int nativo
 * `NativePtr.toVoidPtr`per convertire un puntatore int nativo in un puntatore void
 
-Ciò è utile quando si interagisce con un componente nativo che utilizza puntatori void.
+Questa operazione è utile quando si interopera con un componente nativo che utilizza i puntatori void.
 
 ## <a name="the-match-keyword"></a>Parola chiave `match!`
 
-La `match!` parola chiave migliora la corrispondenza dei criteri di ricerca all'interno di un'espressione di calcolo:The keyword enhances pattern matching when inside a computation expression:
+La `match!` parola chiave migliora i criteri di ricerca all'interno di un'espressione di calcolo:
 
 ```fsharp
 // Code that returns an asynchronous option
@@ -111,11 +111,11 @@ let funcWithString (s: string) =
 }
 ```
 
-Ciò consente di abbreviare il codice che spesso comporta la combinazione di opzioni (o altri tipi) con espressioni di calcolo, ad esempio async. Per saperne di più, vedi [match!](../language-reference/computation-expressions.md#match).
+In questo modo è possibile abbreviare il codice che spesso include opzioni di combinazione, o altri tipi, con espressioni di calcolo come Async. Per altre informazioni, vedere [match!](../language-reference/computation-expressions.md#match).
 
-## <a name="relaxed-upcasting-requirements-in-array-list-and-sequence-expressions"></a>Requisiti di upcast rilassati nelle espressioni di matrice, elenco e sequenza
+## <a name="relaxed-upcasting-requirements-in-array-list-and-sequence-expressions"></a>Requisiti di multicast più rilassati nelle espressioni array, List e Sequence
 
-La combinazione di tipi in cui uno può ereditare da un'altra all'interno di espressioni `:>` `upcast`di matrice, elenco e sequenza ha tradizionalmente richiesto l'upcast di qualsiasi tipo derivato al relativo tipo padre con o . Questo è ora rilassato, dimostrato come segue:
+Quando si combinano i tipi in cui è possibile ereditare da un altro oggetto all'interno delle espressioni array, List e Sequence, è necessario eseguire il cast di qualsiasi tipo derivato al relativo tipo padre con `:>` o `upcast` . Questo aspetto è ora rilassato, illustrato di seguito:
 
 ```fsharp
 let x0 : obj list  = [ "a" ] // ok pre-F# 4.5
@@ -125,9 +125,9 @@ let x2 : obj list  = [ yield "a" :> obj ] // ok pre-F# 4.5
 let x3 : obj list  = [ yield "a" ] // Now ok for F# 4.5, and can replace x2
 ```
 
-## <a name="indentation-relaxation-for-array-and-list-expressions"></a>Rilassamento del rientro per le espressioni di matrice ed elenco
+## <a name="indentation-relaxation-for-array-and-list-expressions"></a>Rilassamento dei rientri per le espressioni di matrici ed elenchi
 
-Prima della versione 4.5 di F, era necessario applicare un rientro eccessivo alle espressioni di matrice ed elenco quando vengono passate come argomenti alle chiamate al metodo. Questo non è più necessario:
+Prima di F # 4,5, era necessario rientrare eccessivamente le espressioni di matrici ed elenchi quando venivano passati come argomenti alle chiamate al metodo. Questa operazione non è più necessaria:
 
 ```fsharp
 module NoExcessiveIndenting =

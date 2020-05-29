@@ -1,19 +1,19 @@
 ---
 title: Provider di tipi
-description: Informazioni su come F# un provider di tipi è un componente che fornisce tipi, proprietà e metodi da utilizzare nei programmi.
+description: 'Informazioni su come un provider di tipi F # è un componente che fornisce tipi, proprietà e metodi da utilizzare nei programmi.'
 ms.date: 04/02/2018
-ms.openlocfilehash: 7fa0ff6b5f2b0bc978df2988f22b2042acc22320
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: eae64d2e318ee93f0b8d5b91f0c6da6c91743527
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552910"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202102"
 ---
 # <a name="type-providers"></a>Provider di tipi
 
-Un provider di tipi F# è un componente che fornisce tipi, proprietà e metodi da utilizzare in un programma. I provider di tipi generano gli F# elementi noti come **tipi forniti**, che vengono generati dal compilatore e sono basati su un'origine dati esterna.
+Un provider di tipi F# è un componente che fornisce tipi, proprietà e metodi da utilizzare in un programma. I provider di tipi generano gli elementi noti come **tipi forniti**, che vengono generati dal compilatore F # e sono basati su un'origine dati esterna.
 
-Un F# provider di tipi per SQL, ad esempio, può generare tipi che rappresentano tabelle e colonne in un database relazionale. In realtà, si tratta del provider [di tipi SqlProvider.](https://fsprojects.github.io/SQLProvider/)
+Un provider di tipi F # per SQL, ad esempio, può generare tipi che rappresentano tabelle e colonne in un database relazionale. In realtà, si tratta del provider [di tipi SqlProvider.](https://fsprojects.github.io/SQLProvider/)
 
 I tipi forniti dipendono dai parametri di input di un provider di tipi. Tale input può essere un'origine dati di esempio, ad esempio un file di schema JSON, un URL che punta direttamente a un servizio esterno o una stringa di connessione a un'origine dati. Un provider di tipi può inoltre garantire che i gruppi di tipi vengano espansi solo su richiesta. ovvero vengono espansi se il programma fa effettivamente riferimento ai tipi. Questo consente di utilizzare l'integrazione diretta su richiesta di spazi di informazioni su larga scala fortemente tipizzati, come i mercati di dati online.
 
@@ -30,8 +30,8 @@ La cancellazione dei provider di tipi produce tipi che possono essere utilizzati
 Le seguenti librerie di uso frequente contengono provider di tipi per usi diversi:
 
 - [FSharp. Data](https://fsharp.github.io/FSharp.Data/) include provider di tipi per le risorse e i formati di documento JSON, XML, CSV e HTML.
-- [Sqlfornitor](https://fsprojects.github.io/SQLProvider/) fornisce un accesso fortemente tipizzato ai database relazionali tramite il F# mapping degli oggetti e le query LINQ su tali origini dati.
-- [FSharp. Data. SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) include un set di provider di tipi per l'incorporamento di T-SQL selezionato in F#fase di compilazione.
+- [Sqlfornitor](https://fsprojects.github.io/SQLProvider/) fornisce accesso fortemente tipizzato ai database di relazione tramite il mapping degli oggetti e le query LINQ F # su tali origini dati.
+- [FSharp. Data. SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) include un set di provider di tipi per l'incorporamento di T-SQL selezionato in fase di compilazione in F #.
 - Il [provider del tipo di archiviazione di Azure](https://fsprojects.github.io/AzureStorageTypeProvider/) fornisce i tipi per BLOB, tabelle e code di Azure, consentendo di accedere a queste risorse senza dover specificare i nomi delle risorse come stringhe nel programma.
 - [FSharp. Data. GraphQL](https://fsprojects.github.io/FSharp.Data.GraphQL/index.html) contiene **GraphQLProvider**, che fornisce tipi basati su un server GraphQL specificato dall'URL.
 
@@ -40,4 +40,4 @@ Se necessario, è possibile [creare provider di tipi personalizzati](creating-a-
 ## <a name="see-also"></a>Vedere anche
 
 - [Esercitazione: creare un provider di tipi](creating-a-type-provider.md)
-- [Riferimenti per il linguaggio F#](../../language-reference/index.md)
+- [Riferimenti per il linguaggio F #](../../language-reference/index.md)

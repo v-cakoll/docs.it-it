@@ -3,12 +3,12 @@ title: Impostazioni di configurazione del Garbage Collector
 description: Informazioni sulle impostazioni di run-time per la configurazione del modo in cui il Garbage Collector gestisce la memoria per le app .NET Core.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: d7e3d040cd634eeb020beff806c60f834cc02585
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 0ce2f70204463c1525ef7d29de21ddf5384d0238
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761980"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202091"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opzioni di configurazione in fase di esecuzione per Garbage Collection
 
@@ -78,7 +78,7 @@ File di progetto:
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.Concurrent` | `true`-GC in background<br/>`false`-GC non simultanei | .NET Core 1.0 |
 | **MSBuild (proprietà)** | `ConcurrentGarbageCollection` | `true`-GC in background<br/>`false`-GC non simultanei | .NET Core 1.0 |
-| **Variabile di ambiente** | `COMPlus_gcConcurrent` | `true`-GC in background<br/>`false`-GC non simultanei | .NET Core 1.0 |
+| **Variabile di ambiente** | `COMPlus_gcConcurrent` | `1`-GC in background<br/>`0`-GC non simultanei | .NET Core 1.0 |
 | **app. config per .NET Framework** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true`-GC in background<br/>`false`-GC non simultanei |  |
 
 ### <a name="examples"></a>Esempi

@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-ms.openlocfilehash: 1770eb08055fd244bd0f220fed6d1641c35174fd
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: ea42cbfe7427e026f5e3339af5f5a2ceec17dad3
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794351"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202194"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>Modifica dei dati XML con XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un set di metodi usati per modificare nodi e valori in un documento XML. Per usare questi metodi, è necessario che l'oggetto <xref:System.Xml.XPath.XPathNavigator> sia modificabile, ovvero, la relativa proprietà <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> deve essere `true`.  
@@ -28,7 +28,7 @@ La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un set di metodi usati
   
 |<xref:System.Xml.XPath.XPathNodeType>|Dati modificati|  
 |---------------------------------------------------------------------------------------------------------------------------------------------|------------------|  
-|<xref:System.Xml.XPath.XPathNodeType.Root>|Non supportata.|  
+|<xref:System.Xml.XPath.XPathNodeType.Root>|Non supportato.|  
 |<xref:System.Xml.XPath.XPathNodeType.Element>|Contenuto dell'elemento.|  
 |<xref:System.Xml.XPath.XPathNodeType.Attribute>|Valore dell'attributo.|  
 |<xref:System.Xml.XPath.XPathNodeType.Text>|Contenuto di testo.|  
@@ -104,7 +104,7 @@ navigator.SetTypedValue(DateTime.Now);
  [!code-xml[XPathXMLExamples#3](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
   
 #### <a name="the-effects-of-editing-strongly-typed-xml-data"></a>Effetti delle modifiche ai dati XML tipizzati in modo sicuro  
- La classe <xref:System.Xml.XPath.XPathNavigator> usa W3C XML Schema come base per la descrizione del codice XML tipizzato in modo sicuro. Gli elementi e gli attributi possono essere annotati con informazioni sul tipo basate sulla convalida rispetto a un documento W3C XML Schema. Gli elementi che possono contenere altri elementi o attributi sono denominati tipi complessi, mentre gli elementi che possono contenere solo contenuto testuale sono denominati tipi semplici.  
+ La <xref:System.Xml.XPath.XPathNavigator> classe utilizza l'XML Schema W3C come base per la descrizione di codice XML fortemente tipizzato. Gli elementi e gli attributi possono essere annotati con informazioni sul tipo basate sulla convalida rispetto a un documento W3C XML Schema. Gli elementi che possono contenere altri elementi o attributi sono denominati tipi complessi, mentre gli elementi che possono contenere solo contenuto testuale sono denominati tipi semplici.  
   
 > [!NOTE]
 > Gli attributi possono disporre solo di tipi semplici.  

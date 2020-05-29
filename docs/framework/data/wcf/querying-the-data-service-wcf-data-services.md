@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: 99fe377e8fff193c4f8bb566946b95c61c1b3693
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8ae4b4b9938f72f4f4fc011e180cd69440ec3dd9
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568887"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201762"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Esecuzione di query sul servizio dati (WCF Data Services)
 
@@ -24,7 +24,7 @@ La libreria client di WCF Data Services consente di eseguire query su un servizi
 
 La classe generica <xref:System.Data.Services.Client.DataServiceQuery%601> rappresenta una query che restituisce una raccolta di zero o più istanze di tipi di entità. Una query sul servizio dati appartiene sempre a un contesto del servizio dati esistente. Il contesto gestisce l'URI del servizio e le informazioni sui metadati necessarie per comporre ed eseguire la query.
 
-Quando si usa la finestra di dialogo **Aggiungi riferimento al servizio** per aggiungere un servizio dati a un'applicazione client basata su .NET Framework, viene creata una classe contenitore di entità che eredita dalla classe <xref:System.Data.Services.Client.DataServiceContext>. Tale classe include proprietà che restituiscono istanze della classe <xref:System.Data.Services.Client.DataServiceQuery%601> tipizzate. Esiste una proprietà per ogni set di entità esposto dal servizio dati. Tali proprietà semplificano la creazione di un'istanza di <xref:System.Data.Services.Client.DataServiceQuery%601> tipizzata.
+Quando si usa la finestra di dialogo **Aggiungi riferimento al servizio** per aggiungere un servizio dati a un'applicazione client basata su .NET Framework, viene creata una classe contenitore di entità che eredita dalla <xref:System.Data.Services.Client.DataServiceContext> classe. Tale classe include proprietà che restituiscono istanze della classe <xref:System.Data.Services.Client.DataServiceQuery%601> tipizzate. Esiste una proprietà per ogni set di entità esposto dal servizio dati. Tali proprietà semplificano la creazione di un'istanza di <xref:System.Data.Services.Client.DataServiceQuery%601> tipizzata.
 
 Una query viene eseguita negli scenari seguenti:
 
@@ -45,11 +45,11 @@ La query seguente, al termine dell'esecuzione, restituisce tutte le entità `Cus
 
 Per altre informazioni, vedere [procedura: eseguire query sul servizio dati](how-to-execute-data-service-queries-wcf-data-services.md).
 
-Il client WCF Data Services supporta le query per gli oggetti ad associazione tardiva, ad esempio quando si usa il C#tipo dinamico in. Tuttavia, per preservare le prestazioni, è necessario comporre sempre query fortemente tipizzate per il servizio dati. Il tipo <xref:System.Tuple> e oggetti dinamici non sono supportati dal client.
+Il client WCF Data Services supporta le query per gli oggetti ad associazione tardiva, ad esempio quando si usa il tipo *dinamico* in C#. Tuttavia, per motivi di prestazioni è necessario comporre sempre query fortemente tipizzate sul servizio dati. Il tipo <xref:System.Tuple> e oggetti dinamici non sono supportati dal client.
 
 ## <a name="linq-queries"></a>Query LINQ
 
-Poiché la classe <xref:System.Data.Services.Client.DataServiceQuery%601> implementa l'interfaccia <xref:System.Linq.IQueryable%601> definita da LINQ, la libreria client WCF Data Services è in grado di trasformare le query LINQ sui dati del set di entità in un URI che rappresenta un'espressione di query valutata in base a una risorsa del servizio dati. Nell'esempio seguente viene mostrata una query LINQ equivalente alla precedente classe <xref:System.Data.Services.Client.DataServiceQuery%601> che restituisce le entità `Orders` con un costo di spedizione maggiore di 30 dollari e ordina i risultati in base al costo di spedizione:
+Poiché la <xref:System.Data.Services.Client.DataServiceQuery%601> classe implementa l' <xref:System.Linq.IQueryable%601> interfaccia definita da LINQ, la libreria client di WCF Data Services è in grado di trasformare le query LINQ sui dati del set di entità in un URI che rappresenta un'espressione di query valutata in base a una risorsa del servizio dati. Nell'esempio seguente viene mostrata una query LINQ equivalente alla precedente classe <xref:System.Data.Services.Client.DataServiceQuery%601> che restituisce le entità `Orders` con un costo di spedizione maggiore di 30 dollari e ordina i risultati in base al costo di spedizione:
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]
@@ -139,7 +139,7 @@ In alcuni scenari è utile conoscere il numero complessivo di entità contenute 
 
 - [Considerazioni su LINQ](linq-considerations-wcf-data-services.md)
 
-- [Procedura: Eseguire query sul servizio dati](how-to-execute-data-service-queries-wcf-data-services.md)
+- [Procedura: eseguire query sul servizio dati](how-to-execute-data-service-queries-wcf-data-services.md)
 
 - [Procedura: aggiungere opzioni di query a una query del servizio dati](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
 

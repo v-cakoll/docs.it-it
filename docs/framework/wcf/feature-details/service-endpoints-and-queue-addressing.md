@@ -2,17 +2,17 @@
 title: Mapping fra gli endpoint di servizio e l'indirizzamento delle code
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: ec932e83a2b37330f54be545a45358a5ab055423
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8b323993a698dac219e0f2be43e9b508a19065dd
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744625"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202416"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Mapping fra gli endpoint di servizio e l'indirizzamento delle code
 Questo argomento descrive come i client indirizzano i servizi che leggono da code e il mapping fra gli endpoint di servizio e le code. Come promemoria, nella figura seguente viene illustrata la distribuzione dell'applicazione in coda Windows Communication Foundation (WCF) classica.  
   
- ![Diagramma dell'applicazione in coda](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Queue-Figure")  
+ ![Diagramma di applicazioni in coda](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Queue-Figure")  
   
  Per inviare il messaggio al servizio, il client indirizza il messaggio alla coda di destinazione. Per leggere i messaggi da questa coda, il servizio imposta il proprio indirizzo di attesa sulla coda di destinazione. L'indirizzamento in WCF è Uniform Resource Identifier basato su (URI), mentre i nomi delle code di Accodamento messaggi (MSMQ) non sono basati su URI. È pertanto essenziale comprendere come indirizzare le code create in MSMQ tramite WCF.  
   
@@ -30,15 +30,15 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
   
  L'indirizzamento di una coda in WCF si basa sul modello seguente:  
   
- NET. MSMQ://\<*nome-host*>/[private/] \<*nome-coda*>  
+ NET. MSMQ:// \<*host-name*> /[privato/]\<*queue-name*>  
   
  dove:  
   
-- \<*nome host-* > è il nome del computer che ospita la coda di destinazione.  
+- \<*host-name*>nome del computer che ospita la coda di destinazione.  
   
 - L'elemento facoltativo [private] viene utilizzato quando si indirizza una coda di destinazione privata. Per indirizzare una coda pubblica è necessario non specificare [private]. Si noti che, a differenza dei percorsi MSMQ, non esiste alcun "$" nel form URI WCF.  
   
-- \<*queue-name*> è il nome della coda. Il nome della coda può riferirsi anche a una coda secondaria. Pertanto, \<nome- *coda*> = \<*nome della coda*> [; *nome-coda secondaria*].  
+- \<*queue-name*>nome della coda. Il nome della coda può riferirsi anche a una coda secondaria. Quindi, \<*queue-name*>  =  \<*name-of-queue*> [;* nome-coda secondaria*].  
   
  Esempio 1: per indirizzare una coda privata PurchaseOrders ospitata nel computer abc presso adatum.com, l'URI da utilizzare è net.msmq://abc.adatum.com/private/PurchaseOrders.  
   
@@ -51,7 +51,7 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
 ### <a name="multiple-contracts-in-a-queue"></a>Contratti multipli in una coda  
  I messaggi di una coda possono implementare più contratti. In questo caso, per leggere ed elaborare tutti i messaggi, è essenziale applicare uno degli approcci seguenti:  
   
-- Specificare un endpoint per un servizio che implementa tutti i contratti. Si tratta dell'approccio consigliato.  
+- Specificare un endpoint per un servizio che implementa tutti i contratti. Questo è l'approccio consigliato.  
   
 - Specificare più endpoint con contratti diversi, garantendo tuttavia che tutti gli endpoint utilizzino lo stesso oggetto `NetMsmqBinding`. La logica di distribuzione di ServiceModel utilizza una message pump che legge i messaggi dal canale di trasporto e quindi li distribuisce. Questa procedura, una volta completata, consente di ottenere il demultiplexing dei messaggi verso vari endpoint in base al contratto. Una message pump viene creata per una coppia URI di ascolto/associazione. L'indirizzo della coda viene utilizzato dal listener in coda come URI di ascolto. Se si configurano tutti gli endpoint in modo da utilizzare lo stesso oggetto di associazione è possibile garantire che il sistema utilizzi un'unica message pump per leggere il messaggio e quindi eseguirne il demultiplexing verso gli endpoint appropriati in base al contratto.  
   
@@ -72,9 +72,9 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
   
 |Indirizzo di coda basato sugli URI WCF|Impostazione della proprietà UseActiveDirectory|Impostazione della proprietà QueueTransferProtocol|Nomi di formato di MSMQ risultanti|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|NET. MSMQ://\<nome computer >/Private/ABC|False (valore predefinito)|Native (impost. predef.)|DIRECT=OS:nome-computer\private$\abc|  
-|NET. MSMQ://\<nome computer >/Private/ABC|False|SRMP|DIRECT =http://machine/msmq/private$/ABC|  
-|NET. MSMQ://\<nome computer >/Private/ABC|True|Nativo|PUBLIC=guid (GUID della coda)|  
+|`Net.msmq://<machine-name>/private/abc`|False (impostazione predefinita)|Native (impost. predef.)|`DIRECT=OS:machine-name\private$\abc`|  
+|`Net.msmq://<machine-name>/private/abc`|False|SRMP|`DIRECT=http://machine/msmq/private$/abc`|  
+|`Net.msmq://<machine-name>/private/abc`|True |Nativa|`PUBLIC=some-guid`(GUID della coda)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Lettura dei messaggi dalla coda dei messaggi non recapitabili o dalla coda dei messaggi non elaborabili  
  Per leggere i messaggi da una coda di messaggi non elaborabili che è una coda secondaria della coda di destinazione, aprire l'elemento `ServiceHost` con l'indirizzo della coda secondaria.  
@@ -87,7 +87,7 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
   
  Quando si utilizza una coda di messaggi non recapitabili personalizzata, si noti che questa coda deve trovarsi nel computer locale. Ne consegue che l'URI della coda deve attenersi al formato:  
   
- NET. MSMQ://localhost/[private/] \<> *Custom-Dead-Letter-Queue-Name*.  
+ NET. MSMQ://localhost/[private/] \<*custom-dead-letter-queue-name*> .  
   
  Un servizio WCF verifica che tutti i messaggi ricevuti siano stati rivolti alla coda specifica su cui è in ascolto. Se un messaggio viene rilevato in una coda a cui non era destinato, tale messaggio non viene elaborato dal servizio. Si tratta di un problema che i servizi in attesa di una coda di messaggi non recapitabili devono affrontare, poiché questo tipo di coda contiene messaggi che in realtà erano destinati altrove. Per leggere i messaggi di una coda di messaggi non recapitabili o non elaborabili occorre utilizzare un comportamento `ServiceBehavior` con il parametro <xref:System.ServiceModel.AddressFilterMode.Any>. Per un esempio, vedere Code di messaggi non [recapitabili](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
   
@@ -100,10 +100,10 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
   
  Si noti che quando si ricevono messaggi da una coda tramite l'associazione `MsmqIntegrationBinding` è possibile utilizzare soltanto i nomi di formato Direct e, se è stata scelta l'opzione di integrazione con Active Directory, i nomi di formato pubblici e privati. È tuttavia consigliabile utilizzare i nomi di formato Direct. In Windows Vista, ad esempio, l'utilizzo di qualsiasi altro nome di formato causa un errore, in quanto il sistema tenta di aprire una coda secondaria, che può essere aperta solo con nomi di formato diretti.  
   
- Quando si esegue l'indirizzamento tramite il protocollo SRMP usando l'associazione `MsmqIntegrationBinding` non occorre aggiungere /msmq/ nel nome di formato Direct per consentire ai servizi Internet Information Services (IIS) di eseguire la distribuzione. Ad esempio: quando si indirizza una coda ABC usando il protocollo SRMP, anziché DIRECT =http://adatum.com/msmq/private$/ABC, è consigliabile usare DIRECT =http://adatum.com/private$/ABC.  
+ Quando si esegue l'indirizzamento tramite il protocollo SRMP usando l'associazione `MsmqIntegrationBinding` non occorre aggiungere /msmq/ nel nome di formato Direct per consentire ai servizi Internet Information Services (IIS) di eseguire la distribuzione. Ad esempio: quando si indirizza una coda ABC usando il protocollo SRMP, anziché `DIRECT=http://adatum.com/msmq/private$/abc` , è necessario usare `DIRECT=http://adatum.com/private$/abc` .  
   
- Si noti che non è possibile utilizzare l'indirizzamento net.msmq:// con l'associazione `MsmqIntegrationBinding`. Poiché `MsmqIntegrationBinding` supporta l'indirizzamento dei nomi di formato MSMQ in formato libero, è possibile utilizzare un servizio WCF che utilizza questa associazione per utilizzare le funzionalità della lista di distribuzione e multicast in MSMQ. Un'eccezione è la specifica dell'elemento `CustomDeadLetterQueue` quando si utilizza l'associazione `MsmqIntegrationBinding`. Analogamente al caso di specifica dell'elemento quando si utilizza l'associazione `NetMsmqBinding`, tale elemento deve presentare il formato net.msmq://.  
+ Si noti che non è possibile utilizzare l'indirizzamento net.msmq:// con l'associazione `MsmqIntegrationBinding`. Poiché `MsmqIntegrationBinding` supporta l'indirizzamento dei nomi in formato libero MSMQ, è possibile utilizzare un servizio WCF che utilizza questa associazione per utilizzare le funzionalità della lista di distribuzione e di multicast in MSMQ. Un'eccezione è la specifica dell'elemento `CustomDeadLetterQueue` quando si utilizza l'associazione `MsmqIntegrationBinding`. Analogamente al caso di specifica dell'elemento quando si utilizza l'associazione `NetMsmqBinding`, tale elemento deve presentare il formato net.msmq://.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Hosting Web di un'applicazione in coda](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+- [Sito Web che ospita un'applicazione in coda](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

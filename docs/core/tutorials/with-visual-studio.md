@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 7dcd7957a9a160b3caf2692e9888c70a838bffc5
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 9c3456cd8c940e53e8a70c1d3a7c3b09de77c21d
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005024"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201594"
 ---
 # <a name="tutorial-create-a-net-core-console-application-in-visual-studio-2019"></a>Esercitazione: creare un'applicazione console .NET Core in Visual Studio 2019
 
@@ -97,9 +97,9 @@ Migliorare l'applicazione per richiedere il nome dell'utente e visualizzarlo ins
 
 1. Sostituire il contenuto del `Main` metodo, che attualmente è solo la riga che chiama `Console.WriteLine` , con il codice seguente:
 
-   [!code-csharp[GettingStarted#1](~/samples/snippets/csharp/getting_started/with_visual_studio/HelloWorld.cs#1)]
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="Snippet1":::
 
-   [!code-vb[GettingStarted#1](~/samples/snippets/core/tutorials/vb-with-visual-studio/Program.vb#1)]
+   :::code language="vb" source="./snippets/with-visual-studio/vb/Program.vb" id="Snippet1":::
 
    Il codice visualizza "What is your name?" nella console e attende che l'utente inserisca una stringa e prema INVIO. Archivia la stringa in una variabile denominata `name` . Recupera inoltre il valore della <xref:System.DateTime.Now?displayProperty=nameWithType> proprietà che contiene l'ora locale corrente e la assegna a una variabile denominata `date` ( `currentDate` in Visual Basic). Infine, questi valori vengono visualizzati nella finestra della console.
 

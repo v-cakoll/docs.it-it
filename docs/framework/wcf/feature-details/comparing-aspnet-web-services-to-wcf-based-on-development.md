@@ -2,12 +2,12 @@
 title: Confronto tra servizi Web ASP.NET e WCF basato sullo sviluppo
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: 607d0eaabde4e00c1a00b995356bb6d4e1a39234
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: c5a2145a6d7b631a666df94eb0c1fc53cbc3c55f
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855767"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202270"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Confronto tra servizi Web ASP.NET e WCF basato sullo sviluppo
 
@@ -29,7 +29,7 @@ Di seguito sono elencati i principali aspetti da considerare nella definizione d
 
 Lo sviluppo di applicazioni WCF inizia in genere anche con la definizione di tipi complessi. È possibile eseguire WCF per utilizzare gli stessi tipi di .NET Framework dei servizi Web ASP.NET.
 
-WCF<xref:System.Runtime.Serialization.DataContractAttribute> e<xref:System.Runtime.Serialization.DataMemberAttribute> possono essere aggiunti ai tipi di .NET Framework per indicare che le istanze del tipo devono essere serializzate in XML e quali particolari campi o proprietà del tipo devono essere serializzati, come illustrato nel codice di esempio seguente.
+WCF <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> possono essere aggiunti ai tipi di .NET Framework per indicare che le istanze del tipo devono essere serializzate in XML e quali particolari campi o proprietà del tipo devono essere serializzati, come illustrato nel codice di esempio seguente.
 
 ```csharp
 //Example One:
@@ -145,7 +145,7 @@ public class LineItem
 }
 ```
 
-<xref:System.Runtime.Serialization.DataContractAttribute> significa che nessuno dei campi o proprietà di un tipo o altri campi o proprietà di un tipo devono essere serializzati, mentre <xref:System.Runtime.Serialization.DataMemberAttribute> indica che un deve essere serializzato un particolare campo o proprietà. L'attributo <xref:System.Runtime.Serialization.DataContractAttribute> può essere applicato a una classe o a una struttura. L'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> può essere applicato a un campo o a una proprietà e i campi e le proprietà alle quali viene applicato l'attributo possono essere pubbliche o private. Le istanze di tipi a cui <xref:System.Runtime.Serialization.DataContractAttribute> è applicato il sono definite contratti dati in WCF. Vengono serializzate in XML usando <xref:System.Runtime.Serialization.DataContractSerializer>.
+<xref:System.Runtime.Serialization.DataContractAttribute> significa che nessuno dei campi o proprietà di un tipo o altri campi o proprietà di un tipo devono essere serializzati, mentre <xref:System.Runtime.Serialization.DataMemberAttribute> indica che un deve essere serializzato un particolare campo o proprietà. L'attributo <xref:System.Runtime.Serialization.DataContractAttribute> può essere applicato a una classe o a una struttura. L'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> può essere applicato a un campo o a una proprietà e i campi e le proprietà alle quali viene applicato l'attributo possono essere pubbliche o private. Le istanze di tipi a cui è <xref:System.Runtime.Serialization.DataContractAttribute> applicato il sono definite contratti dati in WCF. Vengono serializzate in XML usando <xref:System.Runtime.Serialization.DataContractSerializer>.
 
 Nell'elenco seguente sono descritte le principali differenze tra l'uso di <xref:System.Runtime.Serialization.DataContractSerializer> e l'uso di <xref:System.Xml.Serialization.XmlSerializer> e dei vari attributi dello spazio dei nomi <xref:System.Xml.Serialization>.
 
@@ -184,7 +184,7 @@ Nell'elenco seguente sono descritte le principali differenze tra l'uso di <xref:
 
   - Se per un contratto dati viene implementata l'interfaccia <xref:System.Runtime.Serialization.IExtensibleDataObject>, è possibile consentire alla classe <xref:System.Runtime.Serialization.DataContractSerializer> di passare membri definiti in versioni più recenti di un contratto dati mediante applicazioni con versioni precedenti del contratto.
 
-Nonostante tutte le differenze, il codice XML in cui la classe <xref:System.Xml.Serialization.XmlSerializer> serializza un tipo per impostazione predefinita è semanticamente identico al codice XML in cui la classe <xref:System.Runtime.Serialization.DataContractSerializer> serializza un tipo, a condizione che lo spazio dei nomi per il codice XML sia definito esplicitamente. La classe seguente, che include attributi da utilizzare con entrambi i serializzatori, viene convertita in XML semanticamente identico da <xref:System.Xml.Serialization.XmlSerializer> e <xref:System.Runtime.Serialization.DataContractAttribute>da:
+Nonostante tutte le differenze, il codice XML in cui la classe <xref:System.Xml.Serialization.XmlSerializer> serializza un tipo per impostazione predefinita è semanticamente identico al codice XML in cui la classe <xref:System.Runtime.Serialization.DataContractSerializer> serializza un tipo, a condizione che lo spazio dei nomi per il codice XML sia definito esplicitamente. La classe seguente, che include attributi da utilizzare con entrambi i serializzatori, viene convertita in XML semanticamente identico da <xref:System.Xml.Serialization.XmlSerializer> e da <xref:System.Runtime.Serialization.DataContractAttribute> :
 
 ```csharp
 [Serializable]
@@ -204,7 +204,7 @@ public class LineItem
 Windows Software Development Kit (SDK) include uno strumento da riga di comando denominato [ServiceModel Metadata Utility Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Analogamente allo strumento XSD. exe utilizzato con i servizi Web di ASP.NET, Svcutil. exe può generare definizioni di tipi di dati .NET da XML Schema. I tipi sono contratti dati se la classe <xref:System.Runtime.Serialization.DataContractSerializer> può generare codice XML nel formato definito dall'XML Schema. In caso contrario, sono destinati alla serializzazione mediante l'uso della classe <xref:System.Xml.Serialization.XmlSerializer>. Svcutil. exe può inoltre generare un XML Schema dai contratti dati utilizzando il relativo `dataContractOnly` comcambio.
 
 > [!NOTE]
-> Sebbene i servizi Web di ASP.NET <xref:System.Xml.Serialization.XmlSerializer>usino il e la modalità di compatibilità WCF ASP.NET fa in modo che i servizi WCF rispecchino il comportamento dei servizi Web ASP.NET, l'opzione <xref:System.Xml.Serialization.XmlSerializer>di compatibilità ASP.NET non ne limita l'utilizzo. È comunque possibile usare la classe <xref:System.Runtime.Serialization.DataContractSerializer> con servizi che sono in esecuzione nella modalità di compatibilità ASP.NET.
+> Sebbene i servizi Web di ASP.NET usino il <xref:System.Xml.Serialization.XmlSerializer> e la modalità di compatibilità wcf ASP.NET fa in modo che i servizi WCF rispecchino il comportamento dei servizi web ASP.NET, l'opzione di compatibilità ASP.NET non ne limita l'utilizzo <xref:System.Xml.Serialization.XmlSerializer> . È comunque possibile usare la classe <xref:System.Runtime.Serialization.DataContractSerializer> con servizi che sono in esecuzione nella modalità di compatibilità ASP.NET.
 
 ## <a name="service-development"></a>Sviluppo del servizio
 
@@ -257,7 +257,7 @@ public interface IEcho
 }
 ```
 
-Specifica che l'interfaccia definisce un contratto di servizio WCF <xref:System.ServiceModel.OperationContractAttribute> e indica quale, se presente, i metodi dell'interfaccia definiscono le operazioni del contratto di servizio. <xref:System.ServiceModel.ServiceContractAttribute>
+<xref:System.ServiceModel.ServiceContractAttribute>Specifica che l'interfaccia definisce un contratto di servizio WCF e <xref:System.ServiceModel.OperationContractAttribute> indica quale, se presente, i metodi dell'interfaccia definiscono le operazioni del contratto di servizio.
 
 Una volta che è stato definito, il contratto di servizio viene implementato in una classe, facendo in modo che la classe implementi l'interfaccia mediante la quale viene definito il contratto di servizio:
 
@@ -312,7 +312,7 @@ Le associazioni personalizzate per le applicazioni WCF sono facilmente definite 
 Il comportamento interno dei tipi di servizio può essere regolato usando le proprietà di una famiglia di classi denominate comportamenti. In questo caso la classe <xref:System.ServiceModel.ServiceBehaviorAttribute> viene usata per specificare che il tipo di servizio deve essere multithreading.
 
 ```csharp
-[ServiceBehavior(ConcurrencyMode=ConcurrencyMode.Multiple]
+[ServiceBehavior(ConcurrencyMode=ConcurrencyMode.Multiple)]
 public class DerivativesCalculatorServiceType: IDerivativesCalculator
 ```
 
@@ -344,7 +344,7 @@ Per ospitare un servizio in IIS 5.1, 6.0 o in WAS, eseguire i passaggi seguenti:
 
 Per accedere all'applicazione sarà quindi possibile usare l'URL del file del servizio nella radice dell'applicazione.
 
-Per ospitare un servizio WCF all'interno di un'applicazione .NET, compilare il tipo di servizio in un assembly della libreria di classi a cui fa riferimento l'applicazione e programmare l'applicazione in <xref:System.ServiceModel.ServiceHost> modo che ospiti il servizio usando la classe. Di seguito è riportato un esempio della programmazione di base necessaria.
+Per ospitare un servizio WCF all'interno di un'applicazione .NET, compilare il tipo di servizio in un assembly della libreria di classi a cui fa riferimento l'applicazione e programmare l'applicazione in modo che ospiti il servizio usando la <xref:System.ServiceModel.ServiceHost> classe. Di seguito è riportato un esempio della programmazione di base necessaria.
 
 ```csharp
 string httpBaseAddress = "http://www.contoso.com:8000/";
@@ -369,7 +369,7 @@ typeof(Service), //"Service" is the name of the service type baseAddresses))
 
 Questo esempio mostra in che modo vengono specificati gli indirizzi per uno o più protocolli di trasporto nella costruzione di una classe <xref:System.ServiceModel.ServiceHost>. Questi indirizzi sono detti indirizzi di base.
 
-L'indirizzo fornito per qualsiasi endpoint di un servizio WCF è un indirizzo relativo a un indirizzo di base dell'host dell'endpoint. L'host può avere un indirizzo di base per ogni protocollo di trasporto della comunicazione. Nella configurazione di esempio nel file di configurazione precedente, il costruttore <xref:System.ServiceModel.BasicHttpBinding> selezionato per l'endpoint usa HTTP come protocollo di trasporto. L'indirizzo dell'endpoint, `EchoService` è quindi relativo all'indirizzo di base HTTP dell'host. Nel caso dell'host nell'esempio precedente, l'indirizzo di base HTTP è `http://www.contoso.com:8000/`. Nel caso di un servizio ospitato in IIS o WAS, l'indirizzo di base è l'URL del file del servizio.
+L'indirizzo fornito per qualsiasi endpoint di un servizio WCF è un indirizzo relativo a un indirizzo di base dell'host dell'endpoint. L'host può avere un indirizzo di base per ogni protocollo di trasporto della comunicazione. Nella configurazione di esempio nel file di configurazione precedente, il costruttore <xref:System.ServiceModel.BasicHttpBinding> selezionato per l'endpoint usa HTTP come protocollo di trasporto. L'indirizzo dell'endpoint, `EchoService` è quindi relativo all'indirizzo di base HTTP dell'host. Nel caso dell'host nell'esempio precedente, l'indirizzo di base HTTP è `http://www.contoso.com:8000/` . Nel caso di un servizio ospitato in IIS o WAS, l'indirizzo di base è l'URL del file del servizio.
 
 Solo i servizi ospitati in IIS o WAS e che sono configurati solo con HTTP come protocollo di trasporto, possono essere eseguiti per utilizzare l'opzione modalità di compatibilità ASP.NET di WCF. Per attivare questa opzione è necessario eseguire i passaggi seguenti.
 
@@ -473,7 +473,7 @@ public class Service: WebService, IEcho
 }
 ```
 
-WCF fornisce gli attributi, <xref:System.ServiceModel.MessageContractAttribute> <xref:System.ServiceModel.MessageHeaderAttribute>, e <xref:System.ServiceModel.MessageBodyMemberAttribute> per descrivere la struttura dei messaggi SOAP inviati e ricevuti da un servizio.
+WCF fornisce gli attributi,, <xref:System.ServiceModel.MessageContractAttribute> <xref:System.ServiceModel.MessageHeaderAttribute> e <xref:System.ServiceModel.MessageBodyMemberAttribute> per descrivere la struttura dei messaggi SOAP inviati e ricevuti da un servizio.
 
 ```csharp
 [DataContract]
@@ -632,7 +632,7 @@ ASP.NET fornisce un livello di controllo elevato sulla posizione in cui vengono 
 
 WCF fornisce oggetti estendibili per la gestione dello stato. Gli oggetti estensibili sono oggetti che implementano l'interfaccia <xref:System.ServiceModel.IExtensibleObject%601>. Gli oggetti estendibili più importanti sono <xref:System.ServiceModel.ServiceHostBase> e <xref:System.ServiceModel.InstanceContext>. `ServiceHostBase` consente di mantenere lo stato al quale possono accedere tutte le istanze di tutti i tipi di servizio sullo stesso host, mentre `InstanceContext` consente di mantenere lo stato al quale può accedere qualsiasi codice in esecuzione nella stessa istanza di un tipo di servizio.
 
-Qui, il tipo di servizio `TradingSystem`,, dispone <xref:System.ServiceModel.ServiceBehaviorAttribute> di un oggetto che specifica che tutte le chiamate dalla stessa istanza del client WCF vengono instradate alla stessa istanza del tipo di servizio.
+Qui, il tipo di servizio, `TradingSystem` , dispone di un oggetto <xref:System.ServiceModel.ServiceBehaviorAttribute> che specifica che tutte le chiamate dalla stessa istanza del client WCF vengono instradate alla stessa istanza del tipo di servizio.
 
 ```csharp
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
@@ -671,17 +671,17 @@ void ITradingService.AddTrade(Trade trade)
 }
 ```
 
-Mentre ASP.NET fornisce il controllo sulla posizione in cui vengono <xref:System.Web.HttpContext> archiviate le informazioni sullo stato nella classe, WCF, almeno nella versione iniziale, non fornisce alcun controllo sulla posizione in cui vengono archiviati gli oggetti estensibili. Questo costituisce il motivo migliore per la selezione della modalità di compatibilità ASP.NET per un servizio WCF. Se la gestione dello stato configurabile è imperativa, la scelta della modalità di compatibilità ASP.NET consente di usare le funzioni della classe <xref:System.Web.HttpContext> esattamente nel modo in cui vengono usate in ASP.NET, nonché di configurare la posizione in cui vengono memorizzate le informazioni sullo stato gestite mediante la classe <xref:System.Web.HttpContext>.
+Mentre ASP.NET fornisce il controllo sulla posizione in cui vengono archiviate le informazioni sullo stato nella <xref:System.Web.HttpContext> classe, WCF, almeno nella versione iniziale, non fornisce alcun controllo sulla posizione in cui vengono archiviati gli oggetti estensibili. Questo costituisce il motivo migliore per la selezione della modalità di compatibilità ASP.NET per un servizio WCF. Se la gestione dello stato configurabile è imperativa, la scelta della modalità di compatibilità ASP.NET consente di usare le funzioni della classe <xref:System.Web.HttpContext> esattamente nel modo in cui vengono usate in ASP.NET, nonché di configurare la posizione in cui vengono memorizzate le informazioni sullo stato gestite mediante la classe <xref:System.Web.HttpContext>.
 
 ## <a name="security"></a>Sicurezza
 
 Le opzioni per la protezione dei servizi Web ASP.NET sono le stesse usate per la protezione di qualsiasi applicazione IIS. Poiché le applicazioni WCF possono essere ospitate non solo in IIS ma anche in qualsiasi eseguibile .NET, le opzioni per la protezione delle applicazioni WCF devono essere rese indipendenti dalle funzionalità di IIS. Tuttavia, le funzionalità fornite per i servizi Web ASP.NET sono disponibili anche per i servizi WCF in esecuzione in modalità di compatibilità ASP.NET.
 
-### <a name="security-authentication"></a>Sicurezza: Autenticazione
+### <a name="security-authentication"></a>Protezione: autenticazione
 
-IIS fornisce funzionalità per il controllo dell'accesso alle applicazioni mediante cui è possibile selezionare l'accesso anonimo o un'ampia gamma di modalità di autenticazione: Autenticazione di Windows, autenticazione del digest, autenticazione di base e autenticazione .NET Passport. L'opzione Autenticazione di Windows può essere usata per controllare l'accesso ai servizi Web ASP.NET. Tuttavia, quando le applicazioni WCF sono ospitate in IIS, è necessario configurare IIS per consentire l'accesso anonimo all'applicazione, in modo che l'autenticazione possa essere gestita da WCF, che supporta l'autenticazione di Windows tra le varie opzioni. Le altre opzioni incorporate includono token del nome utente, certificati X.509, token SAML e schede CardSpace, ma è comunque possibile definire meccanismi di autenticazione personalizzati.
+IIS fornisce funzionalità per il controllo di accesso alle applicazioni tra le quali è possibile selezionare l'accesso anonimo o varie modalità di autenticazione: autenticazione di Windows, autenticazione digest, autenticazione di base e autenticazione .NET Passport. L'opzione Autenticazione di Windows può essere usata per controllare l'accesso ai servizi Web ASP.NET. Tuttavia, quando le applicazioni WCF sono ospitate in IIS, è necessario configurare IIS per consentire l'accesso anonimo all'applicazione, in modo che l'autenticazione possa essere gestita da WCF, che supporta l'autenticazione di Windows tra le varie opzioni. Le altre opzioni incorporate includono token del nome utente, certificati X.509, token SAML e schede CardSpace, ma è comunque possibile definire meccanismi di autenticazione personalizzati.
 
-### <a name="security-impersonation"></a>Sicurezza: Rappresentazione
+### <a name="security-impersonation"></a>Protezione: rappresentazione
 
 ASP.NET fornisce un elemento di identità mediante il quale un servizio Web ASP.NET può essere impostato per rappresentare un determinato utente o le credenziali utente che vengono fornite con la richiesta corrente. Tale elemento può essere utilizzato per configurare la rappresentazione nelle applicazioni WCF in esecuzione in modalità di compatibilità ASP.NET.
 
@@ -704,17 +704,17 @@ Le operazioni dei servizi possono essere configurate per rappresentare le creden
 public void Receive(Message input)
 ```
 
-### <a name="security-authorization-using-access-control-lists"></a>Sicurezza: Autorizzazione tramite gli elenchi di controllo di accesso
+### <a name="security-authorization-using-access-control-lists"></a>Protezione: autorizzazione mediante elenchi di controllo di accesso (ACL)
 
 Gli elenchi di controllo di accesso (ACL) possono essere usati per limitare l'accesso ai file con estensione asmx. Tuttavia, gli ACL nei file WCF. svc vengono ignorati tranne che in modalità di compatibilità ASP.NET.
 
-### <a name="security-role-based-authorization"></a>Sicurezza: Autorizzazione basata sui ruoli
+### <a name="security-role-based-authorization"></a>Protezione: autorizzazione basata sui ruoli
 
 L'opzione Autenticazione di Windows di IIS può essere usata insieme all'elemento di autorizzazione fornito dal linguaggio di configurazione di ASP.NET per facilitare l'autorizzazione basata sui ruoli per i servizi Web ASP.NET basati sui gruppi di Windows ai quali sono assegnati gli utenti. ASP.NET 2.0 ha introdotto un meccanismo più generale di autorizzazione basata sui ruoli: i provider di ruoli.
 
 I provider di ruoli sono classi che implementano tutte un'interfaccia di base per ottenere informazioni sui ruoli ai quali è assegnato un utente, ma ogni provider di ruoli sa come recuperare tali informazioni da un'origine diversa. ASP.NET 2.0 fornisce un provider di ruoli in grado di recuperare assegnazioni di ruolo da un database Microsoft SQL Server e un altro provider in grado di recuperare assegnazioni di ruolo da Gestione autorizzazioni di Windows Server 2003.
 
-Il meccanismo del provider di ruoli può essere effettivamente utilizzato indipendentemente da ASP.NET in qualsiasi applicazione .NET, inclusa un'applicazione WCF. La configurazione di esempio seguente per un'applicazione WCF Mostra come l'uso di un provider di ruoli ASP.NET è un'opzione selezionata per mezzo <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>del.
+Il meccanismo del provider di ruoli può essere effettivamente utilizzato indipendentemente da ASP.NET in qualsiasi applicazione .NET, inclusa un'applicazione WCF. La configurazione di esempio seguente per un'applicazione WCF Mostra come l'uso di un provider di ruoli ASP.NET è un'opzione selezionata per mezzo del <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> .
 
 ```xml
 <system.serviceModel>
@@ -735,11 +735,11 @@ Il meccanismo del provider di ruoli può essere effettivamente utilizzato indipe
 </system.serviceModel>
 ```
 
-### <a name="security-claims-based-authorization"></a>Sicurezza: Autorizzazione basata sulle attestazioni
+### <a name="security-claims-based-authorization"></a>Protezione: autorizzazione basata sulle attestazioni
 
 Una delle innovazioni più importanti di WCF è il supporto completo per l'autorizzazione dell'accesso alle risorse protette in base alle attestazioni. Le attestazioni sono costituite da un tipo, da un diritto e da un valore, ad esempio la licenza di un driver. In questo caso WCF crea un set di attestazioni relative al titolare della licenza, una delle quali è la data di nascita del titolare. Il tipo di questa attestazione è data di nascita, mentre il valore dell'attestazione è la data di nascita del titolare della licenza. Il diritto che un'attestazione conferisce al titolare specifica le operazioni che possono essere eseguite dal titolare con il valore dell'attestazione. Nel caso dell'attestazione della data di nascita del titolare della licenza, il diritto è possesso: il titolare possiede quella data di nascita ma non può, ad esempio, modificarla. L'autorizzazione basata sulle attestazioni include l'autorizzazione basata sui ruoli in quanto i ruoli sono un tipo di attestazione.
 
-L'autorizzazione basata sulle attestazioni viene eseguita confrontando un set di attestazioni ai requisiti di accesso dell'operazione e, a seconda del risultato di tale confronto, concedendo o negando l'accesso all'operazione. In WCF è possibile specificare una classe da utilizzare per eseguire l'autorizzazione basata sulle attestazioni, ancora una volta assegnando un valore alla `ServiceAuthorizationManager` proprietà di <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>.
+L'autorizzazione basata sulle attestazioni viene eseguita confrontando un set di attestazioni ai requisiti di accesso dell'operazione e, a seconda del risultato di tale confronto, concedendo o negando l'accesso all'operazione. In WCF è possibile specificare una classe da utilizzare per eseguire l'autorizzazione basata sulle attestazioni, ancora una volta assegnando un valore alla `ServiceAuthorizationManager` proprietà di <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> .
 
 ```xml
 <behaviors>
@@ -751,11 +751,11 @@ L'autorizzazione basata sulle attestazioni viene eseguita confrontando un set di
 </behaviors>
 ```
 
-Le classi usate per eseguire l'autorizzazione basata sulle attestazioni devono derivare da <xref:System.ServiceModel.ServiceAuthorizationManager>, che deve eseguire l'override di un solo metodo, `AccessCheck()`. WCF chiama tale metodo ogni volta che viene richiamata un'operazione del servizio e <xref:System.ServiceModel.OperationContext> fornisce un oggetto che dispone delle attestazioni per l'utente `ServiceSecurityContext.AuthorizationContext` nella relativa proprietà. WCF esegue le operazioni di assemblaggio delle attestazioni relative all'utente da qualsiasi token di sicurezza fornito dall'utente per l'autenticazione, che lascia l'attività di valutazione del fatto che le attestazioni siano sufficienti per l'operazione in questione.
+Le classi usate per eseguire l'autorizzazione basata sulle attestazioni devono derivare da <xref:System.ServiceModel.ServiceAuthorizationManager>, che deve eseguire l'override di un solo metodo, `AccessCheck()`. WCF chiama tale metodo ogni volta che viene richiamata un'operazione del servizio e fornisce un <xref:System.ServiceModel.OperationContext> oggetto che dispone delle attestazioni per l'utente nella relativa `ServiceSecurityContext.AuthorizationContext` Proprietà. WCF esegue le operazioni di assemblaggio delle attestazioni relative all'utente da qualsiasi token di sicurezza fornito dall'utente per l'autenticazione, che lascia l'attività di valutazione del fatto che le attestazioni siano sufficienti per l'operazione in questione.
 
 Che WCF assembla automaticamente le attestazioni da qualsiasi tipo di token di sicurezza rappresenta un'innovazione estremamente significativa, perché rende il codice per l'autorizzazione basata sulle attestazioni completamente indipendenti dal meccanismo di autenticazione. L'autorizzazione mediante ACL e l'autorizzazione basata sui ruoli in ASP.NET sono invece strettamente collegate all'autenticazione di Windows.
 
-### <a name="security-confidentiality"></a>Sicurezza: Riservatezza
+### <a name="security-confidentiality"></a>Protezione: riservatezza
 
 La riservatezza dei messaggi scambiati con servizi Web ASP.NET può essere garantita al livello del trasporto configurando l'applicazione in IIS per l'uso del protocollo HTTPS. È possibile eseguire la stessa operazione per le applicazioni WCF ospitate in IIS. Tuttavia, le applicazioni WCF ospitate al di fuori di IIS possono anche essere configurate per l'utilizzo di un protocollo di trasporto sicuro. Più importante, le applicazioni WCF possono anche essere configurate per proteggere i messaggi prima che vengano trasportati, utilizzando il protocollo WS-Security. La protezione del solo corpo del messaggio mediante il protocollo WS-Security consente la trasmissione riservata del messaggio su intermediari prima di raggiungere la destinazione finale.
 
@@ -765,4 +765,4 @@ Il linguaggio di configurazione di ASP.NET consente di specificare le impostazio
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Confronto tra i servizi Web ASP.NET e WCF in base a scopo e standard usati](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+- [Confronto tra i servizi Web ASP.NET e WCF basato sullo scopo e gli standard usati](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
