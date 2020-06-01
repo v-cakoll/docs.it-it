@@ -5,15 +5,16 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 4012027dc1a9bd2543d0a4195360e5f7e0586fe1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a00259dfd5634ad9b9c951c3cd76da97afe5077d
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705262"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241695"
 ---
-# <a name="using-exceptions-c-programming-guide"></a>Utilizzo di eccezioni (Guida per programmatori C#)
-In C# gli errori del programma in fase di esecuzione vengono propagati attraverso il programma usando il meccanismo delle eccezioni. Le eccezioni vengono generate dal codice che rileva un errore e intercettate dal codice in grado di correggere l'errore. Le eccezioni possono essere generate da Common Language Runtime (CLR) in .NET Framework o dal codice in un programma. Quando viene generata un'eccezione, si propaga nello stack di chiamate finché non viene trovata un'istruzione `catch` per l'eccezione. Le eccezioni non rilevate vengono gestite da un gestore di eccezioni generico del sistema che visualizza una finestra di dialogo.  
+# <a name="use-exceptions-c-programming-guide"></a>Usare le eccezioni (Guida per programmatori C#)
+
+In C# gli errori del programma in fase di esecuzione vengono propagati attraverso il programma usando il meccanismo delle eccezioni. Le eccezioni vengono generate dal codice che rileva un errore e intercettate dal codice in grado di correggere l'errore. Le eccezioni possono essere generate dal runtime .NET o dal codice in un programma. Quando viene generata un'eccezione, si propaga nello stack di chiamate finché non viene trovata un'istruzione `catch` per l'eccezione. Le eccezioni non rilevate vengono gestite da un gestore di eccezioni generico del sistema che visualizza una finestra di dialogo.  
   
  Le eccezioni sono rappresentate dalle classi derivate da <xref:System.Exception>. Questa classe identifica il tipo di eccezione e contiene proprietà con informazioni sull'eccezione. Generare un'eccezione implica la creazione un'istanza di una classe derivata dall'eccezione, la configurazione, se necessaria, delle proprietà dell'eccezione e la generazione dell'oggetto usando la parola chiave `throw`. Ad esempio:  
   

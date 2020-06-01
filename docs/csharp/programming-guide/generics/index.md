@@ -5,28 +5,28 @@ helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: c7252180c9c98a8ca99c8cc6b3faaf8b1b8f0749
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3ed3aa412c7d9c9d6b705dba80b527057c647fa
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79167492"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241669"
 ---
 # <a name="generics-c-programming-guide"></a>Generics (Guida per programmatori C#)
 
-I generics introducono il concetto di parametri di tipo in .NET Framework, che consentono di progettare classi e metodi che rinviano la specifica di uno o più tipi fino a quando la classe o il metodo non viene dichiarata e creata un'istanza dal codice client. Ad esempio, utilizzando un `T`parametro di tipo generico , è possibile scrivere una singola classe che può essere utilizzata da altro codice client senza incorrere nel costo o nel rischio di eseguire cast di runtime o operazioni di boxing, come illustrato di seguito:
+I generics introducono il concetto di parametri di tipo in .NET, che rendono possibile la progettazione di classi e metodi che rinviano la specifica di uno o più tipi fino a quando la classe o il metodo non viene dichiarato e ne viene creata un'istanza dal codice client. Usando, ad esempio, un parametro di tipo generico `T` , è possibile scrivere una singola classe che può essere usata da un altro codice client senza sostenere il costo o il rischio di cast di runtime o di operazioni di conversione boxing, come illustrato di seguito:
 
 [!code-csharp[csProgGuideGenerics#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#1)]
 
-Le classi e i metodi generici combinano riusabilità, indipendenza dai tipi ed efficienza in un modo che le loro controparti non generiche non possono. I generics sono in genere usati con le raccolte e i metodi che operano su di essi. Lo <xref:System.Collections.Generic> spazio dei nomi contiene diverse classi di raccolte basate su generici. Le raccolte non generiche, ad <xref:System.Collections.ArrayList> esempio non sono consigliate e vengono mantenute per motivi di compatibilità. Per altre informazioni, vedere [Generics in .NET](../../../standard/generics/index.md).
+Classi e metodi generici combinano riusabilità, indipendenza dai tipi ed efficienza in modo che non possano essere presenti controparti non generiche. I generics sono in genere usati con le raccolte e i metodi che operano su di essi. Lo <xref:System.Collections.Generic> spazio dei nomi contiene diverse classi di raccolta basate su generiche. Le raccolte non generiche, ad esempio, <xref:System.Collections.ArrayList> non sono consigliate e vengono mantenute per motivi di compatibilità. Per altre informazioni, vedere [Generics in .NET](../../../standard/generics/index.md).
 
-Naturalmente, è anche possibile creare tipi e metodi generici personalizzati per offrire le proprie soluzioni e schemi progettuali generalizzati che sono indipendenti dai tipi ed efficienti. Nell'esempio di codice riportato di seguito viene illustrata una classe di elenco collegato generica semplice a scopo dimostrativo. Nella maggior parte dei casi, è consigliabile utilizzare la <xref:System.Collections.Generic.List%601> classe fornita dalla libreria di classi .NET Framework anziché crearne una personalizzata. Il parametro `T` type viene utilizzato in diverse posizioni in cui un tipo concreto viene in genere utilizzato per indicare il tipo di elemento archiviato nell'elenco. In particolare, viene usato nei seguenti modi:
+Naturalmente, è anche possibile creare tipi e metodi generici personalizzati per offrire le proprie soluzioni e schemi progettuali generalizzati che sono indipendenti dai tipi ed efficienti. Nell'esempio di codice riportato di seguito viene illustrata una classe di elenco collegato generica semplice a scopo dimostrativo. Nella maggior parte dei casi, è consigliabile usare la <xref:System.Collections.Generic.List%601> classe fornita da .NET anziché crearne una personalizzata. Il parametro di tipo `T` viene usato in diverse posizioni in cui un tipo concreto viene normalmente usato per indicare il tipo di elemento archiviato nell'elenco. In particolare, viene usato nei seguenti modi:
 
 - Come tipo di un parametro del metodo nel metodo `AddHead`.
 - Come tipo restituito della proprietà `Data` nella classe `Node` annidata.
 - Come tipo del membro privato `data` nella classe annidata.
 
- Si `T` noti che `Node` è disponibile per la classe annidata. Quando si crea un'istanza di `GenericList<T>` con un tipo concreto, ad esempio `GenericList<int>`, ogni occorrenza di `T` verrà sostituita con `int`.
+ Si noti che `T` è disponibile per la `Node` classe annidata. Quando si crea un'istanza di `GenericList<T>` con un tipo concreto, ad esempio `GenericList<int>`, ogni occorrenza di `T` verrà sostituita con `int`.
 
 [!code-csharp[csProgGuideGenerics#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#2)]
 
@@ -34,12 +34,12 @@ Nell'esempio di codice riportato di seguito viene illustrato come il codice clie
 
 [!code-csharp[csProgGuideGenerics#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#3)]
 
-## <a name="generics-overview"></a>Panoramica dei generici
+## <a name="generics-overview"></a>Cenni preliminari sui generics
 
 - Usare i tipi generici per ottimizzare il riutilizzo del codice, l'indipendenza dai tipi e le prestazioni.
 - L'uso più comune dei generics consiste nel creare classi di raccolte.
-- La libreria di classi .NET Framework contiene diverse nuove classi di raccolte generiche nello spazio dei nomi <xref:System.Collections.Generic>. Queste classi devono essere usate ogni volta che sia possibile al posto di classi come <xref:System.Collections.ArrayList> nello spazio dei nomi <xref:System.Collections>.
-- È possibile creare interfacce, classi, metodi, eventi e delegati generici personalizzati.
+- La libreria di classi .NET contiene varie classi di raccolte generiche nello <xref:System.Collections.Generic> spazio dei nomi. Queste classi devono essere usate ogni volta che sia possibile al posto di classi come <xref:System.Collections.ArrayList> nello spazio dei nomi <xref:System.Collections>.
+- È possibile creare interfacce, classi, metodi, eventi e delegati generici.
 - Le classi generiche possono essere limitate in modo da abilitare l'accesso ai metodi per particolari tipi di dati.
 - Le informazioni sui tipi usati in un tipo di dati generico possono essere ottenute usando la reflection in fase di esecuzione.
 
@@ -47,9 +47,9 @@ Nell'esempio di codice riportato di seguito viene illustrato come il codice clie
 
 - [Parametri di tipo generico](generic-type-parameters.md)
 - [Vincoli sui parametri di tipo](constraints-on-type-parameters.md)
-- [Classi genericheGeneric Classes](generic-classes.md)
+- [Classi generiche](generic-classes.md)
 - [Interfacce generiche](generic-interfaces.md)
-- [Metodi Generic](generic-methods.md)
+- [Metodi generici](generic-methods.md)
 - [Delegati generici](generic-delegates.md)
 - [Differenze tra modelli C++ e generics C#](differences-between-cpp-templates-and-csharp-generics.md)
 - [Generics e reflection](generics-and-reflection.md)
@@ -57,13 +57,13 @@ Nell'esempio di codice riportato di seguito viene illustrato come il codice clie
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
-Per ulteriori informazioni, vedere la [specifica del linguaggio C .](~/_csharplang/spec/types.md#constructed-types)
+Per ulteriori informazioni, vedere la [specifica del linguaggio C#](~/_csharplang/spec/types.md#constructed-types).
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Collections.Generic>
 - [Guida per programmatori C#](../index.md)
 - [Tipi](../types/index.md)
-- [\<>typeparam](../xmldoc/typeparam.md)
-- [\<>typeparamref](../xmldoc/typeparamref.md)
+- [\<typeparam>](../xmldoc/typeparam.md)
+- [\<typeparamref>](../xmldoc/typeparamref.md)
 - [Generics in .NET](../../../standard/generics/index.md)

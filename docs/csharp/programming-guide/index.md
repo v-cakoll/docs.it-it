@@ -9,26 +9,26 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: de40369a661c347a2125075e820420af4eb71cac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: df69d895dee51f1bad1fb6164fcb18996ee3eef4
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75337248"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241656"
 ---
 # <a name="c-programming-guide"></a>Guida per programmatori C#
 
-Questa sezione include informazioni dettagliate sulle principali funzionalità del linguaggio C# e sulle funzionalità accessibili a C# tramite .NET Framework.  
+In questa sezione vengono fornite informazioni dettagliate sulle principali funzionalità del linguaggio C# e sulle funzionalità accessibili a C# tramite .NET.  
   
- La maggior parte di questa sezione presuppone che siano già noti i concetti principali relativi a C# e alla programmazione in generale. Se si è un principiante completo con la programmazione o con C , è possibile visitare [l'esercitazione Introduzione alle esercitazioni su C ,](../tutorials/intro-to-csharp/index.md) o [.NET In-Browser Tutorial](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), in cui non è necessaria alcuna conoscenza di programmazione precedente.  
+ La maggior parte di questa sezione presuppone che siano già noti i concetti principali relativi a C# e alla programmazione in generale. Se si è principianti con la programmazione o con C#, è possibile visitare l'esercitazione [Introduzione alle esercitazioni in c#](../tutorials/intro-to-csharp/index.md) o [.NET nel browser, in](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)cui non è necessaria alcuna conoscenza della programmazione precedente.  
   
- Per informazioni su parole chiave, operatori e direttive per il preprocessore specifici, vedere [Riferimenti per C#](../language-reference/index.md). Per informazioni sulla specifica del linguaggio C++, vedere [Specifiche del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction).  
+ Per informazioni sulle parole chiave, gli operatori e le direttive per il preprocessore specifici, vedere [riferimenti per C#](../language-reference/index.md). Per informazioni sulla specifica del linguaggio C++, vedere [Specifiche del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction).  
   
 ## <a name="program-sections"></a>Sezioni relative al programma
 
-[Contenuto di un programma C#](./inside-a-program/index.md)  
+[All'interno di un programma C#](./inside-a-program/index.md)  
   
-[Main() e argomenti della riga di comando](./main-and-command-args/index.md)  
+[Main () e argomenti della riga di comando](./main-and-command-args/index.md)  
 
 ## <a name="language-sections"></a>Sezioni relative al linguaggio
 
@@ -54,17 +54,17 @@ Questa sezione include informazioni dettagliate sulle principali funzionalità d
   
  [Generics](./generics/index.md)  
   
- [Iteratori](./concepts/iterators.md)
+ [Iterators](./concepts/iterators.md)
   
- [Espressioni di query LINQLINQ Query Expressions](../linq/index.md)  
+ [Espressioni di query LINQ](../linq/index.md)  
   
- [Espressioni lambdaLambda Expressions](./statements-expressions-operators/lambda-expressions.md)  
+ [Espressioni lambda](./statements-expressions-operators/lambda-expressions.md)  
   
  [Spazi dei nomi](./namespaces/index.md)  
   
  [Codice unsafe e puntatori](./unsafe-code-pointers/index.md)  
   
- [Commenti relativi alla documentazione XMLXML Documentation Comments](./xmldoc/index.md)  
+ [Commenti relativi alla documentazione XML](./xmldoc/index.md)  
   
 ## <a name="platform-sections"></a>Sezioni relative alla piattaforma
 
@@ -74,7 +74,7 @@ Questa sezione include informazioni dettagliate sulle principali funzionalità d
   
  [Attributi](./concepts/attributes/index.md)  
   
- [Raccolte](./concepts/collections.md)  
+ [raccolte](./concepts/collections.md)  
   
  [Eccezioni e gestione delle eccezioni](./exceptions/index.md)  
   
@@ -82,8 +82,8 @@ Questa sezione include informazioni dettagliate sulle principali funzionalità d
   
  [Interoperabilità](./interop/index.md)  
   
- [Riflessione](./concepts/reflection.md)  
+ [Reflection](./concepts/reflection.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida di riferimento a C](../language-reference/index.md)
+- [Riferimenti per C#](../language-reference/index.md)

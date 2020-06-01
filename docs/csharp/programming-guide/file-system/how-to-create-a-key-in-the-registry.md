@@ -1,19 +1,19 @@
 ---
-title: Come creare una chiave nel Registro di sistema - Guida per programmatori C
+title: Come creare una chiave nel registro di sistema-guida per programmatori C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry, adding keys and values [C#]
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: 16974db950a3a460416cfb917147439707e1d007
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e340083ffca118337dc9a53bdf20808cd1b15cb
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635444"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241630"
 ---
-# <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>Come creare una chiave nel Registro di sistema (Guida per programmatori C
+# <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>Come creare una chiave nel registro di sistema (Guida per programmatori C#)
 Nell'esempio riportato di seguito viene aggiunta la coppia di valori "Name" e "Isabella" alla chiave "Names"del Registro di sistema dell'utente corrente.  
   
 ## <a name="example"></a>Esempio  
@@ -48,7 +48,7 @@ key.Close();
   
 - La chiave del Registro di sistema è di sola lettura.  
   
-## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
+## <a name="net-security"></a>Sicurezza .NET  
  È più sicuro scrivere i dati nella cartella dell'utente, ovvero `Microsoft.Win32.Registry.CurrentUser`, anziché nel computer locale, ovvero `Microsoft.Win32.Registry.LocalMachine`.  
   
  Quando si crea un valore del Registro di sistema, è necessario decidere come procedere nel caso in cui tale valore esista già. È possibile che un altro processo, forse dannoso, abbia già creato il valore e possa accedervi. I dati inseriti nel valore del Registro di sistema sono disponibili per altri processi. Per evitare che ciò accada, usare il metodo `Overload:Microsoft.Win32.RegistryKey.GetValue` ProcessOnStatus. Restituisce null se la chiave non esiste.  

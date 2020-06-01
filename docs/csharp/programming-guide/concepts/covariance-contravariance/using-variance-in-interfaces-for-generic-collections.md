@@ -2,19 +2,19 @@
 title: Uso della varianza nelle interfacce per le raccolte generiche (C#)
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-ms.openlocfilehash: b891ccde93e18baf5d5e814911666e9c6268e009
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5f5531e17a530ed840108df2cf9bf829b2beb656
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169740"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241357"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>Uso della varianza nelle interfacce per le raccolte generiche (C#)
 Un'interfaccia covariante consente ai propri metodi di restituire più tipi derivati rispetto a quelli specificati nell'interfaccia. Un'interfaccia controvariante consente ai propri metodi di accettare parametri di meno tipi derivati rispetto a quelli specificati nell'interfaccia.  
   
  In .NET Framework 4 diverse interfacce già esistenti sono diventate covarianti e controvarianti. Tra queste sono inclusi i tipi  <xref:System.Collections.Generic.IEnumerable%601> e <xref:System.IComparable%601>. In questo modo è possibile riutilizzare i metodi che funzionano con raccolte generiche di tipi di base per le raccolte di tipi derivati.  
   
- Per un elenco di interfacce varianti in .NET Framework, vedere [Varianza nelle interfacce generiche (C#)](./variance-in-generic-interfaces.md).  
+ Per un elenco di interfacce variant in .NET, vedere [varianza nelle interfacce generiche (C#)](./variance-in-generic-interfaces.md).  
   
 ## <a name="converting-generic-collections"></a>Convertire le raccolte generiche  
  L'esempio seguente illustra i vantaggi del supporto di covarianza nell'interfaccia <xref:System.Collections.Generic.IEnumerable%601>. Il metodo `PrintFullName` accetta una raccolta del tipo `IEnumerable<Person>` come parametro. Tuttavia, è possibile riutilizzarlo per una raccolta del tipo `IEnumerable<Employee>` perché `Employee` eredita `Person`.  

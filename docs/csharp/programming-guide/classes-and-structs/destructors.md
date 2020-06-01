@@ -6,17 +6,17 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: c8ad738baa3ff76cf9ae8367f2fd2a1fb44a79d6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a266cfd5996aca7b7a6b297b0775526cf38b8f64
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170299"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241422"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizzatori (Guida per programmatori C#)
 I finalizzatori (detti anche **distruttori**) vengono usati per eseguire operazioni di pulizia finale eventualmente necessarie quando un'istanza di classe viene raccolta da Garbage Collector.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 - I finalizzatori non possono essere definiti negli struct. Vengono usati solo con le classi.  
   
@@ -64,7 +64,7 @@ protected override void Finalize()
  Sebbene sia possibile forzare l'esecuzione di Garbage Collection chiamando <xref:System.GC.Collect%2A>, nella maggior parte dei casi è preferibile non effettuare questa operazione per evitare problemi di prestazioni.  
   
 ## <a name="using-finalizers-to-release-resources"></a>Uso di finalizzatori per liberare risorse  
- In generale C# non richiede una gestione della memoria come quella necessaria quando si sviluppa con un linguaggio che non ha come destinazione un runtime con Garbage Collection. Il Garbage Collector di .NET Framework, infatti, gestisce in modo implicito l'allocazione e il rilascio di memoria per gli oggetti. Tuttavia, quando l'applicazione incapsula risorse non gestite come finestre, file e connessioni di rete, è necessario usare i finalizzatori per rendere disponibili tali risorse. Quando l'oggetto è idoneo per la finalizzazione, il Garbage Collector esegue il metodo `Finalize` dell'oggetto.  
+ In generale C# non richiede una gestione della memoria come quella necessaria quando si sviluppa con un linguaggio che non ha come destinazione un runtime con Garbage Collection. Ciò è dovuto al fatto che .NET Garbage Collector gestisce in modo implicito l'allocazione e il rilascio di memoria per gli oggetti. Tuttavia, quando l'applicazione incapsula risorse non gestite, ad esempio Windows, file e connessioni di rete, è necessario usare i finalizzatori per liberare tali risorse. Quando l'oggetto è idoneo per la finalizzazione, il Garbage Collector esegue il metodo `Finalize` dell'oggetto.
   
 ## <a name="explicit-release-of-resources"></a>Rilascio esplicito di risorse  
  Se l'applicazione usa una risorsa esterna che consuma molta memoria, è consigliabile specificare un modo per rilasciare la risorsa in modo esplicito prima che il Garbage Collector renda disponibile l'oggetto. A questo scopo, è possibile implementare un metodo `Dispose` dall'interfaccia <xref:System.IDisposable> che esegua la pulitura necessaria per l'oggetto. Questo consente di migliorare notevolmente le prestazioni dell'applicazione. Nonostante questo controllo esplicito sulle risorse, il finalizzatore consente di salvaguardare la pulitura delle risorse nei casi in cui la chiamata al metodo `Dispose` non venga eseguita correttamente.  
@@ -73,7 +73,7 @@ protected override void Finalize()
   
 - [Pulizia delle risorse non gestite](../../../standard/garbage-collection/unmanaged.md)  
   
-- [Implementazione di un metodo DisposeImplementing a Dispose Method](../../../standard/garbage-collection/implementing-dispose.md)  
+- [Implementazione di un metodo Dispose](../../../standard/garbage-collection/implementing-dispose.md)  
   
 - [Istruzione using](../../language-reference/keywords/using-statement.md)  
   

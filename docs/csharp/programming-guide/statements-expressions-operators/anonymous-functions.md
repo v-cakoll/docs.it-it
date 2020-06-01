@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: cfb0190ee263e65e8130a8925f76357a382eafa3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c99aaf4f35d2d294a9f07de54129bb3b4fbfbfde
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712000"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241903"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>Funzioni anonime (Guida per programmatori C#)
 
@@ -21,7 +21,7 @@ Per creare una funzione anonima, è possibile usare un'[espressione lambda](lamb
 
 ## <a name="the-evolution-of-delegates-in-c"></a>Evoluzione dei delegati in C\#
 
- In C# 1.0 è stata creata un'istanza di un delegato inizializzandola in modo esplicito con un metodo che è stato definito altrove nel codice. C# 2.0 ha introdotto il concetto di metodi anonimi come modo per scrivere blocchi di istruzioni inline senza nome che possono essere eseguiti in una chiamata a delegati. C# 3.0 ha introdotto le espressioni lambda, che sono concettualmente analoghe ai metodi anonimi, ma più espressive e concise. Queste due funzionalità sono noti collettivamente come *funzioni anonime*. In generale, le applicazioni destinate alla versione 3.5 o successiva di .NET Framework devono usare le espressioni lambda.  
+ In C# 1.0 è stata creata un'istanza di un delegato inizializzandola in modo esplicito con un metodo che è stato definito altrove nel codice. C# 2.0 ha introdotto il concetto di metodi anonimi come modo per scrivere blocchi di istruzioni inline senza nome che possono essere eseguiti in una chiamata a delegati. C# 3.0 ha introdotto le espressioni lambda, che sono concettualmente analoghe ai metodi anonimi, ma più espressive e concise. Queste due funzionalità sono noti collettivamente come *funzioni anonime*. In generale, le applicazioni destinate a .NET Framework 3,5 o versioni successive devono usare espressioni lambda.  
   
  L'esempio seguente illustra l'evoluzione della creazione di delegati da C# 1.0 a C# 3.0:  
   
@@ -34,6 +34,6 @@ Per altre informazioni, vedere la sezione [Espressioni di funzioni anonime](~/_c
 ## <a name="see-also"></a>Vedere anche
 
 - [Istruzioni, espressioni e operatori](./index.md)
-- [Espressioni lambdaLambda Expressions](./lambda-expressions.md)
+- [Espressioni lambda](./lambda-expressions.md)
 - [Delegati](../delegates/index.md)
 - [Alberi delle espressioni (C#)](../concepts/expression-trees/index.md)

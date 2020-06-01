@@ -2,35 +2,33 @@
 title: Eseguire la migrazione di un database SQL Server ad Azure
 description: Informazioni su come eseguire la migrazione di un database SQL Server da SQL Server locale ad Azure.
 ms.topic: how-to
-ms.date: 11/15/2017
-ms.openlocfilehash: dac35970f2d77e232c2ee1a5e3a1f6e7bfec2317
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.date: 05/27/2020
+ms.openlocfilehash: ed5d6ef9395dca14d8e0ecba82d3fc18cb3d629a
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "82072095"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241448"
 ---
 # <a name="migrate-a-sql-server-database-to-azure"></a>Eseguire la migrazione di un database SQL Server ad Azure
 
-Questo breve articolo descrive sinteticamente due opzioni per la migrazione di un database SQL Server ad Azure.
-
-Azure offre due opzioni principali per la migrazione di un database SQL Server di produzione:
+Questo articolo fornisce una breve descrizione di due opzioni per la migrazione di un database di SQL Server in Azure. Azure offre tre opzioni principali per la migrazione di un database di SQL Server di produzione. Questo articolo è incentrato sulle due opzioni seguenti:
 
 1. [SQL Server in VM di Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview):un'istanza di SQL Server installata e ospitata in una macchina virtuale Windows in esecuzione in Azure, definita anche infrastruttura distribuita come servizio (IaaS).
 2. [Database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview): un servizio completamente gestito di Azure per il database SQL, definito anche piattaforma distribuita come servizio (PaaS).
 
-Entrambi presentano vantaggi e svantaggi che sarà necessario esaminare prima di eseguire la migrazione.
+Entrambi presentano vantaggi e svantaggi che sarà necessario esaminare prima di eseguire la migrazione. La terza opzione è rappresentata dalle [istanze gestite del database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
 
-## <a name="get-started"></a>Introduzione
+## <a name="get-started"></a>Operazioni preliminari
 
 Le seguenti sono guide utili per la migrazione, a seconda del servizio usato:
 
-* [Eseguire la migrazione di un database di SQL Server a SQL Server in una macchina virtuale di Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)
+* [Eseguire la migrazione di un database di SQL Server a SQL Server in una VM di Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)
 * [Migrare un database SQL Server in un database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 
 I collegamenti seguenti per contenuti concettuali consentono di comprendere meglio le VM:
 
-* [Disponibilità elevata e ripristino di emergenza per SQL Server in macchine virtuali di Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr)
+* [Disponibilità elevata e ripristino di emergenza di SQL Server in Macchine virtuali di Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr)
 * [Procedure consigliate per le prestazioni per SQL Server in Macchine virtuali di Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance)
 * [Modelli di applicazione e strategie di sviluppo per SQL Server in Macchine virtuali di Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-app-patterns-dev-strategies)
 
@@ -63,10 +61,10 @@ La tabella seguente descrive le differenze tra ogni servizio in base a un set di
 | Migrazione | Richiede modifiche minime al database. | Può richiedere modifiche al database se si usano funzionalità non disponibili in Azure SQL, come stabilito da [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595), o se si hanno altre dipendenze, ad esempio eseguibili installati in locale.|
 | Gestione di disponibilità, ripristino e aggiornamenti | La disponibilità e il ripristino sono configurati manualmente. Gli aggiornamenti possono essere automatizzati con i [set di scalabilità di macchine virtuali](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade). | Gestita automaticamente. |
 | Configurazione del sistema operativo sottostante | Configurazione manuale. | Gestita automaticamente. |
-| Gestione delle dimensioni del database | Supporta fino a 64 TB di spazio di archiviazione per ogni istanza di SQL Server. | Supporta 4 TB di spazio di archiviazione prima che sia necessaria una partizione orizzontale. |
+| Gestione delle dimensioni del database | Supporta fino a 256 TB di spazio di archiviazione per ogni istanza di SQL Server. | Supporta 8 TB di spazio di archiviazione prima che sia necessaria una partizione orizzontale. |
 | Gestione dei costi | È necessario gestire i costi delle licenze SQL Server, i costi delle licenze Windows Server e i costi delle VM (in base a core, RAM e spazio di archiviazione). | È necessario gestire i costi dei servizi (in base a [eDTU o DTU](https://docs.microsoft.com/azure/sql-database/sql-database-what-is-a-dtu), spazio di archiviazione e numero di database se si usa un pool elastico). È anche necessario gestire il costo dei contratti di servizio. |
 
-Per altre informazioni sulle differenze tra le due, vedere scegliere un'opzione di SQL Server Cloud: [database SQL di Azure o SQL Server in macchine virtuali di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas).
+Per altre informazioni sulle differenze tra i due, vedere [scegliere l'opzione di distribuzione corretta in Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas).
 
 ## <a name="faq"></a>Domande frequenti
 

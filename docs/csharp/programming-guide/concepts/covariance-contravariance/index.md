@@ -2,12 +2,12 @@
 title: Covarianza e controvarianza (C#)
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
-ms.openlocfilehash: 80b4d703bb88d0bf1f7f48236c21b7698017e7f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 23633675059b9c295dda7ddf3d78754c0223f5f8
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79169870"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241370"
 ---
 # <a name="covariance-and-contravariance-c"></a>Covarianza e controvarianza (C#)
 In C#, covarianza e controvarianza abilitano la conversione implicita del riferimento per i tipi di matrice, i tipi delegati e gli argomenti di tipo generico. La covarianza mantiene la compatibilità dell'assegnazione e la controvarianza la inverte.  
@@ -68,7 +68,7 @@ static void Test()
 }  
 ```  
   
- In .NET Framework 4 o versioni più recenti C# supporta la covarianza e la controvarianza nelle interfacce e nei delegati generici e consente la conversione implicita dei parametri di tipo generico. Per altre informazioni, vedere [Varianza nelle interfacce generiche (C#)](./variance-in-generic-interfaces.md) e [Varianza nei delegati (C#)](./variance-in-delegates.md).  
+ In .NET Framework 4 e versioni successive, C# supporta la covarianza e la controvarianza nelle interfacce e nei delegati generici e consente la conversione implicita di parametri di tipo generico. Per altre informazioni, vedere [Varianza nelle interfacce generiche (C#)](./variance-in-generic-interfaces.md) e [Varianza nei delegati (C#)](./variance-in-delegates.md).  
   
  L'esempio di codice seguente illustra la conversione implicita del riferimento per le interfacce generiche.  
   

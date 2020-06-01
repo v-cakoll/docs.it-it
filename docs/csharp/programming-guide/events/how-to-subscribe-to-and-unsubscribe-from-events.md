@@ -1,19 +1,19 @@
 ---
-title: Come sottoscrivere e annullare la sottoscrizione agli eventi - Guida per programmatori C
+title: Come sottoscrivere e annullare la sottoscrizione di eventi-Guida per programmatori C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 0a9e2cc64da56c376445efce32e8da36ba9b6cdc
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d917ea097cf9253a65c1907efdca71a640df9497
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738227"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240668"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Come sottoscrivere e annullare la sottoscrizione agli eventi (Guida per programmatori C
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Come sottoscrivere e annullare la sottoscrizione di eventi (Guida per programmatori C#)
 Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere codice personalizzato che viene chiamato quando viene generato tale evento. È ad esempio possibile sottoscrivere l'evento `click` di un pulsante perché l'applicazione esegua un'operazione utile quando l'utente fa clic sul pulsante in questione.  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Per sottoscrivere gli eventi usando l'IDE di Visual Studio  
@@ -57,7 +57,7 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
-     È anche possibile usare [un'espressione lambda](../statements-expressions-operators/lambda-expressions.md) per specificare un gestore eventi:You can also use a lambda expression to specify an event handler:
+     È anche possibile usare un' [espressione lambda](../statements-expressions-operators/lambda-expressions.md) per specificare un gestore eventi:
   
     ```csharp
     public Form1()  
@@ -101,6 +101,6 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
 
 - [Events](./index.md)
 - [event](../../language-reference/keywords/event.md)
-- [Come pubblicare eventi conformi alle linee guida di .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
-- [- e - - operatori](../../language-reference/operators/subtraction-operator.md)
+- [Come pubblicare eventi conformi alle linee guida di .NET](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [operatori-and-=](../../language-reference/operators/subtraction-operator.md)
 - [Operatori + e +=](../../language-reference/operators/addition-operator.md)

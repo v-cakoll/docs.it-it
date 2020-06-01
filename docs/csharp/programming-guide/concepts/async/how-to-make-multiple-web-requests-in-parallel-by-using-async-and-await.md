@@ -1,22 +1,22 @@
 ---
-title: Come effettuare più richieste Web in parallelo utilizzando async e await (C
+title: Come eseguire più richieste Web in parallelo tramite Async e await (C#)
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 9f7420113d4af83d7d057b772af307bd8d4bcc00
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0cfc1d6d1d59dc74fcf5990abb0a9d980a83d7b0
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169949"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241799"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Come effettuare più richieste Web in parallelo utilizzando async e await (C
-In un metodo asincrono le attività vengono avviate al momento della creazione. L'operatore [await](../../../language-reference/operators/await.md) viene applicato all'attività in un punto del metodo in cui è impossibile continuare l'elaborazione finché l'attività non è terminata. Spesso un'attività viene messa in attesa al momento della creazione, come illustrato nell'esempio seguente.  
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Come eseguire più richieste Web in parallelo tramite Async e await (C#)
+In un metodo asincrono, le attività vengono avviate al momento della creazione. L'operatore [await](../../../language-reference/operators/await.md) viene applicato all'attività nel punto del metodo in cui l'elaborazione non può continuare finché l'attività non viene completata. Spesso un'attività viene attesa non appena viene creata, come illustrato nell'esempio seguente.  
   
 ```csharp  
 var result = await someWebAccessMethodAsync(url);  
 ```  
   
- Tuttavia, è possibile separare la creazione dalla messa in attesa dell'attività se il programma ha altro lavoro da eseguire che non dipende dal completamento dell'attività.  
+ Tuttavia, è possibile separare la creazione dell'attività in attesa dell'attività se il programma ha altro lavoro da eseguire che non dipende dal completamento dell'attività.  
   
 ```csharp  
 // The following line creates and starts the task.  
@@ -32,12 +32,12 @@ var result = await myTask;
   
  Tra l'avvio di un'attività e la messa in attesa, è possibile avviare altre attività. Le attività aggiuntive vengono eseguite in modo implicito in parallelo, ma non vengono creati thread aggiuntivi.  
   
- Il programma seguente avvia tre download Web asincroni e quindi li mette in attesa nell'ordine in cui vengono chiamati. Si noti che, quando si esegue il programma, non sempre le attività finiscono nell'ordine in cui sono state create e messe in attesa. Vengono avviate al momento della creazione ed è possibile che una o più di una finiscano prima che il metodo raggiunga le espressioni await.  
+ Il programma seguente avvia tre download asincroni Web e li attende nell'ordine in cui sono chiamati. Si noti che quando si esegue il programma, le attività non vengono sempre completate nell'ordine in cui sono state create e attese. Iniziano a essere eseguiti quando vengono creati e una o più attività potrebbero terminare prima che il metodo raggiunga le espressioni await.  
   
 > [!NOTE]
 > Per completare il progetto, è necessario che nel computer siano installati Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive.  
   
- Per un altro esempio in cui vengono avviate più attività contemporaneamente, vedere [Come estendere la procedura dettagliata asincrona utilizzando Task.WhenAll (C )](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
+ Per un altro esempio in cui vengono avviate più attività contemporaneamente, vedere [come estendere la procedura dettagliata asincrona tramite Task. WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
   
  È possibile scaricare il codice per l'esempio da [Developer Code Samples](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) (Esempi di codice per sviluppatori).  
   
@@ -136,7 +136,7 @@ var result = await myTask;
   
 5. Premere F5 per eseguire il programma e quindi scegliere il pulsante **Avvia**.  
   
-     Eseguire il programma più volte per verificare che le tre attività non vengano completate sempre nello stesso ordine e che l'ordine in cui vengono completate non è necessariamente l'ordine in cui sono state create e messe in attesa.  
+     Eseguire il programma più volte per verificare che le tre attività non finiscano sempre nello stesso ordine e che l'ordine in cui vengono completate non sia necessariamente l'ordine in cui sono state create e attese.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente contiene l'esempio completo.  
@@ -228,4 +228,4 @@ namespace AsyncExample_MultipleTasks
 
 - [Procedura dettagliata: accesso al Web tramite async e await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programmazione asincrona con async e await (C#)](./index.md)
-- [Come estendere la procedura dettagliata asincrona utilizzando Task.WhenAll (C )How to extend the async walkthrough by using Task.WhenAll (C](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Come estendere la procedura dettagliata asincrona tramite Task. WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

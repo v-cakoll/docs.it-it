@@ -2,12 +2,12 @@
 title: Eseguire un'iterazione sulle raccolte in C#
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: aceedd11466c75cedad3c67224c3a5595b4cabfa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 15b77fd11c0ff606119425ec7aae8e7127315e82
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626270"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240694"
 ---
 # <a name="iterators-c"></a>Iteratori (C#)
 
@@ -324,11 +324,11 @@ public class Stack<T> : IEnumerable<T>
 
 Un iteratore può verificarsi come metodo o funzione di accesso `get`. Un iteratore non può verificarsi in un evento, in un costruttore di istanze, in un costruttore statico o in un finalizzatore statico.
 
-Deve esistere una conversione implicita `yield return` dal tipo di `IEnumerable<T>` espressione nell'istruzione all'argomento di tipo per l'oggetto restituito dall'iteratore.
+Una conversione implicita deve esistere dal tipo di espressione nell' `yield return` istruzione all'argomento tipo per l'oggetto `IEnumerable<T>` restituito dall'iteratore.
 
 In C# un metodo iteratore non può avere parametri `in`, `ref` o `out`.
 
-Nel linguaggio `yield` C, non è una parola riservata e `return` `break` ha un significato speciale solo quando viene usata prima di una parola chiave o .
+In C#, `yield` non è una parola riservata e ha un significato speciale solo quando viene usata prima di `return` una `break` parola chiave o.
 
 ## <a name="technical-implementation"></a>Implementazione tecnica
 
@@ -350,7 +350,7 @@ Gli iteratori consentono di mantenere la semplicità di un ciclo `foreach` quand
 
 - Modificare la sequenza di elenco dopo la prima iterazione del ciclo `foreach`.
 
-- Evitare il caricamento completo di un elenco di grandi dimensioni prima della prima iterazione di un ciclo `foreach`. Un esempio è un'operazione di recupero di paging per caricare un batch di righe della tabella. Un altro esempio è il metodo <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, che implementa gli iteratori all'interno di .NET Framework.
+- Evitare il caricamento completo di un elenco di grandi dimensioni prima della prima iterazione di un ciclo `foreach`. Un esempio è un'operazione di recupero di paging per caricare un batch di righe della tabella. Un altro esempio è il <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> metodo, che implementa gli iteratori in .NET.
 
 - Incapsulare la generazione dell'elenco nell'iteratore. Nel metodo iteratore è possibile compilare l'elenco e restituire quindi ogni risultato in un ciclo.
 

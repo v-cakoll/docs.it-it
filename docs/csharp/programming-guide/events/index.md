@@ -6,17 +6,17 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 183f53a579bdd9f70deb16ca9157c377fa3aff3f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e15c3d124b4d1c30e2f9bb9f44b40e25b6a72346
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75712312"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240721"
 ---
 # <a name="events-c-programming-guide"></a>Eventi (Guida per programmatori C#)
-Tramite gli eventi, una [classe](../../language-reference/keywords/class.md) o un oggetto è in grado di segnalare ad altre classi o oggetti una situazione di interesse. La classe che invia (o *genera)* l'evento viene chiamato *editore* e le classi che ricevono (o *gestiscono*) l'evento sono chiamate *sottoscrittori*.  
+Tramite gli eventi, una [classe](../../language-reference/keywords/class.md) o un oggetto è in grado di segnalare ad altre classi o oggetti una situazione di interesse. La classe che invia (o *genera*) l'evento viene chiamata *server di pubblicazione* e le classi che ricevono (o *gestiscono*) l'evento sono chiamate *sottoscrittori*.  
   
-In un'applicazione C# Web o Windows Form tipica si sottoscrivono eventi generati da controlli quali pulsanti e caselle di riepilogo. È possibile usare l'ambiente di sviluppo integrato (IDE) di Visual C# per cercare gli eventi pubblicati da un controllo e selezionare quelli che si vuole gestire. L'IDE consente di aggiungere automaticamente un metodo vuoto del gestore eventi e il codice per sottoscrivere l'evento. Per ulteriori informazioni, vedere [Come sottoscrivere e annullare la sottoscrizione agli eventi](./how-to-subscribe-to-and-unsubscribe-from-events.md).
+In un'applicazione C# Web o Windows Form tipica si sottoscrivono eventi generati da controlli quali pulsanti e caselle di riepilogo. È possibile usare l'ambiente di sviluppo integrato (IDE) di Visual C# per cercare gli eventi pubblicati da un controllo e selezionare quelli che si vuole gestire. L'IDE consente di aggiungere automaticamente un metodo vuoto del gestore eventi e il codice per sottoscrivere l'evento. Per ulteriori informazioni, vedere [come sottoscrivere e annullare la sottoscrizione di eventi](./how-to-subscribe-to-and-unsubscribe-from-events.md).
   
 ## <a name="events-overview"></a>Cenni preliminari sugli eventi  
  Di seguito sono riportate le proprietà degli eventi:  
@@ -38,7 +38,7 @@ In un'applicazione C# Web o Windows Form tipica si sottoscrivono eventi generati
   
 - [Come eseguire e annullare la sottoscrizione a eventi](./how-to-subscribe-to-and-unsubscribe-from-events.md)
 
-- [Come pubblicare eventi conformi alle linee guida di .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [Come pubblicare eventi conformi alle linee guida di .NET](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 
 - [Come generare eventi di classe base nelle classi derivate](./how-to-raise-base-class-events-in-derived-classes.md)
 
@@ -60,4 +60,4 @@ Per altre informazioni, vedere [Eventi](~/_csharplang/spec/classes.md#events) ne
 - <xref:System.EventHandler>
 - [Guida per programmatori C#](../index.md)
 - [Delegati](../delegates/index.md)
-- [Creazione di gestori eventi in Windows Forms](../../../framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [Creazione di gestori eventi in Windows Form](../../../framework/winforms/creating-event-handlers-in-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Eseguire il debug di un'applicazione console .NET Core con Visual Studio Code
 description: Informazioni su come eseguire il debug di un'app console .NET Core con Visual Studio Code.
 ms.date: 05/26/2020
-ms.openlocfilehash: eaeb97f54442006d2f0e29483a68dc3de89b5778
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 82b2798397d702aa2a50c04bf6e4d569b97e3666
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202589"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241513"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Esercitazione: eseguire il debug di un'applicazione console .NET Core usando Visual Studio Code
 
@@ -29,7 +29,13 @@ Nella configurazione di debug, un programma viene compilato con informazioni di 
 
 Un punto di interruzione interrompe temporaneamente l'esecuzione dell'applicazione *prima* che venga eseguita la riga con il punto di interruzione.
 
-1. In *Program.cs*, impostare un punto di *interruzione* sulla riga in cui vengono visualizzati il nome, la data e l'ora facendo clic sul margine sinistro della finestra del codice. Il margine sinistro è a sinistra dei numeri di riga. Un altro modo per impostare un punto di interruzione consiste nel posizionare il cursore nella riga di codice e quindi premere <kbd>F9</kbd>.
+1. Aprire Visual Studio Code.
+
+1. Aprire la cartella del progetto *HelloWorld* creata in [creare un'applicazione console .net core in Visual Studio Code](with-visual-studio-code.md).
+
+1. Aprire il file *Program.cs* .
+
+1. Impostare un punto di *interruzione* nella riga in cui vengono visualizzati il nome, la data e l'ora facendo clic sul margine sinistro della finestra del codice. Il margine sinistro è a sinistra dei numeri di riga. Un altro modo per impostare un punto di interruzione consiste nel posizionare il cursore nella riga di codice e quindi premere <kbd>F9</kbd>.
 
    Come illustrato nell'immagine seguente, Visual Studio Code indica la riga in cui è impostato il punto di interruzione visualizzando un punto rosso nel margine sinistro.
 
@@ -215,10 +221,7 @@ dotnet run --configuration Release
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In questa esercitazione sono stati usati Visual Studio Code strumenti di debug. Per informazioni su come pubblicare una versione distribuibile dell'app, vedere [pubblicare l'app](cli-create-console-app.md#publish-your-app).
-
-<!--In the next tutorial, you publish a deployable version of the app.
+In questa esercitazione sono stati usati Visual Studio Code strumenti di debug. Nell'esercitazione successiva si pubblica una versione distribuibile dell'app.
 
 > [!div class="nextstepaction"]
-> [Publish a .NET Core console application with Visual Studio Code](publishing-with-visual-studio-code.md)
--->
+> [Pubblicare un'applicazione console .NET Core con Visual Studio Code](publishing-with-visual-studio-code.md)

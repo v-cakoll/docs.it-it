@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 7add512b262afbabe996f752c083566a2c394dfd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f5e355d66d9b022a037d53e1241e76282852888e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705431"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241461"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Classi statiche e membri di classi statiche (Guida per programmatori C#)
 
@@ -23,7 +23,7 @@ Una classe [statica](../../language-reference/keywords/static.md) corrisponde fo
 UtilityClass.MethodA();  
 ```  
   
- Una classe statica può essere usata come un contenitore adatto per insiemi di metodi che funzionano solo sui parametri di input e non devono ottenere o impostare campi di istanza interni. Ad esempio, nella libreria di classi .NET Framework, la classe statica <xref:System.Math?displayProperty=nameWithType> contiene diversi metodi che eseguono operazioni matematiche, senza alcun requisito per archiviare o recuperare dati univoci per una particolare istanza della classe <xref:System.Math>. In altre parole, si applicano i membri della classe specificando il nome della classe e il nome del metodo, come illustrato nell'esempio seguente.  
+ Una classe statica può essere usata come un contenitore adatto per insiemi di metodi che funzionano solo sui parametri di input e non devono ottenere o impostare campi di istanza interni. Nella libreria di classi .NET, ad esempio, la <xref:System.Math?displayProperty=nameWithType> classe statica contiene metodi che eseguono operazioni matematiche, senza alcun requisito per archiviare o recuperare dati univoci per una particolare istanza della <xref:System.Math> classe. In altre parole, si applicano i membri della classe specificando il nome della classe e il nome del metodo, come illustrato nell'esempio seguente.  
   
 ```csharp  
 double dub = -3.14;  
@@ -37,7 +37,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 // 3  
 ```  
   
- Come per tutti i tipi di classe, le informazioni sul tipo per una classe statica vengono caricate da Common Language Runtime (CLR) di .NET Framework quando viene caricato il programma che fa riferimento alla classe. Il programma non può specificare esattamente quando la classe verrà caricata. Tuttavia, è garantito che la classe sarà caricata, che i suoi campi saranno inizializzati e che il costruttore statico sarà chiamato prima che il programma faccia riferimento per la prima volta alla classe stessa. Un costruttore statico viene chiamato solo un volta e una classe statica rimane in memoria per la durata del dominio dell'applicazione in cui risiede il programma.  
+ Come nel caso di tutti i tipi di classe, le informazioni sul tipo per una classe statica vengono caricate dal runtime .NET quando viene caricato il programma che fa riferimento alla classe. Il programma non può specificare esattamente quando la classe verrà caricata. Tuttavia, è garantito che la classe sarà caricata, che i suoi campi saranno inizializzati e che il costruttore statico sarà chiamato prima che il programma faccia riferimento per la prima volta alla classe stessa. Un costruttore statico viene chiamato solo un volta e una classe statica rimane in memoria per la durata del dominio dell'applicazione in cui risiede il programma.  
   
 > [!NOTE]
 > Per creare una classe non statica che consente la creazione di un'unica istanza di se stessa, vedere [Implementing Singleton in C#](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29) (Implementare Singleton in C#).  
@@ -91,8 +91,8 @@ Per altre informazioni, vedere [Classi statiche](~/_csharplang/spec/classes.md#s
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
-- [Statico](../../language-reference/keywords/static.md)
+- [static](../../language-reference/keywords/static.md)
 - [Classi](./classes.md)
-- [Classe](../../language-reference/keywords/class.md)
+- [classe](../../language-reference/keywords/class.md)
 - [Costruttori statici](./static-constructors.md)
-- [Costruttori di istanze](./instance-constructors.md)
+- [Costruttori di istanza](./instance-constructors.md)

@@ -1,19 +1,19 @@
 ---
-title: Come determinare se una stringa rappresenta un valore numerico - Guida per programmatori C
+title: Come determinare se una stringa rappresenta un valore numerico (Guida per programmatori C#)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - numeric strings [C#]
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: 15a21a6298f8f0a57e0189554246202b220dd259
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 37437460ea4c6ca216f2844d63af3688ccc984c6
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157065"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241721"
 ---
-# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Come determinare se una stringa rappresenta un valore numerico (Guida per programmatori C
+# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Come determinare se una stringa rappresenta un valore numerico (Guida per programmatori C#)
 Per determinare se una stringa è una rappresentazione valida di un tipo numerico specificato, usare il metodo statico `TryParse` che viene implementato da tutti i tipi numerici primitivi e anche da tipi quali <xref:System.DateTime> e <xref:System.Net.IPAddress>. L'esempio seguente illustra come determinare se "108" è un tipo [int](../../language-reference/builtin-types/integral-numeric-types.md) valido.  
   
 ```csharp  
@@ -35,7 +35,7 @@ bool result = int.TryParse(s, out i); //i now = 108
 ## <a name="robust-programming"></a>Programmazione efficiente  
  I tipi numerici primitivi implementano anche il metodo statico `Parse`, che genera un'eccezione se la stringa non è un numero valido. Il metodo `TryParse` è in genere più efficiente in quanto restituisce false se il numero non è valido.  
   
-## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
+## <a name="net-security"></a>Sicurezza .NET  
  Usare sempre i metodi `TryParse` o `Parse` per convalidare l'input dell'utente da controlli, come caselle di testo e caselle combinate.  
   
 ## <a name="see-also"></a>Vedere anche

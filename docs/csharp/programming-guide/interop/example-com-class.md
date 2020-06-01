@@ -5,12 +5,12 @@ helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: 6af85d0314a44acbde0996cecbe6dad82cdcc8db
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6051ff91d13a3cb3ca6229d813db34dd6a9f3af6
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712078"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241851"
 ---
 # <a name="example-com-class-c-programming-guide"></a>Esempio di classe COM (Guida per programmatori C#)
 Di seguito è riportato un esempio di una classe esposta come oggetto COM. Dopo aver inserito questo codice in un file con estensione cs e averlo aggiunto al progetto, impostare la proprietà **Registra per interoperabilità COM** su **True**. Per altre informazioni, vedere [Procedura: Registrare un componente per l'interoperabilità COM](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100)).
@@ -25,7 +25,7 @@ Di seguito è riportato un esempio di una classe esposta come oggetto COM. Dopo 
   
 - Gli eventi devono essere dichiarati nell'interfaccia eventi.  
   
- Gli altri membri public della classe non dichiarati in queste interfacce non saranno visibili per COM ma lo saranno per altri oggetti di .NET Framework.  
+ Gli altri membri pubblici della classe che non sono dichiarati in queste interfacce non saranno visibili a COM, ma saranno visibili ad altri oggetti .NET.  
   
  Per esporre le proprietà e i metodi a COM, è necessario dichiararli nell'interfaccia di classe e contrassegnarli con un attributo `DispId`, nonché implementarli nella classe stessa. L'ordine con cui i membri vengono dichiarati nell'interfaccia è quello usato per la vtable COM.  
   
@@ -40,4 +40,4 @@ Di seguito è riportato un esempio di una classe esposta come oggetto COM. Dopo 
 
 - [Guida per programmatori C#](../index.md)
 - [Interoperabilità](./index.md)
-- [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp) (Pagina Compilazione, Progettazione progetti (C#))
+- [Pagina Compilazione, Progettazione progetti (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)

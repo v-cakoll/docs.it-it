@@ -5,16 +5,16 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: d39e4c4dd180ba35b7555d61211a34d696b04f50
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 842f73b7af9671157495df961f5db22702ae897e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399826"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240707"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Variabili locali tipizzate in modo implicito - Guida per programmatori C#
 
-Le variabili locali possono essere dichiarate senza specificare un tipo esplicito. La parola chiave `var` indica al compilatore di dedurre il tipo della variabile dall'espressione sul lato destro dell'istruzione di inizializzazione. Il tipo dedotto può essere un tipo predefinito, un tipo anonimo, un tipo definito dall'utente o un tipo definito nella libreria di classi .NET Framework. Per altre informazioni su come inizializzare matrici con `var`, vedere [Matrici tipizzate in modo implicito](../arrays/implicitly-typed-arrays.md).
+Le variabili locali possono essere dichiarate senza specificare un tipo esplicito. La parola chiave `var` indica al compilatore di dedurre il tipo della variabile dall'espressione sul lato destro dell'istruzione di inizializzazione. Il tipo derivato può essere un tipo incorporato, un tipo anonimo, un tipo definito dall'utente o un tipo definito nella libreria di classi .NET. Per altre informazioni su come inizializzare matrici con `var`, vedere [Matrici tipizzate in modo implicito](../arrays/implicitly-typed-arrays.md).
 
 Gli esempi seguenti illustrano svariati modi in cui le variabili locali possono essere dichiarate con `var`:
 
@@ -44,17 +44,17 @@ Gli esempi seguenti illustrano svariati modi in cui le variabili locali possono 
     using (var file = new StreamReader("C:\\myfile.txt")) {...}
     ```
 
-Per ulteriori informazioni, vedere [Come utilizzare matrici e variabili locali tipizzate in modo implicito in un'espressione](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)di query.
+Per ulteriori informazioni, vedere [come utilizzare variabili e matrici locali tipizzate in modo implicito in un'espressione di query](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
 
 ## <a name="var-and-anonymous-types"></a>var e tipi anonimi
 
-In molti casi l'uso di `var` è facoltativo ed è solo una convenzione sintattica. Se però una variabile viene inizializzata con un tipo anonimo e si deve accedere alle proprietà dell'oggetto in un momento successivo, è necessario dichiarare la variabile come `var`. Si tratta di uno scenario comune nelle espressioni di query LINQLINQ. Per ulteriori informazioni, vedere [Tipi anonimi](anonymous-types.md).
+In molti casi l'uso di `var` è facoltativo ed è solo una convenzione sintattica. Se però una variabile viene inizializzata con un tipo anonimo e si deve accedere alle proprietà dell'oggetto in un momento successivo, è necessario dichiarare la variabile come `var`. Si tratta di uno scenario comune nelle espressioni di query LINQ. Per ulteriori informazioni, vedere [tipi anonimi](anonymous-types.md).
 
 Dal punto di vista del codice sorgente, un tipo anonimo non ha nome. Se una variabile di query è stata inizializzata con `var`, l'unico modo per accedere alle proprietà nella sequenza di oggetti restituita è usare `var` come tipo della variabile di iterazione nell'istruzione `foreach`.
 
 [!code-csharp[csProgGuideLINQ#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#44)]
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Alle dichiarazioni di variabili tipizzate in modo implicito si applicano le restrizioni seguenti:
 
@@ -62,7 +62,7 @@ Alle dichiarazioni di variabili tipizzate in modo implicito si applicano le rest
 
 - Non è possibile usare `var` nei campi nell'ambito della classe.
 
-- Le variabili dichiarate tramite `var` non possono essere usate nell'espressione di inizializzazione. In altre parole, questa `int i = (i = 20);` espressione è valida: ma questa espressione genera un errore in fase di compilazione:In other words, this expression is legal: but this expression produces a compile-time error:`var i = (i = 20);`
+- Le variabili dichiarate tramite `var` non possono essere usate nell'espressione di inizializzazione. In altre parole, questa espressione è valida: `int i = (i = 20);` ma questa espressione genera un errore in fase di compilazione:`var i = (i = 20);`
 
 - Non è possibile inizializzare più variabili tipizzate in modo implicito nella stessa istruzione.
 
@@ -88,18 +88,18 @@ La parola chiave `var` può essere utile anche quando il tipo specifico della va
 
 [!code-csharp[cscsrefQueryKeywords#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#13)]
 
-L'uso `var` di consente di semplificare il codice, ma il relativo utilizzo deve essere limitato ai casi in cui è necessario o quando rende il codice più facile da leggere. Per altre informazioni su `var` quando usare correttamente, vedere la sezione [Variabili locali tipizzate](../inside-a-program/coding-conventions.md#implicitly-typed-local-variables) in modo implicito nell'articolo Linee guida per la codifica in C.
+L'uso di `var` consente di semplificare il codice, ma il suo uso dovrebbe essere limitato ai casi in cui è necessario o quando rende il codice più facile da leggere. Per altre informazioni su quando usare `var` correttamente, vedere la sezione [variabili locali tipizzate in modo implicito](../inside-a-program/coding-conventions.md#implicitly-typed-local-variables) nell'articolo linee guida per il codice C#.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida di riferimento a C](../../language-reference/index.md)
+- [Riferimenti per C#](../../language-reference/index.md)
 - [Matrici tipizzate in modo implicito](../arrays/implicitly-typed-arrays.md)
-- [Come utilizzare matrici e variabili locali tipizzate in modo implicito in un'espressione di query](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
+- [Come usare variabili e matrici locali tipizzate in modo implicito in un'espressione di query](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
 - [Tipi anonimi](anonymous-types.md)
-- [Inizializzatori di oggetto e di raccoltaObject and Collection Initializers](object-and-collection-initializers.md)
-- [Var](../../language-reference/keywords/var.md)
+- [Inizializzatori di oggetto e di raccolta](object-and-collection-initializers.md)
+- [var](../../language-reference/keywords/var.md)
 - [LINQ in C#](../../linq/index.md)
 - [LINQ (Language-Integrated Query)](../../linq/index.md)
-- [Per](../../language-reference/keywords/for.md)
+- [for](../../language-reference/keywords/for.md)
 - [foreach, in](../../language-reference/keywords/foreach-in.md)
 - [Istruzione using](../../language-reference/keywords/using-statement.md)

@@ -1,32 +1,32 @@
 ---
-title: Come pubblicare eventi conformi alle linee guida per .NET Framework-guida per programmatori C#
+title: Pubblicare eventi conformi alle linee guida di .NET-Guida per programmatori C#
 ms.date: 05/26/2020
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 137e52b80703491a4528a3eddc7fa12f9dce6f52
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: df2f643f867b93b74d04d8fbd673df545c28938e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144799"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240746"
 ---
-# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Come pubblicare eventi conformi alle linee guida di .NET Framework (Guida per programmatori C#)
+# <a name="how-to-publish-events-that-conform-to-net-guidelines-c-programming-guide"></a>Come pubblicare eventi conformi alle linee guida di .NET (Guida per programmatori C#)
 
-La procedura seguente illustra come aggiungere eventi che seguono lo schema .NET Framework standard a classi e struct. Tutti gli eventi della libreria di classi .NET Framework si basano sul delegato <xref:System.EventHandler> che è definito nel modo seguente:
+La procedura seguente illustra come aggiungere eventi che seguono il modello .NET standard alle classi e agli struct. Tutti gli eventi della libreria di classi .NET Framework si basano sul delegato <xref:System.EventHandler> che è definito nel modo seguente:
 
 ```csharp
 public delegate void EventHandler(object sender, EventArgs e);
 ```
 
 > [!NOTE]
-> .NET Framework 2.0 introduce una versione generica di questo delegato, <xref:System.EventHandler%601>. Negli esempi seguenti viene illustrato l'uso di entrambe le versioni.
+> .NET Framework 2,0 introduce una versione generica di questo delegato <xref:System.EventHandler%601> . Negli esempi seguenti viene illustrato l'uso di entrambe le versioni.
 
-Anche se gli eventi nelle classi che vengono definite possono essere basati su qualsiasi tipo di delegato valido, inclusi i delegati che restituiscono un valore, è in genere consigliabile basare gli eventi sullo schema .NET Framework usando <xref:System.EventHandler>, come illustrato nell'esempio riportato di seguito.
+Anche se gli eventi nelle classi definite possono essere basati su qualsiasi tipo di delegato valido, anche delegati che restituiscono un valore, è in genere consigliabile basare gli eventi sul modello .NET tramite <xref:System.EventHandler> , come illustrato nell'esempio seguente.
 
 Il nome `EventHandler` può causare un po' di confusione perché non gestisce effettivamente l'evento. <xref:System.EventHandler>, E Generic <xref:System.EventHandler%601> sono tipi delegati. Un metodo o un'espressione lambda la cui firma corrisponde alla definizione del delegato è il *gestore eventi* e verrà richiamato quando viene generato l'evento.
 
-### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a>Per pubblicare eventi basati sul modello EventHandler
+## <a name="publish-events-based-on-the-eventhandler-pattern"></a>Pubblicare eventi in base al modello EventHandler
 
 1. Ignorare questo passaggio e andare al passaggio 3a se non è necessario inviare dati personalizzati con l'evento. Dichiarare la classe per i dati personalizzati in un ambito visibile per le classi del server di pubblicazione e del Sottoscrittore. Aggiungere i membri necessari per contenere i dati di evento personalizzati. In questo esempio viene restituita una semplice stringa.
 
@@ -74,7 +74,7 @@ L'esempio seguente illustra i passaggi precedenti usando una classe EventArgs pe
 
 [!code-csharp[csProgGuideEvents#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#2)]
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Delegate>
 - [Guida per programmatori C#](../index.md)

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: fc816123134995b753beda0a6f281133d6ddd691
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 5db2797870b6c2e1998f17f1d8e4df8aa3f95c9e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506818"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241409"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metodi di estensione (Guida per programmatori C#)
 
 I metodi di estensione consentono di "aggiungere" metodi ai tipi esistenti senza creare un nuovo tipo derivato, ricompilare o modificare in altro modo il tipo originale. I metodi di estensione sono metodi statici, ma vengono chiamati come se fossero metodi di istanza sul tipo esteso. Per il codice client scritto in C#, F # e Visual Basic, non esiste alcuna differenza evidente tra la chiamata di un metodo di estensione e i metodi definiti in un tipo.
 
-I metodi di estensione più comuni sono gli operatori di query standard LINQ che aggiungono la funzionalità <xref:System.Collections.IEnumerable?displayProperty=nameWithType> di <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> query ai tipi e esistenti. Per utilizzare gli operatori query standard, inserirli innanzitutto nell'ambito con una direttiva `using System.Linq`. In questo modo qualsiasi tipo che implementa <xref:System.Collections.Generic.IEnumerable%601> avrà apparentemente metodi di istanza quali <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>e così via. È possibile visualizzare questi metodi aggiuntivi con la funzionalità di completamento istruzioni di IntelliSense quando si digita "punto" dopo un'istanza di un tipo <xref:System.Collections.Generic.IEnumerable%601>, ad esempio <xref:System.Collections.Generic.List%601> o <xref:System.Array>.
+I metodi di estensione più comuni sono gli operatori di query standard LINQ che aggiungono la funzionalità di query ai <xref:System.Collections.IEnumerable?displayProperty=nameWithType> tipi e esistenti <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> . Per utilizzare gli operatori query standard, inserirli innanzitutto nell'ambito con una direttiva `using System.Linq`. In questo modo qualsiasi tipo che implementa <xref:System.Collections.Generic.IEnumerable%601> avrà apparentemente metodi di istanza quali <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>e così via. È possibile visualizzare questi metodi aggiuntivi con la funzionalità di completamento istruzioni di IntelliSense quando si digita "punto" dopo un'istanza di un tipo <xref:System.Collections.Generic.IEnumerable%601>, ad esempio <xref:System.Collections.Generic.List%601> o <xref:System.Array>.
 
 ### <a name="orderby-example"></a>Esempio di OrderBy
 
@@ -54,7 +54,7 @@ In generale, probabilmente si chiamerà metodi di estensione molto più spesso r
 using System.Linq;
 ```
 
-Potrebbe anche essere necessario aggiungere un riferimento a System. Core. dll. Si noterà che gli operatori di query standard vengono ora visualizzati in IntelliSense come metodi aggiuntivi disponibili per <xref:System.Collections.Generic.IEnumerable%601> la maggior parte dei tipi.
+Potrebbe anche essere necessario aggiungere un riferimento a System. Core. dll. Si noterà che gli operatori di query standard vengono ora visualizzati in IntelliSense come metodi aggiuntivi disponibili per la maggior parte dei <xref:System.Collections.Generic.IEnumerable%601> tipi.
 
 ## <a name="binding-extension-methods-at-compile-time"></a>Associazione di metodi di estensione in fase di compilazione
 
@@ -74,7 +74,7 @@ Quando il compilatore non riesce a trovare un metodo di istanza con una firma co
 
 ### <a name="collection-functionality"></a>Funzionalità di raccolta
 
-In passato, era comune creare "classi di raccolta" che implementavano l'interfaccia <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> per un determinato tipo e conteneva la funzionalità che agiva sulle raccolte di quel tipo. Anche se non c'è niente di sbagliato nella creazione di questo tipo di oggetto Collection, è possibile ottenere la stessa funzionalità usando un' <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>estensione in. Le estensioni offrono il vantaggio di consentire la chiamata della funzionalità da qualsiasi raccolta, ad esempio <xref:System.Array?displayProperty=nameWithType> o <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> che implementi <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> in tale tipo. Un esempio di questo esempio di utilizzo di una matrice di Int32 è disponibile [in precedenza in questo articolo](#orderby-example).
+In passato, era comune creare "classi di raccolta" che implementavano l' <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> interfaccia per un determinato tipo e conteneva la funzionalità che agiva sulle raccolte di quel tipo. Anche se non c'è niente di sbagliato nella creazione di questo tipo di oggetto Collection, è possibile ottenere la stessa funzionalità usando un'estensione in <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> . Le estensioni offrono il vantaggio di consentire la chiamata della funzionalità da qualsiasi raccolta, ad esempio <xref:System.Array?displayProperty=nameWithType> o <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> che implementi <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> in tale tipo. Un esempio di questo esempio di utilizzo di una matrice di Int32 è disponibile [in precedenza in questo articolo](#orderby-example).
 
 ### <a name="layer-specific-functionality"></a>Funzionalità specifiche del livello
 
@@ -97,9 +97,9 @@ static class DomainEntityExtensions
 
 ### <a name="extending-predefined-types"></a>Estensione di tipi predefiniti
 
-Anziché creare nuovi oggetti quando è necessario creare funzionalità riutilizzabili, è spesso possibile estendere un tipo esistente, ad esempio un .NET Framework o un tipo CLR. Ad esempio, se non si usano i metodi di estensione, è possibile creare `Engine` una `Query` classe o per eseguire il lavoro di esecuzione di una query su un SQL Server che può essere chiamato da più posizioni nel codice. Tuttavia, è possibile estendere la <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> classe usando i metodi di estensione per eseguire la query da qualsiasi luogo in cui è presente una connessione a una SQL Server. Altri esempi potrebbero consistere nell'aggiungere funzionalità comuni alla <xref:System.String?displayProperty=nameWithType> classe, estendere le funzionalità di elaborazione dei dati <xref:System.IO.File?displayProperty=nameWithType> degli <xref:System.IO.Stream?displayProperty=nameWithType> oggetti e e <xref:System.Exception?displayProperty=nameWithType> gli oggetti per una specifica funzionalità di gestione degli errori. Questi tipi di casi d'uso sono limitati solo dalla propria immaginazione e dal buon senso.
+Anziché creare nuovi oggetti quando è necessario creare funzionalità riutilizzabili, è spesso possibile estendere un tipo esistente, ad esempio un tipo .NET o CLR. Ad esempio, se non si usano i metodi di estensione, è possibile creare `Engine` una `Query` classe o per eseguire il lavoro di esecuzione di una query su un SQL Server che può essere chiamato da più posizioni nel codice. Tuttavia, è possibile estendere la <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> classe usando i metodi di estensione per eseguire la query da qualsiasi luogo in cui è presente una connessione a una SQL Server. Altri esempi potrebbero consistere nell'aggiungere funzionalità comuni alla <xref:System.String?displayProperty=nameWithType> classe, estendere le funzionalità di elaborazione dei dati <xref:System.IO.File?displayProperty=nameWithType> degli <xref:System.IO.Stream?displayProperty=nameWithType> oggetti e e <xref:System.Exception?displayProperty=nameWithType> gli oggetti per una specifica funzionalità di gestione degli errori. Questi tipi di casi d'uso sono limitati solo dalla propria immaginazione e dal buon senso.
 
-L'estensione dei tipi predefiniti può essere difficile `struct` con i tipi perché vengono passati per valore ai metodi. Ciò significa che vengono apportate modifiche allo struct a una copia dello struct. Queste modifiche non sono visibili quando il metodo di estensione viene chiuso. A partire da C# 7,2, è possibile aggiungere `ref` il modificatore al primo argomento di un metodo di estensione. L'aggiunta `ref` del modificatore indica che il primo argomento viene passato per riferimento. In questo modo è possibile scrivere metodi di estensione che modificano lo stato dello struct esteso.
+L'estensione dei tipi predefiniti può essere difficile con i `struct` tipi perché vengono passati per valore ai metodi. Ciò significa che vengono apportate modifiche allo struct a una copia dello struct. Queste modifiche non sono visibili quando il metodo di estensione viene chiuso. A partire da C# 7,2, è possibile aggiungere il `ref` modificatore al primo argomento di un metodo di estensione. L'aggiunta del `ref` modificatore indica che il primo argomento viene passato per riferimento. In questo modo è possibile scrivere metodi di estensione che modificano lo stato dello struct esteso.
 
 ## <a name="general-guidelines"></a>Linee guida generali
 
@@ -112,16 +112,16 @@ Quando si usa un metodo di estensione per estendere un tipo il cui codice sorgen
 Se si implementano metodi di estensione per un determinato tipo, è importante tenere presente quanto segue:
 
 - Un metodo di estensione non verrà mai chiamato se dispone della stessa firma di un metodo definito nel tipo.
-- I metodi di estensione vengono inseriti nell'ambito al livello dello spazio dei nomi. Se, ad esempio, sono presenti più classi statiche che contengono metodi di estensione in un singolo `Extensions`spazio dei nomi denominato, verranno tutti inseriti nell'ambito `using Extensions;` dalla direttiva.
+- I metodi di estensione vengono inseriti nell'ambito al livello dello spazio dei nomi. Se, ad esempio, sono presenti più classi statiche che contengono metodi di estensione in un singolo spazio dei nomi denominato `Extensions` , verranno tutti inseriti nell'ambito `using Extensions;` dalla direttiva.
 
-Per una libreria di classi implementata, non è necessario utilizzare i metodi di estensione per evitare l'incremento del numero di versione di un assembly. Se si desidera aggiungere funzionalità significative a una libreria per il quale si è proprietari del codice sorgente, è necessario seguire le linee guida standard di .NET Framework per il controllo delle versioni degli assembly. Per altre informazioni, vedere [Controllo delle versioni degli assembly](../../../standard/assembly/versioning.md).
+Per una libreria di classi implementata, non è necessario utilizzare i metodi di estensione per evitare l'incremento del numero di versione di un assembly. Se si desidera aggiungere funzionalità significative a una libreria per la quale si è proprietari del codice sorgente, attenersi alle linee guida di .NET per il controllo delle versioni degli assembly. Per altre informazioni, vedere [Controllo delle versioni degli assembly](../../../standard/assembly/versioning.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
 - [Esempi di programmazione parallela (sono inclusi molti metodi di estensione di esempio)](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)
 - [Espressioni lambda](../statements-expressions-operators/lambda-expressions.md)
-- [Panoramica degli operatori query standard](../concepts/linq/standard-query-operators-overview.md)
+- [Cenni preliminari sugli operatori di query standard](../concepts/linq/standard-query-operators-overview.md)
 - [Regole di conversione per parametri Instance e relativo impatto](https://docs.microsoft.com/archive/blogs/sreekarc/conversion-rules-for-instance-parameters-and-their-impact)
 - [Interoperabilità dei metodi di estensione tra linguaggi](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-interoperability-between-languages)
 - [Metodi di estensione e delegati sottoposti a currying](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-and-curried-delegates)

@@ -2,15 +2,15 @@
 title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: ae4389aa1ce049edc71bff42c38f66fb328ba034
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c488e49283f3e30ea729adf111fd9ca297039838
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75344787"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241565"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
-Il termine "LINQ to Objects" si riferisce all'utilizzo diretto di query LINQ con qualsiasi raccolta <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>, senza l'utilizzo di un'API o un provider LINQ intermedio, come per [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) o [LINQ to XML](./linq-to-xml-overview.md). È possibile usare LINQ per eseguire una query su qualsiasi raccolta enumerabile, ad esempio <xref:System.Collections.Generic.List%601>, <xref:System.Array> o <xref:System.Collections.Generic.Dictionary%602>. La raccolta può essere definita dall'utente o restituita da un'API di .NET Framework.  
+Il termine "LINQ to Objects" si riferisce all'utilizzo diretto di query LINQ con qualsiasi raccolta <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>, senza l'utilizzo di un'API o un provider LINQ intermedio, come per [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) o [LINQ to XML](./linq-to-xml-overview.md). È possibile usare LINQ per eseguire una query su qualsiasi raccolta enumerabile, ad esempio <xref:System.Collections.Generic.List%601>, <xref:System.Array> o <xref:System.Collections.Generic.Dictionary%602>. La raccolta può essere definita dall'utente o può essere restituita da un'API .NET.  
   
  Come concetto di base, LINQ to Objects rappresenta un nuovo approccio alle raccolte. In passato, era necessario scrivere cicli `foreach` complessi che specificavano come recuperare i dati da una raccolta. Con l'approccio LINQ, è possibile scrivere il codice dichiarativo che descrive i dati da recuperare.  
   
@@ -36,10 +36,10 @@ Il termine "LINQ to Objects" si riferisce all'utilizzo diretto di query LINQ con
  [Directory di file e LINQ (C#)](./linq-and-file-directories.md)  
  Viene illustrato come usare LINQ per interagire con i file system. Include anche collegamenti ad argomenti che illustrano questi concetti.  
   
- [Come eseguire una query su un ArrayList con LINQ (C )How to query an ArrayList with LINQ (C](./how-to-query-an-arraylist-with-linq.md)  
+ [Come eseguire una query su un ArrayList con LINQ (C#)](./how-to-query-an-arraylist-with-linq.md)  
  Viene illustrato come eseguire una query su un oggetto ArrayList in C#.  
   
- [Come aggiungere metodi personalizzati per le query LINQ (C )How to add custom methods for LINQ queries (C](./how-to-add-custom-methods-for-linq-queries.md)  
+ [Come aggiungere metodi personalizzati per le query LINQ (C#)](./how-to-add-custom-methods-for-linq-queries.md)  
  Spiega come estendere il set di metodi utilizzabili per le query LINQ aggiungendo metodi di estensione all'interfaccia <xref:System.Collections.Generic.IEnumerable%601>.  
   
  [LINQ (Language-Integrated Query) (C#)](./index.md)  

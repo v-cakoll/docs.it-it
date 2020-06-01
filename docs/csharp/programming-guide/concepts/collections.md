@@ -2,12 +2,12 @@
 title: Raccolte (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 30aa3e34f362f34fc601f90ee61613acd6e4bc68
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: ecab30d50be58f810246e58e637b331d492e4a47
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201126"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241396"
 ---
 # <a name="collections-c"></a>Raccolte (C#)
 
@@ -182,7 +182,7 @@ public class Galaxy
 
 ## <a name="kinds-of-collections"></a>Tipi di raccolte
 
-Molte raccolte comuni vengono fornite da .NET Framework. Ogni tipo di raccolta è progettato per uno scopo specifico.
+Molte raccolte comuni vengono fornite da .NET. Ogni tipo di raccolta è progettato per uno scopo specifico.
 
 In questa sezione sono descritte alcune classi di raccolte comuni:
 
@@ -214,7 +214,7 @@ Per altre informazioni, vedere [Tipi di raccolte comunemente utilizzate](../../.
 
 ### <a name="systemcollectionsconcurrent-classes"></a>Classi System.Collections.Concurrent
 
-In .NET Framework 4 o versioni successive le raccolte dello spazio dei nomi <xref:System.Collections.Concurrent> garantiscono operazioni thread-safe efficienti per accedere agli elementi della raccolta da più thread.
+In .NET Framework 4 e versioni successive, le raccolte nello <xref:System.Collections.Concurrent> spazio dei nomi forniscono operazioni thread-safe efficienti per accedere agli elementi della raccolta da più thread.
 
 Le classi dello spazio dei nomi <xref:System.Collections.Concurrent> devono essere usate in sostituzione dei tipi corrispondenti negli spazi dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType> e <xref:System.Collections?displayProperty=nameWithType> ogni volta che più thread accedono contemporaneamente alla raccolta. Per altre informazioni, vedere [Raccolte thread-safe](../../../standard/collections/thread-safe/index.md) e <xref:System.Collections.Concurrent>.
 
@@ -482,7 +482,7 @@ public class Car : IComparable<Car>
 
 È possibile definire una raccolta implementando l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Collections.IEnumerable>.
 
-Sebbene sia possibile definire una raccolta personalizzata, in genere è preferibile usare le raccolte incluse in .NET Framework, descritte in [Tipi di raccolte](#BKMK_KindsOfCollections) in precedenza in questo argomento.
+Sebbene sia possibile definire una raccolta personalizzata, in genere è preferibile usare invece le raccolte incluse in .NET, descritte nei [tipi di raccolte](#BKMK_KindsOfCollections) precedenti in questo articolo.
 
 L'esempio seguente definisce una classe di raccolte personalizzata denominata `AllColors`. Questa classe implementa l'interfaccia <xref:System.Collections.IEnumerable> che richiede l'implementazione del metodo <xref:System.Collections.IEnumerable.GetEnumerator%2A>.
 

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: dcc73aba738d6296a44c48aad8b66cd6fc7f4a7b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a81ee5ccdc2697ca435d40be27568b651977f96
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77448439"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241591"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Utilizzo di delegati (Guida per programmatori C#)
 
@@ -23,7 +23,7 @@ Un oggetto delegato viene normalmente creato fornendo il nome del metodo di cui 
 
 [!code-csharp[csProgGuideDelegates#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#23)]
 
-Tipi delegati vengono derivati dalla classe <xref:System.Delegate> di.NET Framework. I tipi delegati sono [sealed](../../language-reference/keywords/sealed.md), ovvero non possono essere usati per la derivazione, e non è possibile derivare classi personalizzate da <xref:System.Delegate>. Poiché l'istanza del delegato è un oggetto, può essere passata come parametro o assegnata a una proprietà. In questo modo un metodo può accettare un delegato come parametro e chiamare il delegato in un secondo momento. Questa operazione è nota come callback asincrono ed è un metodo comune per notificare un chiamante al termine di un processo lungo. Quando un delegato viene usato in questo modo, per il codice che usa il delegato non è richiesta alcuna conoscenza dell'implementazione del metodo in uso. La funzionalità è simile all'incapsulamento fornito dalle interfacce.
+I tipi delegati sono derivati dalla <xref:System.Delegate> classe in .NET. I tipi delegati sono [sealed](../../language-reference/keywords/sealed.md), ovvero non possono essere usati per la derivazione, e non è possibile derivare classi personalizzate da <xref:System.Delegate>. Poiché l'istanza del delegato è un oggetto, può essere passata come parametro o assegnata a una proprietà. In questo modo un metodo può accettare un delegato come parametro e chiamare il delegato in un secondo momento. Questa operazione è nota come callback asincrono ed è un metodo comune per notificare un chiamante al termine di un processo lungo. Quando un delegato viene usato in questo modo, per il codice che usa il delegato non è richiesta alcuna conoscenza dell'implementazione del metodo in uso. La funzionalità è simile all'incapsulamento fornito dalle interfacce.
 
 Un altro utilizzo comune dei callback è la definizione di un metodo di confronto personalizzato e il passaggio di tale delegato a un metodo di ordinamento. Consente al codice del chiamante di entrare a far parte dell'algoritmo di ordinamento. Nell'esempio di metodo seguente viene usato il tipo `Del` come parametro:
 
@@ -51,7 +51,7 @@ Un delegato può chiamare più di un metodo, quando viene richiamato. Questo pro
 
 [!code-csharp[csProgGuideDelegates#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#27)]
 
-A questo punto `allMethodsDelegate` contiene tre metodi nel relativo elenco chiamate: `Method1`, `Method2` e `DelegateMethod`. I tre delegati originali, `d1`, `d2` e `d3`, rimangono invariati. Quando si richiama `allMethodsDelegate`, tutti e tre i metodi vengono chiamati nell'ordine. Se il delegato usa parametri per riferimento, il riferimento viene passato in sequenza a ciascuno dei tre metodi a turno e le eventuali modifiche apportate da un solo metodo saranno visibili al metodo successivo. Quando uno dei metodi genera un'eccezione non rilevata all'interno del metodo, tale eccezione viene passata al chiamante del delegato e non verrà chiamato nessun metodo successivo nell'elenco chiamate. Se il delegato ha un valore restituito e/o i parametri out, restituisce il valore restituito e i parametri dell'ultimo metodo richiamato. Per rimuovere un metodo dall'elenco chiamate, utilizzare gli operatori`-` `-=`di assegnazione di [sottrazione o sottrazione](../../language-reference/operators/subtraction-operator.md) ( o ). Ad esempio:
+A questo punto `allMethodsDelegate` contiene tre metodi nel relativo elenco chiamate: `Method1`, `Method2` e `DelegateMethod`. I tre delegati originali, `d1`, `d2` e `d3`, rimangono invariati. Quando si richiama `allMethodsDelegate`, tutti e tre i metodi vengono chiamati nell'ordine. Se il delegato usa parametri per riferimento, il riferimento viene passato in sequenza a ciascuno dei tre metodi a turno e le eventuali modifiche apportate da un solo metodo saranno visibili al metodo successivo. Quando uno dei metodi genera un'eccezione non rilevata all'interno del metodo, tale eccezione viene passata al chiamante del delegato e non verrà chiamato nessun metodo successivo nell'elenco chiamate. Se il delegato ha un valore restituito e/o i parametri out, restituisce il valore restituito e i parametri dell'ultimo metodo richiamato. Per rimuovere un metodo dall'elenco chiamate, utilizzare gli operatori di assegnazione di sottrazione [o sottrazione](../../language-reference/operators/subtraction-operator.md) ( `-` o `-=` ). Ad esempio:
 
 [!code-csharp[csProgGuideDelegates#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#28)]
 

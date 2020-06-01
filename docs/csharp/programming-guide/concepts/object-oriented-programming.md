@@ -2,12 +2,12 @@
 title: Programmazione orientata a oggetti (C#)
 ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 541d1a2581a3241f35fc8478040c007b6581e3b2
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 98dd5147ab54375ec851ccd9b981a68098a53270
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396680"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241890"
 ---
 # <a name="object-oriented-programming-c"></a>Programmazione orientata a oggetti (C#)
 
@@ -146,9 +146,9 @@ Per altre informazioni, vedere [Costruttori](../classes-and-structs/constructors
 
 #### <a name="finalizers"></a>Finalizzatori
 
-Viene utilizzato un finalizzatore per distruggere le istanze delle classi. In .NET Framework, il Garbage Collector gestisce l'allocazione e il rilascio di memoria per gli oggetti gestiti di un'applicazione. Potrebbero, tuttavia, essere necessari finalizzatori per pulire eventuali risorse non gestite create dall'applicazione. Può essere presente un solo finalizzatore per una classe.
+Viene utilizzato un finalizzatore per distruggere le istanze delle classi. In .NET, il Garbage Collector gestisce automaticamente l'allocazione e il rilascio di memoria per gli oggetti gestiti nell'applicazione. Potrebbero, tuttavia, essere necessari finalizzatori per pulire eventuali risorse non gestite create dall'applicazione. Può essere presente un solo finalizzatore per una classe.
 
-Per altre informazioni sui finalizzatori e sull'operazione di Garbage Collection in .NET Framework, vedere [Garbage Collection](../../../standard/garbage-collection/index.md).
+Per ulteriori informazioni sui finalizzatori e Garbage Collection in .NET, vedere [Garbage Collection](../../../standard/garbage-collection/index.md).
 
 #### <a name="events"></a>Eventi
 
@@ -186,7 +186,7 @@ Sono disponibili i seguenti modificatori di accesso:
 
 | Modificatore di C# | Definizione |
 |--|--|
-| [public](../../language-reference/keywords/public.md) | Il tipo o il membro è accessibile da altro codice nello stesso assembly o in un altro assembly che vi fa riferimento. |
+| [pubblico](../../language-reference/keywords/public.md) | Il tipo o il membro è accessibile da altro codice nello stesso assembly o in un altro assembly che vi fa riferimento. |
 | [private](../../language-reference/keywords/private.md) | Il tipo o il membro è accessibile solo dal codice nella stessa classe. |
 | [protected](../../language-reference/keywords/protected.md) | Il tipo o il membro è accessibile solo dal codice nella stessa classe o in una classe derivata. |
 | [internal](../../language-reference/keywords/internal.md) | Il tipo o il membro è accessibile dal codice nello stesso assembly ma non da un altro assembly. |
@@ -298,7 +298,7 @@ public abstract class B { }
 Per altre informazioni, vedere:
 
 - [sealed](../../language-reference/keywords/sealed.md)
-- [abstract](../../language-reference/keywords/abstract.md)
+- [astratta](../../language-reference/keywords/abstract.md)
 
 ### <a name="overriding-members"></a>Override di membri
 
@@ -310,7 +310,7 @@ I seguenti modificatori consentono di controllare le modalità di override di pr
 |--|--|
 | [virtuale](../../language-reference/keywords/virtual.md) | Consente a un membro della classe di essere sottoposto a override in una classe derivata. |
 | [override](../../language-reference/keywords/override.md) | Esegue l'override di un membro virtuale (sottoponibile a override) definito nella classe base. |
-| [abstract](../../language-reference/keywords/abstract.md) | Richiede che un membro della classe venga sottoposto a override nella classe derivata. |
+| [astratta](../../language-reference/keywords/abstract.md) | Richiede che un membro della classe venga sottoposto a override nella classe derivata. |
 | [Modificatore new](../../language-reference/keywords/new-modifier.md) | Nasconde un membro ereditato da una classe base. |
 
 ## <a name="interfaces"></a>Interfacce
@@ -342,7 +342,7 @@ Per ulteriori informazioni, vedere l'articolo della Guida alla programmazione su
 
 ## <a name="generics"></a>Generics
 
-Classi, strutture, interfacce e metodi in .NET Framework possono includere *parametri di tipo* che definiscono tipi di oggetti che possono archiviare o usare. L'esempio più comune di generics è una raccolta, dove è possibile specificare il tipo di oggetti da archiviare in una raccolta.
+Classi, strutture, interfacce e metodi in .NET possono includere *parametri di tipo* che definiscono tipi di oggetti che possono archiviare o usare. L'esempio più comune di generics è una raccolta, dove è possibile specificare il tipo di oggetti da archiviare in una raccolta.
 
 Per definire una classe generica:
 
@@ -400,6 +400,6 @@ class SampleClass
 
 Per ulteriori informazioni, vedere l'articolo della Guida alla programmazione sui [delegati](../delegates/index.md) e l'articolo di riferimento per il linguaggio sulla parola chiave [delegate](../../language-reference/builtin-types/reference-types.md) .
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)

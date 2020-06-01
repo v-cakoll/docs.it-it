@@ -1,12 +1,12 @@
 ---
 title: Attributi (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 0379bb76cf18ff836bd14aafb9cb97c30aee8ec7
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 358285a39f72ad3ddf1b265e20b443308375d074
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645480"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241578"
 ---
 # <a name="attributes-c"></a>Attributi (C#)
 
@@ -41,7 +41,7 @@ Alcuni attributi possono essere specificati più volte per una stessa entità. U
 [!code-csharp[Using the conditional attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
 
 > [!NOTE]
-> Per convenzione tutti i nomi di attributo terminano con la parola "Attribute", in modo che sia possibile distinguerli da altri elementi delle librerie .NET. Tuttavia, quando gli attributi vengono usati nel codice, non è necessario specificare il suffisso Attribute. Ad esempio `[DllImport]` è equivalente a `[DllImportAttribute]`, mentre `DllImportAttribute` è il nome effettivo dell'attributo nella libreria di classi .NET Framework.
+> Per convenzione tutti i nomi di attributo terminano con la parola "Attribute", in modo che sia possibile distinguerli da altri elementi delle librerie .NET. Tuttavia, quando gli attributi vengono usati nel codice, non è necessario specificare il suffisso Attribute. Ad esempio, `[DllImport]` è equivalente a `[DllImportAttribute]` , ma `DllImportAttribute` è il nome effettivo dell'attributo nella libreria di classi .NET.
 
 ### <a name="attribute-parameters"></a>Parametri degli attributi
 
@@ -57,7 +57,7 @@ Il primo parametro, ovvero il nome della DLL, è posizionale ed è sempre specif
 
 ### <a name="attribute-targets"></a>Destinazioni degli attributi
 
-La *destinazione* di un attributo è l'entità a cui tale attributo viene applicato. Un attributo, ad esempio, può essere applicato a una classe, a un metodo particolare o a un intero assembly. Per impostazione predefinita, un attributo si applica all'elemento che lo segue. È tuttavia possibile identificare in modo esplicito, ad esempio, se un attributo viene applicato a un metodo, al relativo parametro o al relativo valore restituito.
+La *destinazione* di un attributo è l'entità a cui tale attributo viene applicato. Un attributo, ad esempio, può essere applicato a una classe, a un metodo particolare o a un intero assembly. Per impostazione predefinita, un attributo viene applicato all'elemento che lo segue. È tuttavia possibile identificare in modo esplicito, ad esempio, se un attributo viene applicato a un metodo, al relativo parametro o al relativo valore restituito.
 
 Per identificare in modo esplicito la destinazione di un attributo, usare la sintassi seguente:
 
@@ -119,13 +119,13 @@ Per altre informazioni, vedere:
 
 - [Creazione di attributi personalizzati (C#)](creating-custom-attributes.md)  
 - [Accessing Attributes by Using Reflection (C#)](accessing-attributes-by-using-reflection.md) (Accesso agli attributi con reflection (C#))  
-- [Come creare un'unione C/C](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Come creare un'Unione C/C++ usando gli attributi (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [Attributi comuni (C#)](../../../language-reference/attributes/global.md)  
 - [Informazioni sul chiamante (C#)](../../../language-reference/attributes/caller-information.md)  
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida alla programmazione in C](../../index.md)
+- [Guida per programmatori C#](../../index.md)
 - [Reflection (C#)](../reflection.md)
 - [Attributi](../../../../standard/attributes/index.md)
 - [Uso degli attributi in C#](../../../tutorials/attributes.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: b4326be8c9e299a96477096ec21864ec69037abe
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 71d97f7c1c0c3ece0cdce3de4318d8a9d65baed3
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738236"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241929"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Uso degli spazi dei nomi (Guida per programmatori C#)
 
-Gli spazi dei nomi vengono usati frequentemente nei programmi C# in due modi. In primo luogo, le classi di .NET Framework usano gli spazi dei nomi per organizzare numerose classi. In secondo luogo, dichiarando i propri spazi dei nomi è possibile controllare l'ambito dei nomi di classi e metodi nei progetti di programmazione più grandi.  
+Gli spazi dei nomi vengono usati frequentemente nei programmi C# in due modi. In primo luogo, le classi .NET usano gli spazi dei nomi per organizzare le numerose classi. In secondo luogo, dichiarando i propri spazi dei nomi è possibile controllare l'ambito dei nomi di classi e metodi nei progetti di programmazione più grandi.  
   
 ## <a name="accessing-namespaces"></a>Accesso agli spazi dei nomi
 
@@ -36,13 +36,13 @@ Gli spazi dei nomi vengono usati frequentemente nei programmi C# in due modi. In
   
 ## <a name="namespace-aliases"></a>Alias dello spazio dei nomi
 
- È inoltre possibile utilizzare la [ `using` direttiva](../../language-reference/keywords/using-directive.md) per creare un alias per uno spazio dei nomi. Usare il [qualificatore di alias dello spazio dei nomi `::`](../../language-reference/operators/namespace-alias-qualifier.md) per accedere ai membri dello spazio dei nomi con alias. Nell'esempio seguente viene illustrato come creare e usare un alias dello spazio dei nomi:
+ È anche possibile usare la [ `using` direttiva](../../language-reference/keywords/using-directive.md) per creare un alias per uno spazio dei nomi. Usare il [qualificatore di alias dello spazio dei nomi `::`](../../language-reference/operators/namespace-alias-qualifier.md) per accedere ai membri dello spazio dei nomi con alias. Nell'esempio seguente viene illustrato come creare e usare un alias dello spazio dei nomi:
   
 [!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]
   
 ## <a name="using-namespaces-to-control-scope"></a>Uso degli spazi dei nomi per controllare l'ambito
 
- La parola chiave `namespace` viene usata per dichiarare un ambito. La possibilità di creare ambiti all'interno del progetto consente di organizzare il codice e di creare tipi univoci globali. Nell'esempio seguente, una classe denominata `SampleClass` è definita in due spazi dei nomi, uno annidato all'interno dell'altro. Il [ `.` token](../../language-reference/operators/member-access-operators.md#member-access-expression-) viene utilizzato per distinguere il metodo chiamato.  
+ La parola chiave `namespace` viene usata per dichiarare un ambito. La possibilità di creare ambiti all'interno del progetto consente di organizzare il codice e di creare tipi univoci globali. Nell'esempio seguente, una classe denominata `SampleClass` è definita in due spazi dei nomi, uno annidato all'interno dell'altro. Il [ `.` token](../../language-reference/operators/member-access-operators.md#member-access-expression-) viene usato per distinguere il metodo che viene chiamato.  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -92,7 +92,7 @@ Gli spazi dei nomi vengono usati frequentemente nei programmi C# in due modi. In
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida alla programmazione in C](../index.md)
+- [Guida per programmatori C#](../index.md)
 - [Spazi dei nomi](./index.md)
 - [Espressione di accesso ai membri](../../language-reference/operators/member-access-operators.md#member-access-expression-)
 - [:: (operatore)](../../language-reference/operators/namespace-alias-qualifier.md)

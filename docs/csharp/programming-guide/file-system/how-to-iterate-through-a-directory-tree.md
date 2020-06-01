@@ -1,22 +1,22 @@
 ---
-title: Come scorrere un albero di directory - Guida per programmatori C
+title: Come scorrere un albero di directory-guida per programmatori C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: be3931a23e7a88affcf4d0abf617ec00bd35297a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 24a6225527becb0b896017616e2661ab8247c74c
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712260"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241604"
 ---
-# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Come scorrere un albero di directory (Guida per programmatori C
+# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Come scorrere un albero di directory (Guida per programmatori C#)
 Eseguire l'iterazione in un albero di directory significa accedere a ogni file in ogni sottodirectory annidata in una cartella radice specificata, a qualsiasi livello. Non è necessario aprire ogni file. È possibile recuperare semplicemente il nome del file o della sottodirectory come `string` oppure è possibile recuperare informazioni aggiuntive sotto forma di oggetto <xref:System.IO.FileInfo?displayProperty=nameWithType> o <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
   
 > [!NOTE]
-> In Windows i termini "directory" e "cartella" vengono usati indifferentemente. Nella maggior parte della documentazione e dell'interfaccia utente viene usato il termine "cartella", ma nella libreria di classi .NET Framework il termine usato è "directory".  
+> In Windows i termini "directory" e "cartella" vengono usati indifferentemente. La maggior parte della documentazione e del testo dell'interfaccia utente usa il termine "cartella", ma le librerie di classi .NET usano il termine "directory".  
   
  Nel caso più semplice in cui si è certi di avere autorizzazioni di accesso per tutte le directory di una radice specificata, è possibile usare il flag `System.IO.SearchOption.AllDirectories`. Questo flag restituisce tutte le sottodirectory annidate che corrispondono al modello specificato. L'esempio seguente illustra come usare questo flag.  
   
@@ -33,7 +33,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Se è necessario eseguire una serie di operazioni su file e cartelle, è possibile modularizzare questi esempi effettuando il refactoring dell'operazione in funzioni separate che è possibile richiamare tramite un delegato unico.  
   
 > [!NOTE]
-> I file system NTFS possono contenere *reparse point* sotto forma di *punti di giunzione*, *collegamenti simbolici* e *collegamenti reali*. I metodi .NET Framework come <xref:System.IO.DirectoryInfo.GetFiles%2A> e <xref:System.IO.DirectoryInfo.GetDirectories%2A> non restituiranno alcuna sottodirectory in un reparse point. Questo comportamento protegge dal rischio di entrare in un ciclo infinito quando due reparse point fanno riferimento uno all'altro. In generale, è necessario usare estrema cautela quando si usano i reparse point per evitare di modificare o eliminare file involontariamente. Se è necessario un controllo preciso dei reparse point, usare platform invoke o codice nativo per chiamare direttamente i metodi del file system Win32 appropriato.  
+> I file system NTFS possono contenere *reparse point* sotto forma di *punti di giunzione*, *collegamenti simbolici* e *collegamenti reali*. I metodi .NET, ad esempio <xref:System.IO.DirectoryInfo.GetFiles%2A> e, <xref:System.IO.DirectoryInfo.GetDirectories%2A> non restituiscono alcuna sottodirectory in un reparse point. Questo comportamento protegge dal rischio di entrare in un ciclo infinito quando due reparse point fanno riferimento uno all'altro. In generale, è necessario usare estrema cautela quando si usano i reparse point per evitare di modificare o eliminare file involontariamente. Se è necessario un controllo preciso dei reparse point, usare platform invoke o codice nativo per chiamare direttamente i metodi del file system Win32 appropriato.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente illustra come procedere in un albero di directory usando la ricursione. L'approccio ricorsivo è elegante ma può provocare un'eccezione di overflow dello stack se l'albero di directory è grande ed eccessivamente annidato.  
@@ -59,5 +59,5 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.IO>
-- [Directory di file e LINQ (C#)](../concepts/linq/linq-and-file-directories.md)
+- [Directory di file e LINQ](../concepts/linq/linq-and-file-directories.md)
 - [File system e Registro di sistema (Guida per programmatori C#)](./index.md)

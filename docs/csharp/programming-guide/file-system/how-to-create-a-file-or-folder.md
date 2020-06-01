@@ -1,5 +1,5 @@
 ---
-title: Come creare un file o una cartella - Guida per programmatori C
+title: Come creare un file o una cartella-Guida per programmatori C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders [C#]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: cdcc0a375aa1eca29c024d1e0c9008f337d0c772
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5efe3b7dc600645488816d6f931df57fc236efc9
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167557"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241643"
 ---
-# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Come creare un file o una cartella (Guida per programmatori C
+# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Come creare un file o una cartella (Guida per programmatori C#)
 A livello di codice è possibile creare una cartella, una sottocartella e un file nella sottocartella e quindi scrivere dati nel file.  
   
 ## <a name="example"></a>Esempio  
@@ -62,10 +62,10 @@ A livello di codice è possibile creare una cartella, una sottocartella e un fil
   
 - Il nome della cartella è composto solo da un carattere due punti, ":" (classe <xref:System.IO.PathTooLongException>).  
   
-## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
+## <a name="net-security"></a>Sicurezza .NET  
  In situazioni di attendibilità parziale può essere generata un'istanza della classe <xref:System.Security.SecurityException>.  
   
- Se l'utente non è autorizzato a creare la cartella, l'esempio genera un'istanza della classe <xref:System.UnauthorizedAccessException>.  
+ Se non si dispone dell'autorizzazione per creare la cartella, l'esempio genera un'istanza della <xref:System.UnauthorizedAccessException> classe.  
   
 ## <a name="see-also"></a>Vedere anche
 

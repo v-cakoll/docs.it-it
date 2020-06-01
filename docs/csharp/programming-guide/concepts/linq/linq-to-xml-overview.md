@@ -2,12 +2,12 @@
 title: Panoramica di LINQ to XML (C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 334788a50832b8fe42ecc9a3272dd71f2f2af4ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd41d8607ef3f2e6e6be9a1f3964ef0ae937e2ac
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168415"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241838"
 ---
 # <a name="linq-to-xml-overview-c"></a>Panoramica di LINQ to XML (C#)
 
@@ -15,7 +15,7 @@ LINQ to XML offre un'interfaccia di programmazione XML in memoria che usa .NET L
 
 XML è stato ampiamente adottato per la formattazione dei dati in una vasta gamma di contesti. Viene ad esempio usato in applicazioni Web, file di configurazione, file di Microsoft Office Word e in database.
 
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] costituisce un approccio aggiornato e ridisegnato alla programmazione con XML. Fornisce le funzionalità di modifica dei documenti in memoria del modello DOM (Document Object Model) e supporta le espressioni di query LINQLINQ. Sebbene sintatticamente diverse da XPath, queste espressioni di query offrono funzionalità simili.
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] costituisce un approccio aggiornato e ridisegnato alla programmazione con XML. Fornisce le funzionalità di modifica dei documenti in memoria del Document Object Model (DOM) e supporta le espressioni di query LINQ. Sebbene sintatticamente diverse da XPath, queste espressioni di query offrono funzionalità simili.
 
 ## <a name="linq-to-xml-developers"></a>Sviluppatori LINQ to XML
 
@@ -25,11 +25,11 @@ Gli sviluppatori professionisti possono usare [!INCLUDE[sqltecxlinq](~/includes/
 
 ## <a name="what-is-linq-to-xml"></a>Informazioni su LINQ to XML
 
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è un'interfaccia di programmazione XML in memoria con supporto LINQ che consente di usare codice XML dall'interno dei linguaggi di programmazione .NET Framework.
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]è un'interfaccia di programmazione XML in memoria abilitata per LINQ che consente di usare codice XML dall'interno dei linguaggi di programmazione .NET.
 
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è simile al modello DOM (Document Object Model) in quanto porta in memoria il documento XML. È quindi possibile eseguire query e modificare il documento e dopo averlo modificato salvarlo in un file o serializzarlo e inviarlo tramite Internet. Tuttavia, a differenza di DOM, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] offre un nuovo modello a oggetti più leggero e facile da usare che sfrutta le funzionalità del linguaggio in C#.
 
-Il vantaggio più [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] importante è la sua integrazione con Language-Integrated Query (LINQ). Grazie a tale integrazione è possibile scrivere query sul documento XML in memoria per recuperare raccolte di elementi e di attributi. La funzionalità di query di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è paragonabile a XPath e XQuery, dal punto di vista funzionale ma non sintattico. L'integrazione di LINQ in C, offre una digitazione più efficace, un controllo in fase di compilazione e un supporto migliorato del debugger.
+Il vantaggio più importante di è costituito dall' [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] integrazione con LINQ (Language-Integrated Query). Grazie a tale integrazione è possibile scrivere query sul documento XML in memoria per recuperare raccolte di elementi e di attributi. La funzionalità di query di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è paragonabile a XPath e XQuery, dal punto di vista funzionale ma non sintattico. L'integrazione di LINQ in C# fornisce una tipizzazione più forte, il controllo in fase di compilazione e il supporto migliorato del debugger.
 
 Un altre vantaggio di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], costituito dalla possibilità di usare risultati di query come parametri di costruttori di oggetti <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XAttribute>, consente di disporre di un approccio potente per la creazione di alberi XML. Questo approccio, chiamato *costruzione funzionale* consente agli sviluppatori di trasformare facilmente gli alberi XML da una forma all'altra.
 
@@ -77,7 +77,7 @@ IEnumerable<XElement> pricesByPartNos = purchaseOrder.Descendants("Item")
                                         .OrderBy(order => order.Element("PartNumber"));
 ```
 
-Oltre a queste funzionalità [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] LINQ, fornisce un'interfaccia di programmazione XML migliorata. Usando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è possibile:
+Oltre a queste funzionalità LINQ, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] fornisce un'interfaccia di programmazione XML migliorata. Usando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è possibile:
 
 - Caricare XML da [file](how-to-load-xml-from-a-file.md) o [flussi](how-to-stream-xml-fragments-from-an-xmlreader.md).
 
@@ -121,6 +121,6 @@ Per altre informazioni, vedere [Creazione di alberi XML (C#)](./creating-xml-tre
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti (LINQ to XML)](./reference-linq-to-xml.md)
-- [LINQ to XML e DOM (C )](./linq-to-xml-vs-dom.md)
+- [LINQ to XML rispetto a DOM (C#)](./linq-to-xml-vs-dom.md)
 - [LINQ to XML e altre tecnologie XML](./linq-to-xml-vs-other-xml-technologies.md)
 - <xref:System.Xml.Linq>

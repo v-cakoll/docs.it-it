@@ -1,17 +1,17 @@
 ---
-title: Come eseguire una query sui metadati di un assembly con Reflection (LINQ) (C
+title: Come eseguire una query sui metadati di un assembly tramite reflection (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: 6e68cfea2bf3e03aed9de3e4a18cf9941ece34e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 092cb386af0c3f2e2241c2c2ac8e50eab74cc43b
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168921"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241539"
 ---
-# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Come eseguire una query sui metadati di un assembly con Reflection (LINQ) (C
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Come eseguire una query sui metadati di un assembly tramite reflection (LINQ) (C#)
 
-L'API di reflection della libreria di classi .NET Framework consente di esaminare i metadati in un assembly .NET e creare raccolte di tipi, membri dei tipi, parametri e così via, che si trovano in tale assembly. Poiché queste raccolte supportano l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601>, è possibile eseguire query su tali raccolte tramite LINQ.  
+È possibile utilizzare le API di Reflection .NET per esaminare i metadati in un assembly .NET e creare raccolte di tipi, membri dei tipi, parametri e così via che si trovano in tale assembly. Poiché queste raccolte supportano l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601>, è possibile eseguire query su tali raccolte tramite LINQ.  
   
 Nell'esempio seguente viene illustrato come LINQ può essere usato con il processo di reflection per recuperare metadati specifici sui metodi che corrispondono a un criterio di ricerca specificato. In questo caso la query individuerà i nomi di tutti i metodi dell'assembly che restituiscono tipi enumerabili, ad esempio matrici.  
   

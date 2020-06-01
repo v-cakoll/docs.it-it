@@ -5,17 +5,17 @@ helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 4893bf5ebe73988bb6535cc2a85591ff0dde6ebd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 672a0bebdc60eff00acf9b1bdbecc25052f7bc16
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712169"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241682"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Generics e reflection (Guida per programmatori C#)
 Poiché Common Language Runtime (CLR) ha accesso alle informazioni sui tipi generici in fase di esecuzione, è possibile usare il processo di reflection per ottenere informazioni sui tipi generici, analogamente a quanto avviene per i tipi non generici. Per altre informazioni, vedere [Generics nel runtime](./generics-in-the-run-time.md).  
   
- In .NET Framework 2.0, per abilitare le informazioni di runtime per i tipi generici sono stati aggiunti nuovi membri alla classe <xref:System.Type>. Vedere la documentazione su queste classi per altre informazioni su come usare tali metodi e proprietà. Anche lo spazio dei nomi <xref:System.Reflection.Emit> contiene nuovi membri che supportano i generics. Vedere [Procedura: Definire un tipo generico tramite reflection emit](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
+ In .NET Framework 2,0 sono stati aggiunti diversi nuovi membri alla <xref:System.Type> classe per abilitare le informazioni di run-time per i tipi generici. Vedere la documentazione su queste classi per altre informazioni su come usare tali metodi e proprietà. Anche lo spazio dei nomi <xref:System.Reflection.Emit> contiene nuovi membri che supportano i generics. Vedere [Procedura: Definire un tipo generico tramite reflection emit](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
   
  Per un elenco delle condizioni invariabili relative ai termini usati dal processo di reflection generico, vedere i commenti sulla proprietà <xref:System.Type.IsGenericType%2A>.  
   
