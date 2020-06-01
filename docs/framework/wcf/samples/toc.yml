@@ -257,7 +257,7 @@
           items:
             - name: Hello World con il servizio di routing
               href: hello-world-with-the-routing-service.md
-        - name: Sicurezza
+        - name: Security
           href: security-in-wcf.md
           items:
             - name: Agilità di crittografia nella sicurezza WCF
@@ -369,11 +369,11 @@
               href: aspnet-caching-integration.md
             - name: UriTemplate
               href: uritemplate-sample.md
-            - name: UriTemplateTable
+            - name: Tabella UriTemplate
               href: uritemplate-table-sample.md
             - name: Dispatcher della tabella UriTemplate
               href: uritemplate-table-dispatcher-sample.md
-    - name: Extensibility
+    - name: Estendibilità
       href: extensibility.md
       items:
         - name: Estensibilità delle associazioni
@@ -417,9 +417,9 @@
         - name: Estensibilità del codificatore di messaggi
           href: message-encoder-extensibility.md
           items:
-            - name: 'Codificatore di messaggi personalizzato: codificatore di testi personalizzato'
+            - name: 'Codificatore di messaggi personalizzati: Codificatore di testo personalizzato'
               href: custom-message-encoder-custom-text-encoder.md
-            - name: 'Codificatore di messaggi personalizzato: codificatore di compressione'
+            - name: 'Codificatore di messaggi personalizzati: Codificatore di compressione'
               href: custom-message-encoder-compression-encoder.md
         - name: Estensibilità dei metadati
           href: metadata-extensibility.md
@@ -465,11 +465,11 @@
           items:
             - name: Attivazione UDP
               href: udp-activation.md
-            - name: 'Trasporto: transazioni personalizzate nell''esempio UDP'
+            - name: 'Trasporto: transazioni personalizzate tramite UDP'
               href: transport-custom-transactions-over-udp-sample.md
-            - name: Trasporto UDP
+            - name: 'Trasporto: UDP'
               href: transport-udp.md
-            - name: 'Trasporto: Interoperabilità WSE 3.0 TCP'
+            - name: 'Trasporto: interoperabilità WSE 3.0 TCP'
               href: transport-wse-3-0-tcp-interoperability.md
         - name: Formattatore e selettore dell'operazione
           href: operation-formatter-and-operation-selector.md
@@ -505,7 +505,7 @@
           href: weakly-typed-json-serialization-sample.md
         - name: Servizio facciata attendibile
           href: trusted-facade-service.md
-        - name: 'Modelli di progettazione: pubblicazione-sottoscrizione basata su elenchi'
+        - name: 'Schemi progettuali: pubblicazione-sottoscrizione basata su elenchi'
           href: design-patterns-list-based-publish-subscribe.md
     - name: Esempi di strumenti
       href: tool-samples.md
