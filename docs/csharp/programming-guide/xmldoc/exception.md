@@ -1,5 +1,5 @@
 ---
-title: <exception>- Guida alla programmazione in C
+title: <exception>-Guida per programmatori C#
 ms.date: 07/20/2015
 f1_keywords:
 - exception
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: 14318ac0b0cdf781d0488eecaf934879017d91f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb193c586456497ee60aad941d56241ad7c6b63a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789795"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287387"
 ---
-# <a name="exception-c-programming-guide"></a>\<> di eccezione (Guida per programmatori C
+# <a name="exception-c-programming-guide"></a>\<exception>(Guida per programmatori C#)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,7 +37,7 @@ ms.locfileid: "76789795"
 
 ## <a name="remarks"></a>Osservazioni
 
-Il tag \<exception> consente di specificare le eccezioni che possono essere generate. Questo tag può essere applicato alle definizioni di metodi, proprietà, eventi e indicizzatori.
+Il `<exception>` tag consente di specificare le eccezioni che possono essere generate. Questo tag può essere applicato alle definizioni di metodi, proprietà, eventi e indicizzatori.
 
 Compilare con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) per elaborare i commenti relativi alla documentazione in un file.
 
@@ -49,5 +49,5 @@ Per altre informazioni sulla gestione delle eccezioni, vedere [Eccezioni e gesti
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida alla programmazione in C](../index.md)
+- [Guida per programmatori C#](../index.md)
 - [Tag consigliati per i commenti relativi alla documentazione](recommended-tags-for-documentation-comments.md)

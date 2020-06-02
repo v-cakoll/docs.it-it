@@ -1,13 +1,14 @@
 ---
 title: vincolo di integrità referenziale
+description: Informazioni sui vincoli di integrità referenziale nell'Entity Data Model, che garantiscono che le associazioni valide esistano sempre tra i tipi di entità.
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-ms.openlocfilehash: ad35df7bcca62ffdbc3842b0817b22c5482a3d4d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 65c811b2a12a64870107ff771d5acc64e86f2c1f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738379"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286624"
 ---
 # <a name="referential-integrity-constraint"></a>vincolo di integrità referenziale
 Un *vincolo di integrità referenziale* nel Entity Data Model (EDM) è simile a un vincolo di integrità referenziale in un database relazionale. Nello stesso modo in cui una colonna (o più colonne) da una tabella di database può fare riferimento alla chiave primaria di un'altra tabella, una [Proprietà](property.md) (o più proprietà) di un [tipo di entità](entity-type.md) può fare riferimento alla [chiave di entità](entity-key.md) di un altro tipo di entità. Il tipo di entità a cui si fa riferimento viene chiamato *entità finale principale* del vincolo. Il tipo di entità che fa riferimento all'entità finale principale viene chiamato entità *finale dipendente* del vincolo.  

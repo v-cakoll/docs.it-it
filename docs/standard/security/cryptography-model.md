@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: f878f73497b83aaf31f2ba3b23cca1f685867b3e
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: c2d28abacd34736764b69be750a850a0f2e8db85
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095268"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288381"
 ---
 # <a name="net-framework-cryptography-model"></a>Modello di crittografia di .NET Framework
 
@@ -49,7 +49,7 @@ Common Language Runtime usa una progettazione orientata al flusso per l'implemen
 
 ## <a name="cryptographic-configuration"></a>Configurazione della crittografia
 
-La configurazione della crittografia consente di risolvere un'implementazione specifica di un algoritmo in un nome di algoritmo, garantendo estendibilità delle classi di crittografia .NET Framework. È possibile aggiungere la propria implementazione hardware o software di un algoritmo e mappare l'implementazione al nome di algoritmo desiderato. Se un algoritmo non è specificato nel file di configurazione, vengono usate le impostazioni predefinite. Per ulteriori informazioni sulla configurazione della crittografia, vedere [Configuring Cryptography Classes](../../../docs/framework/configure-apps/configure-cryptography-classes.md).
+La configurazione della crittografia consente di risolvere un'implementazione specifica di un algoritmo in un nome di algoritmo, garantendo estendibilità delle classi di crittografia .NET Framework. È possibile aggiungere la propria implementazione hardware o software di un algoritmo e mappare l'implementazione al nome di algoritmo desiderato. Se un algoritmo non è specificato nel file di configurazione, vengono usate le impostazioni predefinite. Per ulteriori informazioni sulla configurazione della crittografia, vedere [Configuring Cryptography Classes](../../framework/configure-apps/configure-cryptography-classes.md).
 
 ## <a name="choosing-an-algorithm"></a>Scelta di un algoritmo
 
@@ -75,5 +75,5 @@ Ecco un elenco degli algoritmi consigliati in base all'applicazione:
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Servizi di crittografia](../../../docs/standard/security/cryptographic-services.md)
+- [Servizi di crittografia](cryptographic-services.md)
 - [Protocolli di crittografia applicati, algoritmi e codice sorgente in C, di Bruce Schneier](https://www.schneier.com/books/applied_cryptography/)

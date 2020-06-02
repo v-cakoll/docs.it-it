@@ -1,26 +1,27 @@
 ---
 title: DataTables
+description: Informazioni su un DataTable ADO.NET, che rappresenta una tabella di dati relazionali in memoria, locale a. Applicazione basata su rete in cui risiede.
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: 12255f738dea0a4713389e599468d1a7fab67d23
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: da6c9201951a6c7916067011c0a4f01ef9fdeffd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784695"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286908"
 ---
 # <a name="datatables"></a>DataTables
 Un tipo <xref:System.Data.DataSet> è composto da una raccolta di tabelle, relazioni e vincoli. In ADO.NET, <xref:System.Data.DataTable> gli oggetti vengono usati per rappresentare le tabelle in un **set di dati**. Un **DataTable** rappresenta una tabella di dati relazionali in memoria; i dati sono locali a. Applicazione basata su rete in cui risiede, ma che può essere popolata da un'origine dati, ad esempio Microsoft SQL Server usando un **DataAdapter** per ulteriori informazioni, vedere [popolamento di un DataSet da un oggetto DataAdapter](../populating-a-dataset-from-a-dataadapter.md).  
   
- La classe **DataTable** è un membro dello spazio dei nomi **System. Data** all'interno della libreria di classi .NET Framework. È possibile creare e usare una **DataTable** in modo indipendente o come membro di un **set di dati**e gli oggetti **DataTable** possono essere usati anche insieme ad altri oggetti <xref:System.Data.DataView>.NET Framework, tra cui. È possibile accedere alla raccolta di tabelle in un **set di dati** tramite la proprietà **Tables** dell'oggetto **DataSet** .  
+ La classe **DataTable** è un membro dello spazio dei nomi **System. Data** all'interno della libreria di classi .NET Framework. È possibile creare e usare una **DataTable** in modo indipendente o come membro di un **set di dati**e gli oggetti **DataTable** possono essere usati anche insieme ad altri oggetti .NET Framework, tra cui <xref:System.Data.DataView> . È possibile accedere alla raccolta di tabelle in un **set di dati** tramite la proprietà **Tables** dell'oggetto **DataSet** .  
   
- Lo schema o struttura di una tabella è rappresentato da colonne e vincoli. Si definisce lo schema di una **DataTable** usando <xref:System.Data.DataColumn> <xref:System.Data.ForeignKeyConstraint> oggetti, nonché oggetti e <xref:System.Data.UniqueConstraint> . Le colonne di una tabella possono essere associate a colonne di un'origine dati, contenere valori calcolati da espressioni, incrementare automaticamente i propri valori o contenere valori di chiavi primarie.  
+ Lo schema o struttura di una tabella è rappresentato da colonne e vincoli. Si definisce lo schema di una **DataTable** usando <xref:System.Data.DataColumn> oggetti, nonché <xref:System.Data.ForeignKeyConstraint> oggetti e <xref:System.Data.UniqueConstraint> . Le colonne di una tabella possono essere associate a colonne di un'origine dati, contenere valori calcolati da espressioni, incrementare automaticamente i propri valori o contenere valori di chiavi primarie.  
   
  Oltre a uno schema, è necessario che un **oggetto DataTable** includa anche righe che contengono e ordinano i dati. La classe <xref:System.Data.DataRow> rappresenta i dati effettivi contenuti in una tabella. Usare **DataRow** e i relativi metodi e proprietà per recuperare, valutare e modificare i dati in una tabella. Quando si accede e si modificano i dati all'interno di una riga, l'oggetto **DataRow** mantiene lo stato corrente e quello originale.  
   
- L'utilizzo di una o più colonne correlate delle tabelle consente di creare relazioni padre-figlio tra tabelle. Si crea una relazione tra oggetti **DataTable** usando un <xref:System.Data.DataRelation>oggetto. Gli oggetti **DataRelation** possono quindi essere utilizzati per restituire le righe padre o figlio correlate di una determinata riga. Per ulteriori informazioni, vedere [aggiunta di oggetti DataRelations](adding-datarelations.md).  
+ L'utilizzo di una o più colonne correlate delle tabelle consente di creare relazioni padre-figlio tra tabelle. Si crea una relazione tra oggetti **DataTable** usando un oggetto <xref:System.Data.DataRelation> . Gli oggetti **DataRelation** possono quindi essere utilizzati per restituire le righe padre o figlio correlate di una determinata riga. Per ulteriori informazioni, vedere [aggiunta di oggetti DataRelations](adding-datarelations.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Creazione di un oggetto DataTable](creating-a-datatable.md)  
  Viene illustrato come creare una **DataTable** e aggiungerla a un **set di dati**.  
   

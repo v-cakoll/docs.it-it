@@ -1,6 +1,6 @@
 ---
 title: Sicurezza e input dell'utente
-description: Il codice potrebbe passare i dati immessi dall'utente come parametri ad altro codice, il che può influire sulla sicurezza. È possibile eseguire il controllo dell'intervallo per rifiutare l'input problematico.
+description: Il codice potrebbe passare i dati immessi dall'utente come parametri ad altro codice, che può influire sulla sicurezza. È possibile eseguire il controllo degli intervalli per rifiutare l'input problematico.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-ms.openlocfilehash: fa9f8d4708e928c51e446d8369c9b4556fc6fb77
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 995af30385790a88718193e7abad1db7bc4b56c3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186112"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84275945"
 ---
 # <a name="security-and-user-input"></a>Sicurezza e input dell'utente
 
@@ -24,7 +24,7 @@ Questi ultimi rappresentano i bug più difficili da rilevare in quanto, sebbene 
 
 Tra gli aspetti importanti dei dati utente sono inclusi i seguenti:
 
-- I dati utente in una risposta server sono eseguiti nel contesto del sito del server sul client. Se il server Web accetta i dati utente e li inserisce nella pagina ** \<** Web restituita, potrebbe, ad esempio, includere uno script>tag ed essere eseguito come se provenivenga dal server.
+- I dati utente in una risposta server sono eseguiti nel contesto del sito del server sul client. Se il server Web accetta dati utente e li inserisce nella pagina Web restituita, potrebbe, ad esempio, includere un **\<script>** tag ed eseguirlo come se fosse dal server.
 
 - Tenere presente che il client può richiedere qualsiasi URL.
 
@@ -60,4 +60,4 @@ Tra gli aspetti importanti dei dati utente sono inclusi i seguenti:
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Linee guida per la generazione di codice sicuro](secure-coding-guidelines.md)

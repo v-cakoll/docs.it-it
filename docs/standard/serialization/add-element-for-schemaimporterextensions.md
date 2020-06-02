@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 401d1ba9cc2f97e93d7851f96f73b552e6ed6356
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 6fd8113ad39a22c927035fca574151ae8f002685
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378472"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288329"
 ---
-# <a name="add-element-for-schemaimporterextensions"></a>\<aggiungere> elemento per \< schemaImporterExtensions>
-Aggiunge i tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l'esecuzione del mapping dei tipi XSD ai tipi .NET Framework. Per altre informazioni sui file di configurazione, vedere [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md).  
+# <a name="add-element-for-schemaimporterextensions"></a>Elemento \<add> per \<schemaImporterExtensions>
+Aggiunge i tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l'esecuzione del mapping dei tipi XSD ai tipi .NET Framework. Per altre informazioni sui file di configurazione, vedere [Schema dei file di configurazione](../../framework/configure-apps/file-schema/index.md).  
   
  \<configuration>  
 \<system.xml.serialization>  
@@ -30,7 +30,7 @@ Aggiunge i tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributi  
+### <a name="attributes"></a>Attributes  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
@@ -64,5 +64,5 @@ Aggiunge i tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
-- [\<System. XML. Serialization> elemento](../../../docs/standard/serialization/system-xml-serialization-element.md)
-- [\<Elemento> schemaImporterExtensions](../../../docs/standard/serialization/schemaimporterextensions-element.md)
+- [\<system.xml.serialization>Elemento](system-xml-serialization-element.md)
+- [\<schemaImporterExtensions>Elemento](schemaimporterextensions-element.md)

@@ -1,13 +1,14 @@
 ---
 title: 'Procedura dettagliata: Modello a oggetti e query semplici (C#)'
+description: Seguire questa procedura dettagliata per creare una classe di entità per la modellazione di una tabella in un database di esempio. Creare quindi una semplice query per elencare i clienti in una determinata posizione.
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: a9b3b57e37331cd13f2cd30b8a7663f2fb39d8c1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4637fabecc1726d8fec12857a667073912cfbed5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792139"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286301"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Procedura dettagliata: Modello a oggetti e query semplici (C#)
 
@@ -29,7 +30,7 @@ Questa procedura è stata scritta usando Impostazioni di sviluppo di Visual C#.
 
 La procedura dettagliata è costituita da sei attività principali:
 
-- Creazione di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] una soluzione in Visual Studio.
+- Creazione [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] di una soluzione in Visual Studio.
 
 - Mapping di una classe a una tabella del database.
 
@@ -49,7 +50,7 @@ In questa prima attività viene creata una soluzione di Visual Studio che contie
 
 1. Scegliere **nuovo**dal menu **file** di Visual Studio, quindi fare clic su **progetto**.
 
-2. Nel riquadro **Tipi progetto** della finestra di dialogo **nuovo progetto** fare clic su **oggetto C#visivo** .
+2. Nel riquadro **Tipi progetto** della finestra di dialogo **nuovo progetto** fare clic su **Visual C#**.
 
 3. Nel riquadro **Modelli** fare clic su **Applicazione console**.
 
@@ -158,9 +159,9 @@ In questo passaggio verrà effettivamente eseguita la query. Le espressioni di q
 
 3. Premere INVIO nella finestra della console per chiudere l'applicazione.
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
-[Procedura dettagliata: L'argomento relativo all'esecuzioneC#di](walkthrough-querying-across-relationships-csharp.md) query tra relazioni () continua nel punto in cui termina questa procedura dettagliata. Nella procedura dettagliata relativa alla query tra [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] relazioni viene illustrato come è possibile eseguire query tra tabelle, in modo analogo ai *join* in un database relazionale.
+L'argomento [procedura dettagliata: esecuzione di query tra relazioni (C#)](walkthrough-querying-across-relationships-csharp.md) continua dove termina questa procedura dettagliata. Nella procedura dettagliata relativa alla query tra relazioni viene illustrato come è [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] possibile eseguire query tra tabelle, in modo analogo ai *join* in un database relazionale.
 
 Se si desidera eseguire la procedura dettagliata relativa all'esecuzione di query tra relazioni, è indispensabile salvare la soluzione per la procedura dettagliata appena completata.
 

@@ -1,17 +1,21 @@
 ---
-title: ''
+title: Come serializzare e deserializzare JSON con C#-.NET
 description: Questo articolo illustra come usare lo System.Text.Json spazio dei nomi per serializzare e deserializzare da JSON in .NET. Include il codice di esempio.
-ms.date: ''
+ms.date: 05/13/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-helpviewer_keywords: []
-ms.openlocfilehash: f1a5da448b08f9b4f1cf3fa6cba67fb376b00a6f
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+helpviewer_keywords:
+- JSON serialization
+- serializing objects
+- serialization
+- objects, serializing
+ms.openlocfilehash: 7ad2721f12c5d14b61b35ecf7696ff0d6a6f27da
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702244"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289512"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Come serializzare e deserializzare (effettuare il marshalling e unmarshalling) JSON in .NET
 
@@ -379,47 +383,11 @@ Per escludere tutte le proprietà con valore null, impostare la <xref:System.Tex
 
 Di seguito è riportato un esempio di oggetto da serializzare e output JSON:
 
-|Proprietà |Value  |
-|---
-title: Description:' questo articolo illustra come usare lo System.Text.Json spazio dei nomi per serializzare e deserializzare da JSON in .NET. Include il codice di esempio ".
-ms. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: Description:' questo articolo illustra come usare lo System.Text.Json spazio dei nomi per serializzare e deserializzare da JSON in .NET. Include il codice di esempio ".
-ms. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|---title: Description:' questo articolo illustra come usare lo System.Text.Json spazio dei nomi per serializzare e deserializzare da JSON in .NET. Include il codice di esempio ".
-ms. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: Description:' questo articolo illustra come usare lo System.Text.Json spazio dei nomi per serializzare e deserializzare da JSON in .NET. Include il codice di esempio ".
-ms. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------| | Data | 8/1/2019 12:00:00 AM-07:00 | | TemperatureCelsius | 25 | | Riepilogo | null |
+|Proprietà |valore  |
+|---------|---------|
+| Data    | 8/1/2019 12:00:00 AM-07:00|
+| TemperatureCelsius| 25 |
+| Summary| Null|
 
 ```json
 {
@@ -671,66 +639,14 @@ Se si deserializza il codice JSON mostrato nel tipo visualizzato, le `DatesAvail
 
 Quando si deserializza il codice JSON illustrato in precedenza in questo tipo di esempio, i dati aggiuntivi diventano coppie chiave-valore della `ExtensionData` proprietà:
 
-|Proprietà |Value  |Note  |
-|---
-title: Description:' questo articolo illustra come usare lo System.Text.Json spazio dei nomi per serializzare e deserializzare da JSON in .NET. Include il codice di esempio ".
-ms. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: Description:' questo articolo illustra come usare lo System.Text.Json spazio dei nomi per serializzare e deserializzare da JSON in .NET. Include il codice di esempio ".
-ms. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|---title: Description:' questo articolo illustra come usare lo System.Text.Json spazio dei nomi per serializzare e deserializzare da JSON in .NET. Include il codice di esempio ".
-ms. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: Description:' questo articolo illustra come usare lo System.Text.Json spazio dei nomi per serializzare e deserializzare da JSON in .NET. Include il codice di esempio ".
-ms. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|---title: Description:' questo articolo illustra come usare lo System.Text.Json spazio dei nomi per serializzare e deserializzare da JSON in .NET. Include il codice di esempio ".
-ms. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: Description:' questo articolo illustra come usare lo System.Text.Json spazio dei nomi per serializzare e deserializzare da JSON in .NET. Include il codice di esempio ".
-ms. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------| | Data | 8/1/2019 12:00:00 AM-07:00 | | | TemperatureCelsius | 0 | Mancata corrispondenza tra maiuscole e minuscole ( `temperatureCelsius` in JSON), quindi la proprietà non è impostata. | | Riepilogo | A caldo | | | ExtensionData | temperatureCelsius: 25 | Poiché il caso non corrisponde, questa proprietà JSON è un oggetto aggiuntivo e diventa una coppia chiave-valore nel dizionario. | || DatesAvailable:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 | Una proprietà aggiuntiva da JSON diventa una coppia chiave-valore, con una matrice come oggetto valore. | | | SummaryWords:<br>Accesso sporadico<br>Ventoso<br>Umido | Una proprietà aggiuntiva da JSON diventa una coppia chiave-valore, con una matrice come oggetto valore. |
+|Proprietà |valore  |Note  |
+|---------|---------|---------|
+| Data    | 8/1/2019 12:00:00 AM-07:00||
+| TemperatureCelsius| 0 | Mancata corrispondenza tra maiuscole e minuscole ( `temperatureCelsius` in JSON), quindi la proprietà non è impostata. |
+| Summary | Accesso frequente ||
+| ExtensionData | temperatureCelsius: 25 |Poiché il caso non corrisponde, questa proprietà JSON è un oggetto aggiuntivo e diventa una coppia chiave-valore nel dizionario.|
+|| DatesAvailable:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |Una proprietà aggiuntiva da JSON diventa una coppia chiave-valore, con una matrice come oggetto valore.|
+| |SummaryWords:<br>Accesso sporadico<br>Ventoso<br>Umido |Una proprietà aggiuntiva da JSON diventa una coppia chiave-valore, con una matrice come oggetto valore.|
 
 Quando l'oggetto di destinazione viene serializzato, le coppie chiave-valore dei dati di estensione diventano proprietà JSON esattamente come nel codice JSON in ingresso:
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - try/finally block
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
-ms.openlocfilehash: d0d55a9253fee1ffcfd5c10714a1118883f6c4ce
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 87eefe2bd347ba1564b2f06d49bbee3b85efdb97
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396977"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287597"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>Uso di oggetti che implementano IDisposable
 
@@ -61,8 +61,8 @@ L'esempio seguente è simile a quello precedente, con la differenza che in quest
 
 Se una classe include un' <xref:System.IDisposable> implementazione come membro di istanza, ovvero un campo o una proprietà, la classe deve implementare anche <xref:System.IDisposable> . Per altre informazioni, vedere [implementare un'eliminazione a catena](implementing-dispose.md#cascade-dispose-calls).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Pulizia delle risorse non gestite](../../../docs/standard/garbage-collection/unmanaged.md)
+- [Pulizia delle risorse non gestite](unmanaged.md)
 - [Istruzione using (riferimenti per C#)](../../csharp/language-reference/keywords/using-statement.md)
 - [Istruzione using (Visual Basic)](../../visual-basic/language-reference/statements/using-statement.md)

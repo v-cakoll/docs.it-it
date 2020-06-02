@@ -1,14 +1,15 @@
 ---
 title: ADO.NET
+description: Informazioni su ADO.NET, classi che espongono servizi di accesso ai dati per .NET Framework programmatori per la creazione di applicazioni distribuite di condivisione dei dati.
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: cca3075a73a7bb45fd6154f760adfcda9064345c
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 4f9b2ca42a2c25c1463b7d1ca38b4b8920b2dafd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094397"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286728"
 ---
 # <a name="adonet"></a>ADO.NET
 
@@ -37,7 +38,7 @@ ADO.NET è un set di classi che espongono servizi di accesso ai dati per i progr
  Fornisce informazioni su LINQ to DataSet, inclusi esempi di programmazione.  
   
  [Recupero e modifica di dati in ADO.NET](retrieving-and-modifying-data.md)  
- Viene descritto come connettersi a un'origine dati e come recuperare e modificare i dati utilizzando `Commands`, `DataReaders`e `DataAdapters`.  
+ Viene descritto come connettersi a un'origine dati e come recuperare e modificare i dati tramite `Commands` , `DataReaders` e `DataAdapters` .  
   
  [SQL Server e ADO.NET](./sql/index.md)  
  Viene descritto come usare le funzionalità e le caratteristiche specifiche di SQL Server.  
@@ -47,7 +48,7 @@ ADO.NET è un set di classi che espongono servizi di accesso ai dati per i progr
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [LINQ (Language-Integrated Query) - C#](../../../csharp/programming-guide/concepts/linq/index.md)  
- Vengono forniti collegamenti ad argomenti e esempi di C#LINQ utilizzando.  
+ Fornisce collegamenti ad argomenti ed esempi di LINQ con C#.  
   
  [LINQ (Language-Integrated Query) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
  Vengono forniti collegamenti ad argomenti e esempi di LINQ utilizzando Visual Basic.  

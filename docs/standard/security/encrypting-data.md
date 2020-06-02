@@ -11,18 +11,18 @@ helpviewer_keywords:
 - cryptography [.NET Framework], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: 669b9c77ca0102ed94d8743cf37b18c0d0c528dc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 3230836b93ea191e5de27717a918038f2f8dead6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159403"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288355"
 ---
 # <a name="encrypting-data"></a>Crittografia dei dati
 La crittografia simmetrica e quella asimmetrica vengono eseguite usando processi diversi. La crittografia simmetrica viene eseguita sui flussi e di conseguenza è utile per crittografare grandi quantità di dati. La crittografia asimmetrica viene eseguita su un numero ridotto di byte e di conseguenza è utile solo per piccole quantità di dati.  
   
 ## <a name="symmetric-encryption"></a>Crittografia simmetrica  
- Le classi di crittografia simmetrica gestite vengono usate con una classe di flusso speciale chiamata <xref:System.Security.Cryptography.CryptoStream> , che crittografa i dati letti nel flusso. La classe **CryptoStream** viene inizializzata con una classe di flusso gestita, una classe che implementa l'interfaccia <xref:System.Security.Cryptography.ICryptoTransform> (creata da una classe che implementa un algoritmo di crittografia) e un'enumerazione <xref:System.Security.Cryptography.CryptoStreamMode> che descrive il tipo di accesso consentito alla classe **CryptoStream**. La classe **CryptoStream** può essere inizializzata usando qualsiasi classe derivata dalla classe <xref:System.IO.Stream> , tra cui <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>e <xref:System.Net.Sockets.NetworkStream>. Usando queste classi, è possibile eseguire crittografia simmetrica su svariati oggetti flusso.  
+ Le classi di crittografia simmetrica gestite vengono usate con una classe di flusso speciale chiamata <xref:System.Security.Cryptography.CryptoStream> , che crittografa i dati letti nel flusso. La classe **CryptoStream** viene inizializzata con una classe di flusso gestita, una classe che implementa l'interfaccia <xref:System.Security.Cryptography.ICryptoTransform> (creata da una classe che implementa un algoritmo di crittografia) e un'enumerazione <xref:System.Security.Cryptography.CryptoStreamMode> che descrive il tipo di accesso consentito alla classe **CryptoStream**. La classe **CryptoStream** può essere inizializzata usando qualsiasi classe derivata dalla <xref:System.IO.Stream> classe, tra cui <xref:System.IO.FileStream> , <xref:System.IO.MemoryStream> e <xref:System.Net.Sockets.NetworkStream> . Usando queste classi, è possibile eseguire crittografia simmetrica su svariati oggetti flusso.  
   
  L'esempio seguente mostra come creare una nuova istanza della classe <xref:System.Security.Cryptography.RijndaelManaged> , che implementa l'algoritmo di crittografia Rijndael, e usarla per eseguire la crittografia su una classe **CryptoStream** . In questo esempio la classe **CryptoStream** viene inizializzata con un oggetto flusso chiamato `myStream` , che può essere qualsiasi tipo di flusso gestito. Al metodo **CreateDecryptor** della classe **RijndaelManaged** vengono passati la chiave e il vettore di inizializzazione usati per la crittografia. In questo caso, vengono usati la chiave e il vettore di inizializzazione predefiniti generati da `rmCrypto` . Infine, viene passato **CryptoStreamMode.Write** , che specifica l'accesso in scrittura al flusso.  
   
@@ -262,6 +262,6 @@ class Class1
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
-- [Decrittografia di dati](../../../docs/standard/security/decrypting-data.md)
-- [Servizi di crittografia](../../../docs/standard/security/cryptographic-services.md)
+- [Generazione di chiavi per crittografia e decrittografia](generating-keys-for-encryption-and-decryption.md)
+- [Decrittografia di dati](decrypting-data.md)
+- [Servizi di crittografia](cryptographic-services.md)

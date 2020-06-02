@@ -17,30 +17,30 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: ec06edc16829c6d4caf8c760922aac1471e365c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2ed9ca7337e40b5520ddbfc92925c5bedb45f701
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75346622"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289278"
 ---
 # <a name="standard-timespan-format-strings"></a>Stringhe di formato TimeSpan standard
 
- Una stringa di formato <xref:System.TimeSpan> standard usa un singolo identificatore di formato per definire la rappresentazione di testo di un valore <xref:System.TimeSpan> che risulta da un'operazione di formattazione. Le stringhe di formato contenenti più caratteri alfabetici, inclusi gli spazi vuoti, vengono interpretate come stringhe di formato <xref:System.TimeSpan> personalizzato. Per ulteriori informazioni, vedere Stringhe di [formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md) .  
+ Una stringa di formato <xref:System.TimeSpan> standard usa un singolo identificatore di formato per definire la rappresentazione di testo di un valore <xref:System.TimeSpan> che risulta da un'operazione di formattazione. Le stringhe di formato contenenti più caratteri alfabetici, inclusi gli spazi vuoti, vengono interpretate come stringhe di formato <xref:System.TimeSpan> personalizzato. Per altre informazioni, vedere [stringhe di formato TimeSpan personalizzate](custom-timespan-format-strings.md) .  
   
- Le rappresentazione di stringa dei valori <xref:System.TimeSpan> vengono prodotte da chiamate agli overload del metodo <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>, nonché dai metodi che supportano la formattazione composita, come <xref:System.String.Format%2A?displayProperty=nameWithType>. Per altre informazioni, vedere [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md) e [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md). Nell'esempio seguente viene illustrato l'utilizzo di stringhe di formato standard nelle operazioni di formattazione.  
+ Le rappresentazione di stringa dei valori <xref:System.TimeSpan> vengono prodotte da chiamate agli overload del metodo <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>, nonché dai metodi che supportano la formattazione composita, come <xref:System.String.Format%2A?displayProperty=nameWithType>. Per altre informazioni, vedere [Formattazione di tipi](formatting-types.md) e [Formattazione composita](composite-formatting.md). Nell'esempio seguente viene illustrato l'utilizzo di stringhe di formato standard nelle operazioni di formattazione.  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/formatexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/formatexample1.vb#2)]  
   
- Le stringhe di formato <xref:System.TimeSpan> standard sono usate anche dai metodi <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> e <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> per definire il formato richieste delle stringhe di input per le operazioni di analisi L'analisi converte la rappresentazione di stringa di un valore in tale valore. Nell'esempio seguente viene illustrato l'utilizzo di stringhe di formato standard nelle operazioni di analisi.  
+ Le stringhe di formato <xref:System.TimeSpan> standard sono usate anche dai metodi <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> e <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> per definire il formato richieste delle stringhe di input per le operazioni di analisi (L'analisi converte la rappresentazione di stringa di un valore in tale valore). Nell'esempio seguente viene illustrato l'utilizzo di stringhe di formato standard nelle operazioni di analisi.  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/parseexample1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/parseexample1.vb#3)]  
   
 Nella tabella seguente sono elencati gli identificatori di formato di intervallo di tempo standard.  
   
-|Identificatore di formato|Nome|Descrizione|Esempi|  
+|Identificatore di formato|Nome|Description|Esempi|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|Formato di costante (invariante)|Questo identificatore non è dipendente dalle impostazioni cultura. Assume il formato `[-][d'.']hh':'mm':'ss['.'fffffff]`<br /><br /> (le stringhe di formato "t" e "T" producono gli stessi risultati).<br /><br /> Altre informazioni: [Identificatore di formato di costante ("c")](#the-constant-c-format-specifier).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|Formato breve generale|Questo identificatore restituisce informazioni strettamente necessarie. È basato sulle impostazioni cultura e assume il formato `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Altre informazioni: [Identificatore di formato breve generale ("g")](#the-general-short-g-format-specifier).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
@@ -56,9 +56,9 @@ Nella tabella seguente sono elencati gli identificatori di formato di intervallo
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |*-*|Un segno negativo facoltativo, che indica un intervallo di tempo negativo.|  
-|*D*|Numero di giorni facoltativo, senza zeri iniziali.|  
-|*Hh*|Numero di ore, nell'intervallo compreso tra "00" e "23".|  
-|*Mm*|Numero di minuti, nell'intervallo compreso tra "00" e "59".|  
+|*d*|Numero di giorni facoltativo, senza zeri iniziali.|  
+|*hh*|Numero di ore, nell'intervallo compreso tra "00" e "23".|  
+|*MM*|Numero di minuti, nell'intervallo compreso tra "00" e "59".|  
 |*ss*|Numero di secondi, nell'intervallo compreso tra "0" e "59".|  
 |*fffffff*|La parte frazionaria facoltativa di un secondo.  Il valore può variare da "0000001" (un tick oppure un decimilionesimo di secondo) e "9999999" (9.999.999 decimilionesimi di secondo, o un secondo meno di un tick).|  
   
@@ -82,9 +82,9 @@ Nella tabella seguente sono elencati gli identificatori di formato di intervallo
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |*-*|Un segno negativo facoltativo, che indica un intervallo di tempo negativo.|  
-|*D*|Numero di giorni facoltativo, senza zeri iniziali.|  
-|*H*|Numero di ore, compreso tra "0" e "23", senza zeri iniziali.|  
-|*Mm*|Numero di minuti, compreso tra "00" e "59".|  
+|*d*|Numero di giorni facoltativo, senza zeri iniziali.|  
+|*h*|Numero di ore, compreso tra "0" e "23", senza zeri iniziali.|  
+|*MM*|Numero di minuti, compreso tra "00" e "59".|  
 |*ss*|Numero di secondi, compreso tra "00" e "59".|  
 |*.*|Il separatore dei secondi frazionari. È equivalente alla proprietà <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> della cultura specificata senza gli override dell'utente.|  
 |*FFFFFFF*|Frazioni di secondo. Viene visualizzato il minor numero di cifre possibile.|  
@@ -99,16 +99,16 @@ Nella tabella seguente sono elencati gli identificatori di formato di intervallo
 ## <a name="the-general-long-g-format-specifier"></a>Identificatore di formato esteso generale ("G")  
  L'identificatore di formato <xref:System.TimeSpan> "G" restituisce la rappresentazione di stringa di un valore <xref:System.TimeSpan> in un formato esteso che include sempre sia i giorni sia le frazioni di secondo. La stringa risultante dall'identificatore di formato standard "G" ha il seguente formato:  
   
- [-] *d*:*hh*:*mm*:*ss*. *fffffff*  
+ [-] *d*:*HH*:*mm*:*SS*. *fffffff*  
   
  Gli elementi tra parentesi quadre ([e]) sono facoltativi. I due punti (:) sono un simbolo letterale. La tabella seguente descrive gli elementi rimanenti.  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |*-*|Un segno negativo facoltativo, che indica un intervallo di tempo negativo.|  
-|*D*|Il numero di giorni, senza zeri iniziali.|  
-|*Hh*|Numero di ore, nell'intervallo compreso tra "00" e "23".|  
-|*Mm*|Numero di minuti, nell'intervallo compreso tra "00" e "59".|  
+|*d*|Il numero di giorni, senza zeri iniziali.|  
+|*hh*|Numero di ore, nell'intervallo compreso tra "00" e "23".|  
+|*MM*|Numero di minuti, nell'intervallo compreso tra "00" e "59".|  
 |*ss*|Numero di secondi, nell'intervallo compreso tra "00" e "59".|  
 |*.*|Il separatore dei secondi frazionari. È equivalente alla proprietà <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> della cultura specificata senza gli override dell'utente.|  
 |*fffffff*|Frazioni di secondo.|  
@@ -122,6 +122,6 @@ Nella tabella seguente sono elencati gli identificatori di formato di intervallo
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)
-- [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)
+- [Formattazione di tipi](formatting-types.md)
+- [Stringhe di formato TimeSpan personalizzate](custom-timespan-format-strings.md)
+- [Analisi di stringhe](parsing-strings.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - generics [.NET Framework], interfaces
 - ordering comparisons [.NET Framework]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
-ms.openlocfilehash: 704ada32d428c468d5b71a3f1390568ca586079e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 21a244a5d44b036a987d8eb8a79aef2c4b8e9a76
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708324"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287519"
 ---
 # <a name="generic-interfaces"></a>Interfacce generiche
 Questo argomento fornisce una panoramica delle interfacce generiche che forniscono funzionalità comuni a famiglie di tipi generici.  
@@ -22,7 +22,7 @@ Questo argomento fornisce una panoramica delle interfacce generiche che fornisco
  Le interfacce generiche forniscono controparti indipendenti dai tipi a interfacce non generiche per confronti di uguaglianza e ordinamento e per le funzionalità condivise da tipi di raccolta generici.  
   
 > [!NOTE]
-> A partire da .NET Framework 4, i parametri di tipo di diverse interfacce generiche vengono contrassegnati come covariante o controvariante, fornendo più flessibilità nell'assegnazione e nell'uso di tipi che implementano queste interfacce. Vedere [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md).  
+> A partire da .NET Framework 4, i parametri di tipo di diverse interfacce generiche vengono contrassegnati come covariante o controvariante, fornendo più flessibilità nell'assegnazione e nell'uso di tipi che implementano queste interfacce. Vedere [Covarianza e controvarianza](covariance-and-contravariance.md).  
   
 ### <a name="equality-and-ordering-comparisons"></a>Confronti di uguaglianza e ordinamento  
  Nello spazio dei nomi <xref:System> le interfacce generiche <xref:System.IComparable%601?displayProperty=nameWithType> e <xref:System.IEquatable%601?displayProperty=nameWithType>, analogamente alle relative controparti non generiche, definiscono rispettivamente i metodi per i confronti di ordinamento e quelli per i confronti di uguaglianza. I tipi implementano queste interfacce per consentire l'esecuzione di questi confronti.  
@@ -44,7 +44,7 @@ Questo argomento fornisce una panoramica delle interfacce generiche che fornisco
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
-- [Generics](../../../docs/standard/generics/index.md)
-- [Collection generiche in .NET Framework](../../../docs/standard/generics/collections.md)
-- [Delegati generici per la modifica di matrici ed elenchi](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
-- [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md)
+- [Generics](index.md)
+- [Collection generiche in .NET Framework](collections.md)
+- [Delegati generici per la modifica di matrici ed elenchi](delegates-for-manipulating-arrays-and-lists.md)
+- [Covarianza e controvarianza](covariance-and-contravariance.md)

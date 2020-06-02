@@ -1,13 +1,14 @@
 ---
 title: Entity Data Model
+description: Il Entity Data Model descrive la struttura dei dati, indipendentemente dal formato archiviato, che risolve le problemi derivanti dall'archiviazione dei dati in molte forme.
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: ed834c57104e9f03ac337f6c1d30a0498bd42a06
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: c98b1f4559ef297f8b11051940fd91f5f6fa06fd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738417"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286740"
 ---
 # <a name="entity-data-model"></a>Entity Data Model
 EDM (Entity Data Model) è un set di concetti che descrivono la struttura dei dati, indipendentemente dal form archiviato. EDM è mutuato dal modello entità-relazione descritto da Peter Chen nel 1976, ma è anche basato su tale modello di cui estende gli utilizzi tradizionali.  
@@ -55,14 +56,14 @@ EDM (Entity Data Model) è un set di concetti che descrivono la struttura dei da
   
  [funzione definita dal modello](model-defined-function.md)  
   
- [proprietà di navigazione](navigation-property.md)  
+ [Proprietà di navigazione](navigation-property.md)  
   
- [proprietà](property.md)  
+ [property](property.md)  
   
  [vincolo di integrità referenziale](referential-integrity-constraint.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Strumenti Entity Data Model ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Panoramica del file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Panoramica sui file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Specifica CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)

@@ -1,13 +1,14 @@
 ---
 title: Stringhe di connessione in ADO.NET Entity Framework
+description: Informazioni sulle stringhe di connessione nella Entity Framework, che contengono informazioni per la connessione al provider di dati ADO.NET e sui file di modello e di mapping.
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 392e51022dc0f98b9fad656b9f950cd25588f31a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2ae25f5881c033a84d65f5b0b4ed14b4866dbcb3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040336"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286870"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Stringhe di connessione in ADO.NET Entity Framework
 
@@ -28,7 +29,7 @@ Nella tabella seguente sono inclusi i nomi validi per i valori di parola chiave 
 |Parola chiave|Descrizione|
 |-------------|-----------------|
 |`Provider`|Obbligatoria se la parola chiave `Name` non è specificata. Nome del provider usato per recuperare l'oggetto <xref:System.Data.Common.DbProviderFactory> per il provider sottostante. Questo valore è costante.<br /><br /> Quando la parola chiave `Name` non è inclusa in una stringa di connessione di entità, per la parola chiave `Provider` è necessario specificare un valore non vuoto. Questa parola chiave e la parola chiave `Name` si escludono a vicenda.|
-|`Provider Connection String`|Parametro facoltativo. Indica la stringa di connessione specifica del provider passata all'origine dati sottostante. Questa stringa di connessione contiene coppie parola chiave/valore valide per il provider di dati. Una parola chiave `Provider Connection String` non valida produrrà un errore di runtime quando viene valutata dall'origine dati.<br /><br /> Questa parola chiave e la parola chiave `Name` si escludono a vicenda.<br /><br /> Assicurarsi di eseguire l'escape del valore in base alla sintassi generale delle [stringhe di connessione di ADO.NET](../connection-strings.md). Si consideri ad esempio la stringa di connessione seguente: `Server=serverName; User ID = userID`. Deve essere preceduto da un carattere di escape perché contiene un punto e virgola. Poiché non contiene virgolette doppie, possono essere usate per l'escape:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|
+|`Provider Connection String`|Facoltativa. Indica la stringa di connessione specifica del provider passata all'origine dati sottostante. Questa stringa di connessione contiene coppie parola chiave/valore valide per il provider di dati. Una parola chiave `Provider Connection String` non valida produrrà un errore di runtime quando viene valutata dall'origine dati.<br /><br /> Questa parola chiave e la parola chiave `Name` si escludono a vicenda.<br /><br /> Assicurarsi di eseguire l'escape del valore in base alla sintassi generale delle [stringhe di connessione di ADO.NET](../connection-strings.md). Si consideri ad esempio la stringa di connessione seguente: `Server=serverName; User ID = userID` . Deve essere preceduto da un carattere di escape perché contiene un punto e virgola. Poiché non contiene virgolette doppie, possono essere usate per l'escape:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|
 |`Metadata`|Obbligatoria se la parola chiave `Name` non è specificata. Elenco di percorsi di directory, file e risorse delimitato da barre verticali in cui cercare informazioni relative a metadati e mapping. Di seguito è riportato un esempio:<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Gli spazi vuoti a ogni lato del separatore vengono ignorati.<br /><br /> Questa parola chiave e la parola chiave `Name` si escludono a vicenda.|
 |`Name`|L'applicazione può eventualmente specificare il nome della connessione in un file di configurazione dell'applicazione che fornisce i valori della stringa di connessione parola chiave/valore obbligatori. In questo caso, non è possibile specificare tali valori direttamente nella stringa di connessione. L'utilizzo della parola chiave `Name` non è consentito in un file di configurazione.<br /><br /> Quando la parola chiave `Name` non è inclusa nella stringa di connessione, per la parola chiave Provider è necessario specificare valori non vuoti.<br /><br /> Questa parola chiave e tutte le altre parole chiave per la stringa di connessione si escludono a vicenda.|
 
@@ -44,9 +45,9 @@ Le risorse incorporate vengono specificate nel modo seguente:
 
 Per la definizione del percorso di una risorsa incorporata, sono disponibili le opzioni seguenti:
 
-|Opzione|Descrizione|
+|Opzione|Description|
 |-|-|
-|`assemblyFullName`|Nome completo di un assembly con la risorsa incorporata. Include il nome semplice, il nome della versione, la lingua supportata e la chiave pubblica, nel modo seguente:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Le risorse possono essere incorporate in qualsiasi assembly accessibile dall'applicazione.<br /><br /> Se si specifica un carattere jolly (\*) per `assemblyFullName`, il runtime di Entity Framework eseguirà la ricerca delle risorse nei percorsi seguenti, in questo ordine:<br /><br /> 1. assembly chiamante.<br />2. assembly a cui si fa riferimento.<br />3. assembly nella directory bin di un'applicazione.<br /><br /> Se i file non sono in uno di questi percorsi, verrà generata un'eccezione. **Nota:**  Quando si usa il carattere jolly (*), il Entity Framework deve esaminare tutti gli assembly per le risorse con il nome corretto. Per migliorare le prestazioni, specificare il nome dell'assembly anziché il carattere jolly.|
+|`assemblyFullName`|Nome completo di un assembly con la risorsa incorporata. Include il nome semplice, il nome della versione, la lingua supportata e la chiave pubblica, nel modo seguente:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Le risorse possono essere incorporate in qualsiasi assembly accessibile dall'applicazione.<br /><br /> Se si specifica un carattere jolly ( \* ) per `assemblyFullName` , il runtime di Entity Framework cercherà le risorse nei percorsi seguenti, in questo ordine:<br /><br /> 1. assembly chiamante.<br />2. assembly a cui si fa riferimento.<br />3. assembly nella directory bin di un'applicazione.<br /><br /> Se i file non sono in uno di questi percorsi, verrà generata un'eccezione. **Nota:**  Quando si usa il carattere jolly (*), il Entity Framework deve esaminare tutti gli assembly per le risorse con il nome corretto. Per migliorare le prestazioni, specificare il nome dell'assembly anziché il carattere jolly.|
 |`resourceName`|Nome della risorsa inclusa, ad esempio AdventureWorksModel. CSDL. I servizi di metadati cercheranno solo i file o le risorse con estensione csdl, ssdl o msl. Se la parola chiave `resourceName` non è specificata, verranno caricate tutte le risorse dei metadati. Le risorse devono disporre di nomi univoci all'interno di un assembly. Se più file con lo stesso nome sono definiti in directory diverse nell'assembly, la parola chiave `resourceName` deve includere la struttura di cartelle prima del nome della risorsa, ad esempio NomeCartella.NomeFile.csdl.<br /><br /> `resourceName` non è obbligatoria quando si specifica un carattere jolly (*) per `assemblyFullName`.|
 
 > [!NOTE]
@@ -78,7 +79,7 @@ Nell'esempio seguente sono caricate tutte le risorse incorporate con estensioni 
 Metadata=res://AdventureWorks, 1.0.0.0, neutral, a14f3033def15840/
 ```
 
-Nell'esempio seguente vengono caricate tutte le risorse nel percorso del file relativo più "datadir\metadata\\" dal percorso dell'assembly caricato.
+Nell'esempio seguente vengono caricate tutte le risorse nel percorso del file relativo più "datadir\metadata \\ " dal percorso dell'assembly caricato.
 
 ```csharp
 Metadata=datadir\metadata\
@@ -90,13 +91,13 @@ Nell'esempio seguente vengono caricate tutte le risorse nel percorso del file re
 Metadata=.\
 ```
 
-## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Supporto per la &#124;stringa di&#124; sostituzione di DataDirectory e l'operatore radice dell'applicazione Web (~)
+## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Supporto per la stringa di sostituzione &#124;DataDirectory&#124; e l'operatore radice dell'applicazione Web (~)
 
-`DataDirectory` e l'operatore ~ vengono usati nell'<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> come parte delle parole chiave `Metadata` e `Provider Connection String`. <xref:System.Data.EntityClient.EntityConnection> inoltra `DataDirectory` e l'operatore ~ rispettivamente a <xref:System.Data.Metadata.Edm.MetadataWorkspace> e al provider di archiviazione.
+`DataDirectory`e l'operatore ~ vengono usati in <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> come parte delle `Metadata` `Provider Connection String` parole chiave e. <xref:System.Data.EntityClient.EntityConnection> inoltra `DataDirectory` e l'operatore ~ rispettivamente a <xref:System.Data.Metadata.Edm.MetadataWorkspace> e al provider di archiviazione.
 
 |Termine|Descrizione|
 |----------|-----------------|
-|`&#124;DataDirectory&#124;`|Si risolve in un percorso relativo di file di mapping e di metadati. Si tratta del valore impostato attraverso il metodo `AppDomain.SetData("DataDirectory", objValue)`. La stringa di sostituzione `DataDirectory` deve essere racchiusa tra caratteri di barra verticale e non può essere presente alcuno spazio vuoto tra il nome e i caratteri della barra verticale. Il nome `DataDirectory` non supporta la distinzione tra maiuscole e minuscole.<br /><br /> Se una directory fisica denominata "DataDirectory" deve essere passata come membro dell'elenco di percorsi di metadati, aggiungere uno spazio vuoto a uno o entrambi i lati del nome. Ad esempio: `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`. Un'applicazione ASP.NET risolve &#124;DataDirectory&#124; nella cartella "\<radice dell'applicazione >/App_Data".|
+|`&#124;DataDirectory&#124;`|Si risolve in un percorso relativo di file di mapping e di metadati. Si tratta del valore impostato attraverso il metodo `AppDomain.SetData("DataDirectory", objValue)`. La `DataDirectory` stringa di sostituzione deve essere racchiusa tra caratteri di barra verticale e non può essere presente alcuno spazio vuoto tra il nome e i caratteri della barra verticale. Il nome `DataDirectory` non supporta la distinzione tra maiuscole e minuscole.<br /><br /> Se una directory fisica denominata "DataDirectory" deve essere passata come membro dell'elenco di percorsi di metadati, aggiungere uno spazio vuoto a uno o entrambi i lati del nome. Ad esempio: `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`. Un'applicazione ASP.NET risolve &#124;DataDirectory&#124; nella \<application root> cartella "/App_Data".|
 |~|Si risolve nella radice dell'applicazione Web. Il carattere ~ in una posizione iniziale viene sempre interpretato come l'operatore radice dell'applicazione Web (~), sebbene possa rappresentare una sottodirectory locale valida. Per fare riferimento a questo tipo di sottodirectory locale, l'utente deve passare in modo esplicito `./~`.|
 
 `DataDirectory` e l'operatore ~ devono essere specificati solo all'inizio di un percorso in quanto non vengono risolti in altre posizioni. Entity Framework tenterà di risolvere `~/data`, ma considererà `/data/~` come un percorso fisico.
@@ -109,7 +110,7 @@ La risoluzione della stringa di sostituzione `DataDirectory` e l'operatore ~ è 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Uso di provider di dati](working-with-data-providers.md)
+- [Utilizzo di provider di dati](working-with-data-providers.md)
 - [Considerazioni sulla distribuzione](deployment-considerations.md)
-- [Gestione delle connessioni e delle transazioni](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
+- [Gestione di connessioni e transazioni](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
 - [Stringhe di connessione](../connection-strings.md)

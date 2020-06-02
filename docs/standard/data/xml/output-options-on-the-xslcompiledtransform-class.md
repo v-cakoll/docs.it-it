@@ -3,12 +3,12 @@ title: Opzioni di output nella classe XslCompiledTransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-ms.openlocfilehash: 504057bd5e10498d39b2bce908742fc20b112c52
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e9ffdc1377dbf124f042802279e7e7a275222eff
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710505"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288706"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Opzioni di output nella classe XslCompiledTransform
 In questo argomento vengono illustrate le opzioni disponibili per l'output di XSLT. È possibile specificare le opzioni di output nel foglio di stile oppure nel metodo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
@@ -43,7 +43,7 @@ In questo argomento vengono illustrate le opzioni disponibili per l'output di XS
 #### <a name="string"></a>string  
  Usare questo tipo di output per specificare l'URI del file di output.  
   
-#### <a name="stream"></a>STREAM  
+#### <a name="stream"></a>Flusso  
  Un flusso è un'astrazione di una sequenza di byte, ad esempio un file, un dispositivo di input/output, una pipe di comunicazione tra processi o un socket TCP/IP. La classe <xref:System.IO.Stream> e le relative classi derivate forniscono una rappresentazione generica di questi diversi tipi di input e output, senza che il programmatore venga a contatto con i dettagli specifici del sistema operativo e con i dispositivi sottostanti.  
   
  Usare questo tipo di output per inviare dati a un tipo <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream> oppure per inviare un flusso di output (`Response.OutputStream`).  
@@ -55,6 +55,6 @@ In questo argomento vengono illustrate le opzioni disponibili per l'output di XS
   
 - Quando si scrivono tag vuoti, viene scritto uno spazio tra l'ultimo carattere del nome dell'elemento e la barra rovesciata, ad esempio `<myElement />`. Questo consente ai browser meno recenti di visualizzare correttamente le pagine HTML generate.  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [Trasformazioni XSLT](xslt-transformations.md)

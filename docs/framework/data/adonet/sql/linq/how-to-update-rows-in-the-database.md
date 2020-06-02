@@ -1,27 +1,28 @@
 ---
-title: 'Procedura: Aggiornare righe nel database'
+title: 'Procedura: aggiornare righe nel database'
+description: Informazioni su come aggiornare le righe in un database modificando LINQ to SQL oggetti in una raccolta correlata a tabella. LINQ to SQL converte le aggiunte ai comandi di SQL UPDATE.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a2b5c90f-6cc3-4128-bfab-1db488d5af26
-ms.openlocfilehash: c2055e1dd988352b50a439531ab5533f34a4965e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f25efb91fb5a83fb1c7c109bd018c8210edaec8b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793127"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286339"
 ---
-# <a name="how-to-update-rows-in-the-database"></a>Procedura: Aggiornare righe nel database
+# <a name="how-to-update-rows-in-the-database"></a>Procedura: aggiornare righe nel database
 
-È possibile aggiornare le righe in un database modificando i valori dei membri degli oggetti associati [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> alla raccolta e quindi inviando le modifiche al database. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]converte le modifiche nei comandi SQL `UPDATE` appropriati.
+È possibile aggiornare le righe in un database modificando i valori dei membri degli oggetti associati alla [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> raccolta e quindi inviando le modifiche al database. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]converte le modifiche nei comandi SQL appropriati `UPDATE` .
 
 > [!NOTE]
 > È possibile eseguire l'override dei metodi predefiniti [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] per le operazioni di database `Insert`, `Update`e `Delete`. Per ulteriori informazioni, vedere [personalizzazione di operazioni di inserimento, aggiornamento ed eliminazione](customizing-insert-update-and-delete-operations.md).
 >
 > Gli sviluppatori che utilizzano Visual Studio possono utilizzare il Object Relational Designer per sviluppare stored procedure allo stesso scopo.
 
-Per l'esecuzione dei passaggi seguenti si presuppone l'uso di un oggetto <xref:System.Data.Linq.DataContext> valido per la connessione al database Northwind. Per altre informazioni, vedere [Procedura: Connettersi a un database](how-to-connect-to-a-database.md).
+Per l'esecuzione dei passaggi seguenti si presuppone l'uso di un oggetto <xref:System.Data.Linq.DataContext> valido per la connessione al database Northwind. Per altre informazioni, vedere [procedura: connettersi a un database](how-to-connect-to-a-database.md).
 
 ### <a name="to-update-a-row-in-the-database"></a>Per aggiornare una riga nel database
 
@@ -40,6 +41,6 @@ Nell'esempio di codice seguente viene eseguita una query sul database per l'ordi
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Gestione dei conflitti di modifica](how-to-manage-change-conflicts.md)
+- [Procedura: gestire i conflitti di modifiche](how-to-manage-change-conflicts.md)
 - [Procedura: Assegnare stored procedure per eseguire aggiornamenti, inserimenti ed eliminazioni (O/R Designer)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
 - [Creazione e invio di modifiche dei dati](making-and-submitting-data-changes.md)

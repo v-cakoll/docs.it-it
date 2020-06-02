@@ -3,18 +3,18 @@ title: Supporto per la funzione msxsl:node-set()
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-ms.openlocfilehash: 5022b298cb20796edbc54e951d8b06043697d832
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 747a0ff8c155f7635d5a6d2ebc76f287cf8646d4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78155594"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291448"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>Supporto per la funzione msxsl:node-set()
 La funzione `msxsl:node-set` consente di convertire un frammento di albero risultato in un set di nodi. Il set di nodi risultante contiene sempre un nodo singolo ed è il nodo radice dell'albero.  
   
 > [!NOTE]
-> La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in .NET Framework 2.0. È possibile eseguire le trasformazioni XSLT (Extensible Stylesheet Language for Transformations) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Per altre informazioni, vedere [Utilizzo della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [Migrazione dalla classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
+> La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in .NET Framework 2.0. È possibile eseguire le trasformazioni XSLT (Extensible Stylesheet Language for Transformations) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Per altre informazioni, vedere [Utilizzo della classe XslCompiledTransform](using-the-xslcompiledtransform-class.md) e [Migrazione dalla classe XslTransform](migrating-from-the-xsltransform-class.md).  
   
  La funzione `msxsl:node-set` consente di convertire un frammento di albero risultato in un set di nodi. Il set di nodi risultante contiene sempre un nodo singolo ed è il nodo radice dell'albero.  
   
@@ -51,6 +51,6 @@ La funzione `msxsl:node-set` consente di convertire un frammento di albero risul
 <authors><author>Michael Howard</author><author>Michael Kay</author></authors>  
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Implementazione del processore XSLT da parte della classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [Implementazione del processore XSLT da parte della classe XslTransform](xsltransform-class-implements-the-xslt-processor.md)

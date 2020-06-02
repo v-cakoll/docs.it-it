@@ -26,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 7f20e5108ad8bff602f5b761e65f093d987f2608
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d7f606126237d4d045f55dde03c125455c8a8634
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156309"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84275958"
 ---
 # <a name="generics-in-net"></a>Generics in .NET
 
@@ -63,7 +63,7 @@ I generics consentono di personalizzare un metodo, una classe o una struttura in
   
 - Il termine generale *tipo generico* include sia tipi costruiti sia definizioni di tipo generico.  
   
-- La *covarianza* e la *controvarianza* dei parametri di tipo generico consentono di usare tipi generici costruiti i cui argomenti di tipo sono più derivati (covarianza) o meno derivati (controvarianza) rispetto a quelle di tipo costruito. La covarianza e la controvarianza sono definite collettivamente *varianza*. Per altre informazioni, vedere [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md).  
+- La *covarianza* e la *controvarianza* dei parametri di tipo generico consentono di usare tipi generici costruiti i cui argomenti di tipo sono più derivati (covarianza) o meno derivati (controvarianza) rispetto a quelle di tipo costruito. La covarianza e la controvarianza sono definite collettivamente *varianza*. Per altre informazioni, vedere [Covarianza e controvarianza](covariance-and-contravariance.md).  
   
 - I*vincoli* sono limiti imposti su parametri di tipo generico. Ad esempio, è possibile limitare un parametro di tipo a tipi che implementano l'interfaccia generica <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> , per garantire la possibilità di ordinare le istanze del tipo. È anche possibile vincolare i parametri di tipo a tipi che hanno una determinata classe di base, con un costruttore senza parametri, o che siano tipi riferimento o tipi valore. Gli utenti di tipo generico non possono sostituire gli argomenti di tipo che non soddisfano i vincoli.  
   
@@ -94,20 +94,20 @@ I generics consentono di personalizzare un metodo, una classe o una struttura in
   
 - I delegati generici consentono di eseguire il callback indipendente dai tipi senza la necessità di creare più classi delegate. Ad esempio, il delegato generico <xref:System.Predicate%601> consente di creare un metodo per implementare i propri criteri di ricerca di un tipo particolare e di usare il proprio metodo con metodi di tipo <xref:System.Array> , ad esempio <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A>e <xref:System.Array.FindAll%2A>.  
   
-- I generics ottimizzano il codice generato dinamicamente. Quando si usano i generics con il codice generato in modo dinamico non è necessario generare il tipo. In questo modo aumenta il numero di scenari in cui è possibile usare i metodi dinamici leggeri invece di generare interi assembly. Per altre informazioni, vedere [Procedura: Definire ed eseguire metodi dinamici](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) e <xref:System.Reflection.Emit.DynamicMethod>.  
+- I generics ottimizzano il codice generato dinamicamente. Quando si usano i generics con il codice generato in modo dinamico non è necessario generare il tipo. In questo modo aumenta il numero di scenari in cui è possibile usare i metodi dinamici leggeri invece di generare interi assembly. Per altre informazioni, vedere [Procedura: Definire ed eseguire metodi dinamici](../../framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) e <xref:System.Reflection.Emit.DynamicMethod>.  
   
  Di seguito sono elencate alcune limitazioni di generics:  
   
 - I tipi generici possono derivare dalla maggior parte delle classi base, ad esempio <xref:System.MarshalByRefObject> (e i vincoli possono essere usati per richiedere che i parametri di tipo generico derivino da classi base quali <xref:System.MarshalByRefObject>). Tuttavia, .NET Framework non supporta tipi generici associati al contesto. Un tipo generico può derivare da <xref:System.ContextBoundObject>, ma provare a creare un'istanza di quel tipo causa un <xref:System.TypeLoadException>.  
   
-- L'enumerazione non può avere parametri di tipo generico. Un'enumerazione può essere generica solo incidentalmente (ad esempio, perché è annidata in un tipo generico che viene definito con Visual Basic, C# o C++). Per altre informazioni, vedere "Enumerazioni" in [Common Type System](../../../docs/standard/base-types/common-type-system.md).  
+- L'enumerazione non può avere parametri di tipo generico. Un'enumerazione può essere generica solo incidentalmente (ad esempio, perché è annidata in un tipo generico che viene definito con Visual Basic, C# o C++). Per altre informazioni, vedere "Enumerazioni" in [Common Type System](../base-types/common-type-system.md).  
   
 - I metodi dinamici leggeri non possono essere generici.  
   
 - In Visual Basic, C# e C++ non è possibile creare un'istanza di un tipo annidato in un tipo generico a meno che non siano stati assegnati i tipi ai parametri di tipo di tutti i tipi di inclusione. In altre parole, in una reflection un tipo annidato che viene definito con questi linguaggi contiene i parametri di tutti i relativi tipi di inclusione. Ciò consente di usare i parametri di tipo dei tipi in inclusione nelle definizioni di membro di un tipo annidato. Per altre informazioni, vedere "Tipi annidati" in <xref:System.Type.MakeGenericType%2A>.  
   
     > [!NOTE]
-    > Un tipo annidato definito con la creazione di codice in un assembly dinamico o usando [Ilasm.exe (Assembler IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) non deve includere i parametri di tipo dei relativi tipi di inclusione. Tuttavia, se non li include, i parametri di tipo non saranno nell'ambito della classe annidata.  
+    > Un tipo annidato definito con la creazione di codice in un assembly dinamico o usando [Ilasm.exe (Assembler IL)](../../framework/tools/ilasm-exe-il-assembler.md) non deve includere i parametri di tipo dei relativi tipi di inclusione. Tuttavia, se non li include, i parametri di tipo non saranno nell'ambito della classe annidata.  
   
      Per altre informazioni, vedere "Tipi annidati" in <xref:System.Type.MakeGenericType%2A>.  
 
@@ -133,16 +133,16 @@ I generics consentono di personalizzare un metodo, una classe o una struttura in
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Raccolte generiche in .NET](../../../docs/standard/generics/collections.md)|Vengono descritte le classi di raccolte generiche e altri tipi generici in .NET.|  
-|[Delegati generici per la modifica di matrici ed elenchi](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Vengono descritti i delegati generici per conversioni, predicati di ricerca e azioni da eseguire sugli elementi di una matrice o raccolta.|  
-|[Interfacce generiche](../../../docs/standard/generics/interfaces.md)|Vengono descritte le interfacce generiche che forniscono funzionalità comuni a famiglie di tipi generici.|  
-|[Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md)|Vengono descritte la covarianza e controvarianza nei parametri di tipo generico.|  
-|[Tipi di Collection comunemente utilizzate](../../../docs/standard/collections/commonly-used-collection-types.md)|Fornisce informazioni di riepilogo sulle caratteristiche e gli scenari di utilizzo dei tipi di raccolta in .NET, inclusi i tipi generici.|  
-|[Quando utilizzare raccolte genericheWhen to Use Generic Collections](../../../docs/standard/collections/when-to-use-generic-collections.md)|Vengono descritte le regole generali per determinare quando usare i tipi di raccolte generiche.|  
-|[Procedura: Definire un tipo generico tramite reflection emit](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Viene illustrato come generare assembly dinamici che includono tipi e metodi generici.|  
+|[Raccolte generiche in .NET](collections.md)|Vengono descritte le classi di raccolte generiche e altri tipi generici in .NET.|  
+|[Delegati generici per la modifica di matrici ed elenchi](delegates-for-manipulating-arrays-and-lists.md)|Vengono descritti i delegati generici per conversioni, predicati di ricerca e azioni da eseguire sugli elementi di una matrice o raccolta.|  
+|[Interfacce generiche](interfaces.md)|Vengono descritte le interfacce generiche che forniscono funzionalità comuni a famiglie di tipi generici.|  
+|[Covarianza e controvarianza](covariance-and-contravariance.md)|Vengono descritte la covarianza e controvarianza nei parametri di tipo generico.|  
+|[Tipi di raccolte comunemente usate](../collections/commonly-used-collection-types.md)|Fornisce informazioni di riepilogo sulle caratteristiche e gli scenari di utilizzo dei tipi di raccolta in .NET, inclusi i tipi generici.|  
+|[Quando usare le raccolte generiche](../collections/when-to-use-generic-collections.md)|Vengono descritte le regole generali per determinare quando usare i tipi di raccolte generiche.|  
+|[Procedura: Definire un tipo generico tramite reflection emit](../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Viene illustrato come generare assembly dinamici che includono tipi e metodi generici.|  
 |[Generic Types in Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|Viene descritta la funzionalità generics per gli utenti di Visual Basic, tra cui procedure relative all'utilizzo e alla definizione di tipi generici.|  
 |[Introduzione ai generics](../../csharp/programming-guide/generics/index.md)|Viene fornita una panoramica di definizione e utilizzo di tipi generici per gli utenti di C#.|  
-|[Cenni preliminari sui generics in Visual C](/cpp/windows/overview-of-generics-in-visual-cpp)|Viene descritta la funzionalità generics per gli utenti di C++, incluse le differenze tra generics e modelli.|  
+|[Panoramica dei generics in Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Viene descritta la funzionalità generics per gli utenti di C++, incluse le differenze tra generics e modelli.|  
 
 ## <a name="reference"></a>Informazioni di riferimento  
  <xref:System.Collections.Generic>  

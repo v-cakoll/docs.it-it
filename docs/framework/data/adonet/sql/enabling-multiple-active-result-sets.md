@@ -1,16 +1,17 @@
 ---
 title: Abilitazione di MARS (Multiple Active Result Set)
+description: Informazioni su come abilitare o disabilitare MARS in una stringa di connessione, che funziona con SQL Server in modo che sia possibile eseguire più batch su una singola connessione in ADO.NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 72125be835298218e5445fe1915d6a17f5008bb2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43bdfebce291c3c1d6c90104c5fef440b295934b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148725"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286481"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Abilitazione di MARS (Multiple Active Result Set)
 MARS (Multiple Active Result Set) è un servizio che funziona in combinazione con SQL Server per consentire l'esecuzione di più batch in un'unica connessione. Quando MARS è abilitato per l'uso con SQL Server, ciascun oggetto comando usato aggiunge una sessione alla connessione.  
@@ -64,7 +65,7 @@ string connectionString = "Data Source=MSSQL1;" +
 ### <a name="mars-session-cache"></a>Cache della sessione MARS  
  Quando viene aperta una connessione con MARS abilitato, viene creata una sessione logica che aggiunge ulteriore overhead. Per ridurre al minimo l'overhead e migliorare le prestazioni, **SqlClient** memorizza nella cache la sessione MARS all'interno di una connessione. La cache contiene al massimo 10 sessioni MARS. Questo valore non può essere modificato dall'utente. Se viene raggiunto il limite della sessione, viene creata una nuova sessione, non viene generato un errore. La cache e le sessioni contenute nella stessa sono specifiche di una connessione e non vengono condivise tra le connessioni. Quando una sessione viene rilasciata, viene restituita al pool, a meno che non sia stato raggiunto il limite massimo del pool. Se il pool di cache è pieno, la sessione viene chiusa. Le sessioni MARS non scadono. Vengono solo pulite quando l'oggetto connessione viene eliminato. La cache della sessione MARS non è precaricata. Viene caricata nel momento in cui l'applicazione richiede più sessioni.  
   
-### <a name="thread-safety"></a>Sicurezza dei thread  
+### <a name="thread-safety"></a>Thread safety  
  Le operazioni MARS non sono thread-safe.  
   
 ### <a name="connection-pooling"></a>Pool di connessioni  
@@ -94,7 +95,7 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Messaggio: Il contesto della transazione è in uso in un'altra sessione.  
   
- Origine: provider di dati SqlClient .NET  
+ Origine: .NET SqlClient provider di dati  
   
  Previsto: (null)  
   

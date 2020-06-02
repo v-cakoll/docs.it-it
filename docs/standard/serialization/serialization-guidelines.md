@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: af0b857e98ffbe0ff9f12108174b79f873c2b38f
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: eb11f0b8ddd34df7c6970c275d4b83cb95f59a53
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378382"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287493"
 ---
 # <a name="serialization-guidelines"></a>Linee guida relative alla serializzazione
 In questo documento vengono elencate le linee guida da tenere presenti quando si progetta un'API da serializzare.  
@@ -31,7 +31,7 @@ In questo documento vengono elencate le linee guida da tenere presenti quando si
   
  Quando si progettano nuovi tipi, è necessario determinare le eventuali tecnologie che devono essere supportate da tali tipi. Le linee guida seguenti descrivono come effettuare la scelta e come fornire tale supporto. È importante tenere presente che queste linee guida non hanno lo scopo di indicare la tecnologia di serializzazione da utilizzare nell'implementazione dell'applicazione o della libreria poiché non sono correlate direttamente alla progettazione dell'API e pertanto esulano dall'ambito di questo argomento.  
   
-## <a name="guidelines"></a>Indicazioni  
+## <a name="guidelines"></a>Linee guida  
   
 - Prendere in seria considerazione la serializzazione quando si progettano nuovi tipi.  
   
@@ -79,7 +79,7 @@ In questo documento vengono elencate le linee guida da tenere presenti quando si
      [!code-csharp[SerializationGuidelines#4](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#4)]
      [!code-vb[SerializationGuidelines#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#4)]  
   
-     Nei casi in cui l'elenco di tipi noti non sia noto staticamente (quando viene compilata la classe **Person**), **KnownTypeAttribute** può puntare anche a un metodo che restituisce un elenco di tipi noti in fase di esecuzione.  
+     Nei casi in cui l'elenco di tipi noti non è noto in modo statico (quando la classe **Person** viene compilata), **KnownTypeAttribute** può puntare anche a un metodo che restituisce un elenco di tipi noti in fase di esecuzione.  
   
 5. Prendere in considerazione la compatibilità con le versioni precedenti e successive quando si creano o si modificano tipi serializzabili.  
   
@@ -92,7 +92,7 @@ In questo documento vengono elencate le linee guida da tenere presenti quando si
      [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]
      [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]  
   
-     Per altre informazioni, vedere [Contratti di dati compatibili con versioni successive](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+     Per altre informazioni, vedere [Contratti di dati compatibili con versioni successive](../../framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 #### <a name="supporting-xml-serialization"></a>Supporto della serializzazione XML  
  La serializzazione dei contratti dati è la tecnologia di serializzazione principale e predefinita in .NET Framework, anche se non supporta tutti gli scenari di serializzazione, ad esempio non consente di controllare completamente la forma del codice XML creato o utilizzato dal serializzatore. Se è richiesto un controllo così dettagliato, è necessario usare la *serializzazione XML* nonché progettare i tipi in modo che supportino questa tecnologia di serializzazione.  
@@ -140,10 +140,10 @@ In questo documento vengono elencate le linee guida da tenere presenti quando si
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Serializzatore dei contratti dati](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
-- [Types Supported by the Data Contract Serializer](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Using Data Contracts](../../framework/wcf/feature-details/using-data-contracts.md)
+- [Serializzatore dei contratti dati](../../framework/wcf/feature-details/data-contract-serializer.md)
+- [Types Supported by the Data Contract Serializer](../../framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [Serializzazione binaria](binary-serialization.md)
 - [Servizi remoti .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [Serializzazione SOAP e XML](xml-and-soap-serialization.md)
-- [Sicurezza e serializzazione](../../../docs/framework/misc/security-and-serialization.md)
+- [Sicurezza e serializzazione](../../framework/misc/security-and-serialization.md)

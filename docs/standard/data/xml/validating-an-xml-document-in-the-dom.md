@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
-ms.openlocfilehash: 93686ddf1afff76926e77acdbf5aa58e93d6cb77
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 949dc52c332b17784b0e1851d178465fe4881b6f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710037"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287636"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Convalida di un documento XML nel DOM
 
@@ -86,11 +86,11 @@ Gli errori di convalida sono gestiti dal tipo <xref:System.Xml.Schema.Validation
 
  Per gli esempi che illustrano il tipo <xref:System.Xml.Schema.ValidationEventHandler>, vedere "Convalida di un documento XML durante il caricamento nel DOM" e "Convalida di un documento XML nel DOM" riportati in precedenza.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XmlReader>
 - <xref:System.Xml.Schema.ValidationEventHandler>
 - <xref:System.Xml.XmlReaderSettings>
-- [Elaborazione di dati XML con il modello DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)
-- [Utilizzo di schemi XML](../../../../docs/standard/data/xml/working-with-xml-schemas.md)
+- [Elaborazione di dati XML con il modello DOM](process-xml-data-using-the-dom-model.md)
+- [Utilizzo di schemi XML](working-with-xml-schemas.md)

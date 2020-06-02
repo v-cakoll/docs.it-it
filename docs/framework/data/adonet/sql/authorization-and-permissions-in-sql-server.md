@@ -1,13 +1,14 @@
 ---
 title: Autorizzazioni in SQL Server
+description: Informazioni su come concedere in modo esplicito le autorizzazioni per rendere gli oggetti di database creati accessibili agli utenti in SQL Server con ADO.NET.
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: c9b041a078494cd29d6cab5297728d233dafa236
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: eb01e29b36da5e1793b9176301a968a42115d19c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782595"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286533"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorizzazioni in SQL Server
 Quando si creano oggetti di database, è necessario concedere in modo esplicito le autorizzazioni per renderli accessibili agli utenti. Ogni oggetto a protezione diretta dispone di autorizzazioni che possono essere concesse a un'entità di sicurezza usando istruzioni di autorizzazione.  
@@ -35,7 +36,7 @@ Quando si creano oggetti di database, è necessario concedere in modo esplicito 
 |--------------------------|-----------------|  
 |GRANT|Consente di concedere un'autorizzazione.|  
 |REVOKE|Consente di revocare un'autorizzazione. Corrisponde allo stato predefinito di un nuovo oggetto. Un'autorizzazione revocata a un utente o a un ruolo può tuttavia ancora essere ereditata da altri gruppi o ruoli a cui è assegnata l'entità di sicurezza.|  
-|DENY|Consente di revocare un'autorizzazione in modo che non possa essere ereditata. Ha la precedenza su tutte le autorizzazioni, ma non si applica a proprietari di oggetti o a membri di `sysadmin`. Se si usa DENY per negare le autorizzazioni su un oggetto al ruolo `public`, le autorizzazioni verranno negate a tutti gli utenti e ruoli, ad eccezione dei parte proprietari dell'oggetto e dei membri di `sysadmin`.|  
+|NEGA|Consente di revocare un'autorizzazione in modo che non possa essere ereditata. Ha la precedenza su tutte le autorizzazioni, ma non si applica a proprietari di oggetti o a membri di `sysadmin`. Se si usa DENY per negare le autorizzazioni su un oggetto al ruolo `public`, le autorizzazioni verranno negate a tutti gli utenti e ruoli, ad eccezione dei parte proprietari dell'oggetto e dei membri di `sysadmin`.|  
   
 - L'istruzione GRANT consente di assegnare a un gruppo o un ruolo autorizzazioni che possono essere ereditate dagli utenti del database. Tuttavia, poiché l'istruzione DENY ha la precedenza su tutte le altre istruzioni di autorizzazione, un utente al quale è stata negata un'autorizzazione non può ereditarla da un altro ruolo.  
   
@@ -52,9 +53,9 @@ Quando si creano oggetti di database, è necessario concedere in modo esplicito 
 > Il concatenamento delle proprietà non si applica nel caso di istruzioni SQL dinamiche. Per chiamare una procedura che esegue un'istruzione SQL, è necessario che al chiamante siano concesse autorizzazioni sulle tabelle sottostanti, esponendo in tal l'applicazione ad attacchi SQL injection. In SQL Server vengono forniti nuovi meccanismi, ad esempio la rappresentazione e la firma di moduli con i certificati, per i quali non è richiesta la concessione di autorizzazioni sulle tabelle sottostanti e che possono essere usati anche con stored procedure CLR.  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Per altre informazioni, vedere le seguenti risorse.  
+ Per ulteriori informazioni, vedere le risorse seguenti.  
   
-|Risorsa|DESCRIZIONE|  
+|Resource|Descrizione|  
 |--------------|-----------------|  
 |[Autorizzazioni](/sql/relational-databases/security/permissions-database-engine)|Contiene argomenti che illustrano la gerarchia delle autorizzazioni, le viste del catalogo e le autorizzazioni dei ruoli predefiniti del server e del database.|
   

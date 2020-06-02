@@ -1,31 +1,32 @@
 ---
 title: Gestione dei valori null
+description: Informazioni sul modo in cui il .NET Framework provider di dati per SQL Server gestisce null e su null e SqlBoolean, sulla logica a tre valori e sull'assegnazione di valori null.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: c45c6672983866df6c47ec84981cc7bd11637c0c
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: a4d086d81f1c2c959780366cfeb59f2d265bc40c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249077"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286455"
 ---
 # <a name="handling-null-values"></a>Gestione dei valori null
 Se il valore di una colonna è sconosciuto o mancante, viene usato un valore Null in un database relazionale. Un valore Null non è né una stringa vuota (per i tipi di dati character o datetime) né un valore zero (per i tipi di dati numerici). La specifica ANSI SQL-92 indica che un valore Null deve essere lo stesso per tutti i tipi di dati, in modo che tutti i valori Null vengano gestiti in modo coerente. Lo spazio dei nomi <xref:System.Data.SqlTypes> specifica la semantica Null implementando l'interfaccia <xref:System.Data.SqlTypes.INullable>. Ogni tipo di dati in <xref:System.Data.SqlTypes> ha una propria proprietà `IsNull` e un valore `Null` che può essere assegnato a un'istanza di tale tipo di dati.  
   
 > [!NOTE]
-> In .NET Framework versione 2.0 è stato introdotto il supporto per i tipi di valore nullable, che consentono ai programmatori di estendere un tipo di valore per rappresentare tutti i valori del tipo sottostante. Questi tipi di valore nullable <xref:System.Nullable> CLR rappresentano un'istanza della struttura. Questa funzionalità è particolarmente utile quando i tipi di valore sono boxed e unboxed, garantendo una maggiore compatibilità con i tipi di oggetto. I tipi di valore nullable CLR non sono destinati all'archiviazione di valori null `null` del database `Nothing` perché un valore null SQL ANSI non si comporta allo stesso modo di un riferimento (o in Visual Basic). Per usufruire dei valori Null SQL ANSI del database, usare valori Null <xref:System.Data.SqlTypes> anziché <xref:System.Nullable>. Per ulteriori informazioni sull'utilizzo di tipi nullable di valori CLR in Visual Basic, vedere [Tipi di valore nullable](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)e per C, vedere Tipi di [valore nullable.](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)  
+> In .NET Framework versione 2,0 è stato introdotto il supporto per i tipi di valore Nullable, che consentono ai programmatori di estendere un tipo di valore per rappresentare tutti i valori del tipo sottostante. Questi tipi di valore nullable CLR rappresentano un'istanza della <xref:System.Nullable> struttura. Questa funzionalità è particolarmente utile quando i tipi di valore sono boxed e unboxed, garantendo una maggiore compatibilità con i tipi di oggetto. I tipi di valore nullable CLR non sono destinati all'archiviazione di valori null di database perché un valore Null ANSI SQL non si comporta in modo analogo a un `null` riferimento (o `Nothing` in Visual Basic). Per usufruire dei valori Null SQL ANSI del database, usare valori Null <xref:System.Data.SqlTypes> anziché <xref:System.Nullable>. Per ulteriori informazioni sull'utilizzo dei tipi nullable di valori CLR in Visual Basic vedere [tipi di valore Nullable](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)e per C# vedere [tipi di valore Nullable](../../../../csharp/language-reference/builtin-types/nullable-value-types.md).  
   
 ## <a name="nulls-and-three-valued-logic"></a>Valori null e logica con tre valori  
  Consentendo i valori Null nelle definizioni di colonna si introduce una logica a tre valori nell'applicazione. Un confronto può restituire una delle tre condizioni seguenti:  
   
-- True  
+- True   
   
 - False  
   
-- Unknown  
+- Sconosciuto  
   
  Poiché il valore Null è considerato sconosciuto, due valori Null confrontati tra loro non sono considerati uguali. Nelle espressioni che usano operatori aritmetici, se uno degli operandi è Null, anche il risultato è Null.  
   
@@ -35,7 +36,7 @@ Se il valore di una colonna è sconosciuto o mancante, viene usato un valore Nul
  ![Tabella Truth](./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansi_nulls-option"></a>Nozioni di base sull'opzione ANSI_NULLS  
- <xref:System.Data.SqlTypes> offre la stessa semantica di quando si imposta l'opzione ANSI_NULLS in SQL Server. Tutti gli operatori aritmetici \*(Sezione , , , / , \|%) , gli operatori bit per bit (Sezione , &, `IsNull`) e la maggior parte delle funzioni restituiscono null se uno degli operandi o degli argomenti è null, ad eccezione della proprietà .  
+ <xref:System.Data.SqlTypes> offre la stessa semantica di quando si imposta l'opzione ANSI_NULLS in SQL Server. Tutti gli operatori aritmetici (+,-, \* ,/,%), gli operatori bit per bit (~, &, \| ) e la maggior parte delle funzioni restituiscono null se uno degli operandi o degli argomenti è null, ad eccezione della proprietà `IsNull` .  
   
  Lo standard ANSI SQL-92 non supporta *columnName* = NULL in una clausola WHERE. In SQL Server l'opzione ANSI_NULLS controlla sia il supporto di valori Null predefinito nel database, sia la valutazione dei confronti con i valori Null. Se l'opzione ANSI_NULLS è attivata (impostazione predefinita), è necessario usare l'operatore IS NULL nelle espressioni quando si effettuano test dei valori Null. Ad esempio, se l'opzione ANSI_NULLS è impostata su ON, il confronto seguente restituisce sempre UNKNOWN:  
   
@@ -143,5 +144,5 @@ String.Equals instance method:
   
 ## <a name="see-also"></a>Vedere anche
 
-- [SQL Server Data Types and ADO.NET](sql-server-data-types.md)
+- [Tipi di dati SQL Server e ADO.NET](sql-server-data-types.md)
 - [Panoramica di ADO.NET](../ado-net-overview.md)

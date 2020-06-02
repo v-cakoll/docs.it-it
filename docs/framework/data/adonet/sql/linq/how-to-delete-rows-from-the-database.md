@@ -1,20 +1,21 @@
 ---
-title: 'Procedura: Eliminare righe dal database'
+title: 'Procedura: eliminare righe dal database'
+description: Informazioni su come eliminare righe in un database rimuovendo LINQ to SQL oggetti da una raccolta correlata a una tabella. LINQ to SQL converte le eliminazioni in comandi SQL DELETE.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 421735567c527ac9a70cc5eefdbd7570599faac7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d08621e834961e1db9312cac36bd2e69133142b5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782011"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286391"
 ---
-# <a name="how-to-delete-rows-from-the-database"></a>Procedura: Eliminare righe dal database
+# <a name="how-to-delete-rows-from-the-database"></a>Procedura: eliminare righe dal database
 
-È possibile eliminare righe in un database rimuovendo gli oggetti [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] corrispondenti dalla raccolta relativa alla tabella. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]converte le modifiche apportate ai comandi SQL `DELETE` appropriati.
+È possibile eliminare righe in un database rimuovendo gli [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] oggetti corrispondenti dalla raccolta relativa alla tabella. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]converte le modifiche apportate ai comandi SQL appropriati `DELETE` .
 
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta o non riconosce operazioni di eliminazione a catena. Se si desidera eliminare una riga in una tabella contenente vincoli, è necessario effettuare una delle attività seguenti:
 
@@ -29,13 +30,13 @@ ms.locfileid: "70782011"
 >
 > Gli sviluppatori che utilizzano Visual Studio possono utilizzare il Object Relational Designer per sviluppare stored procedure allo stesso scopo.
 
-Per l'esecuzione dei passaggi seguenti si presuppone l'uso di un oggetto <xref:System.Data.Linq.DataContext> valido per la connessione al database Northwind. Per altre informazioni, vedere [Procedura: Connettersi a un database](how-to-connect-to-a-database.md).
+Per l'esecuzione dei passaggi seguenti si presuppone l'uso di un oggetto <xref:System.Data.Linq.DataContext> valido per la connessione al database Northwind. Per altre informazioni, vedere [procedura: connettersi a un database](how-to-connect-to-a-database.md).
 
 ### <a name="to-delete-a-row-in-the-database"></a>Per eliminare una riga dal database
 
 1. Eseguire una query sul database per la riga da eliminare.
 
-2. Chiamare il metodo <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>.
+2. Chiamare il metodo <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> .
 
 3. Inviare le modifiche al database.
 
@@ -55,6 +56,6 @@ Nel secondo esempio, l'obiettivo è l'eliminazione di un ordine (N. 10250). Il c
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Gestione dei conflitti di modifica](how-to-manage-change-conflicts.md)
+- [Procedura: gestire i conflitti di modifiche](how-to-manage-change-conflicts.md)
 - [Procedura: Assegnare stored procedure per eseguire aggiornamenti, inserimenti ed eliminazioni (O/R Designer)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
 - [Creazione e invio di modifiche dei dati](making-and-submitting-data-changes.md)

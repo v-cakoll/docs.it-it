@@ -1,21 +1,22 @@
 ---
 title: Aggiunta di colonne a un oggetto DataTable
+description: Una DataTable contiene oggetti DataColumn a cui fa riferimento la proprietà Columns della tabella. Usare questo codice di esempio per aggiungere colonne a una tabella in ADO.NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 6e0dcd819dc354e1fd23b244692dff5091142004
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9d6d21696acd7a6b63cfd6d2ea7e906ec2acd7c9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784851"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286947"
 ---
 # <a name="adding-columns-to-a-datatable"></a>Aggiunta di colonne a un oggetto DataTable
-Un <xref:System.Data.DataTable> oggetto contiene una raccolta <xref:System.Data.DataColumn> di oggetti a cui fa riferimento la proprietà **Columns** della tabella. Tale raccolta di colonne, insieme a eventuali vincoli, consente di definire lo schema, o struttura, della tabella.  
+Un oggetto <xref:System.Data.DataTable> contiene una raccolta di <xref:System.Data.DataColumn> oggetti a cui fa riferimento la proprietà **Columns** della tabella. Tale raccolta di colonne, insieme a eventuali vincoli, consente di definire lo schema, o struttura, della tabella.  
   
- Per creare oggetti **DataColumn** all'interno di una tabella, è possibile usare il costruttore **DataColumn** oppure chiamare il metodo **Add** della proprietà **Columns** della tabella, che è un <xref:System.Data.DataColumnCollection>oggetto. Il metodo **Add** accetta gli argomenti facoltativi **ColumnName**, **DataType**e **Expression** e crea un nuovo oggetto **DataColumn** come membro della raccolta. Accetta inoltre un oggetto **DataColumn** esistente e lo aggiunge alla raccolta e restituisce un riferimento alla **DataColumn** aggiunta, se richiesto. Poiché gli oggetti **DataTable** non sono specifici di alcuna origine dati, i tipi di .NET Framework vengono usati quando si specifica il tipo di dati di un oggetto **DataColumn**.  
+ Per creare oggetti **DataColumn** all'interno di una tabella, è possibile usare il costruttore **DataColumn** oppure chiamare il metodo **Add** della proprietà **Columns** della tabella, che è un oggetto <xref:System.Data.DataColumnCollection> . Il metodo **Add** accetta gli argomenti facoltativi **ColumnName**, **DataType**e **Expression** e crea un nuovo oggetto **DataColumn** come membro della raccolta. Accetta inoltre un oggetto **DataColumn** esistente e lo aggiunge alla raccolta e restituisce un riferimento alla **DataColumn** aggiunta, se richiesto. Poiché gli oggetti **DataTable** non sono specifici di alcuna origine dati, i tipi di .NET Framework vengono usati quando si specifica il tipo di dati di un oggetto **DataColumn**.  
   
  Nell'esempio seguente vengono aggiunte quattro colonne a un **oggetto DataTable**.  
   

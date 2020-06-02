@@ -1,16 +1,17 @@
 ---
 title: Contatori delle prestazioni
+description: Usare i contatori delle prestazioni di ADO.NET per monitorare lo stato dell'applicazione e le risorse di connessione usando Windows Performance Monitor o a livello di codice.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: b68787980a8b64d9ee90ed8d834fab2c5c69006b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9dde2d7305a1176dadba3802fc5335c0c95bfbbb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149336"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286676"
 ---
 # <a name="performance-counters-in-adonet"></a>Contatori di prestazioni in ADO.NET
 In ADO.NET 2.0 è stato introdotto il supporto espanso per i contatori delle prestazioni, che include il supporto per <xref:System.Data.SqlClient> e <xref:System.Data.OracleClient>. I contatori delle prestazioni <xref:System.Data.SqlClient> disponibili nelle versioni precedenti di ADO.NET sono stati deprecati e sostituiti con i nuovi contatori delle prestazioni descritti in questo argomento. È possibile usare i contatori delle prestazioni di ADO.NET per monitorare lo stato dell'applicazione e le risorse di connessione che usa. I contatori delle prestazioni possono essere monitorati tramite Performance Monitor di Windows. In alternativa, è possibile accedervi a livello di codice usando la classe <xref:System.Diagnostics.PerformanceCounter> nello spazio dei nomi <xref:System.Diagnostics>.  
@@ -18,7 +19,7 @@ In ADO.NET 2.0 è stato introdotto il supporto espanso per i contatori delle pre
 ## <a name="available-performance-counters"></a>Contatori delle prestazioni disponibili  
  Attualmente per <xref:System.Data.SqlClient> e <xref:System.Data.OracleClient> sono disponibili 14 contatori delle prestazioni diversi, come descritto nella tabella seguente. Si noti che i nomi dei singoli contatori non sono localizzati nelle versioni internazionali di Microsoft .NET Framework.  
   
-|Contatore delle prestazioni|Description|  
+|Contatore delle prestazioni|Descrizione|  
 |-------------------------|-----------------|  
 |`HardConnectsPerSecond`|Numero di connessioni al secondo eseguite a un server database.|  
 |`HardDisconnectsPerSecond`|Numero di disconnessioni al secondo eseguite a un server database.|  
@@ -36,7 +37,7 @@ In ADO.NET 2.0 è stato introdotto il supporto espanso per i contatori delle pre
 |`SoftDisconnectsPerSecond`|Numero di connessioni attive restituite al pool di connessioni. **Nota:**  Questo contatore delle prestazioni non è abilitato per impostazione predefinita. Per abilitare questo contatore delle prestazioni, vedere [attivazione di contatori disattivati per impostazione predefinita](#ActivatingOffByDefault).|  
   
 ### <a name="connection-pool-groups-and-connection-pools"></a>Gruppi e pool di connessioni e pool di connessioni  
- Quando si usa l'autenticazione di Windows (sicurezza integrata), è necessario monitorare i contatori delle prestazioni `NumberOfActiveConnectionPoolGroups` e `NumberOfActiveConnectionPools`. Il motivo è che questi gruppi di pool di connessioni sono mappati a stringhe di connessione univoche. Quando si usa la sicurezza integrata, i pool di connessioni vengono mappati a stringhe di connessione e inoltre creano pool distinti per le singole identità di Windows. Ad esempio, se Fred e Julie, ognuno all'interno dello stesso AppDomain, usano la stessa stringa di connessione `"Data Source=MySqlServer;Integrated Security=true"`, viene creato un gruppo di pool di connessioni per la stringa di connessione e due pool aggiuntivi, uno per Fred e l'altro per Julie. Se Giorgio e Martha usano una stringa di connessione con un account di accesso `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`SQL Server identico, viene creato solo un singolo pool per l'identità **lowPrivUser** .  
+ Quando si usa l'autenticazione di Windows (sicurezza integrata), è necessario monitorare i contatori delle prestazioni `NumberOfActiveConnectionPoolGroups` e `NumberOfActiveConnectionPools`. Il motivo è che questi gruppi di pool di connessioni sono mappati a stringhe di connessione univoche. Quando si usa la sicurezza integrata, i pool di connessioni vengono mappati a stringhe di connessione e inoltre creano pool distinti per le singole identità di Windows. Ad esempio, se Fred e Julie, ognuno all'interno dello stesso AppDomain, usano la stessa stringa di connessione `"Data Source=MySqlServer;Integrated Security=true"`, viene creato un gruppo di pool di connessioni per la stringa di connessione e due pool aggiuntivi, uno per Fred e l'altro per Julie. Se Giorgio e Martha usano una stringa di connessione con un account di accesso SQL Server identico, `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"` viene creato solo un singolo pool per l'identità **lowPrivUser** .  
   
 <a name="ActivatingOffByDefault"></a>
 ### <a name="activating-off-by-default-counters"></a>Attivazione di contatori disattivati per impostazione predefinita  

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
-ms.openlocfilehash: 794253514edf63f02276e1ece21c60a85c534390
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7cd82ffde5fccf938027a6ab6ea15fef226fef6f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159767"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288433"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Procedura dettagliata: Uso del flusso di dati in un'applicazione Windows Forms
 Questo documento illustra come creare una rete di blocchi di flussi di dati tramite cui viene eseguita l'elaborazione di immagini in una Windows Forms Application.  
   
  Questo esempio carica i file di immagine dalla cartella specificata, crea un'immagine composita e visualizza il risultato. L'esempio utilizza il modello di flusso di dati per instradare le immagini tramite la rete. Nel modello del flusso di dati, i componenti indipendenti di un programma di comunicano tra loro mediante l'invio di messaggi. Quando un componente riceve un messaggio, esegue una determinata azione e quindi passa il risultato a un altro componente. Confrontare questo modello con il modello di flusso di controllo, in cui un'applicazione utilizza le strutture di controllo, ad esempio le istruzioni condizionali, i cicli e così via, per controllare l'ordine delle operazioni in un programma.  
   
-## <a name="prerequisites"></a>Prerequisites  
- Prima di iniziare questa procedura dettagliata, leggere [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md).  
+## <a name="prerequisites"></a>Prerequisiti  
+ Prima di iniziare questa procedura dettagliata, leggere [Flusso di dati](dataflow-task-parallel-library.md).  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
@@ -99,7 +99,7 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
   
  Poiché i blocchi di flussi di dati `displayCompositeBitmap` e `operationCancelled` vengono usati nell'interfaccia utente, è importante che queste azioni si verifichino nel thread di interfaccia utente. A questo scopo, durante la costruzione ognuno di questi oggetti fornisce un oggetto <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> la cui proprietà <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> è impostata su <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>. Tramite il metodo <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> viene creato un oggetto <xref:System.Threading.Tasks.TaskScheduler> mediante il quale viene eseguito il lavoro nel contesto di sincronizzazione corrente. Poiché il metodo `CreateImageProcessingNetwork` viene chiamato dal gestore del pulsante **Scegli cartella**, che viene eseguito nel thread di interfaccia utente, anche le azioni per i blocchi di flussi di dati `displayCompositeBitmap` e `operationCancelled` vengono eseguite nel thread di interfaccia utente.  
   
- Questo esempio usa un token di annullamento condiviso anziché impostare la proprietà <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>, perché la proprietà <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> annulla in modo permanente l'esecuzione dei blocchi di flussi di dati. Un token di annullamento consente in questo esempio di riutilizzare la stessa rete del flusso di dati più volte, anche quando l'utente annulla una o più operazioni. Per un esempio che usa <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> per annullare in modo permanente l'esecuzione di un blocco di flussi di dati, vedere [Procedura: Annullare un blocco di flussi di dati](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
+ Questo esempio usa un token di annullamento condiviso anziché impostare la proprietà <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>, perché la proprietà <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> annulla in modo permanente l'esecuzione dei blocchi di flussi di dati. Un token di annullamento consente in questo esempio di riutilizzare la stessa rete del flusso di dati più volte, anche quando l'utente annulla una o più operazioni. Per un esempio che usa <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> per annullare in modo permanente l'esecuzione di un blocco di flussi di dati, vedere [Procedura: Annullare un blocco di flussi di dati](how-to-cancel-a-dataflow-block.md).  
   
 <a name="ui"></a>
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Connessione della rete del flusso dati all'interfaccia utente  
@@ -127,8 +127,8 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
   
  La figura seguente mostra un output tipico per la cartella common\Sample Pictures\.  
   
- ![Applicazione Windows Form](../../../docs/standard/parallel-programming/media/tpldataflow-compositeimages.gif "TPLDataflow_CompositeImages")  
+ ![Applicazione Windows Form](media/tpldataflow-compositeimages.gif "TPLDataflow_CompositeImages")  
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Flusso di dati](dataflow-task-parallel-library.md)

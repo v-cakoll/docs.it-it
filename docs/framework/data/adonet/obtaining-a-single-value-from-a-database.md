@@ -1,19 +1,20 @@
 ---
 title: Recupero di un valore singolo da un database
+description: Informazioni su come restituire un singolo valore in ADO.NET. Questo codice di esempio restituisce il valore della colonna Identity per un record inserito.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
-ms.openlocfilehash: fb43d21546a0e98e87aab23db9213309b62320b9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a6f268f72f8b8a09ae48ba3cad6254323cb95a20
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794741"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286702"
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>Recupero di un valore singolo da un database
-Può essere necessario restituire informazioni del database costituite semplicemente da un singolo valore anziché da una tabella o da un flusso di dati. È ad esempio possibile che si desideri restituire il risultato di una funzione di aggregazione, ad\*esempio Count (), Sum (price) o AVG (Quantity). L'oggetto **Command** fornisce la possibilità di restituire valori singoli usando il metodo **ExecuteScalar** . Il metodo **ExecuteScalar** restituisce, come valore scalare, il valore della prima colonna della prima riga del set di risultati.  
+Può essere necessario restituire informazioni del database costituite semplicemente da un singolo valore anziché da una tabella o da un flusso di dati. È ad esempio possibile che si desideri restituire il risultato di una funzione di aggregazione, ad esempio COUNT ( \* ), Sum (price) o AVG (Quantity). L'oggetto **Command** fornisce la possibilità di restituire valori singoli usando il metodo **ExecuteScalar** . Il metodo **ExecuteScalar** restituisce, come valore scalare, il valore della prima colonna della prima riga del set di risultati.  
   
  Nell'esempio di codice seguente viene inserito un nuovo valore nel database usando un <xref:System.Data.SqlClient.SqlCommand>. Per restituire il valore della colonna Identity per il record inserito, viene usato il metodo <xref:System.Data.SqlClient.SqlCommand.ExecuteScalar%2A>.  
   

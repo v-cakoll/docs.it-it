@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 725884d8ab6d6d9009ad1cdd7bc185889cd5e485
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: aa569c0da5b963243596ef440ef37c08b4fae37f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243063"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288238"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Indipendenza del linguaggio e componenti indipendenti dal linguaggio
 
@@ -33,13 +33,13 @@ Se il componente è conforme alle specifiche CLS (Common Language Specification)
 
 Contenuto dell'articolo:
 
-- [Regole di conformità CLS](#Rules)
+- [Regole di conformità a CLS](#Rules)
 
   - [Tipi e firme dei membri di tipo](#Types)
 
   - [Convenzioni di denominazione](#naming)
 
-  - [Conversione dei tipi](#conversion)
+  - [Conversione di tipi](#conversion)
 
   - [Matrici](#arrays)
 
@@ -108,9 +108,9 @@ Le regole per la conformità a CLS sono elencate nella tabella riportata di segu
 |Accessibilità|[Accessibilità del membro](#MemberAccess)|L'accessibilità non sarà modificata quando si esegue l'override di metodi ereditati, tranne nel caso in cui si esegue l'override di un metodo ereditato da un assembly diverso con accessibilità `family-or-assembly`. In questo caso, l'override disporrà dell'accessibilità `family`.|10|
 |Accessibilità|[Accessibilità del membro](#MemberAccess)|La visibilità e l'accessibilità di tipi e membri saranno tali che i tipi nella firma di qualsiasi membro saranno visibili e accessibili ogni volta che il membro stesso è visibile e accessibile. Ad esempio, in un metodo pubblico che è visibile all'esterno del relativo assembly non deve essere presente un argomento il cui tipo è visibile solo nell'assembly. La visibilità e l'accessibilità di tipi che compongono un tipo generico con istanze usato nella firma di qualsiasi membro saranno visibili e accessibili ogni volta che il membro stesso è visibile e accessibile. Ad esempio, in un tipo generico con istanze presente nella firma di un membro visibile all'esterno del relativo assembly non deve essere disponibile un argomento generico il cui tipo è visibile solo nell'assembly.|12|
 |Matrici|[Matrici](#arrays)|Le matrici devono disporre di elementi con un tipo conforme a CLS e i limiti inferiori di tutte le dimensioni della matrice devono essere pari a zero. Solo per il fatto che un elemento sia una matrice, il tipo di elemento della matrice sarà richiesto per eseguire una distinzione tra gli overload. Quando l'overload è basato su due o più i tipi di matrice, i tipi di elemento vengono denominati tipi.|16|
-|Attributi|[Attributi](#attributes)|Gli attributi devono essere di tipo <xref:System.Attribute?displayProperty=nameWithType> o di un tipo che eredita da esso.|41|
-|Attributi|[Attributi](#attributes)|La specifica CLS consente solo un subset delle codifiche di attributi personalizzati. Gli unici tipi che verranno visualizzati in queste codifiche sono (vedere la partizione IV): <xref:System.Type?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Char?displayProperty=nameWithType>, <xref:System.Boolean?displayProperty=nameWithType>, <xref:System.Byte?displayProperty=nameWithType>, <xref:System.Int16?displayProperty=nameWithType>, <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.Single?displayProperty=nameWithType>, <xref:System.Double?displayProperty=nameWithType> e qualsiasi tipo di enumerazione basato su un tipo Integer di base conforme a CLS.|34|
-|Attributi|[Attributi](#attributes)|La specifica CLS non consente i modificatori necessari visibili pubblicamente (`modreq`, vedere la partizione II), ma consente i modificatori facoltativi (`modopt`, vedere la partizione II) che non riconosce.|35|
+|Attributes|[Attributi](#attributes)|Gli attributi devono essere di tipo <xref:System.Attribute?displayProperty=nameWithType> o di un tipo che eredita da esso.|41|
+|Attributes|[Attributi](#attributes)|La specifica CLS consente solo un subset delle codifiche di attributi personalizzati. Gli unici tipi che verranno visualizzati in queste codifiche sono (vedere la partizione IV): <xref:System.Type?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Char?displayProperty=nameWithType>, <xref:System.Boolean?displayProperty=nameWithType>, <xref:System.Byte?displayProperty=nameWithType>, <xref:System.Int16?displayProperty=nameWithType>, <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.Single?displayProperty=nameWithType>, <xref:System.Double?displayProperty=nameWithType> e qualsiasi tipo di enumerazione basato su un tipo Integer di base conforme a CLS.|34|
+|Attributes|[Attributi](#attributes)|La specifica CLS non consente i modificatori necessari visibili pubblicamente (`modreq`, vedere la partizione II), ma consente i modificatori facoltativi (`modopt`, vedere la partizione II) che non riconosce.|35|
 |Costruttori|[Costruttori](#ctors)|Prima di un eventuale accesso ai dati di istanza ereditati, tramite un costruttore di oggetti deve essere effettuata una chiamata a un costruttore di istanze della relativa classe di base. Ciò non si applica ai tipi di valore, che non devono disporre di costruttori.|21|
 |Costruttori|[Costruttori](#ctors)|Un costruttore di oggetti non deve essere chiamato se non come parte della creazione di un oggetto e un oggetto non deve essere inizializzato due volte.|22|
 |Enumerazioni|[Enumerazioni](#enums)|Il tipo sottostante di un'enumerazione deve essere un tipo Integer CLS incorporato, il nome del campo deve essere "value__" e il campo deve essere contrassegnato come `RTSpecialName`.|7|
@@ -146,7 +146,7 @@ Le regole per la conformità a CLS sono elencate nella tabella riportata di segu
 |Proprietà|[Proprietà](#properties)|Le funzioni di accesso di una proprietà devono essere tutte statiche, tutte virtuali o tutte istanze.|26|
 |Proprietà|[Proprietà](#properties)|Il tipo di una proprietà deve essere il tipo restituito del metodo Get e il tipo dell'ultimo argomento del metodo Set. I tipi dei parametri della proprietà devono essere i tipi dei parametri per il metodo Get e i tipi di tutti i parametri del metodo Set tranne l'ultimo. Tutti questi tipi devono essere conformi a CLS e non devono essere puntatori gestiti, cioè non devono essere passati per riferimento.|27|
 |Proprietà|[Proprietà](#properties)|Le proprietà devono essere conformi a un pattern di nome specifico. L'attributo `SpecialName` indicato nella regola CLS 24 deve essere ignorato nei confronti tra nomi appropriati e deve essere conforme alle regole dell'identificatore. Una proprietà deve disporre di un metodo Get, un metodo Set o di entrambi.|28|
-|Conversione di tipi|[Conversione dei tipi](#conversion)|Se viene specificato `op_Implicit` oppure `op_Explicit`, sarà necessario fornire un metodo alternativo di coercizione.|39|
+|Conversione di tipi|[Conversione di tipi](#conversion)|Se viene specificato `op_Implicit` oppure `op_Explicit`, sarà necessario fornire un metodo alternativo di coercizione.|39|
 |Tipi|[Tipo e firme dei membri di tipo](#Types)|I tipi di valore boxed non sono conformi a CLS.|3|
 |Tipi|[Tipo e firme dei membri di tipo](#Types)|Tutti i tipi visualizzati in una firma devono essere conformi a CLS. Tutti i tipi che costituiscono un tipo generico con istanze devono essere conformi a CLS.|11|
 |Tipi|[Tipo e firme dei membri di tipo](#Types)|I riferimenti tipizzati non sono conformi a CLS.|14|
@@ -170,7 +170,7 @@ Tutti i tipi visualizzati nelle firme dei membri, incluso il tipo restituito di 
 
 - Tutti i tipi usati come vincoli sui parametri generici devono essere conformi a CLS.
 
-In [Common Type System](../../docs/standard/base-types/common-type-system.md) di .NET Framework è incluso un numero di tipi incorporati supportati direttamente da Common Language Runtime, codificati in particolare nei metadati di un assembly. Di questi tipi intrinseci, i tipi elencati nella tabella seguente sono conformi a CLS.
+In [Common Type System](base-types/common-type-system.md) di .NET Framework è incluso un numero di tipi incorporati supportati direttamente da Common Language Runtime, codificati in particolare nei metadati di un assembly. Di questi tipi intrinseci, i tipi elencati nella tabella seguente sono conformi a CLS.
 
 |Tipo conforme a CLS|Descrizione|
 |-------------------------|-----------------|
@@ -188,7 +188,7 @@ In [Common Type System](../../docs/standard/base-types/common-type-system.md) di
 
 I tipi intrinseci elencati nella tabella seguente non sono conformi a CLS.
 
-|Tipo non conforme|Descrizione|Alternativa alla conformità a CLS|
+|Tipo non conforme|Descrizione|Alternativa conforme a CLS|
 |-------------------------|-----------------|--------------------------------|
 |<xref:System.SByte>|Tipo di dati Signed Integer a 8 bit|<xref:System.Int16>|
 |<xref:System.TypedReference>|Puntatore a un oggetto e relativo tipo di runtime|nessuno|
@@ -205,7 +205,7 @@ Nella libreria di classi .NET Framework o in qualsiasi altra libreria di classi 
 
 - Riferimenti tipizzati, che sono costrutti speciali contenenti un riferimento a un oggetto e un riferimento a un tipo. I riferimenti tipizzati sono rappresentati in .NET Framework dalla classe <xref:System.TypedReference>.
 
-Se un tipo non è conforme a CLS, è necessario applicarvi l'attributo <xref:System.CLSCompliantAttribute> con un valore `isCompliant``false`. Per altre informazioni, vedere la sezione [relativa all'attributo CLSCompliantAttribute.For more information, see The CLSCompliantAttribute attribute](#CLSAttribute) section.
+Se un tipo non è conforme a CLS, è necessario applicarvi l'attributo <xref:System.CLSCompliantAttribute> con un valore `isCompliant``false`. Per ulteriori informazioni, vedere [la sezione attributo CLSCompliantAttribute](#CLSAttribute) .
 
 Nell'esempio seguente viene illustrato il problema della conformità a CLS in una firma di metodo e nella creazione di un'istanza di tipo generico. Viene definita una classe `InvoiceItem` con una proprietà di tipo <xref:System.UInt32>, una proprietà di tipo `Nullable(Of UInt32)` e un costruttore con parametri di tipo <xref:System.UInt32> e `Nullable(Of UInt32)`. Vengono visualizzati quattro avvisi del compilatore quando si tenta di compilare l'esempio.
 
@@ -271,7 +271,7 @@ Tramite le specifiche CLS (Common Language Specification) vengono definiti due o
 
 - `op_Explicit`, che viene usato per le conversioni verso un tipo di dati più piccolo che possono comportare la perdita di grandezza (un valore viene convertito in un altro a cui è associato un intervallo inferiore) o di precisione. Ad esempio, nella struttura <xref:System.Decimal> è incluso un operatore `op_Explicit` di overload per convertire i valori <xref:System.Double> e <xref:System.Single> in <xref:System.Decimal> e per convertire i valori <xref:System.Decimal> in valori integrali <xref:System.Double>, <xref:System.Single> e <xref:System.Char>.
 
-Tuttavia, non tutti i linguaggi supportano l'overload degli operatori o la definizione di operatori personalizzati. Se si sceglie di implementare questi operatori di conversione, è necessario fornire anche un modo alternativo per eseguire la conversione. Si consiglia di `From`specificare i metodi *Xxx* e `To` *Xxx.*
+Tuttavia, non tutti i linguaggi supportano l'overload degli operatori o la definizione di operatori personalizzati. Se si sceglie di implementare questi operatori di conversione, è necessario fornire anche un modo alternativo per eseguire la conversione. È consigliabile fornire i metodi `From` *xxx* e `To` *xxx* .
 
 Nell'esempio seguente vengono definite le convenzioni esplicite e implicite conformi a CLS. Viene creata una classe `UDouble` che rappresenta un numero a virgola mobile e precisione doppia con segno. Viene usato per le conversioni implicite da `UDouble` a <xref:System.Double> e per le conversioni esplicite da `UDouble` a <xref:System.Single>, da <xref:System.Double> a `UDouble` e da <xref:System.Single> a `UDouble`. Vengono anche definiti un metodo `ToDouble` come alternativa all'operatore di conversione implicito e i metodi `ToSingle`, `FromDouble` e `FromSingle` come alternative agli operatori di conversione espliciti.
 
@@ -381,7 +381,7 @@ La relazione tra i parametri di tipo generico di un tipo contenitore e i relativ
 [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)]
 [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]
 
-I nomi di tipo generico sono *name* codificati nel \` *formato n\`*, dove nome è il nome del tipo, è un valore letterale carattere e *n* è il numero di parametri dichiarati nel tipo o, per i tipi generici annidati, il numero di parametri di tipo appena introdotti. Questa codifica dei nomi di tipo generico è principalmente di interesse per gli sviluppatori che usano la reflection per accedere ai tipi generici conformi a CLS in una libreria.
+I nomi di tipo generico sono codificati nel formato *Name \` n*, dove *Name* è il nome del tipo, \` è un valore letterale del carattere e *n* è il numero di parametri dichiarati nel tipo oppure, per i tipi generici annidati, il numero di parametri di tipo appena introdotti. Questa codifica dei nomi di tipo generico è principalmente di interesse per gli sviluppatori che usano la reflection per accedere ai tipi generici conformi a CLS in una libreria.
 
 Se i vincoli vengono applicati a un tipo generico, anche tutti i tipi usati come vincoli devono essere conformi a CLS. Nell'esempio seguente viene definita una classe denominata `BaseClass` che non è conforme a CLS e una classe generica denominata `BaseCollection` il cui parametro di tipo deve derivare da `BaseClass`. Tuttavia, poiché `BaseClass` non è conforme a CLS, viene generato un avviso dal compilatore.
 
@@ -400,7 +400,7 @@ L'esempio viene compilato correttamente se il vincolo viene aggiunto alla classe
 
 Le specifiche CLS (Common Language Specification) impongono un modello conservativo per creazione di istanze per tipi annidati e membri protetti. Tramite i tipi generici aperti non è possibile esporre campi o membri con firme contenenti la creazione di un'istanza specifica di un tipo generico annidato e protetto. Tramite i tipi non generici, mediante i quali viene estesa la creazione di un'istanza specifica di un'interfaccia o di una classe di base generica, non è possibile esporre i campi o i membri con firme contenenti la creazione di un'istanza differente di un tipo generico annidato e protetto.
 
-Nell'esempio seguente vengono definiti un tipo generico, `C1<T>` (o `C1(Of T)` in Visual Basic) e una classe protetta, `C1<T>.N` (o `C1(Of T).N` in Visual Basic). L'oggetto `C1<T>` dispone di due metodi: `M1` e `M2`. Tuttavia, `M1` non è conforme a CLS poiché tramite esso si tenta di restituire un oggetto `C1<int>.N` (o `C1(Of Integer).N`) da C1\<T> (o `C1(Of T)`). Una seconda classe, `C2`, viene derivata da `C1<long>` (o `C1(Of Long)`). Dispone di due metodi, `M3` e `M4`. `M3` non è conforme a CLS poiché viene eseguito il tentativo di restituzione di un oggetto `C1<int>.N` (o `C1(Of Integer).N`) da una sottoclasse di `C1<long>`. Si noti che i compilatori di linguaggio possono essere anche più restrittivi. In questo esempio in Visual Basic viene visualizzato un errore quando viene eseguito un tentativo di compilazione di `M4`.
+Nell'esempio seguente vengono definiti un tipo generico, `C1<T>` (o `C1(Of T)` in Visual Basic) e una classe protetta, `C1<T>.N` (o `C1(Of T).N` in Visual Basic). L'oggetto `C1<T>` dispone di due metodi: `M1` e `M2`. Tuttavia, `M1` non è conforme a CLS perché tenta di restituire un `C1<int>.N` oggetto (o `C1(Of Integer).N` ) da C1 \<T> (o `C1(Of T)` ). Una seconda classe, `C2`, viene derivata da `C1<long>` (o `C1(Of Long)`). Dispone di due metodi, `M3` e `M4`. `M3` non è conforme a CLS poiché viene eseguito il tentativo di restituzione di un oggetto `C1<int>.N` (o `C1(Of Integer).N`) da una sottoclasse di `C1<long>`. Si noti che i compilatori di linguaggio possono essere anche più restrittivi. In questo esempio in Visual Basic viene visualizzato un errore quando viene eseguito un tentativo di compilazione di `M4`.
 
 [!code-csharp[Conceptual.CLSCompliant#32](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics4.cs#32)]
 [!code-vb[Conceptual.CLSCompliant#32](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics4.vb#32)]
@@ -456,7 +456,7 @@ Nell'esempio seguente viene definita una classe conforme a CLS denominata `Tempe
 
 <a name="overloads"></a>
 
-### <a name="overloads"></a>Overloads
+### <a name="overloads"></a>Overload
 
 Le specifiche CLS (Common Language Specification) impongono i requisiti seguenti sui membri di overload:
 
@@ -485,7 +485,7 @@ Per correggere questo errore, la classe `ErrorClass` deve ereditare da <xref:Sys
 
 <a name="attributes"></a>
 
-### <a name="attributes"></a>Attributi
+### <a name="attributes"></a>Attributes
 
 Negli assembly .NET Framework, gli attributi personalizzati forniscono un meccanismo estensibile per archiviare gli attributi personalizzati e recuperare i metadati sugli oggetti di programmazione, ad esempio assembly, tipi, membri e parametri di metodo. Gli attributi personalizzati devono derivare da <xref:System.Attribute?displayProperty=nameWithType> o da un tipo derivato da <xref:System.Attribute?displayProperty=nameWithType>.
 
@@ -571,7 +571,7 @@ Se si sta sviluppando un'applicazione anziché una libreria (cioè se non si sta
 
 ## <a name="cross-language-interoperability"></a>Interoperabilità tra linguaggi diversi
 
-L'indipendenza del linguaggio ha numerosi significati possibili. Un significato, illustrato nell'articolo [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../docs/standard/language-independence-and-language-independent-components.md), riguarda l'uso semplice dei tipi scritti in un linguaggio da parte di un'applicazione scritta in un linguaggio diverso. Un secondo significato, che è il fulcro di questo articolo, riguarda la combinazione di codice scritto in più linguaggi in un unico assembly .NET Framework.
+L'indipendenza del linguaggio ha numerosi significati possibili. Un significato, illustrato nell'articolo [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](language-independence-and-language-independent-components.md), riguarda l'uso semplice dei tipi scritti in un linguaggio da parte di un'applicazione scritta in un linguaggio diverso. Un secondo significato, che è il fulcro di questo articolo, riguarda la combinazione di codice scritto in più linguaggi in un unico assembly .NET Framework.
 
 L'esempio seguente illustra l'interoperabilità tra linguaggi mediante la creazione di una libreria di classi denominata Utilities.dll che comprende due classi, `NumericLib` e `StringLib`. La classe `NumericLib` è scritta in C# e la classe `StringLib` in Visual Basic. Di seguito è riportato il codice sorgente per StringUtil.vb in cui è incluso un singolo membro, `ToTitleCase`, nella classe `StringLib`.
 

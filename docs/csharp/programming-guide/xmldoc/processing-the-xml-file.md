@@ -1,42 +1,44 @@
 ---
-title: Elaborazione del file XML - Guida alla programmazione in C
+title: Elaborazione del file XML (Guida per programmatori C#)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: bc72cade9ce6edddb88d741a3424405bba0a7ad8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e3d96f9398f2c08ed715111f01987e2d1948439
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793385"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287259"
 ---
-# <a name="processing-the-xml-file-c-programming-guide"></a>Elaborazione del file XML (Guida per programmatori C
+# <a name="process-the-xml-file-c-programming-guide"></a>Elaborare il file XML (Guida per programmatori C#)
 
-Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del codice che contiene tag per la creazione della documentazione. Per informazioni su come contrassegnare il codice, vedere Tag consigliati per i commenti relativi alla [documentazione.](./recommended-tags-for-documentation-comments.md) La stringa ID identifica in modo univoco il costrutto. I programmi che elaborano il file XML possono usare la stringa ID per identificare il corrispondente elemento metadati/reflection di .NET Framework a cui si applica la documentazione.
+Il compilatore genera una stringa ID per ogni costrutto nel codice contrassegnato per generare la documentazione. Per informazioni su come contrassegnare il codice, vedere [Tag consigliati per i commenti relativi alla documentazione](./recommended-tags-for-documentation-comments.md). La stringa ID identifica in modo univoco il costrutto. I programmi che elaborano il file XML possono utilizzare la stringa ID per identificare i metadati .NET corrispondenti o l'elemento di Reflection a cui si applica la documentazione.
 
-Il file XML non è una rappresentazione gerarchica del codice, bensì un normale elenco contenente un ID generato per ogni elemento.
+## <a name="id-strings"></a>Stringhe ID
+
+Il file XML non è una rappresentazione gerarchica del codice. Si tratta di un elenco semplice con un ID generato per ogni elemento.
 
 Per generare gli ID, il compilatore applica le regole seguenti:
 
 - Assenza di spazi vuoti nella stringa.
 
-- La prima parte della stringa ID specifica il tipo di membro da identificare, con un singolo carattere seguito dai due punti. Vengono usati i tipi di membri seguenti:
+- La prima parte della stringa identifica il tipo di membro usando un singolo carattere seguito da due punti. Vengono usati i tipi di membri seguenti:
 
-    |Carattere|Descrizione|
-    |---------------|-----------------|
-    |N|spazio dei nomi<br /><br /> Non è possibile aggiungere a uno spazio dei nomi commenti relativi alla documentazione, ma, se supportati, è possibile creare riferimenti cref a tali commenti.|
-    |T|tipo: classe, interfaccia, struct, enum o delegato|
+    |Carattere|Tipo di membro|Note|
+    |---------------|-----------------|-|
+    |N|namespace|Non è possibile aggiungere a uno spazio dei nomi commenti relativi alla documentazione, ma, se supportati, è possibile creare riferimenti cref a tali commenti.|
+    |T|type|Un tipo può essere una classe, un'interfaccia, una struttura, un'enumerazione o un delegato.|
     |F|campo|
-    |P|proprietà (compresi gli indicizzatori o altre proprietà indicizzate)|
-    |M|metodo (compresi i metodi speciali, ad esempio costruttori, operatori e così via)|
-    |E|evento|
-    |!|stringa di errore<br /><br /> Nella parte restante della stringa vengono fornite informazioni sull'errore. Il compilatore C# genera informazioni sugli errori per tutti i collegamenti che non è possibile risolvere.|
+    |P|proprietà|Include gli indicizzatori o altre proprietà indicizzate.|
+    |M|method|Include metodi speciali, ad esempio costruttori e operatori.|
+    |E|event|
+    |!|stringa di errore|Nella parte restante della stringa vengono fornite informazioni sull'errore. Il compilatore C# genera informazioni sugli errori per tutti i collegamenti che non è possibile risolvere.|
 
-- La seconda parte della stringa identifica il nome completo dell'elemento, a partire dalla radice dello spazio dei nomi. Il nome dell'elemento, i tipi di inclusione e lo spazio dei nomi sono separati da punti. Se il nome dell'elemento contiene dei punti, questi verranno sostituiti con il segno di cancelletto ('#'), in base al presupposto che nessun nome di elemento contiene direttamente tale segno. Ad esempio, il nome completo del costruttore String è "System.String.#ctor".
+- La seconda parte della stringa identifica il nome completo dell'elemento, a partire dalla radice dello spazio dei nomi. Il nome dell'elemento, i tipi di inclusione e lo spazio dei nomi sono separati da punti. Se il nome dell'elemento contiene dei punti, questi verranno sostituiti con il segno di cancelletto ('#'), Si presuppone che nessun elemento abbia un segno di hash direttamente nel nome. Ad esempio, il nome completo del costruttore di stringa è "System. String. #ctor".
 
-- Per le proprietà e i metodi, se il metodo ha degli argomenti, verrà incluso di seguito l'elenco degli argomenti racchiuso tra parentesi. Se non sono presenti argomenti, non verranno usate le parentesi. Gli argomenti sono separati da virgole. La codifica di ciascun argomento è del tutto simile alla modalità di codifica usata in una firma .NET Framework:
+- Per le proprietà e i metodi, l'elenco di parametri racchiuso tra parentesi segue. Se non sono presenti parametri, non è presente alcuna parentesi. I parametri sono separati da virgole. La codifica di ogni parametro segue direttamente il modo in cui viene codificata in una firma .NET:
 
   - Tipi di base. I tipi regolari (ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE) vengono rappresentati con il nome completo del tipo.
 
@@ -56,11 +58,11 @@ Per generare gli ID, il compilatore applica le regole seguenti:
 
   - ELEMENT_TYPE_GENERICARRAY viene rappresentato con "[?]" dopo il tipo di elemento della matrice. Non viene mai generato dal compilatore C#.
 
-  - ELEMENT_TYPE_ARRAY è rappresentato come`size`[ limite*inferiore*: ,*lowerbound*:`size`] dove il numero di virgole è il rango - 1 e i limiti inferiori e le dimensioni di ogni dimensione, se noti, sono rappresentati in formato decimale. Se non è specificato alcun valore, il limite o la dimensione inferiore viene omesso. Se vengono omessi il limite inferiore e la dimensione per una dimensione specifica, viene omesso anche ':'. Ad esempio, una matrice a due dimensioni con limiti inferiori pari a 1 e dimensioni non specificate viene rappresentata con [1:,1:].
+  - ELEMENT_TYPE_ARRAY è rappresentato come [*lowerbound*: `size` ,*lowerbound*: `size` ] dove il numero di virgole è il rango-1 e i limiti inferiori e le dimensioni di ogni dimensione, se noti, sono rappresentati in decimali. Se non si specifica una dimensione o un limite inferiore, viene omesso. Se vengono omessi il limite inferiore e la dimensione per una dimensione specifica, viene omesso anche ':'. Ad esempio, una matrice a due dimensioni con limiti inferiori pari a 1 e dimensioni non specificate viene rappresentata con [1:,1:].
 
   - ELEMENT_TYPE_FNPTR viene rappresentato con "=FUNC:`type`(*signature*)", dove `type` rappresenta il tipo restituito e *signature* identifica gli argomenti del metodo. Se non vi sono argomenti, le parentesi vengono omesse. Non viene mai generato dal compilatore C#.
 
-    I seguenti componenti della firma non vengono rappresentati in quanto non vengono mai usati per differenziare i metodi di overload:
+  I componenti della firma seguenti non sono rappresentati perché non vengono usati per distinguere i metodi di overload:
 
   - convenzione di chiamata
 
@@ -68,22 +70,22 @@ Per generare gli ID, il compilatore applica le regole seguenti:
 
   - ELEMENT_TYPE_SENTINEL
 
-- Limitatamente agli operatori di conversione (op_Implicit e op_Explicit), il valore restituito del metodo viene codificato con '~' seguito dal tipo restituito, codificato come descritto in precedenza.
+- Solo per gli operatori di conversione ( `op_Implicit` e `op_Explicit` ), il valore restituito del metodo viene codificato come ' ~' seguito dal tipo restituito.
 
 - Nel caso di tipi generici, il nome del tipo è seguito da un apice inverso e quindi da un numero che indica il numero di parametri di tipo generici. Ad esempio:
 
      ``<member name="T:SampleClass`2">`` è il tag di un tipo che viene definito come `public class SampleClass<T, U>`.
 
-     Nel caso di metodi che accettano tipi generici come parametri, i parametri dei tipi generici sono caratterizzati da numeri preceduti da apici inversi, ad esempio \`0,\`1. Ogni numero rappresenta la notazione della matrice in base zero per i parametri generici del tipo.
+     Per i metodi che accettano tipi generici come parametri, i parametri di tipo generico vengono specificati come numeri preceduti da un apice inverso (ad esempio \` , 0, \` 1). Ogni numero rappresenta una notazione di matrice in base zero per i parametri generici del tipo.
 
 ## <a name="examples"></a>Esempi
 
-Negli esempi seguenti viene illustrato come vengono generate le stringhe di ID per una classe e i relativi membri:
+Negli esempi seguenti viene illustrato come vengono generate le stringhe ID per una classe e i relativi membri:
 
 [!code-csharp[csProgGuidePointers#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#21)]
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida alla programmazione in C](../index.md)
-- [-doc (opzioni del compilatore C](../../language-reference/compiler-options/doc-compiler-option.md)
+- [Guida per programmatori C#](../index.md)
+- [-DOC (opzioni del compilatore C#)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [Commenti relativi alla documentazione XML](./index.md)

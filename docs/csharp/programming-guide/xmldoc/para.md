@@ -1,5 +1,5 @@
 ---
-title: <para> - Guida alla programmazione in C
+title: <para> -Guida per programmatori C#
 ms.date: 07/20/2015
 f1_keywords:
 - <para>
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: b2740370106ce5b2812acbea212354ebea1f0e34
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d1fe81b1752d066c6b2e1ffe27f0c43fc4068edf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793415"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287298"
 ---
-# <a name="para-c-programming-guide"></a>\<para> (Guida per programmatori C
+# <a name="para-c-programming-guide"></a>\<para>(Guida per programmatori C#)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,15 +31,15 @@ ms.locfileid: "76793415"
 
 ## <a name="remarks"></a>Osservazioni
 
-Il \<tag> parziale può essere utilizzato all'interno di [ \< ](./returns.md)un tag, ad [ \< ](./summary.md)esempio>di riepilogo, [ \<osservazioni>](./remarks.md)o>e consente di aggiungere una struttura al testo.
+Il `<para>` tag è da usare all'interno di un tag, ad esempio [\<summary>](./summary.md) , [\<remarks>](./remarks.md) o [\<returns>](./returns.md) , e consente di aggiungere la struttura al testo.
 
 Compilare con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) per elaborare i commenti relativi alla documentazione in un file.
 
 ## <a name="example"></a>Esempio
 
-Per un esempio di \<utilizzo dei> di riepilogo, vedere [ \<>](./summary.md) di riepilogo.
+[\<summary>](./summary.md)Per un esempio dell'utilizzo di `<para>` , vedere.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida alla programmazione in C](../index.md)
+- [Guida per programmatori C#](../index.md)
 - [Tag consigliati per i commenti relativi alla documentazione](./recommended-tags-for-documentation-comments.md)

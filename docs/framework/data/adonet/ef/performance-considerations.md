@@ -1,13 +1,14 @@
 ---
 title: Considerazioni sulle prestazioni (Entity Framework)
+description: Informazioni sulle caratteristiche delle prestazioni di ADO.NET Entity Framework e considerazioni che consentono di migliorare le prestazioni delle applicazioni Entity Framework.
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 0ff018fe0d8199dcd790bcd3de18751662e0a92b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: edf82e4db3e72fab1555eea9bfcd34cd34ddbba7
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149739"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286766"
 ---
 # <a name="performance-considerations-entity-framework"></a>Considerazioni sulle prestazioni (Entity Framework)
 In questo argomento vengono descritte le caratteristiche relative alle prestazioni di ADO.NET Entity Framework e vengono illustrate alcune considerazioni per migliorare le prestazioni di applicazioni Entity Framework.  
@@ -17,9 +18,9 @@ In questo argomento vengono descritte le caratteristiche relative alle prestazio
   
 |Operazione|Costo relativo|Frequenza|Commenti|  
 |---------------|-------------------|---------------|--------------|  
-|Caricamento di metadati|Moderata|Una volta in ogni dominio dell'applicazione.|I metadati del modello e di mapping usati da Entity Framework sono caricati in un <xref:System.Data.Metadata.Edm.MetadataWorkspace>. Questi metadati sono memorizzati nella cache globalmente e sono disponibili per altre istanze di <xref:System.Data.Objects.ObjectContext> nello stesso dominio dell'applicazione.|  
+|Caricamento di metadati|Moderato|Una volta in ogni dominio dell'applicazione.|I metadati del modello e di mapping usati da Entity Framework sono caricati in un <xref:System.Data.Metadata.Edm.MetadataWorkspace>. Questi metadati sono memorizzati nella cache globalmente e sono disponibili per altre istanze di <xref:System.Data.Objects.ObjectContext> nello stesso dominio dell'applicazione.|  
 |Apertura della connessione al database|Moderato<sup>1</sup>|Secondo le necessità.|Poiché una connessione aperta al database utilizza una risorsa preziosa, la Entity Framework apre e chiude la connessione al database solo in base alle esigenze. È possibile aprire anche in modo esplicito la connessione. Per ulteriori informazioni, vedere [gestione delle connessioni e delle transazioni](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).|  
-|Generazione di visualizzazioni|Alto|Una volta in ogni dominio dell'applicazione. Possono essere generate anticipatamente.|Prima di poter eseguire una query su un modello concettuale o salvare delle modifiche all'origine dati, Entity Framework deve generare un set di visualizzazioni query locali per accedere al database. A causa del costo elevato della generazione di queste visualizzazioni, è possibile generarle in anticipo e aggiungerle al progetto in fase di progettazione. Per altre informazioni, vedere [procedura: pre-generare viste per migliorare le prestazioni di esecuzione delle query](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100)).|  
+|Generazione di visualizzazioni|Alta|Una volta in ogni dominio dell'applicazione. Possono essere generate anticipatamente.|Prima di poter eseguire una query su un modello concettuale o salvare delle modifiche all'origine dati, Entity Framework deve generare un set di visualizzazioni query locali per accedere al database. A causa del costo elevato della generazione di queste visualizzazioni, è possibile generarle in anticipo e aggiungerle al progetto in fase di progettazione. Per altre informazioni, vedere [procedura: pre-generare viste per migliorare le prestazioni di esecuzione delle query](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100)).|  
 |Preparazione della query|Moderato<sup>2</sup>|Una volta per ogni query univoca.|Include i costi per creare il comando della query, generare un albero dei comandi basato sui metadati del modello e di mapping e definire la forma dei dati restituiti. Poiché vengono memorizzati nella cache sia i comandi delle query Entity SQL sia le query LINQ, le successive esecuzioni dei comandi della stessa query sono più veloci. Tuttavia, è possibile usare le query LINQ compilate per ridurre il costo nelle esecuzioni successive e le query compilate possono essere più efficienti di quelle LINQ che vengono memorizzate nella cache automaticamente. Per ulteriori informazioni, vedere [query compilate (LINQ to Entities)](./language-reference/compiled-queries-linq-to-entities.md). Per informazioni generali sull'esecuzione di query LINQ, vedere [LINQ to Entities](./language-reference/linq-to-entities.md). **Nota:**  LINQ to Entities le query che applicano l' `Enumerable.Contains` operatore alle raccolte in memoria non vengono memorizzate automaticamente nella cache. Inoltre, la parametrizzazione delle raccolte in memoria nelle query LINQ compilate non è consentita.|  
 |Esecuzione della query|Basso<sup>2</sup>|Una volta per ogni query.|Costo dell'esecuzione del comando sull'origine dati tramite il provider di dati ADO.NET. Poiché la maggior parte delle origini dati memorizzano nella cache i piani di query, è possibile che le successive esecuzioni della stessa query siano ancor più veloci.|  
 |Caricamento e convalida di tipi|Basso<sup>3</sup>|Una volta per ciascuna istanza <xref:System.Data.Objects.ObjectContext>.|I tipi vengono caricati e convalidati rispetto ai tipi definiti nel modello concettuale.|  
@@ -32,7 +33,7 @@ In questo argomento vengono descritte le caratteristiche relative alle prestazio
   
  <sup>3</sup> il costo totale aumenta in modo proporzionale al numero di oggetti restituiti dalla query.  
   
- <sup>4</sup> questo sovraccarico non è necessario per le query EntityClient perché le query EntityClient <xref:System.Data.EntityClient.EntityDataReader> restituiscono un anziché oggetti. Per ulteriori informazioni, vedere [Provider EntityClient per Entity Framework](entityclient-provider-for-the-entity-framework.md).  
+ <sup>4</sup> questo sovraccarico non è necessario per le query EntityClient perché le query EntityClient restituiscono un <xref:System.Data.EntityClient.EntityDataReader> anziché oggetti. Per ulteriori informazioni, vedere [Provider EntityClient per Entity Framework](entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="additional-considerations"></a>Ulteriori considerazioni  
  Di seguito sono illustrate altre considerazioni che possono influire sulle prestazioni di applicazioni Entity Framework.  
@@ -131,7 +132,7 @@ In questo argomento vengono descritte le caratteristiche relative alle prestazio
  Il formato dei metadati .NET limita il numero di caratteri di stringa specificabili dall'utente in un file binario a 16.777.215 (0xFFFFFF). Se si generano visualizzazioni per un modello di dimensioni molto grandi e il file di visualizzazione raggiunge tale limite, verrà visualizzato lo spazio logico per la creazione di altre stringhe utente. errore di compilazione. Questa limitazione delle dimensioni si applica a tutti i file binari gestiti. Per ulteriori informazioni, vedere il [Blog](https://docs.microsoft.com/archive/blogs/appfabriccat/solving-the-no-logical-space-left-to-create-more-user-strings-error-and-improving-performance-of-pre-generated-views-in-visual-studio-net4-entity-framework) che illustra come evitare l'errore quando si utilizzano modelli complessi e di grandi dimensioni.  
   
 #### <a name="consider-using-the-notracking-merge-option-for-queries"></a>Usare l'opzione di merge NoTracking per le query  
- Esiste un costo necessario per tenere traccia degli oggetti restituiti nel contesto dell'oggetto. Il rilevamento di modifiche agli oggetti e la garanzia che più richieste per la stessa l'entità logica restituiscano la stessa istanza dell'oggetto richiedono che gli oggetti siano allegati a un'istanza <xref:System.Data.Objects.ObjectContext>. Se non si intende effettuare aggiornamenti o eliminazioni di oggetti e non è necessaria la gestione delle identità, è consigliabile <xref:System.Data.Objects.MergeOption.NoTracking> utilizzare le opzioni di Unione quando si eseguono le query.  
+ Esiste un costo necessario per tenere traccia degli oggetti restituiti nel contesto dell'oggetto. Il rilevamento di modifiche agli oggetti e la garanzia che più richieste per la stessa l'entità logica restituiscano la stessa istanza dell'oggetto richiedono che gli oggetti siano allegati a un'istanza <xref:System.Data.Objects.ObjectContext>. Se non si intende effettuare aggiornamenti o eliminazioni di oggetti e non è necessaria la gestione delle identità, è consigliabile utilizzare le <xref:System.Data.Objects.MergeOption.NoTracking> Opzioni di Unione quando si eseguono le query.  
   
 #### <a name="return-the-correct-amount-of-data"></a>Restituire la quantità corretta di dati  
  In alcuni scenari, la specifica di un percorso della query usando il metodo <xref:System.Data.Objects.ObjectQuery%601.Include%2A> è molto più veloce perché richiede meno round trip al database. Tuttavia, in altri scenari, l'esecuzione di round trip aggiuntivi al database per caricare oggetti correlati potrebbe risultare più veloce perché le query più semplici con meno join comportano meno ridondanza di dati. Per questo motivo si consiglia di testare le prestazioni usando varie modalità di recupero di oggetti correlati. Per ulteriori informazioni, vedere [caricamento di oggetti correlati](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100)).  
@@ -153,6 +154,6 @@ In questo argomento vengono descritte le caratteristiche relative alle prestazio
   
 - [Confronto di prestazioni di ADO.NET Entity Framework](https://docs.microsoft.com/archive/blogs/adonet/ado-net-entity-framework-performance-comparison)  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Considerazioni sullo sviluppo e sulla distribuzione](development-and-deployment-considerations.md)

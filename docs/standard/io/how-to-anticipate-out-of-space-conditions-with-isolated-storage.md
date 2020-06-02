@@ -22,16 +22,16 @@ helpviewer_keywords:
 - isolated storage, out of space conditions
 - data storage using isolated storage, out of space conditions
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
-ms.openlocfilehash: 5666019e1a65880221261ef5ad704f82c37263b2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdc2cee343e9d9be44230e84ff45d6fa54901f48
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708115"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288589"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Procedura: Anticipare le condizioni di spazio insufficiente con lo spazio di memorizzazione isolato
 
-Il codice che usa lo spazio di memorizzazione isolato è vincolato da una [quota](../../../docs/standard/io/isolated-storage.md#quotas) che specifica la dimensione massima per il raggruppamento dati in cui si trovano file e directory dello spazio di memorizzazione isolato. La quota è definita da criteri di sicurezza e può essere configurata dagli amministratori. Se la dimensione massima consentita viene superata quando si prova a scrivere dati, viene generata un'eccezione <xref:System.IO.IsolatedStorage.IsolatedStorageException> e l'operazione non riesce. In questo modo, è possibile impedire attacchi Denial of Service dannosi che possono causare il rifiuto delle richieste da parte dell'applicazione perché l'archivio dati è pieno.
+Il codice che usa lo spazio di memorizzazione isolato è vincolato da una [quota](isolated-storage.md#quotas) che specifica la dimensione massima per il raggruppamento dati in cui si trovano file e directory dello spazio di memorizzazione isolato. La quota è definita da criteri di sicurezza e può essere configurata dagli amministratori. Se la dimensione massima consentita viene superata quando si prova a scrivere dati, viene generata un'eccezione <xref:System.IO.IsolatedStorage.IsolatedStorageException> e l'operazione non riesce. In questo modo, è possibile impedire attacchi Denial of Service dannosi che possono causare il rifiuto delle richieste da parte dell'applicazione perché l'archivio dati è pieno.
 
 Per determinare se un tentativo di scrittura specifico rischia di non riuscire per questo motivo, la classe <xref:System.IO.IsolatedStorage.IsolatedStorage> fornisce tre proprietà di sola lettura: <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A> e <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>. È possibile usare queste proprietà per determinare se la scrittura nell'archivio provocherà il superamento della dimensione massima consentita. Tenere presente che lo spazio di memorizzazione isolato è accessibile simultaneamente. Di conseguenza, quando si calcola la quantità di archiviazione rimanente, lo spazio di memorizzazione potrebbe essere già completamente utilizzato quando si tenta di scrivere nell'archivio. Tuttavia, è possibile usare la dimensione massima dell'archivio per determinare se sta per essere raggiunto il limite superiore di archiviazione disponibile.
 
@@ -48,5 +48,5 @@ L'esempio di codice seguente ottiene uno spazio di memorizzazione isolato, crea 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
-- [Archiviazione isolata](../../../docs/standard/io/isolated-storage.md)
-- [Procedura: Recuperare archivi per lo spazio di memorizzazione isolato](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
+- [Spazio di memorizzazione isolato](isolated-storage.md)
+- [Procedura: Recuperare archivi per lo spazio di memorizzazione isolato](how-to-obtain-stores-for-isolated-storage.md)

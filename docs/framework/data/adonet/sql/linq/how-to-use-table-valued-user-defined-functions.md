@@ -1,18 +1,19 @@
 ---
-title: "Procedura: Usare funzioni definite dall'utente con valori scalari"
+title: "Procedura: utilizzare funzioni definite dall'utente con valori di tabella"
+description: Utilizzare questi esempi per apprendere come creare una funzione con valori di tabella, che restituisce un singolo set di righe. Utilizzare una funzione con valori di tabella analoga a una tabella.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
-ms.openlocfilehash: c4b5290e4f1aa69c7f55951d526ccb303a5a95ec
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 44866367393e321d7dd2db965e2fad8a2e6b63e9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003180"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286326"
 ---
-# <a name="how-to-use-table-valued-user-defined-functions"></a>Procedura: Usare funzioni definite dall'utente con valori scalari
+# <a name="how-to-use-table-valued-user-defined-functions"></a>Procedura: utilizzare funzioni definite dall'utente con valori di tabella
 Una funzione con valori di tabella restituisce un unico rowset, a differenza delle stored procedure che possono restituire forme di più risultati. Poiché il tipo restituito di una funzione con valori di tabella è `Table`, è possibile usare tale funzione in un punto qualsiasi del codice SQL in cui possa essere usata una tabella. È inoltre possibile gestire la funzione con valori di tabella esattamente come una tabella.  
   
 ## <a name="example"></a>Esempio  

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: aggiungere zeri iniziali a un numero'
+title: 'Procedura: Aggiungere zeri iniziali a un numero'
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - number formatting [.NET Framework]
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-ms.openlocfilehash: bc3c4b75c484274c214141d8fbfcf8ac592b0b99
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ef18fb1bb7b1592a4e92866028868bf1cf793bbf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73131985"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290461"
 ---
-# <a name="how-to-pad-a-number-with-leading-zeros"></a>Procedura: aggiungere zeri iniziali a un numero
+# <a name="how-to-pad-a-number-with-leading-zeros"></a>Procedura: Aggiungere zeri iniziali a un numero
 
-È possibile aggiungere degli zeri iniziali a un numero intero usando la [stringa di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md) "D" con un identificatore di precisione. È possibile aggiungere zeri iniziali sia ai numeri interi che ai numeri a virgola mobile usando una [stringa di formato numerico personalizzata](../../../docs/standard/base-types/custom-numeric-format-strings.md). Questo argomento illustra come usare entrambi i metodi per aggiungere gli zeri iniziali a un numero.
+È possibile aggiungere degli zeri iniziali a un numero intero usando la [stringa di formato numerico standard](standard-numeric-format-strings.md) "D" con un identificatore di precisione. È possibile aggiungere zeri iniziali sia ai numeri interi che ai numeri a virgola mobile usando una [stringa di formato numerico personalizzata](custom-numeric-format-strings.md). Questo argomento illustra come usare entrambi i metodi per aggiungere gli zeri iniziali a un numero.
 
 ## <a name="to-pad-an-integer-with-leading-zeros-to-a-specific-length"></a>Per aggiungere un intero con gli zeri iniziali a una lunghezza specifica
 
@@ -32,7 +32,7 @@ ms.locfileid: "73131985"
 
     - Per visualizzare il numero intero come valore esadecimale, chiamare il metodo `ToString(String)` e passare la stringa "X*n*" come valore del parametro format, dove *n* rappresenta la lunghezza minima della stringa.
 
-È anche possibile formattare la stringa come stringa interpolata in [C#](../../csharp/language-reference/tokens/interpolated.md) e in [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) oppure chiamare un metodo, come <xref:System.String.Format%2A?displayProperty=nameWithType> o <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, che usa la [formattazione composita](../../../docs/standard/base-types/composite-formatting.md).
+È anche possibile formattare la stringa come stringa interpolata in [C#](../../csharp/language-reference/tokens/interpolated.md) e in [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) oppure chiamare un metodo, come <xref:System.String.Format%2A?displayProperty=nameWithType> o <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, che usa la [formattazione composita](composite-formatting.md).
 
 Il seguente esempio formatta diversi valori di tipo Integer con gli zeri iniziali in modo che la lunghezza totale del numero formattato sia almeno di otto caratteri.
 
@@ -102,6 +102,6 @@ Il seguente esempio aggiunge due valori <xref:System.Double> con cinque zeri ini
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md)
+- [Stringhe di formato numerico personalizzato](custom-numeric-format-strings.md)
+- [Stringhe di formato numerico standard](standard-numeric-format-strings.md)
+- [Formattazione composita](composite-formatting.md)

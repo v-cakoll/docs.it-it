@@ -1,5 +1,5 @@
 ---
-title: <example> - Guida alla programmazione in C
+title: <example> -Guida per programmatori C#
 ms.date: 07/20/2015
 f1_keywords:
 - <example>
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-ms.openlocfilehash: 615eccbc427b6a5bbbed061acd0c8b0b9be7f46c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8d26f82562cc5140662f5b32ea9fedf5481d8f8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789811"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287388"
 ---
-# <a name="example-c-programming-guide"></a>\<> di esempio (Guida per programmatori C
+# <a name="example-c-programming-guide"></a>\<example>(Guida per programmatori C#)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,7 +31,7 @@ ms.locfileid: "76789811"
 
 ## <a name="remarks"></a>Osservazioni
 
-Il tag \<example> consente di specificare un esempio di come usare un metodo o un altro membro della libreria. Ciò implica [ \<](./code.md) in genere l'utilizzo del codice>tag.
+Il `<example>` tag consente di specificare un esempio di come usare un metodo o un altro membro della libreria. Questa operazione comporta in genere l'uso del [\<code>](./code.md) tag.
 
 Compilare con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) per elaborare i commenti relativi alla documentazione in un file.
 

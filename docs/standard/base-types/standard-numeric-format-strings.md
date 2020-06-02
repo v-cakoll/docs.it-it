@@ -16,18 +16,18 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: 93f93574e6a3c24fc03a2cbc6c7d0f11f4fe61f6
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 6b84fc752a7bb37ff64bf6cfa08879aed3f20010
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83440876"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288316"
 ---
 # <a name="standard-numeric-format-strings"></a>Stringhe di formato numerico standard
 
 Le stringhe di formato numerico standard vengono usate per formattare tipi numerici comuni. Una stringa di formato numerico standard usa il formato `Axx`, dove:
 
-- `A` è un carattere alfabetico denominato *identificatore di formato*. Le stringhe di formato numerico contenenti più caratteri alfabetici, inclusi gli spazi, vengono interpretate come stringhe di formato numerico personalizzate. Per altre informazioni, vedere [Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md).
+- `A` è un carattere alfabetico denominato *identificatore di formato*. Le stringhe di formato numerico contenenti più caratteri alfabetici, inclusi gli spazi, vengono interpretate come stringhe di formato numerico personalizzate. Per altre informazioni, vedere [Stringhe di formato numerico personalizzato](custom-numeric-format-strings.md).
 
 - `xx` è un numero intero facoltativo denominato *identificatore di precisione*. L'identificatore di precisione, compreso tra 0 e 99, controlla il numero di cifre nel risultato. L'identificatore di precisione controlla il numero di cifre nella rappresentazione di stringa di un numero. Non arrotonda il numero stesso. Per eseguire un'operazione di arrotondamento, usare il metodo <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> o <xref:System.Math.Round%2A?displayProperty=nameWithType>.
 
@@ -36,13 +36,13 @@ Le stringhe di formato numerico standard vengono usate per formattare tipi numer
   - **In .NET Core 2.1 e versioni successive** il runtime seleziona il risultato con una cifra meno significativa pari, ovvero usando <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>.
 
   > [!NOTE]
-  > L'identificatore di precisione determina il numero di cifre nella stringa risultato. Per riempire una stringa risultato con spazi iniziali o finali, usare la funzionalità di [formattazione composita](../../../docs/standard/base-types/composite-formatting.md) e definire un *componente allineamento* nell'elemento di formato.
+  > L'identificatore di precisione determina il numero di cifre nella stringa risultato. Per riempire una stringa risultato con spazi iniziali o finali, usare la funzionalità di [formattazione composita](composite-formatting.md) e definire un *componente allineamento* nell'elemento di formato.
 
 Le stringhe di formato numerico standard sono supportate:
 
 - Da alcuni overload del metodo `ToString` di tutti i tipi numerici. È ad esempio possibile fornire una stringa di formato numerico ai metodi <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> e <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>.
 
-- Dalla [funzionalità di formattazione composita](../../../docs/standard/base-types/composite-formatting.md) di .NET usata da alcuni metodi `Write` e `WriteLine` delle classi <xref:System.Console> e <xref:System.IO.StreamWriter>, dal metodo <xref:System.String.Format%2A?displayProperty=nameWithType> e dal metodo <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. La funzionalità di formattazione composta consente di includere la rappresentazione di stringa di più elementi dati in un'unica stringa per specificare la larghezza di un campo e per allinearvi i numeri all'interno. Per altre informazioni, vedere [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md).
+- Dalla [funzionalità di formattazione composita](composite-formatting.md) di .NET usata da alcuni metodi `Write` e `WriteLine` delle classi <xref:System.Console> e <xref:System.IO.StreamWriter>, dal metodo <xref:System.String.Format%2A?displayProperty=nameWithType> e dal metodo <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. La funzionalità di formattazione composta consente di includere la rappresentazione di stringa di più elementi dati in un'unica stringa per specificare la larghezza di un campo e per allinearvi i numeri all'interno. Per altre informazioni, vedere [Formattazione composita](composite-formatting.md).
 
 - Dalle [stringhe interpolate](../../csharp/language-reference/tokens/interpolated.md) in c# e Visual Basic, che forniscono una sintassi semplificata rispetto alle stringhe di formato composito.
 
@@ -51,14 +51,14 @@ Le stringhe di formato numerico standard sono supportate:
 
 <a name="table"></a>Nella tabella seguente vengono descritti gli identificatori di formato numerico standard e viene visualizzato l'output di esempio prodotto da ogni identificatore di formato. Vedere la sezione [Note](#NotesStandardFormatting) per informazioni aggiuntive sull'uso di stringhe di formato numerico standard e la sezione [Esempio](#example) per un'illustrazione completa dell'uso.
 
-|Identificatore di formato|Nome|Description|Esempi|
+|Identificatore di formato|Nome|Descrizione|Esempi|
 |----------------------|----------|-----------------|--------------|
 |"C" o "c"|Valuta|Risultato: un valore di valuta.<br /><br /> Supportato da: tutti i tipi numerici.<br /><br /> Identificatore di precisione: numero di cifre decimali.<br /><br /> Identificatore di precisione predefinito: definito da <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Altre informazioni: [Identificatore di formato di valuta ("C")](#CFormatString).|123,456 ("C", en-US)-> \\ $123,46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123,456 ("C3", en-US)-> ( \\ $123,456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
 |"D" o "d"|Decimal|Risultato: cifre intere con segno negativo facoltativo.<br /><br /> Supportato da: solo tipi integrali.<br /><br /> Identificatore di precisione: numero minimo di cifre.<br /><br /> Identificatore di precisione predefinito: numero minimo di cifre richieste.<br /><br /> Altre informazioni: [Identificatore di formato decimale ("D")](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
 |"E" o "e"|Esponenziale (scientifico)|Risultato: notazione esponenziale.<br /><br /> Supportato da: tutti i tipi numerici.<br /><br /> Identificatore di precisione: numero di cifre decimali.<br /><br /> Identificatore di precisione predefinito: 6.<br /><br /> Altre informazioni: [Identificatore di formato esponenziale ("E")](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|
 |"F" o "f"|A virgola fissa|Risultato: cifre integrali e decimali con segno negativo facoltativo.<br /><br /> Supportato da: tutti i tipi numerici.<br /><br /> Identificatore di precisione: numero di cifre decimali.<br /><br /> Identificatore di precisione predefinito: definito da <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Altre informazioni: [Identificatore di formato a virgola fissa ("F")](#FFormatString).|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|
 |"G" o "g"|Generale|Risultato: la più compatta tra la notazione a virgola fissa e quella scientifica.<br /><br /> Supportato da: tutti i tipi numerici.<br /><br /> Identificatore di precisione: numero di cifre significative.<br /><br /> Identificatore di precisione predefinito: dipende dal tipo numerico.<br /><br /> Altre informazioni: [Identificatore di formato generale ("G")](#GFormatString).|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|
-|"N" o "n"|Numero|Risultato: cifre integrali e decimali, separatori di gruppi e un separatore decimale con segno negativo facoltativo.<br /><br /> Supportato da: tutti i tipi numerici.<br /><br /> Identificatore di precisione: numero desiderato di posizioni decimali.<br /><br /> Identificatore di precisione predefinito: definito da <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Altre informazioni: [Identificatore di formato numerico ("N")](#NFormatString).|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|
+|"N" o "n"|Number|Risultato: cifre integrali e decimali, separatori di gruppi e un separatore decimale con segno negativo facoltativo.<br /><br /> Supportato da: tutti i tipi numerici.<br /><br /> Identificatore di precisione: numero desiderato di posizioni decimali.<br /><br /> Identificatore di precisione predefinito: definito da <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Altre informazioni: [Identificatore di formato numerico ("N")](#NFormatString).|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|
 |"P" o "p"|Percentuale|Risultato: numero moltiplicato per 100 e visualizzato con un simbolo di percentuale.<br /><br /> Supportato da: tutti i tipi numerici.<br /><br /> Identificatore di precisione: numero desiderato di posizioni decimali.<br /><br /> Identificatore di precisione predefinito: definito da <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Altre informazioni: [Identificatore di formato percentuale ("P")](#PFormatString).|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|
 |"R" o "r"|Round trip|Risultato: stringa che può eseguire il round trip a un numero identico.<br /><br /> Supportato da: <xref:System.Single>, <xref:System.Double> e <xref:System.Numerics.BigInteger>.<br /><br /> Nota: consigliato solo per il tipo <xref:System.Numerics.BigInteger>. Per i tipi <xref:System.Double>, usare "G17"; per i tipi <xref:System.Single>, usare "G9". <br> Identificatore di precisione: ignorato.<br /><br /> Altre informazioni: [Identificatore di formato di round trip ("R")](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|
 |"X" o "x"|Valore esadecimale|Risultato: stringa esadecimale.<br /><br /> Supportato da: solo tipi integrali.<br /><br /> Identificatore di precisione: numero di cifre nella stringa di risultato.<br /><br /> Altre informazioni: [Identificatore di formato esadecimale ("X")](#XFormatString).|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|
@@ -78,7 +78,7 @@ Le stringhe di formato numerico standard sono supportate:
   [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
   [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]
 
-- È possibile fornire la stringa come argomento `formatString` in un elemento di formato usato con metodi come <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> e <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Per altre informazioni, vedere [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md). Nell'esempio seguente viene usato un elemento di formato per inserire un valore di valuta in una stringa.
+- È possibile fornire la stringa come argomento `formatString` in un elemento di formato usato con metodi come <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> e <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Per altre informazioni, vedere [Formattazione composita](composite-formatting.md). Nell'esempio seguente viene usato un elemento di formato per inserire un valore di valuta in una stringa.
 
   [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
   [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
@@ -104,7 +104,7 @@ Se il valore da formattare contiene un numero di posizioni decimali maggiore del
 
 La stringa di risultato è influenzata dalle informazioni sulla formattazione dell'oggetto <xref:System.Globalization.NumberFormatInfo> corrente. Nella tabella seguente sono elencate le proprietà di <xref:System.Globalization.NumberFormatInfo> che consentono di controllare la formattazione della stringa restituita.
 
-|Proprietà di NumberFormatInfo|Description|
+|Proprietà di NumberFormatInfo|Descrizione|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A>|Definisce la posizione del simbolo di valuta per i valori positivi.|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>|Definisce la posizione del simbolo di valuta per i valori negativi e specifica se il segno negativo è rappresentato da parentesi o dalla proprietà <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>.|
@@ -133,7 +133,7 @@ L'identificatore di precisione indica il numero minimo di cifre che si vogliono 
 
 La stringa di risultato è influenzata dalle informazioni sulla formattazione dell'oggetto <xref:System.Globalization.NumberFormatInfo> corrente. Come illustrato nella tabella seguente, una singola proprietà influisce sulla formattazione della stringa di risultato.
 
-|Proprietà di NumberFormatInfo|Description|
+|Proprietà di NumberFormatInfo|Descrizione|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definisce la stringa che indica che un numero è negativo.|
 
@@ -157,7 +157,7 @@ Il fatto che per l'identificatore di formato venga usata una lettera maiuscola o
 
 La stringa di risultato è influenzata dalle informazioni sulla formattazione dell'oggetto <xref:System.Globalization.NumberFormatInfo> corrente. Nella tabella seguente sono elencate le proprietà di <xref:System.Globalization.NumberFormatInfo> che consentono di controllare la formattazione della stringa restituita.
 
-|Proprietà di NumberFormatInfo|Description|
+|Proprietà di NumberFormatInfo|Descrizione|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definisce la stringa che indica che un numero è negativo sia per il coefficiente che per l'esponente.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definisce la stringa che separa la cifra integrale dalle cifre decimali nel coefficiente.|
@@ -181,7 +181,7 @@ L'identificatore di precisione indica il numero di posizioni decimali desiderato
 
 La stringa di risultato è influenzata dalle informazioni sulla formattazione dell'oggetto <xref:System.Globalization.NumberFormatInfo> corrente. Nella tabella seguente sono elencate le proprietà dell'oggetto <xref:System.Globalization.NumberFormatInfo> che consentono di controllare la formattazione della stringa di risultato.
 
-|Proprietà di NumberFormatInfo|Description|
+|Proprietà di NumberFormatInfo|Descrizione|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definisce la stringa che indica che un numero è negativo.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definisce la stringa che separa le cifre integrali da quelle decimali.|
@@ -228,7 +228,7 @@ Se usato con un valore <xref:System.Single>, l'identificatore di formato "G9" as
 
 La stringa di risultato è influenzata dalle informazioni sulla formattazione dell'oggetto <xref:System.Globalization.NumberFormatInfo> corrente. Nella tabella seguente sono elencate le proprietà di <xref:System.Globalization.NumberFormatInfo> che consentono di controllare la formattazione della stringa di risultato.
 
-|Proprietà di NumberFormatInfo|Description|
+|Proprietà di NumberFormatInfo|Descrizione|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definisce la stringa che indica che un numero è negativo.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definisce la stringa che separa le cifre integrali da quelle decimali.|
@@ -250,7 +250,7 @@ L'identificatore di formato numerico ("N") converte un numero in una stringa in 
 
 La stringa di risultato è influenzata dalle informazioni sulla formattazione dell'oggetto <xref:System.Globalization.NumberFormatInfo> corrente. Nella tabella seguente sono elencate le proprietà di <xref:System.Globalization.NumberFormatInfo> che consentono di controllare la formattazione della stringa di risultato.
 
-|Proprietà di NumberFormatInfo|Description|
+|Proprietà di NumberFormatInfo|Descrizione|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definisce la stringa che indica che un numero è negativo.|
 |<xref:System.Globalization.NumberFormatInfo.NumberNegativePattern%2A>|Definisce il formato dei valori negativi e specifica se il segno negativo è rappresentato da parentesi o dalla proprietà <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>.|
@@ -275,7 +275,7 @@ L'identificatore di formato percentuale ("P") moltiplica un numero per 100 e lo 
 
 Nella tabella seguente sono elencate le proprietà di <xref:System.Globalization.NumberFormatInfo> che consentono di controllare la formattazione della stringa restituita.
 
-|Proprietà di NumberFormatInfo|Description|
+|Proprietà di NumberFormatInfo|Descrizione|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.PercentPositivePattern%2A>|Definisce la posizione del simbolo di percentuale per i valori positivi.|
 |<xref:System.Globalization.NumberFormatInfo.PercentNegativePattern%2A>|Definisce la posizione del simbolo di percentuale e del simbolo negativo per i valori negativi.|
@@ -307,7 +307,7 @@ Quando un valore <xref:System.Numerics.BigInteger> viene formattato usando quest
 Sebbene sia possibile includere un identificatore di precisione, questo viene ignorato. Quando si usa questo identificatore, infatti, il formato della riconversione ha la precedenza sulla precisione.
 La stringa di risultato è influenzata dalle informazioni sulla formattazione dell'oggetto <xref:System.Globalization.NumberFormatInfo> corrente. Nella tabella seguente sono elencate le proprietà di <xref:System.Globalization.NumberFormatInfo> che consentono di controllare la formattazione della stringa di risultato.
 
-|Proprietà di NumberFormatInfo|Description|
+|Proprietà di NumberFormatInfo|Descrizione|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definisce la stringa che indica che un numero è negativo.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definisce la stringa che separa le cifre integrali da quelle decimali.|
@@ -384,9 +384,9 @@ Nell'esempio seguente vengono formattati un valore numerico a virgola mobile e u
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Globalization.NumberFormatInfo>
-- [Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)
-- [Procedura: Aggiungere zeri iniziali a un numero](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
-- [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md)
+- [Stringhe di formato numerico personalizzato](custom-numeric-format-strings.md)
+- [Formattazione di tipi](formatting-types.md)
+- [Procedura: Aggiungere zeri iniziali a un numero](how-to-pad-a-number-with-leading-zeros.md)
+- [Formattazione composita](composite-formatting.md)
 - [Esempio: Utilità di formattazione di .NET Core WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
 - [Esempio: Utilità di formattazione di .NET Core WinForms (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)

@@ -1,13 +1,14 @@
 ---
-title: Panoramica di
+title: Panoramica
+description: Leggi una panoramica di ADO.NET in .NET Framework e leggi le risorse per ottenere spiegazioni ed esempi più dettagliati.
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: d5dc9cf7081c6876118914a0b95853a5a7ca5e57
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 2ff3b7ad197bfe1e1c12e382f3a59bd470c57a75
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980340"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287155"
 ---
 # <a name="adonet-overview"></a>Cenni preliminari su ADO.NET
 ADO.NET fornisce uniformità di accesso sia per origini dati quali SQL Server e XML, sia per origini dati esposte tramite OLE DB e ODBC. Le applicazioni consumer che supportano la condivisione dei dati sono in grado di usare ADO.NET per connettersi a tali origini dati e recuperare, gestire e aggiornare i dati contenuti.  
@@ -22,8 +23,8 @@ ADO.NET fornisce uniformità di accesso sia per origini dati quali SQL Server e 
   
  **Informativa sulla privacy**: gli assembly System. Data. dll, System. Data. Design. dll, System. Data. OracleClient. dll, System. Data. SQLXML. dll, System. Data. Linq. dll, System. Data. SqlServerCe. dll e System. Data. datasetextensions. dll non fanno distinzione tra i dati privati e non privati di un utente.  Questi assembly non raccolgono, archiviano o trasportano i dati privati degli utenti, tuttavia possono essere usati da applicazioni di terze parti per tali scopi.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Architettura di ADO.NET](ado-net-architecture.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Architettura ADO.NET](ado-net-architecture.md)  
  Viene fornita una descrizione generale dell'architettura e dei componenti di ADO.NET.  
   
  [Opzioni e linee guida per la tecnologia ADO.NET](ado-net-technology-options-and-guidelines.md)  
@@ -41,7 +42,7 @@ ADO.NET fornisce uniformità di accesso sia per origini dati quali SQL Server e 
  [Esecuzione side-by-side in ADO.NET](side-by-side-execution.md)  
  Vengono descritte le differenze tra le diverse versioni di ADO.NET e le relative ripercussioni sull'esecuzione contemporanea di diverse versioni e la compatibilità tra applicazioni.  
   
- [Esempi di codice ADO.NET](ado-net-code-examples.md)  
+ [Esempi di codice di ADO.NET](ado-net-code-examples.md)  
  Vengono forniti esempi di codice in cui vengono recuperati dati usando i provider di dati di ADO.NET.  
   
 ## <a name="related-sections"></a>Sezioni correlate  

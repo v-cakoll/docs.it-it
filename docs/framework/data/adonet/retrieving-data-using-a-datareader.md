@@ -1,21 +1,22 @@
 ---
 title: Recupero di dati tramite un oggetto DataReader
+description: Informazioni su come recuperare i dati usando un DataReader in ADO.NET con questo codice di esempio. DataReader fornisce un flusso di dati non memorizzato nel buffer.
 ms.date: 10/29/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 88cd85ce343aaab08b944f81c9659918014da0a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e5161cc325bf0379bb9241b99c473c539ad1081
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149024"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286598"
 ---
-# <a name="retrieve-data-using-a-datareader"></a>Recuperare i dati usando un DataReaderRetrieve data using a DataReader
-Per recuperare i dati utilizzando un **DataReader**, creare un'istanza dell'oggetto **Command,** quindi creare un **oggetto DataReader** chiamando **Command.ExecuteReader** per recuperare righe da un'origine dati. Il **DataReader** fornisce un flusso di dati senza buffer che consente alla logica procedurale di elaborare in modo efficiente i risultati da un'origine dati in sequenza. Il **DataReader** è una buona scelta quando si recuperano grandi quantità di dati perché i dati non sono memorizzati nella cache.
+# <a name="retrieve-data-using-a-datareader"></a>Recuperare i dati usando un DataReader
+Per recuperare i dati usando un **DataReader**, creare un'istanza dell'oggetto **Command** e quindi creare un **DataReader** chiamando **Command. ExecuteReader** per recuperare le righe da un'origine dati. **DataReader** fornisce un flusso di dati non memorizzato nel buffer che consente alla logica procedurale di elaborare in modo efficiente i risultati da un'origine dati. Il **DataReader** è una scelta ottimale quando si recuperano grandi quantità di dati perché i dati non vengono memorizzati nella cache.
 
-Nell'esempio seguente viene illustrato l'utilizzo di un `command` **DataReader**, in cui `reader` rappresenta un DataReader valido e rappresenta un oggetto Command valido.  
+Nell'esempio seguente viene illustrato l'utilizzo di un **DataReader**, dove `reader` rappresenta un DataReader valido e `command` rappresenta un oggetto comando valido.  
 
 ```csharp
 reader = command.ExecuteReader();  
@@ -25,39 +26,39 @@ reader = command.ExecuteReader();
 reader = command.ExecuteReader()
 ```  
 
-Utilizzare il metodo **DataReader.Read** per ottenere una riga dai risultati della query. È possibile accedere a ogni colonna della riga restituita passando il nome o il numero ordinale della colonna a **DataReader**. Tuttavia, per ottenere prestazioni ottimali, **DataReader** fornisce una serie di metodi che consentono di accedere ai valori delle colonne nei relativi tipi di dati nativi (**GetDateTime**, **GetDouble**, **GetGuid**, **GetInt32**e così via). Per un elenco dei metodi delle opzioni di accesso <xref:System.Data.OleDb.OleDbDataReader> tipizzate per **DataReader**specifici del provider di dati, vedere e <xref:System.Data.SqlClient.SqlDataReader>. L'utilizzo dei metodi della funzione di accesso tipizzato quando si conosce il tipo di dati sottostante riduce la quantità di conversione del tipo necessaria durante il recupero del valore della colonna.  
+Utilizzare il metodo **DataReader. Read** per ottenere una riga dai risultati della query. È possibile accedere a ogni colonna della riga restituita passando il nome o il numero ordinale della colonna a **DataReader**. Tuttavia, per ottenere prestazioni ottimali, **DataReader** fornisce una serie di metodi che consentono di accedere ai valori delle colonne nei tipi di dati nativi (**GetDateTime**, **GetDouble**, **GetGuid**, **GetInt32**e così via). Per un elenco di metodi tipizzati della funzione di accesso per i data **Reader**specifici del provider di dati, vedere <xref:System.Data.OleDb.OleDbDataReader> e <xref:System.Data.SqlClient.SqlDataReader> . Utilizzando i metodi tipizzati della funzione di accesso quando si conosce il tipo di dati sottostante, è possibile ridurre la quantità di conversione del tipo necessaria durante il recupero del valore della colonna.  
   
- L'esempio seguente scorre un oggetto **DataReader** e restituisce due colonne da ogni riga.  
+ Nell'esempio seguente viene eseguita l'iterazione di un oggetto **DataReader** e vengono restituite due colonne da ogni riga.  
   
  [!code-csharp[DataWorks SqlClient.HasRows#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.HasRows/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.HasRows#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.HasRows/VB/source.vb#1)]  
   
 ## <a name="closing-the-datareader"></a>Chiusura dell'oggetto DataReader  
- Chiamare sempre il **Close** metodo dopo aver terminato di utilizzare il **DataReader** oggetto.  
+ Al termine dell'utilizzo dell'oggetto **DataReader** , chiamare sempre il metodo **Close** .  
   
- Se il **comando** contiene parametri di output o valori restituiti, tali valori non sono disponibili fino a quando il **DataReader** viene chiuso.  
+ Se il **comando** contiene parametri di output o valori restituiti, tali valori non saranno disponibili fino alla chiusura del **DataReader** .  
   
- Mentre un **DataReader** è aperto, il **Connection** è in uso esclusivamente da tale **DataReader**. Non è possibile eseguire comandi per **Connection**, inclusa la creazione di un altro **DataReader**, fino alla chiusura del **DataReader** originale.  
+ Mentre un **DataReader** è aperto, la **connessione** viene utilizzata esclusivamente da tale **DataReader**. Non è possibile eseguire alcun comando per la **connessione**, inclusa la creazione di un altro **DataReader**, fino alla chiusura del **DataReader** originale.  
   
 > [!NOTE]
-> Non chiamare **Close** o **Dispose** su un **oggetto Connection**, un **DataReader**o qualsiasi altro oggetto gestito nel metodo **Finalize** della classe. Nei finalizzatori rilasciare solo le risorse non gestite che la classe controlla direttamente. Se la classe non possiede alcuna risorsa non gestita, non includere un metodo **Finalize** nella definizione della classe. Per ulteriori informazioni, vedere [Garbage Collection](../../../standard/garbage-collection/index.md).  
+> Non chiamare **Close** o **Dispose** per una **connessione**, un **DataReader**o qualsiasi altro oggetto gestito nel metodo **Finalize** della classe. Nei finalizzatori rilasciare solo le risorse non gestite che la classe controlla direttamente. Se la classe non è proprietaria di risorse non gestite, non includere un metodo **Finalize** nella definizione della classe. Per altre informazioni, vedere [Garbage Collection](../../../standard/garbage-collection/index.md).  
   
-## <a name="retrieving-multiple-result-sets-using-nextresult"></a>Recupero di più set di risultati tramite NextResultRetrieving multiple result sets using NextResult  
- Se il **DataReader** restituisce più set di risultati, chiamare il **NextResult** metodo per scorrere i set di risultati in sequenza. Nell'esempio seguente viene illustrata l'elaborazione dei risultati di due dichiarazioni SELECT da parte del tipo <xref:System.Data.SqlClient.SqlDataReader> usando il metodo <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>.  
+## <a name="retrieving-multiple-result-sets-using-nextresult"></a>Recupero di più set di risultati con NextResult  
+ Se **DataReader** restituisce più set di risultati, chiamare il metodo **NextResult** per scorrere i set di risultati in modo sequenziale. Nell'esempio seguente viene illustrata l'elaborazione dei risultati di due dichiarazioni SELECT da parte del tipo <xref:System.Data.SqlClient.SqlDataReader> usando il metodo <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>.  
   
  [!code-csharp[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/VB/source.vb#1)]  
   
-## <a name="getting-schema-information-from-the-datareader"></a>Recupero di informazioni sullo schema da DataReaderGetting schema information from the DataReader  
- Mentre un **DataReader** è aperto, è possibile recuperare le informazioni sullo schema sul set di risultati corrente utilizzando il **GetSchemaTable** metodo. **GetSchemaTable** restituisce un <xref:System.Data.DataTable> oggetto popolato con righe e colonne che contengono le informazioni sullo schema per il set di risultati corrente. Il **DataTable** contiene una riga per ogni colonna del set di risultati. Ogni colonna della tabella dello schema esegue il mapping a una proprietà delle colonne restituite nelle righe del set di risultati, dove **ColumnName** è il nome della proprietà e il valore della colonna è il valore della proprietà. Nell'esempio seguente vengono scrivete le informazioni sullo schema per **DataReader**.  
+## <a name="getting-schema-information-from-the-datareader"></a>Recupero delle informazioni sullo schema dal DataReader  
+ Mentre un **DataReader** è aperto, è possibile recuperare le informazioni sullo schema relative al set di risultati corrente usando il metodo **GetSchemaTable** . **GetSchemaTable** restituisce un <xref:System.Data.DataTable> oggetto popolato con righe e colonne che contengono le informazioni sullo schema per il set di risultati corrente. Il **DataTable** contiene una riga per ogni colonna del set di risultati. Ogni colonna della tabella dello schema è mappata a una proprietà delle colonne restituite nelle righe del set di risultati, dove **ColumnName** è il nome della proprietà e il valore della colonna è il valore della proprietà. Nell'esempio seguente vengono scritte le informazioni sullo schema per **DataReader**.  
   
  [!code-csharp[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/VB/source.vb#1)]  
   
-## <a name="working-with-ole-db-chapters"></a>Utilizzo dei capitoli OLE DB  
- È possibile recuperare i set di righe gerarchici o i capitoli (tipo <xref:System.Data.OleDb.OleDbDataReader>OLE DB **DBTYPE_HCHAPTER**, tipo ADO **adChapter**), utilizzando il metodo . Quando una query che include un capitolo viene restituita come **DataReader**, il capitolo viene restituito come colonna in tale **DataReader** e viene esposto come oggetto **DataReader** .  
+## <a name="working-with-ole-db-chapters"></a>Uso dei capitoli OLE DB  
+ I set di righe gerarchici, o capitoli (tipo OLE DB **DBTYPE_HCHAPTER**, tipo ADO **adChapter**), possono essere recuperati utilizzando <xref:System.Data.OleDb.OleDbDataReader> . Quando una query che include un capitolo viene restituita come **DataReader**, il capitolo viene restituito come una colonna nel **DataReader** e viene esposto come oggetto **DataReader** .  
   
- Il ADO.NET **DataSet** può essere utilizzato anche per rappresentare set di righe gerarchici utilizzando relazioni padre-figlio tra tabelle. Per ulteriori informazioni, vedere [DataSets, DataTables e DataViews](./dataset-datatable-dataview/index.md).  
+ Il **set di dati** ADO.NET può essere utilizzato anche per rappresentare i set di righe gerarchici utilizzando le relazioni padre-figlio tra le tabelle. Per ulteriori informazioni, vedere [DataSet, DataTable e DataViews](./dataset-datatable-dataview/index.md).  
   
  Nell'esempio di codice seguente viene usato il provider MSDataShape per generare una colonna del capitolo contenente gli ordini per ogni cliente presente in un elenco di clienti.  
   
@@ -133,14 +134,14 @@ using (OleDbConnection connection = new OleDbConnection(
 }
 ```  
   
-## <a name="returning-results-with-oracle-ref-cursors"></a>Restituzione dei risultati con Oracle REF CURSOR  
+## <a name="returning-results-with-oracle-ref-cursors"></a>Restituzione di risultati con CURSORi REF Oracle  
  Con il provider di dati .NET Framework per Oracle è possibile usare i REF CURSOR Oracle per la restituzione del risultato di una query. I REF CURSOR Oracle vengono restituiti come <xref:System.Data.OracleClient.OracleDataReader>.  
   
- È possibile <xref:System.Data.OracleClient.OracleDataReader> recuperare un oggetto che rappresenta <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A> un Oracle REF CURSOR utilizzando il metodo . È inoltre possibile <xref:System.Data.OracleClient.OracleCommand> specificare un che restituisce uno o più <xref:System.Data.OracleClient.OracleDataAdapter> CHIAMAVA.R <xref:System.Data.DataSet>Oracle REF come **SelectCommand** per un oggetto utilizzato per riempire un oggetto .  
+ È possibile recuperare un <xref:System.Data.OracleClient.OracleDataReader> oggetto che rappresenta un REF CURSOR Oracle utilizzando il <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A> metodo. È inoltre possibile specificare un oggetto <xref:System.Data.OracleClient.OracleCommand> che restituisce uno o più REF CURSOR Oracle come **SelectCommand** per un oggetto <xref:System.Data.OracleClient.OracleDataAdapter> utilizzato per riempire un oggetto <xref:System.Data.DataSet> .  
   
- Per accedere a un CURSOR REF restituito da <xref:System.Data.OracleClient.OracleCommand> un'origine dati Oracle, creare un oggetto <xref:System.Data.OracleClient.OracleCommand.Parameters> per <xref:System.Data.OracleClient.OracleCommand>la query e aggiungere un parametro di output che faccia riferimento a REF CURSOR alla raccolta dell'oggetto . È necessario che il nome del parametro corrisponda al nome del parametro REF CURSOR della query. Impostare il tipo <xref:System.Data.OracleClient.OracleType.Cursor?displayProperty=nameWithType>del parametro su . Il <xref:System.Data.OracleClient.OracleCommand.ExecuteReader?displayProperty=nameWithType> metodo <xref:System.Data.OracleClient.OracleCommand> dell'utente restituisce un <xref:System.Data.OracleClient.OracleDataReader> per il CURSOR REF.  
+ Per accedere a un cursore REF restituito da un'origine dati Oracle, creare un oggetto <xref:System.Data.OracleClient.OracleCommand> per la query e aggiungere un parametro di output che fa riferimento al cursore Ref alla <xref:System.Data.OracleClient.OracleCommand.Parameters> raccolta di <xref:System.Data.OracleClient.OracleCommand> . È necessario che il nome del parametro corrisponda al nome del parametro REF CURSOR della query. Impostare il tipo del parametro su <xref:System.Data.OracleClient.OracleType.Cursor?displayProperty=nameWithType> . Il <xref:System.Data.OracleClient.OracleCommand.ExecuteReader?displayProperty=nameWithType> metodo di <xref:System.Data.OracleClient.OracleCommand> restituisce un oggetto <xref:System.Data.OracleClient.OracleDataReader> per il cursore Ref.  
   
- Se <xref:System.Data.OracleClient.OracleCommand> restituisce più REF CURSORS, aggiungere più parametri di output. È possibile accedere ai diversi REF(ARIE) chiamando il <xref:System.Data.OracleClient.OracleCommand.ExecuteReader?displayProperty=nameWithType> metodo . La chiamata <xref:System.Data.OracleClient.OracleCommand.ExecuteReader> a <xref:System.Data.OracleClient.OracleDataReader> restituisce un riferimento al primo CURSOR REF. È quindi possibile <xref:System.Data.OracleClient.OracleDataReader.NextResult?displayProperty=nameWithType> chiamare il metodo per accedere ai REF SUCCESSIVI. Anche se i <xref:System.Data.OracleClient.OracleCommand.Parameters?displayProperty=nameWithType> parametri nella raccolta corrispondono ai parametri di output REF CURSOR in base al nome, li <xref:System.Data.OracleClient.OracleDataReader> accede nell'ordine in cui sono stati aggiunti alla <xref:System.Data.OracleClient.OracleCommand.Parameters> raccolta.  
+ Se <xref:System.Data.OracleClient.OracleCommand> restituisce più cursori Ref, aggiungere più parametri di output. È possibile accedere ai diversi CURSORi REF chiamando il <xref:System.Data.OracleClient.OracleCommand.ExecuteReader?displayProperty=nameWithType> metodo. La chiamata a <xref:System.Data.OracleClient.OracleCommand.ExecuteReader> restituisce un oggetto che fa <xref:System.Data.OracleClient.OracleDataReader> riferimento al primo REF CURSOR. È quindi possibile chiamare il <xref:System.Data.OracleClient.OracleDataReader.NextResult?displayProperty=nameWithType> metodo per accedere ai cursori Ref successivi. Sebbene i parametri nella <xref:System.Data.OracleClient.OracleCommand.Parameters?displayProperty=nameWithType> raccolta corrispondano ai parametri di output di REF CURSOR in base al nome, il <xref:System.Data.OracleClient.OracleDataReader> accede a tali parametri nell'ordine in cui sono stati aggiunti alla <xref:System.Data.OracleClient.OracleCommand.Parameters> raccolta.  
   
  Si considerino ad esempio il package e il corpo package Oracle seguenti.  
   
@@ -162,7 +163,7 @@ CREATE OR REPLACE PACKAGE BODY CURSPKG AS
 END CURSPKG;
 ```  
   
- Il codice seguente <xref:System.Data.OracleClient.OracleCommand> crea un oggetto che restituisce i REF CURSO <xref:System.Data.OracleClient.OracleType.Cursor?displayProperty=nameWithType> dal <xref:System.Data.OracleClient.OracleCommand.Parameters?displayProperty=nameWithType> pacchetto Oracle precedente aggiungendo due parametri di tipo alla raccolta.  
+ Il codice seguente crea un oggetto <xref:System.Data.OracleClient.OracleCommand> che restituisce i REF CURSOR dal pacchetto Oracle precedente aggiungendo due parametri di tipo <xref:System.Data.OracleClient.OracleType.Cursor?displayProperty=nameWithType> alla <xref:System.Data.OracleClient.OracleCommand.Parameters?displayProperty=nameWithType> raccolta.  
   
 ```vb  
 Dim cursCmd As OracleCommand = New OracleCommand("CURSPKG.OPEN_TWO_CURSORS", oraConn)  
@@ -176,7 +177,7 @@ cursCmd.Parameters.Add("EMPCURSOR", OracleType.Cursor).Direction = ParameterDire
 cursCmd.Parameters.Add("DEPTCURSOR", OracleType.Cursor).Direction = ParameterDirection.Output;  
 ```  
   
- Il codice seguente restituisce i risultati <xref:System.Data.OracleClient.OracleDataReader.Read> <xref:System.Data.OracleClient.OracleDataReader.NextResult> del comando <xref:System.Data.OracleClient.OracleDataReader>precedente utilizzando i metodi e dell'oggetto . I parametri REF CURSOR vengono restituiti in ordine.  
+ Il codice seguente restituisce i risultati del comando precedente usando i <xref:System.Data.OracleClient.OracleDataReader.Read> metodi e <xref:System.Data.OracleClient.OracleDataReader.NextResult> dell'oggetto <xref:System.Data.OracleClient.OracleDataReader> . I parametri REF CURSOR vengono restituiti in ordine.  
   
 ```vb  
 oraConn.Open()  
@@ -232,7 +233,7 @@ reader.Close();
 oraConn.Close();  
 ```  
   
- Nell'esempio seguente viene utilizzato <xref:System.Data.DataSet> il comando precedente per popolare un con i risultati del pacchetto Oracle.  
+ Nell'esempio seguente viene usato il comando precedente per popolare un oggetto <xref:System.Data.DataSet> con i risultati del pacchetto Oracle.  
   
 ```vb  
 Dim ds As DataSet = New DataSet()  
@@ -255,7 +256,7 @@ adapter.Fill(ds);
 ```
 
 > [!NOTE]
-> Per evitare **un'eccezione OverflowException**, è consigliabile gestire anche qualsiasi conversione dal tipo <xref:System.Data.DataRow>Oracle NUMBER a un tipo .NET Framework valido prima di archiviare il valore in un oggetto . È possibile <xref:System.Data.Common.DataAdapter.FillError> utilizzare l'evento per determinare se si è verificata **un'eccezione OverflowException.** Per ulteriori informazioni <xref:System.Data.Common.DataAdapter.FillError> sull'evento, vedere [Gestione degli eventi DataAdapter](handling-dataadapter-events.md).  
+> Per evitare un **overflow**, è consigliabile gestire anche qualsiasi conversione dal tipo di numero Oracle a un tipo di .NET Framework valido prima di archiviare il valore in un oggetto <xref:System.Data.DataRow> . È possibile utilizzare l' <xref:System.Data.Common.DataAdapter.FillError> evento per determinare se si è verificato un **overflow** . Per ulteriori informazioni sull' <xref:System.Data.Common.DataAdapter.FillError> evento, vedere [gestione di eventi DataAdapter](handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

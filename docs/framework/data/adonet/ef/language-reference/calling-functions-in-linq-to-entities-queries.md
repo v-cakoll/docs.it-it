@@ -1,18 +1,19 @@
 ---
 title: Chiamata di funzioni in query di LINQ to Entities
+description: Usare questi articoli per vedere come le classi EntityFunctions e SqlFunctions forniscono l'accesso alle funzioni canoniche e di database come parte del Entity Framework.
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: 267bb393d9e75c66eb18139e8897da34bd86e159
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: faa6406713592f10e5e7371cd73f29bec4b03b7b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251257"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286857"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>Chiamata di funzioni in query di LINQ to Entities
 Negli argomenti di questa sezione viene illustrato come chiamare le funzioni nelle LINQ to Entities.  
   
- Le classi <xref:System.Data.Objects.EntityFunctions> e <xref:System.Data.Objects.SqlClient.SqlFunctions> forniscono l'accesso alle funzioni canoniche e di database come parte di Entity Framework. Per altre informazioni, vedere [Procedura: Chiamare funzioni](how-to-call-canonical-functions.md) canoniche [e procedura: Chiamare le funzioni](how-to-call-database-functions.md)di database.  
+ Le classi <xref:System.Data.Objects.EntityFunctions> e <xref:System.Data.Objects.SqlClient.SqlFunctions> forniscono l'accesso alle funzioni canoniche e di database come parte di Entity Framework. Per altre informazioni, vedere [procedura: chiamare funzioni canoniche](how-to-call-canonical-functions.md) e [procedura: chiamare funzioni di database](how-to-call-database-functions.md).  
   
  Il processo per la chiamata di una funzione personalizzata richiede tre passaggi di base:  
   
@@ -24,14 +25,14 @@ Negli argomenti di questa sezione viene illustrato come chiamare le funzioni nel
   
  Per altre informazioni, vedere gli argomenti in questa sezione.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Procedura: Chiama funzioni canoniche](how-to-call-canonical-functions.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Procedura: chiamare funzioni canoniche](how-to-call-canonical-functions.md)  
   
- [Procedura: Funzioni di database di chiamata](how-to-call-database-functions.md)  
+ [Procedura: chiamare funzioni di database](how-to-call-database-functions.md)  
   
- [Procedura: Chiamare funzioni di database personalizzate](how-to-call-custom-database-functions.md)  
+ [Procedura: chiamare funzioni di database personalizzate](how-to-call-custom-database-functions.md)  
   
- [Procedura: Chiamare funzioni definite dal modello nelle query](how-to-call-model-defined-functions-in-queries.md)  
+ [Procedura: Chiamare funzioni definite dal modello in query](how-to-call-model-defined-functions-in-queries.md)  
   
  [Procedura: Chiamare funzioni definite dal modello come metodi di oggetto](how-to-call-model-defined-functions-as-object-methods.md)  
   
@@ -39,5 +40,5 @@ Negli argomenti di questa sezione viene illustrato come chiamare le funzioni nel
 
 - [Query in LINQ to Entities](queries-in-linq-to-entities.md)
 - [Funzioni canoniche](canonical-functions.md)
-- [Panoramica del file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
-- [Procedura: Definire funzioni personalizzate nel modello concettuale](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))
+- [Panoramica sui file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Procedura: definire funzioni personalizzate nel modello concettuale](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))

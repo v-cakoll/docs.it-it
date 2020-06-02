@@ -1,5 +1,5 @@
 ---
-title: <list> - Guida alla programmazione in C
+title: <list> -Guida per programmatori C#
 ms.date: 07/20/2015
 f1_keywords:
 - list
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: cb289b26e9bc12d561892c421fb40da18d8c3513
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78eec992671dab1aa59717a007a8e3a2662f6e87
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789744"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287337"
 ---
-# <a name="list-c-programming-guide"></a>\<elenco> (Guida per programmatori C
+# <a name="list-c-programming-guide"></a>\<list>(Guida per programmatori C#)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -48,11 +48,11 @@ ms.locfileid: "76789744"
   
 ## <a name="remarks"></a>Osservazioni
 
-Il blocco \<listheader> viene usato per definire la riga di intestazione di una tabella o di un elenco di definizioni. Per definire una tabella, è sufficiente specificare una voce per il termine nell'intestazione.
+Il `<listheader>` blocco viene utilizzato per definire la riga di intestazione di un elenco di tabelle o definizioni. Per definire una tabella, è sufficiente specificare una voce per il termine nell'intestazione.
 
-Ogni elemento dell'elenco viene specificato tramite un blocco \<item>. Quando si crea un elenco di definizioni, è necessario specificare sia `term` che `description`. Per le tabelle e gli elenchi puntati o numerati, tuttavia, è sufficiente fornire una voce per `description`.
+Ogni elemento nell'elenco viene specificato con un `<item>` blocco. Quando si crea un elenco di definizioni, è necessario specificare sia `term` che `description`. Per le tabelle e gli elenchi puntati o numerati, tuttavia, è sufficiente fornire una voce per `description`.
 
-Gli elenchi e le tabelle possono contenere un numero qualsiasi di blocchi \<item>.
+Un elenco o una tabella può includere un numero di `<item>` blocchi sufficiente.
 
 Compilare con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) per elaborare i commenti relativi alla documentazione in un file.
 
@@ -62,5 +62,5 @@ Compilare con [-doc](../../language-reference/compiler-options/doc-compiler-opti
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida alla programmazione in C](../index.md)
+- [Guida per programmatori C#](../index.md)
 - [Tag consigliati per i commenti relativi alla documentazione](./recommended-tags-for-documentation-comments.md)

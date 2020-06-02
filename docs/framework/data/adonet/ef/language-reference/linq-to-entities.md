@@ -1,13 +1,14 @@
 ---
 title: LINQ to Entities
+description: Informazioni su come creare ed eseguire query LINQ to Entities, che consentono di scrivere query sul modello concettuale di Entity Framework tramite Visual Basic o Visual C#.
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: bc568cb9dff170062651c908471a36cd17eac980
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 389a81872f4652c69e2b845359cf4e5a275aed5c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854374"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286844"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities fornisce il supporto LINQ (Language Integrated Query) che consente agli sviluppatori di scrivere query sul modello concettuale di Entity Framework usando Visual Basic o Visual C#. Le query su Entity Framework sono rappresentate da query ad albero dei comandi, eseguite sul contesto dell'oggetto. LINQ to Entities consente di convertire query LINQ (Language Integrated Query) in query ad albero dei comandi, eseguire le query su Entity Framework e restituire oggetti che possono essere usati sia da Entity Framework sia da LINQ. Di seguito viene descritto il processo di creazione ed esecuzione di una query LINQ to Entities:  
@@ -35,7 +36,7 @@ LINQ to Entities fornisce il supporto LINQ (Language Integrated Query) che conse
 ## <a name="query-conversion"></a>Conversione della query  
  Per eseguire una query LINQ to Entities su Entity Framework, è necessario convertire la query LINQ in una rappresentazione ad albero dei comandi che possa essere eseguita su Entity Framework.  
   
- LINQ to Entities le query sono costituite da operatori di query standard LINQ ( <xref:System.Linq.Queryable.Select%2A>ad <xref:System.Linq.Queryable.Where%2A>esempio, <xref:System.Linq.Queryable.GroupBy%2A>e) ed espressioni (x > 10, Contact. LastName e così via). Gli operatori LINQ non sono definiti da una classe, ma sono piuttosto metodi in una classe. In LINQ le espressioni possono contenere tutto ciò che è consentito dai tipi all'interno dello spazio dei nomi <xref:System.Linq.Expressions> e, per estensione, tutto ciò che può essere rappresentato in una funzione lambda. Si tratta di un superset delle espressioni consentite da Entity Framework, per definizione limitate alle operazioni consentite sul database, e supportate da <xref:System.Data.Objects.ObjectQuery%601>.  
+ LINQ to Entities le query sono costituite da operatori di query standard LINQ (ad esempio <xref:System.Linq.Queryable.Select%2A> , <xref:System.Linq.Queryable.Where%2A> e <xref:System.Linq.Queryable.GroupBy%2A> ) ed espressioni (x > 10, Contact. LastName e così via). Gli operatori LINQ non sono definiti da una classe, ma sono piuttosto metodi in una classe. In LINQ le espressioni possono contenere tutto ciò che è consentito dai tipi all'interno dello spazio dei nomi <xref:System.Linq.Expressions> e, per estensione, tutto ciò che può essere rappresentato in una funzione lambda. Si tratta di un superset delle espressioni consentite da Entity Framework, per definizione limitate alle operazioni consentite sul database, e supportate da <xref:System.Data.Objects.ObjectQuery%601>.  
   
  In Entity Framework sia gli operatori sia le espressioni sono rappresentati da una singola gerarchia dei tipi e vengono quindi inclusi in un albero dei comandi. L'albero dei comandi viene usato da Entity Framework per eseguire la query. Se la query LINQ non può essere espressa come albero dei comandi, viene generata un'eccezione durante la conversione della query. La conversione di query LINQ to Entities comporta due conversioni secondarie: la conversione degli operatori di query standard e la conversione delle espressioni.  
   
@@ -67,7 +68,7 @@ LINQ to Entities fornisce il supporto LINQ (Language Integrated Query) che conse
   
  Per altre informazioni, vedere [Risultati della query](query-results.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Query in LINQ to Entities](queries-in-linq-to-entities.md)  
   
  [Espressioni in query di LINQ to Entities](expressions-in-linq-to-entities-queries.md)  

@@ -1,22 +1,23 @@
 ---
 title: Isolamento dello snapshot in SQL Server
+description: Leggi una panoramica dell'isolamento dello snapshot e del controllo delle versioni delle righe in SQL Server e Scopri come gestire la concorrenza con i livelli di isolamento.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 8313ffc8eef70c1e5efc24b09a160edb7cec1595
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7fa769448dd922925a5eccf4c85bd1840155df68
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174264"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286248"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Isolamento dello snapshot in SQL Server
 L'isolamento dello snapshot migliora la concorrenza per le applicazioni OLTP.  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>Informazioni sull'isolamento dello snapshot e il controllo delle versioni delle righe  
- Una volta abilitata l'isolamento dello snapshot, è necessario mantenere le versioni di riga aggiornate per ogni transazione.  Prima di SQL Server 2019, queste versioni erano archiviate in **tempdb**. SQL Server 2019 sql Server introduce una nuova funzionalità, Accelerated Database Recovery (ADR) che richiede il proprio set di versioni di riga.  Pertanto, a partire da SQL Server 2019, se ADR non è abilitato, le versioni di riga vengono mantenute in **tempdb** come sempre.  Se ADR è abilitato, tutte le versioni di riga, entrambe correlate all'isolamento dello snapshot e all'ADR, vengono mantenute nell'archivio versione persistente (PVS, Persistent Version Store) di ADR, che si trova nel database utente di un filegroup specificato dall'utente. Un numero di sequenza di transazioni univoco identifica ogni transazione. Questi numeri univoci vengono registrati per ogni versione di riga. La transazione usa le versioni di riga più recenti con un numero di sequenza precedente al numero di sequenza della transazione. Le versioni di riga più recenti create dopo l'inizio della transazione vengono ignorate dalla transazione.  
+ Una volta abilitato l'isolamento dello snapshot, è necessario mantenere aggiornate le versioni di riga per ogni transazione.  Prima del SQL Server 2019, queste versioni venivano archiviate in **tempdb**. SQL Server 2019 introduce una nuova funzionalità, il recupero accelerato del database (ADR), che richiede un proprio set di versioni di riga.  Quindi, a partire da SQL Server 2019, se ADR non è abilitato, le versioni di riga vengono mantenute in **tempdb** come sempre.  Se ADR è abilitato, tutte le versioni di riga, entrambe correlate all'isolamento dello snapshot e all'ADR, vengono mantenute nell'archivio versioni permanente (PVS) dell'ADR, che si trova nel database utente in un filegroup specificato dall'utente. Un numero di sequenza di transazioni univoco identifica ogni transazione. Questi numeri univoci vengono registrati per ogni versione di riga. La transazione usa le versioni di riga più recenti con un numero di sequenza precedente al numero di sequenza della transazione. Le versioni di riga più recenti create dopo l'inizio della transazione vengono ignorate dalla transazione.  
   
  Il termine "snapshot" riflette il fatto che tutte le query nella transazione visualizzano la stessa versione, o snapshot, del database, in base allo stato del database nel momento in cui viene avviata la transazione. In una transazione snapshot non vengono acquisiti blocchi sulle pagine di dati o sulle righe di dati sottostanti. In questo modo è possibile eseguire altre transazioni senza che vengano bloccate da una precedente transazione non completata. Le transazioni che modificano i dati non bloccano le transazioni che leggono i dati e viceversa, come normalmente accade nel livello di isolamento READ COMMITTED predefinito in SQL Server. Questo comportamento, oltre a non causare blocchi, riduce anche in modo significativo la probabilità di deadlock per le transazioni complesse.  
   
@@ -97,7 +98,7 @@ SqlTransaction sqlTran =
   
 - Apre una seconda connessione e avvia una seconda transazione usando il livello di isolamento SNAPSHOT per leggere i dati nella tabella **TestSnapshot**. Poiché l'isolamento dello snapshot è abilitato, questa transazione può leggere i dati esistenti prima dell'avvio di sqlTransaction1.  
   
-- Apre una terza connessione e avvia una transazione usando il livello di isolamento READ COMMITTED per tentare di leggere i dati nella tabella. In questo caso, il codice non è in grado di leggere i dati perché non è in grado di leggere oltre i blocchi inseriti nella tabella nella prima transazione e si scade. Lo stesso risultato si verificherebbe se venissero utilizzati i livelli di isolamento REPEATABLE READ e SERIALI-ABLE perché anche questi livelli di isolamento non sono in grado di leggere oltre i blocchi inseriti nella prima transazione.  
+- Apre una terza connessione e avvia una transazione usando il livello di isolamento READ COMMITTED per tentare di leggere i dati nella tabella. In questo caso, il codice non è in grado di leggere i dati perché non è in grado di leggere oltre i blocchi posizionati sulla tabella nella prima transazione e si verifica il timeout. Lo stesso risultato si verifica se sono stati utilizzati i livelli di isolamento REPEATable READ e SERIALIZABLE, perché questi livelli di isolamento non possono anche leggere oltre i blocchi inseriti nella prima transazione.  
   
 - Apre una quarta connessione e avvia una transazione usando il livello di isolamento READ UNCOMMITTED, che esegue una lettura dirty del valore di cui non è stato eseguito il commit in sqlTransaction1. Questo valore potrebbe non esistere mai nel database se non viene eseguito il commit della prima transazione.  
   

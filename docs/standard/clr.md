@@ -16,12 +16,12 @@ helpviewer_keywords:
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6f9ad8aafc37039b55ae3bf6eb743e07ad8e2235
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 74421f79c18f32e121d51c47f3eb32f3c2ed71fd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74884410"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289246"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Panoramica di CLR (Common Language Runtime)
 
@@ -58,11 +58,11 @@ I compilatori e gli strumenti dei linguaggi sono progettati per esporre le funzi
 
 - Garbage Collection.
 
-- Utilizzo dei delegati invece dei puntatori a funzioni con conseguente miglioramento dell'indipendenza dai tipi e della sicurezza dei tipi. Per altre informazioni sui delegati, vedere [Common Type System](../../docs/standard/base-types/common-type-system.md).
+- Utilizzo dei delegati invece dei puntatori a funzioni con conseguente miglioramento dell'indipendenza dai tipi e della sicurezza dei tipi. Per altre informazioni sui delegati, vedere [Common Type System](base-types/common-type-system.md).
 
 ## <a name="clr-versions"></a>Versioni CLR
 
-Il numero di versione di .NET Framework non corrisponde necessariamente al numero di versione di CLR incluso. Per un elenco delle versioni di .NET Framework e delle corrispondenti versioni CLR, vedere Versioni e dipendenze di [.NET Framework.](../framework/migration-guide/versions-and-dependencies.md) Le versioni di .NET Core hanno una singola versione del prodotto, ovvero non esiste una versione CLR separata. Per un elenco delle versioni di .NET Core, vedere [Scaricare .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
+Il numero di versione del .NET Framework non corrisponde necessariamente al numero di versione di CLR incluso. Per un elenco delle versioni di .NET Framework e delle versioni CLR corrispondenti, vedere [.NET Framework versioni e dipendenze](../framework/migration-guide/versions-and-dependencies.md). Le versioni di .NET Core hanno una sola versione del prodotto, ovvero non esiste una versione CLR separata. Per un elenco delle versioni di .NET Core, vedere [scaricare .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 
 ## <a name="related-topics"></a>Argomenti correlati
 
