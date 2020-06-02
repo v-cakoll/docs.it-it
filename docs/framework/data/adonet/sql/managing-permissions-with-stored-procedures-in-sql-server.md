@@ -1,13 +1,14 @@
 ---
 title: Gestione delle autorizzazioni con stored procedure in SQL Server
+description: Informazioni su come limitare l'accesso ai dati e agli oggetti di database implementando l'accesso tramite stored procedure o funzioni definite dall'utente.
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 85383c46dd029db825d24d2f67d2dbda00f3bc95
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 890c1c6dd7003f3abd684d6c827b6a77a3a019c1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452383"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286288"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Gestione delle autorizzazioni con stored procedure in SQL Server
 Per creare più linee di difesa intorno al database, è possibile implementare tutto l'accesso ai dati tramite stored procedure o funzioni definite dall'utente. Revocare o negare tutte le autorizzazioni per gli oggetti sottostanti, ad esempio tabelle, e concedere autorizzazioni EXECUTE sulle stored procedure. In questo modo viene creato un perimetro di sicurezza efficace intorno ai dati e agli oggetti di database.  
@@ -50,7 +51,7 @@ Per creare più linee di difesa intorno al database, è possibile implementare t
 - Evitare le istruzioni SQL dinamiche se non sono assolutamente necessarie. Usare la funzione Transact-SQL QUOTENAME() per delimitare un valore di stringa e usare caratteri di escape per tutte le occorrenze del delimitatore nella stringa di input.  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Per altre informazioni, vedere le seguenti risorse.  
+ Per ulteriori informazioni, vedere le risorse seguenti.  
   
 |Resource|Descrizione|  
 |--------------|-----------------|  
@@ -61,7 +62,7 @@ Per creare più linee di difesa intorno al database, è possibile implementare t
 - [Protezione delle applicazioni ADO.NET](../securing-ado-net-applications.md)
 - [Cenni preliminari sulla sicurezza in SQL Server](overview-of-sql-server-security.md)
 - [Scenari di sicurezza delle applicazioni in SQL Server](application-security-scenarios-in-sql-server.md)
-- [Scrittura dinamica sicura in SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
+- [Scrittura di istruzioni SQL dinamiche protette in SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
 - [Firma di stored procedure in SQL Server](signing-stored-procedures-in-sql-server.md)
 - [Personalizzazione delle autorizzazioni con rappresentazione in SQL Server](customizing-permissions-with-impersonation-in-sql-server.md)
 - [Modifica di dati con stored procedure](../modifying-data-with-stored-procedures.md)

@@ -3,12 +3,12 @@ title: Oggetti di estensione XSLT
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
-ms.openlocfilehash: 6ad5b5140239ad7dc0ad72e65d10af744dfbd784
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 03e24153cc11c139fc9d9e692ef93bd82c51ee3d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709712"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282597"
 ---
 # <a name="xslt-extension-objects"></a>Oggetti di estensione XSLT
 Gli oggetti di estensione vengono usati per estendere la funzionalità dei fogli di stile. Gli oggetti di estensione sono gestiti dalla classe <xref:System.Xml.Xsl.XsltArgumentList>.  
@@ -22,7 +22,7 @@ Gli oggetti di estensione vengono usati per estendere la funzionalità dei fogli
  Gli oggetti di estensione XSLT vengono aggiunti all'oggetto <xref:System.Xml.Xsl.XsltArgumentList> usando il metodo <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. Un nome completo e un URI dello spazio dei nomi sono associati all'oggetto di estensione in quel momento.  
   
 > [!NOTE]
-> È richiesto il set di autorizzazioni FullTrust per chiamare il metodo <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. Per altre informazioni, vedere [Protezione dall'accesso di codice](../../../../docs/framework/misc/code-access-security.md) e [Set di autorizzazioni denominati](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
+> È richiesto il set di autorizzazioni FullTrust per chiamare il metodo <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. Per altre informazioni, vedere [Protezione dall'accesso di codice](../../../framework/misc/code-access-security.md) e [Set di autorizzazioni denominati](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
  Dagli oggetti di estensione vengono restituiti dati appartenenti a uno dei quattro tipi di dati XPath principali, ovvero `number`, `string`, `Boolean` e `node set`.  
   
@@ -36,7 +36,7 @@ Gli oggetti di estensione vengono usati per estendere la funzionalità dei fogli
   
 3. Passare l'oggetto <xref:System.Xml.Xsl.XsltArgumentList> al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [Considerazioni sulla sicurezza XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md)
+- [Trasformazioni XSLT](xslt-transformations.md)
+- [Considerazioni sulla sicurezza XSLT](xslt-security-considerations.md)

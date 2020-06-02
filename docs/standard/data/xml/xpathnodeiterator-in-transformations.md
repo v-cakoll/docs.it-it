@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
-ms.openlocfilehash: 63beeb3ca9d3f3cb6e6bde418e99ee2bd0a12e20
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 88b8f4acbb9fa92d71659ee006ee544275353954
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709738"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282753"
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>XPathNodeIterator nelle trasformazioni
 La classe <xref:System.Xml.XPath.XPathNodeIterator> fornisce i metodi per eseguire un'iterazione in un set di nodi creato come risultato di una query XPath (XML Path Language) o un frammento di albero risultato convertito in un set di nodi usando il metodo node-set. La classe <xref:System.Xml.XPath.XPathNodeIterator> consente di eseguire un'iterazione tra i nodi all'interno di quel determinato set. Una volta recuperato il set di nodi, la classe <xref:System.Xml.XPath.XPathNodeIterator> fornisce al set di nodi selezionato un cursore forward-only di sola lettura. Il set di nodi viene creato in base all'ordine con cui è riportato nel documento, quindi la chiamata a questo metodo consente di spostarsi al nodo successivo nell'ordine del documento. L'oggetto <xref:System.Xml.XPath.XPathNodeIterator> non compila un albero con tutti i nodi del set, bensì fornisce una finestra per i dati di ogni singolo nodo, esponendo il nodo sottostante a cui si riferisce quando il cursore viene spostato all'interno dell'albero. I metodi e le proprietà disponibili nella classe <xref:System.Xml.XPath.XPathNodeIterator> consentono di ottenere informazioni dal nodo corrente. Per un elenco dei metodi e delle proprietà disponibili, vedere <xref:System.Windows.Forms.ToolBar>.  
@@ -156,6 +156,6 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </out>  
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Implementazione del processore XSLT da parte della classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [Implementazione del processore XSLT da parte della classe XslTransform](xsltransform-class-implements-the-xslt-processor.md)

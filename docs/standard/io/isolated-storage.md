@@ -18,18 +18,18 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: ed784bafda2aed829f2e97d7e7e8b2716c48c7ba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f98af970c8827623298fb43cd0653bdaafb20dd3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75706582"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278882"
 ---
 # <a name="isolated-storage"></a>Spazio di memorizzazione isolato
 <a name="top"></a> Per le applicazioni desktop, lo spazio di memorizzazione isolato è un meccanismo di archiviazione dati che offre isolamento e sicurezza definendo modi standardizzati di associare il codice ai dati salvati. La standardizzazione offre anche altri vantaggi. Gli amministratori possono utilizzare strumenti in grado di modificare l'archiviazione isolata per configurare lo spazio di archiviazione dei file, per impostare i criteri di sicurezza e per eliminare dati inutilizzati. Con lo spazio di memorizzazione isolato, non occorre più fornire al codice percorsi univoci per individuare posizioni sicure nel file system e i dati sono protetti da altre applicazioni che dispongono esclusivamente dell'accesso allo spazio di memorizzazione isolato. Non è necessario specificare informazioni hardcoded che indicano il percorso dell'area di archiviazione di un'applicazione.
 
 > [!IMPORTANT]
-> L'archiviazione isolata non è disponibile per le app di Windows 8.x Store. Al contrario, usare le classi di dati dell'applicazione negli spazi dei nomi `Windows.Storage` inclusi nell'API di Windows Runtime per archiviare dati e file locali. Per altre informazioni, vedere [Dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.
+> Lo spazio di memorizzazione isolato non è disponibile per le app di Windows 8. x Store. Al contrario, usare le classi di dati dell'applicazione negli spazi dei nomi `Windows.Storage` inclusi nell'API di Windows Runtime per archiviare dati e file locali. Per altre informazioni, vedere [Dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.
 
 In questo argomento sono incluse le sezioni seguenti:
 
@@ -113,10 +113,10 @@ Talvolta risulta utile verificare una modifica nello spazio di memorizzazione is
 
 |Sistema operativo|Percorso nel file system|
 |----------------------|-----------------------------|
-|Windows 2000, Windows XP, Windows Server 2003 - (aggiornamento da Windows NT 4.0)|Archivi con supporto roaming =<br /><br /> \<SYSTEMROOT>\Profili\\<utente\>\Dati applicazione<br /><br /> Archivi non abilitati al roaming =<br /><br /> \<SYSTEMROOT>\Profili\\<utente\>\Impostazioni locali\Dati applicazione|
-|Windows 2000 - installazione pulita (e aggiornamenti da Windows 98 e Windows NT 3.51)|Archivi con supporto roaming =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<utente\>\Dati applicazione<br /><br /> Archivi non abilitati al roaming =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<utente\>\Impostazioni locali\Dati applicazione|
-|Windows XP, Windows Server 2003 - installazione pulita (e aggiornamenti da Windows 2000 e Windows 98)|Archivi con supporto roaming =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<utente\>\Dati applicazione<br /><br /> Archivi non abilitati al roaming =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<utente\>\Impostazioni locali\Dati applicazione|
-|Windows 8, Windows 7, Windows Server 2008, Windows Vista|Archivi con supporto roaming =<br /><br /> \<SYSTEMDRIVE>\Utenti\\<utente\>\AppData\Roaming<br /><br /> Archivi non abilitati al roaming =<br /><br /> \<SYSTEMDRIVE>\Utenti\\<utente\>\AppData\Locale|
+|Windows 2000, Windows XP, Windows Server 2003 - (aggiornamento da Windows NT 4.0)|Archivi con supporto roaming =<br /><br /> \<SYSTEMROOT>\Profiles \\<utente \> \Dati dati<br /><br /> Archivi non abilitati al roaming =<br /><br /> \<SYSTEMROOT>\Profiles \\<utente \> \Impostazioni locali\Dati dati|
+|Windows 2000 - installazione pulita (e aggiornamenti da Windows 98 e Windows NT 3.51)|Archivi con supporto roaming =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings \\<utente \> \Dati dati<br /><br /> Archivi non abilitati al roaming =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings \\<utente \> \Impostazioni locali\Dati dati|
+|Windows XP, Windows Server 2003 - installazione pulita (e aggiornamenti da Windows 2000 e Windows 98)|Archivi con supporto roaming =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings \\<utente \> \Dati dati<br /><br /> Archivi non abilitati al roaming =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings \\<utente \> \Impostazioni locali\Dati dati|
+|Windows 8, Windows 7, Windows Server 2008, Windows Vista|Archivi con supporto roaming =<br /><br /> \<SYSTEMDRIVE>\Users \\<utente \> \AppData\Roaming<br /><br /> Archivi non abilitati al roaming =<br /><br /> \<SYSTEMDRIVE>\Users \\<utente \> \AppData\Local|
 
 <a name="isolated_storage_tasks"></a>
 
@@ -164,16 +164,16 @@ Molte applicazioni utilizzano un database per memorizzare e isolare dati. In que
 
 |Titolo|Descrizione|
 |-----------|-----------------|
-|[Tipi di isolamento](../../../docs/standard/io/types-of-isolation.md)|Vengono descritti i vari tipi di isolamento.|
-|[Procedura: Recuperare archivi per lo spazio di memorizzazione isolato](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Viene fornito un esempio di utilizzo della classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> per ottenere uno spazio di memorizzazione isolato in base all'utente e all'assembly.|
-|[Procedura: Enumerare gli archivi per lo spazio di memorizzazione isolato](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|Viene illustrato come utilizzare il metodo <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> per calcolare la dimensione dell'intero spazio di memorizzazione isolato dell'utente.|
-|[Procedura: Eliminare gli archivi nello spazio di memorizzazione isolato](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|Vengono illustrati i due possibili utilizzi del metodo <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> per l'eliminazione degli spazi di memorizzazione isolati.|
-|[Procedura: Anticipare le condizioni di spazio insufficiente con lo spazio di memorizzazione isolato](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|Viene illustrato come misurare lo spazio rimanente in un archivio isolato.|
-|[Procedura: Creare file e directory nello spazio di memorizzazione isolato](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|Vengono forniti alcuni esempi di creazione di file e directory in un archivio isolato.|
-|[Procedura: Trovare file e directory esistenti nello spazio di memorizzazione isolato](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|Viene illustrato come leggere la struttura di directory e i file dell'archiviazione isolata.|
-|[Procedura: leggere e scrivere sui file nello spazio di memorizzazione isolato](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|Viene fornito un esempio di scrittura e rilettura di una stringa in un file di spazio di memorizzazione isolato.|
-|[Procedura: Eliminare file e directory nello spazio di memorizzazione isolato](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|Viene illustrato come eliminare file e directory di uno spazio di memorizzazione isolato.|
-|[I/O su file e flusso](../../../docs/standard/io/index.md)|Illustra le modalità di esecuzione di un file sincrono e asincrono e dell'accesso al flusso di dati.|
+|[Tipi di isolamento](types-of-isolation.md)|Vengono descritti i vari tipi di isolamento.|
+|[Procedura: Recuperare archivi per lo spazio di memorizzazione isolato](how-to-obtain-stores-for-isolated-storage.md)|Viene fornito un esempio di utilizzo della classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> per ottenere uno spazio di memorizzazione isolato in base all'utente e all'assembly.|
+|[Procedura: Enumerare gli archivi per lo spazio di memorizzazione isolato](how-to-enumerate-stores-for-isolated-storage.md)|Viene illustrato come utilizzare il metodo <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> per calcolare la dimensione dell'intero spazio di memorizzazione isolato dell'utente.|
+|[Procedura: Eliminare gli archivi nello spazio di memorizzazione isolato](how-to-delete-stores-in-isolated-storage.md)|Vengono illustrati i due possibili utilizzi del metodo <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> per l'eliminazione degli spazi di memorizzazione isolati.|
+|[Procedura: Anticipare le condizioni di spazio insufficiente con lo spazio di memorizzazione isolato](how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|Viene illustrato come misurare lo spazio rimanente in un archivio isolato.|
+|[Procedura: Creare file e directory nello spazio di memorizzazione isolato](how-to-create-files-and-directories-in-isolated-storage.md)|Vengono forniti alcuni esempi di creazione di file e directory in un archivio isolato.|
+|[Procedura: Trovare file e directory esistenti nello spazio di memorizzazione isolato](how-to-find-existing-files-and-directories-in-isolated-storage.md)|Viene illustrato come leggere la struttura di directory e i file dell'archiviazione isolata.|
+|[Procedura: Leggere e scrivere sui file nello spazio di memorizzazione isolato](how-to-read-and-write-to-files-in-isolated-storage.md)|Viene fornito un esempio di scrittura e rilettura di una stringa in un file di spazio di memorizzazione isolato.|
+|[Procedura: Eliminare file e directory nello spazio di memorizzazione isolato](how-to-delete-files-and-directories-in-isolated-storage.md)|Viene illustrato come eliminare file e directory di uno spazio di memorizzazione isolato.|
+|[I/O di file e di flussi](index.md)|Illustra le modalità di esecuzione di un file sincrono e asincrono e dell'accesso al flusso di dati.|
 
 <a name="reference"></a>
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-ms.openlocfilehash: 2d8b22063a184773928e5bc072f51a9f7d5d45ba
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: aeb39f32c97424646b85b26ed9c4ed0e350d196b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396985"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287610"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Pulizia delle risorse non gestite
 
@@ -44,9 +44,9 @@ I consumer del tipo in uso possono quindi chiamare l'implementazione <xref:Syste
 
 L' [implementazione di un metodo Dispose](implementing-dispose.md) descrive come implementare il modello Dispose per il rilascio delle risorse non gestite.
 
-[Uso di oggetti che `IDisposable` implementano](../../../docs/standard/garbage-collection/using-objects.md) viene descritto il modo in cui i consumer di un tipo garantiscono che <xref:System.IDisposable.Dispose%2A> venga chiamata l'implementazione. `using`A tale scopo, è consigliabile usare l'istruzione C# (o l'Visual Basic `Using` ).
+[Uso di oggetti che `IDisposable` implementano](using-objects.md) viene descritto il modo in cui i consumer di un tipo garantiscono che <xref:System.IDisposable.Dispose%2A> venga chiamata l'implementazione. `using`A tale scopo, è consigliabile usare l'istruzione C# (o l'Visual Basic `Using` ).
 
-## <a name="reference"></a>Riferimento
+## <a name="reference"></a>Informazioni di riferimento
 
 | Tipo/membro | Descrizione |
 |--|--|

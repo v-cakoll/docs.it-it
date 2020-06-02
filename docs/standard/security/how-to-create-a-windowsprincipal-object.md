@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-ms.openlocfilehash: 30af18b7d7b86621586c7da66eda1b37356d5565
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 6064c98c4e1e5153f4e0de4849de196228972a89
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159780"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284429"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>Procedura: creare un oggetto WindowsPrincipal
 Vi sono due metodi per creare un oggetto <xref:System.Security.Principal.WindowsPrincipal>, a seconda che il codice debba eseguire ripetutamente la convalida basata sui ruoli o solo una alla volta.  
@@ -77,4 +77,4 @@ Vi sono due metodi per creare un oggetto <xref:System.Security.Principal.Windows
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Oggetti Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)
+- [Oggetti Principal e Identity](principal-and-identity-objects.md)

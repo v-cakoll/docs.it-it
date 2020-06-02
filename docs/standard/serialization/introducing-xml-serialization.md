@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 7534ad702039b37a85a24223576320aea8052e9e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: d9b71b7530debde7708ee107c990541e2b97cd44
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421267"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277960"
 ---
 # <a name="xml-serialization"></a>serializzazione XML
 
@@ -33,7 +33,7 @@ La serializzazione è il processo di conversione di un oggetto in un formato che
 
  I dati negli oggetti vengono descritti tramite costrutti del linguaggio di programmazione come classi, campi, proprietà, tipi primitivi, matrici e anche XML incorporato sotto forma di oggetti **XmlElement** o **XmlAttribute**. È possibile creare le classi, annotate con attributi, o utilizzare lo strumento XML Schema Definition per generare le classi basate su uno schema XML esistente.
 
- Se si dispone di uno schema XML, è possibile eseguire lo strumento XML Schema Definition per generare un set di classi fortemente tipizzate rispetto allo schema e annotate con attributi. Quando viene serializzata un'istanza di tale classe, l'XML generato è conforme allo schema XML. Con l'utilizzo di tale classe, è possibile effettuare la programmazione rispetto a un modello a oggetti facilmente modificato essendo certi che l'XML generato sia conforme allo schema XML. Si tratta di un'alternativa all'uso di altre classi in .NET Framework, ad esempio le classi **XmlReader** e **XmlWriter**, per analizzare e scrivere un flusso XML. Per altre informazioni, vedere [XML Documents and Data](../../../docs/standard/data/xml/index.md) (Documenti e dati XML). Queste classi consentono di analizzare qualsiasi flusso XML. Al contrario, usare **XmlSerializer** quando si prevede che il flusso XML sarà conforme a un oggetto XML Schema noto.
+ Se si dispone di uno schema XML, è possibile eseguire lo strumento XML Schema Definition per generare un set di classi fortemente tipizzate rispetto allo schema e annotate con attributi. Quando viene serializzata un'istanza di tale classe, l'XML generato è conforme allo schema XML. Con l'utilizzo di tale classe, è possibile effettuare la programmazione rispetto a un modello a oggetti facilmente modificato essendo certi che l'XML generato sia conforme allo schema XML. Si tratta di un'alternativa all'uso di altre classi in .NET Framework, ad esempio le classi **XmlReader** e **XmlWriter**, per analizzare e scrivere un flusso XML. Per altre informazioni, vedere [XML Documents and Data](../data/xml/index.md) (Documenti e dati XML). Queste classi consentono di analizzare qualsiasi flusso XML. Al contrario, usare **XmlSerializer** quando si prevede che il flusso XML sarà conforme a un oggetto XML Schema noto.
 
  Gli attributi controllano il flusso XML generato dalla classe **XmlSerializer**, consentendo di impostare lo spazio dei nomi XML, il nome dell'elemento, il nome di attributo e altre voci per il flusso XML. Per altre informazioni su questi attributi e sul modo in cui controllano la serializzazione XML, vedere [Controllo della serializzazione XML mediante attributi](controlling-xml-serialization-using-attributes.md). Per una tabella degli attributi usati per controllare l'XML generato, vedere [Attributi per il controllo della serializzazione XML](attributes-that-control-xml-serialization.md).
 

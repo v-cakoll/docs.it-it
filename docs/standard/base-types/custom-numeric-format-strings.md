@@ -16,25 +16,25 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 1e2456da9fd1b9bd26d0317c0d04c6d1b61cf16d
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: bc2ace5a068a49f19db55c6fcc3cfc7287b6f618
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83440915"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278960"
 ---
 # <a name="custom-numeric-format-strings"></a>Stringhe in formato numerico personalizzato
 
-È possibile creare una stringa di formato numerico personalizzata costituita da uno o più identificatori numerici personalizzati, per definire la formattazione dei dati numerici. Viene considerata stringa di formato numerico personalizzata qualsiasi stringa di formato che non rientri nella categoria di [stringa di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md).
+È possibile creare una stringa di formato numerico personalizzata costituita da uno o più identificatori numerici personalizzati, per definire la formattazione dei dati numerici. Viene considerata stringa di formato numerico personalizzata qualsiasi stringa di formato che non rientri nella categoria di [stringa di formato numerico standard](standard-numeric-format-strings.md).
 
-Le stringhe di formato numerico personalizzate sono supportate da alcuni overload del metodo `ToString` di tutti i tipi numerici. È ad esempio possibile fornire una stringa di formato numerico ai metodi <xref:System.Int32.ToString%28System.String%29> e <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> del tipo <xref:System.Int32> . Le stringhe di formato numerico personalizzate sono supportate anche dalla [funzionalità di formattazione composita](../../../docs/standard/base-types/composite-formatting.md) di .NET usata da alcuni metodi `Write` e `WriteLine` delle classi <xref:System.Console> e <xref:System.IO.StreamWriter>, dal metodo <xref:System.String.Format%2A?displayProperty=nameWithType> e dal metodo <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. La funzionalità di [interpolazione di stringhe](../../csharp/language-reference/tokens/interpolated.md) supporta anche le stringhe in formato numerico personalizzate.
+Le stringhe di formato numerico personalizzate sono supportate da alcuni overload del metodo `ToString` di tutti i tipi numerici. È ad esempio possibile fornire una stringa di formato numerico ai metodi <xref:System.Int32.ToString%28System.String%29> e <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> del tipo <xref:System.Int32> . Le stringhe di formato numerico personalizzate sono supportate anche dalla [funzionalità di formattazione composita](composite-formatting.md) di .NET usata da alcuni metodi `Write` e `WriteLine` delle classi <xref:System.Console> e <xref:System.IO.StreamWriter>, dal metodo <xref:System.String.Format%2A?displayProperty=nameWithType> e dal metodo <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. La funzionalità di [interpolazione di stringhe](../../csharp/language-reference/tokens/interpolated.md) supporta anche le stringhe in formato numerico personalizzate.
 
 > [!TIP]
 > È possibile scaricare l'**utilità di formattazione**, un'applicazione .NET Core Windows Forms che consente di applicare stringhe di formato a valori numerici o di data e ora e di visualizzare la stringa di risultato. Il codice sorgente è disponibile per [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) e [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb).
 
 <a name="table"></a> Nella tabella seguente vengono descritti gli identificatori di formato numerico personalizzati e viene visualizzato l'output di esempio prodotto da ogni identificatore di formato. Vedere la sezione [Note](#NotesCustomFormatting) per informazioni aggiuntive sull'utilizzo di stringhe di formato numerico personalizzate e la sezione [Esempio](#example) per un'illustrazione completa dell'utilizzo.
 
-|Identificatore di formato|Nome|Description|Esempi|
+|Identificatore di formato|Nome|Descrizione|Esempi|
 |----------------------|----------|-----------------|--------------|
 |"0"|Segnaposto zero|Sostituisce lo zero con la cifra corrispondente, se disponibile; in caso contrario, lo zero viene visualizzato nella stringa di risultato.<br /><br /> Ulteriori informazioni: [Identificatore personalizzato "0"](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
 |"#"|Segnaposto per cifre|Sostituisce il simbolo "#" con la cifra corrispondente, se disponibile; in caso contrario, nella stringa di risultato non viene visualizzata nessuna cifra.<br /><br /> Si noti che nella stringa di risultato non viene visualizzata nessuna cifra se la cifra corrispondente nella stringa di input equivale a uno 0 non significativo. Ad esempio, 0003 ("####") -> 3.<br /><br /> Ulteriori informazioni: [Identificatore personalizzato "#"](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|
@@ -46,7 +46,7 @@ Le stringhe di formato numerico personalizzate sono supportate da alcuni overloa
 |"\\"|Carattere di escape|Fa in modo che il carattere successivo venga interpretato come valore letterale anziché come identificatore di formato personalizzato.<br /><br /> Altre informazioni: [Carattere di escape "\\"](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|
 |'*String*'<br /><br /> "*stringa*"|Delimitatore di stringa letterale|Indica che i caratteri contenuti devono essere copiati nella stringa di risultato senza essere modificati.<br/><br/>Altre informazioni: [caratteri letterali](#character-literals).|68 ("# 'gradi'") -> 68 gradi<br /><br /> 68 ("# ' gradi'") -> 68 gradi|
 |;|Separatore di sezione|Definisce le sezioni con stringhe di formato separate per numeri positivi, negativi e zero.<br /><br /> Ulteriori informazioni: [Separatore di sezione ";"](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|
-|Altri|Tutti gli altri caratteri|Il carattere viene copiato nella stringa di risultato senza alcuna modifica.<br/><br/>Altre informazioni: [caratteri letterali](#character-literals).|68 ("# °") -> 68 °|
+|Altro|Tutti gli altri caratteri|Il carattere viene copiato nella stringa di risultato senza alcuna modifica.<br/><br/>Altre informazioni: [caratteri letterali](#character-literals).|68 ("# °") -> 68 °|
 
 Nelle sezioni seguenti vengono fornite informazioni dettagliate su ognuno degli identificatori di formato numerico personalizzati.
 
@@ -84,7 +84,7 @@ Nell'esempio seguente vengono visualizzati diversi valori formattati usando stri
 [!code-csharp[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
 [!code-vb[Formatting.Numeric.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#2)]
 
-Per restituire una stringa di risultato in cui le cifre mancanti o gli zeri iniziali vengono sostituiti da spazi, usare la [funzionalità di formattazione composita](../../../docs/standard/base-types/composite-formatting.md) e specificare una lunghezza di campo, come illustrato nell'esempio seguente.
+Per restituire una stringa di risultato in cui le cifre mancanti o gli zeri iniziali vengono sostituiti da spazi, usare la [funzionalità di formattazione composita](composite-formatting.md) e specificare una lunghezza di campo, come illustrato nell'esempio seguente.
 
 [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
 [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
@@ -205,7 +205,7 @@ Nell'esempio seguente viene usato il carattere di escape per evitare che durante
 
 Il punto e virgola (;) è un identificatore di formato condizionale che applica una formattazione diversa a un numero, a seconda del fatto che il suo valore sia positivo, negativo o zero. A tale scopo, una stringa di formato personalizzata può contenere un massimo di tre sezioni separate da punti e virgola. Queste sezioni sono descritte nella tabella seguente.
 
-|Numero di sezioni|Description|
+|Numero di sezioni|Descrizione|
 |------------------------|-----------------|
 |Una sezione|La stringa di formato viene applicata a tutti i valori.|
 |Due sezioni|La prima sezione viene applicata ai valori positivi e agli zeri, la seconda ai valori negativi.<br /><br /> Se il numero da formattare è negativo, ma diventa zero dopo l'arrotondamento in base al formato della seconda sezione, lo zero risultante viene formattato in base alla prima sezione.|
@@ -288,8 +288,8 @@ Nell'esempio seguente vengono illustrate due stringhe di formato numerico person
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>
-- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)
-- [Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [Procedura: Aggiungere zeri iniziali a un numero](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
+- [Formattazione di tipi](formatting-types.md)
+- [Stringhe di formato numerico standard](standard-numeric-format-strings.md)
+- [Procedura: Aggiungere zeri iniziali a un numero](how-to-pad-a-number-with-leading-zeros.md)
 - [Esempio: Utilità di formattazione di .NET Core WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
 - [Esempio: Utilità di formattazione di .NET Core WinForms (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)

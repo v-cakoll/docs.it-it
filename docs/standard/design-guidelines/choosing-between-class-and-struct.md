@@ -12,17 +12,17 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: 76042bef1475f2fdf14e309390dcba6654ccfaa9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4b4a619214fe6ba49f21a88cd132dcb3f2704608
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741755"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280361"
 ---
 # <a name="choosing-between-class-and-struct"></a>Scelta tra classi e struct
 Una delle decisioni di progettazione di base ogni volto di progettazione Framework è se progettare un tipo come classe (un tipo di riferimento) o come struct (tipo valore). Una migliore comprensione delle differenze nel comportamento dei tipi di riferimento e dei tipi di valore è essenziale per la scelta.
 
- La prima differenza tra i tipi di riferimento e i tipi di valore da considerare è che i tipi di riferimento vengono allocati nell'heap e sottoposti a Garbage Collection, mentre i tipi di valore vengono allocati nello stack o inline nei tipi che li contengono e deallocati quando lo stack viene rimosso o quando il tipo contenitore viene deallocato. Pertanto, le allocazioni e le deallocazioni di tipi di valore sono in genere più convenienti rispetto alle allocazioni e alle deallocazioni dei tipi di riferimento.
+ La prima differenza tra i tipi di riferimento e i tipi di valore che consideriamo è che i tipi di riferimento vengono allocati nell'heap e sottoposti a Garbage Collection, mentre i tipi di valore vengono allocati nello stack o inline in che contengono tipi e deallocati quando lo stack viene rimosso o quando il tipo contenitore viene deallocato. Pertanto, le allocazioni e le deallocazioni di tipi di valore sono in genere più convenienti rispetto alle allocazioni e alle deallocazioni dei tipi di riferimento.
 
  Successivamente, le matrici di tipi di riferimento vengono allocate fuori riga, ovvero gli elementi della matrice sono solo riferimenti a istanze del tipo di riferimento che risiedono nell'heap. Le matrici di tipi di valore vengono allocate inline, vale a dire che gli elementi della matrice sono le istanze effettive del tipo di valore. Pertanto, le allocazioni e le deallocazioni di matrici di tipi di valore sono molto più convenienti delle allocazioni e delle deallocazioni di matrici di tipi di riferimento. Inoltre, nella maggior parte dei casi, le matrici di tipi di valore presentano una maggiore località di riferimento.
 
@@ -36,9 +36,9 @@ Una delle decisioni di progettazione di base ogni volto di progettazione Framewo
 
  ✔️ CONSIGLIABILE definire uno struct anziché una classe se le istanze del tipo sono di dimensioni ridotte e di breve durata o sono comunemente incorporate in altri oggetti.
 
- ❌ evitare di definire uno struct, a meno che il tipo non abbia tutte le caratteristiche seguenti:
+ ❌EVITARE di definire uno struct, a meno che il tipo non abbia tutte le caratteristiche seguenti:
 
-- Rappresenta logicamente un singolo valore, simile ai tipi primitivi (`int`, `double`e così via).
+- Rappresenta logicamente un singolo valore, simile ai tipi primitivi ( `int` , `double` e così via).
 
 - Ha una dimensione di istanza inferiore a 16 byte.
 
@@ -54,5 +54,5 @@ Una delle decisioni di progettazione di base ogni volto di progettazione Framewo
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la progettazione di tipi](../../../docs/standard/design-guidelines/type.md)
-- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
+- [Linee guida per la progettazione di tipi](type.md)
+- [Linee guida per la progettazione di Framework](index.md)

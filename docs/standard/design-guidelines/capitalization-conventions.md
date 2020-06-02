@@ -9,12 +9,12 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-ms.openlocfilehash: 8af4a15e1e5b34c38b14c6b547cf44801bbf13e6
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 10d628700a9cbf0e842416878ec2c7febfa3d6f5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741767"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280400"
 ---
 # <a name="capitalization-conventions"></a>Convenzioni per l'utilizzo di maiuscole e minuscole
 Le linee guida in questo capitolo definiscono un metodo semplice per l'utilizzo di case che, quando vengono applicate in modo coerente, rendono facili da leggere gli identificatori di tipi, membri e parametri.
@@ -54,7 +54,7 @@ Le linee guida in questo capitolo definiscono un metodo semplice per l'utilizzo 
 |Interfaccia|Pascal|`public interface IEnumerable { ... }`|
 |Metodo|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
 |Proprietà|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
-|Evento|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
+|Event|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
 |Campo|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
 |Valore enum|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|
 |Parametro|notazione Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
@@ -62,11 +62,11 @@ Le linee guida in questo capitolo definiscono un metodo semplice per l'utilizzo 
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Capitalizzazione di parole composte e termini comuni
  La maggior parte dei termini composti viene considerata come una singola parola per scopi di maiuscole.
 
- ❌ non capitalizzare ogni parola in cosiddette parole composte in formato chiuso.
+ ❌NON capitalizzare ogni parola nelle parole composte a forma chiusa.
 
  Si tratta di parole composte scritte come una singola parola, ad esempio endpoint. Ai fini delle linee guida per l'utilizzo di maiuscole e minuscole, considerare una parola composta a forma chiusa come una singola parola. Usare un dizionario corrente per determinare se una parola composta viene scritta in formato chiuso.
 
-|Pascal|notazione Camel|not|
+|Pascal|notazione Camel|Not|
 |------------|-----------|---------|
 |`BitFlag`|`bitFlag`|`Bitflag`|
 |`Callback`|`callback`|`CallBack`|
@@ -94,10 +94,10 @@ Le linee guida in questo capitolo definiscono un metodo semplice per l'utilizzo 
 |`WhiteSpace`|`whiteSpace`|`Whitespace`|
 |`Writable`|`writable`|`Writeable`|
 
-## <a name="case-sensitivity"></a>Distinzione fra maiuscole e minuscole
+## <a name="case-sensitivity"></a>Maiuscole/minuscole
  Le lingue che possono essere eseguite su CLR non devono supportare la distinzione tra maiuscole e minuscole, sebbene alcune operazioni. Anche se il linguaggio lo supporta, altre lingue che potrebbero accedere al Framework non lo sono. Le API che sono accessibili esternamente, pertanto, non possono basarsi solo su case per distinguere tra due nomi nello stesso contesto.
 
- ❌ non presupporre che tutti i linguaggi di programmazione fanno distinzione tra maiuscole e minuscole. Ma non lo sono. I nomi non possono differire solo per caso.
+ ❌Non presupporre che tutti i linguaggi di programmazione fanno distinzione tra maiuscole e minuscole. Ma non lo sono. I nomi non possono differire solo per caso.
 
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*
 
@@ -105,5 +105,5 @@ Le linee guida in questo capitolo definiscono un metodo semplice per l'utilizzo 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
-- [Convenzioni di denominazione](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Linee guida per la progettazione di Framework](index.md)
+- [Linee guida per la denominazione](naming-guidelines.md)

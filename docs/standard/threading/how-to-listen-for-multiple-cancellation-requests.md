@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cancellation tokens, joining
 - LinkedTokenSource, how to
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
-ms.openlocfilehash: e35472040b6ee1263ebc4c4968fa1822045a2064
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3f92d1d9e8fec91475886e8bd7bffbc97bb632a0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138016"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279395"
 ---
 # <a name="how-to-listen-for-multiple-cancellation-requests"></a>Procedura: Ascolto di più richieste di annullamento
 Questo esempio illustra come essere in ascolto di due token di annullamento contemporaneamente, in modo da annullare un'operazione se uno dei due token lo richiede.  
@@ -34,4 +34,4 @@ Questo esempio illustra come essere in ascolto di due token di annullamento cont
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+- [Annullamento in thread gestiti](cancellation-in-managed-threads.md)
