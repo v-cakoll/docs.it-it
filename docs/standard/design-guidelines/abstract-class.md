@@ -10,16 +10,16 @@ helpviewer_keywords:
 - classes [.NET Framework], design guidelines
 - type design guidelines, classes
 ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
-ms.openlocfilehash: 018dd353024e75e9819f5a97008f2f422ecad291
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e6a5923f293ed536fb272f6fe6c805067aede0ab
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739065"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280777"
 ---
 # <a name="abstract-class-design"></a>Progettazione di classi astratte
 
-❌ non definiscono costruttori interni pubblici o protetti in tipi astratti.
+❌NON definire costruttori interni pubblici o protetti in tipi astratti.
 
  I costruttori devono essere pubblici solo se gli utenti dovranno creare istanze del tipo. Poiché non è possibile creare istanze di un tipo astratto, un tipo astratto con un costruttore pubblico non è progettato correttamente e fuorviante per gli utenti.
 
@@ -31,7 +31,7 @@ ms.locfileid: "76739065"
 
  ✔️ forniscono almeno un tipo concreto che eredita da ogni classe astratta distribuita.
 
- Questa operazione consente di convalidare la progettazione della classe astratta. Ad esempio, <xref:System.IO.FileStream?displayProperty=nameWithType> è un'implementazione della classe <xref:System.IO.Stream?displayProperty=nameWithType> abstract.
+ Questa operazione consente di convalidare la progettazione della classe astratta. Ad esempio, <xref:System.IO.FileStream?displayProperty=nameWithType> è un'implementazione della <xref:System.IO.Stream?displayProperty=nameWithType> classe astratta.
 
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*
 
@@ -39,5 +39,5 @@ ms.locfileid: "76739065"
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la progettazione di tipi](../../../docs/standard/design-guidelines/type.md)
-- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
+- [Linee guida per la progettazione di tipi](type.md)
+- [Linee guida per la progettazione di Framework](index.md)

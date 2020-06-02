@@ -3,12 +3,12 @@ title: Considerazioni sulla sicurezza XSLT
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
-ms.openlocfilehash: e6e490c0f637aace57dacc88ef49cc9be87532cd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 81db764016607ebe6facfc530dbb2bac8e6b8cfe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709686"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282510"
 ---
 # <a name="xslt-security-considerations"></a>Considerazioni sulla sicurezza XSLT
 Il linguaggio XSLT dispone di un'ampia gamma di funzionalità che offrono notevoli prestazioni e flessibilità. Sono incluse numerose funzionalità utili che possono essere usate anche da origini esterne. Per usare XSLT senza problemi, è necessario comprendere i tipi di problemi di sicurezza che si possono verificare durante l'uso di XSLT e le strategie di base che è possibile applicare per limitare tali rischi.  
@@ -26,7 +26,7 @@ Il linguaggio XSLT dispone di un'ampia gamma di funzionalità che offrono notevo
 ### <a name="style-sheet-scripts"></a>Script di foglio di stile  
  Gli script possono essere incorporati in un foglio di stile usando l'elemento di estensione `msxsl:script`. Il supporto degli script è una funzionalità opzionale della classe <xref:System.Xml.Xsl.XslCompiledTransform> e per impostazione predefinita è disabilitata. È possibile abilitare l'inserimento di script impostando la proprietà <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A?displayProperty=nameWithType> su `true` e passando l'oggetto <xref:System.Xml.Xsl.XsltSettings> al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.  
   
-#### <a name="guidelines"></a>Indicazioni  
+#### <a name="guidelines"></a>Linee guida  
  Abilitare l'inserimento di script solo se il foglio di stile proviene da un'origine attendibile. Se non è possibile verificare l'origine del foglio di stile o se il foglio di stile non deriva da un'origine attendibile, passarlo in `null` per l'argomento delle impostazioni XSLT.  
   
 ## <a name="external-resources"></a>Risorse esterne  
@@ -41,7 +41,7 @@ Il linguaggio XSLT dispone di un'ampia gamma di funzionalità che offrono notevo
   
  I metodi <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> e <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> includono ciascuno overload che accettano un tipo <xref:System.Xml.XmlResolver> come argomento. Se non viene specificato alcun tipo <xref:System.Xml.XmlResolver>, viene usato un tipo predefinito <xref:System.Xml.XmlUrlResolver> senza credenziali.  
   
-#### <a name="guidelines"></a>Indicazioni  
+#### <a name="guidelines"></a>Linee guida  
  Abilitare la funzione `document()` solo se il foglio di stile proviene da un'origine attendibile.  
   
  Nell'elenco seguente viene descritto quando può essere necessario specificare un oggetto <xref:System.Xml.XmlResolver>:  
@@ -54,8 +54,8 @@ Il linguaggio XSLT dispone di un'ampia gamma di funzionalità che offrono notevo
   
 - Se si desidera assicurarsi che non venga eseguito l'accesso ad alcuna risorsa esterna, è possibile specificare `null` per l'argomento <xref:System.Xml.XmlResolver>.  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [Risoluzione delle risorse esterne durante l'elaborazione XSLT](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)
-- [Sicurezza dall'accesso di codice](../../../../docs/framework/misc/code-access-security.md)
+- [Trasformazioni XSLT](xslt-transformations.md)
+- [Risoluzione delle risorse esterne durante l'elaborazione XSLT](resolving-external-resources-during-xslt-processing.md)
+- [Sicurezza dall'accesso di codice](../../../framework/misc/code-access-security.md)

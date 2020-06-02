@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: annullare un blocco di flussi di dati'
+title: 'Procedura: Annullare un blocco di flussi di dati'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-ms.openlocfilehash: aa175d95f27fcbf28c3f3da3eaa7b8f7988681e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 530c231deeaba007975849ab6dc41f4da6a859ea
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140086"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285547"
 ---
-# <a name="how-to-cancel-a-dataflow-block"></a>Procedura: annullare un blocco di flussi di dati
+# <a name="how-to-cancel-a-dataflow-block"></a>Procedura: Annullare un blocco di flussi di dati
 In questo documento viene dimostrato come abilitare l'annullamento nell'applicazione. In questo esempio Windows Form viene usato per mostrare dove gli elementi di lavoro sono attivi in una pipeline del flusso di dati, nonché gli effetti dell'annullamento.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -63,7 +63,7 @@ In questo documento viene dimostrato come abilitare l'annullamento nell'applicaz
   
  Poiché i blocchi di flussi di dati `incrementProgress` e `decrementProgress` vengono usati nell'interfaccia utente, è importante che queste azioni si verifichino nel thread di interfaccia utente. A questo scopo, durante la costruzione ciascuno di questi oggetti fornisce un oggetto <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> la cui proprietà <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> è impostata su <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>. Tramite il metodo <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> viene creato un oggetto <xref:System.Threading.Tasks.TaskScheduler> mediante il quale viene eseguito il lavoro nel contesto di sincronizzazione corrente. Poiché il costruttore `Form1` viene chiamato dal thread dell'interfaccia utente, le azioni per i blocchi di flussi di dati `incrementProgress` e `decrementProgress` vengono eseguite anche nel thread dell'interfaccia utente.  
   
- Questo esempio imposta la proprietà <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> durante la costruzione dei membri della pipeline. Poiché la proprietà <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> annulla definitivamente l'esecuzione del blocco del flusso di dati, l'intera pipeline deve essere ricreata dopo che l'utente annulla l'operazione e quindi vuole aggiungere più elementi di lavoro alla pipeline. Per un esempio che mostra un modo alternativo per annullare un blocco del flusso di dati per poter eseguire un altro lavoro dopo che viene annullata un'operazione, vedere [Walkthrough: Using Dataflow in a Windows Forms Application](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md) (Procedura dettagliata: Uso del flusso di dati in un'applicazione Windows Forms).  
+ Questo esempio imposta la proprietà <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> durante la costruzione dei membri della pipeline. Poiché la proprietà <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> annulla definitivamente l'esecuzione del blocco del flusso di dati, l'intera pipeline deve essere ricreata dopo che l'utente annulla l'operazione e quindi vuole aggiungere più elementi di lavoro alla pipeline. Per un esempio che mostra un modo alternativo per annullare un blocco del flusso di dati per poter eseguire un altro lavoro dopo che viene annullata un'operazione, vedere [Walkthrough: Using Dataflow in a Windows Forms Application](walkthrough-using-dataflow-in-a-windows-forms-application.md) (Procedura dettagliata: Uso del flusso di dati in un'applicazione Windows Forms).  
   
 ## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>Connessione della pipeline del flusso di dati all'interfaccia utente  
  In questa sezione viene descritto come connettere la pipeline del flusso di dati all'interfaccia utente. Sia la creazione della pipeline sia l'aggiunta di elementi di lavoro alla pipeline sono controllate dal gestore eventi tramite il pulsante **Aggiungi elementi di lavoro**. L'annullamento viene avviato dal pulsante **Annulla**. Quando l'utente fa clic su uno di questi pulsanti, l'azione appropriata viene avviata in modo asincrono.  
@@ -92,8 +92,8 @@ In questo documento viene dimostrato come abilitare l'annullamento nell'applicaz
   
  Nell'immagine riportata di seguito viene illustrata l'applicazione in esecuzione.  
   
- ![Applicazione Windows Form](../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
+ ![Applicazione Windows Form](media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Flusso di dati](dataflow-task-parallel-library.md)

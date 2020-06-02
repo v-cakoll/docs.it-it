@@ -1,5 +1,5 @@
 ---
-title: Garbage Collection di .NET
+title: Garbage Collection .NET
 ms.date: 04/21/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - runtime, garbage collection
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
-ms.openlocfilehash: c087deb033a373dd8b3980feb7ec6901c7909569
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: ef7e078c6ef2f0b4081c49aa0db09316e79f0702
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102242"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286054"
 ---
 # <a name="garbage-collection"></a>Garbage Collection
 
@@ -33,17 +33,17 @@ Il Garbage Collector di .NET gestisce l'allocazione e il rilascio di memoria per
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Nozioni fondamentali sull'operazione di Garbage Collection](../../../docs/standard/garbage-collection/fundamentals.md)|Descrive il funzionamento di Garbage Collection, la modalità di allocazione degli oggetti nell'heap gestito e altri concetti di base.|  
-|[Operazione di Garbage Collection per workstation e server](workstation-server-gc.md)|Vengono descritte le differenze tra la procedura di Garbage Collection per le workstation per le app client e la Garbage Collection del server per le app server.|
-|[Garbage Collection in background](background-gc.md)|Descrive la garbage collection in background, ovvero la raccolta di oggetti di generazione 0 e 1 mentre è in corso la raccolta di generazione 2.Describes background garbage collection, which is the collection of generation 0 and 1 objects while generation 2 collection is in progress.|
-|[L'heap oggetti grandi](large-object-heap.md)|Descrive l'heap oggetti grandi (LOH) e il modo in cui gli oggetti di grandi dimensioni vengono sottoposti a garbage collection.|
-|[Garbage Collection e prestazioni](../../../docs/standard/garbage-collection/performance.md)|Descrive i controlli delle prestazioni è possibile usare per diagnosticare i problemi di Garbage Collection e di prestazioni.|  
-|[Raccolte indotte](../../../docs/standard/garbage-collection/induced.md)|Descrive come eseguire un'operazione di Garbage Collection.|  
-|[Modalità di latenza](../../../docs/standard/garbage-collection/latency.md)|Descrive i modi per determinare l'ingerenza di Garbage Collection.|  
-|[Ottimizzazione per l'hosting Web condiviso](../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)|Descrive come ottimizzare l'operazione di Garbage Collection nei server condivisi da più siti Web di piccole dimensioni.|  
-|[Notifiche di Garbage Collection](../../../docs/standard/garbage-collection/notifications.md)|Descrive come determinare quando è imminente una Garbage Collection completa e quando è stata completata.|  
-|[Monitoraggio delle risorse del dominio applicazione](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)|Descrive come monitorare l'utilizzo della CPU e della memoria da un dominio dell'applicazione.|  
-|[Riferimenti deboli](../../../docs/standard/garbage-collection/weak-references.md)|Descrive i riferimenti che consentono al Garbage Collector di raccogliere un oggetto, pur senza impedire all'applicazione di accedervi.|  
+|[Nozioni fondamentali di Garbage Collection](fundamentals.md)|Descrive il funzionamento di Garbage Collection, la modalità di allocazione degli oggetti nell'heap gestito e altri concetti di base.|  
+|[Operazione di Garbage Collection per workstation e server](workstation-server-gc.md)|Descrive le differenze tra Garbage Collection workstation per le app client e Garbage Collection server per le app Server.|
+|[Garbage Collection in background](background-gc.md)|Descrive Garbage Collection in background, ovvero la raccolta di oggetti di generazione 0 e 1 mentre è in corso la raccolta di generazione 2.|
+|[Heap degli oggetti grandi](large-object-heap.md)|Descrive l'heap degli oggetti grandi (LOH) e la modalità di Garbage Collection degli oggetti di grandi dimensioni.|
+|[Garbage Collection e prestazioni](performance.md)|Descrive i controlli delle prestazioni è possibile usare per diagnosticare i problemi di Garbage Collection e di prestazioni.|  
+|[Raccolte indotte](induced.md)|Descrive come eseguire un'operazione di Garbage Collection.|  
+|[Modalità di latenza](latency.md)|Descrive i modi per determinare l'ingerenza di Garbage Collection.|  
+|[Ottimizzazione per l'hosting Web condiviso](optimization-for-shared-web-hosting.md)|Descrive come ottimizzare l'operazione di Garbage Collection nei server condivisi da più siti Web di piccole dimensioni.|  
+|[Notifiche di Garbage Collection](notifications.md)|Descrive come determinare quando è imminente una Garbage Collection completa e quando è stata completata.|  
+|[Monitoraggio delle risorse del dominio applicazione](app-domain-resource-monitoring.md)|Descrive come monitorare l'utilizzo della CPU e della memoria da un dominio dell'applicazione.|  
+|[Riferimenti deboli](weak-references.md)|Descrive i riferimenti che consentono al Garbage Collector di raccogliere un oggetto, pur senza impedire all'applicazione di accedervi.|  
   
 ## <a name="reference"></a>Informazioni di riferimento
 
@@ -58,4 +58,4 @@ Il Garbage Collector di .NET gestisce l'allocazione e il rilascio di memoria per
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Pulizia delle risorse non gestite](../../../docs/standard/garbage-collection/unmanaged.md)
+- [Pulizia delle risorse non gestite](unmanaged.md)

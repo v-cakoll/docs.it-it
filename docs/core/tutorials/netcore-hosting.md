@@ -4,12 +4,12 @@ description: Informazioni su come ospitare il runtime di .NET Core dal codice na
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 342a0cec78303f70db3a5b31294be1d465459f55
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 2324b61bcffb686a455fcfd154284a2b78aa746b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394847"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283494"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Scrivere un host di .NET Core personalizzato per controllare il runtime di .NET dal codice nativo
 
@@ -115,7 +115,7 @@ Prima di avviare il runtime è necessario preparare alcune proprietà per specif
 Le proprietà comuni includono:
 
 * `TRUSTED_PLATFORM_ASSEMBLIES` Elenco di percorsi di assembly, delimitato da ";" in Windows e da ":" in Linux, che il runtime riuscirà a risolvere per impostazione predefinita. Alcuni host includono manifesti hardcoded con l'elenco degli assembly che possono caricare. Altri inseriranno una libreria in determinate posizioni, ad esempio accanto a *coreclr.dll*, in questo elenco.
-* `APP_PATHS` Elenco di percorsi in cui eseguire il probe se un assembly non viene trovato nell'elenco degli assembly di piattaforma attendibili (TPA). Poiché l'host ha un maggiore controllo su quali assembly vengono caricati tramite l'elenco TPA, è consigliabile che gli host determinino gli assembly che prevedono di caricare e li elenchino in modo esplicito. Se è necessaria l'esecuzione del probe al runtime, tuttavia, questa proprietà può abilitare tale scenario.
+* `APP_PATHS` Elenco di percorsi in cui eseguire il probe se un assembly non viene trovato nell'elenco degli assembly di piattaforma attendibili (TPA). Poiché l'host ha un maggiore controllo su quali assembly vengono caricati tramite l'elenco TPA, è consigliabile che gli host determinino gli assembly che prevedono di caricare e li elenchino in modo esplicito. Se è necessario eseguire il sondaggio in fase di esecuzione, questa proprietà può tuttavia abilitare tale scenario.
 * `APP_NI_PATHS` Elenco simile ad APP_PATHS ma che deve includere i percorsi in cui verrà eseguito il probe di immagini native.
 * `NATIVE_DLL_SEARCH_DIRECTORIES` Questa proprietà è un elenco di percorsi in cui il caricatore esegue il probe quando cerca librerie native chiamate tramite p/invoke.
 * `PLATFORM_RESOURCE_ROOTS`Questo elenco include i percorsi in cui eseguire il probe per gli assembly satellite delle risorse (in sottodirectory specifiche delle impostazioni cultura).
@@ -213,7 +213,7 @@ Dopo aver deciso quali flag AppDomain usare, è necessario definire le propriet�
 Le proprietà di AppDomain comuni includono:
 
 * `TRUSTED_PLATFORM_ASSEMBLIES`Si tratta di un elenco di percorsi di assembly (delimitati da `;` in Windows e `:` in Linux/MacOS) che devono essere classificati in ordine di priorità del caricamento e con attendibilità totale (anche in domini parzialmente attendibili). Questo elenco deve contenere assembly 'Framework' e altri moduli attendibili, analogamente a GAC negli scenari .NET Framework. Alcuni host inseriranno le librerie accanto a *coreclr.dll* nell'elenco, mentre altri avranno manifesti hardcoded che elencano gli assembly attendibili per i propri scopi.
-* `APP_PATHS` Elenco di percorsi in cui eseguire il probe se un assembly non viene trovato nell'elenco degli assembly di piattaforma attendibili (TPA). Poiché l'host ha un maggiore controllo su quali assembly vengono caricati tramite l'elenco TPA, è consigliabile che gli host determinino gli assembly che prevedono di caricare e li elenchino in modo esplicito. Se è necessaria l'esecuzione del probe al runtime, tuttavia, questa proprietà può abilitare tale scenario.
+* `APP_PATHS` Elenco di percorsi in cui eseguire il probe se un assembly non viene trovato nell'elenco degli assembly di piattaforma attendibili (TPA). Poiché l'host ha un maggiore controllo su quali assembly vengono caricati tramite l'elenco TPA, è consigliabile che gli host determinino gli assembly che prevedono di caricare e li elenchino in modo esplicito. Se è necessario eseguire il sondaggio in fase di esecuzione, questa proprietà può tuttavia abilitare tale scenario.
 * `APP_NI_PATHS` Elenco molto simile ad APP_PATHS ma che deve includere i percorsi in cui verrà eseguito il probe delle immagini native.
 * `NATIVE_DLL_SEARCH_DIRECTORIES` Questa proprietà è un elenco di percorsi in cui il caricatore esegue il probe quando cerca DLL native chiamate tramite p/invoke.
 * `PLATFORM_RESOURCE_ROOTS`Questo elenco include i percorsi in cui eseguire il probe per gli assembly satellite delle risorse (in sottodirectory specifiche delle impostazioni cultura).
@@ -253,7 +253,7 @@ hr = runtimeHost->CreateDelegate(
 
 CoreCLR non supporta lo scaricamento. Non scaricare la libreria CoreCLR.
 
-## <a name="conclusion"></a>Conclusione
+## <a name="conclusion"></a>Conclusioni
 Dopo aver compilato l'host, è possibile testarlo eseguendolo dalla riga di comando e passando gli argomenti previsti dall'host, ad esempio l'app gestita da eseguire per l'host di esempio mscoree. Quando si specifica l'app .NET Core che deve essere eseguita dall'host, assicurarsi di usare il file DLL prodotto da `dotnet build`. Gli eseguibili (file con estensione exe) prodotti da `dotnet publish` per applicazioni autonome e complete sono in realtà l'host .NET Core predefinito, in modo che l'app possa essere avviata direttamente dalla riga di comando nei principali scenari. Il codice utente viene compilato in un file DLL con lo stesso nome.
 
 Se gli elementi non funzionano inizialmente, verificare che *CoreCLR. dll* sia disponibile nella posizione prevista dall'host, che tutte le librerie di Framework necessarie siano incluse nell'elenco TPA e che la bit di coreclr (32 bit o 64 bit) corrisponda alla modalità di compilazione dell'host.

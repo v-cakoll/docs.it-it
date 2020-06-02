@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
-ms.openlocfilehash: 8383d8cb3e5819c46a0716c59323e492bb9add8e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: d18cf72f0629d347fb5f55ad7332e6046614c01b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937987"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282389"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migrazione dalla classe XslTransform
 
@@ -35,9 +35,9 @@ Per impostazione predefinita, la classe <xref:System.Xml.Xsl.XslCompiledTransfor
 [!code-csharp[XML_Migration#16](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#16)]
 [!code-vb[XML_Migration#16](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#16)]
 
-Per altre informazioni, vedere [Considerazioni sulla sicurezza XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md).
+Per altre informazioni, vedere [Considerazioni sulla sicurezza XSLT](xslt-security-considerations.md).
 
-## <a name="new-features"></a>Nuove funzionalità
+## <a name="new-features"></a>Nuove funzioni e caratteristiche
 
 ### <a name="temporary-files"></a>File temporanei
 
@@ -97,7 +97,7 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 
 ### <a name="discretionary-behavior"></a>Comportamento discretionary
 
-Nella raccomandazione W3C, XSL Transformations (XSLT) Version 1.0, sono incluse aree in cui il provider dell'implementazione può decidere come gestire una determinata situazione. Queste aree si considerano come aree di comportamento discretionary. Sono numerose le aree in cui <xref:System.Xml.Xsl.XslCompiledTransform> si comporta in modo diverso rispetto alla classe <xref:System.Xml.Xsl.XslTransform>. Per altre informazioni, vedere [Errori XSLT risolvibili](../../../../docs/standard/data/xml/recoverable-xslt-errors.md).
+Nella raccomandazione W3C, XSL Transformations (XSLT) Version 1.0, sono incluse aree in cui il provider dell'implementazione può decidere come gestire una determinata situazione. Queste aree si considerano come aree di comportamento discretionary. Sono numerose le aree in cui <xref:System.Xml.Xsl.XslCompiledTransform> si comporta in modo diverso rispetto alla classe <xref:System.Xml.Xsl.XslTransform>. Per altre informazioni, vedere [Errori XSLT risolvibili](recoverable-xslt-errors.md).
 
 ### <a name="extension-objects-and-script-functions"></a>Oggetti di estensione e funzioni di script
 
@@ -109,7 +109,7 @@ Con <xref:System.Xml.Xsl.XslCompiledTransform> vengono introdotte due nuove rest
 
 In <xref:System.Xml.Xsl.XslCompiledTransform> si verifica un'associazione (ricerca del nome del metodo) alle funzioni di script in fase di compilazione e i fogli di stile usati con XslTransform possono causare un'eccezione quando vengono caricati con <xref:System.Xml.Xsl.XslCompiledTransform>.
 
-Con <xref:System.Xml.Xsl.XslCompiledTransform> sono supportati gli elementi figlio `msxsl:using` e `msxsl:assembly` all'interno dell'elemento `msxsl:script`. Gli elementi `msxsl:using` e `msxsl:assembly` sono usati per dichiarare spazi dei nomi e assembly aggiuntivi da usare nel blocco di script. Per altre informazioni, vedere [Blocchi di script con msxsl:script](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md).
+Con <xref:System.Xml.Xsl.XslCompiledTransform> sono supportati gli elementi figlio `msxsl:using` e `msxsl:assembly` all'interno dell'elemento `msxsl:script`. Gli elementi `msxsl:using` e `msxsl:assembly` sono usati per dichiarare spazi dei nomi e assembly aggiuntivi da usare nel blocco di script. Per altre informazioni, vedere [Blocchi di script con msxsl:script](script-blocks-using-msxsl-script.md).
 
 In <xref:System.Xml.Xsl.XslCompiledTransform> sono proibiti gli oggetti di estensione che presentano più overload con lo stesso numero di argomenti.
 
@@ -125,7 +125,7 @@ Alla classe <xref:System.Xml.Xsl.XslCompiledTransform> è stato aggiunto il supp
 
 - Funzioni di estensione XPath correlate allo schema: queste funzioni non sono supportate in modalità nativa da <xref:System.Xml.Xsl.XslCompiledTransform>. Tuttavia, possono essere implementate come funzioni di estensione.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [Utilizzo della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+- [Trasformazioni XSLT](xslt-transformations.md)
+- [Utilizzo della classe XslCompiledTransform](using-the-xslcompiledtransform-class.md)

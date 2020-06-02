@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - Barrier, how to use
 ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
-ms.openlocfilehash: 33098878764c2f8a8c1f83a122028da40b984243
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e13dfb277807eb0a9f256f74c2845f5a4d2a047
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73137966"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279297"
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>Procedura: sincronizzare operazioni simultanee con una barriera
 L'esempio seguente mostra come sincronizzare le attività simultanee con un oggetto <xref:System.Threading.Barrier>.  
@@ -28,4 +28,4 @@ L'esempio seguente mostra come sincronizzare le attività simultanee con un ogge
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strutture di dati per la programmazione in parallelo](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)
+- [Strutture di dati per la programmazione parallela](../parallel-programming/data-structures-for-parallel-programming.md)

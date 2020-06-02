@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: dae8a3690d63d77a47a5cd2e76f210ca8210f058
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 87105acbd43eb8eda0daa00c65ca0635f5e1cc74
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420578"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286028"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Heap oggetti grandi nei sistemi Windows
 
@@ -203,7 +203,7 @@ Questo test molto semplice esegue solo l'allocazione di oggetti grandi dal relat
 
 ### <a name="a-debugger"></a>Un debugger
 
-Se è presente solo di un dump di memoria ed è necessario esaminare quali oggetti sono effettivamente inclusi nell'heap oggetti grandi, è possibile usare l'[estensione del debugger SoS](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md) disponibile in .NET.
+Se è presente solo di un dump di memoria ed è necessario esaminare quali oggetti sono effettivamente inclusi nell'heap oggetti grandi, è possibile usare l'[estensione del debugger SoS](../../framework/tools/sos-dll-sos-debugging-extension.md) disponibile in .NET.
 
 > [!NOTE]
 > I comandi di debug indicati in questa sezione sono applicabili ai [debugger di Windows](https://www.microsoft.com/whdc/devtools/debugging/default.mspx).

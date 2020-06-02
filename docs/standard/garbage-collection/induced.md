@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-ms.openlocfilehash: 604b49ef577a46204b523ebf5a8575a30b81635e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 36dff45587c6c28ba17fd7389dc3863893ff8f61
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120925"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286041"
 ---
 # <a name="induced-collections"></a>Raccolte indotte
 Nella maggior parte dei casi, tramite il Garbage Collector è possibile determinare il momento migliore per eseguire una raccolta ed è consigliabile consentire l'esecuzione in modo indipendente. In rari casi una raccolta forzata può migliorare le prestazioni dell'applicazione. In questi casi, è possibile indurre un'operazione di Garbage Collection usando il metodo <xref:System.GC.Collect%2A?displayProperty=nameWithType> per forzarla.  
@@ -36,5 +36,5 @@ Nella maggior parte dei casi, tramite il Garbage Collector è possibile determin
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modalità di latenza](../../../docs/standard/garbage-collection/latency.md)
-- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+- [Modalità di latenza](latency.md)
+- [Garbage Collection](index.md)

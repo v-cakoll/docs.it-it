@@ -10,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-ms.openlocfilehash: 5b122befffbcad39258393462c75ac20431d9136
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5e8d604c8152d37475bf93e3b5687f24cfebfa02
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420500"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285963"
 ---
 # <a name="qualifying-net-types-for-com-interoperation"></a>Qualificazione di tipi .NET per l'interoperabilità COM
 Se si vuole esporre i tipi contenuti in un assembly alle applicazioni COM, tenere presenti i requisiti di interoperabilità COM in fase di progettazione. Rispettando le linee guida seguenti, è possibile ottenere una facile integrazione tra i tipi gestiti (classi, interfacce, strutture ed enumerazioni) e i tipi COM:  
@@ -49,7 +49,7 @@ Se si vuole esporre i tipi contenuti in un assembly alle applicazioni COM, tener
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.InteropServices.ComVisibleAttribute>
-- [Esposizione di componenti .NET Framework a COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [Esposizione di componenti .NET Framework a COM](../../framework/interop/exposing-dotnet-components-to-com.md)
 - [Introduzione all'interfaccia della classe](com-callable-wrapper.md#introducing-the-class-interface)
-- [Applicazione di attributi di interoperabilità](../../../docs/standard/native-interop/apply-interop-attributes.md)
-- [Creazione di un pacchetto di un assembly .NET Framework per COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+- [Applicazione di attributi di interoperabilità](apply-interop-attributes.md)
+- [Creazione di un pacchetto di un assembly .NET Framework per COM](../../framework/interop/packaging-an-assembly-for-com.md)

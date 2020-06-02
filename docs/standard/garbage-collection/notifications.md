@@ -9,20 +9,20 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-ms.openlocfilehash: d5646c4969c95350ab4cd63b16f6f99ffba3a4ec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 389e851782edb82578c216951be440070b92723c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73131540"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286002"
 ---
 # <a name="garbage-collection-notifications"></a>Notifiche di Garbage Collection
-In alcune situazioni un'operazione completa di Garbage Collection (cioè di generazione 2) eseguita da Common Language Runtime può influire negativamente sulle prestazioni. Questo può essere un problema in particolare con i server che elaborano grandi volumi di richieste; In questo caso, una lunga garbage collection può causare un timeout della richiesta. Per evitare che si verifichi una raccolta completa durante un periodo critico, è possibile ricevere una notifica che si sta avvicinando a un'operazione completa di Garbage Collection e quindi intervenire per reindirizzare il carico di lavoro a un'altra istanza del server. È anche possibile indurre manualmente una raccolta, a condizione che l'istanza del server corrente non sia necessaria per elaborare le richieste.  
+In alcune situazioni un'operazione completa di Garbage Collection (cioè di generazione 2) eseguita da Common Language Runtime può influire negativamente sulle prestazioni. Questo può costituire un problema in particolare con i server che elaborano volumi elevati di richieste. in questo caso, un Garbage Collection lungo può causare un timeout della richiesta. Per evitare che si verifichi una raccolta completa durante un periodo critico, è possibile ricevere una notifica del raggiungimento di un Garbage Collection completo e quindi eseguire un'azione per reindirizzare il carico di lavoro a un'altra istanza del server. È anche possibile indurre manualmente una raccolta, a condizione che l'istanza del server corrente non sia necessaria per elaborare le richieste.  
   
  Il metodo <xref:System.GC.RegisterForFullGCNotification%2A> registra la generazione di una notifica quando il runtime rileva che sta per essere eseguita una Garbage Collection completa. Esistono due parti per questa notifica: quando sta per essere eseguita la Garbage Collection completa e quando la Garbage Collection completa è terminata.  
   
 > [!WARNING]
-> Le notifiche vengono generate solo in caso di blocco delle operazioni di Garbage Collection. Quando [ \<](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) l'elemento di configurazione gcConcurrent>è abilitato, le operazioni di Garbage Collection in background non genereranno notifiche.  
+> Le notifiche vengono generate solo in caso di blocco delle operazioni di Garbage Collection. Quando l' [\<gcConcurrent>](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) elemento di configurazione è abilitato, le operazioni di Garbage Collection in background non generano notifiche.  
   
  Per determinare quando è stata generata una notifica, usare i metodi <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A>. Questi metodi vengono in genere usati in un ciclo `while` per ottenere continuamente un'enumerazione <xref:System.GCNotificationStatus> che indica lo stato della notifica. Se tale valore è <xref:System.GCNotificationStatus.Succeeded>, è possibile procedere nel modo seguente:  
   
@@ -52,7 +52,7 @@ In alcune situazioni un'operazione completa di Garbage Collection (cioè di gene
 ## <a name="notification-threshold-parameters"></a>Parametri delle soglie di notifica  
  Il metodo <xref:System.GC.RegisterForFullGCNotification%2A> presenta due parametri per specificare i valori di soglia degli oggetti di generazione 2 e dell'heap degli oggetti grandi. Quando tali valori sono soddisfatti, verrà generata una notifica di Garbage Collection. Nella tabella seguente vengono descritti i parametri.  
   
-|Parametro|Descrizione|  
+|Parametro|Description|  
 |---------------|-----------------|  
 |`maxGenerationThreshold`|Numero compreso tra 1 e 99 che specifica se la notifica deve essere generata in base agli oggetti promossi alla generazione 2.|  
 |`largeObjectHeapThreshold`|Numero compreso tra 1 e 99 che specifica quando generare la notifica in base agli oggetti allocati nell'heap degli oggetti grandi.|  
@@ -122,4 +122,4 @@ In alcune situazioni un'operazione completa di Garbage Collection (cioè di gene
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+- [Garbage Collection](index.md)

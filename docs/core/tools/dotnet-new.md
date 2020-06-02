@@ -2,12 +2,12 @@
 title: Comando dotnet new
 description: Il comando dotnet new consente di creare nuovi progetti .NET Core in base al modello specificato.
 ms.date: 04/10/2020
-ms.openlocfilehash: 1544f519f2a5f6a1a6e042c1db720eff45f5d98c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 39301ad95761848b60b45cb5c18ede937f70c32c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442241"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283975"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -30,7 +30,7 @@ dotnet new <TEMPLATE> [-l|--list] [--type <TYPE>]
 dotnet new -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrizione
 
 Il `dotnet new` comando crea un progetto .NET Core o altri artefatti in base a un modello.
 
@@ -40,7 +40,7 @@ Questo comando chiama il [motore del modello](https://github.com/dotnet/templati
 
 [!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argomenti
 
 - **`TEMPLATE`**
 
@@ -75,6 +75,7 @@ Questo comando chiama il [motore del modello](https://github.com/dotnet/templati
 | MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
 | App Server Blazer                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazer                            | 3.0        |
+| App webassembly Blazer                       | `blazorwasm`                    | [C#]         | Web/Blazer/webassembly                            | 3.1.300    |
 | Progetto ASP.NET Core vuoto                           | [Web](#web)                     | [C#], F#     | Web/Vuoto                             | 1.0        |
 | App Web ASP.NET Core (Model-View-Controller) | [MVC](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
 | App Web ASP.NET Core                         | [WebApp, Razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2,2, 2,0   |
@@ -148,7 +149,7 @@ Questo comando chiama il [motore del modello](https://github.com/dotnet/templati
   Se non si specifica un parametro per questa opzione, il comando elenca i modelli installati e i relativi dettagli.
 
   > [!NOTE]
-  > Per disinstallare un modello con `PATH`, è necessario specificare il percorso completo. Ad esempio, *C:/Users/ \< User>/Documents/templates/garciasoftware.consoletemplate.CSharp* funzionerà, ma *./GarciaSoftware.ConsoleTemplate.CSharp* dalla cartella che lo contiene.
+  > Per disinstallare un modello con `PATH`, è necessario specificare il percorso completo. Ad esempio, *C:/Users/ \<USER> /Documents/templates/GarciaSoftware.ConsoleTemplate.CSharp* funzionerà, ma *./GarciaSoftware.ConsoleTemplate.CSharp* dalla cartella che lo contiene.
   > Non includere una barra di directory finale terminata nel percorso del modello.
 
 - **`--update-apply`**

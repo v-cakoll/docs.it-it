@@ -13,12 +13,12 @@ helpviewer_keywords:
 - strings [.NET Framework], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-ms.openlocfilehash: ef65c50111d6ba91ab70d0b9c8cb90c606f9366c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a5dfe6429ac135202874f0524a252a7af900bd8d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73103822"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279012"
 ---
 # <a name="creating-new-strings-in-net"></a>Creazione di nuove stringhe in .NET
 .NET Framework consente di creare stringhe usando una semplice assegnazione, oltre a eseguire l'overload del costruttore di classe per supportare la creazione di stringhe tramite una serie di parametri diversi. .NET Framework offre anche diversi metodi nella classe <xref:System.String?displayProperty=nameWithType> per creare nuovi oggetti stringa combinando più stringhe, matrici di stringhe o oggetti.  
@@ -41,7 +41,7 @@ ms.locfileid: "73103822"
 |<xref:System.String.CopyTo%2A?displayProperty=nameWithType>|Copia i caratteri specificati di una stringa in una determinata posizione all'interno di una matrice di caratteri.|  
   
 ### <a name="format"></a>Format  
- È possibile usare il metodo **String.Format** per creare stringhe formattate e concatenare stringhe che rappresentano più oggetti. Qualsiasi oggetto venga passato a questo metodo viene automaticamente convertito in una stringa. Se ad esempio l'applicazione deve visualizzare un valore **Int32** e un valore **DateTime**, è possibile costruire con facilità una stringa che rappresenti tali valori usando il metodo **Format**. Per altre informazioni sulle convenzioni di formattazione usate con questo metodo, vedere la sezione relativa alla [formattazione composita](../../../docs/standard/base-types/composite-formatting.md).  
+ È possibile usare il metodo **String.Format** per creare stringhe formattate e concatenare stringhe che rappresentano più oggetti. Qualsiasi oggetto venga passato a questo metodo viene automaticamente convertito in una stringa. Se ad esempio l'applicazione deve visualizzare un valore **Int32** e un valore **DateTime**, è possibile costruire con facilità una stringa che rappresenti tali valori usando il metodo **Format**. Per altre informazioni sulle convenzioni di formattazione usate con questo metodo, vedere la sezione relativa alla [formattazione composita](composite-formatting.md).  
   
  L'esempio di codice seguente usa il metodo **Format** per creare una stringa che usa una variabile integer.  
   
@@ -80,5 +80,5 @@ ms.locfileid: "73103822"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Operazioni di base sulle stringheBasic String Operations](../../../docs/standard/base-types/basic-string-operations.md)
-- [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md)
+- [Operazioni di base sulle stringhe](basic-string-operations.md)
+- [Formattazione composita](composite-formatting.md)

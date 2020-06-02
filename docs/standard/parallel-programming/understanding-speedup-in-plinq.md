@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-ms.openlocfilehash: 60df814e18f473d84c260511292666c524fda7b7
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 627f1327a9fe87fc226dfbb40df50ec4855edfb9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588071"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284897"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Informazioni sull'aumento di velocità in PLINQ
 L'obiettivo principale di PLINQ consiste nel velocizzare l'esecuzione di query LINQ to Objects mediante l'esecuzione di delegati di query in parallelo in computer multicore. PLINQ assicura le prestazioni migliori quando l'elaborazione di ogni elemento in una raccolta di origine è indipendente, senza stati condivisi tra i singoli delegati. Tali operazioni sono comuni in LINQ to Objects e PLINQ e spesso vengono definite "*squisitamente parallele*" perché si prestano facilmente alla pianificazione su più thread. Tuttavia, non tutte le query sono costituite interamente da operazioni squisitamente parallele. Nella maggior parte dei casi una query implica alcuni operatori che non possono essere parallelizzati o che rallentano l'esecuzione parallela. Anche in caso di query che sono tutte squisitamente parallele, PLINQ deve comunque partizionare l'origine dati e pianificare il lavoro sui thread, unendo in genere i risultati al termine della query. Tutte queste operazioni incrementano i costi di calcolo della parallelizzazione, che vengono definiti *sovraccarico*. Per ottenere prestazioni ottimali in una query PLINQ, l'obiettivo è ottimizzare le parti squisitamente parallele e ridurre al minimo quelle che comportano un sovraccarico. Questo articolo fornisce informazioni che consentono di scrivere query PLINQ che siano il più efficaci possibile producendo comunque risultati corretti.  
@@ -51,7 +51,7 @@ L'obiettivo principale di PLINQ consiste nel velocizzare l'esecuzione di query L
   
 3. Numero e tipo di operazioni.  
   
-     PLINQ fornisce l'operatore AsOrdered per situazioni in cui è necessario mantenere l'ordine degli elementi nella sequenza di origine. L'ordinamento prevede un costo, che tuttavia è in genere limitato. Anche GroupBy e le operazioni di join comportano un sovraccarico. PLINQ assicura le prestazioni migliori quando è consentito elaborare gli elementi nella raccolta di origine in qualsiasi ordine e passarli all'operatore successivo non appena sono pronti. Per altre informazioni, vedere [Conservazione dell'ordine in PLINQ](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md).  
+     PLINQ fornisce l'operatore AsOrdered per situazioni in cui è necessario mantenere l'ordine degli elementi nella sequenza di origine. L'ordinamento prevede un costo, che tuttavia è in genere limitato. Anche GroupBy e le operazioni di join comportano un sovraccarico. PLINQ assicura le prestazioni migliori quando è consentito elaborare gli elementi nella raccolta di origine in qualsiasi ordine e passarli all'operatore successivo non appena sono pronti. Per altre informazioni, vedere [Conservazione dell'ordine in PLINQ](order-preservation-in-plinq.md).  
   
 4. Formato di esecuzione della query.  
   
@@ -59,16 +59,16 @@ L'obiettivo principale di PLINQ consiste nel velocizzare l'esecuzione di query L
   
 5. Tipo di opzioni di unione.  
   
-     PLINQ può essere configurato per il buffering dell'output e la relativa visualizzazione in blocchi o tutto in una volta dopo che è stato prodotto l'intero set di risultati oppure per lo streaming dei singoli risultati mano a mano che vengono prodotti. Nel primo caso il tempo di esecuzione complessivo diminuisce, mentre nel secondo il risultato è una riduzione della latenza tra gli elementi restituiti.  Mentre le opzioni di unione non hanno sempre un impatto significativo sulle prestazioni complessive delle query, possono incidere sulle prestazioni percepite dal momento che controllano quanto tempo deve attendere un utente per vedere i risultati. Per altre informazioni, vedere [Opzioni di unione in PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
+     PLINQ può essere configurato per il buffering dell'output e la relativa visualizzazione in blocchi o tutto in una volta dopo che è stato prodotto l'intero set di risultati oppure per lo streaming dei singoli risultati mano a mano che vengono prodotti. Nel primo caso il tempo di esecuzione complessivo diminuisce, mentre nel secondo il risultato è una riduzione della latenza tra gli elementi restituiti.  Mentre le opzioni di unione non hanno sempre un impatto significativo sulle prestazioni complessive delle query, possono incidere sulle prestazioni percepite dal momento che controllano quanto tempo deve attendere un utente per vedere i risultati. Per altre informazioni, vedere [Opzioni di unione in PLINQ](merge-options-in-plinq.md).  
   
 6. Tipo di partizionamento.  
   
-     In alcuni casi una query PLINQ su una raccolta di origine indicizzabile può comportare un carico di lavoro non equilibrato. Quando ciò si verifica, potrebbe essere possibile aumentare le prestazioni delle query creando un partitioner personalizzato. Per altre informazioni, vedere [Partitioner personalizzati per PLINQ e TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+     In alcuni casi una query PLINQ su una raccolta di origine indicizzabile può comportare un carico di lavoro non equilibrato. Quando ciò si verifica, potrebbe essere possibile aumentare le prestazioni delle query creando un partitioner personalizzato. Per altre informazioni, vedere [Partitioner personalizzati per PLINQ e TPL](custom-partitioners-for-plinq-and-tpl.md).  
   
 ## <a name="when-plinq-chooses-sequential-mode"></a>Quando PLINQ sceglie la modalità sequenziale  
  PLINQ tenterà sempre di eseguire una query almeno alla stessa velocità con cui la query verrebbe eseguita in sequenza. Anche se PLINQ non prende in considerazione il costo dei delegati dell'utente dal punto di vista del calcolo o la grandezza dell'origine di input, presta attenzione a determinate "forme" delle query. In particolare, prende in considerazione operatori di query o combinazioni di operatori che possono rallentare l'esecuzione di una query in modalità parallela. Quando vengono individuate tali forme, per impostazione predefinita PLINQ torna alla modalità sequenziale.  
   
- Tuttavia, dopo avere misurato le prestazioni di una query specifica, è possibile determinare che viene effettivamente eseguita più velocemente in modalità parallela. In questi casi è possibile usare il flag <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> tramite il metodo <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> per indicare a PLINQ di parallelizzare la query. Per altre informazioni, vedere [Procedura: Specificare la modalità di esecuzione in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).  
+ Tuttavia, dopo avere misurato le prestazioni di una query specifica, è possibile determinare che viene effettivamente eseguita più velocemente in modalità parallela. In questi casi è possibile usare il flag <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> tramite il metodo <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> per indicare a PLINQ di parallelizzare la query. Per altre informazioni, vedere [Procedura: Specificare la modalità di esecuzione in PLINQ](how-to-specify-the-execution-mode-in-plinq.md).  
   
  Nell'elenco seguente sono riportate le forme delle query che per impostazione predefinita PLINQ eseguirà in modalità sequenziale:  
   
@@ -84,4 +84,4 @@ L'obiettivo principale di PLINQ consiste nel velocizzare l'esecuzione di query L
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [Parallel LINQ (PLINQ)](introduction-to-plinq.md)

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - arrays [.NET Framework], usage guidelines
 - empty arrays
 ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
-ms.openlocfilehash: d4a1f379a88231654c710b1df7b505316377c915
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 30277507050091de6b1e9293401d61ac5e351a1f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741796"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280621"
 ---
 # <a name="arrays"></a>Matrici
-✔️ preferiscono usare le raccolte su matrici in API pubbliche. La sezione [Collections](../../../docs/standard/design-guidelines/guidelines-for-collections.md) fornisce informazioni dettagliate su come scegliere tra le raccolte e le matrici.
+✔️ preferiscono usare le raccolte su matrici in API pubbliche. La sezione [Collections](guidelines-for-collections.md) fornisce informazioni dettagliate su come scegliere tra le raccolte e le matrici.
 
- ❌ non utilizzano campi di matrice di sola lettura. Il campo stesso è di sola lettura e non può essere modificato, ma è possibile modificare gli elementi della matrice.
+ ❌Non usare campi di matrice di sola lettura. Il campo stesso è di sola lettura e non può essere modificato, ma è possibile modificare gli elementi della matrice.
 
  ✔️ CONSIGLIABILE utilizzare matrici di matrici anziché matrici multidimensionali.
 
@@ -30,5 +30,5 @@ ms.locfileid: "76741796"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Array>
-- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
-- [Linee guida per l'uso](../../../docs/standard/design-guidelines/usage-guidelines.md)
+- [Linee guida per la progettazione di Framework](index.md)
+- [Linee guida sull'utilizzo](usage-guidelines.md)
