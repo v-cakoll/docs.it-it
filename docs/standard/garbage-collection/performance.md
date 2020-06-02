@@ -6,12 +6,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 72cf742aae26f9441229b355dc6e70da7a5fc9cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1d9c72a64d172dcadf1bff1b1edf3050ca5f7d05
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75900575"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287623"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection e prestazioni
 
@@ -23,7 +23,7 @@ Le sezioni seguenti descrivono gli strumenti disponibili per esaminare i problem
 
 ### <a name="memory-performance-counters"></a>Contatori delle prestazioni di memoria
 
-È possibile usare i contatori delle prestazioni per raccogliere dati sulle prestazioni. Per istruzioni, vedere [Profilatura runtime](../../../docs/framework/debug-trace-profile/runtime-profiling.md). La categoria Memoria CLR .NET dei contatori delle prestazioni, descritta in [Contatori delle prestazioni in .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md), fornisce informazioni su Garbage Collector.
+È possibile usare i contatori delle prestazioni per raccogliere dati sulle prestazioni. Per istruzioni, vedere [Profilatura runtime](../../framework/debug-trace-profile/runtime-profiling.md). La categoria Memoria CLR .NET dei contatori delle prestazioni, descritta in [Contatori delle prestazioni in .NET Framework](../../framework/debug-trace-profile/performance-counters.md), fornisce informazioni su Garbage Collector.
 
 ### <a name="debugging-with-sos"></a>Debug con SOS
 
@@ -33,7 +33,7 @@ Per installare WinDbg, installare gli strumenti di debug per Windows dalla [pagi
 
 ### <a name="garbage-collection-etw-events"></a>Eventi ETW di Garbage Collection
 
-Event Tracing for Windows (ETW) è un sistema di traccia che integra il supporto per profilatura e debug offerto da .NET Framework. A partire da .NET Framework 4, gli [eventi ETW di Garbage Collection](../../../docs/framework/performance/garbage-collection-etw-events.md) acquisiscono informazioni utili per l'analisi dell'heap gestito da un punto di vista statistico. Ad esempio, l'evento `GCStart_V1`, generato quando sta per verificarsi un'operazione di Garbage Collection, fornisce le informazioni seguenti:
+Event Tracing for Windows (ETW) è un sistema di traccia che integra il supporto per profilatura e debug offerto da .NET Framework. A partire da .NET Framework 4, gli [eventi ETW di Garbage Collection](../../framework/performance/garbage-collection-etw-events.md) acquisiscono informazioni utili per l'analisi dell'heap gestito da un punto di vista statistico. Ad esempio, l'evento `GCStart_V1`, generato quando sta per verificarsi un'operazione di Garbage Collection, fornisce le informazioni seguenti:
 
 - Generazione di oggetti raccolta.
 
@@ -45,13 +45,13 @@ La registrazione degli eventi ETW è efficiente e non maschera alcun problema di
 
 ### <a name="the-profiling-api"></a>API di profilatura
 
-Le interfacce di profilatura Common Language Runtime (CLR) forniscono informazioni dettagliate sugli oggetti interessati durante l'operazione di Garbage Collection. Un profiler può ricevere una notifica all'inizio o alla fine di un'operazione di Garbage Collection e può fornire report sugli oggetti nell'heap gestito, inclusa un'identificazione degli oggetti in ogni generazione. Per altre informazioni, vedere [Cenni preliminari sulla profilatura](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md).
+Le interfacce di profilatura Common Language Runtime (CLR) forniscono informazioni dettagliate sugli oggetti interessati durante l'operazione di Garbage Collection. Un profiler può ricevere una notifica all'inizio o alla fine di un'operazione di Garbage Collection e può fornire report sugli oggetti nell'heap gestito, inclusa un'identificazione degli oggetti in ogni generazione. Per altre informazioni, vedere [Cenni preliminari sulla profilatura](../../framework/unmanaged-api/profiling/profiling-overview.md).
 
 I profiler possono fornire informazioni complete. Tuttavia, i profiler complessi possono potenzialmente modificare il comportamento di un'applicazione.
 
 ### <a name="application-domain-resource-monitoring"></a>Monitoraggio delle risorse del dominio applicazione
 
-A partire da .NET Framework 4, il monitoraggio delle risorse del dominio dell'applicazione consente agli host di monitorare l'utilizzo di CPU e memoria da parte del dominio dell'applicazione. Per altre informazioni, vedere [Monitoraggio delle risorse del dominio applicazione](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).
+A partire da .NET Framework 4, il monitoraggio delle risorse del dominio dell'applicazione consente agli host di monitorare l'utilizzo di CPU e memoria da parte del dominio dell'applicazione. Per altre informazioni, vedere [Monitoraggio delle risorse del dominio applicazione](app-domain-resource-monitoring.md).
 
 ## <a name="troubleshooting-performance-issues"></a>Risoluzione dei problemi relativi alle prestazioni
 
@@ -133,7 +133,7 @@ La frammentazione si verifica sempre nell'heap oggetti grandi in quanto non vien
 
 La frammentazione può diventare un problema nella generazione 1 e nella generazione 2. Se in queste generazioni è disponibile una quantità elevata di spazio libero dopo un'operazione di Garbage Collection, potrebbe essere necessario modificare l'utilizzo degli oggetti di un'applicazione e provare a eseguire una nuova valutazione della durata degli oggetti a lungo termine.
 
-Il blocco eccessivo di oggetti può aumentare la frammentazione. Se la frammentazione è elevata, potrebbero essere stati bloccati troppi oggetti.
+Il blocco eccessivo di oggetti può aumentare la frammentazione. Se la frammentazione è elevata, potrebbe essere stato aggiunto un numero eccessivo di oggetti.
 
 Se la frammentazione della memoria virtuale impedisce a Garbage Collector di aggiungere segmenti, la causa può essere una delle seguenti:
 
@@ -143,7 +143,7 @@ Se la frammentazione della memoria virtuale impedisce a Garbage Collector di agg
 
 - Creazione di oggetti temporanei di grandi dimensioni, che fa sì che l'heap grandi oggetti allochi e liberi frequentemente segmenti di heap.
 
-  Quando si ospita CLR, un'applicazione può richiedere che Garbage Collector ne mantenga i segmenti. In questo modo, viene ridotta la frequenza delle allocazioni di segmenti. A questo scopo, viene usato il contrassegno STARTUP_HOARD_GC_VM nell'[Enumerazione STARTUP_FLAGS](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).
+  Quando si ospita CLR, un'applicazione può richiedere che Garbage Collector ne mantenga i segmenti. In questo modo, viene ridotta la frequenza delle allocazioni di segmenti. A questo scopo, viene usato il contrassegno STARTUP_HOARD_GC_VM nell'[Enumerazione STARTUP_FLAGS](../../framework/unmanaged-api/hosting/startup-flags-enumeration.md).
 
 |Controlli delle prestazioni|
 |------------------------|
@@ -161,9 +161,9 @@ Nelle operazioni di Garbage Collection simultanee, i thread gestiti possono esse
 
 Poiché le operazioni di Garbage Collection effimere (generazioni 0 e 1) durano solo pochi millisecondi, la riduzione delle pause non è in genere possibile. Tuttavia, è possibile ridurre le pause nelle raccolte di generazione 2 modificando il modello delle richieste di allocazione da parte di un'applicazione.
 
-Un altro metodo, più accurato, consiste nell'usare gli [eventi ETW di Garbage Collection](../../../docs/framework/performance/garbage-collection-etw-events.md). È possibile individuare gli intervalli di tempo per le raccolte aggiungendo le differenze dei timestamp per una sequenza di eventi. L'intera sequenza di raccolta include la sospensione del motore di esecuzione, l'operazione di Garbage Collection stessa e la ripresa del motore di esecuzione.
+Un altro metodo, più accurato, consiste nell'usare gli [eventi ETW di Garbage Collection](../../framework/performance/garbage-collection-etw-events.md). È possibile individuare gli intervalli di tempo per le raccolte aggiungendo le differenze dei timestamp per una sequenza di eventi. L'intera sequenza di raccolta include la sospensione del motore di esecuzione, l'operazione di Garbage Collection stessa e la ripresa del motore di esecuzione.
 
-È possibile usare le [notifiche di Garbage Collection](../../../docs/standard/garbage-collection/notifications.md) per determinare se in un server sta per essere eseguita una raccolta di generazione 2 e se le richieste di reindirizzamento a un altro server potrebbero risolvere eventuali problemi relativi alle pause.
+È possibile usare le [notifiche di Garbage Collection](notifications.md) per determinare se in un server sta per essere eseguita una raccolta di generazione 2 e se le richieste di reindirizzamento a un altro server potrebbero risolvere eventuali problemi relativi alle pause.
 
 |Controlli delle prestazioni|
 |------------------------|
@@ -181,7 +181,7 @@ Un altro metodo, più accurato, consiste nell'usare gli [eventi ETW di Garbage C
 
 L'utilizzo della CPU durante un'operazione di Garbage Collection è elevato. Se il periodo di tempo del processo è significativo in un'operazione di Garbage Collection, il numero di raccolte è troppo frequente oppure la raccolta dura troppo a lungo. Una frequenza di allocazione di oggetti maggiore nell'heap gestito fa sì che le operazioni di Garbage Collection avvengano più spesso. La riduzione della frequenza di allocazione riduce anche la frequenza delle operazioni di Garbage Collection.
 
-È possibile monitorare le frequenze di allocazione usando il contatore delle prestazioni `Allocated Bytes/second`. Per altre informazioni, vedere [Contatori delle prestazioni in .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md).
+È possibile monitorare le frequenze di allocazione usando il contatore delle prestazioni `Allocated Bytes/second`. Per altre informazioni, vedere [Contatori delle prestazioni in .NET Framework](../../framework/debug-trace-profile/performance-counters.md).
 
 La durata di una raccolta è principalmente un fattore del numero di oggetti rimanenti in seguito all'allocazione. Garbage Collector deve usare una quantità elevata di memoria se restano molti oggetti da raccogliere. L'attività di compattazione degli oggetti rimanenti richiede molto tempo. Per determinare quanti oggetti sono stati gestiti durante una raccolta, impostare un punto di interruzione nel debugger alla fine di un'operazione di Garbage Collection per una generazione specificata.
 
@@ -271,9 +271,9 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 - Esaminare i due contatori delle prestazioni della memoria seguenti:
 
-  - **% Tempo in GC**. Visualizza la percentuale di tempo trascorso, impiegato per l'esecuzione di un'operazione di Garbage Collection dopo l'ultimo ciclo di Garbage Collection. Usare questo contatore per determinare se Garbage Collector sta impiegando troppo tempo per rendere disponibile lo spazio dell'heap gestito. Se il tempo impiegato nell'operazione di Garbage Collection è relativamente ridotto, ciò può indicare un problema di risorse all'esterno dell'heap gestito. Questo contatore potrebbe non essere accurato se sono interessate operazioni di Garbage Collection simultanee o in background.
+  - **Percentuale tempo in GC**. Visualizza la percentuale di tempo trascorso, impiegato per l'esecuzione di un'operazione di Garbage Collection dopo l'ultimo ciclo di Garbage Collection. Usare questo contatore per determinare se Garbage Collector sta impiegando troppo tempo per rendere disponibile lo spazio dell'heap gestito. Se il tempo impiegato nell'operazione di Garbage Collection è relativamente ridotto, ciò può indicare un problema di risorse all'esterno dell'heap gestito. Questo contatore potrebbe non essere accurato se sono interessate operazioni di Garbage Collection simultanee o in background.
 
-  - **- Totale byte di cui è stato eseguito il commit**. Visualizza la quantità di memoria virtuale di cui Garbage Collector ha attualmente eseguito il commit. Usare questo contatore per determinare se la memoria usata da Garbage Collector è una parte eccessiva della memoria usata dall'applicazione.
+  - **N. totale di byte vincolati**. Visualizza la quantità di memoria virtuale di cui Garbage Collector ha attualmente eseguito il commit. Usare questo contatore per determinare se la memoria usata da Garbage Collector è una parte eccessiva della memoria usata dall'applicazione.
 
   La maggior parte dei contatori delle prestazioni della memoria viene aggiornata alla fine di ogni operazione di Garbage Collection. Di conseguenza, i contatori potrebbero non riflettere le attuali condizioni su cui si vuole ottenere informazioni.
 
@@ -283,7 +283,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 1. Nel debugger WinDbg o di Visual Studio con l'estensione del debugger SOS caricata, digitare il comando di stampa dell'eccezione (**pe**):
 
-    **!pe**
+    **! PE**
 
     Se l'eccezione è gestita, <xref:System.OutOfMemoryException> viene visualizzato come tipo di eccezione, come mostrato nell'esempio seguente.
 
@@ -297,7 +297,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 2. Se l'output non specifica un'eccezione, è necessario determinare il thread da cui proviene l'eccezione di memoria esaurita. Digitare il comando seguente nel debugger per mostrare tutti i thread con i rispettivi stack di chiamate:
 
-    **~\*Kb**
+    **~\*KB**
 
     Il thread con lo stack che include le chiamate dell'eccezione è indicato dall'argomento `RaiseTheException`. Si tratta dell'oggetto eccezione gestita.
 
@@ -654,7 +654,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   La seconda operazione di Garbage Collection di generazione 2 è iniziata durante il terzo intervallo ed è terminata durante il quinto intervallo. Presupponendo il caso peggiore, l'ultima operazione di Garbage Collection è avvenuta per una raccolta di generazione 0 terminata all'inizio del secondo intervallo, mentre l'operazione di Garbage Collection di generazione 2 è terminata alla fine del quinto intervallo. Di conseguenza, l'intervallo di tempo tra la fine dell'operazione di Garbage Collection di generazione 0 e la fine dell'operazione di Garbage Collection di generazione 2 è 4 secondi. Poiché il contatore `% Time in GC` indica 20%, la quantità massima di tempo che l'operazione di Garbage Collection di generazione 2 avrebbe potuto impiegare è (4 secondi * 20% = 800 ms).
 
-- In alternativa, è possibile determinare la lunghezza di un'operazione di Garbage Collection usando gli [eventi ETW di Garbage Collection](../../../docs/framework/performance/garbage-collection-etw-events.md) e analizzando le informazioni per stabilire la durata dell'operazione di Garbage Collection.
+- In alternativa, è possibile determinare la lunghezza di un'operazione di Garbage Collection usando gli [eventi ETW di Garbage Collection](../../framework/performance/garbage-collection-etw-events.md) e analizzando le informazioni per stabilire la durata dell'operazione di Garbage Collection.
 
   Ad esempio, i dati seguenti mostrano una sequenza di eventi verificatasi durante un'operazione di Garbage Collection non simultanea.
 
@@ -713,7 +713,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 - Nel debugger WinDbg o di Visual Studio con l'estensione del debugger SOS caricata, digitare il comando seguente per mostrare tutti i thread con i rispettivi stack di chiamate:
 
-  **~\*Kb**
+  **~\*KB**
 
   Questo comando genera un output simile al seguente.
 
@@ -796,4 +796,4 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+- [Garbage Collection](index.md)

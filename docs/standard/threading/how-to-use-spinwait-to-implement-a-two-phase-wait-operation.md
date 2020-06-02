@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - SpinWait, how to synchronize two-phase wait
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
-ms.openlocfilehash: 5bac174660177fd47e1f345e64581e35ae4c0ffc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b2bc79a7b652c34334d5a78d9c9af328993ff44
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73137945"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279206"
 ---
 # <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Procedura: utilizzare SpinWait per implementare un'operazione di attesa a due fasi
 L'esempio seguente mostra come usare un oggetto <xref:System.Threading.SpinWait?displayProperty=nameWithType> per implementare un'operazione di attesa a due fasi. Nella prima fase, l'oggetto di sincronizzazione, `Latch`, ruota per alcuni cicli mentre controlla se il blocco è diventato disponibile. Nella seconda fase, se il blocco diventa disponibile, il metodo `Wait` restituisce un risultato senza usare <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> per l'attesa; in caso contrario, `Wait` esegue l'attesa.  
@@ -30,5 +30,5 @@ L'esempio seguente mostra come usare un oggetto <xref:System.Threading.SpinWait?
   
 ## <a name="see-also"></a>Vedere anche
 
-- [SpinWait](../../../docs/standard/threading/spinwait.md)
-- [Funzionalità e oggetti di threading](../../../docs/standard/threading/threading-objects-and-features.md)
+- [SpinWait](spinwait.md)
+- [Oggetti e funzionalità di threading](threading-objects-and-features.md)

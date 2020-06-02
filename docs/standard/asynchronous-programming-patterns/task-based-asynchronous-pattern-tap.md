@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-ms.openlocfilehash: 89c486618729c334bf74f0a1f4f9dd1b3cee8b0e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4a08c8a72116ea509f559e412c5f270f3471bf1c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78158168"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276439"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Modello asincrono basato su attività (TAP)
 Il modello asincrono basato su attività (TAP) è basato sui tipi <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> nello spazio dei nomi <xref:System.Threading.Tasks?displayProperty=nameWithType>, che vengono usati per rappresentare le operazioni asincrone arbitrarie. TAP è il modello di progettazione asincrono consigliato per le nuove attività di sviluppo.  
@@ -30,9 +30,9 @@ TAP usa un singolo metodo per rappresentare l'inizio e il completamento di un'op
   
  I parametri di un metodo TAP devono corrispondere ai parametri della relativa controparte sincrona e devono essere forniti nello stesso ordine.  Tuttavia, i parametri `out` e `ref` sono esclusi da questa regola e dovrebbero essere evitati completamente. Tutti i dati che dovrebbero venire restituiti da un parametro `out` o `ref` dovranno invece essere restituiti come parte di `TResult` restituito da <xref:System.Threading.Tasks.Task%601> e usare una tupla o una struttura dei dati personalizzata per contenere più valori. È anche consigliabile valutare l'opportunità di aggiungere un parametro <xref:System.Threading.CancellationToken> anche se la controparte sincrona del metodo TAP non ne offre uno.
 
- I metodi dedicati esclusivamente alla creazione, modifica o combinazione di attività (dove l'intento asincrono del metodo risulta chiaro nel nome del metodo o nel nome del tipo a cui appartiene il metodo) non devono seguire questo modello di denominazione. Tali metodi vengono spesso definiti *combinatori*. Esempi di combinatori includono <xref:System.Threading.Tasks.Task.WhenAll%2A> e <xref:System.Threading.Tasks.Task.WhenAny%2A> e sono illustrati nella sezione [Utilizzo di combinatori incorporati basati su attività](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators) dell'articolo [Utilizzo del modello asincrono basato su attività](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).  
+ I metodi dedicati esclusivamente alla creazione, modifica o combinazione di attività (dove l'intento asincrono del metodo risulta chiaro nel nome del metodo o nel nome del tipo a cui appartiene il metodo) non devono seguire questo modello di denominazione. Tali metodi vengono spesso definiti *combinatori*. Esempi di combinatori includono <xref:System.Threading.Tasks.Task.WhenAll%2A> e <xref:System.Threading.Tasks.Task.WhenAny%2A> e sono illustrati nella sezione [Utilizzo di combinatori incorporati basati su attività](consuming-the-task-based-asynchronous-pattern.md#combinators) dell'articolo [Utilizzo del modello asincrono basato su attività](consuming-the-task-based-asynchronous-pattern.md).  
   
- Per esempi relativi alle differenze di sintassi di TAP rispetto ai modelli di programmazione asincrona legacy, come il modello di programmazione asincrono (APM) e il modello asincrono basato su eventi (EAP), vedere [Modelli di programmazione asincrona](../../../docs/standard/asynchronous-programming-patterns/index.md).  
+ Per esempi relativi alle differenze di sintassi di TAP rispetto ai modelli di programmazione asincrona legacy, come il modello di programmazione asincrono (APM) e il modello asincrono basato su eventi (EAP), vedere [Modelli di programmazione asincrona](index.md).  
   
 ## <a name="initiating-an-asynchronous-operation"></a>Avvio di un'operazione asincrona  
  Un metodo asincrono basato su TAP può eseguire una piccola quantità di lavoro in modo sincrono, ad esempio convalidare gli argomenti e avviare l'operazione asincrona, prima di restituire l'attività risultante. Le attività sincrone devono essere minime in modo che il metodo asincrono possa eseguire rapidamente la restituzione. I motivi per una restituzione rapida includono:  
@@ -92,7 +92,7 @@ TAP usa un singolo metodo per rappresentare l'inizio e il completamento di un'op
   
  Se le implementazioni TAP forniscono overload che accettano un parametro `progress`, devono consentire che l'argomento sia `null`, nel qual caso non verrà segnalato alcuno stato di avanzamento. Le implementazioni TAP devono segnalare lo stato di avanzamento all'oggetto <xref:System.Progress%601> in modo sincrono, in modo che il metodo asincrono possa fornire rapidamente lo stato di avanzamento e il consumer dello stato di avanzamento possa determinare il miglior modo per gestire le informazioni. Ad esempio, l'istanza dello stato di avanzamento può scegliere di effettuare il marshalling dei callback e generare eventi in un contesto di sincronizzazione acquisito.  
   
-## <a name="iprogresst-implementations"></a>Implementazioni di IProgress\<T>  
+## <a name="iprogresst-implementations"></a>\<T>Implementazioni IProgress  
  .NET Framework 4.5 offre un'unica implementazione di <xref:System.IProgress%601>: <xref:System.Progress%601>. La classe <xref:System.Progress%601> viene dichiarata nel modo seguente:  
   
 ```csharp  
@@ -191,7 +191,7 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Modelli di programmazione asincrona](../../../docs/standard/asynchronous-programming-patterns/index.md)|Vengono illustrati i tre modelli per eseguire le operazioni asincrone: il modello asincrono basato su attività (TAP), il modello di programmazione asincrono (APM) e il modello asincrono basato su eventi (EAP).|  
-|[Implementazione del modello asincrono basato su attività](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)|Vengono descritti i tre modi per implementare il modello asincrono basato su attività (TAP): tramite i compilatori C# e Visual Basic in Visual Studio, manualmente oppure mediante una combinazione dei primi due.|  
-|[Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)|Viene descritto come usare le attività e i callback per ottenere l'attesa senza blocchi.|  
-|[Interoperabilità con altri tipi e modelli asincroni](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)|Viene descritto come usare il modello asincrono basato su attività (TAP) per implementare il modello di programmazione asincrono (APM) e il modello asincrono basato su eventi (EAP).|
+|[Modelli di programmazione asincrona](index.md)|Vengono illustrati i tre modelli per eseguire le operazioni asincrone: il modello asincrono basato su attività (TAP), il modello di programmazione asincrono (APM) e il modello asincrono basato su eventi (EAP).|  
+|[Implementazione del modello asincrono basato su attività](implementing-the-task-based-asynchronous-pattern.md)|Vengono descritti i tre modi per implementare il modello asincrono basato su attività (TAP): tramite i compilatori C# e Visual Basic in Visual Studio, manualmente oppure mediante una combinazione dei primi due.|  
+|[Consuming the Task-based Asynchronous Pattern](consuming-the-task-based-asynchronous-pattern.md)|Viene descritto come usare le attività e i callback per ottenere l'attesa senza blocchi.|  
+|[Interoperabilità con altri tipi e modelli asincroni](interop-with-other-asynchronous-patterns-and-types.md)|Viene descritto come usare il modello asincrono basato su attività (TAP) per implementare il modello di programmazione asincrono (APM) e il modello asincrono basato su eventi (EAP).|

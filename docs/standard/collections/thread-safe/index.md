@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-ms.openlocfilehash: 790543118b18b0422f41c3249512b62aae0cfb03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7af59cf0fdbe8d5c7d7d586b4b86992ae1dc7601
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75938101"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290370"
 ---
 # <a name="thread-safe-collections"></a>Raccolte thread-safe
 .NET Framework 4 introduce lo spazio dei nomi <xref:System.Collections.Concurrent?displayProperty=nameWithType> che include diverse classi di raccolta thread-safe e scalabili. Più thread possono aggiungere o rimuovere elementi da queste raccolte in modo sicuro ed efficiente, senza richiedere una sincronizzazione aggiuntiva nel codice utente. Quando si scrive nuovo codice, usare le classi di raccolta simultanee ogni volta che più thread scriveranno nella raccolta contemporaneamente. Se si prevede di leggere solo da una raccolta condivisa, è possibile usare le classi dello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>. È consigliabile evitare di usare le classi di raccolta 1.0 a meno che non sia necessario definire come destinazione il runtime di .NET Framework versione 1.1 o precedente.  
@@ -23,7 +23,7 @@ ms.locfileid: "75938101"
  È quindi consigliabile usare le classi di raccolta simultanea disponibili in .NET Framework 4 perché offrono non solo l'indipendenza dai tipi delle classi di raccolta .NET Framework 2.0, ma anche una thread safety più efficiente e completa rispetto alle raccolte di .NET Framework 1.0.  
   
 ## <a name="fine-grained-locking-and-lock-free-mechanisms"></a>Blocco con granularità fine e meccanismi senza blocco  
- Alcuni tipi di raccolta simultanea usano meccanismi di sincronizzazione leggeri, ad esempio <xref:System.Threading.SpinLock>, <xref:System.Threading.SpinWait>, <xref:System.Threading.SemaphoreSlim> e <xref:System.Threading.CountdownEvent>, che sono una novità di .NET Framework 4. Questi tipi di sincronizzazione usano in genere la rotazione con *stato occupato* per breve periodi di tempo prima di impostare il thread in uno stato di attesa effettivo. Quando si prevedono tempi di attesa molto brevi, la rotazione è molto meno dispendiosa a livello di elaborazione rispetto all'attesa, che implica una transizione del kernel complessa. Per le classi di raccolta che usano la rotazione, questo livello di efficienza significa che più thread possono aggiungere e rimuovere elementi con una frequenza molto elevata. Per altre informazioni sul confronto tra spin e blocco, vedere [SpinLock](../../../../docs/standard/threading/spinlock.md) e [SpinWait](../../../../docs/standard/threading/spinwait.md).  
+ Alcuni tipi di raccolta simultanea usano meccanismi di sincronizzazione leggeri, ad esempio <xref:System.Threading.SpinLock>, <xref:System.Threading.SpinWait>, <xref:System.Threading.SemaphoreSlim> e <xref:System.Threading.CountdownEvent>, che sono una novità di .NET Framework 4. Questi tipi di sincronizzazione usano in genere la rotazione con *stato occupato* per breve periodi di tempo prima di impostare il thread in uno stato di attesa effettivo. Quando si prevedono tempi di attesa molto brevi, la rotazione è molto meno dispendiosa a livello di elaborazione rispetto all'attesa, che implica una transizione del kernel complessa. Per le classi di raccolta che usano la rotazione, questo livello di efficienza significa che più thread possono aggiungere e rimuovere elementi con una frequenza molto elevata. Per altre informazioni sul confronto tra spin e blocco, vedere [SpinLock](../../threading/spinlock.md) e [SpinWait](../../threading/spinwait.md).  
   
  Le classi <xref:System.Collections.Concurrent.ConcurrentQueue%601> e <xref:System.Collections.Concurrent.ConcurrentStack%601> non usano alcun blocco. Al contrario, si basano sulle operazioni <xref:System.Threading.Interlocked> per ottenere la thread safety.  
   
@@ -32,9 +32,9 @@ ms.locfileid: "75938101"
   
  Nella tabella seguente sono elencati i tipi di raccolta dello spazio dei nomi <xref:System.Collections.Concurrent?displayProperty=nameWithType>.  
   
-|Type|Descrizione|  
+|Type|Description|  
 |----------|-----------------|  
-|<xref:System.Collections.Concurrent.BlockingCollection%601>|Offre la funzionalità di delimitazione e blocco per qualsiasi tipo che implementa <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>. Per altre informazioni, vedere [Panoramica di BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).|  
+|<xref:System.Collections.Concurrent.BlockingCollection%601>|Offre la funzionalità di delimitazione e blocco per qualsiasi tipo che implementa <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>. Per altre informazioni, vedere [Panoramica di BlockingCollection](blockingcollection-overview.md).|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|Implementazione thread-safe di un dizionario di coppie chiave-valore.|  
 |<xref:System.Collections.Concurrent.ConcurrentQueue%601>|Implementazione thread-safe di una coda FIFO (First-In, First-Out).|  
 |<xref:System.Collections.Concurrent.ConcurrentStack%601>|Implementazione thread-safe di una coda LIFO (Last-In, First-Out).|  
@@ -45,13 +45,13 @@ ms.locfileid: "75938101"
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Panoramica di BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|Descrive la funzionalità fornita dal tipo <xref:System.Collections.Concurrent.BlockingCollection%601>.|  
-|[Procedura: aggiungere e rimuovere elementi da un oggetto ConcurrentDictionary](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Descrive come aggiungere e rimuovere elementi da un oggetto <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  
-|[Procedura: Aggiungere e rimuovere singoli elementi di un oggetto BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|Descrive come aggiungere e recuperare elementi da una raccolta di blocco senza usare l'enumeratore di sola lettura.|  
-|[Procedura: Aggiungere funzionalità di delimitazione e blocco a una raccolta](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|Descrive come usare una classe di raccolta come meccanismo di archiviazione sottostante per una raccolta <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>.|  
-|[Procedura: utilizzare ForEach per rimuovere elementi in un oggetto BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|Descrive come usare `foreach` (`For Each` in Visual Basic) per rimuovere tutti gli elementi in una raccolta di blocco.|  
-|[Procedura: utilizzare matrici di raccolte di blocco in una pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|Descrive come usare più raccolte di blocco contemporaneamente per implementare una pipeline.|  
-|[Procedura: Creare un pool di oggetti con un oggetto ConcurrentBag](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|Illustra come usare un contenitore simultaneo per migliorare le prestazioni negli scenari in cui è possibile riutilizzare gli oggetti anziché crearne continuamente di nuovi.|  
+|[Panoramica di BlockingCollection](blockingcollection-overview.md)|Descrive la funzionalità fornita dal tipo <xref:System.Collections.Concurrent.BlockingCollection%601>.|  
+|[Procedura: aggiungere e rimuovere elementi da un oggetto ConcurrentDictionary](how-to-add-and-remove-items.md)|Descrive come aggiungere e rimuovere elementi da un oggetto <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  
+|[Procedura: Aggiungere e rimuovere singoli elementi di un oggetto BlockingCollection](how-to-add-and-take-items.md)|Descrive come aggiungere e recuperare elementi da una raccolta di blocco senza usare l'enumeratore di sola lettura.|  
+|[Procedura: Aggiungere funzionalità di delimitazione e blocco a una raccolta](how-to-add-bounding-and-blocking.md)|Descrive come usare una classe di raccolta come meccanismo di archiviazione sottostante per una raccolta <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>.|  
+|[Procedura: utilizzare ForEach per rimuovere elementi in un oggetto BlockingCollection](how-to-use-foreach-to-remove.md)|Descrive come usare `foreach` (`For Each` in Visual Basic) per rimuovere tutti gli elementi in una raccolta di blocco.|  
+|[Procedura: utilizzare matrici di raccolte di blocco in una pipeline](how-to-use-arrays-of-blockingcollections.md)|Descrive come usare più raccolte di blocco contemporaneamente per implementare una pipeline.|  
+|[Procedura: Creare un pool di oggetti con un oggetto ConcurrentBag](how-to-create-an-object-pool.md)|Illustra come usare un contenitore simultaneo per migliorare le prestazioni negli scenari in cui è possibile riutilizzare gli oggetti anziché crearne continuamente di nuovi.|  
   
 ## <a name="reference"></a>Informazioni di riferimento  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>

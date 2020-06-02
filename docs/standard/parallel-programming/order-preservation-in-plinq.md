@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 0e9b4510757fc0f98b2edfbe1c656cdb5f6bce72
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 45752f3ffa64079079505934afd76e812daad7bd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588641"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290655"
 ---
 # <a name="order-preservation-in-plinq"></a>Conservazione dell'ordine in PLINQ
 In PLINQ, l'obiettivo è ottimizzare le prestazioni, mantenendo la correttezza. Una query deve essere eseguita il più velocemente possibile ma comunque produrre i risultati corretti. In alcuni casi, la correttezza richiede il mantenimento dell'ordine della sequenza di origine, ma l'ordinamento può essere oneroso a livello di risorse di calcolo. Pertanto, per impostazione predefinita, PLINQ non mantiene l'ordine della sequenza di origine. Da questo punto di vista, PLINQ è simile a [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], ma differisce da LINQ to Objects, che mantiene l'ordinamento.  
   
- Per eseguire l'override del comportamento predefinito, è possibile attivare il mantenimento dell'ordine usando l'operatore <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> nella sequenza di origine. È quindi possibile disattivare il mantenimento dell'ordine in un secondo momento nella query usando il metodo <xref:System.Linq.ParallelEnumerable.AsUnordered%2A>. Con entrambi i metodi, la query viene elaborata in base alle regole euristiche che determinano se scegliere l'esecuzione parallela o sequenziale per la query. Per altre informazioni, vedere [Informazioni sull'aumento di velocità in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+ Per eseguire l'override del comportamento predefinito, è possibile attivare il mantenimento dell'ordine usando l'operatore <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> nella sequenza di origine. È quindi possibile disattivare il mantenimento dell'ordine in un secondo momento nella query usando il metodo <xref:System.Linq.ParallelEnumerable.AsUnordered%2A>. Con entrambi i metodi, la query viene elaborata in base alle regole euristiche che determinano se scegliere l'esecuzione parallela o sequenziale per la query. Per altre informazioni, vedere [Informazioni sull'aumento di velocità in PLINQ](understanding-speedup-in-plinq.md).  
   
  L'esempio seguente mostra una query parallela non ordinata che applica un filtro per individuare tutti gli elementi che soddisfano una condizione, senza tentare di ordinare i risultati in alcun modo.  
   
@@ -122,5 +122,5 @@ In PLINQ, l'obiettivo è ottimizzare le prestazioni, mantenendo la correttezza. 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
-- [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)
+- [Parallel LINQ (PLINQ)](introduction-to-plinq.md)
+- [Programmazione parallela](index.md)

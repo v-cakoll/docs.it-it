@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-ms.openlocfilehash: af6df3729f1bd926e9a47cc5b9d9bf460c8e1225
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 3d517652665d6d0693e141d623483ff8946bbbf4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159286"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290240"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>Compilazione dello schema XmlSchemaCollection
 **XmlSchemaCollection** è una cache o una libreria in cui è possibile archiviare e convalidare gli schemi XDR (XML-Data Reduced) e XSD (XML Schema Definition Language). **XmlSchemaCollection** migliora le prestazioni memorizzando nella cache gli schemi anziché accedervi da un file o un URL.  
@@ -20,7 +20,7 @@ ms.locfileid: "78159286"
 > Sebbene la classe **XmlSchemaCollection** archivi sia schemi XDR che XML Schema, tutti i metodi e le proprietà che accettano o restituiscono un oggetto **XmlSchema** supportano solo gli XML Schema.  
   
 > [!IMPORTANT]
-> La classe <xref:System.Xml.Schema.XmlSchemaCollection> è obsoleta ed è stata sostituita dalla classe <xref:System.Xml.Schema.XmlSchemaSet>. Per altre informazioni sulla classe <xref:System.Xml.Schema.XmlSchemaSet>, vedere [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+> La classe <xref:System.Xml.Schema.XmlSchemaCollection> è obsoleta ed è stata sostituita dalla classe <xref:System.Xml.Schema.XmlSchemaSet>. Per altre informazioni sulla classe <xref:System.Xml.Schema.XmlSchemaSet>, vedere [XmlSchemaSet per la compilazione di schemi](xmlschemaset-for-schema-compilation.md).  
   
 ## <a name="add-schemas-to-the-collection"></a>Aggiunta di schemi alla raccolta  
  Gli schemi vengono caricati nella raccolta usando il metodo **Add** di **XmlSchemaCollection** e a ogni schema viene associato un URI dello spazio dei nomi. In genere, per gli XML Schema l'URI dello spazio dei nomi è lo spazio dei nomi di destinazione per lo schema. Per gli schemi XDR, invece, l'URI dello spazio dei nomi è lo spazio dei nomi specificato quando lo schema è stato aggiunto alla raccolta.  
@@ -55,7 +55,7 @@ xsc.Add("urn:bookstore-schema", "Books.xsd");
 vr.Schemas.Add(xsc);  
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Convalida XDR con XmlSchemaCollection](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)
-- [Convalida XSD (XML Schema) con XmlSchemaCollection](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemacollection.md)
+- [Convalida XDR con XmlSchemaCollection](xdr-validation-with-xmlschemacollection.md)
+- [Convalida XSD (XML Schema) con XmlSchemaCollection](xml-schema-xsd-validation-with-xmlschemacollection.md)

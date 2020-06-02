@@ -1,16 +1,16 @@
 ---
 title: Oggetti e classi
-ms.date: 07/20/2015
+ms.date: 05/26/2020
 helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 589b0b362cc25fd10e2780fd541cf9f7cfb546a9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 10e257a1cbc8778565a9838aeef423522f9d2970
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344643"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290617"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Oggetti e classi in Visual Basic
 
@@ -26,32 +26,38 @@ Ogni oggetto in Visual Basic è definito da una *classe*. che ne descrive le var
 
 Per comprendere la relazione esistente tra un oggetto e la classe di appartenenza, si pensi alla relazione tra gli stampi per biscotti e i biscotti. La classe è lo stampo che definisce le caratteristiche di ogni biscotto, ad esempio le dimensioni e la forma. La classe viene usata per creare oggetti. Gli oggetti sono i biscotti.
 
-Per poter accedere ai membri di un oggetto, è prima necessario creare l'oggetto stesso.
+È necessario creare un oggetto prima di poter accedere ai relativi membri, ad eccezione dei [`Shared`](../../../language-reference/modifiers/shared.md) membri a cui è possibile accedere senza un oggetto della classe.
 
-### <a name="to-create-an-object-from-a-class"></a>Per creare un oggetto da una classe
+### <a name="create-an-object-from-a-class"></a>Creare un oggetto da una classe
 
-1. Scegliere la classe da cui si vuole creare un oggetto.
-
-2. Scrivere un'[istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) per creare una variabile a cui assegnare un'istanza di una classe. La variabile dovrebbe essere del tipo della classe desiderata.
+1. Determinare da quale classe si desidera creare un oggetto o definire una classe personalizzata. Ad esempio:
 
    ```vb
-   Dim nextCustomer As customer
+   Public Class Customer
+       Public Property AccountNumber As Integer
+   End Class
    ```
 
-3. Aggiungere la parola chiave [New](../../../../visual-basic/language-reference/operators/new-operator.md) per inizializzare la variabile su una nuova istanza della classe.
+2. Scrivere un'[istruzione Dim](../../../language-reference/statements/dim-statement.md) per creare una variabile a cui assegnare un'istanza di una classe. La variabile dovrebbe essere del tipo della classe desiderata.
 
    ```vb
-   Dim nextCustomer As New customer
+   Dim nextCustomer As Customer
+   ```
+
+3. Aggiungere la parola chiave [New](../../../language-reference/operators/new-operator.md) per inizializzare la variabile su una nuova istanza della classe.
+
+   ```vb
+   Dim nextCustomer As New Customer
    ```
 
 4. È ora possibile accedere ai membri della classe mediante la variabile oggetto.
 
    ```vb
-   nextCustomer.accountNumber = lastAccountNumber + 1
+   nextCustomer.AccountNumber = lastAccountNumber + 1
    ```
 
 > [!NOTE]
-> Quando possibile, è necessario dichiarare che la variabile appartiene al tipo classe a cui si vuole assegnarla. Questa operazione è definita *associazione anticipata*. Se il tipo di classe non è noto in fase di compilazione, è possibile richiamare l'*associazione tardiva* dichiarando che la variabile è del [tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md). Questo tipo di associazione, tuttavia, può determinare un rallentamento delle prestazioni e limitare l'accesso ai membri dell'oggetto in fase di esecuzione. Per altre informazioni, vedere [Object Variable Declaration](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md) (Dichiarazione di variabili oggetto).
+> Quando possibile, è necessario dichiarare che la variabile appartiene al tipo classe a cui si vuole assegnarla. Questa operazione è definita *associazione anticipata*. Se il tipo di classe non è noto in fase di compilazione, è possibile richiamare l'*associazione tardiva* dichiarando che la variabile è del [tipo di dati Object](../../../language-reference/data-types/object-data-type.md). Questo tipo di associazione, tuttavia, può determinare un rallentamento delle prestazioni e limitare l'accesso ai membri dell'oggetto in fase di esecuzione. Per altre informazioni, vedere [Object Variable Declaration](../variables/object-variable-declaration.md) (Dichiarazione di variabili oggetto).
 
 ### <a name="multiple-instances"></a>Istanze multiple
 
@@ -71,7 +77,7 @@ warningLabel.Text = "Data not saved"
 
 #### <a name="intellisense-listing-of-members"></a>Elenco di membri IntelliSense
 
-Quando si richiama l'opzione Elenca membri relativa a una classe, ad esempio quando si digita un punto (`.`) come operatore di accesso ai membri, IntelliSense elenca i membri di tale classe. Se si digita il punto dopo il nome di una variabile dichiarata come istanza della classe, vengono elencati tutti i membri di istanza ma nessuno dei membri condivisi. Se si digita il punto dopo il nome della classe, vengono elencati tutti i membri condivisi ma nessuno dei membri di istanza. Per altre informazioni, vedere [Using IntelliSense](/visualstudio/ide/using-intellisense).
+Quando si richiama l'opzione Elenca membri relativa a una classe, ad esempio quando si digita un punto (`.`) come operatore di accesso ai membri, IntelliSense elenca i membri di tale classe. Se si digita il punto dopo il nome di una variabile dichiarata come istanza della classe, vengono elencati tutti i membri di istanza ma nessuno dei membri condivisi. Se si digita il punto dopo il nome della classe, vengono elencati tutti i membri condivisi ma nessuno dei membri di istanza. Per altre informazioni, vedere [Using IntelliSense](/visualstudio/ide/using-intellisense) (Uso di IntelliSense).
 
 ### <a name="fields-and-properties"></a>Campi e proprietà
 
@@ -106,6 +112,9 @@ Usare i campi nei casi seguenti:
 
 - Per altre informazioni, vedere [Routine Property](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md).
 
+> [!TIP]
+> Mantieni sempre i campi non costanti privati. Quando si desidera renderla pubblica, utilizzare invece una proprietà.
+
 ### <a name="methods"></a>Metodi
 
 Un *metodo* è un'azione che può essere eseguita da un oggetto. Ad esempio, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A> è un metodo dell'oggetto <xref:System.Windows.Forms.ComboBox> che aggiunge una nuova voce in una casella combinata.
@@ -119,23 +128,21 @@ safetyTimer.Start()
 
 Si noti che un metodo è semplicemente una *routine* esposta da un oggetto.
 
-Per altre informazioni, vedere [Routine](../../../../visual-basic/programming-guide/language-features/procedures/index.md).
+Per altre informazioni, vedere [Routine](../procedures/index.md).
 
-### <a name="events"></a>Events
+### <a name="events"></a>Eventi
 
 Un evento è un'azione che viene riconosciuta da un oggetto, ad esempio il clic del mouse o la pressione di un tasto, e alla quale è possibile rispondere mediante un codice scritto appositamente. Gli eventi possono verificarsi come conseguenza di un'azione utente o un codice programma oppure possono essere generati dal sistema. Il codice che segnala un evento è detto codice che *genera* l'evento, mentre il codice che risponde all'evento è detto codice che *gestisce* l'evento.
 
-È inoltre possibile sviluppare eventi personalizzati generati dai propri oggetti e gestiti da altri oggetti. Per ulteriori informazioni, vedi [Eventi](../../../../visual-basic/programming-guide/language-features/events/index.md).
+È inoltre possibile sviluppare eventi personalizzati generati dai propri oggetti e gestiti da altri oggetti. Per altre informazioni, vedere [Eventi](../events/index.md).
 
 ### <a name="instance-members-and-shared-members"></a>Membri di istanza e membri condivisi
 
-Quando si crea un oggetto da una classe, il risultato è un'istanza di tale classe. I membri non dichiarati con la parola chiave [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) sono *membri di istanza* e appartengono soltanto a tale istanza. Un membro di istanza appartenente a una determinata istanza è indipendente dallo stesso membro appartenente a un'altra istanza della stessa classe. Una variabile membro di istanza, ad esempio, può avere valori differenti in istanze differenti.
+Quando si crea un oggetto da una classe, il risultato è un'istanza di tale classe. I membri non dichiarati con la parola chiave [Shared](../../../language-reference/modifiers/shared.md) sono *membri di istanza* e appartengono soltanto a tale istanza. Un membro di istanza appartenente a una determinata istanza è indipendente dallo stesso membro appartenente a un'altra istanza della stessa classe. Una variabile membro di istanza, ad esempio, può avere valori differenti in istanze differenti.
 
 I membri dichiarati con la parola chiave `Shared` sono *membri condivisi*. Questo significa che appartengono all'intera classe e non a una particolare istanza. Un membro condiviso viene definito una sola volta, indipendentemente dal numero di istanze della relativa classe che vengono create. Questo è vero anche se non viene creata alcuna istanza. Una variabile membro condiviso, ad esempio, può avere un unico valore, che può essere usato da tutto il codice che ha accesso alla classe.
 
-#### <a name="accessing-nonshared-members"></a>Accesso a membri non condivisi
-
-##### <a name="to-access-a-nonshared-member-of-an-object"></a>Per accedere a un membro non condiviso di un oggetto
+#### <a name="accessing-non-shared-members"></a>Accesso a membri non condivisi
 
 1. Verificare che l'oggetto sia stato creato a partire dalla relativa classe e che sia stato assegnato a una variabile oggetto.
 
@@ -143,7 +150,7 @@ I membri dichiarati con la parola chiave `Shared` sono *membri condivisi*. Quest
    Dim secondForm As New System.Windows.Forms.Form
    ```
 
-2. Nell'istruzione che consente l'accesso al membro inserire il nome della variabile oggetto, quindi l'*operatore di accesso ai membri* (`.`) e infine il nome del membro.
+2. Nell'istruzione che accede al membro, seguire il nome della variabile oggetto con l' *operatore di accesso ai membri* ( `.` ) e quindi il nome del membro.
 
    ```vb
    secondForm.Show()
@@ -151,19 +158,17 @@ I membri dichiarati con la parola chiave `Shared` sono *membri condivisi*. Quest
 
 #### <a name="accessing-shared-members"></a>Accesso a membri condivisi
 
-##### <a name="to-access-a-shared-member-of-an-object"></a>Per accedere a un membro condiviso di un oggetto
-
-- Inserire il nome della classe, quindi l'*operatore di accesso ai membri* (`.`) e infine il nome del membro. È necessario accedere sempre a un membro `Shared` dell'oggetto tramite il nome della classe.
+- Seguire il nome della classe con l' *operatore di accesso ai membri* ( `.` ) e quindi il nome del membro. È necessario accedere sempre a un membro `Shared` dell'oggetto tramite il nome della classe.
 
    ```vb
-   MsgBox("This computer is called " & Environment.MachineName)
+   Console.WriteLine("This computer is called " & Environment.MachineName)
    ```
 
 - In alternativa, se è già stato creato un oggetto a partire dalla classe, è possibile accedere a un membro `Shared` tramite la variabile dell'oggetto.
 
 ### <a name="differences-between-classes-and-modules"></a>Differenze tra classi e moduli
 
-La differenza principale tra le classi e i moduli consiste nel fatto che è possibile creare istanze delle classi come oggetti, ma tale operazione non è possibile per i moduli standard. Poiché è presente una sola copia di dati di un modulo standard, quando una parte del programma modifica una variabile pubblica in un modulo standard, a una successiva lettura della variabile qualsiasi altra parte del programma ottiene lo stesso valore. I dati oggetto, invece, sono separati per ciascun oggetto di cui è stata creata un'istanza. A differenza dei moduli standard, inoltre, le classi possono implementare interfacce.
+La differenza principale tra le classi e i moduli consiste nel fatto che è possibile creare istanze delle classi come oggetti, ma tale operazione non è possibile per i moduli standard. Poiché è presente una sola copia di dati di un modulo standard, quando una parte del programma modifica una variabile pubblica in un modulo standard, a una successiva lettura della variabile qualsiasi altra parte del programma ottiene lo stesso valore. I dati oggetto, invece, sono separati per ciascun oggetto di cui è stata creata un'istanza. A differenza dei moduli standard, inoltre, le classi possono implementare interfacce. Se una classe è contrassegnata con il modificatore [MustInherit](../../../language-reference/modifiers/mustinherit.md) , non è possibile crearne un'istanza direttamente. Tuttavia, è ancora diverso da un modulo perché può essere ereditato mentre i moduli non possono essere ereditati.
 
 > [!NOTE]
 > Quando si applica un modificatore `Shared` a un membro di una classe, il modificatore viene associato alla classe stessa anziché a una particolare istanza di quest'ultima. L'accesso al membro avviene direttamente tramite il nome della classe, nello stesso modo in cui si accede ai membri del modulo.
@@ -176,10 +181,10 @@ D'altra parte, i membri dichiarati all'interno di un modulo sono accessibili pub
 
 Grazie agli oggetti, è possibile dichiarare variabili e routine una sola volta e quindi riutilizzarle quando necessario. Se, ad esempio, si desidera aggiungere un correttore ortografico a un'applicazione, è possibile definire tutte le variabili e le funzioni di supporto per fornire la funzionalità di correttore ortografico. Se il controllo ortografico viene creato come classe, sarà possibile riutilizzarlo in altre applicazioni aggiungendo un riferimento all'assembly compilato. Soluzione ancora migliore, sarà possibile risparmiare lavoro usando una classe correttore ortografico già sviluppata da altri programmatori.
 
-Il .NET Framework fornisce molti esempi di componenti disponibili per l'utilizzo. Nell'esempio seguente viene usata la classe <xref:System.TimeZone> nello spazio dei nomi <xref:System>. La classe <xref:System.TimeZone> specifica i membri che consentono di recuperare le informazioni sul fuso orario del computer corrente.
+.NET fornisce molti esempi di componenti disponibili per l'utilizzo. Nell'esempio seguente viene usata la classe <xref:System.TimeZone> nello spazio dei nomi <xref:System>. La classe <xref:System.TimeZone> specifica i membri che consentono di recuperare le informazioni sul fuso orario del computer corrente.
 
 ```vb
-Public Sub examineTimeZone()
+Public Sub ExamineTimeZone()
     Dim tz As System.TimeZone = System.TimeZone.CurrentTimeZone
     Dim s As String = "Current time zone is "
     s &= CStr(tz.GetUtcOffset(Now).Hours) & " hours and "
@@ -188,11 +193,11 @@ Public Sub examineTimeZone()
     s &= vbCrLf & "and is currently "
     If tz.IsDaylightSavingTime(Now) = False Then s &= "not "
     s &= "on ""summer time""."
-    MsgBox(s)
+    Console.WriteLine(s)
 End Sub
 ```
 
-Nell'esempio precedente, la prima [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) dichiara una variabile oggetto di tipo <xref:System.TimeZone> e assegna alla variabile un oggetto <xref:System.TimeZone> restituito dalla proprietà <xref:System.TimeZone.CurrentTimeZone%2A>.
+Nell'esempio precedente, la prima [istruzione Dim](../../../language-reference/statements/dim-statement.md) dichiara una variabile oggetto di tipo <xref:System.TimeZone> e assegna alla variabile un oggetto <xref:System.TimeZone> restituito dalla proprietà <xref:System.TimeZone.CurrentTimeZone%2A>.
 
 ## <a name="relationships-among-objects"></a>Relazioni tra oggetti
 
@@ -204,17 +209,17 @@ Se sono presenti classi di maggiore importanza e classi da esse derivate, tra le
 
 Nell'esempio seguente, si supponga di voler definire un tipo speciale di classe <xref:System.Windows.Forms.Button> che si comporti come una classe <xref:System.Windows.Forms.Button> normale ma che allo stesso tempo esponga un metodo per invertire i colori di sfondo e di primo piano.
 
-#### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>Per definire una classe come derivata da una classe già esistente
+#### <a name="define-a-class-that-is-derived-from-an-already-existing-class"></a>Definire una classe derivata da una classe già esistente
 
-1. Usare un'[istruzione Class](../../../../visual-basic/language-reference/statements/class-statement.md) per definire una classe dalla quale creare l'oggetto necessario.
+1. Usare un'[istruzione Class](../../../language-reference/statements/class-statement.md) per definire una classe dalla quale creare l'oggetto necessario.
 
    ```vb
-   Public Class reversibleButton
+   Public Class ReversibleButton
    ```
 
    Verificare che l'ultima riga di codice della classe sia seguita da un'istruzione `End Class`. Per impostazione predefinita, quando si immette un'istruzione `Class` l'ambiente di sviluppo integrato (IDE) genera automaticamente un'istruzione `End Class`.
 
-2. Aggiungere un'[istruzione Inherits](../../../../visual-basic/language-reference/statements/inherits-statement.md) subito dopo l'istruzione `Class`. Specificare la classe dalla quale deriva la nuova classe.
+2. Aggiungere un'[istruzione Inherits](../../../language-reference/statements/inherits-statement.md) subito dopo l'istruzione `Class`. Specificare la classe dalla quale deriva la nuova classe.
 
    ```vb
    Inherits System.Windows.Forms.Button
@@ -222,12 +227,12 @@ Nell'esempio seguente, si supponga di voler definire un tipo speciale di classe 
 
    La nuova classe eredita tutti i membri definiti dalla classe di base.
 
-3. Aggiungere il codice per i membri aggiuntivi esposti dalla classe derivata. Ad esempio, è possibile aggiungere un metodo `reverseColors`. La classe derivata sarà simile alla seguente:
+3. Aggiungere il codice per i membri aggiuntivi esposti dalla classe derivata. Ad esempio, è possibile aggiungere un metodo `ReverseColors`. La classe derivata sarà simile alla seguente:
 
    ```vb
-   Public Class reversibleButton
+   Public Class ReversibleButton
        Inherits System.Windows.Forms.Button
-           Public Sub reverseColors()
+           Public Sub ReverseColors()
                Dim saveColor As System.Drawing.Color = Me.BackColor
                Me.BackColor = Me.ForeColor
                Me.ForeColor = saveColor
@@ -235,13 +240,13 @@ Nell'esempio seguente, si supponga di voler definire un tipo speciale di classe 
    End Class
    ```
 
-   Se si crea un oggetto dalla classe `reversibleButton`, tale oggetto potrà accedere a tutti i membri della classe <xref:System.Windows.Forms.Button>, nonché al metodo `reverseColors` e a qualsiasi altro membro nuovo definito in `reversibleButton`.
+   Se si crea un oggetto dalla `ReversibleButton` classe, può accedere a tutti i membri della <xref:System.Windows.Forms.Button> classe, nonché al `ReverseColors` metodo e a qualsiasi altro nuovo membro definito in `ReversibleButton` .
 
-Le classi derivate ereditano i membri della classe su cui sono basate, consentendo di raggiungere una maggiore complessità mano a mano che si avanza nella gerarchia. Per altre informazioni, vedere [Nozioni fondamentali sull'ereditarietà](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).
+Le classi derivate ereditano i membri della classe su cui sono basate, consentendo di raggiungere una maggiore complessità mano a mano che si avanza nella gerarchia. Per altre informazioni, vedere [Nozioni fondamentali sull'ereditarietà](inheritance-basics.md).
 
 ### <a name="compile-the-code"></a>Compilare il codice
 
-Verificare che il compilatore possa accedere alla classe da cui si vuole derivare la nuova classe. A tale scopo è possibile fornire il nome completo della classe, come nell'esempio precedente, oppure specificare il relativo spazio dei nomi in un'[istruzione Imports (tipo e spazio dei nomi .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Se la classe si trova in un progetto differente, può essere necessario aggiungere un riferimento a tale progetto. Per altre informazioni, vedere [Gestione dei riferimenti in un progetto](/visualstudio/ide/managing-references-in-a-project).
+Verificare che il compilatore possa accedere alla classe da cui si vuole derivare la nuova classe. A tale scopo è possibile fornire il nome completo della classe, come nell'esempio precedente, oppure specificare il relativo spazio dei nomi in un'[istruzione Imports (tipo e spazio dei nomi .NET)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md). Se la classe si trova in un progetto differente, può essere necessario aggiungere un riferimento a tale progetto. Per ulteriori informazioni, vedere [gestione dei riferimenti in un progetto](/visualstudio/ide/managing-references-in-a-project).
 
 ### <a name="containment-relationship"></a>Relazione di contenuto
 
@@ -249,27 +254,27 @@ Un altro tipo di relazione tra oggetti è la *relazione di contenimento*. Gli og
 
 #### <a name="collections"></a>Raccolte
 
-Un tipo particolare di contenimento degli oggetti è rappresentato dalle *raccolte*. Le raccolte sono gruppi di oggetti simili che possono essere enumerati. Visual Basic supporta una sintassi specifica in [for each... Istruzione successiva](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) che consente di scorrere gli elementi di una raccolta. Inoltre, le raccolte consentono spesso di usare un <xref:Microsoft.VisualBasic.Collection.Item%2A> per recuperare gli elementi in base al relativo indice o tramite l'associazione a una stringa univoca. Le raccolte possono risultare di uso più semplice rispetto alle matrici, in quanto consentono di aggiungere o rimuovere elementi senza ricorrere agli indici. Grazie alla loro facilità d'uso, vengono spesso usate per l'archiviazione di form e controlli.
+Un tipo particolare di contenimento degli oggetti è rappresentato dalle *raccolte*. Le raccolte sono gruppi di oggetti simili che possono essere enumerati. Visual Basic supporta una sintassi specifica in [for each... Istruzione successiva](../../../language-reference/statements/for-each-next-statement.md) che consente di scorrere gli elementi di una raccolta. Inoltre, le raccolte consentono spesso di usare un <xref:Microsoft.VisualBasic.Collection.Item%2A> per recuperare gli elementi in base al relativo indice o tramite l'associazione a una stringa univoca. Le raccolte possono risultare di uso più semplice rispetto alle matrici, in quanto consentono di aggiungere o rimuovere elementi senza ricorrere agli indici. Grazie alla loro facilità d'uso, vengono spesso usate per l'archiviazione di form e controlli.
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-[Procedura dettagliata: definizione delle classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)\
+[Procedura dettagliata: definizione delle classi](walkthrough-defining-classes.md)\
 Viene fornita una descrizione dettagliata della creazione di una classe.
 
-[Metodi e proprietà di overload](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)\
+[Metodi e proprietà di overload](overloaded-properties-and-methods.md)\
 Metodi e proprietà di overload
 
-[Nozioni fondamentali sull'ereditarietà](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)\
+[Nozioni fondamentali sull'ereditarietà](inheritance-basics.md)\
 Vengono illustrati modificatori di ereditarietà, override di metodi e proprietà, MyClass e MyBase.
 
-[Object Lifetime: How Objects Are Created and Destroyed](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)\ (Durata degli oggetti: come creare e distruggere oggetti)
+[Durata degli oggetti: come creare ed eliminare definitivamente oggetti](object-lifetime-how-objects-are-created-and-destroyed.md)\
 Vengono illustrate la creazione e l'eliminazione delle istanze di classe.
 
-[Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)\
+[Tipi anonimi](anonymous-types.md)\
 Viene descritto come creare e usare i tipi anonimi, che consentono di creare oggetti senza scrivere una definizione della classe per il tipo dati.
 
-[Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)\
+[Inizializzatori di oggetto: tipi denominati e anonimi](object-initializers-named-and-anonymous-types.md)\
 Vengono discussi gli inizializzatori di oggetto, usati per creare istanze di tipi denominati e anonimi mediante un'unica espressione.
 
-[Procedura: dedurre tipi e nomi di proprietà nelle dichiarazioni di tipo anonimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
+[Procedura: dedurre tipi e nomi di proprietà nelle dichiarazioni di tipo anonimo](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
 Viene descritto come dedurre nomi e tipi di proprietà nelle dichiarazioni di tipo anonimo. Vengono forniti esempi di inferenze riuscite e non riuscite.

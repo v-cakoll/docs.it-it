@@ -15,12 +15,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 82e60b3cb5eb777d48219209550367642f78d8c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c260c349f035de67257adbca06fb447ff993329
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711428"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277674"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Caratteri di escape nelle espressioni regolari
 La barra rovesciata (\\) in un'espressione regolare indica una delle situazioni seguenti:  
@@ -37,19 +37,19 @@ La barra rovesciata (\\) in un'espressione regolare indica una delle situazioni 
   
 |Carattere o sequenza|Descrizione|  
 |---------------------------|-----------------|  
-|Tutti i caratteri eccetto i seguenti:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |I caratteri diversi da quelli elencati nella colonna **Carattere o sequenza** non hanno un significato speciale nelle espressioni regolari, ma corrispondono a se stessi.<br /><br /> I caratteri inclusi nella colonna **Carattere o sequenza** sono elementi speciali del linguaggio di espressioni regolari. Per associarli in un'espressione regolare, è necessario essere preceduti dal carattere di escape o inclusi in un gruppo di [caratteri positivi.](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) Ad esempio, l'espressione regolare `\$\d+` o `[$]\d+` trova la corrispondenza con "$1200".|  
+|Tutti i caratteri eccetto i seguenti:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |I caratteri diversi da quelli elencati nella colonna **Carattere o sequenza** non hanno un significato speciale nelle espressioni regolari, ma corrispondono a se stessi.<br /><br /> I caratteri inclusi nella colonna **Carattere o sequenza** sono elementi speciali del linguaggio di espressioni regolari. Per abbinarli in un'espressione regolare, è necessario che siano preceduti da un carattere di escape o inclusi in un [gruppo di caratteri positivi](character-classes-in-regular-expressions.md). Ad esempio, l'espressione regolare `\$\d+` o `[$]\d+` trova la corrispondenza con "$1200".|  
 |`\a`|Corrisponde a un carattere di controllo del segnale acustico di avviso, `\u0007`.|  
-|`\b`|In `[`una *character_group* `]` classe di caratteri, corrisponde a un backspace, `\u0008`.  (Vedere [classi di caratteri](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) All'esterno di `\b` una classe di caratteri, è un ancoraggio che corrisponde a un confine di parola. Vedere [Ancoraggi](../../../docs/standard/base-types/anchors-in-regular-expressions.md).|  
+|`\b`|In una `[` *character_group* `]` classe di caratteri character_group, corrisponde a un BACKSPACE, `\u0008` .  Vedere [classi di caratteri](character-classes-in-regular-expressions.md). Al di fuori di una classe di caratteri, `\b` è un ancoraggio che corrisponde a un confine di parola. Vedere [Ancoraggi](anchors-in-regular-expressions.md).|  
 |`\t`|Corrisponde a un carattere di tabulazione, `\u0009`.|  
 |`\r`|Corrisponde a un carattere di ritorno a capo, `\u000D`. Si noti che `\r` non equivale al carattere di nuova riga, `\n`.|  
 |`\v`|Corrisponde a un carattere di tabulazione verticale, `\u000B`.|  
 |`\f`|Corrisponde a un carattere di avanzamento carta, `\u000C`.|  
 |`\n`|Corrisponde a una nuova riga, `\u000A`.|  
 |`\e`|Corrisponde a un carattere di escape, `\u001B`.|  
-|`\` *nnn*|Corrisponde a un carattere ASCII, dove *nnn* è costituito da due o tre cifre che rappresentano il codice di carattere ottale. Ad esempio, `\040` rappresenta un carattere di spazio. Questo costrutto viene interpretato come un backreference se è costituito solo da una cifra, ad esempio `\2` o se corrisponde al numero di un gruppo di acquisizione. Vedere [Costrutti di backreference](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).|  
-|`\x`*nn*|Corrisponde a un carattere ASCII dove *nn* è un codice carattere esadecimale a due cifre.|  
-|`\c`*X (in* vi o|Corrisponde a un carattere di controllo ASCII, dove X è la lettera del carattere di controllo. Ad esempio, `\cC` corrisponde a CTRL-C.|  
-|`\u` *nnnn*|Corrisponde a un'unità di codice UTF-16 il cui valore è l'esadecimale *nnnn*. **Nota:** la sequenza di caratteri di escape Perl 5 usata per specificare Unicode non è supportata da .NET. Il formato di escape carattere Perl 5 ha il `\x{` *####* `…}`formato , dove *####* `…` è una serie di cifre esadecimali. Usare invece `\u`*nnnn*.|  
+|`\` *nnn*|Corrisponde a un carattere ASCII dove *nnn* è costituito da due o tre cifre che rappresentano il codice carattere ottale. Ad esempio, `\040` rappresenta un carattere di spazio. Questo costrutto viene interpretato come un backreference se è costituito solo da una cifra, ad esempio `\2` o se corrisponde al numero di un gruppo di acquisizione. Vedere [Costrutti di backreference](backreference-constructs-in-regular-expressions.md).|  
+|`\x` *nn*|Corrisponde a un carattere ASCII dove *nn* è un codice carattere esadecimale a due cifre.|  
+|`\c` *X*|Corrisponde a un carattere di controllo ASCII, dove X è la lettera del carattere di controllo. Ad esempio, `\cC` corrisponde a CTRL-C.|  
+|`\u` *nnnn*|Corrisponde a un'unità di codice UTF-16 il cui valore è l'esadecimale *nnnn*. **Nota:** la sequenza di caratteri di escape Perl 5 usata per specificare Unicode non è supportata da .NET. Il carattere di escape Perl 5 ha il formato `\x{` *####* `…}` , dove *####* `…` è una serie di cifre esadecimali. Usare invece `\u`*nnnn*.|  
 |`\`|Quando è seguito da un carattere non riconosciuto come carattere di escape, corrisponde a tale carattere. Ad esempio, `\*` corrisponde a un asterisco (*) ed equivale a `\x2A`.|  
   
 ## <a name="an-example"></a>Esempio  
@@ -70,4 +70,4 @@ La barra rovesciata (\\) in un'espressione regolare indica una delle situazioni 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linguaggio delle espressioni regolari - Guida di riferimento rapidoRegular Expression Language - Quick Reference](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguaggio di espressioni regolari - Riferimento rapido](regular-expression-language-quick-reference.md)

@@ -8,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
-ms.openlocfilehash: cca48889670c3bd67366c879ccede94c89542c8d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eff176f7c3ae5cae4c450047214d8e9e20a6e66d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139693"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290746"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Procedura: Scrivere un ciclo Parallel.ForEach con variabili partition-local
 
 L'esempio seguente illustra come scrivere un metodo <xref:System.Threading.Tasks.Parallel.ForEach%2A> che usa variabili partition-local. Quando viene eseguito un ciclo <xref:System.Threading.Tasks.Parallel.ForEach%2A>, la relativa raccolta di origine viene divisa in più partizioni. Ogni partizione ha la propria copia della variabile partition-local. Una variabile partition-local è simile a una [variabile thread-local](xref:System.Threading.ThreadLocal%601), tranne per il fatto che in un singolo thread possono essere eseguite più partizioni.
 
-Il codice e i parametri riportati in questo esempio, somigliano molto al metodo <xref:System.Threading.Tasks.Parallel.For%2A> corrispondente. Per altre informazioni, vedere [Procedura: scrivere un ciclo Parallel.For con variabili di thread locali](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).
+Il codice e i parametri riportati in questo esempio, somigliano molto al metodo <xref:System.Threading.Tasks.Parallel.For%2A> corrispondente. Per altre informazioni, vedere [Procedura: scrivere un ciclo Parallel.For con variabili di thread locali](how-to-write-a-parallel-for-loop-with-thread-local-variables.md).
 
 Per usare una variabile partition-local in un ciclo <xref:System.Threading.Tasks.Parallel.ForEach%2A>, è necessario chiamare uno degli overload del metodo che accetta due parametri di tipo. Il primo parametro di tipo, `TSource`, specifica il tipo di elemento di origine, mentre il secondo parametro di tipo, `TLocal`, specifica il tipo di variabile partition-local.
 
@@ -50,6 +50,6 @@ Nell'esempio seguente viene chiamato l'overload <xref:System.Threading.Tasks.Par
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Parallelismo dei dati](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [Procedura: scrivere un ciclo Parallel.For con variabili di thread locali](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
-- [Espressioni lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [Parallelismo dei dati](data-parallelism-task-parallel-library.md)
+- [Procedura: Scrivere un ciclo Parallel.For con variabili di thread locali](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
+- [Espressioni lambda in PLINQ e TPL](lambda-expressions-in-plinq-and-tpl.md)

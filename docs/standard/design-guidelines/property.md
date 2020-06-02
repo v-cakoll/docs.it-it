@@ -6,12 +6,12 @@ helpviewer_keywords:
 - member design guidelines, properties
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-ms.openlocfilehash: 8b6570b1b7c292729b78f2fe52f24f73319efe6c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: c49b42ab369ace582c76d7f326da309415e8c45b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743660"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291942"
 ---
 # <a name="property-design"></a>Progettazione di proprietà
 Sebbene le proprietà siano tecnicamente molto simili ai metodi, sono piuttosto diverse in termini di scenari di utilizzo. Dovrebbero essere considerati campi intelligenti. Hanno la sintassi di chiamata dei campi e la flessibilità dei metodi.
@@ -20,11 +20,11 @@ Sebbene le proprietà siano tecnicamente molto simili ai metodi, sono piuttosto 
 
  Tenere presente che se il tipo della proprietà è un tipo di riferimento modificabile, è possibile modificare il valore della proprietà anche se la proprietà è solo Get.
 
- ❌ non forniscono proprietà o proprietà solo set con il metodo set con accessibilità più ampia rispetto al Getter.
+ ❌NON fornire proprietà o proprietà solo set con il metodo set con accessibilità più ampia rispetto al Getter.
 
  Ad esempio, non usare le proprietà con un setter pubblico e un getter protetto.
 
- Se non è possibile specificare il getter della proprietà, implementare invece la funzionalità come metodo. Prendere in considerazione l'avvio del nome del metodo con `Set` e seguire il nome della proprietà. Ad esempio, <xref:System.AppDomain> dispone di un metodo denominato `SetCachePath` invece di avere una proprietà solo set denominata `CachePath`.
+ Se non è possibile specificare il getter della proprietà, implementare invece la funzionalità come metodo. Prendere in considerazione l'avvio del nome del metodo con `Set` e seguire gli elementi che avrebbero denominato la proprietà. Ad esempio, <xref:System.AppDomain> dispone di un metodo chiamato `SetCachePath` anziché avere una proprietà solo set denominata `CachePath` .
 
  ✔️ forniscono valori predefiniti ragionevoli per tutte le proprietà, assicurando che le impostazioni predefinite non comportino un problema di sicurezza o un codice inefficiente.
 
@@ -34,53 +34,53 @@ Sebbene le proprietà siano tecnicamente molto simili ai metodi, sono piuttosto 
 
  ✔️ conservare il valore precedente se un metodo di impostazione della proprietà genera un'eccezione.
 
- ❌ evitare di generare eccezioni dai getter della proprietà.
+ ❌EVITARE di generare eccezioni dai getter della proprietà.
 
  I getter della proprietà devono essere semplici operazioni e non devono avere precondizioni. Se un getter può generare un'eccezione, dovrebbe essere probabilmente riprogettato per essere un metodo. Si noti che questa regola non si applica agli indicizzatori, in cui si prevedono eccezioni come risultato della convalida degli argomenti.
 
 ### <a name="indexed-property-design"></a>Progettazione proprietà indicizzata
  Una proprietà indicizzata è una proprietà speciale che può avere parametri e può essere chiamata con una sintassi speciale simile all'indicizzazione della matrice.
 
- Le proprietà indicizzate sono comunemente definite indicizzatori. Gli indicizzatori devono essere usati solo nelle API che consentono di accedere agli elementi di una raccolta logica. Ad esempio, una stringa è una raccolta di caratteri e l'indicizzatore in <xref:System.String?displayProperty=nameWithType> è stato aggiunto per accedere ai relativi caratteri.
+ Le proprietà indicizzate sono comunemente definite indicizzatori. Gli indicizzatori devono essere usati solo nelle API che consentono di accedere agli elementi di una raccolta logica. Ad esempio, una stringa è una raccolta di caratteri e l'indicizzatore su <xref:System.String?displayProperty=nameWithType> è stato aggiunto per accedere ai relativi caratteri.
 
  ✔️ CONSIGLIABILE usare gli indicizzatori per fornire l'accesso ai dati archiviati in una matrice interna.
 
  ✔️ considerare la possibilità di fornire indicizzatori sui tipi che rappresentano raccolte di elementi.
 
- ❌ evitare di utilizzare proprietà indicizzate con più di un parametro.
+ ❌EVITARE di utilizzare proprietà indicizzate con più di un parametro.
 
- Se la progettazione richiede più parametri, riconsiderare se la proprietà rappresenta effettivamente una funzione di accesso a una raccolta logica. In caso contrario, utilizzare i metodi. Provare ad avviare il nome del metodo con `Get` o `Set`.
+ Se la progettazione richiede più parametri, riconsiderare se la proprietà rappresenta effettivamente una funzione di accesso a una raccolta logica. In caso contrario, utilizzare i metodi. Provare ad avviare il nome del metodo con `Get` o `Set` .
 
- ❌ evitare gli indicizzatori con tipi di parametro diversi da <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType>o un'enumerazione.
+ ❌Evitare gli indicizzatori con tipi di parametro diversi da <xref:System.Int32?displayProperty=nameWithType> , <xref:System.Int64?displayProperty=nameWithType> ,, o da <xref:System.String?displayProperty=nameWithType> <xref:System.Object?displayProperty=nameWithType> un'enumerazione.
 
- Se la progettazione richiede altri tipi di parametri, valutare fortemente se l'API rappresenta effettivamente una funzione di accesso a una raccolta logica. In caso contrario, usare un metodo. Provare ad avviare il nome del metodo con `Get` o `Set`.
+ Se la progettazione richiede altri tipi di parametri, valutare fortemente se l'API rappresenta effettivamente una funzione di accesso a una raccolta logica. In caso contrario, usare un metodo. Provare ad avviare il nome del metodo con `Get` o `Set` .
 
- ✔️ utilizzare il nome `Item` per le proprietà indicizzate a meno che non esista un nome ovviamente migliore (ad esempio, vedere la proprietà <xref:System.String.Chars%2A> in `System.String`).
+ ✔️ utilizzare il nome `Item` per le proprietà indicizzate a meno che non esista un nome ovviamente migliore (ad esempio, vedere la <xref:System.String.Chars%2A> Proprietà in `System.String` ).
 
- In C#gli indicizzatori sono elementi denominati per impostazione predefinita. Il <xref:System.Runtime.CompilerServices.IndexerNameAttribute> può essere utilizzato per personalizzare questo nome.
+ In C# gli indicizzatori sono elementi denominati per impostazione predefinita. L'oggetto <xref:System.Runtime.CompilerServices.IndexerNameAttribute> può essere utilizzato per personalizzare questo nome.
 
- ❌ non forniscono un indicizzatore e metodi semanticamente equivalenti.
+ ❌NON fornire un indicizzatore e metodi semanticamente equivalenti.
 
- ❌ non forniscono più di una famiglia di indicizzatori in overload in un unico tipo.
+ ❌NON fornire più di una famiglia di indicizzatori in overload in un unico tipo.
 
- Questa operazione viene applicata dal C# compilatore.
+ Questa impostazione viene applicata dal compilatore C#.
 
- ❌ non utilizzano proprietà indicizzate non predefinite.
+ ❌Non usare proprietà indicizzate non predefinite.
 
- Questa operazione viene applicata dal C# compilatore.
+ Questa impostazione viene applicata dal compilatore C#.
 
 ### <a name="property-change-notification-events"></a>Eventi di notifica della modifica delle proprietà
- A volte è utile fornire un evento per notificare all'utente le modifiche apportate al valore di una proprietà. Ad esempio, `System.Windows.Forms.Control` genera un evento `TextChanged` dopo che il valore della relativa proprietà `Text` è stato modificato.
+ A volte è utile fornire un evento per notificare all'utente le modifiche apportate al valore di una proprietà. Ad esempio, `System.Windows.Forms.Control` genera un `TextChanged` evento dopo che il valore della relativa `Text` proprietà è stato modificato.
 
  ✔️ valutare la possibilità di generare eventi di notifica delle modifiche quando vengono modificati i valori delle proprietà nelle API di alto livello, in genere componenti di progettazione.
 
  Se è disponibile uno scenario valido che consente a un utente di conoscere quando una proprietà di un oggetto viene modificata, l'oggetto deve generare un evento di notifica delle modifiche per la proprietà.
 
- Tuttavia, è improbabile che valga l'overhead per generare eventi di questo tipo per le API di basso livello, ad esempio tipi di base o raccolte. Ad esempio, <xref:System.Collections.Generic.List%601> non genererebbe tali eventi quando un nuovo elemento viene aggiunto all'elenco e la proprietà `Count` viene modificata.
+ Tuttavia, è improbabile che valga l'overhead per generare eventi di questo tipo per le API di basso livello, ad esempio tipi di base o raccolte. Ad esempio, <xref:System.Collections.Generic.List%601> non genererà tali eventi quando un nuovo elemento viene aggiunto all'elenco e la `Count` proprietà viene modificata.
 
  ✔️ valutare la possibilità di generare eventi di notifica delle modifiche quando il valore di una proprietà viene modificato tramite forze esterne.
 
- Se il valore di una proprietà viene modificato tramite una forza esterna (in un modo diverso dalla chiamata ai metodi sull'oggetto), la generazione di eventi indica allo sviluppatore che il valore è in corso di modifica ed è stato modificato. Un esempio valido è la proprietà `Text` di un controllo casella di testo. Quando l'utente digita il testo in un `TextBox`, il valore della proprietà cambia automaticamente.
+ Se il valore di una proprietà viene modificato tramite una forza esterna (in un modo diverso dalla chiamata ai metodi sull'oggetto), la generazione di eventi indica allo sviluppatore che il valore è in corso di modifica ed è stato modificato. Un esempio valido è la `Text` proprietà di un controllo casella di testo. Quando l'utente digita il testo in un oggetto `TextBox` , il valore della proprietà cambia automaticamente.
 
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*
 
@@ -88,5 +88,5 @@ Sebbene le proprietà siano tecnicamente molto simili ai metodi, sono piuttosto 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida di progettazione dei membri](../../../docs/standard/design-guidelines/member.md)
-- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
+- [Linee guida per la progettazione di membri](member.md)
+- [Linee guida per la progettazione di Framework](index.md)

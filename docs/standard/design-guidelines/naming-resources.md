@@ -9,12 +9,12 @@ helpviewer_keywords:
 - global applications, naming guidelines
 - international applications, naming guidelines
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
-ms.openlocfilehash: 95aff35569e58eacfd064609140a29b53e0036da
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 762ba99c4751ba40f5f33e99455cf950af35cdf6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743823"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290149"
 ---
 # <a name="naming-resources"></a>Denominazione di risorse
 Poiché è possibile fare riferimento alle risorse localizzabili tramite determinati oggetti come se fossero proprietà, le linee guida per la denominazione delle risorse sono simili alle linee guida della proprietà.
@@ -23,7 +23,7 @@ Poiché è possibile fare riferimento alle risorse localizzabili tramite determi
 
  ✔️ forniscono identificatori descrittivi anziché brevi.
 
- ❌ non utilizzano parole chiave specifiche della lingua dei linguaggi CLR principali.
+ ❌Non usare parole chiave specifiche del linguaggio dei linguaggi CLR principali.
 
  ✔️ utilizzano solo caratteri alfanumerici e caratteri di sottolineatura nelle risorse di denominazione.
 
@@ -40,5 +40,5 @@ Poiché è possibile fare riferimento alle risorse localizzabili tramite determi
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
-- [Convenzioni di denominazione](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Linee guida per la progettazione di Framework](index.md)
+- [Linee guida per la denominazione](naming-guidelines.md)

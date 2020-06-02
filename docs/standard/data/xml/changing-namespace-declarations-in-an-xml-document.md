@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2758f40-e497-4964-8d8d-1bb68af14dcd
-ms.openlocfilehash: b8aa670764deb8e77cfb67fd16dbcf8b1cc9b4c0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e55486feeb427c95a9394ac83758e6052603921e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711129"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291578"
 ---
 # <a name="changing-namespace-declarations-in-an-xml-document"></a>Modifica delle dichiarazioni dello spazio dei nomi in un documento XML
 Le dichiarazioni dello spazio dei nomi e gli attributi **xmlns** vengono esposti da **XmlDocument** come parte del modello a oggetti del documento e archiviati in **XmlDocument**, perché il documento mantenga la posizione degli attributi quando viene salvato. La modifica di questi attributi non ha effetto sulle proprietà **Name**, **NamespaceURI** e **Prefix** degli altri nodi già presenti nell'albero. Se ad esempio si carica il documento seguente, l'elemento `test` ha **NamespaceURI** `123.`  
@@ -42,6 +42,6 @@ doc.documentElement.SetAttribute("xmlns","456");
   
  La modifica degli attributi `xmlns` non avrà quindi alcun effetto fino a quando l'oggetto **XmlDocument** non verrà salvato e ricaricato.  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [XML DOM (Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML DOM (Document Object Model)](xml-document-object-model-dom.md)

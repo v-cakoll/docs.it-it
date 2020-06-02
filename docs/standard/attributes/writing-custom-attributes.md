@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: 6570c6994c0f2e6571361c3eadc73b02a55f1584
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d05df02bfc75e9aeb2c583a831bcee8b7b971206
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140581"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276131"
 ---
 # <a name="writing-custom-attributes"></a>Scrittura di attributi personalizzati
 Per progettare attributi personalizzati, non è necessario apprendere molti nuovi concetti. Se si ha familiarità con la programmazione orientata agli oggetti e si è in grado di progettare le classi, si ha già gran parte delle conoscenze necessarie. Gli attributi personalizzati sono essenzialmente classi tradizionali che derivano direttamente o indirettamente da <xref:System.Attribute?displayProperty=nameWithType>. Analogamente alle classi tradizionali, gli attributi personalizzati contengono metodi che archiviano e recuperano dati.  
@@ -32,7 +32,7 @@ Per progettare attributi personalizzati, non è necessario apprendere molti nuov
   
 - [Dichiarazione della classe di attributi](#declaring-the-attribute-class)  
   
-- [Dichiarazione di costruttoriDeclaring constructors](#declaring-constructors)  
+- [Dichiarazione di costruttori](#declaring-constructors)  
   
 - [Dichiarazione delle proprietà](#declaring-properties)  
   
@@ -150,4 +150,4 @@ Per progettare attributi personalizzati, non è necessario apprendere molti nuov
 
 - <xref:System.Attribute?displayProperty=nameWithType>
 - <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>
-- [Attributi](../../../docs/standard/attributes/index.md)
+- [Attributi](index.md)

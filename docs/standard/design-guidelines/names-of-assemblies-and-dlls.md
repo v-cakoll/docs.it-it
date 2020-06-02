@@ -8,27 +8,27 @@ helpviewer_keywords:
 - assemblies [.NET Framework], names
 - DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
-ms.openlocfilehash: f3c5997f777c937e9726b271afa0ae6d7a19b37d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 138ae8154b0d10fb813f0c98ceb7c58a2471b780
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744162"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291955"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>Nomi di assembly e DLL
 Un assembly è l'unità di distribuzione e di identità per i programmi di codice gestito. Sebbene gli assembly possano estendersi su uno o più file, in genere un assembly esegue il mapping uno-a-uno con una DLL. Pertanto, in questa sezione vengono descritte solo le convenzioni di denominazione delle DLL, che possono essere mappate alle convenzioni di denominazione degli assembly.
 
  ✔️ scegliere nomi per le DLL di assembly che suggeriscono grandi porzioni di funzionalità, ad esempio System. Data.
 
- I nomi di assembly e DLL non devono corrispondere ai nomi degli spazi dei nomi, ma è ragionevole seguire il nome dello spazio dei nomi durante la denominazione degli assembly. Una regola empirica consiste nel denominare la DLL in base al prefisso comune degli spazi dei nomi contenuti nell'assembly. Ad esempio, è possibile chiamare un assembly con due spazi dei nomi, `MyCompany.MyTechnology.FirstFeature` e `MyCompany.MyTechnology.SecondFeature`, `MyCompany.MyTechnology.dll`.
+ I nomi di assembly e DLL non devono corrispondere ai nomi degli spazi dei nomi, ma è ragionevole seguire il nome dello spazio dei nomi durante la denominazione degli assembly. Una regola empirica consiste nel denominare la DLL in base al prefisso comune degli spazi dei nomi contenuti nell'assembly. Ad esempio, `MyCompany.MyTechnology.FirstFeature` `MyCompany.MyTechnology.SecondFeature` è possibile chiamare un assembly con due spazi dei nomi, e `MyCompany.MyTechnology.dll` .
 
  ✔️ CONSIDERARE la denominazione di dll in base al modello seguente:
 
  `<Company>.<Component>.dll`
 
- dove `<Component>` contiene una o più clausole separate da punti. Ad esempio,
+ dove `<Component>` contiene una o più clausole separate da punti. Ad esempio:
 
- `Litware.Controls.dll`
+ `Litware.Controls.dll`.
 
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*
 
@@ -36,5 +36,5 @@ Un assembly è l'unità di distribuzione e di identità per i programmi di codic
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
-- [Convenzioni di denominazione](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Linee guida per la progettazione di Framework](index.md)
+- [Linee guida per la denominazione](naming-guidelines.md)

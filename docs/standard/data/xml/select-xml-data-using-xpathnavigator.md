@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c268c49e-32b9-4171-b782-dcb7b065fa73
-ms.openlocfilehash: 99b6b3b6959abf4c8adc313364ad641249bd9bc3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d5e7074fc8c68a0a0243ea4ad237e713e0a729b3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710167"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289057"
 ---
 # <a name="select-xml-data-using-xpathnavigator"></a>Selezione di dati XML con XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un set di metodi usato per selezionare un set di nodi in un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> usando un'espressione XPath. È possibile scorrere il set di nodi dopo averlo selezionato.  
@@ -60,14 +60,14 @@ while(nodes.MoveNext())
 ### <a name="optimized-selection-methods"></a>Metodi di selezione ottimizzati  
  I metodi <xref:System.Xml.XPath.XPathNavigator.SelectChildren%2A>, <xref:System.Xml.XPath.XPathNavigator.SelectAncestors%2A> e <xref:System.Xml.XPath.XPathNavigator.SelectDescendants%2A> della classe <xref:System.Xml.XPath.XPathNavigator> rappresentano le espressioni XPath comunemente usate per recuperare nodi figlio, discendente e progenitore. Questi metodi consentono di ottimizzare le prestazioni e sono più veloci delle espressioni XPath corrispondenti. I metodi <xref:System.Xml.XPath.XPathNavigator.SelectChildren%2A>, <xref:System.Xml.XPath.XPathNavigator.SelectAncestors%2A> e <xref:System.Xml.XPath.XPathNavigator.SelectDescendants%2A> consentono di selezionare i nodi progenitore, figlio e discendente in base a un valore <xref:System.Xml.XPath.XPathNodeType> o al nome locale e all'URI dello spazio dei nomi dei nodi da selezionare. I nodi progenitore, figlio e discendente vengono restituiti in un oggetto <xref:System.Xml.XPath.XPathNodeIterator>.  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Elaborazione di dati XML con il modello di dati XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Valutazione di espressioni XPath con XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
-- [Corrispondenza di nodi utilizzando XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
-- [Tipi di nodo riconosciuti con le query XPath](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)
-- [Query e spazi dei nomi XPath](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
-- [Espressioni XPath compilate](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
+- [Elaborazione di dati XML con il modello di dati XPath](process-xml-data-using-the-xpath-data-model.md)
+- [Valutazione di espressioni XPath con XPathNavigator](evaluate-xpath-expressions-using-xpathnavigator.md)
+- [Corrispondenza di nodi utilizzando XPathNavigator](matching-nodes-using-xpathnavigator.md)
+- [Tipi di nodo riconosciuti con le query XPath](node-types-recognized-with-xpath-queries.md)
+- [Query e spazi dei nomi XPath](xpath-queries-and-namespaces.md)
+- [Espressioni XPath compilate](compiled-xpath-expressions.md)

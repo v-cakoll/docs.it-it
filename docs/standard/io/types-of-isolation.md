@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: 0e8be9b1d12d40f8135d21abe9dd6cb0b63bb2d8
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 7802e4bc27195d1c8ecaccbd64121fb24328a4d8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646398"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288537"
 ---
 # <a name="types-of-isolation"></a>Tipi di isolamento
 L'accesso allo spazio di memorizzazione isolato è sempre limitato all'utente che l'ha creata. Per implementare questo tipo di isolamento, Common Language Runtime usa la stessa nozione di identità utente riconosciuta dal sistema operativo, ovvero l'identità associata al processo in cui è in esecuzione il codice quando viene aperto lo spazio di memorizzazione. Sebbene sia un'identità utente autenticata, è possibile che con la rappresentazione l'identità dell'utente corrente venga modificata dinamicamente.  
@@ -38,9 +38,9 @@ L'accesso allo spazio di memorizzazione isolato è sempre limitato all'utente ch
   
  Combinando i concetti di identità di utente, dominio e assembly, lo spazio di memorizzazione isolato può isolare i dati nei modi seguenti, ciascuno dei quali presenta specifici scenari di utilizzo:  
   
-- [Isolamento per utente e assemblaggio](#UserAssembly)  
+- [Isolamento in base all'utente e all'assembly](#UserAssembly)  
   
-- [Isolamento per utente, dominio e assembly](#UserDomainAssembly)  
+- [Isolamento in base all'utente, al dominio e all'assembly](#UserDomainAssembly)  
   
  Ognuno di questi isolamenti può essere combinato con un profilo di utente roaming. Per altre informazioni, vedere la sezione [Spazio di memorizzazione isolato e roaming](#Roaming).  
   
@@ -48,10 +48,10 @@ L'accesso allo spazio di memorizzazione isolato è sempre limitato all'utente ch
   
  ![Diagramma che illustra l'isolamento in base a utente e assembly.](./media/types-of-isolation/isolated-storage-types.gif)  
   
- Ad eccezione degli archivi mobili, l'archiviazione isolata viene sempre isolata in modo implicito dal computer perché utilizza le funzionalità di archiviazione locali a un determinato computer.  
+ Ad eccezione degli archivi di roaming, lo spazio di memorizzazione isolato viene sempre isolato in modo implicito dal computer perché usa le funzionalità di archiviazione locali di un determinato computer.  
   
 > [!IMPORTANT]
-> L'archiviazione isolata non è disponibile per le app di Windows 8.x Store. Al contrario, usare le classi di dati dell'applicazione negli spazi dei nomi `Windows.Storage` inclusi nell'API di Windows Runtime per archiviare dati e file locali. Per altre informazioni, vedere [Dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.  
+> Lo spazio di memorizzazione isolato non è disponibile per le app di Windows 8. x Store. Al contrario, usare le classi di dati dell'applicazione negli spazi dei nomi `Windows.Storage` inclusi nell'API di Windows Runtime per archiviare dati e file locali. Per altre informazioni, vedere [Dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.  
   
 <a name="UserAssembly"></a>
 ## <a name="isolation-by-user-and-assembly"></a>Isolamento in base all'utente e all'assembly  
@@ -106,4 +106,4 @@ L'accesso allo spazio di memorizzazione isolato è sempre limitato all'utente ch
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
-- [Archiviazione isolata](../../../docs/standard/io/isolated-storage.md)
+- [Spazio di memorizzazione isolato](isolated-storage.md)

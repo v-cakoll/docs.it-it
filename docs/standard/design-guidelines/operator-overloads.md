@@ -8,43 +8,43 @@ helpviewer_keywords:
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-ms.openlocfilehash: 0999e94c8d77396b237522e89c51206ce1226718
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 893b7d1f76dfb059a0ddca77dfd8654812e9ae12
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400568"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289733"
 ---
 # <a name="operator-overloads"></a>Overload dell'operatore
-Gli overload degli operatori consentono ai tipi di framework di apparire come se fossero primitive di linguaggio incorporate.
+Gli overload degli operatori consentono la visualizzazione di tipi di Framework come se fossero primitive di linguaggio incorporati.
 
- Sebbene siano consentiti e utili in alcune situazioni, gli overload dell'operatore devono essere usati con cautela. Esistono molti casi in cui l'overload degli operatori è stato abusato, ad esempio quando i progettisti del framework hanno iniziato a utilizzare gli operatori per le operazioni che devono essere metodi semplici. Le linee guida seguenti dovrebbero aiutare a decidere quando e come usare l'overload dell'operatore.
+ Sebbene sia consentito e utile in alcune situazioni, gli overload degli operatori devono essere usati con cautela. In molti casi l'overload degli operatori è stato abusato, ad esempio quando le finestre di progettazione del Framework hanno iniziato a usare gli operatori per le operazioni che devono essere metodi semplici. Le linee guida seguenti consentono di decidere quando e come usare l'overload degli operatori.
 
- ❌AVOID che definisce gli overload degli operatori, ad eccezione dei tipi che dovrebbero avere l'aspetto di tipi primitivi (incorporati).
+ ❌EVITARE di definire gli overload degli operatori, ad eccezione dei tipi che dovrebbero avere un aspetto simile ai tipi primitivi (incorporati).
 
- ✔️ CONSIDER che definisce gli overload dell'operatore in un tipo che dovrebbe sembrare un tipo primitivo.
+ ✔️ CONSIDERARE la definizione di overload degli operatori in un tipo che dovrebbe essere simile a un tipo primitivo.
 
- Ad <xref:System.String?displayProperty=nameWithType> esempio, `operator==` `operator!=` ha e definito.
+ Ad esempio, <xref:System.String?displayProperty=nameWithType> ha `operator==` e `operator!=` definito.
 
- ✔️ dedefinire gli overload degli operatori in <xref:System.Decimal?displayProperty=nameWithType>struct che rappresentano numeri (ad esempio ).
+ ✔️ definiscono gli overload degli operatori negli struct che rappresentano i numeri (ad esempio <xref:System.Decimal?displayProperty=nameWithType> ).
 
- ❌NON essere carino quando si definiscono gli overload dell'operatore.
+ ❌NON è carino quando si definiscono gli overload degli operatori.
 
- L'overload dell'operatore è utile nei casi in cui è immediatamente evidente quale sarà il risultato dell'operazione. Ad esempio, ha senso essere in <xref:System.DateTime> grado `DateTime` di <xref:System.TimeSpan>sottrarre uno dall'altro e ottenere un . Tuttavia, non è appropriato utilizzare l'operatore di unione logica per unionare due query di database o utilizzare l'operatore shift per scrivere in un flusso.
+ L'overload degli operatori è utile nei casi in cui è immediatamente evidente quale sarà il risultato dell'operazione. Ad esempio, è sensato poter sottrarre un <xref:System.DateTime> oggetto da un altro `DateTime` e ottenere un <xref:System.TimeSpan> . Tuttavia, non è consigliabile usare l'operatore di unione logica per unire due query di database o per usare l'operatore Shift per scrivere in un flusso.
 
- ❌DO NOT fornire overload dell'operatore a meno che almeno uno degli operandi sia del tipo che definisce l'overload.
+ ❌Non fornire overload degli operatori a meno che almeno uno degli operandi sia del tipo che definisce l'overload.
 
- ✔️ gli operatori DO eseguono l'overload degli operatori in modo simmetrico.
+ ✔️ gli operatori di overload in modo simmetrico.
 
- Ad esempio, se `operator==`si esegue l'overload di , è necessario eseguire anche l'overload di `operator!=`. Analogamente, se `operator<`si esegue l'overload di , è necessario eseguire anche l'overload di `operator>`, e così via.
+ Se, ad esempio, si esegue l'overload di `operator==` , è necessario anche eseguire l'overload di `operator!=` . Analogamente, se si esegue l'overload di `operator<` , è inoltre necessario eseguire l'overload di `operator>` e così via.
 
- ✔️ CONSIDER che forniscono metodi con nomi descrittivi che corrispondono a ogni operatore di overload.
+ ✔️ considerare la possibilità di fornire metodi con nomi descrittivi che corrispondono a ogni operatore di overload.
 
- Molti linguaggi non supportano l'overload degli operatori. Per questo motivo, è consigliabile che i tipi che eseguono l'overload degli operatori includano un metodo secondario con un nome specifico di dominio appropriato che fornisce funzionalità equivalenti.
+ Molti linguaggi non supportano l'overload degli operatori. Per questo motivo, è consigliabile che i tipi che gli operatori di overload includano un metodo secondario con un nome appropriato specifico del dominio che fornisca funzionalità equivalenti.
 
- La tabella seguente contiene un elenco di operatori e i nomi dei metodi descrittivi corrispondenti.
+ La tabella seguente contiene un elenco di operatori e i nomi di metodo descrittivi corrispondenti.
 
-|Simbolo dell'operatore di C|Nome metadati|Nome descrittivo|
+|Simbolo dell'operatore C#|Nome dei metadati|Nome descrittivo|
 |-------------------------|-------------------|-------------------|
 |`N/A`|`op_Implicit`|`To<TypeName>/From<TypeName>`|
 |`N/A`|`op_Explicit`|`To<TypeName>/From<TypeName>`|
@@ -85,27 +85,27 @@ Gli overload degli operatori consentono ai tipi di framework di apparire come se
 |`+ (unary)`|`op_UnaryPlus`|`Plus`|
 |`~`|`op_OnesComplement`|`OnesComplement`|
 
-### <a name="overloading-operator-"></a>Operatore di Overloading
- Sovraccaricare `operator ==` è piuttosto complicato. La semantica dell'operatore deve essere compatibile con <xref:System.Object.Equals%2A?displayProperty=nameWithType>diversi altri membri, ad esempio .
+### <a name="overloading-operator-"></a>Overload Operator = =
+ L'overload `operator ==` è piuttosto complesso. La semantica dell'operatore deve essere compatibile con diversi altri membri, ad esempio <xref:System.Object.Equals%2A?displayProperty=nameWithType> .
 
 ### <a name="conversion-operators"></a>Operatori di conversione
  Gli operatori di conversione sono operatori unari che consentono la conversione da un tipo a un altro. Gli operatori devono essere definiti come membri statici nell'operando o nel tipo restituito. Esistono due tipi di operatori di conversione: implicito ed esplicito.
 
- ❌NON fornire un operatore di conversione se tale conversione non è chiaramente prevista dagli utenti finali.
+ ❌Non fornire un operatore di conversione se tale conversione non è chiaramente prevista dagli utenti finali.
 
- ❌NON definire operatori di conversione all'esterno del dominio di un tipo.
+ ❌NON definire operatori di conversione al di fuori del dominio di un tipo.
 
- Ad <xref:System.Int32>esempio, <xref:System.Double>, <xref:System.Decimal> e sono tutti <xref:System.DateTime> tipi numerici, mentre non lo è. Pertanto, non deve essere presente `Double(long)` alcun `DateTime`operatore di conversione per convertire un oggetto in un oggetto . In tal caso, è preferibile utilizzare un costruttore.
+ Ad esempio, <xref:System.Int32> , <xref:System.Double> e <xref:System.Decimal> sono tutti tipi numerici, mentre <xref:System.DateTime> non è. Pertanto, non deve essere presente alcun operatore di conversione per convertire un oggetto `Double(long)` in un oggetto `DateTime` . In tal caso, è preferibile un costruttore.
 
- ❌NON fornire un operatore di conversione implicito se la conversione è potenzialmente lossy.
+ ❌NON fornire un operatore di conversione implicita se la conversione è potenzialmente perdita di perdite.
 
- Ad esempio, non deve essere `Double` presente `Int32` `Double` una conversione `Int32`implicita da a perché ha un intervallo più ampio di . Un operatore di conversione esplicito può essere fornito anche se la conversione è potenzialmente lossy.
+ Ad esempio, non deve essere presente una conversione implicita da `Double` a `Int32` perché `Double` ha un intervallo più ampio rispetto a `Int32` . È possibile fornire un operatore di conversione esplicito anche se la conversione è potenzialmente perdita di perdite.
 
- ❌DO NOT generare eccezioni da cast impliciti.
+ ❌Non generare eccezioni da cast impliciti.
 
- È molto difficile per gli utenti finali capire cosa sta succedendo, perché potrebbero non essere consapevoli che è in corso una conversione.
+ È molto difficile per gli utenti finali comprendere ciò che accade, perché potrebbero non essere consapevoli del fatto che è stata eseguita una conversione.
 
- ✔️ DO <xref:System.InvalidCastException?displayProperty=nameWithType> throw se una chiamata a un operatore cast genera una conversione lossy e il contratto dell'operatore non consente conversioni con perdita di dati.
+ ✔️ generano <xref:System.InvalidCastException?displayProperty=nameWithType> se una chiamata a un operatore cast comporta una conversione con perdita di dati e il contratto dell'operatore non consente le conversioni con perdita di dati.
 
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*
 
@@ -113,5 +113,5 @@ Gli overload degli operatori consentono ai tipi di framework di apparire come se
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida di progettazione dei membri](../../../docs/standard/design-guidelines/member.md)
-- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
+- [Linee guida per la progettazione di membri](member.md)
+- [Linee guida per la progettazione di Framework](index.md)

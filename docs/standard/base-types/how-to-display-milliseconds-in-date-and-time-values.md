@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: visualizzare i millisecondi nei valori data e ora'
+title: 'Procedura: Visualizzare i millisecondi nei valori di data e ora'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - dates [.NET Framework], milliseconds
 - milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-ms.openlocfilehash: 36d99753503d9ba4b1bde4143c86ba184674e53e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4c63e7e67d388b000954f3a53281f95b0f2522b9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74960399"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290500"
 ---
-# <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Procedura: visualizzare i millisecondi nei valori data e ora
+# <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Procedura: Visualizzare i millisecondi nei valori di data e ora
 I metodi di formattazione di data e ora predefiniti, ad esempio <xref:System.DateTime.ToString?displayProperty=nameWithType>, includono le ore, i minuti e i secondi di un valore di ora, ma ne escludono il componente dei millisecondi. Questo argomento descrive come includere un componente millisecondi di una data e un'ora nelle stringhe di data e ora formattate.  
   
 ### <a name="to-display-the-millisecond-component-of-a-datetime-value"></a>Per visualizzare il componente millisecondi di un valore DateTime  
@@ -47,9 +47,9 @@ I metodi di formattazione di data e ora predefiniti, ad esempio <xref:System.Dat
  [!code-vb[Formatting.HowTo.Millisecond#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Millisecond/vb/Millisecond.vb#3)]  
   
 > [!NOTE]
-> È possibile visualizzare piccolissime unità di secondo frazionarie, come decimillesimi di secondo o centomillesimi di secondo. Questi valori tuttavia potrebbero non essere significativi. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. Nei sistemi operativi Windows NT 3.5 e versioni successive e Windows Vista, la risoluzione dell'orologio è di circa 10-15 millisecondi.  
+> È possibile visualizzare piccolissime unità di secondo frazionarie, come decimillesimi di secondo o centomillesimi di secondo. Questi valori tuttavia potrebbero non essere significativi. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. Nei sistemi operativi Windows NT 3,5 e versioni successive e Windows Vista la risoluzione del clock è di circa 10-15 millisecondi.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Globalization.DateTimeFormatInfo>
-- [Stringhe di formato di data e ora personalizzateCustom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Stringhe di formato di data e ora personalizzato](custom-date-and-time-format-strings.md)

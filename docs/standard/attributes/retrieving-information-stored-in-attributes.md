@@ -11,26 +11,26 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: 4f0f3555ae1ab7e662d5f88ac65739a7c791a964
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fc8dcb38471d80d01d1f87993783af3d24868506
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78158077"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276135"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Recupero di informazioni memorizzate negli attributi
 Il recupero di un attributo personalizzato è un processo semplice. Dichiarare prima di tutto un'istanza dell'attributo da recuperare. Usare quindi il metodo <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> per inizializzare il nuovo attributo per il valore dell'attributo da recuperare. Dopo avere inizializzato il nuovo attributo, è sufficiente usarne le proprietà per ottenere i valori.  
   
 > [!IMPORTANT]
-> Questo argomento descrive come recuperare gli attributi personalizzati per il codice caricato nel contesto di esecuzione. Per recuperare gli attributi per il codice caricato nel contesto di sola reflection, è necessario usare la classe <xref:System.Reflection.CustomAttributeData>, come illustrato in [Procedura: Caricare assembly nel contesto Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+> Questo argomento descrive come recuperare gli attributi personalizzati per il codice caricato nel contesto di esecuzione. Per recuperare gli attributi per il codice caricato nel contesto di sola reflection, è necessario usare la classe <xref:System.Reflection.CustomAttributeData>, come illustrato in [Procedura: Caricare assembly nel contesto Reflection-Only](../../framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
  Questa sezione descrive i modi seguenti per recuperare gli attributi:  
   
-- [Recupero di una singola istanza di un attributoRetrieving a single instance of an attribute](#cpconretrievingsingleinstanceofattribute)  
+- [Recupero di una singola istanza di un attributo](#cpconretrievingsingleinstanceofattribute)  
   
 - [Recupero di più istanze di un attributo applicate allo stesso ambito](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
   
-- [Recupero di più istanze di un attributo applicato a ambiti diversiRetrieving multiple instances of an attribute applied to different scopes](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
+- [Recupero di più istanze di un attributo applicate a ambiti diversi](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
 <a name="cpconretrievingsingleinstanceofattribute"></a>
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>Recupero di una singola istanza di un attributo  
@@ -87,4 +87,4 @@ The attribute was not found.
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
-- [Attributi](../../../docs/standard/attributes/index.md)
+- [Attributi](index.md)

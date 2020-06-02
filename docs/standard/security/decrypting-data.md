@@ -11,12 +11,12 @@ helpviewer_keywords:
 - asymmetric decryption
 - decryption
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
-ms.openlocfilehash: 37194380d9f08d328f836bcb8648772348958768
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 844561c0d207106a183243f5f2b3e0cea3e70422
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706240"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288368"
 ---
 # <a name="decrypting-data"></a>Decrittografia di dati
 
@@ -174,9 +174,9 @@ Per permettere il funzionamento dell'esempio precedente, è necessario stabilire
 
 In genere, una parte (parte A) genera la sia la chiave pubblica che quella privata e archivia la chiave in memoria o in un contenitore di chiavi crittografiche. La parte A invia quindi la chiave pubblica a un'altra parte (parte B). Utilizzando la chiave pubblica, l'entità B crittografa i dati e li invia all'entità A. Dopo la ricezione dei dati, l'entità A la decrittografa usando la chiave privata corrispondente A. La decrittografia avrà esito positivo solo se la parte A usa la chiave privata corrispondente alla chiave pubblica usata dalla parte B per crittografare i dati.
 
-Per informazioni su come archiviare una chiave asimmetrica in un contenitore protetto di chiavi crittografiche e su come recuperare in seguito la chiave asimmetrica, vedere [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).
+Per informazioni su come archiviare una chiave asimmetrica in un contenitore protetto di chiavi crittografiche e su come recuperare in seguito la chiave asimmetrica, vedere [How to: Store Asymmetric Keys in a Key Container](how-to-store-asymmetric-keys-in-a-key-container.md).
 
-L'esempio seguente illustra la decrittografia di due matrici di byte che rappresentano una chiave simmetrica e il valore di inizializzazione. Per informazioni su come estrarre la chiave pubblica simmetrica dall'oggetto <xref:System.Security.Cryptography.RSACryptoServiceProvider> in un formato facilmente inviabile a terze parti, vedere [Encrypting Data](../../../docs/standard/security/encrypting-data.md).
+L'esempio seguente illustra la decrittografia di due matrici di byte che rappresentano una chiave simmetrica e il valore di inizializzazione. Per informazioni su come estrarre la chiave pubblica simmetrica dall'oggetto <xref:System.Security.Cryptography.RSACryptoServiceProvider> in un formato facilmente inviabile a terze parti, vedere [Encrypting Data](encrypting-data.md).
 
 ```vb
 'Create a new instance of the RSACryptoServiceProvider class.
@@ -204,6 +204,6 @@ symmetricIV = rsa.Decrypt(encryptedSymmetricIV , false);
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
-- [Crittografia di dati](../../../docs/standard/security/encrypting-data.md)
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [Generazione di chiavi per crittografia e decrittografia](generating-keys-for-encryption-and-decryption.md)
+- [Encrypting Data](encrypting-data.md)
+- [Servizi di crittografia](cryptographic-services.md)

@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
-ms.openlocfilehash: 889c5f85a2ea3fc08dadefda5509de0fcfab76ec
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bf1078d52f5e9056da6b28acc8dd2fc257eb3636
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710414"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291253"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>Lettura e scrittura di schemi XML
 È possibile usare l'API del modello SOM (Schema Object Model) per scrivere e leggere gli schemi XSD (XML Schema Definition Language) da file o altre origini e compilare schemi XML in memoria usando le classi nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType> associato alle strutture definite nella raccomandazione W3C (World Wide Web Consortium) "XML Schema".  
@@ -20,7 +20,7 @@ ms.locfileid: "75710414"
 ## <a name="reading-and-writing-xml-schemas"></a>Lettura e scrittura di schemi XML  
  La classe <xref:System.Xml.Schema.XmlSchema> fornisce i metodi <xref:System.Xml.Schema.XmlSchema.Read%2A> e <xref:System.Xml.Schema.XmlSchema.Write%2A> per leggere e scrivere schemi XML. Il metodo <xref:System.Xml.Schema.XmlSchema.Read%2A> restituisce un oggetto <xref:System.Xml.Schema.XmlSchema> che rappresenta lo schema XML e accetta un tipo <xref:System.Xml.Schema.ValidationEventHandler> facoltativo come parametro per gestire i messaggi di avviso e di errore della convalida dello rilevati durante la lettura di uno schema XML.  
   
- Il metodo <xref:System.Xml.Schema.XmlSchema.Write%2A> scrive schemi XML negli oggetti <xref:System.IO.Stream>, <xref:System.IO.TextWriter> e <xref:System.Xml.XmlWriter> e può accettare un oggetto <xref:System.Xml.XmlNamespaceManager> facoltativo come parametro. Un tipo <xref:System.Xml.XmlNamespaceManager> viene usato per la gestione degli spazi dei nomi rilevati in uno schema XML. Per altre informazioni sulla classe <xref:System.Xml.XmlNamespaceManager>, vedere [Gestione di spazi dei nomi in un documento XML](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md).  
+ Il metodo <xref:System.Xml.Schema.XmlSchema.Write%2A> scrive schemi XML negli oggetti <xref:System.IO.Stream>, <xref:System.IO.TextWriter> e <xref:System.Xml.XmlWriter> e può accettare un oggetto <xref:System.Xml.XmlNamespaceManager> facoltativo come parametro. Un tipo <xref:System.Xml.XmlNamespaceManager> viene usato per la gestione degli spazi dei nomi rilevati in uno schema XML. Per altre informazioni sulla classe <xref:System.Xml.XmlNamespaceManager>, vedere [Gestione di spazi dei nomi in un documento XML](managing-namespaces-in-an-xml-document.md).  
   
  Nell'esempio di codice seguente vengono mostrate la lettura da un file e la scrittura in un file di schemi XML. Il codice di esempio legge il file `example.xsd` in un oggetto <xref:System.Xml.Schema.XmlSchema> mediante il metodo `static`<xref:System.Xml.Schema.XmlSchema.Read%2A>, quindi scrive il file nella console e in un nuovo file `new.xsd`. Inoltre, il codice di esempio fornisce un tipo <xref:System.Xml.Schema.ValidationEventHandler> come parametro per il metodo `static`<xref:System.Xml.Schema.XmlSchema.Read%2A>, per gestire eventuali errori o avvisi di convalida dello schema rilevati durante la generazione di XML Schema. Se il tipo <xref:System.Xml.Schema.ValidationEventHandler> non è specificato (`null`), non vengono riportati né avvisi né errori.  
   
@@ -45,13 +45,13 @@ ms.locfileid: "75710414"
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari sul modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Post-Schema Compilation Infoset (PSCI, infoset sulla compilazione post-schema)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
-- [Gestione di spazi dei nomi in un documento XML](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)
+- [Cenni preliminari sul modello SOM XML](xml-schema-object-model-overview.md)
+- [Compilazione di XML Schema](building-xml-schemas.md)
+- [Attraversamento di schemi XML](traversing-xml-schemas.md)
+- [Modifica di schemi XML](editing-xml-schemas.md)
+- [Inclusione o importazione di schemi XML](including-or-importing-xml-schemas.md)
+- [XmlSchemaSet per la compilazione di schemi](xmlschemaset-for-schema-compilation.md)
+- [Post-Schema Compilation Infoset (PSCI, infoset sulla compilazione post-schema)](post-schema-compilation-infoset.md)
+- [Gestione di spazi dei nomi in un documento XML](managing-namespaces-in-an-xml-document.md)

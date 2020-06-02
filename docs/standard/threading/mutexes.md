@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Mutex class, about Mutex class
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-ms.openlocfilehash: 3f020db49bcdcbf6ce3d573348a93b06e87db199
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: f9267bdd19a14995851f2689651c001815812912
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242725"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291175"
 ---
 # <a name="mutexes"></a>Mutex
-È possibile usare un oggetto <xref:System.Threading.Mutex> per fornire l'accesso esclusivo a una risorsa. La classe <xref:System.Threading.Mutex> usa più risorse di sistema della classe <xref:System.Threading.Monitor>, ma è possibile eseguirne il marshalling fra i limiti del dominio dell'applicazione, può essere usata con più condizioni di attesa e può essere usata per sincronizzare i thread in processi diversi. Per un confronto dei meccanismi di sincronizzazione gestiti, vedere [Panoramica sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+È possibile usare un oggetto <xref:System.Threading.Mutex> per fornire l'accesso esclusivo a una risorsa. La classe <xref:System.Threading.Mutex> usa più risorse di sistema della classe <xref:System.Threading.Monitor>, ma è possibile eseguirne il marshalling fra i limiti del dominio dell'applicazione, può essere usata con più condizioni di attesa e può essere usata per sincronizzare i thread in processi diversi. Per un confronto dei meccanismi di sincronizzazione gestiti, vedere [Panoramica sulle primitive di sincronizzazione](overview-of-synchronization-primitives.md).  
   
  Per esempi di codice, vedere la documentazione di riferimento per i costruttori <xref:System.Threading.Mutex.%23ctor%2A>.  
   

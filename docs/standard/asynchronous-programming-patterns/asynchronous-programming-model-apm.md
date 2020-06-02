@@ -11,18 +11,18 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-ms.openlocfilehash: 0a9ea3c8c9c589bb5954fa9771ffd1bb095f6d73
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 96ad18e613d68ee97f4e5666afe77febadc6f991
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140148"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289980"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Modello di programmazione asincrona (APM)
 Un'operazione asincrona in cui viene usato il modello di progettazione dell'oggetto <xref:System.IAsyncResult> viene implementata come due metodi denominati `BeginOperationName` e `EndOperationName` tramite cui viene rispettivamente avviata e terminata l'operazione asincrona *NomeOperazione*. La classe <xref:System.IO.FileStream> fornisce ad esempio i metodi <xref:System.IO.FileStream.BeginRead%2A> e <xref:System.IO.FileStream.EndRead%2A> per la lettura asincrona dei byte da un file. Tali metodi implementano la versione asincrona del metodo <xref:System.IO.FileStream.Read%2A> .  
   
 > [!NOTE]
-> A partire da .NET Framework 4, Task Parallel Library fornisce un nuovo modello di programmazione asincrona e parallela. Per ulteriori informazioni, vedere [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) e [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)).  
+> A partire da .NET Framework 4, Task Parallel Library fornisce un nuovo modello di programmazione asincrona e parallela. Per altre informazioni, vedere [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md) e [modello asincrono basato su attività (TAP)](task-based-asynchronous-pattern-tap.md).  
   
  Dopo aver chiamato il metodo `BeginOperationName`, l'app può continuare a eseguire le istruzioni nel thread chiamante mentre l'operazione asincrona viene eseguita in un altro thread. Per ogni chiamata a `BeginOperationName`, l'app deve chiamare anche il metodo `EndOperationName` per ottenere i risultati dell'operazione.  
   
@@ -53,18 +53,18 @@ Un'operazione asincrona in cui viene usato il modello di progettazione dell'ogge
   
  Gli sviluppatori di applicazioni dispongono di diverse scelte di progettazione per accedere ai risultati dell'operazione asincrona. La scelta adeguata dipende dall'eventuale presenza nell'applicazione di istruzioni che possono essere eseguite durante il completamento dell'operazione. Se l'applicazione non consente di eseguire altre attività fino alla ricezione dei risultati dell'operazione asincrona, deve essere bloccata fino a quel momento. A tale scopo, sono disponibili i due approcci illustrati di seguito:  
   
-- Chiamare il metodo `EndOperationName` dal thread principale dell'applicazione, bloccando l'esecuzione dell'applicazione fino al completamento dell'operazione. Per un esempio relativo all'uso di questa tecnica, vedere [Blocco dell'esecuzione dell'applicazione terminando un'operazione asincrona](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
+- Chiamare il metodo `EndOperationName` dal thread principale dell'applicazione, bloccando l'esecuzione dell'applicazione fino al completamento dell'operazione. Per un esempio relativo all'uso di questa tecnica, vedere [Blocco dell'esecuzione dell'applicazione terminando un'operazione asincrona](blocking-application-execution-by-ending-an-async-operation.md).  
   
-- Usare <xref:System.IAsyncResult.AsyncWaitHandle%2A> per bloccare l'esecuzione dell'applicazione fino al completamento di una o più operazioni. Per un esempio relativo all'uso di questa tecnica, vedere [Blocking Application Execution Using an AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
+- Usare <xref:System.IAsyncResult.AsyncWaitHandle%2A> per bloccare l'esecuzione dell'applicazione fino al completamento di una o più operazioni. Per un esempio relativo all'uso di questa tecnica, vedere [Blocking Application Execution Using an AsyncWaitHandle](blocking-application-execution-using-an-asyncwaithandle.md).  
   
  Per le applicazioni che non è necessario bloccare durante il completamento dell'operazione asincrona, è possibile usare uno degli approcci seguenti:  
   
-- Eseguire il polling dello stato di completamento dell'operazione verificando periodicamente la proprietà <xref:System.IAsyncResult.IsCompleted%2A> e chiamando il metodo `EndOperationName` al completamento dell'operazione. Per un esempio relativo all'uso di questa tecnica, vedere [Polling for the Status of an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).  
+- Eseguire il polling dello stato di completamento dell'operazione verificando periodicamente la proprietà <xref:System.IAsyncResult.IsCompleted%2A> e chiamando il metodo `EndOperationName` al completamento dell'operazione. Per un esempio relativo all'uso di questa tecnica, vedere [Polling for the Status of an Asynchronous Operation](polling-for-the-status-of-an-asynchronous-operation.md).  
   
-- Usare un delegato <xref:System.AsyncCallback> per specificare il metodo da richiamare quando l'operazione viene completata. Per un esempio relativo all'uso di questa tecnica, vedere [Using an AsyncCallback Delegate to End an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
+- Usare un delegato <xref:System.AsyncCallback> per specificare il metodo da richiamare quando l'operazione viene completata. Per un esempio relativo all'uso di questa tecnica, vedere [Using an AsyncCallback Delegate to End an Asynchronous Operation](using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP)
-- [Chiamata di metodi sincroni in modalità asincrona](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
-- [Utilizzo di un oggetto di stato e di un delegato AsyncCallback](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-and-state-object.md)
+- [Event-based Asynchronous Pattern (EAP)](event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP)
+- [Chiamata di metodi sincroni in modalità asincrona](calling-synchronous-methods-asynchronously.md)
+- [Utilizzo di un oggetto di stato e di un delegato AsyncCallback](using-an-asynccallback-delegate-and-state-object.md)

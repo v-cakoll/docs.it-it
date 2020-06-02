@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-ms.openlocfilehash: 0e88303f2bac2dae90a97f9d2de92af1d2a0f80d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 33b8c49033c901917e674879048558799f484194
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73976484"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291656"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Conversione di tipi in .NET Framework
 A ogni valore è associato un tipo che definisce attributi quali la quantità di spazio allocato per il valore, l'intervallo di valori possibili supportati e i membri resi disponibili. Numerosi valori possono essere espressi mediante tipi diversi. Il valore 4, ad esempio, può essere espresso come intero o come valore a virgola mobile. Mediante la conversione di tipi viene creato un valore in un nuovo tipo equivalente al valore del tipo precedente, ma non viene necessariamente mantenuta l'identità, o il valore esatto, dell'oggetto originale.  
@@ -46,9 +46,9 @@ A ogni valore è associato un tipo che definisce attributi quali la quantità di
   
  Oltre a queste conversioni automatiche, .NET Framework offre diverse funzionalità che supportano la conversione di tipo personalizzato. tra cui:  
   
-- Operatore `Implicit` che definisce le conversioni tra tipi verso un tipo di dati più grande. Per altre informazioni, vedere la sezione [Conversione implicita con l'operatore implicito.](#implicit-conversion-with-the-implicit-operator)  
+- Operatore `Implicit` che definisce le conversioni tra tipi verso un tipo di dati più grande. Per ulteriori informazioni, vedere la sezione [conversione implicita con l'operatore Implicit](#implicit-conversion-with-the-implicit-operator) .  
   
-- Operatore `Explicit` che definisce le conversioni tra tipi verso un tipo di dati più piccolo. Per altre informazioni, vedere la sezione [Conversione esplicita con operatore esplicito.](#explicit-conversion-with-the-explicit-operator)  
+- Operatore `Explicit` che definisce le conversioni tra tipi verso un tipo di dati più piccolo. Per ulteriori informazioni, vedere la sezione [conversione esplicita con l'operatore Explicit](#explicit-conversion-with-the-explicit-operator) .  
   
 - Interfaccia <xref:System.IConvertible> che definisce le conversioni in ognuno dei tipi di dati .NET Framework di base. Per altre informazioni, vedere la sezione [Interfaccia IConvertible](#the-iconvertible-interface).  
   
@@ -91,7 +91,7 @@ A ogni valore è associato un tipo che definisce attributi quali la quantità di
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> è maggiore di <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> è maggiore di <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
   
- Per gestire le conversioni verso un tipo di dati più piccolo, .NET Framework consente ai tipi di definire un operatore `Explicit`. I singoli compilatori di linguaggio possono implementare quindi questo operatore usando la propria sintassi oppure è possibile chiamare un membro della classe <xref:System.Convert> per eseguire la conversione. Per ulteriori informazioni <xref:System.Convert> sulla classe, vedere [La classe Convert](#the-convert-class) più avanti in questo argomento. Nell'esempio seguente viene illustrato l'utilizzo delle funzionalità del linguaggio per gestire <xref:System.Int32> la conversione esplicita di questi valori integer potenzialmente non compresi nell'intervallo in valori.  
+ Per gestire le conversioni verso un tipo di dati più piccolo, .NET Framework consente ai tipi di definire un operatore `Explicit`. I singoli compilatori di linguaggio possono implementare quindi questo operatore usando la propria sintassi oppure è possibile chiamare un membro della classe <xref:System.Convert> per eseguire la conversione. Per ulteriori informazioni sulla <xref:System.Convert> classe, vedere [la classe Convert](#the-convert-class) più avanti in questo argomento. Nell'esempio seguente viene illustrato l'utilizzo delle funzionalità del linguaggio per gestire la conversione esplicita di questi valori Integer potenzialmente fuori intervallo in <xref:System.Int32> valori.  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -131,12 +131,12 @@ A ogni valore è associato un tipo che definisce attributi quali la quantità di
  [!code-csharp[Conceptual.Conversion#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/iconvertible1.cs#7)]
  [!code-vb[Conceptual.Conversion#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/iconvertible1.vb#7)]  
   
- Il requisito che il metodo di conversione venga chiamato sull'interfaccia anziché sul tipo di implementazione rende relativamente costose le implementazioni esplicite dell'interfaccia. È invece consigliabile chiamare il membro appropriato della classe <xref:System.Convert> per eseguire la conversione tra tipi di base di Common Language Runtime. Per ulteriori informazioni, vedere la sezione successiva, [The Convert (Classe Convert](#the-convert-class)).  
+ Il requisito che il metodo di conversione venga chiamato sull'interfaccia anziché sul tipo di implementazione rende relativamente costose le implementazioni esplicite dell'interfaccia. È invece consigliabile chiamare il membro appropriato della classe <xref:System.Convert> per eseguire la conversione tra tipi di base di Common Language Runtime. Per ulteriori informazioni, vedere la sezione successiva, [la classe Convert](#the-convert-class).  
   
 > [!NOTE]
 > Oltre all'interfaccia <xref:System.IConvertible> e alla classe <xref:System.Convert> fornite da .NET Framework, nei singoli linguaggi possono essere disponibili altre modalità per eseguire le conversioni. In C# vengono ad esempio utilizzati gli operatori di cast mentre in Visual Basic vengono utilizzate funzioni di conversione implementate dal compilatore quali `CType`, `CInt` e `DirectCast`.  
   
- L'interfaccia <xref:System.IConvertible> è principalmente progettata per supportare la conversione tra tipi di base in .NET Framework. L'interfaccia può tuttavia anche essere implementata da un tipo personalizzato per supportare la conversione di tale tipo in altri tipi personalizzati. Per altre informazioni, vedere la sezione [Conversioni personalizzate con il metodo ChangeType](#custom-conversions-with-the-changetype-method) più avanti in questo argomento.
+ L'interfaccia <xref:System.IConvertible> è principalmente progettata per supportare la conversione tra tipi di base in .NET Framework. L'interfaccia può tuttavia anche essere implementata da un tipo personalizzato per supportare la conversione di tale tipo in altri tipi personalizzati. Per ulteriori informazioni, vedere la sezione [conversioni personalizzate con il metodo ChangeType](#custom-conversions-with-the-changetype-method) più avanti in questo argomento.
 
 ## <a name="the-convert-class"></a>Classe Convert
  Benché sia possibile chiamare l'implementazione dell'interfaccia <xref:System.IConvertible> di ogni tipo di base per eseguire una conversione di tipi, il modo indipendente dal linguaggio consigliato per convertire un tipo di base in un altro consiste nel chiamare i metodi della classe <xref:System.Convert?displayProperty=nameWithType>. È inoltre possibile utilizzare il metodo <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> per eseguire la conversione da un tipo personalizzato specificato a un altro.  
@@ -157,7 +157,7 @@ A ogni valore è associato un tipo che definisce attributi quali la quantità di
  [!code-csharp[Conceptual.Conversion#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/convert1.cs#9)]
  [!code-vb[Conceptual.Conversion#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/convert1.vb#9)]  
   
- Per consultare una tabella in cui sono elencate le conversioni verso un tipo di dati più piccolo e più grande supportate dalla classe <xref:System.Convert>, vedere [Tabelle di conversione di tipi](../../../docs/standard/base-types/conversion-tables.md).  
+ Per consultare una tabella in cui sono elencate le conversioni verso un tipo di dati più piccolo e più grande supportate dalla classe <xref:System.Convert>, vedere [Tabelle di conversione di tipi](conversion-tables.md).  
 
 ### <a name="custom-conversions-with-the-changetype-method"></a>Conversioni personalizzate con il metodo ChangeType  
  Oltre a supportare le conversioni in ognuno dei tipi di base, la classe <xref:System.Convert> può essere utilizzata per convertire un tipo personalizzato in uno o più tipi predefiniti. Questa conversione viene eseguita dal metodo <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> che a sua volta esegue il wrapping di una chiamata al metodo <xref:System.IConvertible.ToType%2A?displayProperty=nameWithType> del parametro `value`. Questo significa che l'oggetto rappresentato dal parametro `value` deve fornire un'implementazione dell'interfaccia <xref:System.IConvertible>.  
@@ -194,4 +194,4 @@ A ogni valore è associato un tipo che definisce attributi quali la quantità di
 
 - <xref:System.Convert?displayProperty=nameWithType>
 - <xref:System.IConvertible>
-- [Tabelle di conversione dei tipiType Conversion Tables](../../../docs/standard/base-types/conversion-tables.md)
+- [Tabelle di conversione di tipi](conversion-tables.md)

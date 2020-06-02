@@ -14,12 +14,12 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: f1627248cbed0f03c6fb76ce660f9b2bf7764781
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dbfe4422b89b6223988ec9c6034d4b91b6ec8b5d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160014"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276148"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>quantificatori in espressioni regolari
 I quantificatori specificano il numero di istanze di un carattere, un gruppo o una classe di caratteri che deve essere presente nell'input affinché venga trovata una corrispondenza.  Nella tabella seguente vengono elencati i quantificatori supportati da .NET.  
@@ -36,13 +36,13 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
  Le quantità `n` e `m` sono costanti integer. In genere, i quantificatori sono greedy: il motore delle espressioni regolari trova la corrispondenza con il maggior numero possibile di determinati criteri. L'aggiunta del carattere `?` rende un quantificatore lazy: il motore delle espressioni regolari trova la corrispondenza con il minor numero possibile di occorrenze. Per una descrizione completa della differenza tra quantificatori greedy e lazy, vedere la sezione [Quantificatori greedy e lazy](#Greedy) più avanti in questo argomento.  
   
 > [!IMPORTANT]
-> Annidare i quantificatori, come nel caso del criterio di espressione regolare `(a*)*`, può aumentare il numero dei confronti che deve eseguire il motore delle espressioni regolari, come una funzione esponenziale del numero di caratteri nella stringa di input. Per altre informazioni su questo comportamento e sulle relative soluzioni alternative, vedere [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
+> Annidare i quantificatori, come nel caso del criterio di espressione regolare `(a*)*`, può aumentare il numero dei confronti che deve eseguire il motore delle espressioni regolari, come una funzione esponenziale del numero di caratteri nella stringa di input. Per altre informazioni su questo comportamento e sulle relative soluzioni alternative, vedere [Backtracking](backtracking-in-regular-expressions.md).  
   
 ## <a name="regular-expression-quantifiers"></a>Quantificatori delle espressioni regolari  
  Nelle sezioni seguenti sono riportati i quantificatori supportati dalle espressioni regolari in .NET.  
   
 > [!NOTE]
-> Se vengono rilevati i caratteri *, +,?, { e} in un criterio di espressione regolare, il motore delle espressioni regolari li interpreta come quantificatori o parte di costrutti di quantificatori a meno che non siano inclusi in una [classe di caratteri](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Per interpretarli come caratteri letterali all'esterno di una classe di caratteri, è necessaria una sequenza di escape con i caratteri preceduti da una barra rovesciata. Ad esempio, la stringa `\*` in un'espressione regolare viene interpretata come carattere letterale asterisco ("\*").  
+> Se vengono rilevati i caratteri *, +,?, { e} in un criterio di espressione regolare, il motore delle espressioni regolari li interpreta come quantificatori o parte di costrutti di quantificatori a meno che non siano inclusi in una [classe di caratteri](character-classes-in-regular-expressions.md). Per interpretarli come caratteri letterali all'esterno di una classe di caratteri, è necessaria una sequenza di escape con i caratteri preceduti da una barra rovesciata. Ad esempio, la stringa `\*` in un'espressione regolare viene interpretata come carattere letterale asterisco ("\*").  
   
 ### <a name="match-zero-or-more-times-"></a>Trova la corrispondenza zero o più volte: *  
  Il quantificatore `*` trova la corrispondenza con l'elemento precedente zero o più volte. È equivalente al quantificatore `{0,}`. `*` è un quantificatore greedy il cui equivalente lazy è `*?`.  
@@ -95,7 +95,7 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
 |`\b`|Terminare al confine di una parola.|  
   
 ### <a name="match-exactly-n-times-n"></a>Trova la corrispondenza esatta n volte: {n}  
- Il `{`quantificatore *n* `}` corrisponde all'elemento precedente esattamente *n* volte, dove *n* è qualsiasi numero intero. `{`*n* `}` è un quantificatore greedy il cui equivalente lazy è `{` *n*`}?`.  
+ Il `{` *n* `}` quantificatore n trova la corrispondenza con l'elemento precedente esattamente *n* volte, dove *n* è qualsiasi numero intero. `{`*n* `}` è un quantificatore greedy il cui equivalente lazy è `{` *n* `}?` .  
   
  Ad esempio, l'espressione regolare `\b\d+\,\d{3}\b` tenta di trovare la corrispondenza con il confine di una parola seguito da una o più cifre decimali seguite da tre cifre decimali seguite dal confine di una parola. L'esempio seguente illustra questa espressione regolare.  
   
@@ -113,7 +113,7 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
 |`\b`|Terminare al confine di una parola.|  
   
 ### <a name="match-at-least-n-times-n"></a>Trova la corrispondenza almeno n volte: {n,}  
- Il `{`quantificatore *n* `,}` corrisponde all'elemento precedente almeno *n* volte, dove *n* è qualsiasi numero intero. `{`*n* `,}` è un quantificatore greedy il cui equivalente lazy è `{` *n*`,}?`.  
+ Il `{` *n* `,}` quantificatore n trova la corrispondenza con l'elemento precedente almeno *n* volte, dove *n* è qualsiasi numero intero. `{`*n* `,}` è un quantificatore greedy il cui equivalente lazy è `{` *n* `,}?` .  
   
  Ad esempio, l'espressione regolare `\b\d{2,}\b\D+` tenta di trovare la corrispondenza con il confine di una parola seguito da almeno due cifre seguite dal confine di una parola e un carattere non numerico. L'esempio seguente illustra questa espressione regolare. L'espressione regolare non riesce a trovare la frase `"7 days"` perché contiene solo una cifra decimale, ma trova la corrispondenza con le frasi `"10 weeks and 300 years"`.  
   
@@ -130,7 +130,7 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
 |`\D+`|Trova la corrispondenza con almeno una cifra non decimale.|  
   
 ### <a name="match-between-n-and-m-times-nm"></a>Trova la corrispondenza tra n e m volte: {n,m}  
- Il `{`quantificatore *n*`,`*m* `}` corrisponde all'elemento precedente almeno *n* volte, ma non più di *m* volte, dove *n* e *m* sono interi. `{`*n*`,`*m* `}` è un quantificatore `{`greedy il cui equivalente lazy è *n*`,`*m*`}?`.  
+ Il `{` *n* `,` *m* `}` quantificatore n m trova la corrispondenza con l'elemento precedente almeno *n* volte, ma non più di *m* volte, dove *n* e *m* sono numeri interi. `{`*n* `,` *m* `}` è un quantificatore greedy il cui equivalente lazy è `{` *n* `,` *m* `}?` .  
   
  Nell'esempio seguente, l'espressione regolare `(00\s){2,4}` tenta di trovare una corrispondenza tra due e quattro occorrenze di due cifre zero seguite da uno spazio. Si noti che la parte finale della stringa di input include questo criterio cinque volte anziché il numero massimo di quattro. Tuttavia, solo la parte iniziale della sottostringa (fino allo spazio e alla quinta coppia di zeri) corrisponde al criterio dell'espressione regolare.  
   
@@ -183,7 +183,7 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
 |`\(??`|Trova la corrispondenza con zero o una occorrenza della parentesi di apertura.|  
   
 ### <a name="match-exactly-n-times-lazy-match-n"></a>Trova la corrispondenza esatta n volte (corrispondenza lazy): {n}?  
- Il `{`quantificatore *n* `}?` corrisponde `n` all'elemento precedente esattamente volte, dove *n* è qualsiasi numero intero. È la controparte pigra del `{`quantificatore greedy *n*`}`.  
+ Il `{` *n* `}?` quantificatore n trova la corrispondenza con l'elemento precedente esattamente `n` volte, dove *n* è qualsiasi numero intero. Si tratta della controparte Lazy del quantificatore greedy `{` *n* `}` .  
   
  Nell'esempio seguente viene usata l'espressione regolare `\b(\w{3,}?\.){2}?\w{3,}?\b` per identificare un indirizzo di sito Web. Si noti che corrisponde a "www.microsoft.com" e "msdn.microsoft.com", ma non a "mywebsite" o "mycompany.com".  
   
@@ -200,12 +200,12 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
 |`\b`|Termina la corrispondenza sul confine di parola.|  
   
 ### <a name="match-at-least-n-times-lazy-match-n"></a>Trova la corrispondenza almeno n volte (corrispondenza lazy): {n,}?  
- Il `{`quantificatore *n* `,}?` corrisponde `n` all'elemento precedente almeno volte, dove *n* è qualsiasi numero intero, ma il minor numero di volte possibile. È la controparte pigra del `{`quantificatore greedy *n*`,}`.  
+ Il `{` *n* `,}?` quantificatore n trova la corrispondenza con l'elemento precedente almeno `n` volte, dove *n* è qualsiasi numero intero, ma il minor numero di volte possibile. Si tratta della controparte Lazy del quantificatore greedy `{` *n* `,}` .  
   
- Per un'illustrazione, vedere l'esempio per il `{`quantificatore *n* `}?` nella sezione precedente. L'espressione regolare in `{`questo esempio usa il quantificatore *n* `,}` per trovare una corrispondenza con una stringa con almeno tre caratteri seguiti da un punto.  
+ Vedere l'esempio per il `{` *n* `}?` quantificatore n nella sezione precedente per un'illustrazione. L'espressione regolare in tale esempio usa il `{` *n* `,}` quantificatore n per trovare la corrispondenza con una stringa che contiene almeno tre caratteri seguiti da un punto.  
   
 ### <a name="match-between-n-and-m-times-lazy-match-nm"></a>Trova la corrispondenza tra n e m volte (corrispondenza lazy): {n,m}?  
- Il `{`quantificatore *n*`,`*m* `}?` `n` corrisponde `m` all'elemento precedente between e times, dove *n* e *m* sono numeri interi, ma il minor numero di volte possibile. È la controparte pigra del `{`quantificatore greedy *n*`,`*m*`}`.  
+ Il `{` *n* `,` *m* `}?` quantificatore n m trova la corrispondenza con l'elemento precedente tra `n` e `m` Times, dove *n* e *m* sono numeri interi, ma il minor numero di volte possibile. Si tratta della controparte Lazy del quantificatore greedy `{` *n* `,` *m* `}` .  
   
  Nell'esempio seguente l'espressione regolare `\b[A-Z](\w*?\s*?){1,10}[.!?]` corrisponde alle frasi che contengono da una a dieci parole. Trova la corrispondenza con tutte le frasi nella stringa di input, ad eccezione di una frase che contiene 18 parole.  
   
@@ -249,7 +249,7 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
  Nella maggior parte dei casi le espressioni regolari con quantificatori greedy e lazy restituiscono le stesse corrispondenze. In genere restituiscono risultati diversi quando vengono usate con il metacarattere jolly (`.`), che corrisponde a qualsiasi carattere.  
   
 ## <a name="quantifiers-and-empty-matches"></a>Quantificatori e corrispondenze vuote  
- I `*`quantificatori `{`, `+`, e *n*`,`*m* `}` e le relative controparti lazy non si ripetono mai dopo una corrispondenza vuota quando è stato trovato il numero minimo di acquisizioni. Questa regola impedisce ai quantificatori di avviare cicli infiniti su corrispondenze di sottoespressioni vuote quando il numero massimo di acquisizioni possibili per il gruppo possibili è infinito o quasi infinito.  
+ I quantificatori `*` , `+` e `{` *n* `,` *m* `}` e le relative controparti lazy non si ripetono mai dopo una corrispondenza vuota quando è stato trovato il numero minimo di acquisizioni. Questa regola impedisce ai quantificatori di avviare cicli infiniti su corrispondenze di sottoespressioni vuote quando il numero massimo di acquisizioni possibili per il gruppo possibili è infinito o quasi infinito.  
   
  Ad esempio, il codice seguente presenta il risultato di una chiamata al metodo <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> con il criterio di espressione regolare `(a?)*` che trova la corrispondenza con uno o nessun carattere "a" zero o più volte. Si noti che il singolo gruppo di acquisizione acquisisce ogni "a" nonché <xref:System.String.Empty?displayProperty=nameWithType>, ma che non esiste una seconda corrispondenza vuota, perché la prima corrispondenza vuota induce il quantificatore a interrompere la ripetizione.  
   
@@ -271,5 +271,5 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linguaggio delle espressioni regolari - Guida di riferimento rapidoRegular Expression Language - Quick Reference](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
-- [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+- [Linguaggio di espressioni regolari - Riferimento rapido](regular-expression-language-quick-reference.md)
+- [Backtracking](backtracking-in-regular-expressions.md)

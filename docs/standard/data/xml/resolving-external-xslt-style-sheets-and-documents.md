@@ -3,12 +3,12 @@ title: Risoluzione di fogli di stile e documenti XSLT esterni
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-ms.openlocfilehash: 504519532d9a6988209cf04fd6b6196796f929f8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8e7f66d67f2520b47c30307a98ed2f3fb08455df
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710297"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291474"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Risoluzione di fogli di stile e documenti XSLT esterni
 Durante una trasformazione si presentano vari casi in cui può essere necessario risolvere le risorse esterne.  
@@ -41,17 +41,17 @@ Durante una trasformazione si presentano vari casi in cui può essere necessario
   
  Quando viene chiamato il metodo <xref:System.Xml.Xsl.XslTransform.Transform%2A>, le autorizzazioni vengono calcolate in base all'evidenza fornita in fase di caricamento e il set di autorizzazioni viene assegnato all'intero processo di trasformazione. Se la funzione `document()` tenta di avviare un'azione che richiede autorizzazioni non presenti nel set, viene generata un'eccezione.  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Trasformazioni XSLT con la classe XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
-- [Implementazione del processore XSLT da parte della classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
-- [Output da un XslTransform](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)
-- [Trasformazioni XSLT su diversi archivi](../../../../docs/standard/data/xml/xslt-transformations-over-different-stores.md)
-- [XsltArgumentList per i parametri dei fogli di stile e gli oggetti di estensione](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)
-- [Scripting dei fogli di stile XSLT con \<msxsl:script>](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)
-- [Supporto per la funzione msxsl:node-set()](../../../../docs/standard/data/xml/support-for-the-msxsl-node-set-function.md)
-- [XPathNavigator nelle trasformazioni](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)
-- [XPathNodeIterator nelle trasformazioni](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)
-- [Input di XPathDocument in XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)
-- [Input di XmlDataDocument in XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)
-- [Input di XmlDocument in XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+- [Trasformazioni XSLT con la classe XslTransform](xslt-transformations-with-the-xsltransform-class.md)
+- [Implementazione del processore XSLT da parte della classe XslTransform](xsltransform-class-implements-the-xslt-processor.md)
+- [Output da un XslTransform](outputs-from-an-xsltransform.md)
+- [Trasformazioni XSLT su diversi archivi](xslt-transformations-over-different-stores.md)
+- [XsltArgumentList per i parametri dei fogli di stile e gli oggetti di estensione](xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)
+- [Scripting del foglio di stile XSLT con\<msxsl:script>](xslt-stylesheet-scripting-using-msxsl-script.md)
+- [Supporto per la funzione msxsl:node-set()](support-for-the-msxsl-node-set-function.md)
+- [XPathNavigator nelle trasformazioni](xpathnavigator-in-transformations.md)
+- [XPathNodeIterator nelle trasformazioni](xpathnodeiterator-in-transformations.md)
+- [Input di XPathDocument in XslTransform](xpathdocument-input-to-xsltransform.md)
+- [Input di XmlDataDocument in XslTransform](xmldatadocument-input-to-xsltransform.md)
+- [Input di XmlDocument in XslTransform](xmldocument-input-to-xsltransform.md)

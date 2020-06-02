@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: e54990785cafd6061c6d53c13af6476a4b46e20e
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: fda5441c58d14b91a9eca16fff9149c8795f95b9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160352"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289226"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>Conversione delle stringhe in tipi di dati di .NET Framework
 Per convertire una stringa in un tipo di dati di .NET Framework, usare il metodo **XmlConvert** che soddisfa i requisiti dell'applicazione. Per un elenco di tutti i metodi di conversione disponibili nella classe **XmlConvert**, vedere <xref:System.Xml.XmlConvert>.  
@@ -131,7 +131,7 @@ Double value = Double.PositiveInfinity;
 writer.WriteElementString("Infinity", XmlConvert.ToString(value));  
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Conversione dei tipi di dati XML](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
-- [Conversione dei tipi di .NET Framework in stringhe](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+- [Conversione dei tipi di dati XML](conversion-of-xml-data-types.md)
+- [Conversione dei tipi di .NET Framework in stringhe](converting-dotnet-types-to-strings.md)

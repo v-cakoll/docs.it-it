@@ -1,14 +1,14 @@
 ---
 title: Che cos'è il generatore di modelli e come funziona?
 description: Come usare il generatore di modelli di ML.NET per eseguire automaticamente il training di un modello di Machine Learning
-ms.date: 03/25/2020
+ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 4afdbfd1682a30647b09d05d51a5c73c214fe2bd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2ed4a0c3c94ae9f46bb1cf6ddb1e9774baf82367
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616930"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289499"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Che cos'è il generatore di modelli e come funziona?
 
@@ -107,7 +107,7 @@ L'etichetta è il prezzo storico della casa per la riga dei valori dei metri qua
 
 Se non sono ancora disponibili dati, provare uno dei set di dati seguenti:
 
-|Scenario|Esempio|Data|Etichetta|Caratteristiche|
+|Scenario|Esempio|Data|Label|Funzionalità|
 |-|-|-|-|-|
 |Classificazione|Stimare le anomalie di vendita|[dati di vendita dei prodotti](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Vendita dei prodotti|Month|
 ||Stimare i sentimenti dei commenti del sito Web|[dati dei commenti del sito Web](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etichetta (0 con sentiment negativo, 1 con sentiment positivo)|Commento, anno|
@@ -119,7 +119,7 @@ Se non sono ancora disponibili dati, provare uno dei set di dati seguenti:
 
 ## <a name="train"></a>Eseguire il training
 
-Dopo aver selezionato lo scenario, i dati e l'etichetta, il generatore di modelli esegue il training del modello.
+Dopo aver selezionato lo scenario, l'ambiente, i dati e l'etichetta, generatore di modelli esegue il training del modello.
 
 ### <a name="what-is-training"></a>Cos'è il training?
 
@@ -149,6 +149,8 @@ Questi numeri sono solo una guida. La lunghezza esatta del training dipende da:
 - tipo di colonne
 - attività ML
 - le prestazioni della CPU, del disco e della memoria del computer utilizzato per il training
+
+Si consiglia in genere di usare più di 100 righe come set di dati con un valore minore di quello che potrebbe non produrre alcun risultato e potrebbe richiedere un tempo molto più lungo per il training.
 
 ## <a name="evaluate"></a>Valutazione
 
@@ -193,7 +195,7 @@ Se il punteggio delle prestazioni del modello non è quello desiderato, è possi
 
 - Eseguire il training per un periodo di tempo più lungo. Con più tempo, il motore di Machine Learning automatico sperimenta più algoritmi e impostazioni.
 
-- Aggiungere altri dati. A volte la quantità di dati non è sufficiente per eseguire il training di un modello di Machine Learning di qualità elevata.
+- Aggiungere altri dati. A volte la quantità di dati non è sufficiente per eseguire il training di un modello di apprendimento automatico di alta qualità. Ciò vale soprattutto per i set di impostazioni con un numero ridotto di esempi.
 
 - Bilanciare i dati. Per le attività di classificazione, assicurarsi che il set di training sia bilanciato tra le categorie. Ad esempio, se sono presenti quattro classi per 100 esempi di training e le prime due classi (tag1 e tag2) vengono usate per 90 record mentre le altre due classi (tag3 e tag4) vengono usate solo per i rimanenti 10 record, la mancanza di dati bilanciati può rendere più difficile per il modello prevedere correttamente tag3 o tag4.
 

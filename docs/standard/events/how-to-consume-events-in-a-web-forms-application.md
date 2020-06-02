@@ -12,12 +12,12 @@ helpviewer_keywords:
 - events [.NET Framework], consuming
 - Web Forms, event handling
 ms.assetid: 73bf8638-c4ec-4069-b0bb-a1dc79b92e32
-ms.openlocfilehash: 1f95fd0dcc12f2d4e47ee07e1e6bb15d91000f0f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3490b6fb89bfe6d7ac778078f58381bb5172e2fe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73124789"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288485"
 ---
 # <a name="how-to-consume-events-in-a-web-forms-application"></a>Procedura: Usare eventi in un'applicazione Web Form
 Uno scenario comune in applicazioni Web Form ASP.NET consiste nel popolare una pagina Web con controlli e quindi eseguire un'azione specifica in base al controllo su cui fa clic l'utente. Ad esempio, un controllo <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> genera un evento quando l'utente fa clic nella pagina Web. Gestendo l'evento, l'applicazione può eseguire la logica appropriata per la pressione del pulsante.  
@@ -51,4 +51,4 @@ Uno scenario comune in applicazioni Web Form ASP.NET consiste nel popolare una p
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Events](../../../docs/standard/events/index.md)
+- [Events](index.md)

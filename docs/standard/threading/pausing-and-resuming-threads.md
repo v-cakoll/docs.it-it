@@ -10,16 +10,16 @@ helpviewer_keywords:
 - threading [.NET Framework], pausing
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
-ms.openlocfilehash: 3020694b93479d5f1d64d31c203f8fe033a10320
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 369631603791d90c51244c1dc9907b9d8ec17364
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73128998"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291162"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Sospensione e interruzione di thread
 
-Le tecniche più comuni per sincronizzare le attività dei thread consistono nel blocco e nel rilascio dei thread oppure nel blocco di oggetti o aree di codice. Per altre informazioni su questi meccanismi di blocco, vedere [Panoramica delle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+Le tecniche più comuni per sincronizzare le attività dei thread consistono nel blocco e nel rilascio dei thread oppure nel blocco di oggetti o aree di codice. Per altre informazioni su questi meccanismi di blocco, vedere [Panoramica delle primitive di sincronizzazione](overview-of-synchronization-primitives.md).  
   
  È anche possibile fare in modo che i thread vengano sospesi automaticamente. Quando i thread sono bloccati o sospesi, è possibile usare un'eccezione <xref:System.Threading.ThreadInterruptedException> per interromperne lo stato di attesa.  
   
@@ -45,13 +45,13 @@ Le tecniche più comuni per sincronizzare le attività dei thread consistono nel
   
 - <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> fa uscire un thread da qualsiasi attesa e genera un'eccezione <xref:System.Threading.ThreadInterruptedException> nel thread di destinazione.  
   
-- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> fa uscire un thread da qualsiasi attesa e genera un'eccezione <xref:System.Threading.ThreadAbortException> nel thread. Per informazioni dettagliate, vedere [Eliminazione definitiva di thread](../../../docs/standard/threading/destroying-threads.md).  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> fa uscire un thread da qualsiasi attesa e genera un'eccezione <xref:System.Threading.ThreadAbortException> nel thread. Per informazioni dettagliate, vedere [Eliminazione definitiva di thread](destroying-threads.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadInterruptedException>
 - <xref:System.Threading.ThreadAbortException>
-- [Threading](../../../docs/standard/threading/index.md)
-- [Utilizzo di thread e threading](../../../docs/standard/threading/using-threads-and-threading.md)
-- [Panoramica delle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [Threading](index.md)
+- [Utilizzo di thread e threading](using-threads-and-threading.md)
+- [Panoramica delle primitive di sincronizzazione](overview-of-synchronization-primitives.md)

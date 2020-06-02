@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-ms.openlocfilehash: 016032b2b37ced5592edc18934ed183c475f5598
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3bd0c6063fee1fa1a9f046a8be2ebfde07aea9ee
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710479"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291513"
 ---
 # <a name="post-schema-compilation-infoset"></a>Post-Schema Compilation Infoset (PSCI, infoset sulla compilazione post-schema)
 Nel documento [World Wide Web Consortium (W3C) XML Schema Recommendation](https://www.w3.org/XML/Schema) viene illustrato il set di informazioni (infoset) che deve essere esposto per la convalida pre-schema e la compilazione post-schema. Il modello SOM (Schema Object Model) XML visualizza questa esposizione prima e dopo che venga chiamato il metodo <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> del tipo <xref:System.Xml.Schema.XmlSchemaSet>.  
@@ -38,6 +38,6 @@ Nel documento [World Wide Web Consortium (W3C) XML Schema Recommendation](https:
  [!code-csharp[PsciSample#1](../../../../samples/snippets/csharp/VS_Snippets_Data/PsciSample/CS/PsciSample.cs#1)]
  [!code-vb[PsciSample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/PsciSample/VB/PsciSample.vb#1)]  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [SOM (Schema Object Model) XML](xml-schema-object-model-som.md)

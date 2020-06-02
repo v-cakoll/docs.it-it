@@ -12,12 +12,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-ms.openlocfilehash: 905578d763ebe5d5b8eb96a9056fbe11fbfab137
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 87c3dbde2eb2b5a19b91f34bb2b088af5c0d1827
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711532"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290604"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Costrutti di backreference nelle espressioni regolari
 
@@ -26,13 +26,13 @@ I backreference sono uno strumento utile per identificare un carattere ripetuto 
 > [!NOTE]
 > Per fare riferimento a gruppi di acquisizione denominati e numerati in stringhe sostitutive, si usa una sintassi separata. Per altre informazioni, vedere [Sostituzioni](substitutions-in-regular-expressions.md).
 
-.NET definisce elementi di linguaggio separati per fare riferimento a gruppi di acquisizione denominati e numerati. Per altre informazioni sui gruppi di acquisizione, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+.NET definisce elementi di linguaggio separati per fare riferimento a gruppi di acquisizione denominati e numerati. Per altre informazioni sui gruppi di acquisizione, vedere [Costrutti di raggruppamento](grouping-constructs-in-regular-expressions.md).
 
 ## <a name="numbered-backreferences"></a>Backreference numerati
 
 Nei backreference numerati si usa la sintassi seguente:
 
-`\`*numero*
+`\` *d'acquisto*
 
 dove *numero* è la posizione corretta del gruppo di acquisizione nell'espressione regolare. Ad esempio, `\4` corrisponde al contenuto del quarto gruppo di acquisizione. Se nel modello di espressione regolare *numero* non è definito, si verifica un errore di analisi e il motore delle espressioni regolari genera un'eccezione <xref:System.ArgumentException>. Ad esempio, l'espressione regolare `\b(\w+)\s\1` è valida, poiché `(\w+)` è il primo e l'unico gruppo di acquisizione nell'espressione. D'altra parte, `\b(\w+)\s\2` non è un'espressione valida e genera un'eccezione di argomento, perché non esistono gruppi di acquisizione numerati `\2`. Inoltre, se *numero* identifica un gruppo di acquisizione in una determinata posizione ordinale, ma a tale gruppo di acquisizione è stato assegnato un valore numerico diverso dalla relativa posizione ordinale, il parser delle espressioni regolari genera anche un'eccezione <xref:System.ArgumentException>.
 
@@ -46,7 +46,7 @@ Si noti l'ambiguità tra i codici di escape ottale, ad esempio `\16`, e i backre
 
 - Se l'espressione regolare contiene un backreference a un numero di gruppo non definito, si verifica un errore di analisi e il motore delle espressioni regolari genera un'eccezione <xref:System.ArgumentException>.
 
-Se l'ambiguità è un problema, è possibile utilizzare la notazione del `\k<` *nome,* `>` che non è ambigua e non può essere confusa con codici di carattere ottali. Analogamente, i codici esadecimale come `\xdd` non sono ambigui e non possono essere confusi con backreference.
+Se l'ambiguità rappresenta un problema, è possibile usare la `\k<` notazione del *nome* `>` , che non è ambigua e non può essere confusa con codici di caratteri ottali. Analogamente, i codici esadecimale come `\xdd` non sono ambigui e non possono essere confusi con backreference.
 
 L'esempio seguente consente di trovare caratteri alfanumerici doppi all'interno di una stringa. Viene definita un'espressione regolare `(\w)\1` costituita dagli elementi seguenti.
 
@@ -92,7 +92,7 @@ Se *nome* è la rappresentazione stringa di un numero e nessun gruppo di acquisi
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]
 
-Tuttavia, se *nome* è la rappresentazione stringa di un numero e al gruppo di acquisizione in tale posizione è stato assegnato in modo esplicito un nome numerico, il parser delle espressioni regolari non è in grado di identificare il gruppo di acquisizione in base alla posizione ordinale. Al contrario, <xref:System.ArgumentException>genera un file . L'unico gruppo di acquisizione nell'esempio seguente è denominato "2". Dato che il costrutto `\k` viene usato per definire un backreference denominato "1", il parser delle espressioni regolari non è in grado di identificare il primo gruppo di acquisizione e genera un'eccezione.
+Tuttavia, se *nome* è la rappresentazione stringa di un numero e al gruppo di acquisizione in tale posizione è stato assegnato in modo esplicito un nome numerico, il parser delle espressioni regolari non è in grado di identificare il gruppo di acquisizione in base alla posizione ordinale. Viene invece generata un'eccezione <xref:System.ArgumentException> . L'unico gruppo di acquisizione nell'esempio seguente è denominato "2". Dato che il costrutto `\k` viene usato per definire un backreference denominato "1", il parser delle espressioni regolari non è in grado di identificare il primo gruppo di acquisizione e genera un'eccezione.
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference7.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]
@@ -138,4 +138,4 @@ Una stringa di input può corrispondere a questa espressione regolare, anche se 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Linguaggio delle espressioni regolari - Guida di riferimento rapidoRegular Expression Language - Quick Reference](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguaggio di espressioni regolari - Riferimento rapido](regular-expression-language-quick-reference.md)

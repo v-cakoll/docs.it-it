@@ -3,12 +3,12 @@ title: Tipi di nodo riconosciuti con le query XPath
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1d33e22d-18e5-43f8-a466-2e3d0a8dd094
-ms.openlocfilehash: cc1aa668ccf6fc7f210f48a28cf76b364459c784
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b9fc55b11455491406970af2a9232b277160875f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710544"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288732"
 ---
 # <a name="node-types-recognized-with-xpath-queries"></a>Tipi di nodo riconosciuti con le query XPath
 I tipi di nodi riconosciuti in una query XPath non corrispondono a quelli del DOM (Document Object Model).  
@@ -42,16 +42,16 @@ I tipi di nodi riconosciuti in una query XPath non corrispondono a quelli del DO
   
  Il tipo di nodo Namespace è un'aggiunta al modello dati XPath e non è un tipo di nodo DOM riconosciuto.  
   
- Per altre informazioni sulla navigazione dei nodi di elementi, attributi e spazi dei nomi, vedere gli argomenti [Navigazione del set di nodi con XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) e [Navigazione dei nodi di attributi e dello spazio dei nomi con XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md).  
+ Per altre informazioni sulla navigazione dei nodi di elementi, attributi e spazi dei nomi, vedere gli argomenti [Navigazione del set di nodi con XPathNavigator](node-set-navigation-using-xpathnavigator.md) e [Navigazione dei nodi di attributi e dello spazio dei nomi con XPathNavigator](attribute-and-namespace-node-navigation-using-xpathnavigator.md).  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Elaborazione di dati XML con il modello di dati XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Selezione di dati XML con XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
-- [Valutazione di espressioni XPath con XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
-- [Corrispondenza di nodi utilizzando XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
-- [Query e spazi dei nomi XPath](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
-- [Espressioni XPath compilate](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
+- [Elaborazione di dati XML con il modello di dati XPath](process-xml-data-using-the-xpath-data-model.md)
+- [Selezione di dati XML con XPathNavigator](select-xml-data-using-xpathnavigator.md)
+- [Valutazione di espressioni XPath con XPathNavigator](evaluate-xpath-expressions-using-xpathnavigator.md)
+- [Corrispondenza di nodi utilizzando XPathNavigator](matching-nodes-using-xpathnavigator.md)
+- [Query e spazi dei nomi XPath](xpath-queries-and-namespaces.md)
+- [Espressioni XPath compilate](compiled-xpath-expressions.md)

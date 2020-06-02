@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-ms.openlocfilehash: b4675765849299050eb6cddeaaa497bc6cdc620a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e74b52e471699fc663504fa42d6c7e502859adda
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711103"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291526"
 ---
 # <a name="compiled-xpath-expressions"></a>Espressioni XPath compilate
 Un oggetto <xref:System.Xml.XPath.XPathExpression> rappresenta una query XPath compilata che viene restituita dal metodo statico <xref:System.Xml.XPath.XPathExpression.Compile%2A> della classe <xref:System.Xml.XPath.XPathExpression> oppure dal metodo <xref:System.Xml.XPath.XPathNavigator.Compile%2A> della classe <xref:System.Xml.XPath.XPathNavigator>.  
@@ -35,7 +35,7 @@ Un oggetto <xref:System.Xml.XPath.XPathExpression> rappresenta una query XPath c
   
  Nella tabella seguente vengono descritti ciascun tipo W3C XPath restituito, il tipo equivalente di Microsoft .NET Frameworks e i metodi che possono essere usati dall'oggetto <xref:System.Xml.XPath.XPathExpression> in base al relativo tipo restituito.  
   
-|Tipo W3C XPath restituito|Tipo equivalente di .NET Framework|Description|Metodi|  
+|Tipo W3C XPath restituito|Tipo equivalente di .NET Framework|Descrizione|Metodi|  
 |---------------------------|------------------------------------|-----------------|-------------|  
 |`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|Raccolta non ordinata di nodi senza duplicati creati in ordine di documento.|<xref:System.Xml.XPath.XPathNavigator.Select%2A> o <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`Boolean`|<xref:System.Boolean>|Valore `true` o `false`.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> oppure<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
@@ -115,16 +115,16 @@ Console.WriteLine(nodes.Current.Value);
   
  Inoltre, nei casi in cui i criteri di selezione sono semplici, l'uso dei metodi di navigazione dei set di nodi forniti dalla classe <xref:System.Xml.XPath.XPathNavigator> può garantire un livello di prestazioni più elevato rispetto a quello fornito dai metodi della classe <xref:System.Xml.XPath.XPathNavigator>. Ad esempio, se è necessario selezionare il primo nodo figlio del nodo corrente, risulta più veloce usare il metodo <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> anziché l'espressione XPath `child::*[1]` e il metodo <xref:System.Xml.XPath.XPathNavigator.Select%2A>.  
   
- Per altre informazioni sui metodi di navigazione del set di nodi della classe <xref:System.Xml.XPath.XPathNavigator>, vedere [Navigazione del set di nodi con XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md).  
+ Per altre informazioni sui metodi di navigazione del set di nodi della classe <xref:System.Xml.XPath.XPathNavigator>, vedere [Navigazione del set di nodi con XPathNavigator](node-set-navigation-using-xpathnavigator.md).  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Elaborazione di dati XML con il modello di dati XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Selezione di dati XML con XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
-- [Valutazione di espressioni XPath con XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
-- [Corrispondenza di nodi utilizzando XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
-- [Tipi di nodo riconosciuti con le query XPath](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)
-- [Query e spazi dei nomi XPath](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
+- [Elaborazione di dati XML con il modello di dati XPath](process-xml-data-using-the-xpath-data-model.md)
+- [Selezione di dati XML con XPathNavigator](select-xml-data-using-xpathnavigator.md)
+- [Valutazione di espressioni XPath con XPathNavigator](evaluate-xpath-expressions-using-xpathnavigator.md)
+- [Corrispondenza di nodi utilizzando XPathNavigator](matching-nodes-using-xpathnavigator.md)
+- [Tipi di nodo riconosciuti con le query XPath](node-types-recognized-with-xpath-queries.md)
+- [Query e spazi dei nomi XPath](xpath-queries-and-namespaces.md)

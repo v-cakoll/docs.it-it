@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: scrivere un ciclo Parallel.For con variabili di thread locali'
+title: 'Procedura: Scrivere un ciclo Parallel.For con variabili di thread locali'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-ms.openlocfilehash: 14f4f1402f564d38bb508e893521a3951c1509f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb6ac1a64c3a71646946d1af894d1124b12e4769
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139718"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290759"
 ---
-# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Procedura: scrivere un ciclo Parallel.For con variabili di thread locali
+# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Procedura: Scrivere un ciclo Parallel.For con variabili di thread locali
 Questo esempio illustra come usare le variabili locali di thread per archiviare e recuperare lo stato in ogni attività separata creata da un ciclo <xref:System.Threading.Tasks.Parallel.For%2A>. L'uso dei dati locali di thread permette di evitare il sovraccarico dovuto alla sincronizzazione di un numero elevato di accessi a uno stato condiviso. Invece di scrivere in una risorsa condivisa a ogni iterazione, si calcola e si archivia il valore fino al completamento di tutte le iterazioni per l'attività. È quindi possibile scrivere il risultato finale una volta sola nella risorsa condivisa oppure passarlo a un altro metodo.  
   
 ## <a name="example"></a>Esempio  
@@ -40,11 +40,11 @@ Function() new MyClass()
   
  Il quinto parametro definisce il metodo chiamato una volta, dopo il completamento di tutte le iterazioni in un determinato thread. Il tipo di argomento di input corrisponde di nuovo all'argomento di tipo del metodo <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> e al tipo restituito dall'espressione lambda del corpo. In questo esempio il valore è aggiunto a una variabile nell'ambito delle classi in un modo thread-safe chiamando il metodo <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType>. L'uso di una variabile locale di thread permette di evitare di scrivere nella variabile della classe a ogni iterazione del ciclo.  
   
- Per altre informazioni su come usare le espressioni lambda, vedere [Espressioni lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+ Per altre informazioni su come usare le espressioni lambda, vedere [Espressioni lambda in PLINQ e TPL](lambda-expressions-in-plinq-and-tpl.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Parallelismo dei dati](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)
-- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Espressioni lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [Parallelismo dei dati](data-parallelism-task-parallel-library.md)
+- [Programmazione parallela](index.md)
+- [Task Parallel Library (TPL)](task-parallel-library-tpl.md)
+- [Espressioni lambda in PLINQ e TPL](lambda-expressions-in-plinq-and-tpl.md)

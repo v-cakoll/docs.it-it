@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-ms.openlocfilehash: aa6d4b706eb11921ffd419402bcf4cf059a29b11
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 674abcfe4477e14295f131e766a48422779391de
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021507"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290045"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Gestione delle eccezioni (Task Parallel Library)
 
@@ -28,7 +28,7 @@ Anche se viene generata un'unica eccezione, il sistema ne esegue comunque il wra
 
 È possibile evitare un'eccezione non gestita rilevando solo l'oggetto <xref:System.AggregateException> senza osservare alcuna eccezione interna. Tuttavia, è consigliabile evitare questo approccio perché è analogo al rilevamento del tipo <xref:System.Exception> di base negli scenari senza parallelismo. Rilevare un'eccezione senza intraprendere azioni specifiche per gestirla può lasciare il programma in uno stato indeterminato.
 
-Se non si vuole chiamare il metodo <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> per attendere il completamento dell'attività, è anche possibile recuperare l'eccezione <xref:System.AggregateException> dalla proprietà <xref:System.Threading.Tasks.Task.Exception%2A> dell'attività, come illustrato nell'esempio seguente. Per altre informazioni, vedere la sezione [Osservazione delle eccezioni tramite la sezione della proprietà Task.Exception](#observing-exceptions-by-using-the-taskexception-property) in questo argomento.
+Se non si vuole chiamare il metodo <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> per attendere il completamento dell'attività, è anche possibile recuperare l'eccezione <xref:System.AggregateException> dalla proprietà <xref:System.Threading.Tasks.Task.Exception%2A> dell'attività, come illustrato nell'esempio seguente. Per ulteriori informazioni, vedere la sezione [osservazione delle eccezioni mediante la proprietà Task. Exception](#observing-exceptions-by-using-the-taskexception-property) in questo argomento.
 
 [!code-csharp[TPL_Exceptions#29](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/handling22.cs#29)]
 [!code-vb[TPL_Exceptions#29](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/handling22.vb#29)]
@@ -63,7 +63,7 @@ Anche se si usa una continuazione per osservare un'eccezione in un'attività fig
 
 ## <a name="exceptions-that-indicate-cooperative-cancellation"></a>Eccezioni che indicano un annullamento cooperativo
 
-Quando il codice utente in un'attività risponde a una richiesta di annullamento, la procedura corretta è generare un oggetto <xref:System.OperationCanceledException> che passa il token di annullamento usato per comunicare la richiesta. Prima di provare a propagare l'eccezione, l'istanza dell'attività confronta il token nell'eccezione con quello che le è stato passato quando è stata creata. Se sono uguali, l'attività propaga un oggetto <xref:System.Threading.Tasks.TaskCanceledException> con wrapping nell'oggetto <xref:System.AggregateException>e che può essere visto quando vengono esaminate le eccezioni interne. Tuttavia, se il thread di unione non è in attesa dell'attività, questa eccezione specifica non verrà propagata. Per altre informazioni, vedere [Task Cancellation](../../../docs/standard/parallel-programming/task-cancellation.md).
+Quando il codice utente in un'attività risponde a una richiesta di annullamento, la procedura corretta è generare un oggetto <xref:System.OperationCanceledException> che passa il token di annullamento usato per comunicare la richiesta. Prima di provare a propagare l'eccezione, l'istanza dell'attività confronta il token nell'eccezione con quello che le è stato passato quando è stata creata. Se sono uguali, l'attività propaga un oggetto <xref:System.Threading.Tasks.TaskCanceledException> con wrapping nell'oggetto <xref:System.AggregateException>e che può essere visto quando vengono esaminate le eccezioni interne. Tuttavia, se il thread di unione non è in attesa dell'attività, questa eccezione specifica non verrà propagata. Per altre informazioni, vedere [Task Cancellation](task-cancellation.md).
 
 [!code-csharp[TPL_Exceptions#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptions.cs#4)]
 [!code-vb[TPL_Exceptions#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/tpl_exceptions.vb#4)]
@@ -89,14 +89,14 @@ Se un'attività viene completata con lo stato <xref:System.Threading.Tasks.TaskS
 [!code-csharp[TPL_Exceptions#27](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptionprop21.cs#27)]
 [!code-vb[TPL_Exceptions#27](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/exceptionprop21.vb#27)]
 
-In un'applicazione significativa, il delegato di continuazione potrebbe registrare informazioni dettagliate sull'eccezione ed eventualmente generare nuove attività per il ripristino dall'eccezione. Se un'attività si verifica un errore, le espressioni seguenti generano l'eccezione:If a task faults, the following expressions throw the exception:
+In un'applicazione significativa, il delegato di continuazione potrebbe registrare informazioni dettagliate sull'eccezione ed eventualmente generare nuove attività per il recupero dall'eccezione. Se si verifica un errore in un'attività, le espressioni seguenti generano l'eccezione:
 
 - `await task`
 - `task.Wait()`
 - `task.Result`
 - `task.GetAwaiter().GetResult()`
 
-Utilizzare [`try-catch`](../../csharp/language-reference/keywords/try-catch.md) un'istruzione per gestire e osservare le eccezioni generate. In alternativa, osservare l'eccezione accedendo alla <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> proprietà.
+Utilizzare un' [`try-catch`](../../csharp/language-reference/keywords/try-catch.md) istruzione per gestire e osservare le eccezioni generate. In alternativa, osservare l'eccezione accedendo alla <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> Proprietà.
 
 ## <a name="unobservedtaskexception-event"></a>Evento UnobservedTaskException
 
@@ -104,4 +104,4 @@ In alcuni scenari, ad esempio durante l'hosting di plug-in non attendibili, le e
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Task Parallel Library (TPL)](task-parallel-library-tpl.md)

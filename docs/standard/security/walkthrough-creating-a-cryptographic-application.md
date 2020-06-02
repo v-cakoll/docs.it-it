@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cryptography [NET Framework], cryptographic application example
 - cryptography [NET Framework], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-ms.openlocfilehash: 6e2d9b8bebdfd2ea5d5507cc73d444fa8bf785fb
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 246028566c59e5c8a77b26a21729d3f143d38d07
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705834"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289707"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Procedura dettagliata: creazione di un'applicazione di crittografia
 Questa procedura dettagliata illustra come crittografare e decrittografare il contenuto. Gli esempi di codice sono progettati per un'applicazione Windows Forms. Questa applicazione non illustra situazioni del mondo reale, come l'utilizzo di smart card. Al contrario illustra gli aspetti fondamentali della crittografia e decrittografia.  
@@ -44,14 +44,14 @@ Questa procedura dettagliata illustra come crittografare e decrittografare il co
 |Test dell'applicazione|Elenca le procedure per il test di questa applicazione.|  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:  
+ Per completare questa procedura dettagliata, è necessario disporre dei componenti seguenti:  
   
 - Riferimenti agli spazi dei nomi <xref:System.IO> e <xref:System.Security.Cryptography>.  
   
 ## <a name="creating-a-windows-forms-application"></a>Creazione di un'applicazione Windows Forms  
  La maggior parte degli esempi di codice in questa procedura dettagliata sono progettati per essere gestori di eventi per i controlli pulsante. Nella tabella seguente sono elencati i controlli necessari per l'applicazione di esempio e i relativi nomi richiesti per la corrispondenza con gli esempi di codice.  
   
-|Control|Name|Proprietà di testo (in base alle necessità)|  
+|Controllo|Nome|Proprietà di testo (in base alle necessità)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|Crittografa un file|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|Decrittografa un file|  
@@ -80,7 +80,7 @@ Questa procedura dettagliata illustra come crittografare e decrittografare il co
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>Crittografia di un file  
- Questa attività include due metodi: il metodo del gestore eventi per il pulsante `Encrypt File` (`buttonEncryptFile_Click`) e il metodo `EncryptFile`. Il primo metodo visualizza una finestra di dialogo per la selezione di un file e passa il nome file al secondo metodo, che esegue la crittografia.  
+ Questa attività include due metodi: il metodo del gestore eventi per il `Encrypt File` pulsante ( `buttonEncryptFile_Click` ) e il `EncryptFile` metodo. Il primo metodo visualizza una finestra di dialogo per la selezione di un file e passa il nome file al secondo metodo, che esegue la crittografia.  
   
  Il contenuto, la chiave e il vettore di inizializzazione (IV) crittografati vengono tutti salvati in un <xref:System.IO.FileStream>, a cui si fa riferimento come pacchetto di crittografia.  
   
@@ -104,7 +104,7 @@ Questa procedura dettagliata illustra come crittografare e decrittografare il co
   
 - Chiave crittografata  
   
-- Vettore di inizializzazione (IV)  
+- IV  
   
 - Testo crittografato  
   
@@ -175,7 +175,7 @@ Questa procedura dettagliata illustra come crittografare e decrittografare il co
  [!code-csharp[CryptoWalkThru#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#7)]
  [!code-vb[CryptoWalkThru#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#7)]  
   
-## <a name="testing-the-application"></a>Verifica dell'applicazione  
+## <a name="testing-the-application"></a>Test dell'applicazione  
  Dopo aver compilato l'applicazione, eseguire gli scenari di test seguenti.  
   
 #### <a name="to-create-keys-encrypt-and-decrypt"></a>Per creare chiavi, crittografare e decrittografare  
@@ -210,4 +210,4 @@ Questa procedura dettagliata illustra come crittografare e decrittografare il co
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [Servizi di crittografia](cryptographic-services.md)

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-ms.openlocfilehash: afa4e748599781a5979823320d8913ff5357d415
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a558547f0e6770e7e76ca31f760d6e2f55c712db
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741649"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289785"
 ---
 # <a name="exceptions-and-performance"></a>Eccezioni e prestazioni
 Un problema comune correlato alle eccezioni è che se vengono utilizzate eccezioni per il codice che si interrompe normalmente, le prestazioni dell'implementazione non saranno accettabili. Si tratta di un problema valido. Quando un membro genera un'eccezione, le prestazioni possono essere di dimensioni inferiori. Tuttavia, è possibile ottenere prestazioni soddisfacenti rispettando rigorosamente le linee guida sulle eccezioni che non consentono l'utilizzo di codici di errore. Due modelli descritti in questa sezione suggeriscono i modi per eseguire questa operazione.
 
- ❌ non utilizzano codici di errore a causa di problemi che le eccezioni possono influire negativamente sulle prestazioni.
+ ❌NON utilizzare codici di errore a causa di problemi che le eccezioni possono influire negativamente sulle prestazioni.
 
  Per migliorare le prestazioni, è possibile usare il modello del tester-agente di test o il modello try-Parse, descritto nelle due sezioni successive.
 
 ## <a name="tester-doer-pattern"></a>Modello del tester-agente
- A volte le prestazioni di un membro che genera eccezioni possono essere migliorate suddividendo il membro in due. Esaminiamo il metodo <xref:System.Collections.Generic.ICollection%601.Add%2A> dell'interfaccia <xref:System.Collections.Generic.ICollection%601>.
+ A volte le prestazioni di un membro che genera eccezioni possono essere migliorate suddividendo il membro in due. Esaminiamo il <xref:System.Collections.Generic.ICollection%601.Add%2A> metodo dell' <xref:System.Collections.Generic.ICollection%601> interfaccia.
 
 ```csharp
 ICollection<int> numbers = ...
@@ -42,12 +42,12 @@ if (!numbers.IsReadOnly)
 }
 ```
 
- Il membro usato per testare una condizione, che in questo esempio è la proprietà `IsReadOnly`, viene definito tester. Il membro usato per eseguire un'operazione potenzialmente generata, il metodo `Add` nell'esempio, viene definito agente.
+ Il membro usato per testare una condizione, che in questo esempio è la proprietà `IsReadOnly` , viene definito tester. Il membro usato per eseguire un'operazione potenzialmente generata, il `Add` metodo nell'esempio, viene definito agente.
 
  ✔️ prendere in considerazione il modello del tester per i membri che potrebbero generare eccezioni in scenari comuni per evitare problemi di prestazioni correlati alle eccezioni.
 
 ## <a name="try-parse-pattern"></a>Modello try-parse
- Per le API estremamente sensibili alle prestazioni, è consigliabile usare un modello ancora più veloce rispetto a quello descritto nella sezione precedente. Il pattern chiama per modificare il nome del membro per creare una test case ben definita parte della semantica dei membri. Ad esempio, <xref:System.DateTime> definisce un metodo <xref:System.DateTime.Parse%2A> che genera un'eccezione se l'analisi di una stringa ha esito negativo. Definisce inoltre un metodo di <xref:System.DateTime.TryParse%2A> corrispondente che tenta di analizzare, ma restituisce false se l'analisi ha esito negativo e restituisce il risultato di un'analisi corretta utilizzando un parametro di `out`.
+ Per le API estremamente sensibili alle prestazioni, è consigliabile usare un modello ancora più veloce rispetto a quello descritto nella sezione precedente. Il pattern chiama per modificare il nome del membro per creare una test case ben definita parte della semantica dei membri. Ad esempio, <xref:System.DateTime> definisce un <xref:System.DateTime.Parse%2A> metodo che genera un'eccezione se l'analisi di una stringa ha esito negativo. Definisce inoltre un metodo corrispondente <xref:System.DateTime.TryParse%2A> che tenta di analizzare, ma restituisce false se l'analisi ha esito negativo e restituisce il risultato di un'analisi riuscita utilizzando un `out` parametro.
 
 ```csharp
 public struct DateTime
@@ -77,5 +77,5 @@ public struct DateTime
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
-- [Linee guida di progettazione delle eccezioni](../../../docs/standard/design-guidelines/exceptions.md)
+- [Linee guida per la progettazione di Framework](index.md)
+- [Linee guida di progettazione delle eccezioni](exceptions.md)

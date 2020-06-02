@@ -12,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: 81c837bd045992043208a59f6ee16803c1d6eb3c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 87cf793229cfc7d8d0547af935369a3febee41a3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744185"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290188"
 ---
 # <a name="names-of-type-members"></a>Nomi di membri dei tipi
 I tipi sono costituiti da membri: metodi, proprietà, eventi, costruttori e campi. Le sezioni seguenti illustrano le linee guida per assegnare nomi ai membri dei tipi.
@@ -40,7 +40,7 @@ public class String {
 
  ✔️ le proprietà del nome usando un sostantivo, una frase nominale o un aggettivo.
 
- ❌ non dispongono di proprietà corrispondenti al nome dei metodi "Get", come nell'esempio seguente:
+ ❌NON dispongono di proprietà corrispondenti al nome dei metodi "Get", come nell'esempio seguente:
 
  `public string TextWriter { get {...} set {...} }` `public string GetTextWriter(int value) { ... }`
 
@@ -48,7 +48,7 @@ public class String {
 
  ✔️ ESEGUIRE le proprietà della raccolta dei nomi con una frase plurale che descrive gli elementi nella raccolta invece di usare una frase singolare seguita da "list" o "Collection".
 
- ✔️ denominare le proprietà booleane con una frase affermativa (`CanSeek` invece di `CantSeek`). Facoltativamente, è anche possibile precedere le proprietà booleane con "is", "Can" o "has", ma solo dove viene aggiunto value.
+ ✔️ denominare le proprietà booleane con una frase affermativa `CanSeek` `CantSeek` , anziché. Facoltativamente, è anche possibile precedere le proprietà booleane con "is", "Can" o "has", ma solo dove viene aggiunto value.
 
  ✔️ PROVARE a assegnare a una proprietà lo stesso nome del tipo.
 
@@ -72,7 +72,7 @@ public class Control {
 
  Ad esempio, un evento di chiusura generato prima della chiusura di una finestra può essere chiamato `Closing`, mentre uno generato dopo la chiusura della finestra può essere chiamato `Closed`.
 
- ❌ non usare prefissi o postcorrezioni "before" o "After" per indicare gli eventi pre-e post-post. Usare il presente e il passato come descritto in precedenza.
+ ❌Non usare prefissi o postcorrezioni "before" o "After" per indicare gli eventi pre-e post-post. Usare il presente e il passato come descritto in precedenza.
 
  ✔️ i gestori eventi dei nomi (delegati usati come tipi di eventi) con il suffisso "EventHandler", come illustrato nell'esempio seguente:
 
@@ -85,13 +85,13 @@ public class Control {
  ✔️ le classi di argomenti dell'evento Name con il suffisso "EventArgs".
 
 ## <a name="names-of-fields"></a>Nomi dei campi
- Le linee guida per i nomi dei campi si applicano ai campi statici pubblici e protetti. I campi interni e privati non sono descritti in queste linee guida, mentre i campi istanza pubblica o istanza protetta non sono consentiti dalle [linee guida di progettazione dei membri](../../../docs/standard/design-guidelines/member.md).
+ Le linee guida per i nomi dei campi si applicano ai campi statici pubblici e protetti. I campi interni e privati non sono descritti in queste linee guida, mentre i campi istanza pubblica o istanza protetta non sono consentiti dalle [linee guida di progettazione dei membri](member.md).
 
  ✔️ utilizzare sistema Pascal nei nomi dei campi.
 
  ✔️ i campi nome usando un sostantivo, una frase nominale o un aggettivo.
 
- ❌ non utilizzano un prefisso per i nomi dei campi.
+ ❌Non usare un prefisso per i nomi dei campi.
 
  Ad esempio evitare di usare "g_" o "s _" per indicare i campi statici.
 
@@ -101,5 +101,5 @@ public class Control {
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
-- [Convenzioni di denominazione](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Linee guida per la progettazione di Framework](index.md)
+- [Linee guida per la denominazione](naming-guidelines.md)
