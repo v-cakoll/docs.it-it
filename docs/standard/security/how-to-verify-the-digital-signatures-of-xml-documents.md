@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Verificare le firme digitali dei documenti XML'
+title: 'Procedura: verificare le firme digitali dei documenti XML'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - XML digital signatures
 - digital signatures, verifying
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
-ms.openlocfilehash: 5d562c23d3b0fd7eda5dc273932ada77709641a1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: fa5e13e4a84a7d5d5c07c63df9079f4a07aebc62
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706006"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277141"
 ---
-# <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Procedura: Verificare le firme digitali dei documenti XML
-È possibile usare le classi nello spazio dei nomi <xref:System.Security.Cryptography.Xml> per verificare i dati XML firmati con una firma digitale. Le firme digitali XML (XMLDSIG) consentono di verificare che i dati non siano stati alterati dopo la firma. Per ulteriori informazioni sullo standard XMLDSIG, vedere la specifica World Wide Web Consortium (W3C) in <https://www.w3.org/TR/xmldsig-core/>.
+# <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Procedura: verificare le firme digitali dei documenti XML
+È possibile usare le classi nello spazio dei nomi <xref:System.Security.Cryptography.Xml> per verificare i dati XML firmati con una firma digitale. Le firme digitali XML (XMLDSIG) consentono di verificare che i dati non siano stati alterati dopo la firma. Per ulteriori informazioni sullo standard XMLDSIG, vedere la specifica World Wide Web Consortium (W3C) in <https://www.w3.org/TR/xmldsig-core/> .
   
- Nell'esempio di codice di questa procedura viene illustrato come verificare una firma digitale XML contenuta in un elemento <`Signature`>.  L'esempio recupera una chiave pubblica RSA da un contenitore di chiavi, quindi usa la chiave per verificare la firma.  
+ Nell'esempio di codice di questa procedura viene illustrato come verificare una firma digitale XML contenuta in un `Signature` elemento <>.  L'esempio recupera una chiave pubblica RSA da un contenitore di chiavi, quindi usa la chiave per verificare la firma.  
   
- Per informazioni su come creare una firma digitale che può essere verificata usando questa tecnica, vedere [procedura: firmare documenti XML con firme digitali](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
+ Per informazioni su come creare una firma digitale che può essere verificata usando questa tecnica, vedere [procedura: firmare documenti XML con firme digitali](how-to-sign-xml-documents-with-digital-signatures.md).  
   
 ### <a name="to-verify-the-digital-signature-of-an-xml-document"></a>Per verificare la firma digitale di un documento XML  
   
@@ -50,12 +50,12 @@ ms.locfileid: "75706006"
      [!code-csharp[HowToVerifyXMLDocumentRSA#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#5)]
      [!code-vb[HowToVerifyXMLDocumentRSA#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#5)]  
   
-5. Trovare l'elemento <`signature`> e creare un nuovo oggetto <xref:System.Xml.XmlNodeList>.  
+5. Trovare l' `signature` elemento <> e creare un nuovo <xref:System.Xml.XmlNodeList> oggetto.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#6)]
      [!code-vb[HowToVerifyXMLDocumentRSA#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#6)]  
   
-6. Caricare il codice XML del primo <`signature`elemento > nell'oggetto <xref:System.Security.Cryptography.Xml.SignedXml>.  
+6. Caricare il codice XML del primo <`signature` elemento> nell' <xref:System.Security.Cryptography.Xml.SignedXml> oggetto.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#7)]
      [!code-vb[HowToVerifyXMLDocumentRSA#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#7)]  
@@ -66,7 +66,7 @@ ms.locfileid: "75706006"
      [!code-vb[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#8)]  
   
 ## <a name="example"></a>Esempio  
- Questo esempio presuppone che sia presente un file denominato `"test.xml"` nella stessa directory del programma compilato  Il file di `"test.xml"` deve essere firmato usando le tecniche descritte in [procedura: firmare documenti XML con firme digitali](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
+ Questo esempio presuppone che sia presente un file denominato `"test.xml"` nella stessa directory del programma compilato  Il `"test.xml"` file deve essere firmato usando le tecniche descritte in [procedura: firmare documenti XML con firme digitali](how-to-sign-xml-documents-with-digital-signatures.md).  
   
  [!code-csharp[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#1)]
  [!code-vb[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#1)]  
@@ -78,11 +78,11 @@ ms.locfileid: "75706006"
 - Includere gli spazi dei nomi seguenti: <xref:System.Xml>, <xref:System.Security.Cryptography> e <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
- Non archiviare né trasferire mai in testo non crittografato la chiave privata di una coppia di chiavi asimmetriche.  Per ulteriori informazioni sulle chiavi crittografiche simmetriche e asimmetriche, vedere [generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
+ Non archiviare né trasferire mai in testo non crittografato la chiave privata di una coppia di chiavi asimmetriche.  Per ulteriori informazioni sulle chiavi crittografiche simmetriche e asimmetriche, vedere [generazione di chiavi per crittografia e decrittografia](generating-keys-for-encryption-and-decryption.md).  
   
- Non incorporare mai una chiave privata direttamente nel codice sorgente.  Le chiavi incorporate possono essere lette facilmente da un assembly tramite [Ildasm. exe (DISASSEMBLER il)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) oppure aprendo l'assembly in un editor di testo, ad esempio Blocco note.  
+ Non incorporare mai una chiave privata direttamente nel codice sorgente.  Le chiavi incorporate possono essere lette facilmente da un assembly tramite [Ildasm. exe (DISASSEMBLER il)](../../framework/tools/ildasm-exe-il-disassembler.md) oppure aprendo l'assembly in un editor di testo, ad esempio Blocco note.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Security.Cryptography.Xml>
-- [Procedura: Firmare documenti XML con firme digitali](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)
+- [Procedura: firmare documenti XML con firme digitali](how-to-sign-xml-documents-with-digital-signatures.md)

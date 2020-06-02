@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interprocess communication [.NET Framework], pipes
 - I/O [.NET Framework], pipes
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
-ms.openlocfilehash: 693dd1eb0b0b9bb87973eead26a344ed67641e34
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a634cb87a5f25b520e5fe6fd5b39eae861120a28
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75706556"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278688"
 ---
 # <a name="pipe-operations-in-net"></a>Operazioni pipe in .NET
 Le pipe rappresentano un mezzo che consente la comunicazione interprocesso. Sono disponibili due tipi di pipe:  
@@ -24,7 +24,7 @@ Le pipe rappresentano un mezzo che consente la comunicazione interprocesso. Sono
   
      In .NET, le unnamed pipe vengono implementate tramite le classi <xref:System.IO.Pipes.AnonymousPipeServerStream> e <xref:System.IO.Pipes.AnonymousPipeClientStream>.  
   
-     Vedere [Procedura: Usare le unnamed pipe per la comunicazione interprocesso locale](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md).  
+     Vedere [Procedura: Usare le unnamed pipe per la comunicazione interprocesso locale](how-to-use-anonymous-pipes-for-local-interprocess-communication.md).  
   
 - Named pipe.  
   
@@ -32,10 +32,10 @@ Le pipe rappresentano un mezzo che consente la comunicazione interprocesso. Sono
   
      In .NET, le named pipe vengono implementate tramite le classi <xref:System.IO.Pipes.NamedPipeServerStream> e <xref:System.IO.Pipes.NamedPipeClientStream>.  
   
-     Vedere [Procedura: Usare le named pipe per la comunicazione interprocesso in rete](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md).  
+     Vedere [Procedura: Usare le named pipe per la comunicazione interprocesso in rete](how-to-use-named-pipes-for-network-interprocess-communication.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [I/O su file e flusso](../../../docs/standard/io/index.md)
-- [Procedura: utilizzare le unnamed pipe per la comunicazione interprocesso locale](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
-- [Procedura: utilizzare le named pipe per la comunicazione interprocesso in rete](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [I/O di file e di flussi](index.md)
+- [Procedura: Usare le unnamed pipe per la comunicazione interprocesso locale](how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
+- [Procedura: Usare le named pipe per la comunicazione interprocesso in rete](how-to-use-named-pipes-for-network-interprocess-communication.md)

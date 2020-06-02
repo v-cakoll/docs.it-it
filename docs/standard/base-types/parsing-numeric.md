@@ -11,15 +11,15 @@ helpviewer_keywords:
 - enumerations [.NET Framework], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-ms.openlocfilehash: ac44282a06b2b3710d3a9e5390c7a514c1632c3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 000419e63e86607cd76728ae6e15ac6cd67b87f4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127596"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277648"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analisi di stringhe numeriche in .NET
-Tutti i tipi numerici hanno due metodi di analisi statici, `Parse` e `TryParse`, che è possibile usare per convertire la rappresentazione di stringa di un numero in un tipo numerico. Tali metodi consentono di analizzare le stringhe generate usando le stringhe di formato documentate in [Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md) e [Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md). Per impostazione predefinita, i metodi `Parse` e `TryParse` consentono di convertire correttamente le stringhe contenenti cifre decimali integrali solo in valori integer. Consentono di convertire correttamente le stringhe che contengono cifre decimali integrali e frazionarie, separatori di gruppi e un separatore decimale in valori a virgola mobile. Il metodo `Parse` genera un'eccezione se l'operazione ha esito negativo, mentre il metodo `TryParse` restituisce `false`.  
+Tutti i tipi numerici hanno due metodi di analisi statici, `Parse` e `TryParse`, che è possibile usare per convertire la rappresentazione di stringa di un numero in un tipo numerico. Tali metodi consentono di analizzare le stringhe generate usando le stringhe di formato documentate in [Stringhe di formato numerico standard](standard-numeric-format-strings.md) e [Stringhe di formato numerico personalizzato](custom-numeric-format-strings.md). Per impostazione predefinita, i metodi `Parse` e `TryParse` consentono di convertire correttamente le stringhe contenenti cifre decimali integrali solo in valori integer. Consentono di convertire correttamente le stringhe che contengono cifre decimali integrali e frazionarie, separatori di gruppi e un separatore decimale in valori a virgola mobile. Il metodo `Parse` genera un'eccezione se l'operazione ha esito negativo, mentre il metodo `TryParse` restituisce `false`.  
   
 ## <a name="parsing-and-format-providers"></a>Analisi e provider di formato  
  In genere, le rappresentazioni di stringa dei valori numerici differiscono in base alle impostazioni cultura. Gli elementi delle stringhe numeriche, ad esempio simboli di valuta, separatori di gruppi (o migliaia) e separatori decimali, variano in base alle impostazioni cultura. I metodi di analisi usano in modo implicito o esplicito un provider di formato che riconosce le variazioni specifiche delle impostazioni cultura. Se non viene specificato alcun provider di formato in una chiamata al metodo `Parse` o `TryParse`, viene usato il provider di formato associato alle impostazioni cultura del thread corrente, ossia l'oggetto <xref:System.Globalization.NumberFormatInfo> restituito dalla proprietà <xref:System.Globalization.NumberFormatInfo.CurrentInfo%2A?displayProperty=nameWithType>.  
@@ -84,5 +84,5 @@ Tutti i tipi numerici hanno due metodi di analisi statici, `Parse` e `TryParse`,
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Globalization.NumberStyles>
-- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)
-- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)
+- [Analisi di stringhe](parsing-strings.md)
+- [Formattazione di tipi](formatting-types.md)

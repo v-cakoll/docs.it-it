@@ -9,12 +9,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-ms.openlocfilehash: 3b24bfefd3edb0585e9c6369e9b8151b17151661
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: efdfcda95a67941f0fde5f7a96467af7dd374396
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741708"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280140"
 ---
 # <a name="enum-design"></a>Progettazione di enum
 
@@ -28,17 +28,17 @@ Le enumerazioni di flag sono progettate per supportare operazioni bit per bit su
 
 ✔️ prediligono l'uso di un'enumerazione anziché di costanti statiche.
 
-❌ non usare un'enumerazione per i set aperti, ad esempio la versione del sistema operativo, i nomi degli amici e così via.
+❌Non usare un'enumerazione per i set aperti, ad esempio la versione del sistema operativo, i nomi degli amici e così via.
 
-❌ non forniscono valori di enumerazione riservati destinati a un uso futuro.
+❌NON fornire valori di enumerazione riservati destinati a un uso futuro.
 
 È sempre possibile aggiungere semplicemente valori all'enum esistente in una fase successiva. Per ulteriori informazioni sull'aggiunta di valori alle enumerazioni, vedere [aggiunta di valori alle enumerazioni](#add_value) . I valori riservati non inquinano il set di valori reali e tendono a causare errori dell'utente.
 
-❌ evitare l'esposizione pubblica delle enumerazioni con un solo valore.
+❌EVITARE di esporre pubblicamente le enumerazioni con un solo valore.
 
 Una procedura comune per garantire l'estendibilità futura delle API C consiste nell'aggiungere parametri riservati alle firme dei metodi. Tali parametri riservati possono essere espressi come enum con un unico valore predefinito. Questa operazione non deve essere eseguita nelle API gestite. L'overload dei metodi consente l'aggiunta di parametri nelle versioni future.
 
-❌ non includono i valori sentinel nelle enumerazioni.
+❌Non includere valori sentinel nelle enumerazioni.
 
 Sebbene siano talvolta utili per gli sviluppatori di Framework, i valori sentinella creano confusione per gli utenti del Framework. Vengono utilizzati per tenere traccia dello stato dell'enumerazione anziché di uno dei valori del set rappresentato dall'enumerazione.
 
@@ -46,11 +46,11 @@ Sebbene siano talvolta utili per gli sviluppatori di Framework, i valori sentine
 
 Prendere in considerazione la chiamata di un valore simile a "None". Se tale valore non è appropriato per questa enumerazione specifica, il valore predefinito più comune per l'enumerazione deve essere assegnato al valore sottostante pari a zero.
 
-✔️ CONSIDERARE l'uso di <xref:System.Int32> (impostazione predefinita nella maggior parte dei linguaggi di programmazione) come tipo sottostante di un'enumerazione, a meno che non siano soddisfatte le condizioni seguenti:
+✔️ CONSIGLIABILE utilizzare <xref:System.Int32> (il valore predefinito nella maggior parte dei linguaggi di programmazione) come tipo sottostante di un'enumerazione, a meno che non esista una delle condizioni seguenti:
 
 - Enum è un'enumerazione Flags e sono presenti più di 32 flag oppure si prevede di avere più in futuro.
 
-- Il tipo sottostante deve essere diverso da <xref:System.Int32> per semplificare l'interoperabilità con codice non gestito che prevede enum di dimensioni diverse.
+- Il tipo sottostante deve essere diverso da quello <xref:System.Int32> per semplificare l'interoperabilità con codice non gestito che prevede enum di dimensioni diverse.
 
 - Un tipo sottostante più piccolo comporta un notevole risparmio nello spazio. Se si prevede che l'enumerazione venga utilizzata principalmente come argomento per il flusso di controllo, le dimensioni hanno poca differenza. Il risparmio di dimensioni può essere significativo se:
 
@@ -60,31 +60,31 @@ Prendere in considerazione la chiamata di un valore simile a "None". Se tale val
 
   - Si prevede che un numero elevato di istanze dell'enum venga serializzato.
 
-Per l'utilizzo in memoria, tenere presente che gli oggetti gestiti sono sempre allineati `DWORD`, quindi è necessario che in un'istanza siano presenti più enumerazioni o altre strutture di piccole dimensioni per comprimere un'enum più piccola con per fare una differenza, in quanto le dimensioni totali dell'istanza verranno sempre arrotondate per eccesso a una `DWORD`.
+Per quanto riguarda l'utilizzo in memoria, tenere presente che gli oggetti gestiti sono sempre `DWORD` allineati, pertanto è necessario disporre di più enumerazioni o altre strutture di piccole dimensioni in un'istanza per comprimere un'enum più piccola con per fare una differenza, in quanto le dimensioni totali dell'istanza verranno sempre arrotondate per eccesso a un `DWORD` .
 
 ✔️ le enumerazioni dei flag nome con Sostantivi plurali o frasi sostantivi e semplici enumerazioni con sostantivi singolari o frasi sostantive.
 
-❌ non estendono direttamente <xref:System.Enum?displayProperty=nameWithType>.
+❌NON estendere <xref:System.Enum?displayProperty=nameWithType> direttamente.
 
-<xref:System.Enum?displayProperty=nameWithType> è un tipo speciale utilizzato da CLR per creare enumerazioni definite dall'utente. La maggior parte dei linguaggi di programmazione fornisce un elemento di programmazione che consente di accedere a questa funzionalità. Ad esempio, nella C# parola chiave `enum` viene usato per definire un'enumerazione.
+<xref:System.Enum?displayProperty=nameWithType>è un tipo speciale utilizzato da CLR per creare enumerazioni definite dall'utente. La maggior parte dei linguaggi di programmazione fornisce un elemento di programmazione che consente di accedere a questa funzionalità. In C#, ad esempio, la `enum` parola chiave viene usata per definire un'enumerazione.
 
 <a name="design"></a>
 
 ### <a name="designing-flag-enums"></a>Progettazione di enumerazioni di flag
 
-✔️ applicare la <xref:System.FlagsAttribute?displayProperty=nameWithType> per contrassegnare le enumerazioni. Non applicare questo attributo alle enumerazioni semplici.
+✔️ applicare l'oggetto <xref:System.FlagsAttribute?displayProperty=nameWithType> per contrassegnare le enumerazioni. Non applicare questo attributo alle enumerazioni semplici.
 
 ✔️ usano le potenze di due per i valori enum del flag, in modo che possano essere combinati liberamente usando l'operazione OR bit per bit.
 
 ✔️ CONSIGLIABILE fornire valori enum speciali per le combinazioni di flag comunemente utilizzate.
 
-Le operazioni bit per bit sono un concetto avanzato e non devono essere necessarie per le attività semplici. <xref:System.IO.FileAccess.ReadWrite> è un esempio di tale valore speciale.
+Le operazioni bit per bit sono un concetto avanzato e non devono essere necessarie per le attività semplici. <xref:System.IO.FileAccess.ReadWrite>è un esempio di tale valore speciale.
 
-❌ evitare di creare enumerazioni di flag in cui determinate combinazioni di valori non sono valide.
+❌EVITARE di creare enumerazioni di flag in cui determinate combinazioni di valori non sono valide.
 
-❌ evitare di usare i valori enum del flag pari a zero, a meno che il valore non rappresenti "tutti i flag sono cancellati" ed è denominato in modo appropriato, come previsto dalle linee guida successive.
+❌EVITARE di utilizzare valori enum di flag pari a zero, a meno che il valore non rappresenti "tutti i flag sono cancellati" ed è denominato in modo appropriato, come previsto dalle linee guida successive.
 
-✔️ Denominare il valore zero di enum Flags `None`. Per l'enumerazione di un flag, il valore deve sempre indicare che tutti i flag sono cancellati.
+✔️ Denominare il valore zero delle enumerazioni di flag `None` . Per l'enumerazione di un flag, il valore deve sempre indicare che tutti i flag sono cancellati.
 
 <a name="add_value"></a>
 
@@ -102,5 +102,5 @@ Se sono presenti dati reali sulle incompatibilità delle applicazioni causati da
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la progettazione di tipi](../../../docs/standard/design-guidelines/type.md)
-- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
+- [Linee guida per la progettazione di tipi](type.md)
+- [Linee guida per la progettazione di Framework](index.md)

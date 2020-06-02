@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Decrittografare gli elementi XML con chiavi simmetriche'
+title: 'Procedura: decrittografare gli elementi XML con chiavi simmetriche'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Rijndael
 - decryption
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
-ms.openlocfilehash: fd377cd470d361f5a46c662ab37780713a2d3804
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bb34332d345ee7bcb9037dc7bdf0deebbe70c3c9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706123"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277427"
 ---
-# <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Procedura: Decrittografare gli elementi XML con chiavi simmetriche
+# <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Procedura: decrittografare gli elementi XML con chiavi simmetriche
 È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per crittografare un elemento all'interno di un documento XML.  La crittografia XML consente di archiviare o trasportare contenuti XML sensibili, senza preoccuparsi che i dati vengano letti con facilità.  Questo esempio di codice consente di decrittografare un elemento XML usando l'algoritmo Advanced Encryption Standard (AES), noto anche come Rijndael.  
   
- Per informazioni su come crittografare un elemento XML usando questa procedura, vedere [procedura: crittografare gli elementi XML con chiavi simmetriche](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
+ Per informazioni su come crittografare un elemento XML usando questa procedura, vedere [procedura: crittografare gli elementi XML con chiavi simmetriche](how-to-encrypt-xml-elements-with-symmetric-keys.md).  
   
  Quando si usa un algoritmo simmetrico come AES per crittografare i dati XML, è necessario usare la stessa chiave per crittografare e decrittografare i dati XML.  L'esempio riportato in questa procedura presuppone che i dati XML crittografati siano stati decrittografati mediante la stessa chiave e che le parti che eseguono le operazioni di crittografia e decrittografia si accordino sull'algoritmo e sulla chiave da usare.  L'esempio non archivia né crittografa la chiave AES nei dati XML crittografati.  
   
@@ -31,9 +31,9 @@ ms.locfileid: "75706123"
   
 ### <a name="to-decrypt-an-xml-element-with-a-symmetric-key"></a>Per decrittografare un elemento XML con una chiave simmetrica  
   
-1. Crittografare un elemento XML con la chiave generata in precedenza usando le tecniche descritte in [procedura: crittografare gli elementi XML con chiavi simmetriche](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
+1. Crittografare un elemento XML con la chiave generata in precedenza usando le tecniche descritte in [procedura: crittografare gli elementi XML con chiavi simmetriche](how-to-encrypt-xml-elements-with-symmetric-keys.md).  
   
-2. Trovare l'elemento <`EncryptedData`> (definito dallo standard di crittografia XML) in un oggetto <xref:System.Xml.XmlDocument> che contiene il codice XML crittografato e creare un nuovo oggetto <xref:System.Xml.XmlElement> per rappresentare tale elemento.  
+2. Trovare l' `EncryptedData` elemento <> (definito dallo standard di crittografia XML) in un <xref:System.Xml.XmlDocument> oggetto che contiene il codice XML crittografato e creare un nuovo <xref:System.Xml.XmlElement> oggetto per rappresentare tale elemento.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#10)]
      [!code-vb[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#10)]  
@@ -82,4 +82,4 @@ ms.locfileid: "75706123"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Security.Cryptography.Xml>
-- [Procedura: Crittografare gli elementi XML con chiavi simmetriche](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)
+- [Procedura: crittografare gli elementi XML con chiavi simmetriche](how-to-encrypt-xml-elements-with-symmetric-keys.md)

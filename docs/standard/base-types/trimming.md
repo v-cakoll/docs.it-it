@@ -15,12 +15,12 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: bdbe267bb178e90c0008422e6543a23178c2c4d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0777ba7348d13697fd53f556ac69cba3f98d1e4d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159988"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290876"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Eliminazione di spazi iniziali e finali e rimozione di caratteri dalle stringhe in .NET
 Se si sta analizzando una frase in singole parole, è possibile che si ottengano parole con spazi vuoti alle estremità. In questo caso è possibile usare uno dei metodi trim della classe **System.String** per rimuovere un numero qualsiasi di spazi o altri caratteri da una posizione specificata nella stringa. La tabella seguente illustra i metodi trim disponibili.  
@@ -77,7 +77,7 @@ Se si sta analizzando una frase in singole parole, è possibile che si ottengano
   
  Il codice visualizza `World!` nella console.  
   
-## <a name="remove"></a>Rimuovere
+## <a name="remove"></a>Rimuovi
 
  Tramite il metodo <xref:System.String.Remove%2A?displayProperty=nameWithType> viene rimosso un numero specificato di caratteri a partire da una posizione specificata in una stringa esistente. Questo metodo presuppone un indice a base zero.  
   
@@ -96,4 +96,4 @@ Se si sta analizzando una frase in singole parole, è possibile che si ottengano
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Operazioni di base sulle stringheBasic String Operations](../../../docs/standard/base-types/basic-string-operations.md)
+- [Operazioni di base sulle stringhe](basic-string-operations.md)

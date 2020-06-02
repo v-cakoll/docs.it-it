@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: c08f4309d7673d7e7fb1c6bd84307e4323411d9e
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: adc617362cf3ba07ff63f1095968e2bd88df88d9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242686"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291916"
 ---
 # <a name="globalization"></a>Globalizzazione
 
@@ -38,7 +38,7 @@ Per impostazione predefinita, .NET usa stringhe Unicode. Una stringa Unicode è 
 
 In molti sistemi operativi e applicazioni, incluso il sistema operativo Windows, è possibile usare anche tabelle codici per rappresentare i set di caratteri. Le tabelle codici in genere contengono i valori ASCII standard compresi tra 0x00 e 0x7F ed eseguono il mapping degli altri caratteri ai valori rimanenti compresi tra 0x80 e 0xFF. L'interpretazione dei valori da 0x80 a 0xFF dipende dalla tabella codici specifica. Per questo motivo, se possibile, è consigliabile evitare l'uso di tabelle codici in un'app globalizzata.
 
-Nell'esempio seguente vengono illustrati i rischi di interpretazione dei dati della tabella codici quando la tabella codici predefinita in un sistema è diversa dalla tabella codici in cui i sono stati salvati i dati. Per simulare questo scenario, nell'esempio vengono specificate in modo esplicito tabelle codici diverse. In primo luogo, nell'esempio viene definita una matrice costituita dai caratteri maiuscoli dell'alfabeto greco. I caratteri vengono codificati in una matrice di byte usando la tabella codici 737 (nota anche come Greco MS-DOS) e la matrice di byte viene salvata in un file. Se viene recuperato il file e viene decodificata la relativa matrice di byte tramite la tabella codici 737, vengono ripristinati i caratteri originali. Tuttavia, se viene recuperato il file e viene decodificata la relativa matrice di byte usando la tabella codici 1252 (o Windows-1252, che rappresenta i caratteri nell'alfabeto latino), i caratteri originali vengono persi.
+Nell'esempio seguente vengono illustrati i rischi di interpretazione dei dati della tabella codici quando la tabella codici predefinita in un sistema è diversa dalla tabella codici in cui i sono stati salvati i dati. (Per simulare questo scenario, l'esempio specifica in modo esplicito tabelle codici diverse). Innanzitutto, nell'esempio viene definita una matrice costituita dai caratteri maiuscoli dell'alfabeto greco. I caratteri vengono codificati in una matrice di byte usando la tabella codici 737 (nota anche come Greco MS-DOS) e la matrice di byte viene salvata in un file. Se viene recuperato il file e viene decodificata la relativa matrice di byte tramite la tabella codici 737, vengono ripristinati i caratteri originali. Tuttavia, se viene recuperato il file e viene decodificata la relativa matrice di byte usando la tabella codici 1252 (o Windows-1252, che rappresenta i caratteri nell'alfabeto latino), i caratteri originali vengono persi.
 
 [!code-csharp[Conceptual.Globalization#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/codepages1.cs#1)]
 [!code-vb[Conceptual.Globalization#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/codepages1.vb#1)]
@@ -57,7 +57,7 @@ Anche se si sviluppa un'app destinata a singole impostazioni cultura o aree, è 
 
 L'uso di file di risorse presenta vantaggi specifici se si crea un'app localizzata. Quando si distribuiscono le risorse in assembly satellite, Common Language Runtime seleziona automaticamente una risorsa di impostazioni cultura appropriata basata sulle impostazioni cultura dell'interfaccia utente corrente come specificato dalla proprietà <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>. Purché venga definita una risorsa specifica delle impostazioni cultura adatta e si crei correttamente un'istanza di un oggetto <xref:System.Resources.ResourceManager> o si usi una classe di risorse fortemente tipizzata, il runtime gestisce i dettagli relativi al recupero delle risorse appropriate.
 
-Per altre informazioni sulla creazione di file di risorse, vedere [Creazione di file di risorse](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md). Per informazioni sulla creazione e distribuzione di assembly satellite, vedere [Creazione di assembly satellite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) e [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).
+Per altre informazioni sulla creazione di file di risorse, vedere [Creazione di file di risorse](../../framework/resources/creating-resource-files-for-desktop-apps.md). Per informazioni sulla creazione e distribuzione di assembly satellite, vedere [Creazione di assembly satellite](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) e [Creazione del pacchetto e distribuzione delle risorse](../../framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).
 
 ### <a name="search-and-compare-strings"></a>Eseguire la ricerca e il confronto di stringhe
 
@@ -66,7 +66,7 @@ Quando possibile, si raccomanda di gestire le stringhe come unità intere, anzic
 > [!TIP]
 > È possibile usare la classe <xref:System.Globalization.StringInfo> per gestire gli elementi di testo anziché i singoli caratteri in una stringa.
 
-Nelle ricerche e nei confronti di stringhe, un errore comune consiste nel gestire la stringa come una raccolta di caratteri, ognuno dei quali è rappresentato da un oggetto <xref:System.Char>. Infatti, un singolo carattere può essere costituito da uno, due o più oggetti <xref:System.Char>. Caratteri di questo tipo vengono trovati più frequentemente nelle stringhe delle impostazioni cultura i cui alfabeti sono costituiti da caratteri esterni all'intervallo di caratteri latini di base Unicode (da U+0021 a U+007E). Nell'esempio seguente si tenta di trovare l'indice del carattere LETTERA LATINA A MAIUSCOLA CON accento GRAVE (U+00C0) in una stringa. Tuttavia, questo carattere può essere rappresentato in due modi diversi: come una singola unità di codice (U-00C0) o come un carattere composito (due unità di codice: U-0041 e U-0300). In questo caso, il carattere è <xref:System.Char> rappresentato nell'istanza di stringa da due oggetti, U-0041 e U-0300. Il codice di esempio chiama gli overload <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> e <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> per trovare la posizione del carattere incluso nell'istanza della stringa, ma questi restituiscono risultati diversi. La prima chiamata al metodo dispone di un argomento <xref:System.Char>; esegue un confronto ordinale e pertanto non può trovare una corrispondenza. La seconda chiamata dispone di un argomento <xref:System.String>; esegue un confronto dipendente dalle impostazioni cultura e pertanto trova una corrispondenza.
+Nelle ricerche e nei confronti di stringhe, un errore comune consiste nel gestire la stringa come una raccolta di caratteri, ognuno dei quali è rappresentato da un oggetto <xref:System.Char>. Infatti, un singolo carattere può essere costituito da uno, due o più oggetti <xref:System.Char>. Caratteri di questo tipo vengono trovati più frequentemente nelle stringhe delle impostazioni cultura i cui alfabeti sono costituiti da caratteri esterni all'intervallo di caratteri latini di base Unicode (da U+0021 a U+007E). Nell'esempio seguente si tenta di trovare l'indice del carattere LETTERA LATINA A MAIUSCOLA CON accento GRAVE (U+00C0) in una stringa. Tuttavia, questo carattere può essere rappresentato in due modi diversi: come singola unità di codice (U + 00C0) o come carattere composito (due unità di codice: U + 0041 e U + 0300). In questo caso, il carattere è rappresentato nell'istanza della stringa da due <xref:System.Char> oggetti, u + 0041 e u + 0300. Il codice di esempio chiama gli overload <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> e <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> per trovare la posizione del carattere incluso nell'istanza della stringa, ma questi restituiscono risultati diversi. La prima chiamata al metodo dispone di un argomento <xref:System.Char>; esegue un confronto ordinale e pertanto non può trovare una corrispondenza. La seconda chiamata dispone di un argomento <xref:System.String>; esegue un confronto dipendente dalle impostazioni cultura e pertanto trova una corrispondenza.
 
 [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
 [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]
@@ -108,7 +108,7 @@ Il confronto di stringhe dipendenti dalle impostazioni cultura viene definito da
 |----------------------------|----------------------|---------------------|
 |.NET Framework 2.0|Tutti i sistemi operativi|Unicode 4.1|
 |.NET Framework 3.0|Tutti i sistemi operativi|Unicode 4.1|
-|.NET Framework 3.5|Tutti i sistemi operativi|Unicode 4.1|
+|.NET Framework 3.5|Tutti i sistemi operativi|Unicode 4.1|
 |.NET Framework 4|Tutti i sistemi operativi|Unicode 5.0|
 |.NET Framework 4.5 e versioni successive in Windows 7|Unicode 5.0|
 |.NET Framework 4.5 e versioni successive in Windows 8 e sistemi operativi successivi|Unicode 6.3.0|
@@ -143,7 +143,7 @@ In genere, quando le date e le ore sono visualizzate nell'interfaccia utente, è
 
 - Il metodo <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>, che include una stringa di formato
 
-- La funzionalità di [formattazione composita](../../../docs/standard/base-types/composite-formatting.md), quando viene usata con le date
+- La funzionalità di [formattazione composita](../base-types/composite-formatting.md), quando viene usata con le date
 
 Nell'esempio seguente vengono visualizzati due volte i dati di tramonto e di alba dell'11 ottobre 2012. Innanzitutto vengono impostate le impostazioni cultura correnti su Croato (Croazia) e, successivamente, su Inglese (Gran Bretagna). In entrambi i casi, le date e le ore verranno visualizzate nel formato appropriato per le impostazioni cultura specifiche.
 
@@ -174,7 +174,7 @@ L'ultimo approccio viene illustrato nell'esempio seguente. Vengono usate le conv
 
 Un valore di data e ora può avere più interpretazioni, a partire da un'ora generale (Gli archivi vengono aperti il 2 gennaio 2013 alle 9:00) a un momento specifico ("Data di nascita: 2 gennaio 2013 6.32.00"). Quando un valore di ora rappresenta un momento specifico e si ripristina da un valore serializzato, è necessario assicurarsi che rappresenti lo stesso momento indipendentemente dalla posizione geografica o dal fuso orario dell'utente.
 
-L'esempio seguente illustra questo problema. Viene salvato un singolo valore locale di data e ora come stringa in tre [formati standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) ("G" per ora estesa e data generale, "S" per data/ora ordinabile e "O" per data/ora roundtrip), nonché in formato binario.
+L'esempio seguente illustra questo problema. Viene salvato un singolo valore locale di data e ora come stringa in tre [formati standard](../base-types/standard-date-and-time-format-strings.md) ("G" per ora estesa e data generale, "S" per data/ora ordinabile e "O" per data/ora roundtrip), nonché in formato binario.
 
 [!code-csharp[Conceptual.Globalization#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates4.cs#10)]
 [!code-vb[Conceptual.Globalization#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates4.vb#10)]
@@ -224,7 +224,7 @@ Quando i dati vengono serializzati in un sistema nel fuso orario del Pacifico e 
 3/31/2013 3:00:00 AM Local
 ```
 
-Per altre informazioni, vedere [Conversione degli orari tra fusi orari](../../../docs/standard/datetime/converting-between-time-zones.md).
+Per altre informazioni, vedere [Conversione degli orari tra fusi orari](../datetime/converting-between-time-zones.md).
 
 ### <a name="perform-date-and-time-arithmetic"></a>Eseguire operazioni aritmetiche con data e ora
 
@@ -248,7 +248,7 @@ L'esempio seguente è simile a quello precedente, con la differenza che segue qu
 [!code-csharp[Conceptual.Globalization#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates6.cs#9)]
 [!code-vb[Conceptual.Globalization#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates6.vb#9)]
 
-Per altre informazioni, vedere [Esecuzione di operazioni aritmetiche con date e ore](../../../docs/standard/datetime/performing-arithmetic-operations.md).
+Per altre informazioni, vedere [Esecuzione di operazioni aritmetiche con date e ore](../datetime/performing-arithmetic-operations.md).
 
 ### <a name="use-culture-sensitive-names-for-date-elements"></a>Usare nomi dipendenti delle impostazioni cultura per gli elementi di dati
 
@@ -259,7 +259,7 @@ Per altre informazioni, vedere [Esecuzione di operazioni aritmetiche con date e 
 
 Tuttavia, tramite il codice vengono restituiti sempre i nomi dei giorni della settimana in inglese. Il codice che estrae il nome del mese è spesso più flessibile. Spesso si presuppone un calendario di dodici mesi con i nomi dei mesi in una lingua specifica.
 
-Usando le [stringhe di formato di data e ora personalizzate](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) o le proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo>, è facile estrarre le stringhe che riflettono i nomi dei giorni della settimana o dei mesi nelle impostazioni cultura dell'utente, come illustrato nell'esempio seguente. Vengono impostate le impostazioni cultura correnti su Francese (Francia) e vengono visualizzati il nome del giorno della settimana e il nome del mese per il 1° luglio 2013.
+Usando le [stringhe di formato di data e ora personalizzate](../base-types/custom-date-and-time-format-strings.md) o le proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo>, è facile estrarre le stringhe che riflettono i nomi dei giorni della settimana o dei mesi nelle impostazioni cultura dell'utente, come illustrato nell'esempio seguente. Vengono impostate le impostazioni cultura correnti su Francese (Francia) e vengono visualizzati il nome del giorno della settimana e il nome del mese per il 1° luglio 2013.
 
 [!code-csharp[Conceptual.Globalization#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/monthname2.cs#20)]
 [!code-vb[Conceptual.Globalization#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/monthname2.vb#20)]
@@ -279,7 +279,7 @@ In genere, quando i numeri sono visualizzati nell'interfaccia utente, è consigl
 
 - Il metodo `ToString(String)` di qualsiasi tipo numerico, che include una stringa di formato come argomento
 
-- La funzionalità di [formattazione composita](../../../docs/standard/base-types/composite-formatting.md), quando viene usata con valori numerici
+- La funzionalità di [formattazione composita](../base-types/composite-formatting.md), quando viene usata con valori numerici
 
 L'esempio seguente consente di visualizzare la temperatura mensile media di Parigi, Francia. Innanzitutto vengono impostate le impostazioni cultura correnti su Francese (Francia) prima di visualizzare i dati e, successivamente, vengono impostate su Inglese (Stati Uniti). In ogni caso, le temperature e i nomi dei mesi verranno visualizzati nel formato appropriato per le impostazioni cultura in questione. Si noti che nelle due impostazioni cultura vengono usati separatori decimali diversi per il valore della temperatura. Si noti inoltre che in questo esempio viene usata la stringa di formato di data e ora personalizzata "MMMM" per visualizzare il nome completo dei mesi e che viene allocata la quantità di spazio appropriata per il nome del mese nella stringa di risultato determinando la lunghezza del nome del mese più lungo nella matrice <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType>.
 
@@ -336,9 +336,9 @@ In genere, non fare supposizioni sui valori della proprietà <xref:System.Global
 
 - .NET supporta impostazioni cultura sostitutive. Ciò consente di definire nuove impostazioni cultura personalizzate che completano le impostazioni cultura standard esistenti o li sostituiscono completamente.
 
-- Nei sistemi Windows l'utente può personalizzare aspetti specifici delle impostazioni cultura usando l'app **Paese e lingua** nel Pannello di controllo. Quando viene creata un'istanza di un oggetto <xref:System.Globalization.CultureInfo>, è possibile determinare se rifletta le personalizzazioni dell'utente chiamando il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29>. In genere, per le app per l'utente finale, è necessario rispettare le preferenze dell'utente in modo che all'utente vengano presentati i dati in un formato previsto.
+- Nei sistemi Windows l'utente può personalizzare aspetti specifici delle impostazioni cultura usando l'app **Paese e lingua** nel Pannello di controllo. Quando viene creata un'istanza di un oggetto <xref:System.Globalization.CultureInfo>, è possibile determinare se rifletta le personalizzazioni dell'utente chiamando il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29>. In genere, per le app degli utenti finali, è necessario rispettare le preferenze dell'utente in modo che l'utente venga visualizzato con i dati in un formato previsto.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)
-- [Procedure consigliate per l'utilizzo di stringheBest Practices for Using Strings](../../../docs/standard/base-types/best-practices-strings.md)
+- [Globalizzazione e localizzazione](index.md)
+- [Procedure consigliate per l'utilizzo di stringhe](../base-types/best-practices-strings.md)

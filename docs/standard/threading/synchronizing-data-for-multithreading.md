@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: a70bd3070d8b1dcd06e55d330a01d29071293f6c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7f064738472a65ce89f17efc4d7ea00ac98280d0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159390"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291097"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizzazione dei dati per il multithreading
 
@@ -22,11 +22,11 @@ Se più thread sono in grado di effettuare chiamate alle proprietà e ai metodi 
   
 - Aree di codice sincronizzate. È possibile usare la classe <xref:System.Threading.Monitor> o il supporto del compilatore per questa classe per sincronizzare solo il codice di blocco necessario, migliorando le prestazioni.  
   
-- Sincronizzazione manuale. È possibile usare gli oggetti di sincronizzazione della libreria di classi .NET. Vedere la [panoramica sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md), che include una descrizione della classe <xref:System.Threading.Monitor>.  
+- Sincronizzazione manuale. È possibile usare gli oggetti di sincronizzazione della libreria di classi .NET. Vedere la [panoramica sulle primitive di sincronizzazione](overview-of-synchronization-primitives.md), che include una descrizione della classe <xref:System.Threading.Monitor>.  
   
 - Contesti sincronizzati. Per le applicazioni .NET Framework e Xamarin, è possibile usare <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> per abilitare la sincronizzazione semplice e automatica per gli oggetti <xref:System.ContextBoundObject>.  
   
-- Classi delle raccolte nello spazio dei nomi <xref:System.Collections.Concurrent?displayProperty=nameWithType>. Queste classi consentono di eseguire operazioni di aggiunta e rimozione incorporate sincronizzate. Per altre informazioni, vedere [Raccolte thread-safe](../../../docs/standard/collections/thread-safe/index.md).  
+- Classi delle raccolte nello spazio dei nomi <xref:System.Collections.Concurrent?displayProperty=nameWithType>. Queste classi consentono di eseguire operazioni di aggiunta e rimozione incorporate sincronizzate. Per altre informazioni, vedere [Raccolte thread-safe](../collections/thread-safe/index.md).  
   
  Common Language Runtime offre un modello di thread in cui le classi rientrano in un numero di categorie che possono essere sincronizzate in molti modi in base ai requisiti. La tabella seguente indica il supporto di sincronizzazione disponibile per campi e metodi con una determinata categoria di sincronizzazione.  
   
@@ -41,7 +41,7 @@ Se più thread sono in grado di effettuare chiamate alle proprietà e ai metodi 
  Questa è l'impostazione predefinita per gli oggetti. Qualsiasi thread può accedere a qualsiasi metodo o campo in qualsiasi momento. Un solo thread alla volta deve accedere a questi oggetti.  
   
 ## <a name="manual-synchronization"></a>Sincronizzazione manuale  
- La libreria di classi .NET offre diverse classi per la sincronizzazione dei thread. Vedere [Cenni preliminari sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+ La libreria di classi .NET offre diverse classi per la sincronizzazione dei thread. Vedere [Cenni preliminari sulle primitive di sincronizzazione](overview-of-synchronization-primitives.md).  
   
 ## <a name="synchronized-code-regions"></a>Aree di codice sincronizzate  
  È possibile usare la classe <xref:System.Threading.Monitor> o una parola chiave del compilatore per sincronizzare aree di codice, metodi di istanza e metodi statici. Non esiste un supporto per i campi statici sincronizzati.  
@@ -61,7 +61,7 @@ Se più thread sono in grado di effettuare chiamate alle proprietà e ai metodi 
 ### <a name="compiler-support"></a>Supporto del compilatore  
  Visual Basic e C# supportano una parola chiave del linguaggio che usa <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> per bloccare l'oggetto. Visual Basic supporta l'istruzione [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md), C# supporta l'istruzione [lock](../../csharp/language-reference/keywords/lock-statement.md).  
   
- In entrambi i casi, se viene generata un'eccezione nell'area di codice, il blocco acquisito da **lock** o **SyncLock** viene rilasciato automaticamente. I compilatori di C e Visual Basic generano un blocco **finally try**/**finally** con **Monitor.Enter** all'inizio di try e **Monitor.Exit** nel blocco **finally.** Se viene generata un'eccezione all'interno del blocco **lock** o **SyncLock**, viene eseguito il gestore **finally** per consentire l'esecuzione di operazioni di pulizia.  
+ In entrambi i casi, se viene generata un'eccezione nell'area di codice, il blocco acquisito da **lock** o **SyncLock** viene rilasciato automaticamente. I compilatori C# e Visual Basic emettono un blocco **try** / **finally** con **monitor. Enter** all'inizio di try e **monitor. Exit** nel blocco **finally** . Se viene generata un'eccezione all'interno del blocco **lock** o **SyncLock**, viene eseguito il gestore **finally** per consentire l'esecuzione di operazioni di pulizia.  
   
 ## <a name="synchronized-context"></a>Contesto sincronizzato  
 
@@ -70,7 +70,7 @@ Solo nelle applicazioni .NET Framework e Xamarin è possibile usare <xref:System
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
-- [Thread e threading](../../../docs/standard/threading/threads-and-threading.md)
-- [Panoramica delle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [Thread e Threading](threads-and-threading.md)
+- [Panoramica delle primitive di sincronizzazione](overview-of-synchronization-primitives.md)
 - [Istruzione SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md)
 - [Istruzione lock](../../csharp/language-reference/keywords/lock-statement.md)

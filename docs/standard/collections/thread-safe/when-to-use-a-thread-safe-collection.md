@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: 5a0abef6de9f932f44fc7e3239b98c3a27846580
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2c5d612abb824c93c611514a836c811e6e65efe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711220"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288875"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Quando utilizzare una raccolta thread-safe
 .NET Framework 4 introduce cinque nuovi tipi di raccolta creati specificamente per il supporto di operazioni di aggiunta e rimozione multithread. Per ottenere la thread safety, questi nuovi tipi usano vari nuovi meccanismi di sincronizzazione, sia di blocco che senza blocco. La sincronizzazione aggiunge sovraccarico a un'operazione. La quantità di sovraccarico dipende dal tipo di sincronizzazione usato, dal tipo di operazioni eseguite e da altri fattori, quali il numero di thread che provano ad accedere contemporaneamente alla raccolta.  
@@ -63,5 +63,5 @@ ms.locfileid: "75711220"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
-- [Raccolte thread-safe](../../../../docs/standard/collections/thread-safe/index.md)
-- [Programmazione parallela](../../../../docs/standard/parallel-programming/index.md)
+- [Raccolte thread-safe](index.md)
+- [Programmazione parallela](../../parallel-programming/index.md)

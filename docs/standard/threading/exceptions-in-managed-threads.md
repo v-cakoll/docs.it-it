@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: 6c14c60b30f8f70aa5e888ed45d6f867154e18d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 56900ddab5e1e6ee5375c8979dc19694d4ad9c54
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159650"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279698"
 ---
 # <a name="exceptions-in-managed-threads"></a>Eccezioni in thread gestiti
 A partire da .NET Framework versione 2.0, Common Language Runtime consente alla maggior parte delle eccezioni non gestite nei thread di proseguire normalmente. Nella maggior parte dei casi questo significa che l'eccezione non gestita provoca l'interruzione dell'applicazione.  
@@ -64,7 +64,7 @@ A partire da .NET Framework versione 2.0, Common Language Runtime consente alla 
   
 - Se un thread deve essere arrestato in modo che la terminazione del processo possa continuare, spostare il thread in background in modo che venga terminato automaticamente all'uscita dal processo.  
   
- In tutti i casi, la strategia deve rispettare le linee guida di progettazione per le eccezioni. Vedere [Linee guida di progettazione delle eccezioni](../../../docs/standard/design-guidelines/exceptions.md).  
+ In tutti i casi, la strategia deve rispettare le linee guida di progettazione per le eccezioni. Vedere [Linee guida di progettazione delle eccezioni](../design-guidelines/exceptions.md).  
   
 ### <a name="application-compatibility-flag"></a>Contrassegno della compatibilità delle applicazioni  
  Come misura di compatibilità temporanea, gli amministratori possono inserire un contrassegno di compatibilità nella sezione `<runtime>` del file di configurazione dell'applicazione. In questo modo Common Language Runtime può ripristinare il comportamento delle versioni 1.0 e 1.1.  
@@ -74,8 +74,8 @@ A partire da .NET Framework versione 2.0, Common Language Runtime consente alla 
 ```  
   
 ## <a name="host-override"></a>Override dell'host  
- In .NET Framework versione 2.0 un host non gestito può sfruttare l'interfaccia [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) nell'API di hosting per eseguire l'override del criterio predefinito dell'eccezione non gestita di Common Language Runtime. La funzione [ICLRPolicyManager:: SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) viene usata per impostare il criterio per le eccezioni non gestite.  
+ In .NET Framework versione 2.0 un host non gestito può sfruttare l'interfaccia [ICLRPolicyManager](../../framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) nell'API di hosting per eseguire l'override del criterio predefinito dell'eccezione non gestita di Common Language Runtime. La funzione [ICLRPolicyManager:: SetUnhandledExceptionPolicy](../../framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) viene usata per impostare il criterio per le eccezioni non gestite.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Nozioni di base sul threading gestito](../../../docs/standard/threading/managed-threading-basics.md)
+- [Nozioni fondamentali sul threading gestito](managed-threading-basics.md)

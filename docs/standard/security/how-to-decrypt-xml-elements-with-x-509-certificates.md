@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Decrittografare gli elementi XML con certificati X.509'
+title: 'Procedura: decrittografare gli elementi XML con certificati X.509'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
-ms.openlocfilehash: 46fbefbf7a427ec0d60a34ecc2166f8499d08575
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 32a6d95b96bb20571c14c16cc70b944fa3e4032b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708888"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277388"
 ---
-# <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Procedura: Decrittografare gli elementi XML con certificati X.509
-È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per crittografare e decrittografare un elemento all'interno di un documento XML.  La crittografia XML consente di scambiare o archiviare dati XML crittografati in modo standard, garantendo un'adeguata protezione dei dati da letture non autorizzate.  Per ulteriori informazioni sullo standard di crittografia XML, vedere la specifica World Wide Web Consortium (W3C) per la crittografia XML disponibile in <https://www.w3.org/TR/xmldsig-core/>.  
+# <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Procedura: decrittografare gli elementi XML con certificati X.509
+È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per crittografare e decrittografare un elemento all'interno di un documento XML.  La crittografia XML consente di scambiare o archiviare dati XML crittografati in modo standard, garantendo un'adeguata protezione dei dati da letture non autorizzate.  Per ulteriori informazioni sullo standard di crittografia XML, vedere la specifica World Wide Web Consortium (W3C) per la crittografia XML disponibile all'indirizzo <https://www.w3.org/TR/xmldsig-core/> .  
   
- Questo esempio decrittografa un elemento XML crittografato usando i metodi descritti in [procedura: crittografare gli elementi XML con certificati X. 509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md).  Trova un elemento <`EncryptedData`>, decrittografa l'elemento e quindi sostituisce l'elemento con l'elemento XML originale in testo non crittografato.  
+ Questo esempio decrittografa un elemento XML crittografato usando i metodi descritti in [procedura: crittografare gli elementi XML con certificati X. 509](how-to-encrypt-xml-elements-with-x-509-certificates.md).  Trova un elemento <`EncryptedData`>, decrittografa l'elemento e quindi sostituisce l'elemento con l'elemento XML originale in testo non crittografato.  
   
- L'esempio di codice in questa procedura decrittografa un elemento XML usando un certificato X.509 dall'archivio certificati locale dell'account utente corrente.  Nell'esempio viene utilizzato il metodo <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> per recuperare automaticamente il certificato X. 509 e decrittografare una chiave di sessione archiviata nell'elemento <`EncryptedKey`> dell'elemento <`EncryptedData`>.  Il metodo <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> usa quindi automaticamente la chiave della sessione per decrittografare l'elemento XML.  
+ L'esempio di codice in questa procedura decrittografa un elemento XML usando un certificato X.509 dall'archivio certificati locale dell'account utente corrente.  Nell'esempio viene utilizzato il <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> metodo per recuperare automaticamente il certificato X. 509 e decrittografare una chiave di sessione archiviata nell' `EncryptedKey` elemento <> dell' `EncryptedData` elemento <>.  Il metodo <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> usa quindi automaticamente la chiave della sessione per decrittografare l'elemento XML.  
   
  Questo esempio è adatto per situazioni in cui più applicazioni devono condividere dati crittografati o in cui un'applicazione deve salvare dati crittografati tra un'esecuzione e l'altra.  
   
@@ -78,4 +78,4 @@ ms.locfileid: "75708888"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Security.Cryptography.Xml>
-- [Procedura: Crittografare gli elementi XML con certificati X.509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)
+- [Procedura: crittografare gli elementi XML con certificati X.509](how-to-encrypt-xml-elements-with-x-509-certificates.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - observers [.NET Framework], observer design pattern
 - observer design pattern [.NET Framework], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-ms.openlocfilehash: e6aba4d85e502563291478640927bd0f234736a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 969b83bcd11159509a2cc1ed843836679ffd1705
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139316"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289720"
 ---
 # <a name="how-to-implement-an-observer"></a>Procedura: Implementare un elemento Observer
-Lo schema progettuale degli observer richiede una divisione tra un observer, che si registra per le notifiche, e un provider, che monitora i dati e invia notifiche a uno o più observer. Questo argomento descrive come creare un observer. Un argomento correlato, [Procedura: Implementare un provider](../../../docs/standard/events/how-to-implement-a-provider.md), descrive come creare un provider.  
+Lo schema progettuale degli observer richiede una divisione tra un observer, che si registra per le notifiche, e un provider, che monitora i dati e invia notifiche a uno o più observer. Questo argomento descrive come creare un observer. Un argomento correlato, [Procedura: Implementare un provider](how-to-implement-a-provider.md), descrive come creare un provider.  
   
 ### <a name="to-create-an-observer"></a>Per creare un observer  
   
@@ -50,6 +50,6 @@ Lo schema progettuale degli observer richiede una divisione tra un observer, che
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.IObserver%601>
-- [Modello di progettazione observer](../../../docs/standard/events/observer-design-pattern.md)
-- [Procedura: Implementare un provider](../../../docs/standard/events/how-to-implement-a-provider.md)
-- [Procedure consigliate per un modello di progettazione observer](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+- [Modello di progettazione Observer](observer-design-pattern.md)
+- [Procedura: implementare un provider](how-to-implement-a-provider.md)
+- [Procedure consigliate per un modello di progettazione observer](observer-design-pattern-best-practices.md)

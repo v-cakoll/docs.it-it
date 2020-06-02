@@ -2,16 +2,16 @@
 title: Comando dotnet migrate
 description: Il comando dotnet migrate consente di eseguire la migrazione di un progetto e di tutte le relative dipendenze.
 ms.date: 02/14/2020
-ms.openlocfilehash: 71f587c1bfadd445aca818448bdd5f136f009fe0
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 2e7f9ae5a1d11c54280d914b04df761f0d5aff99
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463641"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284092"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
-**Questo articolo si applica a:** ✔️ .NET Core 2.x SDK
+**Questo articolo si applica a:** ✔️ .NET Core 2. x SDK
 
 ## <a name="name"></a>Nome
 
@@ -30,9 +30,9 @@ dotnet migrate -h|--help
 
 ## <a name="description"></a>Descrizione
 
-Questo comando è deprecato. Il `dotnet migrate` comando non è più disponibile a partire da .NET Core 3.0 SDK. Può eseguire solo la migrazione di un progetto .NET Core di anteprima 2 a un progetto 1.x .NET Core, che non è supportato.
+Questo comando è deprecato. Il `dotnet migrate` comando non è più disponibile a partire da .NET Core 3,0 SDK. È possibile eseguire la migrazione di un progetto .NET Core di anteprima 2 a un progetto .NET Core 1. x, che non è supportato.
 
-Per impostazione predefinita, il comando esegue la migrazione del progetto radice e dei riferimenti del progetto presenti nel progetto radice. Questo comportamento viene disabilitato usando l'opzione `--skip-project-references` in fase di esecuzione.
+Per impostazione predefinita, il comando esegue la migrazione del progetto radice e dei riferimenti del progetto presenti nel progetto radice. Questo comportamento viene disabilitato usando l' `--skip-project-references` opzione in fase di esecuzione.
 
 È possibile eseguire la migrazione in uno degli asset seguenti:
 

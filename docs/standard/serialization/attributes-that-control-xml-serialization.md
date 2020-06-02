@@ -10,19 +10,19 @@ helpviewer_keywords:
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-ms.openlocfilehash: 3a269e1f3e8fd6e982db3c241c113f471134f9d3
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: fbc42ff696107f4a1b06d3611fc97a09cc4a3542
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378453"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276699"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>Attributi per il controllo della serializzazione XML
-È possibile applicare gli attributi riportati nella seguente tabella alle classi e ai membri delle classi per controllare le modalità di serializzazione o deserializzazione di un'istanza della classe da parte di <xref:System.Xml.Serialization.XmlSerializer>. Per comprendere in che modo gli attributi controllano la serializzazione XML, vedere [Controllo della serializzazione XML mediante attributi](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md).  
+È possibile applicare gli attributi riportati nella seguente tabella alle classi e ai membri delle classi per controllare le modalità di serializzazione o deserializzazione di un'istanza della classe da parte di <xref:System.Xml.Serialization.XmlSerializer>. Per comprendere in che modo gli attributi controllano la serializzazione XML, vedere [Controllo della serializzazione XML mediante attributi](controlling-xml-serialization-using-attributes.md).  
   
- Tali  attributi possono inoltre essere utilizzati per controllare i messaggi SOAP in stile letterale generati da qualsiasi servizio Web XML. Per altre informazioni sull'applicazione di questi attributi a un metodo dei servizi Web XML, vedere [Serializzazione XML mediante servizi Web XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md).  
+ Tali  attributi possono inoltre essere utilizzati per controllare i messaggi SOAP in stile letterale generati da qualsiasi servizio Web XML. Per altre informazioni sull'applicazione di questi attributi a un metodo dei servizi Web XML, vedere [Serializzazione XML mediante servizi Web XML](xml-serialization-with-xml-web-services.md).  
   
- Per altre informazioni sugli attributi, vedere [Attributi](../../../docs/standard/attributes/index.md).  
+ Per altre informazioni sugli attributi, vedere [Attributi](../attributes/index.md).  
   
 |Attributo|Si applica a|Specifica|  
 |---------------|----------------|---------------|  
@@ -42,13 +42,13 @@ ms.locfileid: "83378453"
   
  Oltre a questi attributi, tutti reperibili nello spazio dei nomi <xref:System.Xml.Serialization>, a un campo può essere anche applicato l'attributo <xref:System.ComponentModel.DefaultValueAttribute>. **DefaultValueAttribute** imposta il valore che verrà automaticamente assegnato al membro se non viene specificato alcun valore.  
   
- Per controllare la serializzazione XML con codifica SOAP, vedere [Attributi che controllano la serializzazione con codifica SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
+ Per controllare la serializzazione XML con codifica SOAP, vedere [Attributi che controllano la serializzazione con codifica SOAP](attributes-that-control-encoded-soap-serialization.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Serializzazione SOAP e XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [Serializzazione SOAP e XML](xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Controllo della serializzazione XML mediante attributi](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [Procedura: specificare un nome di elemento alternativo per un flusso XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [Procedura: serializzare un oggetto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Procedura: Deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Controllo della serializzazione XML mediante attributi](controlling-xml-serialization-using-attributes.md)
+- [Procedura: specificare un nome di elemento alternativo per un flusso XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Procedura: serializzare un oggetto](how-to-serialize-an-object.md)
+- [Procedura: Deserializzare un oggetto](how-to-deserialize-an-object.md)
