@@ -2,14 +2,14 @@
 title: Dipendenze e librerie .NET
 description: Procedure consigliate per la gestione delle dipendenze NuGet nelle librerie .NET.
 ms.date: 10/02/2018
-ms.openlocfilehash: 265e92e86d22c778f65476e7f1383d32e4964655
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 344d5dff564b64b9d70bbd61afb0b7bc057c8f21
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895701"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291370"
 ---
-# <a name="dependencies"></a>Dipendenze
+# <a name="dependencies"></a>Dependencies
 
 Il modo principale per aggiungere dipendenze a una libreria .NET consiste nel fare riferimento ai pacchetti NuGet. I riferimenti ai pacchetti NuGet consentono di riutilizzare rapidamente e di sfruttare le funzionalità già scritte, ma possono causare problemi per gli sviluppatori .NET. La corretta gestione delle dipendenze è importante per evitare che le modifiche apportate in altre librerie .NET impediscano il funzionamento della libreria .NET in uso e viceversa.
 
@@ -24,7 +24,7 @@ In fase di compilazione NuGet analizza tutti i pacchetti da cui un progetto dipe
 La maggior parte delle dipendenze a rombo può essere risolta facilmente, tuttavia in alcune circostanze è possibile che si verifichino problemi:
 
 1. I **riferimenti ai pacchetti NuGet in conflitto** impediscono la risoluzione di una versione durante il ripristino dei pacchetti.
-2. Le **modifiche tra versioni che causano un'interruzione** provocano bug ed eccezioni in fase di esecuzione.
+2. Le **modifiche di rilievo tra le versioni** generano bug ed eccezioni in fase di esecuzione.
 3. L'**assembly del pacchetto ha un nome sicuro**, la versione dell'assembly è stata modificata e l'app è in esecuzione in .NET Framework. Sono richiesti reindirizzamenti di binding dell'assembly.
 
 Non è possibile sapere quali pacchetti verranno usati insieme ai propri. Un buon metodo per ridurre le probabilità che una dipendenza a rombo provochi il malfunzionamento della libreria consiste nel ridurre al minimo il numero di pacchetti da cui la libreria dipende.
@@ -97,5 +97,5 @@ I pacchetti di codice sorgente condiviso presentano alcune limitazioni. È possi
 > Pubblicare i pacchetti di codice sorgente condiviso in un [feed locale o MyGet](./publish-nuget-package.md) per usarli internamente all'interno del progetto.
 
 >[!div class="step-by-step"]
->[Precedente](nuget.md)
->[successivo](sourcelink.md)
+>[Precedente](nuget.md) 
+> [Avanti](sourcelink.md)

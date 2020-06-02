@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: utilizzare JoinBlock per leggere dati da più origini'
+title: 'Procedura: usare JoinBlock per leggere dati da più origini'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - TPL dataflow library, joining blocks in
 - dataflow blocks, joining in TPL
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
-ms.openlocfilehash: 66fd7ed7a98b8be8f88f65ecb52710a1e40af778
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd2f5c65f45d83ef23643dcc747a748bb8ba89d9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139735"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290824"
 ---
-# <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Procedura: utilizzare JoinBlock per leggere dati da più origini
+# <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Procedura: usare JoinBlock per leggere dati da più origini
 In questo documento viene spiegato come utilizzare la classe <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> per eseguire un'operazione quando i dati sono disponibili da più origini. Viene inoltre illustrato come utilizzare la modalità non greedy per consentire la condivisione in modo più efficiente di un'origine dati da parte di più blocchi join.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -35,4 +35,4 @@ In questo documento viene spiegato come utilizzare la classe <xref:System.Thread
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Flusso di dati](dataflow-task-parallel-library.md)

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: d6bde74441334a4454865c1fdb890a4e859bc072
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 0ff187251831130c846a20473237b13268c768be
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83440902"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289304"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Stringhe di formato di data e ora standard
 
-Una stringa di formato data e ora standard usa un singolo identificatore di formato per definire la rappresentazione di testo di un valore di data e ora. Qualsiasi stringa di formato di data e ora contenente più di un carattere, inclusi gli spazi vuoti, viene interpretata come stringa di formato di data e ora personalizzato; per altre informazioni, vedere [stringhe di formato di data e ora personalizzate](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Una stringa di formato standard o personalizzata può essere usata in due modi:
+Una stringa di formato data e ora standard usa un singolo identificatore di formato per definire la rappresentazione di testo di un valore di data e ora. Qualsiasi stringa di formato di data e ora contenente più di un carattere, inclusi gli spazi vuoti, viene interpretata come stringa di formato di data e ora personalizzato; per altre informazioni, vedere [stringhe di formato di data e ora personalizzate](custom-date-and-time-format-strings.md). Una stringa di formato standard o personalizzata può essere usata in due modi:
 
 - Per definire la stringa risultante da un'operazione di formattazione.
 
@@ -38,7 +38,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
 
 <a name="table"></a> Nella tabella seguente vengono descritti gli identificatori di formato di data e ora standard. Se non specificato diversamente, un identificatore di formato di data e ora standard specifico genera una rappresentazione di stringa identica, indipendentemente dal fatto che venga usato con un valore <xref:System.DateTime> o con un valore <xref:System.DateTimeOffset>. Per altre informazioni sull'uso di stringhe di formato di data e ora standard, vedere la sezione [Note](#Notes).
 
-|Identificatore di formato|Description|Esempi|
+|Identificatore di formato|Descrizione|Esempi|
 |----------------------|-----------------|--------------|
 |"d"|Schema di data breve.<br /><br /> Altre informazioni: [Identificatore di formato di data breve ("d")](#ShortDate).|2009-06-15T13:45:30 -> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> 2009/06/15 (ja-JP)|
 |"D"|Schema di data estesa.<br /><br /> Altre informazioni: [Identificatore di formato di data estesa ("D")](#LongDate).|2009-06-15T13:45:30 -> Monday, June 15, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> Montag, 15. Juni 2009 (de-DE)|
@@ -450,7 +450,7 @@ La formattazione è influenzata dalle proprietà dell'oggetto <xref:System.Globa
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.DateTimeOffset?displayProperty=nameWithType>
-- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)
-- [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Formattazione di tipi](formatting-types.md)
+- [Stringhe di formato di data e ora personalizzato](custom-date-and-time-format-strings.md)
 - [Esempio: Utilità di formattazione di .NET Core WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
 - [Esempio: Utilità di formattazione di .NET Core WinForms (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)

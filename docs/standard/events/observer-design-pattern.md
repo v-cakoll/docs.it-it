@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: 817337cec604a431f9f7d4eacb04378ee0d3c227
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5794cd1ec9b63a6e151b35c28e09e29f86dcfac6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73131581"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291266"
 ---
 # <a name="observer-design-pattern"></a>Modello di progettazione observer
 
@@ -93,6 +93,6 @@ L'esempio seguente contiene il punto di ingresso dell'applicazione che crea un'i
 
 |Titolo|Descrizione|
 |-----------|-----------------|
-|[Procedure consigliate per un modello di progettazione observer](../../../docs/standard/events/observer-design-pattern-best-practices.md)|Descrive le procedure consigliate per lo sviluppo di applicazioni che implementano lo schema progettuale observer.|
-|[Procedura: Implementare un provider](../../../docs/standard/events/how-to-implement-a-provider.md)|Fornisce un'implementazione dettagliata di un provider per un'applicazione di monitoraggio della temperatura.|
-|[Procedura: Implementare un elemento Observer](../../../docs/standard/events/how-to-implement-an-observer.md)|Fornisce un'implementazione dettagliata di un osservatore per un'applicazione di monitoraggio della temperatura.|
+|[Procedure consigliate per un modello di progettazione observer](observer-design-pattern-best-practices.md)|Descrive le procedure consigliate per lo sviluppo di applicazioni che implementano lo schema progettuale observer.|
+|[Procedura: implementare un provider](how-to-implement-a-provider.md)|Fornisce un'implementazione dettagliata di un provider per un'applicazione di monitoraggio della temperatura.|
+|[Procedura: implementare un Observer](how-to-implement-an-observer.md)|Fornisce un'implementazione dettagliata di un osservatore per un'applicazione di monitoraggio della temperatura.|

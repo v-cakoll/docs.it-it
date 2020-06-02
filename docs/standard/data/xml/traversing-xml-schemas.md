@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-ms.openlocfilehash: dbe02242f9bb8654e3f12d87b6ff6c2aea1f76b1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0951e83c3035de751801d194696eb64993260ef8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710115"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289837"
 ---
 # <a name="traversing-xml-schemas"></a>Attraversamento di schemi XML
 
@@ -39,7 +39,7 @@ Le seguenti proprietà della classe <xref:System.Xml.Schema.XmlSchema> forniscon
 >
 > La proprietà <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> fornisce l'accesso agli attributi che non appartengono allo spazio dei nomi dello schema. Tali attributi non vengono elaborati dal processore dello schema.
 
-Nel seguente esempio di codice viene illustrato l'attraversamento dello schema del cliente creato nell'argomento [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md). Nell'esempio di codice viene eseguito l'attraversamento dello schema usando le raccolte descritte in precedenza e tutti gli elementi e attributi dello schema vengono scritti nella console.
+Nel seguente esempio di codice viene illustrato l'attraversamento dello schema del cliente creato nell'argomento [Compilazione di XML Schema](building-xml-schemas.md). Nell'esempio di codice viene eseguito l'attraversamento dello schema usando le raccolte descritte in precedenza e tutti gli elementi e attributi dello schema vengono scritti nella console.
 
 L'esempio consente di attraversare lo schema del cliente eseguendo i passaggi seguenti.
 
@@ -65,14 +65,14 @@ Di seguito è riportato l'esempio di codice completo.
 
 Se è un tipo semplice o un tipo complesso definito dall'utente, il tipo della proprietà <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A?displayProperty=nameWithType> può essere <xref:System.Xml.Schema.XmlSchemaSimpleType> o <xref:System.Xml.Schema.XmlSchemaComplexType>. Se è uno dei tipi di dati incorporati definiti nella raccomandazione W3C relativa agli schemi XML, il tipo della proprietà può essere anche <xref:System.Xml.Schema.XmlSchemaDatatype>. Nello schema del cliente, il tipo della proprietà <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> dell'elemento `Customer` è <xref:System.Xml.Schema.XmlSchemaComplexType> e il tipo degli elementi `FirstName` e `LastName` è <xref:System.Xml.Schema.XmlSchemaSimpleType>.
 
-Nell'esempio di codice dell'argomento [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md) è stata usata la raccolta <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> per aggiungere l'attributo `CustomerId` all'elemento `Customer`. Questa è una proprietà precedente alla compilazione dello schema. La proprietà PSCI corrispondente è la raccolta <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>, che contiene tutti gli attributi del tipo complesso, inclusi quelli ereditati tramite una derivazione del tipo.
+Nell'esempio di codice dell'argomento [Compilazione di XML Schema](building-xml-schemas.md) è stata usata la raccolta <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> per aggiungere l'attributo `CustomerId` all'elemento `Customer`. Questa è una proprietà precedente alla compilazione dello schema. La proprietà PSCI corrispondente è la raccolta <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>, che contiene tutti gli attributi del tipo complesso, inclusi quelli ereditati tramite una derivazione del tipo.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari sul modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Post-Schema Compilation Infoset (PSCI, infoset sulla compilazione post-schema)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [Cenni preliminari sul modello SOM XML](xml-schema-object-model-overview.md)
+- [Lettura e scrittura di schemi XML](reading-and-writing-xml-schemas.md)
+- [Compilazione di XML Schema](building-xml-schemas.md)
+- [Modifica di schemi XML](editing-xml-schemas.md)
+- [Inclusione o importazione di schemi XML](including-or-importing-xml-schemas.md)
+- [XmlSchemaSet per la compilazione di schemi](xmlschemaset-for-schema-compilation.md)
+- [Post-Schema Compilation Infoset (PSCI, infoset sulla compilazione post-schema)](post-schema-compilation-infoset.md)

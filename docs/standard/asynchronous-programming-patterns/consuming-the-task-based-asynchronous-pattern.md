@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-ms.openlocfilehash: f80e6ae520ab03c0f5f4edc30c0b7102193ee6c5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64a9b963ce6a8554a581f9d5d0f77cf4edfa71b4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139820"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289460"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Utilizzo del modello asincrono basato su attività
 
@@ -631,7 +631,7 @@ double currentPrice = await NeedOnlyOne(
 ```
 
 ### <a name="interleaved-operations"></a>Operazioni con interfoliazione
- Esiste un potenziale problema di prestazioni quando si usa il metodo <xref:System.Threading.Tasks.Task.WhenAny%2A> per supportare uno scenario di interfoliazione nel caso in cui si usino set di attività molto grandi. Ogni chiamata a <xref:System.Threading.Tasks.Task.WhenAny%2A> comporta la registrazione di una continuazione con ogni attività. Per il numero N di attività, ciò comporta la creazione di continuazioni O(N<sup>2)</sup>per tutta la durata dell'operazione di interfoliazione. Se si utilizza un set di attività di grandi dimensioni, è possibile utilizzare un combinatore (nell'esempio`Interleaved` seguente) per risolvere il problema di prestazioni:
+ Esiste un potenziale problema di prestazioni quando si usa il metodo <xref:System.Threading.Tasks.Task.WhenAny%2A> per supportare uno scenario di interfoliazione nel caso in cui si usino set di attività molto grandi. Ogni chiamata a <xref:System.Threading.Tasks.Task.WhenAny%2A> comporta la registrazione di una continuazione con ogni attività. Per il numero N di attività, il risultato è una continuazione di O (N<sup>2</sup>) creata per la durata dell'operazione di interfoliazione. Se si lavora con un ampio set di attività, è possibile usare un combinatore ( `Interleaved` nell'esempio seguente) per risolvere il problema di prestazioni:
 
 ```csharp
 static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)
@@ -725,7 +725,7 @@ public class AsyncCache<TKey, TValue>
 }
 ```
 
- La classe [AsyncCache\<TKey, TValue>](https://devblogs.microsoft.com/pfxteam/parallelextensionsextras-tour-12-asynccache/) accetta come delegato al costruttore una funzione che accetta `TKey` e restituisce <xref:System.Threading.Tasks.Task%601>.  Tutti i valori della cache a cui si è acceduto precedentemente vengono archiviati nel dizionario interno e `AsyncCache` fa in modo che venga generata solo un'attività per chiave, anche si accede alla cache contemporaneamente.
+ La [classe \<TKey,TValue> AsyncCache](https://devblogs.microsoft.com/pfxteam/parallelextensionsextras-tour-12-asynccache/) accetta come delegato al relativo costruttore una funzione che accetta un oggetto `TKey` e restituisce un oggetto <xref:System.Threading.Tasks.Task%601> .  Tutti i valori della cache a cui si è acceduto precedentemente vengono archiviati nel dizionario interno e `AsyncCache` fa in modo che venga generata solo un'attività per chiave, anche si accede alla cache contemporaneamente.
 
  È possibile, ad esempio, creare una cache per le pagine Web scaricate:
 
@@ -835,6 +835,6 @@ private static void Produce(int data)
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Modello asincrono basato su attività (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
-- [Implementazione del modello asincrono basato su attività](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)
-- [Interoperabilità con altri tipi e modelli asincroni](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)
+- [Modello asincrono basato su attività (TAP)](task-based-asynchronous-pattern-tap.md)
+- [Implementazione del modello asincrono basato su attività](implementing-the-task-based-asynchronous-pattern.md)
+- [Interoperabilità con altri tipi e modelli asincroni](interop-with-other-asynchronous-patterns-and-types.md)

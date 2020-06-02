@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-ms.openlocfilehash: e63b2a8ac44d6171f9c48990882780ea420f8c76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7997f3098265b76f8fe2ef4fc7ab0e17f6e81d69
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73101663"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289330"
 ---
 # <a name="comparing-strings-in-net"></a>Confronto di stringhe in .NET
 .NET offre diversi metodi per confrontare i valori delle stringhe. La tabella seguente elenca e descrive i metodi di confronto di valori.  
@@ -59,7 +59,7 @@ ms.locfileid: "73101663"
   
  L'esempio visualizza `-1` nella console.  
   
- L'esempio precedente fa distinzione tra le impostazioni cultura per impostazione predefinita. Per eseguire un confronto tra stringhe senza fare distinzione tra le impostazioni cultura, usare un overload del metodo <xref:System.String.Compare%2A?displayProperty=nameWithType>, che consente di specificare le impostazioni cultura da usare tramite un parametro *culture*. Per un esempio che illustra come usare il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> per eseguire un confronto senza distinzione tra le impostazioni cultura, vedere [Esecuzione di confronti di stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ L'esempio precedente fa distinzione tra le impostazioni cultura per impostazione predefinita. Per eseguire un confronto tra stringhe senza fare distinzione tra le impostazioni cultura, usare un overload del metodo <xref:System.String.Compare%2A?displayProperty=nameWithType>, che consente di specificare le impostazioni cultura da usare tramite un parametro *culture*. Per un esempio che illustra come usare il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> per eseguire un confronto senza distinzione tra le impostazioni cultura, vedere [Esecuzione di confronti di stringhe indipendenti dalle impostazioni cultura](../globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="compareordinal"></a>CompareOrdinal  
  Il metodo <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> confronta due oggetti stringa senza considerare le impostazioni cultura locali. I valori restituiti da questo metodo sono identici a quelli restituiti dal metodo **Compare** nella tabella precedente.  
@@ -89,7 +89,7 @@ ms.locfileid: "73101663"
   
  L'esempio visualizza `-1` nella console.  
   
- Tutti gli overload del metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> eseguono per impostazione predefinita confronti che fanno distinzione tra le impostazioni cultura e tra maiuscole e minuscole. Non sono disponibili overload di questo metodo per eseguire un confronto senza distinzione tra le impostazioni cultura. Per maggiore chiarezza del codice, è consigliabile usare invece il metodo **String.Compare**, specificando <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> per operazioni con distinzione tra le impostazioni cultura o <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> per operazioni senza distinzione tra le impostazioni cultura. Per un esempio che illustra come usare il metodo **String.Compare** per eseguire confronti con e senza distinzione tra le impostazioni cultura, vedere [Esecuzione di confronti di stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ Tutti gli overload del metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> eseguono per impostazione predefinita confronti che fanno distinzione tra le impostazioni cultura e tra maiuscole e minuscole. Non sono disponibili overload di questo metodo per eseguire un confronto senza distinzione tra le impostazioni cultura. Per maggiore chiarezza del codice, è consigliabile usare invece il metodo **String.Compare**, specificando <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> per operazioni con distinzione tra le impostazioni cultura o <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> per operazioni senza distinzione tra le impostazioni cultura. Per un esempio che illustra come usare il metodo **String.Compare** per eseguire confronti con e senza distinzione tra le impostazioni cultura, vedere [Esecuzione di confronti di stringhe indipendenti dalle impostazioni cultura](../globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="equals"></a>Uguale a  
  Il metodo **Equals** consente di determinare in modo semplice se due stringhe sono uguali. Questo metodo, che fa distinzione tra maiuscole e minuscole, restituisce un valore booleano **true** o **false** . Può essere usato da una classe esistente, come illustrato nell'esempio seguente. L'esempio seguente usa il metodo **Equals** per determinare se un oggetto stringa contiene la frase "Hello World".  
@@ -150,7 +150,7 @@ ms.locfileid: "73101663"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Operazioni di base sulle stringheBasic String Operations](../../../docs/standard/base-types/basic-string-operations.md)
-- [Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+- [Operazioni di base sulle stringhe](basic-string-operations.md)
+- [Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura](../globalization-localization/performing-culture-insensitive-string-operations.md)
 - [Sorting Weight Tables (for .NET on Windows)](https://www.microsoft.com/download/details.aspx?id=10921) (Tabelle di ordinamento spessore - Per .NET in Windows)
 - [Default Unicode Collation Element Table (for .NET Core on Linux and macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt) (Tabella degli elementi delle regole di confronto Unicode predefinite - Per .NET Core in Linux e MacOS)

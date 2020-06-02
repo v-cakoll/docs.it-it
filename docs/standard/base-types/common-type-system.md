@@ -16,12 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: f079613f790121c000a312132e7135121ca721a6
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: a1aa244d470402823fc22e12cb5e32bbbdcd87fe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635902"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289343"
 ---
 # <a name="common-type-system"></a>Common Type System
 
@@ -70,7 +70,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 |exported o not exported|Indica se una classe è visibile all'esterno dell'assembly in cui è definita. Questa caratteristica è applicabile unicamente alle classi di primo livello e non alle classi annidate.|  
   
 > [!NOTE]
-> Una classe può anche essere annidata in una struttura o una classe padre. Anche le classi annidate possiedono le caratteristiche dei membri. Per ulteriori informazioni, vedere [Tipi annidati](#nested-types).  
+> Una classe può anche essere annidata in una struttura o una classe padre. Anche le classi annidate possiedono le caratteristiche dei membri. Per ulteriori informazioni, vedere [tipi annidati](#nested-types).  
   
  I membri di classe privi di implementazione sono membri astratti. Una classe con uno o più membri astratti è essa stessa astratta e non è possibile crearne nuove istanze. Con alcuni linguaggi destinati al runtime è possibile contrassegnare una classe come astratta anche se nessuno dei relativi membri è astratto. È possibile utilizzare una classe astratta quando si desidera incapsulare un set di base di funzionalità che le classi derivate possono ereditare oppure sottoporre a override nelle circostanze appropriate. Alle classi che non sono astratte viene fatto riferimento come a classi concrete.  
   
@@ -78,7 +78,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
 ### <a name="structures"></a>Strutture
 
- Una struttura è un tipo di valore che deriva in modo implicito da <xref:System.ValueType?displayProperty=nameWithType>, che a sua volta deriva da <xref:System.Object?displayProperty=nameWithType>. Una struttura è utile per rappresentare valori i cui requisiti di memoria sono di piccole dimensioni e per passare valori come parametri in base al valore a metodi con parametri fortemente tipizzati. In .NET Framework tutti i tipi di dati primitivi (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32> e <xref:System.UInt64>) sono definiti come strutture.  
+ Una struttura è un tipo di valore che deriva in modo implicito da <xref:System.ValueType?displayProperty=nameWithType>, che a sua volta deriva da <xref:System.Object?displayProperty=nameWithType>. Una struttura è utile per rappresentare i valori i cui requisiti di memoria sono ridotti e per passare valori come parametri per valore a metodi con parametri fortemente tipizzati. In .NET Framework tutti i tipi di dati primitivi (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32> e <xref:System.UInt64>) sono definiti come strutture.  
   
  Analogamente alle classi, le strutture definiscono sia i dati (i campi della struttura) che le operazioni che è possibile eseguire s tali dati (i metodi della struttura). Ciò significa che è possibile chiamare metodi nelle strutture, inclusi i metodi virtuali definiti nelle classi <xref:System.Object?displayProperty=nameWithType> e <xref:System.ValueType?displayProperty=nameWithType> e qualsiasi metodo definito nel tipo di valore stesso. In altre parole, le strutture possono disporre di campi, proprietà ed eventi, nonché di metodi statici e non statici. È possibile creare istanze di strutture, passarle come parametri, archiviarle come variabili locali oppure in un campo di un altro tipo di valore o tipo di riferimento. Le strutture possono inoltre implementare interfacce.  
   
@@ -88,7 +88,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
 ### <a name="enumerations"></a>Enumerazioni
 
- Un'enumerazione è un tipo <xref:System.Enum?displayProperty=nameWithType> di valore che eredita direttamente da e che fornisce nomi alternativi per i valori di un tipo primitivo sottostante. Un tipo di enumerazione dispone di un nome, un tipo sottostante che deve essere uno dei tipi Signed Integer o Unsigned Integer predefiniti, ad esempio <xref:System.Byte>, <xref:System.Int32> o <xref:System.UInt64>, e di un set di campi. I campi sono campi letterali statici, ognuno dei quali rappresenta una costante. Lo stesso valore può essere assegnato a più campi. In questo caso, è necessario contrassegnare uno dei valori come valore di enumerazione primario a scopo di reflection e conversione di stringhe.  
+ Un'enumerazione è un tipo di valore che eredita direttamente da <xref:System.Enum?displayProperty=nameWithType> e che fornisce nomi alternativi per i valori di un tipo primitivo sottostante. Un tipo di enumerazione dispone di un nome, un tipo sottostante che deve essere uno dei tipi Signed Integer o Unsigned Integer predefiniti, ad esempio <xref:System.Byte>, <xref:System.Int32> o <xref:System.UInt64>, e di un set di campi. I campi sono campi letterali statici, ognuno dei quali rappresenta una costante. Lo stesso valore può essere assegnato a più campi. In questo caso, è necessario contrassegnare uno dei valori come valore di enumerazione primario a scopo di reflection e conversione di stringhe.  
   
  È possibile assegnare a un'enumerazione un valore del tipo sottostante e viceversa. Nel runtime non è richiesto alcun cast. È possibile creare un'istanza di un'enumerazione e chiamare i metodi di <xref:System.Enum?displayProperty=nameWithType>, nonché qualsiasi metodo definito nel tipo sottostante dell'enumerazione. In alcuni linguaggi, tuttavia, potrebbe non essere possibile passare un'enumerazione come parametro quando un'istanza del tipo sottostante è obbligatoria (o viceversa).  
   
@@ -170,7 +170,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
 - Le definizioni per ciascuno dei membri del tipo.  
   
-### <a name="attributes"></a>Attributi  
+### <a name="attributes"></a>Attributes  
  Gli attributi forniscono metadati aggiuntivi definiti dall'utente. Comunemente vengono utilizzati per archiviare informazioni aggiuntive su un tipo nell'assembly o per modificare il comportamento di un membro del tipo nella fase di progettazione o nell'ambiente di runtime.  
   
  Gli attributi stessi sono classi che ereditano da <xref:System.Attribute?displayProperty=nameWithType>. I linguaggi che supportano l'utilizzo di attributi forniscono ognuno la sintassi necessaria per l'applicazione degli attributi a un elemento del linguaggio. Gli attributi possono essere applicati a quasi tutti gli elementi del linguaggio. Gli elementi specifici a cui è possibile applicare un attributo sono definiti dall'oggetto <xref:System.AttributeUsageAttribute> applicato a tale classe di attributi.  
@@ -206,7 +206,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
  La maggior parte dei linguaggi impone tuttavia restrizioni aggiuntive per i nomi dei tipi. Poiché tutti i confronti vengono effettuati byte per byte, sono indipendenti dalle impostazioni locali e fanno distinzione tra maiuscole e minuscole.  
   
- Sebbene un tipo possa fare riferimento a tipi di altri moduli e assembly, deve essere definito completamente all'interno di un modulo .NET. A seconda del supporto del compilatore, tuttavia, può essere suddiviso in più file di codice sorgente. I nomi dei tipi devono essere univoci solo all'interno di uno spazio dei nomi. Per identificare completamente un tipo, il relativo nome deve essere qualificato dallo spazio dei nomi che contiene l'implementazione del tipo.  
+ Sebbene un tipo possa fare riferimento a tipi di altri moduli e assembly, deve essere definito completamente all'interno di un modulo .NET. A seconda del supporto del compilatore, tuttavia, può essere diviso in più file di codice sorgente. I nomi dei tipi devono essere univoci solo all'interno di uno spazio dei nomi. Per identificare completamente un tipo, il relativo nome deve essere qualificato dallo spazio dei nomi che contiene l'implementazione del tipo.  
   
 ### <a name="base-types-and-interfaces"></a>Tipi di base e interfacce  
  Un tipo può ereditare valori e comportamenti da un altro tipo. Common Type System non consente ai tipi di ereditare da più di un tipo base.  
@@ -227,7 +227,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
 - [Events](#events)  
   
-- [Tipi nidificati](#nested-types)  
+- [Tipi annidati](#nested-types)  
 
 ### <a name="fields"></a>Campi
 
@@ -265,9 +265,9 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
  Se il codice sorgente per una struttura definisce i costruttori, essi devono essere con parametri. Una struttura non può definire un costruttore senza parametri e i compilatori non generano costruttori senza parametri per strutture o altri tipi di valori. Tutti i tipi di valori hanno un costruttore senza parametri. Questo costruttore viene implementato da Common Language Runtime e inizializza tutti i campi della struttura sui valori predefiniti.  
 
-### <a name="events"></a>Events
+### <a name="events"></a>Eventi
 
- Un evento definisce una situazione a cui è possibile fornire risposta e metodi per la sottoscrizione, l'annullamento della sottoscrizione e la generazione dell'evento. Gli eventi sono spesso utilizzati per indicare modifiche di stato a tipi diversi. Per altre informazioni, vedere [Eventi](../../../docs/standard/events/index.md).  
+ Un evento definisce una situazione a cui è possibile fornire risposta e metodi per la sottoscrizione, l'annullamento della sottoscrizione e la generazione dell'evento. Gli eventi sono spesso utilizzati per indicare modifiche di stato a tipi diversi. Per altre informazioni, vedere [Eventi](../events/index.md).  
 
 ### <a name="nested-types"></a>Tipi annidati
 
@@ -307,5 +307,5 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 ## <a name="see-also"></a>Vedere anche
 
 - [Browser API .NET](/dotnet/api)
-- [Common Language Runtime](../../../docs/standard/clr.md)
-- [Conversione dei tipi in .NETType Conversion in .NET](../../../docs/standard/base-types/type-conversion.md)
+- [Common Language Runtime](../clr.md)
+- [Conversione di tipi in .NET](type-conversion.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - attributes [.NET Framework], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-ms.openlocfilehash: 9e99856c3ac70b122c0def23e36bbc3059c5891c
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d9a4631189d348c02ab36054257a54c9c4673018
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378467"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289668"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>Attributi per il controllo della serializzazione SOAP codificata
 
@@ -22,7 +22,7 @@ Il documento World Wide Web Consortium (W3C) denominato [Simple Object Access Pr
 
 Nella seguente tabella sono illustrati gli attributi, dove è possibile applicarli e la loro funzione. Per altre informazioni sull'utilizzo di questi attributi per il controllo della serializzazione XML, vedere [Procedura: Serializzare un oggetto come flusso XML con codifica SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md) e [Procedura: Eseguire l'override della serializzazione XML con codifica SOAP](how-to-override-encoded-soap-xml-serialization.md).
 
-Per altre informazioni sugli attributi, vedere [Attributi](../../../docs/standard/attributes/index.md).
+Per altre informazioni sugli attributi, vedere [Attributi](../attributes/index.md).
 
 |Attributo|Si applica a|Specifica|
 |---------------|----------------|---------------|
@@ -38,7 +38,7 @@ Per altre informazioni sugli attributi, vedere [Attributi](../../../docs/standar
 - [Serializzazione SOAP e XML](xml-and-soap-serialization.md)
 - [Procedura: Serializzare un oggetto come flusso XML con codifica SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
 - [Procedura: eseguire l'override della serializzazione XML con codifica SOAP](how-to-override-encoded-soap-xml-serialization.md)
-- [Attributi](../../../docs/standard/attributes/index.md)
+- [Attributi](../attributes/index.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Procedura: serializzare un oggetto](how-to-serialize-an-object.md)
 - [Procedura: Deserializzare un oggetto](how-to-deserialize-an-object.md)

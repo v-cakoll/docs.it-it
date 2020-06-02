@@ -1,13 +1,14 @@
 ---
 title: Ruoli server e database in SQL Server
+description: Informazioni sui ruoli predefiniti del database e del server a cui è stato assegnato un set fisso di autorizzazioni. SQL Server usa la sicurezza basata sui ruoli.
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: f3e31aa67bfbaa541d8d1eb5b8b61dfd28182c72
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9c3725b0404a5b3c754a53fa56f4a22497afee70
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791788"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286236"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Ruoli server e database in SQL Server
 In tutte le versioni di SQL Server si usa la sicurezza basata sui ruoli, che consente di assegnare le autorizzazioni a un ruolo, ovvero un gruppo di utenti, anziché ai singoli utenti. Ai ruoli predefiniti del server e del database è assegnato un set predefinito di autorizzazioni.  
@@ -25,7 +26,7 @@ In tutte le versioni di SQL Server si usa la sicurezza basata sui ruoli, che con
   
  Per altre informazioni sui ruoli predefiniti di SQL Server, vedere le risorse seguenti.  
   
-|Risorsa|Descrizione|  
+|Resource|Descrizione|  
 |--------------|-----------------|  
 |[Ruoli a livello di server](/sql/relational-databases/security/authentication-access/server-level-roles)|Vengono descritti i ruoli predefiniti del server e le autorizzazioni associate in SQL Server.|  
 |[Ruoli a livello di database](/sql/relational-databases/security/authentication-access/database-level-roles)|Vengono descritti i ruoli predefiniti del database e le autorizzazioni associate.|  
@@ -56,10 +57,10 @@ In tutte le versioni di SQL Server si usa la sicurezza basata sui ruoli, che con
   
  Per altre informazioni su account di accesso, utenti e ruoli di SQL Server, vedere le risorse seguenti.  
   
-|Risorsa|Descrizione|  
+|Resource|Descrizione|  
 |--------------|-----------------|  
-|[Introduzione con autorizzazioni di motore di database](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Contiene collegamenti ad argomenti in cui vengono descritti entità, ruoli, credenziali, entità a protezione diretta e autorizzazioni.|  
-|[Entità](/sql/relational-databases/security/authentication-access/principals-database-engine)|Contiene una descrizione delle entità e collegamenti ad argomenti in cui sono illustrati i ruoli del server e del database.|  
+|[Introduzione alle autorizzazioni del motore di database](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Contiene collegamenti ad argomenti in cui vengono descritti entità, ruoli, credenziali, entità a protezione diretta e autorizzazioni.|  
+|[Principals](/sql/relational-databases/security/authentication-access/principals-database-engine)|Contiene una descrizione delle entità e collegamenti ad argomenti in cui sono illustrati i ruoli del server e del database.|  
   
 ## <a name="see-also"></a>Vedere anche
 

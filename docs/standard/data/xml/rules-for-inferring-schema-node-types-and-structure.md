@@ -3,12 +3,12 @@ title: Regole per l'inferenza dello schema per tipi di nodo e struttura
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
-ms.openlocfilehash: 6d66384dea7018bcc3b2dd8fde96f4fa2653f8e8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 381c5fbd3823514de98b38840b8259a417e48fb8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710245"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289083"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Regole per l'inferenza dello schema per tipi di nodo e struttura
 In questo argomento viene descritto in che modo il processo di inferenza converte in una struttura XSD (XML Schema Definition Language) i tipi di nodo di un documento XML.  
@@ -35,12 +35,12 @@ In questo argomento viene descritto in che modo il processo di inferenza convert
 > [!NOTE]
 > Tutte le dichiarazioni `complexType` sono inferite come tipi anonimi. L'unico elemento globale inferito è l'elemento radice, tutti gli altri elementi sono locali.  
   
- Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](inferring-schemas-from-xml-documents.md).  
   
 ### <a name="simple-typed-element"></a>Elemento di tipo semplice  
  Nella tabella seguente viene mostrato l'input XML nel metodo <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> e lo schema XML generato. L'elemento in grassetto mostra lo schema inferito per l'elemento di tipo semplice.  
   
- Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|SCHEMA|  
 |---------|------------|  
@@ -49,7 +49,7 @@ In questo argomento viene descritto in che modo il processo di inferenza convert
 ### <a name="empty-element"></a>Elemento vuoto  
  Nella tabella seguente viene mostrato l'input XML nel metodo <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> e lo schema XML generato. L'elemento in grassetto mostra lo schema inferito per l'elemento vuoto.  
   
- Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|SCHEMA|  
 |---------|------------|  
@@ -58,7 +58,7 @@ In questo argomento viene descritto in che modo il processo di inferenza convert
 ### <a name="empty-element-with-attributes"></a>Elemento vuoto con attributi  
  Nella tabella seguente viene mostrato l'input XML nel metodo <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> e lo schema XML generato. L'elemento in grassetto mostra lo schema inferito per l'elemento vuoto con attributi.  
   
- Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|SCHEMA|  
 |---------|------------|  
@@ -67,7 +67,7 @@ In questo argomento viene descritto in che modo il processo di inferenza convert
 ### <a name="element-with-attributes-and-simple-content"></a>Elemento con attributi e contenuto semplice  
  Nella tabella seguente viene mostrato l'input XML nel metodo <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> e lo schema XML generato. Gli elementi in grassetto mostrano lo schema inferito per un elemento con attributi e contenuto semplice.  
   
- Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|SCHEMA|  
 |---------|------------|  
@@ -79,7 +79,7 @@ In questo argomento viene descritto in che modo il processo di inferenza convert
 > [!NOTE]
 > Anche se un elemento contiene solo un elemento figlio, viene ancora considerato come una sequenza.  
   
- Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|SCHEMA|  
 |---------|------------|  
@@ -91,7 +91,7 @@ In questo argomento viene descritto in che modo il processo di inferenza convert
 > [!NOTE]
 > Anche se un elemento contiene solo un elemento figlio, viene ancora considerato come una sequenza.  
   
- Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|SCHEMA|  
 |---------|------------|  
@@ -103,7 +103,7 @@ In questo argomento viene descritto in che modo il processo di inferenza convert
 > [!NOTE]
 > L'attributo `maxOccurs` dell'elemento `xs:choice` è impostato su `"unbounded"` nello schema inferito.  
   
- Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|SCHEMA|  
 |---------|------------|  
@@ -115,7 +115,7 @@ In questo argomento viene descritto in che modo il processo di inferenza convert
 > [!NOTE]
 > L'attributo `maxOccurs` dell'elemento `xs:choice` è impostato su `"unbounded"` nello schema inferito.  
   
- Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|SCHEMA|  
 |---------|------------|  
@@ -142,12 +142,12 @@ In questo argomento viene descritto in che modo il processo di inferenza convert
 |Document type|Ignorato.|  
 |Spazi dei nomi|Ignorato.|  
   
- Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](inferring-schemas-from-xml-documents.md).  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
-- [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
-- [Inferenza di uno schema XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
-- [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
-- [Regole per l'inferenza di tipi semplici](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+- [SOM (Schema Object Model) XML](xml-schema-object-model-som.md)
+- [Inferenza di uno schema XML](inferring-an-xml-schema.md)
+- [Inferenza degli schemi da documenti XML](inferring-schemas-from-xml-documents.md)
+- [Regole per l'inferenza di tipi semplici](rules-for-inferring-simple-types.md)

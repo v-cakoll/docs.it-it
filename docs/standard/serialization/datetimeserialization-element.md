@@ -7,14 +7,14 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
-ms.openlocfilehash: 652a88e25f59cd905e47ef71351e47e67f375286
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: a2684ab72c1fb109d711e333e01836d3399caf86
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83375817"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289642"
 ---
-# <a name="datetimeserialization-element"></a>\<Elemento dateTimeSerialization>
+# <a name="datetimeserialization-element"></a>\<dateTimeSerialization> Elemento
 Determina la modalità di serializzazione degli oggetti <xref:System.DateTime>.  
   
  \<configuration>  
@@ -31,9 +31,9 @@ Determina la modalità di serializzazione degli oggetti <xref:System.DateTime>.
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributi  
+### <a name="attributes"></a>Attributes  
   
-|Attributi|Description|  
+|Attributes|Descrizione|  
 |----------------|-----------------|  
 |`mode`|Facoltativa. Specifica la modalità di serializzazione. Impostarlo a uno dei valori di <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>. Il valore predefinito è **RoundTrip**.|  
   
@@ -56,7 +56,7 @@ Determina la modalità di serializzazione degli oggetti <xref:System.DateTime>.
 - <xref:System.DateTime>
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
-- [Schema del file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<Elemento> schemaImporterExtensions](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-- [\<aggiungere> elemento per \< schemaImporterExtensions>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
-- [\<System. XML. Serialization> elemento](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [Schema del file di configurazione](../../framework/configure-apps/file-schema/index.md)
+- [\<schemaImporterExtensions>Elemento](schemaimporterextensions-element.md)
+- [\<add>Elemento per\<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)
+- [\<system.xml.serialization>Elemento](system-xml-serialization-element.md)

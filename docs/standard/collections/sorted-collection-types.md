@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SortedList collection type
 - collections [.NET Framework], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-ms.openlocfilehash: c948c70a06931f5f93a6f4235585cf7ac94e8533
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 2d9d3744859eea1a09923980b3b4c57eca6bba97
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728360"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287939"
 ---
 # <a name="sorted-collection-types"></a>Tipi di raccolta ordinati
 
@@ -40,7 +40,7 @@ La tabella seguente elenca alcune differenze tra le due classi SortedList e la c
 | L'inserimento e la rimozione sono in genere O(`n`); l'inserimento è tuttavia O(log`n`) per i dati già presenti nell'ordinamento, in modo che ogni elemento venga aggiunto alla fine dell'elenco. (Ciò presuppone che non sia necessario un ridimensionamento). | L'inserimento e la rimozione sono O(log `n`). |
 | Usa meno memoria di un <xref:System.Collections.Generic.SortedDictionary%602>. | Usa più memoria della classe non generica <xref:System.Collections.SortedList> e della classe generica <xref:System.Collections.Generic.SortedList%602>. |
 
-Per gli elenchi ordinati o i dizionari che devono essere accessibili contemporaneamente da più thread, è possibile aggiungere logica di ordinamento per una classe che deriva da <xref:System.Collections.Concurrent.ConcurrentDictionary%602>. Quando si considera l'immutabilità, i seguenti tipi non modificabili corrispondenti seguono una <xref:System.Collections.Immutable.ImmutableSortedSet%601> semantica di ordinamento simile: e <xref:System.Collections.Immutable.ImmutableSortedDictionary%602>.
+Per gli elenchi ordinati o i dizionari che devono essere accessibili contemporaneamente da più thread, è possibile aggiungere logica di ordinamento per una classe che deriva da <xref:System.Collections.Concurrent.ConcurrentDictionary%602>. Quando si considera l'immutabilità, i seguenti tipi non modificabili corrispondenti seguono una semantica di ordinamento simile: <xref:System.Collections.Immutable.ImmutableSortedSet%601> e <xref:System.Collections.Immutable.ImmutableSortedDictionary%602> .
 
 > [!NOTE]
 > Per i valori che contengono chiavi specifiche (ad esempio, record dei dipendenti che contengono un numero di ID dipendente) è possibile creare una raccolta con chiave che include alcune caratteristiche di un elenco e alcune caratteristiche di un dizionario mediante la derivazione dalla classe generica <xref:System.Collections.ObjectModel.KeyedCollection%602>.
@@ -52,4 +52,4 @@ A partire da .NET Framework 4, la classe <xref:System.Collections.Generic.Sorted
 - <xref:System.Collections.IDictionary?displayProperty=nameWithType>
 - <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>
 - <xref:System.Collections.Concurrent.ConcurrentDictionary%602>
-- [Tipi di raccolte comunemente usate](../../../docs/standard/collections/commonly-used-collection-types.md)
+- [Tipi di raccolte comunemente usate](commonly-used-collection-types.md)

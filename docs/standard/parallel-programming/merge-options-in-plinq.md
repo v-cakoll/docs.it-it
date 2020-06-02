@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-ms.openlocfilehash: 623466e0e960ea991ae92e5de432171b70bad1d2
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: a2c238cb66c5018cd1dd4085c6541ef3c9371beb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588624"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290642"
 ---
 # <a name="merge-options-in-plinq"></a>Opzioni di merge in PLINQ
 Quando una query è in esecuzione come parallela, PLINQ partiziona la sequenza di origine in modo che più thread possano operare simultaneamente su parti diverse, in genere su thread separati. Se i risultati devono essere utilizzati in un unico thread, ad esempio in un ciclo `foreach` (`For Each` in Visual Basic), i risultati di ogni thread devono essere nuovamente uniti in un'unica sequenza. Il tipo di merge che PLINQ esegue dipende dagli operatori presenti nella query. Ad esempio, gli operatori che impongono un nuovo ordine nei risultati devono memorizzare nel buffer tutti gli elementi da tutti i thread. Dal punto di vista del thread consumer (che è anche quello dell'utente dell'applicazione), una query completamente memorizzata nel buffer potrebbe essere eseguita per un periodo considerevole di tempo prima che produca il primo risultato. Gli altri operatori, per impostazione predefinita, sono parzialmente memorizzati nel buffer e generano i risultati in batch. Un operatore, <xref:System.Linq.ParallelEnumerable.ForAll%2A>, non è memorizzato nel buffer per impostazione predefinita. Genera immediatamente tutti gli elementi di tutti i thread.  
@@ -23,7 +23,7 @@ Quando una query è in esecuzione come parallela, PLINQ partiziona la sequenza d
  [!code-csharp[PLINQ#26](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#26)]
  [!code-vb[PLINQ#26](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#26)]  
   
- Per l'esempio completo, vedere [Procedura: Specificare le opzioni di Merge in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
+ Per l'esempio completo, vedere [Procedura: Specificare le opzioni di Merge in PLINQ](how-to-specify-merge-options-in-plinq.md).  
   
  Se la query specifica non può supportare l'opzione richiesta, l'opzione verrà ignorata. Nella maggior parte dei casi, non è necessario specificare un'opzione di merge per una query PLINQ. In alcuni casi, tuttavia, in base ai test e alle misurazioni, può risultare evidente che una query viene eseguita meglio in una modalità non predefinita. Un uso comune di questa opzione è quello di forzare un operatore di merge in blocchi per trasmettere i risultati e poter fornire un'interfaccia utente più reattiva.  
   
@@ -32,7 +32,7 @@ Quando una query è in esecuzione come parallela, PLINQ partiziona la sequenza d
   
 - `Not Buffered`  
   
-     L'opzione <xref:System.Linq.ParallelMergeOptions.NotBuffered> fa in modo che ogni elemento elaborato venga restituito da ogni thread non appena viene prodotto. Questo comportamento è simile alla "trasmissione" dell'output. Se l'operatore <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> è presente nella query, `NotBuffered` mantiene l'ordine degli elementi di origine. Anche `NotBuffered` se inizia a produrre risultati non appena sono disponibili, il tempo totale per produrre tutti i risultati potrebbe essere ancora più lungo rispetto all'utilizzo di una delle altre opzioni di unione.  
+     L'opzione <xref:System.Linq.ParallelMergeOptions.NotBuffered> fa in modo che ogni elemento elaborato venga restituito da ogni thread non appena viene prodotto. Questo comportamento è simile alla "trasmissione" dell'output. Se l'operatore <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> è presente nella query, `NotBuffered` mantiene l'ordine degli elementi di origine. Sebbene `NotBuffered` inizi a cedere i risultati non appena sono disponibili, il tempo totale per produrre tutti i risultati potrebbe essere ancora più lungo dell'utilizzo di una delle altre opzioni di merge.  
   
 - `Auto Buffered`  
   
@@ -65,5 +65,5 @@ Quando una query è in esecuzione come parallela, PLINQ partiziona la sequenza d
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
-- [Procedura: specificare le opzioni di merge in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)
+- [Parallel LINQ (PLINQ)](introduction-to-plinq.md)
+- [Procedura: Specificare le opzioni di merge in PLINQ](how-to-specify-merge-options-in-plinq.md)

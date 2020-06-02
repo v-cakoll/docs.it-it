@@ -37,12 +37,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: 596c0fd8fec8f59d977f1db445f9000df23ad5ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b076298a5a5f90a3c2dd39e4c5c9684e02a291c4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400484"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289239"
 ---
 # <a name="net-class-library-overview"></a>Panoramica della libreria di classi .NET
 
@@ -76,7 +76,7 @@ Le implementazioni .NET includono classi, interfacce, delegati e tipi di valore 
   
  Il ricorso a schemi di denominazione per raggruppare dei tipi correlati all'intero di spazi dei nomi è un metodo estremamente utile per compilare e documentare librerie di classi. Questo schema di denominazione non ha tuttavia alcun effetto sulla visibilità, sull'accesso ai membri, sull'ereditarietà, sulla sicurezza o sull'associazione. Gli spazi dei nomi possono essere ripartiti tra più assembly e un singolo assembly può contenere tipi provenienti da spazi dei nomi differenti. L'assembly fornisce la struttura formale per la creazione di versioni successive, la distribuzione, la sicurezza, il caricamento e la visibilità in Common Language Runtime.  
   
- Per altre informazioni sugli spazi dei nomi e sui nomi dei tipi, vedere [Common Type System](../../docs/standard/base-types/common-type-system.md).  
+ Per altre informazioni sugli spazi dei nomi e sui nomi dei tipi, vedere [Common Type System](base-types/common-type-system.md).  
   
 ## <a name="system-namespace"></a>spazio dei nomi di sistema
 
@@ -86,23 +86,23 @@ Le implementazioni .NET includono classi, interfacce, delegati e tipi di valore 
   
 |Category|Nome di classe|Descrizione|Tipo di dati di Visual Basic|Tipo di dati di C#|Tipo di dati C++/CLI|Tipo di dati F#|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
-|Integer|<xref:System.Byte>|Intero senza segno a 8 bit.|**Byte**|**byte**|**unsigned char**|**byte**|  
-||<xref:System.SByte>|Numero intero con segno a 8 bit.<br /><br /> Non conforme a CLS.|**Sbyte**|**sbyte**|**Char**<br /> -oppure-<br /> **signed** **char**|**sbyte**|  
+|Intero|<xref:System.Byte>|Intero senza segno a 8 bit.|**Byte**|**byte**|**unsigned char**|**byte**|  
+||<xref:System.SByte>|Numero intero con segno a 8 bit.<br /><br /> Non conforme a CLS.|**SByte**|**sbyte**|**char**<br /> -oppure-<br /> **signed** **char**|**sbyte**|  
 ||<xref:System.Int16>|Intero con segno a 16 bit.|**Breve**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|Intero con segno a 32 bit.|**Integer**|**Int**|**Int**<br /><br /> -oppure-<br /><br /> **Lungo**|**Int**|  
-||<xref:System.Int64>|Intero con segno a 64 bit.|**Lungo**|**Lungo**|**__int64**|**int64**|  
-||<xref:System.UInt16>|Numero intero non firmato a 16 bit.<br /><br /> Non conforme a CLS.|**Ushort**|**ushort**|**unsigned short**|**uint16**|  
+||<xref:System.Int32>|Intero con segno a 32 bit.|**Intero**|**int**|**int**<br /><br /> -oppure-<br /><br /> **long**|**int**|  
+||<xref:System.Int64>|Intero con segno a 64 bit.|**Long**|**long**|**__int64**|**int64**|  
+||<xref:System.UInt16>|Numero intero non firmato a 16 bit.<br /><br /> Non conforme a CLS.|**UShort**|**ushort**|**unsigned short**|**UInt16**|  
 ||<xref:System.UInt32>|Intero senza segno a 32 bit.<br /><br /> Non conforme a CLS.|**UInteger**|**uint**|**int senza segno**<br /> -oppure-<br /> **long senza segno**|**uint32**|  
-||<xref:System.UInt64>|Intero senza segno a 64 bit.<br /><br /> Non conforme a CLS.|**Ulong**|**Ulong**|**unsigned __int64**|**uint64**|  
-|Virgola mobile|<xref:System.Single>|Un numero a virgola mobile e precisione singola a 32 bit.|**Singolo**|**Galleggiante**|**Galleggiante**|**float32**<br> o<br>**Singolo**|  
-||<xref:System.Double>|Un numero a virgola mobile e precisione doppia a 64 bit.|**Doppia**|**Doppia**|**Doppia**|**Galleggiante**<br> o <br> **Doppia**|  
-|Logico|<xref:System.Boolean>|Un valore Boolean (true o false).|**Boolean**|**Bool**|**Bool**|**Bool**|  
-|Altri|<xref:System.Char>|Un carattere Unicode a 16 bit.|**Char**|**Char**|**wchar_t**|**Char**|  
-||<xref:System.Decimal>|Un valore decimale a 128 bit.|**Decimale**|**Decimale**|**Decimale**|**Decimale**|  
+||<xref:System.UInt64>|Intero senza segno a 64 bit.<br /><br /> Non conforme a CLS.|**ULong**|**ULONG**|**unsigned __int64**|**uint64**|  
+|Virgola mobile|<xref:System.Single>|Un numero a virgola mobile e precisione singola a 32 bit.|**Singolo**|**float**|**float**|**float32**<br> o<br>**single**|  
+||<xref:System.Double>|Un numero a virgola mobile e precisione doppia a 64 bit.|**Doppio**|**double**|**double**|**float**<br> o <br> **double**|  
+|Logico|<xref:System.Boolean>|Un valore Boolean (true o false).|**Boolean**|**bool**|**bool**|**bool**|  
+|Altro|<xref:System.Char>|Un carattere Unicode a 16 bit.|**Char**|**char**|**wchar_t**|**char**|  
+||<xref:System.Decimal>|Un valore decimale a 128 bit.|**Decimale**|**decimal**|**Decimale**|**decimal**|  
 ||<xref:System.IntPtr>|Un intero con segno la cui dimensione dipende dalla piattaforma sottostante (un valore a 32 bit su una piattaforma a 32 bit e un valore a 64 bit su una piattaforma a 64 bit).|**IntPtr**<br /><br /> Nessun tipo incorporato.|**IntPtr**<br /><br /> Nessun tipo incorporato.|**IntPtr**<br /><br /> Nessun tipo incorporato.|**unativeint**|  
 ||<xref:System.UIntPtr>|Un intero senza segno la cui dimensione dipende dalla piattaforma sottostante (un valore a 32 bit su una piattaforma a 32 bit e un valore a 64 bit su una piattaforma a 64 bit).<br /><br /> Non conforme a CLS.|**UIntPtr**<br /><br /> Nessun tipo incorporato.|**UIntPtr**<br /><br /> Nessun tipo incorporato.|**UIntPtr**<br /><br /> Nessun tipo incorporato.|**unativeint**|  
-||<xref:System.Object>|Il primo livello della gerarchia di oggetti.|**Oggetto**|**Oggetto**|**Oggetto:**|**obj**|  
-||<xref:System.String>|Una stringa di caratteri Unicode immutabile e a lunghezza fissa.|**Stringa**|**Stringa**|**Stringa di lavoro**|**Stringa**|  
+||<xref:System.Object>|Il primo livello della gerarchia di oggetti.|**Object**|**object**|**Oggetto ^**|**obj**|  
+||<xref:System.String>|Una stringa di caratteri Unicode immutabile e a lunghezza fissa.|**Stringa**|**string**|**Stringa ^**|**string**|  
   
  Oltre ai tipi di dati di base, lo spazio dei nomi <xref:System> contiene oltre 100 classi, da quelle che gestiscono le eccezioni a quelle correlate a concetti fondamentali della fase di esecuzione, quali i domini di applicazione e Garbage Collector. Lo spazio dei nomi <xref:System> contiene inoltre numerosi spazi dei nomi di secondo livello.  
   
@@ -110,6 +110,6 @@ Le implementazioni .NET includono classi, interfacce, delegati e tipi di valore 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Common Type System](../../docs/standard/base-types/common-type-system.md)
-- [Browser per le API .NET](../../api/index.md)
-- [Panoramica](../../docs/framework/get-started/overview.md)
+- [Common Type System](base-types/common-type-system.md)
+- [Browser API .NET](../../api/index.md)
+- [Panoramica](../framework/get-started/overview.md)

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-ms.openlocfilehash: a63452df16e452a90eff3977ac8726cc0a5ac439
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e65308f097e81d844cb04b1ebd5cbcdd8a3aadad
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710193"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291994"
 ---
 # <a name="script-blocks-using-msxslscript"></a>Blocchi di script utilizzando msxsl:script
 La classe <xref:System.Xml.Xsl.XslCompiledTransform> supporta lo script incorporato mediante l'elemento `msxsl:script`. Quando viene caricato il foglio di stile, le funzioni definite vengono compilate in MSIL (Microsoft Intermediate Language) da CodeDOM (Code Document Object Model) e vengono attivate in fase di esecuzione. L'assembly generato dal blocco di script incorporato è separato rispetto all'assembly generato per il foglio di stile.  
@@ -92,7 +92,7 @@ La classe <xref:System.Xml.Xsl.XslCompiledTransform> supporta lo script incorpor
 #### <a name="namespaces"></a>Spazi dei nomi  
  Per impostazione predefinita sono inclusi i seguenti spazi dei nomi:  
   
-- Sistema  
+- System  
   
 - System.Collection  
   
@@ -146,7 +146,7 @@ La classe <xref:System.Xml.Xsl.XslCompiledTransform> supporta lo script incorpor
 </circles>  
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [Generazione e compilazione dinamica di codice sorgente](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)
+- [Trasformazioni XSLT](xslt-transformations.md)
+- [Generazione e compilazione dinamica di codice sorgente](../../../framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

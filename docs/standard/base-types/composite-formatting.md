@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: b1ec8cfc0f8c6e660d716c51bf3c3387b73a278f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2488a471af3e0dfc8ebf7dad1589c3c03ac15d86
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400344"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289317"
 ---
 # <a name="composite-formatting"></a>Formattazione composita
 
@@ -55,7 +55,7 @@ La funzionalità di formattazione composita è supportata da metodi quali i segu
 ## <a name="format-item-syntax"></a>Sintassi degli elementi di formato  
  Ogni elemento di formato usa il formato seguente ed è costituito dai componenti riportati di seguito:  
   
- `{`*indice*`,`[*allineamento*][`:`*stringaformatore*]`}`  
+ `{`*index*[ `,` *allineamento*] [ `:` *FormatString*]`}`  
   
  Le parentesi graffe corrispondenti "{" e "}" sono obbligatorie.  
   
@@ -65,12 +65,12 @@ La funzionalità di formattazione composita è supportata da metodi quali i segu
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- Più elementi di formato possono fare riferimento allo stesso elemento dell'elenco di oggetti specificando lo stesso identificatore di parametro. Ad esempio, è possibile formattare lo stesso valore numerico in formato esadecimale, scientifico e numerico{0:X} {0:E} {0:N}specificando una stringa di formato composito, ad esempio: "0x", come illustrato nell'esempio seguente.  
+ Più elementi di formato possono fare riferimento allo stesso elemento dell'elenco di oggetti specificando lo stesso identificatore di parametro. È ad esempio possibile formattare lo stesso valore numerico in formato esadecimale, scientifico e numerico specificando una stringa di formato composito, ad esempio "0x {0:X} {0:E} {0:N} ", come illustrato nell'esempio seguente.  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
   
- Ogni elemento di formato può fare riferimento a un oggetto dell'elenco. Ad esempio, se sono presenti tre oggetti, è possibile formattare il secondo, il primo{1} {0} {2}e il terzo oggetto specificando una stringa di formato composito come questa: " ". Gli oggetti a cui non fa riferimento un elemento di formato vengono ignorati. Se un identificatore di parametro corrisponde a un elemento non incluso nei limiti dell'elenco di oggetti, verrà generata un'eccezione <xref:System.FormatException> in fase di esecuzione.  
+ Ogni elemento di formato può fare riferimento a un oggetto dell'elenco. Se ad esempio sono presenti tre oggetti, è possibile formattare il secondo, il primo e il terzo oggetto specificando una stringa di formato composita come la seguente: " {1} {0} {2} ". Gli oggetti a cui non fa riferimento un elemento di formato vengono ignorati. <xref:System.FormatException>Viene generata un'eccezione in fase di esecuzione se un identificatore di parametro designa un elemento non compreso nei limiti dell'elenco di oggetti.  
   
 ### <a name="alignment-component"></a>Componente di allineamento  
  Il componente facoltativo *alignment* corrisponde a un intero con segno che indica la larghezza preferita del campo formattato. Se il valore di *alignment* è inferiore alla lunghezza della stringa formattata, il componente *alignment* verrà ignorato e come larghezza del campo verrà usata la lunghezza della stringa. I dati formattati verranno allineati a destra se il valore di *alignment* è positivo e a sinistra se il valore di *alignment* è negativo. Per la spaziatura eventualmente necessaria verranno usati spazi vuoti. Se viene specificato il componente *alignment*, la virgola è obbligatoria.  
@@ -81,17 +81,17 @@ La funzionalità di formattazione composita è supportata da metodi quali i segu
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Componente della stringa di formato  
- Il componente *formatString* facoltativo è una stringa di formato appropriata per il tipo di oggetto formattato. Specificare una stringa di formato numerico standard o personalizzata se l'oggetto corrispondente è un valore numerico, una stringa di formato di data e ora standard o personalizzata se l'oggetto corrispondente è un oggetto <xref:System.DateTime> o una [stringa di formato di enumerazione](../../../docs/standard/base-types/enumeration-format-strings.md) se l'oggetto corrispondente è un valore di enumerazione. Se il componente *formatString* viene omesso, verrà usato l'identificatore di formato generale "G" per un tipo numerico, di data e ora o di enumerazione. Se viene specificato il componente *formatString*, i due punti sono obbligatori.  
+ Il componente *formatString* facoltativo è una stringa di formato appropriata per il tipo di oggetto formattato. Specificare una stringa di formato numerico standard o personalizzata se l'oggetto corrispondente è un valore numerico, una stringa di formato di data e ora standard o personalizzata se l'oggetto corrispondente è un oggetto <xref:System.DateTime> o una [stringa di formato di enumerazione](enumeration-format-strings.md) se l'oggetto corrispondente è un valore di enumerazione. Se il componente *formatString* viene omesso, verrà usato l'identificatore di formato generale "G" per un tipo numerico, di data e ora o di enumerazione. Se viene specificato il componente *formatString*, i due punti sono obbligatori.  
   
  Nella tabella seguente sono elencati i tipi o le categorie di tipi della libreria di classi .NET Framework che supportano un set predefinito di stringhe di formato e vengono forniti collegamenti ad argomenti in cui vengono elencate le stringhe di formato supportate. Si noti che la formattazione delle stringhe è un meccanismo estendibile che consente di definire nuove stringhe di formato per tutti i tipi esistenti nonché definire un set di stringhe di formato supportate da un tipo definito dall'applicazione. Per altre informazioni, vedere gli argomenti delle interfacce <xref:System.IFormattable> e <xref:System.ICustomFormatter>.  
   
 |Tipo o categoria di tipo|Vedere|  
 |---------------------------|---------|  
-|Tipi di data e ora (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Stringhe di formato di data e ora personalizzateCustom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|Tipi di enumerazione (tutti derivati da <xref:System.Enum?displayProperty=nameWithType>)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|Tipi numerici (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|Tipi di data e ora (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Stringhe di formato di data e ora standard](standard-date-and-time-format-strings.md)<br /><br /> [Stringhe di formato di data e ora personalizzato](custom-date-and-time-format-strings.md)|  
+|Tipi di enumerazione (tutti derivati da <xref:System.Enum?displayProperty=nameWithType>)|[Stringhe di formato di enumerazione](enumeration-format-strings.md)|  
+|Tipi numerici (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Stringhe di formato numerico standard](standard-numeric-format-strings.md)<br /><br /> [Stringhe di formato numerico personalizzato](custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
-|<xref:System.TimeSpan>|[Stringhe di formato TimeSpan standardStandard TimeSpan Format Strings](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
+|<xref:System.TimeSpan>|[Stringhe di formato TimeSpan standard](standard-timespan-format-strings.md)<br /><br /> [Stringhe di formato TimeSpan personalizzate](custom-timespan-format-strings.md)|  
   
 ### <a name="escaping-braces"></a>Sequenze di escape delle parentesi graffe  
  Le parentesi graffe di apertura e di chiusura sono interpretate come l'inizio e la fine di un elemento di formato. Di conseguenza, è necessario usare una sequenza di escape per visualizzare una parentesi graffa di apertura o di chiusura letterale. Specificare due parentesi graffe di apertura ("{{") nel testo fisso per visualizzare una parentesi di apertura ("{") oppure due parentesi graffe di chiusura ("}}") per visualizzare una parentesi graffa di chiusura ("}"). Le parentesi graffe in un elemento di formato vengono interpretate sequenzialmente nell'ordine in cui sono rilevate. L'interpretazione delle parentesi graffe annidate non è supportata.  
@@ -163,11 +163,11 @@ La funzionalità di formattazione composita è supportata da metodi quali i segu
 - <xref:System.String.Format%2A?displayProperty=nameWithType>
 - [Interpolazione di stringhe (C#)](../../csharp/language-reference/tokens/interpolated.md)
 - [Interpolazione di stringhe (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
-- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)
-- [Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Stringhe di formato di data e ora personalizzateCustom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
-- [Stringhe di formato TimeSpan standardStandard TimeSpan Format Strings](../../../docs/standard/base-types/standard-timespan-format-strings.md)
-- [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)
+- [Formattazione di tipi](formatting-types.md)
+- [Stringhe di formato numerico standard](standard-numeric-format-strings.md)
+- [Stringhe di formato numerico personalizzato](custom-numeric-format-strings.md)
+- [Stringhe di formato di data e ora standard](standard-date-and-time-format-strings.md)
+- [Stringhe di formato di data e ora personalizzato](custom-date-and-time-format-strings.md)
+- [Stringhe di formato TimeSpan standard](standard-timespan-format-strings.md)
+- [Stringhe di formato TimeSpan personalizzate](custom-timespan-format-strings.md)
+- [Stringhe di formato di enumerazione](enumeration-format-strings.md)

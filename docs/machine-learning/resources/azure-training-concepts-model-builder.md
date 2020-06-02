@@ -1,89 +1,93 @@
 ---
-title: Risorse per la formazione di Azure per Il Generatore di modelliModel Builder Azure Training Resources
+title: Risorse di formazione di Azure per generatore di modelli
 description: Guida alle risorse per Azure Machine Learning
 ms.topic: reference
-ms.date: 02/27/2020
+ms.date: 06/01/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: a19e13955d0eaea344109eb817f3a3959c3dd883
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d9eb5560ef33f8f80dbe53e17087c606a8697378
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185815"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289473"
 ---
-# <a name="model-builder-azure-training-resources"></a>Risorse per la formazione di Azure per Il Generatore di modelliModel Builder Azure Training Resources
+# <a name="model-builder-azure-training-resources"></a>Risorse di formazione di Azure per generatore di modelli
 
-Di seguito è riportata una guida che illustra altre informazioni sulle risorse usate per eseguire il training dei modelli in Azure con Model Builder.The following is a guide to help you learn more about resources used to train models in Azure with Model Builder.
+Di seguito è riportata una guida che consente di ottenere altre informazioni sulle risorse usate per eseguire il training dei modelli in Azure con generatore di modelli.
 
 ## <a name="what-is-an-azure-machine-learning-experiment"></a>Che cos'è un esperimento di Azure Machine Learning?
 
-Un esperimento di Azure Machine Learning è una risorsa che deve essere creata prima di eseguire il training di Model Builder in Azure.An Azure Machine Learning experiment is a resource that needs to be created before running Model Builder training on Azure.
+Un esperimento di Azure Machine Learning è una risorsa che è necessario creare prima di eseguire il training del generatore di modelli in Azure.
 
-L'esperimento incapsula la configurazione e i risultati per una o più esecuzioni di training di apprendimento automatico. Gli esperimenti appartengono a un'area di lavoro specifica. La prima volta che viene creato un esperimento, il suo nome viene registrato nell'area di lavoro. Tutte le esecuzioni successive, se viene utilizzato lo stesso nome dell'esperimento, vengono registrate come parte dello stesso esperimento. In caso contrario, viene creato un nuovo esperimento.
+L'esperimento incapsula la configurazione e i risultati per una o più esecuzioni di training di machine learning. Gli esperimenti appartengono a un'area di lavoro specifica. La prima volta che si crea un esperimento, il relativo nome viene registrato nell'area di lavoro. Tutte le esecuzioni successive: se viene usato lo stesso nome di esperimento, vengono registrate come parte dello stesso esperimento. In caso contrario, viene creato un nuovo esperimento.
 
-## <a name="what-is-an-azure-machine-learning-workspace"></a>Che cos'è un'area di lavoro di Azure Machine Learning?
+## <a name="what-is-an-azure-machine-learning-workspace"></a>Che cos'è un'area di lavoro Azure Machine Learning?
 
-Un'area di lavoro è una risorsa di Azure Machine Learning che fornisce una posizione centrale per tutte le risorse e gli elementi di Azure Machine Learning creati durante l'esecuzione del training.
+Un'area di lavoro è una risorsa Azure Machine Learning che fornisce una posizione centrale per tutte le risorse Azure Machine Learning e gli artefatti creati come parte dell'esecuzione del training.
 
-Per creare un'area di lavoro di Azure Machine Learning, sono necessari gli elementi seguenti:To create an Azure Machine Learning workspace, the following are required:
+Per creare un'area di lavoro di Azure Machine Learning, sono necessari gli elementi seguenti:
 
-- Nome: un nome per l'area di lavoro compreso tra 3 e 33 caratteri. I nomi possono contenere solo caratteri alfanumerici e trattini.
-- Area geografica: la posizione geografica del data center in cui vengono distribuite l'area di lavoro e le risorse. Si consiglia di scegliere una posizione vicina a dove si trovano voi o i vostri clienti.
-- Gruppo di risorse: un contenitore che contiene tutte le risorse correlate per una soluzione Azure.Resource group: A container that contains all related resources for an Azure solution.
+- Nome: nome dell'area di lavoro compreso tra 3-33 caratteri. I nomi possono contenere solo caratteri alfanumerici e trattini.
+- Region: la posizione geografica del data center in cui sono distribuite le risorse e l'area di lavoro. Si consiglia di scegliere una località vicina a quella in cui si trovano i clienti.
+- Gruppo di risorse: contenitore che contiene tutte le risorse correlate per una soluzione di Azure.
 
-## <a name="what-is-an-azure-machine-learning-compute"></a>Che cos'è un calcolo di Azure Machine Learning?
+## <a name="what-is-an-azure-machine-learning-compute"></a>Che cos'è un calcolo Azure Machine Learning?
 
-Un calcolo di Azure Machine Learning è una macchina virtuale Linux basata su cloud usata per il training.
+Un calcolo Azure Machine Learning è una macchina virtuale Linux basata sul cloud usata per il training.
 
-Per creare un'area di lavoro di Azure Machine Learning, sono necessari gli elementi seguenti:To create an Azure Machine Learning workspace, the following are required:
+Per creare un'area di lavoro di Azure Machine Learning, sono necessari gli elementi seguenti:
 
-- Nome: un nome per l'area di lavoro compreso tra 2 e 16 caratteri. I nomi possono contenere solo caratteri alfanumerici e trattini.
+- Nome: nome dell'area di lavoro compreso tra 2-16 caratteri. I nomi possono contenere solo caratteri alfanumerici e trattini.
 - Dimensioni di calcolo
 
-    Model Builder può utilizzare uno dei seguenti tipi di calcolo ottimizzati per GPU:
+    Il generatore di modelli può usare uno dei tipi di calcolo ottimizzati per GPU seguenti:
 
     | Dimensione | vCPU | Memoria: GiB | GiB di archiviazione temp (unità SSD) | GPU | Memoria GPU: GiB | Numero massimo di dischi dati | Schede di interfaccia di rete max |
     |---|---|---|---|---|---|---|---|
     | Standard_NC12   | 12 | 112 | 680  | 2 | 24 | 48 | 2 |
     | Standard_NC24   | 24 | 224 | 1440 | 4 | 48 | 64 | 4 |
 
-    Visitare la [documentazione](https://docs.microsoft.com/azure/virtual-machines/nc-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) della macchina virtuale Linux serie NC per ulteriori dettagli sui tipi di calcolo ottimizzati Per GPU.
+    Per altri dettagli sui tipi di calcolo ottimizzati per GPU, vedere la [documentazione della VM Linux della serie NC](https://docs.microsoft.com/azure/virtual-machines/nc-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) .
+- Priorità di calcolo
+
+  - Bassa priorità: adatta per le attività con tempi di esecuzione più brevi. Potrebbero essere interessati da interruzioni e da mancanza di disponibilità. In genere costa meno perché sfrutta la capacità in eccesso in Azure.
+  - Dedicato: adatto per le attività di qualsiasi durata, ma soprattutto processi con esecuzione prolungata. Non influenzato dalle interruzioni o dalla mancanza di disponibilità. In genere il costo è maggiore perché riserva un set dedicato di risorse di calcolo in Azure per le attività.
 
 ## <a name="training"></a>Formazione
 
-La formazione in Azure è disponibile solo per lo scenario di classificazione delle immagini di Model Builder.Training on Azure is only available for the Model Builder image classification scenario. L'algoritmo utilizzato per eseguire il training di questi modelli è una rete neurale profonda basata sull'architettura ResNet50.The algorithm used to train these models is a Deep Neural Network based on the ResNet50 architecture. Il processo di training richiede un certo tempo e la quantità di tempo può variare a seconda delle dimensioni del calcolo selezionato e della quantità di dati. La prima volta che viene eseguito il training di un modello, è possibile prevedere un tempo di formazione leggermente più lungo perché è necessario eseguire il provisioning delle risorse. È possibile tenere traccia dello stato di avanzamento delle esecuzioni selezionando il collegamento "Monitora l'esecuzione corrente nel portale di Azure" in Visual Studio.You can track the progress of your runs by selecting the "Monitor current run in Azure portal" link in Visual Studio.
+Il training in Azure è disponibile solo per lo scenario di classificazione delle immagini del generatore di modelli. L'algoritmo usato per il training di questi modelli è una rete neurale profonda basata sull'architettura ResNet50. Il processo di training richiede tempo e la quantità di tempo può variare a seconda delle dimensioni del calcolo selezionato e della quantità di dati. La prima volta che si esegue il training di un modello, è possibile prevedere un tempo di training leggermente più lungo perché è necessario effettuare il provisioning delle risorse. È possibile tenere traccia dello stato di avanzamento delle esecuzioni selezionando il collegamento "monitora esecuzione corrente in portale di Azure" in Visual Studio.
 
 ## <a name="results"></a>Risultati
 
-Al termine della formazione, alla soluzione vengono aggiunti due progetti con i suffissi seguenti:Once training is complete, two projects are added to your solution with the following suffixes:
+Al termine del training, verranno aggiunti due progetti alla soluzione con i suffissi seguenti:
 
-- *ConsoleApp*: Un'applicazione console di C .NET Core che fornisce il codice iniziale per compilare la pipeline di stima ed eseguire stime.
-- *Modello*: Un'applicazione .NET Standard di C .NET che contiene i modelli di dati che definiscono lo schema dei dati del modello di input e di output, nonché gli asset seguenti:
+- *ConsoleApp*: un'applicazione console C# .NET Core che fornisce codice di avvio per compilare la pipeline di stima ed eseguire stime.
+- *Modello*: un'applicazione .NET standard C# che contiene i modelli di dati che definiscono lo schema dei dati del modello di input e di output, nonché gli asset seguenti:
 
-  - bestModel.onnx: versione serializzata del modello in formato ONNX (Open Neural Network Exchange). ONNX è un formato open source per i modelli Di IA che supporta l'interoperabilità tra framework come ML.NET, PyTorch e TensorFlow.
-  - bestModelMap.json: elenco di categorie utilizzate durante l'esecuzione di stime per eseguire il mapping dell'output del modello a una categoria di testo.BestModelMap.json: A list of categories used when making predictions to map the model output to a text category.
-  - MLModel.zip: una versione serializzata della pipeline di stima ML.NET che utilizza la versione serializzata del modello *bestModel.onnx* per eseguire stime ed eseguire il mapping degli output usando il `bestModelMap.json` file.
+  - bestModel. Onnx: una versione serializzata del modello nel formato Open Neural Network Exchange (ONNX). ONNX è un formato Open Source per i modelli di intelligenza artificiale che supporta l'interoperabilità tra Framework come ML.NET, PyTorch e TensorFlow.
+  - bestModelMap. JSON: elenco di categorie utilizzate per eseguire stime per eseguire il mapping dell'output del modello a una categoria di testo.
+  - MLModel. zip: una versione serializzata della pipeline di stima ML.NET che utilizza la versione serializzata del modello *bestModel. Onnx* per eseguire stime ed eseguire il mapping degli output utilizzando il `bestModelMap.json` file.
 
-## <a name="use-the-machine-learning-model"></a>Usare il modello di apprendimento automaticoUse the machine learning model
+## <a name="use-the-machine-learning-model"></a>Usare il modello di Machine Learning
 
-Le `ModelInput` `ModelOutput` classi e nel progetto *Model* definiscono lo schema rispettivamente dell'input e dell'output previsti del modello.
+Le `ModelInput` `ModelOutput` classi e nel progetto di *modello* definiscono rispettivamente lo schema dell'input e dell'output previsto del modello.
 
-In uno scenario di `ModelInput` classificazione delle immagini, il contiene due colonne:In an image classification scenario, the contains two columns:
+In uno scenario di classificazione delle immagini, `ModelInput` contiene due colonne:
 
-- `ImageSource`: il percorso della stringa della posizione dell'immagine.
-- `Label`: la categoria effettiva a cui appartiene l'immagine. `Label`viene utilizzato solo come input durante l'allenamento e non deve essere fornito quando si effettuano previsioni.
+- `ImageSource`: Percorso della stringa del percorso dell'immagine.
+- `Label`: Categoria effettiva a cui appartiene l'immagine. `Label`viene utilizzato solo come input quando si esegue il training e non è necessario specificarlo durante le stime.
 
-Il `ModelOutput` contiene due colonne:
+`ModelOutput`Contiene due colonne:
 
-- `Prediction`: categoria prevista dell'immagine.
-- `Score`: l'elenco delle probabilità per tutte le `Prediction`categorie (il più alto appartiene al ).
+- `Prediction`: Categoria stimata dell'immagine.
+- `Score`: Elenco di probabilità per tutte le categorie (il più alto appartiene a `Prediction` ).
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-### <a name="cannot-create-compute"></a>Impossibile creare il calcolo
+### <a name="cannot-create-compute"></a>Non è possibile creare il calcolo
 
-Se si verifica un errore durante la creazione del calcolo di Azure Machine Learning, la risorsa di calcolo potrebbe essere ancora presente, in uno stato con errori. Se si tenta di ricreare la risorsa di calcolo con lo stesso nome, l'operazione non riesce. Per correggere l'errore, eseguire una delle operazioni seguenti:
+Se si verifica un errore durante la creazione di Azure Machine Learning calcolo, è possibile che la risorsa di calcolo esista ancora, in uno stato di errore. Se si tenta di ricreare la risorsa di calcolo con lo stesso nome, l'operazione non riesce. Per correggere l'errore, eseguire una delle operazioni seguenti:
 
-- Creare il nuovo calcolo con un nome diversoCreate the new compute with a different name
-- Passare al portale di Azure e rimuovere la risorsa di calcolo originale
+- Crea il nuovo calcolo con un nome diverso
+- Passare alla portale di Azure e rimuovere la risorsa di calcolo originale

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-ms.openlocfilehash: b286bdd2c5d7b03a0a2b5f94478e252da6cd0ae2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ef23cff2416792f13fda04dbe9beb34cbacfd7ea
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120854"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288277"
 ---
 # <a name="localizability-review"></a>Revisione della localizzabilità
 
@@ -38,7 +38,7 @@ L'analisi della localizzabilità è costituita dai tre controlli seguenti:
 <a name="global"></a>
 ## <a name="implement-globalization-recommendations"></a>Implementare le raccomandazioni per la globalizzazione
 
-Se l'applicazione è stata progettata e sviluppata pensando alla localizzazione e se sono stati seguiti i consigli forniti nell'articolo [Globalizzazione](../../../docs/standard/globalization-localization/globalization.md), la revisione della localizzabilità sarà principalmente un passaggio di controllo di qualità. In caso contrario, durante questa fase è necessario esaminare e implementare i suggerimenti per la [globalizzazione](../../../docs/standard/globalization-localization/globalization.md) e correggere gli errori nel codice sorgente che impediscono la localizzazione.
+Se l'applicazione è stata progettata e sviluppata pensando alla localizzazione e se sono stati seguiti i consigli forniti nell'articolo [Globalizzazione](globalization.md), la revisione della localizzabilità sarà principalmente un passaggio di controllo di qualità. In caso contrario, durante questa fase è necessario rivedere e implementare i consigli per la [globalizzazione](globalization.md) e correggere gli errori nel codice sorgente che impediscono la localizzazione.
 
 <a name="culture"></a>
 ## <a name="handle-culture-sensitive-features"></a>Gestire le funzionalità dipendenti dalle impostazioni cultura
@@ -75,11 +75,11 @@ Prima di localizzare l'applicazione, è necessario testarla utilizzando i dati i
 
 - Confronti di stringhe o confronti per l'uguaglianza tramite cui vengono restituiti risultati imprevisti.
 
-Se durante lo sviluppo dell'applicazione sono stati seguiti i consigli per la globalizzazione, le funzionalità dipendenti dalle impostazioni cultura sono state gestite correttamente e i problemi di localizzazione riscontrati durante i test sono stati identificati e risolti, è possibile procedere al passaggio successivo, [Localizzazione](../../../docs/standard/globalization-localization/localization.md).
+Se durante lo sviluppo dell'applicazione sono stati seguiti i consigli per la globalizzazione, le funzionalità dipendenti dalle impostazioni cultura sono state gestite correttamente e i problemi di localizzazione riscontrati durante i test sono stati identificati e risolti, è possibile procedere al passaggio successivo, [Localizzazione](localization.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)
-- [Localizzazione](../../../docs/standard/globalization-localization/localization.md)
-- [Globalizzazione](../../../docs/standard/globalization-localization/globalization.md)
-- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)
+- [Globalizzazione e localizzazione](index.md)
+- [Localizzazione](localization.md)
+- [Globalizzazione](globalization.md)
+- [Risorse nelle applicazioni desktop](../../framework/resources/index.md)

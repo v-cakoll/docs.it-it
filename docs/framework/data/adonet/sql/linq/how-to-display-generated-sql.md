@@ -1,24 +1,25 @@
 ---
-title: 'Procedura: Visualizzare il codice SQL generato'
+title: 'Procedura: visualizzare il codice SQL generato'
+description: Informazioni su come visualizzare il codice SQL generato per le query usando la proprietà log per comprendere LINQ to SQL funzionalità e per il debug.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 15fc6a50d232ea12b229b7b2790c0398bc1c370d
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5e75a8aadf4631f0a6e50641db72ba7b83af41fe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002973"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286378"
 ---
-# <a name="how-to-display-generated-sql"></a>Procedura: Visualizzare il codice SQL generato
+# <a name="how-to-display-generated-sql"></a>Procedura: visualizzare il codice SQL generato
 È possibile visualizzare il codice SQL generato per le query e modificare l'elaborazione usando la proprietà <xref:System.Data.Linq.DataContext.Log%2A>. Questo approccio può essere utile per comprendere la funzionalità di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e per eseguire il debug di problemi specifici.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio riportato di seguito viene usata la proprietà <xref:System.Data.Linq.DataContext.Log%2A> per visualizzare il codice SQL nella finestra della console prima di eseguirlo.  È possibile usare questa proprietà con comandi di query, inserimento, aggiornamento ed eliminazione.  
   
- Le linee dalla finestra della console sono quelle visualizzate quando si esegue il Visual Basic o C# il codice seguente.  
+ Le linee dalla finestra della console sono quelle visualizzate quando si esegue il codice Visual Basic o C# seguente.  
   
 ```console  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  

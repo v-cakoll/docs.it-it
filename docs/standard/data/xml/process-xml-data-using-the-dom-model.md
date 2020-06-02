@@ -3,12 +3,12 @@ title: Elaborazione di dati XML con il modello DOM
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 56b6e9c7-ed82-4a65-a647-7be32c83bcc8
-ms.openlocfilehash: 01ef4bef57b8a2e3e13f28a98adb21b111f3f4ed
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 242554cc948ef16972ffd26d5464dae2727ed339
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710453"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290837"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a>Elaborazione di dati XML con il modello DOM
 Il DOM (Document Object Model) XML considera i dati XML come un set standard di oggetti e viene usato per elaborare i dati XML in memoria. Lo spazio dei nomi `System.Xml` fornisce una rappresentazione programmatica di documenti, frammenti, nodi o set di nodi XML. Si basa sulle raccomandazioni principali del World Wide Web Consortium (W3C) DOM Level 1 e DOM Level 2.  
@@ -17,44 +17,44 @@ Il DOM (Document Object Model) XML considera i dati XML come un set standard di 
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
-- [XML DOM (Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)  
+- [XML DOM (Document Object Model)](xml-document-object-model-dom.md)  
   
-- [Tipi di nodi XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
+- [Tipi di nodi XML](types-of-xml-nodes.md)  
   
-- [Gerarchia del modello a oggetti di documenti XML (Document Object Model, DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md)  
+- [Gerarchia del modello a oggetti di documenti XML (Document Object Model, DOM)](xml-document-object-model-dom-hierarchy.md)  
   
-- [Mapping della gerarchia di oggetti in dati XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)  
+- [Mapping della gerarchia di oggetti in dati XML](mapping-the-object-hierarchy-to-xml-data.md)  
   
-- [Creazione di documenti XML](../../../../docs/standard/data/xml/xml-document-creation.md)  
+- [Creazione di documenti XML](xml-document-creation.md)  
   
-- [Lettura di un documento XML nel DOM](../../../../docs/standard/data/xml/reading-an-xml-document-into-the-dom.md)  
+- [Lettura di un documento XML nel DOM](reading-an-xml-document-into-the-dom.md)  
   
-- [Inserimento di nodi in un documento XML](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)  
+- [Inserimento di nodi in un documento XML](inserting-nodes-into-an-xml-document.md)  
   
-- [Rimozione di nodi, contenuto e valori da un documento XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md)  
+- [Rimozione di nodi, contenuto e valori da un documento XML](removing-nodes-content-and-values-from-an-xml-document.md)  
   
-- [Modifica di nodi, contenuto e valori in un documento XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)  
+- [Modifica di nodi, contenuto e valori in un documento XML](modifying-nodes-content-and-values-in-an-xml-document.md)  
   
-- [Convalida di un documento XML nel DOM](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md)  
+- [Convalida di un documento XML nel DOM](validating-an-xml-document-in-the-dom.md)  
   
-- [Salvataggio e scrittura di un documento](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)  
+- [Salvataggio e scrittura di un documento](saving-and-writing-a-document.md)  
   
-- [Selezione di nodi utilizzando la navigazione XPath](../../../../docs/standard/data/xml/select-nodes-using-xpath-navigation.md)  
+- [Selezione di nodi utilizzando la navigazione XPath](select-nodes-using-xpath-navigation.md)  
   
-- [Risoluzione di risorse esterne](../../../../docs/standard/data/xml/resolving-external-resources.md)  
+- [Risoluzione di risorse esterne](resolving-external-resources.md)  
   
-- [Confronto di oggetti con XmlNameTable](../../../../docs/standard/data/xml/object-comparison-using-xmlnametable.md)  
+- [Confronto di oggetti con XmlNameTable](object-comparison-using-xmlnametable.md)  
   
-- [Raccolte di nodi in NamedNodeMaps e NodeLists](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md)  
+- [Raccolte di nodi in NamedNodeMaps e NodeLists](node-collections-in-namednodemaps-and-nodelists.md)  
   
-- [Aggiornamenti dinamici di NodeLists e NamedNodeMaps](../../../../docs/standard/data/xml/dynamic-updates-to-nodelists-and-namednodemaps.md)  
+- [Aggiornamenti dinamici di NodeLists e NamedNodeMaps](dynamic-updates-to-nodelists-and-namednodemaps.md)  
   
-- [Supporto dello spazio dei nomi nel DOM](../../../../docs/standard/data/xml/namespace-support-in-the-dom.md)  
+- [Supporto dello spazio dei nomi nel DOM](namespace-support-in-the-dom.md)  
   
-- [Gestione degli eventi in un documento XML con XmlNodeChangedEventArgs](../../../../docs/standard/data/xml/event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md)  
+- [Gestione degli eventi in un documento XML con XmlNodeChangedEventArgs](event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md)  
   
-- [Estensione del DOM](../../../../docs/standard/data/xml/extending-the-dom.md)  
+- [Estensione del DOM](extending-the-dom.md)  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Elaborazione di dati XML con il modello di dati XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [Elaborazione di dati XML con il modello di dati XPath](process-xml-data-using-the-xpath-data-model.md)  
  Viene illustrata l'elaborazione XML usando la classe <xref:System.Xml.XPath.XPathNavigator>.

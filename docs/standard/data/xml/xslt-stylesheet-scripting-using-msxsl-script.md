@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: 9bf57e0f74a353fb6512a24214e9479c1d813aab
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: aef2471a375469f7cd4dff27084b305ef9394d5e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160209"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291968"
 ---
-# <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Scripting dei fogli di stile XSLT con \<msxsl:script>
+# <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Scripting del foglio di stile XSLT con\<msxsl:script>
 La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato mediante l'elemento `script`.  
   
 > [!NOTE]
-> La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in .NET Framework 2.0. È possibile eseguire le trasformazioni XSLT (Extensible Stylesheet Language for Transformations) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Per altre informazioni, vedere [Utilizzo della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [Migrazione dalla classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
+> La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in .NET Framework 2.0. È possibile eseguire le trasformazioni XSLT (Extensible Stylesheet Language for Transformations) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Per altre informazioni, vedere [Utilizzo della classe XslCompiledTransform](using-the-xslcompiledtransform-class.md) e [Migrazione dalla classe XslTransform](migrating-from-the-xsltransform-class.md).  
   
  La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato mediante l'elemento `script`. Dal momento che, quando viene caricato il foglio di stile, le funzioni definite vengono compilate nel linguaggio MSIL (Microsoft Intermediate Language) mediante l'incapsulamento in una definizione della classe, non si verifica alcuna riduzione delle prestazioni.  
   
@@ -29,7 +29,7 @@ La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato m
   
  dove `msxsl` è un prefisso associato allo spazio dei nomi `urn:schemas-microsoft-com:xslt`.  
   
- L' `language` attributo non è obbligatorio, ma se specificato, il relativo valore deve essere uno dei seguenti: `C#`, `VB`, `JScript`, `JavaScript`, `VisualBasic`o `CSharp`. Se omesso, il linguaggio viene impostato su JScript. Poiché nel `language-name` non viene fatta distinzione tra maiuscole e minuscole, "JavaScript" e "javascript" si equivalgono.  
+ L' `language` attributo non è obbligatorio, ma se specificato, il relativo valore deve essere uno dei seguenti: `C#` , `VB` , `JScript` , `JavaScript` , `VisualBasic` o `CSharp` . Se omesso, il linguaggio viene impostato su JScript. Poiché nel `language-name` non viene fatta distinzione tra maiuscole e minuscole, "JavaScript" e "javascript" si equivalgono.  
   
  L'attributo `implements-prefix` è obbligatorio. Questo attributo viene usato per dichiarare uno spazio dei nomi e associarlo al blocco di script. Il valore di questo attributo è il prefisso che rappresenta lo spazio dei nomi. È possibile definire lo spazio dei nomi in un punto qualsiasi di un foglio di stile.  
   
@@ -47,9 +47,9 @@ La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato m
   
  È possibile dichiarare le funzioni all'interno dell'elemento `msxsl:script`. Nella tabella seguente sono illustrati gli spazi dei nomi supportati per impostazione predefinita. È possibile usare classi che non sono comprese negli spazi dei nomi elencati. Tuttavia, è necessario che tali classi siano complete.  
   
-|Spazi dei nomi predefiniti|Description|  
+|Spazi dei nomi predefiniti|Descrizione|  
 |------------------------|-----------------|  
-|Sistema|Classe di sistema.|  
+|System|Classe di sistema.|  
 |System.Collection|Classi di raccolte.|  
 |System.Text|Classi di testo.|  
 |System.Text.RegularExpressions|Classi di espressioni regolari.|  
@@ -229,6 +229,6 @@ public class Sample
 </circles>
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Implementazione del processore XSLT da parte della classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [Implementazione del processore XSLT da parte della classe XslTransform](xsltransform-class-implements-the-xslt-processor.md)

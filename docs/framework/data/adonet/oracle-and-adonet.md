@@ -1,17 +1,18 @@
 ---
 title: Oracle e ADO.NET
+description: Informazioni sulle funzionalità e sui comportamenti della provider di dati .NET Framework per Oracle, che consente di accedere a un database Oracle tramite l'interfaccia di chiamata Oracle.
 titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 5683f2b4ba57021ff6dda3a51baca016f886b605
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 8757352a7444fad802ea88ba58e0fe643c86cbb8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980080"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286689"
 ---
 # <a name="oracle-and-adonet"></a>Oracle e ADO.NET
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "76980080"
   
  Il .NET Framework provider di dati per Oracle consente di accedere a un database Oracle utilizzando l'interfaccia OCI (Oracle Call Interface) fornita dal software client Oracle. La funzionalità del provider di dati è progettata per essere simile a quella dei provider di dati .NET Framework per SQL Server, OLE DB e ODBC.  
   
- Per usare il provider di dati .NET Framework per Oracle, un'applicazione deve fare riferimento allo spazio dei nomi <xref:System.Data.OracleClient> come indicato di seguito:  
+ Per utilizzare la .NET Framework provider di dati per Oracle, un'applicazione deve fare riferimento allo <xref:System.Data.OracleClient> spazio dei nomi come indicato di seguito:  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -37,7 +38,7 @@ using System.Data.OracleClient;
 csc /r:System.Data.OracleClient.dll  
 ```  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Requisiti di sistema](system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
  Vengono descritti i requisiti per l'utilizzo di .NET Framework provider di dati per Oracle e vengono descritti alcuni problemi che è necessario tenere presente quando si utilizza.  
   
@@ -75,7 +76,7 @@ csc /r:System.Data.OracleClient.dll
  [SQL Server e ADO.NET](./sql/index.md)  
  Viene descritto come usare le funzionalità e le caratteristiche specifiche di SQL Server.  
   
- [DbProviderFactories](dbproviderfactories.md)  
+ [Oggetti DbProviderFactory](dbproviderfactories.md)  
  Vengono descritte le classi generiche che consentono di scrivere codice indipendente dal provider in ADO.NET.  
   
 ## <a name="see-also"></a>Vedere anche

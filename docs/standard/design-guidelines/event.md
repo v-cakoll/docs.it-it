@@ -10,25 +10,25 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-ms.openlocfilehash: b44ee5933f8629b4dddbf3be1b79b2e77b0254f7
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 852c99b1a41691911f7ae82d3b8104526811757d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741680"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289824"
 ---
 # <a name="event-design"></a>Progettazione di eventi
-Gli eventi sono il formato di callback più comunemente usato (costrutti che consentono al Framework di effettuare chiamate nel codice utente). Altri meccanismi di callback includono membri che accettano delegati, membri virtuali e plug-in basati su interfaccia. i dati degli studi di usabilità indicano che la maggior parte degli sviluppatori è più comoda usando gli eventi che usano gli altri meccanismi di callback . Gli eventi sono perfettamente integrati con Visual Studio e molti linguaggi.
+Gli eventi sono il formato di callback più comunemente usato (costrutti che consentono al Framework di effettuare chiamate nel codice utente). Altri meccanismi di callback includono i membri che accettano delegati, membri virtuali e plug-in basati su interfaccia. i dati degli studi di usabilità indicano che la maggior parte degli sviluppatori è più comoda usando gli eventi che usano gli altri meccanismi di callback. Gli eventi sono perfettamente integrati con Visual Studio e molti linguaggi.
 
- È importante notare che esistono due gruppi di eventi: eventi generati prima che uno stato del sistema venga modificato, denominati pre-eventi ed eventi generati dopo una modifica dello stato, detti post-eventi. Un esempio di pre-evento verrebbe `Form.Closing`, che viene generato prima della chiusura di un form. Viene `Form.Closed`un esempio di post-evento, che viene generato dopo la chiusura di un form.
+ È importante notare che esistono due gruppi di eventi: eventi generati prima che uno stato del sistema venga modificato, denominati pre-eventi ed eventi generati dopo una modifica dello stato, detti post-eventi. Un esempio di evento preliminare `Form.Closing` è, che viene generato prima della chiusura di un form. Un esempio di post-evento è `Form.Closed` , che viene generato dopo la chiusura di un form.
 
  ✔️ usare il termine "Raise" per gli eventi anziché "Fire" o "trigger".
 
  ✔️ utilizzare <xref:System.EventHandler%601?displayProperty=nameWithType> anziché creare manualmente nuovi delegati da utilizzare come gestori eventi.
 
- ✔️ CONSIDERARE l'uso di una sottoclasse di <xref:System.EventArgs> come argomento dell'evento, a meno che non si sia certi che l'evento non debba mai trasferire dati al metodo di gestione degli eventi, nel qual caso è possibile usare direttamente il tipo di `EventArgs`.
+ ✔️ CONSIDERARE l'uso di una sottoclasse di <xref:System.EventArgs> come argomento dell'evento, a meno che non si sia certi che l'evento non debba mai trasferire dati al metodo di gestione degli eventi, nel qual caso è possibile usare `EventArgs` direttamente il tipo.
 
- Se si distribuisce un'API usando direttamente `EventArgs`, non sarà mai possibile aggiungere dati da trasportare con l'evento senza interruzioni della compatibilità. Se si usa una sottoclasse, anche se inizialmente completamente vuota, sarà possibile aggiungere proprietà alla sottoclasse quando necessario.
+ Se si invia un'API usando `EventArgs` direttamente, non sarà mai possibile aggiungere dati da trasportare con l'evento senza interruzioni della compatibilità. Se si usa una sottoclasse, anche se inizialmente completamente vuota, sarà possibile aggiungere proprietà alla sottoclasse quando necessario.
 
  ✔️ utilizzare un metodo virtuale protetto per generare ogni evento. Questa operazione è applicabile solo a eventi non statici su classi non sealed, non a struct, classi sealed o eventi statici.
 
@@ -38,32 +38,32 @@ Gli eventi sono il formato di callback più comunemente usato (costrutti che con
 
  ✔️ accettano un parametro per il metodo protetto che genera un evento.
 
- Il nome del parametro deve essere `e` e deve essere tipizzato come classe dell'argomento dell'evento.
+ Il parametro deve essere denominato `e` e deve essere tipizzato come classe dell'argomento dell'evento.
 
- ❌ non passano null come mittente durante la generazione di un evento non statico.
+ ❌NON passare null come mittente durante la generazione di un evento non statico.
 
  ✔️ passano null come mittente durante la generazione di un evento statico.
 
- Quando si genera un evento, ❌ non passare null come parametro di dati dell'evento.
+ ❌NON passare null come parametro di dati evento durante la generazione di un evento.
 
  È necessario passare `EventArgs.Empty` se non si desidera passare dati al metodo di gestione degli eventi. Gli sviluppatori si aspettano che questo parametro non sia null.
 
  ✔️ prendere in considerazione la generazione di eventi che possono essere annullati dall'utente finale. Questo vale solo per gli eventi precedenti.
 
- Usare <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> o la relativa sottoclasse come argomento dell'evento per consentire all'utente finale di annullare gli eventi.
+ Utilizzare <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> o la relativa sottoclasse come argomento dell'evento per consentire all'utente finale di annullare gli eventi.
 
 ### <a name="custom-event-handler-design"></a>Progettazione di gestori eventi personalizzati
- Esistono casi in cui non è possibile usare `EventHandler<T>`, ad esempio quando il Framework deve funzionare con le versioni precedenti di CLR, che non supportano i generics. In questi casi, potrebbe essere necessario progettare e sviluppare un delegato del gestore eventi personalizzato.
+ In alcuni casi non `EventHandler<T>` è possibile utilizzare, ad esempio quando il Framework deve funzionare con le versioni precedenti di CLR, che non supportava i generics. In questi casi, potrebbe essere necessario progettare e sviluppare un delegato del gestore eventi personalizzato.
 
  ✔️ utilizzare un tipo restituito void per i gestori eventi.
 
  Un gestore eventi può richiamare più metodi di gestione degli eventi, possibilmente su più oggetti. Se i metodi di gestione degli eventi sono autorizzati a restituire un valore, saranno presenti più valori restituiti per ogni chiamata di evento.
 
- ✔️ usare `object` come tipo del primo parametro del gestore eventi e chiamarlo `sender`.
+ ✔️ utilizzare `object` come tipo del primo parametro del gestore eventi e chiamarlo `sender` .
 
- ✔️ usare <xref:System.EventArgs?displayProperty=nameWithType> o la relativa sottoclasse come tipo del secondo parametro del gestore eventi e chiamarla `e`.
+ ✔️ utilizzare <xref:System.EventArgs?displayProperty=nameWithType> o la relativa sottoclasse come tipo del secondo parametro del gestore eventi e chiamarlo `e` .
 
- ❌ non dispongono di più di due parametri per i gestori eventi.
+ ❌NON avere più di due parametri sui gestori eventi.
 
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*
 
@@ -71,5 +71,5 @@ Gli eventi sono il formato di callback più comunemente usato (costrutti che con
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida di progettazione dei membri](../../../docs/standard/design-guidelines/member.md)
-- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
+- [Linee guida per la progettazione di membri](member.md)
+- [Linee guida per la progettazione di Framework](index.md)

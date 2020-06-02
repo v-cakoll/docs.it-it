@@ -1,13 +1,14 @@
 ---
 title: Novità
+description: Per informazioni sulle nuove funzionalità di ADO.NET, vedere la .NET Framework 4,5, incluse le nuove funzionalità per il provider di dati SqlClient e ADO.NET Entity Framework.
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 2ac8ebced700dc6c874ac22304773b3b9c19f8b3
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 536b9314dd83366202f7fd9b489759681021fd9e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76979762"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286171"
 ---
 # <a name="whats-new-in-adonet"></a>Novità in ADO.NET
 
@@ -27,7 +28,7 @@ Le funzionalità seguenti sono nuove nell'provider di dati di .NET Framework per
 
 - SqlClient dispone ora del supporto per la funzionalità di ripristino di emergenza e disponibilità elevata SQL Server, AlwaysOn. Per ulteriori informazioni, vedere il [supporto SqlClient per la disponibilità elevata e il ripristino di emergenza](./sql/sqlclient-support-for-high-availability-disaster-recovery.md).
 
-- Una password può essere passata come <xref:System.Security.SecureString> quando si usa l'autenticazione di SQL Server. Per altre informazioni, vedere <xref:System.Data.SqlClient.SqlCredential>.
+- Una password può essere passata come <xref:System.Security.SecureString> quando si usa l'autenticazione SQL Server. Per altre informazioni, vedere <xref:System.Data.SqlClient.SqlCredential>.
 
 - Quando `TrustServerCertificate` è false e `Encrypt` è true, il nome del server (o indirizzo IP) in un certificato SSL SQL Server deve corrispondere esattamente al nome del server (o indirizzo IP) specificato nella stringa di connessione. In caso contrario, il tentativo di connessione non riuscirà. Per altre informazioni, vedere la descrizione dell'opzione di connessione `Encrypt` in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
@@ -43,9 +44,9 @@ Le funzionalità seguenti sono nuove nell'provider di dati di .NET Framework per
 
 - SqlClient supporta le connessioni ai database LocalDB. Per ulteriori informazioni, vedere [supporto SqlClient per il database locale](./sql/sqlclient-support-for-localdb.md).
 
-- `Type System Version=SQL Server 2012;` è il nuovo valore da passare alla proprietà di connessione `Type System Version`. Il valore `Type System Version=Latest;` è obsoleto ed è diventato equivalente a `Type System Version=SQL Server 2008;`. Per ulteriori informazioni, vedere <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
+- `Type System Version=SQL Server 2012;` è il nuovo valore da passare alla proprietà di connessione `Type System Version`. Il valore `Type System Version=Latest;` è obsoleto ed è diventato equivalente a `Type System Version=SQL Server 2008;`. Per altre informazioni, vedere <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
-- SqlClient fornisce supporto aggiuntivo per le colonne di tipo sparse, una funzionalità aggiunta in SQL Server 2008. Se l'applicazione accede già ai dati in una tabella che usa colonne di tipo sparse, si sarà notato un aumento delle prestazioni. La colonna IsColumnSet di <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> indica se una colonna è di tipo sparse, ovvero membro di un set di colonne. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> indica se una colonna è una colonna di tipo sparse. per ulteriori informazioni, vedere [SQL Server raccolte di schemi](sql-server-schema-collections.md) . Per ulteriori informazioni sulle colonne di tipo sparse, vedere [utilizzo di colonne di tipo sparse](/sql/relational-databases/tables/use-sparse-columns).
+- SqlClient fornisce supporto aggiuntivo per le colonne di tipo sparse, una funzionalità aggiunta in SQL Server 2008. Se l'applicazione accede già ai dati in una tabella che usa colonne di tipo sparse, si noterà un miglioramento delle prestazioni. La colonna IsColumnSet di <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> indica se una colonna è di tipo sparse, ovvero membro di un set di colonne. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>indica se una colonna è una colonna di tipo sparse. per ulteriori informazioni, vedere [SQL Server raccolte di schemi](sql-server-schema-collections.md) . Per ulteriori informazioni sulle colonne di tipo sparse, vedere [utilizzo di colonne di tipo sparse](/sql/relational-databases/tables/use-sparse-columns).
 
 - L'assembly Microsoft.SqlServer.Types.dll, che contiene i tipi di dati spaziali, è stato aggiornato dalla versione 10.0 alla versione 11.0. Le applicazioni che fanno riferimento a questo assembly potrebbero avere esito negativo. Per ulteriori informazioni, vedere [modifiche di rilievo alle funzionalità di motore di database](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms143179(v=sql.110)).
 

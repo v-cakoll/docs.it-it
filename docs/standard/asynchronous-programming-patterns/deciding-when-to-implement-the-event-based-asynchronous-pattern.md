@@ -12,18 +12,18 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: 5fca32953af91184fe99d8ef6afe5a2374f325d6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c235a838504889a105ef98df47f7373a145503da
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67663721"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289447"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Quando implementare il modello asincrono basato su eventi
 
 Il modello asincrono basato su eventi fornisce un modello per esporre il comportamento asincrono di una classe. Con l'introduzione di questo modello, .NET Framework definisce due modelli per l'esposizione del comportamento asincrono: il modello asincrono basato sull'interfaccia <xref:System.IAsyncResult?displayProperty=nameWithType> e il modello basato su eventi. Questo argomento illustra quando è appropriato implementare entrambi i modelli.
 
-Per altre informazioni sulla programmazione asincrona con l'interfaccia <xref:System.IAsyncResult>, vedere [Modello di programmazione asincrona (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).
+Per altre informazioni sulla programmazione asincrona con l'interfaccia <xref:System.IAsyncResult>, vedere [Modello di programmazione asincrona (APM)](asynchronous-programming-model-apm.md).
 
 ## <a name="general-principles"></a>Principi generali
 
@@ -32,7 +32,7 @@ In generale, è consigliabile esporre le funzionalità asincrone usando il model
 > [!NOTE]
 > È raro che il modello <xref:System.IAsyncResult> venga implementato senza che venga implementato anche il modello basato su eventi.
 
-## <a name="guidelines"></a>Indicazioni
+## <a name="guidelines"></a>Linee guida
 
 L'elenco seguente illustra le linee guida che indicano quando è consigliabile implementare il modello asincrono basato su eventi:
 
@@ -86,8 +86,8 @@ L'elenco seguente illustra alcuni consigli da seguire se si decide di usare il m
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: implementare un componente che supporta il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
-- [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP)
-- [Implementazione del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)
-- [Suggerimenti per l'implementazione del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [Cenni preliminari sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Procedura: implementare un componente che supporta il modello asincrono basato su eventi](component-that-supports-the-event-based-asynchronous-pattern.md)
+- [Event-based Asynchronous Pattern (EAP)](event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP)
+- [Implementazione del modello asincrono basato su eventi](implementing-the-event-based-asynchronous-pattern.md)
+- [Suggerimenti per l'implementazione del modello asincrono basato su eventi](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+- [Cenni preliminari sul modello asincrono basato su eventi](event-based-asynchronous-pattern-overview.md)

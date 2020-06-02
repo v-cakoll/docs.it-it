@@ -1,6 +1,6 @@
 ---
 title: Sicurezza e generazione di codice immediata
-description: La generazione di codice per conto di codice con attendibilità inferiore eseguito con un trust superiore è un problema di sicurezza, soprattutto quando un chiamante può influenzare la generazione di codice.
+description: La generazione di codice per conto di un codice di minore attendibilità eseguito a un livello di attendibilità superiore costituisce un problema di sicurezza, soprattutto quando un chiamante può influenzare la generazione del codice.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - security [.NET Framework], on-the-fly code generation
 - secure coding, on-the-fly code generation
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
-ms.openlocfilehash: 34ebda27a81ca29ebb27a721b77b735a12be882e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e5168aa9305c559cf5ea2fb197b2c23ce2a05b0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186792"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291032"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>Sicurezza e generazione di codice immediata
 Alcune librerie funzionano tramite la generazione e l'esecuzione di codice per eseguire alcune operazioni per il chiamante. Il problema di fondo è costituito dalla generazione di codice per conto di codice meno attendibile e dalla relativa esecuzione con attendibilità superiore e diventa più grave quando il chiamante è in grado di influenzare la generazione di codice, per cui è necessario che venga generato solo codice sicuro.  
@@ -27,4 +27,4 @@ Alcune librerie funzionano tramite la generazione e l'esecuzione di codice per e
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Linee guida per la generazione di codice sicuro](secure-coding-guidelines.md)

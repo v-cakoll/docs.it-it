@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, blocking dictionary
 ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
-ms.openlocfilehash: 3f4270d2ec71421bad8974a3e5cd8f1d65db3b74
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f895be4c20a0cccad23e27db3d488355a614cbfc
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711298"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287887"
 ---
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>Procedura: Aggiungere e rimuovere singoli elementi di un oggetto BlockingCollection
-Questo esempio mostra come aggiungere e rimuovere elementi in un oggetto <xref:System.Collections.Concurrent.BlockingCollection%601> in modo bloccante e non bloccante. Per altre informazioni su <xref:System.Collections.Concurrent.BlockingCollection%601>, vedere [Panoramica di BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
+Questo esempio mostra come aggiungere e rimuovere elementi in un oggetto <xref:System.Collections.Concurrent.BlockingCollection%601> in modo bloccante e non bloccante. Per altre informazioni su <xref:System.Collections.Concurrent.BlockingCollection%601>, vedere [Panoramica di BlockingCollection](blockingcollection-overview.md).  
   
- Per un esempio di <xref:System.Collections.Concurrent.BlockingCollection%601> come enumerare un finché non è vuoto e non verranno aggiunti altri elementi, vedere [Procedura: utilizzare ForEach per rimuovere elementi in un BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).
+ Per un esempio di come enumerare un oggetto <xref:System.Collections.Concurrent.BlockingCollection%601> finché non è vuoto e non verranno aggiunti altri elementi, vedere [procedura: usare foreach per rimuovere elementi in un oggetto BlockingCollection](how-to-use-foreach-to-remove.md).
   
 ## <a name="example"></a>Esempio  
  Il primo esempio mostra come aggiungere e rimuovere elementi in modo da bloccare le operazioni se la raccolta è temporaneamente vuota (durante la rimozione) o ha raggiunto la capacità massima (durante l'aggiunta) oppure se è trascorso un periodo di timeout specificato. Si noti che il blocco relativo alla capacità massima è abilitato solo quando l'oggetto BlockingCollection è stato creato specificando una capacità massima nel costruttore.  
@@ -35,4 +35,4 @@ Questo esempio mostra come aggiungere e rimuovere elementi in un oggetto <xref:S
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
-- [Panoramica di BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)
+- [Panoramica di BlockingCollection](blockingcollection-overview.md)

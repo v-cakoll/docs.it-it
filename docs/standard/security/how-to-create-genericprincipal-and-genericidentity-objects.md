@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Creating GenericPrincipal Objects
 - GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-ms.openlocfilehash: 546b4d20f7b6b7a8c448f704fefd9a39b3ebd1d7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 10a71185db3359cda1c3bf7a12f5698929c98296
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706149"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290863"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Procedura: creare oggetti GenericPrincipal e GenericIdentity
 
-È possibile utilizzare la classe <xref:System.Security.Principal.GenericIdentity> insieme alla classe <xref:System.Security.Principal.GenericPrincipal> per creare uno schema di autorizzazione esistente indipendentemente da un dominio di Windows.
+È possibile utilizzare la <xref:System.Security.Principal.GenericIdentity> classe insieme alla <xref:System.Security.Principal.GenericPrincipal> classe per creare uno schema di autorizzazione esistente indipendentemente da un dominio di Windows.
 
 ### <a name="to-create-a-genericprincipal-object"></a>Per creare un oggetto GenericPrincipal
 
@@ -46,7 +46,7 @@ ms.locfileid: "75706149"
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. Usare il codice seguente per allegare l'entità al thread attuale. Questo è utile nelle situazioni in cui l'entità deve essere convalidata più volte, deve essere convalidata da un altro codice in esecuzione nell'applicazione oppure deve essere convalidata da un oggetto <xref:System.Security.Permissions.PrincipalPermission>. Si può comunque eseguire la convalida basata sui ruoli sull'oggetto entità senza allegarlo al thread. Per maggiori informazioni, vedere [Sostituzione di oggetti Principal](../../../docs/standard/security/replacing-a-principal-object.md).
+3. Usare il codice seguente per allegare l'entità al thread attuale. Questo è utile nelle situazioni in cui l'entità deve essere convalidata più volte, deve essere convalidata da un altro codice in esecuzione nell'applicazione oppure deve essere convalidata da un <xref:System.Security.Permissions.PrincipalPermission> oggetto. Si può comunque eseguire la convalida basata sui ruoli sull'oggetto entità senza allegarlo al thread. Per maggiori informazioni, vedere [Sostituzione di oggetti Principal](replacing-a-principal-object.md).
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal
@@ -144,5 +144,5 @@ Is this a Manager? True
 - <xref:System.Security.Principal.GenericIdentity>
 - <xref:System.Security.Principal.GenericPrincipal>
 - <xref:System.Security.Permissions.PrincipalPermission>
-- [Sostituzione di oggetti Principal](../../../docs/standard/security/replacing-a-principal-object.md)
-- [Oggetti Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)
+- [Sostituzione di oggetti Principal](replacing-a-principal-object.md)
+- [Oggetti Principal e Identity](principal-and-identity-objects.md)

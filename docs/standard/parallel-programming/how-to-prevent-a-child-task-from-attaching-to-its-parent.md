@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Evitare l'associazione di un'attività figlio alla relativa attività padre"
+title: "Procedura: evitare l'associazione di un'attività figlio alla relativa attività padre"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - tasks, preventing attachments
 ms.assetid: c0fb85d4-9e80-4905-9f65-29acc54201c4
-ms.openlocfilehash: 265b6d06f17a1dfbee3f009feff1ee1645e62a46
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ff181344e6437179fa77f11872ae9a47745be93
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139252"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288160"
 ---
-# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>Procedura: Evitare l'associazione di un'attività figlio alla relativa attività padre
+# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>Procedura: evitare l'associazione di un'attività figlio alla relativa attività padre
 In questo documento viene illustrato come impedire a un'attività figlio di essere associata all'attività padre. L'impedimento dell'associazione di un'attività figlio al relativo padre è utile quando si chiama un componente scritto da terze parti e in cui si utilizzano anche attività. Ad esempio, un componente di terze parti in cui si utilizza l'opzione <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> per creare un oggetto <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> può causare problemi nel codice se è in esecuzione prolungata o genera un'eccezione non gestita.  
   
 ## <a name="example"></a>Esempio  
@@ -28,4 +28,4 @@ In questo documento viene illustrato come impedire a un'attività figlio di esse
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione asincrona basata su attivitàTask-based Asynchronous Programming](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+- [Programmazione asincrona basata su attività](task-based-asynchronous-programming.md)

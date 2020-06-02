@@ -13,12 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
-ms.openlocfilehash: f2704e3fb5ceb68609a475d52e11030177ad760b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 48f2bf5c0d9af0a3fc286561ba978f86d1f11ac8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138730"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290487"
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Procedura: Estrarre un protocollo e un numero di porta da un URL
 L'esempio seguente estrae un protocollo e un numero di porta da un URL.  
@@ -49,4 +49,4 @@ L'esempio seguente estrae un protocollo e un numero di porta da un URL.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Espressioni regolari .NET](../../../docs/standard/base-types/regular-expressions.md)
+- [Espressioni regolari .NET](regular-expressions.md)

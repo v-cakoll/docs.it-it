@@ -16,12 +16,12 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-ms.openlocfilehash: 7f897241b121cf1bd52d02ee5f487aeafafc3cb0
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d0b822f725444248d1037c21ffea9afe1cebb7e2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378653"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290019"
 ---
 # <a name="assembly-security-considerations"></a>Considerazioni sulla sicurezza degli assembly
 Quando si compila un assembly, è possibile specificare l'insieme di autorizzazioni che verranno richieste per consentirne l'esecuzione. Se sussistano o meno le autorizzazioni per l'utilizzo di un assembly lo si evince dalle evidenze.  
@@ -39,7 +39,7 @@ Quando si compila un assembly, è possibile specificare l'insieme di autorizzazi
 - Non prevedere una richiesta per le autorizzazioni eventualmente necessarie, ma limitarsi a predisporre la gestione delle eccezioni di sicurezza che si verificheranno in mancanza di tali autorizzazioni.  
   
   > [!NOTE]
-  > Quello della sicurezza è un tema complesso in cui è possibile scegliere tra molte possibili opzioni. Per altre informazioni, vedere [Concetti principali sulla sicurezza](../../standard/security/key-security-concepts.md).  
+  > Quello della sicurezza è un tema complesso in cui è possibile scegliere tra molte possibili opzioni. Per altre informazioni, vedere [Concetti principali sulla sicurezza](../security/key-security-concepts.md).  
   
  In fase di caricamento, l'evidenza dell'assembly viene utilizzata come input per i criteri di sicurezza. I criteri di sicurezza vengono stabiliti dall'azienda e dall'amministratore dei computer, così come dalle impostazioni adottate dallo stesso utente, e determinano l'insieme di autorizzazioni concesse a tutto il codice gestito che viene eseguito sul computer. È possibile stabilire criteri di sicurezza basati sull'autore dell'assembly (se questo dispone di una firma generata da uno strumento firma digitale), sul sito Web e la zona (come è definita in Internet Explorer) da cui è stato effettuato il download dell'assembly o sul nome sicuro dell'assembly. L'amministratore di un computer può ad esempio stabilire criteri di sicurezza che consentono a tutto il codice scaricato da un sito Web e firmato da una determinata azienda di software di accedere al database presente su un computer, ma non di scrivere sul disco rigido.  
   

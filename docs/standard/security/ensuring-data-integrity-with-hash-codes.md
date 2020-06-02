@@ -14,12 +14,12 @@ helpviewer_keywords:
 - encryption [.NET Framework], hash
 - hash
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
-ms.openlocfilehash: 98bdce59ccbbb3b1d00ea5521169214c2bd7a10b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4938cd75af32caa4f9da6ed682f18e9f6c73ad5b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706201"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288342"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Integrità dei dati con codici hash
 Un valore hash è un valore numerico di lunghezza fissa che identifica in modo univoco i dati. I valori hash rappresentano grandi quantità di dati sotto forma di valori numerici molto più piccoli, pertanto vengono usati con le firme digitali. È possibile firmare un valore hash in modo più efficiente rispetto alla firma di un valore più grande. I valori hash sono anche utili per verificare l'integrità dei dati inviati attraverso canali non sicuri. Il valore hash dei dati ricevuti può essere confrontato con il valore hash dei dati inviati per determinare se i dati sono stati modificati.  
@@ -60,4 +60,4 @@ The hash codes do not match.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [Servizi di crittografia](cryptographic-services.md)

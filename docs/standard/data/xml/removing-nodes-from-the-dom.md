@@ -3,12 +3,12 @@ title: Rimozione di nodi dal DOM
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 0a98e0ca-0555-45c1-ab69-0d8d20ca1abd
-ms.openlocfilehash: a34b92abc59215c3cb2b94afd88e2e30405b4e9a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5df95700bb1e84aa5f3adcc752b2314dc964477b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710310"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288641"
 ---
 # <a name="removing-nodes-from-the-dom"></a>Rimozione di nodi dal DOM
 Per rimuovere un nodo specifico dal DOM (Document Object Model) XML, usare il metodo <xref:System.Xml.XmlNode.RemoveChild%2A>. Quando si rimuove un nodo, il metodo rimuove il sottoalbero appartenente al nodo che viene rimosso, purché tale nodo non sia un nodo foglia.  
@@ -17,8 +17,8 @@ Per rimuovere un nodo specifico dal DOM (Document Object Model) XML, usare il me
   
  Se si usa una mappa di nodi <xref:System.Xml.XmlNamedNodeMap>, è possibile rimuovere un nodo usando il metodo <xref:System.Xml.XmlNamedNodeMap.RemoveNamedItem%2A>.  
   
- Per rimuovere gli attributi, vedere [Rimozione di attributi da un nodo di tipo element nel DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
+ Per rimuovere gli attributi, vedere [Rimozione di attributi da un nodo di tipo element nel DOM](removing-attributes-from-an-element-node-in-the-dom.md).  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [XML DOM (Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML DOM (Document Object Model)](xml-document-object-model-dom.md)

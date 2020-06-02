@@ -7,12 +7,12 @@ helpviewer_keywords:
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-ms.openlocfilehash: 8ed519a01162056151d8ae6398c0d06495911afd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 9eb6cbef969e51dee1a72d402c124d06f08fe5c4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743537"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288498"
 ---
 # <a name="virtual-members"></a>Membri virtuali
 È possibile eseguire l'override dei membri virtuali, modificando in tal modo il comportamento della sottoclasse. Sono molto simili alle richiamate in termini di estendibilità che forniscono, ma sono migliori in termini di prestazioni di esecuzione e di utilizzo della memoria. Inoltre, i membri virtuali si sentono più naturali negli scenari che richiedono la creazione di un tipo speciale di un tipo esistente (specializzazione).
@@ -23,7 +23,7 @@ ms.locfileid: "76743537"
 
  I membri virtuali, ad esempio i callback (e forse più di callback), sono costosi da progettare, testare e gestire perché qualsiasi chiamata a un membro virtuale può essere sottoposta a override in modi imprevedibili ed è in grado di eseguire codice arbitrario. Inoltre, la maggior parte degli sforzi è in genere necessaria per definire chiaramente il contratto dei membri virtuali, quindi il costo della progettazione e della relativa documentazione è superiore.
 
- ❌ non rendono i membri virtuali, a meno che non si disponga di un motivo valido e si siano consapevoli di tutti i costi correlati alla progettazione, al test e alla gestione dei membri virtuali.
+ ❌NON rendere virtuali i membri, a meno che non si disponga di un motivo valido e si siano consapevoli di tutti i costi correlati alla progettazione, al test e alla gestione dei membri virtuali.
 
  I membri virtuali sono meno indulgenti in termini di modifiche che possono essere apportate senza interruzioni della compatibilità. Sono inoltre più lenti dei membri non virtuali, soprattutto perché le chiamate a membri virtuali non sono inline.
 
@@ -39,5 +39,5 @@ ms.locfileid: "76743537"
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
-- [Progettazione finalizzata all'estensibilità](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+- [Linee guida per la progettazione di Framework](index.md)
+- [Progettazione finalizzata all'estensibilità](designing-for-extensibility.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - read-only fields
 - member design guidelines, fields
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
-ms.openlocfilehash: c00929ca499e39bd4e24d482c9413beb9cccddc1
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3a5ae985ab161899fbb5e96f9b0ef0cfa90b957c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741601"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289746"
 ---
 # <a name="field-design"></a>Progettazione di campi
 Il principio di incapsulamento è uno dei concetti più importanti della progettazione orientata a oggetti. Questo principio indica che i dati archiviati all'interno di un oggetto devono essere accessibili solo a tale oggetto.
@@ -21,7 +21,7 @@ Il principio di incapsulamento è uno dei concetti più importanti della progett
 
  Si escludono i campi costanti e statici di sola lettura da questa restrizione restrittiva, perché tali campi, quasi per definizione, non sono mai necessari per la modifica.
 
- ❌ non forniscono campi di istanza pubblici o protetti.
+ ❌Non specificare campi di istanza pubblici o protetti.
 
  È necessario specificare le proprietà per l'accesso ai campi, anziché renderle pubbliche o protette.
 
@@ -29,13 +29,13 @@ Il principio di incapsulamento è uno dei concetti più importanti della progett
 
  Il compilatore brucia i valori dei campi const direttamente nel codice chiamante. Pertanto, i valori const non possono mai essere modificati senza il rischio di interruzioni della compatibilità.
 
- ✔️ utilizzare i campi `readonly` statici pubblici per le istanze di oggetti predefinite.
+ ✔️ usare campi statici pubblici `readonly` per le istanze di oggetti predefinite.
 
  Se sono presenti istanze predefinite del tipo, dichiararle come campi statici di sola lettura pubblici del tipo stesso.
 
- ❌ non assegnare istanze di tipi modificabili ai campi `readonly`.
+ ❌NON assegnare istanze di tipi modificabili ai `readonly` campi.
 
- Un tipo modificabile è un tipo con istanze che possono essere modificate dopo la creazione di istanze. Ad esempio, le matrici, la maggior parte delle raccolte e i flussi sono tipi modificabili, ma <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>e <xref:System.String?displayProperty=nameWithType> sono tutti non modificabili. Il modificatore di sola lettura in un campo di tipo riferimento impedisce che l'istanza archiviata nel campo venga sostituita, ma non impedisce la modifica dei dati dell'istanza del campo chiamando membri che modificano l'istanza.
+ Un tipo modificabile è un tipo con istanze che possono essere modificate dopo la creazione di istanze. Ad esempio, le matrici, la maggior parte delle raccolte e i flussi sono tipi modificabili, ma <xref:System.Int32?displayProperty=nameWithType> , <xref:System.Uri?displayProperty=nameWithType> e <xref:System.String?displayProperty=nameWithType> sono tutti non modificabili. Il modificatore di sola lettura in un campo di tipo riferimento impedisce che l'istanza archiviata nel campo venga sostituita, ma non impedisce la modifica dei dati dell'istanza del campo chiamando membri che modificano l'istanza.
 
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*
 
@@ -43,5 +43,5 @@ Il principio di incapsulamento è uno dei concetti più importanti della progett
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida di progettazione dei membri](../../../docs/standard/design-guidelines/member.md)
-- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
+- [Linee guida per la progettazione di membri](member.md)
+- [Linee guida per la progettazione di Framework](index.md)

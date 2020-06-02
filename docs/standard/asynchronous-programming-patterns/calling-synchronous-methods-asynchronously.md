@@ -20,12 +20,12 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-ms.openlocfilehash: 06df584f0120fbd4978e18647854a3ee844a2095
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a3dd83fe9d3fc48f66a0bb6bef333e4ff399108
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73105120"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289902"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Chiamata asincrona dei metodi sincroni
 
@@ -36,10 +36,10 @@ ms.locfileid: "73105120"
 
 Il `BeginInvoke` metodo avvia la chiamata asincrona. Presenta gli stessi parametri del metodo da eseguire in modo asincrono, con due parametri aggiuntivi facoltativi. Il primo parametro è un delegato <xref:System.AsyncCallback> che fa riferimento a un metodo da chiamare al completamento della chiamata asincrona. Il secondo parametro è un oggetto definito dall'utente che passa informazioni al metodo di callback. `BeginInvoke` restituisce immediatamente un valore e non attende il completamento della chiamata asincrona. `BeginInvoke` restituisce un oggetto <xref:System.IAsyncResult>che può essere usato per monitorare lo stato di avanzamento della chiamata asincrona.
 
-Il metodo `EndInvoke` recupera i risultati della chiamata asincrona. Può essere chiamato in qualsiasi momento dopo `BeginInvoke`. Se la chiamata asincrona non è stata completata, `EndInvoke` blocca il thread chiamante fino al suo completamento. I parametri `EndInvoke` di `out` `ref` includono`<Out>` `ByRef` i `ByRef` parametri e ( e in Visual Basic) del <xref:System.IAsyncResult> metodo `BeginInvoke`che si desidera eseguire in modo asincrono, oltre a quelli restituiti da .
+Il metodo `EndInvoke` recupera i risultati della chiamata asincrona. Può essere chiamato in qualsiasi momento dopo `BeginInvoke`. Se la chiamata asincrona non è stata completata, `EndInvoke` blocca il thread chiamante fino al suo completamento. I parametri di `EndInvoke` includono i `out` `ref` parametri e ( `<Out>` `ByRef` e `ByRef` in Visual Basic) del metodo che si desidera eseguire in modo asincrono, oltre all'oggetto <xref:System.IAsyncResult> restituito da `BeginInvoke` .
 
 > [!NOTE]
-> La funzionalità IntelliSense in Visual Studio visualizza i parametri di `BeginInvoke` e `EndInvoke`. Se non si usa Visual Studio o uno strumento analogo o se si usa C# con Visual Studio, vedere [Modello di programmazione asincrona (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) per una descrizione dei parametri definiti per tali metodi.
+> La funzionalità IntelliSense in Visual Studio visualizza i parametri di `BeginInvoke` e `EndInvoke`. Se non si usa Visual Studio o uno strumento analogo o se si usa C# con Visual Studio, vedere [Modello di programmazione asincrona (APM)](asynchronous-programming-model-apm.md) per una descrizione dei parametri definiti per tali metodi.
 
 Gli esempi di codice in questo argomento presentano quattro modi comuni per usare `BeginInvoke` e `EndInvoke` per effettuare chiamate asincrone. Dopo avere chiamato `BeginInvoke` è possibile procedere nel modo seguente:
 
@@ -99,7 +99,7 @@ Gli esempi di codice in questo argomento presentano quattro modi comuni per usar
 
  Note sull'esempio:
 
-- Il `threadId` parametro `TestMethod` `out` di è`<Out>` `ByRef` un parametro ([ in Visual `TestMethod`Basic), pertanto il relativo valore di input non viene mai utilizzato da . Viene passata una variabile fittizia alla chiamata `BeginInvoke` . Se il parametro `threadId` fosse un parametro `ref` (`ByRef` in Visual Basic), la variabile dovrebbe essere un campo a livello di classe perché possa essere passata sia a `BeginInvoke` che a `EndInvoke`.
+- Il `threadId` parametro di `TestMethod` è un `out` parametro ([ `<Out>` `ByRef` in Visual Basic), pertanto il valore di input non viene mai usato da `TestMethod` . Viene passata una variabile fittizia alla chiamata `BeginInvoke` . Se il parametro `threadId` fosse un parametro `ref` (`ByRef` in Visual Basic), la variabile dovrebbe essere un campo a livello di classe perché possa essere passata sia a `BeginInvoke` che a `EndInvoke`.
 
 - Le informazioni sullo stato che vengono passate a `BeginInvoke` sono costituite da una stringa di formato, che viene usata dal metodo di callback per formattare un messaggio di output. Dato che le informazioni sullo stato vengono passate come tipo <xref:System.Object>, è necessario eseguirne il cast al tipo appropriato prima di poterle usare.
 
@@ -112,4 +112,4 @@ Gli esempi di codice in questo argomento presentano quattro modi comuni per usar
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Delegate>
-- [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP)
+- [Event-based Asynchronous Pattern (EAP)](event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP)

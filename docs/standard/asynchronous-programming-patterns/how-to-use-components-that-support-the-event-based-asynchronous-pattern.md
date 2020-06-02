@@ -18,19 +18,19 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: 9ac98b5c576c065f8944714c72b492539e0d2f05
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0f15cd870efbdcd00dafa071175be078311a9a37
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "61870240"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289395"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Procedura: usare componenti che supportano il modello asincrono basato su eventi
 Molti componenti consentono di eseguire le attività in modo asincrono. I componenti <xref:System.Media.SoundPlayer> e <xref:System.Windows.Forms.PictureBox>, ad esempio, consentono di caricare suoni e immagini "in background", mentre l'esecuzione del thread principale procede senza interruzioni.  
   
- L'uso di metodi asincroni in una classe che supporta il [modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) può essere semplice quanto collegare un gestore eventi all'evento _MethodName_**Completed** del componente, come per qualsiasi altro evento. Quando si chiama il metodo _MethodName_**Async**, l'esecuzione dell'applicazione continua senza interruzioni fino alla generazione dell'evento _MethodName_**Completed**. Nel gestore eventi è possibile esaminare il parametro <xref:System.ComponentModel.AsyncCompletedEventArgs> per determinare se l'operazione asincrona è stata completata o se è stata annullata.  
+ L'uso di metodi asincroni in una classe che supporta il [modello asincrono basato su eventi](event-based-asynchronous-pattern-overview.md) può essere semplice quanto collegare un gestore eventi all'evento _MethodName_**Completed** del componente, come per qualsiasi altro evento. Quando si chiama il metodo _MethodName_**Async**, l'esecuzione dell'applicazione continua senza interruzioni fino alla generazione dell'evento _MethodName_**Completed**. Nel gestore eventi è possibile esaminare il parametro <xref:System.ComponentModel.AsyncCompletedEventArgs> per determinare se l'operazione asincrona è stata completata o se è stata annullata.  
   
- Per altre informazioni sull'uso dei gestori eventi, vedere [Cenni preliminari sui gestori eventi](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+ Per altre informazioni sull'uso dei gestori eventi, vedere [Cenni preliminari sui gestori eventi](../../framework/winforms/event-handlers-overview-windows-forms.md).  
   
  La procedura seguente mostra come usare la funzionalità asincrona di caricamento di immagini di un controllo <xref:System.Windows.Forms.PictureBox>.  
   
@@ -62,5 +62,5 @@ Molti componenti consentono di eseguire le attività in modo asincrono. I compon
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Eseguire un'operazione in background](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Cenni preliminari sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Procedura: Eseguire un'operazione in background](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Cenni preliminari sul modello asincrono basato su eventi](event-based-asynchronous-pattern-overview.md)

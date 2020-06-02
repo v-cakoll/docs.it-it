@@ -16,12 +16,12 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: 4fc7667a2123a106b995a1ea3a31da4551ca650e
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 79c5541b4c384e91fbec8c8f1b2130887e79a252
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83375956"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289681"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Controllo della serializzazione XML mediante attributi
 
@@ -30,7 +30,7 @@ Gli attributi possono essere utilizzati per controllare la serializzazione XML d
 > [!NOTE]
 > Se il codice XML generato deve essere conforme alla sezione 5 del documento World Wide Web Consortium (W3C) denominato [Simple Object Access Protocol (SOAP) 1,1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), utilizzare gli attributi elencati negli [attributi che controllano la serializzazione SOAP codificata](attributes-that-control-encoded-soap-serialization.md).
 
-Per impostazione predefinita, un nome di elemento XML è determinato dal nome della classe o del membro. In una classe semplice denominata `Book` un campo denominato `ISBN` produrrà un tag di elemento XML \<ISBN>, come illustra l'esempio riportato di seguito.
+Per impostazione predefinita, un nome di elemento XML è determinato dal nome della classe o del membro. In una classe semplice denominata `Book` , un campo denominato `ISBN` produrrà un tag di elemento XML \<ISBN> , come illustrato nell'esempio seguente.
 
 ```vb
 Public Class Book
@@ -67,7 +67,7 @@ public class TaxRates {
 }
 ```
 
-Per altre informazioni sugli attributi, vedere [Attributi](../../../docs/standard/attributes/index.md). Per l'elenco degli attributi che controllano la serializzazione XML, vedere [Attributi per il controllo della serializzazione XML](attributes-that-control-xml-serialization.md).
+Per altre informazioni sugli attributi, vedere [Attributi](../attributes/index.md). Per l'elenco degli attributi che controllano la serializzazione XML, vedere [Attributi per il controllo della serializzazione XML](attributes-that-control-xml-serialization.md).
 
 ## <a name="controlling-array-serialization"></a>Controllo della serializzazione di matrice
 

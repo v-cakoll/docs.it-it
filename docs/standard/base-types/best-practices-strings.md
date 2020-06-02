@@ -18,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: 0fb7ec8d9de8fae7a0443984511e538d38d93c7a
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 28c1397c71debeed181acb2c1acb01b0f8cee7c9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441006"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289365"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Procedure consigliate per l'uso delle stringhe in .NET
 
@@ -56,7 +56,7 @@ Evitare le operazioni seguenti quando si usano le stringhe:
 
 Molti dei metodi di modifica delle stringhe in .NET sono di tipo overload. In genere, uno o più overload accettano le impostazioni predefinite, mentre altri accettano le impostazioni non predefinite, specificando invece una determinata procedura di confronto o modifica delle stringhe. La maggior parte dei metodi che non si basano sulle impostazioni predefinite include un parametro di tipo <xref:System.StringComparison>, che corrisponde a un'enumerazione che specifica in modo esplicito le regole per il confronto tra stringhe in base alle impostazioni cultura e alle maiuscole e minuscole. La tabella seguente descrive i membri dell'enumerazione <xref:System.StringComparison> .
 
-|Membro StringComparison|Description|
+|Membro StringComparison|Descrizione|
 |-----------------------------|-----------------|
 |<xref:System.StringComparison.CurrentCulture>|Esegue un confronto con distinzione tra maiuscole e minuscole usando le impostazioni cultura correnti.|
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Esegue un confronto senza distinzione tra maiuscole e minuscole usando le impostazioni cultura correnti.|
@@ -309,7 +309,7 @@ L'esempio seguente crea un'istanza di un oggetto <xref:System.Collections.Hashta
 Quando si consente agli utenti di visualizzare dati non di tipo stringa, come numeri e date e ore, formattarli usando le impostazioni cultura dell'utente. Per impostazione predefinita, nei casi seguenti si usano impostazioni cultura del thread corrente nelle operazioni di formattazione:
 
 - Stringhe interpolate supportate da compilatori [C#](../../csharp/language-reference/tokens/interpolated.md) e [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
-- Operazioni di concatenazione di stringhe che usano operatori di concatenazione [ C# ](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) o [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ) o che chiamano il metodo <xref:System.String.Concat%2A?displayProperty=nameWithType> direttamente.
+- Operazioni di concatenazione di stringhe che usano operatori di concatenazione [ C# ](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) o [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) o che chiamano il metodo <xref:System.String.Concat%2A?displayProperty=nameWithType> direttamente.
 - Metodo <xref:System.String.Format%2A?displayProperty=nameWithType> .
 - Metodi `ToString` dei tipi numerici e dei tipi data e ora.
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - DateTimeOffset.ToString method
 - full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-ms.openlocfilehash: 8eed7c0176a2c1f4beb472dff981d52e522c7e36
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 128ff4887601431f75981f13b51a11469e65d65c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523836"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290474"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Procedura: Estrarre il giorno della settimana da una data specifica
 .NET Framework consente di determinare in modo semplice il giorno ordinale della settimana e di visualizzare il nome del giorno della settimana localizzato per una data specifica. Un valore enumerato che indica il giorno della settimana corrispondente a una determinata data è specificato dalla proprietà <xref:System.DateTime.DayOfWeek%2A> o <xref:System.DateTimeOffset.DayOfWeek%2A>. Al contrario, il recupero del nome del giorno della settimana è un'operazione di formattazione che può essere eseguita effettuando la chiamata a un metodo di formattazione, ad esempio il metodo `ToString` del valore di data e ora o il metodo <xref:System.String.Format%2A?displayProperty=nameWithType>. In questo argomento viene illustrato come eseguire queste operazioni di formattazione.  
@@ -56,7 +56,7 @@ ms.locfileid: "80523836"
          [!code-csharp[Formatting.Howto.WeekdayName#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname1.cs#1)]
          [!code-vb[Formatting.Howto.WeekdayName#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname1.vb#1)]  
   
-    2. Per estrarre il nome abbreviato del giorno della settimana per <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> impostazioni <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> cultura specifiche, chiamare il metodo o il metodo di istanza del valore di data e ora. Passare la stringa "ddd" come parametro `format`. Passare un oggetto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.DateTimeFormatInfo> che rappresenta le impostazioni di cultura per cui si vuole recuperare il nome del giorno della settimana come parametro `provider`. Nel codice seguente viene illustrata una chiamata al metodo <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> usando un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni di cultura fr-FR.  
+    2. Per estrarre il nome del giorno della settimana abbreviato per impostazioni cultura specifiche, chiamare il <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> metodo di istanza o del valore di data e ora <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> . Passare la stringa "ddd" come parametro `format`. Passare un oggetto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.DateTimeFormatInfo> che rappresenta le impostazioni di cultura per cui si vuole recuperare il nome del giorno della settimana come parametro `provider`. Nel codice seguente viene illustrata una chiamata al metodo <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> usando un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni di cultura fr-FR.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname2.cs#2)]
          [!code-vb[Formatting.Howto.WeekdayName#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname2.vb#2)]  
@@ -67,12 +67,12 @@ ms.locfileid: "80523836"
   
 2. È possibile estrarre il nome del giorno della settimana esteso delle impostazioni di cultura correnti o di impostazioni di cultura specifiche:  
   
-    1. Per estrarre il nome del giorno della settimana per le <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> impostazioni cultura correnti, chiamare il metodo di `format` istanza o del valore di data e ora e passare la stringa "dddd" come parametro. Nell'esempio seguente viene illustrata la chiamata al metodo <xref:System.DateTime.ToString%28System.String%29>.  
+    1. Per estrarre il nome del giorno della settimana per le impostazioni cultura correnti, chiamare il metodo di istanza o del valore di data e ora <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> e passare la stringa "dddd" come `format` parametro. Nell'esempio seguente viene illustrata la chiamata al metodo <xref:System.DateTime.ToString%28System.String%29>.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname4.cs#4)]
          [!code-vb[Formatting.Howto.WeekdayName#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname4.vb#4)]  
   
-    2. Per estrarre il nome del giorno della settimana per impostazioni <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> cultura specifiche, chiamare il metodo o il metodo di istanza del valore di data e ora. Passare la stringa "dddd" come parametro `format`. Passare un oggetto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.DateTimeFormatInfo> che rappresenta le impostazioni di cultura per cui si vuole recuperare il nome del giorno della settimana come parametro `provider`. Nel codice seguente viene illustrata una chiamata al metodo <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> usando un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni di cultura es-ES.  
+    2. Per estrarre il nome del giorno della settimana per impostazioni cultura specifiche, chiamare il metodo di istanza o del valore di data e ora <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> . Passare la stringa "dddd" come parametro `format`. Passare un oggetto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.DateTimeFormatInfo> che rappresenta le impostazioni di cultura per cui si vuole recuperare il nome del giorno della settimana come parametro `provider`. Nel codice seguente viene illustrata una chiamata al metodo <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> usando un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni di cultura es-ES.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname5.cs#5)]
          [!code-vb[Formatting.Howto.WeekdayName#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname5.vb#5)]  
@@ -100,5 +100,5 @@ ms.locfileid: "80523836"
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Stringhe di formato di data e ora standard](standard-date-and-time-format-strings.md)
+- [Stringhe di formato di data e ora personalizzato](custom-date-and-time-format-strings.md)

@@ -1,42 +1,43 @@
 ---
 title: Operazioni di copia di massa in SQL Server
+description: Viene illustrato come utilizzare la classe SqlBulkCopy per scrivere soluzioni di codice gestito per la copia bulk di file di grandi dimensioni in tabelle o viste di database SQL Server.
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
-ms.openlocfilehash: ae97bcdd6776d573cf9e523133c2c00a42c273bb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f877836aa45efe162cce3c42cb5733f86deab2c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782521"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286520"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Operazioni di copia di massa in SQL Server
-Microsoft SQL Server include una nota utilità da riga di comando denominata **bcp** per la copia bulk di file di grandi dimensioni in tabelle o viste nei database SQL Server. La classe <xref:System.Data.SqlClient.SqlBulkCopy> consente di scrivere soluzioni di codice gestito che offrono funzionalità simili. Esistono altri metodi per caricare dati in una tabella SQL Server (ad esempio con l'istruzione INSERT) ma <xref:System.Data.SqlClient.SqlBulkCopy> offre prestazioni molto più vantaggiose.  
+Microsoft SQL Server include una popolare utilità della riga di comando denominata **bcp** per eseguire rapidamente la copia bulk di file di grandi dimensioni in tabelle o viste nei database di SQL Server. La classe <xref:System.Data.SqlClient.SqlBulkCopy> consente di scrivere soluzioni di codice gestito che offrono funzionalità simili. Esistono altri modi per caricare dati in una tabella di SQL Server (ad esempio, istruzioni INSERT) ma <xref:System.Data.SqlClient.SqlBulkCopy> offre un significativo vantaggio in termini di prestazioni.  
   
- La classe <xref:System.Data.SqlClient.SqlBulkCopy> consente di scrivere dati solo su tabelle SQL Server. Tuttavia l'origine dati non si limita a SQL Server ed è possibile usare qualsiasi origine i cui dati possano essere caricati in un'istanza <xref:System.Data.DataTable> oppure letti con un'istanza <xref:System.Data.IDataReader>.  
+ La classe <xref:System.Data.SqlClient.SqlBulkCopy> può essere usata per scrivere dati solo in tabelle di SQL Server. Tuttavia l'origine dati non si limita a SQL Server ed è possibile usare qualsiasi origine i cui dati possano essere caricati in un'istanza <xref:System.Data.DataTable> oppure letti con un'istanza <xref:System.Data.IDataReader>.  
   
- Con la classe <xref:System.Data.SqlClient.SqlBulkCopy> è possibile eseguire le seguenti operazioni:  
+ Con la classe <xref:System.Data.SqlClient.SqlBulkCopy> è possibile eseguire:  
   
-- Copia di massa singola  
+- Una singola operazione di copia bulk  
   
-- Più copie di massa  
+- Più operazioni di copia bulk  
   
-- Copia bulk all'interno di una transazione  
+- Un'operazione di copia bulk all'interno di una transazione  
   
 > [!NOTE]
-> Quando si usa .NET Framework versione 1,1 o precedente (che non supporta la <xref:System.Data.SqlClient.SqlBulkCopy> classe), è possibile eseguire l'istruzione SQL Server **BULK INSERT** Transact-SQL usando l' <xref:System.Data.SqlClient.SqlCommand> oggetto.  
+> Con .NET Framework versione 1.1 o precedenti (in cui non è supportata la classe <xref:System.Data.SqlClient.SqlBulkCopy>), è possibile eseguire l'istruzione **BULK INSERT** di SQL Server Transact-SQL usando l'oggetto <xref:System.Data.SqlClient.SqlCommand>.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Creazione di esempi di copia di massa](bulk-copy-example-setup.md)  
- Vengono descritte le tabelle usate negli esempi di copia di massa e vengono forniti gli script SQL per la creazione di tabelle nel database AdventureWorks.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Configurazione di esempio per la copia bulk](bulk-copy-example-setup.md)  
+ Descrive le tabelle usate negli esempi di copia bulk e fornisce script SQL per la creazione delle tabelle nel database AdventureWorks.  
   
- [Singole operazioni di copia di massa](single-bulk-copy-operations.md)  
- Viene descritto come eseguire una copia di massa singola di dati in un'istanza di SQL Server usando la classe <xref:System.Data.SqlClient.SqlBulkCopy> e come eseguire la copia di massa con istruzioni Transact-SQL e con la classe <xref:System.Data.SqlClient.SqlCommand>.  
+ [Singole operazioni di copia bulk](single-bulk-copy-operations.md)  
+ Viene descritto come eseguire una singola copia bulk dei dati in un'istanza di SQL Server usando la classe <xref:System.Data.SqlClient.SqlBulkCopy> e come eseguire l'operazione di copia bulk usando istruzioni Transact-SQL e la classe <xref:System.Data.SqlClient.SqlCommand>.  
   
- [Più operazioni di copia di massa](multiple-bulk-copy-operations.md)  
- Viene descritto come eseguire più copie di massa di dati in un'istanza di SQL Server usando la classe <xref:System.Data.SqlClient.SqlBulkCopy>.  
+ [Più operazioni di copia bulk](multiple-bulk-copy-operations.md)  
+ Viene descritto come eseguire più operazioni di copia bulk dei dati in un'istanza di SQL Server usando la classe <xref:System.Data.SqlClient.SqlBulkCopy>.  
   
  [Transazioni e operazioni di copia bulk](transaction-and-bulk-copy-operations.md)  
- Viene descritto come eseguire una copia bulk all'interno di una transazione e come eseguire il commit e il rollback della transazione.  
+ Viene descritto come eseguire un'operazione di copia bulk all'interno di una transazione e come eseguire il commit o il ripristino dello stato precedente della transazione.  
   
 ## <a name="see-also"></a>Vedere anche
 

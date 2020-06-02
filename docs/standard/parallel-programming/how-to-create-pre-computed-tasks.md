@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare attività precalcolate'
+title: 'Procedura: creare attività precalcolate'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - tasks, creating pre-computed
 ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
-ms.openlocfilehash: f5d2a70685fe0401d0219b99ada6936ac04691f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 88f0782380d21858bc5dd0fc0fbf63bbf85403b8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73123134"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289993"
 ---
-# <a name="how-to-create-pre-computed-tasks"></a>Procedura: Creare attività precalcolate
+# <a name="how-to-create-pre-computed-tasks"></a>Procedura: creare attività precalcolate
 In questo documento viene descritto come utilizzare il metodo <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> per recuperare i risultati di operazioni di download asincrone contenute in una cache. Tramite il metodo <xref:System.Threading.Tasks.Task.FromResult%2A> viene restituito un oggetto <xref:System.Threading.Tasks.Task%601> finito contenente il valore fornito come relativa proprietà <xref:System.Threading.Tasks.Task%601.Result%2A>. Questo metodo è utile quando si esegue un'operazione asincrona che restituisce un oggetto <xref:System.Threading.Tasks.Task%601> e il risultato di tale oggetto <xref:System.Threading.Tasks.Task%601> è già calcolato.  
   
 ## <a name="example"></a>Esempio  
@@ -28,4 +28,4 @@ In questo documento viene descritto come utilizzare il metodo <xref:System.Threa
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione asincrona basata su attivitàTask-based Asynchronous Programming](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+- [Programmazione asincrona basata su attività](task-based-asynchronous-programming.md)

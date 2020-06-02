@@ -35,27 +35,27 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: 8956be3cf8f96a8dd255f378d4927404c172c908
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ad7957fd555c1de8fe47c092d3eb399a803fb1fb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160001"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290902"
 ---
 # <a name="the-regular-expression-object-model"></a>Modello a oggetti delle espressioni regolari
 <a name="introduction"></a> In questo argomento viene illustrato il modello a oggetti usato con le espressioni regolari di .NET. Contiene le sezioni seguenti:  
   
-- [Il motore delle espressioni regolariThe Regular Expression Engine](#Engine)  
+- [Motore delle espressioni regolari](#Engine)  
   
-- [Oggetti MatchCollection e Match](#Match_and_MCollection)  
+- [Oggetti MatchCollection e match](#Match_and_MCollection)  
   
-- [La Collezione Di Gruppo](#GroupCollection)  
+- [Raccolta di gruppi](#GroupCollection)  
   
-- [Il gruppo catturato](#the_captured_group)  
+- [Gruppo acquisito](#the_captured_group)  
   
-- [La collezione Capture](#CaptureCollection)  
+- [Raccolta di acquisizione](#CaptureCollection)  
   
-- [La cattura individuale](#the_individual_capture)  
+- [Acquisizione singola](#the_individual_capture)  
   
 <a name="Engine"></a>
 ## <a name="the-regular-expression-engine"></a>Motore delle espressioni regolari  
@@ -284,7 +284,7 @@ ms.locfileid: "78160001"
   
  Le proprietà della classe <xref:System.Text.RegularExpressions.Group> forniscono informazioni sul gruppo acquisito. La proprietà `Group.Value` include la sottostringa acquisita, la proprietà`Group.Index` indica la posizione iniziale del gruppo acquisito nel testo di input, la proprietà `Group.Length` include la lunghezza del testo acquisito e la proprietà `Group.Success` indica se una sottostringa corrisponde al modello definito dal gruppo di acquisizione.  
   
- L'applicazione di quantificatori a un gruppo (per altre informazioni, vedere [Quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) modifica la relazione di un'acquisizione per ogni gruppo di acquisizione in due modi:  
+ L'applicazione di quantificatori a un gruppo (per altre informazioni, vedere [Quantificatori](quantifiers-in-regular-expressions.md)) modifica la relazione di un'acquisizione per ogni gruppo di acquisizione in due modi:  
   
 - Se il quantificatore `*` o `*?` (che specifica zero o più corrispondenze) è applicato a un gruppo, è possibile che per un gruppo di acquisizione non siano rilevate corrispondenze nella stringa di input. Se non è presente testo acquisito, le proprietà dell'oggetto <xref:System.Text.RegularExpressions.Group> sono impostate come mostrato nella tabella seguente.  
   
@@ -352,5 +352,5 @@ ms.locfileid: "78160001"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Text.RegularExpressions>
-- [Espressioni regolari .NET](../../../docs/standard/base-types/regular-expressions.md)
-- [Linguaggio delle espressioni regolari - Guida di riferimento rapidoRegular Expression Language - Quick Reference](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Espressioni regolari .NET](regular-expressions.md)
+- [Linguaggio di espressioni regolari - Riferimento rapido](regular-expression-language-quick-reference.md)

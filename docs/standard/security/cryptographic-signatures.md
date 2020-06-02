@@ -20,16 +20,16 @@ helpviewer_keywords:
 - digital signatures, verifying
 - signing XML
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
-ms.openlocfilehash: 1de6b3f2eb30df270339910e7b8287101bde65ca
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9e69578ceffeeacb73cf059f5b577fe7c137b599
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706253"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288394"
 ---
 # <a name="cryptographic-signatures"></a>Firme di crittografia
 
-Le firme digitali di crittografia usano algoritmi con chiave pubblica per garantire l'integrità dei dati. Quando viene applicata una firma digitale ai dati, questa può essere verificata da altri e può quindi provare che i dati non sono stati modificati dopo l'applicazione della firma. Per altre informazioni sulle firme digitali, vedere [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md).
+Le firme digitali di crittografia usano algoritmi con chiave pubblica per garantire l'integrità dei dati. Quando viene applicata una firma digitale ai dati, questa può essere verificata da altri e può quindi provare che i dati non sono stati modificati dopo l'applicazione della firma. Per altre informazioni sulle firme digitali, vedere [Cryptographic Services](cryptographic-services.md).
 
 Questo argomento spiega come generare e verificare firme digitali usando le classi nello <xref:System.Security.Cryptography?displayProperty=nameWithType> spazio dei nomi.
 
@@ -116,7 +116,7 @@ Per verificare che i dati siano stati firmati da una determinata parte, è neces
 
 - L'algoritmo hash usato dal firmatario.
 
-Usare la classe <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> per verificare una firma eseguita dalla classe <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> . Alla classe <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> deve essere fornita la chiave pubblica del firmatario. Sarà necessario avere i valori del modulo e l'esponente per specificare la chiave pubblica. L'entità che ha generato la coppia di chiavi pubblica/privata deve fornire questi valori. Creare innanzitutto un oggetto <xref:System.Security.Cryptography.RSACryptoServiceProvider> per conservare la chiave pubblica che verificherà la firma, quindi inizializzare una struttura <xref:System.Security.Cryptography.RSAParameters> per i valori di modulo ed esponente che specificano la chiave pubblica.
+Usare la classe <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> per verificare una firma eseguita dalla classe <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> . Alla classe <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> deve essere fornita la chiave pubblica del firmatario. Sarà necessario avere i valori del modulo e l'esponente per specificare la chiave pubblica. L'entità che ha generato la coppia di chiavi pubblica/privata deve fornire questi valori. Creare prima di tutto un <xref:System.Security.Cryptography.RSACryptoServiceProvider> oggetto per conservare la chiave pubblica che verificherà la firma, quindi inizializzare una <xref:System.Security.Cryptography.RSAParameters> struttura per i valori di modulo ed esponente che specificano la chiave pubblica.
 
 Il codice seguente illustra la creazione di una struttura <xref:System.Security.Cryptography.RSAParameters> . La proprietà `Modulus` è impostata sul valore di una matrice di byte denominata `modulusData` e la proprietà `Exponent` è impostata sul valore di una matrice di byte denominata `exponentData`.
 
@@ -134,7 +134,7 @@ rsaKeyInfo.Exponent = exponentData;
 
 Dopo avere creato l'oggetto <xref:System.Security.Cryptography.RSAParameters> , è possibile inizializzare una nuova istanza della classe <xref:System.Security.Cryptography.RSACryptoServiceProvider> per i valori specificati in <xref:System.Security.Cryptography.RSAParameters>. <xref:System.Security.Cryptography.RSACryptoServiceProvider> viene a sua volta passato al costruttore di un oggetto <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> per trasferire la chiave.
 
-Nell'esempio che segue viene illustrato questo processo. `hashValue` e `signedHashValue` sono in questo caso matrici di byte fornite da una parte remota. La parte remota ha firmato `hashValue` usando l'algoritmo SHA1, producendo la firma digitale `signedHashValue`. Il metodo <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> verifica che la firma digitale sia valida e usata per firmare il `hashValue`.
+Nell'esempio che segue viene illustrato questo processo. `hashValue` e `signedHashValue` sono in questo caso matrici di byte fornite da una parte remota. La parte remota ha firmato `hashValue` usando l'algoritmo SHA1, producendo la firma digitale `signedHashValue`. Il <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> metodo verifica che la firma digitale sia valida e usata per firmare il `hashValue` .
 
 ```vb
 Dim rsa As New RSACryptoServiceProvider()
@@ -167,4 +167,4 @@ Nel frammento di codice sarà visualizzato il messaggio "`The signature is valid
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [Servizi di crittografia](cryptographic-services.md)

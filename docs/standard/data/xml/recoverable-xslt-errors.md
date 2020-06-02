@@ -3,12 +3,12 @@ title: Errori XSLT risolvibili
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-ms.openlocfilehash: e3ff86cc80887d14fdffe50f256409cb70ff2d88
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ada0b352cd867417ed3ecf86291df023ca7c579e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710375"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289096"
 ---
 # <a name="recoverable-xslt-errors"></a>Errori XSLT risolvibili
 Nella raccomandazione W3C, XSL Transformations (XSLT) Version 1.0, sono incluse aree in cui il provider dell'implementazione può decidere come gestire una determinata situazione. Queste aree si considerano come aree di comportamento discretionary. Nella sezione 7.3 Creating Processing Instructions della raccomandazione XSLT 1.0, ad esempio, viene specificato che la creazione di nodi diversi da nodi di tipo text durante la creazione di un'istanza del contenuto di `xsl:processing-instruction` costituisce un errore. Per alcuni problemi, la raccomandazione XSLT 1.0 fornisce una linea d'azione nel caso in cui il processore tenti di risolvere l'errore. Per l'errore illustrato nella sezione 7.3 viene spiegato che il problema può essere risolto ignorando i nodi e il relativo contenuto.  
@@ -50,8 +50,8 @@ Nella raccomandazione W3C, XSL Transformations (XSLT) Version 1.0, sono incluse 
 |L'attributo `value` di un `xsl:number` è un valore NaN, infinito o minore di 0,5.|errata 24|Recupera|  
 |Il secondo set di nodi dell'argomento della funzione del documento è vuoto e il riferimento all'URI è relativo.|errata 14|Recupera|  
   
- <sup>*</sup>Questo comportamento è diverso da quello della <xref:System.Xml.Xsl.XslTransform> classe. Per altre informazioni, vedere [Implementazione di comportamenti discretionary nella classe XslTransform](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
+ <sup>*</sup>Questo comportamento è diverso da quello della <xref:System.Xml.Xsl.XslTransform> classe. Per altre informazioni, vedere [Implementazione di comportamenti discretionary nella classe XslTransform](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [Trasformazioni XSLT](xslt-transformations.md)

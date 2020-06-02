@@ -1,5 +1,5 @@
 ---
-title: "Procedura: specificare un'utilità di pianificazione in un blocco di flussi di dati"
+title: "Procedura: Specificare un'utilità di pianificazione in un blocco di flussi di dati"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-ms.openlocfilehash: 2abac1ccf45fc9c9c28e27c132e72fe483a24d75
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76c9e75f787c28657af143b46bb22d08039e2dc4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73122226"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288134"
 ---
-# <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Procedura: specificare un'utilità di pianificazione in un blocco di flussi di dati
+# <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Procedura: Specificare un'utilità di pianificazione in un blocco di flussi di dati
 In questo documento viene illustrato come associare una specifica utilità di pianificazione delle attività quando si utilizza il flusso di dati nell'applicazione. Nell'esempio viene usata la classe <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> in un'applicazione Windows Forms per visualizzare quando le attività del lettore sono attive e quando invece lo è una del writer. Viene inoltre utilizzato il metodo <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> per consentire a un blocco di flussi di dati l'esecuzione nel thread dell'interfaccia utente.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -81,4 +81,4 @@ In questo documento viene illustrato come associare una specifica utilità di pi
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Flusso di dati](dataflow-task-parallel-library.md)

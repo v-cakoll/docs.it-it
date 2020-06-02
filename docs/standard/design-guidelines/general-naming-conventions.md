@@ -14,92 +14,92 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: ef4a8f571a67477739bbc59d3103ba78dea47177
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: c90987fd28d5157cfb7f7eea4680b5ab4be1a200
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635912"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290954"
 ---
 # <a name="general-naming-conventions"></a>Convenzioni di denominazione generali
 
-In questa sezione vengono descritte le convenzioni di denominazione generali relative alla scelta delle parole, le linee guida sull'utilizzo di abbreviazioni e acronimi e i suggerimenti su come evitare l'utilizzo di nomi specifici della lingua.
+In questa sezione vengono descritte le convenzioni di denominazione generali che riguardano la scelta di Word, le linee guida sull'utilizzo delle abbreviazioni e degli acronimi e consigli su come evitare l'utilizzo di nomi specifici della lingua.
 
-## <a name="word-choice"></a>Scelta delle parole
+## <a name="word-choice"></a>Scelta di Word
  ✔️ scegliere nomi di identificatori facilmente leggibili.
 
- Ad esempio, una `HorizontalAlignment` proprietà denominata è `AlignmentHorizontal`più leggibile in inglese di .
+ Ad esempio, una proprietà denominata `HorizontalAlignment` è più leggibile in inglese rispetto a `AlignmentHorizontal` .
 
- ✔️ favorire la leggibilità rispetto alla brevità.
+ ✔️ prediligono la leggibilità per brevità.
 
- Il nome `CanScrollHorizontally` della `ScrollableX` proprietà è migliore di (un riferimento oscuro all'asse X).
+ Il nome della proprietà `CanScrollHorizontally` è migliore di `ScrollableX` (un riferimento oscuro all'asse X).
 
- ❌NON utilizzare caratteri di sottolineatura, trattini o altri caratteri non alfanumerici.
+ ❌Non usare caratteri di sottolineatura, trattini o altri caratteri non alfanumerici.
 
- ❌NON usare la notazione ungherese.
+ ❌Non usare la notazione ungherese.
 
- ❌AVOID utilizzando identificatori in conflitto con parole chiave di linguaggi di programmazione ampiamente utilizzati.
+ ❌EVITARE l'utilizzo di identificatori in conflitto con parole chiave di linguaggi di programmazione ampiamente utilizzati.
 
- In base alla regola 4 di Common Language Specification (CLS), tutti i linguaggi conformi devono fornire un meccanismo che consenta l'accesso agli elementi denominati che utilizzano una parola chiave di tale lingua come identificatore. In questo caso, ad esempio, viene utilizzato il segno di escape di C. Tuttavia, è comunque una buona idea evitare parole chiave comuni perché è molto più difficile utilizzare un metodo con la sequenza di escape rispetto a uno senza di esso.
+ In base alla regola 4 della Common Language Specification (CLS), tutti i linguaggi conformi devono fornire un meccanismo che consenta l'accesso agli elementi denominati che usano una parola chiave di tale lingua come identificatore. In C#, ad esempio, in questo caso viene utilizzato il segno @ come meccanismo di escape. Tuttavia, è comunque consigliabile evitare le parole chiave comuni perché è molto più difficile usare un metodo con la sequenza di escape rispetto a una senza di essa.
 
-## <a name="using-abbreviations-and-acronyms"></a>Utilizzo di abbreviazioni e acronimi
- ❌NON utilizzare abbreviazioni o contrazioni come parte dei nomi degli identificatori.
+## <a name="using-abbreviations-and-acronyms"></a>Uso delle abbreviazioni e degli acronimi
+ ❌Non usare abbreviazioni o contrazioni come parte dei nomi degli identificatori.
 
- Ad esempio, `GetWindow` utilizzare `GetWin`anziché .
+ Ad esempio, usare `GetWindow` anziché `GetWin` .
 
- ❌NON utilizzare acronimi che non sono ampiamente accettati, e anche se lo sono, solo quando necessario.
+ ❌Non usare alcun acronimo che non sia ampiamente accettato e anche se sono, solo quando necessario.
 
 ## <a name="avoiding-language-specific-names"></a>Evitare nomi specifici della lingua
- ✔️ utilizzare nomi semanticamente interessanti anziché parole chiave specifiche del linguaggio per i nomi dei tipi.
+ ✔️ utilizzare nomi semanticamente interessanti anziché parole chiave specifiche della lingua per i nomi dei tipi.
 
- Ad esempio, `GetLength` è un `GetInt`nome migliore di .
+ Ad esempio, `GetLength` è un nome migliore rispetto a `GetInt` .
 
- ✔️ utilizzare un nome di tipo CLR generico, anziché un nome specifico del linguaggio, nei rari casi in cui un identificatore non ha alcun significato semantico oltre il tipo.
+ ✔️ utilizzano un nome di tipo CLR generico, anziché un nome specifico della lingua, nei rari casi in cui un identificatore non ha un significato semantico oltre il relativo tipo.
 
- Ad esempio, un metodo <xref:System.Int64> di `ToInt64`conversione `ToLong` deve <xref:System.Int64> essere denominato , non (perché `long`è un nome CLR per l'alias specifico di C . Nella tabella seguente vengono presentate diverse tipi di dati di base utilizzando i nomi dei tipi CLR ,così come i nomi di tipo corrispondenti per C .
+ Ad esempio, un metodo che converte in <xref:System.Int64> deve essere denominato `ToInt64` , non `ToLong` (perché <xref:System.Int64> è un nome CLR per l'alias specifico di C# `long` ). Nella tabella seguente vengono illustrati diversi tipi di dati di base utilizzando i nomi dei tipi CLR (nonché i nomi dei tipi corrispondenti per C#, Visual Basic e C++).
 
 |C#|Visual Basic|C++|CLR|
 |---------|------------------|-----------|---------|
-|**sbyte**|**Sbyte**|**char**|**Sbyte**|
+|**sbyte**|**SByte**|**char**|**SByte**|
 |**byte**|**Byte**|**unsigned char**|**Byte**|
 |**short**|**Breve**|**short**|**Int16**|
 |**ushort**|**UInt16**|**unsigned short**|**UInt16**|
-|**Int**|**Intero**|**Int**|**Int32**|
-|**uint**|**UInt32 (int32)**|**int senza segno**|**UInt32 (int32)**|
-|**Lungo**|**Lungo**|**__int64**|**Int64**|
-|**Ulong**|**UInt64 (informazioni in inglese)**|**unsigned __int64**|**UInt64 (informazioni in inglese)**|
-|**Galleggiante**|**Singolo**|**Galleggiante**|**Singolo**|
-|**double**|**Doppia**|**double**|**Doppia**|
+|**int**|**Intero**|**int**|**Int32**|
+|**uint**|**UInt32**|**int senza segno**|**UInt32**|
+|**long**|**Long**|**__int64**|**Int64**|
+|**ULONG**|**UInt64**|**unsigned __int64**|**UInt64**|
+|**float**|**Singolo**|**float**|**Singolo**|
+|**double**|**Doppio**|**double**|**Doppio**|
 |**bool**|**Boolean**|**bool**|**Boolean**|
 |**char**|**Char**|**wchar_t**|**Char**|
 |**string**|**Stringa**|**Stringa**|**Stringa**|
-|**Oggetto**|**Oggetto**|**Oggetto**|**Oggetto**|
+|**object**|**Object**|**Object**|**Object**|
 
- ✔️ utilizzare un nome comune, ad `value` esempio o `item`, anziché ripetere il nome del tipo, nei rari casi in cui un identificatore non ha un significato semantico e il tipo del parametro non è importante.
+ ✔️ usano un nome comune, ad esempio `value` o `item` , anziché ripetere il nome del tipo, nei rari casi in cui un identificatore non ha un significato semantico e il tipo del parametro non è importante.
 
-## <a name="naming-new-versions-of-existing-apis"></a>Denominazione di nuove versioni delle API esistenti
- ✔️ usare un nome simile all'API precedente quando si creano nuove versioni di un'API esistente.
+## <a name="naming-new-versions-of-existing-apis"></a>Assegnazione di un nome alle nuove versioni delle API esistenti
+ ✔️ usare un nome simile a quello dell'API precedente durante la creazione di nuove versioni di un'API esistente.
 
  Ciò consente di evidenziare la relazione tra le API.
 
- ✔️ preferisce aggiungere un suffisso anziché un prefisso per indicare una nuova versione di un'API esistente.
+ ✔️ preferiscono aggiungere un suffisso anziché un prefisso per indicare una nuova versione di un'API esistente.
 
- Ciò aiuterà l'individuazione durante l'esplorazione della documentazione o l'utilizzo di IntelliSense.This will assist discovery when browsing documentation, or using IntelliSense. La versione precedente dell'API sarà organizzata vicino alle nuove API, perché la maggior parte dei browser e IntelliSense mostrano gli identificatori in ordine alfabetico.
+ Questa operazione aiuterà l'individuazione durante l'esplorazione della documentazione o l'uso di IntelliSense. La versione precedente dell'API verrà organizzata vicino alle nuove API, perché la maggior parte dei browser e di IntelliSense mostrano gli identificatori in ordine alfabetico.
 
- ✔️ CONSIDER utilizzando un identificatore nuovo di zecca, ma significativo, invece di aggiungere un suffisso o un prefisso.
+ ✔️ CONSIGLIABILE usare un identificatore nuovo, ma significativo, anziché aggiungere un suffisso o un prefisso.
 
- ✔️ usare un suffisso numerico per indicare una nuova versione di un'API esistente, in particolare se il nome esistente dell'API è l'unico nome appropriato (ad esempio, se si tratta di uno standard del settore) e se l'aggiunta di un suffisso significativo (o la modifica del nome) non è un'opzione appropriata.
+ ✔️ usare un suffisso numerico per indicare una nuova versione di un'API esistente, in particolare se il nome esistente dell'API è l'unico nome che ha senso (ad esempio, se è uno standard di settore) e se l'aggiunta di un suffisso significativo (o la modifica del nome) non è un'opzione appropriata.
 
- ❌NON usare il suffisso "Ex" (o simile) per un identificatore per distinguerlo da una versione precedente della stessa API.
+ ❌Non usare il suffisso "ex" (o simile) per un identificatore per distinguerlo da una versione precedente della stessa API.
 
- ✔️ utilizzare il suffisso "64" quando si introducono versioni di API che operano su un numero intero a 64 bit (un intero lungo) anziché un numero intero a 32 bit. È necessario adottare questo approccio solo quando esiste l'API a 32 bit esistente; non farlo per le NUOVE API con solo una versione a 64 bit.
+ ✔️ usare il suffisso "64" quando si introducono versioni di API che operano su un intero a 64 bit (un valore Long Integer) invece che su un intero a 32 bit. È necessario adottare questo approccio solo quando esiste l'API a 32 bit esistente. non eseguire questa operazione per le API nuovissime con una versione a 64 bit.
 
- *Porzioni &copy; 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*
+ *Parti &copy; 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*
 
  *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la progettazione di framework](../../../docs/standard/design-guidelines/index.md)
-- [Linee guida per la denominazione](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Linee guida per la progettazione di framework](index.md)
+- [Convenzioni di denominazione](naming-guidelines.md)
 - [.NET naming conventions for EditorConfig](/visualstudio/ide/editorconfig-naming-conventions) (Convenzioni di denominazione .NET per EditorConfig)

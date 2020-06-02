@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 3562bd113ae4c9a3f721d8858a5d3625ef548d3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e5773c220dccd4d139b4f85e19b55048a64e7ef
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160079"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288004"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Sostituzioni nelle espressioni regolari
 Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei criteri di sostituzione. Utilizzano un modello di espressione regolare per definire in tutto o in parte il testo che sostituirà il testo corrispondente nella stringa di input. Il criterio di sostituzione può essere costituito da una o più sostituzioni insieme a caratteri letterali. I criteri di sostituzione vengono forniti agli overload del metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> che dispongono di un parametro `replacement` e al metodo <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> . I metodi sostituiscono il criterio di ricerca con il criterio definito dal parametro `replacement` .  
@@ -27,8 +27,8 @@ Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei cr
   
 |Sostituzione|Descrizione|  
 |------------------|-----------------|  
-|$ *Numero*|Include nella stringa di sostituzione l'ultima sottostringa corrispondente al gruppo di acquisizione identificato da *numero*dove *numero* è un valore decimale. Per ulteriori informazioni, vedere [Sostituzione di un gruppo numerato](#substituting-a-numbered-group).|  
-|${ *nome* }|Include l'ultima sottostringa corrispondente al gruppo denominato `(?<`designato in base al *nome* `> )` nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione di un gruppo denominato](#substituting-a-named-group).|  
+|$ *number*|Include nella stringa di sostituzione l'ultima sottostringa corrispondente al gruppo di acquisizione identificato da *numero*dove *numero* è un valore decimale. Per ulteriori informazioni, vedere [Sostituzione di un gruppo numerato](#substituting-a-numbered-group).|  
+|${ *nome* }|Include l'ultima sottostringa corrispondente al gruppo denominato definito dal `(?<` *nome* `> )` nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione di un gruppo denominato](#substituting-a-named-group).|  
 |$$|Include un solo simbolo letterale "$" nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione di un simbolo "$"](#substituting-a--character).|  
 |$&|Include una copia dell'intera corrispondenza nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione dell'intera corrispondenza](#substituting-the-entire-match).|  
 |$\`|Include nella stringa di sostituzione tutto il testo della stringa di input precedente alla corrispondenza. Per ulteriori informazioni, vedere [Sostituzione del testo prima della corrispondenza](#substituting-the-text-before-the-match).|  
@@ -42,14 +42,14 @@ Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei cr
  L'unico carattere che può essere utilizzato in un modello di espressione regolare o in una sostituzione è il carattere `$` , anche se presenta un significato diverso in ogni contesto. In un modello di espressione regolare `$` è un ancoraggio che corrisponde al termine della stringa. In un criterio di sostituzione, `$` indica l'inizio di una sostituzione.  
   
 > [!NOTE]
-> Per una funzionalità simile a un criterio di sostituzione all'interno di un'espressione regolare, utilizzare un backreference. Per ulteriori informazioni sui backreference, vedere Costrutti di [backreference](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
+> Per una funzionalità simile a un criterio di sostituzione all'interno di un'espressione regolare, utilizzare un backreference. Per ulteriori informazioni sui backreference, vedere [costrutti di backreference](backreference-constructs-in-regular-expressions.md).  
 
 ## <a name="substituting-a-numbered-group"></a>Sostituzione di un gruppo numerato  
- L'elemento `$`del linguaggio *numerico* include l'ultima sottostringa corrispondente al gruppo di acquisizione *numeri* nella stringa di sostituzione, dove *numero* è l'indice del gruppo di acquisizione. Ad esempio, il criterio di sostituzione `$1` indica che la sottostringa corrispondente deve essere sostituita dal primo gruppo acquisito. Per altre informazioni sui gruppi di acquisizione numerati, vedere [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ L' `$` elemento del linguaggio *numero* include l'ultima sottostringa corrispondente al gruppo di acquisizione *numero* nella stringa di sostituzione, dove *numero* è l'indice del gruppo di acquisizione. Ad esempio, il criterio di sostituzione `$1` indica che la sottostringa corrispondente deve essere sostituita dal primo gruppo acquisito. Per altre informazioni sui gruppi di acquisizione numerati, vedere [Grouping Constructs](grouping-constructs-in-regular-expressions.md).  
   
  Tutte le cifre che seguono `$` vengono interpretate come appartenenti al gruppo *numero* . Se questa non è la propria intenzione, è possibile sostituire un gruppo denominato invece. Ad esempio, è possibile utilizzare la stringa di sostituzione `${1}1` anziché `$11` per definire la stringa di sostituzione come la validità del gruppo innanzitutto acquisito con il numero "1 ". Per ulteriori informazioni, vedere [Sostituzione di un gruppo denominato](#substituting-a-named-group).  
   
- I gruppi di acquisizione a `(?<`cui non vengono assegnati nomi in modo esplicito utilizzando *la* `>)` sintassi dei nomi sono numerati da sinistra a destra a partire da uno. I gruppi denominati sono anche numerati da sinistra a destra, a partire dall'indice dell'ultimo gruppo senza nome più uno. Ad esempio, nell'espressione regolare `(\w)(?<digit>\d)`l'indice del gruppo denominato `digit` è 2.  
+ I gruppi di acquisizione a cui non sono assegnati nomi in modo esplicito tramite la sintassi del `(?<` *nome* `>)` sono numerati da sinistra a destra a partire da uno. I gruppi denominati sono anche numerati da sinistra a destra, a partire dall'indice dell'ultimo gruppo senza nome più uno. Ad esempio, nell'espressione regolare `(\w)(?<digit>\d)`l'indice del gruppo denominato `digit` è 2.  
   
  Se *numero* non specifica un gruppo di acquisizione valido definito nel criterio di espressione regolare, `$`*numero* viene interpretato come una sequenza di caratteri letterali usata per sostituire ogni corrispondenza.  
   
@@ -70,13 +70,13 @@ Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei cr
 |`(\s?\d+[.,]?\d*)`|Corrisponde a uno spazio vuoto seguito da una o più cifre decimali, seguite da zero o un punto o una virgola, seguita da zero o più cifre decimali. Equivale al primo gruppo di acquisizione. Poiché il criterio di sostituzione è `$1`, la chiamata al metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> sostituisce la sottostringa corrispondente intera con questo gruppo acquisito.|  
 
 ## <a name="substituting-a-named-group"></a>Sostituzione di un gruppo denominato  
- `${`L'elemento del linguaggio *dei* `}` nomi sostituisce l'ultima sottostringa corrispondente al gruppo di `(?<`acquisizione del *nome,* dove *nome* è il nome di un gruppo di acquisizione definito dall'elemento del linguaggio dei *nomi.* `>)` Per altre informazioni sui gruppi di acquisizione denominati, vedere [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ L' `${` *name* `}` elemento del linguaggio nome sostituisce l'ultima sottostringa corrispondente al gruppo di acquisizione *nome* , dove *nome* è il nome di un gruppo di acquisizione definito dall' `(?<` elemento di linguaggio *nome* `>)` . Per altre informazioni sui gruppi di acquisizione denominati, vedere [Grouping Constructs](grouping-constructs-in-regular-expressions.md).  
   
  Se *nome* non specifica un gruppo di acquisizione denominato valido definito nel criterio di espressione regolare ma è costituito dalle cifre, `${`*nome*`}` viene interpretato come un gruppo numerato.  
   
  Se *nome* non specifica un gruppo di acquisizione denominato valido o un gruppo di acquisizione numerato valido definito nel criterio di espressione regolare, `${`*nome*`}` viene interpretato come una sequenza di caratteri letterali usata per sostituire ogni corrispondenza.  
   
- Nell'esempio seguente `${`viene utilizzata la sostituzione del *nome* `}` per rimuovere il simbolo di valuta da un valore decimale. Rimuove i simboli di valuta trovati all'inizio o alla fine di un valore valutario e riconosce i due separatori decimali più comuni ("." e ",").  
+ Nell'esempio seguente viene usata la sostituzione del `${` *nome* `}` per rimuovere il simbolo di valuta da un valore decimale. Rimuove i simboli di valuta trovati all'inizio o alla fine di un valore valutario e riconosce i due separatori decimali più comuni ("." e ",").  
   
  [!code-csharp[Conceptual.RegEx.Language.Substitutions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/namedgroup1.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.Substitutions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/namedgroup1.vb#2)]  
@@ -129,7 +129,7 @@ Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei cr
  Il criterio di sostituzione `"$&"` aggiunge le virgolette letterali all'inizio e alla fine di ogni corrispondenza.  
 
 ## <a name="substituting-the-text-before-the-match"></a>Sostituzione del testo prima della corrispondenza  
- La sostituzione ``$` `` sostituisce la stringa corrispondente con l'intera stringa di input prima della corrispondenza. Ovvero, duplica la stringa di input fino alla corrispondenza e rimuove il testo corrispondente. Qualsiasi testo che segue il testo corrispondente resta invariato nella stringa di risultato. Se esistono più corrispondenze in una stringa di input, il testo di sostituzione viene derivato dalla stringa di input originale anziché dalla stringa in cui il testo è stato sostituito dalle corrispondenze precedenti. \(L'esempio fornisce un'illustrazione. \) Se non c'è ``$` `` corrispondenza, la sostituzione non ha alcun effetto.  
+ La sostituzione ``$` `` sostituisce la stringa corrispondente con l'intera stringa di input prima della corrispondenza. Ovvero, duplica la stringa di input fino alla corrispondenza e rimuove il testo corrispondente. Qualsiasi testo che segue il testo corrispondente resta invariato nella stringa di risultato. Se esistono più corrispondenze in una stringa di input, il testo di sostituzione viene derivato dalla stringa di input originale anziché dalla stringa in cui il testo è stato sostituito dalle corrispondenze precedenti. \(Nell'esempio viene illustrato. \) Se non esiste alcuna corrispondenza, la ``$` `` sostituzione non ha alcun effetto.  
   
  Nell'esempio seguente viene usato il criterio di espressione regolare `\d+` per trovare la corrispondenza con una sequenza di una o più cifre decimali nella stringa di input. La stringa di sostituzione ``$` `` sostituisce queste cifre con il testo che precede la corrispondenza.  
   
@@ -199,4 +199,4 @@ Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei cr
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linguaggio delle espressioni regolari - Guida di riferimento rapidoRegular Expression Language - Quick Reference](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguaggio di espressioni regolari - Riferimento rapido](regular-expression-language-quick-reference.md)

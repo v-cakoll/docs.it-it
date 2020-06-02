@@ -9,12 +9,12 @@ helpviewer_keywords:
 - exceptions, COM interop
 - COM interop, exceptions
 ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
-ms.openlocfilehash: 17cd739ac40b43bdd4a93b83a4ab9d0d92400e2d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c8eb374058ddbd2ba3d866079f0f40b292b69ea
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708932"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286106"
 ---
 # <a name="handling-com-interop-exceptions"></a>Gestione di eccezioni per interoperabilità COM
 Il codice gestito può essere integrato con il codice non gestito per la gestione delle eccezioni. Se un metodo genera un'eccezione nel codice gestito, Common Language Runtime può passare un valore HRESULT a un oggetto COM. Se un metodo non riesce nel codice non gestito, restituendo un HRESULT di errore, il runtime genera un'eccezione che può essere intercettata dal codice gestito.  
@@ -26,7 +26,7 @@ Il codice gestito può essere integrato con il codice non gestito per la gestion
 ## <a name="working-with-ierrorinfo"></a>Uso di IErrorInfo  
  Quando un errore viene passato da COM al codice gestito, il runtime compila l'oggetto eccezione con informazioni sull'errore. Gli oggetti COM che supportano IErrorInfo e restituiscono valori HRESULT forniscono queste informazioni per le eccezioni del codice gestito. Ad esempio, il runtime esegue il mapping della descrizione dell'errore COM alla proprietà <xref:System.Exception.Message%2A> dell'eccezione. Se il valore HRESULT non fornisce alcuna informazione di errore, il runtime compila molte delle proprietà dell'eccezione con i valori predefiniti.  
   
- Se un metodo non riesce nel codice non gestito, un'eccezione può essere passata a un segmento di codice gestito. L'argomento [HRESULT ed eccezioni](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md) contiene una tabella che mostra il mapping di HRESULT a oggetti eccezione di runtime.  
+ Se un metodo non riesce nel codice non gestito, un'eccezione può essere passata a un segmento di codice gestito. L'argomento [HRESULT ed eccezioni](../../framework/interop/how-to-map-hresults-and-exceptions.md) contiene una tabella che mostra il mapping di HRESULT a oggetti eccezione di runtime.  
 
 ## <a name="see-also"></a>Vedere anche
 

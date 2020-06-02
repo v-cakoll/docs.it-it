@@ -1,13 +1,14 @@
 ---
 title: Programmazione asincrona
+description: Informazioni sulla programmazione asincrona nella .NET Framework provider di dati per SQL Server, inclusi i miglioramenti introdotti in .NET Framework 4,5.
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 7bf492e45a9ebabdd36caa8e21605739bb410695
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 2e5f48b0818ab9cfabc75ba47c95c8198e0fe7fa
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937582"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287103"
 ---
 # <a name="asynchronous-programming"></a>Programmazione asincrona
 
@@ -15,7 +16,7 @@ In questo argomento viene illustrato il supporto per la programmazione asincrona
 
 ## <a name="legacy-asynchronous-programming"></a>Programmazione asincrona legacy
 
-Prima di .NET Framework 4,5, la programmazione asincrona con SqlClient veniva eseguita con i metodi e la proprietà di connessione `Asynchronous Processing=true` seguenti:
+Prima di .NET Framework 4,5, la programmazione asincrona con SqlClient veniva eseguita con i metodi e la `Asynchronous Processing=true` proprietà di connessione seguenti:
 
 1. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>
 
@@ -26,7 +27,7 @@ Prima di .NET Framework 4,5, la programmazione asincrona con SqlClient veniva es
 Questa funzionalità rimane in SqlClient in .NET Framework 4,5.
 
 > [!TIP]
-> A partire da .NET Framework 4,5, questi metodi legacy non richiedono più `Asynchronous Processing=true` nella stringa di connessione.
+> A partire da .NET Framework 4,5, questi metodi legacy non sono più necessari `Asynchronous Processing=true` nella stringa di connessione.
 
 ## <a name="asynchronous-programming-features-added-in-net-framework-45"></a>Funzionalità di programmazione asincrona aggiunte in .NET Framework 4,5
 
@@ -46,7 +47,7 @@ Quando l'interfaccia utente non risponde o il server non è scalabile, si potreb
 
 È ora possibile chiamare i metodi asincroni senza usare callback e senza suddividere il codice in più metodi o espressioni lambda.
 
-Il modificatore `async` specifica che un metodo è asincrono. Quando si chiama un metodo `async`, viene restituita un'attività. Quando l'operatore `await` viene applicato a un'attività, il metodo corrente si chiude immediatamente. Al termine dell'attività, l'esecuzione riprende in corrispondenza dello stesso metodo.
+Il modificatore `async` specifica che un metodo è asincrono. Quando si chiama un metodo `async`, viene restituita un'attività. Quando l' `await` operatore viene applicato a un'attività, il metodo corrente si chiude immediatamente. Al termine dell'attività, l'esecuzione riprende in corrispondenza dello stesso metodo.
 
 > [!WARNING]
 > Le chiamate asincrone non sono supportate se in un'applicazione viene inoltre usata la parola chiave della stringa di connessione `Context Connection`.
@@ -640,10 +641,10 @@ namespace SqlBulkCopyAsyncCodeSample {
 
 ## <a name="asynchronously-using-multiple-commands-with-mars"></a>Utilizzo in modo asincrono di più comandi con MARS
 
-Nell'esempio viene aperta una singola connessione al database **AdventureWorks** . Usando un oggetto <xref:System.Data.SqlClient.SqlCommand> viene creato un tipo <xref:System.Data.SqlClient.SqlDataReader>. Poiché viene usato il lettore, viene aperto un secondo <xref:System.Data.SqlClient.SqlDataReader>, usando i dati del primo <xref:System.Data.SqlClient.SqlDataReader> come input per la clausola WHERE per il secondo lettore.
+Nell'esempio viene aperta una singola connessione al database di **AdventureWorks**. Usando un oggetto <xref:System.Data.SqlClient.SqlCommand>, viene creata una <xref:System.Data.SqlClient.SqlDataReader>. Quando il lettore è in uso viene aperto un secondo <xref:System.Data.SqlClient.SqlDataReader>, usando i dati del primo <xref:System.Data.SqlClient.SqlDataReader> come input per la clausola WHERE per il secondo lettore.
 
 > [!NOTE]
-> Nell'esempio seguente viene usato il database di esempio **AdventureWorks** incluso in SQL Server. Per la stringa di connessione fornita nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione per adattarla all'ambiente, se necessario.
+> Nell'esempio seguente viene usato il database di esempio **AdventureWorks** incluso in SQL Server. Per la stringa di connessione specificata nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione in base alle esigenze dell'ambiente in uso.
 
 ```csharp
 using System;
@@ -711,12 +712,12 @@ class Class1 {
 
 ## <a name="asynchronously-reading-and-updating-data-with-mars"></a>Lettura e aggiornamento asincroni dei dati con MARS
 
-MARS consente di usare una connessione per operazioni di lettura e operazioni DML (Data Manipulation Language) con più di un'operazione in sospeso. Questa funzionalità elimina la necessità, da parte di un'applicazione, di dover gestire errori dovuti a una connessione non disponibile. Inoltre, MARS è in grado di sostituire l'uso di cursori sul lato server, che di norma usano più risorse. Infine, poiché su una singola connessione possono essere eseguite più operazioni, queste possono condividere lo stesso contesto di transazione, eliminando la necessità di usare le stored procedure di sistema **sp_getbindtoken** e **sp_bindsession**.
+MARS consente di usare una connessione sia per le operazioni di lettura che per operazioni DML (Data Manipulation Language) con più di un'operazione in sospeso. Questa funzionalità consente a un'applicazione di evitare la gestione degli errori dovuti a una connessione occupata. Inoltre, MARS può sostituire l'utente dei cursori sul lato server, che in genere consumano più risorse. Infine, poiché su una singola connessione possono essere eseguite più operazioni, queste possono condividere lo stesso contesto di transazione, eliminando la necessità di usare le stored procedure di sistema **sp_getbindtoken** e **sp_bindsession**.
 
-Nella seguente applicazione console viene mostrato come usare due oggetti <xref:System.Data.SqlClient.SqlDataReader> con tre oggetti <xref:System.Data.SqlClient.SqlCommand> e un singolo oggetto <xref:System.Data.SqlClient.SqlConnection> con MARS abilitato. Il primo oggetto comando recupera un elenco di fornitori la cui posizione creditizia corrisponde a 5. Il secondo oggetto comando usa l'identificatore fornitore fornito da un oggetto <xref:System.Data.SqlClient.SqlDataReader> per caricare il secondo oggetto <xref:System.Data.SqlClient.SqlDataReader> con tutti i prodotti per il fornitore specifico. Il record di ciascun prodotto viene visitato dal secondo <xref:System.Data.SqlClient.SqlDataReader>. Viene calcolato il nuovo valore di **OnOrderQty**. Il terzo oggetto comando viene usato per aggiornare la tabella **ProductVendor** con il nuovo valore. L'intero processo viene eseguito all'interno di una singola transazione, che viene quindi sottoposta a rollback.
+Nell'applicazione console seguente viene illustrato come usare due oggetti <xref:System.Data.SqlClient.SqlDataReader> con tre oggetti <xref:System.Data.SqlClient.SqlCommand> e un singolo oggetto <xref:System.Data.SqlClient.SqlConnection> con MARS abilitato. Il primo oggetto comando recupera un elenco di fornitori la cui posizione creditizia è 5. Il secondo oggetto comando usa l'ID fornitore specificato da <xref:System.Data.SqlClient.SqlDataReader> per caricare il secondo <xref:System.Data.SqlClient.SqlDataReader> con tutti i prodotti per il fornitore specifico. Ogni record di prodotto viene visitato dal secondo <xref:System.Data.SqlClient.SqlDataReader>. Viene calcolato il nuovo valore di **OnOrderQty**. Il terzo oggetto comando viene usato per aggiornare la tabella **ProductVendor** con il nuovo valore. L'intero processo viene eseguito nell'ambito di una singola transazione, di cui alla fine viene eseguito il rollback.
 
 > [!NOTE]
-> Nell'esempio seguente viene usato il database di esempio **AdventureWorks** incluso in SQL Server. Per la stringa di connessione fornita nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione per adattarla all'ambiente, se necessario.
+> Nell'esempio seguente viene usato il database di esempio **AdventureWorks** incluso in SQL Server. Per la stringa di connessione specificata nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione in base alle esigenze dell'ambiente in uso.
 
 ```csharp
 using System;

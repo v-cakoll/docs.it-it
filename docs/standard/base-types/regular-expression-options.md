@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: bf352d6494a823d4f7b24eb2876d9bffa5877b2b
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8c742c855234bfd9653bb57036c41e7ccce66295
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242777"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289291"
 ---
 # <a name="regular-expression-options"></a>Opzioni di espressioni regolari
 
@@ -28,7 +28,7 @@ Per impostazione predefinita, il confronto di una stringa di input con qualsiasi
 |<xref:System.Text.RegularExpressions.RegexOptions.None>|Non disponibile|Usare il comportamento predefinito. Per altre informazioni, vedere [Opzioni predefinite](#default-options).|
 |<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|Usa la corrispondenza che non fa distinzione tra maiuscole e minuscole. Per altre informazioni, vedere [Corrispondenza senza distinzione tra maiuscole e minuscole](#case-insensitive-matching).|
 |<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|Usare la modalità multiriga, in cui `^` e `$` corrispondono all'inizio e alla fine di una riga, anziché all'inizio e alla fine della stringa di input. Per altre informazioni, vedere [Modalità multiriga](#multiline-mode).|
-|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|Usa la modalità a riga singola, in cui il punto (.) corrisponde a qualsiasi carattere anziché a tutti i caratteri tranne `\n`. Per ulteriori informazioni, consultate [Modalità a riga singola](#single-line-mode).|
+|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|Usa la modalità a riga singola, in cui il punto (.) corrisponde a qualsiasi carattere anziché a tutti i caratteri tranne `\n`. Per altre informazioni, vedere [modalità a riga singola](#single-line-mode).|
 |<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|Non acquisire gruppi senza nome. Le uniche acquisizioni valide sono i gruppi denominati o numerati in modo esplicito in formato `(?<`*nome*`>` *sottoespressione*`)`. Per altre informazioni, vedere [Solo acquisizioni esplicite](#explicit-captures-only).|
 |<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|Non disponibile|Compila l'espressione regolare in un assembly. Per altre informazioni, vedere [Espressioni regolari compilate](#compiled-regular-expressions).|
 |<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Esclude gli spazi vuoti senza caratteri di escape nel criterio e abilita i commenti dopo un simbolo di cancelletto (`#`). Per altre informazioni, vedere [Ignora spazi vuoti](#ignore-white-space).|
@@ -49,14 +49,14 @@ Per impostazione predefinita, il confronto di una stringa di input con qualsiasi
   [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
   [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
 
-- Applicando le opzioni inline in un criterio di ricerca di espressioni regolari con la sintassi `(?imnsx-imnsx)`. L'opzione si applica al criterio dal punto in cui viene definita fino alla fine del criterio oppure fino al punto in cui viene annullata da un'altra opzione inline. Si noti che la proprietà <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> di un'istanza di <xref:System.Text.RegularExpressions.Regex> non rispecchia queste opzioni inline. Per altre informazioni, vedere l'argomento [Costrutti vari](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).
+- Applicando le opzioni inline in un criterio di ricerca di espressioni regolari con la sintassi `(?imnsx-imnsx)`. L'opzione si applica al criterio dal punto in cui viene definita fino alla fine del criterio oppure fino al punto in cui viene annullata da un'altra opzione inline. Si noti che la proprietà <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> di un'istanza di <xref:System.Text.RegularExpressions.Regex> non rispecchia queste opzioni inline. Per altre informazioni, vedere l'argomento [Costrutti vari](miscellaneous-constructs-in-regular-expressions.md).
 
   Di seguito ne viene illustrato un esempio. Le opzioni online vengono usate per abilitare la corrispondenza senza distinzione tra maiuscole e minuscole e per ignorare gli spazi vuoti nel criterio durante l'identificazione delle parole che iniziano con la lettera "d".
 
   [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
   [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
 
-- Applicando opzioni inline in un particolare costrutto di `(?imnsx-imnsx:`raggruppamento in un modello di espressione regolare con la *sintassi subespressione*`)`. Nessun segno prima di un set di opzioni attiva il set. Un segno meno prima di un set di opzioni disattiva il set. (è`?` una parte fissa della sintassi del costrutto di linguaggio che è necessario se le opzioni sono abilitate o disabilitate.) L'opzione si applica solo a tale gruppo. Per altre informazioni, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+- Applicando opzioni inline in un particolare costrutto di raggruppamento in un criterio di ricerca di espressioni regolari con la sintassi `(?imnsx-imnsx:` *sottoespressione* `)` . Nessun segno prima di un set di opzioni attiva il set. Un segno meno prima di un set di opzioni disattiva il set. ( `?` è una parte fissa della sintassi del costrutto di linguaggio richiesta se le opzioni sono abilitate o disabilitate). L'opzione si applica solo a tale gruppo. Per altre informazioni, vedere [Costrutti di raggruppamento](grouping-constructs-in-regular-expressions.md).
 
   Di seguito ne viene illustrato un esempio. Le opzioni online vengono usate in un costrutto di raggruppamento per abilitare la corrispondenza senza distinzione tra maiuscole e minuscole e per ignorare gli spazi vuoti nel criterio durante l'identificazione delle parole che iniziano con la lettera "d".
 
@@ -190,7 +190,7 @@ L'esempio di seguito equivale al precedente, tranne il fatto che viene usata l'o
 
 ## <a name="explicit-captures-only"></a>Solo acquisizioni esplicite
 
-Per impostazione predefinita, i gruppi di acquisizione vengono definiti dall'uso di parentesi nel criterio di ricerca di espressioni regolari. Ai gruppi denominati viene `(?<`assegnato un nome o un numero in base all'opzione di lingua delle*sottoespressioni* `)` del *nome,*`>`mentre i gruppi senza nome sono accessibili in base all'indice. Nell'oggetto <xref:System.Text.RegularExpressions.GroupCollection> i gruppi non denominati precedono i gruppi denominati.
+Per impostazione predefinita, i gruppi di acquisizione vengono definiti dall'uso di parentesi nel criterio di ricerca di espressioni regolari. Ai gruppi denominati viene assegnato un nome o un numero dall' `(?<` opzione di linguaggio *nome* `>` *sottoespressione* `)` , mentre i gruppi non denominati sono accessibili in base all'indice. Nell'oggetto <xref:System.Text.RegularExpressions.GroupCollection> i gruppi non denominati precedono i gruppi denominati.
 
 I costrutti di raggruppamento vengono spesso usati solo per applicare quantificatori a più elementi di linguaggio e le sottostringhe acquisite non sono di alcun interesse. Ad esempio, se l'espressione regolare seguente:
 
@@ -262,13 +262,13 @@ Nei casi seguenti, tuttavia, gli spazi in un'espressione regolare non vengono ig
 
 - Uno spazio vuoto in una classe di caratteri viene sempre interpretato letteralmente. Ad esempio, il criterio di ricerca di espressioni regolari `[ .,;:]` trova la corrispondenza di qualsiasi spazio vuoto, punto, virgola, punto e virgola o due punti.
 
-- Lo spazio vuoto non è consentito all'interno di un quantificatore tra parentesi `{`quadre, ad esempio *n*`}`, `{` *n*`,}`e `{` *n*`,`*m*`}`. Ad esempio, il criterio di ricerca di espressioni regolari `\d{1, 3}` non riesce a trovare sequenze di cifre da una a tre cifre perché contiene uno spazio vuoto.
+- Gli spazi vuoti non sono consentiti all'interno di un quantificatore racchiuso tra parentesi, ad esempio `{` *n* `}` , `{` *n* `,}` e `{` *n* `,` *m* `}` . Ad esempio, il criterio di ricerca di espressioni regolari `\d{1, 3}` non riesce a trovare sequenze di cifre da una a tre cifre perché contiene uno spazio vuoto.
 
 - Gli spazi vuoti non sono consentiti all'interno di una sequenza di caratteri che introduce un elemento di linguaggio. Ad esempio:
 
-  - La `(?:` *sottoespressione dell'elemento* `)` del linguaggio `(?:` rappresenta un gruppo di non acquisizione e la parte dell'elemento non può avere spazi incorporati. La `(? :` *sottoespressione* `)` del <xref:System.ArgumentException> modello genera un'eccezione in fase di esecuzione perché `( ?:`il motore delle espressioni regolari non è in grado di analizzare il modello e la *sottoespressione* `)` del modello non corrisponde alla *sottoespressione*.
+  - L'elemento del linguaggio `(?:` *sottoespressione* `)` rappresenta un gruppo di non acquisizione e la `(?:` parte dell'elemento non può contenere spazi incorporati. Il criterio `(? :` *sottoespressione* `)` genera un'eccezione <xref:System.ArgumentException> in fase di esecuzione perché il motore delle espressioni regolari non può analizzare il criterio e il criterio `( ?:` *sottoespressione* `)` non riesce a trovare la corrispondenza di *sottoespressione*.
 
-  - Il `\p{` *nome*`}`dell'elemento di linguaggio , che rappresenta una categoria `\p{` Unicode o un blocco denominato, non può includere spazi incorporati nella parte dell'elemento. Se si include uno spazio vuoto, l'elemento genera un'eccezione <xref:System.ArgumentException> in fase di esecuzione.
+  - Il nome dell'elemento `\p{` *name* `}` di linguaggio, che rappresenta una categoria Unicode o un blocco denominato, non può includere spazi incorporati nella `\p{` parte dell'elemento. Se si include uno spazio vuoto, l'elemento genera un'eccezione <xref:System.ArgumentException> in fase di esecuzione.
 
 Abilitare questa opzione consente di semplificare espressioni regolari spesso difficili da analizzare e capire. Migliora la leggibilità e rende possibile documentare un'espressione regolare.
 
@@ -298,7 +298,7 @@ L'opzione <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayP
 [!code-csharp[Conceptual.Regex.Language.Options#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft1.cs#17)]
 [!code-vb[Conceptual.Regex.Language.Options#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft1.vb#17)]
 
-Si noti inoltre che `(?=`l'asserzione lookahead (l'elemento language *della sottoespressione)* `)` e l'asserzione lookbehind (l'elemento `(?<=`language della *sottoespressione)* `)` non modificano la direzione. Le asserzioni lookahead cercano a destra, mentre le asserzioni lookbehind cercano a sinistra. Ad esempio, l'espressione regolare `(?<=\d{1,2}\s)\w+,?\s\d{4}` usa l'asserzione lookbehind per testare una data che precede il nome di un mese. L'espressione regolare trova quindi la corrispondenza di mese e anno. Per informazioni sulle asserzioni lookahead e lookbehind, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+Si noti inoltre che l'asserzione lookahead (l' `(?=` elemento di linguaggio *sottoespressione* `)` ) e l'asserzione lookbehind (l' `(?<=` elemento di linguaggio *sottoespressione* `)` ) non cambiano direzione. Le asserzioni lookahead cercano a destra, mentre le asserzioni lookbehind cercano a sinistra. Ad esempio, l'espressione regolare `(?<=\d{1,2}\s)\w+,?\s\d{4}` usa l'asserzione lookbehind per testare una data che precede il nome di un mese. L'espressione regolare trova quindi la corrispondenza di mese e anno. Per informazioni sulle asserzioni lookahead e lookbehind, vedere [Costrutti di raggruppamento](grouping-constructs-in-regular-expressions.md).
 
 [!code-csharp[Conceptual.Regex.Language.Options#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft2.cs#18)]
 [!code-vb[Conceptual.Regex.Language.Options#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft2.vb#18)]
@@ -324,7 +324,7 @@ L'opzione <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayPr
 
 Il comportamento di ECMAScript e quello delle espressioni regolari canoniche differiscono in tre aspetti: sintassi delle classi di caratteri, gruppi di acquisizione autoreferenziali e interpretazione degli ottali rispetto a quella dei backreference.
 
-- Sintassi delle classi di caratteri. Poiché le espressioni regolari canoniche supportano Unicode a differenza di ECMAScript, le classi di caratteri in ECMAScript hanno una sintassi più limitata e alcuni elementi di linguaggio delle classi di caratteri hanno un significato diverso. Ad esempio, ECMAScript non supporta elementi di linguaggio come la categoria Unicode o gli elementi di blocco `\p` e `\P`. Analogamente, l'elemento `\w`, che trova la corrispondenza di un carattere alfanumerico è equivalente alla classe di caratteri `[a-zA-Z_0-9]` quando si usa ECMAScript e a `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` quando si usa il comportamento canonico. Per ulteriori informazioni, vedere [Classi di caratteri](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).
+- Sintassi delle classi di caratteri. Poiché le espressioni regolari canoniche supportano Unicode a differenza di ECMAScript, le classi di caratteri in ECMAScript hanno una sintassi più limitata e alcuni elementi di linguaggio delle classi di caratteri hanno un significato diverso. Ad esempio, ECMAScript non supporta elementi di linguaggio come la categoria Unicode o gli elementi di blocco `\p` e `\P`. Analogamente, l'elemento `\w`, che trova la corrispondenza di un carattere alfanumerico è equivalente alla classe di caratteri `[a-zA-Z_0-9]` quando si usa ECMAScript e a `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` quando si usa il comportamento canonico. Per altre informazioni, vedere [classi di caratteri](character-classes-in-regular-expressions.md).
 
   L'esempio seguente illustra le differenze tra i criteri di ricerca canonici ed ECMAScript. Definisce un'espressione regolare, `\b(\w+\s*)+`, che trova la corrispondenza di parole seguite da spazi vuoti. L'input è costituito da due stringhe, una che usa il set di caratteri latini e l'altra che usa il set di caratteri cirillici. Come mostra l'output, la chiamata al metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> che usa i criteri di ricerca ECMAScript non riesce a trovare la corrispondenza delle parole in cirillico, mentre la chiamata al metodo che usa i criteri di ricerca individua trova la corrispondenza.
 
@@ -363,7 +363,7 @@ Tuttavia, questo comportamento risulta inappropriato per alcuni tipi di confront
 [!code-vb[Conceptual.Regex.Language.Options#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#14)]
 
 > [!NOTE]
-> Per altre informazioni sui confronti di stringhe che supportano la distinzione tra maiuscole e minuscole e che usano la lingua inglese, vedere [Procedure consigliate per l'uso di stringhe](../../../docs/standard/base-types/best-practices-strings.md).
+> Per altre informazioni sui confronti di stringhe che supportano la distinzione tra maiuscole e minuscole e che usano la lingua inglese, vedere [Procedure consigliate per l'uso di stringhe](best-practices-strings.md).
 
 Invece di usare i confronti senza distinzione fra maiuscole e minuscole delle impostazioni cultura correnti, è possibile specificare l'opzione <xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant?displayProperty=nameWithType> per ignorare le differenze culturali di lingua e usare le convenzioni della lingua inglese.
 
@@ -377,4 +377,4 @@ L'esempio che segue è identico al precedente, tranne il fatto che il metodo sta
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguaggio di espressioni regolari - Riferimento rapido](regular-expression-language-quick-reference.md)

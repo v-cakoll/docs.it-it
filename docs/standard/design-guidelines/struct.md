@@ -11,21 +11,21 @@ helpviewer_keywords:
 - type design guidelines, structures
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
-ms.openlocfilehash: b6d06bc8a1e8535f1452af0726138abaebfd4951
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: c6ac53014e048da3a90dd7b8e961176f61e90355
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743608"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290811"
 ---
 # <a name="struct-design"></a>Progettazione di struct
-Il tipo di valore di utilizzo generico è spesso definito struct, la relativa C# parola chiave. Questa sezione fornisce linee guida per la progettazione di struct generali.
+Il tipo di valore generico è spesso definito struct, la relativa parola chiave C#. Questa sezione fornisce linee guida per la progettazione di struct generali.
 
- ❌ non forniscono un costruttore senza parametri per uno struct.
+ ❌Non fornire un costruttore senza parametri per uno struct.
 
- Seguendo questa guida, è possibile creare matrici di struct senza dover eseguire il costruttore in ogni elemento della matrice. Si noti C# che non consente agli struct di avere costruttori senza parametri.
+ Seguendo questa guida, è possibile creare matrici di struct senza dover eseguire il costruttore in ogni elemento della matrice. Si noti che C# non consente struct con costruttori senza parametri.
 
- ❌ non definiscono tipi di valore modificabili.
+ ❌NON definire tipi di valore modificabili.
 
  I tipi di valore modificabili presentano diversi problemi. Ad esempio, quando un getter di proprietà restituisce un tipo di valore, il chiamante riceve una copia. Poiché la copia viene creata in modo implicito, è possibile che gli sviluppatori non ritengano che stiano mutando la copia e non il valore originale. Inoltre, alcune lingue (linguaggi dinamici, in particolare) presentano problemi con i tipi di valore modificabili perché anche le variabili locali, quando vengono dereferenziate, causano la copia.
 
@@ -33,11 +33,11 @@ Il tipo di valore di utilizzo generico è spesso definito struct, la relativa C#
 
  Ciò impedisce la creazione accidentale di istanze non valide quando viene creata una matrice degli struct.
 
- ✔️ implementano <xref:System.IEquatable%601> sui tipi di valore.
+ ✔️ implementano i <xref:System.IEquatable%601> tipi di valore.
 
- Il <xref:System.Object.Equals%2A?displayProperty=nameWithType> metodo sui tipi valore causa la conversione boxing e la relativa implementazione predefinita non è molto efficiente, perché usa la reflection. <xref:System.IEquatable%601.Equals%2A> possono avere prestazioni molto migliori e possono essere implementate in modo che non provochino la conversione boxing.
+ Il <xref:System.Object.Equals%2A?displayProperty=nameWithType> metodo sui tipi valore causa la conversione boxing e la relativa implementazione predefinita non è molto efficiente perché usa la reflection. <xref:System.IEquatable%601.Equals%2A>può avere prestazioni molto migliori e può essere implementato in modo che non provochi la conversione boxing.
 
- ❌ non estendono esplicitamente <xref:System.ValueType>. In realtà, la maggior parte dei linguaggi impedisce questo problema.
+ ❌Non estendere in modo esplicito <xref:System.ValueType> . In realtà, la maggior parte dei linguaggi impedisce questo problema.
 
  In generale, gli struct possono essere molto utili, ma devono essere usati solo per valori piccoli, singoli e non modificabili che non verranno sottoposto a Boxing di frequente.
 
@@ -47,6 +47,6 @@ Il tipo di valore di utilizzo generico è spesso definito struct, la relativa C#
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la progettazione di tipi](../../../docs/standard/design-guidelines/type.md)
-- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
-- [Scelta tra classi e struct](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)
+- [Linee guida per la progettazione di tipi](type.md)
+- [Linee guida per la progettazione di Framework](index.md)
+- [Scelta tra classi e struct](choosing-between-class-and-struct.md)

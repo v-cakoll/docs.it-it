@@ -6,18 +6,18 @@ helpviewer_keywords:
 - observer design pattern [.NET Framework], best practices
 - best practices [.NET Framework], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-ms.openlocfilehash: 2da29e0baf429142707d0ddd39b1a11c13a17a90
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b4f8e568dcb6790dac1dc8fc5c969d6fa1367c4e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141534"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288459"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Procedure consigliate per un modello di progettazione observer
 In.NET Framework, il modello di progettazione osservatore è implementato come un insieme di interfacce. L'interfaccia <xref:System.IObservable%601?displayProperty=nameWithType> rappresenta il provider di dati, che è anche responsabile di fornire un'implementazione di <xref:System.IDisposable> che consenta agli osservatori di annullare la sottoscrizione di notifiche. L'interfaccia <xref:System.IObserver%601?displayProperty=nameWithType> rappresenta l'osservatore. In questo argomento vengono descritte le procedure consigliate che gli sviluppatori devono seguire per implementare il modello di progettazione osservatore usando queste interfacce.  
   
 ## <a name="threading"></a>Threading  
- In genere, un provider implementa il metodo <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> aggiungendo un osservatore specifico a un elenco di server di sottoscrizione, che è rappresentato da un oggetto di raccolta, e implementa il metodo <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> rimuovendo un osservatore specifico dall'elenco dei server di sottoscrizione. Un osservatore può chiamare questi metodi in qualsiasi momento. Inoltre, perché il contratto provider/osservatore non specifica chi è responsabile dell'annullamento della sottoscrizione dopo il metodo di callback <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, il provider e l'osservatore possono provare a rimuovere lo stesso membro dall'elenco. Grazie a questa possibilità, entrambi i metodi <xref:System.IObservable%601.Subscribe%2A> e <xref:System.IDisposable.Dispose%2A> dovrebbero essere thread-safe. In genere, ciò comporta l'uso di una [raccolta simultanea](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md) o di un blocco. Le implementazioni che non sono thread-safe devono documentare esplicitamente che non lo sono.  
+ In genere, un provider implementa il metodo <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> aggiungendo un osservatore specifico a un elenco di server di sottoscrizione, che è rappresentato da un oggetto di raccolta, e implementa il metodo <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> rimuovendo un osservatore specifico dall'elenco dei server di sottoscrizione. Un osservatore può chiamare questi metodi in qualsiasi momento. Inoltre, perché il contratto provider/osservatore non specifica chi è responsabile dell'annullamento della sottoscrizione dopo il metodo di callback <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, il provider e l'osservatore possono provare a rimuovere lo stesso membro dall'elenco. Grazie a questa possibilità, entrambi i metodi <xref:System.IObservable%601.Subscribe%2A> e <xref:System.IDisposable.Dispose%2A> dovrebbero essere thread-safe. In genere, ciò comporta l'uso di una [raccolta simultanea](../parallel-programming/data-structures-for-parallel-programming.md) o di un blocco. Le implementazioni che non sono thread-safe devono documentare esplicitamente che non lo sono.  
   
  Tutte le garanzie aggiuntive devono essere specificate in un livello all'inizio del contratto provider/osservatore. Gli implementatori devono indicare chiaramente quando impongono requisiti aggiuntivi per evitare confusione sul contratto di osservatore.  
   
@@ -53,6 +53,6 @@ In.NET Framework, il modello di progettazione osservatore è implementato come u
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modello di progettazione observer](../../../docs/standard/events/observer-design-pattern.md)
-- [Procedura: Implementare un elemento Observer](../../../docs/standard/events/how-to-implement-an-observer.md)
-- [Procedura: Implementare un provider](../../../docs/standard/events/how-to-implement-a-provider.md)
+- [Modello di progettazione Observer](observer-design-pattern.md)
+- [Procedura: implementare un Observer](how-to-implement-an-observer.md)
+- [Procedura: implementare un provider](how-to-implement-a-provider.md)

@@ -3,12 +3,12 @@ title: Regole per l'inferenza di tipi semplici
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: 17429e77f7764873e607a8feaa62da1cc6e014a4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 571019d13433312a5d31f581c3527aae901bbba7
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710232"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289070"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regole per l'inferenza di tipi semplici
 Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> inferisce il tipo di dati per attributi ed elementi.  
@@ -22,7 +22,7 @@ Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> infer
   
  Nella tabella seguente sono elencati i tipi che possono essere inferiti per lo schema risultante.  
   
-|Tipo semplice|Description|  
+|Tipo semplice|Descrizione|  
 |-----------------|-----------------|  
 |boolean|True, false, 0, 1.|  
 |byte|Numeri interi nell'intervallo compreso tra -128 e 127.|  
@@ -42,7 +42,7 @@ Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> infer
 |time|Formato di ora W3C.|  
 |Data|I valori relativi agli anni sono compresi tra 0001 e 9999.|  
 |gYearMonth|Formato dell'anno e del mese gregoriano W3C.|  
-|stringa|Uno o più caratteri Unicode.|  
+|string|Uno o più caratteri Unicode.|  
   
 ## <a name="type-promotion"></a>Promozione tipo  
  La classe <xref:System.Xml.Schema.XmlSchemaInference> esamina i valori di attributi ed elementi singolarmente. Quando i valori vengono rilevati, viene inferito il tipo più restrittivo e senza segno. Se è stato inferito un tipo per un attributo o elemento ed è stato rilevato un nuovo valore che non corrisponde al tipo inferito, quest'ultimo viene promosso a un nuovo tipo applicabile sia al tipo inferito che al nuovo valore. Durante la promozione del tipo inferito, la classe <xref:System.Xml.Schema.XmlSchemaInference> valuta i valori precedenti.  
@@ -67,15 +67,15 @@ Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> infer
 
 Di seguito sono riportati gli attributi di definizione dello schema che vengono ignorati durante l'inferenza dello schema.  
   
-|Attributo|Description|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |`xsi:type`|Se viene rilevato un elemento con `xsi:type` specificato, l'attributo `xsi:type` viene ignorato.|  
 |`xsi:nil`|Se viene rilevato un elemento con un attributo `xsi:nil`, la dichiarazione dell'elemento nello schema inferito presenta il valore `nillable="true"`. Un elemento con un attributo `xsi:nil` impostato su `true` non può contenere elementi figlio.|  
 |`xsi:schemaLocation`|Se rilevato, l'attributo `xsi:schemaLocation` viene ignorato.|  
 |`xsi:noNamespaceSchemaLocation`|Se rilevato, l'attributo `xsi:noNamespaceSchemaLocation` viene ignorato.|  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
-- [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
-- [Regole per l'inferenza dello schema per tipi di nodo e struttura](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+- [SOM (Schema Object Model) XML](xml-schema-object-model-som.md)
+- [Inferenza degli schemi da documenti XML](inferring-schemas-from-xml-documents.md)
+- [Regole per l'inferenza dello schema per tipi di nodo e struttura](rules-for-inferring-schema-node-types-and-structure.md)

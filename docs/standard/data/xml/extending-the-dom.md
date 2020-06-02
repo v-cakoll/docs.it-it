@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-ms.openlocfilehash: 11c7e8c8d2ea3b49fe73ab4dde4e2ccc8bc917ff
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 4a1a7af0e841601542a30c7bd3f71395faa6cb57
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159676"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287792"
 ---
 # <a name="extending-the-dom"></a>Estensione del DOM
 
@@ -244,12 +244,12 @@ Nell'implementazione del DOM da parte di .NET Framework è compreso anche un sis
 
 Il processo di gestione degli eventi nelle classi derivate è identico a quello nelle classi originali del DOM.
 
-Per altre informazioni sulla gestione degli eventi del nodo, vedere [Eventi](../../../../docs/standard/events/index.md) e <xref:System.Xml.XmlNodeChangedEventHandler>.
+Per altre informazioni sulla gestione degli eventi del nodo, vedere [Eventi](../../events/index.md) e <xref:System.Xml.XmlNodeChangedEventHandler>.
 
 ## <a name="default-attributes-and-the-createelement-method"></a>Attributi predefiniti e metodo CreateElement
 
 Se si esegue l'override del metodo <xref:System.Xml.XmlDocument.CreateElement%2A> in una classe derivata, gli attributi predefiniti non vengono aggiunti alla creazione di nuovi elementi durante la modifica del documento. Questo problema si verifica solo durante la modifica. Poiché il metodo <xref:System.Xml.XmlDocument.CreateElement%2A> è responsabile dell'aggiunta di attributi predefiniti a un <xref:System.Xml.XmlDocument>, è necessario codificare questa funzionalità nel metodo <xref:System.Xml.XmlDocument.CreateElement%2A>. Se si carica un <xref:System.Xml.XmlDocument> in cui sono compresi attributi predefiniti, questi verranno gestiti correttamente. Per altre informazioni sugli attributi predefiniti, vedere [Creazione di nuovi attributi per gli elementi nel DOM](creating-new-attributes-for-elements-in-the-dom.md).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [XML DOM (Document Object Model)](xml-document-object-model-dom.md)

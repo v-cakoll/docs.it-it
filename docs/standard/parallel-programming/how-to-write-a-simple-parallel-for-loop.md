@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: scrivere un ciclo Parallel.For semplice'
+title: 'Procedura: Scrivere un ciclo Parallel.For semplice'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-ms.openlocfilehash: 78f07a4f0118c6bce7a043f111988281ddd6add0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b18e110b86389dd5d28bbc370e207aaaf7571aaf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139662"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290733"
 ---
-# <a name="how-to-write-a-simple-parallelfor-loop"></a>Procedura: scrivere un ciclo Parallel.For semplice
+# <a name="how-to-write-a-simple-parallelfor-loop"></a>Procedura: Scrivere un ciclo Parallel.For semplice
 
 Questo argomento contiene due esempi che mostrano il metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Il primo usa l'overload del metodo <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType>, mentre il secondo usa l'overload <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>, ovvero i due overload più semplici del metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. È possibile usare questi due overload del metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> quando non è necessario annullare il ciclo, interrompere le iterazioni del ciclo o mantenere qualsiasi stato locale dei thread.
 
 > [!NOTE]
-> Questa documentazione usa espressioni lambda per definire delegati in TPL. Se non si ha familiarità con le espressioni lambda in Visual Basic o in Visual Basic, vedere [Espressioni lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
+> Questa documentazione usa espressioni lambda per definire delegati in TPL. Se non si ha familiarità con le espressioni lambda in C# o Visual Basic, vedere [espressioni lambda in PLINQ e TPL](lambda-expressions-in-plinq-and-tpl.md).
 
 Il primo esempio calcola le dimensioni dei file in una singola directory. Il secondo calcola il prodotto di due matrici.
 
@@ -44,7 +44,7 @@ Quando si parallelizza qualsiasi codice, inclusi i cicli, un obiettivo important
 
 ## <a name="the-delegate"></a>Delegato
 
-Il terzo parametro di questo overload di <xref:System.Threading.Tasks.Parallel.For%2A> è un delegato di tipo `Action<int>` in C# o `Action(Of Integer)` in Visual Basic. Un delegato `Action`, che abbia nessuno, uno o sedici parametri di tipo, restituisce sempre void. In Visual Basic il comportamento di un delegato `Action` viene definito con un oggetto `Sub`. L'esempio usa un'espressione lambda per creare il delegato, ma è possibile creare il delegato anche in altri modi. Per altre informazioni, vedere [Espressioni lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
+Il terzo parametro di questo overload di <xref:System.Threading.Tasks.Parallel.For%2A> è un delegato di tipo `Action<int>` in C# o `Action(Of Integer)` in Visual Basic. Un delegato `Action`, che abbia nessuno, uno o sedici parametri di tipo, restituisce sempre void. In Visual Basic il comportamento di un delegato `Action` viene definito con un oggetto `Sub`. L'esempio usa un'espressione lambda per creare il delegato, ma è possibile creare il delegato anche in altri modi. Per altre informazioni, vedere [Espressioni lambda in PLINQ e TPL](lambda-expressions-in-plinq-and-tpl.md).
 
 ## <a name="the-iteration-value"></a>Valore di iterazione
 
@@ -72,5 +72,5 @@ Copiare e incollare questo codice in un progetto di Visual Studio.
 
 - <xref:System.Threading.Tasks.Parallel.For%2A>
 - <xref:System.Threading.Tasks.Parallel.ForEach%2A>
-- [Parallelismo dei dati](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)
+- [Parallelismo dei dati](data-parallelism-task-parallel-library.md)
+- [Programmazione parallela](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-ms.openlocfilehash: a4f4c0e1af379d31c5b478472780d5c7de813bf6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5327bd70b05bac8970fa9802fb15e94ba5f686c8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121943"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290058"
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadati e componenti auto-descrittivi
 
@@ -64,11 +64,11 @@ I metadati costituiscono la chiave di un modello di programmazione più semplice
 
 - Attributi.
 
-  .NET Framework consente di dichiarare tipi specifici di metadati, detti attributi, nel proprio file compilato. Gli attributi sono disponibili nell'intero contesto di .NET Framework e vengono utilizzati per controllare in maggior dettaglio come si comporta il proprio programma in fase di esecuzione. È inoltre possibile inserire i propri metadati personalizzati nei file di .NET Framework tramite attributi personalizzati definiti dall'utente. Per altre informazioni, vedere [Attributi](../../docs/standard/attributes/index.md).
+  .NET Framework consente di dichiarare tipi specifici di metadati, detti attributi, nel proprio file compilato. Gli attributi sono disponibili nell'intero contesto di .NET Framework e vengono utilizzati per controllare in maggior dettaglio come si comporta il proprio programma in fase di esecuzione. È inoltre possibile inserire i propri metadati personalizzati nei file di .NET Framework tramite attributi personalizzati definiti dall'utente. Per altre informazioni, vedere [Attributi](attributes/index.md).
 
 ## <a name="metadata-and-the-pe-file-structure"></a>I metadati e la struttura dei file PE
 
-I metadati vengono memorizzati in una sezione di un file eseguibile portabile (PE, Portable Executable) .NET Framework, mentre il codice Microsoft Intermediate Language (MSIL) viene memorizzato in una diversa sezione dello stesso file. La parte del file che ospita i metadati contiene una serie di tabelle e di strutture di dati dell'heap. La parte MSIL contiene codice MSIL e token di metadati che fanno riferimento alla parte del file PE che ospita i metadati. I token dei metadati vengono usati, ad esempio, con strumenti come il [disassemblatore MSIL (Ildasm.exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md), che consente di visualizzare il proprio codice MSIL.
+I metadati vengono memorizzati in una sezione di un file eseguibile portabile (PE, Portable Executable) .NET Framework, mentre il codice Microsoft Intermediate Language (MSIL) viene memorizzato in una diversa sezione dello stesso file. La parte del file che ospita i metadati contiene una serie di tabelle e di strutture di dati dell'heap. La parte MSIL contiene codice MSIL e token di metadati che fanno riferimento alla parte del file PE che ospita i metadati. I token dei metadati vengono usati, ad esempio, con strumenti come il [disassemblatore MSIL (Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md), che consente di visualizzare il proprio codice MSIL.
 
 ### <a name="metadata-tables-and-heaps"></a>Tabelle e heap dei metadati
 
@@ -134,7 +134,7 @@ public class MyApp
 
 Durante l'esecuzione del codice, il runtime carica il modulo in memoria e cerca questa classe nei metadati. Dopo il caricamento, il runtime compie un'analisi approfondita del flusso Microsoft Intermediate Language (MSIL) del metodo per convertirlo in veloci istruzioni macchina native. Il runtime consente di usare un compilatore JIT (Just-In-Time) per convertire le istruzioni MSIL in codice macchina nativo, procedendo un metodo alla volta, in base alle necessità.
 
-Nell'esempio che segue viene illustrata parte del codice MSIL prodotto dalla funzione `Main` del codice precedente. È possibile vedere il codice MSIL e i metadati di qualsiasi applicazione .NET Framework usando il [disassemblatore MSIL (Ildasm.exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md).
+Nell'esempio che segue viene illustrata parte del codice MSIL prodotto dalla funzione `Main` del codice precedente. È possibile vedere il codice MSIL e i metadati di qualsiasi applicazione .NET Framework usando il [disassemblatore MSIL (Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md).
 
 ```console
 .entrypoint
@@ -159,9 +159,9 @@ Nella tabella che segue viene illustrata la parte di **MethodDef** a cui fa rife
 
 |Riga|RVA (Relative Virtual Address)|ImplFlags|Flags|Nome<br /><br /> (punta all'heap delle stringhe)|Firma (punta all'heap dei blob)|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
-|1|0x00002050|IL<br /><br /> Gestito|Pubblico<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (costruttore)||
-|2|0x00002058|IL<br /><br /> Gestito|Pubblico<br /><br /> Statico<br /><br /> ReuseSlot|Principale|string|
-|3|0x0000208c|IL<br /><br /> Gestito|Pubblico<br /><br /> Statico<br /><br /> ReuseSlot|Add|int, int, int|
+|1|0x00002050|IL<br /><br /> Gestiti|Pubblico<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (costruttore)||
+|2|0x00002058|IL<br /><br /> Gestiti|Pubblico<br /><br /> Statico<br /><br /> ReuseSlot|Principale|string|
+|3|0x0000208c|IL<br /><br /> Gestiti|Pubblico<br /><br /> Statico<br /><br /> ReuseSlot|Aggiunta|int, int, int|
 
 Ogni colonna della tabella contiene importanti informazioni sul codice. La colonna **RVA** consente al runtime di calcolare l'indirizzo di memoria iniziale del codice MSIL che definisce questo metodo. Le colonne **ImplFlags** e **Flags** contengono maschere di bit che descrivono il metodo, indicando ad esempio se il metodo è pubblico o privato. La colonna **Name** indicizza il nome del metodo nell'heap delle stringhe. La colonna **Signature** indicizza la definizione della firma del metodo nell'heap dei blob.
 
@@ -173,4 +173,4 @@ Grazie ai metadati, il runtime ha accesso a tutte le informazioni necessarie per
 
 |Titolo|Descrizione|
 |-----------|-----------------|
-|[Attributi](../../docs/standard/attributes/index.md)|Viene descritto come applicare attributi, scrivere attributi personalizzati e recuperare le informazioni archiviate negli attributi.|
+|[Attributi](attributes/index.md)|Viene descritto come applicare attributi, scrivere attributi personalizzati e recuperare le informazioni archiviate negli attributi.|

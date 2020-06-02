@@ -1,16 +1,16 @@
 ---
-title: Come utilizzare le funzionalità della documentazione XML - Guida alla programmazione in C
+title: Come usare le funzionalità della documentazione XML-guida per programmatori C#
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: e279b13d9216120e25f454faa14dc71ad24c74ef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7c5a8a895271f067505496c0d13f98b66a393d9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157000"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287363"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>Come usare le funzionalità relative alla documentazione XML
 
@@ -20,7 +20,7 @@ L'esempio seguente fornisce una panoramica di base di un tipo documentato.
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-Nell'esempio viene generato un file *XML* con il contenuto seguente.
+Nell'esempio viene generato un file con estensione *XML* con il contenuto seguente.
 
 ```xml
 <?xml version="1.0"?>
@@ -108,33 +108,33 @@ Nell'esempio viene generato un file *XML* con il contenuto seguente.
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
-Per compilare l'esempio, digitare la riga di comando seguente:
+Per compilare l'esempio, immettere il comando seguente:
 
 `csc XMLsample.cs /doc:XMLsample.xml`
 
-Tramite il comando verrà creato il file XML *XMLsample.xml*, che è possibile visualizzare nel browser o tramite il comando TYPE.
+Questo comando crea il file XML *XMLsample. XML*, che è possibile visualizzare nel browser o tramite il `TYPE` comando.
 
 ## <a name="robust-programming"></a>Programmazione efficiente
 
-La documentazione XML inizia con ///. Quando si crea un nuovo progetto, le procedure guidate inseriscono alcune linee /// iniziali. L'elaborazione di questi commenti presenta alcune restrizioni:
+La documentazione XML inizia con `///` . Quando si crea un nuovo progetto, le procedure guidate inseriscono alcune `///` righe iniziali. L'elaborazione di questi commenti presenta alcune restrizioni:
 
 - La documentazione deve essere in codice XML ben formato. Se il codice XML non è ben formato, viene generato un avviso e il file di documentazione conterrà un commento che segnalerà che si è verificato un errore.
 
-- Gli sviluppatori sono liberi di creare set di tag personalizzati. È disponibile un [set consigliato di tag](recommended-tags-for-documentation-comments.md). Alcuni tag consigliati hanno un significato speciale:
+- Gli sviluppatori sono liberi di creare set di tag personalizzati. È disponibile un [set di tag consigliato](recommended-tags-for-documentation-comments.md). Alcuni tag consigliati hanno un significato speciale:
 
-  - Il tag \< viene usato per descrivere i parametri. Se usato, il compilatore verifica che il parametro esista e che tutti i parametri siano descritti nella documentazione. Se la verifica ha esito negativo, il compilatore genera un avviso.
+  - Il `<param>` tag viene usato per descrivere i parametri. Se usato, il compilatore verifica che il parametro esista e che tutti i parametri siano descritti nella documentazione. Se la verifica ha esito negativo, il compilatore genera un avviso.
 
-  - L'attributo `cref` può essere associato a qualsiasi tag per fornire un riferimento a un elemento del codice. Il compilatore verifica l'esistenza di questo elemento. Se la verifica ha esito negativo, il compilatore genera un avviso. Il compilatore rispetta eventuali istruzioni `using` quando esegue la ricerca di un tipo descritto nell'attributo `cref`.
+  - L' `cref` attributo può essere allegato a qualsiasi tag per fare riferimento a un elemento di codice. Il compilatore verifica l'esistenza di questo elemento. Se la verifica ha esito negativo, il compilatore genera un avviso. Il compilatore rispetta eventuali istruzioni `using` quando esegue la ricerca di un tipo descritto nell'attributo `cref`.
 
-  - Il tag \< è usato da IntelliSense all'interno di Visual Studio per visualizzare altre informazioni su un tipo o su un membro.
+  - Il `<summary>` tag viene usato da IntelliSense all'interno di Visual Studio per visualizzare informazioni aggiuntive su un tipo o un membro.
 
     > [!NOTE]
-    > Il file XML non fornisce informazioni complete sul tipo e sui membri, ad esempio, non contiene alcuna informazione sul tipo. Per ottenere informazioni complete su un tipo o su un membro, è necessario usare il file di documentazione con reflection sul tipo o sul membro effettivo.
+    > Il file XML non fornisce informazioni complete sul tipo e sui membri, ad esempio, non contiene alcuna informazione sul tipo. Per ottenere informazioni complete su un tipo o un membro, usare il file di documentazione insieme alla reflection sul tipo o sul membro effettivo.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida alla programmazione in C](../index.md)
-- [-doc (opzioni del compilatore C](../../language-reference/compiler-options/doc-compiler-option.md)
+- [Guida per programmatori C#](../index.md)
+- [-DOC (opzioni del compilatore C#)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [Commenti relativi alla documentazione XML](./index.md)
-- [Processore di documentazione DocFX](https://dotnet.github.io/docfx/)
+- [Processore della documentazione di DocFX](https://dotnet.github.io/docfx/)
 - [Processore di documentazione Sandcastle](https://github.com/EWSoftware/SHFB)

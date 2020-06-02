@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 46a266849f137076170287aeb10becedf83ccf78
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3cfe66f188c5abf245370f841d4b4d31e7b6db8b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160222"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290071"
 ---
 # <a name="managed-execution-process"></a>processo di esecuzione gestita
 <a name="introduction"></a> Il processo di esecuzione gestita include i passaggi seguenti, descritti in modo dettagliato più avanti in questo argomento:  
@@ -28,7 +28,7 @@ ms.locfileid: "78160222"
   
      La compilazione converte il codice sorgente in codice MSIL (Microsoft Intermediate Language) e genera i metadati necessari.  
   
-3. [Compilazione di MSIL in codice nativo](#compiling_msil_to_native_code).  
+3. [Compilazione del codice MSIL in codice nativo](#compiling_msil_to_native_code).  
   
      In fase di esecuzione, un compilatore JIT converte il codice MSIL in codice nativo. Durante questa compilazione, il codice deve superare un processo di verifica che esamina il codice MSIL e i metadati per determinare se può essere considerato indipendente dai tipi.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "78160222"
 ## <a name="choosing-a-compiler"></a>Scelta di un compilatore  
  Per sfruttare i vantaggi offerti da Common Language Runtime (CLR), è necessario usare uno o più compilatori di linguaggio destinati al runtime, come Visual Basic, C#, Visual C++, F# o uno dei molti compilatori di terze parti come Eiffel, Perl o COBOL.  
   
- Poiché si tratta di un ambiente di esecuzione multilinguaggio, il runtime supporta un'ampia gamma di tipi di dati e funzionalità per i linguaggi. Il compilatore di linguaggio usato determina le funzionalità di runtime disponibili, che verranno usate per progettare il codice. È il compilatore, non Common Language Runtime, a determinare la sintassi che deve essere utilizzata dal codice. Per essere completamente utilizzabile dai componenti scritti in altri linguaggi, il componente deve avere tipi esportati che espongono solo le funzionalità per i linguaggi incluse in [Language Independence and Language-Independent Components](../../docs/standard/language-independence-and-language-independent-components.md) (CLS). È possibile usare l'attributo <xref:System.CLSCompliantAttribute> per garantire che il codice sia conforme a CLS. Per altre informazioni, vedere [Language Independence and Language-Independent Components](../../docs/standard/language-independence-and-language-independent-components.md).  
+ Poiché si tratta di un ambiente di esecuzione multilinguaggio, il runtime supporta un'ampia gamma di tipi di dati e funzionalità per i linguaggi. Il compilatore di linguaggio usato determina le funzionalità di runtime disponibili, che verranno usate per progettare il codice. È il compilatore, non Common Language Runtime, a determinare la sintassi che deve essere utilizzata dal codice. Per essere completamente utilizzabile dai componenti scritti in altri linguaggi, il componente deve avere tipi esportati che espongono solo le funzionalità per i linguaggi incluse in [Language Independence and Language-Independent Components](language-independence-and-language-independent-components.md) (CLS). È possibile usare l'attributo <xref:System.CLSCompliantAttribute> per garantire che il codice sia conforme a CLS. Per altre informazioni, vedere [Language Independence and Language-Independent Components](language-independence-and-language-independent-components.md).  
   
  [Torna all'inizio](#introduction)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "78160222"
   
 - A .NET Framework just-in-time (JIT) compiler.  
   
-- [Generatore di immagini native (Ngen.exe)](../../docs/framework/tools/ngen-exe-native-image-generator.md) di .NET Framework.  
+- [Generatore di immagini native (Ngen.exe)](../framework/tools/ngen-exe-native-image-generator.md) di .NET Framework.  
   
 ### <a name="compilation-by-the-jit-compiler"></a>Compilazione tramite il compilatore JIT  
  La compilazione JIT converte il codice MSIL in codice nativo su richiesta in fase di esecuzione dell'applicazione, durante il caricamento e l'esecuzione del contenuto di un assembly. Poiché Common Language Runtime fornisce un compilatore JIT per ogni architettura CPU supportata, gli sviluppatori possono compilare un set di assembly MSIL da compilare tramite JIT ed eseguire su più computer con diverse architetture di computer. Tuttavia, se il codice gestito chiama API native specifiche della piattaforma o una libreria di classi specifica della piattaforma, viene eseguito solo su tale sistema operativo.  
@@ -66,7 +66,7 @@ ms.locfileid: "78160222"
  La compilazione JIT tiene conto della possibilità che parte del codice non venga mai chiamata durante l'esecuzione. Invece di usare tempo e memoria per convertire tutto il codice MSIL in un file PE in codice nativo, la compilazione converte solo quello necessario durante l'esecuzione e archivia il codice nativo risultante in memoria, perché sia accessibile per le chiamate successive nel contesto del processo. Il caricatore crea e collega uno stub a ogni metodo in un tipo durante il caricamento e l'inizializzazione del tipo. Quando un metodo viene chiamato per la prima volta, lo stub passa il controllo al compilatore JIT, che converte in codice nativo il codice MSIL per il metodo e modifica lo stub in modo da puntare direttamente al codice nativo generato. Di conseguenza, le successive chiamate del metodo compilato tramite JIT passano direttamente al codice nativo.  
   
 ### <a name="install-time-code-generation-using-ngenexe"></a>Generazione di codice in fase di installazione mediante NGen.exe  
- Poiché il compilatore JIT converte il codice MSIL di un assembly in codice nativo quando vengono chiamati singoli metodi definiti nell'assembly, influisce negativamente sulle prestazioni in fase di esecuzione. Nella maggior parte dei casi, queste prestazioni inferiori sono comunque accettabili. Un aspetto ancora più importante è che il codice generato dal compilatore JIT è associato al processo che ha attivato la compilazione e non può essere condiviso tra più processi. Per permettere la condivisione del codice generato tra più chiamate di un'applicazione o tra più processi che condividono un set di assembly, Common Language Runtime supporta una modalità di compilazione anticipata. Questa modalità di compilazione usa il [generatore di immagini native (Ngen.exe)](../../docs/framework/tools/ngen-exe-native-image-generator.md) per convertire assembly MSIL in codice nativo in modo molto simile al compilatore JIT. Tuttavia, il funzionamento di Ngen.exe differisce da quello del compilatore JIT per tre aspetti:  
+ Poiché il compilatore JIT converte il codice MSIL di un assembly in codice nativo quando vengono chiamati singoli metodi definiti nell'assembly, influisce negativamente sulle prestazioni in fase di esecuzione. Nella maggior parte dei casi, queste prestazioni inferiori sono comunque accettabili. Un aspetto ancora più importante è che il codice generato dal compilatore JIT è associato al processo che ha attivato la compilazione e non può essere condiviso tra più processi. Per permettere la condivisione del codice generato tra più chiamate di un'applicazione o tra più processi che condividono un set di assembly, Common Language Runtime supporta una modalità di compilazione anticipata. Questa modalità di compilazione usa il [generatore di immagini native (Ngen.exe)](../framework/tools/ngen-exe-native-image-generator.md) per convertire assembly MSIL in codice nativo in modo molto simile al compilatore JIT. Tuttavia, il funzionamento di Ngen.exe differisce da quello del compilatore JIT per tre aspetti:  
   
 - Esegue la conversione da codice MSIL a codice nativo prima di eseguire l'applicazione invece che durante l'esecuzione dell'applicazione.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "78160222"
   
  Durante l'esecuzione, il codice gestito riceve servizi come Garbage Collection, sicurezza, interoperabilità con codice non gestito, supporto per il debug tra linguaggi e supporto migliorato per distribuzione e controllo delle versioni.  
   
- In Microsoft Windows Vista, il caricatore del sistema operativo controlla i moduli gestiti esaminando un po' nell'intestazione COFF. Il bit impostato denota un modulo gestito. Se il caricatore rileva moduli gestiti, carica mscoree.dll e `_CorValidateImage` e `_CorImageUnloading` notificano al caricatore l'avvenuto caricamento o scaricamento delle immagini dei moduli gestiti. `_CorValidateImage` esegue le azioni seguenti:  
+ In Microsoft Windows Vista, il caricatore del sistema operativo controlla la presenza di moduli gestiti esaminando un bit nell'intestazione COFF. Il bit impostato denota un modulo gestito. Se il caricatore rileva moduli gestiti, carica mscoree.dll e `_CorValidateImage` e `_CorImageUnloading` notificano al caricatore l'avvenuto caricamento o scaricamento delle immagini dei moduli gestiti. `_CorValidateImage` esegue le azioni seguenti:  
   
 1. Assicura che il codice sia codice gestito valido.  
   
@@ -107,12 +107,12 @@ ms.locfileid: "78160222"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica](../../docs/framework/get-started/overview.md)
-- [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../docs/standard/language-independence-and-language-independent-components.md)
-- [Metadati e componenti auto-descrittivi](../../docs/standard/metadata-and-self-describing-components.md)
-- [Ilasm.exe (Assembler IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [Sicurezza](../../docs/standard/security/index.md)
-- [Interoperabilità con codice non gestito](../../docs/framework/interop/index.md)
-- [Distribuzione](../../docs/framework/deployment/net-framework-applications.md)
+- [Panoramica](../framework/get-started/overview.md)
+- [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](language-independence-and-language-independent-components.md)
+- [Metadati e componenti auto-descrittivi](metadata-and-self-describing-components.md)
+- [Ilasm. exe (assembler IL)](../framework/tools/ilasm-exe-il-assembler.md)
+- [Sicurezza](security/index.md)
+- [Interoperabilità con codice non gestito](../framework/interop/index.md)
+- [Distribuzione](../framework/deployment/net-framework-applications.md)
 - [Assembly in .NET](assembly/index.md)
-- [Domini applicazione](../../docs/framework/app-domains/application-domains.md)
+- [Domini applicazione](../framework/app-domains/application-domains.md)

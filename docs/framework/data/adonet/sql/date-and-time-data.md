@@ -1,16 +1,17 @@
 ---
 title: Dati relativi a data e ora
+description: Informazioni sui tipi di dati per la gestione delle informazioni di data e ora nel provider di dati .NET Framework per SQL Server.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: d7a016b8911cee3091dec24bc26d1f1965f54749
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9345e995dcb1179e7d0a86f62737f9fda5889f42
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148764"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286494"
 ---
 # <a name="date-and-time-data"></a>Dati relativi a data e ora
 SQL Server 2008 introduce nuovi tipi di dati per la gestione delle informazioni relative a data e ora. I nuovi tipi di dati includono tipi distinti per data e ora e tipi di dati espansi ottimizzati in termini di intervallo, precisione e riconoscimento del fuso orario. A partire da .NET Framework versione 3.5 Service Pack 1 (SP1), il provider di dati .NET Framework per SQL Server (<xref:System.Data.SqlClient>) fornisce supporto completo per tutte le nuove funzionalità del Motore di database di SQL Server 2008. Per usare queste nuove funzionalità con SqlClient, è necessario installare .NET Framework 3.5 SP1 (o versione successiva).  
@@ -41,12 +42,12 @@ SQL Server 2008 introduce nuovi tipi di dati per la gestione delle informazioni 
   
  L'istruzione Transact-SQL SET LANGUAGE imposta in modo implicito l'oggetto DATEFORMAT che determina l'ordine delle parti della data. È possibile usare l'istruzione Transact-SQL SET DATEFORMAT per una connessione per distinguere i valori di data ordinando le parti della data nell'ordine MDY, DMY, YMD, MYD o DYM.  
   
- Se non si specifica alcun oggetto DATEFORMAT per la connessione, SQL Server usa la lingua predefinita associata alla connessione. Ad esempio, una stringa di data "01/02/03" viene interpretata come MDY (2 gennaio 2003) su un server con impostazione della lingua Inglese (Stati Uniti) e come DMY (1 febbraio 2003) su un server con impostazione della lingua Inglese (Regno Unito). L'anno viene determinato usando la regola dell'anno di cambio data di SQL Server, che definisce la data limite per l'assegnazione del valore di secolo. Per ulteriori informazioni, vedere [Opzione di taglio dell'anno a due cifre .](/sql/database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option)  
+ Se non si specifica alcun oggetto DATEFORMAT per la connessione, SQL Server usa la lingua predefinita associata alla connessione. Ad esempio, una stringa di data "01/02/03" viene interpretata come MDY (2 gennaio 2003) su un server con impostazione della lingua Inglese (Stati Uniti) e come DMY (1 febbraio 2003) su un server con impostazione della lingua Inglese (Regno Unito). L'anno viene determinato usando la regola dell'anno di cambio data di SQL Server, che definisce la data limite per l'assegnazione del valore di secolo. Per altre informazioni, vedere [opzione two digit year cutoff](/sql/database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option).  
   
 > [!NOTE]
 > Il formato di data YDM non è supportato quando si esegue la conversione da un formato stringa a `date`, `time`, `datetime2` o `datetimeoffset`.  
   
- Per ulteriori informazioni sul modo in cui SQL Server interpreta i dati di data e ora, vedere [Utilizzo di dati di data e ora](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100)).  
+ Per ulteriori informazioni sul modo in cui SQL Server interpreta i dati di data e ora, vedere [utilizzo di dati di data e ora](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100)).  
   
 ## <a name="datetime-data-types-and-parameters"></a>Tipi di dati e parametri relativi a data e ora  
  Le enumerazioni riportate di seguito sono state aggiunte a <xref:System.Data.SqlDbType> per supportare i nuovi tipi di dati relativi a data e ora.  
@@ -77,7 +78,7 @@ SQL Server 2008 introduce nuovi tipi di dati per la gestione delle informazioni 
 |Tipo di dati di SQL Server|Tipo .NET Framework|System.Data.SqlDbType|System.Data.DbType|  
 |--------------------------|-------------------------|---------------------------|------------------------|  
 |Data|System.DateTime|Data|Data|  
-|time|System.TimeSpan|Tempo|Tempo|  
+|time|System.TimeSpan|Ora|Ora|  
 |datetime2|System.DateTime|DateTime2|DateTime2|  
 |datetimeoffset|System.DateTimeOffset|DateTimeOffset|DateTimeOffset|  
 |Datetime|System.DateTime|Datetime|Datetime|  
@@ -88,7 +89,7 @@ SQL Server 2008 introduce nuovi tipi di dati per la gestione delle informazioni 
   
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Ottiene o imposta un valore che indica se il valore ammette i valori Null. Quando si invia un valore di parametro Null al server, è necessario specificare <xref:System.DBNull> anziché `null` (`Nothing` in Visual Basic). Per ulteriori informazioni sui valori null del database, vedere [Gestione di valori Null](handling-null-values.md).|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Ottiene o imposta un valore che indica se il valore ammette i valori Null. Quando si invia un valore di parametro Null al server, è necessario specificare <xref:System.DBNull> anziché `null` (`Nothing` in Visual Basic). Per ulteriori informazioni sui valori null di database, vedere [gestione di valori null](handling-null-values.md).|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|Ottiene o imposta il numero massimo di cifre usate per rappresentare il valore. Questa impostazione viene ignorata per i tipi di dati relativi a data e ora.|  
 |<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|Ottiene o imposta il numero di posizioni decimali in cui viene risolta la parte del valore relativa all'ora per `Time`, `DateTime2` e `DateTimeOffset`. Il valore predefinito è 0, che indica che la scala effettiva viene dedotta dal valore e inviata al server.|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Viene ignorata per i tipi di dati per data e ora.|  
@@ -101,7 +102,7 @@ SQL Server 2008 introduce nuovi tipi di dati per la gestione delle informazioni 
 ### <a name="creating-parameters"></a>Creazione di parametri  
  È possibile creare un oggetto <xref:System.Data.SqlClient.SqlParameter> usando il relativo costruttore o aggiungendolo a una raccolta <xref:System.Data.SqlClient.SqlCommand> di <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> chiamando il metodo `Add` di <xref:System.Data.SqlClient.SqlParameterCollection>. Il metodo `Add` accetterà come input gli argomenti del costruttore o un oggetto parametro esistente.  
   
- Le sezioni successive di questo argomento contengono esempi che illustrano come specificare i parametri di data e ora. Per ulteriori esempi di utilizzo dei parametri, vedere Configurazione dei parametri e Tipi di [dati dei parametri](../configuring-parameters-and-parameter-data-types.md) e Parametri [DataAdapter](../dataadapter-parameters.md).  
+ Le sezioni successive di questo argomento contengono esempi che illustrano come specificare i parametri di data e ora. Per ulteriori esempi di utilizzo dei parametri, vedere [configurazione di parametri e tipi di dati dei](../configuring-parameters-and-parameter-data-types.md) parametri e [parametri DataAdapter](../dataadapter-parameters.md).  
   
 ### <a name="date-example"></a>Esempio relativo a Date  
  Il frammento di codice seguente illustra come specificare un parametro `date`.  
@@ -231,17 +232,17 @@ command.Parameters.AddWithValue( _
  I valori di ora minori di zero o maggiori o uguali a 24 ore genereranno un <xref:System.ArgumentException>.  
   
 ## <a name="resources-in-sql-server-books-online"></a>Risorse nella documentazione online di SQL Server  
- Per ulteriori informazioni sull'utilizzo di valori di data e ora in SQL Server, vedere le risorse seguenti nella documentazione in linea di SQL Server.  
+ Per ulteriori informazioni sull'utilizzo dei valori di data e ora in SQL Server, vedere le risorse seguenti nella documentazione online di SQL Server.  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Funzioni e tipi di dati di data e ora (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|Viene fornita una panoramica di tutte le funzioni e i tipi di dati relativi a data e ora di Transact-SQL.|  
 |[Uso di dati relativi a data e ora](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|Informazioni sui tipi di dati e le funzioni relativi a data e ora ed esempi per l'uso.|  
-|[Tipi di dati (Transact-SQL)Data Types (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)|Descrive i tipi di dati di sistema in SQL ServerSQL Server.Describes system data types in SQL ServerSQL Server.|  
+|[Tipi di dati (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)|Descrive i tipi di dati di sistema in SQL Server.|  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Mapping dei tipi di dati SQL Server](../sql-server-data-type-mappings.md)
 - [Configurazione di parametri e tipi di dati dei parametri](../configuring-parameters-and-parameter-data-types.md)
-- [SQL Server Data Types and ADO.NET](sql-server-data-types.md)
+- [Tipi di dati SQL Server e ADO.NET](sql-server-data-types.md)
 - [Panoramica di ADO.NET](../ado-net-overview.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-ms.openlocfilehash: ee8c90d63478e444b7d25cb7cbb5c969963d7c63
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 604e7a944579a284004817009b06c11b268d5daf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73130934"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289434"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>Modello asincrono basato su eventi (EAP)
 
@@ -60,11 +60,11 @@ ms.locfileid: "73130934"
  [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md)  
  Descrive un modello di programmazione delle operazioni asincrone e parallele.  
   
- [Threading](../../../docs/standard/threading/index.md)  
+ [Threading](../threading/index.md)  
  Descrive le funzionalità di multithreading in .NET.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedure consigliate per il threading gestitoManaged Threading Best Practices](../threading/managed-threading-best-practices.md)
+- [Procedure consigliate per il threading gestito](../threading/managed-threading-best-practices.md)
 - [Events](../events/index.md)
 - [Modelli di programmazione asincrona](index.md)

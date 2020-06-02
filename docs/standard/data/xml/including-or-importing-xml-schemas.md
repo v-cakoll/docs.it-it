@@ -7,18 +7,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-ms.openlocfilehash: d9a18876d8a5ba3067aa35c617b1e20fce0411f5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f6c2829d45db147c81592c00710f04168b40679e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710778"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287701"
 ---
 # <a name="including-or-importing-xml-schemas"></a>Inclusione o importazione di schemi XML
 Uno schema XML può contenere elementi `<xs:import />`, `<xs:include />` e `<xs:redefine />`. Questi elementi dello schema fanno riferimento ad altri schemi XML che possono essere usati per integrare la struttura dello schema che li include o importa. Nell'API del modello SOM (Schema Object Model), a questi elementi sono associate le classi <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> e <xref:System.Xml.Schema.XmlSchemaRedefine>.  
   
 ## <a name="including-or-importing-an-xml-schema"></a>Inclusione o importazione di uno schema XML  
- L'esempio di codice seguente integra lo schema del cliente creato nell'argomento [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md) con lo schema dell'indirizzo. L'integrazione dello schema del cliente con lo schema dell'indirizzo rende disponibili i tipi di indirizzo nello schema del cliente.  
+ L'esempio di codice seguente integra lo schema del cliente creato nell'argomento [Compilazione di XML Schema](building-xml-schemas.md) con lo schema dell'indirizzo. L'integrazione dello schema del cliente con lo schema dell'indirizzo rende disponibili i tipi di indirizzo nello schema del cliente.  
   
  È possibile incorporare lo schema dell'indirizzo mediante l'elemento `<xs:include />` o `<xs:import />` per usare i componenti dello schema dell'indirizzo senza apportarvi modifiche oppure mediante un elemento `<xs:redefine />` per modificare i componenti in modo che soddisfino le esigenze dello schema del cliente. Poiché nello schema dell'indirizzo `targetNamespace` è diverso da quello dello schema del cliente, vengono usati l'elemento `<xs:import />` e quindi la semantica di importazione.  
   
@@ -97,11 +97,11 @@ Uno schema XML può contenere elementi `<xs:import />`, `<xs:include />` e `<xs:
   
  Per altre informazioni sugli elementi `<xs:import />`, `<xs:include />` e `<xs:redefine />` e sulle classi <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> e <xref:System.Xml.Schema.XmlSchemaRedefine>, vedere il documento [W3C XML Schema](https://www.w3.org/XML/Schema) e la documentazione di riferimento sulle classi dello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari sul modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
+- [Cenni preliminari sul modello SOM XML](xml-schema-object-model-overview.md)
+- [Lettura e scrittura di schemi XML](reading-and-writing-xml-schemas.md)
+- [Compilazione di XML Schema](building-xml-schemas.md)
+- [Attraversamento di schemi XML](traversing-xml-schemas.md)
+- [Modifica di schemi XML](editing-xml-schemas.md)
+- [XmlSchemaSet per la compilazione di schemi](xmlschemaset-for-schema-compilation.md)

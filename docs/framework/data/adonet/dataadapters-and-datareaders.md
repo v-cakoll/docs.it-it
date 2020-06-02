@@ -1,13 +1,14 @@
 ---
 title: DataAdapter e DataReader
+description: Informazioni sul DataReader ADO.NET, che recupera i dati da un database e DataAdapter, che recupera i dati da un'origine dati e popola un set di dati.
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 20c6d514e70d2e4db451e0fff02e72688bf7d0ba
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17463d65266baa53521bed9603c8abd96923277b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786642"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286973"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapter e DataReader
 È possibile utilizzare il **DataReader** ADO.NET per recuperare un flusso di dati di sola lettura e di sola trasmissione da un database. I risultati vengono restituiti quando la query viene eseguita e vengono archiviati nel buffer di rete nel client fino a quando non vengono richiesti tramite il metodo **Read** di **DataReader**. L'utilizzo di **DataReader** può migliorare le prestazioni dell'applicazione recuperando i dati non appena sono disponibili e (per impostazione predefinita) archiviando solo una riga alla volta in memoria, riducendo l'overhead del sistema.  
@@ -16,8 +17,8 @@ ms.locfileid: "70786642"
   
  Per ogni provider di dati .NET Framework incluso in .NET Framework sono disponibili un oggetto <xref:System.Data.Common.DbDataReader> e un oggetto <xref:System.Data.Common.DbDataAdapter>: nel provider di dati .NET Framework per OLE DB sono inclusi <xref:System.Data.OleDb.OleDbDataReader> e <xref:System.Data.OleDb.OleDbDataAdapter>, in quello per SQL Server sono inclusi <xref:System.Data.SqlClient.SqlDataReader> e <xref:System.Data.SqlClient.SqlDataAdapter>, in quello per ODBC sono inclusi <xref:System.Data.Odbc.OdbcDataReader> e <xref:System.Data.Odbc.OdbcDataAdapter> e in quello per Oracle sono inclusi <xref:System.Data.OracleClient.OracleDataReader> e <xref:System.Data.OracleClient.OracleDataAdapter>.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Recupero di dati tramite DataReader](retrieving-data-using-a-datareader.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Recupero di dati tramite un oggetto DataReader](retrieving-data-using-a-datareader.md)  
  Descrive l'oggetto **DataReader** ADO.NET e come usarlo per restituire un flusso di risultati da un'origine dati.  
   
  [Popolamento di un set di dati da un oggetto DataAdapter](populating-a-dataset-from-a-dataadapter.md)  
@@ -26,13 +27,13 @@ ms.locfileid: "70786642"
  [Parametri DataAdapter](dataadapter-parameters.md)  
  Viene descritto come usare i parametri con le proprietà dei comandi di un `DataAdapter` e vengono fornite informazioni su come eseguire il mapping del contenuto di una colonna in un `DataSet` sul parametro di un comando.  
   
- [Aggiunta di vincoli esistenti a un set di dati](adding-existing-constraints-to-a-dataset.md)  
+ [Aggiunta di vincoli esistenti a un dataset](adding-existing-constraints-to-a-dataset.md)  
  Viene descritto come aggiungere i vincoli esistenti a un `DataSet`.  
   
  [Mapping di DataAdapter, DataTable e DataColumn](dataadapter-datatable-and-datacolumn-mappings.md)  
  Viene descritto come impostare `DataTableMappings` e `ColumnMappings` per un `DataAdapter`.  
   
- [Paging del risultato di query](paging-through-a-query-result.md)  
+ [Spostarsi tra il risultato delle query](paging-through-a-query-result.md)  
  Viene fornito un esempio di visualizzazione dei risultati di una query sotto forma di pagine di dati.  
   
  [Aggiornamento di origini dati con DataAdapter](updating-data-sources-with-dataadapters.md)  
@@ -41,7 +42,7 @@ ms.locfileid: "70786642"
  [Gestione di eventi DataAdapter](handling-dataadapter-events.md)  
  Vengono descritti gli eventi del `DataAdapter` e il relativo uso.  
   
- [Esecuzione di operazioni batch tramite DataAdapter](performing-batch-operations-using-dataadapters.md)  
+ [Esecuzione di operazioni batch tramite oggetti DataAdapter](performing-batch-operations-using-dataadapters.md)  
  Viene descritto il miglioramento delle prestazioni delle applicazioni mediante la riduzione del numero dei round trip a SQL Server quando si applicano gli aggiornamenti dal `DataSet`.  
   
 ## <a name="see-also"></a>Vedere anche

@@ -1,24 +1,24 @@
 ---
 title: Elemento <system.xml.serialization>
-description: Questo articolo descrive l'elemento <System. XML. Serialization>, che è l'elemento di livello principale per il controllo della serializzazione XML.
+description: Questo articolo descrive l'elemento < System. XML. Serialization >, che è l'elemento di livello principale per il controllo della serializzazione XML.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - system.xml.serialization element
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-ms.openlocfilehash: 1e66220004d561f937d03c506e6f30db4ccc635b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: f69e80592e9321de64421b977a63b83d8be2ad9e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380121"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289486"
 ---
-# <a name="systemxmlserialization-element"></a>\<Elemento system.xml.serialization>
+# <a name="systemxmlserialization-element"></a>\<system.xml.serialization> Elemento
 
-L'elemento di primo livello per il controllo della serializzazione XML. Per altre informazioni sui file di configurazione, vedere [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md).
+L'elemento di primo livello per il controllo della serializzazione XML. Per altre informazioni sui file di configurazione, vedere [Schema dei file di configurazione](../../framework/configure-apps/file-schema/index.md).
 
-\<> di configurazione \
+\<configuration>\
 \<system.xml.serialization>
 
 ## <a name="syntax"></a>Sintassi
@@ -32,7 +32,7 @@ L'elemento di primo livello per il controllo della serializzazione XML. Per altr
 
 Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.
 
-### <a name="attributes"></a>Attributi
+### <a name="attributes"></a>Attributes
 
 No.
 
@@ -40,14 +40,14 @@ No.
 
 |Elemento|Descrizione|
 |-------------|-----------------|
-|[\<Elemento> dateTimeSerialization](../../../docs/standard/serialization/datetimeserialization-element.md)|Determina la modalità di serializzazione degli oggetti <xref:System.DateTime>.|
-|[\<Elemento> schemaImporterExtensions](../../../docs/standard/serialization/schemaimporterextensions-element.md)|Contiene tipi utilizzati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l'esecuzione del mapping dei tipi XSD ai tipi .NET Framework.|
+|[\<dateTimeSerialization>Elemento](datetimeserialization-element.md)|Determina la modalità di serializzazione degli oggetti <xref:System.DateTime>.|
+|[\<schemaImporterExtensions>Elemento](schemaimporterextensions-element.md)|Contiene tipi utilizzati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l'esecuzione del mapping dei tipi XSD ai tipi .NET Framework.|
 
 ### <a name="parent-elements"></a>Elementi padre
 
 |Elemento|Descrizione|
 |-------------|-----------------|
-|[\<Configuration>-elemento](../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Elemento radice in ogni file di configurazione utilizzato dal Common Language Runtime e dalle applicazioni .NET Framework.|
+|[\<configuration>Elemento](../../framework/configure-apps/file-schema/configuration-element.md)|Elemento radice in ogni file di configurazione utilizzato dal Common Language Runtime e dalle applicazioni .NET Framework.|
 
 ## <a name="example"></a>Esempio
 
@@ -71,7 +71,7 @@ Nell'esempio di codice riportato di seguito viene illustrato come specificare la
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
-- [Schema del file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<Elemento> dateTimeSerialization](../../../docs/standard/serialization/datetimeserialization-element.md)
-- [\<Elemento> schemaImporterExtensions](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-- [\<aggiungere> elemento per \< schemaImporterExtensions>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [Schema del file di configurazione](../../framework/configure-apps/file-schema/index.md)
+- [\<dateTimeSerialization>Elemento](datetimeserialization-element.md)
+- [\<schemaImporterExtensions>Elemento](schemaimporterextensions-element.md)
+- [\<add>Elemento per\<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)
