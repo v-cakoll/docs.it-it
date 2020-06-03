@@ -1,5 +1,5 @@
 ---
-title: Come creare eccezioni definite dall'utente con messaggi di eccezione localizzatiHow to create user-defined exceptions with localized exception messages
+title: Come creare eccezioni definite dall'utente con messaggi di eccezione localizzati
 description: Informazioni su come creare eccezioni definite dall'utente con messaggi di eccezione localizzati
 author: Youssef1313
 dev_langs:
@@ -13,18 +13,18 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 04/13/2020
 ms.locfileid: "81243349"
 ---
-# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a><span data-ttu-id="ec938-103">Come creare eccezioni definite dall'utente con messaggi di eccezione localizzatiHow to create user-defined exceptions with localized exception messages</span><span class="sxs-lookup"><span data-stu-id="ec938-103">How to create user-defined exceptions with localized exception messages</span></span>
+# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a><span data-ttu-id="d0742-103">Come creare eccezioni definite dall'utente con messaggi di eccezione localizzati</span><span class="sxs-lookup"><span data-stu-id="d0742-103">How to create user-defined exceptions with localized exception messages</span></span>
 
-<span data-ttu-id="ec938-104">In questo articolo verrà illustrato come creare eccezioni definite dall'utente <xref:System.Exception> ereditate dalla classe base con messaggi di eccezione localizzati tramite assembly satellite.</span><span class="sxs-lookup"><span data-stu-id="ec938-104">In this article, you will learn how to create user-defined exceptions that are inherited from the base <xref:System.Exception> class with localized exception messages using satellite assemblies.</span></span>
+<span data-ttu-id="d0742-104">In questo articolo si apprenderà come creare eccezioni definite dall'utente ereditate dalla <xref:System.Exception> classe base con messaggi di eccezione localizzati tramite assembly satellite.</span><span class="sxs-lookup"><span data-stu-id="d0742-104">In this article, you will learn how to create user-defined exceptions that are inherited from the base <xref:System.Exception> class with localized exception messages using satellite assemblies.</span></span>
 
-## <a name="create-custom-exceptions"></a><span data-ttu-id="ec938-105">Creare eccezioni personalizzate</span><span class="sxs-lookup"><span data-stu-id="ec938-105">Create custom exceptions</span></span>
+## <a name="create-custom-exceptions"></a><span data-ttu-id="d0742-105">Creare eccezioni personalizzate</span><span class="sxs-lookup"><span data-stu-id="d0742-105">Create custom exceptions</span></span>
 
-<span data-ttu-id="ec938-106">.NET contiene molte eccezioni diverse che è possibile utilizzare.</span><span class="sxs-lookup"><span data-stu-id="ec938-106">.NET contains many different exceptions that you can use.</span></span> <span data-ttu-id="ec938-107">Tuttavia, in alcuni casi quando nessuno di essi soddisfa le proprie esigenze, è possibile creare eccezioni personalizzate.</span><span class="sxs-lookup"><span data-stu-id="ec938-107">However, in some cases when none of them meets your needs, you can create your own custom exceptions.</span></span>
+<span data-ttu-id="d0742-106">.NET contiene molte eccezioni diverse che è possibile usare.</span><span class="sxs-lookup"><span data-stu-id="d0742-106">.NET contains many different exceptions that you can use.</span></span> <span data-ttu-id="d0742-107">Tuttavia, in alcuni casi in cui nessuno soddisfa le proprie esigenze, è possibile creare eccezioni personalizzate.</span><span class="sxs-lookup"><span data-stu-id="d0742-107">However, in some cases when none of them meets your needs, you can create your own custom exceptions.</span></span>
 
-<span data-ttu-id="ec938-108">Si supponga di voler creare `StudentNotFoundException` un `StudentName` che contiene una proprietà.</span><span class="sxs-lookup"><span data-stu-id="ec938-108">Let's assume you want to create a `StudentNotFoundException` that contains a `StudentName` property.</span></span>
-<span data-ttu-id="ec938-109">Per creare un'eccezione personalizzata, attenersi alla seguente procedura:</span><span class="sxs-lookup"><span data-stu-id="ec938-109">To create a custom exception, follow these steps:</span></span>
+<span data-ttu-id="d0742-108">Si supponga di voler creare un oggetto `StudentNotFoundException` che contiene una `StudentName` Proprietà.</span><span class="sxs-lookup"><span data-stu-id="d0742-108">Let's assume you want to create a `StudentNotFoundException` that contains a `StudentName` property.</span></span>
+<span data-ttu-id="d0742-109">Per creare un'eccezione personalizzata, attenersi alla procedura seguente:</span><span class="sxs-lookup"><span data-stu-id="d0742-109">To create a custom exception, follow these steps:</span></span>
 
-1. <span data-ttu-id="ec938-110">Creare una classe serializzabile che <xref:System.Exception>eredita da .</span><span class="sxs-lookup"><span data-stu-id="ec938-110">Create a serializable class that inherits from <xref:System.Exception>.</span></span> <span data-ttu-id="ec938-111">Il nome della classe deve terminare con "Exception":</span><span class="sxs-lookup"><span data-stu-id="ec938-111">The class name should end in "Exception":</span></span>
+1. <span data-ttu-id="d0742-110">Creare una classe serializzabile che eredita da <xref:System.Exception> .</span><span class="sxs-lookup"><span data-stu-id="d0742-110">Create a serializable class that inherits from <xref:System.Exception>.</span></span> <span data-ttu-id="d0742-111">Il nome della classe deve terminare con "Exception":</span><span class="sxs-lookup"><span data-stu-id="d0742-111">The class name should end in "Exception":</span></span>
 
     ```csharp
     [Serializable]
@@ -38,7 +38,7 @@ ms.locfileid: "81243349"
     End Class
     ```
 
-1. <span data-ttu-id="ec938-112">Aggiungere i costruttori predefiniti:Add the default constructors:</span><span class="sxs-lookup"><span data-stu-id="ec938-112">Add the default constructors:</span></span>
+1. <span data-ttu-id="d0742-112">Aggiungere i costruttori predefiniti:</span><span class="sxs-lookup"><span data-stu-id="d0742-112">Add the default constructors:</span></span>
 
     ```csharp
     [Serializable]
@@ -72,7 +72,7 @@ ms.locfileid: "81243349"
     End Class
     ```
 
-1. <span data-ttu-id="ec938-113">Definire eventuali proprietà e costruttori aggiuntivi:Define any additional properties and constructors:</span><span class="sxs-lookup"><span data-stu-id="ec938-113">Define any additional properties and constructors:</span></span>
+1. <span data-ttu-id="d0742-113">Definire le proprietà e i costruttori aggiuntivi:</span><span class="sxs-lookup"><span data-stu-id="d0742-113">Define any additional properties and constructors:</span></span>
 
     ```csharp
     [Serializable]
@@ -121,9 +121,9 @@ ms.locfileid: "81243349"
     End Class
     ```
 
-## <a name="create-localized-exception-messages"></a><span data-ttu-id="ec938-114">Creare messaggi di eccezione localizzatiCreate localized exception messages</span><span class="sxs-lookup"><span data-stu-id="ec938-114">Create localized exception messages</span></span>
+## <a name="create-localized-exception-messages"></a><span data-ttu-id="d0742-114">Creare messaggi di eccezione localizzati</span><span class="sxs-lookup"><span data-stu-id="d0742-114">Create localized exception messages</span></span>
 
-<span data-ttu-id="ec938-115">È stata creata un'eccezione personalizzata ed è possibile generarla ovunque con codice simile al seguente:You have created a custom exception, and you can throw it anywhere with code like the following:</span><span class="sxs-lookup"><span data-stu-id="ec938-115">You have created a custom exception, and you can throw it anywhere with code like the following:</span></span>
+<span data-ttu-id="d0742-115">È stata creata un'eccezione personalizzata, che può essere generata ovunque con codice simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="d0742-115">You have created a custom exception, and you can throw it anywhere with code like the following:</span></span>
 
 ```csharp
 throw new StudentNotFoundException("The student cannot be found.", "John");
@@ -133,24 +133,24 @@ throw new StudentNotFoundException("The student cannot be found.", "John");
 Throw New StudentNotFoundException("The student cannot be found.", "John")
 ```
 
-<span data-ttu-id="ec938-116">Il problema con la `"The student cannot be found."` riga precedente è che è solo una stringa costante.</span><span class="sxs-lookup"><span data-stu-id="ec938-116">The problem with the previous line is that `"The student cannot be found."` is just a constant string.</span></span> <span data-ttu-id="ec938-117">In un'applicazione localizzata, si desidera avere messaggi diversi a seconda delle impostazioni cultura dell'utente.</span><span class="sxs-lookup"><span data-stu-id="ec938-117">In a localized application, you want to have different messages depending on user culture.</span></span>
-<span data-ttu-id="ec938-118">[Gli assembly satellitari](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) sono un buon modo per farlo.</span><span class="sxs-lookup"><span data-stu-id="ec938-118">[Satellite Assemblies](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) are a good way to do that.</span></span> <span data-ttu-id="ec938-119">Un assembly satellite è una DLL che contiene risorse per una lingua specifica.</span><span class="sxs-lookup"><span data-stu-id="ec938-119">A satellite assembly is a .dll that contains resources for a specific language.</span></span> <span data-ttu-id="ec938-120">Quando si richiede una risorsa specifica in fase di esecuzione, CLR trova tale risorsa in base alle impostazioni cultura dell'utente.</span><span class="sxs-lookup"><span data-stu-id="ec938-120">When you ask for a specific resources at run time, the CLR finds that resource depending on user culture.</span></span> <span data-ttu-id="ec938-121">Se non viene trovato alcun assembly satellite per tali impostazioni cultura, vengono utilizzate le risorse delle impostazioni cultura predefinite.</span><span class="sxs-lookup"><span data-stu-id="ec938-121">If no satellite assembly is found for that culture, the resources of the default culture are used.</span></span>
+<span data-ttu-id="d0742-116">Il problema con la riga precedente è `"The student cannot be found."` semplicemente una stringa costante.</span><span class="sxs-lookup"><span data-stu-id="d0742-116">The problem with the previous line is that `"The student cannot be found."` is just a constant string.</span></span> <span data-ttu-id="d0742-117">In un'applicazione localizzata è necessario avere messaggi diversi a seconda delle impostazioni cultura dell'utente.</span><span class="sxs-lookup"><span data-stu-id="d0742-117">In a localized application, you want to have different messages depending on user culture.</span></span>
+<span data-ttu-id="d0742-118">Gli [assembly satellite](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) sono un modo efficace per eseguire questa operazione.</span><span class="sxs-lookup"><span data-stu-id="d0742-118">[Satellite Assemblies](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) are a good way to do that.</span></span> <span data-ttu-id="d0742-119">Un assembly satellite è un file con estensione dll che contiene risorse per una lingua specifica.</span><span class="sxs-lookup"><span data-stu-id="d0742-119">A satellite assembly is a .dll that contains resources for a specific language.</span></span> <span data-ttu-id="d0742-120">Quando si richiede una specifica risorsa in fase di esecuzione, CLR trova tale risorsa a seconda delle impostazioni cultura dell'utente.</span><span class="sxs-lookup"><span data-stu-id="d0742-120">When you ask for a specific resources at run time, the CLR finds that resource depending on user culture.</span></span> <span data-ttu-id="d0742-121">Se non viene trovato alcun assembly satellite per tali impostazioni cultura, vengono utilizzate le risorse delle impostazioni cultura predefinite.</span><span class="sxs-lookup"><span data-stu-id="d0742-121">If no satellite assembly is found for that culture, the resources of the default culture are used.</span></span>
 
-<span data-ttu-id="ec938-122">Per creare i messaggi di eccezione localizzati:</span><span class="sxs-lookup"><span data-stu-id="ec938-122">To create the localized exception messages:</span></span>
+<span data-ttu-id="d0742-122">Per creare i messaggi di eccezione localizzati:</span><span class="sxs-lookup"><span data-stu-id="d0742-122">To create the localized exception messages:</span></span>
 
-1. <span data-ttu-id="ec938-123">Creare una nuova cartella denominata *Resources* per contenere i file di risorse.</span><span class="sxs-lookup"><span data-stu-id="ec938-123">Create a new folder named *Resources* to hold the resource files.</span></span>
-1. <span data-ttu-id="ec938-124">Aggiungere un nuovo file di risorse.</span><span class="sxs-lookup"><span data-stu-id="ec938-124">Add a new resource file to it.</span></span> <span data-ttu-id="ec938-125">A tale scopo in Visual Studio, fare clic con il pulsante destro del mouse sulla cartella in **Esplora soluzioni**e scegliere **Aggiungi** > **nuovo file** > **di risorse**elemento .</span><span class="sxs-lookup"><span data-stu-id="ec938-125">To do that in Visual Studio, right-click the folder in **Solution Explorer**, and select **Add** > **New Item** > **Resources File**.</span></span> <span data-ttu-id="ec938-126">Assegnare al file il nome *ExceptionMessages.resx*.</span><span class="sxs-lookup"><span data-stu-id="ec938-126">Name the file *ExceptionMessages.resx*.</span></span> <span data-ttu-id="ec938-127">Questo è il file di risorse predefinito.</span><span class="sxs-lookup"><span data-stu-id="ec938-127">This is the default resources file.</span></span>
-1. <span data-ttu-id="ec938-128">Aggiungere una coppia nome/valore per il messaggio di eccezione, come illustrato nell'immagine seguente:Add a name/value pair for your exception message, like the following image shows:</span><span class="sxs-lookup"><span data-stu-id="ec938-128">Add a name/value pair for your exception message, like the following image shows:</span></span>
+1. <span data-ttu-id="d0742-123">Creare una nuova cartella denominata *Resources* per conservare i file di risorse.</span><span class="sxs-lookup"><span data-stu-id="d0742-123">Create a new folder named *Resources* to hold the resource files.</span></span>
+1. <span data-ttu-id="d0742-124">Aggiungere un nuovo file di risorse.</span><span class="sxs-lookup"><span data-stu-id="d0742-124">Add a new resource file to it.</span></span> <span data-ttu-id="d0742-125">Per eseguire questa operazione in Visual Studio, fare clic con il pulsante destro del mouse sulla cartella in **Esplora soluzioni**e scegliere **Aggiungi**  >  **nuovo elemento**  >  **risorse file**.</span><span class="sxs-lookup"><span data-stu-id="d0742-125">To do that in Visual Studio, right-click the folder in **Solution Explorer**, and select **Add** > **New Item** > **Resources File**.</span></span> <span data-ttu-id="d0742-126">Denominare il file *ExceptionMessages. resx*.</span><span class="sxs-lookup"><span data-stu-id="d0742-126">Name the file *ExceptionMessages.resx*.</span></span> <span data-ttu-id="d0742-127">Questo è il file di risorse predefinito.</span><span class="sxs-lookup"><span data-stu-id="d0742-127">This is the default resources file.</span></span>
+1. <span data-ttu-id="d0742-128">Aggiungere una coppia nome/valore per il messaggio di eccezione, come illustrato nella figura seguente:</span><span class="sxs-lookup"><span data-stu-id="d0742-128">Add a name/value pair for your exception message, like the following image shows:</span></span>
 
-   ![Aggiungere risorse alle impostazioni cultura predefiniteAdd resources to the default culture](media/add-resources-to-default-culture.jpg)
+   ![Aggiungere risorse alle impostazioni cultura predefinite](media/add-resources-to-default-culture.jpg)
 
-1. <span data-ttu-id="ec938-130">Aggiungere un nuovo file di risorse per il francese.</span><span class="sxs-lookup"><span data-stu-id="ec938-130">Add a new resource file for French.</span></span> <span data-ttu-id="ec938-131">Denominarlo *ExceptionMessages.fr-FR.resx*.</span><span class="sxs-lookup"><span data-stu-id="ec938-131">Name it *ExceptionMessages.fr-FR.resx*.</span></span>
-1. <span data-ttu-id="ec938-132">Aggiungere nuovamente una coppia nome/valore per il messaggio di eccezione, ma con un valore francese:Add a name/value pair for the exception message again, but with a French value:</span><span class="sxs-lookup"><span data-stu-id="ec938-132">Add a name/value pair for the exception message again, but with a French value:</span></span>
+1. <span data-ttu-id="d0742-130">Aggiungere un nuovo file di risorse per il francese.</span><span class="sxs-lookup"><span data-stu-id="d0742-130">Add a new resource file for French.</span></span> <span data-ttu-id="d0742-131">Denominarlo *ExceptionMessages.fr-fr. resx*.</span><span class="sxs-lookup"><span data-stu-id="d0742-131">Name it *ExceptionMessages.fr-FR.resx*.</span></span>
+1. <span data-ttu-id="d0742-132">Aggiungere nuovamente una coppia nome/valore per il messaggio di eccezione, ma con un valore francese:</span><span class="sxs-lookup"><span data-stu-id="d0742-132">Add a name/value pair for the exception message again, but with a French value:</span></span>
 
    ![Aggiungere risorse alle impostazioni cultura fr-FR](media/add-resources-to-fr-culture.jpg)
 
-1. <span data-ttu-id="ec938-134">Dopo aver compilato il progetto, la cartella dell'output di compilazione deve contenere la cartella *fr-FR* con un file *DLL,* ovvero l'assembly satellite.</span><span class="sxs-lookup"><span data-stu-id="ec938-134">After you build the project, the build output folder should contain the *fr-FR* folder with a *.dll* file, which is the satellite assembly.</span></span>
-1. <span data-ttu-id="ec938-135">Generare l'eccezione con codice simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="ec938-135">You throw the exception with code like the following:</span></span>
+1. <span data-ttu-id="d0742-134">Dopo aver compilato il progetto, la cartella di output di compilazione deve contenere la cartella *fr-fr* con un file con estensione *dll* , ovvero l'assembly satellite.</span><span class="sxs-lookup"><span data-stu-id="d0742-134">After you build the project, the build output folder should contain the *fr-FR* folder with a *.dll* file, which is the satellite assembly.</span></span>
+1. <span data-ttu-id="d0742-135">L'eccezione viene generata con codice simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="d0742-135">You throw the exception with code like the following:</span></span>
 
     ```csharp
     var resourceManager = new ResourceManager("FULLY_QUALIFIED_NAME_OF_RESOURCE_FILE", Assembly.GetExecutingAssembly());
@@ -163,11 +163,11 @@ Throw New StudentNotFoundException("The student cannot be found.", "John")
     ```
 
     > [!NOTE]
-    > <span data-ttu-id="ec938-136">Se il nome `TestProject` del progetto è e il file di risorse *ExceptionMessages.resx* si trova nella `TestProject.Resources.ExceptionMessages`cartella *Resources* del progetto, il nome completo del file di risorse è .</span><span class="sxs-lookup"><span data-stu-id="ec938-136">If the project name is `TestProject` and the resource file *ExceptionMessages.resx* resides in the *Resources* folder of the project, the fully qualified name of the resource file is `TestProject.Resources.ExceptionMessages`.</span></span>
+    > <span data-ttu-id="d0742-136">Se il nome del progetto è `TestProject` e il file di risorse *ExceptionMessages. resx* risiede nella cartella *Resources* del progetto, il nome completo del file di risorse è `TestProject.Resources.ExceptionMessages` .</span><span class="sxs-lookup"><span data-stu-id="d0742-136">If the project name is `TestProject` and the resource file *ExceptionMessages.resx* resides in the *Resources* folder of the project, the fully qualified name of the resource file is `TestProject.Resources.ExceptionMessages`.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="ec938-137">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ec938-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0742-137">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d0742-137">See also</span></span>
 
-- [<span data-ttu-id="ec938-138">Come creare eccezioni definite dall'utenteHow to create user-defined exceptions</span><span class="sxs-lookup"><span data-stu-id="ec938-138">How to create user-defined exceptions</span></span>](how-to-create-user-defined-exceptions.md)
-- [<span data-ttu-id="ec938-139">Creazione di assembly satellite per applicazioni desktop</span><span class="sxs-lookup"><span data-stu-id="ec938-139">Creating Satellite Assemblies for Desktop Apps</span></span>](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
-- [<span data-ttu-id="ec938-140">base (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="ec938-140">base (C# Reference)</span></span>](../../csharp/language-reference/keywords/base.md)
-- [<span data-ttu-id="ec938-141">this (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="ec938-141">this (C# Reference)</span></span>](../../csharp/language-reference/keywords/this.md)
+- [<span data-ttu-id="d0742-138">Come creare eccezioni definite dall'utente</span><span class="sxs-lookup"><span data-stu-id="d0742-138">How to create user-defined exceptions</span></span>](how-to-create-user-defined-exceptions.md)
+- [<span data-ttu-id="d0742-139">Creazione di assembly satellite per applicazioni desktop</span><span class="sxs-lookup"><span data-stu-id="d0742-139">Creating Satellite Assemblies for Desktop Apps</span></span>](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [<span data-ttu-id="d0742-140">base (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="d0742-140">base (C# Reference)</span></span>](../../csharp/language-reference/keywords/base.md)
+- [<span data-ttu-id="d0742-141">this (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="d0742-141">this (C# Reference)</span></span>](../../csharp/language-reference/keywords/this.md)
