@@ -49,7 +49,7 @@ L'esempio seguente usa la direttiva `using static` per rendere i membri statici 
 
 Nell'esempio la direttiva `using static` può anche essere stata applicata al tipo <xref:System.Double>. In questo caso sarebbe stato possibile chiamare il metodo <xref:System.Double.TryParse(System.String,System.Double@)> senza specificare un nome di tipo. Tuttavia, in questo modo viene creato codice meno leggibile, poiché diventa necessario controllare le `using static` direttive per determinare quale metodo del tipo numerico `TryParse` viene chiamato.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [direttiva using](using-directive.md)
 - [Riferimenti per C#](../index.md)

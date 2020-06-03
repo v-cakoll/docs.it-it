@@ -2,16 +2,16 @@
 title: Implementazione di un bus di eventi con RabbitMQ per l'ambiente di sviluppo o test
 description: Architettura di microservizi .NET per applicazioni .NET nei contenitori | Implementazione della messaggistica di un bus di eventi con RabbitMQ per l'integrazione di eventi per gli ambienti di sviluppo o test.
 ms.date: 10/02/2018
-ms.openlocfilehash: 32259c76fe81d324ba3ea9b35f7fddc6a0f9cdbc
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 1af72d18825eb610d6900178205450e2c2e34c25
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144292"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306890"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementazione di un bus di eventi con RabbitMQ per l'ambiente di sviluppo o test
 
-È necessario premettere che se si crea un bus di eventi basato su RabbitMQ personalizzato in esecuzione in un contenitore, come l'applicazione eShopOnContainers, tale bus deve essere usato solo per gli ambienti di sviluppo e test. È consigliabile evitare di usarlo per l'ambiente di produzione, a meno che non venga creato nell'ambito di un bus di servizio per la produzione. In un bus di eventi personalizzato semplice potrebbero mancare molte funzionalità critiche per la produzione, disponibili invece in un bus di servizio disponibile in commercio.
+È necessario premettere che se si crea un bus di eventi basato su RabbitMQ personalizzato in esecuzione in un contenitore, come l'applicazione eShopOnContainers, tale bus deve essere usato solo per gli ambienti di sviluppo e test. Non usarlo per l'ambiente di produzione, a meno che non lo si stia compilando come parte di un bus di servizio pronto per la produzione. In un bus di eventi personalizzato semplice potrebbero mancare molte funzionalità critiche per la produzione, disponibili invece in un bus di servizio disponibile in commercio.
 
 Una delle implementazioni personalizzate del bus di eventi in eShopOnContainers è essenzialmente una libreria che usa l'API RabbitMQ. (È presente un'altra implementazione basata sul bus di servizio di Azure).
 
@@ -114,7 +114,7 @@ Per gli scenari di produzione, controllare le risorse aggiuntive seguenti, speci
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-Soluzioni pronte per l'ambiente di produzione con supporto per RabbitMQ.
+Soluzione pronta per la produzione con supporto per RabbitMQ.
 
 - **EasyNetQ** -client API .NET open source per RabbitMQ \
   <https://easynetq.com/>

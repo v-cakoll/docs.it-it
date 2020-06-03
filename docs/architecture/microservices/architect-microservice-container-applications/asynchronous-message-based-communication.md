@@ -2,12 +2,12 @@
 title: Comunicazione asincrona basata su messaggi
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | La comunicazione asincrona basata su messaggi è un concetto essenziale nell'architettura dei microservizi, perché è il modo migliore per mantenere i microservizi al contempo indipendenti uno dall'altro e sincronizzati.
 ms.date: 09/20/2018
-ms.openlocfilehash: 476e42ccb39374c2bb50f22e41f60c10c563dc66
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: a8af94540a7906c474b9b784c28aa60ebae0a6e3
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144344"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306968"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicazione asincrona basata su messaggi
 
@@ -35,7 +35,7 @@ Una volta che si iniziano a inviare comunicazioni basate su messaggi (con comand
 
 **Figura 4-18**. Un singolo microservizio che riceve un messaggio asincrono
 
-Si noti che quando i comandi provengono da applicazioni client, possono essere implementati come comandi sincroni HTTP. Usare comandi basati su messaggi quando è necessaria una maggiore scalabilità o quando si è già in un processo aziendale basato su messaggi.
+Quando i comandi provengono da applicazioni client, possono essere implementati come comandi sincroni HTTP. Usare i comandi basati su messaggi quando è necessaria una maggiore scalabilità o quando si è già in un processo di business basato su messaggi.
 
 ## <a name="multiple-receivers-message-based-communication"></a>Comunicazione basata su messaggi con più destinatari
 
@@ -57,7 +57,7 @@ Un aspetto importante è che potrebbe essere necessario comunicare con più micr
 
 **Figura 4-19**. Comunicazione di messaggi asincrona basata su eventi
 
-Nella comunicazione asincrona basata su evento un microservizio pubblica eventi in un bus di eventi a cui più microservizi possono eseguire la sottoscrizione per ricevere notifiche ed eseguire operazioni. L'implementazione determina il protocollo da usare per le comunicazioni di messaggi basate su eventi. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) può consentire di realizzare comunicazioni in coda affidabili.
+Nella comunicazione asincrona basata su eventi, un microservizio pubblica eventi in un bus di eventi e molti microservizi possono sottoscriverli, per ricevere notifiche e agire su di essi. L'implementazione determina il protocollo da usare per le comunicazioni di messaggi basate su eventi. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) può consentire di realizzare comunicazioni in coda affidabili.
 
 Quando si usa un bus di eventi, è possibile usare un livello di astrazione (ad esempio, un'interfaccia di bus di eventi) basato su un'implementazione correlata nelle classi con codice che usa l'API da un broker di messaggi come [RabbitMQ](https://www.rabbitmq.com/) o un bus di servizio come il [bus di servizio di Azure con argomenti](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). In alternativa, è possibile usare un bus di servizio di livello superiore come NServiceBus, MassTransit o Brighter per articolare il bus di eventi e il sistema di pubblicazione/sottoscrizione.
 

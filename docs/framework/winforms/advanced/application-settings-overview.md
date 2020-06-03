@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: ec73fb61f0a4b43e47936c864e73355ee777aeb7
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 369495322328350bc06827b87598160469d864bb
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040420"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307059"
 ---
 # <a name="application-settings-overview"></a>Cenni preliminari sulle impostazioni delle applicazioni
 Questo argomento descrive come creare e archiviare i dati delle impostazioni per conto dell'applicazione e degli utenti.
@@ -29,9 +29,9 @@ Questo argomento descrive come creare e archiviare i dati delle impostazioni per
 
  Impostazioni applicazione rende permanenti i dati in formato XML inserendoli in file di configurazione diversi (con estensione config) a seconda dell'ambito dell'impostazione (applicazione o utente). Nella maggior parte dei casi le impostazioni relative all'applicazione sono di sola lettura perché contengono informazioni sul programma e normalmente non è necessario sovrascriverle. Per contro, le impostazioni relative all'utente possono essere lette e scritte senza problemi in fase di esecuzione anche se l'applicazione è eseguita con attendibilità parziale. Per altre informazioni sull'attendibilità parziale, vedere [Security in Windows Forms Overview](../security-in-windows-forms-overview.md).
 
- Le impostazioni vengono archiviate come frammenti XML nei file di configurazione. Le impostazioni con ambito di applicazione sono rappresentate dall'elemento `<application.Settings>` e di solito sono inserite in *app*.exe.config, dove *app* è il nome del file eseguibile principale. Le impostazioni con ambito di utente sono rappresentate dall'elemento `<userSettings>` e inserite in *utente*.config, dove *utente* è il nome dell'utente che esegue l'applicazione in quel momento. È necessario distribuire il file *app*.exe.config con l'applicazione. L'architettura delle impostazioni creerà i file *utente*.config su richiesta la prima volta che nell'applicazione verranno salvate le impostazioni per tale utente. È anche possibile definire un blocco `<userSettings>` in *app*.exe.config per fornire valori predefiniti per le impostazioni con ambito di utente.
+ Le impostazioni vengono archiviate come frammenti XML nei file di configurazione. Le impostazioni con ambito di applicazione sono rappresentate dall'elemento `<applicationSettings>` e di solito sono inserite in *app*.exe.config, dove *app* è il nome del file eseguibile principale. Le impostazioni con ambito di utente sono rappresentate dall'elemento `<userSettings>` e inserite in *utente*.config, dove *utente* è il nome dell'utente che esegue l'applicazione in quel momento. È necessario distribuire il file *app*.exe.config con l'applicazione. L'architettura delle impostazioni creerà i file *utente*.config su richiesta la prima volta che nell'applicazione verranno salvate le impostazioni per tale utente. È anche possibile definire un blocco `<userSettings>` in *app*.exe.config per fornire valori predefiniti per le impostazioni con ambito di utente.
 
- Anche per i controlli personalizzati è possibile salvare le impostazioni implementando l'interfaccia <xref:System.Configuration.IPersistComponentSettings> , che espone il metodo <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> . Il controllo <xref:System.Windows.Forms.ToolStrip> di Windows Form implementa questa interfaccia per salvare la posizione delle barre degli strumenti e dei relativi elementi tra le sessioni di un'applicazione. Per altre informazioni sui controlli personalizzati e le impostazioni dell'applicazione, vedere [Application Settings for Custom Controls](application-settings-for-custom-controls.md) (Impostazioni delle applicazioni per i controlli personalizzati).
+ Anche per i controlli personalizzati è possibile salvare le impostazioni implementando l'interfaccia <xref:System.Configuration.IPersistComponentSettings> , che espone il metodo <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> . Il controllo <xref:System.Windows.Forms.ToolStrip> di Windows Form implementa questa interfaccia per salvare la posizione delle barre degli strumenti e dei relativi elementi tra le sessioni di un'applicazione. Per altre informazioni sui controlli personalizzati e le impostazioni dell'applicazione, vedere [Application Settings for Custom Controls](application-settings-for-custom-controls.md).
 
 ## <a name="limitations-of-application-settings"></a>Limitazioni della funzionalità Impostazioni applicazione
  Non è possibile usare le impostazioni dell'applicazione in un'applicazione non gestita che ospita il .NET Framework. Le impostazioni non funzioneranno correttamente in ambienti come i componenti aggiuntivi di Visual Studio, C++ per Microsoft Office, i controlli contenuti in Internet Explorer o i componenti aggiuntivi e i progetti di Microsoft Outlook.
@@ -43,7 +43,7 @@ Questo argomento descrive come creare e archiviare i dati delle impostazioni per
 ## <a name="getting-started-with-application-settings"></a>Guida introduttiva alle impostazioni dell'applicazione
  Se si usa Visual Studio, per definire le impostazioni in Progettazione Windows Form usare la proprietà **(ApplicationSettings)** nella finestra **Proprietà** . Quando si definiscono le impostazioni in questo modo, viene creata automaticamente una classe wrapper gestita personalizzata che stabilisce un'associazione tra ogni impostazione e una proprietà di classe. Visual Studio stabilisce inoltre l'associazione tra l'impostazione e una proprietà su un form o controllo, in modo che le impostazioni del controllo vengano ripristinate automaticamente alla visualizzazione del form e salvate automaticamente alla chiusura.
 
- Se si desidera un controllo maggiore sulle impostazioni, è possibile definire una classe wrapper personalizzata per le impostazioni dell'applicazione. Questa operazione viene eseguita derivando una classe da <xref:System.Configuration.ApplicationSettingsBase>, aggiungendo una proprietà corrispondente a ogni impostazione e applicando attributi speciali alle proprietà. Per informazioni sulla creazione di classi wrapper, vedere [Application Settings Architecture](application-settings-architecture.md) (Architettura Impostazioni applicazione).
+ Se si desidera un controllo maggiore sulle impostazioni, è possibile definire una classe wrapper personalizzata per le impostazioni dell'applicazione. Questa operazione viene eseguita derivando una classe da <xref:System.Configuration.ApplicationSettingsBase>, aggiungendo una proprietà corrispondente a ogni impostazione e applicando attributi speciali alle proprietà. Per informazioni dettagliate sulla creazione di classi wrapper, vedere [Application Settings Architecture](application-settings-architecture.md).
 
  È anche possibile usare la classe <xref:System.Windows.Forms.Binding> per associare le impostazioni alle proprietà a livello di codice su form e controlli.
 
@@ -53,9 +53,9 @@ Questo argomento descrive come creare e archiviare i dati delle impostazioni per
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [Procedura: Convalidare le impostazioni dell'applicazione](how-to-validate-application-settings.md)
+- [Procedura: convalidare le impostazioni applicazione](how-to-validate-application-settings.md)
 - [Gestione delle impostazioni di un'applicazione (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [Procedura: Leggere le impostazioni in fase di esecuzione conC#](how-to-read-settings-at-run-time-with-csharp.md)
-- [Uso delle impostazioni applicazione e delle impostazioni utente](using-application-settings-and-user-settings.md)
+- [Procedura: leggere le impostazioni in fase di esecuzione con C#](how-to-read-settings-at-run-time-with-csharp.md)
+- [Utilizzo delle impostazioni applicazione e delle impostazioni utente](using-application-settings-and-user-settings.md)
 - [Application Settings Architecture](application-settings-architecture.md)
-- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
+- [Impostazioni delle applicazioni per i controlli personalizzati](application-settings-for-custom-controls.md)

@@ -6,4 +6,4 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "61646179"
 ---
-Per ulteriori informazioni, vedere la [specifica del linguaggio C .](~/docs/csharp/language-reference/language-specification/index.md) La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
+Per ulteriori informazioni, vedere la [specifica del linguaggio C#](~/docs/csharp/language-reference/language-specification/index.md). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.

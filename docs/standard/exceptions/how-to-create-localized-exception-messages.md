@@ -1,5 +1,5 @@
 ---
-title: Come creare eccezioni definite dall'utente con messaggi di eccezione localizzatiHow to create user-defined exceptions with localized exception messages
+title: Come creare eccezioni definite dall'utente con messaggi di eccezione localizzati
 description: Informazioni su come creare eccezioni definite dall'utente con messaggi di eccezione localizzati
 author: Youssef1313
 dev_langs:
@@ -13,18 +13,18 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 04/13/2020
 ms.locfileid: "81243349"
 ---
-# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Come creare eccezioni definite dall'utente con messaggi di eccezione localizzatiHow to create user-defined exceptions with localized exception messages
+# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Come creare eccezioni definite dall'utente con messaggi di eccezione localizzati
 
-In questo articolo verrà illustrato come creare eccezioni definite dall'utente <xref:System.Exception> ereditate dalla classe base con messaggi di eccezione localizzati tramite assembly satellite.
+In questo articolo si apprenderà come creare eccezioni definite dall'utente ereditate dalla <xref:System.Exception> classe base con messaggi di eccezione localizzati tramite assembly satellite.
 
 ## <a name="create-custom-exceptions"></a>Creare eccezioni personalizzate
 
-.NET contiene molte eccezioni diverse che è possibile utilizzare. Tuttavia, in alcuni casi quando nessuno di essi soddisfa le proprie esigenze, è possibile creare eccezioni personalizzate.
+.NET contiene molte eccezioni diverse che è possibile usare. Tuttavia, in alcuni casi in cui nessuno soddisfa le proprie esigenze, è possibile creare eccezioni personalizzate.
 
-Si supponga di voler creare `StudentNotFoundException` un `StudentName` che contiene una proprietà.
-Per creare un'eccezione personalizzata, attenersi alla seguente procedura:
+Si supponga di voler creare un oggetto `StudentNotFoundException` che contiene una `StudentName` Proprietà.
+Per creare un'eccezione personalizzata, attenersi alla procedura seguente:
 
-1. Creare una classe serializzabile che <xref:System.Exception>eredita da . Il nome della classe deve terminare con "Exception":
+1. Creare una classe serializzabile che eredita da <xref:System.Exception> . Il nome della classe deve terminare con "Exception":
 
     ```csharp
     [Serializable]
@@ -38,7 +38,7 @@ Per creare un'eccezione personalizzata, attenersi alla seguente procedura:
     End Class
     ```
 
-1. Aggiungere i costruttori predefiniti:Add the default constructors:
+1. Aggiungere i costruttori predefiniti:
 
     ```csharp
     [Serializable]
@@ -72,7 +72,7 @@ Per creare un'eccezione personalizzata, attenersi alla seguente procedura:
     End Class
     ```
 
-1. Definire eventuali proprietà e costruttori aggiuntivi:Define any additional properties and constructors:
+1. Definire le proprietà e i costruttori aggiuntivi:
 
     ```csharp
     [Serializable]
@@ -121,9 +121,9 @@ Per creare un'eccezione personalizzata, attenersi alla seguente procedura:
     End Class
     ```
 
-## <a name="create-localized-exception-messages"></a>Creare messaggi di eccezione localizzatiCreate localized exception messages
+## <a name="create-localized-exception-messages"></a>Creare messaggi di eccezione localizzati
 
-È stata creata un'eccezione personalizzata ed è possibile generarla ovunque con codice simile al seguente:You have created a custom exception, and you can throw it anywhere with code like the following:
+È stata creata un'eccezione personalizzata, che può essere generata ovunque con codice simile al seguente:
 
 ```csharp
 throw new StudentNotFoundException("The student cannot be found.", "John");
@@ -133,24 +133,24 @@ throw new StudentNotFoundException("The student cannot be found.", "John");
 Throw New StudentNotFoundException("The student cannot be found.", "John")
 ```
 
-Il problema con la `"The student cannot be found."` riga precedente è che è solo una stringa costante. In un'applicazione localizzata, si desidera avere messaggi diversi a seconda delle impostazioni cultura dell'utente.
-[Gli assembly satellitari](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) sono un buon modo per farlo. Un assembly satellite è una DLL che contiene risorse per una lingua specifica. Quando si richiede una risorsa specifica in fase di esecuzione, CLR trova tale risorsa in base alle impostazioni cultura dell'utente. Se non viene trovato alcun assembly satellite per tali impostazioni cultura, vengono utilizzate le risorse delle impostazioni cultura predefinite.
+Il problema con la riga precedente è `"The student cannot be found."` semplicemente una stringa costante. In un'applicazione localizzata è necessario avere messaggi diversi a seconda delle impostazioni cultura dell'utente.
+Gli [assembly satellite](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) sono un modo efficace per eseguire questa operazione. Un assembly satellite è un file con estensione dll che contiene risorse per una lingua specifica. Quando si richiede una specifica risorsa in fase di esecuzione, CLR trova tale risorsa a seconda delle impostazioni cultura dell'utente. Se non viene trovato alcun assembly satellite per tali impostazioni cultura, vengono utilizzate le risorse delle impostazioni cultura predefinite.
 
 Per creare i messaggi di eccezione localizzati:
 
-1. Creare una nuova cartella denominata *Resources* per contenere i file di risorse.
-1. Aggiungere un nuovo file di risorse. A tale scopo in Visual Studio, fare clic con il pulsante destro del mouse sulla cartella in **Esplora soluzioni**e scegliere **Aggiungi** > **nuovo file** > **di risorse**elemento . Assegnare al file il nome *ExceptionMessages.resx*. Questo è il file di risorse predefinito.
-1. Aggiungere una coppia nome/valore per il messaggio di eccezione, come illustrato nell'immagine seguente:Add a name/value pair for your exception message, like the following image shows:
+1. Creare una nuova cartella denominata *Resources* per conservare i file di risorse.
+1. Aggiungere un nuovo file di risorse. Per eseguire questa operazione in Visual Studio, fare clic con il pulsante destro del mouse sulla cartella in **Esplora soluzioni**e scegliere **Aggiungi**  >  **nuovo elemento**  >  **risorse file**. Denominare il file *ExceptionMessages. resx*. Questo è il file di risorse predefinito.
+1. Aggiungere una coppia nome/valore per il messaggio di eccezione, come illustrato nella figura seguente:
 
-   ![Aggiungere risorse alle impostazioni cultura predefiniteAdd resources to the default culture](media/add-resources-to-default-culture.jpg)
+   ![Aggiungere risorse alle impostazioni cultura predefinite](media/add-resources-to-default-culture.jpg)
 
-1. Aggiungere un nuovo file di risorse per il francese. Denominarlo *ExceptionMessages.fr-FR.resx*.
-1. Aggiungere nuovamente una coppia nome/valore per il messaggio di eccezione, ma con un valore francese:Add a name/value pair for the exception message again, but with a French value:
+1. Aggiungere un nuovo file di risorse per il francese. Denominarlo *ExceptionMessages.fr-fr. resx*.
+1. Aggiungere nuovamente una coppia nome/valore per il messaggio di eccezione, ma con un valore francese:
 
    ![Aggiungere risorse alle impostazioni cultura fr-FR](media/add-resources-to-fr-culture.jpg)
 
-1. Dopo aver compilato il progetto, la cartella dell'output di compilazione deve contenere la cartella *fr-FR* con un file *DLL,* ovvero l'assembly satellite.
-1. Generare l'eccezione con codice simile al seguente:
+1. Dopo aver compilato il progetto, la cartella di output di compilazione deve contenere la cartella *fr-fr* con un file con estensione *dll* , ovvero l'assembly satellite.
+1. L'eccezione viene generata con codice simile al seguente:
 
     ```csharp
     var resourceManager = new ResourceManager("FULLY_QUALIFIED_NAME_OF_RESOURCE_FILE", Assembly.GetExecutingAssembly());
@@ -163,11 +163,11 @@ Per creare i messaggi di eccezione localizzati:
     ```
 
     > [!NOTE]
-    > Se il nome `TestProject` del progetto è e il file di risorse *ExceptionMessages.resx* si trova nella `TestProject.Resources.ExceptionMessages`cartella *Resources* del progetto, il nome completo del file di risorse è .
+    > Se il nome del progetto è `TestProject` e il file di risorse *ExceptionMessages. resx* risiede nella cartella *Resources* del progetto, il nome completo del file di risorse è `TestProject.Resources.ExceptionMessages` .
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Come creare eccezioni definite dall'utenteHow to create user-defined exceptions](how-to-create-user-defined-exceptions.md)
+- [Come creare eccezioni definite dall'utente](how-to-create-user-defined-exceptions.md)
 - [Creazione di assembly satellite per applicazioni desktop](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
 - [base (Riferimenti per C#)](../../csharp/language-reference/keywords/base.md)
 - [this (Riferimenti per C#)](../../csharp/language-reference/keywords/this.md)

@@ -40,7 +40,7 @@ Altre informazioni sul testing unità sono disponibili nei progetti .NET Core:
 I progetti di unit test .NET Core sono supportati per i linguaggi seguenti:
 
 - [C#](../../csharp/index.yml)
-- [F#](../../fsharp/index.yml)
+- [F #](../../fsharp/index.yml)
 - [Visual Basic](../../visual-basic/index.yml)
 
 È anche possibile scegliere tra diversi framework di unit test:

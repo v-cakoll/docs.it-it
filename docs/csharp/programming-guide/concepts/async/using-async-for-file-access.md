@@ -174,7 +174,7 @@ public async Task ProcessWriteMultAsync()
   
  Quando si usano i metodi <xref:System.IO.Stream.WriteAsync%2A> e <xref:System.IO.Stream.ReadAsync%2A>, è possibile specificare uno struct <xref:System.Threading.CancellationToken>, che consente di annullare l'operazione nel corso del flusso. Per altre informazioni, vedere [Ottimizzazione dell'app asincrona (C#)](./fine-tuning-your-async-application.md) e [Annullamento in thread gestiti](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Programmazione asincrona con async e await (C#)](./index.md)
 - [Tipi restituiti async (C#)](./async-return-types.md)

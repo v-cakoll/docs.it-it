@@ -2,12 +2,12 @@
 title: Implementazione del livello dell'applicazione di microservizi tramite l'API Web
 description: Comprendere l'inserimento delle dipendenze e i modelli Mediator e i relativi dettagli di implementazione nel livello applicazione API Web.
 ms.date: 01/30/2020
-ms.openlocfilehash: 3efa4939bb8762534af398d4e92361e81e668b85
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: c6e82b610a528b688cb4334bdec01700abbd2a62
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144604"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306929"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementare il livello dell'applicazione del microservizio usando l'API Web
 
@@ -18,14 +18,14 @@ Come accennato in precedenza, il livello dell'applicazione può essere implement
 Il codice del livello dell'applicazione del microservizio degli ordini, ad esempio, viene direttamente implementato come parte del progetto **Ordering.API** (un progetto API Web ASP.NET Core), come illustrato nella figura 7-23.
 
 :::image type="complex" source="./media/microservice-application-layer-implementation-web-api/ordering-api-microservice.png" alt-text="Screenshot del microservizio ordering. API nella Esplora soluzioni.":::
-La visualizzazione Esplora soluzioni del microservizio Ordering.API contiene le sottocartelle della cartella Application: Behaviors, Commands, DomainEventHandlers, IntegrationEvents, Models, Queries e Validations.
+Visualizzazione Esplora soluzioni del microservizio ordering. API, che mostra le sottocartelle nella cartella dell'applicazione: comportamenti, comandi, DomainEventHandlers, IntegrationEvents, modelli, query e convalide.
 :::image-end:::
 
 **Figura 7-23**. Livello dell'applicazione nel progetto API Web ASP.NET Core Ordering.API
 
 ASP.NET Core include un semplice [contenitore IoC predefinito](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) (rappresentato dall'interfaccia IServiceProvider) che supporta l'inserimento del costruttore per impostazione predefinita, mentre ASP.NET rende disponibili determinati servizi tramite l'inserimento delle dipendenze. In ASP.NET Core il termine *servizio* indica qualsiasi tipo registrato che verrà inserito tramite l'inserimento delle dipendenze. I servizi del contenitore predefinito vengono configurati nel metodo ConfigureServices nella classe Startup dell'applicazione. Le dipendenze vengono implementate nei servizi necessari per un tipo e registrati nel contenitore IoC.
 
-È in genere necessario inserire dipendenze che implementano oggetti dell'infrastruttura. Un repository è un tipico esempio di dipendenza da inserire, ma è possibile inserire qualsiasi altra dipendenza dell'infrastruttura disponibile. Per implementazioni più semplici, è possibile inserire direttamente l'oggetto schema Unit of Work (oggetto DbContext EF), perché DBContext è anche l'implementazione degli oggetti persistenza dell'infrastruttura.
+È in genere necessario inserire dipendenze che implementano oggetti dell'infrastruttura. Una dipendenza tipica da inserire è un repository. ma è possibile inserire qualsiasi altra dipendenza dell'infrastruttura disponibile. Per implementazioni più semplici, è possibile inserire direttamente l'oggetto schema Unit of Work (oggetto DbContext EF), perché DBContext è anche l'implementazione degli oggetti persistenza dell'infrastruttura.
 
 Nell'esempio seguente è possibile osservare come .NET Core inserisca gli oggetti del repository necessari tramite il costruttore. La classe è un gestore comando, che verrà illustrato nella sezione successiva.
 
@@ -433,7 +433,7 @@ Il diagramma precedente mostra uno zoom dall'immagine 7-24: il controller ASP.NE
 
 L'uso dello schema Mediator è sensato perché nelle applicazioni aziendali l'elaborazione delle richieste può essere complessa. Potrebbe essere necessario aggiungere un numero indeterminato di problematiche trasversali, ad esempio registrazione, convalide, controllo e sicurezza. In questi casi, è possibile affidarsi a una pipeline di Mediator (vedere [Mediator pattern](https://en.wikipedia.org/wiki/Mediator_pattern)) per fornire un mezzo per gestire questi comportamenti o problematiche trasversali aggiuntive.
 
-Un Mediator è un oggetto che incapsula il "come" di questo processo: coordina l'esecuzione in base allo stato, la modalità di richiamo di un gestore di comando o il payload fornito al gestore. Con un componente Mediator è possibile applicare le problematiche trasversali in modo centralizzato e trasparente applicando gli elementi Decorator (o [comportamenti della pipeline](https://github.com/jbogard/MediatR/wiki/Behaviors) da [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0)). Per altre informazioni, vedere lo [schema Decorator](https://en.wikipedia.org/wiki/Decorator_pattern).
+Un Mediator è un oggetto che incapsula il "come" di questo processo: coordina l'esecuzione in base allo stato, la modalità di richiamo di un gestore di comando o il payload fornito al gestore. Con un componente Mediator è possibile applicare le problematiche trasversali in modo centralizzato e trasparente applicando elementi Decorator (o [comportamenti della pipeline](https://github.com/jbogard/MediatR/wiki/Behaviors) a partire da [Mediator 3](https://www.nuget.org/packages/MediatR/3.0.0)). Per altre informazioni, vedere lo [schema Decorator](https://en.wikipedia.org/wiki/Decorator_pattern).
 
 Gli elementi Decorator e i comportamenti sono simili alla [programmazione orientata agli aspetti](https://en.wikipedia.org/wiki/Aspect-oriented_programming), che viene applicata solo a una pipeline di processi specifica gestita dal componente Mediator. Gli aspetti nella programmazione orientata agli aspetti, che implementano i problemi trasversali, vengono applicati in base ai *weaver degli aspetti* inseriti in fase di compilazione o in base all'intercettazione della chiamata all'oggetto. Si dice a volte che entrambi i tipici approcci alla programmazione orientata agli aspetti "fanno magie", perché non è facile vedere come funziona la programmazione orientata agli aspetti. Quando si affrontano problemi o bug gravi, può essere difficile eseguire il debug della programmazione orientata agli aspetti. D'altra parte, questi elementi Decorator/comportamenti sono espliciti e vengono applicati solo nel contesto del Mediator, quindi il debug è molto più prevedibile e semplice.
 
@@ -477,7 +477,7 @@ Un altro valido motivo per usare lo schema Mediator è stato illustrato da Jimmy
 
 > Penso che qui valga la pena parlare dei test, che offrono un quadro coerente del comportamento del sistema. Richiesta-in, risposta in uscita. Questo aspetto è molto utile per la creazione di test comportati in modo coerente.
 
-In primo luogo, esaminiamo un controller WebAPI di esempio in cui si utilizzerà l'oggetto Mediator. Se non si utilizza l'oggetto Mediator, è necessario inserire tutte le dipendenze per quel controller, ad esempio un oggetto logger e altri elementi. Il costruttore sarebbe quindi piuttosto complesso. D'altra parte, se si usa l'oggetto Mediator, il costruttore del controller può essere molto più semplice, con solo alcune dipendenze invece di molte se ne fosse presente una per ogni operazione trasversale, come nell'esempio seguente:
+In primo luogo, esaminiamo un controller WebAPI di esempio in cui si utilizzerà l'oggetto Mediator. Se non si utilizza l'oggetto Mediator, è necessario inserire tutte le dipendenze per quel controller, ad esempio un oggetto logger e altri elementi. Pertanto, il costruttore risulterebbe complesso. D'altra parte, se si usa l'oggetto Mediator, il costruttore del controller può essere molto più semplice, con solo alcune dipendenze invece di molte se ne fosse presente una per ogni operazione trasversale, come nell'esempio seguente:
 
 ```csharp
 public class MyMicroserviceController : Controller
@@ -526,9 +526,9 @@ var requestCreateOrder = new IdentifiedCommand<CreateOrderCommand,bool>(createOr
 result = await _mediator.Send(requestCreateOrder);
 ```
 
-Tuttavia, anche questo caso è un po' più avanzato perché sono implementati anche i comandi di idempotente. Il processo CreateOrderCommand dovrebbe essere idempotente, quindi, se per qualsiasi motivo lo stesso messaggio viene duplicato in rete, ad esempio a causa di più tentativi, lo stesso ordine aziendale verrà elaborato più di una volta.
+Tuttavia, anche questo caso è leggermente più avanzato perché vengono implementati anche i comandi di idempotente. Il processo CreateOrderCommand dovrebbe essere idempotente, quindi, se per qualsiasi motivo lo stesso messaggio viene duplicato in rete, ad esempio a causa di più tentativi, lo stesso ordine aziendale verrà elaborato più di una volta.
 
-Per l'implementazione viene eseguito il wrapping del comando aziendale (in questo caso CreateOrderCommand), che viene quindi incorporato in un generico IdentifiedCommand di cui viene tenuta traccia usando un ID di ogni messaggio in arrivo dalla rete che deve essere idempotente.
+Questa operazione viene eseguita eseguendo il wrapping del comando business (in questo caso CreateOrderCommand) e inserendolo in un IdentifiedCommand generico, che viene rilevata da un ID di ogni messaggio in arrivo attraverso la rete che deve essere idempotente.
 
 Nel codice seguente è possibile osservare che IdentifiedCommand è semplicemente un oggetto DTO con un ID e l'oggetto comando aziendale di cui viene eseguito il wrapping.
 
@@ -590,9 +590,9 @@ public class IdentifiedCommandHandler<T, R> :
 }
 ```
 
-Poiché il IdentifiedCommand funziona come una busta del comando aziendale, quando il comando business deve essere elaborato perché non è un ID ripetuto, accetta il comando aziendale interno e lo invia di nuovo al Mediator, come nell'ultima parte del codice illustrato in precedenza durante l'esecuzione `_mediator.Send(message.Command)` , dal [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
+Poiché il IdentifiedCommand funziona come una busta del comando aziendale, quando il comando business deve essere elaborato perché non è un ID ripetuto, accetta il comando aziendale interno e lo invia nuovamente al Mediator, come nell'ultima parte del codice illustrato in precedenza durante l'esecuzione `_mediator.Send(message.Command)` , dal [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
 
-Durante tale operazione, collegherà ed eseguirà il gestore comando aziendale, in questo caso [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs), che sta eseguendo le transazioni nel database degli ordini, come illustrato nel codice seguente.
+Quando si esegue questa operazione, verrà collegato ed eseguito il gestore dei comandi di business, in questo caso [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs), che esegue le transazioni nel database di ordinamento, come illustrato nel codice seguente.
 
 ```csharp
 // CreateOrderCommandHandler.cs

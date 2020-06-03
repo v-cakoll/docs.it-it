@@ -108,9 +108,9 @@ Le regole per la conformità a CLS sono elencate nella tabella riportata di segu
 |Accessibilità|[Accessibilità del membro](#MemberAccess)|L'accessibilità non sarà modificata quando si esegue l'override di metodi ereditati, tranne nel caso in cui si esegue l'override di un metodo ereditato da un assembly diverso con accessibilità `family-or-assembly`. In questo caso, l'override disporrà dell'accessibilità `family`.|10|
 |Accessibilità|[Accessibilità del membro](#MemberAccess)|La visibilità e l'accessibilità di tipi e membri saranno tali che i tipi nella firma di qualsiasi membro saranno visibili e accessibili ogni volta che il membro stesso è visibile e accessibile. Ad esempio, in un metodo pubblico che è visibile all'esterno del relativo assembly non deve essere presente un argomento il cui tipo è visibile solo nell'assembly. La visibilità e l'accessibilità di tipi che compongono un tipo generico con istanze usato nella firma di qualsiasi membro saranno visibili e accessibili ogni volta che il membro stesso è visibile e accessibile. Ad esempio, in un tipo generico con istanze presente nella firma di un membro visibile all'esterno del relativo assembly non deve essere disponibile un argomento generico il cui tipo è visibile solo nell'assembly.|12|
 |Matrici|[Matrici](#arrays)|Le matrici devono disporre di elementi con un tipo conforme a CLS e i limiti inferiori di tutte le dimensioni della matrice devono essere pari a zero. Solo per il fatto che un elemento sia una matrice, il tipo di elemento della matrice sarà richiesto per eseguire una distinzione tra gli overload. Quando l'overload è basato su due o più i tipi di matrice, i tipi di elemento vengono denominati tipi.|16|
-|Attributes|[Attributi](#attributes)|Gli attributi devono essere di tipo <xref:System.Attribute?displayProperty=nameWithType> o di un tipo che eredita da esso.|41|
-|Attributes|[Attributi](#attributes)|La specifica CLS consente solo un subset delle codifiche di attributi personalizzati. Gli unici tipi che verranno visualizzati in queste codifiche sono (vedere la partizione IV): <xref:System.Type?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Char?displayProperty=nameWithType>, <xref:System.Boolean?displayProperty=nameWithType>, <xref:System.Byte?displayProperty=nameWithType>, <xref:System.Int16?displayProperty=nameWithType>, <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.Single?displayProperty=nameWithType>, <xref:System.Double?displayProperty=nameWithType> e qualsiasi tipo di enumerazione basato su un tipo Integer di base conforme a CLS.|34|
-|Attributes|[Attributi](#attributes)|La specifica CLS non consente i modificatori necessari visibili pubblicamente (`modreq`, vedere la partizione II), ma consente i modificatori facoltativi (`modopt`, vedere la partizione II) che non riconosce.|35|
+|Attributi|[Attributi](#attributes)|Gli attributi devono essere di tipo <xref:System.Attribute?displayProperty=nameWithType> o di un tipo che eredita da esso.|41|
+|Attributi|[Attributi](#attributes)|La specifica CLS consente solo un subset delle codifiche di attributi personalizzati. Gli unici tipi che verranno visualizzati in queste codifiche sono (vedere la partizione IV): <xref:System.Type?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Char?displayProperty=nameWithType>, <xref:System.Boolean?displayProperty=nameWithType>, <xref:System.Byte?displayProperty=nameWithType>, <xref:System.Int16?displayProperty=nameWithType>, <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.Single?displayProperty=nameWithType>, <xref:System.Double?displayProperty=nameWithType> e qualsiasi tipo di enumerazione basato su un tipo Integer di base conforme a CLS.|34|
+|Attributi|[Attributi](#attributes)|La specifica CLS non consente i modificatori necessari visibili pubblicamente (`modreq`, vedere la partizione II), ma consente i modificatori facoltativi (`modopt`, vedere la partizione II) che non riconosce.|35|
 |Costruttori|[Costruttori](#ctors)|Prima di un eventuale accesso ai dati di istanza ereditati, tramite un costruttore di oggetti deve essere effettuata una chiamata a un costruttore di istanze della relativa classe di base. Ciò non si applica ai tipi di valore, che non devono disporre di costruttori.|21|
 |Costruttori|[Costruttori](#ctors)|Un costruttore di oggetti non deve essere chiamato se non come parte della creazione di un oggetto e un oggetto non deve essere inizializzato due volte.|22|
 |Enumerazioni|[Enumerazioni](#enums)|Il tipo sottostante di un'enumerazione deve essere un tipo Integer CLS incorporato, il nome del campo deve essere "value__" e il campo deve essere contrassegnato come `RTSpecialName`.|7|
@@ -172,7 +172,7 @@ Tutti i tipi visualizzati nelle firme dei membri, incluso il tipo restituito di 
 
 In [Common Type System](base-types/common-type-system.md) di .NET Framework è incluso un numero di tipi incorporati supportati direttamente da Common Language Runtime, codificati in particolare nei metadati di un assembly. Di questi tipi intrinseci, i tipi elencati nella tabella seguente sono conformi a CLS.
 
-|Tipo conforme a CLS|Descrizione|
+|Tipo conforme a CLS|Description|
 |-------------------------|-----------------|
 |<xref:System.Byte>|Unsigned Integer a 8 bit|
 |<xref:System.Int16>|Signed Integer a 16 bit|
@@ -188,10 +188,10 @@ In [Common Type System](base-types/common-type-system.md) di .NET Framework è i
 
 I tipi intrinseci elencati nella tabella seguente non sono conformi a CLS.
 
-|Tipo non conforme|Descrizione|Alternativa conforme a CLS|
+|Tipo non conforme|Description|Alternativa conforme a CLS|
 |-------------------------|-----------------|--------------------------------|
 |<xref:System.SByte>|Tipo di dati Signed Integer a 8 bit|<xref:System.Int16>|
-|<xref:System.TypedReference>|Puntatore a un oggetto e relativo tipo di runtime|nessuno|
+|<xref:System.TypedReference>|Puntatore a un oggetto e relativo tipo di runtime|Nessuno|
 |<xref:System.UInt16>|Intero senza segno a 16 bit|<xref:System.Int32>|
 |<xref:System.UInt32>|Intero senza segno a 32 bit|<xref:System.Int64>|
 |<xref:System.UInt64>|Intero senza segno a 64 bit|<xref:System.Int64> (possibile overflow), <xref:System.Numerics.BigInteger> o <xref:System.Double>|
@@ -485,7 +485,7 @@ Per correggere questo errore, la classe `ErrorClass` deve ereditare da <xref:Sys
 
 <a name="attributes"></a>
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attributi
 
 Negli assembly .NET Framework, gli attributi personalizzati forniscono un meccanismo estensibile per archiviare gli attributi personalizzati e recuperare i metadati sugli oggetti di programmazione, ad esempio assembly, tipi, membri e parametri di metodo. Gli attributi personalizzati devono derivare da <xref:System.Attribute?displayProperty=nameWithType> o da un tipo derivato da <xref:System.Attribute?displayProperty=nameWithType>.
 

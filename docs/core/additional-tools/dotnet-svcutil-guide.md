@@ -37,7 +37,7 @@ Lo strumento **DotNet-Svcutil** è un'opzione alternativa al [**servizio Web WCF
 
 ---
 
-## <a name="getting-started"></a>Guida introduttiva
+## <a name="getting-started"></a>Introduzione
 
 L'esempio seguente illustra la procedura necessaria per aggiungere un riferimento al servizio Web a un progetto Web .NET Core e richiamare il servizio. Si creerà un'applicazione Web .NET Core denominata *HelloSvcutil* e verrà aggiunto un riferimento a un servizio Web che implementa il contratto seguente:
 

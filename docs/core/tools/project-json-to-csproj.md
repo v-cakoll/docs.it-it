@@ -38,7 +38,7 @@ Il nuovo formato, \*.csproj, è un formato basato su XML. L'esempio seguente ill
 }
 ```
 
-Non più supportata. In csproj è determinato dal nome del file di progetto, che in genere corrisponde al nome della directory. Ad esempio, `MyProjectName.csproj`
+Non più supportata. In csproj è determinato dal nome del file di progetto, che in genere corrisponde al nome della directory. Ad esempio: `MyProjectName.csproj`.
 
 Per impostazione predefinita, il nome del file di progetto specifica anche il valore delle proprietà `<AssemblyName>` e `<PackageId>`.
 
@@ -141,7 +141,7 @@ Usare la proprietà `TargetFrameworks` per definire l'elenco dei framework di de
 </PropertyGroup>
 ```
 
-## <a name="dependencies"></a>dependencies
+## <a name="dependencies"></a>dipendenze
 
 > [!IMPORTANT]
 > Se la dipendenza è un **progetto** e non un pacchetto, il formato è diverso.
@@ -339,7 +339,7 @@ In MSBuild, tutti i progetti sono *portatili* durante la creazione, ma possono e
 
 Per altre informazioni, vedere [Distribuzioni autonome (SCD)](../deploying/index.md#publish-self-contained).
 
-## <a name="tools"></a>strumenti
+## <a name="tools"></a>tools
 
 ```json
 {

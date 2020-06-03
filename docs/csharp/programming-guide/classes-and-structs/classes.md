@@ -85,7 +85,7 @@ Quando una classe dichiara una classe di base, eredita tutti i membri della clas
   
 Diversamente da C++, una classe di C# può ereditare direttamente solo da una classe di base. Tuttavia, poiché una classe di base può ereditare da un'altra classe, una classe può ereditare indirettamente più classi di base. Una classe può anche implementare direttamente più di un'interfaccia. Per ulteriori informazioni, vedi [Interfacce](../interfaces/index.md).  
   
-Una classe può essere dichiarata come [astratta](../../language-reference/keywords/abstract.md). Una classe astratta contiene metodi astratti che hanno una definizione di firma, ma senza implementazione. Non è possibile creare un'istanza di classi astratte. Le classi astratte possono essere usate solo tramite classi derivate che implementano i metodi astratti. Al contrario, una classe [sealed](../../language-reference/keywords/sealed.md) non consente ad altre classi di derivare da tale classe. Per ulteriori informazioni, vedere [Classi astratte e sealed e Membri di classe](abstract-and-sealed-classes-and-class-members.md).  
+Una classe può essere dichiarata come [astratta](../../language-reference/keywords/abstract.md). Una classe astratta contiene metodi astratti che hanno una definizione di firma, ma senza implementazione. Non è possibile creare un'istanza di classi astratte. Le classi astratte possono essere usate solo tramite classi derivate che implementano i metodi astratti. Al contrario, una classe [sealed](../../language-reference/keywords/sealed.md) non consente ad altre classi di derivare da tale classe. Per altre informazioni, vedere [classi e membri delle classi astratte e sealed](abstract-and-sealed-classes-and-class-members.md).  
   
 Le definizioni di classe possono essere suddivise tra file di origine diversa. Per altre informazioni, vedere [Classi e metodi parziali](partial-classes-and-methods.md).  
   
@@ -101,7 +101,7 @@ L'esempio seguente definisce una classe pubblica che contiene una [proprietà im
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida alla programmazione in C](../index.md)
+- [Guida per programmatori C#](../index.md)
 - [Programmazione orientata ad oggetti](../concepts/object-oriented-programming.md)
 - [Polimorfismo](polymorphism.md)
 - [Nomi di identificatore](../inside-a-program/identifier-names.md)

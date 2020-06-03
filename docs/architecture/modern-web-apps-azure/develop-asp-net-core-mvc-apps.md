@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Svil
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 955d4ec4a0bd0ddf2d022d4154fc6528b2abf3d0
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: be674f3292238b1983064408184777d379cf52a7
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144552"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307007"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Sviluppare app ASP.NET Core MVC
 
@@ -88,7 +88,7 @@ Nell'esempio precedente, la pagina in questione corrisponderà a una route con u
 "/Products/123"
 ```
 
-Dopo aver individuato una determinata richiesta corrispondente a una route e prima della chiamata al metodo di azione, ASP.NET Core MVC eseguirà l'[associazione del modello](/aspnet/core/mvc/models/model-binding) e la [convalida del modello](/aspnet/core/mvc/models/validation) nella richiesta. L'associazione del modello converte i dati HTTP in ingresso nei tipi .NET specificati come parametri del metodo di azione da chiamare. Ad esempio, se il metodo di azione prevede un parametro ID di tipo int, l'associazione del modello tenterà di usare questo parametro in base a un valore specificato come parte della richiesta. A tale scopo, l'associazione del modello cerca i valori in un form pubblicato, i valori nella route e i valori di stringa di query. Se viene trovato un valore ID, il valore viene convertito in un intero prima di essere passato nel metodo di azione.
+Dopo aver individuato una determinata richiesta corrispondente a una route e prima della chiamata al metodo di azione, ASP.NET Core MVC eseguirà l'[associazione del modello](/aspnet/core/mvc/models/model-binding) e la [convalida del modello](/aspnet/core/mvc/models/validation) nella richiesta. L'associazione del modello converte i dati HTTP in ingresso nei tipi .NET specificati come parametri del metodo di azione da chiamare. Se, ad esempio, il metodo di azione prevede un `int id` parametro, l'associazione di modelli tenterà di fornire questo parametro da un valore fornito come parte della richiesta. A tale scopo, l'associazione del modello cerca i valori in un form pubblicato, i valori nella route e i valori di stringa di query. Se viene trovato un valore ID, il valore viene convertito in un intero prima di essere passato nel metodo di azione.
 
 Dopo l'associazione del modello ma prima della chiamata al metodo di azione, viene eseguita la convalida del modello. La convalida del modello usa gli attributi facoltativi del tipo di modello e contribuisce a garantire che l'oggetto di modello specificato sia conforme a determinati requisiti dei dati. Alcuni valori possono essere specificati come obbligatori o limitati a una determinata lunghezza o a un intervallo numerico e così via. Se vengono specificati gli attributi di convalida, ma il modello non è conforme ai propri requisiti, la proprietà ModelState. IsValid sarà false e il set di regole di convalida non riuscite sarà disponibile per l'invio al client che esegue la richiesta.
 
@@ -158,7 +158,7 @@ La classe Startup costituisce un modello per la struttura delle altre parti dell
 
 ## <a name="structuring-the-application"></a>Creazione della struttura dell'applicazione
 
-Le applicazioni monolitiche hanno in genere un singolo punto di ingresso. In un'applicazione Web ASP.NET Core il punto di ingresso sarà il progetto Web ASP.NET Core. Tuttavia, ciò non significa che la soluzione deve essere costituita da un singolo progetto. È utile suddividere l'applicazione in livelli diversi per riflettere la separazione delle competenze. Dopo la suddivisione in livelli, è utile andare oltre le cartelle per separare i progetti per ottenere un miglior incapsulamento. L'approccio migliore per raggiungere questi obiettivi con un'applicazione ASP.NET Core è una variante dell'architettura "pulita" descritta nel capitolo 5. Seguendo questo approccio, la soluzione dell'applicazione sarà costituita da librerie separate per interfaccia utente, infrastruttura e ApplicationCore.
+Le applicazioni monolitiche hanno in genere un singolo punto di ingresso. In un'applicazione Web ASP.NET Core il punto di ingresso sarà il progetto Web ASP.NET Core. Tuttavia, ciò non significa che la soluzione deve essere costituita da un singolo progetto. È utile suddividere l'applicazione in livelli diversi per riflettere la separazione delle competenze. Dopo la suddivisione in livelli, è utile andare oltre le cartelle per separare i progetti per ottenere un miglior incapsulamento. L'approccio migliore per raggiungere questi obiettivi con un'applicazione ASP.NET Core è una variante dell'architettura "pulita" descritta nel capitolo 5. Seguendo questo approccio, la soluzione dell'applicazione includerà librerie separate per interfaccia utente, infrastruttura e ApplicationCore.
 
 Oltre a questi progetti, sono inclusi anche i progetti di test separati (i test sono descritti nel capitolo 9).
 
@@ -438,7 +438,7 @@ Prestare particolare attenzione alle implementazioni personalizzate della critto
 
 Oltre a visualizzare le pagine e a rispondere alle richieste di dati tramite le API Web, le app ASP.NET Core possono comunicare direttamente con i client connessi. Questa comunicazione in uscita può usare diverse tecnologie di trasporto, tra cui la più comune sono i WebSocket. ASP.NET ASP.NET Core SignalR è una libreria che semplifica l'aggiunta della funzionalità di comunicazione da server a client in tempo reale alle applicazioni. SignalR supporta diverse tecnologie di trasporto, inclusi i WebSocket, ed elimina molti dei dettagli di implementazione specificati dallo sviluppatore.
 
-La comunicazione con il client in tempo reale, con l'utilizzo diretto di WebSocket o altre tecniche, è utile in diversi scenari di applicazioni. Di seguito sono riportati alcuni esempi:
+La comunicazione con il client in tempo reale, con l'utilizzo diretto di WebSocket o altre tecniche, è utile in diversi scenari di applicazioni. Di seguito sono riportati alcuni esempi.
 
 - Applicazioni live chat room
 
@@ -501,7 +501,7 @@ La progettazione basata su domini (Domain-Driven Design, DDD) è un approccio se
 
 Quando si compila un software seguendo un approccio DDD, è necessario che il team, inclusi gli utenti e i collaboratori non tecnici, sviluppi un _linguaggio universale_ per l'area dei problemi. Ciò significa che è necessario usare la stessa terminologia per il concetto del mondo reale modellato, l'equivalente software ed eventuali strutture esistenti per il mantenimento del concetto, ad esempio le tabelle di database. Di conseguenza, i concetti descritti in linguaggio universale devono costituire la base del _modello di dominio_.
 
-Il modello di dominio è costituito da oggetti che interagiscono tra loro per rappresentare il comportamento del sistema. Gli oggetti sono suddivisi nelle categorie seguenti:
+Il modello di dominio comprende gli oggetti che interagiscono tra loro per rappresentare il comportamento del sistema. Gli oggetti sono suddivisi nelle categorie seguenti:
 
 - [Entità](https://deviq.com/entity/) che rappresentano gli oggetti con un thread di identità. Le entità sono in genere salvate in modo permanente con una chiave con cui possono essere recuperate in seguito.
 
@@ -537,7 +537,7 @@ DDD è particolarmente adatto per applicazioni di grandi dimensioni con compless
 
 La progettazione DDD prevede investimenti nella modellazione, nell'architettura e nella comunicazione non sempre garantiti per le applicazioni di piccole dimensioni o le applicazioni CRUD (Create/Read/Update/Delete). Se si sceglie un approccio basato sulla progettazione DDD per l'applicazione e si scopre che il dominio ha un modello anemico senza comportamento, potrebbe essere necessario cambiare approccio. È possibile che l'applicazione non richieda la progettazione DDD oppure potrebbe essere necessario ricevere assistenza per effettuare il refactoring dell'applicazione in modo da incapsulare la logica di business nel modello di dominio anziché nel database o nell'interfaccia utente.
 
-Un approccio ibrido potrebbe essere quello di usare la progettazione DDD solo per le aree transazionali o più complesse dell'applicazione e di non usarla per le parti più semplici CRUD o di sola lettura dell'applicazione. Ad esempio, non sono necessari i vincoli di un'aggregazione quando si eseguono query sui dati per visualizzare un report o i dati di un dashboard. Per questo tipo di requisiti è possibile avere un modello di lettura più semplice separato.
+Un approccio ibrido potrebbe essere quello di usare la progettazione DDD solo per le aree transazionali o più complesse dell'applicazione e di non usarla per le parti più semplici CRUD o di sola lettura dell'applicazione. Se, ad esempio, si esegue una query sui dati per visualizzare un report o visualizzare i dati per un dashboard, non sono necessari i vincoli di un'aggregazione. Per questo tipo di requisiti è possibile avere un modello di lettura più semplice separato.
 
 > ### <a name="references--domain-driven-design"></a>Riferimenti - Progettazione basata su domini (DDD)
 >

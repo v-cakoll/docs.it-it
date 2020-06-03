@@ -1,5 +1,5 @@
 ---
-title: Come eseguire la ricerca di stringhe (Guida di C
+title: Come cercare stringhe (Guida a C#)
 ms.date: 02/21/2018
 helpviewer_keywords:
 - searching strings [C#]
@@ -72,11 +72,11 @@ Il codice seguente usa le espressioni regolari per convalidare il formato di ogn
 
 Questo singolo criterio di ricerca corrisponde a molte stringhe valide. Le espressioni regolari sono preferibili per eseguire ricerche o convalide in base a un modello, anziché a una singola stringa di testo.
 
-È possibile provare questi esempi esaminando il codice nel repository [GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings). Oppure è possibile scaricare gli esempi [come file ZIP](../../../samples/snippets/csharp/how-to/strings.zip).
+È possibile provare questi esempi esaminando il codice nel [repository GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings). Oppure è possibile scaricare gli esempi [come file ZIP](../../../samples/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida alla programmazione in C](../programming-guide/index.md)
+- [Guida per programmatori C#](../programming-guide/index.md)
 - [Stringhe](../programming-guide/strings/index.md)
 - [LINQ e stringhe](../programming-guide/concepts/linq/linq-and-strings.md)
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>

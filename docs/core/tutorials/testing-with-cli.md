@@ -1,18 +1,18 @@
 ---
-title: Organizzazione e test di progetti con l'interfaccia della riga di comando di .NET Core
+title: Organizzazione e testing dei progetti con la interfaccia della riga di comando di .NET Core
 description: Questa esercitazione illustra come organizzare e testare i progetti .NET Core dalla riga di comando.
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: 0d61e0fc004cfcb6d78c49475c7b7f0f523aad2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 58c78c0f11ab1b275e4e4d05bf1da32562333c91
+ms.sourcegitcommit: 0a798a7e9680e2d0a5a81a3eaa203870ea782883
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78239911"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84325945"
 ---
-# <a name="organizing-and-testing-projects-with-the-net-core-cli"></a>Organizzazione e test di progetti con l'interfaccia della riga di comando di .NET Core
+# <a name="organizing-and-testing-projects-with-the-net-core-cli"></a>Organizzazione e testing dei progetti con la interfaccia della riga di comando di .NET Core
 
-Questa esercitazione segue [Introduzione all'uso di .NET Core su Windows/Linux/macOS dalla riga di comando](cli-create-console-app.md) e va oltre la creazione di una semplice app console, illustrando lo sviluppo di applicazioni più avanzate e organizzate. L'esercitazione indica come usare le cartelle per organizzare il codice, quindi illustra come estendere un'applicazione console con il framework di testo [xUnit](https://xunit.github.io/).
+Questa esercitazione segue l'esercitazione relativa alla [creazione di un'applicazione console con .NET Core con Visual Studio Code](with-visual-studio-code.md), oltre alla creazione di una semplice app console per lo sviluppo di applicazioni avanzate e ben organizzate. L'esercitazione indica come usare le cartelle per organizzare il codice, quindi illustra come estendere un'applicazione console con il framework di testo [xUnit](https://xunit.github.io/).
 
 ## <a name="using-folders-to-organize-code"></a>Uso di cartelle per organizzare il codice
 
@@ -104,7 +104,7 @@ Il progetto `NewTypes` è attivo ed è stato organizzato inserendo i tipi associ
 
 Tornare alla cartella *src* e creare una cartella *test* contenente una sottocartella *NewTypesTests*. Al prompt dei comandi della cartella *NewTypesTests* eseguire `dotnet new xunit`. Questa operazione produce due file: *NewTypesTests.csproj* e *UnitTest1.cs*.
 
-Il progetto di test non può verificare i tipi in `NewTypes` e richiede un riferimento al progetto `NewTypes`. Per aggiungere un riferimento [`dotnet add reference`](../tools/dotnet-add-reference.md) al progetto, utilizzare il comando:To add a project reference, use the command:
+Il progetto di test non può verificare i tipi in `NewTypes` e richiede un riferimento al progetto `NewTypes`. Per aggiungere un riferimento al progetto, usare il [`dotnet add reference`](../tools/dotnet-add-reference.md) comando:
 
 ```dotnetcli
 dotnet add reference ../../src/NewTypes/NewTypes.csproj
@@ -181,7 +181,7 @@ Di seguito viene riportata la struttura completa del progetto:
       |__NewTypesTests.csproj
 ```
 
-Iniziare nella directory *test/NewTypesTests*. Ripristinare il progetto [`dotnet restore`](../tools/dotnet-restore.md) di test con il comando. Eseguire i test [`dotnet test`](../tools/dotnet-test.md) con il comando . Questo comando avvia il Test Runner specificato nel file di progetto.
+Iniziare nella directory *test/NewTypesTests*. Ripristinare il progetto di test con il [`dotnet restore`](../tools/dotnet-restore.md) comando. Eseguire i test con il [`dotnet test`](../tools/dotnet-test.md) comando. Questo comando avvia il Test Runner specificato nel file di progetto.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 

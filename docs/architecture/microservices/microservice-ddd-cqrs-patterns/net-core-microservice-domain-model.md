@@ -2,23 +2,23 @@
 title: Implementazione di un modello di dominio del microservizio con .NET Core
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Informazioni dettagliate sull'implementazione di un modello di dominio orientato a DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: 8aff06a2e37dc87e5ba4f556e9b808598ff3653a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0b42ecc2440faf5870b2d99e31d03cda00b21ce0
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144578"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306909"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementare un modello di dominio del microservizio con .NET Core
 
-La sezione precedente ha illustrato i principi e gli schemi fondamentali per la progettazione di un modello di dominio. È giunto ora il momento di esplorare i possibili modi per implementare il modello di dominio usando .NET Core (normale codice C\#) e EF Core. Si noti che il modello di dominio sarà costituito semplicemente dal codice: avrà i requisiti del modello EF Core, ma non vere dipendenze su EF. Il modello di dominio non deve contenere dipendenze rigide o riferimenti a EF Core né a nessun altro ORM.
+La sezione precedente ha illustrato i principi e gli schemi fondamentali per la progettazione di un modello di dominio. È giunto ora il momento di esplorare i possibili modi per implementare il modello di dominio usando .NET Core (normale codice C\#) e EF Core. Il modello di dominio verrà composto semplicemente dal codice. avrà i requisiti del modello EF Core, ma non vere dipendenze su EF. Il modello di dominio non deve contenere dipendenze rigide o riferimenti a EF Core né a nessun altro ORM.
 
 ## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Struttura del modello di dominio in una libreria .NET Standard personalizzata
 
 L'organizzazione della cartella usata per l'applicazione di riferimento eShopOnContainers dimostra il modello DDD per l'applicazione. Un'organizzazione della cartella differente potrebbe comunicare in maniera più chiara le scelte di progettazione effettuate per la propria applicazione. Come si vede nella figura 7-10, nel modello di dominio di ordinamento sono presenti due aggregazioni: l'aggregazione order e l'aggregazione buyer. Ogni aggregazione è un gruppo di entità di dominio e oggetti valore, anche se è possibile avere un aggregato costituito da una singola entità di dominio (radice dell'aggregazione o entità radice).
 
 :::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="Screenshot del progetto ordering. Domain in Esplora soluzioni.":::
-Nella visualizzazione Esplora soluzioni per il progetto Ordering.Domain appare la cartella AggregatesModel contenente le cartelle BuyerAggregate e OrderAggregate, ognuna delle quali contiene le proprie classi di entità, i file di oggetti valore e così via.
+Visualizzazione Esplora soluzioni per il progetto ordering. Domain, che mostra la cartella AggregatesModel contenente le cartelle BuyerAggregate e OrderAggregate, ognuna delle quali contiene le classi di entità, i file oggetto valore e così via.
 :::image-end:::
 
 **Figura 7-10**. Struttura del modello di dominio per il microservizio degli ordini in eShopOnContainers
@@ -95,7 +95,7 @@ public class Order : Entity, IAggregateRoot
 }
 ```
 
-È importante notare che questa è un'entità di dominio implementata come classe POCO, che non ha alcuna dipendenza diretta da Entity Framework Core o qualsiasi altro framework dell'infrastruttura. Questa implementazione è come deve essere in DDD, solo codice C\# che implementa un modello di dominio.
+È importante notare che questa è un'entità di dominio implementata come classe POCO, che non ha alcuna dipendenza diretta da Entity Framework Core o qualsiasi altro framework dell'infrastruttura. Questa implementazione è come dovrebbe essere in DDD, solo il codice C# che implementa un modello di dominio.
 
 La classe è anche decorata con un'interfaccia denominata IAggregateRoot. Tale interfaccia vuota, talvolta detta *interfaccia dei marcatori*, viene usata solo per indicare che questa classe di entità è anche una radice di aggregazione.
 
@@ -154,7 +154,7 @@ Anche la nuova operazione OrderItem(params) sarà controllata ed eseguita dal me
 
 Quando si usa Entity Framework Core 1.1 o versioni successive, un'entità DDD può essere espressa meglio perché consente di [eseguire il mapping ai campi](https://docs.microsoft.com/ef/core/modeling/backing-field) oltre alle proprietà. Ciò è utile quando si proteggono le raccolte di entità figlio oppure oggetti valore. Con questa funzionalità avanzata, è possibile usare i semplici campi privati anziché le proprietà e implementare gli aggiornamenti della raccolta di campi nei metodi pubblici e fornire l'accesso di sola lettura usando il metodo AsReadOnly.
 
-In DDD, aggiornare l'entità usando solo i metodi nell'entità (o costruttore) per controllare qualsiasi invariante e la coerenza dei dati, dunque le proprietà sono definite solo con una funzione di accesso Get. Le proprietà sono supportate da campi privati. I membri privati sono accessibili solo dall'interno della classe. Tuttavia, esiste un'eccezione: questi campi devono essere impostati anche in EF Core, in modo che venga restituito l'oggetto con i valori appropriati.
+In DDD si desidera aggiornare l'entità solo tramite metodi nell'entità (o nel costruttore) per controllare qualsiasi invariante e la coerenza dei dati, in modo che le proprietà siano definite solo con una funzione di accesso get. Le proprietà sono supportate da campi privati. I membri privati sono accessibili solo dall'interno della classe. Tuttavia, esiste un'eccezione: questi campi devono essere impostati anche in EF Core, in modo che venga restituito l'oggetto con i valori appropriati.
 
 ### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Mappare le proprietà solo con funzioni di accesso Get ai campi nella tabella di database
 

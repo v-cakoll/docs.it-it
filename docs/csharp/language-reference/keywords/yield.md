@@ -25,7 +25,7 @@ yield return <expression>;
 yield break;
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Si utilizza un'istruzione `yield return` per restituire un elemento alla volta.
 

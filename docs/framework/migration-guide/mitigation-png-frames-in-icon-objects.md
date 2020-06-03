@@ -18,7 +18,7 @@ A partire da .NET Framework 4.6, il metodo <xref:System.Drawing.Icon.ToBitmap%2A
  Questa modifica influisce sulle app che vengono ricompilate per essere destinate a .NET Framework 4.6 e che implementano una gestione speciale per l'eccezione <xref:System.ArgumentOutOfRangeException> generata quando un oggetto <xref:System.Drawing.Icon> presenta frame PNG. Quando è in esecuzione su .NET Framework 4.6, la conversione viene completata correttamente, non viene più generata un'eccezione <xref:System.ArgumentOutOfRangeException> e quindi non viene più richiamato il gestore di eccezioni.  
   
 ### <a name="mitigation"></a>Strategia di riduzione del rischio  
- Se questo comportamento è indesiderato, è possibile mantenere il comportamento precedente aggiungendo l'elemento seguente alla sezione [ \<>di runtime](../configure-apps/file-schema/runtime/runtime-element.md) del file app.config:  
+ Se questo comportamento è indesiderato, è possibile mantenere il comportamento precedente aggiungendo l'elemento seguente alla sezione [ \< Runtime >](../configure-apps/file-schema/runtime/runtime-element.md) del file app. config:  
   
 ```xml  
 <AppContextSwitchOverrides
@@ -34,4 +34,4 @@ A partire da .NET Framework 4.6, il metodo <xref:System.Drawing.Icon.ToBitmap%2A
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Compatibilità tra le versioni](application-compatibility.md)
+- [Compatibilità delle applicazioni](application-compatibility.md)

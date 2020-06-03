@@ -2,12 +2,12 @@
 title: Progettazione di un modello di dominio del microservizio
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Comprendere i concetti principali quando si progetta un modello di dominio orientato a DDD.
 ms.date: 01/30/2020
-ms.openlocfilehash: 234d6e518eac8de5b2f130b91adb32b6a24a7265
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: fe78e719570d5758b71531beab883e5c24a88dca
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144591"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306910"
 ---
 # <a name="design-a-microservice-domain-model"></a>Progettare un modello di dominio del microservizio
 
@@ -35,7 +35,7 @@ La figura 7-8 illustra un'entità di dominio che implementa non solo gli attribu
 
 **Figura 7-8**. Esempio di progettazione di un'entità di dominio che implementa dati e comportamento
 
-Un'entità del modello di dominio implementa i comportamenti usando i metodi, vale a dire, non è un modello "anemico". In alcuni casi, naturalmente, è possibile che un'entità non implementi alcuna logica nell'ambito della classe di entità. Questa situazione può verificarsi nelle entità figlio all'interno di un aggregazione se l'entità figlio non contiene alcuna logica speciale, poiché la maggior parte della logica è definita nella radice di aggregazione. Se si ha un microservizio complesso in cui la maggior parte della logica è implementata nelle classi del servizio anziché nelle entità di dominio, è possibile che si abbia a che fare con un modello di dominio anemico, illustrato nella sezione seguente.
+Un'entità del modello di dominio implementa i comportamenti usando i metodi, vale a dire, non è un modello "anemico". In alcuni casi, naturalmente, è possibile che un'entità non implementi alcuna logica nell'ambito della classe di entità. Questa situazione può verificarsi nelle entità figlio all'interno di un aggregazione se l'entità figlio non contiene alcuna logica speciale, poiché la maggior parte della logica è definita nella radice di aggregazione. Se si dispone di un microservizio complesso con la logica implementata nelle classi del servizio anziché nelle entità di dominio, è possibile che si stia ricadendo nel modello di dominio anemico, illustrato nella sezione seguente.
 
 ### <a name="rich-domain-model-versus-anemic-domain-model"></a>Modello di dominio avanzato e modello di dominio anemico a confronto
 
@@ -45,7 +45,7 @@ La caratteristica principale di un modello di dominio anemico è che inizialment
 
 Quando si usa un modello di dominio anemico, ovviamente, questi modelli di dati vengono usati da un set di oggetti servizio (tradizionalmente denominato *livello aziendale*) che acquisisce tutta la logica aziendale o di dominio. Il livello aziendale si basa quindi sul modello di dati, che usa come dati.
 
-Il modello di dominio anemico è una progettazione di tipo procedurale. Gli oggetti entità anemici non sono oggetti reali perché non hanno un comportamento (metodi). Si limitano a contenere proprietà di dati e, pertanto, non hanno una progettazione orientata agli oggetti. Inserendo tutti i tipi di comportamento in oggetti servizio (il livello aziendale), tuttavia, si finisce per avere [blocchi di codice complicato](https://en.wikipedia.org/wiki/Spaghetti_code) o [script transazionali](https://martinfowler.com/eaaCatalog/transactionScript.html) e, quindi, si perdono i vantaggi offerti da un modello di dominio.
+Il modello di dominio anemico è una progettazione di tipo procedurale. Gli oggetti entità anemici non sono oggetti reali perché non hanno un comportamento (metodi). Si limitano a contenere proprietà di dati e, pertanto, non hanno una progettazione orientata agli oggetti. Inserendo tutto il comportamento in oggetti servizio (il livello aziendale), si finisce essenzialmente con [codice spaghetti](https://en.wikipedia.org/wiki/Spaghetti_code) o [script di transazione](https://martinfowler.com/eaaCatalog/transactionScript.html)e pertanto si perdono i vantaggi offerti da un modello di dominio.
 
 Indipendentemente dal fatto che il microservizio o il contesto limitato sia molto semplice (un servizio CRUD), è possibile che il modello di dominio anemico sotto forma di oggetti entità contenenti solo le proprietà dei dati sia sufficiente e, in questo caso, non sarebbe necessario implementare schemi di progettazione basata su domini più complessi. Si tratterà semplicemente di un modello di persistenza, poiché è stata intenzionalmente creata un'entità contenente solo i dati necessari per il servizio CRUD.
 
@@ -72,7 +72,7 @@ Un'entità richiede un'identità, che non è necessaria invece in molti oggetti 
 
 È possibile che un elemento che rappresenta un'entità in un microservizio non svolga la stessa funzione in un altro microservizio poiché, in questo secondo caso, il contesto limitato ha un significato diverso. Ad esempio, un indirizzo in un'applicazione di e-commerce potrebbe non avere un'identità, perché potrebbe rappresentare solo un gruppo di attributi del profilo del cliente per una persona o una società. In questo caso, l'indirizzo deve essere classificato come un oggetto valore. In un'applicazione per una società di energia elettrica, invece, l'indirizzo del cliente può essere importante per il dominio aziendale. L'indirizzo, quindi, deve avere un'identità in modo che il sistema di fatturazione sia direttamente collegato all'indirizzo. In questo caso, l'indirizzo deve essere classificato come un'entità di dominio.
 
-Una persona con un nome e un cognome, in genere, costituisce un'entità perché ogni persona ha un'identità, anche se il nome e il cognome coincidono con un altro set di valori, come nel caso in cui i nomi facciano riferimento anche a una persona diversa.
+Una persona con un nome e un cognome è in genere un'entità perché una persona ha un'identità, anche se il nome e il cognome coincidono con un altro set di valori, ad esempio se tali nomi fanno riferimento anche a una persona diversa.
 
 Gli oggetti valore sono difficili da gestire nei database relazionali e ORM come Entity Framework (EF), mentre nei database orientati ai documenti sono più facili da implementare e usare.
 
@@ -114,14 +114,14 @@ Nella figura 7-9 è possibile osservare aggregazioni di esempio come l'aggregazi
 
 Un modello di dominio DDD è composto da aggregati, un aggregato può avere una o più entità e includere anche oggetti valore. L'aggregazione Buyer può avere entità figlio aggiuntive, in base al dominio, come avviene nel microservizio degli ordini nell'applicazione di riferimento eShopOnContainers. La figura 7-9 illustra un caso in cui l'aggregazione Buyer contiene un'unica entità, come esempio di aggregazione contenente solo una radice di aggregazione.
 
-Per mantenere le aggregazioni separate in un modello di progettazione basata su domini, è buona norma impedire l'esplorazione diretta tra le aggregazioni e mantenere solo il campo della chiave esterna, come implementato nel [modello di dominio del microservizio degli ordini](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) in eShopOnContainers. L'entità Order include solo un campo di chiave esterna per l'aggregazione Buyer, ma non una proprietà di navigazione EF Core, come illustrato nel codice seguente:
+Per mantenere le aggregazioni separate in un modello di progettazione basata su domini, è buona norma impedire l'esplorazione diretta tra le aggregazioni e mantenere solo il campo della chiave esterna, come implementato nel [modello di dominio del microservizio degli ordini](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) in eShopOnContainers. L'entità Order dispone solo di un campo di chiave esterna per l'acquirente, ma non di una proprietà di navigazione EF Core, come illustrato nel codice seguente:
 
 ```csharp
 public class Order : Entity, IAggregateRoot
 {
     private DateTime _orderDate;
     public Address Address { get; private set; }
-    private int? _buyerId; //FK pointing to a different aggregate root
+    private int? _buyerId; // FK pointing to a different aggregate root
     public OrderStatus OrderStatus { get; private set; }
     private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;

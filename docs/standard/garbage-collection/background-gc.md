@@ -5,12 +5,12 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, background
 - background garbage collection
-ms.openlocfilehash: e2e25dcfff759d68087006b63544bf688798c029
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8134c0af55d74e57dcfce8c7174265b8c9902feb
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286080"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307072"
 ---
 # <a name="background-garbage-collection"></a>Garbage Collection in background
 
@@ -39,11 +39,11 @@ Il server in background Garbage Collection funziona in modo analogo alla Garbage
 
 Nell'illustrazione seguente viene mostrata Garbage Collection *workstation* in background eseguita su un thread separato dedicato:
 
-![Garbage Collection della workstation in background](./media/fundamentals/background-workstation-garbage-collection.png)
+![Garbage Collection della workstation in background](media/fundamentals/background-workstation-garbage-collection.png)
 
 Nella figura seguente viene illustrato il *Server* in background Garbage Collection eseguito su thread separati dedicati:
 
-![Garbage Collection del server in background](./media/fundamentals/background-server-garbage-collection.png)
+![Garbage Collection del server in background](media/fundamentals/background-server-garbage-collection.png)
 
 ## <a name="concurrent-garbage-collection"></a>Garbage Collection contemporanea
 
@@ -63,7 +63,7 @@ La modalità simultanea di Garbage Collection viene eseguita in un thread dedica
 
 Nell'illustrazione riportata di seguito viene mostrata l'esecuzione simultanea di un'operazione di Garbage Collection in un thread dedicato separato.
 
-![Thread di Garbage Collection simultanei](./media/gc-concurrent.png)
+![Thread di Garbage Collection simultanei](media/gc-concurrent.png)
 
 ## <a name="see-also"></a>Vedere anche
 

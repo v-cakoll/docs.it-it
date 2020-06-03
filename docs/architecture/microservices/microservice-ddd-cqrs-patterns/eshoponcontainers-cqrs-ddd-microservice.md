@@ -2,12 +2,12 @@
 title: Applicazione degli approcci CQRS e CQS in un microservizio DDD in eShopOnContainers
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Modalità di implementazione di CQRS nel microservizio degli ordini in eShopOnContainers.
 ms.date: 03/03/2020
-ms.openlocfilehash: 0fd38a93a1056cda4abd2f9f89ee9efc626985c8
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 2916df596a6d0f887411f3ef0074aed395ef58ba
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144279"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306942"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Applicare gli approcci CQRS e CQS in un microservizio DDD in eShopOnContainers
 
@@ -27,9 +27,9 @@ Come illustrato nella figura 7-2 della sezione precedente, questa guida suggeris
 
 Per implementare il "lato query", è possibile scegliere tra molti approcci, dall'ORM completo, ad esempio EF Core, le proiezioni di automapping, le stored procedure, le visualizzazioni, le visualizzazioni materializzate o un micro ORM.
 
-In questa guida e in eShopOnContainers, in particolare nel microservizio degli ordini, è stato scelto di implementare query lineari tramite un micro ORM come [Dapper](https://github.com/StackExchange/dapper-dot-net). In questo modo è possibile implementare qualsiasi query basata su istruzioni SQL per ottenere le prestazioni migliori, grazie a un framework leggero con un sovraccarico ridotto.
+In questa guida e in eShopOnContainers, in particolare nel microservizio degli ordini, è stato scelto di implementare query lineari tramite un micro ORM come [Dapper](https://github.com/StackExchange/dapper-dot-net). In questo modo è possibile implementare qualsiasi query basata su istruzioni SQL per ottenere prestazioni ottimali, grazie a un framework leggero con un sovraccarico ridotto.
 
-Si noti che quando si usa questo approccio, gli aggiornamenti al modello che influiscono sul modo in cui le entità vengono salvate in modo permanente in un database SQL devono separare gli aggiornamenti alle query SQL usate da Dapper o da qualsiasi altro approccio separato (non EF) all'esecuzione di query.
+Quando si usa questo approccio, eventuali aggiornamenti al modello che influiscano sul modo in cui le entità vengono rese disponibili in un database SQL devono anche eseguire aggiornamenti distinti per le query SQL usate da elegante o da altri approcci distinti (non EF) per eseguire query.
 
 ## <a name="cqrs-and-ddd-patterns-are-not-top-level-architectures"></a>Gli schemi CQRS e DDD non sono architetture di primo livello
 

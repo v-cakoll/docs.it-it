@@ -11,7 +11,7 @@ ms.locfileid: "81463668"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
-**Questo articolo si applica a:** ✔️ .NET Core 2.2 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .net core 2,2 SDK e versioni successive
 
 ## <a name="name"></a>Nome
 
@@ -28,7 +28,7 @@ dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
 dotnet list package -h|--help
 ```
 
-## <a name="description"></a>Descrizione
+## <a name="description"></a>Description
 
 Il comando `dotnet list package` offre un'opzione utile per visualizzare un elenco di tutti i riferimenti al pacchetto NuGet per un progetto o una soluzione specifica. Occorre prima di tutto compilare il progetto in modo da avere le risorse che il comando dovrà elaborare. L'esempio seguente mostra l'output del comando `dotnet list package` per il progetto [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis):
 
@@ -66,7 +66,7 @@ Project 'HelloPlugin' has the following package references
    > PluginBase            1.0.0
 ```
 
-## <a name="arguments"></a>Argomenti
+## <a name="arguments"></a>Arguments
 
 `PROJECT | SOLUTION`
 
@@ -114,7 +114,7 @@ File di progetto o di soluzione su cui eseguire le operazioni. Se non specificat
 
   Origini NuGet da usare per cercare i pacchetti più recenti. Richiede l'opzione `--outdated`.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 - Elencare i riferimenti al pacchetto di un progetto specifico:
 

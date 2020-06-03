@@ -2,12 +2,12 @@
 title: Confronto tra schema API Gateway e comunicazione diretta da client a microservizio
 description: Informazioni sulle differenze e sugli usi dello schema API Gateway e della comunicazione diretta da client a microservizio.
 ms.date: 01/07/2019
-ms.openlocfilehash: 5c2f3bd32396b45a6209550f5b7a07c88795ccc0
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 089b6302132437e4bb733653b3edb401ff81a164
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144331"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306955"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Confronto tra schema API Gateway e comunicazione diretta da client a microservizio
 
@@ -53,13 +53,13 @@ In un'architettura di microservizi le app client necessitano in genere di utiliz
 
 Pertanto, può essere molto comodo per le applicazioni basate su microservizi disporre di un livello intermedio di riferimento indiretto (gateway). Se non si dispone di gateway API, le app client devono inviare le richieste direttamente ai microservizi e ciò può creare problemi, ad esempio:
 
-- **Accoppiamento**: senza lo schema API Gateway, le app client sono associate ai microservizi interni. Le app client devono sapere in che modo le diverse aree dell'applicazione vengono scomposte in microservizi. Quando i microservizi interni si evolvono e vengono sottoposti a refactoring, queste attività hanno ripercussioni negative, comportando modifiche che causano interruzioni alle app client per via del riferimento diretto ai microservizi interni dalle app client. Le app client devono essere aggiornate frequentemente, rendendo più difficile sviluppare la soluzione.
+- **Accoppiamento**: senza lo schema API Gateway, le app client sono associate ai microservizi interni. Le app client devono sapere in che modo le diverse aree dell'applicazione vengono scomposte in microservizi. Quando si evolvono e si effettua il refactoring dei microservizi interni, tali azioni incidono sulla manutenzione perché causano modifiche di rilievo alle app client a causa del riferimento diretto ai microservizi interni dalle app client. Le app client devono essere aggiornate frequentemente, rendendo più difficile sviluppare la soluzione.
 
 - **Troppi round trip**: una singola pagina/schermata nell'app client potrebbe richiedere diverse chiamate a più servizi. Questo può determinare più round trip in rete tra il client e il server e causare così una latenza significativa. Con l'aggregazione gestita in un livello intermedio è stato possibile migliorare le prestazioni e l'esperienza utente per l'app client.
 
 - **Problemi di sicurezza**: senza un gateway, tutti i microservizi devono essere esposti all'esterno, rendendo più ampia la superficie di attacco rispetto a quando si nascondono i microservizi interni non usati direttamente dalle app client. Minore è la superficie di attacco, maggiore è la sicurezza dell'applicazione.
 
-- **Problematiche trasversali**: ogni microservizio pubblicato pubblicamente deve gestire problemi quali autorizzazione, SSL e così via. In molte situazioni, questi problemi possono essere gestiti in un singolo livello, in modo da semplificare i microservizi interni.
+- **Problematiche trasversali**: ogni microservizio pubblicato pubblicamente deve gestire problemi quali l'autorizzazione e SSL. In molti casi questi problemi possono essere gestiti in un livello singolo così che i microservizi interni risultino semplificati.
 
 ## <a name="what-is-the-api-gateway-pattern"></a>Definizione dello schema API Gateway
 
@@ -75,7 +75,7 @@ La figura 4-13 mostra in che modo un gateway API personalizzato può essere inse
 
 Le app si connettono a un singolo endpoint, il gateway API, configurato per l'invio di richieste a singoli microservizi. In questo esempio il gateway API viene implementato sotto forma di servizio WebHost ASP.NET Core personalizzato eseguito come contenitore.
 
-È importante evidenziare che nel diagramma viene usato un solo servizio gateway API personalizzato per numerose app client di diverso tipo. Ciò può presentare dei rischi significativi perché il servizio API Gateway verrà ampliato e sviluppato in base alle diverse esigenze delle app client. Alla fine, per soddisfare tutte le esigenze, il servizio potrebbe diventare talmente esteso da sembrare un'unica applicazione o servizio monolitico. Ecco perché si consiglia vivamente di suddividere il gateway API in più servizi o in gateway API più piccoli, ad esempio uno per ogni tipo fattore di forma di app client.
+È importante evidenziare che nel diagramma viene usato un solo servizio gateway API personalizzato per numerose app client di diverso tipo. Ciò può presentare dei rischi significativi perché il servizio API Gateway verrà ampliato e sviluppato in base alle diverse esigenze delle app client. Alla fine, il problema si verificherà a causa di queste diverse esigenze e in effetti potrebbe essere simile a un'applicazione monolitica o a un servizio monolitico. Ecco perché si consiglia vivamente di suddividere il gateway API in più servizi o in gateway API più piccoli, ad esempio uno per ogni tipo fattore di forma di app client.
 
 È necessario prestare attenzione quando si implementa lo schema API Gateway. Di solito non è consigliabile lasciare che un singolo gateway API aggreghi tutti i microservizi interni dell'applicazione. Se accade, funge da aggregatore monolitico o da agente di orchestrazione e viola l'autonomia del microservizio accoppiando tutti i microservizi.
 
@@ -93,11 +93,11 @@ Figura 4-13.1 Mostra i gateway API che sono separati dal tipo di client; uno per
 
 Lo schema API Gateway può offrire più funzionalità. A seconda del prodotto, le funzionalità possono essere più o meno avanzate, tuttavia quelle più importanti e fondamentali per qualsiasi gateway API sono gli schemi progettuali seguenti:
 
-**Proxy inverso o routing del gateway.** Lo schema API Gateway offre un proxy inverso per reindirizzare o instradare le richieste (routing di livello 7, in genere richieste HTTP) agli endpoint dei microservizi interni. Il gateway fornisce un singolo endpoint o URL per le app client e quindi associa internamente le richieste a un gruppo di microservizi interni. Questa funzionalità di routing consente di separare le app client dai microservizi, ma risulta anche molto utile quando si modernizza un'API monolitica posizionando il gateway API tra l'API monolitica e le app client; quindi è possibile aggiungere nuove API come nuovi microservizi mentre l'API monolitica legacy è ancora in uso, finché non viene suddivisa successivamente in molti microservizi. A causa del gateway API, le app client non rilevano se le API in uso sono implementate come microservizi interni o come un'API monolitica e, cosa ancora più importante, quando si sviluppa e si effettua il refactoring dell'API monolitica in microservizi, grazie al routing del gateway API le app client non sono interessate da eventuali modifiche a livello di URI.
+**Proxy inverso o routing del gateway.** Lo schema API Gateway offre un proxy inverso per reindirizzare o instradare le richieste (routing di livello 7, in genere richieste HTTP) agli endpoint dei microservizi interni. Il gateway fornisce un singolo endpoint o URL per le app client e quindi associa internamente le richieste a un gruppo di microservizi interni. Questa funzionalità di routing consente di separare le app client dai microservizi, ma è anche utile quando si modernizza un'API monolitica posizionando il gateway API tra l'API monolitica e le app client, è possibile aggiungere nuove API come nuovi microservizi continuando comunque a usare l'API monolitica legacy fino a quando non sarà suddiviso in molti microservizi in futuro. A causa del gateway API, le app client non rilevano se le API in uso sono implementate come microservizi interni o come un'API monolitica e, cosa ancora più importante, quando si sviluppa e si effettua il refactoring dell'API monolitica in microservizi, grazie al routing del gateway API le app client non sono interessate da eventuali modifiche a livello di URI.
 
 Per altre informazioni, vedere [Modello di routing gateway](https://docs.microsoft.com/azure/architecture/patterns/gateway-routing).
 
-**Aggregazione di richieste.** Nell'ambito dello schema del gateway è possibile aggregare più richieste client (in genere richieste HTTP) destinate a più microservizi interni in una singola richiesta client. Questo schema è particolarmente utile quando una pagina/schermata del client necessita di informazioni da svariati microservizi. Con questo approccio, l'app client invia una singola richiesta al gateway API che invia diverse richieste ai microservizi interni, per poi aggregare i risultati e inviare nuovamente tutti i dati all'app client. Il vantaggio e l'obiettivo principali di questo schema progettuale consistono nel ridurre le comunicazioni frammentate tra le app client e l'API back-end, un aspetto particolarmente importante per le app remote all'esterno del data center in cui si trovano i microservizi, come le app per dispositivi mobili o le richieste dalle app a pagina singola provenienti da Javascript nei browser dei client remoti. Per le app Web regolari che eseguono le richieste nell'ambiente server (come un'app Web ASP.NET Core MVC), questo schema non è così importante dal momento che la latenza è molto inferiore rispetto a quella per le app client remote.
+**Aggregazione di richieste.** Nell'ambito dello schema del gateway è possibile aggregare più richieste client (in genere richieste HTTP) destinate a più microservizi interni in una singola richiesta client. Questo schema è particolarmente utile quando una pagina/schermata del client necessita di informazioni da svariati microservizi. Con questo approccio, l'app client invia una singola richiesta al gateway API che invia diverse richieste ai microservizi interni, per poi aggregare i risultati e inviare nuovamente tutti i dati all'app client. Il principale vantaggio e lo scopo di questo schema progettuale è quello di ridurre i chattiness tra le app client e l'API back-end, che è particolarmente importante per le app Remote fuori dal Data Center in cui si trovano i microservizi, come le app per dispositivi mobili o le richieste provenienti da app SPA che provengono da JavaScript nei browser remoti del client. Per le app Web regolari che eseguono le richieste nell'ambiente server (come un'app Web ASP.NET Core MVC), questo schema non è così importante dal momento che la latenza è molto inferiore rispetto a quella per le app client remote.
 
 A seconda del gateway API in uso, potrebbe essere possibile eseguire questa aggregazione. Tuttavia in molti casi risulta più flessibile creare microservizi di aggregazione nell'ambito del gateway API, definendo l'aggregazione nel codice (vale a dire nel codice C#):
 
@@ -107,7 +107,7 @@ Per altre informazioni, vedere [Modello di aggregazione gateway](https://docs.mi
 
 - Autenticazione e autorizzazione
 - Integrazione dell'individuazione dei servizi
-- Memorizzazione delle risposte nella cache
+- Memorizzazione nella cache delle risposte
 - Criteri per i tentativi, interruttore di circuito e QoS
 - Limiti di velocità e limitazione delle richieste
 - Bilanciamento del carico
@@ -144,7 +144,7 @@ In questa guida e nell'applicazione di esempio di riferimento (eShopOnContainers
 
 ### <a name="ocelot"></a>Ocelot
 
-[Ocelot](https://github.com/ThreeMammals/Ocelot) è un gateway API leggero, consigliato per gli approcci più semplici. Ocelot è un gateway API open source basato su .NET Core, pensato espressamente per un'architettura di microservizi che necessita di punti di ingresso unificati nel proprio sistema. È leggero, veloce e scalabile e offre molte funzionalità, tra cui routing e autenticazione.
+[Ocelot](https://github.com/ThreeMammals/Ocelot) è un gateway API leggero, consigliato per gli approcci più semplici. Ocelot è un gateway API Open source basato su .NET Core, appositamente creato per le architetture di microservizi che necessitano di punti di ingresso unificati nei rispettivi sistemi. Si tratta di un servizio leggero, veloce e scalabile che offre routing e autenticazione tra molte altre funzionalità.
 
 Il motivo principale per cui si sceglie Ocelot per l' [applicazione di riferimento eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) è che Ocelot è un gateway API Lightweight .NET Core che è possibile distribuire nello stesso ambiente di distribuzione dell'applicazione in cui si distribuiscono i microservizi/contenitori, ad esempio un host Docker, Kubernetes e così via. Poiché è basato su .NET Core, è multipiattaforma che ti permette di eseguire la distribuzione in Linux o Windows.
 
@@ -188,7 +188,7 @@ Dopo le sezioni iniziali di spiegazione degli schemi e dell'architettura, le sez
 - **Clemens più grande. Messaggistica e microservizi in GOTO 2016 (video)** \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
-- **API Gateway in a Nutshell (Breve panoramica sul gateway API) (serie di esercitazioni sul gateway API di ASP.NET Core)** \
+- **Gateway API in breve** (ASP.NET Core serie di esercitazioni sul gateway API) \
   <https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html>
 
 >[!div class="step-by-step"]

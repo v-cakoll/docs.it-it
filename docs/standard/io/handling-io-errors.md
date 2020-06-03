@@ -71,7 +71,7 @@ Si noti che nel codice di gestione dell'eccezione, si dovrà gestire sempre per 
 
 Nel caso di <xref:System.IO.IOException>, è possibile ottenere altre informazioni sull'errore dalla proprietà [IOException.HResult](xref:System.Exception.HResult). Per convertire il valore HResult in un codice di errore Win32, si rimuovono i 16 bit superiori del valore da 32 bit. La tabella seguente elenca i codici di errore di cui potrebbe essere eseguito il wrapping in un'eccezione <xref:System.IO.IOException>.
 
-| HResult | Costante | Descrizione |
+| HResult | Costante | Description |
 | --- | --- | --- |
 | ERROR_SHARING_VIOLATION | 32 | Il nome del file è mancante oppure il file o la directory è in uso. |
 | ERROR_FILE_EXISTS | 80 | File già esistente. |

@@ -2,18 +2,18 @@
 title: Indicazioni generali
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Indicazioni generali
 ms.date: 09/11/2018
-ms.openlocfilehash: e3bb4b8cf3e371c31d783fe4cfafeac282fb72b8
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 6e63d7804abc1703f17378584d58d66a933022c7
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144565"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306877"
 ---
 # <a name="general-guidance"></a>Indicazioni generali
 
 Questa sezione contiene un riepilogo dei casi in cui è consigliabile scegliere .NET Core o .NET Framework. Altri dettagli su questo tipo di scelta sono disponibili nelle sezioni successive.
 
-È consigliabile usare .NET Core, con contenitori Linux o Windows, per l'applicazione server Docker in contenitori nei casi seguenti:
+Usare .NET Core, con i contenitori Linux o Windows, per l'applicazione server Docker in contenitori nei casi seguenti:
 
 - Si hanno esigenze multipiattaforma. Ad esempio, si vogliono usare sia contenitori Windows sia contenitori Linux.
 
@@ -25,7 +25,7 @@ In breve, quando si creano nuove applicazioni .NET in contenitori, considerare .
 
 Un altro vantaggio dato dall'uso di .NET Core consiste nel fatto che è possibile eseguire in modo affiancato le versioni .NET delle applicazioni che si trovano all'interno dello stesso computer. Questo vantaggio è più importante per i server o le macchine virtuali che non usano i contenitori, in quanto i contenitori isolano le versioni di .NET necessarie all'app. È tuttavia necessario che siano compatibili con il sistema operativo sottostante.
 
-È consigliabile usare .NET Framework per l'applicazione server Docker in contenitori nei casi seguenti:
+Usare .NET Framework per l'applicazione server Docker in contenitori nei casi seguenti:
 
 - L'applicazione attualmente usa .NET Framework ed è fortemente dipendente da Windows.
 

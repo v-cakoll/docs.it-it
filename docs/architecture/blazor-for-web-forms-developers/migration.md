@@ -4,12 +4,12 @@ description: Informazioni su come eseguire la migrazione di un'app Web Form ASP.
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: b614572bd04d9ec694b0feb95173373591d5e117
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: c70e4a4f57ddac97db4d58d9f876f7edc6aa6ce9
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144409"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306981"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>Eseguire la migrazione da Web Form ASP.NET a blazer
 
@@ -285,7 +285,7 @@ Per altre informazioni sulla creazione di bundle e minification, vedere [bundle 
 
 Una pagina in un'app Web Form è un file con estensione *aspx* . Una pagina Web Form spesso può essere mappata a un componente in blazer. Un componente Blazer viene creato in un file con estensione *Razor* . Per il progetto eShop, cinque pagine vengono convertite in una pagina Razor.
 
-La visualizzazione dettagli, ad esempio, è costituita da tre file nel progetto Web Form, ovvero *Details. aspx*, *Details.aspx.cs*e *Details.aspx.designer.cs*. Quando si esegue la conversione in blazer, il code-behind e il markup vengono combinati in *Details. Razor*. La compilazione Razor (equivalente ai file con *estensione designer.cs* ) viene archiviata nella directory *obj* e, per impostazione predefinita, è visualizzabile in **Esplora soluzioni**. La pagina Web Form è costituita dal markup seguente:
+Ad esempio, la visualizzazione dettagli comprende tre file nel progetto Web Form: *Details. aspx*, *Details.aspx.cs*e *Details.aspx.designer.cs*. Quando si esegue la conversione in blazer, il code-behind e il markup vengono combinati in *Details. Razor*. La compilazione Razor (equivalente ai file con *estensione designer.cs* ) viene archiviata nella directory *obj* e, per impostazione predefinita, è visualizzabile in **Esplora soluzioni**. La pagina Web Form è costituita dal markup seguente:
 
 ```aspx-csharp
 <%@ Page Title="Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="eShopLegacyWebForms.Catalog.Details" %>
