@@ -1,5 +1,5 @@
 ---
-title: "La dichiarazione dell'operatore deve essere uno di: +,-, *,-, -, ^, &amp;, Like, Mod e, Or, Xor, non, <<>>,, <>, <, < =, >, > =, CType, IsTrue, IsFalse"
+title: "La dichiarazione dell'operatore deve essere una delle seguenti: +,-, *,-,-, ^, &amp; , like, mod, and, or, XOR, not,  <<,  >>, =,  <>, <, <=, >, >=, CType, IsTrue, false"
 ms.date: 07/20/2015
 f1_keywords:
 - bc33000
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-ms.openlocfilehash: 4283547109ec312cc4fe07a054bbb8db3bff660f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fb2cf392611e5ca83818e3bf173513be031085d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946601"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409335"
 ---
-# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>La dichiarazione dell'operatore deve essere uno di: +,-, *,\,/, ^, &amp;, Like, Mod e, Or, Xor, non \< \<, >>...
-È possibile dichiarare solo gli operatori che sono idoneo per l'overload. Nella tabella seguente vengono elencati gli operatori che è possibile dichiarare.  
+# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>La dichiarazione dell'operatore deve essere una delle seguenti: +,-, *, \, /, ^, &amp; , like, mod, and, or, XOR, not, \<\<, >>...
+È possibile dichiarare solo un operatore idoneo per l'overload. Nella tabella seguente sono elencati gli operatori che è possibile dichiarare.  
   
-|Tipo|Operatori|  
+|Type|Operatori|  
 |----------|---------------|  
-|Unario|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|  
+|Unaria|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|  
 |Binario|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|  
 |Conversione (unario)|`CType`|  
   
- Si noti che il `=` operatore nell'elenco binario è l'operatore di confronto, non l'operatore di assegnazione.  
+ Si noti che l'operatore `=` nell'elenco binario è l'operatore di confronto, non l'operatore di assegnazione.  
   
  **ID errore:** BC33000  
   
@@ -35,8 +35,8 @@ ms.locfileid: "61946601"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
-- [Procedura: Definire un operatore](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [Procedura: Definire un operatore di conversione](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
-- [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Operator Statement](../statements/operator-statement.md)
+- [Routine di operatore](../../programming-guide/language-features/procedures/operator-procedures.md)
+- [Procedura: definire un operatore](../../programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [Procedura: Definire un operatore di conversione](../../programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Istruzione Function](../statements/function-statement.md)

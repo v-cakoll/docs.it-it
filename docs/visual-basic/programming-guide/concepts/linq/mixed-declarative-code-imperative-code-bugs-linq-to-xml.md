@@ -2,22 +2,22 @@
 title: Bug nel codice dichiarativo/imperativo misto (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: f12b1ab4-bb92-4b92-a648-0525e45b3ce7
-ms.openlocfilehash: 369fae59516df785ac686645d47e74e69a8f1457
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e5526a64805b19ea293d3ef28636738923d03662
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331652"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84361073"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>Bug nel codice dichiarativo/imperativo misto (LINQ to XML) (Visual Basic)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contiene i vari metodi che consentono di modificare direttamente un albero XML. È possibile aggiungere elementi, eliminare elementi, modificare il contenuto di un elemento, aggiungere attributi e così via. Questa interfaccia di programmazione è descritta in [modifica di alberi XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Se si scorre uno degli assi, ad esempio <xref:System.Xml.Linq.XContainer.Elements%2A>, e si modifica l'albero XML durante lo scorrimento dell'asse, è possibile che vengano individuati alcuni bug strani.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contiene i vari metodi che consentono di modificare direttamente un albero XML. È possibile aggiungere elementi, eliminare elementi, modificare il contenuto di un elemento, aggiungere attributi e così via. Questa interfaccia di programmazione è descritta in [modifica di alberi XML (LINQ to XML) (Visual Basic)](modifying-xml-trees-linq-to-xml.md). Se si scorre uno degli assi, ad esempio <xref:System.Xml.Linq.XContainer.Elements%2A>, e si modifica l'albero XML durante lo scorrimento dell'asse, è possibile che vengano individuati alcuni bug strani.  
   
  Questo problema viene talvolta definito come "problema di Halloween".  
   
 ## <a name="definition-of-the-problem"></a>Definizione del problema  
  Quando si scrive codice usando LINQ che scorre in una raccolta, si usa uno stile dichiarativo. Si tratta in pratica più di descrivere *cosa* si vuole eseguire, anziché *come* si vuole che venga eseguito. Se invece si scrive codice che 1) ottiene il primo elemento, 2) lo verifica in base ad alcune condizioni, 3) lo modifica e 4) lo reinserisce nell'elenco, si usa lo stile del codice imperativo. In pratica si indica al computer *come* eseguire le operazioni desiderate.  
   
- È proprio la combinazione di questi stili di codice nella stessa operazione a comportare problemi. Tenere presente quanto riportato di seguito:  
+ È proprio la combinazione di questi stili di codice nella stessa operazione a comportare problemi. Considerare quanto segue:  
   
  Si supponga di disporre di un elenco collegato contenente tre elementi (a, b e c):  
   
@@ -118,7 +118,7 @@ Next
 Console.WriteLine(root)  
 ```  
   
- L'output ottenuto è il seguente:  
+ Viene prodotto l'output seguente:  
   
 ```xml  
 <Root />  
@@ -155,7 +155,7 @@ Dim z = _
   
  È responsabilità dell'utente evitare questi problemi.  
   
-## <a name="guidance"></a>Materiale sussidiario  
+## <a name="guidance"></a>Indicazioni  
  In primo luogo, non combinare codice dichiarativo e codice imperativo.  
   
  Anche se si conosce esattamente la semantica delle raccolte e la semantica dei metodi che modificano l'albero XML, eventuale codice scritto appositamente per evitare queste categorie di problemi dovrà essere gestito da altri sviluppatori in futuro che potrebbero non avere ugualmente chiara la situazione. Se si combinano stili di codifica dichiarativa e imperativa, il codice sarà più fragile.  
@@ -178,4 +178,4 @@ Console.WriteLine(newRoot)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione LINQ to XML avanzata (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Programmazione LINQ to XML avanzata (Visual Basic)](advanced-linq-to-xml-programming.md)

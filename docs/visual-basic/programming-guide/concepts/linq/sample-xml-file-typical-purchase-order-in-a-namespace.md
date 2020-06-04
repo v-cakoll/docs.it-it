@@ -1,13 +1,13 @@
 ---
-title: 'File XML di esempio: Ordine di acquisto tipico in uno spazio dei nomi3'
+title: 'File XML di esempio: tipico ordine di acquisto in una spazio dei nomi3'
 ms.date: 07/20/2015
 ms.assetid: 38260901-c9f9-4240-9cbf-652c8b05021d
-ms.openlocfilehash: de0ac574b0f7b086592bc2d6afa3db3fdcebda78
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e753d0a4d6bea3e4a01221258e1f5de3862c4ecb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786919"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360839"
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>File XML di esempio: tipico ordine di acquisto in uno spazio dei nomi
 Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Si tratta di un ordine di acquisto tipico. L'XML si trova in uno spazio dei nomi.  
@@ -56,4 +56,4 @@ Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUD
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Documenti XML di esempio (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [Documenti XML di esempio (LINQ to XML)](sample-xml-documents-linq-to-xml.md)

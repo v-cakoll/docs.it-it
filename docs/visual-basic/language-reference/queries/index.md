@@ -5,60 +5,60 @@ helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: d23e18527fadce031f56bed3ae4c5a5c17b12e18
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 8fb245309170d4b9adf7458bb3bcfde3e28c0538
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636731"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359832"
 ---
 # <a name="queries-visual-basic"></a>Query (Visual Basic)
 Visual Basic consente di creare espressioni LINQ (Language Integrated Query) nel codice.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Clausola Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- Descrive la clausola `Aggregate`, che applica una o più funzioni di aggregazione a una raccolta.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Aggregate Clause](aggregate-clause.md)  
+ Descrive la `Aggregate` clausola che applica una o più funzioni di aggregazione a una raccolta.  
   
- [Clausola Distinct](../../../visual-basic/language-reference/queries/distinct-clause.md)  
- Descrive la clausola `Distinct`, che limita i valori della variabile di intervallo corrente per eliminare i valori duplicati nei risultati della query.  
+ [Clausola Distinct](distinct-clause.md)  
+ Descrive la `Distinct` clausola, che limita i valori della variabile di intervallo corrente per eliminare i valori duplicati nei risultati della query.  
   
- [Clausola From](../../../visual-basic/language-reference/queries/from-clause.md)  
- Descrive la clausola `From`, che specifica una raccolta e una variabile di intervallo per una query.  
+ [Clausola from](from-clause.md)  
+ Descrive la `From` clausola che specifica una raccolta e una variabile di intervallo per una query.  
   
- [Clausola Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)  
- Descrive la clausola `Group By`, che raggruppa gli elementi di un risultato della query e può essere usata per applicare funzioni di aggregazione a ogni gruppo.  
+ [Clausola Group By](group-by-clause.md)  
+ Descrive la `Group By` clausola, che raggruppa gli elementi di un risultato della query e può essere usata per applicare funzioni di aggregazione a ogni gruppo.  
   
- [Clausola Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- Descrive la clausola `Group Join`, che combina due raccolte in un'unica raccolta gerarchica.  
+ [Clausola Group Join](group-join-clause.md)  
+ Descrive la `Group Join` clausola, che combina due raccolte in un'unica raccolta gerarchica.  
   
- [Clausola Join](../../../visual-basic/language-reference/queries/join-clause.md)  
- Descrive la clausola `Join`, che combina due raccolte in un'unica raccolta.  
+ [Clausola join](join-clause.md)  
+ Descrive la `Join` clausola, che combina due raccolte in un'unica raccolta.  
   
- [Clausola Let](../../../visual-basic/language-reference/queries/let-clause.md)  
- Descrive la clausola `Let`, che calcola un valore e lo assegna a una nuova variabile nella query.  
+ [Clausola Let](let-clause.md)  
+ Viene descritta la `Let` clausola, che calcola un valore e lo assegna a una nuova variabile nella query.  
   
- [Clausola Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- Viene descritta la clausola `Order By`, che specifica l'ordinamento delle colonne in una query.  
+ [Clausola Order By](order-by-clause.md)  
+ Descrive la `Order By` clausola che specifica l'ordinamento delle colonne in una query.  
   
- [Clausola Select](../../../visual-basic/language-reference/queries/select-clause.md)  
- Viene descritta la clausola `Select`, che dichiara un set di variabili di intervallo per una query.  
+ [Clausola SELECT](select-clause.md)  
+ Viene descritta la `Select` clausola che dichiara un set di variabili di intervallo per una query.  
   
- [Clausola Skip](../../../visual-basic/language-reference/queries/skip-clause.md)  
- Descrive la clausola `Skip`, che ignora un numero specificato di elementi in una raccolta e quindi restituisce gli elementi rimanenti.  
+ [Clausola Skip](skip-clause.md)  
+ Descrive la `Skip` clausola che ignora un numero specificato di elementi in una raccolta e quindi restituisce gli elementi rimanenti.  
   
- [Clausola Skip While](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- Descrive la clausola `Skip While`, che ignora gli elementi di una raccolta, purché una condizione specificata venga `true` e quindi restituisce gli elementi rimanenti.  
+ [Clausola Skip While](skip-while-clause.md)  
+ Descrive la `Skip While` clausola che ignora gli elementi di una raccolta, purché una condizione specificata sia `true` e quindi restituisce gli elementi rimanenti.  
   
- [Clausola Take](../../../visual-basic/language-reference/queries/take-clause.md)  
- Descrive la clausola `Take`, che restituisce un numero specificato di elementi contigui dall'inizio di una raccolta.  
+ [Clausola Take](take-clause.md)  
+ Descrive la `Take` clausola, che restituisce un numero specificato di elementi contigui dall'inizio di una raccolta.  
   
- [Clausola Take While](../../../visual-basic/language-reference/queries/take-while-clause.md)  
- Descrive la clausola `Take While`, che include gli elementi di una raccolta, purché una condizione specificata venga `true` e ignori gli elementi rimanenti.  
+ [Clausola Take While](take-while-clause.md)  
+ Descrive la `Take While` clausola, che include gli elementi di una raccolta, purché una condizione specificata sia `true` e ignori gli elementi rimanenti.  
   
- [Clausola Where](../../../visual-basic/language-reference/queries/where-clause.md)  
- Viene descritta la clausola `Where`, che specifica una condizione di filtro per una query.  
+ [Clausola WHERE](where-clause.md)  
+ Descrive la `Where` clausola che specifica una condizione di filtro per una query.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Introduzione a LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [LINQ](../../programming-guide/language-features/linq/index.md)
+- [Introduzione a LINQ in Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)

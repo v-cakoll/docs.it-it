@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30202
 ms.assetid: 6f75060c-2db4-4a79-b5d1-5780c09a74cd
-ms.openlocfilehash: 71a25784f357a7e596093b314ed5b3d721d6f92c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 411e3248409ab0184666f4efefb4ec4becf7cab1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946588"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409348"
 ---
 # <a name="optional-expected"></a>Previsto 'Optional'
-Un argomento facoltativo in una dichiarazione di routine è seguito da un argomento obbligatorio. Ogni argomento dopo un argomento facoltativo deve anche essere facoltativo.  
+Un argomento facoltativo in una dichiarazione di routine è seguito da un argomento obbligatorio. Ogni argomento che segue un argomento facoltativo deve anche essere facoltativo.  
   
  **ID errore:** BC30202  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. Se l'argomento è destinato a essere necessari, spostarlo in modo che preceda il primo argomento facoltativo nell'elenco di argomenti.  
+1. Se l'argomento deve essere necessario, spostarlo in modo che preceda il primo argomento facoltativo nell'elenco di argomenti.  
   
-2. Se l'argomento è destinato a essere facoltativi, usare il `Optional` (parola chiave).  
+2. Se l'argomento è destinato a essere facoltativo, usare la `Optional` parola chiave.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Parametri facoltativi](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [Parametri facoltativi](../../programming-guide/language-features/procedures/optional-parameters.md)

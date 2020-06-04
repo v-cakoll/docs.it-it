@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 393e3bd24c4bc8b89064e01e1048b24254f5f83b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d20f5d826620ad8654ddf1e9471ecc894b2c0391
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635951"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408523"
 ---
 # <a name="data-transformations-with-linq-c"></a>Trasformazioni dati con LINQ (C#)
-Language-Integrated Query (LINQ) non riguarda solo il recupero dei dati. È anche un potente strumento per la trasformazione dei dati. Utilizzando una query LINQ, è possibile usare una sequenza di origine come input e modificarla in molti modi per creare una nuova sequenza di output. È possibile modificare la sequenza senza modificare gli elementi con operazioni di ordinamento e raggruppamento. Ma forse la funzionalità più potente delle query LINQLINQ è la possibilità di creare nuovi tipi. Questa operazione viene eseguita nella clausola [select](../../../language-reference/keywords/select-clause.md). Ad esempio, è possibile effettuare le attività seguenti:  
+LINQ (Language-Integrated Query) non riguarda solo il recupero dei dati. È anche un potente strumento per la trasformazione dei dati. Utilizzando una query LINQ, è possibile utilizzare una sequenza di origine come input e modificarla in molti modi per creare una nuova sequenza di output. È possibile modificare la sequenza senza modificare gli elementi con operazioni di ordinamento e raggruppamento. Ma probabilmente la funzionalità più potente delle query LINQ è la possibilità di creare nuovi tipi. Questa operazione viene eseguita nella clausola [select](../../../language-reference/keywords/select-clause.md). Ad esempio, è possibile effettuare le attività seguenti:  
   
 - Unire più sequenze di input in un'unica sequenza di output con un nuovo tipo.  
   
@@ -31,7 +31,7 @@ Language-Integrated Query (LINQ) non riguarda solo il recupero dei dati. È anch
  Questi sono solo alcuni esempi. Naturalmente, queste trasformazioni possono essere combinate in modi diversi nella stessa query. Inoltre, la sequenza di output di una query può essere usata come sequenza di input per una nuova query.  
   
 ## <a name="joining-multiple-inputs-into-one-output-sequence"></a>Unione di più input in un'unica sequenza di output  
- È possibile usare una query LINQLINQ per creare una sequenza di output che contiene elementi da più di una sequenza di input. Nell'esempio seguente viene illustrato come combinare due strutture di dati in memoria, ma è possibile applicare gli stessi principi per combinare dati da origini XML, SQL o DataSet. Si supponga di avere questi tipi di classi:  
+ È possibile usare una query LINQ per creare una sequenza di output che contiene elementi da più di una sequenza di input. Nell'esempio seguente viene illustrato come combinare due strutture di dati in memoria, ma è possibile applicare gli stessi principi per combinare dati da origini XML, SQL o DataSet. Si supponga di avere questi tipi di classi:  
   
  [!code-csharp[CsLINQGettingStarted#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#7)]  
   
@@ -61,7 +61,7 @@ Language-Integrated Query (LINQ) non riguarda solo il recupero dei dati. È anch
  Per altre informazioni, vedere [Inizializzatori di oggetto e di insieme](../../classes-and-structs/object-and-collection-initializers.md) e [Tipi anonimi](../../classes-and-structs/anonymous-types.md).  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>Trasformazione di oggetti in memoria in XML  
- Le query LINQ semplificano la trasformazione dei dati tra strutture di dati in memoria, database SQL, ADO.NET di dati e flussi o documenti XML. Nell'esempio seguente gli oggetti di una struttura di dati in memoria vengono trasformati in elementi XML.  
+ Le query LINQ semplificano la trasformazione dei dati tra le strutture di dati in memoria, i database SQL, i set di dati ADO.NET e i documenti o i flussi XML. Nell'esempio seguente gli oggetti di una struttura di dati in memoria vengono trasformati in elementi XML.  
   
  [!code-csharp[CsLINQGettingStarted#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#9)]  
   
@@ -90,7 +90,11 @@ Language-Integrated Query (LINQ) non riguarda solo il recupero dei dati. È anch
  Per altre informazioni, vedere [Creazione di alberi XML in C# (LINQ to XML)](./creating-xml-trees-linq-to-xml-2.md).  
   
 ## <a name="performing-operations-on-source-elements"></a>Esecuzione di operazioni su elementi di origine  
- Una sequenza di output potrebbe non contenere elementi o proprietà degli elementi della sequenza di origine. L'output potrebbe invece essere una sequenza di valori che viene calcolata usando gli elementi di origine come argomenti di input. La seguente query semplice, quando viene eseguita, restituisce una sequenza di stringhe i cui valori rappresentano un calcolo basato sulla sequenza di origine di elementi di tipo `double`.  
+ Una sequenza di output potrebbe non contenere elementi o proprietà degli elementi della sequenza di origine. L'output potrebbe invece essere una sequenza di valori che viene calcolata usando gli elementi di origine come argomenti di input.
+
+ Con la query seguente viene eseguita una sequenza di numeri che rappresentano raggi di cerchi, viene calcolata l'area per ogni raggio e viene restituita una sequenza di output contenente stringhe formattate con l'area calcolata.
+
+ Ogni stringa per la sequenza di output verrà formattata utilizzando l' [interpolazione di stringhe](../../../language-reference/tokens/interpolated.md). Una stringa interpolata avrà un oggetto `$` davanti alle virgolette di apertura della stringa e le operazioni possono essere eseguite all'interno di parentesi graffe posizionate all'interno della stringa interpolata. Una volta eseguite queste operazioni, i risultati saranno concatenati.
   
 > [!NOTE]
 > La chiamata ai metodi nelle espressioni di query non è supportata se la query verrà traslata in un altro dominio. Ad esempio, non è possibile chiamare un normale metodo C# in [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] perché SQL Server non offre alcun contesto. Tuttavia, è possibile eseguire il mapping delle stored procedure ai metodi e chiamarli. Per altre informazioni, vedere [Stored procedure](../../../../framework/data/adonet/sql/linq/stored-procedures.md).  
@@ -103,5 +107,5 @@ Language-Integrated Query (LINQ) non riguarda solo il recupero dei dati. È anch
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 - [LINQ to XML (C#)](./linq-to-xml-overview.md)
-- [Espressioni di query LINQLINQ Query Expressions](../../../linq/index.md)
-- [clausola select](../../../language-reference/keywords/select-clause.md)
+- [Espressioni di query LINQ](../../../linq/index.md)
+- [Clausola select](../../../language-reference/keywords/select-clause.md)

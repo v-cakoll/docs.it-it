@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
-ms.openlocfilehash: d65c8eab661675c955ff6562098248c04036d6e7
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 28d07f01c0fd467cb68d73749988273eee95edf4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580642"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409426"
 ---
-# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>La funzione annidata non dispone di una firma compatibile con il delegato ' \<delegatename >'
+# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>La funzione annidata non dispone di una firma compatibile con il delegato '\<delegatename>'
 
-Un'espressione lambda è stata assegnata a un delegato con una firma incompatibile. Nel codice seguente, ad esempio, Delegate `Del` dispone di due parametri Integer.
+Un'espressione lambda è stata assegnata a un delegato con una firma incompatibile. Nel codice seguente, ad esempio, il delegato `Del` ha due parametri Integer.
 
 ```vb
 Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer
 ```
 
-L'errore viene generato se un'espressione lambda con un argomento viene dichiarata come tipo `Del`:
+L'errore viene generato se un'espressione lambda con un argomento viene dichiarata come tipo `Del` :
 
 ```vb
 ' Neither of these is valid.
@@ -38,5 +38,5 @@ Modificare la definizione del delegato o l'espressione lambda assegnata in modo 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Conversione di tipo relaxed del delegato](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Conversione di tipo relaxed del delegato](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Espressioni lambda](../../programming-guide/language-features/procedures/lambda-expressions.md)
