@@ -1,23 +1,23 @@
 ---
-title: 'Procedura: trovare un elenco gli elementi figlio (XPath-LINQ to XML)'
+title: 'Procedura: Trovare un elenco di elementi figlio (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2868abfd-9f7b-412a-9cb5-f643f0fed146
-ms.openlocfilehash: 899252e7aacdec00ad75611ee4d149a53e71f95e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d03b89f93fede3abd2d482c01979e93876d60c0b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353014"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410773"
 ---
 # <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a>Procedura: trovare un elenco di elementi figlio (XPath-LINQ to XML) (Visual Basic)
-Questo argomento confronta l'asse degli elementi figlio XPath con l'asse [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A>.  
+In questo argomento l'asse degli elementi figlio XPath viene confrontato con l' [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> asse.  
   
  L'espressione XPath è: `./*`.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio vengono individuati tutti gli elementi figlio dell'elemento `Address`.  
   
- Questo esempio usa il documento XML seguente: [File XML di esempio: più ordini di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: più ordini di acquisto (LINQ to XML)](sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim cpo As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -40,7 +40,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```console
 Results are identical  
@@ -54,4 +54,4 @@ Results are identical
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML per gli utenti di XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
-ms.openlocfilehash: d7d3d86f89ef3b76e958707dd0be2dce8a3e9bf2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7914bc859966e17f3da41c9a13a01573b31baf91
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659810"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409673"
 ---
-# <a name="elementname-is-obsolete-visual-basic-warning"></a>'\<NomeElemento >' è obsoleto (avviso di Visual Basic)
+# <a name="elementname-is-obsolete-visual-basic-warning"></a>'\<elementname>' è obsoleto (Avviso di Visual Basic)
 Un'istruzione prova ad accedere a un elemento di programmazione che è stato contrassegnato con l'attributo <xref:System.ObsoleteAttribute> e la direttiva di considerarlo come un avviso.  
   
  È possibile contrassegnare qualsiasi elemento di programmazione come non più in uso applicando <xref:System.ObsoleteAttribute> a tale elemento. In questo caso, è possibile impostare la proprietà <xref:System.ObsoleteAttribute.IsError%2A> dell'attributo su `True` o `False`. Se si imposta la proprietà su `True`, il compilatore considera il tentativo di usare l'elemento come un errore. Se si imposta la proprietà su `False`, o si lascia l'impostazione predefinita `False`, il compilatore genera un avviso se si prova a usare l'elemento.  
@@ -29,4 +29,4 @@ Un'istruzione prova ad accedere a un elemento di programmazione che è stato con
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica degli attributi](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Panoramica degli attributi](../../programming-guide/concepts/attributes/index.md)

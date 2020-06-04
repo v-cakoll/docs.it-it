@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30149
 ms.assetid: 29d1b7f4-dca7-478c-bbe7-c657f342c183
-ms.openlocfilehash: c387b0225375f4675042bef593b23a084305b4fd
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 90d2b6d70390bfb732af4a5868c935de61d18f94
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591587"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408498"
 ---
-# <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<type1 >' \<typename >' deve implementare ' \<methodname >' per l'interfaccia ' \<interfacename >'
+# <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<type1>'\<typename>' deve implementare '\<methodname>' per l'interfaccia '\<interfacename>'
 Una classe o una struttura attestazioni per implementare un'interfaccia ma non implementa una routine definita dall'interfaccia. È necessario implementare tutti i membri dell'interfaccia.  
   
  **ID errore:** BC30149  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. Dichiarare una routine con lo stesso nome e la stessa firma definiti nell'interfaccia. Assicurarsi di includere almeno l'istruzione `End Function` o `End Sub`.  
+1. Dichiarare una routine con lo stesso nome e la stessa firma definiti nell'interfaccia. Assicurarsi di includere almeno l' `End Function` `End Sub` istruzione o.  
   
-2. Aggiungere una clausola `Implements` alla fine dell'istruzione `Function` o `Sub`. Esempio:  
+2. Aggiungere una `Implements` clausola alla fine dell' `Function` `Sub` istruzione o. Ad esempio:  
   
     ```vb  
     Public Sub DoSomething() Implements IBaseInterface.DoSomething  
@@ -31,5 +31,5 @@ Una classe o una struttura attestazioni per implementare un'interfaccia ma non i
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzione Implements](../../../visual-basic/language-reference/statements/implements-statement.md)
-- [Interfacce](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [Istruzione Implements](../statements/implements-statement.md)
+- [Interfacce](../../programming-guide/language-features/interfaces/index.md)

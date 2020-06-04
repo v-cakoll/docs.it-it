@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30014
 ms.assetid: 5215585e-2efa-485a-9efe-9833a1cc83a0
-ms.openlocfilehash: 4832fb80cfbe42c7a1303e0de69f36784711c05a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 808cf35fb05da092cdef560721b2f667778aa78f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803363"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409660"
 ---
 # <a name="elseif-must-be-preceded-by-a-matching-if-or-elseif"></a>'#ElseIf' deve essere preceduto da un '#If' o '#ElseIf' corrispondente
-`#ElseIf` è una direttiva di compilazione condizionale. Un' `#ElseIf` clausola deve essere preceduta da un oggetto corrispondente `#If` o `#ElseIf` clausola.  
+`#ElseIf` è una direttiva di compilazione condizionale. Una `#ElseIf` clausola deve essere preceduta da una `#If` clausola OR corrispondente `#ElseIf` .  
   
  **ID errore:** BC30014  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. Verificare che un precedente `#If` oppure `#ElseIf` non sia stata separata da questo `#ElseIf` mediante un blocco di compilazione condizionale o inserita in posizione errata `#End If`.  
+1. Verificare che un oggetto `#If` o precedente `#ElseIf` non sia stato separato da questo oggetto `#ElseIf` mediante un blocco di compilazione condizionale o un oggetto inserito in modo errato `#End If` .  
   
-2. Se il `#ElseIf` è preceduto da un `#Else` direttiva, rimuovere il `#Else` oppure modificarlo in base a un `#ElseIf`.  
+2. Se `#ElseIf` è preceduto da una `#Else` direttiva, rimuovere `#Else` o modificare il valore in un oggetto `#ElseIf` .  
   
 3. Se tutti gli altri elementi sono in ordine, aggiungere una direttiva `#If` all'inizio del blocco di compilazione condizionale.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Direttive #If...Then...#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [#If... Direttive then... #Else](../directives/if-then-else-directives.md)

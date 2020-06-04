@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: aa47304cf2bded93bdb95ffe7dfa35bb37d9a643
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 46177d0af7e5df767eb8421caf424880baac615e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976466"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411727"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Cenni preliminari sul modello di applicazione Visual Basic
 
@@ -40,25 +40,25 @@ Visual Basic fornisce un modello ben definito per controllare il comportamento d
   
 - **Avvio dell'applicazione**. L'applicazione genera l' <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> evento all'avvio. Gestendo questo evento, è possibile aggiungere il codice che Inizializza l'applicazione prima che venga caricato il form principale. L' `Startup` evento fornisce anche l'annullamento dell'esecuzione dell'applicazione durante la fase del processo di avvio, se necessario.  
   
-     È possibile configurare l'applicazione in modo da visualizzare una schermata iniziale mentre viene eseguito il codice di avvio dell'applicazione. Per impostazione predefinita, il modello di applicazione elimina la schermata iniziale quando si `/nosplash` USA `-nosplash` l'argomento della riga di comando o.  
+     È possibile configurare l'applicazione in modo da visualizzare una schermata iniziale mentre viene eseguito il codice di avvio dell'applicazione. Per impostazione predefinita, il modello di applicazione elimina la schermata iniziale quando `/nosplash` `-nosplash` si usa l'argomento della riga di comando o.  
   
 - **Applicazioni a istanza singola**. L' <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> evento viene generato quando viene avviata un'istanza successiva di un'applicazione a istanza singola. L'evento passa gli argomenti della riga di comando dell'istanza successiva.  
   
 - **Eccezioni non gestite**. Se l'applicazione rileva un'eccezione non gestita, genera l' <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> evento. Il gestore per l'evento può esaminare l'eccezione e determinare se continuare l'esecuzione.  
   
-     In `UnhandledException` alcune circostanze l'evento non viene generato. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>.  
+     `UnhandledException`In alcune circostanze l'evento non viene generato. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>.  
   
-- **Modifiche della connettività di rete**. Se la disponibilità di rete del computer viene modificata, l'applicazione <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged> genera l'evento.  
+- **Modifiche della connettività di rete**. Se la disponibilità di rete del computer viene modificata, l'applicazione genera l' <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged> evento.  
   
-     In `NetworkAvailabilityChanged` alcune circostanze l'evento non viene generato. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
+     `NetworkAvailabilityChanged`In alcune circostanze l'evento non viene generato. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
   
 - L'applicazione è stata **arrestata**. L'applicazione fornisce l' <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> evento da segnalare quando sta per essere arrestato. In tale gestore eventi, è possibile verificare che le operazioni che l'applicazione deve eseguire, ad esempio la chiusura e il salvataggio, siano completate. È possibile configurare l'applicazione in modo che venga arrestata quando il form principale viene chiuso o per arrestarsi solo quando tutti i form si chiudono.  
   
 ## <a name="availability"></a>Disponibilità  
 
- Per impostazione predefinita, il modello di applicazione Visual Basic è disponibile per i progetti Windows Forms. Se si configura l'applicazione in modo che usi un oggetto di avvio diverso o si avvia il codice dell' `Sub Main`applicazione con un oggetto personalizzato, tale oggetto o classe potrebbe dover fornire un' <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> implementazione della classe per usare il modello di applicazione. Per informazioni sulla modifica dell'oggetto di avvio, vedere [pagina applicazione, Progettazione progetti (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Per impostazione predefinita, il modello di applicazione Visual Basic è disponibile per i progetti Windows Forms. Se si configura l'applicazione in modo che usi un oggetto di avvio diverso o si avvia il codice dell'applicazione con un oggetto personalizzato `Sub Main` , tale oggetto o classe potrebbe dover fornire un'implementazione della <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe per usare il modello di applicazione. Per informazioni sulla modifica dell'oggetto di avvio, vedere [pagina applicazione, Progettazione progetti (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>
@@ -67,4 +67,4 @@ Visual Basic fornisce un modello ben definito per controllare il comportamento d
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
-- [Estensione del modello di applicazione Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
+- [Estensione del modello di applicazione Visual Basic](../customizing-extending-my/extending-the-visual-basic-application-model.md)

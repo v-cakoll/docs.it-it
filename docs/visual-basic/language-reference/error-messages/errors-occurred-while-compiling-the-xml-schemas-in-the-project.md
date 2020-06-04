@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC36810
 ms.assetid: 9323b5d2-ba14-4e49-91f1-9ad647162144
-ms.openlocfilehash: 7c05c712bcbb0a61bb3121bb71a7823a1c29afb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 919c6873ba63addb776d756a58c44a3fe3f0ec3d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625577"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409628"
 ---
 # <a name="errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a>Errori durante la compilazione di XML schema nel progetto
-Si sono verificati errori durante la compilazione di XML schema nel progetto. Per questo motivo, IntelliSense XML non è disponibile.  
+Si sono verificati errori durante la compilazione degli XML Schema nel progetto. Per questo motivo, IntelliSense XML non è disponibile.  
   
- Si verifica un errore in uno schema di XML Schema Definition (XSD) incluso nel progetto. Questo errore si verifica quando si aggiunge un file di schema (XSD) di XSD che è in conflitto con lo schema XSD esistente impostato per il progetto.  
+ Si è verificato un errore in uno schema XSD (XML Schema Definition) incluso nel progetto. Questo errore si verifica quando si aggiunge un file di schema XSD (XSD) in conflitto con il set di schemi XSD esistente per il progetto.  
   
  **ID errore:** BC36810  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-- Fare doppio clic su avviso nella **elenco errori** finestra. Visual Basic verrà visualizzata la posizione nel file XSD che rappresenta l'origine dell'avviso. Correggere l'errore nello schema XSD.  
+- Fare doppio clic sull'avviso nella finestra **Elenco errori** . Visual Basic consentirà di passare al percorso nel file XSD che rappresenta l'origine dell'avviso. Correggere l'errore nello schema XSD.  
   
-- Assicurarsi che tutti i necessari file di schema (XSD) XSD sono inclusi nel progetto. Potrebbe essere necessario fare clic su **Mostra tutti i file** nel **Project** file menu per visualizzare il XSD **Esplora soluzioni**. Fare doppio clic su un file XSD e quindi fare clic su **Includi nel progetto** per includere il file nel progetto.  
+- Verificare che tutti i file di schema XSD (. xsd) necessari siano inclusi nel progetto. Potrebbe essere necessario fare clic su **Mostra tutti i file** nel menu **progetto** per visualizzare i file con estensione XSD in **Esplora soluzioni**. Fare clic con il pulsante destro del mouse su un file con estensione XSD, quindi scegliere **Includi nel progetto** per includere il file nel progetto.  
   
-- Se si usa il codice XML alla procedura guidata Schema, questo errore può verificarsi se in grado di dedurre schemi più di una volta dalla stessa origine. In questo caso, è possibile rimuovere i file di schema XSD esistenti dal progetto, aggiungere un nuovo file XML al modello di elemento di Schema e quindi indicare il codice XML alla procedura guidata Schema con tutte le origini XML applicabile per il progetto.  
+- Se si utilizza la procedura guidata XML per schema, questo errore può verificarsi se si deduce più di una volta gli schemi dalla stessa origine. In questo caso, è possibile rimuovere i file di schema XSD esistenti dal progetto, aggiungere un nuovo modello di elemento XML a schema, quindi fornire la procedura guidata XML to schema con tutte le origini XML applicabili per il progetto.  
   
-- Se nessun errore è identificato nello schema XSD, il compilatore XML non dispone di informazioni sufficienti per fornire un messaggio di errore dettagliato. È possibile ottenere informazioni più dettagliate sugli errori, facendo in modo che gli spazi dei nomi XML per i file con estensione XSD incluso nel progetto corrispondano gli spazi dei nomi XML identificate per lo Schema XML, impostare in Visual Studio.  
+- Se nello schema XSD non viene identificato alcun errore, è possibile che il compilatore XML non disponga di informazioni sufficienti per fornire un messaggio di errore dettagliato. Se si verifica che gli spazi dei nomi XML per i file XSD inclusi nel progetto corrispondano agli spazi dei nomi XML identificati per il set di XML Schema in Visual Studio, è possibile ottenere informazioni più dettagliate sugli errori.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Finestra Elenco errori](/visualstudio/ide/reference/error-list-window)
-- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [XML](../../programming-guide/language-features/xml/index.md)

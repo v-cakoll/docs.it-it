@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
-ms.openlocfilehash: 68e1fb4f55d9f9b140f1b54cfde2bc5f60952dd2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e572189b958612bf9527c82ce702df3ab929a23f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592130"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409400"
 ---
-# <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>Non conforme a CLS \<membername > non è consentita in un'interfaccia conforme a CLS
-Una proprietà, routine o evento in un'interfaccia è contrassegnata come `<CLSCompliant(True)>` quando l'interfaccia stessa viene contrassegnata come `<CLSCompliant(False)>` o non è contrassegnata.  
+# <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>\<membername> non conforme a CLS non consentito in un'interfaccia conforme a CLS
+Una proprietà, una routine o un evento in un'interfaccia è contrassegnato come `<CLSCompliant(True)>` quando l'interfaccia stessa è contrassegnata come `<CLSCompliant(False)>` o non è contrassegnata.  
   
- Per un'interfaccia è conforme con la [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS), tutti i relativi membri devono essere conformi.  
+ Affinché un'interfaccia sia conforme all'indipendenza del [linguaggio e ai componenti indipendenti dal linguaggio](../../../standard/language-independence-and-language-independent-components.md) , tutti i relativi membri devono essere conformi.  
   
  Quando <xref:System.CLSCompliantAttribute> viene applicato a un elemento di programmazione, il parametro `isCompliant` dell'attributo viene impostato su `True` o `False` per indicare la conformità o la non conformità. L'impostazione predefinita per questo parametro non è disponibile, quindi è necessario specificare un valore.  
   
@@ -29,12 +29,12 @@ Una proprietà, routine o evento in un'interfaccia è contrassegnata come `<CLSC
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-- Se si Richiedi la conformità a CLS ed è possibile accedere al codice sorgente di interfaccia, contrassegnare l'interfaccia come `<CLSCompliant(True)>` se tutti i relativi membri sono conformi.  
+- Se è necessaria la conformità a CLS e si ha il controllo sul codice sorgente dell'interfaccia, contrassegnare l'interfaccia come `<CLSCompliant(True)>` se tutti i relativi membri fossero conformi.  
   
-- Se necessaria la conformità a CLS e non è possibile controllare il codice sorgente dell'interfaccia, o se non è idonea essere conforme, definire il membro all'interno di un'interfaccia diversa.  
+- Se è necessaria la conformità a CLS e non si ha il controllo sul codice sorgente dell'interfaccia o se non si è idonei per essere conforme, definire questo membro all'interno di un'interfaccia diversa.  
   
-- Se è necessario che il membro rimanga nell'interfaccia corrente, rimuovere il <xref:System.CLSCompliantAttribute> dalla relativa definizione o contrassegnarlo come `<CLSCompliant(False)>`.  
+- Se è necessario che il membro rimanga all'interno dell'interfaccia corrente, rimuovere <xref:System.CLSCompliantAttribute> dalla relativa definizione o contrassegnarlo come `<CLSCompliant(False)>` .  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzione Interface](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Istruzione Interface](../statements/interface-statement.md)
