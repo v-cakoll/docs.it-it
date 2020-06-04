@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-ms.openlocfilehash: 9868598b32ae17ef5bfb5dd738f8a7541515f5ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b9f74f0627268752b0ba3c3816fe9d4cc8a231b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013746"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404823"
 ---
-# <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>Necessario riferimento all'assembly '\<identitàassembly >' contenente il tipo '\<nomeTipo >', ma non è stato possibile trovare un riferimento appropriato a causa dell'ambiguità tra dei progetti\<projectname1 >' e '\< projectname2 >'
+# <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>Necessario riferimento all'assembly '\<assemblyidentity>' contenente il tipo '\<typename>'. Impossibile trovare un riferimento adatto a causa dell'ambiguità tra i progetti '\<projectname1>' e '\<projectname2>'
 In un'espressione viene usato un tipo, ad esempio una classe, una struttura, un'interfaccia, un'enumerazione o un delegato, definito all'esterno del progetto. Tuttavia, sono presenti riferimenti di progetto a più assembly che definiscono quel tipo.  
   
  I progetti citati generano assembly con lo stesso nome. Pertanto, il compilatore non può determinare l'assembly da usare per il tipo a cui si accede.  
@@ -32,7 +32,7 @@ In un'espressione viene usato un tipo, ad esempio una classe, una struttura, un'
 ## <a name="see-also"></a>Vedere anche
 
 - [Gestione dei riferimenti in un progetto](/visualstudio/ide/managing-references-in-a-project)
-- [Riferimenti a elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
 - [Risoluzione dei problemi relativi ai riferimenti interrotti](/visualstudio/ide/troubleshooting-broken-references)

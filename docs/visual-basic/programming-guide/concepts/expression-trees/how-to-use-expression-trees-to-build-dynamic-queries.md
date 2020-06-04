@@ -1,13 +1,13 @@
 ---
-title: "Procedura: utilizzare strutture ad albero dell'espressione per la compilazione di query dinamiche"
+title: 'Procedura: Usare alberi delle espressioni per la compilazione di query dinamiche'
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: 616aa3eba1e07a92983bb5d2048a9dbae936e77c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1f686c37b5d04263ac5ae0dd6883aa8a519ed19e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346059"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410979"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Procedura: usare alberi delle espressioni per la compilazione di query dinamiche (Visual Basic)
 
@@ -103,13 +103,13 @@ Questo codice usa un numero fisso di espressioni nel predicato passato al metodo
 
 ## <a name="compile-the-code"></a>Compilare il codice
 
-- Creare un nuovo progetto **applicazione console**.
+- Creare un nuovo progetto di **applicazione console** .
 
 - Includere lo spazio dei nomi System.Linq.Expressions.
 
-- Copiare il codice dall'esempio e incollarlo nella procedura `Main` `Sub`.
+- Copiare il codice dall'esempio e incollarlo nella `Main` `Sub` procedura.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [Procedura: eseguire alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [Alberi delle espressioni (Visual Basic)](index.md)
+- [How to: Execute Expression Trees (Visual Basic)](how-to-execute-expression-trees.md) (Procedura: Eseguire alberi delle espressioni (Visual Basic))

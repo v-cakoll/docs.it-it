@@ -1,16 +1,16 @@
 ---
-title: 'Procedura: cercare sottodirectory con un modello specifico'
+title: 'Procedura: Trovare sottodirectory con un criterio specifico'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pattern matching
 - folders, finding
 ms.assetid: c9265fd1-7483-4150-8b7f-ff642caa939d
-ms.openlocfilehash: c8e13598080139cafabffb2e17d0a3b99c37dc5d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5b57914a518b568732955e5c73bb2031824c84dd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348766"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401628"
 ---
 # <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Procedura: cercare sottodirectory con un modello specifico in Visual Basic
 
@@ -46,7 +46,7 @@ Le seguenti condizioni possono generare un'eccezione:
 
 - L'utente non dispone delle autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>
-- [How to: Find Files with a Specific Pattern](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md) (Procedura: Trovare file con un modello specifico)
+- [Procedura: Trovare file con un criterio specifico](how-to-find-files-with-a-specific-pattern.md)

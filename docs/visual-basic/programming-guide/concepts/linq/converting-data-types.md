@@ -2,12 +2,12 @@
 title: Conversione del tipo di dati
 ms.date: 07/20/2015
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
-ms.openlocfilehash: 25d21954f0bb7555f1f5666f83fb37f4f73e2a60
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1394f53923ba850ae11fbc326a25c279589c3be1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354261"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410851"
 ---
 # <a name="converting-data-types-visual-basic"></a>Conversione di tipi di dati (Visual Basic)
 
@@ -40,7 +40,7 @@ I metodi di conversione nella tabella i cui nomi iniziano con "As" modificano il
 
 ## <a name="query-expression-syntax-example"></a>Esempio di sintassi delle espressioni di query
 
-Nell'esempio di codice seguente viene utilizzata la clausola `From As` per eseguire il cast di un tipo a un sottotipo prima di accedere a un membro disponibile solo sul sottotipo.
+Nell'esempio di codice seguente viene utilizzata la `From As` clausola per eseguire il cast di un tipo a un sottotipo prima di accedere a un membro disponibile solo sul sottotipo.
 
 ```vb
 Class Plant
@@ -83,6 +83,6 @@ End Sub
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Linq>
-- [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Clausola From](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [Procedura: eseguire una query su un ArrayList con LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+- [Panoramica degli operatori query standard (Visual Basic)](standard-query-operators-overview.md)
+- [Clausola from](../../../language-reference/queries/from-clause.md)
+- [Procedura: eseguire una query su un ArrayList con LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md)

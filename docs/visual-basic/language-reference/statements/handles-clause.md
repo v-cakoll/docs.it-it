@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-ms.openlocfilehash: 2fecad919722f3da25c48f133a9c92b5e683d5e4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: df786e4b0f0ab3795592ea57f7af17695b086cfa
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345916"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404576"
 ---
 # <a name="handles-clause-visual-basic"></a>Clausola Handles (Visual Basic)
 Dichiara che una routine gestisce un evento specificato.  
@@ -30,12 +30,12 @@ proceduredeclaration Handles eventlist
  `eventlist`  
  Elenco degli eventi che devono essere gestiti da `proceduredeclaration`. Gli eventi devono essere generati dalla classe base per la classe corrente o da un oggetto dichiarato usando la parola chiave `WithEvents`.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
  Usare la parola chiave `Handles` alla fine di una dichiarazione di routine per fare in modo che la routine gestisca eventi generati da una variabile oggetto dichiarata con la parola chiave `WithEvents` . La parola chiave `Handles` può anche essere usata in una classe derivata per gestire eventi da una classe base.  
   
- La parola chiave `Handles` e l'istruzione `AddHandler` consentono entrambe di specificare che quelle particolari routine gestiscono particolari eventi, ma esistono alcune differenze. Usare la parola chiave `Handles` quando si definisce una routine, per specificare che questa gestisce un particolare evento. L'istruzione `AddHandler` connette le routine agli eventi in fase di esecuzione. Per ulteriori informazioni, vedere l' [istruzione AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md).  
+ La parola chiave `Handles` e l'istruzione `AddHandler` consentono entrambe di specificare che quelle particolari routine gestiscono particolari eventi, ma esistono alcune differenze. Usare la parola chiave `Handles` quando si definisce una routine, per specificare che questa gestisce un particolare evento. L'istruzione `AddHandler` connette le routine agli eventi in fase di esecuzione. Per ulteriori informazioni, vedere l' [istruzione AddHandler](addhandler-statement.md).  
   
- Per gli eventi personalizzati, l'applicazione richiama la funzione di accesso `AddHandler` dell'evento quando aggiunge la routine come gestore eventi. Per ulteriori informazioni sugli eventi personalizzati, vedere [istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md).  
+ Per gli eventi personalizzati, l'applicazione richiama la funzione di accesso `AddHandler` dell'evento quando aggiunge la routine come gestore eventi. Per ulteriori informazioni sugli eventi personalizzati, vedere [istruzione Event](event-statement.md).  
   
 ## <a name="example"></a>Esempio  
  [!code-vb[VbVbalrEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#2)]  
@@ -56,9 +56,9 @@ proceduredeclaration Handles eventlist
   
 ## <a name="see-also"></a>Vedere anche
 
-- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
-- [Istruzione AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)
-- [Istruzione RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)
-- [Istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md)
-- [Istruzione RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
-- [Eventi](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [WithEvents](../modifiers/withevents.md)
+- [Istruzione AddHandler](addhandler-statement.md)
+- [Istruzione RemoveHandler](removehandler-statement.md)
+- [Istruzione Event](event-statement.md)
+- [Istruzione RaiseEvent](raiseevent-statement.md)
+- [Events](../../programming-guide/language-features/events/index.md)

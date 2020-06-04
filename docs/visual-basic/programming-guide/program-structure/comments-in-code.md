@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 189810393db42c54cb8a0f97b22b3d1514d9a7c4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b50e76b8f832c3a214ca54f97bab8b0b6789ac25
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346165"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403317"
 ---
 # <a name="comments-in-code-visual-basic"></a>Commenti nel codice (Visual Basic)
 Negli esempi di codice viene spesso utilizzato il simbolo di commento (`'`). Questo simbolo indica al compilatore Visual Basic di ignorare il testo che lo segue o il *Commento*. I commenti sono brevi annotazioni descrittive che vengono aggiunte al codice per agevolarne la lettura.  
@@ -44,7 +44,7 @@ Negli esempi di codice viene spesso utilizzato il simbolo di commento (`'`). Que
 |Presupposti|Elenca tutte le variabili esterne, i controlli, i file aperti o gli altri elementi a cui accede la routine|  
 |Effetti|Elenca tutte le variabili esterne, i controlli o i file interessati, nonché l'effetto su di essi (solo se non è ovvio)|  
 |Input|Specifica lo scopo dell'argomento|  
-|Valore restituito|Spiega i valori restituiti dalla routine|  
+|Valori di codice restituiti|Spiega i valori restituiti dalla routine|  
   
  È importante tenere presente i seguenti punti:  
   
@@ -54,15 +54,15 @@ Negli esempi di codice viene spesso utilizzato il simbolo di commento (`'`). Que
   
 - Non è possibile inserire sulla stessa riga una sequenza di continuazione di riga seguita da un commento.  
   
- È possibile aggiungere o rimuovere i simboli di commento per un blocco di codice selezionando una o più righe di codice e scegliendo il **Commento** (![pulsante Visual Basic commento in Visual studio.](./media/comments-in-code/visual-basic-comment-button.gif)) e rimuovere il **Commento** (![il pulsante Visual Basic Rimuovi commento nei pulsanti di Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif)) sulla barra degli strumenti di **modifica** .  
+ È possibile aggiungere o rimuovere i simboli di commento per un blocco di codice selezionando una o più righe di codice e scegliendo il **Commento** ( ![ il Visual Basic pulsante commento in Visual Studio ](./media/comments-in-code/visual-basic-comment-button.gif) ) e rimuovere il **Commento** ( ![ il Visual Basic pulsante Rimuovi commento in Visual Studio. ](./media/comments-in-code/visual-basic-uncomment-button.gif) ) nella barra degli strumenti **modifica** .  
   
 > [!NOTE]
-> Per aggiungere commenti al codice è possibile anche inserire la parola chiave `REM` prima del testo. Tuttavia, il simbolo `'` e i pulsanti **commento**/Rimuovi **Commento** sono più semplici da utilizzare e richiedono meno spazio e memoria.  
+> Per aggiungere commenti al codice è possibile anche inserire la parola chiave `REM` prima del testo. Tuttavia, i `'` pulsanti simbolo e **Rimuovi** / **Commento** sono più semplici da utilizzare e richiedono meno spazio e memoria.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Istinti di base-documentazione del codice con commenti XML](https://docs.microsoft.com/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
-- [Procedura: Creare documentazione XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
-- [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/index.md)
-- [Struttura del programma e convenzioni di scrittura del codice](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Istruzione REM](../../../visual-basic/language-reference/statements/rem-statement.md)
+- [Procedura: Creare documentazione XML](how-to-create-xml-documentation.md)
+- [Tag di commento XML](../../language-reference/xmldoc/index.md)
+- [Struttura del programma e convenzioni del codice](program-structure-and-code-conventions.md)
+- [Istruzione REM](../../language-reference/statements/rem-statement.md)

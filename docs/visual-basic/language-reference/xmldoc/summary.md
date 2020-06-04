@@ -5,14 +5,14 @@ helpviewer_keywords:
 - <summary> XML tag
 - summary XML tag
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
-ms.openlocfilehash: 3bc4393d2fa14f804c6383780e238b1ac2610a94
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 893ed299b46bd6255ca0e87d008ac53265698614
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352206"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411499"
 ---
-# <a name="summary-visual-basic"></a>> Riepilogo \<(Visual Basic)
+# <a name="summary-visual-basic"></a>\<summary> (Visual Basic)
 Specifica il riepilogo del membro.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -25,18 +25,18 @@ Specifica il riepilogo del membro.
  `description`  
  Un riepilogo dell'oggetto.  
   
-## <a name="remarks"></a>Note  
- Usare il tag `<summary>` per descrivere un tipo o un membro del tipo. Utilizzare [ \<osservazioni >](../../../visual-basic/language-reference/xmldoc/remarks.md) per aggiungere informazioni supplementari alla descrizione di un tipo.  
+## <a name="remarks"></a>Commenti  
+ Usare il `<summary>` tag per descrivere un tipo o un membro del tipo. Utilizzare [\<remarks>](remarks.md) per aggiungere informazioni aggiuntive a una descrizione del tipo.  
   
- Il testo per il tag `<summary>` è l'unica fonte di informazioni sul tipo in IntelliSense e viene visualizzato anche nel Visualizzatore oggetti. Per informazioni sulla Visualizzatore oggetti, vedere [visualizzazione della struttura del codice](/visualstudio/ide/viewing-the-structure-of-code).  
+ Il testo per il `<summary>` tag è l'unica fonte di informazioni sul tipo in IntelliSense e viene visualizzato anche nell'Visualizzatore oggetti. Per informazioni sulla Visualizzatore oggetti, vedere [visualizzazione della struttura del codice](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Compilare con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
+ Compilare con [-doc](../../reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio usa il tag `<summary>` per descrivere il metodo `ResetCounter` e `Counter` proprietà.  
+ Questo esempio usa il `<summary>` tag per descrivere il `ResetCounter` metodo e la `Counter` Proprietà.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Tag di commento XML](index.md)

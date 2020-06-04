@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 1d4323366e567dab4b27b07803d0c06e731611ce
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d75dd816278a876fa05d133e5eb189d606300a5c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738900"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401927"
 ---
 # <a name="do-c-reference"></a>do (Riferimenti per C#)
 
@@ -22,13 +22,13 @@ In qualsiasi punto all'interno del blocco `do` è possibile uscire dal ciclo usa
 
 È possibile passare direttamente alla valutazione dell'espressione `while` tramite l'istruzione [continue](continue.md). Se l'espressione restituisce `true`, l'esecuzione continua con la prima istruzione nel ciclo. In caso contrario, l'esecuzione continua con la prima istruzione dopo il ciclo.
 
-È inoltre possibile `do-while` uscire da un ciclo mediante le istruzioni [goto](goto.md), [return](return.md)o [throw](throw.md) .
+È anche possibile uscire `do-while` da un ciclo tramite le istruzioni [goto](goto.md), [return](return.md)o [throw](throw.md) .
 
 ## <a name="example"></a>Esempio
 
 L'esempio seguente illustra l'utilizzo dell'istruzione `do`. Selezionare **Esegui** per eseguire il codice di esempio. Dopo l'esecuzione è possibile modificare il codice ed eseguirlo di nuovo.
 
-[!code-csharp-interactive[do loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#4)]
+[!code-csharp-interactive[do loop example](snippets/IterationKeywordsExamples.cs#4)]
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
@@ -36,7 +36,7 @@ Per altre informazioni, vedere la sezione [Istruzione do](~/_csharplang/spec/sta
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida di riferimento a C](../index.md)
-- [Guida alla programmazione in C](../../programming-guide/index.md)
-- [Parole chiave di C](index.md)
-- [while dichiarazione](while.md)
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Parole chiave di C#](index.md)
+- [Istruzione while](while.md)

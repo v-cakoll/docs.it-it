@@ -13,15 +13,15 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
-ms.openlocfilehash: bd70d8642c18e9bc2baba8128ec908c88e0477ce
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e8d87e095b7c3104e3a2d66525644d1771ae883e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345177"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410632"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Associazione anticipata e tardiva (Visual Basic)
-Il compilatore Visual Basic esegue un processo denominato `binding` quando un oggetto viene assegnato a una variabile oggetto. Un oggetto è *ad associazione anticipata* quando viene assegnato a una variabile di un tipo object specifico. Gli oggetti ad associazione anticipata consentono al compilatore di allocare memoria ed effettuare altre ottimizzazioni prima dell'esecuzione di un'applicazione. Il frammento di codice seguente, ad esempio, dichiara una variabile di tipo <xref:System.IO.FileStream>:  
+Il compilatore Visual Basic esegue un processo chiamato `binding` quando un oggetto viene assegnato a una variabile oggetto. Un oggetto è *ad associazione anticipata* quando viene assegnato a una variabile di un tipo object specifico. Gli oggetti ad associazione anticipata consentono al compilatore di allocare memoria ed effettuare altre ottimizzazioni prima dell'esecuzione di un'applicazione. Il frammento di codice seguente, ad esempio, dichiara una variabile di tipo <xref:System.IO.FileStream>:  
   
  [!code-vb[VbVbalrOOP#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#90)]  
   
@@ -40,5 +40,5 @@ Il compilatore Visual Basic esegue un processo denominato `binding` quando un og
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>
-- [Durata degli oggetti: come creare e distruggere oggetti](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Durata degli oggetti: come creare e distruggere oggetti](../objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Object Data Type](../../../language-reference/data-types/object-data-type.md)

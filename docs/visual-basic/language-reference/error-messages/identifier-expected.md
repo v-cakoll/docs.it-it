@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30203
 ms.assetid: c05162ee-55d0-4d7f-84bb-e7758d4c5081
-ms.openlocfilehash: 619b1c55ef035530c6854fa15763fb9c187565a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e33450e921f1859c97edf1fbf123a0a95267767f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662021"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402888"
 ---
 # <a name="identifier-expected"></a>È previsto un identificatore
-Un elemento di programmazione che non è un nome facilmente riconoscibile elemento dichiarato si verifica dove il contesto richiede un nome di elemento. Una possibile causa è che un attributo sia stato specificato in una posizione diversa rispetto all'inizio dell'istruzione.  
+Un elemento di programmazione che non è un nome di elemento dichiarato riconoscibile si verifica dove il contesto richiede un nome di elemento. Una delle possibili cause è che un attributo è stato specificato in un punto diverso dall'inizio dell'istruzione.  
   
  **ID errore:** BC30203  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-- Verificare che tutti gli attributi dell'istruzione vengono inseriti all'inizio.  
+- Verificare che tutti gli attributi nell'istruzione siano tutti posizionati all'inizio.  
   
-- Verificare che tutti i nomi di elementi nell'istruzione siano digitati correttamente.  
+- Verificare che tutti i nomi degli elementi nell'istruzione siano stati digitati correttamente.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Panoramica degli attributi](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Panoramica degli attributi](../../programming-guide/concepts/attributes/index.md)

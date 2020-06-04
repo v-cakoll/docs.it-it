@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - In keyword [Visual Basic]
 ms.assetid: 2f003a85-8fb6-4280-822b-6ac12839b915
-ms.openlocfilehash: bf7a21e694b245ea72916e0930f11c332a3c9726
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ad3a1281cfaf366f1f28a847d3c3831ad11b0a20
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353583"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404524"
 ---
 # <a name="in-clause-visual-basic"></a>Clausola In (Visual Basic)
-Specifica il gruppo che deve essere attraversato dalla variabile di ciclo in un ciclo di `For Each` o che specifica la raccolta di cui eseguire la query in una clausola `From`, `Join`o `Group Join`.  
+Specifica il gruppo che deve essere attraversato dalla variabile di ciclo in un `For Each` ciclo oppure specifica la raccolta per eseguire una query in `From` una `Join` clausola, o `Group Join` .  
   
-## <a name="remarks"></a>Osservazioni  
- La parola chiave `In` può essere utilizzata nei contesti seguenti:  
+## <a name="remarks"></a>Commenti  
+ La `In` parola chiave può essere utilizzata nei contesti seguenti:  
   
- [Istruzione For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [Istruzione For Each...Next](for-each-next-statement.md)  
   
- [Clausola From](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Clausola from](../queries/from-clause.md)  
   
- [Clausola Join](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [Clausola join](../queries/join-clause.md)  
   
- [Clausola Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Clausola Group Join](../queries/group-join-clause.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)
+- [Parole chiave](../keywords/index.md)

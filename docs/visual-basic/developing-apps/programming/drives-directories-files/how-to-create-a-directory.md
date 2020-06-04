@@ -1,16 +1,16 @@
 ---
-title: 'Procedura: creare una directory'
+title: 'Procedura: Creare una directory'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - directories [Visual Basic], creating
 - folders [Visual Basic], creating
 ms.assetid: 0351a2ca-24d8-43b5-bb39-9b99e6401cff
-ms.openlocfilehash: 3d838352a0a3dd69a1555dc34b8acba3afba278b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0da915054a2e38c778f15bc0b472fe9b02521189
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348804"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401667"
 ---
 # <a name="how-to-create-a-directory-in-visual-basic"></a>Procedura: creare una directory in Visual Basic
 
@@ -42,7 +42,7 @@ Usare il metodo `CreateDirectory` dell'oggetto `My.Computer.FileSystem` per la c
   
 - L'utente non ha le autorizzazioni richieste in una situazione di attendibilità parziale (<xref:System.Security.SecurityException>).  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>
-- [Creazione, eliminazione e spostamento di file e directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
+- [Creazione, eliminazione e spostamento di file e directory](creating-deleting-and-moving-files-and-directories.md)
