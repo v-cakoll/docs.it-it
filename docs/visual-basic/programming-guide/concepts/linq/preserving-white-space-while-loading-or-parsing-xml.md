@@ -1,13 +1,13 @@
 ---
-title: Conservazione di spazi vuoti durante il caricamento o l'analisi XML2
+title: Conservazione degli spazi vuoti durante il caricamento o l'analisi di XML2
 ms.date: 07/20/2015
 ms.assetid: ef6518e0-2c8d-462c-8b92-a16e9dc737ad
-ms.openlocfilehash: 7febbf1ea27d3e73df8b91869befcd0b29a07c6e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9c60c707730ed0b07e82040a4ce3aab5d83eef1c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666131"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396441"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Conservazione di spazi vuoti durante il caricamento o l'analisi di dati XML
 In questo argomento viene descritto come controllare il comportamento dello spazio vuoto di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] .  
@@ -16,7 +16,7 @@ In questo argomento viene descritto come controllare il comportamento dello spaz
   
  In un altro scenario comune viene letto e modificato codice XML che è già stato intenzionalmente rientrato. È possibile che si desideri non modificare questo rientro in alcun modo. In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è possibile ottenere questo risultato conservando lo spazio vuoto durante il caricamento o l'analisi XML e disabilitando la formattazione durante la serializzazione XML.  
   
- In questo argomento viene descritto il comportamento dello spazio vuoto dei metodi che popolano l'albero XML. Per informazioni sul controllo dello spazio vuoto durante la serializzazione di strutture ad albero XML, vedere [Mantenimento dello spazio vuoto durante la serializzazione](../../../../visual-basic/programming-guide/concepts/linq/preserving-white-space-while-serializing.md).  
+ In questo argomento viene descritto il comportamento dello spazio vuoto dei metodi che popolano l'albero XML. Per informazioni sul controllo dello spazio vuoto durante la serializzazione di strutture ad albero XML, vedere [Mantenimento dello spazio vuoto durante la serializzazione](preserving-white-space-while-serializing.md).  
   
 ## <a name="behavior-of-methods-that-populate-xml-trees"></a>Comportamento dei metodi che popolano gli alberi XML  
  I metodi seguenti nelle classi <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XDocument> popolano un albero XML. È possibile popolare un albero XML da un file, un oggetto <xref:System.IO.TextReader>, un oggetto <xref:System.Xml.XmlReader> o una stringa:  
@@ -39,4 +39,4 @@ In questo argomento viene descritto come controllare il comportamento dello spaz
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Analisi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Analisi di XML (Visual Basic)](parsing-xml.md)

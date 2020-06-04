@@ -1,18 +1,18 @@
 ---
-title: Modifica di strutture ad albero XML in memoria e costruzione funzionale (LINQ to XML)
+title: Differenze tra la modifica dell'albero XML in memoria e la Costruzione funzionale (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: d91c4ebf-6549-43cc-9961-26d4a82f722b
-ms.openlocfilehash: 15c38cdf7ce860b34d8d3e9d59b8f06d80f6edd8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: efdbf51efa0f502ac9991d520defe45bb95678b7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344444"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397609"
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-visual-basic"></a>Modifica dell'albero XML in memoria rispetto alla costruzione funzionale (LINQ to XML) (Visual Basic)
 La modifica di un albero XML sul posto è un approccio tradizionale per cambiare la forma di un documento XML. In una tipica applicazione un documento viene caricato in un archivio dati quale DOM o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], viene usata un'interfaccia di programmazione per inserire o eliminare nodi oppure per modificarne il contenuto, quindi il file XML viene salvato in un file o trasmesso tramite una rete.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] consente di adottare un altro approccio che risulta utile in molti scenari: la *costruzione funzionale*. Nella costruzione funzionale la modifica di dati viene considerata come un problema di trasformazione, anziché come una modifica dettagliata di un archivio dati. Se è possibile trasformare in modo efficiente una rappresentazione di dati da un formato a un altro, il risultato è identico a quello ottenuto modificando un archivio dati in modo da cambiarne la forma. Un aspetto importante dell'approccio della costruzione funzionale riguarda il passaggio dei risultati delle query ai costruttori <xref:System.Xml.Linq.XDocument> e <xref:System.Xml.Linq.XElement>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]consente un altro approccio utile in molti scenari *: costruzione funzionale*. Nella costruzione funzionale la modifica di dati viene considerata come un problema di trasformazione, anziché come una modifica dettagliata di un archivio dati. Se è possibile trasformare in modo efficiente una rappresentazione di dati da un formato a un altro, il risultato è identico a quello ottenuto modificando un archivio dati in modo da cambiarne la forma. Un aspetto importante dell'approccio della costruzione funzionale riguarda il passaggio dei risultati delle query ai costruttori <xref:System.Xml.Linq.XDocument> e <xref:System.Xml.Linq.XElement>.  
   
  In molti casi, è possibile scrivere il codice di trasformazione in tempi ridotti rispetto a quelli richiesti per la modifica dell'archivio dati. Il codice è inoltre più affidabile e facile da gestire. In questi casi, anche se l'approccio della trasformazione può richiedere una maggiore potenza di elaborazione, si tratta di una soluzione più efficace per la modifica dei dati. Se gli sviluppatori hanno familiarità con l'approccio funzionale, il codice risultante è spesso più facile da comprendere. Risulta facile trovare il codice che modifica ogni parte dell'albero.  
   
@@ -76,4 +76,4 @@ Console.WriteLine(newTree)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modifica di strutture ad albero XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Modifica di strutture ad albero XML (LINQ to XML) (Visual Basic)](modifying-xml-trees-linq-to-xml.md)

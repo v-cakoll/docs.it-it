@@ -1,17 +1,17 @@
 ---
-title: "Procedura: scrivere all'interno di file binari"
+title: 'Procedura: Scrivere in file binari'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], binary access
 - WriteAllBytes method [Visual Basic]
 - binary files [Visual Basic], writing in Visual Basic
 ms.assetid: 59fae125-de5b-4c96-883c-209f4a55112c
-ms.openlocfilehash: 72d019f5f49868bd84d0507535e8ebc547b50e25
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b36da82060b930101cb54dd852d050ac0155bd10
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74334436"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411551"
 ---
 # <a name="how-to-write-to-binary-files-in-visual-basic"></a>Procedura: scrivere all'interno di file binari in Visual Basic
 
@@ -43,7 +43,7 @@ Le condizioni seguenti possono generare un'eccezione:
 
 - L'utente non dispone delle autorizzazioni necessarie per visualizzare il percorso (<xref:System.Security.SecurityException>).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
-- [Procedura: scrivere testo in file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)
+- [Procedura: Scrivere testo in file](how-to-write-text-to-files.md)

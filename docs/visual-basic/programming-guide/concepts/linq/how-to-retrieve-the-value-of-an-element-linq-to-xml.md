@@ -1,13 +1,13 @@
 ---
-title: 'Procedura: recuperare il valore di un elemento (LINQ to XML)'
+title: 'Procedura: Recuperare il valore di un elemento (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-ms.openlocfilehash: b1a61091dc59b403c5d967609e8870492c24347f
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: b8ff44416f0fbb590119af7e11714e449185d977
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248934"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397791"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>Procedura: recuperare il valore di un elemento (LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come ottenere il valore degli elementi. Questa operazione può essere eseguita in due modi. È possibile eseguire il cast di un oggetto <xref:System.Xml.Linq.XElement> o  <xref:System.Xml.Linq.XAttribute> nel tipo desiderato. L'operatore di conversione esplicito converte quindi il contenuto dell'elemento o dell'attributo nel tipo specificato e lo assegna alla variabile. In alternativa, è possibile usare la proprietà <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> o <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>.  
@@ -67,7 +67,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>Esempio  
- A volte, si tenta di recuperare il valore di un elemento anche se non si è certi che esista. In questo caso, quando si assegna l'elemento di `string` cui è stato eseguito il cast a un tipo nullable (uno o `Nothing`uno dei tipi di valore nullable in .NET Framework), se l'elemento non esiste, la variabile assegnata viene semplicemente impostata su . Nel codice seguente viene dimostrato che quando non si è certi che l'elemento esista, è preferibile eseguire il cast anziché usare la proprietà <xref:System.Xml.Linq.XElement.Value%2A>.  
+ A volte, si tenta di recuperare il valore di un elemento anche se non si è certi che esista. In questo caso, quando si assegna l'elemento sottoposto a cast a un tipo Nullable ( `string` o uno dei tipi di valore nullable nel .NET Framework), se l'elemento non esiste, la variabile assegnata viene semplicemente impostata su `Nothing` . Nel codice seguente viene dimostrato che quando non si è certi che l'elemento esista, è preferibile eseguire il cast anziché usare la proprietà <xref:System.Xml.Linq.XElement.Value%2A>.  
   
 ```vb  
 Dim root As XElement = <Root>  
@@ -151,4 +151,4 @@ v4:element does not exist
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Assi LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [Assi LINQ to XML (Visual Basic)](linq-to-xml-axes.md)

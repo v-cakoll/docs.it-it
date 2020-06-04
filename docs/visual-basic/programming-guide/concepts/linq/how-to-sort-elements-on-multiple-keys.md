@@ -1,13 +1,13 @@
 ---
-title: 'Procedura: ordinare elementi in più chiavi'
+title: 'Procedura: Ordinare elementi in base a più chiavi'
 ms.date: 07/20/2015
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
-ms.openlocfilehash: bf1749983700656508b781091ab349943dbc7bc1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: de468f999117030942f9e770cd1235966f17e2c7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74333743"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397739"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>Procedura: ordinare elementi su più chiavi (Visual Basic)
 In questo argomento viene illustrato come ordinare elementi su più chiavi.  
@@ -15,7 +15,7 @@ In questo argomento viene illustrato come ordinare elementi su più chiavi.
 ## <a name="example"></a>Esempio  
  In questo esempio i risultati vengono ordinati dapprima in base al codice postale di spedizione e quindi in base alla data dell'ordine.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: Customers e Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: clienti e ordini (LINQ to XML)](sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -64,7 +64,7 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente è illustrata la stessa query per XML in uno spazio dei nomi. Per ulteriori informazioni, vedere [Cenni preliminari sugli spazi dei nomi (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Questo esempio usa il documento XML seguente: [File XML di esempio: clienti e ordini in uno spazio dei nomi](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: clienti e ordini in uno spazio dei nomi](sample-xml-file-customers-and-orders-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adventure-works.com'>  
@@ -118,4 +118,4 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Query di base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Query di base (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)

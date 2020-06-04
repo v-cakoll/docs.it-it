@@ -2,12 +2,12 @@
 title: Operazioni di proiezione
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-ms.openlocfilehash: d7efb46ccfe3208ae6c58043a64c236171d0c147
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4795bdaba53949b34fe380ea9c51025ce43c40db
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346623"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396337"
 ---
 # <a name="projection-operations-visual-basic"></a>Operazioni di proiezione (Visual Basic)
 
@@ -19,12 +19,12 @@ Nella sezione seguente sono elencati i metodi dell'operatore query standard che 
 
 |Nome metodo|Descrizione|Visual Basic sintassi delle espressioni di query|Altre informazioni|
 |-----------------|-----------------|------------------------------------------|----------------------|
-|Seleziona|Proietta i valori che si basano su una funzione di trasformazione.|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|
+|Select|Proietta i valori che si basano su una funzione di trasformazione.|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|
 |SelectMany|Proietta le sequenze di valori che si basano su una funzione di trasformazione semplificandoli in un'unica sequenza.|Usare più clausole `From`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|
 
 ## <a name="query-expression-syntax-examples"></a>Esempi di sintassi delle espressioni di query
 
-### <a name="select"></a>Seleziona
+### <a name="select"></a>Select
 
 L'esempio seguente usa la clausola `Select` per proiettare la prima lettera di ogni stringa di un elenco di stringhe.
 
@@ -52,7 +52,7 @@ MsgBox(sb.ToString())
 
 ### <a name="selectmany"></a>SelectMany
 
-Nell'esempio seguente vengono usate più clausole `From` per proiettare ogni parola da ogni stringa in un elenco di stringhe.
+Nell'esempio seguente vengono utilizzate più `From` clausole per proiettare ogni parola da ogni stringa in un elenco di stringhe.
 
 ```vb
 Dim phrases = New List(Of String) From {"an apple a day", "the quick brown fox"}
@@ -178,9 +178,9 @@ End Sub
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Linq>
-- [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Clausola Select](../../../../visual-basic/language-reference/queries/select-clause.md)
-- [Procedura: Combinare dati utilizzando join](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
-- [Procedura: popolare raccolte di oggetti da più origini (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
-- [Procedura: Restituire un risultato di query LINQ come tipo specifico](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)
-- [Procedura: suddividere un file in molti file usando i gruppi (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Panoramica degli operatori query standard (Visual Basic)](standard-query-operators-overview.md)
+- [Clausola SELECT](../../../language-reference/queries/select-clause.md)
+- [Procedura: Combinare dati utilizzando join](../../language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
+- [Procedura: popolare raccolte di oggetti da più origini (LINQ) (Visual Basic)](how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Procedura: restituire un risultato di query LINQ come tipo specifico](../../language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)
+- [Procedura: suddividere un file in molti file usando i gruppi (LINQ) (Visual Basic)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)

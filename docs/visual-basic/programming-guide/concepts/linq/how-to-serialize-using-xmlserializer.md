@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: serializzare mediante XmlSerializer'
+title: 'Procedura: Serializzare con XmlSerializer'
 ms.date: 07/20/2015
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
-ms.openlocfilehash: 6d5874d6722fac6deba93de01cb5441e7dbc7503
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2265ad2129a4dc243f82c562058dbe5436fa418b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352361"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397765"
 ---
-# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>Procedura: serializzare tramite XmlSerializer (Visual Basic)
+# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>Procedura: Serializzare tramite XmlSerializer (Visual Basic)
 In questo argomento viene illustrato un esempio in cui viene usato <xref:System.Xml.Serialization.XmlSerializer> per eseguire la serializzazione e la deserializzazione.  
   
 ## <a name="example"></a>Esempio  
@@ -69,7 +69,7 @@ Public Class XLinqTest
 End Class  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```console  
 Testing for type: XElementNullContainer  
@@ -82,4 +82,4 @@ Testing for type: XElementContainer
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Serializzazione di oggetti grafici contenenti oggetti XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [Serializzazione di oggetti grafici contenenti oggetti XElement (Visual Basic)](serializing-object-graphs-that-contain-xelement-objects.md)

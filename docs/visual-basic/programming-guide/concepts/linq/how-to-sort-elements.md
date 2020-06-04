@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: ordinare elementi'
+title: 'Procedura: Ordinare elementi'
 ms.date: 07/20/2015
 ms.assetid: c2c09279-6c8a-482e-8e71-b1453a815052
-ms.openlocfilehash: 84d791a73c27b9acf1eaa5a5e4a31d6798a6c76d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1204fb4dc190d68956d01ffce225ce40e11538a4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341543"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397752"
 ---
 # <a name="how-to-sort-elements-visual-basic"></a>Procedura: ordinare elementi (Visual Basic)
 In questo esempio viene illustrato come scrivere una query che ordina i relativi risultati.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: dati numerici (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: dati numerici (LINQ to XML)](sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -42,7 +42,7 @@ Next
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente è illustrata la stessa query per XML in uno spazio dei nomi. Per ulteriori informazioni, vedere [Cenni preliminari sugli spazi dei nomi (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Questo esempio usa il documento XML seguente: [File XML di esempio: dati numerici in uno spazio dei nomi](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: dati numerici in uno spazio dei nomi](sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -76,5 +76,5 @@ End Module
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Ordinamento dei dati](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
-- [Query di base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Ordinamento dei dati](sorting-data.md)
+- [Query di base (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)

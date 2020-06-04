@@ -5,35 +5,35 @@ helpviewer_keywords:
 - Visual Basic code, strings
 - strings [Visual Basic], Visual Basic
 ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
-ms.openlocfilehash: db79284e45161f87e447fec7ab7faf91093a3fd7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 302805f8b9a83fceeeaa050332140c157a7a786f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344342"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410555"
 ---
 # <a name="strings-in-visual-basic"></a>Stringhe in Visual Basic
 In questa sezione vengono descritti i concetti di base relativi all'utilizzo di stringhe in Visual Basic.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
- [Introduzione alle stringhe in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
+ [Introduzione alle stringhe in Visual Basic](introduction-to-strings.md)  
  Vengono elencati gli argomenti in cui vengono descritti i concetti di base relativi all'utilizzo di stringhe in Visual Basic.  
   
- [Procedura: Creare stringhe usando StringBuilder in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
+ [Procedura: creare stringhe utilizzando StringBuilder in Visual Basic](how-to-create-strings-using-a-stringbuilder.md)  
  Illustra come creare in modo efficiente una stringa lunga da molte stringhe più piccole.  
   
- [Procedura: Cercare all'interno di una stringa](../../../../visual-basic/programming-guide/language-features/strings/how-to-search-within-a-string.md)  
+ [Procedura: cercare all'interno di una stringa](how-to-search-within-a-string.md)  
  Illustra come determinare l'indice della prima occorrenza di una sottostringa.  
   
- [Conversione tra stringhe e altri tipi di dati in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)  
+ [Conversione tra stringhe e altri tipi di dati in Visual Basic](converting-between-strings-and-other-data-types.md)  
  Elenca argomenti che illustrano come convertire le stringhe in altri tipi di dati.  
   
- [Convalida delle stringhe in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
+ [Convalida delle stringhe in Visual Basic](validating-strings.md)  
  Elenca argomenti che descrivono come convalidare le stringhe.  
   
- [Procedura dettagliata: Crittografia e decrittografia di stringhe in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
+ [Procedura dettagliata: crittografia e decrittografia di stringhe in Visual Basic](walkthrough-encrypting-and-decrypting-strings.md)  
  Illustra come crittografare e decrittografare le stringhe usando la versione del provider del servizio di crittografia dell'algoritmo Triple Data Encryption Standard.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzionalità del linguaggio Visual Basic](../../../../visual-basic/programming-guide/language-features/index.md)
+- [Funzionalità del linguaggio Visual Basic](../index.md)

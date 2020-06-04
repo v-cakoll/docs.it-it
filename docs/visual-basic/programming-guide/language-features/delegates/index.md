@@ -5,20 +5,20 @@ helpviewer_keywords:
 - delegates [Visual Basic]
 - Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
-ms.openlocfilehash: 15b4cb0a038429c5fe67d3e013818a7a2170abcc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1f161248fa04f8fab0e5335413e69ca565732f71
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345229"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410683"
 ---
 # <a name="delegates-visual-basic"></a>Delegati (Visual Basic)
 
-I delegati sono oggetti che fanno riferimento ai metodi. Vengono a volte descritti come *puntatori a funzione indipendenti dai tipi* poiché sono simili ai puntatori a funzione usati in altri linguaggi di programmazione. Tuttavia, a differenza dei puntatori a funzione, i delegati Visual Basic sono un tipo riferimento basato sulla classe <xref:System.Delegate?displayProperty=nameWithType>. I delegati possono fare riferimento sia a metodi condivisi, ovvero metodi che è possibile chiamare senza una specifica istanza di una classe, sia a metodi di istanza.
+I delegati sono oggetti che fanno riferimento ai metodi. Vengono a volte descritti come *puntatori a funzione indipendenti dai tipi* poiché sono simili ai puntatori a funzione usati in altri linguaggi di programmazione. Tuttavia, a differenza dei puntatori a funzione, i delegati Visual Basic sono un tipo di riferimento basato sulla classe <xref:System.Delegate?displayProperty=nameWithType> . I delegati possono fare riferimento sia a metodi condivisi, ovvero metodi che è possibile chiamare senza una specifica istanza di una classe, sia a metodi di istanza.
 
 ## <a name="delegates-and-events"></a>Delegati ed eventi
 
-I delegati sono utili nelle situazioni in cui è necessario un intermediario tra una routine chiamante e la routine chiamata. Ad esempio, può essere necessario che un oggetto generatore di eventi sia in grado di chiamare gestori di eventi differenti in circostanze diverse. Purtroppo, l'oggetto che genera gli eventi non può sapere in anticipo quale gestore eventi gestirà uno specifico evento. Visual Basic consente di associare dinamicamente i gestori eventi agli eventi creando un delegato quando si usa l'istruzione `AddHandler`. In fase di esecuzione, il delegato inoltrerà le chiamate al gestore eventi appropriato.
+I delegati sono utili nelle situazioni in cui è necessario un intermediario tra una routine chiamante e la routine chiamata. Ad esempio, può essere necessario che un oggetto generatore di eventi sia in grado di chiamare gestori di eventi differenti in circostanze diverse. Purtroppo, l'oggetto che genera gli eventi non può sapere in anticipo quale gestore eventi gestirà uno specifico evento. Visual Basic consente di associare dinamicamente i gestori eventi agli eventi creando un delegato quando si usa l' `AddHandler` istruzione. In fase di esecuzione, il delegato inoltrerà le chiamate al gestore eventi appropriato.
 
 Sebbene sia possibile creare delegati personalizzati, nella maggior parte dei casi Visual Basic crea il delegato e si occupa dei dettagli. Un'istruzione `Event`, ad esempio, consente di definire implicitamente una classe delegata denominata `<EventName>EventHandler` come classe nidificata della classe contenente l'istruzione `Event` e con la stessa firma dell'evento. L'istruzione `AddressOf` crea in modo implicito un'istanza di un delegato che fa riferimento a una routine specifica. Le due righe di codice seguenti sono equivalenti. Nella prima riga è possibile osservare la creazione esplicita di un'istanza di `EventHandler`, con un riferimento al metodo `Button1_Click` inviato come argomento. La seconda riga rappresenta un modo più pratico di eseguire la stessa operazione.
 
@@ -60,13 +60,13 @@ Nell'esempio seguente sono illustrate sia l'espressione `AddressOf` che l'espres
 
 [!code-vb[VbVbalrDelegates#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class2.vb#15)]
 
-La firma della funzione deve corrispondere a quella del tipo delegato. Per altre informazioni sulle espressioni lambda, vedere [Espressioni lambda in C++](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md). Per altri esempi di espressioni lambda e assegnazioni di `AddressOf` a delegati, vedere [Conversione di tipo relaxed del delegato](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).
+La firma della funzione deve corrispondere a quella del tipo delegato. Per ulteriori informazioni sulle espressioni lambda, vedere [espressioni lambda](../procedures/lambda-expressions.md). Per altri esempi di espressioni lambda e assegnazioni di `AddressOf` a delegati, vedere [Conversione di tipo relaxed del delegato](relaxed-delegate-conversion.md).
 
 ## <a name="related-topics"></a>Argomenti correlati
 
 |Titolo|Descrizione|
 |-----------|-----------------|
-|[Procedura: Richiamare un metodo delegato](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)|Viene offerto un esempio che mostra come associare un metodo a un delegato e quindi richiamare tale metodo tramite il delegato.|
-|[Procedura: Passare una routine a un'altra routine in Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|Viene illustrato come usare i delegati per passare una routine a un'altra routine.|
-|[Conversione di tipo relaxed del delegato](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|Viene descritto come assegnare subroutine e funzioni a delegati o gestori anche quando le relative firme non sono identiche.|
-|[Eventi](../../../../visual-basic/programming-guide/language-features/events/index.md)|Viene offerta una panoramica degli eventi in Visual Basic.|
+|[Procedura: richiamare un metodo delegato](how-to-invoke-a-delegate-method.md)|Viene offerto un esempio che mostra come associare un metodo a un delegato e quindi richiamare tale metodo tramite il delegato.|
+|[Procedura: passare una routine a un'altra routine in Visual Basic](how-to-pass-procedures-to-another-procedure.md)|Viene illustrato come usare i delegati per passare una routine a un'altra routine.|
+|[Conversione di tipo relaxed del delegato](relaxed-delegate-conversion.md)|Viene descritto come assegnare subroutine e funzioni a delegati o gestori anche quando le relative firme non sono identiche.|
+|[Events](../events/index.md)|Viene offerta una panoramica degli eventi in Visual Basic.|

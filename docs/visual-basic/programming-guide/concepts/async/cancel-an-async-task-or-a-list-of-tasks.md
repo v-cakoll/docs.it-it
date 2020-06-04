@@ -2,23 +2,23 @@
 title: Annullare un'attività asincrona o un elenco di attività
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 2956582cd0c8e044fcd37ffab13686489a7c854c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 932bf46f1e3aee220d0412f1688e961faaef3459
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347959"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396701"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Annullare un'attività asincrona o un elenco di attività (Visual Basic)
 
 È possibile impostare un pulsante che consenta di annullare un'applicazione asincrona se non si vuole attendere il suo completamento. Seguendo gli esempi in questo argomento, è possibile aggiungere un pulsante di annullamento di un'applicazione che scarica il contenuto di un sito Web o di un elenco di siti Web.
 
-Negli esempi viene usata l'interfaccia utente che consente di [ottimizzare l'applicazione asincrona (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) .
+Negli esempi viene usata l'interfaccia utente che consente di [ottimizzare l'applicazione asincrona (Visual Basic)](fine-tuning-your-async-application.md) .
 
 > [!NOTE]
-> Per eseguire gli esempi, è necessario che nel computer siano installati Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive.
+> Per eseguire gli esempi, è necessario avere installato Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive nel computer.
 
-## <a name="BKMK_CancelaTask"></a> Annullare un'attività
+## <a name="cancel-a-task"></a><a name="BKMK_CancelaTask"></a> Annullare un'attività
 
 Il primo esempio associa il pulsante **Annulla** con un'attività di download singola. Se si sceglie il pulsante mentre l'applicazione sta scaricando il contenuto, il download viene annullato.
 
@@ -138,7 +138,7 @@ Aggiungere quindi le seguenti modifiche al file MainWindow. XAML. vb del progett
     Download canceled.
     ```
 
-## <a name="BKMK_CancelaListofTasks"></a> Annullare un elenco di attività
+## <a name="cancel-a-list-of-tasks"></a><a name="BKMK_CancelaListofTasks"></a> Annullare un elenco di attività
 
 È possibile estendere l'esempio precedente per annullare più attività associando la stessa istanza `CancellationTokenSource` con ogni attività. Se si sceglie il pulsante **Annulla**, vengono annullate tutte le attività che non sono ancora complete.
 
@@ -253,7 +253,7 @@ Per estendere l'esempio passo a passo, seguire le istruzioni nella sezione "Down
     Downloads canceled.
     ```
 
-## <a name="BKMK_CompleteExamples"></a> Esempi completi
+## <a name="complete-examples"></a><a name="BKMK_CompleteExamples"></a> Esempi completi
 
 Le sezioni seguenti contengono il codice per ognuno degli esempi precedenti. Si noti che è necessario aggiungere un riferimento per <xref:System.Net.Http>.
 
@@ -467,6 +467,6 @@ End Class
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
-- [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Ottimizzazione dell'applicazione Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione)
+- [Programmazione asincrona con Async e Await (Visual Basic)](index.md)
+- [Ottimizzazione dell'applicazione Async (Visual Basic)](fine-tuning-your-async-application.md)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: Ottimizzazione dell'applicazione)

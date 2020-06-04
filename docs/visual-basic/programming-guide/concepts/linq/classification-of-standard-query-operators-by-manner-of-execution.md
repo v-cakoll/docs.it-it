@@ -1,20 +1,20 @@
 ---
-title: Classificazione degli operatori di query standard in base alla modalità di esecuzione
+title: Classificazione di operatori di query standard in base alla modalità di esecuzione
 ms.date: 07/20/2015
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
-ms.openlocfilehash: edace870ea684c70bbf2768c44388f2236622c2c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e1ba5d8bdc2b7a521a11ca5c055323fde4bcb9d9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345720"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410903"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Classificazione degli operatori di query standard in base alla modalità di esecuzione (Visual Basic)
 Le implementazioni LINQ to Objects dei metodi degli operatori di query standard vengono eseguite in due modi principali: implementazione immediata o posticipata. Gli operatori di query che usano l'esecuzione posticipata possono essere anche suddivisi in due categorie: di flusso e non di flusso. Se si conosce la modalità di esecuzione dei vari operatori di query, sarà più facile capire i risultati che si ottengono da una determinata query. Ciò è particolarmente vero se l'origine dei dati viene modificata oppure se si sta creando una query su un'altra query. Questo argomento classifica gli operatori di query standard in base alla relativa modalità di esecuzione.  
   
 ## <a name="manners-of-execution"></a>Modalità di esecuzione  
   
-### <a name="immediate"></a>Immediata  
+### <a name="immediate"></a>Immediato  
  L'esecuzione immediata indica che l'origine dei dati è in lettura e l'operazione viene eseguita in corrispondenza del punto del codice in cui viene dichiarata la query. Tutti gli operatori di query standard che restituiscono un risultato singolo non enumerabile vengono eseguiti immediatamente.  
   
 ### <a name="deferred"></a>Rinviata  
@@ -90,6 +90,6 @@ Le implementazioni LINQ to Objects dei metodi degli operatori di query standard 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Linq.Enumerable>
-- [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Sintassi delle espressioni di query per gli operatori di query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [Panoramica degli operatori query standard (Visual Basic)](standard-query-operators-overview.md)
+- [Sintassi delle espressioni di query per gli operatori di query standard (Visual Basic)](query-expression-syntax-for-standard-query-operators.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)

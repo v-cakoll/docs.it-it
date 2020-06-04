@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /filealign compiler option [Visual Basic]
 - filealign compiler option [Visual Basic]
 ms.assetid: cc61ec3d-ad38-4b28-9659-099d73cad099
-ms.openlocfilehash: fef2652f591e713140c651a9cb0df1ea9e6236c8
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3877757185030b0dba914a79d8c760fb8033ae5f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005594"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408647"
 ---
 # <a name="-filealign"></a>-filealign
 Specifica la posizione di allineamento per le sezioni del file di output.  
@@ -29,16 +29,16 @@ Specifica la posizione di allineamento per le sezioni del file di output.
  `number`  
  Obbligatorio. Valore che specifica l'allineamento delle sezioni nel file di output. I valori validi sono 512, 1024, 2048, 4096 e 8192. I valori sono in byte.  
   
-## <a name="remarks"></a>Osservazioni  
- È possibile usare l' `-filealign` opzione per specificare l'allineamento delle sezioni nel file di output. Le sezioni sono blocchi di memoria contigua in un file eseguibile portabile (PE) che contiene il codice o i dati. L' `-filealign` opzione consente di compilare l'applicazione con un allineamento non standard. per la maggior parte degli sviluppatori non è necessario usare questa opzione.  
+## <a name="remarks"></a>Commenti  
+ È possibile usare l' `-filealign` opzione per specificare l'allineamento delle sezioni nel file di output. Le sezioni sono blocchi di memoria contigua in un file eseguibile portabile (PE) che contiene il codice o i dati. L' `-filealign` opzione consente di compilare l'applicazione con un allineamento non standard. la maggior parte degli sviluppatori non è necessario utilizzare questa opzione.  
   
- Ogni sezione è allineata a un limite che corrisponde a un `-filealign` multiplo del valore. Non vi è alcun valore predefinito fisso. Se `-filealign` non viene specificato, il compilatore sceglie un valore predefinito in fase di compilazione.  
+ Ogni sezione è allineata a un limite che corrisponde a un multiplo del `-filealign` valore. Non vi è alcun valore predefinito fisso. Se `-filealign` non viene specificato, il compilatore sceglie un valore predefinito in fase di compilazione.  
   
  Specificando le dimensioni della sezione, è possibile modificare le dimensioni del file di output. La modifica delle dimensioni della sezione può essere utile per i programmi che verranno eseguiti su dispositivi di piccole dimensioni.  
   
 > [!NOTE]
 > L' `-filealign` opzione non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Compilatore della riga di comando di Visual Basic](index.md)

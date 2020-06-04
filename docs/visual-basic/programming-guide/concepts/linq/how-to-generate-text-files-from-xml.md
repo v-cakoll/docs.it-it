@@ -1,13 +1,13 @@
 ---
-title: 'Procedura: generare file di testo da XML'
+title: 'Procedura: Generare file di testo da XML'
 ms.date: 07/20/2015
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
-ms.openlocfilehash: b30596df1a490d78d1333c688a23ed4ab30bcb82
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9d89d8d5e929574fa26cc5c11346980e8b235ac5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344569"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396571"
 ---
 # <a name="how-to-generate-text-files-from-xml-visual-basic"></a>Procedura: generare file di testo da XML (Visual Basic)
 In questo esempio viene illustrato come generare un file CSV con valori delimitati da virgole da un file XML.  
@@ -15,7 +15,7 @@ In questo esempio viene illustrato come generare un file CSV con valori delimita
 ## <a name="example"></a>Esempio  
  La versione Visual Basic usa il codice procedurale per aggregare la raccolta di stringhe in una singola stringa.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: Customers e Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: clienti e ordini (LINQ to XML)](sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim custOrd As XElement = XElement.Load("CustomersOrders.xml")  
@@ -53,4 +53,4 @@ LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,Sa
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Proiezioni e trasformazioni (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Proiezioni e trasformazioni (LINQ to XML) (Visual Basic)](projections-and-transformations-linq-to-xml.md)

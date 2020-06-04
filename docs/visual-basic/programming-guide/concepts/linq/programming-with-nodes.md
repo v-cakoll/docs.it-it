@@ -2,12 +2,12 @@
 title: Programmazione con nodi
 ms.date: 07/20/2015
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-ms.openlocfilehash: 9c64c348f5d26172f26593b927e6bc24baf365bf
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 4cae85d99e7e28506faad8ca39347cf8f271718e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794403"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396376"
 ---
 # <a name="programming-with-nodes-visual-basic"></a>Programmazione con nodi (Visual Basic)
 Gli sviluppatori di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] che hanno la necessità di scrivere programmi come un editor XML, un sistema di trasformazioni o un writer di rapporti, spesso devono scrivere programmi che funzionano a un livello di granularità maggiore rispetto a elementi e attributi. Devono spesso operare a livello di nodo, modificando i nodi di testo, elaborando istruzioni e commenti. In questo argomento vengono forniti dettagli sulla programmazione a livello di nodo.  
@@ -173,4 +173,4 @@ Console.WriteLine(doc.Nodes().Count())
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione LINQ to XML avanzata (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Programmazione LINQ to XML avanzata (Visual Basic)](advanced-linq-to-xml-programming.md)

@@ -2,12 +2,12 @@
 title: Prestazioni delle query concatenate (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 589f2adc-69f9-404d-b9d6-4c28dabea7f7
-ms.openlocfilehash: 15cb9f94a49600c221b0cbb246743a79e9a5297b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6b87f2744f663ebd45dceb036dcaac71b80765fc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353128"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396389"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>Prestazioni delle query concatenate (LINQ to XML) (Visual Basic)
 
@@ -27,7 +27,7 @@ For Each i As var In query2
 Next
 ```
 
-Questo esempio produce il seguente output:
+Nell'esempio viene prodotto l'output seguente:
 
 ```console
 4
@@ -47,4 +47,4 @@ Questa query concatenata offre lo stesso profilo di prestazioni dell'iterazione 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Prestazioni (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [Prestazioni (LINQ to XML) (Visual Basic)](performance-linq-to-xml.md)

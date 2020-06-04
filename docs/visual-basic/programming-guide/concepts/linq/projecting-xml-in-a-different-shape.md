@@ -2,12 +2,12 @@
 title: Proiezione di XML in una forma diversa
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-ms.openlocfilehash: 400ceafe8ca219efbbb921d573126e0ca80bbb5e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1424b88b478896854b0f094ca4ec8eba82b816b4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344493"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396363"
 ---
 # <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Proiezione di XML in una forma diversa (Visual Basic)
 In questo argomento viene illustrato un esempio di proiezione del codice XML in una forma diversa da quella del codice XML di origine.  
@@ -17,7 +17,7 @@ In questo argomento viene illustrato un esempio di proiezione del codice XML in 
 ## <a name="example"></a>Esempio  
  In questo esempio viene elaborato un documento WordprocessingML, recuperandone i nodi dei paragrafi da un documento WordprocessingML. Vengono inoltre identificati lo stile e il testo di ciascun paragrafo. Infine il codice XML viene proiettato con una forma diversa. Questo esempio si basa su esempi precedenti di questa esercitazione. La nuova istruzione usata per la proiezione è indicata nei commenti del codice riportato di seguito.  
   
- Per istruzioni sulla creazione del documento di origine per questo esempio, vedere [creazione del documento Office Open XML di origine (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Per istruzioni sulla creazione del documento di origine per questo esempio, vedere [creazione del documento Office Open XML di origine (Visual Basic)](creating-the-source-office-open-xml-document.md).  
   
  In questo esempio vengono usate classi dell'assembly WindowsBase e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -160,7 +160,7 @@ Module Module1
 End Module  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```xml  
 <Root>  
@@ -230,8 +230,8 @@ End Module
 ## <a name="next-steps"></a>Passaggi successivi  
  Nell'esempio successivo viene eseguita una query per individuare tutto il testo in un documento di Word:  
   
-- [Ricerca di testo nei documenti di Word (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Ricerca di testo nei documenti di Word (Visual Basic)](finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esercitazione: modifica del contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Esercitazione: modifica del contenuto in un documento WordprocessingML (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -2,21 +2,21 @@
 title: Annullare le attività asincrone rimanenti dopo che ne è stata completata una
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: e6747f35e665611ac7a48a87f955c8b893ee2b99
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: be716e98263c865adad3c197236467b2f48d7740
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347929"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396675"
 ---
-# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Annulla le attività asincrone rimanenti dopo che ne è stata completata una (Visual Basic)
+# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Annullare le attività asincrone rimanenti dopo che ne è stata completata una(Visual Basic)
 
 È possibile usare il metodo <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> insieme a <xref:System.Threading.CancellationToken> per annullare tutte le attività rimanenti dopo il completamento di un'attività. Il metodo `WhenAny` accetta un argomento che rappresenta una raccolta di attività. Il metodo avvia tutte le attività e restituisce una singola attività. La singola attività è completa quando una qualsiasi attività nella raccolta è completata.
 
 Questo esempio illustra come usare un token di annullamento in combinazione con `WhenAny` per terminare il completamento della prima attività della raccolta di attività e annullare le rimanenti attività. Ogni attività scarica il contenuto di un sito Web. L'esempio visualizza la lunghezza del contenuto del primo download da completare e annulla gli altri download.
 
 > [!NOTE]
-> Per eseguire gli esempi, è necessario che nel computer siano installati Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive.
+> Per eseguire gli esempi, è necessario avere installato Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive nel computer.
 
 ## <a name="downloading-the-example"></a>Download dell'esempio
 
@@ -40,11 +40,11 @@ Se non si vuole scaricare il progetto, è possibile esaminare il file MainWindow
 
 ## <a name="building-the-example"></a>Compilazione dell'esempio
 
-Nell'esempio riportato in questo argomento viene aggiunto al progetto sviluppato in [annullare un'attività asincrona o un elenco di attività](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) per annullare un elenco di attività. L'esempio usa la stessa interfaccia utente, sebbene il pulsante **Annulla** non viene usato in modo esplicito.
+Nell'esempio riportato in questo argomento viene aggiunto al progetto sviluppato in [annullare un'attività asincrona o un elenco di attività](cancel-an-async-task-or-a-list-of-tasks.md) per annullare un elenco di attività. L'esempio usa la stessa interfaccia utente, sebbene il pulsante **Annulla** non viene usato in modo esplicito.
 
 Per compilare l'esempio passo a passo, seguire le istruzioni nella sezione "Download dell'esempio", ma scegliere **CancelAListOfTasks** come **progetto di avvio**. Aggiungere al progetto le modifiche illustrate in questo argomento.
 
-Nel file MainWindow. XAML. vb del progetto **CancelAListOfTasks** avviare la transizione spostando i passaggi di elaborazione per ogni sito Web dal ciclo in `AccessTheWebAsync` al metodo asincrono seguente.
+Nel file MainWindow. XAML. vb del progetto **CancelAListOfTasks** avviare la transizione spostando i passaggi di elaborazione per ogni sito Web dal ciclo in `AccessTheWebAsync` al seguente metodo asincrono.
 
 ```vb
 ' ***Bundle the processing steps for a website into one async method.
@@ -239,6 +239,6 @@ End Class
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Ottimizzazione dell'applicazione Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione)
+- [Ottimizzazione dell'applicazione Async (Visual Basic)](fine-tuning-your-async-application.md)
+- [Programmazione asincrona con Async e Await (Visual Basic)](index.md)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: Ottimizzazione dell'applicazione)

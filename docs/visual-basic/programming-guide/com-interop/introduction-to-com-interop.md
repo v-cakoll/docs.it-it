@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: c7909b3b6a2c9f0b397b9621b7e5125c232be313
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6c7caf266514c43e40135b33d848a688546acf1c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353206"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396779"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Introduzione all'interoperabilità COM (Visual Basic)
 Il Component Object Model (COM) consente a un oggetto di esporre la funzionalità ad altri componenti e di ospitare le applicazioni. Sebbene gli oggetti COM siano stati fondamentali per la programmazione di Windows per molti anni, le applicazioni progettate per il Common Language Runtime (CLR) offrono molti vantaggi.  
@@ -22,7 +22,7 @@ Il Component Object Model (COM) consente a un oggetto di esporre la funzionalit�
 ## <a name="managed-code-and-data"></a>Codice gestito e dati  
  Il codice sviluppato per la .NET Framework viene definito *codice gestito*e contiene i metadati utilizzati da CLR. I dati utilizzati dalle applicazioni .NET Framework sono denominati *dati gestiti* perché il runtime gestisce le attività relative ai dati, ad esempio l'allocazione e il reclamo della memoria e l'esecuzione del controllo del tipo. Per impostazione predefinita, Visual Basic .NET usa codice gestito e dati, ma è possibile accedere al codice non gestito e ai dati degli oggetti COM usando gli assembly di interoperabilità, descritti più avanti in questa pagina.  
   
-## <a name="assemblies"></a>Assemblies  
+## <a name="assemblies"></a>Assembly  
  Un assembly è il blocco predefinito principale di un'applicazione .NET Framework. Si tratta di una raccolta di funzionalità compilata, con versione e distribuita come singola unità di implementazione contenente uno o più file. Ogni assembly contiene un manifesto dell'assembly.  
   
 ## <a name="type-libraries-and-assembly-manifests"></a>Librerie dei tipi e manifesti di assembly  
@@ -53,12 +53,12 @@ Il Component Object Model (COM) consente a un oggetto di esporre la funzionalit�
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interoperabilità COM](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Procedura dettagliata: Implementazione dell'ereditarietà con gli oggetti COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [Interoperabilità COM](index.md)
+- [Procedura dettagliata: Implementazione dell'ereditarietà con gli oggetti COM](walkthrough-implementing-inheritance-with-com-objects.md)
 - [Interoperabilità con codice non gestito](../../../framework/interop/index.md)
-- [Risoluzione dei problemi relativi all'interoperabilità](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+- [Risoluzione dei problemi relativi all'interoperabilità](troubleshooting-interoperability.md)
 - [Assembly in .NET](../../../standard/assembly/index.md)
-- [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
-- [Tlbexp.exe (utilità di esportazione della libreria dei tipi)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
+- [Tlbimp. exe (utilità di importazione della libreria di tipi)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp. exe (utilità di esportazione della libreria di tipi)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
 - [Marshalling di interoperabilità](../../../framework/interop/interop-marshaling.md)
 - [Interoperabilità COM senza registrazione](../../../framework/interop/registration-free-com-interop.md)

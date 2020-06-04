@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
-ms.openlocfilehash: 8ec1e704815ee10cb98d8cc20fb5982ee4b92832
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 537689405ea30bdd7c075320eba58a8723a93cdb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662017"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397402"
 ---
-# <a name="keyword-is-valid-only-within-an-instance-method"></a>'\<parola chiave >' è valido solo all'interno di un metodo di istanza
-Il `Me`, `MyClass`, e `MyBase` parole chiave fanno riferimento alle istanze di classe specifica. È possibile utilizzarle all'interno di un oggetto condiviso `Function` o `Sub` procedure.  
+# <a name="keyword-is-valid-only-within-an-instance-method"></a>'\<keyword>' è valido solo all'interno di un metodo di istanza
+Le `Me` `MyClass` `MyBase` parole chiave, e si riferiscono a specifiche istanze di classe. Non è possibile usarli all'interno di una `Function` routine o condivisa `Sub` .  
   
  **ID errore:** BC30043  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-- Rimuovere la parola chiave dalla routine oppure rimuovere il `Shared` parola chiave dalla dichiarazione di routine.  
+- Rimuovere la parola chiave dalla routine oppure rimuovere la `Shared` parola chiave dalla dichiarazione di routine.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Assegnazione di variabili oggetto](../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
-- [Me, My, MyBase e MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
-- [Nozioni fondamentali sull'ereditarietà](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [Assegnazione di variabili oggetto](../../programming-guide/language-features/variables/object-variable-assignment.md)
+- [Me, My, MyBase e MyClass](../../programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [Nozioni fondamentali sull'ereditarietà](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)

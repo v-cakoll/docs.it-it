@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: leggere da file di testo'
+title: 'Procedura: Leggere da file di testo'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extended characters [Visual Basic], reading
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
-ms.openlocfilehash: 8af088ad269cc77bc5c83aedb86bde9af2e37a15
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d99209ed123686355e8d49c82ba23f94084f895
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74334583"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411616"
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>Procedura: leggere da file di testo in Visual Basic
 
@@ -60,14 +60,14 @@ Non basarsi sul nome del file per prendere decisioni in merito al relativo conte
 
 Prima di usare i dati nell'applicazione verificare tutti gli input. È possibile che il contenuto del file non corrisponda a quanto previsto e che quindi i metodi per la lettura dal file non abbiano esito positivo.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>
-- [Lettura da file](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [Procedura: leggere file di testo delimitati da virgola](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
-- [Procedura: leggere file di testo a larghezza fissa](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
-- [Procedura: leggere file di testo con più formati](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
-- [Risoluzione dei problemi: lettura e scrittura nei file di testo](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
-- [Procedura dettagliata: Modifica di file e directory in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)
-- [Codifiche di file](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)
+- [Lettura da file](reading-from-files.md)
+- [Procedura: Leggere da file di testo con valori delimitati da virgole](how-to-read-from-comma-delimited-text-files.md)
+- [Procedura: Leggere da file di testo a larghezza fissa](how-to-read-from-fixed-width-text-files.md)
+- [Procedura: Leggere da file di testo con più formati](how-to-read-from-text-files-with-multiple-formats.md)
+- [Risoluzione dei problemi: Lettura e scrittura nei file di testo](troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Procedura dettagliata: Modifica di file e directory in Visual Basic](walkthrough-manipulating-files-and-directories.md)
+- [Codifiche dei file](file-encodings.md)
