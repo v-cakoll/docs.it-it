@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30594
 ms.assetid: 5b9fceb4-ab11-41bb-ad3b-6f1a9da8ae7e
-ms.openlocfilehash: d6067c75835ecd14f1dd796c20ae3f29f456e541
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fc163c1069aa6f41766664e0fa5f5a9c34a1f73d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642949"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409569"
 ---
-# <a name="events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a><span data-ttu-id="3c07e-102">Impossibile gestire gli eventi delle variabili WithEvents condivise mediante metodi non condivisi</span><span class="sxs-lookup"><span data-stu-id="3c07e-102">Events of shared WithEvents variables cannot be handled by non-shared methods</span></span>
-<span data-ttu-id="3c07e-103">Una variabile dichiarata con la `Shared` modificatore è una variabile condivisa.</span><span class="sxs-lookup"><span data-stu-id="3c07e-103">A variable declared with the `Shared` modifier is a shared variable.</span></span> <span data-ttu-id="3c07e-104">Una variabile condivisa identifica esattamente una posizione di archiviazione.</span><span class="sxs-lookup"><span data-stu-id="3c07e-104">A shared variable identifies exactly one storage location.</span></span> <span data-ttu-id="3c07e-105">Una variabile dichiarata con la `WithEvents` modificatore asserisce che il tipo a cui appartiene la variabile gestisce il set di eventi genera la variabile.</span><span class="sxs-lookup"><span data-stu-id="3c07e-105">A variable declared with the `WithEvents` modifier asserts that the type to which the variable belongs handles the set of events the variable raises.</span></span> <span data-ttu-id="3c07e-106">Quando viene assegnato un valore alla variabile, la proprietà creata per il `WithEvents` dichiarazione qualsiasi gestore eventi esistente, scollega e collega il nuovo gestore di eventi tramite il `Add` (metodo).</span><span class="sxs-lookup"><span data-stu-id="3c07e-106">When a value is assigned to the variable, the property created by the `WithEvents` declaration unhooks any existing event handler and hooks up the new event handler via the `Add` method.</span></span>  
+# <a name="events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a><span data-ttu-id="d7df9-102">Impossibile gestire gli eventi delle variabili WithEvents condivise mediante metodi non condivisi</span><span class="sxs-lookup"><span data-stu-id="d7df9-102">Events of shared WithEvents variables cannot be handled by non-shared methods</span></span>
+<span data-ttu-id="d7df9-103">Una variabile dichiarata con il `Shared` modificatore è una variabile condivisa.</span><span class="sxs-lookup"><span data-stu-id="d7df9-103">A variable declared with the `Shared` modifier is a shared variable.</span></span> <span data-ttu-id="d7df9-104">Una variabile condivisa identifica esattamente un percorso di archiviazione.</span><span class="sxs-lookup"><span data-stu-id="d7df9-104">A shared variable identifies exactly one storage location.</span></span> <span data-ttu-id="d7df9-105">Una variabile dichiarata con il `WithEvents` modificatore dichiara che il tipo a cui appartiene la variabile gestisce il set di eventi generato dalla variabile.</span><span class="sxs-lookup"><span data-stu-id="d7df9-105">A variable declared with the `WithEvents` modifier asserts that the type to which the variable belongs handles the set of events the variable raises.</span></span> <span data-ttu-id="d7df9-106">Quando un valore viene assegnato alla variabile, la proprietà creata dalla `WithEvents` dichiarazione sgancia qualsiasi gestore eventi esistente e associa il nuovo gestore eventi tramite il `Add` metodo.</span><span class="sxs-lookup"><span data-stu-id="d7df9-106">When a value is assigned to the variable, the property created by the `WithEvents` declaration unhooks any existing event handler and hooks up the new event handler via the `Add` method.</span></span>  
   
- <span data-ttu-id="3c07e-107">**ID errore:** BC30594</span><span class="sxs-lookup"><span data-stu-id="3c07e-107">**Error ID:** BC30594</span></span>  
+ <span data-ttu-id="d7df9-107">**ID errore:** BC30594</span><span class="sxs-lookup"><span data-stu-id="d7df9-107">**Error ID:** BC30594</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="3c07e-108">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="3c07e-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d7df9-108">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="d7df9-108">To correct this error</span></span>  
   
-- <span data-ttu-id="3c07e-109">Dichiarare il gestore eventi `Shared`.</span><span class="sxs-lookup"><span data-stu-id="3c07e-109">Declare your event handler `Shared`.</span></span>  
+- <span data-ttu-id="d7df9-109">Dichiarare il gestore dell'evento `Shared` .</span><span class="sxs-lookup"><span data-stu-id="d7df9-109">Declare your event handler `Shared`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3c07e-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3c07e-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d7df9-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d7df9-110">See also</span></span>
 
-- [<span data-ttu-id="3c07e-111">Shared</span><span class="sxs-lookup"><span data-stu-id="3c07e-111">Shared</span></span>](../../../visual-basic/language-reference/modifiers/shared.md)
-- [<span data-ttu-id="3c07e-112">WithEvents</span><span class="sxs-lookup"><span data-stu-id="3c07e-112">WithEvents</span></span>](../../../visual-basic/language-reference/modifiers/withevents.md)
+- [<span data-ttu-id="d7df9-111">Condivisa</span><span class="sxs-lookup"><span data-stu-id="d7df9-111">Shared</span></span>](../modifiers/shared.md)
+- [<span data-ttu-id="d7df9-112">WithEvents</span><span class="sxs-lookup"><span data-stu-id="d7df9-112">WithEvents</span></span>](../modifiers/withevents.md)
