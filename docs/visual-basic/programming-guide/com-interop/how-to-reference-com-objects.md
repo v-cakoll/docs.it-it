@@ -8,17 +8,17 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: ea0e1d9b0ae9f151d901c425512508ba7bc05343
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 2e2cbac6fad5e1686b7383c44619b8c6f5326483
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524364"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396804"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Procedura: fare riferimento a oggetti COM da Visual Basic
 In Visual Basic l'aggiunta di riferimenti a oggetti COM con librerie dei tipi richiede la creazione di un assembly di interoperabilità per la libreria COM. I riferimenti ai membri dell'oggetto COM vengono instradati all'assembly di interoperabilità e quindi inoltrati all'oggetto COM effettivo. Le risposte dall'oggetto COM vengono instradate all'assembly di interoperabilità e inoltrate all'applicazione .NET Framework.  
   
- È possibile fare riferimento a un oggetto COM senza utilizzare un assembly di interoperabilità incorporando le informazioni sul tipo per l'oggetto COM in un assembly .NET. Per incorporare le informazioni sul tipo, impostare la proprietà `Embed Interop Types` su `True` per il riferimento all'oggetto COM. Se si esegue la compilazione utilizzando il compilatore da riga di comando, utilizzare l'opzione `/link` per fare riferimento alla libreria COM. Per ulteriori informazioni, vedere [-link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
+ È possibile fare riferimento a un oggetto COM senza utilizzare un assembly di interoperabilità incorporando le informazioni sul tipo per l'oggetto COM in un assembly .NET. Per incorporare le informazioni sul tipo, impostare la `Embed Interop Types` proprietà su `True` per il riferimento all'oggetto com. Se si esegue la compilazione utilizzando il compilatore da riga di comando, utilizzare l' `/link` opzione per fare riferimento alla libreria com. Per ulteriori informazioni, vedere [-link (Visual Basic)](../../reference/command-line-compiler/link.md).  
   
  Visual Basic crea automaticamente assembly di interoperabilità quando si aggiunge un riferimento a una libreria dei tipi dall'Integrated Development Environment (IDE). Quando si utilizza la riga di comando, è possibile utilizzare l'utilità Tlbimp per creare manualmente assembly di interoperabilità.  
   
@@ -28,7 +28,7 @@ In Visual Basic l'aggiunta di riferimenti a oggetti COM con librerie dei tipi ri
   
 2. Consente di selezionare il componente che si desidera utilizzare dall'elenco di oggetti COM.  
   
-3. Per semplificare l'accesso all'assembly di interoperabilità, aggiungere un'istruzione `Imports` all'inizio della classe o del modulo in cui si utilizzerà l'oggetto COM. Nell'esempio di codice seguente, ad esempio, viene importato lo spazio dei nomi `INKEDLib` per gli oggetti a cui si fa riferimento nella libreria `Microsoft InkEdit Control 1.0`.  
+3. Per semplificare l'accesso all'assembly di interoperabilità, aggiungere un' `Imports` istruzione all'inizio della classe o del modulo in cui si utilizzerà l'oggetto com. Ad esempio, nell'esempio di codice seguente viene importato lo spazio dei nomi `INKEDLib` per gli oggetti a cui si fa riferimento nella `Microsoft InkEdit Control 1.0` libreria.  
   
      [!code-vb[VbVbalrInterop#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#40)]  
   
@@ -54,9 +54,9 @@ In Visual Basic l'aggiunta di riferimenti a oggetti COM con librerie dei tipi ri
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interoperabilità COM](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
-- [Tlbexp.exe (utilità di esportazione della libreria dei tipi)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
-- [Procedura dettagliata: Implementazione dell'ereditarietà con gli oggetti COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
-- [Risoluzione dei problemi relativi all'interoperabilità](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
-- [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Interoperabilità COM](index.md)
+- [Tlbimp. exe (utilità di importazione della libreria di tipi)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp. exe (utilità di esportazione della libreria di tipi)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
+- [Procedura dettagliata: Implementazione dell'ereditarietà con gli oggetti COM](walkthrough-implementing-inheritance-with-com-objects.md)
+- [Risoluzione dei problemi relativi all'interoperabilità](troubleshooting-interoperability.md)
+- [Istruzione Imports (tipo e spazio dei nomi .NET)](../../language-reference/statements/imports-statement-net-namespace-and-type.md)

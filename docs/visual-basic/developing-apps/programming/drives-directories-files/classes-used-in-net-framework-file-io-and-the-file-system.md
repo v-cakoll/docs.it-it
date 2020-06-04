@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: fe70f8fb655579049bb36fc324d04530259d25f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c696d5b8c83ae55caf61e4710630ad1e34c088d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348922"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401771"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Classi utilizzate nel file system e nella funzionalità di I/O di file di .Net Framework (Visual Basic)
 
@@ -21,7 +21,7 @@ Per un elenco più completo, vedere [Panoramica della libreria di classi](../../
 
  La tabella seguente elenca e descrive le principali classi usate nell'I/O di file.  
   
-|Classe|Descrizione|  
+|Class|Descrizione|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|Offre metodi statici per creare, spostare ed enumerare directory e sottodirectory.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Offre metodi di istanza per creare, spostare ed enumerare directory e sottodirectory.|  
@@ -39,7 +39,7 @@ Per un elenco più completo, vedere [Panoramica della libreria di classi](../../
 
  La tabella seguente elenca e descrive le principali classi usate per creare flussi.  
   
-|Classe|Descrizione|  
+|Class|Descrizione|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Aggiunge un livello di buffer per operazioni di lettura e scrittura in un altro flusso.|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|Supporta l'accesso casuale ai file tramite il metodo <xref:System.IO.FileStream.Seek%2A>. <xref:System.IO.FileStream> apre file simultaneamente per impostazione predefinita, ma supporta anche operazioni asincrone.|  
@@ -60,9 +60,9 @@ Per un elenco più completo, vedere [Panoramica della libreria di classi](../../
 |<xref:System.IO.StringReader?displayProperty=nameWithType>|Legge caratteri da un `String`. L'output può essere un flusso in qualsiasi codifica o una `String`.|  
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Scrive caratteri in una `String`. L'output può essere un flusso in qualsiasi codifica o una `String`.|  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Composizione dei flussi](../../../../standard/io/composing-streams.md)
 - [I/O di file e di flussi](../../../../standard/io/index.md)
 - [I/O file asincrono](../../../../standard/io/asynchronous-file-i-o.md)
-- [Nozioni fondamentali sul file system e sulla funzionalità di I/O di file di .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
+- [Nozioni fondamentali sul file system e sulla funzionalità di I/O di file di .NET Framework (Visual Basic)](basics-of-net-framework-file-io-and-the-file-system.md)

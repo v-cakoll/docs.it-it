@@ -5,14 +5,14 @@ helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: 2f2bebfd06d4614f05cb66834cc5bef40524ce3b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 78a10624107cea349b01f484c641190a945dbd7e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348452"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400111"
 ---
-# <a name="include-visual-basic"></a>\<includere > (Visual Basic)
+# <a name="include-visual-basic"></a>\<include> (Visual Basic)
 Fa riferimento a un altro file che descrive i tipi e i membri nel codice sorgente.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -23,28 +23,28 @@ Fa riferimento a un altro file che descrive i tipi e i membri nel codice sorgent
   
 ## <a name="parameters"></a>Parametri  
  `filename`  
- Obbligatoria. Nome del file che contiene la documentazione. È possibile qualificare il nome del file con un percorso. Racchiudere `filename` tra virgolette doppie ("").  
+ Obbligatorio. Nome del file che contiene la documentazione. È possibile qualificare il nome del file con un percorso. Racchiude `filename` tra virgolette doppie ("").  
   
  `tagpath`  
- Obbligatoria. Percorso dei tag di `filename` che porta al `name` del tag. Racchiudere il percorso tra virgolette doppie ("").  
+ Obbligatorio. Percorso dei tag di `filename` che porta al `name` del tag. Racchiudere il percorso tra virgolette doppie ("").  
   
  `name`  
- Obbligatoria. Identificatore del nome nel tag che precede i commenti. `Name` avrà una `id`.  
+ Obbligatorio. Identificatore del nome nel tag che precede i commenti. `Name`avrà un `id` .  
   
  `id`  
- Obbligatoria. ID del tag che precede i commenti. Racchiudere l'ID racchiuso tra virgolette singole ('').  
+ Obbligatorio. ID del tag che precede i commenti. Racchiudere l'ID racchiuso tra virgolette singole ('').  
   
-## <a name="remarks"></a>Note  
- Usare il tag `<include>` per fare riferimento ai commenti in un altro file che descrive i tipi e i membri nel codice sorgente. eliminando la necessità di inserire i commenti relativi alla documentazione direttamente nel file del codice sorgente.  
+## <a name="remarks"></a>Commenti  
+ Usare il `<include>` tag per fare riferimento ai commenti in un altro file che descrive i tipi e i membri nel codice sorgente. eliminando la necessità di inserire i commenti relativi alla documentazione direttamente nel file del codice sorgente.  
   
- Il tag `<include>` usa la raccomandazione W3C XML Path Language (XPath) versione 1,0. Per ulteriori informazioni sulle modalità di personalizzazione dell'utilizzo `<include>`, vedere <https://www.w3.org/TR/xpath>.  
+ Il `<include>` tag usa la raccomandazione W3C XML Path Language (XPath) versione 1,0. Per ulteriori informazioni sulle modalità di personalizzazione dell' `<include>` utilizzo, vedere <https://www.w3.org/TR/xpath> .  
   
 ## <a name="example"></a>Esempio  
- Questo esempio usa il tag `<include>` per importare i commenti relativi alla documentazione dei membri da un file denominato `commentFile.xml`.  
+ Questo esempio usa il `<include>` tag per importare i commenti relativi alla documentazione membri da un file denominato `commentFile.xml` .  
   
  [!code-vb[VbVbcnXmlDocComments#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#4)]  
   
- Il formato del `commentFile.xml` è il seguente.  
+ Il formato di `commentFile.xml` è il seguente.  
   
 ```xml  
 <Docs>  
@@ -61,4 +61,4 @@ Fa riferimento a un altro file che descrive i tipi e i membri nel codice sorgent
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Tag di commento XML](index.md)

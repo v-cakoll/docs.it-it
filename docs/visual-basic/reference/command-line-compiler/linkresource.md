@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 0315645eccdc899ac9cf4d0be105297e1fa2a4c4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 43ebb61efa26ed11af573e2c4e73a6fd71ac0902
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74335487"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403200"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource ((Visual Basic)
 Crea un collegamento a una risorsa gestita.  
@@ -25,25 +25,25 @@ Crea un collegamento a una risorsa gestita.
 -linkresource:filename[,identifier[,public|private]]  
 ```
 
-oppure  
+Oppure  
 
 ```console
 -linkres:filename[,identifier[,public|private]]  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>Arguments  
  `filename`  
  Obbligatorio. File di risorse da collegare all'assembly. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette ("").  
   
  `identifier`  
- Facoltativo. Nome logico della risorsa. Nome usato per caricare la risorsa. L'impostazione predefinita corrisponde al nome del file. Facoltativamente, è possibile specificare se il file è pubblico o privato nel manifesto dell'assembly, ad esempio: `-linkres:filename.res,myname.res,public`. Per impostazione predefinita `filename` , è Public nell'assembly.  
+ Facoltativa. Nome logico della risorsa. Nome usato per caricare la risorsa. L'impostazione predefinita corrisponde al nome del file. Facoltativamente, è possibile specificare se il file è pubblico o privato nel manifesto dell'assembly, ad esempio: `-linkres:filename.res,myname.res,public` . Per impostazione predefinita, `filename` è Public nell'assembly.  
   
-## <a name="remarks"></a>Osservazioni  
- L' `-linkresource` opzione non incorpora il file di risorse nel file di output. usare l' `-resource` opzione per eseguire questa operazione.  
+## <a name="remarks"></a>Commenti  
+ L' `-linkresource` opzione non incorpora il file di risorse nel file di output. utilizzare l' `-resource` opzione per eseguire questa operazione.  
   
- L' `-linkresource` opzione richiede una delle `-target` opzioni diverse da. `-target:module`  
+ L' `-linkresource` opzione richiede una delle `-target` opzioni diverse da `-target:module` .  
   
- Se `filename` è un file di risorse .NET Framework creato, ad esempio da [Resgen. exe (Generatore di file di risorse)](../../../framework/tools/resgen-exe-resource-file-generator.md) o nell'ambiente di sviluppo, è possibile accedervi con i membri <xref:System.Resources> nello spazio dei nomi. Per ulteriori informazioni, vedere <xref:System.Resources.ResourceManager>. Per accedere a tutte le altre risorse in fase di esecuzione, usare i metodi `GetManifestResource` che iniziano <xref:System.Reflection.Assembly> con nella classe.  
+ Se `filename` è un file di risorse .NET Framework creato, ad esempio da [Resgen. exe (Generatore di file di risorse)](../../../framework/tools/resgen-exe-resource-file-generator.md) o nell'ambiente di sviluppo, è possibile accedervi con i membri nello <xref:System.Resources> spazio dei nomi. Per ulteriori informazioni, vedere <xref:System.Resources.ResourceManager> . Per accedere a tutte le altre risorse in fase di esecuzione, usare i metodi che iniziano con `GetManifestResource` nella <xref:System.Reflection.Assembly> classe.  
   
  Il nome del file può essere qualsiasi formato di file. Può ad esempio risultare opportuno rendere una DLL nativa parte dell'assembly in modo che possa essere installata nella Global Assembly Cache e che sia possibile accedervi dal codice gestito nell'assembly.  
   
@@ -53,15 +53,15 @@ oppure
 > L' `-linkresource` opzione non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente compila `in.vb` e collega a un file `rf.resource`di risorse.  
+ Il codice seguente compila `in.vb` e collega a un file di risorse `rf.resource` .  
   
 ```console  
 vbc -linkresource:rf.resource in.vb  
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [-Resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
-- [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Compilatore della riga di comando di Visual Basic](index.md)
+- [-target (Visual Basic)](target.md)
+- [-Resource (Visual Basic)](resource.md)
+- [Esempi di righe di comando di compilazione](sample-compilation-command-lines.md)

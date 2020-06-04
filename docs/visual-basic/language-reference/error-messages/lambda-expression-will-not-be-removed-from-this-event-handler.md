@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 52107589c6bbebbd34ecbb090845f4031612c276
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 07ace3f1b9c5e512227dc1f718ef768b631c8303
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578927"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397376"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>L'espressione lambda non verrà rimossa da questo gestore eventi
 
 L'espressione lambda non verrà rimossa da questo gestore eventi. Assegnare l'espressione lambda a una variabile e usare la variabile per aggiungere e rimuovere l'evento.
 
-Quando le espressioni lambda vengono usate con i gestori eventi, è possibile che non venga visualizzato il comportamento previsto. Il compilatore genera un nuovo metodo per ogni definizione di espressione lambda, anche se sono identici. Il codice seguente, pertanto, Visualizza `False`.
+Quando le espressioni lambda vengono usate con i gestori eventi, è possibile che non venga visualizzato il comportamento previsto. Il compilatore genera un nuovo metodo per ogni definizione di espressione lambda, anche se sono identici. Viene pertanto visualizzato il codice seguente `False` .
 
 ```vb
 Module Module1
@@ -34,7 +34,7 @@ Module Module1
 End Module
 ```
 
-Quando le espressioni lambda vengono usate con i gestori eventi, è possibile che si verifichino risultati imprevisti. Nell'esempio seguente l'espressione lambda aggiunta da `AddHandler` non viene rimossa dall'istruzione `RemoveHandler`.
+Quando le espressioni lambda vengono usate con i gestori eventi, è possibile che si verifichino risultati imprevisti. Nell'esempio seguente l'espressione lambda aggiunta da `AddHandler` non viene rimossa dall' `RemoveHandler` istruzione.
 
 ```vb
 Module Module1
@@ -61,7 +61,7 @@ Per impostazione predefinita, si tratta di un messaggio di avviso. Per altre inf
 
 ## <a name="to-correct-this-error"></a>Per correggere l'errore
 
-Per evitare l'avviso e rimuovere l'espressione lambda, assegnare l'espressione lambda a una variabile e usare la variabile nelle istruzioni `AddHandler` e `RemoveHandler`, come illustrato nell'esempio seguente.
+Per evitare l'avviso e rimuovere l'espressione lambda, assegnare l'espressione lambda a una variabile e usare la variabile in entrambe le `AddHandler` `RemoveHandler` istruzioni e, come illustrato nell'esempio seguente.
 
 ```vb
 Module Module1
@@ -87,6 +87,6 @@ End Module
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Conversione di tipo relaxed del delegato](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [Eventi](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Espressioni lambda](../../programming-guide/language-features/procedures/lambda-expressions.md)
+- [Conversione di tipo relaxed del delegato](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Events](../../programming-guide/language-features/events/index.md)

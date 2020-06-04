@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: eseguire una query su un ArrayList con LINQ'
+title: 'Procedura: Eseguire una query su un ArrayList con LINQ'
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-ms.openlocfilehash: 94a3c6d4c381f41f9ba87bf3af93261712ad1136
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b7b75e017fb314b5e5998b743dbf922f34fd9b7c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347753"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396467"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Procedura: eseguire una query su un ArrayList con LINQ (Visual Basic)
 
-Quando si usa LINQ per eseguire una query su raccolte <xref:System.Collections.IEnumerable> non generiche, ad esempio <xref:System.Collections.ArrayList>, è necessario dichiarare in modo esplicito il tipo della variabile di intervallo in base al tipo specifico di oggetti nella raccolta. Se, ad esempio, si dispone di un <xref:System.Collections.ArrayList> di oggetti `Student`, la [clausola from](../../../../visual-basic/language-reference/queries/from-clause.md) dovrebbe essere simile alla seguente:
+Quando si usa LINQ per eseguire una query su raccolte <xref:System.Collections.IEnumerable> non generiche, ad esempio <xref:System.Collections.ArrayList>, è necessario dichiarare in modo esplicito il tipo della variabile di intervallo in base al tipo specifico di oggetti nella raccolta. Se, ad esempio, si dispone <xref:System.Collections.ArrayList> di un oggetto di `Student` oggetti, la [clausola from](../../../language-reference/queries/from-clause.md) dovrebbe essere simile alla seguente:
 
 ```vb
 Dim query = From student As Student In arrList
@@ -20,7 +20,7 @@ Dim query = From student As Student In arrList
 
 Specificando il tipo della variabile di intervallo, si esegue il cast di ogni elemento di <xref:System.Collections.ArrayList> in `Student`.
 
-L'uso di una variabile di intervallo tipizzata in modo esplicito in un'espressione di query è equivalente alla chiamata del metodo <xref:System.Linq.Enumerable.Cast%2A>. <xref:System.Linq.Enumerable.Cast%2A> genera un'eccezione se non è possibile eseguire il cast specificato. <xref:System.Linq.Enumerable.Cast%2A> e <xref:System.Linq.Enumerable.OfType%2A> sono i due metodi dell'operatore query standard che operano sui tipi <xref:System.Collections.IEnumerable> non generici. In Visual Basic, è necessario chiamare in modo esplicito il metodo <xref:System.Linq.Enumerable.Cast%2A> sull'origine dati per garantire un tipo specifico di variabile di intervallo. Per ulteriori informazioni, vedere [relazioni tra i tipi nelle operazioni di query (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).
+L'uso di una variabile di intervallo tipizzata in modo esplicito in un'espressione di query è equivalente alla chiamata del metodo <xref:System.Linq.Enumerable.Cast%2A>. <xref:System.Linq.Enumerable.Cast%2A> genera un'eccezione se non è possibile eseguire il cast specificato. <xref:System.Linq.Enumerable.Cast%2A> e <xref:System.Linq.Enumerable.OfType%2A> sono i due metodi dell'operatore query standard che operano sui tipi <xref:System.Collections.IEnumerable> non generici. In Visual Basic, è necessario chiamare in modo esplicito il <xref:System.Linq.Enumerable.Cast%2A> metodo sull'origine dati per garantire un tipo specifico di variabile di intervallo. Per ulteriori informazioni, vedere [relazioni tra i tipi nelle operazioni di query (Visual Basic)](type-relationships-in-query-operations.md).
 
 ## <a name="example"></a>Esempio
 
@@ -80,4 +80,4 @@ End Module
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)

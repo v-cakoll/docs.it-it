@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: f1a24c001cd20acc7663fb4cbe60e7e35a9c8fc3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c78cbeaa5c2df2d4f2e3cce2b5b3fb8048ff3388
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347432"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403252"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Procedura: Interrompere e combinare istruzioni nel codice (Visual Basic)
 
@@ -34,10 +34,10 @@ Quando si scrive il codice, è possibile creare a volte istruzioni lunghe che ri
 
 ## <a name="to-break-a-single-statement-into-multiple-lines"></a>Per suddividere una singola istruzione in più righe
 
-Utilizzare il carattere di continuazione di riga, ovvero un carattere di sottolineatura (`_`), nel punto in cui si desidera che la riga si interrompa. Il carattere di sottolineatura deve essere immediatamente preceduto da uno spazio e seguito da un terminatore di riga (ritorno a capo) o (a partire dalla versione 16,0) di un commento seguito da un ritorno a capo.
+Utilizzare il carattere di continuazione di riga, ovvero un carattere di sottolineatura ( `_` ), nel punto in cui si desidera che la riga si interrompa. Il carattere di sottolineatura deve essere immediatamente preceduto da uno spazio e seguito da un terminatore di riga (ritorno a capo) o (a partire dalla versione 16,0) di un commento seguito da un ritorno a capo.
 
   > [!NOTE]
-  > In alcuni casi, se si omette il carattere di continuazione di riga, il Visual Basic compilatore continuerà in modo implicito l'istruzione alla riga di codice successiva. Per un elenco degli elementi della sintassi per i quali è possibile omettere il carattere di continuazione di riga, vedere "continuazione di riga implicita" nelle [istruzioni](../../../visual-basic/programming-guide/language-features/statements.md).
+  > In alcuni casi, se si omette il carattere di continuazione di riga, il Visual Basic compilatore continuerà in modo implicito l'istruzione alla riga di codice successiva. Per un elenco degli elementi della sintassi per i quali è possibile omettere il carattere di continuazione di riga, vedere "continuazione di riga implicita" nelle [istruzioni](../language-features/statements.md).
 
   Nell'esempio seguente l'istruzione è suddivisa in quattro righe con caratteri di continuazione di riga che terminano tutti tranne l'ultima riga.
 
@@ -49,17 +49,17 @@ Utilizzare il carattere di continuazione di riga, ovvero un carattere di sottoli
 
   Esistono alcune limitazioni per la posizione in cui è possibile utilizzare il carattere di continuazione di riga; ad esempio, non è possibile usarlo nel mezzo di un nome di argomento. È possibile suddividere un elenco di argomenti con il carattere di continuazione di riga, ma i singoli nomi degli argomenti devono rimanere intatti.
 
-  Non è possibile continuare un commento usando un carattere di continuazione di riga. Il compilatore non esamina i caratteri in un commento per un significato speciale. Per un commento su più righe, ripetere il simbolo di commento (`'`) per ogni riga.
+  Non è possibile continuare un commento usando un carattere di continuazione di riga. Il compilatore non esamina i caratteri in un commento per un significato speciale. Per un commento su più righe, ripetere il simbolo di commento ( `'` ) in ogni riga.
 
  Sebbene ogni istruzione venga posizionata in una riga distinta è il metodo consigliato, Visual Basic consente anche di inserire più istruzioni nella stessa riga.
 
 ## <a name="to-place-multiple-statements-on-the-same-line"></a>Per inserire più istruzioni nella stessa riga
 
-Separare le istruzioni con i due punti (`:`), come nell'esempio seguente:
+Separare le istruzioni con i due punti ( `:` ), come nell'esempio seguente:
 
   [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Struttura del programma e convenzioni di scrittura del codice](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Istruzioni](../../../visual-basic/programming-guide/language-features/statements.md)
+- [Struttura del programma e convenzioni del codice](program-structure-and-code-conventions.md)
+- [Istruzioni](../language-features/statements.md)

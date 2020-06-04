@@ -2,12 +2,12 @@
 title: Documento WordprocessingML con Styles2
 ms.date: 07/20/2015
 ms.assetid: a9136e4d-c368-4661-8049-7d45c679a236
-ms.openlocfilehash: 977de8e4272ca7cea004127adcf1b15726dcc211
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: caf80014077bf57dc1ffb8eaeac6390cf4258015
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907946"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403550"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>Documento WordprocessingML con stili
 I documenti WordprocessingML più complicati includono paragrafi formattati con stili.  
@@ -17,7 +17,7 @@ I documenti WordprocessingML più complicati includono paragrafi formattati con 
  È importante che per l'accesso ai pacchetti vengano usate le relazioni tra le parti, anziché un percorso arbitrario. Questo aspetto esula dagli argomenti previsti dall'esercitazione sulla modifica del contenuto in un documento WordprocessingML, tuttavia i programmi di esempio inclusi nell'esercitazione illustrano l'approccio corretto.  
   
 ## <a name="a-document-that-uses-styles"></a>Documento con stili  
- L'esempio WordML illustrato presentati nel [forma dei documenti WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) argomento è molto semplice. Il documento seguente è più complicato: include paragrafi formattati con stili. Il modo più semplice per visualizzare il codice XML che costituisce un documento Office Open XML consiste nell'eseguire la [esempio di tale output Office Open XML parti di documento (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md).  
+ L'esempio WordML presentato nella [forma di WordprocessingML Documents (Visual Basic)](shape-of-wordprocessingml-documents.md) è un argomento molto semplice. Il documento seguente è più complicato perché include paragrafi formattati con stili. Il modo più semplice per visualizzare il codice XML che costituisce un documento Office Open XML consiste nell'eseguire l' [esempio che genera parti di documento Office Open XML (Visual Basic)](example-that-outputs-office-open-xml-document-parts.md).  
   
  Nel documento seguente al primo paragrafo è applicato lo stile `Heading1`. Vi sono poi diversi paragrafi cui è applicato lo stile predefinito e altri cui è applicato lo stile `Code`. In virtù di questa relativa complessità, si tratta di un documento più interessante da analizzare con LINQ to XML.  
   
@@ -139,4 +139,4 @@ I documenti WordprocessingML più complicati includono paragrafi formattati con 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Dettagli di Office Open XML sui documenti WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Informazioni dettagliate sui documenti WordprocessingML di Office Open XML (Visual Basic)](details-of-office-open-xml-wordprocessingml-documents.md)
