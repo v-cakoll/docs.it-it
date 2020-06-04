@@ -9,25 +9,25 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 12e983ae62fa9f9ea762d434ffe5b73873a4a2e8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f971f0c3693177adbcb8869d487e3ad41d49ddc2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351900"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413104"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Dimensioni di matrice in Visual Basic
 
 Una *dimensione* rappresenta una direzione in cui è possibile variare la specifica degli elementi di una matrice. Una matrice che contiene il totale delle vendite per ogni giorno del mese ha una dimensione (il giorno del mese). Una matrice che contiene il totale delle vendite per reparto per ogni giorno del mese ha due dimensioni, ovvero il numero del reparto e il giorno del mese. Il numero di dimensioni di una matrice è denominato *rango*.
 
 > [!NOTE]
-> È possibile utilizzare la proprietà <xref:System.Array.Rank%2A> per determinare il numero di dimensioni di una matrice.
+> È possibile usare la <xref:System.Array.Rank%2A> proprietà per determinare il numero di dimensioni di una matrice.
 
 ## <a name="working-with-dimensions"></a>Utilizzo delle dimensioni
 
 Per specificare un elemento di una matrice, è necessario specificare un indice *o un* *Indice* per ogni dimensione. Gli elementi sono contigui lungo ogni dimensione dall'indice 0 all'indice più alto per tale dimensione.
 
-Nelle illustrazioni seguenti viene illustrata la struttura concettuale di matrici con diverse classificazioni. Ogni elemento nelle illustrazioni mostra i valori di indice che vi accedono. Ad esempio, è possibile accedere al primo elemento della seconda riga della matrice bidimensionale specificando gli indici `(1, 0)`.
+Nelle illustrazioni seguenti viene illustrata la struttura concettuale di matrici con diverse classificazioni. Ogni elemento nelle illustrazioni mostra i valori di indice che vi accedono. Ad esempio, è possibile accedere al primo elemento della seconda riga della matrice bidimensionale specificando gli indici `(1, 0)` .
 
 ![Diagramma che mostra una matrice unidimensionale.](./media/array-dimensions/one-dimensional-array.gif)
 
@@ -91,9 +91,9 @@ Dim salesAmounts(4, 11, 30) As Double
 Si noti che, poiché ogni indice varia da 0 al massimo, ogni dimensione di `salesAmounts` viene dichiarata come una minore della lunghezza richiesta per tale dimensione. Si noti inoltre che le dimensioni della matrice aumentano con ogni nuova dimensione. Le tre dimensioni degli esempi precedenti sono rispettivamente 31, 372 e 1.860.
 
 > [!NOTE]
-> È possibile creare una matrice senza utilizzare l'istruzione `Dim` o la clausola `New`. Ad esempio, è possibile chiamare il metodo <xref:System.Array.CreateInstance%2A> o un altro componente può passare il codice a una matrice creata in questo modo. Una matrice di questo tipo può avere un limite inferiore diverso da 0. È sempre possibile verificare il limite inferiore di una dimensione tramite il metodo <xref:System.Array.GetLowerBound%2A> o la funzione `LBound`.
+> È possibile creare una matrice senza utilizzare l' `Dim` istruzione o la `New` clausola. Ad esempio, è possibile chiamare il <xref:System.Array.CreateInstance%2A> metodo oppure un altro componente può passare il codice a una matrice creata in questo modo. Una matrice di questo tipo può avere un limite inferiore diverso da 0. È sempre possibile verificare il limite inferiore di una dimensione tramite il <xref:System.Array.GetLowerBound%2A> metodo o la `LBound` funzione.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Risoluzione dei problemi relativi alle matrici](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+- [Matrici](index.md)
+- [Risoluzione dei problemi relativi alle matrici](troubleshooting-arrays.md)

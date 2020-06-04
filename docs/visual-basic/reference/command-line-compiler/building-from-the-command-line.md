@@ -13,12 +13,12 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-ms.openlocfilehash: c7219c0497bb87f0cc44f27229eaf25f9b3eebce
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ec6ae3328c2042af950d1ee78a33d3de97219f10
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344789"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414298"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Compilazione dalla riga di comando (Visual Basic)
 
@@ -35,18 +35,18 @@ Per compilare i file di origine dall'IDE di Visual Studio, scegliere il comando 
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-[Procedura: richiamare il compilatore da riga di comando](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) \
+[Procedura: richiamare il compilatore da riga di comando](how-to-invoke-the-command-line-compiler.md) \
 Viene descritto come richiamare il compilatore da riga di comando al prompt di MS-DOS o da una sottodirectory specifica.
 
-[Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) \
+[Esempi di righe di comando di compilazione](sample-compilation-command-lines.md) \
 Fornisce un elenco di righe di comando di esempio che è possibile modificare per uso personale.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Visual Basic compilatore da riga di comando](../../../visual-basic/reference/command-line-compiler/index.md) \
+[Visual Basic compilatore da riga di comando](index.md) \
 Fornisce elenchi di opzioni del compilatore, organizzate in ordine alfabetico o per scopo.
 
-[Compilazione condizionale](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
+[Compilazione condizionale](../../programming-guide/program-structure/conditional-compilation.md) \
 Viene descritto come compilare sezioni di codice specifiche.
 
 [Compilazione e pulizia di progetti e soluzioni in Visual Studio](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) \

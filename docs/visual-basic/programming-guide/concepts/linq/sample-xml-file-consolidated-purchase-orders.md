@@ -1,13 +1,13 @@
 ---
-title: 'File XML di esempio: Orders3 di acquisto consolidati'
+title: 'File XML di esempio: Orders3 Purchase consolidato'
 ms.date: 07/20/2015
 ms.assetid: 7203da90-a514-415a-b978-6980e89f3e9c
-ms.openlocfilehash: edeb1381b674ee9f6fba45f14c7b6f12b363a37a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de5acdd92b9d6dd300eb7bc7471db845cc00d44a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787063"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413349"
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a>File XML di esempio: ordini di acquisto consolidati
 Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Questo file è costituito da un set di ordini di acquisto contenenti forme diverse e relativi a più società. Gli ordini di acquisto di ciascuna società sono inseriti in spazi dei nomi distinti.  
@@ -146,4 +146,4 @@ Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUD
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Documenti XML di esempio (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [Documenti XML di esempio (LINQ to XML)](sample-xml-documents-linq-to-xml.md)
