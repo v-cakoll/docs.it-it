@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: fbdd116298c530ae54677631eff7dac2f22c0fe2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1d2d5adc7266faaa1636e568d6433429761eeaab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346776"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414544"
 ---
 # <a name="collection-initializers-visual-basic"></a>Inizializzatori di raccolta (Visual Basic)
 
 Gli *inizializzatori di insieme* consentono di creare una raccolta e popolarla con un set iniziale di valori. Gli inizializzatori di insieme sono utili quando si crea una raccolta da un set di valori noti, ad esempio un elenco di opzioni di menu o categorie, un set iniziale di valori numerici, un elenco statico di stringhe quali nomi di giorni o mesi o un elenco di aree geografiche, ad esempio un elenco di stati che viene usato per la convalida.
 
-Per altre informazioni sulle raccolte, vedere [Raccolte](../../../../visual-basic/programming-guide/concepts/collections.md).
+Per altre informazioni sulle raccolte, vedere [Raccolte](../../concepts/collections.md).
 
-È possibile identificare un inizializzatore di insieme usando la parola chiave `From` seguita da parentesi graffe (`{}`). Questo approccio è simile alla sintassi dei valori letterali di matrice, descritta in [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md). Gli esempi seguenti illustrano diversi metodi d'uso degli inizializzatori di insieme per la creazione di raccolte.
+È possibile identificare un inizializzatore di insieme usando la parola chiave `From` seguita da parentesi graffe (`{}`). Questo approccio è simile alla sintassi dei valori letterali di matrice, descritta in [Matrici](../arrays/index.md). Gli esempi seguenti illustrano diversi metodi d'uso degli inizializzatori di insieme per la creazione di raccolte.
 
 [!code-vb[VbVbalrCollectionInitializers#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#1)]
 
@@ -57,7 +57,7 @@ L'esempio di codice seguente visualizza codice equivalente che non usa un inizia
 
 [!code-vb[VbVbalrCollectionInitializers#10](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#10)]
 
-Se la raccolta ha un metodo `Add` con parametri che corrispondono al costruttore dell'oggetto `Customer` è possibile nidificare i valori dei parametri per il metodo `Add` all'interno di inizializzatori di insieme, come descritto nella sezione successiva. Se la raccolta non dispone di tale metodo `Add` è possibile crearne uno come metodo di estensione. Per un esempio di creazione di un metodo `Add` come metodo di estensione per una raccolta, vedere [Procedura: Creare un metodo di estensione Add usato da un inizializzatore di insieme](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Per un esempio di creazione di una raccolta personalizzata che può essere usata con un inizializzatore di insieme, vedere [Procedura: Creare una raccolta usata da un inizializzatore di insieme](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).
+Se la raccolta ha un metodo `Add` con parametri che corrispondono al costruttore dell'oggetto `Customer` è possibile nidificare i valori dei parametri per il metodo `Add` all'interno di inizializzatori di insieme, come descritto nella sezione successiva. Se la raccolta non dispone di tale metodo `Add` è possibile crearne uno come metodo di estensione. Per un esempio di creazione di un metodo `Add` come metodo di estensione per una raccolta, vedere [Procedura: Creare un metodo di estensione Add usato da un inizializzatore di insieme](how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Per un esempio di creazione di una raccolta personalizzata che può essere usata con un inizializzatore di insieme, vedere [Procedura: Creare una raccolta usata da un inizializzatore di insieme](how-to-create-a-collection-used-by-a-collection-initializer.md).
 
 ## <a name="nesting-collection-initializers"></a>Annidamento di inizializzatori di insieme
 
@@ -75,20 +75,20 @@ Solo gli elenchi di valori annidati al primo livello di annidamento vengono invi
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-|Titolo|description|
+|Titolo|Descrizione|
 |---|---|
-|[Procedura: Creare un metodo di estensione Add usato da un inizializzatore di raccolta](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Illustra come creare un metodo di estensione denominato `Add` che può essere usato per popolare una raccolta con valori di un inizializzatore di insieme.|
-|[Procedura: Creare una raccolta usata da un inizializzatore di raccolta](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Illustra come abilitare l'uso di un inizializzatore di insieme includendo un metodo `Add` in una classe di raccolte che implementa `IEnumerable`.|
+|[Procedura: creare un metodo di estensione Add utilizzato da un inizializzatore di raccolta](how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Illustra come creare un metodo di estensione denominato `Add` che può essere usato per popolare una raccolta con valori di un inizializzatore di insieme.|
+|[Procedura: Creare una raccolta usata da un inizializzatore di raccolta](how-to-create-a-collection-used-by-a-collection-initializer.md)|Illustra come abilitare l'uso di un inizializzatore di insieme includendo un metodo `Add` in una classe di raccolte che implementa `IEnumerable`.|
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Raccolte](../../../../visual-basic/programming-guide/concepts/collections.md)
-- [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [Operatore New](../../../../visual-basic/language-reference/operators/new-operator.md)
-- [Proprietà implementate automaticamente](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
-- [Procedura: Inizializzare una variabile di matrice in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
-- [Inferenza del tipo di variabile locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Procedura: Creare un elenco di elementi](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+- [raccolte](../../concepts/collections.md)
+- [Matrici](../arrays/index.md)
+- [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Operatore New](../../../language-reference/operators/new-operator.md)
+- [Proprietà implementate automaticamente](../procedures/auto-implemented-properties.md)
+- [Procedura: Inizializzare una variabile di matrice in Visual Basic](../arrays/how-to-initialize-an-array-variable.md)
+- [Inferenza del tipo di variabile locale](../variables/local-type-inference.md)
+- [Tipi anonimi](../objects-and-classes/anonymous-types.md)
+- [Introduzione a LINQ in Visual Basic](../linq/introduction-to-linq.md)
+- [Procedura: Creare un elenco di elementi](../../concepts/linq/how-to-create-a-list-of-items.md)

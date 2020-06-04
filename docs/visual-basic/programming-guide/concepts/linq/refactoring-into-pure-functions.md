@@ -2,12 +2,12 @@
 title: Refactoring in funzioni pure
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-ms.openlocfilehash: 22b371c6136836d6e0f1281f824b69378c0d3e4a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 415b088661eca347330f4776901d68ee514d8dad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346526"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413479"
 ---
 # <a name="refactoring-into-pure-functions-visual-basic"></a>Refactoring in funzioni pure (Visual Basic)
 
@@ -21,7 +21,7 @@ Come accennato in precedenza, una funzione pura prevede due caratteristiche util
 
  Per passare alla programmazione funzionale, è possibile eseguire il refactoring del codice esistente per eliminare inutili effetti collaterali e dipendenze esterne. In questo modo, è possibile creare versioni di funzioni pure del codice esistente.
 
-In questo argomento vengono descritte le caratteristiche presenti e non presenti in una funzione pura. L'esercitazione [: manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) Mostra come modificare un documento WordprocessingML e include due esempi di come effettuare il refactoring con una funzione pura.
+In questo argomento vengono descritte le caratteristiche presenti e non presenti in una funzione pura. L'esercitazione [: manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md) Mostra come modificare un documento WordprocessingML e include due esempi di come effettuare il refactoring con una funzione pura.
 
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminazione di effetti collaterali e dipendenze esterne
 
@@ -52,7 +52,7 @@ L'output del codice è il seguente:
 StringOne-StringTwo
 ```
 
-Si noti che è irrilevante se i dati modificati hanno `public` o `private` l'accesso oppure è un membro `shared` o un membro di istanza. Una funzione pura non modifica i dati all'eterno della funzione.
+Si noti che è irrilevante se i dati da modificare hanno `public` o hanno `private` accesso oppure è un membro `shared` o un membro di istanza. Una funzione pura non modifica i dati all'eterno della funzione.
 
 ### <a name="non-pure-function-that-changes-an-argument"></a>Funzione non pura che modifica un argomento
 
@@ -103,9 +103,9 @@ Un approccio che può risultare utile consiste nello scrivere funzioni localment
 
 Una caratteristica importante degli operatori di query standard è che vengono implementati come funzioni pure.
 
-Per ulteriori informazioni, vedere [Cenni preliminari sugli operatori di query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
+Per ulteriori informazioni, vedere [Cenni preliminari sugli operatori di query standard (Visual Basic)](standard-query-operators-overview.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Introduzione alle trasformazioni funzionali pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Programmazione funzionale e programmazione imperativa (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Introduzione alle trasformazioni funzionali pure (Visual Basic)](introduction-to-pure-functional-transformations.md)
+- [Programmazione funzionale e programmazione imperativa (Visual Basic)](functional-programming-vs-imperative-programming.md)

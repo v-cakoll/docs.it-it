@@ -2,12 +2,12 @@
 title: È stato specificato un nome non valido per il log eventi
 ms.date: 07/20/2015
 ms.assetid: b1b158bd-f13f-4371-a8af-31c0e86ae6be
-ms.openlocfilehash: 05f37239510482de218847f069dc74cbef91f398
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70b1de2a3776a9c68260cc431b65e754d7247a0c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609173"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84412923"
 ---
 # <a name="an-invalid-name-was-specified-for-the-event-log"></a>È stato specificato un nome non valido per il log eventi
 È stato specificato un nome non valido per il log eventi. Generalmente è l'effetto della presenza di caratteri non validi nel nome, di un nome file vuoto o di un nome file troppo lungo.  
@@ -22,5 +22,5 @@ ms.locfileid: "64609173"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Analizzare percorsi di file](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
-- [Procedura: Rinominare un file](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
+- [Procedura: Analizzare percorsi di file](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [Procedura: Rinominare un file](../developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)

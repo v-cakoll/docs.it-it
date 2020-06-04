@@ -1,13 +1,13 @@
 ---
-title: 'Procedura: creare una gerarchia tramite il raggruppamento'
+title: 'Procedura: Creare una gerarchia usando il raggruppamento'
 ms.date: 07/20/2015
 ms.assetid: 4eb3ca6b-1aed-43de-b8b9-41c769c993f8
-ms.openlocfilehash: 3fea3e008e0bb18ae92f8883d08be4f27929b9fd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 551a1b8909eb36fea17c93563895296f65794cac
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341588"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414582"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>Procedura: creare una gerarchia tramite il raggruppamento (Visual Basic)
 In questo esempio viene illustrato come raggruppare dati e quindi generare codice XML basato sul raggruppamento.  
@@ -15,7 +15,7 @@ In questo esempio viene illustrato come raggruppare dati e quindi generare codic
 ## <a name="example"></a>Esempio  
  In questo esempio vengono prima raggruppati i dati in base a una categoria, quindi viene generato un nuovo file XML in cui la gerarchia XML riflette il raggruppamento.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: dati numerici (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: dati numerici (LINQ to XML)](sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim doc As XElement = XElement.Load("Data.xml")  
@@ -40,7 +40,7 @@ Dim newData As XElement = _
 Console.WriteLine(newData)  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```xml  
 <Root>  
@@ -81,4 +81,4 @@ Console.WriteLine(newData)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Tecniche di query avanzate (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Tecniche di query avanzate (LINQ to XML) (Visual Basic)](advanced-query-techniques-linq-to-xml.md)
