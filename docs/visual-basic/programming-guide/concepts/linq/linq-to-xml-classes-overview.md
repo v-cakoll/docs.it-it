@@ -2,12 +2,12 @@
 title: Panoramica delle classi LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
-ms.openlocfilehash: 8b7c1e13d462bbee38f4e958bb3ef90a8c7d32f3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 468435a0dfac64c85b3447f15f9cde63eb98aeb0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352003"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84368881"
 ---
 # <a name="linq-to-xml-classes-overview-visual-basic"></a>Cenni preliminari sulle classi LINQ to XML (Visual Basic)
 In questo argomento viene fornito un elenco delle classi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] disponibili nello spazio dei nomi <xref:System.Xml.Linq>, con una breve descrizione.  
@@ -15,10 +15,10 @@ In questo argomento viene fornito un elenco delle classi [!INCLUDE[sqltecxlinq](
 ## <a name="linq-to-xml-classes"></a>Classi LINQ to XML  
   
 ### <a name="xattribute-class"></a>Classe XAttribute  
- <xref:System.Xml.Linq.XAttribute> rappresenta un attributo XML. Per informazioni dettagliate ed esempi, vedere [Panoramica della classe XAttribute (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xattribute-class-overview.md).  
+ <xref:System.Xml.Linq.XAttribute> rappresenta un attributo XML. Per informazioni dettagliate ed esempi, vedere [Panoramica della classe XAttribute (Visual Basic)](xattribute-class-overview.md).  
   
 ### <a name="xcdata-class"></a>Classe XCData  
- <xref:System.Xml.Linq.XCData> rappresenta un nodo di testo CDATA.  
+ <xref:System.Xml.Linq.XCData> rappresenta un nodo di testo CDAT.  
   
 ### <a name="xcomment-class"></a>Classe XComment  
  <xref:System.Xml.Linq.XComment> rappresenta un commento XML.  
@@ -34,23 +34,23 @@ In questo argomento viene fornito un elenco delle classi [!INCLUDE[sqltecxlinq](
  <xref:System.Xml.Linq.XDeclaration> rappresenta una dichiarazione XML. Una dichiarazione XML viene usata per dichiarare la versione XML e la codifica di un documento XML. Inoltre, una dichiarazione XML specifica se il documento XML è autonomo o meno. Se il documento è autonomo non sono presenti dichiarazioni di markup esterne in una DTD esterna o in un'entità parametro esterna a cui è fatto riferimento dal subset interno.  
   
 ### <a name="xdocument-class"></a>Classe XDocument  
- <xref:System.Xml.Linq.XDocument> rappresenta un documento XML. Per informazioni dettagliate ed esempi, vedere [Cenni preliminari sulla classe XDocument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md).  
+ <xref:System.Xml.Linq.XDocument> rappresenta un documento XML. Per informazioni dettagliate ed esempi, vedere [Cenni preliminari sulla classe XDocument (Visual Basic)](xdocument-class-overview.md).  
   
 ### <a name="xdocumenttype-class"></a>Classe XDocumentType  
- <xref:System.Xml.Linq.XDocumentType> rappresenta una DTD (Document Type Definition) XML.  
+ <xref:System.Xml.Linq.XDocumentType> rappresenta una definizione DTD (Document Type Definition) XML.  
   
 ### <a name="xelement-class"></a>Classe XElement  
- <xref:System.Xml.Linq.XElement> rappresenta un elemento XML. Per informazioni dettagliate ed esempi, vedere [Cenni preliminari sulle classi XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md).  
+ <xref:System.Xml.Linq.XElement> rappresenta un elemento XML. Per informazioni dettagliate ed esempi, vedere [Cenni preliminari sulle classi XElement (Visual Basic)](xelement-class-overview.md).  
   
 ### <a name="xname-class"></a>Classe XName  
- <xref:System.Xml.Linq.XName> rappresenta i nomi di elementi (<xref:System.Xml.Linq.XElement>) e attributi (<xref:System.Xml.Linq.XAttribute>). Per informazioni dettagliate ed esempi, vedere [Cenni preliminari sulla classe XDocument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md).  
+ <xref:System.Xml.Linq.XName> rappresenta nomi di elementi (<xref:System.Xml.Linq.XElement>) e attributi (<xref:System.Xml.Linq.XAttribute>). Per informazioni dettagliate ed esempi, vedere [Cenni preliminari sulla classe XDocument (Visual Basic)](xdocument-class-overview.md).  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è progettato per semplificare il più possibile i nomi XML. Essendo molto complessi, i nomi XML vengono spesso considerati un argomento avanzato in XML. In effetti questa complessità non deriva dagli spazi dei nomi, utilizzati regolarmente dagli sviluppatori nella programmazione, ma dai prefissi di spazio dei nomi. I prefissi di spazio dei nomi possono risultare utili per ridurre le sequenze di tasti richieste durante l'input XML o per migliorare la leggibilità di XML. Tuttavia, i prefissi rappresentano spesso solo una scelta rapida per utilizzare lo spazio dei nomi XML completo e nella maggior parte dei casi non sono necessari. In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] i nomi XML vengono semplificati risolvendo tutti i prefissi nello spazio dei nomi XML corrispondente. Se necessari, i prefissi sono disponibili tramite il metodo <xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A>.  
   
  Se è necessario, è possibile controllare i prefissi di spazio dei nomi. In alcune circostanze, se si usano altri sistemi XML, ad esempio XSLT o XAML, è necessario controllare i prefissi di spazio dei nomi. Ad esempio se in un'espressione XPath incorporata in un foglio di stile XSLT vengono usati i prefissi di spazio dei nomi, è necessario assicurarsi che il documento XML venga serializzato con prefissi di spazio dei nomi corrispondenti a quelli usati nell'espressione XPath.  
   
 ### <a name="xnamespace-class"></a>Classe XNamespace  
- <xref:System.Xml.Linq.XNamespace> rappresenta uno spazio dei nomi per un <xref:System.Xml.Linq.XElement> o un <xref:System.Xml.Linq.XAttribute>. Gli spazi dei nomi sono un componente di <xref:System.Xml.Linq.XName>.  
+ <xref:System.Xml.Linq.XNamespace> rappresenta uno spazio dei nomi per <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XAttribute>. Gli spazi dei nomi sono un componente di <xref:System.Xml.Linq.XName>.  
   
 ### <a name="xnode-class"></a>Classe XNode  
  <xref:System.Xml.Linq.XNode> è una classe astratta che rappresenta i nodi di un albero XML. Le seguenti classi derivano dalla classe <xref:System.Xml.Linq.XNode>:  
@@ -66,16 +66,16 @@ In questo argomento viene fornito un elenco delle classi [!INCLUDE[sqltecxlinq](
 - <xref:System.Xml.Linq.XDocumentType>  
   
 ### <a name="xnodedocumentordercomparer-class"></a>Classe XNodeDocumentOrderComparer  
- <xref:System.Xml.Linq.XNodeDocumentOrderComparer> fornisce funzionalità per confrontare i nodi per l'ordine dei documenti.  
+ <xref:System.Xml.Linq.XNodeDocumentOrderComparer> fornisce funzionalità per confrontare nodi per rilevare l'ordine del documento.  
   
 ### <a name="xnodeequalitycomparer-class"></a>Classe XNodeEqualityComparer  
- <xref:System.Xml.Linq.XNodeEqualityComparer> fornisce funzionalità per confrontare i nodi per verificare l'uguaglianza dei valori.  
+ <xref:System.Xml.Linq.XNodeEqualityComparer> fornisce funzionalità per confrontare nodi per rilevare l'uguaglianza di valori.  
   
 ### <a name="xobject-class"></a>Classe XObject  
  <xref:System.Xml.Linq.XObject> è una classe di base astratta di <xref:System.Xml.Linq.XNode> e <xref:System.Xml.Linq.XAttribute>. Fornisce funzionalità di annotazione ed evento.  
   
 ### <a name="xobjectchange-class"></a>Classe XObjectChange  
- <xref:System.Xml.Linq.XObjectChange> specifica il tipo di evento quando viene generato un evento per un <xref:System.Xml.Linq.XObject>.  
+ <xref:System.Xml.Linq.XObjectChange> specifica il tipo di evento quando viene generato un evento per <xref:System.Xml.Linq.XObject>.  
   
 ### <a name="xobjectchangeeventargs-class"></a>Classe XObjectChangeEventArgs  
  <xref:System.Xml.Linq.XObjectChangeEventArgs> fornisce i dati per gli eventi <xref:System.Xml.Linq.XObject.Changing> e <xref:System.Xml.Linq.XObject.Changed>.  
@@ -88,4 +88,4 @@ In questo argomento viene fornito un elenco delle classi [!INCLUDE[sqltecxlinq](
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica della programmazione LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [Panoramica della programmazione LINQ to XML (Visual Basic)](linq-to-xml-programming-overview.md)
