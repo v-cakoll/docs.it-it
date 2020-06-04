@@ -2,24 +2,24 @@
 title: Ricerca di testo nei documenti di Word
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
-ms.openlocfilehash: 83941de815968fce471b7366ed7c5114dae0d63c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 546703e3dbead64fd10c04fe52cb1dd98ba53049
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347519"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398090"
 ---
-# <a name="finding-text-in-word-documents-visual-basic"></a><span data-ttu-id="7d01b-102">Ricerca di testo nei documenti di Word (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7d01b-102">Finding Text in Word Documents (Visual Basic)</span></span>
+# <a name="finding-text-in-word-documents-visual-basic"></a><span data-ttu-id="1b367-102">Ricerca di testo nei documenti di Word (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1b367-102">Finding Text in Word Documents (Visual Basic)</span></span>
 
-<span data-ttu-id="7d01b-103">In questo argomento le query precedenti vengono estese in modo da individuare tutte le occorrenze di una stringa nel documento.</span><span class="sxs-lookup"><span data-stu-id="7d01b-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>
+<span data-ttu-id="1b367-103">In questo argomento le query precedenti vengono estese in modo da individuare tutte le occorrenze di una stringa nel documento.</span><span class="sxs-lookup"><span data-stu-id="1b367-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>
 
-## <a name="example"></a><span data-ttu-id="7d01b-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="7d01b-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="1b367-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="1b367-104">Example</span></span>
 
-<span data-ttu-id="7d01b-105">Questo esempio elabora un documento WordprocessingML per individuare tutte le occorrenze di una stringa di testo specifica nel documento.</span><span class="sxs-lookup"><span data-stu-id="7d01b-105">This example processes a WordprocessingML document, to find all the occurrences of a specific piece of text in the document.</span></span> <span data-ttu-id="7d01b-106">A tale scopo, viene usata una query per ricercare la stringa "Hello".</span><span class="sxs-lookup"><span data-stu-id="7d01b-106">To do this, we use a query that finds the string "Hello".</span></span> <span data-ttu-id="7d01b-107">Questo esempio si basa su esempi precedenti di questa esercitazione.</span><span class="sxs-lookup"><span data-stu-id="7d01b-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="7d01b-108">La nuova query è indicata nei commenti del codice riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="7d01b-108">The new query is called out in comments in the code below.</span></span>
+<span data-ttu-id="1b367-105">Questo esempio elabora un documento WordprocessingML per individuare tutte le occorrenze di una stringa di testo specifica nel documento.</span><span class="sxs-lookup"><span data-stu-id="1b367-105">This example processes a WordprocessingML document, to find all the occurrences of a specific piece of text in the document.</span></span> <span data-ttu-id="1b367-106">A tale scopo, viene usata una query per ricercare la stringa "Hello".</span><span class="sxs-lookup"><span data-stu-id="1b367-106">To do this, we use a query that finds the string "Hello".</span></span> <span data-ttu-id="1b367-107">Questo esempio si basa su esempi precedenti di questa esercitazione.</span><span class="sxs-lookup"><span data-stu-id="1b367-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="1b367-108">La nuova query è indicata nei commenti del codice riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="1b367-108">The new query is called out in comments in the code below.</span></span>
 
-<span data-ttu-id="7d01b-109">Per istruzioni sulla creazione del documento di origine per questo esempio, vedere [creazione del documento Office Open XML di origine (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="7d01b-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>
+<span data-ttu-id="1b367-109">Per istruzioni sulla creazione del documento di origine per questo esempio, vedere [creazione del documento Office Open XML di origine (Visual Basic)](creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="1b367-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](creating-the-source-office-open-xml-document.md).</span></span>
 
-<span data-ttu-id="7d01b-110">In questo esempio vengono usate classi dell'assembly WindowsBase</span><span class="sxs-lookup"><span data-stu-id="7d01b-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="7d01b-111">e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="7d01b-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>
+<span data-ttu-id="1b367-110">In questo esempio vengono usate classi dell'assembly WindowsBase</span><span class="sxs-lookup"><span data-stu-id="1b367-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="1b367-111">e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="1b367-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>
 
 ```vb
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
@@ -153,14 +153,14 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="7d01b-112">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="7d01b-112">This example produces the following output:</span></span>
+<span data-ttu-id="1b367-112">Nell'esempio viene prodotto l'output seguente:</span><span class="sxs-lookup"><span data-stu-id="1b367-112">This example produces the following output:</span></span>
 
 ```console
 StyleName:Code >        Console.WriteLine("Hello World")<
 StyleName:Code >Hello World<
 ```
 
-<span data-ttu-id="7d01b-113">È naturalmente possibile modificare la ricerca in modo da cercare righe formattate con uno stile specifico.</span><span class="sxs-lookup"><span data-stu-id="7d01b-113">You can, of course, modify the search so that it searches for lines with a specific style.</span></span> <span data-ttu-id="7d01b-114">La query seguente consente di individuare tutte le righe vuote formattate con lo stile Code:</span><span class="sxs-lookup"><span data-stu-id="7d01b-114">The following query finds all blank lines that have the Code style:</span></span>
+<span data-ttu-id="1b367-113">È naturalmente possibile modificare la ricerca in modo da cercare righe formattate con uno stile specifico.</span><span class="sxs-lookup"><span data-stu-id="1b367-113">You can, of course, modify the search so that it searches for lines with a specific style.</span></span> <span data-ttu-id="1b367-114">La query seguente consente di individuare tutte le righe vuote formattate con lo stile Code:</span><span class="sxs-lookup"><span data-stu-id="1b367-114">The following query finds all blank lines that have the Code style:</span></span>
 
 ```vb
 Imports System.IO.Packaging
@@ -294,24 +294,24 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="7d01b-115">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="7d01b-115">This example produces the following output:</span></span>
+<span data-ttu-id="1b367-115">Nell'esempio viene prodotto l'output seguente:</span><span class="sxs-lookup"><span data-stu-id="1b367-115">This example produces the following output:</span></span>
 
 ```console
 StyleName:Code ><
 ```
 
-<span data-ttu-id="7d01b-116">È naturalmente possibile modificare questo esempio in diversi modi,</span><span class="sxs-lookup"><span data-stu-id="7d01b-116">Of course, this example could be enhanced in a number of ways.</span></span> <span data-ttu-id="7d01b-117">ad esempio usando espressioni regolari per la ricerca di testo, scorrendo tutti i file di Word in una determinata directory e così via.</span><span class="sxs-lookup"><span data-stu-id="7d01b-117">For example, we could use regular expressions to search for text, we could iterate through all the Word files in a particular directory, and so on.</span></span>
+<span data-ttu-id="1b367-116">È naturalmente possibile modificare questo esempio in diversi modi,</span><span class="sxs-lookup"><span data-stu-id="1b367-116">Of course, this example could be enhanced in a number of ways.</span></span> <span data-ttu-id="1b367-117">ad esempio usando espressioni regolari per la ricerca di testo, scorrendo tutti i file di Word in una determinata directory e così via.</span><span class="sxs-lookup"><span data-stu-id="1b367-117">For example, we could use regular expressions to search for text, we could iterate through all the Word files in a particular directory, and so on.</span></span>
 
-<span data-ttu-id="7d01b-118">Notare che questo esempio viene eseguito quasi come se fosse stato scritto come una singola query.</span><span class="sxs-lookup"><span data-stu-id="7d01b-118">Note that this example performs approximately as well as if it were written as a single query.</span></span> <span data-ttu-id="7d01b-119">Perché ogni query viene implementata in modo lazy e posticipato, non restituisce i risultati finché non ne viene eseguita l'iterazione.</span><span class="sxs-lookup"><span data-stu-id="7d01b-119">Because each query is implemented in a lazy, deferred fashion, each query does not yield its results until the query is iterated.</span></span> <span data-ttu-id="7d01b-120">Per ulteriori informazioni sull'esecuzione e la valutazione lazy, vedere [esecuzione posticipata e valutazione lazy in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="7d01b-120">For more information about execution and lazy evaluation, see [Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span></span>
+<span data-ttu-id="1b367-118">Notare che questo esempio viene eseguito quasi come se fosse stato scritto come una singola query.</span><span class="sxs-lookup"><span data-stu-id="1b367-118">Note that this example performs approximately as well as if it were written as a single query.</span></span> <span data-ttu-id="1b367-119">Perché ogni query viene implementata in modo lazy e posticipato, non restituisce i risultati finché non ne viene eseguita l'iterazione.</span><span class="sxs-lookup"><span data-stu-id="1b367-119">Because each query is implemented in a lazy, deferred fashion, each query does not yield its results until the query is iterated.</span></span> <span data-ttu-id="1b367-120">Per ulteriori informazioni sull'esecuzione e la valutazione lazy, vedere [esecuzione posticipata e valutazione lazy in LINQ to XML (Visual Basic)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="1b367-120">For more information about execution and lazy evaluation, see [Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="7d01b-121">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="7d01b-121">Next Steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="1b367-121">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="1b367-121">Next Steps</span></span>
 
-<span data-ttu-id="7d01b-122">Nella sezione successiva vengono fornite ulteriori informazioni sui documenti WordprocessingML:</span><span class="sxs-lookup"><span data-stu-id="7d01b-122">The next section provides more information about WordprocessingML documents:</span></span>
+<span data-ttu-id="1b367-122">Nella sezione successiva vengono fornite ulteriori informazioni sui documenti WordprocessingML:</span><span class="sxs-lookup"><span data-stu-id="1b367-122">The next section provides more information about WordprocessingML documents:</span></span>
 
-- [<span data-ttu-id="7d01b-123">Informazioni dettagliate sui documenti WordprocessingML di Office Open XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7d01b-123">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [<span data-ttu-id="1b367-123">Informazioni dettagliate sui documenti WordprocessingML di Office Open XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1b367-123">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](details-of-office-open-xml-wordprocessingml-documents.md)
 
-## <a name="see-also"></a><span data-ttu-id="7d01b-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7d01b-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1b367-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1b367-124">See also</span></span>
 
-- [<span data-ttu-id="7d01b-125">Esercitazione: modifica del contenuto in un documento WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7d01b-125">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [<span data-ttu-id="7d01b-126">Refactoring con una funzione pura (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7d01b-126">Refactoring Using a Pure Function (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
-- [<span data-ttu-id="7d01b-127">Esecuzione posticipata e valutazione lazy in LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7d01b-127">Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [<span data-ttu-id="1b367-125">Esercitazione: modifica del contenuto in un documento WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1b367-125">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [<span data-ttu-id="1b367-126">Refactoring con una funzione pura (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1b367-126">Refactoring Using a Pure Function (Visual Basic)</span></span>](refactoring-using-a-pure-function.md)
+- [<span data-ttu-id="1b367-127">Esecuzione posticipata e valutazione lazy in LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1b367-127">Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)</span></span>](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

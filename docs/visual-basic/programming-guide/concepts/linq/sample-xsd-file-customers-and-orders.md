@@ -1,20 +1,20 @@
 ---
-title: 'File XSD di esempio: I clienti e Orders2'
+title: 'File XSD di esempio: Customers e Consolidati2'
 ms.date: 07/20/2015
 ms.assetid: a0c0b414-c8e1-45e4-bb67-b5e650c97130
-ms.openlocfilehash: e2549b4d330ecd8b60ede86c55f28930ae5e41dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1b1d9f1702f9ba9946d9bd7f678440558ef0a75
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786906"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360696"
 ---
-# <a name="sample-xsd-file-customers-and-orders"></a><span data-ttu-id="16005-102">File XSD di esempio: clienti e ordini</span><span class="sxs-lookup"><span data-stu-id="16005-102">Sample XSD File: Customers and Orders</span></span>
-<span data-ttu-id="16005-103">Il file XSD seguente viene usato in vari esempi nella documentazione relativa a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="16005-103">The following XSD file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="16005-104">Tale file contiene una definizione dello schema per [File XML di esempio: clienti e ordini (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="16005-104">This file contains a schema definition for the [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span> <span data-ttu-id="16005-105">Lo schema usa le funzionalità `xs:key` e `xs:keyref` di XSD per stabilire che l'attributo `CustomerID` dell'elemento `Customer` è una chiave e per stabilire una relazione tra l'elemento `CustomerID` in ogni elemento `Order` e l'attributo `CustomerID` in ogni elemento `Customer`.</span><span class="sxs-lookup"><span data-stu-id="16005-105">The schema uses the `xs:key` and `xs:keyref` features of XSD to establish that the `CustomerID` attribute of the `Customer` element is a key, and to establish a relationship between the `CustomerID` element in each `Order` element and the `CustomerID` attribute in each `Customer` element.</span></span>  
+# <a name="sample-xsd-file-customers-and-orders"></a><span data-ttu-id="daa9b-102">File XSD di esempio: clienti e ordini</span><span class="sxs-lookup"><span data-stu-id="daa9b-102">Sample XSD File: Customers and Orders</span></span>
+<span data-ttu-id="daa9b-103">Il file XSD seguente viene usato in vari esempi nella documentazione relativa a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="daa9b-103">The following XSD file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="daa9b-104">Questo file contiene una definizione dello schema per il [file XML di esempio: Customers e Orders (LINQ to XML)](sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="daa9b-104">This file contains a schema definition for the [Sample XML File: Customers and Orders (LINQ to XML)](sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span> <span data-ttu-id="daa9b-105">Lo schema usa le funzionalità `xs:key` e `xs:keyref` di XSD per stabilire che l'attributo `CustomerID` dell'elemento `Customer` è una chiave e per stabilire una relazione tra l'elemento `CustomerID` in ogni elemento `Order` e l'attributo `CustomerID` in ogni elemento `Customer`.</span><span class="sxs-lookup"><span data-stu-id="daa9b-105">The schema uses the `xs:key` and `xs:keyref` features of XSD to establish that the `CustomerID` attribute of the `Customer` element is a key, and to establish a relationship between the `CustomerID` element in each `Order` element and the `CustomerID` attribute in each `Customer` element.</span></span>  
   
- <span data-ttu-id="16005-106">Per un esempio relativo alla scrittura di query LINQ in cui tale relazione viene sfruttata usando la clausola `Join`, vedere [Procedura: Unire due raccolte (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="16005-106">For an example of writing LINQ queries that take advantage of this relationship using the `Join` clause, see [How to: Join Two Collections (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="daa9b-106">Per un esempio di scrittura di query LINQ che sfruttano questa relazione usando la `Join` clausola, vedere [procedura: unire due raccolte (LINQ to XML) (Visual Basic)](how-to-join-two-collections-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="daa9b-106">For an example of writing LINQ queries that take advantage of this relationship using the `Join` clause, see [How to: Join Two Collections (LINQ to XML) (Visual Basic)](how-to-join-two-collections-linq-to-xml.md).</span></span>  
   
-## <a name="customersordersxsd"></a><span data-ttu-id="16005-107">CustomersOrders.xsd</span><span class="sxs-lookup"><span data-stu-id="16005-107">CustomersOrders.xsd</span></span>  
+## <a name="customersordersxsd"></a><span data-ttu-id="daa9b-107">CustomersOrders.xsd</span><span class="sxs-lookup"><span data-stu-id="daa9b-107">CustomersOrders.xsd</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -93,6 +93,6 @@ ms.locfileid: "61786906"
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="16005-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="16005-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="daa9b-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="daa9b-108">See also</span></span>
 
-- [<span data-ttu-id="16005-109">Documenti XML di esempio (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="16005-109">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="daa9b-109">Documenti XML di esempio (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="daa9b-109">Sample XML Documents (LINQ to XML)</span></span>](sample-xml-documents-linq-to-xml.md)
