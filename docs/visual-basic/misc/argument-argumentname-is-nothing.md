@@ -1,17 +1,17 @@
 ---
-title: Argomento '<argumentname>' è Nothing
+title: L'argomento '<argumentname>' è Nothing
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidNullValue1
 ms.assetid: abbde904-c191-4911-8822-c9dd2f81d616
-ms.openlocfilehash: 2a0be0a10bc8b2a19c1c4b7ab3517ac6a32401e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe06605c25b9bb281ad9818708375a2f8f5c9480
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666053"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84412871"
 ---
-# <a name="argument-argumentname-is-nothing"></a>Argomento '\<NomeArgomento >' è Nothing
+# <a name="argument-argumentname-is-nothing"></a>L'argomento '\<argumentname>' è Nothing
 Un'espressione contiene un argomento Null.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
@@ -22,4 +22,4 @@ Un'espressione contiene un argomento Null.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Passaggio di argomenti per valore e per riferimento](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Passaggio di argomenti per valore e per riferimento](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

@@ -2,15 +2,15 @@
 title: Refactoring usando un metodo di estensione
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-ms.openlocfilehash: c66fb90f9949ee3e47105498b211c857d5d63804
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5bb3ed44c0c3f7616468f820428fe1a384ab6d45
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348024"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413436"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>Refactoring tramite un metodo di estensione (Visual Basic)
-Questo esempio si basa sull'esempio precedente, [recuperando il testo dei paragrafi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), effettuando il refactoring della concatenazione di stringhe usando una funzione pura implementata come metodo di estensione.  
+Questo esempio si basa sull'esempio precedente, [recuperando il testo dei paragrafi (Visual Basic)](retrieving-the-text-of-the-paragraphs.md), effettuando il refactoring della concatenazione di stringhe usando una funzione pura implementata come metodo di estensione.  
   
  Nell'esempio precedente è stato usato l'operatore di query standard <xref:System.Linq.Enumerable.Aggregate%2A> per concatenare più stringhe in un'unica stringa. Se tuttavia si scrive un metodo di estensione per eseguire tale operazione, la query risultante sarà più semplice e ridotta.  
   
@@ -19,7 +19,7 @@ Questo esempio si basa sull'esempio precedente, [recuperando il testo dei paragr
   
  L'esempio contiene più overload del metodo `StringConcatenate`.  
   
- Per istruzioni sulla creazione del documento di origine per questo esempio, vedere [creazione del documento Office Open XML di origine (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Per istruzioni sulla creazione del documento di origine per questo esempio, vedere [creazione del documento Office Open XML di origine (Visual Basic)](creating-the-source-office-open-xml-document.md).  
   
  In questo esempio vengono usate classi dell'assembly WindowsBase e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -80,7 +80,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(Function(i) i.ToString()))
 Console.WriteLine("{0}", intNumbers.StringConcatenate(Function(i) i.ToString(), ":"))  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```console  
 onetwothree  
@@ -241,9 +241,9 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>Passaggi successivi  
  Nell'esempio successivo viene illustrato come effettuare il refactoring di questo codice in un modo diverso usando funzioni pure:  
   
-- [Refactoring con una funzione pura (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [Refactoring con una funzione pura (Visual Basic)](refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esercitazione: modifica del contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [Refactoring in funzioni pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Esercitazione: modifica del contenuto in un documento WordprocessingML (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Refactoring in funzioni pure (Visual Basic)](refactoring-into-pure-functions.md)

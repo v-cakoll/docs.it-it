@@ -12,29 +12,29 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 0ee6ce183310aa836ecdbbc0bc819e0e83d1872d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8b21f22edea84448e3f2969c3e4b07c08a17a338
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345383"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357348"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Procedura: controllare l'ambito di una variabile (Visual Basic)
 In genere, una variabile è nell' *ambito*o visibile per riferimento, in tutta l'area in cui viene dichiarata. In alcuni casi, il livello di *accesso* della variabile può influenzare il proprio ambito.  
   
- Per altre informazioni, vedere [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
+ Per altre informazioni, vedere [Scope in Visual Basic](scope.md).  
   
 ## <a name="scope-at-block-or-procedure-level"></a>Ambito a livello di blocco o di procedura  
   
 #### <a name="to-make-a-variable-visible-only-within-a-block"></a>Per rendere una variabile visibile solo all'interno di un blocco  
   
-- Inserire l' [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) per la variabile tra le istruzioni di inizializzazione e terminazione del blocco, ad esempio tra le istruzioni `For` e `Next` di un ciclo di `For`.  
+- Inserire l' [istruzione Dim](../../../language-reference/statements/dim-statement.md) per la variabile tra le istruzioni di inizializzazione e terminazione del blocco, ad esempio tra le `For` istruzioni e `Next` di un `For` ciclo.  
   
      È possibile fare riferimento alla variabile solo dall'interno del blocco.  
   
 #### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>Per rendere una variabile visibile solo all'interno di una routine  
   
-- Inserire l'istruzione `Dim` per la variabile all'interno della procedura, ma all'esterno di qualsiasi blocco, ad esempio un blocco di`End With` `With`....  
+- Inserire l' `Dim` istruzione per la variabile all'interno della routine, ma all'esterno di qualsiasi blocco (ad esempio un `With` blocco... `End With` ).  
   
      È possibile fare riferimento alla variabile solo dalla procedura, incluso all'interno di qualsiasi blocco contenuto nella procedura.  
   
@@ -43,17 +43,17 @@ In genere, una variabile è nell' *ambito*o visibile per riferimento, in tutta l
   
 #### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>Per rendere visibile una variabile in un modulo, una classe o una struttura  
   
-1. Inserire l'istruzione `Dim` per la variabile all'interno del modulo, della classe o della struttura, ma all'esterno di qualsiasi routine.  
+1. Inserire l' `Dim` istruzione per la variabile all'interno del modulo, della classe o della struttura, ma all'esterno di qualsiasi routine.  
   
-2. Includere la parola chiave [private](../../../../visual-basic/language-reference/modifiers/private.md) nell'istruzione `Dim`.  
+2. Includere la parola chiave [private](../../../language-reference/modifiers/private.md) nell' `Dim` istruzione.  
   
 3. È possibile fare riferimento alla variabile da qualsiasi punto all'interno del modulo, della classe o della struttura, ma non dall'esterno.  
   
 #### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>Per rendere visibile una variabile in uno spazio dei nomi  
   
-1. Inserire l'istruzione `Dim` per la variabile all'interno del modulo, della classe o della struttura, ma all'esterno di qualsiasi routine.  
+1. Inserire l' `Dim` istruzione per la variabile all'interno del modulo, della classe o della struttura, ma all'esterno di qualsiasi routine.  
   
-2. Includere la parola chiave [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) o [Public](../../../../visual-basic/language-reference/modifiers/public.md) nell'istruzione `Dim`.  
+2. Includere la parola chiave [Friend](../../../language-reference/modifiers/friend.md) o [public](../../../language-reference/modifiers/public.md) nell' `Dim` istruzione.  
   
 3. È possibile fare riferimento alla variabile da qualsiasi punto all'interno dello spazio dei nomi che contiene il modulo, la classe o la struttura.  
   
@@ -72,9 +72,9 @@ Module demonstrateScope
 End Module  
 ```  
   
- Nell'esempio precedente, tutte le procedure definite in Module `demonstrateScope` possono fare riferimento alla variabile `String` `strMsg`. Quando viene chiamata la procedura `usePrivateVariable`, viene visualizzato il contenuto della variabile stringa `strMsg` in una finestra di dialogo.  
+ Nell'esempio precedente, tutte le procedure definite in module `demonstrateScope` possono fare riferimento alla `String` variabile `strMsg` . Quando `usePrivateVariable` viene chiamata la stored procedure, viene visualizzato il contenuto della variabile stringa `strMsg` in una finestra di dialogo.  
   
- Con la seguente modifica apportata all'esempio precedente, è possibile fare riferimento alla variabile di stringa `strMsg` dal codice in qualsiasi punto dello spazio dei nomi della relativa dichiarazione.  
+ Con la seguente modifica all'esempio precedente, `strMsg` è possibile fare riferimento alla variabile di stringa dal codice in qualsiasi punto dello spazio dei nomi della relativa dichiarazione.  
   
 ```vb  
 Public strMsg As String  
@@ -88,9 +88,9 @@ Public strMsg As String
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Ambito in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Durata in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Livelli di accesso in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [Variabili](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Dichiarazione di variabile](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Ambito in Visual Basic](scope.md)
+- [Durata in Visual Basic](lifetime.md)
+- [Livelli di accesso in Visual Basic](access-levels.md)
+- [Variabili](../variables/index.md)
+- [Dichiarazione di variabile](../variables/variable-declaration.md)
+- [Istruzione Dim](../../../language-reference/statements/dim-statement.md)

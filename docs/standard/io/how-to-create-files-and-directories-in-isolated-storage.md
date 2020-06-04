@@ -14,12 +14,12 @@ helpviewer_keywords:
 - stores, creating files and directories
 - storing data using isolated storage, creating files and directories
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
-ms.openlocfilehash: b74bf62dabe24765e07ffa6820cc1675122a9122
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d5e086e77ab6309fa0757ef32b620e0fdbc1f627
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288550"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413040"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Procedura: Creare file e directory nello spazio di memorizzazione isolato
 Dopo aver ottenuto uno spazio di memorizzazione isolato, è possibile creare directory e file per l'archiviazione dei dati. All'interno di un archivio i nomi di file e directory vengono specificati rispetto alla radice del file system virtuale.  
@@ -29,6 +29,8 @@ Dopo aver ottenuto uno spazio di memorizzazione isolato, è possibile creare dir
  Per creare un file, utilizzare il metodo <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile%2A?displayProperty=nameWithType>.  
   
  Nel sistema operativo Windows i nomi di file e directory dello spazio di memorizzazione isolato non fanno distinzione tra maiuscole e minuscole. Di conseguenza, se si crea un file denominato `ThisFile.txt` e quindi un altro file denominato `THISFILE.TXT`, viene creato un solo file. Il nome del file mantiene le maiuscole e minuscole originali ai fini della visualizzazione.  
+
+ La creazione di file di spazio di memorizzazione isolato genererà un' <xref:System.IO.IsolatedStorage.IsolatedStorageException> operazione se il percorso contiene una directory che non esiste.
   
 ## <a name="example"></a>Esempio  
  L'esempio di codice seguente mostra come creare file e directory in uno spazio di memorizzazione isolato.  

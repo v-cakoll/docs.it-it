@@ -2,12 +2,12 @@
 title: 'Procedura: Creare un albero da un XmlReader'
 ms.date: 07/20/2015
 ms.assetid: 6de683d8-177d-402b-b0de-d0539f1ce5d8
-ms.openlocfilehash: 7d8d7f5b6389bef520e11fd2b7cc3e1c7e862e73
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 25c15ff08563b12b26041a536dfbca1c9cce260a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353092"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414608"
 ---
 # <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>Procedura: creare una struttura ad albero da un XmlReader (Visual Basic)
 
@@ -15,7 +15,7 @@ In questo argomento viene illustrato come creare un albero XML direttamente da u
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio viene usato il documento XML seguente: [File XML di esempio: libri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).
+Nell'esempio viene usato il documento XML seguente: [File XML di esempio: libri (LINQ to XML)](sample-xml-file-books-linq-to-xml.md).
 
 Nel codice seguente viene creato un oggetto `T:System.Xml.XmlReader`, quindi vengono letti i nodi fino a individuare il primo nodo di elemento. Viene quindi caricato l'oggetto <xref:System.Xml.Linq.XElement>.
 
@@ -28,7 +28,7 @@ Dim e As XElement = XElement.Load(r)
 Console.WriteLine(e)
 ```
 
-Questo esempio produce il seguente output:
+Nell'esempio viene prodotto l'output seguente:
 
 ```xml
 <Catalog>
@@ -56,4 +56,4 @@ Questo esempio produce il seguente output:
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Analisi di XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Analisi di XML (Visual Basic)](parsing-xml.md)
