@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30594
 ms.assetid: 5b9fceb4-ab11-41bb-ad3b-6f1a9da8ae7e
-ms.openlocfilehash: d6067c75835ecd14f1dd796c20ae3f29f456e541
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fc163c1069aa6f41766664e0fa5f5a9c34a1f73d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642949"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409569"
 ---
 # <a name="events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a>Impossibile gestire gli eventi delle variabili WithEvents condivise mediante metodi non condivisi
-Una variabile dichiarata con la `Shared` modificatore è una variabile condivisa. Una variabile condivisa identifica esattamente una posizione di archiviazione. Una variabile dichiarata con la `WithEvents` modificatore asserisce che il tipo a cui appartiene la variabile gestisce il set di eventi genera la variabile. Quando viene assegnato un valore alla variabile, la proprietà creata per il `WithEvents` dichiarazione qualsiasi gestore eventi esistente, scollega e collega il nuovo gestore di eventi tramite il `Add` (metodo).  
+Una variabile dichiarata con il `Shared` modificatore è una variabile condivisa. Una variabile condivisa identifica esattamente un percorso di archiviazione. Una variabile dichiarata con il `WithEvents` modificatore dichiara che il tipo a cui appartiene la variabile gestisce il set di eventi generato dalla variabile. Quando un valore viene assegnato alla variabile, la proprietà creata dalla `WithEvents` dichiarazione sgancia qualsiasi gestore eventi esistente e associa il nuovo gestore eventi tramite il `Add` metodo.  
   
  **ID errore:** BC30594  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-- Dichiarare il gestore eventi `Shared`.  
+- Dichiarare il gestore dell'evento `Shared` .  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
-- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
+- [Condivisa](../modifiers/shared.md)
+- [WithEvents](../modifiers/withevents.md)

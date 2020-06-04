@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-ms.openlocfilehash: c964003217e7b96cf25288e2ae6ae6a2fb07a6c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 37f98ce8120d5861552819690f9d5f22c9959a0e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651384"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409725"
 ---
-# <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>Proprietà predefinita '\<nomeproprietà1 >' è in conflitto con la proprietà predefinita '\<nomeproprietà2 >' in '\<NomeClasse >' e pertanto deve essere dichiarato come 'Shadows'
-Una proprietà viene dichiarata con lo stesso nome di una proprietà definita nella classe di base. In questo caso, la proprietà di questa classe deve nascondere le proprietà della classe base.  
+# <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>La proprietà predefinita '\<propertyname1>' è in conflitto con la proprietà predefinita '\<propertyname2> nella base '\<classname>', quindi deve essere dichiarata 'Shadows'
+Una proprietà viene dichiarata con lo stesso nome di una proprietà definita nella classe base. In questa situazione, la proprietà in questa classe deve nascondere la proprietà della classe base.  
   
  Si tratta di un messaggio di avviso. Per impostazione predefinita viene usato`Shadows` . Per altre informazioni su come nascondere gli avvisi o considerarli come errori, vedere [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
@@ -23,9 +23,9 @@ Una proprietà viene dichiarata con lo stesso nome di una proprietà definita ne
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-- Aggiungere il `Shadows` una parola chiave per la dichiarazione o modificare il nome della proprietà da dichiarare.  
+- Aggiungere la `Shadows` parola chiave alla dichiarazione o modificare il nome della proprietà dichiarata.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shadows](../modifiers/shadows.md)
+- [Shadowing in Visual Basic](../../programming-guide/language-features/declared-elements/shadowing.md)

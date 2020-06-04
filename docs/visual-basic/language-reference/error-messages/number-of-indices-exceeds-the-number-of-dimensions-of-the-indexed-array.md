@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
-ms.openlocfilehash: 76cf0a997e9ad36ab4b5dfdc7c4bc29c57d309eb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4d8ffd2c4ad0a386053ced0f98503969723c7168
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665685"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409374"
 ---
 # <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>Il numero di indici è superiore al numero di dimensioni della matrice indicizzata
 Il numero di indici usati per accedere a un elemento di matrice deve essere esattamente uguale all'ordine di priorità della matrice, vale a dire al numero di dimensioni dichiarate per la matrice.  
@@ -21,7 +21,7 @@ Il numero di indici usati per accedere a un elemento di matrice deve essere esat
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-- Rimuovere gli indici da riferimento della matrice fino a quando il numero totale di indici è pari all'ordine della matrice. Ad esempio:  
+- Rimuovere gli indici dal riferimento alla matrice fino a quando il numero totale di pedici è uguale al numero di dimensioni della matrice. Ad esempio:  
   
     ```vb  
     Dim gameBoard(3, 3) As String  
@@ -37,4 +37,4 @@ Il numero di indici usati per accedere a un elemento di matrice deve essere esat
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Matrici](../../programming-guide/language-features/arrays/index.md)

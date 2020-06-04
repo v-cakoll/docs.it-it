@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 87080254ad5d237a593f0c35e7c3fdaef3a8ad59
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5fce4f818e22373de7f1b37b941fd88155f3a33f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350467"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359890"
 ---
 # <a name="group-by-clause-visual-basic"></a>Clausola Group By (Visual Basic)
 Raggruppa gli elementi di un risultato della query. Può essere usata anche per applicare funzioni di aggregazione a ogni gruppo. L'operazione di raggruppamento è basata su una o più chiavi.  
@@ -37,7 +37,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 - `keyExp1`  
   
-     Obbligatoria. Espressione che identifica la chiave da usare per determinare i gruppi di elementi. È possibile specificare più di una chiave per specificare una chiave composta.  
+     Obbligatorio. Espressione che identifica la chiave da usare per determinare i gruppi di elementi. È possibile specificare più di una chiave per specificare una chiave composta.  
   
 - `keyExp2`  
   
@@ -45,7 +45,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 - `aggregateList`  
   
-     Obbligatoria. Una o più espressioni che identificano come vengono aggregati i gruppi. Per identificare un nome di membro per i risultati raggruppati, usare la parola chiave `Group` , che può essere in uno dei seguenti formati:  
+     Obbligatorio. Una o più espressioni che identificano come vengono aggregati i gruppi. Per identificare un nome di membro per i risultati raggruppati, usare la parola chiave `Group` , che può essere in uno dei seguenti formati:  
   
     ```vb  
     Into Group  
@@ -59,10 +59,10 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
      È anche possibile includere funzioni di aggregazione da applicare al gruppo.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
  È possibile usare la clausola `Group By` per suddividere i risultati di una query in gruppi. Il raggruppamento è basato su una chiave o una chiave composta costituita da più chiavi. Gli elementi associati ai valori della chiave corrispondenti vengono inclusi nello stesso gruppo.  
   
- Per identificare il nome del membro che viene usato per fare riferimento al gruppo, usare il parametro `aggregateList` della clausola `Into` e la parola chiave `Group` . È anche possibile includere funzioni di aggregazione nella clausola `Into` per calcolare i valori per gli elementi raggruppati. Per un elenco di funzioni di aggregazione standard, vedere [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ Per identificare il nome del membro che viene usato per fare riferimento al gruppo, usare il parametro `aggregateList` della clausola `Into` e la parola chiave `Group` . È anche possibile includere funzioni di aggregazione nella clausola `Into` per calcolare i valori per gli elementi raggruppati. Per un elenco di funzioni di aggregazione standard, vedere [Aggregate Clause](aggregate-clause.md).  
   
 ## <a name="example"></a>Esempio  
  L'esempio di codice seguente raggruppa un elenco di clienti in base alla relativa posizione (paese/area geografica) e fornisce un conteggio dei clienti in ogni gruppo. I risultati vengono ordinati in base al nome del paese/area geografica. I risultati raggruppati vengono ordinati in base al nome della città.  
@@ -71,10 +71,10 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Introduzione a LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Query](../../../visual-basic/language-reference/queries/index.md)
-- [Clausola Select](../../../visual-basic/language-reference/queries/select-clause.md)
-- [Clausola From](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Clausola Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)
-- [Clausola Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)
-- [Clausola Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [Introduzione a LINQ in Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [Query](index.md)
+- [Clausola SELECT](select-clause.md)
+- [Clausola from](from-clause.md)
+- [Clausola Order By](order-by-clause.md)
+- [Aggregate Clause](aggregate-clause.md)
+- [Clausola Group Join](group-join-clause.md)

@@ -4,21 +4,21 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID459
 ms.assetid: 785df3f3-2aae-4a25-af36-1f9879d4e5fd
-ms.openlocfilehash: ad9176b5332a75f03968e742501c3fce541055de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc75e031c2d05bea3aa64774a9d3817756e51e8b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925762"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409361"
 ---
 # <a name="object-or-class-does-not-support-the-set-of-events"></a>L'oggetto o la classe non supporta il set di eventi
-Si è provato a usare un `WithEvents` variabile con un componente che non può fungere da un'origine evento per il set specificato di eventi. Ad esempio, si voleva il sink degli eventi di un oggetto, quindi creare un altro oggetto che `Implements` il primo oggetto. Anche se si potrebbe pensare che è possibile effettuare il sink gli eventi dall'oggetto implementato, questo non è sempre il caso. `Implements` implementa solo un'interfaccia per i metodi e proprietà. `WithEvents` non è supportata per privati `UserControls`, perché le informazioni sul tipo necessarie generare il `ObjectEvent` non è disponibile in fase di esecuzione.  
+Si è provato a usare una `WithEvents` variabile con un componente che non può funzionare come origine evento per il set di eventi specificato. Si desidera, ad esempio, affondare gli eventi di un oggetto, quindi creare un altro oggetto che `Implements` il primo oggetto. Sebbene si possa pensare che è possibile affondare gli eventi dall'oggetto implementato, questo non è sempre il caso. `Implements`implementa solo un'interfaccia per metodi e proprietà. `WithEvents`non è supportato per private `UserControls` , perché le informazioni sul tipo necessarie per generare l'oggetto `ObjectEvent` non sono disponibili in fase di esecuzione.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. È possibile effettuare il sink degli eventi per un componente che non sia l'origine eventi.  
+1. Non è possibile eseguire il sink di eventi per un componente che non è un evento di origine.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
-- [Istruzione Implements](../../../visual-basic/language-reference/statements/implements-statement.md)
+- [WithEvents](../modifiers/withevents.md)
+- [Istruzione Implements](../statements/implements-statement.md)

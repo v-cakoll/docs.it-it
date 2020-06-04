@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: richiamare il compilatore da riga di comando'
+title: 'Procedura: Richiamare il compilatore da riga di comando'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: 3b34ebba68c9c9b2a8335822d0ffaef2a9b06d7c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6def53d4a2d15dda3e3ac43abe35b3100f456fe9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344265"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408608"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Procedura: richiamare il compilatore da riga di comando (Visual Basic)
 
@@ -30,7 +30,7 @@ ms.locfileid: "74344265"
 
 4. Nella riga di comando digitare `vbc.exe` *sourceFileName* e quindi premere INVIO.
 
-    Ad esempio, se il codice sorgente è stato archiviato in una directory `SourceFiles`denominata, si aprirà il prompt dei comandi `cd SourceFiles` e il tipo per passare a tale directory. Se la directory contiene un file di origine `Source.vb`denominato, è possibile compilarlo `vbc.exe Source.vb`digitando.
+    Ad esempio, se il codice sorgente è stato archiviato in una directory denominata `SourceFiles` , si aprirà il prompt dei comandi e il tipo `cd SourceFiles` per passare a tale directory. Se la directory contiene un file di origine denominato `Source.vb` , è possibile compilarlo digitando `vbc.exe Source.vb` .
 
 ## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>Per impostare la variabile di ambiente PATH sul compilatore per il prompt dei comandi di Windows
 
@@ -56,9 +56,9 @@ ms.locfileid: "74344265"
 
 2. Nella riga di comando digitare `vbc.exe` *sourceFileName* e quindi premere INVIO.
 
-     Ad esempio, se il codice sorgente è stato archiviato in una directory `SourceFiles`denominata, si aprirà il prompt dei comandi `cd SourceFiles` e il tipo per passare a tale directory. Se la directory contiene un file di origine `Source.vb`denominato, è possibile compilarlo `vbc.exe Source.vb`digitando.
+     Ad esempio, se il codice sorgente è stato archiviato in una directory denominata `SourceFiles` , si aprirà il prompt dei comandi e il tipo `cd SourceFiles` per passare a tale directory. Se la directory contiene un file di origine denominato `Source.vb` , è possibile compilarlo digitando `vbc.exe Source.vb` .
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Compilazione condizionale](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [Compilatore della riga di comando di Visual Basic](index.md)
+- [Compilazione condizionale](../../programming-guide/program-structure/conditional-compilation.md)

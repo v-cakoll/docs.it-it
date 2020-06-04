@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: 42177f22e632e4a05b1f0b4d934f3e56ab9ff0f2
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: e3a9f4cf2f4105d2c449813bf0c593860df7d1f0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698572"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409530"
 ---
-# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>L'espressione chiama in modo ricorsivo la proprietà' \<propertyname >' che lo contiene
-Un'istruzione nella procedura `Set` di una definizione di proprietà archivia un valore nel nome della proprietà.  
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>L'espressione chiama in modo ricorsivo la proprietà '\<propertyname>' che la contiene
+Un'istruzione nella `Set` procedura di una definizione di proprietà archivia un valore nel nome della proprietà.  
   
- L'approccio consigliato per contenere il valore di una proprietà consiste nel definire una variabile `Private` nel contenitore della proprietà e usarla nelle procedure `Get` e `Set`. La procedura `Set` deve quindi archiviare il valore in ingresso in questa variabile `Private`.  
+ L'approccio consigliato per contenere il valore di una proprietà consiste nel definire una `Private` variabile nel contenitore della proprietà e usarla in entrambe le `Get` routine e `Set` . La `Set` stored procedure deve quindi archiviare il valore in ingresso in questa `Private` variabile.  
   
- La procedura `Get` si comporta come una procedura `Function`, in modo da poter assegnare un valore al nome della proprietà e restituire il controllo mediante l'istruzione `End Get`. Tuttavia, l'approccio consigliato consiste nell'includere la variabile `Private` come valore in un' [istruzione return](../../../visual-basic/language-reference/statements/return-statement.md).  
+ La `Get` procedura si comporta come una `Function` routine, quindi può assegnare un valore al nome della proprietà e restituire il controllo mediante l' `End Get` istruzione. Tuttavia, l'approccio consigliato consiste nell'includere la `Private` variabile come valore in un' [istruzione Return](../statements/return-statement.md).  
   
- La procedura `Set` si comporta come una procedura `Sub`, che non restituisce un valore. Pertanto, il nome della procedura o della proprietà non ha un significato speciale in una procedura `Set` e non è possibile archiviarvi un valore.  
+ La `Set` procedura si comporta come una `Sub` routine che non restituisce un valore. Pertanto, il nome della procedura o della proprietà non ha un significato speciale all'interno di una `Set` routine e non è possibile archiviarvi un valore.  
   
  Nell'esempio seguente viene illustrato l'approccio che può causare questo errore, seguito dall'approccio consigliato.  
   
@@ -65,6 +65,6 @@ End Class
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Routine Property](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
-- [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Istruzione Set](../../../visual-basic/language-reference/statements/set-statement.md)
+- [Routine Property](../../programming-guide/language-features/procedures/property-procedures.md)
+- [Property Statement](../statements/property-statement.md)
+- [Istruzione set](../statements/set-statement.md)

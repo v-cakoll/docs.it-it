@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-ms.openlocfilehash: 1873c0af7a251afd7754557f5dcb6aed13eb9f11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8675d9c3b202200c89e12e7a5f51a19d9e3e0e64
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918320"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409465"
 ---
-# <a name="namespace-or-type-specified-in-the-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Namespace o il tipo specificato nelle istruzioni 'Imports\<nomeelementoqualificato >' non contiene alcun membro pubblico o non è stata trovata
+# <a name="namespace-or-type-specified-in-the-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Lo spazio dei nomi o il tipo specificato nelle importazioni '\<qualifiedelementname>' non contiene alcun membro pubblico o non è definito
 
-Namespace o il tipo specificato nelle istruzioni 'Imports\<nomeelementoqualificato >' non contiene alcun membro pubblico o non è stata trovata. Assicurarsi che lo spazio dei nomi o il tipo sia definito e contenga almeno un membro pubblico. Assicurarsi che il nome di alias non contenga altri alias.
+Lo spazio dei nomi o il tipo specificato nelle importazioni ' \<qualifiedelementname> ' non contiene alcun membro pubblico o non è stato trovato. Verificare che lo spazio dei nomi o il tipo sia definito e contenga almeno un membro pubblico. Verificare che il nome dell'alias non contenga altri alias.
 
-Un' `Imports` istruzione specifica un elemento contenitore che può essere trovato o non definisce alcun `Public` membri.
+Un' `Imports` istruzione specifica un elemento contenitore che non può essere trovato o non definisce `Public` membri.
 
-Oggetto *contenente l'elemento* può essere un spazio dei nomi, classe, struttura, modulo, interfaccia o enumerazione. L'elemento contenitore contiene membri, ad esempio variabili, routine o altri elementi che lo contiene.
+Un *elemento contenitore* può essere uno spazio dei nomi, una classe, una struttura, un modulo, un'interfaccia o un'enumerazione. L'elemento contenitore contiene membri, ad esempio variabili, procedure o altri elementi contenenti.
 
-Lo scopo dell'importazione è di consentire al codice per accedere ai membri dello spazio dei nomi o un tipo senza dover fornire il nome completo. Il progetto potrebbe essere necessario anche aggiungere un riferimento al tipo o dello spazio dei nomi. Per altre informazioni, vedere "Importazione di elementi contenitore" nella [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+Lo scopo dell'importazione è consentire al codice di accedere ai membri dello spazio dei nomi o ai tipi senza doverli qualificare. Il progetto potrebbe anche dover aggiungere un riferimento allo spazio dei nomi o al tipo. Per ulteriori informazioni, vedere "importazione di elementi contenitore" in [riferimenti a elementi dichiarati](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
 
-Se il compilatore non trova l'elemento contenitore specificato, non sarà possibile risolvere i riferimenti che lo usano. Se viene trovato l'elemento ma l'elemento non espone alcun `Public` membri, non esiste alcun riferimento può essere esito positivo. In entrambi i casi è significativo per l'elemento import.
+Se il compilatore non riesce a trovare l'elemento contenitore specificato, non può risolvere i riferimenti che lo usano. Se trova l'elemento, ma l'elemento non espone `Public` membri, nessun riferimento può avere esito positivo. In entrambi i casi non è significativo importare l'elemento.
 
-Tenere presente che se si importa un elemento che lo contiene e assegnarvi un alias di importazione, quindi è possibile usare tale alias di importazione per importare un altro elemento. Il codice seguente genera un errore del compilatore.
+Tenere presente che se si importa un elemento contenitore e si assegna un alias di importazione, non è possibile usare tale alias di importazione per importare un altro elemento. Il codice seguente genera un errore del compilatore.
 
 ```vb
 Imports winfrm = System.Windows.Forms
@@ -40,16 +40,16 @@ Imports behave = winfrm.Design.Behavior`
 
 ## <a name="to-correct-this-error"></a>Per correggere l'errore
 
-1. Verificare che l'elemento contenitore è accessibile dal progetto.
+1. Verificare che l'elemento contenitore sia accessibile dal progetto.
 
-2. Verificare che la specifica dell'elemento contenitore non è inclusa qualsiasi alias di importazione da un'altra importazione.
+2. Verificare che la specifica dell'elemento contenitore non includa alcun alias di importazione da un'altra importazione.
 
-3. Verificare che l'elemento contenitore espone ad almeno uno `Public` membro.
+3. Verificare che l'elemento contenitore esponga almeno un `Public` membro.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [Istruzione Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [Spazi dei nomi in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [Riferimenti a elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Istruzione Imports (tipo e spazio dei nomi .NET)](../statements/imports-statement-net-namespace-and-type.md)
+- [Istruzione Namespace](../statements/namespace-statement.md)
+- [Pubblica](../modifiers/public.md)
+- [Spazi dei nomi in Visual Basic](../../programming-guide/program-structure/namespaces.md)
+- [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: a73589c4b0d0faeac321090e6030f1f8392a5342
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f7c7d818e6439f732031e23f297661bb960effb7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349610"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359490"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Membri della libreria di runtime di Visual Basic
 
-Lo spazio dei nomi `Microsoft.VisualBasic` contiene le classi, i moduli, le costanti e le enumerazioni che costituiscono la libreria di runtime Visual Basic. Questi membri della libreria forniscono procedure, proprietà e valori costanti che è possibile usare nel codice. Ogni modulo e classe rappresenta una particolare categoria di funzionalità.  
+Lo `Microsoft.VisualBasic` spazio dei nomi contiene classi, moduli, costanti ed enumerazioni che costituiscono la libreria di runtime Visual Basic. Questi membri della libreria forniscono procedure, proprietà e valori costanti che è possibile usare nel codice. Ogni modulo e classe rappresenta una particolare categoria di funzionalità.  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Classe Microsoft. VisualBasic. Collection  
   
@@ -98,7 +98,7 @@ Lo spazio dei nomi `Microsoft.VisualBasic` contiene le classi, i moduli, le cost
 |<xref:Microsoft.VisualBasic.ErrObject.HelpContext%2A>|<xref:Microsoft.VisualBasic.ErrObject.HelpFile%2A>|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|<xref:Microsoft.VisualBasic.ErrObject.Number%2A>|  
 |<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|||  
   
-## <a name="microsoftvisualbasicfilesystem-module"></a>Microsoft.VisualBasic.FileSystem Module  
+## <a name="microsoftvisualbasicfilesystem-module"></a>Modulo Microsoft. VisualBasic. FileSystem  
   
 |||||  
 |---|---|---|---|  
@@ -193,9 +193,9 @@ Lo spazio dei nomi `Microsoft.VisualBasic` contiene le classi, i moduli, le cost
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Costanti ed enumerazioni Microsoft. VisualBasic  
 
- Lo spazio dei nomi `Microsoft.VisualBasic` fornisce costanti ed enumerazioni come parte della libreria di runtime Visual Basic. È possibile usare questi valori costanti nel codice. Ogni enumerazione rappresenta una particolare categoria di funzionalità. Per ulteriori informazioni, vedere [costanti ed enumerazioni](../../visual-basic/language-reference/constants-and-enumerations.md).  
+ Lo `Microsoft.VisualBasic` spazio dei nomi fornisce costanti ed enumerazioni come parte della libreria di runtime Visual Basic. È possibile usare questi valori costanti nel codice. Ogni enumerazione rappresenta una particolare categoria di funzionalità. Per ulteriori informazioni, vedere [costanti ed enumerazioni](constants-and-enumerations.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Costanti ed enumerazioni](../../visual-basic/language-reference/constants-and-enumerations.md)
-- [Parole chiave](../../visual-basic/language-reference/keywords/index.md)
+- [Costanti ed enumerazioni](constants-and-enumerations.md)
+- [Parole chiave](keywords/index.md)

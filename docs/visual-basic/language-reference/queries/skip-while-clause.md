@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip While clause [Visual Basic]
 - queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-ms.openlocfilehash: 47703e445865435f5bf5312c3fe41833ac21aa3f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b357320a92ace1b7a261991737ed653d54d0eeab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74333150"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359645"
 ---
 # <a name="skip-while-clause-visual-basic"></a>Clausola Skip While (Visual Basic)
 Ignora gli elementi in una raccolta finché una condizione specificata è `true` e quindi restituisce gli elementi rimanenti.  
@@ -28,26 +28,26 @@ Skip While expression
   
 |Termine|Definizione|  
 |---|---|  
-|`expression`|Obbligatoria. Espressione che rappresenta una condizione per cui verificare gli elementi. L'espressione deve restituire un valore `Boolean` o un equivalente funzionale, ad esempio un `Integer` da valutare come `Boolean`.|  
+|`expression`|Obbligatorio. Espressione che rappresenta una condizione per cui verificare gli elementi. L'espressione deve restituire un `Boolean` valore o un equivalente funzionale, ad esempio un oggetto `Integer` da valutare come `Boolean` .|  
   
-## <a name="remarks"></a>Note  
- La clausola `Skip While` ignora gli elementi dall'inizio di un risultato della query fino a quando l'`expression` fornito non restituisce `false`. Dopo che `expression` restituisce `false`, la query restituisce tutti gli elementi rimanenti. Il `expression` viene ignorato per i risultati rimanenti.  
+## <a name="remarks"></a>Commenti  
+ La `Skip While` clausola ignora gli elementi dall'inizio di un risultato della query fino a quando l'oggetto specificato `expression` restituisce `false` . `expression`Una volta restituito `false` , la query restituisce tutti gli elementi rimanenti. `expression`Viene ignorato per i risultati rimanenti.  
   
- La clausola `Skip While` differisce dalla clausola `Where` in quanto la clausola `Where` può essere usata per escludere tutti gli elementi da una query che non soddisfano una determinata condizione. La clausola `Skip While` esclude gli elementi solo fino alla prima volta che la condizione non viene soddisfatta. La clausola `Skip While` è particolarmente utile quando si utilizza un risultato di query ordinato.  
+ La clausola è `Skip While` diversa dalla `Where` clausola in quanto la `Where` clausola può essere usata per escludere tutti gli elementi da una query che non soddisfano una determinata condizione. La `Skip While` clausola esclude gli elementi solo fino alla prima volta che la condizione non viene soddisfatta. La `Skip While` clausola è particolarmente utile quando si lavora con un risultato di query ordinato.  
   
- È possibile ignorare un numero specifico di risultati dall'inizio di un risultato della query utilizzando la clausola `Skip`.  
+ È possibile ignorare un numero specifico di risultati dall'inizio di un risultato della query usando la `Skip` clausola.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio di codice seguente viene utilizzata la clausola `Skip While` per ignorare i risultati fino a quando non viene trovato il primo cliente del Stati Uniti.  
+ Nell'esempio di codice seguente viene utilizzata la `Skip While` clausola per ignorare i risultati fino a quando non viene trovato il primo cliente del Stati Uniti.  
   
  [!code-vb[VbSimpleQuerySamples#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#3)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Introduzione a LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Query](../../../visual-basic/language-reference/queries/index.md)
-- [Clausola Select](../../../visual-basic/language-reference/queries/select-clause.md)
-- [Clausola From](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Clausola Skip](../../../visual-basic/language-reference/queries/skip-clause.md)
-- [Clausola Take While](../../../visual-basic/language-reference/queries/take-while-clause.md)
-- [Clausola Where](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Introduzione a LINQ in Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [Query](index.md)
+- [Clausola SELECT](select-clause.md)
+- [Clausola from](from-clause.md)
+- [Clausola Skip](skip-clause.md)
+- [Clausola Take While](take-while-clause.md)
+- [Clausola WHERE](where-clause.md)
