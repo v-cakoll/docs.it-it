@@ -6,26 +6,26 @@ helpviewer_keywords:
 - My.WebServices object
 - applications [Visual Basic], Web services
 ms.assetid: 8ad5405b-e771-42b1-82d3-ce97af2cea9e
-ms.openlocfilehash: ad616bd46f92261ec5ad6ae81d0db48138631ed1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf9a0c9840b9228b59af9959cf3a4efb9a1d1ea0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74349222"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410192"
 ---
-# <a name="accessing-application-web-services-visual-basic"></a><span data-ttu-id="2c544-102">Accesso ai servizi Web dell'applicazione (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2c544-102">Accessing Application Web Services (Visual Basic)</span></span>
+# <a name="accessing-application-web-services-visual-basic"></a><span data-ttu-id="32036-102">Accesso ai servizi Web dell'applicazione (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="32036-102">Accessing Application Web Services (Visual Basic)</span></span>
 
-<span data-ttu-id="2c544-103">L'oggetto `My.WebServices` fornisce un'istanza di ogni servizio Web a cui si fa riferimento nel progetto corrente.</span><span class="sxs-lookup"><span data-stu-id="2c544-103">The `My.WebServices` object provides an instance of each Web service referenced by the current project.</span></span> <span data-ttu-id="2c544-104">Ogni istanza viene creata su richiesta.</span><span class="sxs-lookup"><span data-stu-id="2c544-104">Each instance is instantiated on demand.</span></span> <span data-ttu-id="2c544-105">È possibile accedere a questi servizi Web tramite le proprietà dell'oggetto `My.WebServices`.</span><span class="sxs-lookup"><span data-stu-id="2c544-105">You can access these Web services through the properties of the `My.WebServices` object.</span></span> <span data-ttu-id="2c544-106">Il nome della proprietà è uguale al nome del servizio Web a cui la proprietà accede.</span><span class="sxs-lookup"><span data-stu-id="2c544-106">The name of the property is the same as the name of the Web service that the property accesses.</span></span> <span data-ttu-id="2c544-107">Qualsiasi classe che eredita da <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> è un servizio Web.</span><span class="sxs-lookup"><span data-stu-id="2c544-107">Any class that inherits from <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> is a Web service.</span></span>
+<span data-ttu-id="32036-103">L'oggetto `My.WebServices` fornisce un'istanza di ogni servizio Web a cui si fa riferimento nel progetto corrente.</span><span class="sxs-lookup"><span data-stu-id="32036-103">The `My.WebServices` object provides an instance of each Web service referenced by the current project.</span></span> <span data-ttu-id="32036-104">Ogni istanza viene creata su richiesta.</span><span class="sxs-lookup"><span data-stu-id="32036-104">Each instance is instantiated on demand.</span></span> <span data-ttu-id="32036-105">È possibile accedere a questi servizi Web tramite le proprietà dell'oggetto `My.WebServices`.</span><span class="sxs-lookup"><span data-stu-id="32036-105">You can access these Web services through the properties of the `My.WebServices` object.</span></span> <span data-ttu-id="32036-106">Il nome della proprietà è uguale al nome del servizio Web a cui la proprietà accede.</span><span class="sxs-lookup"><span data-stu-id="32036-106">The name of the property is the same as the name of the Web service that the property accesses.</span></span> <span data-ttu-id="32036-107">Qualsiasi classe che eredita da <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> è un servizio Web.</span><span class="sxs-lookup"><span data-stu-id="32036-107">Any class that inherits from <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> is a Web service.</span></span>
 
-## <a name="tasks"></a><span data-ttu-id="2c544-108">Attività</span><span class="sxs-lookup"><span data-stu-id="2c544-108">Tasks</span></span>
+## <a name="tasks"></a><span data-ttu-id="32036-108">Attività</span><span class="sxs-lookup"><span data-stu-id="32036-108">Tasks</span></span>
 
-<span data-ttu-id="2c544-109">La tabella seguente presenta i modi possibili per accedere ai servizi Web a cui fa riferimento un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="2c544-109">The following table lists possible ways to access Web services referenced by an application.</span></span>
+<span data-ttu-id="32036-109">La tabella seguente presenta i modi possibili per accedere ai servizi Web a cui fa riferimento un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="32036-109">The following table lists possible ways to access Web services referenced by an application.</span></span>
 
-|<span data-ttu-id="2c544-110">A</span><span class="sxs-lookup"><span data-stu-id="2c544-110">To</span></span>|<span data-ttu-id="2c544-111">Vedere</span><span class="sxs-lookup"><span data-stu-id="2c544-111">See</span></span>|
+|<span data-ttu-id="32036-110">A</span><span class="sxs-lookup"><span data-stu-id="32036-110">To</span></span>|<span data-ttu-id="32036-111">Vedere</span><span class="sxs-lookup"><span data-stu-id="32036-111">See</span></span>|
 |---|---|
-|<span data-ttu-id="2c544-112">Chiamare un servizio Web</span><span class="sxs-lookup"><span data-stu-id="2c544-112">Call a Web service</span></span>|[<span data-ttu-id="2c544-113">Oggetto My.WebServices</span><span class="sxs-lookup"><span data-stu-id="2c544-113">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)|
-|<span data-ttu-id="2c544-114">Chiamare un servizio Web in modo asincrono e gestire un evento quando quest'ultimo viene completato</span><span class="sxs-lookup"><span data-stu-id="2c544-114">Call a Web service asynchronously and handle an event when it completes</span></span>|[<span data-ttu-id="2c544-115">Procedura: chiamare un servizio Web in modo asincrono</span><span class="sxs-lookup"><span data-stu-id="2c544-115">How to: Call a Web Service Asynchronously</span></span>](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|
+|<span data-ttu-id="32036-112">Chiamare un servizio Web</span><span class="sxs-lookup"><span data-stu-id="32036-112">Call a Web service</span></span>|[<span data-ttu-id="32036-113">Oggetto My.WebServices</span><span class="sxs-lookup"><span data-stu-id="32036-113">My.WebServices Object</span></span>](../../language-reference/objects/my-webservices-object.md)|
+|<span data-ttu-id="32036-114">Chiamare un servizio Web in modo asincrono e gestire un evento quando quest'ultimo viene completato</span><span class="sxs-lookup"><span data-stu-id="32036-114">Call a Web service asynchronously and handle an event when it completes</span></span>|[<span data-ttu-id="32036-115">Procedura: Chiamare un servizio Web in modo asincrono</span><span class="sxs-lookup"><span data-stu-id="32036-115">How to: Call a Web Service Asynchronously</span></span>](how-to-call-a-web-service-asynchronously.md)|
 
-## <a name="see-also"></a><span data-ttu-id="2c544-116">Vedi anche</span><span class="sxs-lookup"><span data-stu-id="2c544-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="32036-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="32036-116">See also</span></span>
 
-- [<span data-ttu-id="2c544-117">Oggetto My.WebServices</span><span class="sxs-lookup"><span data-stu-id="2c544-117">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+- [<span data-ttu-id="32036-117">Oggetto My.WebServices</span><span class="sxs-lookup"><span data-stu-id="32036-117">My.WebServices Object</span></span>](../../language-reference/objects/my-webservices-object.md)
