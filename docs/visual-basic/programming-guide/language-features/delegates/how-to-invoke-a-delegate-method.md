@@ -2,26 +2,26 @@
 title: 'Procedura: richiamare un metodo delegato'
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: 520bacfbe6103490e0459cd5af149c1d55a8fce4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f319727c007b93c7b334af0598f1b9f7c034144d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345258"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410721"
 ---
-# <a name="how-to-invoke-a-delegate-method-visual-basic"></a><span data-ttu-id="0dab8-102">Procedura: richiamare un metodo delegato (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0dab8-102">How to: Invoke a Delegate Method (Visual Basic)</span></span>
+# <a name="how-to-invoke-a-delegate-method-visual-basic"></a><span data-ttu-id="cf8b9-102">Procedura: richiamare un metodo delegato (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cf8b9-102">How to: Invoke a Delegate Method (Visual Basic)</span></span>
 
-<span data-ttu-id="0dab8-103">Questo esempio illustra come associare un metodo a un delegato e quindi richiamare il metodo tramite il delegato.</span><span class="sxs-lookup"><span data-stu-id="0dab8-103">This example shows how to associate a method with a delegate and then invoke that method through the delegate.</span></span>
+<span data-ttu-id="cf8b9-103">Questo esempio illustra come associare un metodo a un delegato e quindi richiamare il metodo tramite il delegato.</span><span class="sxs-lookup"><span data-stu-id="cf8b9-103">This example shows how to associate a method with a delegate and then invoke that method through the delegate.</span></span>
 
-### <a name="create-the-delegate-and-matching-procedures"></a><span data-ttu-id="0dab8-104">Creare il delegato e le procedure di corrispondenza</span><span class="sxs-lookup"><span data-stu-id="0dab8-104">Create the delegate and matching procedures</span></span>
+### <a name="create-the-delegate-and-matching-procedures"></a><span data-ttu-id="cf8b9-104">Creare il delegato e le procedure di corrispondenza</span><span class="sxs-lookup"><span data-stu-id="cf8b9-104">Create the delegate and matching procedures</span></span>
 
-1. <span data-ttu-id="0dab8-105">Creare un delegato denominato `MySubDelegate`.</span><span class="sxs-lookup"><span data-stu-id="0dab8-105">Create a delegate named `MySubDelegate`.</span></span>
+1. <span data-ttu-id="cf8b9-105">Creare un delegato denominato `MySubDelegate` .</span><span class="sxs-lookup"><span data-stu-id="cf8b9-105">Create a delegate named `MySubDelegate`.</span></span>
 
     ```vb
     Delegate Sub MySubDelegate(ByVal x As Integer)
     ```
 
-2. <span data-ttu-id="0dab8-106">Dichiarare una classe che contiene un metodo con la stessa firma del delegato.</span><span class="sxs-lookup"><span data-stu-id="0dab8-106">Declare a class that contains a method with the same signature as the delegate.</span></span>
+2. <span data-ttu-id="cf8b9-106">Dichiarare una classe che contiene un metodo con la stessa firma del delegato.</span><span class="sxs-lookup"><span data-stu-id="cf8b9-106">Declare a class that contains a method with the same signature as the delegate.</span></span>
 
     ```vb
     Class class1
@@ -31,7 +31,7 @@ ms.locfileid: "74345258"
     End Class
     ```
 
-3. <span data-ttu-id="0dab8-107">Definire un metodo che crea un'istanza del delegato e richiama il metodo associato al delegato chiamando il metodo `Invoke` incorporato.</span><span class="sxs-lookup"><span data-stu-id="0dab8-107">Define a method that creates an instance of the delegate and invokes the method associated with the delegate by calling the built-in `Invoke` method.</span></span>
+3. <span data-ttu-id="cf8b9-107">Definire un metodo che crea un'istanza del delegato e richiama il metodo associato al delegato chiamando il `Invoke` metodo incorporato.</span><span class="sxs-lookup"><span data-stu-id="cf8b9-107">Define a method that creates an instance of the delegate and invokes the method associated with the delegate by calling the built-in `Invoke` method.</span></span>
 
     ```vb
     Protected Sub DelegateTest()
@@ -43,9 +43,9 @@ ms.locfileid: "74345258"
     End Sub
     ```
 
-## <a name="see-also"></a><span data-ttu-id="0dab8-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0dab8-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cf8b9-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cf8b9-108">See also</span></span>
 
-- [<span data-ttu-id="0dab8-109">Istruzione Delegate</span><span class="sxs-lookup"><span data-stu-id="0dab8-109">Delegate Statement</span></span>](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [<span data-ttu-id="0dab8-110">Delegati</span><span class="sxs-lookup"><span data-stu-id="0dab8-110">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [<span data-ttu-id="0dab8-111">Eventi</span><span class="sxs-lookup"><span data-stu-id="0dab8-111">Events</span></span>](../../../../visual-basic/programming-guide/language-features/events/index.md)
-- [<span data-ttu-id="0dab8-112">Applicazioni multithread</span><span class="sxs-lookup"><span data-stu-id="0dab8-112">Multithreaded Applications</span></span>](../../../../standard/threading/using-threads-and-threading.md)
+- [<span data-ttu-id="cf8b9-109">Istruzione Delegate</span><span class="sxs-lookup"><span data-stu-id="cf8b9-109">Delegate Statement</span></span>](../../../language-reference/statements/delegate-statement.md)
+- [<span data-ttu-id="cf8b9-110">Delegati</span><span class="sxs-lookup"><span data-stu-id="cf8b9-110">Delegates</span></span>](index.md)
+- [<span data-ttu-id="cf8b9-111">Events</span><span class="sxs-lookup"><span data-stu-id="cf8b9-111">Events</span></span>](../events/index.md)
+- [<span data-ttu-id="cf8b9-112">Applicazioni a thread multipli</span><span class="sxs-lookup"><span data-stu-id="cf8b9-112">Multithreaded Applications</span></span>](../../../../standard/threading/using-threads-and-threading.md)

@@ -1,23 +1,23 @@
 ---
-title: Argomento '<argumentname>'non può essere convertito nel tipo'<typename>'
+title: Impossibile convertire l'argomento ' <argumentname> ' nel tipo ' <typename> '
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidValueType2
 ms.assetid: 5b83a9cf-296b-479f-aa17-df655b8f51a0
-ms.openlocfilehash: 3000633f838be18d3d243c91fa9256f70ec4b65f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 841aca9d57afaff423a7065e9c6d9fc64f14ea2a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659951"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411356"
 ---
-# <a name="argument-argumentname-cannot-be-converted-to-type-typename"></a><span data-ttu-id="f7ac4-102">Argomento '\<NomeArgomento >' non può essere convertito nel tipo '\<nomeTipo >'</span><span class="sxs-lookup"><span data-stu-id="f7ac4-102">Argument '\<argumentname>' cannot be converted to type '\<typename>'</span></span>
-<span data-ttu-id="f7ac4-103">Una conversione tenta di modificare un argomento a un tipo non valido.</span><span class="sxs-lookup"><span data-stu-id="f7ac4-103">A conversion attempts to change an argument to a type that is not valid.</span></span>  
+# <a name="argument-argumentname-cannot-be-converted-to-type-typename"></a><span data-ttu-id="876ba-102">Impossibile convertire l'argomento ' \<argumentname> ' nel tipo ' \<typename> '</span><span class="sxs-lookup"><span data-stu-id="876ba-102">Argument '\<argumentname>' cannot be converted to type '\<typename>'</span></span>
+<span data-ttu-id="876ba-103">Una conversione tenta di modificare un argomento a un tipo non valido.</span><span class="sxs-lookup"><span data-stu-id="876ba-103">A conversion attempts to change an argument to a type that is not valid.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f7ac4-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="f7ac4-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="876ba-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="876ba-104">To correct this error</span></span>  
   
-- <span data-ttu-id="f7ac4-105">Modificare il tipo in un tipo valido.</span><span class="sxs-lookup"><span data-stu-id="f7ac4-105">Change the type to one that is valid.</span></span>  
+- <span data-ttu-id="876ba-105">Modificare il tipo in un tipo valido.</span><span class="sxs-lookup"><span data-stu-id="876ba-105">Change the type to one that is valid.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f7ac4-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f7ac4-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="876ba-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="876ba-106">See also</span></span>
 
-- [<span data-ttu-id="f7ac4-107">Funzioni di conversione</span><span class="sxs-lookup"><span data-stu-id="f7ac4-107">Conversion Functions</span></span>](../../visual-basic/language-reference/functions/conversion-functions.md)
+- [<span data-ttu-id="876ba-107">Funzioni di conversione</span><span class="sxs-lookup"><span data-stu-id="876ba-107">Conversion Functions</span></span>](../language-reference/functions/conversion-functions.md)
