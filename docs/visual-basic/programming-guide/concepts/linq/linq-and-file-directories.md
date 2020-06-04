@@ -2,36 +2,36 @@
 title: Directory di file e LINQ
 ms.date: 07/20/2015
 ms.assetid: 159fd5c3-3926-4071-ae78-d8e423287eb7
-ms.openlocfilehash: 390d3c7a1c738aea0df8e3dcad0edb70563f8fb6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9738dc2b07b33b2d96f8134e8418c54aae53e6a1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347793"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397519"
 ---
-# <a name="linq-and-file-directories-visual-basic"></a>Directory di file e LINQ (Visual Basic)
+# <a name="linq-and-file-directories-visual-basic"></a>LINQ and File Directories (Visual Basic) (LINQ e directory file (Visual Basic))
 Molte operazioni del file system sono essenzialmente query e quindi particolarmente adatte all'approccio LINQ.  
   
  Si noti che le query in questa sezione sono non distruttive. Non vengono usate per modificare il contenuto dei file o delle cartelle originali. Ne consegue la regola per cui le query non dovrebbero causare effetti collaterali. In generale, il codice (incluse le query che eseguono operatori create/update/delete) che modifica i dati di origine deve essere mantenuto separato dal codice che esegue esclusivamente query sui dati.  
   
  Questa sezione contiene i seguenti argomenti:  
   
- [Procedura: eseguire una query per i file con un nome o un attributo specificato (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
+ [Procedura: eseguire una query per i file con un nome o un attributo specificato (Visual Basic)](how-to-query-for-files-with-a-specified-attribute-or-name.md)  
  La procedura illustra come cercare file esaminando una o più proprietà del relativo oggetto <xref:System.IO.FileInfo>.  
   
- [Procedura: raggruppare file per estensione (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
+ [Procedura: raggruppare file per estensione (LINQ) (Visual Basic)](how-to-group-files-by-extension-linq.md)  
  La procedura illustra come restituire gruppi dell'oggetto <xref:System.IO.FileInfo> in base all'estensione del file.  
   
- [Procedura: eseguire una query per il numero totale di byte in un set di cartelle (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)  
+ [Procedura: eseguire una query per il numero totale di byte in un set di cartelle (LINQ) (Visual Basic)](how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)  
  La procedura illustra come restituire il numero totale di byte in tutti i file all'interno di un albero di directory specificato.  
   
- [Procedura: confrontare il contenuto di due cartelle (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s  
+ [Procedura: confrontare il contenuto di due cartelle (LINQ) (Visual Basic)](how-to-compare-the-contents-of-two-folders-linq.md)s  
  La procedura illustra come restituire tutti i file presenti in due cartelle specifiche e tutti i file presenti in una cartella, ma non nell'altra.  
   
- [Procedura: eseguire una query per il file o i file più grandi in un albero di directory (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
+ [Procedura: eseguire una query per trovare il file o i file più grandi in un albero di directory (LINQ) (Visual Basic)](how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
  La procedura illustra come ripristinare il file più grande, il file più piccolo o un numero specificato di file in un albero di directory.  
   
- [Procedura: eseguire una query per File duplicati in un albero di directory (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
+ [Procedura: eseguire una query per File duplicati in un albero di directory (LINQ) (Visual Basic)](how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
  La procedura illustra come raggruppare tutti i nomi file che si verificano in più di una posizione all'interno di un albero di directory specificato. Viene anche illustrato come eseguire confronti più complessi basati su un operatore di confronto personalizzato.  
   
  [Come eseguire una query sul contenuto dei file in una cartella (LINQ) (Visual Basic)](how-to-query-the-contents-of-files-in-a-folder-linq.md)  
@@ -42,4 +42,4 @@ Molte operazioni del file system sono essenzialmente query e quindi particolarme
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)

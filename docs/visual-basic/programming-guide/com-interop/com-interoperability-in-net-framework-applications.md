@@ -6,12 +6,12 @@ helpviewer_keywords:
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: c3567464616d3b0b3f91ff57e8a169aca046c866
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 377958a21886fe0257633ea19417f9a19bd51ff3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452292"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396869"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>Interoperabilità COM nelle applicazioni .NET Framework (Visual Basic)
 
@@ -25,8 +25,8 @@ I collegamenti in questa pagina forniscono informazioni dettagliate sulle intera
 
 | | |
 |---------|---------|
-| [Interoperabilità COM](../../../visual-basic/programming-guide/com-interop/index.md) | Vengono forniti collegamenti ad argomenti relativi all'interoperabilità COM in Visual Basic, inclusi oggetti COM, controlli ActiveX, dll Win32, oggetti gestiti ed ereditarietà di oggetti COM. |
+| [Interoperabilità COM](index.md) | Vengono forniti collegamenti ad argomenti relativi all'interoperabilità COM in Visual Basic, inclusi oggetti COM, controlli ActiveX, dll Win32, oggetti gestiti ed ereditarietà di oggetti COM. |
 | [Interoperabilità con codice non gestito](../../../framework/interop/index.md) | Descrive brevemente alcuni problemi di interazione tra codice gestito e non gestito e fornisce collegamenti per ulteriori studi. |
 | [Wrapper COM](../../../standard/native-interop/com-wrappers.md) | Vengono illustrati i Runtime Callable Wrapper che consentono al codice gestito di chiamare i metodi COM e COM Callable Wrapper che consentono ai client COM di chiamare i metodi dell'oggetto .NET. |
 | [Interoperabilità COM avanzata](../../../framework/interop/index.md) | Vengono forniti collegamenti ad argomenti relativi all'interoperabilità COM rispetto a wrapper, eccezioni, ereditarietà, Threading, eventi, conversioni e marshalling. |
-| [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | Viene illustrato lo strumento che è possibile utilizzare per convertire le definizioni dei tipi presenti in una libreria dei tipi COM in definizioni equivalenti in un assembly Common Language Runtime. |
+| [Tlbimp. exe (utilità di importazione della libreria di tipi)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | Viene illustrato lo strumento che è possibile utilizzare per convertire le definizioni dei tipi presenti in una libreria dei tipi COM in definizioni equivalenti in un assembly Common Language Runtime. |

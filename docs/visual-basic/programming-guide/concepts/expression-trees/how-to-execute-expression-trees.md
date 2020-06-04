@@ -1,15 +1,15 @@
 ---
-title: "Procedura: eseguire strutture ad albero dell'espressione"
+title: 'Procedura: Eseguire alberi delle espressioni'
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-ms.openlocfilehash: 2a2749eaed5279d04b72eb77b066c83de9722fa9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7b7b08ea1a7a1310b1d98876be96f1fa28ecba91
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345997"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375330"
 ---
-# <a name="how-to-execute-expression-trees-visual-basic"></a>Procedura: eseguire alberi delle espressioni (Visual Basic)
+# <a name="how-to-execute-expression-trees-visual-basic"></a>How to: Execute Expression Trees (Visual Basic) (Procedura: Eseguire alberi delle espressioni (Visual Basic))
 In questo argomento viene illustrato come eseguire un albero delle espressioni. L'esecuzione di un albero delle espressioni può restituire un valore o può eseguire solo un'azione, ad esempio la chiamata a un metodo.  
   
  Possono essere eseguite solo gli alberi delle espressioni che rappresentano espressioni lambda. Gli alberi delle espressioni che rappresentano espressioni lambda sono di tipo <xref:System.Linq.Expressions.LambdaExpression> o <xref:System.Linq.Expressions.Expression%601>. Per eseguire gli alberi delle espressioni, chiamare il metodo <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> per creare un delegato eseguibile e quindi richiamare il delegato.  
@@ -48,5 +48,5 @@ MsgBox(result)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [Procedura: modificare alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [Alberi delle espressioni (Visual Basic)](index.md)
+- [How to: Modify Expression Trees (Visual Basic)](how-to-modify-expression-trees.md) (Procedura: Modificare alberi delle espressioni (Visual Basic)).

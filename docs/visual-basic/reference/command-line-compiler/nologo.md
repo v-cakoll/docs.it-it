@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-ms.openlocfilehash: 03dc98c45a894304a67765c3e49cd19bbb089c8c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d1307603ebc06b4eb4c3786f1cd2fb432c0cf636
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74335439"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360462"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
 Evita la visualizzazione del banner sul copyright e dei messaggi informativi durante la compilazione.  
@@ -24,7 +24,7 @@ Evita la visualizzazione del banner sul copyright e dei messaggi informativi dur
 ```  
   
 ## <a name="remarks"></a>Osservazioni  
- Se si specifica `-nologo`, il compilatore non visualizza un banner sul copyright. Per impostazione predefinita, l'opzione `-nologo` non è attiva.  
+ Se si specifica `-nologo` , il compilatore non visualizza un banner sul copyright. Per impostazione predefinita, l'opzione `-nologo` non è attiva.  
   
 > [!NOTE]
 > L' `-nologo` opzione non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
@@ -36,7 +36,7 @@ Evita la visualizzazione del banner sul copyright e dei messaggi informativi dur
 vbc -nologo t2.vb  
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Compilatore della riga di comando di Visual Basic](index.md)
+- [Esempi di righe di comando di compilazione](sample-compilation-command-lines.md)

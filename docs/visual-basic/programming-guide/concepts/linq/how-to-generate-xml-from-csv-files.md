@@ -1,16 +1,16 @@
 ---
-title: 'Procedura: generare XML da file CSV'
+title: 'Procedura: Generare XML da file CSV'
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 79b609c3a706db4c8b4c082fbeaf143632a75033
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 647cab02c730f18629c669c3526520b2a98a86d8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636822"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396610"
 ---
 # <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Procedura: generare XML da file CSV (Visual Basic)
-Questo esempio illustra come usare LINQ (Language-Integrated Query) e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] per generare un file XML da un file con valori delimitati da virgole (CSV).  
+Questo esempio illustra come usare LINQ (Language Integrated Query) e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] per generare un file XML da un file con valori delimitati da virgole (CSV).  
   
 ## <a name="example"></a>Esempio  
  Nel codice seguente viene eseguita una query LINQ su una matrice di stringhe.  
@@ -109,4 +109,4 @@ Console.WriteLine(cust)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Proiezioni e trasformazioni (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Proiezioni e trasformazioni (LINQ to XML) (Visual Basic)](projections-and-transformations-linq-to-xml.md)

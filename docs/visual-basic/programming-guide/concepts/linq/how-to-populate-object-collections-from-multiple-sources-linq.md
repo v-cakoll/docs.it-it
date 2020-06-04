@@ -1,13 +1,13 @@
 ---
-title: 'Procedura: popolare raccolte di oggetti da più origini (LINQ)'
+title: 'Procedura: Popolare le raccolte di oggetti da più origini (LINQ)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 74a2a0f71e575136f1758f72f9a8db72549a9489
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9c6d8ff5165bf886d8aad87b64305819e65361ab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346970"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396519"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Procedura: popolare raccolte di oggetti da più origini (LINQ) (Visual Basic)
 
@@ -18,7 +18,7 @@ In questo esempio viene illustrato come unire dati da origini diverse in una seq
 
 ## <a name="to-create-the-data-file"></a>Per creare il file di dati
 
-- Copiare i file names. csv e scores. csv nella cartella del progetto, come descritto in [procedura: aggiungere contenuto da file non analoghi (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+- Copiare i file names. csv e scores. csv nella cartella del progetto, come descritto in [procedura: aggiungere contenuto da file non analoghi (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Esempio
 
@@ -100,7 +100,7 @@ End Class
 ' The average score of Michael Tucker is 92
 ```
 
-Nella clausola [select clause](../../../../visual-basic/language-reference/queries/select-clause.md) viene utilizzato un inizializzatore di oggetto per creare un'istanza di ogni nuovo oggetto `Student` utilizzando i dati delle due origini.
+Nella clausola [SELECT clausola](../../../language-reference/queries/select-clause.md) viene utilizzato un inizializzatore di oggetto per creare un'istanza di ogni nuovo `Student` oggetto utilizzando i dati delle due origini.
 
 Se non è necessario archiviare i risultati della query, può essere più utile usare i tipi anonimi rispetto ai tipi denominati. I tipi denominati sono necessari se si passano i risultati della query al di fuori del metodo in cui viene eseguita la query. Nell'esempio seguente viene eseguita la stessa attività dell'esempio precedente, ma vengono usati i tipi anonimi anziché i tipi denominati:
 
@@ -130,4 +130,4 @@ Next
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](linq-and-strings.md) (LINQ e le stringhe (Visual Basic))
