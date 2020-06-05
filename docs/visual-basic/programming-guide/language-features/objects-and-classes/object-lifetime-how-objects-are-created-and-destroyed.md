@@ -1,5 +1,5 @@
 ---
-title: 'Durata degli oggetti: come creare ed eliminare definitivamente oggetti'
+title: 'Durata degli oggetti: come creare e distruggere oggetti'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Constructor
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 8d9647fa490077f9f6ef82f30eccc4d5ee271985
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e81e131933e0997756ed4185a3ceb12ad19b78de
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346100"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392883"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Durata degli oggetti: come creare ed eliminare definitivamente oggetti (Visual Basic)
 
@@ -37,11 +37,11 @@ Dopo aver abbandona un ambito, un oggetto viene rilasciato da Common Language Ru
 
 ## <a name="using-constructors-and-destructors"></a>Uso di costruttori e distruttori
 
-È possibile usare costruttori e distruttori per controllare la creazione e l'eliminazione di oggetti. Le procedure `Sub New` e `Sub Finalize` in Visual Basic inizializzare ed eliminare definitivamente oggetti; sostituiscono i metodi `Class_Initialize` e `Class_Terminate` usati in Visual Basic 6,0 e versioni precedenti.
+È possibile usare costruttori e distruttori per controllare la creazione e l'eliminazione di oggetti. Le `Sub New` `Sub Finalize` routine e in Visual Basic inizializzano ed eliminano oggetti; sostituiscono i `Class_Initialize` `Class_Terminate` metodi e usati in Visual Basic 6,0 e versioni precedenti.
 
 ### <a name="sub-new"></a>Sub New
 
-Il costruttore `Sub New` può essere eseguito solo una volta dopo la creazione di una classe. Non può essere chiamato in modo esplicito in alcun punto che non sia la prima riga di codice di un altro costruttore, dalla stessa classe o da una classe derivata. Inoltre, il codice nel metodo `Sub New` viene sempre eseguito prima di qualsiasi altro codice in una classe. Visual Basic crea in modo implicito un costruttore di `Sub New` in fase di esecuzione se non si definisce in modo esplicito una procedura di `Sub New` per una classe.
+Il costruttore `Sub New` può essere eseguito solo una volta dopo la creazione di una classe. Non può essere chiamato in modo esplicito in alcun punto che non sia la prima riga di codice di un altro costruttore, dalla stessa classe o da una classe derivata. Inoltre, il codice nel metodo `Sub New` viene sempre eseguito prima di qualsiasi altro codice in una classe. Visual Basic crea in modo implicito un `Sub New` costruttore in fase di esecuzione se non si definisce in modo esplicito una `Sub New` routine per una classe.
 
 Per creare un costruttore per una classe, creare una routine denominata `Sub New` in qualsiasi punto della definizione della classe. Per creare un costruttore con parametri, specificare i nomi e i tipi di dati degli argomenti su `Sub New` analogamente a come si specificano argomenti per qualsiasi altra routine, come illustrato nel codice seguente:
 
@@ -51,9 +51,9 @@ I costruttori sono spesso in overload, come nell'esempio seguente:
 
 [!code-vb[VbVbalrOOP#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#116)]
 
-Quando si definisce una classe derivata da un'altra classe, la prima riga di un costruttore deve essere una chiamata al costruttore della classe base, a meno che questa disponga di un costruttore accessibile che non accetta parametri. Una chiamata della classe base che contiene questo costruttore sarebbe ad esempio `MyBase.New(s)`. In caso contrario, `MyBase.New` è facoltativo e il runtime Visual Basic lo chiama in modo implicito.
+Quando si definisce una classe derivata da un'altra classe, la prima riga di un costruttore deve essere una chiamata al costruttore della classe base, a meno che questa disponga di un costruttore accessibile che non accetta parametri. Una chiamata della classe base che contiene questo costruttore sarebbe ad esempio `MyBase.New(s)`. In caso contrario, `MyBase.New` è facoltativo e il runtime di Visual Basic lo chiama in modo implicito.
 
-Dopo aver scritto il codice per chiamare il costruttore di un oggetto padre, è possibile aggiungere un codice di inizializzazione alla routine `Sub New`. `Sub New` possibile accettare argomenti quando viene chiamato come costruttore con parametri. Tali parametri vengono passati dalla routine che chiama il costruttore, ad esempio, `Dim AnObject As New ThisClass(X)`.
+Dopo aver scritto il codice per chiamare il costruttore di un oggetto padre, è possibile aggiungere un codice di inizializzazione alla routine `Sub New`. La routine `Sub New` può accettare gli argomenti quando viene chiamata come costruttore con parametri. Tali parametri vengono passati dalla routine che chiama il costruttore, ad esempio, `Dim AnObject As New ThisClass(X)`.
 
 ### <a name="sub-finalize"></a>Sub Finalize
 
@@ -64,14 +64,14 @@ Prima di rilasciare oggetti, CLR richiede automaticamente al metodo `Finalize` g
 
 Il distruttore `Finalize` è un metodo protetto che può essere chiamato solo dalla classe a cui appartiene o dalle classi derivate. Poiché `Finalize` viene chiamato automaticamente dal sistema quando viene eliminato definitivamente un oggetto, si consiglia di non chiamare `Finalize` in modo esplicito dall'esterno dell'implementazione `Finalize` di una classe derivata.
 
-A differenza del metodo `Class_Terminate` che viene eseguito subito dopo aver impostato un oggetto su Nothing, tra l'abbandono dell'ambito da parte di un oggetto e la chiamata del distruttore `Finalize` da parte di Visual Basic si verifica generalmente un ritardo. Visual Basic .NET consente un secondo tipo di distruttore, <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>, che può essere chiamato in modo esplicito in qualsiasi momento per rilasciare immediatamente le risorse.
+A differenza del metodo `Class_Terminate` che viene eseguito subito dopo aver impostato un oggetto su Nothing, tra l'abbandono dell'ambito da parte di un oggetto e la chiamata del distruttore `Finalize` da parte di Visual Basic si verifica generalmente un ritardo. Visual Basic .NET consente un secondo tipo di distruttore, <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> , che può essere chiamato in modo esplicito in qualsiasi momento per rilasciare immediatamente le risorse.
 
 > [!NOTE]
 > Un distruttore `Finalize` non deve generare eccezioni, perché queste non possono essere gestite dall'applicazione e possono provocarne l'interruzione.
 
 ### <a name="how-new-and-finalize-methods-work-in-a-class-hierarchy"></a>Uso dei metodi New e Finalize in una gerarchia di classi
 
-Ogni volta che viene creata un'istanza di una classe, nel Common Language Runtime (CLR) viene effettuato un tentativo di eseguire una routine denominata `New`, se esiste in quell'oggetto. `New` è un tipo di routine denominato `constructor` utilizzato per inizializzare nuovi oggetti prima dell'esecuzione di qualsiasi altro codice in un oggetto. Un costruttore `New` consente di aprire file, collegarsi a database, inizializzare variabili e svolgere ogni altra attività necessaria prima che un oggetto possa essere usato.
+Ogni volta che viene creata un'istanza di una classe, nel Common Language Runtime (CLR) viene effettuato un tentativo di eseguire una routine denominata `New`, se esiste in quell'oggetto. `New` è un tipo di routine chiamato `constructor` che consente di inizializzare nuovi oggetti prima che venga eseguito qualsiasi altro codice in un oggetto. Un costruttore `New` consente di aprire file, collegarsi a database, inizializzare variabili e svolgere ogni altra attività necessaria prima che un oggetto possa essere usato.
 
 Quando viene creata un'istanza di una classe derivata, viene eseguito innanzitutto il costruttore `Sub New` della classe base, seguito dai costruttori delle classi derivate. Nella prima riga del codice di un costruttore `Sub New`, infatti, viene usata la sintassi `MyBase.New()` per chiamare il costruttore della classe immediatamente superiore nella gerarchia delle classi. Viene quindi eseguita la chiamata al costruttore `Sub New` di ogni classe della gerarchia fino al raggiungimento del costruttore della classe base. A quel punto viene eseguito il codice del costruttore della classe base, seguito dal codice del costruttore di tutte le classi derivate. In ultimo viene eseguito il codice delle classi derivate di livello più basso.
 
@@ -85,7 +85,7 @@ Quando un oggetto non è più necessario, prima di liberare la memoria corrispon
 
 Le istanze di classe controllano spesso risorse non gestite da CLR, quali gli handle di Windows e le connessioni al database. È necessario eliminare definitivamente queste risorse nel metodo `Finalize` della classe per consentirne il rilascio quando il Garbage Collector elimina definitivamente l'oggetto. Tuttavia, poiché il Garbage Collector elimina definitivamente gli oggetti solo quando CLR richiede la disponibilità di maggiore memoria, è possibile che le risorse vengano rilasciate solo molto tempo dopo l'abbandono dell'ambito da parte dell'oggetto.
 
-A supporto del Garbage Collector, le classi possono implementare l'interfaccia <xref:System.IDisposable> per fornire un sistema di gestione attiva delle risorse di sistema. <xref:System.IDisposable> dispone di un metodo, <xref:System.IDisposable.Dispose%2A>, che i client devono chiamare al termine dell'utilizzo di un oggetto. È possibile usare il metodo <xref:System.IDisposable.Dispose%2A> per rilasciare immediatamente risorse ed eseguire attività quali la chiusura di file e le connessioni al database. A differenza del distruttore `Finalize`, il metodo <xref:System.IDisposable.Dispose%2A> non viene chiamato automaticamente. Quando si vogliono rilasciare immediatamente risorse, è necessario che i client di una classe chiamino in modo esplicito il metodo <xref:System.IDisposable.Dispose%2A>.
+A supporto del Garbage Collector, le classi possono implementare l'interfaccia <xref:System.IDisposable> per fornire un sistema di gestione attiva delle risorse di sistema. <xref:System.IDisposable> dispone di un metodo, <xref:System.IDisposable.Dispose%2A> che i client chiamano dopo aver usato un oggetto. È possibile usare il metodo <xref:System.IDisposable.Dispose%2A> per rilasciare immediatamente risorse ed eseguire attività quali la chiusura di file e le connessioni al database. A differenza del distruttore `Finalize`, il metodo <xref:System.IDisposable.Dispose%2A> non viene chiamato automaticamente. Quando si vogliono rilasciare immediatamente risorse, è necessario che i client di una classe chiamino in modo esplicito il metodo <xref:System.IDisposable.Dispose%2A>.
 
 ### <a name="implementing-idisposable"></a>Implementazione di IDisposable
 
@@ -159,6 +159,6 @@ Un'altra differenza tra i sistemi di Garbage Collection riguarda l'uso di `Nothi
 
 - <xref:System.IDisposable.Dispose%2A>
 - [Inizializzazione e terminazione di componenti](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
-- [Operatore New](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [Operatore New](../../../language-reference/operators/new-operator.md)
 - [Pulizia delle risorse non gestite](../../../../standard/garbage-collection/unmanaged.md)
-- [Nothing](../../../../visual-basic/language-reference/nothing.md)
+- [Nothing](../../../language-reference/nothing.md)

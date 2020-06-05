@@ -7,52 +7,52 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: db86704fdc8120ccac5f4489c80a515834ad888f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 001f6fbfae2467ea0af5e98ca041b694d1e7b8f9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350366"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372440"
 ---
 # <a name="myforms-object"></a>Oggetto My.Forms
 
 Fornisce le proprietà per l'accesso a un'istanza di ogni Windows Form dichiarato nel progetto corrente.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-L'oggetto `My.Forms` fornisce un'istanza di ogni form nel progetto corrente. Il nome della proprietà è uguale al nome del modulo a cui accede la proprietà.
+L' `My.Forms` oggetto fornisce un'istanza di ogni form nel progetto corrente. Il nome della proprietà è uguale al nome del modulo a cui accede la proprietà.
 
-È possibile accedere ai moduli forniti dall'oggetto `My.Forms` usando il nome del form, senza qualifica. Poiché il nome della proprietà è uguale al nome del tipo del form, questo consente di accedere a un form come se disponesse di un'istanza predefinita. Ad esempio, `My.Forms.Form1.Show` equivale a `Form1.Show`.
+È possibile accedere ai moduli forniti dall' `My.Forms` oggetto utilizzando il nome del form, senza qualifica. Poiché il nome della proprietà è uguale al nome del tipo del form, questo consente di accedere a un form come se disponesse di un'istanza predefinita. Ad esempio, `My.Forms.Form1.Show` equivale a `Form1.Show`.
 
-L'oggetto `My.Forms` espone solo i form associati al progetto corrente. Non fornisce l'accesso ai moduli dichiarati in dll a cui si fa riferimento. Per accedere a un modulo fornito da una DLL, è necessario utilizzare il nome completo del modulo, scritto come *dllname*. *FormName*.
+L' `My.Forms` oggetto espone solo i form associati al progetto corrente. Non fornisce l'accesso ai moduli dichiarati in dll a cui si fa riferimento. Per accedere a un modulo fornito da una DLL, è necessario utilizzare il nome completo del modulo, scritto come *dllname*. *FormName*.
 
-È possibile usare la proprietà <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> per ottenere una raccolta di tutti i form aperti dell'applicazione.
+È possibile usare la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> proprietà per ottenere una raccolta di tutti i form aperti dell'applicazione.
 
 L'oggetto e le relative proprietà sono disponibili solo per le applicazioni Windows.
 
 ## <a name="properties"></a>Proprietà
 
-Ogni proprietà dell'oggetto `My.Forms` fornisce l'accesso a un'istanza di un form nel progetto corrente. Il nome della proprietà è uguale al nome del modulo a cui accede la proprietà e il tipo della proprietà è uguale al tipo del form.
+Ogni proprietà dell' `My.Forms` oggetto fornisce l'accesso a un'istanza di un form nel progetto corrente. Il nome della proprietà è uguale al nome del modulo a cui accede la proprietà e il tipo della proprietà è uguale al tipo del form.
 
 > [!NOTE]
-> Se si verifica un conflitto di nomi, il nome della proprietà per accedere a un modulo è *RootNamespace*_*namespace*\_*FormName*. Si considerino, ad esempio, due moduli denominati `Form1.`se uno di questi form si trova nello spazio dei nomi radice `WindowsApplication1` e nello spazio dei nomi `Namespace1`, si accederà a tale modulo tramite `My.Forms.WindowsApplication1_Namespace1_Form1`.
+> Se si verifica un conflitto di nomi, il nome della proprietà per accedere a un modulo è *RootNamespace*_*spazio dei nomi* \_ *FormName*. Si considerino, ad esempio, due moduli denominati `Form1.` se uno di questi moduli è nello spazio dei nomi radice `WindowsApplication1` e nello spazio dei nomi `Namespace1` , si accederà a tale modulo tramite `My.Forms.WindowsApplication1_Namespace1_Form1` .
 
-L'oggetto `My.Forms` consente di accedere all'istanza del modulo principale dell'applicazione creato all'avvio. Per tutti gli altri form, l'oggetto `My.Forms` crea una nuova istanza del form quando vi si accede e la archivia. I tentativi successivi di accesso a tale proprietà restituiscono tale istanza del form.
+L' `My.Forms` oggetto consente di accedere all'istanza del modulo principale dell'applicazione creato all'avvio. Per tutti gli altri form, l' `My.Forms` oggetto crea una nuova istanza del form quando vi si accede e la archivia. I tentativi successivi di accesso a tale proprietà restituiscono tale istanza del form.
 
-È possibile eliminare un form assegnando `Nothing` alla proprietà per il form. Il setter della proprietà chiama il metodo <xref:System.Windows.Forms.Form.Close%2A> del form, quindi assegna `Nothing` al valore archiviato. Se si assegna un valore diverso da `Nothing` alla proprietà, il setter genera un'eccezione <xref:System.ArgumentException>.
+È possibile eliminare un form assegnando `Nothing` alla proprietà per il form. Il setter della proprietà chiama il <xref:System.Windows.Forms.Form.Close%2A> metodo del form, quindi assegna il `Nothing` valore archiviato. Se si assegna un valore diverso `Nothing` da alla proprietà, il setter genera un' <xref:System.ArgumentException> eccezione.
 
-È possibile verificare se una proprietà dell'oggetto `My.Forms` archivia un'istanza del form utilizzando l'operatore `Is` o `IsNot`. È possibile utilizzare tali operatori per verificare se il valore della proprietà è `Nothing`.
+È possibile verificare se una proprietà dell' `My.Forms` oggetto archivia un'istanza del form utilizzando l' `Is` `IsNot` operatore OR. È possibile utilizzare gli operatori per verificare se il valore della proprietà è `Nothing` .
 
 > [!NOTE]
-> In genere, l'operatore `Is` o `IsNot` deve leggere il valore della proprietà per eseguire il confronto. Tuttavia, se la proprietà archivia attualmente `Nothing`, la proprietà crea una nuova istanza del form e quindi restituisce tale istanza. Tuttavia, il compilatore Visual Basic considera le proprietà dell'oggetto `My.Forms` in modo diverso e consente all'operatore `Is` o `IsNot` di controllare lo stato della proprietà senza modificarne il valore.
+> In genere, `Is` l' `IsNot` operatore o deve leggere il valore della proprietà per eseguire il confronto. Tuttavia, se la proprietà è attualmente archiviata `Nothing` , la proprietà crea una nuova istanza del form e quindi restituisce tale istanza. Tuttavia, il compilatore Visual Basic considera le proprietà dell' `My.Forms` oggetto in modo diverso e consente `Is` all' `IsNot` operatore OR di controllare lo stato della proprietà senza modificarne il valore.
 
 ## <a name="example"></a>Esempio
 
-Questo esempio Mostra come modificare il titolo del modulo predefinito `SidebarMenu`.
+In questo esempio viene modificato il titolo del `SidebarMenu` modulo predefinito.
 
 [!code-vb[VbVbalrMyForms#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyForms/VB/Class1.vb#2)]
 
-Per il corretto funzionamento di questo esempio, il progetto deve avere un modulo denominato `SidebarMenu`.
+Per il corretto funzionamento di questo esempio, il progetto deve avere un formato denominato `SidebarMenu` .
 
 Questo codice funzionerà solo in un progetto di applicazione Windows.
 
@@ -75,7 +75,7 @@ Questo codice funzionerà solo in un progetto di applicazione Windows.
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Form.Close%2A>
-- [Oggetti](../../../visual-basic/language-reference/objects/index.md)
-- [Operatore Is](../../../visual-basic/language-reference/operators/is-operator.md)
-- [Operatore IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Accesso ai form di un'applicazione](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)
+- [Oggetti](index.md)
+- [Operatore Is](../operators/is-operator.md)
+- [Operatore IsNot](../operators/isnot-operator.md)
+- [Accesso ai moduli dell'applicazione](../../developing-apps/programming/accessing-application-forms.md)

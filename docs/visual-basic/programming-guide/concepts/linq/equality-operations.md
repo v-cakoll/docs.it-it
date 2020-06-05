@@ -1,13 +1,13 @@
 ---
-title: Operatori di uguaglianza
+title: Operazioni di uguaglianza
 ms.date: 07/20/2015
 ms.assetid: 1f2fcf87-6f52-4830-b9af-861f9ad999dc
-ms.openlocfilehash: 8895c0f75a8df816372ed1faa98fd128ecd9311a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2c4518b402881fa35406b16144de8c3e360b91fd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346830"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375239"
 ---
 # <a name="equality-operations-visual-basic"></a>Operazioni di uguaglianza (Visual Basic)
 Due sequenze i cui elementi corrispondenti sono uguali e che hanno lo stesso numero di elementi sono considerate uguali.  
@@ -21,5 +21,5 @@ Due sequenze i cui elementi corrispondenti sono uguali e che hanno lo stesso num
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Linq>
-- [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Procedura: confrontare il contenuto di due cartelle (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)
+- [Panoramica degli operatori query standard (Visual Basic)](standard-query-operators-overview.md)
+- [Procedura: confrontare il contenuto di due cartelle (LINQ) (Visual Basic)](how-to-compare-the-contents-of-two-folders-linq.md)
