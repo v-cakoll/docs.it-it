@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: e3af5185d2c2106e6a696a6569ef59897d0f1fe1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 61b138c0851c747ed30eedc10cb882cc3b03c4d4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332998"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392610"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>Procedura: creare valori letterali XML (Visual Basic)
 È possibile creare un documento, un frammento o un elemento XML direttamente nel codice usando un valore letterale XML. Negli esempi di questo argomento viene illustrato come creare un elemento XML con tre elementi figlio e come creare un documento XML.  
   
- È anche possibile usare le API [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] per creare oggetti [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Per altre informazioni, vedere <xref:System.Xml.Linq.XElement>.  
+ È anche possibile usare le [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API per creare [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetti. Per altre informazioni, vedere <xref:System.Xml.Linq.XElement>.  
   
 ### <a name="to-create-an-xml-element"></a>Per creare un elemento XML  
   
@@ -54,7 +54,7 @@ ms.locfileid: "74332998"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [Creazione di XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [Valore letterale elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [Valore letterale di documento XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+- [XML](index.md)
+- [Creazione di XML in Visual Basic](creating-xml.md)
+- [Valore letterale di elemento XML](../../../language-reference/xml-literals/xml-element-literal.md)
+- [Valore letterale di documento XML](../../../language-reference/xml-literals/xml-document-literal.md)
