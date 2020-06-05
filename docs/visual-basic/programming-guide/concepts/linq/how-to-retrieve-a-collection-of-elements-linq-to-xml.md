@@ -1,13 +1,13 @@
 ---
-title: 'Procedura: recuperare una raccolta di elementi (LINQ to XML)'
+title: 'Procedura: Recuperare una raccolta di elementi (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2269f9de-8fb9-4666-b8a1-a4e754fa6a81
-ms.openlocfilehash: 592ef68206df59bc848644d0a62bf0efdb10609e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 13aa9ce10df1e23ba5191b523db0272aa52ea581
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347590"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397869"
 ---
 # <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a>Procedura: recuperare una raccolta di elementi (LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato il metodo <xref:System.Xml.Linq.XContainer.Elements%2A>, che consente di recuperare una raccolta degli elementi figlio di un elemento.  
@@ -15,7 +15,7 @@ In questo argomento viene illustrato il metodo <xref:System.Xml.Linq.XContainer.
 ## <a name="example"></a>Esempio  
  In questo esempio vengono scorsi gli elementi figlio dell'elemento `purchaseOrder`.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: tipico ordine di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: ordine di acquisto tipico (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -39,4 +39,4 @@ Name: Items
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Assi LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [Assi LINQ to XML (Visual Basic)](linq-to-xml-axes.md)

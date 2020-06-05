@@ -21,12 +21,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: f505755caeb9cc3cfeeb1ba83b6de15f48314103
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0884b71c24742286e695e720add9d00dd4bfe52b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351168"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404589"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>Istruzione If...Then...Else (Visual Basic) |
 
@@ -50,7 +50,7 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
 
 ## <a name="quick-links-to-example-code"></a>Collegamenti rapidi al codice di esempio
 
-Questo articolo include diversi esempi che illustrano gli usi dell'istruzione `If`...`Then`...`Else`:
+Questo articolo include diversi esempi che illustrano gli usi del `If` ... `Then` ...`Else` istruzione
 
 - [Esempio di sintassi su più righe](#multi-line)
 - [Esempio di sintassi annidata](#nested)
@@ -59,54 +59,54 @@ Questo articolo include diversi esempi che illustrano gli usi dell'istruzione `I
 ## <a name="parts"></a>Parti
 
 `condition` \
-Obbligatoria. Espressione. Deve restituire `True` o `False`o a un tipo di dati convertibile in modo implicito in `Boolean`.
+Obbligatorio. Espressione. Deve restituire `True` o oppure `False` a un tipo di dati convertibile in modo implicito in `Boolean` .
 
-Se l'espressione è una variabile di `Boolean` [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) che non restituisce [alcun](../../../visual-basic/language-reference/nothing.md)valore, la condizione viene considerata come se l'espressione venisse `False`e i blocchi di `ElseIf` vengono valutati se esistono o se il `Else` blocco viene eseguito se esiste.
+Se l'espressione è una variabile [Nullable](../../programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` che non restituisce [alcun](../nothing.md)valore, la condizione viene considerata come se l'espressione è `False` e i `ElseIf` blocchi vengono valutati se esistono oppure il `Else` blocco viene eseguito se esistente.
 
 `Then` \
 Obbligatorio nella sintassi a riga singola; facoltativo nella sintassi su più righe.
 
 `statements` \
-Facoltativa. Una o più istruzioni che seguono `If`...`Then` che vengono eseguite se `condition` restituisce `True`.
+Facoltativa. Una o più istruzioni `If` che seguono... `Then` che vengono eseguite se `condition` restituisce `True` .
 
 `elseifcondition` \
-Obbligatorio se è presente `ElseIf`. Espressione. Deve restituire `True` o `False`o a un tipo di dati convertibile in modo implicito in `Boolean`.
+Obbligatorio se `ElseIf` è presente. Espressione. Deve restituire `True` o oppure `False` a un tipo di dati convertibile in modo implicito in `Boolean` .
 
 `elseifstatements` \
-Facoltativa. Una o più istruzioni che seguono `ElseIf`...`Then` che vengono eseguite se `elseifcondition` restituisce `True`.
+Facoltativa. Una o più istruzioni `ElseIf` che seguono... `Then` che vengono eseguite se `elseifcondition` restituisce `True` .
 
 `elsestatements` \
-Facoltativa. Una o più istruzioni eseguite se nessuna `condition` o espressione `elseifcondition` precedente restituisce `True`.
+Facoltativa. Una o più istruzioni eseguite se nessuna `condition` espressione o precedente `elseifcondition` restituisce `True` .
 
 `End If` \
-Termina la versione multiriga del blocco `If`...`Then`...`Else`.
+Termina la versione multiriga di `If` ... `Then` ...`Else` blocco.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 ### <a name="multiline-syntax"></a>Sintassi su più righe
 
-Quando viene rilevata un'istruzione `If`...`Then`...`Else`, `condition` viene testato. Se `condition` è `True`, vengono eseguite le istruzioni che seguono `Then`. Se `condition` è `False`, ogni istruzione `ElseIf`, se presente, viene valutata in ordine. Quando viene individuato un `True` `elseifcondition`, vengono eseguite le istruzioni immediatamente successive al `ElseIf` associato. Se nessuna `elseifcondition` restituisce `True`o se non sono presenti istruzioni `ElseIf`, vengono eseguite le istruzioni che seguono `Else`. Dopo aver eseguito le istruzioni che seguono `Then`, `ElseIf`o `Else`, l'esecuzione continua con l'istruzione che segue `End If`.
+Quando un `If` ... `Then` ...`Else` viene rilevata l'istruzione, `condition` viene testata. Se `condition` è `True` , vengono eseguite le istruzioni seguenti `Then` . Se `condition` è `False` , ogni `ElseIf` istruzione, se presente, viene valutata in ordine. Quando `True` `elseifcondition` viene trovato un oggetto, vengono eseguite le istruzioni immediatamente successive all'oggetto associato `ElseIf` . Se nessun `elseifcondition` `True` oggetto restituisce o se non sono presenti `ElseIf` istruzioni, verranno eseguite le istruzioni seguenti `Else` . Dopo l'esecuzione delle istruzioni che seguono `Then` , `ElseIf` o `Else` , l'esecuzione continua con l'istruzione seguente `End If` .
 
-Le clausole `ElseIf` e `Else` sono entrambe facoltative. In un'istruzione `If`...`Then`...`Else` è possibile avere un numero di clausole di `ElseIf`, ma non è possibile visualizzare una clausola `ElseIf` dopo una clausola `Else`. le istruzioni `If`...`Then`...`Else` possono essere annidate l'una all'altra.
+Le `ElseIf` `Else` clausole e sono entrambe facoltative. È possibile avere tutte le `ElseIf` clausole desiderate in `If` ... `Then` ...`Else` ma non `ElseIf` può comparire dopo una `Else` clausola. `If`...`Then` ...`Else` le istruzioni possono essere nidificate l'una all'altra.
 
-Nella sintassi su più righe, l'istruzione `If` deve essere l'unica istruzione nella prima riga. Le istruzioni `ElseIf`, `Else`e `End If` possono essere precedute solo da un'etichetta di riga. Il blocco `If`...`Then`...`Else` deve terminare con un'istruzione `End If`.
+Nella sintassi su più righe, l' `If` istruzione deve essere l'unica istruzione nella prima riga. Le `ElseIf` `Else` istruzioni, e `End If` possono essere precedute solo da un'etichetta di riga. .. `If` . `Then` ...`Else` il blocco deve terminare con un' `End If` istruzione.
 
 > [!TIP]
-> L'oggetto [Select... L'istruzione case](../../../visual-basic/language-reference/statements/select-case-statement.md) può essere più utile quando si valuta una singola espressione con diversi valori possibili.
+> L'oggetto [Select... L'istruzione case](select-case-statement.md) può essere più utile quando si valuta una singola espressione con diversi valori possibili.
 
 ### <a name="single-line-syntax"></a>Sintassi a riga singola
 
 È possibile utilizzare la sintassi a riga singola per una singola condizione con codice da eseguire se è true. Tuttavia, la sintassi a più righe fornisce maggiore struttura e flessibilità ed è più facile da leggere, gestire ed eseguire il debug.
 
-Di seguito viene esaminata la parola chiave `Then` per determinare se un'istruzione è una `If`a riga singola. Se non viene visualizzato alcun commento dopo `Then` sulla stessa riga, l'istruzione viene considerata come un'istruzione `If` a riga singola. Se `Then` è assente, deve essere l'inizio di un `If`a più righe...`Then`...`Else`.
+`Then`Di seguito viene esaminata la parola chiave per determinare se un'istruzione è a riga singola `If` . Se viene visualizzato un valore diverso da un commento dopo `Then` sulla stessa riga, l'istruzione viene considerata come un'istruzione a riga singola `If` . Se `Then` è assente, deve essere l'inizio di una riga a più righe `If` ... `Then` ...`Else`.
 
-Nella sintassi a riga singola è possibile avere più istruzioni eseguite come risultato di una decisione `If`...`Then`. Tutte le istruzioni devono trovarsi sulla stessa riga ed essere separate da due punti.
+Nella sintassi a riga singola è possibile eseguire più istruzioni come risultato di una `If` decisione... `Then` . Tutte le istruzioni devono trovarsi sulla stessa riga ed essere separate da due punti.
 
 ## <a name="multiline-syntax-example"></a>Esempio di sintassi su più righe
 
 <a name="multi-line"></a>
 
-Nell'esempio seguente viene illustrato l'utilizzo della sintassi su più righe dell'istruzione `If`...`Then`...`Else`.
+Nell'esempio seguente viene illustrato l'utilizzo della sintassi multiriga di `If` ... `Then` ...`Else` istruzione.
 
 [!code-vb[VbVbalrStatements#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#101)]
 
@@ -114,7 +114,7 @@ Nell'esempio seguente viene illustrato l'utilizzo della sintassi su più righe d
 
 <a name="nested"></a>
 
-Nell'esempio seguente sono contenute le istruzioni annidate `If`...`Then`...`Else`.
+L'esempio seguente contiene un oggetto annidato `If` ... `Then` ...`Else` istruzioni.
 
 [!code-vb[VbVbalrStatements#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#102)]
 
@@ -128,9 +128,9 @@ Nell'esempio seguente sono contenute le istruzioni annidate `If`...`Then`...`Els
 
 - <xref:Microsoft.VisualBasic.Interaction.Choose%2A>
 - <xref:Microsoft.VisualBasic.Interaction.Switch%2A>
-- [Direttive #If...Then...#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
-- [Istruzione Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)
-- [Strutture di controllo annidate](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [Strutture decisionali](../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
-- [Operatori logici e bit per bit in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
-- [Operatore If](../../../visual-basic/language-reference/operators/if-operator.md)
+- [#If... Direttive then... #Else](../directives/if-then-else-directives.md)
+- [Istruzione Select...Case](select-case-statement.md)
+- [Strutture di controllo annidate](../../programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Strutture decisionali](../../programming-guide/language-features/control-flow/decision-structures.md)
+- [Operatori logici e bit per bit in Visual Basic](../../programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Operatore If](../operators/if-operator.md)

@@ -1,13 +1,13 @@
 ---
-title: 'Procedura: flusso di frammenti XML da un XmlReader'
+title: 'Procedura: Flusso di frammenti XML da un XmlReader'
 ms.date: 07/20/2015
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
-ms.openlocfilehash: 42d3edb390035d20f506388974000aa204312109
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: ff22625767c4e0752ca19d5a315395934b566230
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636796"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397700"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Procedura: flusso di frammenti XML da un XmlReader (Visual Basic)
 Quando è necessario elaborare file XML di grandi dimensioni, potrebbe risultare impossibile caricare in memoria l'intero albero XML. In questo argomento viene illustrato come generare il flusso di frammenti tramite <xref:System.Xml.XmlReader>.  
@@ -18,9 +18,9 @@ Quando è necessario elaborare file XML di grandi dimensioni, potrebbe risultare
   
  Se si desidera creare un albero parziale, è possibile creare un'istanza di <xref:System.Xml.XmlReader>, posizionare il lettore sul nodo da convertire in un albero <xref:System.Xml.Linq.XElement> e quindi creare l'oggetto <xref:System.Xml.Linq.XElement>.  
   
- L'argomento [procedura: eseguire il flusso di frammenti XML con accesso a informazioni di intestazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) contiene informazioni e un esempio su come trasmettere un documento più complesso.  
+ L'argomento [procedura: eseguire il flusso di frammenti XML con accesso a informazioni di intestazione (Visual Basic)](how-to-stream-xml-fragments-with-access-to-header-information.md) contiene informazioni e un esempio su come trasmettere un documento più complesso.  
   
- L'argomento [procedura: eseguire la trasformazione del flusso di documenti XML di grandi dimensioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) contiene un esempio di utilizzo di LINQ to XML per trasformare documenti XML di dimensioni estremamente grandi mantenendo un footprint di memoria ridotto.  
+ L'argomento [procedura: eseguire la trasformazione del flusso di documenti XML di grandi dimensioni (Visual Basic)](how-to-perform-streaming-transform-of-large-xml-documents.md) contiene un esempio di utilizzo di LINQ to XML per trasformare documenti XML di dimensioni estremamente grandi mantenendo un footprint di memoria ridotto.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene creato un metodo dell'asse personalizzato. È possibile eseguire query su di esso utilizzando una query LINQ. Il metodo dell'asse personalizzato `StreamRootChildDoc` è progettato specificamente per leggere un documento contenente un elemento `Child` ripetuto.  
@@ -136,7 +136,7 @@ Public Class StreamChildEnumerator
 End Class  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```console  
 bbb  
@@ -147,5 +147,5 @@ ccc
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura dettagliata: implementazione di IEnumerable (Of T) in Visual Basic](../../../../visual-basic/programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)
-- [Analisi di XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Procedura dettagliata: implementazione di IEnumerable(Of T) in Visual Basic](../../language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)
+- [Analisi di XML (Visual Basic)](parsing-xml.md)

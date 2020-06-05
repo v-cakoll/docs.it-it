@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: bdee0a91360580b156c1734ef4c82139b18ce2b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f9e45cdf4507840f62e32678f4c0a7be2c0be054
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74336728"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398292"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Procedura dettagliata: modifica della posizione di inserimento delle informazioni con My.Application.Log (Visual Basic)
 
@@ -18,9 +18,9 @@ ms.locfileid: "74336728"
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-L'oggetto `Log` può scrivere le informazioni in diversi listener di log. Prima di modificare le configurazioni dei listener di log è necessario determinarne la configurazione corrente. Per altre informazioni, vedere [Procedura dettagliata: Individuazione della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
+L'oggetto `Log` può scrivere le informazioni in diversi listener di log. Prima di modificare le configurazioni dei listener di log è necessario determinarne la configurazione corrente. Per altre informazioni, vedere [Procedura dettagliata: Individuazione della posizione di inserimento delle informazioni con My.Application.Log](walkthrough-determining-where-my-application-log-writes-information.md).
 
-Si consiglia di consultare la [Procedura: Scrivere informazioni sugli eventi in un file di testo](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md) o [Procedura: Scrivere nel registro eventi di un'applicazione](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md).
+Si consiglia di consultare la [Procedura: Scrivere informazioni sugli eventi in un file di testo](how-to-write-event-information-to-a-text-file.md) o [Procedura: Scrivere nel registro eventi di un'applicazione](how-to-write-to-an-application-event-log.md).
 
 ### <a name="to-add-listeners"></a>Per aggiungere listener
 
@@ -34,7 +34,7 @@ Si consiglia di consultare la [Procedura: Scrivere informazioni sugli eventi in 
 
     2. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **File di configurazione dell'applicazione**.
 
-    3. Fare clic su **Aggiungi**.
+    3. Scegliere **Aggiungi**.
 
 2. Individuare la sezione `<listeners>` all'interno della sezione `<source>` con l'attributo `name` "DefaultSource" che si trova nella sezione `<sources>` . La sezione `<sources>` si trova nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .
 
@@ -173,7 +173,7 @@ Si consiglia di consultare la [Procedura: Scrivere informazioni sugli eventi in 
 
 1. Per assicurarsi di usare il tipo di listener di log appropriato, usare il nome di tipo completo e il nome di assembly sicuro. La sintassi di un tipo con nome sicuro è la seguente:
 
-     \<*nome tipo*>, \<*nome assembly*>, \<*numero versione*>, \<*impostazioni cultura*>, \<*nome sicuro*>
+     \<*type name*>, \<*assembly name*>, \<*version number*>, \<*culture*>, \<*strong name*>
 
 2. L'esempio di codice seguente mostra come determinare il tipo con nome sicuro per un tipo completo, in questo caso "System.Diagnostics.FileLogTraceListener".
 
@@ -183,11 +183,11 @@ Si consiglia di consultare la [Procedura: Scrivere informazioni sugli eventi in 
 
      `Microsoft.VisualBasic.Logging.FileLogTraceListener, Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>
 - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>
-- [Procedura: Scrivere informazioni sugli eventi in un file di testo](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)
-- [Procedura: Scrivere nel log eventi di un'applicazione](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
+- [Procedura: Scrivere informazioni sugli eventi in un file di testo](how-to-write-event-information-to-a-text-file.md)
+- [Procedura: Scrivere nel log eventi di un'applicazione](how-to-write-to-an-application-event-log.md)
