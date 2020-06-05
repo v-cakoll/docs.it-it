@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
-ms.openlocfilehash: d983f5f6183c33141079ed35171f7a73f254450f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: de101309fa1edaaddc3defc5759d9293fbef684c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74340201"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388543"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Procedura: chiamare una routine di overload (Visual Basic)
 Il vantaggio dell'overload di una stored procedure è la flessibilità della chiamata. Il codice chiamante può ottenere le informazioni necessarie per passare alla routine e quindi chiamare un solo nome di routine, indipendentemente dagli argomenti che passano.  
@@ -26,7 +26,7 @@ Il vantaggio dell'overload di una stored procedure è la flessibilità della chi
   
 3. Non è necessario determinare la versione della procedura da chiamare. Visual Basic passa il controllo alla versione corrispondente all'elenco di argomenti.  
   
-     Nell'esempio seguente viene chiamata la procedura `post` dichiarata in procedura [: definire più versioni di una routine](./how-to-define-multiple-versions-of-a-procedure.md). Ottiene l'identificazione del cliente, determina se è un `String` o un `Integer`, quindi in entrambi i casi chiama la stessa procedura.  
+     Nell'esempio seguente viene chiamata la `post` procedura dichiarata in [procedura: definire più versioni di una routine](./how-to-define-multiple-versions-of-a-procedure.md). Ottiene l'identificazione del cliente, determina se è un `String` oggetto o `Integer` , quindi in entrambi i casi chiama la stessa procedura.  
   
      [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]  
   
@@ -34,13 +34,13 @@ Il vantaggio dell'overload di una stored procedure è la flessibilità della chi
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Routine](./index.md)
+- [Procedure](./index.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Overload della routine](./procedure-overloading.md)
 - [Risoluzione dei problemi relativi alle routine](./troubleshooting-procedures.md)
-- [Procedura: Definire più versioni di una routine](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Procedura: Eseguire l'overload di una routine che accetta parametri facoltativi](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Procedura: Eseguire l'overload di una routine che accetta un numero indefinito di parametri](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Procedura: definire più versioni di una routine](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Procedura: eseguire l'overload di una routine che accetta parametri facoltativi](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Procedura: eseguire l'overload di una routine che accetta un numero indefinito di parametri](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Considerazioni sull'overload di routine](./considerations-in-overloading-procedures.md)
 - [Risoluzione dell'overload](./overload-resolution.md)
-- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overload](../../../language-reference/modifiers/overloads.md)
