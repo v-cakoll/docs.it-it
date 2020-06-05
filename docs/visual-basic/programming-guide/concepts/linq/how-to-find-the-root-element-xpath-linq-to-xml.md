@@ -1,13 +1,13 @@
 ---
-title: "Procedura: trovare l'elemento radice (XPath-LINQ to XML)"
+title: "Procedura: Trovare l'elemento radice (XPath-LINQ to XML)"
 ms.date: 07/20/2015
 ms.assetid: 72c3aed5-9522-4454-a876-2070aad13f2e
-ms.openlocfilehash: 0e381c074a935a0cda5bd74bc456b8d7d9a495a8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d1a507f97954c62672689bae719f251fed9a298b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344605"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364513"
 ---
 # <a name="how-to-find-the-root-element-xpath-linq-to-xml-visual-basic"></a>Procedura: trovare l'elemento radice (XPath-LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come ottenere l'elemento radice con XPath e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -19,7 +19,7 @@ In questo argomento viene illustrato come ottenere l'elemento radice con XPath e
 ## <a name="example"></a>Esempio  
  In questo esempio viene trovato l'elemento radice.  
   
- Questo esempio usa il documento XML seguente: [File XML di esempio: più ordini di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: più ordini di acquisto (LINQ to XML)](sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -38,7 +38,7 @@ End If
 Console.WriteLine(el1.Name)  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```console  
 Results are identical  
@@ -47,4 +47,4 @@ PurchaseOrders
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML per gli utenti di XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

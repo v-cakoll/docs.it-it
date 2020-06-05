@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: 0460015b44971fa638dba47183690ffcc89ca55f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 28ae7d6fd51170aa822072fc2f5357443f51a353
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351419"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392093"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (modificatore generico) (Visual Basic)
 
-Per i parametri di tipo generico, la parola chiave `Out` specifica che il tipo è covariante.
+Per i parametri di tipo generico, la `Out` parola chiave specifica che il tipo è covariante.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 La covarianza consente di usare un tipo più derivato di quello specificato dal parametro generico. Ciò consente la conversione implicita di classi che implementano interfacce varianti e la conversione implicita di tipi delegati.
 
@@ -64,4 +64,4 @@ L'esempio seguente illustra come dichiarare, creare un'istanza e richiamare un d
 ## <a name="see-also"></a>Vedere anche
 
 - [Varianza nelle interfacce generiche](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [In](in-generic-modifier.md)
