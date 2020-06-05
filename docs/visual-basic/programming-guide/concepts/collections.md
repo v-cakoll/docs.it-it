@@ -2,18 +2,18 @@
 title: Raccolte
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: d27761ba7a955d1dc8843ad168a82a9c9c27a6f6
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: f264a0f9ee15707daf4bece5651b9f5f07ebbc39
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202452"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400655"
 ---
 # <a name="collections-visual-basic"></a>Raccolte (Visual Basic)
 
 Per molte applicazioni è utile creare e gestire gruppi di oggetti correlati. È possibile raggruppare gli oggetti in due modi: creando matrici di oggetti e creando raccolte di oggetti.
 
-Le matrici sono estremamente utili per la creazione e l'uso di un numero fisso di oggetti fortemente tipizzati. Per altre informazioni sulle matrici, vedere [Matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+Le matrici sono estremamente utili per la creazione e l'uso di un numero fisso di oggetti fortemente tipizzati. Per altre informazioni sulle matrici, vedere [Matrici](../language-features/arrays/index.md).
 
 Le raccolte consentono di lavorare in modo più flessibile con gruppi di oggetti. A differenza delle matrici, il gruppo di oggetti con cui si lavora può aumentare e diminuire in modo dinamico in base alle esigenze dell'applicazione. Per alcune raccolte è possibile assegnare una chiave a qualsiasi oggetto inserito nella raccolta in modo da recuperare rapidamente l'oggetto usando la chiave.
 
@@ -22,7 +22,7 @@ Una raccolta è una classe. Di conseguenza, prima di poter aggiungere elementi a
 Se la raccolta contiene elementi di un solo tipo di dati, è possibile usare una delle classi dello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>. In una raccolta generica viene imposta l'indipendenza dai tipi, in modo da impedire che vengano aggiunti altri tipi di dati alla raccolta. Quando si recupera un elemento da una raccolta generica, non è necessario determinarne il tipo di dati né convertirlo.
 
 > [!NOTE]
-> Per gli esempi in questo argomento, includere le istruzioni [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) per gli `System.Collections.Generic` `System.Linq` spazi dei nomi e.
+> Per gli esempi in questo argomento, includere le istruzioni [Imports](../../language-reference/statements/imports-statement-net-namespace-and-type.md) per gli `System.Collections.Generic` `System.Linq` spazi dei nomi e.
 
 <a name="BKMK_SimpleCollection"></a>
 
@@ -30,7 +30,7 @@ Se la raccolta contiene elementi di un solo tipo di dati, è possibile usare una
 
 Gli esempi in questa sezione usano la classe generica <xref:System.Collections.Generic.List%601>, che consente di usare un elenco di oggetti fortemente tipizzato.
 
-Nell'esempio seguente viene creato un elenco di stringhe e quindi viene eseguita un'iterazione nelle stringhe utilizzando un [per ogni... Istruzione successiva](../../../visual-basic/language-reference/statements/for-each-next-statement.md) .
+Nell'esempio seguente viene creato un elenco di stringhe e quindi viene eseguita un'iterazione nelle stringhe utilizzando un [per ogni... Istruzione successiva](../../language-reference/statements/for-each-next-statement.md) .
 
 ```vb
 ' Create a list of strings.
@@ -47,7 +47,7 @@ Next
 'Output: chinook coho pink sockeye
 ```
 
-Se il contenuto di una raccolta è noto in anticipo, si può usare un *inizializzatore di raccolta* per inizializzare la raccolta. Per altre informazioni, vedere [Inizializzatori di insieme](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).
+Se il contenuto di una raccolta è noto in anticipo, si può usare un *inizializzatore di raccolta* per inizializzare la raccolta. Per altre informazioni, vedere [Inizializzatori di insieme](../language-features/collection-initializers/index.md).
 
 L'esempio seguente è identico all'esempio precedente, ma usa un inizializzatore di raccolta per aggiungere elementi alla raccolta.
 
@@ -63,7 +63,7 @@ Next
 'Output: chinook coho pink sockeye
 ```
 
-È possibile usare un [per... Istruzione successiva](../../../visual-basic/language-reference/statements/for-next-statement.md) anziché un' `For Each` istruzione per scorrere una raccolta. Questo è possibile mediante l'accesso agli elementi della raccolta dalla posizione di indice. L'indice degli elementi inizia da 0 e termina in corrispondenza del numero di elementi meno 1.
+È possibile usare un [per... Istruzione successiva](../../language-reference/statements/for-next-statement.md) anziché un' `For Each` istruzione per scorrere una raccolta. Questo è possibile mediante l'accesso agli elementi della raccolta dalla posizione di indice. L'indice degli elementi inizia da 0 e termina in corrispondenza del numero di elementi meno 1.
 
 Nell'esempio seguente l'iterazione negli elementi di una raccolta avviene mediante `For…Next` anziché mediante `For Each`.
 
@@ -95,7 +95,7 @@ Next
 'Output: chinook pink sockeye
 ```
 
-Nell'esempio seguente vengono rimossi elementi da un elenco generico. Anziché un' `For Each` istruzione, un oggetto [per... ](../../../visual-basic/language-reference/statements/for-next-statement.md)Viene utilizzata l'istruzione successiva che esegue l'iterazione in ordine decrescente. Ciò è necessario perché il metodo <xref:System.Collections.Generic.List%601.RemoveAt%2A> fa sì che gli elementi dopo un elemento rimosso abbiano un valore di indice inferiore.
+Nell'esempio seguente vengono rimossi elementi da un elenco generico. Anziché un' `For Each` istruzione, un oggetto [per... ](../../language-reference/statements/for-next-statement.md)Viene utilizzata l'istruzione successiva che esegue l'iterazione in ordine decrescente. Ciò è necessario perché il metodo <xref:System.Collections.Generic.List%601.RemoveAt%2A> fa sì che gli elementi dopo un elemento rimosso abbiano un valore di indice inferiore.
 
 ```vb
 Dim numbers As New List(Of Integer) From
@@ -173,7 +173,7 @@ In questa sezione sono descritte alcune classi di raccolte comuni:
 
 La tabella seguente elenca alcune delle classi di uso frequente dello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>:
 
-|Classe|Descrizione|
+|Class|Descrizione|
 |---|---|
 |<xref:System.Collections.Generic.Dictionary%602>|Rappresenta una raccolta di coppie chiave/valore organizzate in base alla chiave.|
 |<xref:System.Collections.Generic.List%601>|Rappresenta un elenco di oggetti accessibile in base all'indice. Fornisce metodi per la ricerca, l'ordinamento e la modifica degli elenchi.|
@@ -203,7 +203,7 @@ Quando possibile, usare le raccolte generiche degli spazi dei nomi <xref:System.
 
 La tabella seguente elenca alcune classi di uso frequente nello spazio dei nomi `System.Collections`:
 
-|Classe|Descrizione|
+|Class|Descrizione|
 |---|---|
 |<xref:System.Collections.ArrayList>|Rappresenta una matrice di oggetti le cui dimensioni sono incrementate in modo dinamico in base alle esigenze.|
 |<xref:System.Collections.Hashtable>|Rappresenta una raccolta di coppie chiave/valore organizzate in base al codice hash della chiave.|
@@ -330,7 +330,7 @@ End Sub
 
 ## <a name="using-linq-to-access-a-collection"></a>Uso di LINQ per accedere a una raccolta
 
-È possibile usare LINQ (Language-Integrated Query) per accedere alle raccolte. Le query LINQ forniscono funzionalità di filtro, ordinamento e raggruppamento. Per ulteriori informazioni, vedere [Introduzione con LINQ in Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).
+È possibile usare LINQ (Language-Integrated Query) per accedere alle raccolte. Le query LINQ forniscono funzionalità di filtro, ordinamento e raggruppamento. Per ulteriori informazioni, vedere [Introduzione con LINQ in Visual Basic](linq/getting-started-with-linq.md).
 
 Nell'esempio seguente viene eseguita una query LINQ su un oggetto `List` generico. La query LINQ restituisce una raccolta diversa che contiene i risultati.
 
@@ -538,13 +538,13 @@ End Class
 
 ## <a name="iterators"></a>Iterators
 
-Un *iteratore* viene usato per eseguire un'iterazione personalizzata in una raccolta. Un iteratore può essere un metodo o una funzione di accesso `get`. Un iteratore usa un'istruzione [yield](../../../visual-basic/language-reference/statements/yield-statement.md) per restituire ogni elemento della raccolta uno alla volta.
+Un *iteratore* viene usato per eseguire un'iterazione personalizzata in una raccolta. Un iteratore può essere un metodo o una funzione di accesso `get`. Un iteratore usa un'istruzione [yield](../../language-reference/statements/yield-statement.md) per restituire ogni elemento della raccolta uno alla volta.
 
-Si chiama un iteratore usando un [per ogni... Istruzione successiva](../../../visual-basic/language-reference/statements/for-each-next-statement.md) . Ogni iterazione del ciclo `For Each` chiama l'iteratore. Quando si raggiunge un'istruzione `Yield` nell'iteratore, viene restituita un'espressione e viene mantenuta la posizione corrente nel codice. L'esecuzione viene ripresa a partire da quella posizione la volta successiva che viene chiamato l'iteratore.
+Si chiama un iteratore usando un [per ogni... Istruzione successiva](../../language-reference/statements/for-each-next-statement.md) . Ogni iterazione del ciclo `For Each` chiama l'iteratore. Quando si raggiunge un'istruzione `Yield` nell'iteratore, viene restituita un'espressione e viene mantenuta la posizione corrente nel codice. L'esecuzione viene ripresa a partire da quella posizione la volta successiva che viene chiamato l'iteratore.
 
-Per ulteriori informazioni, vedere [iteratori (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md).
+Per ulteriori informazioni, vedere [iteratori (Visual Basic)](iterators.md).
 
-Nell'esempio seguente viene usato un metodo iteratore. Il metodo iteratore ha un' `Yield` istruzione che si trova all'interno di un oggetto [per... Ciclo successivo](../../../visual-basic/language-reference/statements/for-next-statement.md) . Nel metodo `ListEvenNumbers` ogni iterazione del corpo dell'istruzione `For Each` crea una chiamata al metodo iteratore, che procede all'istruzione `Yield` successiva.
+Nell'esempio seguente viene usato un metodo iteratore. Il metodo iteratore ha un' `Yield` istruzione che si trova all'interno di un oggetto [per... Ciclo successivo](../../language-reference/statements/for-next-statement.md) . Nel metodo `ListEvenNumbers` ogni iterazione del corpo dell'istruzione `For Each` crea una chiamata al metodo iteratore, che procede all'istruzione `Yield` successiva.
 
 ```vb
 Public Sub ListEvenNumbers()
@@ -570,10 +570,10 @@ End Function
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Inizializzatori di insieme](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
-- [Concetti di programmazione (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
-- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [Inizializzatori di insieme](../language-features/collection-initializers/index.md)
+- [Concetti di programmazione (Visual Basic)](index.md)
+- [Option Strict Statement](../../language-reference/statements/option-strict-statement.md)
+- [LINQ to Objects (Visual Basic)](linq/linq-to-objects.md)
 - [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/introduction-to-plinq.md)
 - [Raccolte e strutture di dati](../../../standard/collections/index.md)
 - [Selezione di una classe Collection](../../../standard/collections/selecting-a-collection-class.md)

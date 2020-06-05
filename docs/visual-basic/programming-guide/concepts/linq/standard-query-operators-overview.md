@@ -2,12 +2,12 @@
 title: Cenni preliminari sugli operatori di query standard
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 0f68d175b526a9da86853272c47b5e7d7b4a5992
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 7c229a576f6695282473352d6253d2c699c76604
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201088"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406781"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>Panoramica degli operatori query standard (Visual Basic)
 
@@ -66,7 +66,7 @@ MsgBox(output.ToString())
 
 ## <a name="query-expression-syntax"></a>Sintassi delle espressioni di query
 
-Alcuni degli operatori di query standard usati più di frequente dispongono di sintassi dedicata delle parole chiave per i linguaggi C# e Visual Basic che consente di chiamare gli operatori come parte di un'*espressione di * *query*. Per ulteriori informazioni sugli operatori di query standard che hanno parole chiave dedicate e le relative sintassi corrispondenti, vedere [sintassi delle espressioni di query per gli operatori di query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).
+Alcuni degli operatori di query standard usati più di frequente dispongono di sintassi dedicata delle parole chiave per i linguaggi C# e Visual Basic che consente di chiamare gli operatori come parte di un'*espressione di * *query*. Per ulteriori informazioni sugli operatori di query standard che hanno parole chiave dedicate e le relative sintassi corrispondenti, vedere [sintassi delle espressioni di query per gli operatori di query standard (Visual Basic)](query-expression-syntax-for-standard-query-operators.md).
 
 ## <a name="extending-the-standard-query-operators"></a>Estensione degli operatori di query standard
 
@@ -76,39 +76,39 @@ Alcuni degli operatori di query standard usati più di frequente dispongono di s
 
 I collegamenti riportati di seguito consentono di passare ad argomenti che forniscono informazioni aggiuntive sui vari operatori di query standard in base alla funzionalità.
 
-- [Ordinamento dei dati](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
+- [Ordinamento dei dati](sorting-data.md)
 
-- [Operazioni set (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)
+- [Operazioni set (Visual Basic)](set-operations.md)
 
-- [Filtraggio dei dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)
+- [Filtraggio dei dati (Visual Basic)](filtering-data.md)
 
-- [Operazioni del quantificatore (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)
+- [Operazioni del quantificatore (Visual Basic)](quantifier-operations.md)
 
-- [Operazioni di proiezione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Operazioni di proiezione (Visual Basic)](projection-operations.md)
 
-- [Partizionamento dei dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)
+- [Partizionamento dei dati (Visual Basic)](partitioning-data.md)
 
-- [Operazioni di join (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)
+- [Operazioni di join (Visual Basic)](join-operations.md)
 
-- [Raggruppamento di dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)
+- [Raggruppamento di dati (Visual Basic)](grouping-data.md)
 
-- [Operazioni di generazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/generation-operations.md)
+- [Operazioni di generazione (Visual Basic)](generation-operations.md)
 
-- [Operazioni di uguaglianza (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/equality-operations.md)
+- [Operazioni di uguaglianza (Visual Basic)](equality-operations.md)
 
-- [Operazioni sugli elementi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)
+- [Operazioni sugli elementi (Visual Basic)](element-operations.md)
 
-- [Conversione di tipi di dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)
+- [Conversione di tipi di dati (Visual Basic)](converting-data-types.md)
 
-- [Operazioni di concatenazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concatenation-operations.md)
+- [Operazioni di concatenazione (Visual Basic)](concatenation-operations.md)
 
-- [Operazioni di aggregazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)
+- [Operazioni di aggregazione (Visual Basic)](aggregation-operations.md)
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
-- [Introduzione a LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
-- [Sintassi delle espressioni di query per gli operatori di query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [Classificazione degli operatori di query standard in base alla modalità di esecuzione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
-- [Metodi di estensione](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [Introduzione a LINQ (Visual Basic)](introduction-to-linq.md)
+- [Sintassi delle espressioni di query per gli operatori di query standard (Visual Basic)](query-expression-syntax-for-standard-query-operators.md)
+- [Classificazione degli operatori di query standard in base alla modalità di esecuzione (Visual Basic)](classification-of-standard-query-operators-by-manner-of-execution.md)
+- [Metodi di estensione](../../language-features/procedures/extension-methods.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /quiet compiler option [Visual Basic]
 - quiet compiler option [Visual Basic]
 ms.assetid: 5d77fa23-4c50-4708-8535-649912b098e8
-ms.openlocfilehash: 6e773c60469e8426956c92a5aa377741ba5af4d3
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: f894ed6a778e026ffd3976a63fe3b677eb6a9557
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005286"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400526"
 ---
 # <a name="-quiet"></a>-quiet
 
@@ -30,7 +30,7 @@ Impedisce al compilatore di visualizzare codice per avvisi ed errori relativi al
 
 Per impostazione predefinita, l'opzione `-quiet` non è attiva. Quando il compilatore segnala un errore o un avviso correlato alla sintassi, restituisce anche la riga dal codice sorgente. Per le applicazioni che analizzano l'output del compilatore, potrebbe essere più pratico per il compilatore restituire solo il testo della diagnostica.
 
-Nell'esempio seguente viene `Module1` restituito un errore che include il codice sorgente quando viene compilato `-quiet`senza.
+Nell'esempio seguente viene `Module1` restituito un errore che include il codice sorgente quando viene compilato senza `-quiet` .
 
 ```vb
 Module Module1
@@ -49,7 +49,7 @@ C:\projects\vb2.vb(3) : error BC30451: 'x' is not declared. It may be inaccessib
         ~
 ```
 
-Compilato con `-quiet`, il compilatore restituisce solo quanto segue:
+Compilato con `-quiet` , il compilatore restituisce solo quanto segue:
 
 ```console
 E:\test\t2.vb(3) : error BC30451: Name 'x' is not declared.
@@ -66,7 +66,7 @@ Il codice seguente compila `T2.vb` e non Visualizza il codice per la diagnostica
 vbc -quiet t2.vb
 ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Compilatore della riga di comando di Visual Basic](index.md)
+- [Esempi di righe di comando di compilazione](sample-compilation-command-lines.md)

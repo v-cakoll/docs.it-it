@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: e56529919945558df178e18a83a895a79bfe4919
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 98aeb5699fdd5e5e538a205acd37436019c3fc03
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512719"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363046"
 ---
-# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Il tipo per la variabile\<' variablename >' non verrà dedotto perché è associato a un campo in un ambito di inclusione
+# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Il tipo della variabile '\<variablename>' non verrà dedotto perché associato a un ambito di inclusione
 
-Il tipo per la variabile\<' variablename >' non verrà dedotto perché è associato a un campo in un ambito di inclusione. Modificare il nome di '\<VariableName >' o usare il nome completo (ad esempio,' me. VariableName ' o ' MyBase. VariableName ').
+Il tipo per la variabile ' \<variablename> ' non verrà dedotto perché è associato a un campo in un ambito di inclusione. Modificare il nome di ' \<variablename> ' o usare il nome completo (ad esempio,' me. VariableName ' o ' MyBase. VariableName ').
 
-Una variabile di controllo loop nel codice ha lo stesso nome di un campo della classe o di un altro ambito di inclusione. Poiché la variabile di controllo viene utilizzata senza `As` una clausola, viene associata al campo nell'ambito di inclusione e il compilatore non crea una nuova variabile o ne deduce il tipo.
+Una variabile di controllo loop nel codice ha lo stesso nome di un campo della classe o di un altro ambito di inclusione. Poiché la variabile di controllo viene utilizzata senza una `As` clausola, viene associata al campo nell'ambito di inclusione e il compilatore non crea una nuova variabile o ne deduce il tipo.
 
-Nell'esempio `Index`seguente, la variabile di controllo `For` nell'istruzione è associata `Customer` al `Index` campo nella classe. Il compilatore non crea una nuova variabile per la variabile `Index` di controllo o ne deduce il tipo.
+Nell'esempio seguente, `Index` la variabile di controllo nell' `For` istruzione è associata al `Index` campo nella `Customer` classe. Il compilatore non crea una nuova variabile per la variabile di controllo `Index` o ne deduce il tipo.
 
 ```vb
 Class Customer
@@ -51,13 +51,13 @@ Per impostazione predefinita, si tratta di un messaggio di avviso. Per informazi
   For I = 1 To 10
   ```
 
-- Chiarire che la variabile di controllo del ciclo viene associata al campo della classe `Me.` anteponendo il nome della variabile.
+- Chiarire che la variabile di controllo del ciclo viene associata al campo della classe anteponendo `Me.` il nome della variabile.
 
   ```vb
   For Me.Index = 1 To 10
   ```
 
-- Anziché basarsi sull'inferenza del tipo locale, usare `As` una clausola per specificare un tipo per la variabile di controllo del ciclo.
+- Anziché basarsi sull'inferenza del tipo locale, usare una `As` clausola per specificare un tipo per la variabile di controllo del ciclo.
 
   ```vb
   For Index As Integer = 1 To 10
@@ -84,9 +84,9 @@ End Class
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzione Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [Istruzione For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [Istruzione For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [Procedura: Fare riferimento all'istanza corrente di un oggetto](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
-- [Inferenza del tipo di variabile locale](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Me, My, MyBase e MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [Option Infer (istruzione)](../statements/option-infer-statement.md)
+- [Istruzione For Each...Next](../statements/for-each-next-statement.md)
+- [Istruzione For...Next](../statements/for-next-statement.md)
+- [Procedura: fare riferimento all'istanza corrente di un oggetto](../../programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
+- [Inferenza del tipo di variabile locale](../../programming-guide/language-features/variables/local-type-inference.md)
+- [Me, My, MyBase e MyClass](../../programming-guide/program-structure/me-my-mybase-and-myclass.md)

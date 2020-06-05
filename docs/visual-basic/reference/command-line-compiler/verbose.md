@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -verbose compiler option [Visual Basic]
 - /verbose compiler option [Visual Basic]
 ms.assetid: d1aec0c1-0261-421d-9adc-5b13756100be
-ms.openlocfilehash: 8c5bc1d2ce331b8fe9461f91d64fbeab5a070b59
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 405b557568a736de3ddc3b51e265261222613131
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004979"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403031"
 ---
 # <a name="-verbose"></a>-verbose
 Fa in modo che il compilatore generi messaggi di errore e di stato dettagliati.  
@@ -24,9 +24,9 @@ Fa in modo che il compilatore generi messaggi di errore e di stato dettagliati.
   
 ## <a name="arguments"></a>Argomenti  
  `+` &#124; `-`  
- Facoltativo. Specificare `-verbose` equivale a specificare `-verbose+`, che determina la generazione di messaggi dettagliati da parte del compilatore. Il valore predefinito per questa opzione `-verbose-`è.  
+ Facoltativa. Specificare `-verbose` equivale `-verbose+` a specificare, che determina la generazione di messaggi dettagliati da parte del compilatore. Il valore predefinito per questa opzione è `-verbose-` .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L' `-verbose` opzione Visualizza informazioni sul numero totale di errori emessi dal compilatore, segnala gli assembly caricati da un modulo e Visualizza i file attualmente in fase di compilazione.  
   
 > [!NOTE]
@@ -39,7 +39,7 @@ Fa in modo che il compilatore generi messaggi di errore e di stato dettagliati.
 vbc -verbose in.vb  
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Compilatore della riga di comando di Visual Basic](index.md)
+- [Esempi di righe di comando di compilazione](sample-compilation-command-lines.md)
