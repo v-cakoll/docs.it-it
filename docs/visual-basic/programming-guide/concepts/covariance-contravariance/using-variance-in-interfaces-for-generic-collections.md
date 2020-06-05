@@ -1,13 +1,13 @@
 ---
-title: Utilizzo della varianza nelle interfacce per le raccolte generiche
+title: Uso della varianza nelle interfacce per le raccolte generiche
 ms.date: 07/20/2015
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
-ms.openlocfilehash: 6ee133dfd61d7d7a88243ca592642ff21e0c2223
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b762ce42215f9b24371313446637e95962677bfb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349015"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375641"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>Uso della varianza nelle interfacce per le raccolte generiche (Visual Basic)
 
@@ -15,7 +15,7 @@ Un'interfaccia covariante consente ai propri metodi di restituire più tipi deri
 
 In .NET Framework 4 diverse interfacce già esistenti sono diventate covarianti e controvarianti. Tra queste sono inclusi i tipi  <xref:System.Collections.Generic.IEnumerable%601> e <xref:System.IComparable%601>. In questo modo è possibile riutilizzare i metodi che funzionano con raccolte generiche di tipi di base per le raccolte di tipi derivati.
 
-Per un elenco di interfacce variant nella .NET Framework, vedere [varianza nelle interfacce generiche (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
+Per un elenco di interfacce variant nella .NET Framework, vedere [varianza nelle interfacce generiche (Visual Basic)](variance-in-generic-interfaces.md).
 
 ## <a name="converting-generic-collections"></a>Convertire le raccolte generiche
 
@@ -114,4 +114,4 @@ End Sub
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Varianza nelle interfacce generiche (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Varianza nelle interfacce generiche (Visual Basic)](variance-in-generic-interfaces.md)

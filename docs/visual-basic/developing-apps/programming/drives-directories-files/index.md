@@ -9,12 +9,12 @@ helpviewer_keywords:
 - files [Visual Basic], accessing
 - directories [Visual Studio], processing
 ms.assetid: f1db14c8-a4fd-4d0b-8323-c7cb29d688c2
-ms.openlocfilehash: 790cf5aa2d3fde779fcc24c0c9f1fc9c4c42331b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b69c65621f3849b07bd31f569fc4ae9fe04b50a6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74333954"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411564"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Elaborazione di unità, directory e file (Visual Basic)
 
@@ -22,21 +22,21 @@ ms.locfileid: "74333954"
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
 
- [Accesso ai file con Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)  
+ [Accesso ai file con Visual Basic](file-access.md)  
  Descrive come usare l'oggetto `My.Computer.FileSystem` per lavorare con file, unità e cartelle.  
   
- [Nozioni fondamentali sul file system e sulla funzionalità di I/O di file di .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)  
+ [Nozioni fondamentali sul file system e sulla funzionalità di I/O di file di .NET Framework (Visual Basic)](basics-of-net-framework-file-io-and-the-file-system.md)  
  Offre una panoramica dei concetti relativi alla funzionalità di I/O di file in .NET Framework, inclusi flussi, spazio di memorizzazione isolato, eventi di file, attributi di file e accesso ai file.  
   
- [Procedura dettagliata: modifica di file mediante i metodi .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ [Procedura dettagliata: Modifica di file con i metodi .NET Framework](walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  Descrive come usare .NET Framework per modificare file e cartelle.  
   
- [Procedura dettagliata: Modifica di file e directory in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ [Procedura dettagliata: Modifica di file e directory in Visual Basic](walkthrough-manipulating-files-and-directories.md)  
  Descrive come usare l'oggetto `My.Computer.FileSystem` per modificare file e cartelle.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
 
- [Struttura del programma e convenzioni del codice](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
+ [Struttura del programma e convenzioni del codice](../../../programming-guide/program-structure/program-structure-and-code-conventions.md)  
  Offre le linee guida relative alla struttura fisica e all'aspetto dei programmi.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  

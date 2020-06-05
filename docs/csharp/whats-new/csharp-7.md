@@ -3,18 +3,18 @@ title: Novità di C# 7.0 - Guida a C#
 description: Panoramica delle nuove funzionalità nella versione 7.0 del linguaggio C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 1291de95b88b3de16fb94fb376fb4153dd4a5862
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: e78d680e19709bf3dd854531d5d9f6b7d6464f49
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102671"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392249"
 ---
 # <a name="whats-new-in-c-70"></a>Novità di C# 7.0
 
 C# 7.0 aggiunge diverse nuove funzionalità al linguaggio C#:
 
-- [`out`Variabili](#out-variables)
+- [`out`variabili](#out-variables)
   - È possibile dichiarare valori `out` inline come argomenti per il metodo in cui vengono usati.
 - [Tuple](#tuples)
   - È possibile creare tipi leggeri e senza nome che contengono più campi pubblici. I compilatori e gli strumenti dell'IDE comprendono la semantica di questi tipi.
@@ -22,7 +22,7 @@ C# 7.0 aggiunge diverse nuove funzionalità al linguaggio C#:
   - Le variabili discard sono variabili temporanee di sola scrittura usate nelle assegnazioni quando non si è interessati al valore assegnato. Sono utili soprattutto per la decostruzione di tuple e tipi definiti dall'utente, nonché per la chiamata di metodi con i parametri `out`.
 - [Criteri di ricerca](#pattern-matching)
   - È possibile creare una logica di salto condizionato basata su tipi e valori arbitrari dei membri di tali tipi.
-- [`ref`gente del posto e ritorni](#ref-locals-and-returns)
+- [`ref`variabili locali e restituzione](#ref-locals-and-returns)
   - Le variabili locali del metodo e i valori restituiti possono essere riferimenti ad altre opzioni di memorizzazione.
 - [Funzioni locali](#local-functions)
   - È possibile annidare funzioni all'interno di altre funzioni per limitarne l'ambito e visibilità.
@@ -70,7 +70,7 @@ I campi non vengono convalidati e non è possibile definire i propri metodi
 
 [!code-csharp[NamedTuple](~/samples/snippets/csharp/new-in-7/program.cs#NamedTuple "Named tuple")]
 
-La tupla `namedLetters` contiene campi detti `Alpha` e `Beta`. Tali nomi esistono solo in fase di compilazione e non vengono mantenuti, ad esempio, quando si esamina la tupla tramite reflection in fase di esecuzione.
+La tupla `namedLetters` contiene campi detti `Alpha` e `Beta`. Tali nomi sono disponibili solo in fase di compilazione e non vengono conservati, ad esempio quando si esamina la tupla utilizzando la reflection in fase di esecuzione.
 
 In un'assegnazione di tupla è anche possibile specificare i nomi dei campi sul lato destro dell'assegnazione:
 
@@ -114,7 +114,7 @@ Le espressioni di criteri di ricerca estendono questo concetto in modo che sia p
 
 I criteri di ricerca supportano le espressioni `is` e le espressioni `switch`. Ognuno consente di esaminare un oggetto e le relative proprietà per determinare se l'oggetto soddisfa il criterio ricercato. Usare la parola chiave `when` per specificare regole aggiuntive per il modello.
 
-L'espressione `is` di modello estende [ `is` l'operatore](../language-reference/keywords/is.md#pattern-matching-with-is) familiare per eseguire una query su un oggetto sul relativo tipo e assegnare il risultato in un'istruzione. Il codice seguente controlla se una variabile è un `int` e in tal caso lo aggiunge alla somma corrente:
+L' `is` espressione del criterio estende l' [ `is` operatore](../language-reference/keywords/is.md#pattern-matching-with-is) familiare per eseguire una query su un oggetto relativo al tipo e assegnare il risultato in un'unica istruzione. Il codice seguente controlla se una variabile è un `int` e in tal caso lo aggiunge alla somma corrente:
 
 ```csharp
 if (input is int count)
@@ -211,7 +211,7 @@ La stessa tecnica può essere usata con i metodi `async` per garantire che le ec
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> Alcune delle progettazioni supportate dalle funzioni locali possono essere eseguite anche utilizzando *le espressioni lambda*. Per altre informazioni, vedere [Funzioni locali e espressioni lambda](../programming-guide/classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions).
+> Alcune delle progettazioni supportate dalle funzioni locali possono essere eseguite anche usando le *espressioni lambda*. Per ulteriori informazioni, vedere [funzioni locali rispetto alle espressioni lambda](../programming-guide/classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions).
 
 ## <a name="more-expression-bodied-members"></a>Più membri con corpo di espressione
 
@@ -236,12 +236,12 @@ Questa aggiunta facilita la scrittura di codice basato sulle espressioni. Non so
 
 La restituzione di un oggetto `Task` dai metodi asincroni può introdurre colli di bottiglia delle prestazioni in determinati percorsi. `Task` è un tipo di riferimento, quindi usarlo significa allocare un oggetto. Nei casi in cui un metodo dichiarato con il modificatore `async` restituisce un risultato memorizzato nella cache o viene completato in modo sincrono, le allocazioni aggiuntive possono diventare impegnative in termini di tempo nelle sezioni di codice critiche per le prestazioni. Possono diventare onerose se si verificano in cicli ridotti.
 
-La nuova funzionalità del linguaggio significa che i tipi restituiti dal metodo asincrono non sono limitati a `Task`, `Task<T>` e `void`. Il tipo restituito deve comunque essere conforme al modello asincrono ovvero deve essere accessibile un metodo `GetAwaiter`. Come esempio concreto, il `ValueTask` tipo è stato aggiunto a .NET per utilizzare questa nuova funzionalità del linguaggio:As one concrete example, the type has been added to .NET to make use of this new language feature:
+La nuova funzionalità del linguaggio significa che i tipi restituiti dal metodo asincrono non sono limitati a `Task`, `Task<T>` e `void`. Il tipo restituito deve comunque essere conforme al modello asincrono ovvero deve essere accessibile un metodo `GetAwaiter`. Come esempio concreto, il `ValueTask` tipo è stato aggiunto a .NET per usare questa nuova funzionalità del linguaggio:
 
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 
 > [!NOTE]
-> È necessario aggiungere il [`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) pacchetto NuGet <xref:System.Threading.Tasks.ValueTask%601> per usare il tipo.
+> È necessario aggiungere il pacchetto NuGet per [`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) usare il <xref:System.Threading.Tasks.ValueTask%601> tipo.
 
 Questo miglioramento è particolarmente utile perché consente agli autori di librerie di evitare l'allocazione di un `Task` in codice critico per le prestazioni.
 

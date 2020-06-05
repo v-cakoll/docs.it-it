@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 7bbfa6b2238458d3248da830cf9d6ac36551b431
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 492b37460c05ffbc82e020facb354be22706f8d3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507035"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396259"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipi di puntatori (Guida per programmatori C#)
 
@@ -53,7 +53,7 @@ L'espressione `*myVariable` indica la variabile `int` individuata all'indirizzo 
 
 Gli argomenti [Istruzione fixed](../../language-reference/keywords/fixed-statement.md) e [Conversioni di puntatori](./pointer-conversions.md) includono diversi esempi di puntatori. L'esempio seguente usa la parola chiave `unsafe` e l'istruzione `fixed` e mostra come incrementare un puntatore interno.  È possibile incollare il codice nella funzione Main di un'applicazione console per eseguirlo. Questi esempi devono essere compilati con il set di opzioni del compilatore [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md).
 
-[!code-csharp[Using pointer types](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#5)]
+[!code-csharp[Using pointer types](snippets/FixedKeywordExamples.cs#5)]
 
 Non è possibile applicare l'operatore di riferimento indiretto a un puntatore di tipo `void*`. È tuttavia possibile eseguire un cast per convertire un puntatore void in qualsiasi altro tipo e viceversa.
 
@@ -73,7 +73,7 @@ Nella tabella riportata di seguito sono elencati gli operatori e le istruzioni c
 |`+` e `-`|Utilizza l'aritmetica dei puntatori.|
 |`==`, `!=`, `<`, `>`, `<=` e `>=`|Confronta puntatori.|
 |[`stackalloc`](../../language-reference/operators/stackalloc.md)|Alloca memoria nello stack.|
-|[`fixed`affermazione](../../language-reference/keywords/fixed-statement.md)|Corregge temporaneamente una variabile per consentire di trovarne l'indirizzo.|
+|[`fixed`istruzione](../../language-reference/keywords/fixed-statement.md)|Corregge temporaneamente una variabile per consentire di trovarne l'indirizzo.|
 
 Per altre informazioni sugli operatori correlati ai puntatori, vedere [Operatori correlati ai puntatori](../../language-reference/operators/pointer-related-operators.md).
 
@@ -83,9 +83,9 @@ Per altre informazioni, vedere la sezione [Tipi puntatore](~/_csharplang/spec/un
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida alla programmazione in C](../index.md)
+- [Guida per programmatori C#](../index.md)
 - [Codice unsafe e puntatori](index.md)
 - [Conversioni di puntatori](pointer-conversions.md)
 - [Tipi riferimento](../../language-reference/keywords/reference-types.md)
 - [Tipi valore](../../language-reference/builtin-types/value-types.md)
-- [Pericoloso](../../language-reference/keywords/unsafe.md)
+- [unsafe](../../language-reference/keywords/unsafe.md)

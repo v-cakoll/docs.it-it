@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 278219edb1bb5d1c0bb015611d69cbe4ae70014b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 91152771a4ef5ec74a7408511ccc2afe28dd442e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343838"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415466"
 ---
 # <a name="const-directive"></a>Direttiva #Const
 
@@ -35,16 +35,16 @@ Definisce le costanti del compilatore condizionale per Visual Basic.
 ## <a name="parts"></a>Parti  
 
  `constname`  
- Obbligatoria. Nome della costante da definire.  
+ Obbligatorio. Nome della costante da definire.  
   
  `expression`  
- Obbligatoria. Valore letterale, altra costante del compilatore condizionale o qualsiasi combinazione che includa tutti gli operatori aritmetici o logici eccetto `Is`.  
+ Obbligatorio. Valore letterale, altra costante del compilatore condizionale o qualsiasi combinazione che includa tutti gli operatori aritmetici o logici eccetto `Is` .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 
- Le costanti del compilatore condizionale sono sempre private per il file in cui sono visualizzate. Non è possibile creare costanti del compilatore pubbliche usando la direttiva `#Const`; è possibile crearli solo nell'interfaccia utente o con l'opzione del compilatore `/define`.  
+ Le costanti del compilatore condizionale sono sempre private per il file in cui sono visualizzate. Non è possibile creare costanti del compilatore pubbliche usando la `#Const` direttiva. è possibile crearle solo nell'interfaccia utente o con l' `/define` opzione del compilatore.  
   
- È possibile utilizzare solo le costanti e i valori letterali del compilatore condizionale in `expression`. L'uso di una costante standard definita con `Const` causa un errore. Viceversa, è possibile utilizzare le costanti definite con la parola chiave `#Const` solo per la compilazione condizionale. Le costanti possono anche essere indefinite, nel qual caso hanno il valore `Nothing`.  
+ È possibile utilizzare solo le costanti del compilatore condizionale e i valori letterali in `expression` . L'uso di una costante standard definita con `Const` causa un errore. Viceversa, è possibile utilizzare le costanti definite con la `#Const` parola chiave solo per la compilazione condizionale. Le costanti possono anche essere indefinite, nel qual caso hanno un valore di `Nothing` .  
   
 ## <a name="example"></a>Esempio  
 
@@ -54,8 +54,8 @@ Definisce le costanti del compilatore condizionale per Visual Basic.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
-- [Direttive #If...Then...#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
-- [Istruzione Const](../../../visual-basic/language-reference/statements/const-statement.md)
-- [Compilazione condizionale](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
-- [Istruzione If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [-define (Visual Basic)](../../reference/command-line-compiler/define.md)
+- [#If... Direttive then... #Else](if-then-else-directives.md)
+- [Istruzione Const](../statements/const-statement.md)
+- [Compilazione condizionale](../../programming-guide/program-structure/conditional-compilation.md)
+- [Istruzione If...Then...Else](../statements/if-then-else-statement.md)
