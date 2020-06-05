@@ -1,13 +1,13 @@
 ---
-title: 'Procedura: trovare un elemento con un elemento figlio specifico'
+title: 'Procedura: Trovare un elemento con un elemento figlio specifico'
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
-ms.openlocfilehash: a00ca238c67e2edf4e2e68a46fbd7e2cb480ba15
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a05504070fe3d2ea5eb6135fd3bf697b131686c6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352912"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405287"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>Procedura: trovare un elemento con un elemento figlio specifico (Visual Basic)
 In questo argomento viene illustrato come trovare un determinato elemento che include un elemento figlio con un valore specifico.  
@@ -15,7 +15,7 @@ In questo argomento viene illustrato come trovare un determinato elemento che in
 ## <a name="example"></a>Esempio  
  Nell'esempio viene ricercato l'elemento `Test` contenente un elemento figlio `CommandLine` con valore "Examp2.EXE".  
   
- Questo esempio usa il documento XML seguente: [File XML di esempio: configurazione di test (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: configurazione di test (LINQ to XML)](sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("TestConfig.xml")  
@@ -35,12 +35,12 @@ Next
 0006  
 ```  
   
- Si noti che in questo esempio vengono utilizzate la proprietà [Axis Child XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), la [Proprietà Axis attribute XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)e la [proprietà Value XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ Si noti che in questo esempio vengono utilizzate la proprietà [Axis Child XML](../../../language-reference/xml-axis/xml-child-axis-property.md), la [Proprietà Axis attribute XML](../../../language-reference/xml-axis/xml-attribute-axis-property.md)e la [proprietà Value XML](../../../language-reference/xml-axis/xml-value-property.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente è illustrata la stessa query per XML in uno spazio dei nomi. Per ulteriori informazioni, vedere [Cenni preliminari sugli spazi dei nomi (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Questo esempio usa il documento XML seguente: [File XML di esempio: configurazione di test in uno spazio dei nomi](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: configurazione di test in uno spazio dei nomi](sample-xml-file-test-configuration-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -70,6 +70,6 @@ End Module
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Query di base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Operazioni di proiezione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Query di base (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)
+- [Panoramica degli operatori query standard (Visual Basic)](standard-query-operators-overview.md)
+- [Operazioni di proiezione (Visual Basic)](projection-operations.md)

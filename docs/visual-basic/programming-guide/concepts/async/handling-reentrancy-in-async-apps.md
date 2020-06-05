@@ -2,12 +2,12 @@
 title: Gestione della reentrancy nelle applicazioni asincrone
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 110298a2ca937dbf39c94cfe9df29afb2e76a91c
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 2d1af14016f82b5de875d3638b132e14c7d2280d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021501"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396636"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Gestione della reentrancy nelle applicazioni asincrone (Visual Basic)
 
@@ -17,9 +17,9 @@ Quando si include codice asincrono nell'applicazione, è consigliabile prevedere
 > Per eseguire l'esempio, è necessario che nel computer siano installati Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive.
 
 > [!NOTE]
-> Transport Layer Security (TLS) versione 1.2 è ora la versione minima da usare nello sviluppo dell'app. Se l'app è destinata a una versione di .NET Framework precedente alla 4.7, vedere il seguente articolo per [le procedure consigliate TLS (Transport Layer Security) con .NET Framework.](../../../../framework/network-programming/tls.md)
+> Transport Layer Security (TLS) versione 1,2 è ora la versione minima da usare nello sviluppo di app. Se l'app è destinata a una versione di .NET Framework precedente alla 4,7, vedere l'articolo seguente per [le procedure consigliate per Transport Layer Security (TLS) con il .NET Framework](../../../../framework/network-programming/tls.md).
 
-## <a name="recognizing-reentrancy"></a><a name="BKMK_RecognizingReentrancy"></a>Riconoscere la rientranza
+## <a name="recognizing-reentrancy"></a><a name="BKMK_RecognizingReentrancy"></a>Riconoscimento della rientranza
 
 Nell'esempio riportato in questo argomento viene scelto un pulsante **Start** per avviare un'app asincrona che scarica una serie di siti Web e calcola il numero totale di byte scaricati. Una versione sincrona dell'esempio avrebbe risposto allo stesso modo indipendentemente dal numero di volte che un utente sceglie il pulsante perché, dopo la prima volta, il thread dell'interfaccia utente ignora tali eventi fino al termine dell'esecuzione dell'applicazione. In un'applicazione asincrona, tuttavia, il thread dell'interfaccia utente continua a rispondere e potrebbe essere possibile riattivare l'operazione asincrona prima del suo completamento.
 
@@ -85,7 +85,7 @@ TOTAL bytes returned:  890591
 
   Disabilitare il pulsante **Start** mentre l'operazione è in esecuzione in modo che l'utente non la interrompa.
 
-- [Annullare e riavviare l'operazione](#BKMK_CancelAndRestart)
+- [Annulla e riavvia l'operazione](#BKMK_CancelAndRestart)
 
   Annullare le operazioni ancora in esecuzione quando l'utente sceglie di nuovo il pulsante **Start** e consentire la continuazione dell'operazione richiesta più di recente.
 
@@ -93,7 +93,7 @@ TOTAL bytes returned:  890591
 
   Consentire l'esecuzione asincrona di tutte le operazioni richieste, ma coordinare la visualizzazione dell'output in modo che vengano visualizzati i risultati di ogni operazione tutti insieme e ordinati.
 
-### <a name="disable-the-start-button"></a><a name="BKMK_DisableTheStartButton"></a>Disattivare il pulsante Start
+### <a name="disable-the-start-button"></a><a name="BKMK_DisableTheStartButton"></a>Disabilitare il pulsante Start
 
 È possibile bloccare il pulsante **Start** durante l'esecuzione di un'operazione disabilitando il pulsante nella parte superiore del gestore eventi `StartButton_Click`. È possibile riabilitare il pulsante dall'interno un blocco `Finally` al termine dell'operazione in modo che gli utenti possano eseguire nuovamente l'applicazione.
 
@@ -126,9 +126,9 @@ In seguito alle modifiche, il pulsante non risponde mentre `AccessTheWebAsync` s
 
 Anziché disabilitare il pulsante **Start**, è possibile tenere attivo il pulsante ma, se l'utente sceglie di nuovo il pulsante, è necessario annullare l'operazione in esecuzione e consentire la continuazione dell'operazione richiesta più di recente.
 
-Per ulteriori informazioni sull'annullamento, vedere [Ottimizzazione dell'applicazione asincrona (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
+Per ulteriori informazioni sull'annullamento, vedere [ottimizzazione dell'applicazione asincrona (Visual Basic)](fine-tuning-your-async-application.md).
 
-Per configurare questo scenario, apportare le modifiche seguenti al codice di base fornito in [Revisione ed esecuzione dell'app di esempio](#BKMD_SettingUpTheExample). È anche possibile scaricare l'app finita da [Esempi asincroni: Rientranza nelle app desktop .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Il nome di questo progetto è CancelAndRestart.
+Per configurare questo scenario, apportare le modifiche seguenti al codice di base fornito in [Revisione ed esecuzione dell'app di esempio](#BKMD_SettingUpTheExample). È anche possibile scaricare l'app finita da [esempi asincroni: rientranza nelle app desktop .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Il nome di questo progetto è CancelAndRestart.
 
 1. Dichiarare una variabile <xref:System.Threading.CancellationTokenSource>, `cts`, che sia compresa nell'ambito per tutti i metodi.
 
@@ -139,7 +139,7 @@ Per configurare questo scenario, apportare le modifiche seguenti al codice di ba
         Dim cts As CancellationTokenSource
     ```
 
-2. In `StartButton_Click` determinare se un'operazione è già in corso. Se il `cts` valore `Nothing`di è , nessuna operazione è già attiva. Se il valore `Nothing`non è , l'operazione già in esecuzione viene annullata.
+2. In `StartButton_Click` determinare se un'operazione è già in corso. Se il valore di `cts` è `Nothing` , nessuna operazione è già attiva. Se il valore non è `Nothing` , l'operazione già in esecuzione viene annullata.
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -156,7 +156,7 @@ Per configurare questo scenario, apportare le modifiche seguenti al codice di ba
     cts = newCTS
     ```
 
-4. Al termine `StartButton_Click`di , il processo corrente è `cts` completo, `Nothing`quindi impostare il valore di back su .
+4. Alla fine di `StartButton_Click` , il processo corrente è completo, quindi impostare il valore di `cts` nuovo su `Nothing` .
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -248,7 +248,7 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function
 ```
 
-Se si sceglie il pulsante **Start** più volte mentre l'app è in esecuzione, dovrebbe produrre risultati simili al seguente output:
+Se si sceglie il pulsante **Start** più volte mentre l'app è in esecuzione, si otterrà un risultato simile all'output seguente:
 
 ```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
@@ -278,13 +278,13 @@ TOTAL bytes returned:  890591
 
 Per eliminare gli elenchi parziali, rimuovere la prima riga di codice in `StartButton_Click` per cancellare la casella di testo ogni volta che l'utente riavvia l'operazione.
 
-### <a name="run-multiple-operations-and-queue-the-output"></a><a name="BKMK_RunMultipleOperations"></a>Esecuzione di più operazioni e accodamento dell'outputRun Multiple Operations and Queue the Output
+### <a name="run-multiple-operations-and-queue-the-output"></a><a name="BKMK_RunMultipleOperations"></a>Eseguire più operazioni e accodare l'output
 
 Il terzo esempio è il più complesso in quanto l'app avvia un'altra operazione asincrona ogni volta che l'utente sceglie il pulsante **Start** e tutte le operazioni vengono eseguite fino al completamento. Tutte le operazioni richieste scaricano i siti Web dall'elenco in modo asincrono, ma l'output delle operazioni viene visualizzato in sequenza. In altre parole, l'attività di download effettiva è di tipo interleaved, come illustrato nell'output in [Riconoscimento della reentrancy](#BKMK_RecognizingReentrancy), ma l'elenco dei risultati per ogni gruppo viene visualizzato separatamente.
 
 Le operazioni condividono un codice <xref:System.Threading.Tasks.Task> globale, `pendingWork`, che funge da gatekeeper per il processo di visualizzazione.
 
-È possibile eseguire questo esempio incollando le modifiche nel codice in [Compilazione dell'app](#BKMK_BuildingTheApp)oppure seguire le istruzioni in [Download dell'app](#BKMK_DownloadingTheApp) per scaricare l'esempio ed eseguire il progetto QueueResults.
+È possibile eseguire questo esempio incollando le modifiche nel codice in [compilazione dell'app](#BKMK_BuildingTheApp). in alternativa, è possibile seguire le istruzioni riportate in [download dell'app](#BKMK_DownloadingTheApp) per scaricare l'esempio e quindi eseguire il progetto QueueResults.
 
 Nell'output seguente viene illustrato il risultato restituito quando l'utente sceglie il pulsante **Start** una sola volta. L'etichetta A indica che il risultato fa riferimento alla prima volta che il pulsante **Start** viene scelto. I numeri indicano l'ordine degli URL nell'elenco delle destinazioni di download.
 
@@ -516,7 +516,7 @@ L'output mostra i modelli seguenti.
   TOTAL bytes returned:  915908
   ```
 
-- `pendingWork` L'attività `Nothing` è all'inizio del `FinishOneGroupAsync` solo per il gruppo A, che ha iniziato per primo. Il gruppo A non ha ancora completato un'espressione await quando raggiunge `FinishOneGroupAsync`. Pertanto, il controllo non è stato restituito a `AccessTheWebAsync` e non è stata eseguita la prima assegnazione a `pendingWork`.
+- L' `pendingWork` attività si trova `Nothing` all'inizio di `FinishOneGroupAsync` solo per il gruppo a, che viene avviato per primo. Il gruppo A non ha ancora completato un'espressione await quando raggiunge `FinishOneGroupAsync`. Pertanto, il controllo non è stato restituito a `AccessTheWebAsync` e non è stata eseguita la prima assegnazione a `pendingWork`.
 
 - Le due righe seguenti sono sempre visualizzate insieme nell'output. Il codice non viene mai interrotto tra l'avvio dell'operazione di un gruppo in `StartButton_Click` e l'assegnazione di un'attività per il gruppo a `pendingWork`.
 
@@ -560,11 +560,11 @@ Nella sezione seguente viene illustrato il codice per compilare l'esempio come a
 
      Verrà visualizzata la finestra di dialogo **Nuovo progetto** .
 
-3. Nel riquadro **Modelli installati** espandere **Visual Basic**, quindi espandere **Windows**.
+3. Nel riquadro **modelli installati** espandere **Visual Basic**, quindi espandere **Windows**.
 
 4. Dall'elenco dei tipi di progetto scegliere **Applicazione WPF**.
 
-5. Denominare `WebsiteDownloadWPF`il progetto , scegliere .NET Framework versione 4.6 o successiva e quindi fare clic sul pulsante **OK** .
+5. Assegnare un nome al progetto `WebsiteDownloadWPF` , scegliere .NET Framework versione 4,6 o successiva, quindi fare clic sul pulsante **OK** .
 
      Il nuovo progetto verrà visualizzato in **Esplora soluzioni**.
 
@@ -592,13 +592,13 @@ Nella sezione seguente viene illustrato il codice per compilare l'esempio come a
 
      Nella visualizzazione **Progettazione** di MainWindow.xaml viene visualizzata una finestra semplice contenente una casella di testo e un pulsante.
 
-8. In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **Riferimenti** e scegliere **Aggiungi riferimento**.
+8. In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
-     Aggiungere un <xref:System.Net.Http>riferimento per , se non è già selezionato.
+     Aggiungere un riferimento per <xref:System.Net.Http> , se non è già selezionato.
 
-9. In **Esplora soluzioni**aprire il menu di scelta rapida per MainWindow.xaml.vb, quindi scegliere **Visualizza codice**.
+9. In **Esplora soluzioni**aprire il menu di scelta rapida per MainWindow. XAML. vb, quindi scegliere **Visualizza codice**.
 
-10. In MainWindow.xaml.vb sostituire il codice con il codice seguente.
+10. In MainWindow. XAML. vb sostituire il codice con il codice seguente.
 
     ```vb
     ' Add the following Imports statements, and add a reference for System.Net.Http.
@@ -684,5 +684,5 @@ Nella sezione seguente viene illustrato il codice per compilare l'esempio come a
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura dettagliata: accesso al Web con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Procedura dettagliata: accesso al Web con Async e Await (Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Programmazione asincrona con Async e Await (Visual Basic)](index.md)

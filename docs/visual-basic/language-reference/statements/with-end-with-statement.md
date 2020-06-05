@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: eb8790d0d8f82232a4b10e4e0e30165745c065c0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 50f3bd0c6e96254274b429794901e2e4ac719ad0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352741"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401381"
 ---
 # <a name="withend-with-statement-visual-basic"></a>Istruzione With...End With (Visual Basic)
 
@@ -38,11 +38,11 @@ End With
 
 |Termine|Definizione|
 |---|---|
-|`objectExpression`|Obbligatoria. Espressione che restituisce un oggetto. L'espressione può essere arbitrariamente complessa ed essere valutata solo una volta. Può restituire qualsiasi tipo di dati, compresi i tipi di base.|
+|`objectExpression`|Obbligatorio. Espressione che restituisce un oggetto. L'espressione può essere arbitrariamente complessa ed essere valutata solo una volta. Può restituire qualsiasi tipo di dati, compresi i tipi di base.|
 |`statements`|Facoltativa. Una o più istruzioni tra `With` e `End With` che possono fare riferimento ai membri di un oggetto che verrà prodotto dalla valutazione di `objectExpression`.|
-|`End With`|Obbligatoria. Termina la definizione del blocco `With`.|
+|`End With`|Obbligatorio. Termina la definizione del blocco `With`.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Utilizzando `With...End With`, è possibile eseguire una serie di istruzioni in un oggetto specificato senza specificare il nome dell'oggetto più volte. All'interno di un blocco di istruzioni `With`, è possibile specificare un membro dell'oggetto che inizia con un punto, come se l'oggetto dell'istruzione `With` lo precedesse.
 
@@ -64,10 +64,10 @@ Dal blocco `With`, è possibile accedere ai metodi e alle proprietà del solo og
 
 Non è consentita la creazione di rami in un'istruzione `With` dall'esterno del blocco.
 
-A meno che il blocco non contenga un ciclo, le istruzioni vengono eseguite una sola volta. È possibile annidare tipi diversi di strutture di controllo. Per altre informazioni, vedere [strutture di controlli annidati](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
+A meno che il blocco non contenga un ciclo, le istruzioni vengono eseguite una sola volta. È possibile annidare tipi diversi di strutture di controllo. Per altre informazioni, vedere [strutture di controlli annidati](../../programming-guide/language-features/control-flow/nested-control-structures.md).
 
 > [!NOTE]
-> È possibile utilizzare la parola chiave `With` anche negli inizializzatori di oggetto. Per ulteriori informazioni ed esempi, vedere [inizializzatori di oggetto: tipi denominati e anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) e [tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+> È possibile utilizzare la parola chiave `With` anche negli inizializzatori di oggetto. Per ulteriori informazioni ed esempi, vedere [inizializzatori di oggetto: tipi denominati e anonimi](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) e [tipi anonimi](../../programming-guide/language-features/objects-and-classes/anonymous-types.md).
 >
 > Se si utilizza un blocco `With` solo per inizializzare le proprietà o i campi di un oggetto di cui è stata appena creata un'istanza, è possibile utilizzare un inizializzatore di oggetto.
 
@@ -86,6 +86,6 @@ Nell'esempio seguente vengono annidate le istruzioni `With…End With`. Nell'ist
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Collections.Generic.List%601>
-- [Strutture di controllo annidate](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [Tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Strutture di controllo annidate](../../programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Tipi anonimi](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)

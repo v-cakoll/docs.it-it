@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: aggiungere metodi personalizzati per le query LINQ'
+title: 'Procedura: Aggiungere metodi personalizzati per query LINQ'
 ms.date: 07/20/2015
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-ms.openlocfilehash: 3004a9c9c7abeffd9993b848ad765e7ae2dc8876
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 55004441d2d1d74556da6841f28d113b876d1048
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353366"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400604"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Procedura: aggiungere metodi personalizzati per le query LINQ (Visual Basic)
 
 È possibile estendere il set di metodi da usare per le query LINQ aggiungendo metodi di estensione all'interfaccia <xref:System.Collections.Generic.IEnumerable%601>. Oltre alla media standard o a un numero massimo di operazioni, ad esempio, è possibile creare un metodo di aggregazione personalizzato per calcolare un singolo valore da una sequenza di valori. È anche possibile creare un metodo che funzioni come un filtro personalizzato o una trasformazione di dati specifica per una sequenza di valori che restituisca una nuova sequenza. Esempi di tali metodi sono <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Reverse%2A>.
 
-Quando si estende l'interfaccia <xref:System.Collections.Generic.IEnumerable%601>, è possibile applicare i metodi personalizzati a qualsiasi raccolta enumerabile. Per altre informazioni, vedere [Metodi di estensione](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).
+Quando si estende l'interfaccia <xref:System.Collections.Generic.IEnumerable%601>, è possibile applicare i metodi personalizzati a qualsiasi raccolta enumerabile. Per altre informazioni, vedere [Metodi di estensione](../../language-features/procedures/extension-methods.md).
 
 ## <a name="adding-an-aggregate-method"></a>Aggiunta di un metodo di aggregazione
 
@@ -53,7 +53,7 @@ End Module
 Chiamare questo metodo di estensione per qualsiasi raccolta enumerabile nello stesso modo in cui si chiamano altri metodi di aggregazione dall'interfaccia <xref:System.Collections.Generic.IEnumerable%601>.
 
 > [!NOTE]
-> In Visual Basic, è possibile usare una chiamata al metodo o una sintassi di query standard per la clausola `Aggregate` o `Group By`. Per ulteriori informazioni, vedere clausola [Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md) e [clausola Group by](../../../../visual-basic/language-reference/queries/group-by-clause.md).
+> In Visual Basic, è possibile usare una chiamata al metodo o una sintassi di query standard per la `Aggregate` `Group By` clausola o. Per ulteriori informazioni, vedere clausola [Aggregate](../../../language-reference/queries/aggregate-clause.md) e [clausola Group by](../../../language-reference/queries/group-by-clause.md).
 
 L'esempio di codice seguente illustra come usare il metodo `Median` di una matrice di tipo `double`.
 
@@ -129,7 +129,7 @@ Function Median(Of T)(ByVal source As IEnumerable(Of T),
 End Function
 ```
 
-È ora possibile chiamare il metodo `Median` per una sequenza di oggetti di qualsiasi tipo. Se il tipo non ha un proprio overload del metodo, è necessario passare un parametro del delegato. In Visual Basic, è possibile usare un'espressione lambda a questo scopo. Inoltre, se si usa la clausola `Aggregate` o `Group By` invece della chiamata al metodo, è possibile passare qualsiasi valore o espressione presente nell'ambito di questa clausola.
+È ora possibile chiamare il metodo `Median` per una sequenza di oggetti di qualsiasi tipo. Se il tipo non ha un proprio overload del metodo, è necessario passare un parametro del delegato. In Visual Basic, è possibile usare un'espressione lambda a questo scopo. Inoltre, se si utilizza la `Aggregate` `Group By` clausola o invece della chiamata al metodo, è possibile passare qualsiasi valore o espressione nella clausola SCOPE this.
 
 L'esempio di codice seguente illustra come chiamare il metodo `Median` per una matrice di numeri interi e una matrice di stringhe. Per le stringhe, viene calcolato il valore mediano della lunghezza delle stringhe nella matrice. L'esempio mostra come passare il parametro del delegato <xref:System.Func%602> al metodo `Median` per ogni caso.
 
@@ -207,4 +207,4 @@ Next
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [Metodi di estensione](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [Metodi di estensione](../../language-features/procedures/extension-methods.md)

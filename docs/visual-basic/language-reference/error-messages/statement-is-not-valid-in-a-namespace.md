@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30001
 ms.assetid: 43c1b509-15f9-4e91-bcad-90bcb5f6f191
-ms.openlocfilehash: 3110241d2c10c3018b2144dbc8234a9b6633e0c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5e83fda1a7e58cceb86bbd3e700a25b70be96587
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593256"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400331"
 ---
 # <a name="statement-is-not-valid-in-a-namespace"></a>Istruzione non valida in uno spazio dei nomi
-L'istruzione non può trovarsi al livello di uno spazio dei nomi. Le dichiarazioni sole al livello dello spazio dei nomi consentite sono modulo, interfaccia, classe, delegato, enumerazione e dichiarazioni di struttura.  
+L'istruzione non può comparire al livello di uno spazio dei nomi. Le uniche dichiarazioni consentite a livello di spazio dei nomi sono le dichiarazioni di moduli, interfacce, classi, delegati, enumerazioni e strutture.  
   
  **ID errore:** BC30001  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-- Spostare l'istruzione in una posizione all'interno di un modulo, classe, interfaccia, struttura, enumerazione o definizione del delegato.  
+- Spostare l'istruzione in una posizione all'interno di un modulo, una classe, un'interfaccia, una struttura, un'enumerazione o una definizione di delegato.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Scope in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Spazi dei nomi in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Ambito in Visual Basic](../../programming-guide/language-features/declared-elements/scope.md)
+- [Spazi dei nomi in Visual Basic](../../programming-guide/program-structure/namespaces.md)

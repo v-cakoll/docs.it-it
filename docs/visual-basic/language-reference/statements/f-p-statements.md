@@ -2,27 +2,27 @@
 title: Istruzioni F-P
 ms.date: 07/20/2015
 ms.assetid: cdce7ab0-c52e-4d33-a29b-bf32cdacc79f
-ms.openlocfilehash: fcd57321e0fb39a77e89b5b29f66edab6b40763a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0da540df9485fcb9a5b386d76488a5e99264b377
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351217"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404680"
 ---
 # <a name="f-p-statements"></a>Istruzioni F-P
 Nella tabella seguente è incluso un elenco di istruzioni del linguaggio Visual Basic.  
   
 |||||  
 |---|---|---|---|  
-|[Per ogni... Prossimo](../../../visual-basic/language-reference/statements/for-each-next-statement.md)|[Per... Prossimo](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Function](../../../visual-basic/language-reference/statements/function-statement.md)|[Get](../../../visual-basic/language-reference/statements/get-statement.md)|  
-|[GoTo](../../../visual-basic/language-reference/statements/goto-statement.md)|[Se... Quindi... Altro](../../../visual-basic/language-reference/statements/if-then-else-statement.md)|[Implements](../../../visual-basic/language-reference/statements/implements-statement.md)|[Imports (spazio dei nomi e tipo .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)|  
-|[Imports (spazio dei nomi XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)|[Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)|[Interface](../../../visual-basic/language-reference/statements/interface-statement.md)|[Mid](../../../visual-basic/language-reference/statements/mid-statement.md)|  
-|[Modulo](../../../visual-basic/language-reference/statements/module-statement.md)|[Spazio dei nomi](../../../visual-basic/language-reference/statements/namespace-statement.md)|[In errore](../../../visual-basic/language-reference/statements/on-error-statement.md)|[Operator](../../../visual-basic/language-reference/statements/operator-statement.md)|  
-|[Opzione \<parola chiave >](../../../visual-basic/language-reference/statements/option-keyword-statement.md)|[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)|[Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)|[Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)|  
-|[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)|[Property](../../../visual-basic/language-reference/statements/property-statement.md)|||  
+|[Per ogni... Prossimo](for-each-next-statement.md)|[For...Next](for-next-statement.md)|[Funzione](function-statement.md)|[Ottieni](get-statement.md)|  
+|[GoTo](goto-statement.md)|[If...Then...Else](if-then-else-statement.md)|[Implementazioni](implements-statement.md)|[Imports (spazio dei nomi e tipo .NET)](imports-statement-net-namespace-and-type.md)|  
+|[Imports (spazio dei nomi XML)](imports-statement-xml-namespace.md)|[Eredita](inherits-statement.md)|[Interfaccia](interface-statement.md)|[Mid](mid-statement.md)|  
+|[Modulo](module-statement.md)|[Namespace](namespace-statement.md)|[In errore](on-error-statement.md)|[Operatore](operator-statement.md)|  
+|[Opzione\<keyword>](option-keyword-statement.md)|[Option Compare](option-compare-statement.md)|[Option Explicit](option-explicit-statement.md)|[Option Infer](option-infer-statement.md)|  
+|[Option Strict](option-strict-statement.md)|[Proprietà](property-statement.md)|||  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzioni A-E](../../../visual-basic/language-reference/statements/a-e-statements.md)
-- [Istruzioni Q-Z](../../../visual-basic/language-reference/statements/q-z-statements.md)
-- [Riferimenti per il linguaggio Visual Basic](../../../visual-basic/language-reference/index.md)
+- [Istruzioni A-E](a-e-statements.md)
+- [Istruzioni Q-Z](q-z-statements.md)
+- [Riferimenti al linguaggio Visual Basic](../index.md)

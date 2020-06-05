@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30157
 ms.assetid: 70daaee1-14f9-45b7-9f30-53794310b95e
-ms.openlocfilehash: 15390fb506fe9bca10f6917f5b26451a5569bece
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 149acc2baac0f45fa971a11f254d694526d140d7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921121"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397324"
 ---
 # <a name="leading--or--can-only-appear-inside-a-with-statement"></a>Il carattere '.' o '!' iniziale può trovarsi solo all'interno di un'istruzione
-Un punto (.) o un punto esclamativo (!) che non è compreso in un `With` blocchi si verifica senza un'espressione a sinistra. Accesso ai membri (`.`) e accesso ai membri dizionario (`!`) richiedono un'espressione che specifica l'elemento che contiene il membro. Questo deve apparire immediatamente a sinistra della funzione di accesso o come destinazione di un `With` blocco che contiene l'accesso al membro.  
+Un punto (.) o punto esclamativo (!) che non si trova all'interno di un `With` blocco si verifica senza un'espressione a sinistra. L'accesso ai membri ( `.` ) e l'accesso ai membri del dizionario ( `!` ) richiedono un'espressione che specifica l'elemento che contiene il membro. Deve essere visualizzato immediatamente a sinistra della funzione di accesso o come destinazione di un `With` blocco contenente l'accesso ai membri.  
   
  **ID errore:** BC30157  
   
@@ -23,9 +23,9 @@ Un punto (.) o un punto esclamativo (!) che non è compreso in un `With` blocchi
   
 1. Verificare che il `With` blocco sia formattato correttamente.  
   
-2. Se è presente alcun `With` blocco, aggiungere un'espressione a sinistra della funzione di accesso che restituisce un elemento definito che contiene il membro.  
+2. Se non è presente alcun `With` blocco, aggiungere un'espressione a sinistra della funzione di accesso che restituisce un elemento definito contenente il membro.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Caratteri speciali nel codice](../../../visual-basic/programming-guide/program-structure/special-characters-in-code.md)
-- [Istruzione With...End With](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+- [Caratteri speciali nel codice](../../programming-guide/program-structure/special-characters-in-code.md)
+- [Istruzione With...End With](../statements/with-end-with-statement.md)

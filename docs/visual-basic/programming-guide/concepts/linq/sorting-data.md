@@ -2,12 +2,12 @@
 title: Ordinamento dei dati
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: f1d4d8afb9b6e176a7ac048ba3270ecafdce24c9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a5ccff745995ed7f41731cf98fb7c49d3247d994
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350592"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406794"
 ---
 # <a name="sorting-data-visual-basic"></a>Ordinamento dei dati (Visual Basic)
 
@@ -150,7 +150,7 @@ MsgBox(sb.ToString())
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Linq>
-- [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Clausola Order By](../../../../visual-basic/language-reference/queries/order-by-clause.md)
-- [Procedura: Ordinare i risultati di query](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)
-- [Procedura: ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Panoramica degli operatori query standard (Visual Basic)](standard-query-operators-overview.md)
+- [Clausola Order By](../../../language-reference/queries/order-by-clause.md)
+- [Procedura: Ordinare i risultati di query](../../language-features/linq/how-to-sort-query-results-by-using-linq.md)
+- [Procedura: ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (LINQ) (Visual Basic)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

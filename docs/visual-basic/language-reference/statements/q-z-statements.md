@@ -2,26 +2,26 @@
 title: Istruzioni Q-Z
 ms.date: 07/20/2015
 ms.assetid: 32a9e547-c1b7-40f2-8118-7eef1d19649e
-ms.openlocfilehash: a1185bce1d91359940c83f14599f5c6943cebd29
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 85355e8d2035e390dfea95d3bd4309ed601fc48b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350723"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404304"
 ---
 # <a name="q-z-statements"></a>Istruzioni Q-Z
 Nella tabella seguente è incluso un elenco di istruzioni del linguaggio Visual Basic.  
   
 |||||  
 |---|---|---|---|  
-|[RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)|[ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|[REM](../../../visual-basic/language-reference/statements/rem-statement.md)|[RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)|  
-|[Resume](../../../visual-basic/language-reference/statements/resume-statement.md)|[Return](../../../visual-basic/language-reference/statements/return-statement.md)|[Seleziona... Caso](../../../visual-basic/language-reference/statements/select-case-statement.md)|[Set](../../../visual-basic/language-reference/statements/set-statement.md)|  
-|[Stop](../../../visual-basic/language-reference/statements/stop-statement.md)|[Struttura](../../../visual-basic/language-reference/statements/structure-statement.md)|[Sub](../../../visual-basic/language-reference/statements/sub-statement.md)|[SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md)|  
-|[Then](../../../visual-basic/language-reference/statements/then-statement.md)|[Throw](../../../visual-basic/language-reference/statements/throw-statement.md)|[Prova... Rileva... Infine](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[Using](../../../visual-basic/language-reference/statements/using-statement.md)|  
-|[... Termina mentre](../../../visual-basic/language-reference/statements/while-end-while-statement.md)|[Con... Termina con](../../../visual-basic/language-reference/statements/with-end-with-statement.md)|[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)||  
+|[RaiseEvent](raiseevent-statement.md)|[ReDim](redim-statement.md)|[REM](rem-statement.md)|[RemoveHandler](removehandler-statement.md)|  
+|[Riprendi](resume-statement.md)|[Ritorno](return-statement.md)|[Select...Case](select-case-statement.md)|[Set](set-statement.md)|  
+|[Stop](stop-statement.md)|[Struttura](structure-statement.md)|[Sub](sub-statement.md)|[SyncLock](synclock-statement.md)|  
+|[Quindi](then-statement.md)|[Generare](throw-statement.md)|[Prova... Rileva... Infine](try-catch-finally-statement.md)|[Usando](using-statement.md)|  
+|[While...End While](while-end-while-statement.md)|[Con... Termina con](with-end-with-statement.md)|[Rendimento](yield-statement.md)||  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzioni A-E](../../../visual-basic/language-reference/statements/a-e-statements.md)
-- [Istruzioni F-P](../../../visual-basic/language-reference/statements/f-p-statements.md)
-- [Riferimenti per il linguaggio Visual Basic](../../../visual-basic/language-reference/index.md)
+- [Istruzioni A-E](a-e-statements.md)
+- [Istruzioni F-P](f-p-statements.md)
+- [Riferimenti al linguaggio Visual Basic](../index.md)

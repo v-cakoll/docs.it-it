@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: 41b7ef1f435fd0a4f20c4ca2936e2d91e155f7c5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1421cc85beba42b3cf3656c34b1d02347fbaf164
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347413"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403239"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>Procedura: creare documentazione XLM in Visual Basic
 
@@ -29,16 +29,16 @@ Questo esempio illustra come aggiungere commenti alla documentazione XML al codi
 3. Aggiungere informazioni descrittive tra i tag appropriati.
 
     > [!NOTE]
-    > Se si aggiungono righe aggiuntive all'interno del blocco di documentazione XML, ogni riga deve iniziare con `'''`.
+    > Se si aggiungono righe aggiuntive all'interno del blocco di documentazione XML, ogni riga deve iniziare con `'''` .
 
 4. Aggiungere codice aggiuntivo che utilizza il tipo o il membro con i nuovi commenti della documentazione XML.
 
-    IntelliSense Visualizza il testo dal tag di riepilogo > \<per il tipo o il membro.
+    IntelliSense consente di visualizzare il testo del \<summary> tag per il tipo o il membro.
 
-5. Compilare il codice per generare un file XML contenente i commenti della documentazione. Per altre informazioni, vedere [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
+5. Compilare il codice per generare un file XML contenente i commenti della documentazione. Per ulteriori informazioni, vedere [-doc](../../reference/command-line-compiler/doc.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Documentazione del codice tramite XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/index.md)
-- [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
+- [Documentazione del codice tramite XML](documenting-your-code-with-xml.md)
+- [Tag di commento XML](../../language-reference/xmldoc/index.md)
+- [-doc](../../reference/command-line-compiler/doc.md)

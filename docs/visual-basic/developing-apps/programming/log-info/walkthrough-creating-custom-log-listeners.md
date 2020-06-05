@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 7b611e93119dc66a9404cf271ea201676d7b5318
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a140607a4fe7e1e13de54e8d56cab53e52aaa2a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353620"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398266"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Procedura dettagliata: creazione di listener di log personalizzati (Visual Basic)
 
@@ -45,7 +45,7 @@ La procedura seguente prevede alcuni semplici passaggi per la creazione di un as
 
 3. Selezionare la casella **Firma assembly** .
 
-4. Selezionare ** \<nuovo>** dall'elenco **a discesa Scegli un file chiave con nome sicuro** .
+4. Selezionare **\<New>** dall'elenco **a discesa Scegli un file chiave con nome sicuro** .
 
      Si aprirà la finestra di dialogo **Crea chiave con nome sicuro** .
 
@@ -63,7 +63,7 @@ Ora che l'assembly ha un nome sicuro è necessario determinare il nome sicuro de
 
 Il formato di un tipo con nome sicuro è il seguente.
 
-\<nome tipo>, \<nome assembly>, \<numero versione>, \<impostazioni cultura>, \<nome sicuro>
+\<type name>, \<assembly name>, \<version number>, \<culture>, \<strong name>
 
 #### <a name="to-determine-the-strong-name-of-the-listener"></a>Per determinare il nome sicuro del listener
 
@@ -87,7 +87,7 @@ Con il nome sicuro è possibile aggiungere il listener alla raccolta di listener
 
     2. Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **File di configurazione dell'applicazione**.
 
-    3. Fare clic su **Aggiungi**.
+    3. Scegliere **Aggiungi**.
 
 2. Individuare la sezione `<listeners>` all'interno della sezione `<source>` con l'attributo `name` "DefaultSource" che si trova nella sezione `<sources>` . La sezione `<sources>` si trova nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .
 
@@ -107,10 +107,10 @@ Con il nome sicuro è possibile aggiungere il listener alla raccolta di listener
 
      Modificare il valore di `SimpleLogStrongName` in modo che sia il nome sicuro del listener.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
-- [Utilizzo dei log applicazione](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Procedura: Registrare eccezioni](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [Procedura: Scrivere messaggi di log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Procedura dettagliata: Modifica della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Utilizzo dei log applicazione](working-with-application-logs.md)
+- [Procedura: Registrare eccezioni](how-to-log-exceptions.md)
+- [Procedura: Scrivere messaggi di log](how-to-write-log-messages.md)
+- [Procedura dettagliata: Modifica della posizione di inserimento delle informazioni con My.Application.Log](walkthrough-changing-where-my-application-log-writes-information.md)

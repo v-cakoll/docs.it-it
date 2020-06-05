@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: dd42e3364d96a8a9b3800b3d1f5e94b2fa25bad4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a136a517c7ce865b4e1d349270696e2704d61592
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351232"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404667"
 ---
 # <a name="event-statement"></a>Istruzione Event
 Dichiara un evento definito dall'utente.  
@@ -58,28 +58,28 @@ End Event
   
 |Parte|Descrizione|  
 |---|---|  
-|`attrlist`|Facoltativa. Elenco degli attributi applicabili all'evento. Gli attributi sono separati da una virgola. È necessario racchiudere l' [elenco degli attributi](../../../visual-basic/language-reference/statements/attribute-list.md) tra parentesi angolari ("`<`" e "`>`").|  
-|`accessmodifier`|Facoltativa. Specifica il tipo di codice che può accedere all'evento. Può essere uno dei collegamenti seguenti:<br /><br /> -   [public](../../../visual-basic/language-reference/modifiers/public.md): qualsiasi codice in grado di accedere all'elemento che lo dichiara può accedervi.<br />-   [protetto](../../../visual-basic/language-reference/modifiers/protected.md): solo il codice all'interno della classe o di una classe derivata può accedervi.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md): solo il codice nello stesso assembly può accedervi.<br />-   [privato](../../../visual-basic/language-reference/modifiers/private.md): solo il codice nell'elemento che lo dichiara può accedervi.<br /> -   codice solo [Friend protetto](../../language-reference/modifiers/protected-friend.md)nella classe dell'evento, una classe derivata o lo stesso assembly può accedervi. <br />- codice [privato protetto](../../language-reference/modifiers/private-protected.md)solo nella classe dell'evento o in una classe derivata nello stesso assembly può accedervi.|  
+|`attrlist`|Facoltativa. Elenco degli attributi applicabili all'evento. Gli attributi sono separati da una virgola. È necessario racchiudere l' [elenco degli attributi](attribute-list.md) tra parentesi angolari (" `<` " e " `>` ").|  
+|`accessmodifier`|Facoltativa. Specifica il tipo di codice che può accedere all'evento. Può essere uno dei seguenti:<br /><br /> -   [Public](../modifiers/public.md): qualsiasi codice in grado di accedere all'elemento che lo dichiara può accedervi.<br />-   [Protected](../modifiers/protected.md): solo il codice all'interno della classe o di una classe derivata può accedervi.<br />-   [Friend](../modifiers/friend.md): solo il codice nello stesso assembly può accedervi.<br />-   [Private](../modifiers/private.md): solo il codice nell'elemento che lo dichiara può accedervi.<br /> -   Il codice solo [Friend protetto](../modifiers/protected-friend.md)nella classe dell'evento, una classe derivata o lo stesso assembly può accedervi. <br />- Il codice [privato protetto](../modifiers/private-protected.md)solo nella classe dell'evento o in una classe derivata nello stesso assembly può accedervi.|  
 |`Shared`|Facoltativa. Specifica che l'evento non è associato a una specifica istanza di una classe o di una struttura.|  
 |`Shadows`|Facoltativa. Indica che l'evento ridichiara e nasconde un elemento di programmazione omonimo o un insieme di elementi in overload di una classe base. È possibile nascondere qualsiasi tipo di elemento dichiarato con qualsiasi altro tipo.<br /><br /> Un elemento nascosto non è disponibile all'interno della classe derivata che lo nasconde, a meno che l'elemento di shadowing sia inaccessibile. Ad esempio, se un elemento `Private` nasconde un elemento della classe base, il codice che non dispone dell'autorizzazione per accedere all'elemento `Private` accede invece all'elemento della classe base.|  
-|`eventname`|Obbligatoria. Nome dell'evento, conforme alle convenzioni di denominazione standard delle variabili.|  
-|`parameterlist`|Facoltativa. Elenco di variabili locali che rappresentano i parametri dell'evento. È necessario racchiudere l' [elenco di parametri](../../../visual-basic/language-reference/statements/parameter-list.md) tra parentesi.|  
+|`eventname`|Obbligatorio. Nome dell'evento, conforme alle convenzioni di denominazione standard delle variabili.|  
+|`parameterlist`|Facoltativa. Elenco di variabili locali che rappresentano i parametri dell'evento. È necessario racchiudere l' [elenco di parametri](parameter-list.md) tra parentesi.|  
 |`Implements`|Facoltativa. Indica che l'evento implementa un evento di un'interfaccia.|  
-|`implementslist`|Necessario se si fornisce `Implements`. Elenco delle routine `Sub` implementate. Nel caso di più routine, è possibile separarle mediante virgole.<br /><br /> *implementedprocedure* [, *implementedprocedure* ...]<br /><br /> Ogni `implementedprocedure` presenta la sintassi e le parti seguenti:<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`: obbligatorio. Nome di un'interfaccia implementata dalla classe o dalla struttura che contiene la routine.<br />-   `Definedname`: obbligatorio. Nome mediante il quale la routine viene definita in `interface`. Non è necessario che questo nome corrisponda al nome usato dalla routine per implementare la routine definita, ossia `name`.|  
-|`Custom`|Obbligatoria. È necessario che gli eventi dichiarati come `Custom` definiscano funzioni di accesso `AddHandler`, `RemoveHandler` e `RaiseEvent` personalizzate.|  
+|`implementslist`|Necessario se si fornisce `Implements`. Elenco delle routine `Sub` implementate. Nel caso di più routine, è possibile separarle mediante virgole.<br /><br /> *implementedprocedure* [, *implementedprocedure* ...]<br /><br /> Ogni `implementedprocedure` presenta la sintassi e le parti seguenti:<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`Necessaria. Nome di un'interfaccia implementata dalla classe o dalla struttura che contiene la routine.<br />-   `Definedname`Necessaria. Nome mediante il quale la routine viene definita in `interface`. Non è necessario che questo nome corrisponda al nome usato dalla routine per implementare la routine definita, ossia `name`.|  
+|`Custom`|Obbligatorio. È necessario che gli eventi dichiarati come `Custom` definiscano funzioni di accesso `AddHandler`, `RemoveHandler` e `RaiseEvent` personalizzate.|  
 |`delegatename`|Facoltativa. Nome del delegato che specifica la firma del gestore eventi.|  
-|`AddHandler`|Obbligatoria. Dichiara una funzione di accesso `AddHandler` che specifica le istruzioni da eseguire quando viene aggiunto un gestore eventi, sia in modo esplicito mediante l'istruzione `AddHandler` che in modo implicito mediante la clausola `Handles`|  
-|`End AddHandler`|Obbligatoria. Termina il blocco `AddHandler`.|  
-|`value`|Obbligatoria. Nome del parametro.|  
-|`RemoveHandler`|Obbligatoria. Dichiara una funzione di accesso `RemoveHandler`, che specifica le istruzioni da eseguire quando un gestore eventi viene rimosso mediante l'istruzione `RemoveHandler`.|  
-|`End RemoveHandler`|Obbligatoria. Termina il blocco `RemoveHandler`.|  
-|`RaiseEvent`|Obbligatoria. Dichiara una funzione di accesso `RaiseEvent`, che specifica le istruzioni da eseguire quando l'evento viene generato mediante l'istruzione `RaiseEvent`. In genere, viene richiamato un elenco di delegati gestito dalle funzioni di accesso `AddHandler` e `RemoveHandler`.|  
-|`End RaiseEvent`|Obbligatoria. Termina il blocco `RaiseEvent`.|  
-|`delegatesignature`|Obbligatoria. Elenco di parametri che corrisponde ai parametri richiesti dal delegato `delegatename`. È necessario racchiudere l' [elenco di parametri](../../../visual-basic/language-reference/statements/parameter-list.md) tra parentesi.|  
+|`AddHandler`|Obbligatorio. Dichiara una funzione di accesso `AddHandler` che specifica le istruzioni da eseguire quando viene aggiunto un gestore eventi, sia in modo esplicito mediante l'istruzione `AddHandler` che in modo implicito mediante la clausola `Handles`|  
+|`End AddHandler`|Obbligatorio. Termina il blocco `AddHandler`.|  
+|`value`|Obbligatorio. Nome del parametro.|  
+|`RemoveHandler`|Obbligatorio. Dichiara una funzione di accesso `RemoveHandler`, che specifica le istruzioni da eseguire quando un gestore eventi viene rimosso mediante l'istruzione `RemoveHandler`.|  
+|`End RemoveHandler`|Obbligatorio. Termina il blocco `RemoveHandler`.|  
+|`RaiseEvent`|Obbligatorio. Dichiara una funzione di accesso `RaiseEvent`, che specifica le istruzioni da eseguire quando l'evento viene generato mediante l'istruzione `RaiseEvent`. In genere, viene richiamato un elenco di delegati gestito dalle funzioni di accesso `AddHandler` e `RemoveHandler`.|  
+|`End RaiseEvent`|Obbligatorio. Termina il blocco `RaiseEvent`.|  
+|`delegatesignature`|Obbligatorio. Elenco di parametri che corrisponde ai parametri richiesti dal delegato `delegatename`. È necessario racchiudere l' [elenco di parametri](parameter-list.md) tra parentesi.|  
 |`statements`|Facoltativa. Istruzioni che includono i corpi dei metodi `AddHandler`, `RemoveHandler` e `RaiseEvent`.|  
-|`End Event`|Obbligatoria. Termina il blocco `Event`.|  
+|`End Event`|Obbligatorio. Termina il blocco `Event`.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
  Dopo aver dichiarato l'evento, usare l'istruzione `RaiseEvent` per generarlo. Nei frammenti seguenti viene mostrato un esempio tipico di dichiarazione e generazione di un evento:  
   
  [!code-vb[VbVbalrEvents#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#13)]  
@@ -89,9 +89,9 @@ End Event
   
  Per gestire un evento è necessario associarlo a una subroutine del gestore eventi mediante l'istruzione `Handles` o `AddHandler`. Le firme della subroutine e dell'evento devono corrispondere. Per gestire un evento condiviso è necessario usare l'istruzione `AddHandler`.  
   
- Si può usare `Event` solo a livello di modulo. Ciò significa che il *contesto di dichiarazione* per un evento deve essere una classe, una struttura, un modulo o un'interfaccia e non può essere un file di origine, uno spazio dei nomi, una procedura o un blocco. Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Si può usare `Event` solo a livello di modulo. Ciò significa che il *contesto di dichiarazione* per un evento deve essere una classe, una struttura, un modulo o un'interfaccia e non può essere un file di origine, uno spazio dei nomi, una procedura o un blocco. Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](declaration-contexts-and-default-access-levels.md).  
   
- Nella maggior parte dei casi, per dichiarare un evento è possibile usare la prima sintassi nella sezione relativa alla sintassi di questo argomento. In alcuni scenari è tuttavia necessario disporre di un controllo maggiore sui dettagli del comportamento dell'evento. L'ultima sintassi nella sezione relativa alla sintassi di questo argomento, che usa la parola chiave `Custom`, offre questa possibilità consentendo la definizione di eventi personalizzati. In un evento personalizzato si specifica esattamente ciò che accade quando il codice aggiunge o rimuove un gestore eventi a o dall'evento oppure quando il codice genera l'evento. Per esempi, vedere [procedura: dichiarare eventi personalizzati per conservare la memoria](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) e [procedura: dichiarare eventi personalizzati per evitare il blocco](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
+ Nella maggior parte dei casi, per dichiarare un evento è possibile usare la prima sintassi nella sezione relativa alla sintassi di questo argomento. In alcuni scenari è tuttavia necessario disporre di un controllo maggiore sui dettagli del comportamento dell'evento. L'ultima sintassi nella sezione relativa alla sintassi di questo argomento, che usa la parola chiave `Custom`, offre questa possibilità consentendo la definizione di eventi personalizzati. In un evento personalizzato si specifica esattamente ciò che accade quando il codice aggiunge o rimuove un gestore eventi a o dall'evento oppure quando il codice genera l'evento. Per esempi, vedere [procedura: dichiarare eventi personalizzati per conservare la memoria](../../programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) e [procedura: dichiarare eventi personalizzati per evitare il blocco](../../programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
   
 ## <a name="example"></a>Esempio  
  Negli esempi seguenti, gli eventi vengono usati per il conto alla rovescia dei secondi, da 10 a 0. Il codice illustra numerosi metodi, proprietà e istruzioni correlati agli eventi, inclusa l'istruzione `RaiseEvent`.  
@@ -119,14 +119,14 @@ End Event
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzione RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
-- [Istruzione Implements](../../../visual-basic/language-reference/statements/implements-statement.md)
-- [Eventi](../../../visual-basic/programming-guide/language-features/events/index.md)
-- [Istruzione AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)
-- [Istruzione RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)
-- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
-- [Istruzione Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [Procedura: Dichiarare eventi personalizzati per proteggere la memoria](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
-- [Procedura: Dichiarare eventi personalizzati per evitare il blocco](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)
-- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Istruzione RaiseEvent](raiseevent-statement.md)
+- [Istruzione Implements](implements-statement.md)
+- [Events](../../programming-guide/language-features/events/index.md)
+- [Istruzione AddHandler](addhandler-statement.md)
+- [Istruzione RemoveHandler](removehandler-statement.md)
+- [Selettori](handles-clause.md)
+- [Istruzione Delegate](delegate-statement.md)
+- [Procedura: dichiarare eventi personalizzati per proteggere la memoria](../../programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [Procedura: dichiarare eventi personalizzati per evitare il blocco](../../programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)
+- [Condivisa](../modifiers/shared.md)
+- [Shadows](../modifiers/shadows.md)

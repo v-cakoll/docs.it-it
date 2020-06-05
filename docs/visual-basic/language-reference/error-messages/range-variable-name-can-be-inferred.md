@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: ca50ddd86cfbba8db0148ed315645714acabc18d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: d6b155de0bb62f667ca76ec9454dec1466976a9b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582417"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400409"
 ---
 # <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>Il nome di variabile di intervallo può essere dedotto solo da un nome semplice o completo senza argomenti
 
@@ -31,5 +31,5 @@ Dim query = From var1 In collection1
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Introduzione a LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Clausola Select](../../../visual-basic/language-reference/queries/select-clause.md)
+- [Introduzione a LINQ in Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [Clausola SELECT](../queries/select-clause.md)

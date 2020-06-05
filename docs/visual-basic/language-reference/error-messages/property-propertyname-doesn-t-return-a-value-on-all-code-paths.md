@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
-ms.openlocfilehash: a5cb28a024274e58da1755b437d6ba4ca6712610
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 21a1c4dbab6e26cd1cb848e270bbda9a544c2a67
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661710"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400422"
 ---
-# <a name="property-propertyname-doesnt-return-a-value-on-all-code-paths"></a>Proprietà '\<NomeProprietà >' non restituisce un valore per tutti i percorsi del codice
-Proprietà '\<NomeProprietà >' non restituisce un valore per tutti i percorsi del codice. In fase di esecuzione, quando viene usato il risultato, potrebbe verificarsi un'eccezione dovuta a un riferimento Null.  
+# <a name="property-propertyname-doesnt-return-a-value-on-all-code-paths"></a>La proprietà '\<propertyname>' non restituisce un valore in tutti i percorsi del codice
+La proprietà' \<propertyname> ' non restituisce un valore per tutti i percorsi del codice. In fase di esecuzione, quando viene usato il risultato, potrebbe verificarsi un'eccezione dovuta a un riferimento Null.  
   
- Una proprietà `Get` procedure dispone di almeno un possibile percorso all'interno del codice che non restituisce un valore.  
+ Una routine di proprietà `Get` ha almeno un possibile percorso nel codice che non restituisce un valore.  
   
- È possibile restituire un valore da una proprietà `Get` procedure in uno dei modi seguenti:  
+ È possibile restituire un valore da una routine di proprietà `Get` in uno dei modi seguenti:  
   
-- Assegnare il valore per il nome della proprietà, quindi eseguire un `Exit Property` istruzione.  
+- Assegnare il valore al nome della proprietà, quindi eseguire un' `Exit Property` istruzione.  
   
-- Assegnare il valore per il nome della proprietà, quindi eseguire il `End Get` istruzione.  
+- Assegnare il valore al nome della proprietà, quindi eseguire l' `End Get` istruzione.  
   
-- Includere il valore in una [istruzione Return](../../../visual-basic/language-reference/statements/return-statement.md).  
+- Includere il valore in un' [istruzione return](../statements/return-statement.md).  
   
- Se il controllo passa al `Exit Property` oppure `End Get` e non è stato assegnato alcun valore per il nome della proprietà di `Get` procedure restituisce il valore predefinito della proprietà tipo di dati. Per altre informazioni, vedere "Comportamento di" nella [istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md).  
+ Se il controllo passa a `Exit Property` o `End Get` e non è stato assegnato alcun valore al nome della proprietà, la `Get` stored procedure restituisce il valore predefinito del tipo di dati della proprietà. Per ulteriori informazioni, vedere "Behavior" nell' [istruzione Function](../statements/function-statement.md).  
   
  Per impostazione predefinita, si tratta di un messaggio di avviso. Per altre informazioni su come nascondere gli avvisi o considerarli come errori, vedere [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
@@ -35,12 +35,12 @@ Proprietà '\<NomeProprietà >' non restituisce un valore per tutti i percorsi d
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-- Controllare la logica del flusso di controllo e assicurarsi che si assegna un valore prima di ogni istruzione che provoca un valore restituito.  
+- Controllare la logica del flusso di controllo e assicurarsi di assegnare un valore prima di ogni istruzione che causa la restituzione.  
   
-     È più semplice garantire che ogni restituito dalla routine restituisce un valore se si usano sempre il `Return` istruzione. Se si esegue questa operazione, l'ultima istruzione che precede `End Get` deve essere un `Return` istruzione.  
+     È più facile garantire che ogni ritorno dalla procedura restituisca un valore se si usa sempre l' `Return` istruzione. In tal caso, l'ultima istruzione prima `End Get` deve essere un' `Return` istruzione.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Routine Property](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
-- [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Istruzione Get](../../../visual-basic/language-reference/statements/get-statement.md)
+- [Routine Property](../../programming-guide/language-features/procedures/property-procedures.md)
+- [Property Statement](../statements/property-statement.md)
+- [Istruzione Get](../statements/get-statement.md)

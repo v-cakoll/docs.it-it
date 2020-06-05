@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: 02cdbcc59e8817ff4ec06c2f78f835cad77b10f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9abb87f3f6cdefefef29eb37c2c2d4d15155e93d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74333775"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406651"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Procedura dettagliata: modifica di file mediante i metodi .NET Framework (Visual Basic)
 
@@ -44,11 +44,11 @@ Avviare Visual Studio e iniziare il progetto creando un modulo che l'utente può
 
 4. Aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.
 
-|**Oggetto**|**Proprietà**|**Valore**|
+|**Object**|**Proprietà**|**Valore**|
 |---|---|---|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Text**|`Submit`<br /><br /> **Invia voce**|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Text**|`Clear`<br /><br /> **Cancella voce**|
-|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Text**<br /><br /> **Multiline**|`Entry`<br /><br /> **Immettere un valore.**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`Submit`<br /><br /> **Invia voce**|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`Clear`<br /><br /> **Cancella voce**|
+|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Testo**<br /><br /> **Multiline**|`Entry`<br /><br /> **Immettere un valore.**<br /><br /> `False`|
 
 ## <a name="writing-to-the-file"></a>Scrivere nel file
 
@@ -96,9 +96,9 @@ Per questa sezione della procedura, aggiungere i controlli della tabella seguent
 |Controllo|Proprietà|Valori|
 |-------------|----------------|------------|
 |<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Visibile**<br /><br /> **Dimensione**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Text**|`Display`<br /><br /> **Schermo**|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Text**|`GetEntries`<br /><br /> **Ottieni voci**|
-|<xref:System.Windows.Forms.ComboBox>|**Nome**<br /><br /> **Text**<br /><br /> **Attivata**|`PickEntries`<br /><br /> **Seleziona una voce**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`Display`<br /><br /> **Schermo**|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`GetEntries`<br /><br /> **Ottieni voci**|
+|<xref:System.Windows.Forms.ComboBox>|**Nome**<br /><br /> **Testo**<br /><br /> **Enabled**|`PickEntries`<br /><br /> **Seleziona una voce**<br /><br /> `False`|
 
 ### <a name="to-populate-the-combo-box"></a>Per popolare la casella combinata
 
@@ -124,9 +124,9 @@ Aggiungere i controlli della tabella seguente al form e impostare i valori corri
 
 |Controllo|Proprietà|Valori|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Text**<br /><br /> **Attivata**|`DeleteEntry`<br /><br /> **Elimina voce**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Text**<br /><br /> **Attivata**|`EditEntry`<br /><br /> **Modifica voce**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Text**<br /><br /> **Attivata**|`SubmitEdit`<br /><br /> **Invia modifica**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**<br /><br /> **Enabled**|`DeleteEntry`<br /><br /> **Elimina voce**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**<br /><br /> **Enabled**|`EditEntry`<br /><br /> **Modifica voce**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **Invia modifica**<br /><br /> `False`|
 
 ### <a name="to-enable-deletion-and-modification-of-entries"></a>Per abilitare l'eliminazione e la modifica delle voci
 
@@ -152,8 +152,8 @@ Aggiungere i controlli della tabella seguente al form e impostare i valori corri
 
 Per testare il codice, premere F5 per compilare l'applicazione. Fare clic su **Ottieni voci**, selezionare una voce e quindi fare clic su **Visualizza**. La voce viene visualizzata nell'oggetto `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Fare clic su **Modifica voce**. La voce viene visualizzata nell'oggetto `Entry`<xref:System.Windows.Forms.TextBox>. Modificare la voce in `Entry` <xref:System.Windows.Forms.TextBox> e fare clic su **Invia modifica**. Aprire il file `MyDiary.txt` per confermare la correzione. Ora selezionare una voce e fare clic su **Elimina voce**. Quando l'oggetto <xref:System.Windows.Forms.MessageBox> chiede una conferma, fare clic su **OK**. Chiudere l'applicazione e aprire `MyDiary.txt` per confermare l'eliminazione.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamWriter>
-- [Procedure dettagliate](../../../../visual-basic/walkthroughs.md)
+- [Procedure dettagliate](../../../walkthroughs.md)

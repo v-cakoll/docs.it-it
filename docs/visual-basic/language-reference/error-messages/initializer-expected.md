@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
-ms.openlocfilehash: 0795fdc1c4b177e13979d7555cd7588217b8cb4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13fa8917f228661fc44f5e0920d91c596e250c38
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013803"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402837"
 ---
 # <a name="initializer-expected"></a>Previsto inizializzatore
-Si è provato a dichiarare un'istanza di una classe usando un inizializzatore di oggetto in cui l'inizializzazione di elenco è vuota, come illustrato nell'esempio seguente.  
+Si è provato a dichiarare un'istanza di una classe usando un inizializzatore di oggetto in cui l'elenco di inizializzazione è vuoto, come illustrato nell'esempio seguente.  
   
  `' Not valid.`  
   
  `' Dim aStudent As New Student With {}`  
   
- Almeno un campo o una proprietà deve essere inizializzato nell'elenco di inizializzatori, come illustrato nell'esempio seguente.  
+ È necessario inizializzare almeno un campo o una proprietà nell'elenco di inizializzatori, come illustrato nell'esempio seguente.  
   
  `Dim aStudent As New Student With {.year = "Senior"}`  
   
@@ -29,9 +29,9 @@ Si è provato a dichiarare un'istanza di una classe usando un inizializzatore di
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. Inizializzare almeno un campo o proprietà nell'inizializzatore o non utilizzare un inizializzatore di oggetto.  
+1. Inizializzare almeno un campo o una proprietà nell'inizializzatore oppure non usare un inizializzatore di oggetto.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Inizializzatori di oggetto: Tipi denominati e anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [Procedura: Dichiarare un oggetto usando un inizializzatore di oggetto](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+- [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Procedura: dichiarare un oggetto utilizzando un inizializzatore di oggetto](../../programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

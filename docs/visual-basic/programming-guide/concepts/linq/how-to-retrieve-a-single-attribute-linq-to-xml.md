@@ -1,13 +1,13 @@
 ---
-title: 'Procedura: recuperare un singolo attributo (LINQ to XML)'
+title: 'Procedura: Recuperare un singolo attributo (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-ms.openlocfilehash: 02afbc987cf9f55d16bb56912f3eaf45cd8c9a37
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 34c390fbffc1aea68a2fd8ae64b17d2637a1f4f1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347556"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397856"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Procedura: recuperare un singolo attributo (LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come recuperare un singolo attributo di un elemento, dato il relativo nome. Questa procedura è utile per la scrittura di espressioni di query in cui si desidera trovare un elemento con un attributo specifico.  
@@ -38,7 +38,7 @@ work
 ```  
   
 ## <a name="example"></a>Esempio  
- Se si desidera recuperare il valore dell'attributo, è possibile eseguirne il cast, come nel caso degli oggetti <xref:System.Xml.Linq.XElement>. Nell'esempio che segue viene illustrato quanto descritto.  
+ Se si desidera recuperare il valore dell'attributo, è possibile eseguirne il cast, come nel caso degli oggetti <xref:System.Xml.Linq.XElement>. L'esempio seguente illustra questa operazione.  
   
 ```vb  
 Dim cust As XElement = <PhoneNumbers>  
@@ -94,4 +94,4 @@ work
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Assi LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [Assi LINQ to XML (Visual Basic)](linq-to-xml-axes.md)

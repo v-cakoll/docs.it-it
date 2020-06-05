@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-ms.openlocfilehash: 89a39e8e9cd66b1d774da70be47c7c6824cccef2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9ebbbe9d2e6d36f5ab2bc7f7c916d18c9240a06d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350029"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404888"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Procedura: dedurre tipi e nomi di proprietà nelle dichiarazioni di tipo anonimo (Visual Basic)
 
@@ -128,7 +128,7 @@ I tipi anonimi possono anche dedurre i nomi e i tipi delle proprietà da altre o
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [Inferenza del tipo di variabile locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Key](../../../../visual-basic/language-reference/modifiers/key.md)
+- [Inizializzatori di oggetto: tipi denominati e tipi anonimi](object-initializers-named-and-anonymous-types.md)
+- [Inferenza del tipo di variabile locale](../variables/local-type-inference.md)
+- [Tipi anonimi](anonymous-types.md)
+- [Codice](../../../language-reference/modifiers/key.md)

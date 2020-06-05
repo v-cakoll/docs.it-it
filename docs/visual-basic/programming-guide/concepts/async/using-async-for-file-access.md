@@ -2,12 +2,12 @@
 title: Utilizzo della funzionalità Async per l'accesso ai file
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-ms.openlocfilehash: 803d182f5b0f3071feb7aae4945bc3c0a1fd82c3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2ee1efa69f4b13224be65fe802ebf5f834c941aa
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349102"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400771"
 ---
 # <a name="using-async-for-file-access-visual-basic"></a>Uso della funzionalità Async per l'accesso ai file (Visual Basic)
 È possibile usare la funzionalità Async per accedere ai file. Tramite la funzionalità Async, è possibile chiamare i metodi asincroni senza utilizzare callback o suddividere il codice in più metodi o espressioni lambda. Per rendere asincrono il codice sincrono, è sufficiente chiamare un metodo asincrono anziché un metodo sincrono e aggiungere alcune parole chiave al codice.  
@@ -73,10 +73,10 @@ Dim theTask As Task = sourceStream.WriteAsync(encodedText, 0, encodedText.Length
 Await theTask  
 ```  
   
- La prima istruzione restituisce un'attività e determina l'avvio dell'elaborazione dei file. La seconda istruzione con await induce il metodo a terminare immediatamente e restituire un'attività diversa. Al termine dell'elaborazione dei file l'esecuzione torna quindi all'istruzione che segue await. Per ulteriori informazioni, vedere [flusso di controllo in programmi asincroni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).  
+ La prima istruzione restituisce un'attività e determina l'avvio dell'elaborazione dei file. La seconda istruzione con await induce il metodo a terminare immediatamente e restituire un'attività diversa. Al termine dell'elaborazione dei file l'esecuzione torna quindi all'istruzione che segue await. Per ulteriori informazioni, vedere [flusso di controllo in programmi asincroni (Visual Basic)](control-flow-in-async-programs.md).  
   
 ## <a name="reading-text"></a>Lettura di testo  
- Nell'esempio seguente viene letto del testo da un file. Il testo viene memorizzato nel buffer e, in questo caso, inserito in un oggetto <xref:System.Text.StringBuilder>. A differenza dell'esempio precedente, la valutazione di await produce un valore. Il metodo <xref:System.IO.Stream.ReadAsync%2A> restituisce un <xref:System.Threading.Tasks.Task> \< <xref:System.Int32>>. Pertanto la valutazione dell'attesa produce un valore `Int32` (`numRead`) dopo il completamento dell'operazione. Per ulteriori informazioni, vedere [tipi restituiti asincroni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
+ Nell'esempio seguente viene letto del testo da un file. Il testo viene memorizzato nel buffer e, in questo caso, inserito in un oggetto <xref:System.Text.StringBuilder>. A differenza dell'esempio precedente, la valutazione di await produce un valore. Il metodo <xref:System.IO.Stream.ReadAsync%2A> restituisce un <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>. Pertanto la valutazione dell'attesa produce un valore `Int32` (`numRead`) dopo il completamento dell'operazione. Per ulteriori informazioni, vedere [tipi restituiti asincroni (Visual Basic)](async-return-types.md).  
   
 ```vb  
 Public Async Sub ProcessRead()  
@@ -158,10 +158,10 @@ Public Async Sub ProcessWriteMult()
 End Sub  
 ```  
   
- Quando si usano i metodi <xref:System.IO.Stream.WriteAsync%2A> e <xref:System.IO.Stream.ReadAsync%2A>, è possibile specificare uno struct <xref:System.Threading.CancellationToken>, che consente di annullare l'operazione nel corso del flusso. Per altre informazioni, vedere [ottimizzazione dell'applicazione asincrona (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) e [annullamento nei thread gestiti](../../../../standard/threading/cancellation-in-managed-threads.md).  
+ Quando si usano i metodi <xref:System.IO.Stream.WriteAsync%2A> e <xref:System.IO.Stream.ReadAsync%2A>, è possibile specificare uno struct <xref:System.Threading.CancellationToken>, che consente di annullare l'operazione nel corso del flusso. Per altre informazioni, vedere [ottimizzazione dell'applicazione asincrona (Visual Basic)](fine-tuning-your-async-application.md) e [annullamento nei thread gestiti](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Tipi restituiti asincroni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [Flusso di controllo in programmi asincroni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
+- [Programmazione asincrona con Async e Await (Visual Basic)](index.md)
+- [Tipi restituiti asincroni (Visual Basic)](async-return-types.md)
+- [Flusso di controllo in programmi asincroni (Visual Basic)](control-flow-in-async-programs.md)

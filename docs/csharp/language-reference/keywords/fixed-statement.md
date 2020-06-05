@@ -6,12 +6,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: 53bee82bf24a847b0b21ed2375d09a6303d4fe48
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: d743daca2fa779e300c7e8ab430b1ffff10b434c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507191"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401914"
 ---
 # <a name="fixed-statement-c-reference"></a>Istruzione fixed (Riferimenti per C#)
 
@@ -19,15 +19,15 @@ L'istruzione `fixed` impedisce che il Garbage Collector esegua la rilocazione di
 
 L'istruzione `fixed` imposta un puntatore a una variabile gestita e la blocca durante l'esecuzione dell'istruzione. I puntatori alle variabili mobili gestite sono utili solo in un contesto `fixed`. Senza un contesto `fixed`, l'operazione di garbage collection potrebbe spostare le variabili in modo imprevedibile. Il compilatore C# consente di assegnare un puntatore a una variabile gestita in un'istruzione `fixed`.
 
-[!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#1)]
+[!code-csharp[Accessing fixed memory](snippets/FixedKeywordExamples.cs#1)]
 
 È possibile inizializzare un puntatore usando una matrice, una stringa, un buffer a dimensione fissa o l'indirizzo di una variabile. L'esempio seguente illustra l'uso di indirizzi di variabili, matrici e stringhe:
 
-[!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
+[!code-csharp[Initializing fixed size buffers](snippets/FixedKeywordExamples.cs#2)]
 
 A partire da C# 7.3, l'istruzione `fixed` opera su tipi aggiuntivi oltre a matrici, stringhe, buffer a dimensione fissa o variabili non gestite. È possibile bloccare qualsiasi tipo che implementa un metodo denominato `GetPinnableReference`. `GetPinnableReference` deve restituire una variabile `ref` di un [tipo non gestito](../builtin-types/unmanaged-types.md). I tipi .NET <xref:System.Span%601?displayProperty=nameWithType> e <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> introdotti in .NET Core 2.0 usano questo modello e possono essere bloccati. Questa operazione è illustrata nell'esempio seguente:
 
-[!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
+[!code-csharp[Accessing fixed memory](snippets/FixedKeywordExamples.cs#FixedSpan)]
 
 Se si creano tipi che devono partecipare a questo modello, vedere <xref:System.Span%601.GetPinnableReference?displayProperty=nameWithType> per un esempio di implementazione del modello.
 
@@ -39,7 +39,7 @@ fixed (byte* ps = srcarray, pd = dstarray) {...}
 
 Per inizializzare puntatori di tipi diversi, annidare semplicemente le istruzioni `fixed` come illustrato nell'esempio seguente.
 
-[!code-csharp[Initializing multiple pointers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#3)]
+[!code-csharp[Initializing multiple pointers](snippets/FixedKeywordExamples.cs#3)]
 
 Dopo aver eseguito il codice nell'istruzione, le variabili bloccate vengono sbloccate e sottoposte al Garbage Collection. Di conseguenza, evitare di puntare alle variabili esterne all'istruzione `fixed`. Le variabili dichiarate nell'istruzione `fixed` rientrano nell'ambito di tale istruzione, semplificandola:
 
@@ -62,7 +62,7 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-È possibile allocare memoria nello stack, dove non è soggetta a Garbage Collection e pertanto non deve essere bloccata. A tale scopo, utilizzare [ `stackalloc` un'espressione](../operators/stackalloc.md).
+È possibile allocare memoria nello stack, dove non è soggetta a Garbage Collection e pertanto non deve essere bloccata. A tale scopo, utilizzare un' [ `stackalloc` espressione](../operators/stackalloc.md).
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
@@ -70,9 +70,9 @@ Per altre informazioni, vedere la sezione [Istruzione fixed](~/_csharplang/spec/
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida di riferimento a C](../index.md)
-- [Guida alla programmazione in C](../../programming-guide/index.md)
-- [Parole chiave di C](index.md)
-- [Pericoloso](unsafe.md)
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Parole chiave di C#](index.md)
+- [unsafe](unsafe.md)
 - [Tipi puntatore](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Buffer a dimensione fissa](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

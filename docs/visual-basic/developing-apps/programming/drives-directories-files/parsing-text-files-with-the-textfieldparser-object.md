@@ -6,12 +6,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], parsing files
 - files [Visual Basic], parsing
 ms.assetid: fc31d6e6-af0c-403f-8a00-d556b2c57567
-ms.openlocfilehash: f3239184beb58312a8e3598545fc37423ff85287
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b2cb0dd39d14dd94db661cc9cbacf99edf0e778
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74333851"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406677"
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>Analisi dei file di testo con l'oggetto TextFieldParser (Visual Basic)
 
@@ -33,7 +33,7 @@ L'oggetto `TextFieldParser` consente di analizzare ed elaborare file di grandi d
   
 ## <a name="parsing-files-with-multiple-formats"></a>Analisi dei file con più formati  
 
- Il metodo `PeekChars` dell'oggetto `TextFieldParser` può essere usato per controllare ogni campo prima che venga letto, consentendo così di definire più formati per i campi e reagire di conseguenza. Per altre informazioni, vedere [Procedura: Leggere da file di testo con più formati](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md).  
+ Il metodo `PeekChars` dell'oggetto `TextFieldParser` può essere usato per controllare ogni campo prima che venga letto, consentendo così di definire più formati per i campi e reagire di conseguenza. Per altre informazioni, vedere [Procedura: Leggere da file di testo con più formati](how-to-read-from-text-files-with-multiple-formats.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: 7371cbd4fef4abced95744071ff222b40e160e3e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 25008f05979638e050b74fc659fdc0a6d13b3c31
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620319"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406586"
 ---
-# <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>Valore di tipo '\<NomeTipo1 >' non può essere convertito in '\<in NomeTipo2 >' (più riferimenti di file)
-Valore di tipo '\<NomeTipo1 >' non può essere convertito in '\<in NomeTipo2 >'. Mancata corrispondenza del tipo potrebbe essere dovuto a un riferimento file a '\<filepath1 >' nel progetto '\<projectname1 >' con un riferimento file a '\<filepath2 >' nel progetto '\<projectname2 >'. Se gli assembly sono identici, provare a definire lo stesso percorso per entrambi i riferimenti.  
+# <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>Impossibile convertire il valore del tipo '\<typename1>' in '\<typename2>'
+Non è possibile convertire il valore di tipo ' \<typename1> ' in ' \<typename2> '. Il tipo non corrispondente potrebbe essere dovuto alla combinazione di un riferimento file a' \<filepath1> ' nel progetto ' \<projectname1> ' con un riferimento file a' \<filepath2> ' nel progetto ' \<projectname2> '. Se gli assembly sono identici, provare a definire lo stesso percorso per entrambi i riferimenti.  
   
- In una situazione in cui un progetto contiene più di un riferimento file a un assembly, il compilatore non può garantire che un tipo può essere convertito in un altro.  
+ In una situazione in cui un progetto crea più di un riferimento di file a un assembly, il compilatore non può garantire che un tipo possa essere convertito in un altro.  
   
- Ogni riferimento di file specifica un percorso e nome file del file di output di un progetto (in genere un file DLL). Il compilatore non può garantire che i file di output forniti dall'origine stessa, né che rappresentano la stessa versione dello stesso assembly. Pertanto, non può garantire che i tipi i riferimenti sono dello stesso tipo, o può essere convertito anche che uno a altro.  
+ Ogni riferimento a file specifica un percorso e un nome di file per il file di output di un progetto (in genere un file DLL). Il compilatore non può garantire che i file di output provengano dalla stessa origine o che rappresentino la stessa versione dello stesso assembly. Pertanto, non è in grado di garantire che i tipi nei diversi riferimenti siano dello stesso tipo o anche che uno possa essere convertito nell'altro.  
   
- Se si sa che gli assembly di riferimento hanno la stessa identità di assembly, è possibile utilizzare un riferimento a file singolo. L' *identità dell'assembly* include il nome, la versione, la chiave pubblica e le eventuali impostazioni cultura dell'assembly. Queste informazioni identificano l'assembly in modo univoco.  
+ È possibile utilizzare un singolo riferimento a file se si è certi che gli assembly a cui si fa riferimento hanno la stessa identità di assembly. L' *identità dell'assembly* include il nome dell'assembly, la versione, la chiave pubblica, se presente, e le impostazioni cultura. Queste informazioni identificano l'assembly in modo univoco.  
   
  **ID errore:** BC30961  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-- Se gli assembly di riferimento hanno la stessa identità di assembly, quindi rimuovere o sostituire uno dei riferimenti ai file in modo che sia presente solo un riferimento a file singolo.  
+- Se gli assembly a cui si fa riferimento hanno la stessa identità di assembly, rimuovere o sostituire uno dei riferimenti al file in modo che sia presente un solo riferimento a un file.  
   
-- Se gli assembly di riferimento non è la stessa identità di assembly, quindi modificare il codice in modo che non prova a convertire un tipo in uno a un tipo in altro.  
+- Se gli assembly a cui si fa riferimento non hanno la stessa identità di assembly, modificare il codice in modo che non tenti di convertire un tipo in un tipo in un altro.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Conversioni di tipi in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Conversioni di tipi in Visual Basic](../../programming-guide/language-features/data-types/type-conversions.md)
 - [Gestione dei riferimenti in un progetto](/visualstudio/ide/managing-references-in-a-project)

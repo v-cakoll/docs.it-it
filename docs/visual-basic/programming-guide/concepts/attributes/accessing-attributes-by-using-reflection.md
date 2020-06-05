@@ -2,12 +2,12 @@
 title: Accesso agli attributi tramite reflection
 ms.date: 07/20/2015
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-ms.openlocfilehash: 94352f07cf1f7e4a35f023503f138596ae5ac227
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c0da5c4ae00eb2bc80b10f63f4bfd39763445e55
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353548"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400758"
 ---
 # <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Accesso agli attributi tramite reflection (Visual Basic)
 
@@ -105,8 +105,8 @@ End Class
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Guida per programmatori Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Guida per programmatori Visual Basic](../../index.md)
 - [Recupero di informazioni memorizzate negli attributi](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
-- [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Attributi (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [Creazione di attributi personalizzati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [Reflection (Visual Basic)](../reflection.md)
+- [Attributi (Visual Basic)](../../../language-reference/attributes.md)
+- [Creazione di attributi personalizzati (Visual Basic)](creating-custom-attributes.md)

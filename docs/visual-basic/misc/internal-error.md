@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID51
 ms.assetid: 21266dbb-f4a1-4c5d-a646-27909cf53248
-ms.openlocfilehash: 873ad46881e3e5e306e5979afe0fc586b5d5a261
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 01726b7c94c10b1e0f4ffe49f53c28fa0ea6bdd7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74329499"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402226"
 ---
 # <a name="internal-error-visual-basic"></a>Errore interno (Visual Basic)
 Si è verificato un malfunzionamento interno in Visual Basic.  
@@ -20,5 +20,5 @@ Si è verificato un malfunzionamento interno in Visual Basic.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzione On Error](../../visual-basic/language-reference/statements/on-error-statement.md)
+- [Istruzione On Error](../language-reference/statements/on-error-statement.md)
 - [Metodo Raise (oggetto Err)](xref:Microsoft.VisualBasic.ErrObject.Raise%2A)

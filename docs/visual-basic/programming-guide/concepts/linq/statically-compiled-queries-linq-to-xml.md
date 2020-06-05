@@ -2,12 +2,12 @@
 title: Query compilate in modo statico (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
-ms.openlocfilehash: e9f56366f1566f831f1e0ea5bd5a06775d698c3d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f020c1ed8627df8c8386a059f0cea372e8df363e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350572"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406768"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>Query compilate in modo statico (LINQ to XML) (Visual Basic)
 
@@ -58,7 +58,7 @@ For Each el In list1
 Next
 ```
 
-Questo esempio produce esattamente gli stessi risultati dei due esempi precedenti. Questo illustra il fatto che le query sono compilate efficacemente in chiamate ai metodi collegate in modo statico. Questo fatto, insieme alla semantica di esecuzione posticipata degli iteratori, consente un miglioramento delle prestazioni. Per ulteriori informazioni sulla semantica di esecuzione posticipata degli iteratori, vedere [esecuzione posticipata e valutazione lazy in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+Questo esempio produce esattamente gli stessi risultati dei due esempi precedenti. Questo illustra il fatto che le query sono compilate efficacemente in chiamate ai metodi collegate in modo statico. Questo fatto, insieme alla semantica di esecuzione posticipata degli iteratori, consente un miglioramento delle prestazioni. Per ulteriori informazioni sulla semantica di esecuzione posticipata degli iteratori, vedere [esecuzione posticipata e valutazione lazy in LINQ to XML (Visual Basic)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
 
 > [!NOTE]
 > Questi esempi rappresentano il codice che potrebbe venire scritto dal compilatore. L'implementazione effettiva potrebbe differire leggermente da questi esempi, ma le prestazioni saranno la stesse o simili.
@@ -94,4 +94,4 @@ Queste operazioni sono in numero significativamente maggiore rispetto a quelle e
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Prestazioni (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [Prestazioni (LINQ to XML) (Visual Basic)](performance-linq-to-xml.md)

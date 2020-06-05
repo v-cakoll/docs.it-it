@@ -2,12 +2,12 @@
 title: Attributi comuni
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 2889411779a275baa8c91862d4cac2f820d660d0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 57ef8f103d64a51d896f46d2889d78ec99ff3223
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353534"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400719"
 ---
 # <a name="common-attributes-visual-basic"></a>Attributi comuni (Visual Basic)
 
@@ -15,15 +15,15 @@ In questo argomento vengono descritti gli attributi usati più di frequente nei 
 
 - [Attributi globali](#Global)
 
-- [Attributo Obsolete](#Obsolete)
+- [Attributo obsolete](#Obsolete)
 
-- [Attributo Conditional](#Conditional)
+- [Attributo condizionale](#Conditional)
 
-- [Attributi informativi sul chiamante](#CallerInfo)
+- [Attributi delle informazioni sul chiamante](#CallerInfo)
 
 - [Attributi di Visual Basic](#VB)
 
-## <a name="Global"></a> Attributi globali
+## <a name="global-attributes"></a><a name="Global"></a>Attributi globali
 
 La maggior parte degli attributi viene applicata a elementi specifici del linguaggio quali classi o metodi. Alcuni attributi sono invece globali e vengono applicati a un intero assembly o a un intero modulo. Ad esempio, l'attributo <xref:System.Reflection.AssemblyVersionAttribute> può essere usato per incorporare informazioni sulla versione in un assembly, nel modo seguente:
 
@@ -31,9 +31,9 @@ La maggior parte degli attributi viene applicata a elementi specifici del lingua
 <Assembly: AssemblyVersion("1.0.0.0")>
 ```
 
-Gli attributi globali vengono visualizzati nel codice sorgente dopo qualsiasi istruzione `Imports` di primo livello e prima di qualsiasi dichiarazione di tipo, modulo o spazio dei nomi. Gli attributi globali possono apparire in più file di origine, ma i file devono essere compilati in un'unica operazione di compilazione. Per i progetti Visual Basic, gli attributi globali vengono in genere inseriti nel file AssemblyInfo. vb. il file viene creato automaticamente quando si crea un progetto in Visual Studio.
+Gli attributi globali vengono visualizzati nel codice sorgente dopo qualsiasi istruzione di primo livello `Imports` e prima delle dichiarazioni di tipo, modulo o spazio dei nomi. Gli attributi globali possono apparire in più file di origine, ma i file devono essere compilati in un'unica operazione di compilazione. Per i progetti Visual Basic, gli attributi globali vengono in genere inseriti nel file AssemblyInfo. vb. il file viene creato automaticamente quando si crea un progetto in Visual Studio.
 
-Gli attributi dell'assembly sono valori che forniscono informazioni relative a un assembly. Tali pagine e schermate rientrano nelle categorie seguenti:
+Gli attributi dell'assembly sono valori che forniscono informazioni relative a un assembly. Sono suddivisi nelle seguenti categorie:
 
 - Attributi relativi all'identità dell'assembly
 
@@ -79,7 +79,7 @@ Gli attributi informativi consentono di fornire informazioni aggiuntive relative
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Definisce un attributo personalizzato che specifica una configurazione assembly per un manifesto dell'assembly.|
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Definisce un alias predefinito descrittivo per un manifesto dell'assembly.|
 
-## <a name="Obsolete"></a> Attributo Obsolete
+## <a name="obsolete-attribute"></a><a name="Obsolete"></a>Attributo obsolete
 
 L'attributo `Obsolete` contrassegna un'entità del programma il cui uso non è più consigliato. Ogni uso di un'entità contrassegnata con Obsolete genererà in seguito un avviso o errore, a seconda della configurazione dell'attributo. Ad esempio:
 
@@ -122,7 +122,7 @@ L'attributo `Obsolete` può essere usato senza argomenti, ma è consigliabile in
 
 `Obsolete` è un attributo monouso e può essere applicato a qualsiasi entità che supporta gli attributi. `Obsolete` è un alias per <xref:System.ObsoleteAttribute>.
 
-## <a name="Conditional"></a> Attributo Conditional
+## <a name="conditional-attribute"></a><a name="Conditional"></a> Attributo Conditional
 
 L'attributo `Conditional` rende l'esecuzione di un metodo dipendente da un identificatore di pre-elaborazione. L'attributo `Conditional` è un alias per <xref:System.Diagnostics.ConditionalAttribute> e può essere applicato a un metodo o a una classe Attribute.
 
@@ -218,7 +218,7 @@ Class SampleClass
 End Class
 ```
 
-## <a name="CallerInfo"></a> Attributi di informazioni sul chiamante
+## <a name="caller-info-attributes"></a><a name="CallerInfo"></a>Attributi delle informazioni sul chiamante
 
 Gli attributi di informazioni sul chiamante consentono di ottenere informazioni sul chiamante di un metodo. È possibile ottenere il percorso del file del codice sorgente, il numero di riga nel codice sorgente e il nome del chiamante.
 
@@ -228,11 +228,11 @@ Gli attributi di informazioni sul chiamante consentono di ottenere informazioni 
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Percorso completo del file di origine contenente il chiamante. È il percorso al momento della compilazione.|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Numero di riga nel file di origine da cui viene chiamato il metodo.|`Integer`|
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nome di una proprietà o di un metodo del chiamante. Per ulteriori informazioni, vedere [informazioni sul chiamante (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nome di una proprietà o di un metodo del chiamante. Per ulteriori informazioni, vedere [informazioni sul chiamante (Visual Basic)](../caller-information.md).|`String`|
 
-Per ulteriori informazioni sugli attributi delle informazioni sul chiamante, vedere [informazioni sul chiamante (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).
+Per ulteriori informazioni sugli attributi delle informazioni sul chiamante, vedere [informazioni sul chiamante (Visual Basic)](../caller-information.md).
 
-## <a name="VB"></a>Attributi di Visual Basic
+## <a name="visual-basic-attributes"></a><a name="VB"></a>Attributi di Visual Basic
 
 Nella tabella seguente sono elencati gli attributi specifici per Visual Basic.
 
@@ -245,7 +245,7 @@ Nella tabella seguente sono elencati gli attributi specifici per Visual Basic.
 
 ### <a name="comclassattribute"></a>COMClassAttribute
 
-Utilizzare `COMClassAttribute` per semplificare il processo di creazione di componenti COM da Visual Basic. Gli oggetti COM sono molto diversi dagli assembly .NET Framework e, senza `COMClassAttribute`, è necessario seguire una serie di passaggi per generare un oggetto COM da Visual Basic. Per le classi contrassegnate con `COMClassAttribute`, il compilatore esegue automaticamente molti di questi passaggi.
+Usare `COMClassAttribute` per semplificare il processo di creazione di componenti com da Visual Basic. Gli oggetti COM sono molto diversi dagli assembly .NET Framework e senza `COMClassAttribute` , è necessario seguire una serie di passaggi per generare un oggetto com da Visual Basic. Per le classi contrassegnate con `COMClassAttribute` , il compilatore esegue automaticamente molti di questi passaggi.
 
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute
 
@@ -273,7 +273,7 @@ Utilizzare `VBFixedArrayAttribute` per dichiarare matrici di dimensioni fisse. C
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Guida per programmatori Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Guida per programmatori Visual Basic](../../index.md)
 - [Attributi](../../../../standard/attributes/index.md)
-- [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Accesso agli attributi tramite reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [Reflection (Visual Basic)](../reflection.md)
+- [Accesso agli attributi tramite reflection (Visual Basic)](accessing-attributes-by-using-reflection.md)

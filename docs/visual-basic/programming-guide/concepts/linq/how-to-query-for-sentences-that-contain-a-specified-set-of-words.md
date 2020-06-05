@@ -1,13 +1,13 @@
 ---
-title: 'Procedura: eseguire una query per trovare frasi che contengono un set specificato di parole (LINQ)'
+title: 'Procedura: Eseguire una query per trovare frasi che contengono un set definito di parole (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
-ms.openlocfilehash: 6595932fae9737a0ac482c952b29bfde429de76f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ce88bf001346f90eb9b08ca1ff14afc7dcb04fa0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344156"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397960"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a>Procedura: eseguire una query per trovare frasi che contengono un set definito di parole (LINQ) (Visual Basic)
 
@@ -65,8 +65,8 @@ Nella chiamata a <xref:System.String.Split%2A> vengono usati i segni di punteggi
 
 ## <a name="compile-the-code"></a>Compilare il codice
 
-Creare un progetto di applicazione console Visual Basic con un'istruzione `Imports` per lo spazio dei nomi System. Linq.
+Creare un progetto di applicazione console Visual Basic con un' `Imports` istruzione per lo spazio dei nomi System. Linq.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](linq-and-strings.md) (LINQ e le stringhe (Visual Basic))
