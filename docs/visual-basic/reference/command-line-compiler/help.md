@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-ms.openlocfilehash: 6013b92206e00a77a8ca30d38846c87372c3873e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b30a5a9d73dd84231f30f20549f5c0ae813742ab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344275"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408634"
 ---
 # <a name="-help---visual-basic"></a>-help, -? (Visual Basic)
 Visualizza le opzioni del compilatore.  
@@ -25,13 +25,13 @@ Visualizza le opzioni del compilatore.
 -help  
 ```
 
-oppure  
+Oppure  
 
 ```console
 -?  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se si include questa opzione in una compilazione, non viene creato alcun file di output e non si verifica alcuna compilazione.  
   
 > [!NOTE]
@@ -44,7 +44,7 @@ oppure
 vbc -help  
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Compilatore della riga di comando di Visual Basic](index.md)
+- [Esempi di righe di comando di compilazione](sample-compilation-command-lines.md)

@@ -1,5 +1,5 @@
 ---
-title: Utilizzo efficiente dei tipi di dati
+title: Uso efficiente dei tipi di dati
 ms.date: 07/20/2015
 helpviewer_keywords:
 - performance, data type efficiency
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: 621dec7537e9c993024e271b96ab8706baf89885
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0de02840cb18fde16134ef43df9d63abb503c979
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350114"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394171"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Utilizzo efficiente dei tipi di dati (Visual Basic)
-Le variabili e le variabili non dichiarate dichiarate senza un tipo di dati vengono assegnate al tipo di dati `Object`. In questo modo è facile scrivere rapidamente i programmi, ma è possibile che vengano eseguiti più lentamente.
+Alle variabili e alle variabili non dichiarate dichiarate senza un tipo di dati viene assegnato il `Object` tipo di dati. In questo modo è facile scrivere rapidamente i programmi, ma è possibile che vengano eseguiti più lentamente.
 
 ## <a name="strong-typing"></a>Tipizzazione forte
  Specificare i tipi di dati per tutte le variabili è noto come tipizzazione *forte*. L'uso di tipizzazione forte presenta diversi vantaggi:
@@ -33,12 +33,12 @@ Le variabili e le variabili non dichiarate dichiarate senza un tipo di dati veng
 - Questo comporta un'esecuzione più rapida del codice.
 
 ## <a name="most-efficient-data-types"></a>Tipi di dati più efficienti
- Per le variabili che non contengono mai frazioni, i tipi di dati integrali sono più efficienti dei tipi non integrali. In Visual Basic, `Integer` e `UInteger` sono i tipi numerici più efficienti.
+ Per le variabili che non contengono mai frazioni, i tipi di dati integrali sono più efficienti dei tipi non integrali. In Visual Basic `Integer` e `UInteger` sono i tipi numerici più efficienti.
 
- Per i numeri frazionari, `Double` è il tipo di dati più efficiente, perché i processori sulle piattaforme correnti eseguono operazioni a virgola mobile con precisione doppia. Tuttavia, le operazioni con `Double` non sono altrettanto veloci dei tipi integrali, ad esempio `Integer`.
+ Per i numeri frazionari, `Double` è il tipo di dati più efficiente, perché i processori sulle piattaforme correnti eseguono operazioni a virgola mobile con precisione doppia. Tuttavia, le operazioni con `Double` non sono altrettanto veloci dei tipi integrali, ad esempio `Integer` .
 
 ## <a name="specifying-data-type"></a>Specifica del tipo di dati
- Utilizzare l' [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) per dichiarare una variabile di un tipo specifico. È possibile specificare contemporaneamente il relativo livello di accesso tramite la parola chiave [public](../../../../visual-basic/language-reference/modifiers/public.md), [protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)o [private](../../../../visual-basic/language-reference/modifiers/private.md) , come nell'esempio seguente.
+ Utilizzare l' [istruzione Dim](../../../language-reference/statements/dim-statement.md) per dichiarare una variabile di un tipo specifico. È possibile specificare contemporaneamente il relativo livello di accesso tramite la parola chiave [public](../../../language-reference/modifiers/public.md), [protected](../../../language-reference/modifiers/protected.md), [Friend](../../../language-reference/modifiers/friend.md)o [private](../../../language-reference/modifiers/private.md) , come nell'esempio seguente.
 
 ```vb
 Private x As Double
@@ -46,7 +46,7 @@ Protected s As String
 ```
 
 ## <a name="character-conversion"></a>Conversione di caratteri
- Le funzioni `AscW` e `ChrW` funzionano in Unicode. È consigliabile utilizzarle in modo da `Asc` e `Chr`, che devono essere convertite all'interno e all'esterno di Unicode.
+ Le `AscW` `ChrW` funzioni e operano in Unicode. È consigliabile usarli in modo preferenziale per `Asc` e `Chr` , che devono essere convertiti all'interno e all'esterno di Unicode.
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -54,7 +54,7 @@ Protected s As String
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
 - <xref:Microsoft.VisualBasic.Strings.Chr%2A>
 - <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
-- [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Tipi di dati numerici](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)
-- [Dichiarazione di variabile](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Utilizzo di IntelliSense](/visualstudio/ide/using-intellisense)
+- [Tipi di dati](index.md)
+- [Tipi di dati numerici](numeric-data-types.md)
+- [Dichiarazione di variabile](../variables/variable-declaration.md)
+- [Using IntelliSense](/visualstudio/ide/using-intellisense)

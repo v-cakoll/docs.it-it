@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
-ms.openlocfilehash: d5dd90899c8a3c4fb4670258e7ff636822c479da
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1200e9ada45adce267c61f821bc7e2bde211cdc3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346179"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403278"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>Valori letterali XML e specifica XML 1.0 (Visual Basic)
 La sintassi dei valori letterali XML in Visual Basic supporta la maggior parte della specifica Extensible Markup Language (XML) 1,0. Per informazioni dettagliate sulla specifica XML 1,0, vedere [Extensible Markup Language (XML) 1,0](https://www.w3.org/TR/xml) sul sito Web W3C.  
@@ -30,6 +30,6 @@ La sintassi dei valori letterali XML in Visual Basic supporta la maggior parte d
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Creazione di XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [Valore letterale di documento XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
-- [Valore letterale elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [Creazione di XML in Visual Basic](creating-xml.md)
+- [Valore letterale di documento XML](../../../language-reference/xml-literals/xml-document-literal.md)
+- [Valore letterale di elemento XML](../../../language-reference/xml-literals/xml-element-literal.md)

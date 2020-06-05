@@ -5,12 +5,12 @@ helpviewer_keywords:
 - network operations, performing
 - My.Computer.Network object, tasks
 ms.assetid: 8ecc47ce-7730-49cd-b21d-3a13477eec6b
-ms.openlocfilehash: cb39f45ec9382e39569a08e5ba400d43cbc6bbd2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 67cfc1363c840c98f1df6529498fce1a82a0a5bf
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345547"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360150"
 ---
 # <a name="performing-network-operations-visual-basic"></a>Esecuzione di operazioni di rete (Visual Basic)
 
@@ -18,13 +18,13 @@ Nelle tabelle seguenti sono elencate le attività associate all'oggetto `My.Comp
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
 
- [Procedura: Caricare un file](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
+ [Procedura: Caricare un file](how-to-upload-a-file.md)  
  Illustra come caricare un file e archiviarlo in un percorso remoto tramite `My.Computer.Network`.  
   
- [Procedura: Scaricare un file](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
+ [Procedura: Scaricare un file](how-to-download-a-file.md)  
  Illustra come scaricare un file da un percorso remoto tramite `My.Computer.Network`.  
   
- [Procedura: Controllare lo stato di connessione](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
+ [Procedura: Controllare lo stato di connessione](how-to-check-connection-status.md)  
  Illustra come determinare se il computer ha una connessione di rete funzionante.  
   
 ## <a name="reference"></a>Informazioni di riferimento  

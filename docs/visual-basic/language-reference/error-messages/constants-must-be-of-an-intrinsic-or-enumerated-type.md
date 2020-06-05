@@ -7,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - BC30424
 ms.assetid: 2d402c2f-27ad-428b-b699-d45cd62f7196
-ms.openlocfilehash: 88bbab2005b464ee97d647f2b4b9be6ff81e2d82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e36b84252c3d8762308e95323b8e284977df8c0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649842"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409764"
 ---
 # <a name="constants-must-be-of-an-intrinsic-or-enumerated-type-not-a-class-structure-type-parameter-or-array-type"></a>Le costanti devono essere di tipo intrinseco o enumerato, non di tipo classe, struttura, parametro di tipo o matrice
-Si è provato a dichiarare una costante come una classe, struttura o tipo di matrice o come un parametro di tipo definito da un tipo generico che lo contiene.  
+Si è provato a dichiarare una costante come una classe, una struttura o un tipo di matrice oppure come un parametro di tipo definito da un tipo generico che lo contiene.  
   
- Le costanti devono essere di tipo intrinseco (`Boolean`, `Byte`, `Date`, `Decimal`, `Double`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, o `UShort`), o un `Enum` tipo basato su uno dei tipi integrali.  
+ Le costanti devono essere di tipo intrinseco ( `Boolean` , `Byte` , `Date` , `Decimal` , `Double` , `Integer` , `Long` , `Object` , `SByte` , `Short` , `Single` , `String` , `UInteger` , `ULong` o `UShort` ) o di un `Enum` tipo basato su uno dei tipi integrali.  
   
  **ID errore:** BC30424  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. Dichiarare la costante come funzione intrinseca o `Enum` tipo.  
+1. Dichiarare la costante come tipo intrinseco o `Enum` .  
   
-2. Una costante può anche essere, ad esempio un valore speciale `True`, `False`, o `Nothing`. Il compilatore considera i valori predefiniti di tipo intrinseco appropriato.  
+2. Una costante può anche essere un valore speciale, ad esempio `True` , `False` o `Nothing` . Il compilatore considera questi valori predefiniti come il tipo intrinseco appropriato.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Costanti ed enumerazioni](../../../visual-basic/language-reference/constants-and-enumerations.md)
-- [Tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)
+- [Costanti ed enumerazioni](../constants-and-enumerations.md)
+- [Tipi di dati](../../programming-guide/language-features/data-types/index.md)
+- [Tipi di dati](../data-types/index.md)

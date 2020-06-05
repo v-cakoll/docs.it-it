@@ -7,19 +7,19 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: 4cdcda7c5c78481af1633bf29d75070c521ab393
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a98f0b027700717b414d58e1284ddec655eb25f7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347397"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403226"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Parole chiave come nomi di elementi nel codice (Visual Basic)
-Qualsiasi elemento del programma, ad esempio una variabile, una classe o un membro, può avere lo stesso nome di una parola chiave con restrizioni. Ad esempio, è possibile creare una variabile denominata `Loop`. Tuttavia, per fare riferimento alla relativa versione, che ha lo stesso nome della parola chiave `Loop` limitata, è necessario precederla con una stringa di qualificazione completa o racchiuderla tra parentesi quadre (`[ ]`), come illustrato nell'esempio seguente.  
+Qualsiasi elemento del programma, ad esempio una variabile, una classe o un membro, può avere lo stesso nome di una parola chiave con restrizioni. Ad esempio, è possibile creare una variabile denominata `Loop` . Tuttavia, per fare riferimento alla relativa versione, che ha lo stesso nome della parola chiave Restricted, `Loop` è necessario precederla con una stringa di qualificazione completa o racchiuderla tra parentesi quadre ( `[ ]` ), come illustrato nell'esempio seguente.  
   
  [!code-vb[VbVbcnConventions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#8)]  
   
- Se non si esegue una di queste operazioni, Visual Basic presuppone l'uso della parola chiave intrinseca `Loop` e genera un errore, come nell'esempio seguente:  
+ Se non si esegue una di queste operazioni, Visual Basic presuppone l'uso della `Loop` parola chiave intrinseca e genera un errore, come nell'esempio seguente:  
   
  `' The following statement causes a compiler error.`  
   
@@ -32,6 +32,6 @@ Qualsiasi elemento del programma, ad esempio una variabile, una classe o un memb
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Convenzioni di denominazione Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-- [Struttura del programma e convenzioni di scrittura del codice](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)
+- [Convenzioni di denominazione di Visual Basic](naming-conventions.md)
+- [Struttura del programma e convenzioni del codice](program-structure-and-code-conventions.md)
+- [Parole chiave](../../language-reference/keywords/index.md)

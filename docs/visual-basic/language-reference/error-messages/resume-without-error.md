@@ -4,23 +4,23 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID20
 ms.assetid: f9631804-fd36-4443-b36c-30db827e6176
-ms.openlocfilehash: 61332486b20af66af24eac06b222a38353578c16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b6b565c88acadca048ade22ab00ac68539725f78
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055160"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400370"
 ---
 # <a name="resume-without-error"></a>Resume senza errore
-Oggetto `Resume` istruzione all'esterno di codice di gestione degli errori, o il codice passato in un gestore degli errori, anche se si è verificato alcun errore.  
+Un'istruzione è stata rilevata al di `Resume` fuori del codice di gestione degli errori oppure il codice ha saltato un gestore errori anche se non si è verificato alcun errore.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. Spostare il `Resume` istruzione in un gestore di errori, oppure eliminarlo.  
+1. Spostare l' `Resume` istruzione in un gestore errori o eliminarla.  
   
-2. Passa alle etichette non sono consentiti tra le procedure, quindi è necessario cercare la procedura per l'etichetta che identifica il gestore degli errori. Se si trova un'etichetta duplicata specificata come destinazione di una `GoTo` istruzione che non sia un `On Error GoTo` istruzione, modificare l'etichetta di riga per essere conforme alla destinazione prevista.  
+2. I salti alle etichette non possono essere eseguiti nelle procedure, quindi eseguire una ricerca nella routine per l'etichetta che identifica il gestore errori. Se si trova un'etichetta duplicata specificata come destinazione di un' `GoTo` istruzione che non è un' `On Error GoTo` istruzione, modificare l'etichetta della riga in modo che corrisponda alla destinazione prevista.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzione Resume](../../../visual-basic/language-reference/statements/resume-statement.md)
-- [Istruzione On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)
+- [Istruzione Resume](../statements/resume-statement.md)
+- [Istruzione On Error](../statements/on-error-statement.md)
