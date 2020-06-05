@@ -1,20 +1,20 @@
 ---
-title: Introduzione ai valori letterali XML in Visual Basic2Introduction to XML Literals in Visual Basic2
+title: Introduzione ai valori letterali XML in Visual Basic2
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: 9f5c54574e51c537d9ea58d307afda10736d0d88
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 8b92d22727c50274d57a5e407a0ca42807de3a94
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266950"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397584"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Introduzione ai valori letterali XML in Visual Basic
-In questa sezione vengono fornite informazioni sulla creazione di strutture ad albero XML in Visual Basic.  
+In questa sezione vengono fornite informazioni sulla creazione di alberi XML in Visual Basic.  
   
- Per informazioni sull'utilizzo dei risultati delle query LINQ come contenuto per una struttura ad albero XML, vedere [Costruzione funzionale (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ Per informazioni sull'utilizzo dei risultati delle query LINQ come contenuto di un albero XML, vedere la pagina relativa alla [costruzione funzionale (LINQ to XML) (Visual Basic)](functional-construction-linq-to-xml.md).  
   
- Per ulteriori informazioni sui valori letterali XML in Visual Basic, vedere [Panoramica di LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
+ Per ulteriori informazioni sui valori letterali XML in Visual Basic, vedere [Panoramica di LINQ to XML in Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md).  
   
 ## <a name="creating-xml-trees"></a>Creazione di strutture ad albero XML  
  Nell'esempio seguente viene illustrato come creare un oggetto <xref:System.Xml.Linq.XElement>, in questo caso `contacts`.  
@@ -197,4 +197,4 @@ Child2 was attached
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Creazione di strutture ad albero XML (Visual Basic)Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Creazione di strutture ad albero XML (Visual Basic)](creating-xml-trees.md)

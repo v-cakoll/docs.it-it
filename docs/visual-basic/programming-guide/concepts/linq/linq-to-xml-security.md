@@ -2,15 +2,15 @@
 title: Sicurezza in LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: d99b4af2-d447-4a3b-991b-6da0231a8637
-ms.openlocfilehash: 01b03dc5792981d41d16cc7b551892bd6fe2bcde
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2be3e2df81af046035832794766f3317e1e96e35
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331745"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84368530"
 ---
 # <a name="linq-to-xml-security-visual-basic"></a>Sicurezza LINQ to XML (Visual Basic)
-In questo argomento vengono descritti i problemi di sicurezza associati a LINQ to XML. Fornisce inoltre alcune indicazioni utili per prevenire l'esposizione ai rischi.  
+In questo argomento vengono descritti i problemi di sicurezza associati a LINQ to XML. Vengono inoltre fornite alcune indicazioni per ridurre l'esposizione ai rischi.  
   
 ## <a name="linq-to-xml-security-overview"></a>Cenni preliminari sulla sicurezza in LINQ to XML  
  LINQ to XML è progettato più per semplificare la programmazione che per applicazioni lato server con requisiti rigorosi di sicurezza. La maggior parte degli scenari XML sono costituiti dall'elaborazione di documenti XML attendibili, anziché dall'elaborazione di documenti XML non attendibili caricati in un server. LINQ to XML è ottimizzato per questi scenari.  
@@ -47,7 +47,7 @@ In questo argomento vengono descritti i problemi di sicurezza associati a LINQ t
 - Effettuare convalide accurate prima di costruire espressioni XPath dinamiche.  
   
 ## <a name="linq-to-xml-security-issues"></a>Problemi di sicurezza in LINQ to XML  
- I problemi di sicurezza trattati in questo argomento non vengono presentati in un ordine particolare. Tutti i problemi sono importanti e devono essere affrontati nel modo appropriato.  
+ I problemi di sicurezza illustrati in questo argomento non vengono presentati in un ordine specifico. Tutti i problemi sono importanti e devono essere affrontati nel modo appropriato.  
   
  Un attacco riuscito di tipo elevazione dei privilegi offre a un assembly dannoso un maggior controllo sull'ambiente. Può inoltre provocare la diffusione di dati, problemi di Denial of Service e così via.  
   
@@ -80,8 +80,8 @@ In questo argomento vengono descritti i problemi di sicurezza associati a LINQ t
 ### <a name="avoid-excess-entity-expansion"></a>Evitare un'eccessiva espansione delle entità  
  Un tipo noto di attacco Denial of Service associato all'utilizzo di una dichiarazione DTD si verifica quando un documento provoca un'eccessiva espansione delle entità. Per evitare questo problema, è possibile impostare la proprietà <xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities%2A?displayProperty=nameWithType> e creare un lettore che a questo punto è limitato per quanto riguarda il numero di caratteri risultanti dall'espansione di entità. Usare quindi il lettore per creare l'albero XML.  
   
-### <a name="limit-the-depth-of-the-xml-hierarchy"></a>Limitare il numero di livelli della gerarchia XML  
- Un attacco Denial of Service può verificarsi anche quando la gerarchia di un documento inviato contiene un numero eccessivo di livelli. Per evitare questo problema, è possibile eseguire il wrapping di un oggetto <xref:System.Xml.XmlReader> nella classe che conteggia la profondità degli elementi. Se la profondità supera un predeterminato livello ragionevole, è possibile terminare l'elaborazione del documento dannoso.  
+### <a name="limit-the-depth-of-the-xml-hierarchy"></a>Limitare la profondità della gerarchia XML  
+ Un possibile attacco di tipo Denial of Service si verifica quando viene inviato un documento con una profondità della gerarchia eccessiva. Per evitare questo problema, è possibile eseguire il wrapping di un oggetto <xref:System.Xml.XmlReader> nella classe che conteggia la profondità degli elementi. Se la profondità supera un predeterminato livello ragionevole, è possibile terminare l'elaborazione del documento dannoso.  
   
 ### <a name="protect-against-untrusted-xmlreader-or-xmlwriter-implementations"></a>Proteggersi da implementazioni XmlReader o XmlWriter non attendibili  
  Gli amministratori devono verificare che tutte le implementazioni <xref:System.Xml.XmlReader> o <xref:System.Xml.XmlWriter> fornite esternamente abbiano nomi sicuri e siano state registrate nella configurazione del computer. In questo modo è possibile evitare il caricamento di malware camuffato da lettore o writer.  
@@ -101,4 +101,4 @@ In questo argomento vengono descritti i problemi di sicurezza associati a LINQ t
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Guida per programmatori (LINQ to XML) (Visual Basic)](programming-guide-linq-to-xml.md)

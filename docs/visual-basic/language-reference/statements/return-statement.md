@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-ms.openlocfilehash: efc85a3a844898345aa2d16926ba0e35d7346d1b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: cdb58e32c30c8e6c1662fb698ac5576c3f71258c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74333020"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404200"
 ---
 # <a name="return-statement-visual-basic"></a>Istruzione Return (Visual Basic)
-Restituisce il controllo al codice che ha chiamato una procedura di `Function`, `Sub`, `Get`, `Set`o `Operator`.  
+Restituisce il controllo al codice che ha chiamato `Function` una `Sub` routine,, `Get` , `Set` o `Operator` .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -29,30 +29,30 @@ Return expression
   
 ## <a name="part"></a>Parte  
  `expression`  
- Obbligatorio in una procedura `Function`, `Get`o `Operator`. Espressione che rappresenta il valore da restituire al codice chiamante.  
+ Obbligatorio in una `Function` `Get` procedura, o `Operator` . Espressione che rappresenta il valore da restituire al codice chiamante.  
   
-## <a name="remarks"></a>Note  
- In una procedura `Sub` o `Set`, l'istruzione `Return` è equivalente a un'istruzione `Exit Sub` o `Exit Property` e non è necessario fornire `expression`.  
+## <a name="remarks"></a>Commenti  
+ In una `Sub` `Set` routine o l' `Return` istruzione è equivalente a un' `Exit Sub` istruzione o `Exit Property` e `expression` non deve essere fornita.  
   
- In una procedura `Function`, `Get`o `Operator`, l'istruzione `Return` deve includere `expression`e `expression` deve restituire un tipo di dati convertibile nel tipo restituito della stored procedure. In una procedura `Function` o `Get` è inoltre possibile assegnare un'espressione al nome della stored procedure per fungere da valore restituito, quindi eseguire un'istruzione `Exit Function` o `Exit Property`. In una procedura `Operator` è necessario usare `Return expression`.  
+ In una `Function` `Get` routine, o `Operator` , l' `Return` istruzione deve includere `expression` e `expression` deve restituire un tipo di dati convertibile nel tipo restituito della routine. In una `Function` `Get` routine o è inoltre possibile assegnare un'espressione al nome della stored procedure per fungere da valore restituito e quindi eseguire un' `Exit Function` `Exit Property` istruzione o. In una `Operator` procedura è necessario utilizzare `Return expression` .  
   
- È possibile includere il numero di istruzioni `Return` appropriate nella stessa procedura.  
+ È possibile includere tutte `Return` le istruzioni appropriate nella stessa procedura.  
   
 > [!NOTE]
-> Il codice in un blocco `Finally` viene eseguito dopo che è stata rilevata un'istruzione `Return` in un blocco `Try` o `Catch`, ma prima che venga eseguita l'istruzione `Return`. Non è possibile includere un'istruzione `Return` in un blocco di `Finally`.  
+> Il codice in un `Finally` blocco viene eseguito dopo `Return` che un'istruzione in un `Try` `Catch` blocco o viene rilevata, ma prima dell' `Return` esecuzione dell'istruzione. Un' `Return` istruzione non può essere inclusa in un `Finally` blocco.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzata l'istruzione `Return` più volte per tornare al codice chiamante quando la procedura non deve eseguire altre operazioni.  
+ Nell'esempio seguente l'istruzione viene utilizzata `Return` più volte per tornare al codice chiamante quando la procedura non deve eseguire altre operazioni.  
   
  [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Istruzione Get](../../../visual-basic/language-reference/statements/get-statement.md)
-- [Istruzione Set](../../../visual-basic/language-reference/statements/set-statement.md)
-- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Istruzione Exit](../../../visual-basic/language-reference/statements/exit-statement.md)
-- [Istruzione Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Istruzione Function](function-statement.md)
+- [Istruzione Sub](sub-statement.md)
+- [Istruzione Get](get-statement.md)
+- [Istruzione set](set-statement.md)
+- [Operator Statement](operator-statement.md)
+- [Property Statement](property-statement.md)
+- [Istruzione Exit](exit-statement.md)
+- [Istruzione Try...Catch...Finally](try-catch-finally-statement.md)

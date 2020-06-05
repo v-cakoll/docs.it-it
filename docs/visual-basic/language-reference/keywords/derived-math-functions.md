@@ -21,15 +21,15 @@ helpviewer_keywords:
 - degrees
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
-ms.openlocfilehash: 73cf56dd72f2baac0474d6f5c4e88228a1fe38cf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 611f3d8faf2148b8a983467d9ace4fd6c18b30e6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349844"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373887"
 ---
 # <a name="derived-math-functions-visual-basic"></a>Funzioni matematiche derivate (Visual Basic)
-Nella tabella seguente vengono illustrate le funzioni matematiche non intrinseche che possono essere derivate dalle funzioni matematiche intrinseche dell'oggetto <xref:System.Math?displayProperty=nameWithType>. È possibile accedere alle funzioni matematiche intrinseche aggiungendo `Imports System.Math` al file o al progetto.  
+Nella tabella seguente vengono illustrate le funzioni matematiche non intrinseche che possono essere derivate dalle funzioni matematiche intrinseche dell' <xref:System.Math?displayProperty=nameWithType> oggetto. È possibile accedere alle funzioni matematiche intrinseche aggiungendo `Imports System.Math` al file o al progetto.  
   
 |Funzione|Equivalenti derivati|  
 |--------------|-------------------------|  
@@ -41,12 +41,12 @@ Nella tabella seguente vengono illustrate le funzioni matematiche non intrinsech
 |Secante inversa (ASEC (x))|2 * Atan (1) – Atan (Sign (x)/sqrt (x \* x-1))|  
 |Cosecante inverso (ACSC (x))|Atan (Sign (x)/sqrt (x * x-1))|  
 |Cotangente inversa (acot (x))|2 * Atan (1)-Atan (x)|  
-|Seno iperbolico ((x))|(Exp(x) – Exp(-x)) / 2|  
-|Coseno iperbolico (cosh (x))|(Exp(x) + Exp(-x)) / 2|  
-|Tangente iperbolica (tanh (x))|(Exp(x) – Exp(-x)) / (Exp(x) + Exp(-x))|  
-|Secante iperbolica (sech (x))|2 / (Exp(x) + Exp(-x))|  
-|Cosecante iperbolica (csch (x))|2 / (Exp(x) – Exp(-x))|  
-|Cotangente iperbolica (coth (x))|(Exp(x) + Exp(-x)) / (Exp(x) – Exp(-x))|  
+|Seno iperbolico ((x))|(Exp (x) – exp (-x))/2|  
+|Coseno iperbolico (cosh (x))|(Exp (x) + exp (-x))/2|  
+|Tangente iperbolica (tanh (x))|(Exp (x) – exp (-x))/(exp (x) + exp (-x))|  
+|Secante iperbolica (sech (x))|2/(exp (x) + exp (-x))|  
+|Cosecante iperbolica (csch (x))|2/(exp (x) – exp (-x))|  
+|Cotangente iperbolica (coth (x))|(Exp (x) + exp (-x))/(exp (x) – exp (-x))|  
 |Seno iperbolico inverso (asinh (x))|Log (x + sqrt (x * x + 1))|  
 |Coseno iperbolico inverso (acosh (x))|Log (x + sqrt (x * x-1))|  
 |Tangente iperbolica inversa (atanh (x))|Log ((1 + x)/(1 – x))/2|  
@@ -56,4 +56,4 @@ Nella tabella seguente vengono illustrate le funzioni matematiche non intrinsech
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzioni matematiche](../../../visual-basic/language-reference/functions/math-functions.md)
+- [Funzioni matematiche](../functions/math-functions.md)
