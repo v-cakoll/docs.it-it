@@ -8,17 +8,17 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: b322bd2215c95298be0a33ace1f3590a63878e24
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d991a385e537c43daeb708e96e712acd92110379
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350378"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403382"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Proprietà implementate automaticamente (Visual Basic)
-Le *proprietà implementate automaticamente* consentono di specificare rapidamente una proprietà di una classe senza dover scrivere codice per `Get` e `Set` la proprietà. Quando si scrive il codice per una proprietà implementata automaticamente, il compilatore Visual Basic crea automaticamente un campo privato per archiviare la variabile della proprietà oltre a creare le routine `Get` e `Set` associate.  
+Le *proprietà implementate automaticamente* consentono di specificare rapidamente una proprietà di una classe senza dover scrivere codice in `Get` e `Set` la proprietà. Quando si scrive il codice per una proprietà implementata automaticamente, il compilatore Visual Basic crea automaticamente un campo privato per archiviare la variabile della proprietà oltre a creare le routine `Get` e `Set` associate.  
   
- Con le proprietà implementate automaticamente, una proprietà, incluso un valore predefinito, può essere dichiarata in una sola riga. L'esempio seguente illustra tre dichiarazioni di proprietà.  
+ Con le proprietà implementate automaticamente, una proprietà, incluso un valore predefinito, può essere dichiarata in una sola riga. L'esempio seguente illustra tre dichiarazioni di proprietà.   
   
  [!code-vb[VbVbalrAutoImplementedProperties#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#1)]  
   
@@ -90,13 +90,13 @@ End Class
 - Fornire commenti XML per il campo sottostante.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>Espansione di una proprietà implementata automaticamente  
- Se è necessario convertire una proprietà implementata automaticamente in una proprietà espansa contenente una routine `Get` o `Set`, l'editor di codice di Visual Basic può generare automaticamente le routine `Get` e `Set` e l'istruzione `End Property` per la proprietà. Il codice viene generato se si inserisce il cursore su una riga vuota che segue l'istruzione `Property`, si digita una `G` (per `Get`) o un `S` (per `Set`) e si preme INVIO. L'editor di codice di Visual Basic genera automaticamente la routine `Get` o `Set` per le proprietà di sola lettura e di sola scrittura quando si preme INVIO alla fine di un'istruzione `Property`.  
+ Se è necessario convertire una proprietà implementata automaticamente in una proprietà espansa contenente una routine `Get` o `Set`, l'editor di codice di Visual Basic può generare automaticamente le routine `Get` e `Set` e l'istruzione `End Property` per la proprietà. Il codice viene generato se si inserisce il cursore su una riga vuota che segue l' `Property` istruzione, si digita un `G` (per `Get` ) o un `S` (per `Set` ) e si preme INVIO. L'editor di codice di Visual Basic genera automaticamente la routine `Get` o `Set` per le proprietà di sola lettura e di sola scrittura quando si preme INVIO alla fine di un'istruzione `Property`.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Procedura: dichiarare e chiamare una proprietà predefinita in Visual Basic](./how-to-declare-and-call-a-default-property.md)
-- [Procedura: Dichiarare una proprietà con livelli di accesso misti](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Istruzione Property](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)
-- [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)
-- [Oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Procedura: dichiarare una proprietà con livelli di accesso misti](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Property Statement](../../../language-reference/statements/property-statement.md)
+- [ReadOnly](../../../language-reference/modifiers/readonly.md)
+- [WriteOnly](../../../language-reference/modifiers/writeonly.md)
+- [Oggetti e classi](../objects-and-classes/index.md)

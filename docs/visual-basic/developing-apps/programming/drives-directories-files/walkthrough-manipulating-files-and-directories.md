@@ -15,12 +15,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: 83dc6ce0d29c1c368c36b51fc84ecad34d72e01f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b77618e5cd525cf3ad012405f402681aa5bb52c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74333813"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406664"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Procedura dettagliata: modifica di file e directory in Visual Basic
 
@@ -47,9 +47,9 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
     |Controllo|Proprietà|valore|  
     |-------------|--------------|-----------|  
     |**ListBox**|**Nome**|`filesListBox`|  
-    |**Pulsante**|**Nome**<br /><br /> **Text**|`browseButton`<br /><br /> **Sfoglia**|  
-    |**Pulsante**|**Nome**<br /><br /> **Text**|`examineButton`<br /><br /> **Esamina**|  
-    |**Casella**|**Nome**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **Salva risultati**|  
+    |**Button**|**Nome**<br /><br /> **Testo**|`browseButton`<br /><br /> **Sfoglia**|  
+    |**Button**|**Nome**<br /><br /> **Testo**|`examineButton`<br /><br /> **Esamina**|  
+    |**CheckBox**|**Nome**<br /><br /> **Testo**|`saveCheckBox`<br /><br /> **Salva risultati**|  
     |**FolderBrowserDialog**|**Nome**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Per selezionare una cartella ed elencare file di una cartella  
@@ -162,9 +162,9 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
  [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>
-- [Procedura dettagliata: modifica di file mediante i metodi .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
+- [Procedura dettagliata: Modifica di file con i metodi .NET Framework](walkthrough-manipulating-files-by-using-net-framework-methods.md)

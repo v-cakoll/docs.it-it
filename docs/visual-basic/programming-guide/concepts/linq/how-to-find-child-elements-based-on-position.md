@@ -1,13 +1,13 @@
 ---
-title: 'Procedura: trovare elementi figlio in base alla posizione (XPath-LINQ to XML)'
+title: 'Procedura: Trovare elementi figlio in base alla posizione (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 6831e1db-5e97-444f-a7a1-d0a87104b005
-ms.openlocfilehash: c3062963c6144dfafed8b49410208f480c273ec9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d6dd1150ae3e4ad586e476b777b1f7d47d60c261
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349078"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405261"
 ---
 # <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>Procedura: trovare elementi figlio in base alla posizione (XPath-LINQ to XML) (Visual Basic)
 Talvolta si desidera individuare elementi in base alla posizione, ad esempio il secondo elemento oppure dal terzo al quinto elemento.  
@@ -21,7 +21,7 @@ Talvolta si desidera individuare elementi in base alla posizione, ad esempio il 
 ## <a name="example"></a>Esempio  
  In questo esempio vengono individuati gli elementi `Test` compresi tra il secondo e il quarto. Il risultato è una raccolta di elementi.  
   
- Questo esempio usa il documento XML seguente: [File XML di esempio: configurazione di test (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: configurazione di test (LINQ to XML)](sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```vb  
 Dim testCfg As XElement = XElement.Load("TestConfig.xml")  
@@ -54,7 +54,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- Questo esempio produce il seguente output:  
+ Nell'esempio viene prodotto l'output seguente:  
   
 ```console  
 Results are identical  
@@ -80,4 +80,4 @@ Results are identical
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML per gli utenti di XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

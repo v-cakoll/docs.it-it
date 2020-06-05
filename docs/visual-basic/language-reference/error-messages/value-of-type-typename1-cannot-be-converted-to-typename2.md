@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: 027cccc9ad406d5bc2fd686ddeb4c674dc8f3c90
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6b35efbc445887c537b94dd299b317a28e5f689
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621193"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406560"
 ---
-# <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>Valore di tipo '\<NomeTipo1 >' non può essere convertito in '\<in NomeTipo2 >'
-Valore di tipo '\<NomeTipo1 >' non può essere convertito in '\<in NomeTipo2 >'. Mancata corrispondenza del tipo potrebbe essere dovuto a combinare un riferimento al file con un riferimento progetto all'assembly '\<assemblyname >'. Provare a sostituire il riferimento file a '\<percorsofile >' nel progetto '\<projectname1 >' con un riferimento al progetto '\<projectname2 >'.  
+# <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>Impossibile convertire il valore di tipo '\<typename1>' in '\<typename2>'
+Non è possibile convertire il valore di tipo ' \<typename1> ' in ' \<typename2> '. Il tipo non corrisponde potrebbe essere dovuto alla combinazione di un riferimento file con un riferimento di progetto all'assembly ' \<assemblyname> '. Provare a sostituire il riferimento file \<filepath> con '' nel progetto ' \<projectname1> ' con un riferimento di progetto a' \<projectname2> '.  
   
- In una situazione in cui un progetto contiene sia un riferimento al progetto un riferimento al file, il compilatore non può garantire che un tipo può essere convertito in un altro.  
+ In una situazione in cui un progetto rende un riferimento al progetto e un file di riferimento, il compilatore non può garantire che un tipo possa essere convertito in un altro.  
   
- Il pseudo-codice seguente illustra una situazione che può generare questo errore.  
+ Lo pseudo-codice seguente illustra una situazione in cui è possibile generare questo errore.  
   
  `' ================ Visual Basic project P1 ================`  
   
@@ -47,19 +47,19 @@ Valore di tipo '\<NomeTipo1 >' non può essere convertito in '\<in NomeTipo2 >'.
   
  `End Class`  
   
- Project `P1` contiene un riferimento indiretto progetti tramite project `P2` al progetto `P3`e anche un riferimento di file dirette a `P3`. La dichiarazione di `commonObject` utilizza il riferimento al file per `P3`, mentre la chiamata a `P2.getCommonClass` utilizza il riferimento al progetto `P3`.  
+ `P1`Il progetto esegue un riferimento indiretto al progetto tramite `P2` il progetto al progetto `P3` e anche un riferimento diretto a un file `P3` . La dichiarazione di `commonObject` utilizza il riferimento al file `P3` , mentre la chiamata a `P2.getCommonClass` utilizza il riferimento del progetto a `P3` .  
   
- Il problema in questa situazione è che il riferimento al file specifica un percorso e nome file per file di output del `P3` (in genere P3), mentre i riferimenti al progetto identifica il progetto di origine (`P3`) in base al nome di progetto. Per questo motivo, il compilatore non garantisce che il tipo `P3.commonClass` proviene lo stesso codice sorgente tramite i due diversi riferimenti.  
+ Il problema in questa situazione è che il riferimento al file specifica un percorso e un nome di file per il file di output di `P3` (in genere P3. dll), mentre i riferimenti al progetto identificano il progetto di origine ( `P3` ) in base al nome del progetto. Per questo motivo, il compilatore non può garantire che il tipo `P3.commonClass` provenga dallo stesso codice sorgente attraverso i due riferimenti diversi.  
   
- Questa situazione si verifica in genere quando i riferimenti al progetto e riferimenti a file sono di tipo misto. Nella figura precedente, il problema non si verificherà se `P1` reso un riferimento diretto a `P3` anziché un riferimento al file.  
+ Questa situazione si verifica in genere quando i riferimenti al progetto e i riferimenti ai file sono misti. Nell'illustrazione precedente il problema non si verifica se è `P1` stato creato un riferimento diretto a un progetto `P3` anziché un riferimento a un file.  
   
  **ID errore:** BC30955  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-- Modificare il riferimento file a un riferimento al progetto.  
+- Modificare il riferimento al file in un riferimento al progetto.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Conversioni di tipi in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Conversioni di tipi in Visual Basic](../../programming-guide/language-features/data-types/type-conversions.md)
 - [Gestione dei riferimenti in un progetto](/visualstudio/ide/managing-references-in-a-project)

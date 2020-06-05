@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: e8607f8254783b5486b02ccc4c7e4081da506fae
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 09ddc4bb735b645e09d34198c66dff78183592bf
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802153"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403083"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 
@@ -34,7 +34,7 @@ Versione minima richiesta per il sottosistema, espressa in una notazione del pun
 
 Gli zeri iniziali della versione `minor` non modificano la versione, a differenza degli zeri finali. Ad esempio, 6.1 e 6.01 si fanno riferimento alla stessa versione, ma 6.10 fa riferimento a una versione diversa. È consigliabile esprimere la versione secondaria con due cifre per evitare confusione.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Nella tabella seguente sono elencate le versioni comuni del sottosistema di Windows.
 
@@ -54,11 +54,11 @@ Il valore predefinito dell'opzione del compilatore **-subsystemversion** dipende
 
 - Il valore predefinito è 6.02 se è impostata un'opzione del compilatore nell'elenco seguente:
 
-  - [-target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)
+  - [-target:appcontainerexe](target.md)
 
-  - [-target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)
+  - [-target:winmdobj](target.md)
 
-  - [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)
+  - [-platform:arm](platform.md)
 
 - Il valore predefinito è 6.00 se si usa MSBuild, se la destinazione è .NET Framework 4.5 e se non è stata impostata una delle opzioni del compilatore specificate in precedenza in questo elenco.
 
@@ -66,10 +66,10 @@ Il valore predefinito dell'opzione del compilatore **-subsystemversion** dipende
 
 ## <a name="setting-this-option"></a>Impostazione di questa opzione
 
-Per impostare l'opzione del compilatore **-SubsystemVersion** in Visual Studio, è necessario aprire il file con estensione vbproj e specificare un valore `SubsystemVersion` per la proprietà nel codice XML di MSBuild. Non è possibile impostare questa opzione nell'IDE di Visual Studio. Per altre informazioni, vedere "Valori predefiniti" più indietro in questo argomento o [Proprietà di progetto MSBuild comuni](/visualstudio/msbuild/common-msbuild-project-properties).
+Per impostare l'opzione del compilatore **-SubsystemVersion** in Visual Studio, è necessario aprire il file con estensione vbproj e specificare un valore per la `SubsystemVersion` proprietà nel codice XML di MSBuild. Non è possibile impostare questa opzione nell'IDE di Visual Studio. Per altre informazioni, vedere "Valori predefiniti" più indietro in questo argomento o [Proprietà di progetto MSBuild comuni](/visualstudio/msbuild/common-msbuild-project-properties).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Compilatore della riga di comando di Visual Basic](index.md)
 
 - [Proprietà di MSBuild](/visualstudio/msbuild/msbuild-properties)

@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
-ms.openlocfilehash: 191415408f607d0ff768e50c41fa9b3c4405a688
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 94c4229d4036382e344cffb09295e218642c55d4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582819"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402901"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>La clausola Handles richiede una variabile WithEvents definita nel tipo che la contiene o in uno dei relativi tipi di base
 
-Nella clausola `Handles` non è stato fornito un `WithEvents` variabile. La parola chiave `Handles` alla fine di una dichiarazione di routine fa in modo che gestisca gli eventi generati da una variabile oggetto dichiarata con la parola chiave `WithEvents`.
+Non è stata fornita una `WithEvents` variabile nella `Handles` clausola. La `Handles` parola chiave alla fine di una dichiarazione di routine fa in modo che gestisca gli eventi generati da una variabile oggetto dichiarata con la `WithEvents` parola chiave.
 
 **ID errore:** BC30506
 
 ## <a name="to-correct-this-error"></a>Per correggere l'errore
 
-Specificare la variabile di `WithEvents` necessaria.
+Specificare la `WithEvents` variabile necessaria.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente Visual Basic genera un errore del compilatore `BC30506` perché la parola chiave [WithEvents](../modifiers/withevents.md) non viene utilizzata nella definizione dell'istanza di <xref:System.Timers.Timer?displayProperty=nameWithType>.
+Nell'esempio seguente Visual Basic genera un errore del compilatore `BC30506` perché la parola chiave [WithEvents](../modifiers/withevents.md) non viene utilizzata nella definizione dell' <xref:System.Timers.Timer?displayProperty=nameWithType> istanza.
 
 ```vb
 Imports System.Timers
@@ -47,7 +47,7 @@ Module Module1
 End Module
 ```
 
-L'esempio seguente viene compilato correttamente perché la variabile `_timer1` è definita con la parola chiave `WithEvents`:
+L'esempio seguente viene compilato correttamente perché la `_timer1` variabile è definita con la `WithEvents` parola chiave:
 
 ```vb
 Imports System.Timers
@@ -71,4 +71,4 @@ End Module
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [Selettori](../statements/handles-clause.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
-ms.openlocfilehash: 8511a96c7abcc28997c293a09ef10bad543dc261
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 06809ce8a846ea06ff2decdd87f304d1b26a7750
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74352134"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406612"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Scrittura su file in Visual Basic
 
@@ -21,19 +21,19 @@ Questa sezione spiega come eseguire attività che riguardano la scrittura su fil
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
 
- [Procedura: scrivere testo in file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
+ [Procedura: Scrivere testo in file](how-to-write-text-to-files.md)  
  Illustra come scrivere testo in file di testo.  
   
- [Procedura: aggiungere testo a file di testo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-append-to-text-files.md)  
+ [Procedura: Aggiungere a file di testo](how-to-append-to-text-files.md)  
  Illustra come aggiungere testo a un file di testo.  
   
- [Procedura: scrivere all'interno di file binari](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)  
+ [Procedura: Scrivere in file binari](how-to-write-to-binary-files.md)  
  Illustra come scrivere in un file binario.  
   
- [Procedura: scrivere testo in file della directory Documenti](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-in-the-my-documents-directory.md)  
+ [Procedura: Scrivere testo in file della directory Documenti](how-to-write-text-to-files-in-the-my-documents-directory.md)  
  Illustra come creare e scrivere su in un file di testo nuovo nella directory **Documenti**.  
   
- [Procedura: scrivere testo in file con un oggetto StreamWriter](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
+ [Procedura: Scrivere testo in file con un oggetto StreamWriter](how-to-write-text-to-files-with-a-streamwriter.md)  
  Illustra come scrivere in un file con un oggetto <xref:System.IO.StreamWriter?displayProperty=nameWithType>.  
   
 ## <a name="reference"></a>Informazioni di riferimento  
@@ -52,14 +52,14 @@ Questa sezione spiega come eseguire attività che riguardano la scrittura su fil
   
 ## <a name="related-sections"></a>Sezioni correlate  
 
- [Lettura da file](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [Lettura da file](reading-from-files.md)  
  Spiega come eseguire le attività che implicano la lettura da file.  
   
- [Creazione, eliminazione e spostamento di file e directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
+ [Creazione, eliminazione e spostamento di file e directory](creating-deleting-and-moving-files-and-directories.md)  
  Spiega come eseguire le attività che implicano la creazione, l'eliminazione, lo spostamento e la ridenominazione di file e directory.  
   
- [Archiviazione e lettura di dati negli Appunti](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
+ [Archiviazione e lettura di dati negli Appunti](../computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
  Spiega come eseguire attività associate a `My.Computer.Clipboard`, ad esempio la lettura o la scrittura di dati negli Appunti.  
   
- [Codifiche di file](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
+ [Codifiche dei file](file-encodings.md)  
  Offre una panoramica della codifiche di file.
