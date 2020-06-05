@@ -17,12 +17,12 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 41a971896fe726cbe9849fd46334910e7288afe0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f8accc74fbdd9b1d8cf9bc3d8f6ddd26f73452b8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352592"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363876"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Overload della routine (Visual Basic)
 
@@ -50,13 +50,13 @@ Quando si esegue l'overload di una stored procedure, si applicano le regole segu
 
 - **Elementi che non fanno parte della firma**. Non è possibile eseguire l'overload di una routine senza variare la firma. In particolare, non è possibile eseguire l'overload di una routine variando solo uno o più degli elementi seguenti:
 
-  - Parole chiave del modificatore di routine, ad esempio `Public`, `Shared`e `Static`
+  - Parole chiave del modificatore di routine, ad esempio `Public` , `Shared` e`Static`
 
   - Parametri o nomi dei parametri di tipo
 
   - Vincoli del parametro di tipo (per una routine generica)
 
-  - Parole chiave del modificatore di parametro, ad esempio `ByRef` e `Optional`
+  - Parole chiave del modificatore di parametro, ad esempio `ByRef` e`Optional`
 
   - Indica se restituisce un valore
 
@@ -64,27 +64,27 @@ Quando si esegue l'overload di una stored procedure, si applicano le regole segu
 
   Gli elementi nell'elenco precedente non fanno parte della firma. Sebbene non sia possibile utilizzarli per distinguere le versioni di overload, è possibile variare tra le versioni di overload che sono correttamente differenziate in base alle rispettive firme.
 
-- **Argomenti ad associazione tardiva**. Se si intende passare una variabile oggetto con associazione tardiva a una versione di overload, è necessario dichiarare il parametro appropriato come <xref:System.Object>.
+- **Argomenti ad associazione tardiva**. Se si intende passare una variabile oggetto con associazione tardiva a una versione di overload, è necessario dichiarare il parametro appropriato come <xref:System.Object> .
 
 ## <a name="multiple-versions-of-a-procedure"></a>Più versioni di una routine
 
-Si supponga di scrivere una procedura `Sub` per pubblicare una transazione rispetto al saldo del cliente e di voler fare riferimento al cliente in base al nome o al numero di conto. Per risolvere questo problema, è possibile definire due diverse `Sub` procedure, come nell'esempio seguente:
+Si supponga di scrivere una `Sub` procedura per pubblicare una transazione rispetto al saldo del cliente e di voler fare riferimento al cliente in base al nome o al numero di conto. Per risolvere questo problema, è possibile definire due diverse `Sub` procedure, come nell'esempio seguente:
 
 [!code-vb[VbVbcnProcedures#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#73)]
 
 ### <a name="overloaded-versions"></a>Versioni di overload
 
-In alternativa, è possibile eseguire l'overload di un singolo nome di procedura. È possibile usare la parola chiave [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) per definire una versione della routine per ogni elenco di parametri, come indicato di seguito:
+In alternativa, è possibile eseguire l'overload di un singolo nome di procedura. È possibile usare la parola chiave [Overloads](../../../language-reference/modifiers/overloads.md) per definire una versione della routine per ogni elenco di parametri, come indicato di seguito:
 
 [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]
 
 #### <a name="additional-overloads"></a>Overload aggiuntivi
 
-Se si desidera accettare anche un importo di transazione in `Decimal` o `Single`, è possibile eseguire ulteriori Overload `post` per consentire questa variazione. Se questa operazione è stata apportata a ognuno degli overload dell'esempio precedente, si avranno quattro `Sub` procedure, tutte con lo stesso nome ma con quattro firme diverse.
+Se si desidera accettare anche un importo di transazione in `Decimal` o `Single` , è possibile eseguire un ulteriore overload `post` per consentire questa variazione. Se questa operazione è stata apportata a ognuno degli overload dell'esempio precedente, si avranno quattro `Sub` procedure, tutte con lo stesso nome ma con quattro firme diverse.
 
 ## <a name="advantages-of-overloading"></a>Vantaggi dell'overload
 
-Il vantaggio dell'overload di una stored procedure è la flessibilità della chiamata. Per utilizzare la procedura `post` dichiarata nell'esempio precedente, il codice chiamante può ottenere l'identificazione del cliente come `String` o `Integer`, quindi chiamare la stessa procedura in entrambi i casi. Questa condizione è illustrata nell'esempio che segue.
+Il vantaggio dell'overload di una stored procedure è la flessibilità della chiamata. Per usare la `post` procedura dichiarata nell'esempio precedente, il codice chiamante può ottenere l'identificazione del cliente come `String` o `Integer` , quindi chiamare la stessa procedura in entrambi i casi. L'esempio seguente illustra questi concetti.
 
 [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]
 
@@ -92,12 +92,12 @@ Il vantaggio dell'overload di una stored procedure è la flessibilità della chi
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Routine](./index.md)
-- [Procedura: Definire più versioni di una routine](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Procedura: Chiamare una routine di overload](./how-to-call-an-overloaded-procedure.md)
-- [Procedura: Eseguire l'overload di una routine che accetta parametri facoltativi](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Procedura: Eseguire l'overload di una routine che accetta un numero indefinito di parametri](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Procedure](./index.md)
+- [Procedura: definire più versioni di una routine](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Procedura: chiamare una routine di overload](./how-to-call-an-overloaded-procedure.md)
+- [Procedura: eseguire l'overload di una routine che accetta parametri facoltativi](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Procedura: eseguire l'overload di una routine che accetta un numero indefinito di parametri](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Considerazioni sull'overload di routine](./considerations-in-overloading-procedures.md)
 - [Risoluzione dell'overload](./overload-resolution.md)
-- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Tipi generici in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Overload](../../../language-reference/modifiers/overloads.md)
+- [Generic Types in Visual Basic](../data-types/generic-types.md)

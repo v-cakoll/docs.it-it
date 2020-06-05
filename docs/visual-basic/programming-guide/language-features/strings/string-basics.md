@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 7141966e3c8a8cbce42111c56a85a00709e8fe1a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 935926b8b83afa47c20ea68aecd6bc8c40bd0234
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344287"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363697"
 ---
 # <a name="string-basics-in-visual-basic"></a>Nozioni fondamentali sulle stringhe in Visual Basic
 Il tipo di dati `String` rappresenta una serie di caratteri, ognuno dei quali, a sua volta, rappresenta un'istanza del tipo di dati `Char`. In questo argomento vengono introdotti i concetti di base delle stringhe in Visual Basic.  
@@ -29,7 +29,7 @@ Il tipo di dati `String` rappresenta una serie di caratteri, ognuno dei quali, a
   
  [!code-vb[VbVbalrStrings#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#65)]  
   
- L'errore è determinato dal fatto che durante la compilazione la stringa viene considerata terminata dopo il secondo segno di virgolette e il resto della stringa è interpretato come codice. Per risolvere questo problema, Visual Basic interpreta due virgolette in un valore letterale stringa come una virgoletta singola nella stringa. L'esempio seguente illustra il modo corretto per inserire le virgolette in una stringa:  
+ L'errore è determinato dal fatto che durante la compilazione la stringa viene considerata terminata dopo il secondo segno di virgolette e il resto della stringa è interpretato come codice. Per risolvere questo problema, Visual Basic interpreta due virgolette in un valore letterale stringa come una virgoletta singola nella stringa. L'esempio seguente illustra il modo corretto per inserire le virgolette in una stringa:   
   
  [!code-vb[VbVbalrStrings#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#66)]  
   
@@ -61,19 +61,19 @@ World]]></xml>.Value
  La variabile `myArray` ora contiene una matrice di istanze di `Char`, ognuna delle quali rappresenta un carattere di `myString`.  
   
 ## <a name="the-immutability-of-strings"></a>Immutabilità delle stringhe  
- Una stringa è *immutabile*, quindi il suo valore non può essere modificato dopo che è stato creato. Questo non impedisce tuttavia di assegnare più valori a una variabile di tipo String. Si consideri l'esempio seguente:  
+ Una stringa è *immutabile*, quindi il suo valore non può essere modificato dopo che è stato creato. Questo non impedisce tuttavia di assegnare più valori a una variabile di tipo String. Prendere in considerazione gli esempi seguenti:  
   
  [!code-vb[VbVbalrStrings#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#69)]  
   
- In questo esempio, dopo aver creato una variabile stringa, le viene assegnato un valore che successivamente viene modificato.  
+ In questo esempio, dopo aver creato una variabile stringa, le viene assegnato un valore che successivamente viene modificato.   
   
- Più precisamente, nella prima riga viene creata un'istanza di tipo `String` cui viene assegnato il valore `This string is immutable`. Nella seconda riga dell'esempio viene creata una nuova istanza a cui viene assegnato il valore `Or is it?`. Il riferimento alla prima istanza viene quindi ignorato e con la variabile stringa viene archiviato il riferimento alla nuova istanza.  
+ Più precisamente, nella prima riga viene creata un'istanza di tipo `String` cui viene assegnato il valore `This string is immutable`. Nella seconda riga dell'esempio viene creata una nuova istanza a cui viene assegnato il valore `Or is it?`. Il riferimento alla prima istanza viene quindi ignorato e con la variabile stringa viene archiviato il riferimento alla nuova istanza.   
   
- A differenza di altri tipi di dati intrinseci, `String` è un tipo riferimento. Quando una variabile di tipo riferimento viene passata come argomento di una funzione o di una subroutine, invece del valore effettivo della stringa viene passato un riferimento all'indirizzo di memoria in cui sono archiviati i dati Nell'esempio precedente, quindi, il nome della variabile rimane lo stesso, ma punta a un'istanza nuova e diversa della classe `String`, che contiene il nuovo valore.  
+ A differenza di altri tipi di dati intrinseci, `String` è un tipo riferimento. Quando una variabile di tipo riferimento viene passata come argomento di una funzione o di una subroutine, invece del valore effettivo della stringa viene passato un riferimento all'indirizzo di memoria in cui sono archiviati i dati Nell'esempio precedente, quindi, il nome della variabile rimane lo stesso, ma punta a un'istanza nuova e diversa della classe `String`, che contiene il nuovo valore.   
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Introduzione alle stringhe in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
-- [Tipo di dati String](../../../../visual-basic/language-reference/data-types/string-data-type.md)
-- [Tipo di dati Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)
-- [Operazioni di base su stringhe](../../../../standard/base-types/basic-string-operations.md)
+- [Introduzione alle stringhe in Visual Basic](introduction-to-strings.md)
+- [Tipo di dati String](../../../language-reference/data-types/string-data-type.md)
+- [Tipo di dati Char](../../../language-reference/data-types/char-data-type.md)
+- [Operazioni di base sulle stringhe](../../../../standard/base-types/basic-string-operations.md)

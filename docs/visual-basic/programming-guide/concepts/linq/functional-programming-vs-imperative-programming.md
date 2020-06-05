@@ -1,18 +1,18 @@
 ---
-title: Programmazione imperativa e funzionale
+title: Differenze tra programmazione funzionale e programmazione imperativa
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-ms.openlocfilehash: 704beadc29af0de606b8f246360dc6fffca8cfcc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0090761dc07218673e1e0299951530d5a4763ffe
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353435"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364799"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Programmazione funzionale e programmazione imperativa (Visual Basic)
 In questo argomento vengono presentate le differenze tra la programmazione funzionale e la più tradizionale programmazione imperativa (procedurale).  
   
-## <a name="functional-programming-vs-imperative-programming"></a>Programmazione imperativa e funzionale  
+## <a name="functional-programming-vs-imperative-programming"></a>Differenze tra programmazione funzionale e programmazione imperativa  
  Il paradigma della *programmazione funzionale* è stato creato espressamente per supportare un approccio funzionale puro alla risoluzione di problemi. La programmazione funzionale è un tipo di *programmazione dichiarativa*. Al contrario, la maggior parte dei linguaggi più diffusi, compresi i linguaggi di programmazione orientata a oggetti (OOP), quali C#, Visual Basic, C++ e Java, è progettata principalmente per supportare la programmazione (procedurale) *imperativa*.  
   
  Con un approccio imperativo lo sviluppatore scrive codice in cui vengono descritti in dettaglio i passaggi esatti che devono essere eseguiti dal computer per raggiungere l'obiettivo. Questo tipo di programmazione viene a volte definito *algoritmica*. Al contrario, un approccio funzionale implica la composizione del problema come set di funzioni da eseguire. È necessario definire con attenzione l'input e l'output di ogni funzione. Nella tabella seguente sono descritte alcune delle differenze generali tra questi due approcci.  
@@ -20,7 +20,7 @@ In questo argomento vengono presentate le differenze tra la programmazione funzi
 |Caratteristica|Approccio imperativo|Approccio funzionale|  
 |--------------------|-------------------------|-------------------------|  
 |Obiettivo del programmatore|Come eseguire attività (algoritmi) e come tenere traccia delle modifiche di stato.|Quali informazioni si desiderano e quali trasformazioni sono richieste.|  
-|Modifiche dello stato|Importante.|Non esistente.|  
+|Modifiche stato|Importante.|Non esistente.|  
 |Ordine di esecuzione|Importante.|Importanza limitata.|  
 |Controllo del flusso primario|Cicli, condizionali e chiamate di funzioni (metodi).|Chiamate di funzioni, inclusa la ricorsione.|  
 |Unità di modifica primaria|Istanze di strutture o classi.|Funzioni come oggetti e raccolte dati di prima classe.|  
@@ -52,6 +52,6 @@ In questo argomento vengono presentate le differenze tra la programmazione funzi
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Introduzione alle trasformazioni funzionali pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Introduzione alle trasformazioni funzionali pure (Visual Basic)](introduction-to-pure-functional-transformations.md)
 - [Trasformazioni XSLT](../../../../standard/data/xml/xslt-transformations.md)
-- [Refactoring in funzioni pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Refactoring in funzioni pure (Visual Basic)](refactoring-into-pure-functions.md)

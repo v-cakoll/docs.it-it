@@ -1,13 +1,13 @@
 ---
-title: 'Procedura: trovare elementi con un attributo specifico (XPath-LINQ to XML)'
+title: 'Procedura: Trovare elementi con un attributo specifico (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
-ms.openlocfilehash: 36f725a7684dc009dbfb956a1584fd6ca5e487b0
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 4b625fcccc834f860072ad92587bbfd7ed5ec4ad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78267041"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364773"
 ---
 # <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>Procedura: trovare elementi con un attributo specifico (XPath-LINQ to XML) (Visual Basic)
 Talvolta si desidera individuare tutti gli elementi con un attributo specifico. Il contenuto dell'attributo non è rilevante perché si desidera solo individuare gli elementi in cui tale attributo è presente.  
@@ -61,4 +61,4 @@ Results are identical
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to XML per utenti XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML per gli utenti di XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

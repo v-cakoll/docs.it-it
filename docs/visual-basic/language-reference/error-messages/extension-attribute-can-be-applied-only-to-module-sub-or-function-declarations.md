@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
-ms.openlocfilehash: 2ed3a10cdf941bb8d1d7c00379736e04e8cad4d7
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9b8f49c498699a8f7d1c4b329e82258501aa0c47
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583187"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363098"
 ---
 # <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a>È possibile applicare l'attributo 'Extension' solo alle dichiarazioni 'Module', 'Sub' o 'Function'
 
-L'unico modo per estendere un tipo di dati in Visual Basic consiste nel definire un metodo di estensione all'interno di un modulo standard. Il metodo di estensione può essere una routine `Sub` o una `Function` routine. Tutti i metodi di estensione devono essere contrassegnati con l'attributo extension `<Extension()>` dallo spazio dei nomi <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>. Facoltativamente, un modulo che contiene un metodo di estensione può essere contrassegnato nello stesso modo. Nessun altro uso dell'attributo di estensione è valido.
+L'unico modo per estendere un tipo di dati in Visual Basic consiste nel definire un metodo di estensione all'interno di un modulo standard. Il metodo di estensione può essere una `Sub` routine o una `Function` routine. Tutti i metodi di estensione devono essere contrassegnati con l'attributo extension, `<Extension()>` , dallo <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> spazio dei nomi. Facoltativamente, un modulo che contiene un metodo di estensione può essere contrassegnato nello stesso modo. Nessun altro uso dell'attributo di estensione è valido.
 
 **ID errore:** BC36550
 
@@ -28,7 +28,7 @@ L'unico modo per estendere un tipo di dati in Visual Basic consiste nel definire
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene definito un metodo di `Print` per il tipo di dati `String`.
+Nell'esempio seguente viene definito un `Print` metodo per il `String` tipo di dati.
 
 ```vb
 Imports StringUtility
@@ -46,6 +46,6 @@ End Namespace
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica degli attributi](../../../visual-basic/programming-guide/concepts/attributes/index.md)
-- [Metodi di estensione](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
-- [Istruzione Module](../../../visual-basic/language-reference/statements/module-statement.md)
+- [Panoramica degli attributi](../../programming-guide/concepts/attributes/index.md)
+- [Metodi di estensione](../../programming-guide/language-features/procedures/extension-methods.md)
+- [Istruzione Module](../statements/module-statement.md)

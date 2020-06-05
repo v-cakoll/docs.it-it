@@ -1,13 +1,13 @@
 ---
-title: 'Procedura: trovare nodi di pari livello (XPath-LINQ to XML)'
+title: 'Procedura: Trovare nodi di pari livello (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
-ms.openlocfilehash: 52151c939bbf67df37a9535b1081ff902d357123
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: add51249dbc7cc4d33c79fcf6f82126f6bdb5612
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344634"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364539"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>Procedura: trovare nodi di pari livello (XPath-LINQ to XML) (Visual Basic)
 
@@ -21,7 +21,7 @@ L'espressione XPath è:
 
 In questo esempio viene dapprima ricercato un elemento `Book` e quindi tutti gli elementi di pari livello denominati `Book`. La raccolta risultante include il nodo di contesto.
 
-Nell'esempio viene usato il documento XML seguente: [File XML di esempio: libri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).
+Nell'esempio viene usato il documento XML seguente: [File XML di esempio: libri (LINQ to XML)](sample-xml-file-books-linq-to-xml.md).
 
 ```vb
 Dim books As XDocument = XDocument.Load("Books.xml")
@@ -44,7 +44,7 @@ For Each el As XElement In list1
 Next
 ```
 
-Questo esempio produce il seguente output:
+Nell'esempio viene prodotto l'output seguente:
 
 ```console
 Results are identical
@@ -71,4 +71,4 @@ Results are identical
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML per gli utenti di XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

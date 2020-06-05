@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 7e400e20-5d1e-4d22-a65c-9df79d5c1621
-ms.openlocfilehash: 99817844120976b6a6d3241a8fc4aef90daf03b2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bac71138723826137f4c9f22a4acc1a81dfb5afd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352685"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84362204"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>Proprietà Axis XML (Visual Basic)
 Negli argomenti di questa sezione viene illustrata la sintassi delle proprietà Axis XML in Visual Basic. Le proprietà dell'asse XML consentono di accedere facilmente a XML direttamente nel codice.  
@@ -21,12 +21,12 @@ Negli argomenti di questa sezione viene illustrata la sintassi delle proprietà 
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Proprietà axis dell'attributo XML](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)|Viene descritto come accedere agli attributi di un oggetto <xref:System.Xml.Linq.XElement>.|  
-|[Proprietà Child Axis XML](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)|Viene descritto come accedere agli elementi figlio di un oggetto <xref:System.Xml.Linq.XElement>.|  
-|[Proprietà axis descendant XML](../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)|Viene descritto come accedere ai discendenti di un oggetto <xref:System.Xml.Linq.XElement>.|  
-|[Proprietà dell'indicizzatore di estensione](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|Viene descritto come accedere a singoli elementi in una raccolta di oggetti <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XAttribute>.|  
-|[Proprietà Value XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)|Viene descritto come accedere al valore del primo elemento di una raccolta di oggetti <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XAttribute>.|  
+|[XML Attribute Axis Property](xml-attribute-axis-property.md)|Viene descritto come accedere agli attributi di un <xref:System.Xml.Linq.XElement> oggetto.|  
+|[XML Child Axis Property](xml-child-axis-property.md)|Viene descritto come accedere agli elementi figlio di un <xref:System.Xml.Linq.XElement> oggetto.|  
+|[XML Descendant Axis Property](xml-descendant-axis-property.md)|Viene descritto come accedere ai discendenti di un <xref:System.Xml.Linq.XElement> oggetto.|  
+|[Proprietà dell'indicizzatore di estensione](extension-indexer-property.md)|Viene descritto come accedere a singoli elementi in una raccolta <xref:System.Xml.Linq.XElement> di <xref:System.Xml.Linq.XAttribute> oggetti o.|  
+|[Proprietà Value XML](xml-value-property.md)|Viene descritto come accedere al valore del primo elemento di una raccolta di <xref:System.Xml.Linq.XElement> oggetti o <xref:System.Xml.Linq.XAttribute> .|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [XML](../../programming-guide/language-features/xml/index.md)
