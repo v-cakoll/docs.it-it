@@ -1,17 +1,17 @@
 ---
-title: Percorso '<pathname>' non trovato
+title: Impossibile trovare il percorso<pathname>
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_PathNotFound1
 ms.assetid: 184d09ab-771f-4298-bd71-94b33efc325b
-ms.openlocfilehash: 8c9f326cc165955353dab6c33b65ed23e3f03d35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc354ddcfb340305852132448426be99e83b4f92
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944768"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375849"
 ---
-# <a name="path-pathname-not-found"></a>Percorso '\<nomepercorso >' non trovato
+# <a name="path-pathname-not-found"></a>Impossibile trovare il percorso\<pathname>
 Il sistema operativo non riesce a trovare il percorso specificato durante un'operazione di accesso a file o di accesso al disco. Il percorso di un file deve includere l'indicazione dell'unità e delle directory e sottodirectory che devono essere attraversate per individuare il file. Il percorso può essere relativo o assoluto.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
@@ -20,5 +20,5 @@ Il sistema operativo non riesce a trovare il percorso specificato durante un'ope
   
 ## <a name="see-also"></a>Vedere anche
 
-- [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
-- [Procedura: Analizzare percorsi di file](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [My. computer. FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [Procedura: Analizzare percorsi di file](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

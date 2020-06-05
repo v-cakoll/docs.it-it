@@ -2,12 +2,12 @@
 title: Oggetti XName e XNamespace atomizzati (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 21ee7585-7df9-40b4-8c76-a12bb5f29bb3
-ms.openlocfilehash: 0ffed5d00364f6614b439480607ed521f52754ec
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6a94bc0f2fd8013997e233b300fa19c12671bf29
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345723"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84383689"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Oggetti XName e XNamespace atomizzati (LINQ to XML) (Visual Basic)
 
@@ -19,7 +19,7 @@ Atomizzazione significa che se due oggetti <xref:System.Xml.Linq.XName> hanno lo
 
 Affinché una classe consenta gli oggetti atomizzati, il costruttore per la classe deve essere privato, non pubblico. Se il costruttore fosse pubblico, sarebbe possibile creare un oggetto non atomizzato. Le classi <xref:System.Xml.Linq.XName> e <xref:System.Xml.Linq.XNamespace> implementano un operatore di conversione implicita per la conversione di una stringa in un oggetto <xref:System.Xml.Linq.XName> o <xref:System.Xml.Linq.XNamespace>. In questo modo è possibile ottenere un'istanza di questi oggetti. Non è possibile ottenere un'istanza tramite un costruttore, in quanto il costruttore è inaccessibile.
 
-<xref:System.Xml.Linq.XName> e <xref:System.Xml.Linq.XNamespace> implementano anche gli operatori di uguaglianza e disuguaglianza, per determinare se i due oggetti confrontati sono riferimenti alla stessa istanza.
+<xref:System.Xml.Linq.XName> e <xref:System.Xml.Linq.XNamespace> implementano anche gli operatori di uguaglianza e di disuguaglianza, per determinare se i due oggetti confrontati sono riferimenti alla stessa istanza.
 
 ## <a name="example"></a>Esempio
 
@@ -44,7 +44,7 @@ Else
 End If
 ```
 
-Questo esempio produce il seguente output:
+Nell'esempio viene prodotto l'output seguente:
 
 ```console
 r1 and r2 have names that refer to the same instance.
@@ -65,7 +65,7 @@ For Each z As var In query
 Next
 ```
 
-Questo esempio produce il seguente output:
+Nell'esempio viene prodotto l'output seguente:
 
 ```xml
 <C1>1</C1>
@@ -74,4 +74,4 @@ Questo esempio produce il seguente output:
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Prestazioni (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [Prestazioni (LINQ to XML) (Visual Basic)](performance-linq-to-xml.md)

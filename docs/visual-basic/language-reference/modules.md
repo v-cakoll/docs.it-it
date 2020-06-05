@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - modules, Visual Basic
 ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
-ms.openlocfilehash: 6869d981cdca20b915a588969134fc50e8d1ff47
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: df7e32a81746a97a78a4a2a28e57032affa73cc0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838247"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84386595"
 ---
 # <a name="modules-visual-basic"></a>Moduli (Visual Basic)
 
@@ -17,7 +17,7 @@ Visual Basic offre diversi moduli che consentono di semplificare le attività co
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.Constants>|Contiene costanti varie. Queste costanti possono essere utilizzate in qualsiasi punto del codice.|  
+|<xref:Microsoft.VisualBasic.Constants>|Contiene costanti varie. Queste costanti possono essere inserite in qualsiasi punto del codice.|  
 |<xref:Microsoft.VisualBasic.ControlChars>|Contiene caratteri di controllo costanti per la stampa e la visualizzazione di testo.|  
 |<xref:Microsoft.VisualBasic.Conversion>|Contiene membri che convertono i numeri decimali in altre basi, numeri in stringhe, stringhe in numeri e un tipo di dati in un altro.|  
 |<xref:Microsoft.VisualBasic.DateAndTime>|Contiene i membri che ottengono la data o l'ora corrente, eseguono calcoli di data, restituiscono una data o un'ora, impostano la data o l'ora o l'ora della durata di un processo.|  
@@ -32,4 +32,4 @@ Visual Basic offre diversi moduli che consentono di semplificare le attività co
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per il linguaggio Visual Basic](../../visual-basic/language-reference/index.md)
+- [Riferimenti al linguaggio Visual Basic](index.md)
