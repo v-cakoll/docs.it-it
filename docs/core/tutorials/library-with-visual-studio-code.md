@@ -2,12 +2,12 @@
 title: Creare una libreria di classi .NET Standard in Visual Studio Code
 description: Informazioni su come creare una libreria di classi .NET Standard usando Visual Studio Code.
 ms.date: 05/29/2020
-ms.openlocfilehash: 10c832f5817292b366dc816aebada2dfdab11396
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5720ac374d50ef27a07d463e57af1bd95a352d83
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292203"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446952"
 ---
 # <a name="tutorial-create-a-net-standard-library-in-visual-studio-code"></a>Esercitazione: creare una libreria di .NET Standard in Visual Studio Code
 
@@ -127,7 +127,7 @@ Aggiungere un nuovo progetto di libreria di classi .NET Standard denominato "Str
 
 Aggiungere un'applicazione console che usa la libreria di classi. L'app chiede all'utente di immettere una stringa e segnala se la stringa inizia con un carattere maiuscolo.
 
-1. Nel terminale eseguire il comando seguente per creare il progetto di libreria:
+1. Nel terminale eseguire il comando seguente per creare il progetto di app console:
 
    ```dotnetcli
    dotnet new console -o ShowCase

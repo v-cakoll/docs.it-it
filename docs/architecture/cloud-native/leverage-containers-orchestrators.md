@@ -1,13 +1,13 @@
 ---
 title: Uso di contenitori e agenti di orchestrazione
 description: Uso dei contenitori Docker e degli agenti di orchestrazione Kubernetes in Azure
-ms.date: 05/13/2020
-ms.openlocfilehash: b2fedac205d7a5bd8b8f8cf665ae370b9bf26654
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 05/31/2020
+ms.openlocfilehash: 25e981e0fb7957e7180be09a19a406eddfe4e51b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282584"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446867"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Uso di contenitori e agenti di orchestrazione
 
@@ -31,7 +31,7 @@ Le applicazioni monolitiche richiedono una distribuzione completa dell'intera ap
 
 Un'applicazione monolitica è ospitata interamente in una singola istanza del computer, spesso richiedendo hardware ad alta capacità. Se una parte del monolito richiede la scalabilità, un'altra copia dell'intera applicazione deve essere distribuita in un altro computer. Con un Monolith, non è possibile ridimensionare singolarmente i componenti dell'applicazione, perché sono tutti o nulla. Il ridimensionamento di componenti che non richiedono la scalabilità comporta un uso inefficiente e costoso delle risorse.
 
-### <a name="environment"></a>Environment
+### <a name="environment"></a>Ambiente
 
 Le applicazioni monolitiche vengono in genere distribuite in un ambiente host con un sistema operativo preinstallato, un runtime e dipendenze di libreria. Questo ambiente potrebbe non corrispondere a quello in cui l'applicazione è stata sviluppata o testata. Le incoerenze negli ambienti applicativi rappresentano una fonte comune di problemi per le distribuzioni monolitiche.
 

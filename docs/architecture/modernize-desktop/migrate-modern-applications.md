@@ -2,12 +2,12 @@
 title: Migrazione di applicazioni desktop moderne
 description: Tutto ciò che occorre sapere sul processo di migrazione per le moderne applicazioni desktop.
 ms.date: 05/12/2020
-ms.openlocfilehash: 2108aa0b99cabfbb0f3263f094ba8277f953ed6a
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: a015b266dc5c36fcef38dad04b9f4f048ee5906a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83423299"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446917"
 ---
 # <a name="migrating-modern-desktop-applications"></a>Migrazione di applicazioni desktop moderne
 
@@ -108,7 +108,7 @@ Gli esempi più comuni di database che è possibile trovare quando si parla di a
 
 ### <a name="ole-db"></a>OLE DB
 
-[OLE DB](https://msdn.microsoft.com/library/ms722784(v=vs.85).aspx)   è stato un ottimo modo per accedere a diverse origini dati in modo uniforme. Ma si basava su COM, che è una tecnologia solo per Windows e, di conseguenza, non era la soluzione ideale per una tecnologia multipiattaforma, ad esempio .NET Core. Non è supportata anche in SQL Server versioni 2014 e successive. Per questi motivi, OLE DB non sarà supportato da .NET Core.
+[OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms722784(v=vs.85))   è stato un ottimo modo per accedere a diverse origini dati in modo uniforme. Ma si basava su COM, che è una tecnologia solo per Windows e, di conseguenza, non era la soluzione ideale per una tecnologia multipiattaforma, ad esempio .NET Core. Non è supportata anche in SQL Server versioni 2014 e successive. Per questi motivi, OLE DB non sarà supportato da .NET Core.
 
 ### <a name="adonet"></a>ADO.NET
 

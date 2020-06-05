@@ -1,5 +1,6 @@
 ---
 title: Stringhe in formato numerico personalizzato
+description: Informazioni su come creare una stringa di formato numerico personalizzata per formattare dati numerici in .NET. Una stringa di formato numerico personalizzata contiene uno o più identificatori numerici personalizzati.
 ms.date: 06/25/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: bc2ace5a068a49f19db55c6fcc3cfc7287b6f618
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: bd96766c7483a3de1a3c70d1efbe1aa91ea45fbc
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278960"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447238"
 ---
 # <a name="custom-numeric-format-strings"></a>Stringhe in formato numerico personalizzato
 
@@ -46,7 +47,7 @@ Le stringhe di formato numerico personalizzate sono supportate da alcuni overloa
 |"\\"|Carattere di escape|Fa in modo che il carattere successivo venga interpretato come valore letterale anziché come identificatore di formato personalizzato.<br /><br /> Altre informazioni: [Carattere di escape "\\"](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|
 |'*String*'<br /><br /> "*stringa*"|Delimitatore di stringa letterale|Indica che i caratteri contenuti devono essere copiati nella stringa di risultato senza essere modificati.<br/><br/>Altre informazioni: [caratteri letterali](#character-literals).|68 ("# 'gradi'") -> 68 gradi<br /><br /> 68 ("# ' gradi'") -> 68 gradi|
 |;|Separatore di sezione|Definisce le sezioni con stringhe di formato separate per numeri positivi, negativi e zero.<br /><br /> Ulteriori informazioni: [Separatore di sezione ";"](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|
-|Altro|Tutti gli altri caratteri|Il carattere viene copiato nella stringa di risultato senza alcuna modifica.<br/><br/>Altre informazioni: [caratteri letterali](#character-literals).|68 ("# °") -> 68 °|
+|Altri|Tutti gli altri caratteri|Il carattere viene copiato nella stringa di risultato senza alcuna modifica.<br/><br/>Altre informazioni: [caratteri letterali](#character-literals).|68 ("# °") -> 68 °|
 
 Nelle sezioni seguenti vengono fornite informazioni dettagliate su ognuno degli identificatori di formato numerico personalizzati.
 

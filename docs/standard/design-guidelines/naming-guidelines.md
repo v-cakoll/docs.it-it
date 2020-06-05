@@ -1,5 +1,6 @@
 ---
 title: Convenzioni di denominazione
+description: In questa panoramica, vedere le convenzioni di denominazione da usare nello sviluppo di Framework. Passare ad articoli relativi a capitalizzazione, denominazione generale e altre linee guida.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-ms.openlocfilehash: 1b137be60f4c8c1c7cf1fa1f807841d4bc209089
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fbcf5ef5eb02a5e45b5c981b4247ffe1c9c2631b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290175"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447147"
 ---
 # <a name="naming-guidelines"></a>Convenzioni di denominazione
 Un insieme coerente di convenzioni di denominazione nello sviluppo di un Framework può costituire un importante contributo all'usabilità del Framework. Consente di usare il Framework da molti sviluppatori in progetti ampiamente separati. Oltre la coerenza del modulo, i nomi degli elementi del Framework devono essere facilmente comprensibili e devono indicare la funzione di ogni elemento.  

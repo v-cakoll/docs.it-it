@@ -1,5 +1,6 @@
 ---
 title: Eliminazione di spazi iniziali e finali e rimozione di caratteri dalle stringhe in .NET
+description: Informazioni su come tagliare spazi vuoti dall'inizio o dalla fine di una stringa oppure rimuovere un numero qualsiasi di spazi o caratteri da una posizione specificata nella stringa in .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: 0777ba7348d13697fd53f556ac69cba3f98d1e4d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 630fe6b51d151d1f1384f2e3cde62750c303d883
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290876"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446893"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Eliminazione di spazi iniziali e finali e rimozione di caratteri dalle stringhe in .NET
 Se si sta analizzando una frase in singole parole, è possibile che si ottengano parole con spazi vuoti alle estremità. In questo caso è possibile usare uno dei metodi trim della classe **System.String** per rimuovere un numero qualsiasi di spazi o altri caratteri da una posizione specificata nella stringa. La tabella seguente illustra i metodi trim disponibili.  

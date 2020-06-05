@@ -2,12 +2,12 @@
 title: Introduzione ad Azure e .NET
 description: Nozioni di base su Azure e .NET.
 ms.date: 03/15/2020
-ms.openlocfilehash: 64defed4433647c2a0dcce91493d9ec77d21b541
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: d57d1d50852c9d7fff099554bd64c48c15129bb4
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "82072144"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446392"
 ---
 # <a name="introduction-to-azure-and-net"></a>Introduzione ad Azure e .NET
 
@@ -77,5 +77,5 @@ Dopo aver distribuito l'applicazione in Azure, potrebbero verificarsi casi in cu
 
 * [Distribuire la prima app Web ASP.NET Core in Azure](https://docs.microsoft.com/azure/app-service/app-service-web-get-started-dotnet)
 * [Informazioni sull'autenticazione in Azure SDK per .NET](./sdk/authentication.md)
-* [Diagnosticare gli errori nelle app cloud](https://blogs.msdn.microsoft.com/webdev/2018/02/07/diagnosing-errors-on-your-cloud-apps)
+* [Diagnosticare gli errori nelle app cloud](https://devblogs.microsoft.com/aspnet/diagnosing-errors-on-your-cloud-apps/)
 * Scaricare l'e-book gratuito [Guida introduttiva ad Azure per sviluppatori .NET](https://www.microsoft.com/net/download/thank-you/azure-quick-start-ebook)

@@ -1,15 +1,15 @@
 ---
-title: Come aggiungere metodi personalizzati per le query LINQ (C )How to add custom methods for LINQ queries (C
+title: Come aggiungere metodi personalizzati per le query LINQ (C#)
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-ms.openlocfilehash: e16175d3332b6ce36458eaa78af093e4f8772723
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e3f8ba8810d06a2e79093e6022ad6e79f3599468
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141475"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447030"
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Come aggiungere metodi personalizzati per le query LINQ (C )How to add custom methods for LINQ queries (C
+# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Come aggiungere metodi personalizzati per le query LINQ (C#)
 
 È possibile estendere il set di metodi da usare per le query LINQ aggiungendo metodi di estensione all'interfaccia <xref:System.Collections.Generic.IEnumerable%601>. Oltre alla media standard o a un numero massimo di operazioni, ad esempio, è possibile creare un metodo di aggregazione personalizzato per calcolare un singolo valore da una sequenza di valori. È anche possibile creare un metodo che funzioni come un filtro personalizzato o una trasformazione di dati specifica per una sequenza di valori che restituisca una nuova sequenza. Esempi di tali metodi sono <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Reverse%2A>.
 
@@ -26,26 +26,28 @@ public static class LINQExtension
 {
     public static double Median(this IEnumerable<double> source)
     {
-        if (source.Count() == 0)
+        var countOfElementsInTheSet = source?.Count() ?? 0;
+
+        if (countOfElementsInTheSet == 0)
         {
-            throw new InvalidOperationException("Cannot compute median for an empty set.");
+            throw new InvalidOperationException("Cannot compute median for a null or empty set.");
         }
 
-        var sortedList = from number in source
+        var sortedList = (from number in source
                          orderby number
-                         select number;
+                         select number).ToList();
 
-        int itemIndex = (int)sortedList.Count() / 2;
+        int itemIndex = countOfElementsInTheSet / 2;
 
-        if (sortedList.Count() % 2 == 0)
+        if (countOfElementsInTheSet % 2 == 0)
         {
             // Even number of items.
-            return (sortedList.ElementAt(itemIndex) + sortedList.ElementAt(itemIndex - 1)) / 2;
+            return (sortedList[itemIndex] + sortedList[itemIndex - 1]) / 2;
         }
         else
         {
             // Odd number of items.
-            return sortedList.ElementAt(itemIndex);
+            return sortedList[itemIndex];
         }
     }
 }

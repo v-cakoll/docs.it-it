@@ -1,5 +1,6 @@
 ---
 title: Programmazione asincrona basata su attività - .NET
+description: In questo articolo vengono fornite informazioni sulla programmazione asincrona basata su attività tramite TAsk Parallel Library (TPL) in .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: 188a80459fec021dc934597ea2f77ac7b4471b2d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f7cb42c8982cb6a704b39730a4f7aa0ce781d506
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285287"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446379"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programmazione asincrona basata su attività
 
@@ -278,7 +279,7 @@ Se è necessario ereditare da <xref:System.Threading.Tasks.Task> o <xref:System.
 |[Attività figlio connesse e disconnesse](attached-and-detached-child-tasks.md)|Viene descritta la differenza tra attività figlio collegate e scollegate.|
 |[Annullamento delle attività](task-cancellation.md)|Viene descritto il supporto dell'annullamento, incorporato nell'oggetto <xref:System.Threading.Tasks.Task>.|
 |[Gestione delle eccezioni](exception-handling-task-parallel-library.md)|Viene descritto come vengono gestite le eccezioni su thread simultanei.|
-|[Procedura: utilizzare Parallel. Invoke per eseguire operazioni in parallelo](how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Viene descritto come usare <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|
+|[Procedura: Usare Parallel.Invoke per eseguire operazioni parallele](how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Viene descritto come usare <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|
 |[Procedura: Restituire un valore da un'attività](how-to-return-a-value-from-a-task.md)|Viene descritto come restituire valori dalle attività.|
 |[Procedura: Annullare un'attività e i relativi figli](how-to-cancel-a-task-and-its-children.md)|Viene descritto come annullare le attività.|
 |[Procedura: creare attività precalcolate](how-to-create-pre-computed-tasks.md)|Viene descritto come utilizzare il metodo <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> per recuperare i risultati delle operazioni di download asincrone contenuti in una cache.|

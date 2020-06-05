@@ -3,12 +3,12 @@ title: Disinstalla strumento
 description: Panoramica dello strumento di disinstallazione di .NET Core, uno strumento guidato che consente la pulizia controllata degli SDK e dei runtime di .NET Core.
 author: sfoslund
 ms.date: 05/27/2020
-ms.openlocfilehash: 1ad31cd42d8f8f87e3501b422fc4298c643e2067
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 4e70fd3438b582bd5a0d6a52d7e58ed5e07f8811
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144513"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446906"
 ---
 # <a name="net-core-uninstall-tool"></a>Strumento di disinstallazione di .NET Core
 
@@ -104,7 +104,7 @@ dotnet-core-uninstall list [options]
   
 ---
 
-#### <a name="examples"></a>Esempio
+#### <a name="examples"></a>Esempi
 
 * Elencare tutti i runtime e gli SDK di .NET Core che possono essere rimossi con questo strumento:
 
@@ -157,11 +157,11 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
   Rimuove tutti i runtime e gli SDK di .NET Core.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   Rimuove solo gli SDK di .NET Core e i runtime con una versione inferiore alla versione specificata. La versione specificata rimane installata.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   Rimuove tutti i runtime e gli SDK di .NET Core, ad eccezione di quelli specificati.
 
@@ -227,11 +227,11 @@ Note:
 
   Rimuove tutti i runtime e gli SDK di .NET Core.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   Rimuove gli SDK e i Runtime .NET Core sotto la versione specificata. La versione specificata rimarrà.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   Rimuove gli SDK di .NET Core e i runtime, ad eccezione delle versioni specificate.
 
@@ -276,7 +276,7 @@ Note:
 
 ---
 
-#### <a name="examples"></a>Esempio
+#### <a name="examples"></a>Esempi
 
 > [!NOTE]
 > Per impostazione predefinita, gli SDK di .NET Core e i runtime che potrebbero essere richiesti da Visual Studio o altri SDK non sono inclusi nell' `dotnet-core-uninstall dry-run` output. Negli esempi seguenti alcuni degli SDK e dei runtime specificati potrebbero non essere inclusi nell'output, a seconda dello stato del computer. Per includere tutti gli SDK e i runtime, elencarli in modo esplicito come argomenti oppure usare l' `--force` opzione.
@@ -337,11 +337,11 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
   Rimuove tutti i runtime e gli SDK di .NET Core.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   Rimuove solo gli SDK di .NET Core e i runtime con una versione inferiore alla versione specificata. La versione specificata rimane installata.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   Rimuove tutti i runtime e gli SDK di .NET Core, ad eccezione di quelli specificati.
 
@@ -367,7 +367,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`--hosting-bundle`**
 
-  Rimuove solo i pacchetti di runtime e hosting di .NET Core.
+  Rimuove solo i bundle di hosting .NET Core.
 
 * **`--major-minor <MAJOR_MINOR>`**
 
@@ -409,11 +409,11 @@ Note:
 
   Rimuove tutti i runtime e gli SDK di .NET Core.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   Rimuove gli SDK e i Runtime .NET Core sotto la versione specificata. La versione specificata rimarrà.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   Rimuove gli SDK di .NET Core e i runtime, ad eccezione delle versioni specificate.
 
@@ -460,7 +460,7 @@ Note:
 
 ---
 
-#### <a name="examples"></a>Esempio
+#### <a name="examples"></a>Esempi
 
 > [!NOTE]
 > Per impostazione predefinita, vengono conservati gli SDK e i Runtime .NET Core che potrebbero essere richiesti da Visual Studio o altri SDK. Negli esempi seguenti è possibile che alcuni degli SDK e dei runtime specificati rimangano, a seconda dello stato del computer. Per rimuovere tutti gli SDK e i runtime, elencarli in modo esplicito come argomenti oppure usare l' `--force` opzione.

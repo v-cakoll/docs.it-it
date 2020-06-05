@@ -1,5 +1,6 @@
 ---
 title: Formati dei percorsi di file nei sistemi Windows
+description: In questo articolo vengono fornite informazioni sui formati di percorso dei file nei sistemi Windows, ad esempio i percorsi DOS tradizionali, i percorsi dei dispositivi DOS e i percorsi UNC (Universal Naming Convention).
 ms.date: 06/06/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: b3510be5d417b555d2db163636eac5ce0c0779e4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2d3ede97b372dd8922a10a377f69155a12f88bda
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628046"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447134"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formati dei percorsi di file nei sistemi Windows
 
@@ -30,7 +31,7 @@ Un percorso DOS standard può essere costituito da tre componenti:
 
 Se sono presenti tutti e tre i componenti, il percorso è assoluto. Se non si specifica alcun volume o lettera di unità e il nome della directory inizia con il [carattere separatore di directory](<xref:System.IO.Path.DirectorySeparatorChar>), il percorso è relativo dalla radice dell'unità corrente. In caso contrario, il percorso è relativo alla directory corrente. La tabella seguente illustra alcuni percorsi possibili di directory e file.
 
-|Path  |Descrizione  |
+|Percorso  |Descrizione  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | Percorso file assoluto dalla radice dell'unità C: |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Percorso assoluto dalla radice dell'unità corrente. |
@@ -44,7 +45,7 @@ Se sono presenti tutti e tre i componenti, il percorso è assoluto. Se non si sp
 
 È possibile determinare se un percorso di file è completo (ovvero se il percorso è indipendente dalla directory corrente e non cambia quando la directory corrente viene modificata) chiamando il metodo <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType>. Si noti che tale percorso può includere segmenti di directory relativi (`.` e `..`) ed essere comunque completo se il percorso risolto punta sempre alla stessa posizione.
 
-L'esempio seguente illustra la differenza fra percorsi assoluti e relativi. Si presuppone che esista la directory D: dal prompt dei comandi prima di eseguire l'esempio.
+L'esempio seguente illustra la differenza fra percorsi assoluti e relativi. Si presuppone che la directory D:\FY2018\ esista e che non sia stata impostata alcuna directory corrente per D:\ dal prompt dei comandi prima di eseguire l'esempio.
 
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
@@ -62,7 +63,7 @@ I percorsi UNC (Universal Naming Convention), che vengono usati per accedere all
 
 Di seguito sono riportati alcuni esempi di percorsi UNC:
 
-|Path  |Descrizione  |
+|Percorso  |Descrizione  |
 | -- | -- |
 | `\\system07\C$\` | Directory radice dell'unità C: in `system07`. |
 | `\\Server2\Share\Test\Foo.txt` | File Foo.txt nella directory Test del volume \\\\Server2\\Share.|
@@ -202,7 +203,7 @@ L'esclusione della normalizzazione e dei controlli MAX_PATH è l'unica differenz
 
 I percorsi che iniziano con `\\?\` vengono comunque normalizzati se si passano in modo esplicito alla [funzione GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
 
-È possibile passare percorsi di più `MAX_PATH` caratteri `\\?\`a [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) senza . Supporta percorsi di lunghezza arbitraria fino alla dimensione massima delle stringhe che Windows è in grado di gestire.
+È possibile passare i percorsi di più di `MAX_PATH` caratteri a [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) senza `\\?\` . Supporta percorsi di lunghezza arbitraria fino alla dimensione massima delle stringhe che Windows è in grado di gestire.
 
 ## <a name="case-and-the-windows-file-system"></a>Maiuscole/minuscole e file system di Windows
 

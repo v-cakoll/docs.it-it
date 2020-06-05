@@ -1,5 +1,6 @@
 ---
 title: Gestione e generazione di eventi
+description: Informazioni su come gestire e generare eventi .NET basati sul modello delegato. Questo modello consente ai sottoscrittori di eseguire la registrazione o ricevere notifiche dai provider.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: b8ed028bc1edabf14d7b2dd67d94b28d574d2eb4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8cf0ff323e9bf7305e3d9cbb6dabd8f685059e97
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159624"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447108"
 ---
 # <a name="handling-and-raising-events"></a>Gestione e generazione di eventi
 
@@ -31,7 +32,7 @@ Gli eventi in .NET si basano sul modello di delegato. Il modello di delegato seg
 
 Un evento è un messaggio inviato da un oggetto per segnalare l'occorrenza di un'azione. L'azione può essere causata dall'interazione dell'utente, ad esempio il clic su un pulsante, oppure essere il risultato di altre logiche di programma, ad esempio la modifica di un valore della proprietà. L'oggetto che genera l'evento viene chiamato *mittente dell'evento*. Il mente dell'evento non sa quale oggetto o metodo riceverà (handle) gli eventi che egli genera. L'evento è in genere un membro del mittente dell'evento. Ad esempio, l'evento <xref:System.Web.UI.WebControls.Button.Click> è un membro della classe <xref:System.Web.UI.WebControls.Button> e l'evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> è un membro della classe che implementa l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged>.  
   
-Per definire un evento, utilizzare [`event`](../../csharp/language-reference/keywords/event.md) la parola [`Event`](../../visual-basic/language-reference/statements/event-statement.md) chiave di C o Visual Basic nella firma della classe di evento e specificare il tipo di delegato per l'evento. I delegati vengono descritti nella sezione successiva.  
+Per definire un evento, usare la [`event`](../../csharp/language-reference/keywords/event.md) parola chiave C# o Visual Basic [`Event`](../../visual-basic/language-reference/statements/event-statement.md) nella firma della classe di evento e specificare il tipo di delegato per l'evento. I delegati vengono descritti nella sezione successiva.  
   
 In genere, per generare un evento, aggiungere un metodo contrassegnato come `protected` e `virtual` (in C#) o `Protected` e `Overridable` (in Visual Basic). Denominare il metodo `On`*NomeEvento*; ad esempio, `OnDataReceived`. Il metodo deve accettare un parametro che specifica un oggetto dati dell'evento, ovvero un oggetto di tipo <xref:System.EventArgs> o un tipo derivato. Fornire questo metodo per consentire alle classi derivate di sostituire la logica per la generazione dell'evento. Affinché l'evento sia ricevuto da delegati registrati, occorre che tramite una classe derivata venga sempre chiamato il metodo `On`*NomeEvento* della classe di base.  
 
@@ -50,7 +51,7 @@ Sono molti gli usi dei delegati in .NET. Nel contesto degli eventi, un delegato 
   
 I delegati sono [multicast](xref:System.MulticastDelegate), il che significa che possono mantenere riferimenti a più di un metodo di gestione degli eventi. Per informazioni dettagliate, vedere la pagina di riferimento per <xref:System.Delegate>. I delegati offrono flessibilità e controlli specifici nella gestione degli eventi. Un delegato agisce come un dispatcher di eventi per la classe che genera l'evento compilando un elenco di gestori eventi registrati per l'evento.  
   
-Per gli scenari in cui i delegati <xref:System.EventHandler> e <xref:System.EventHandler%601> non sono appropriati, è possibile definire un delegato. Gli scenari che richiedono di definire un delegato sono molto rari, ad esempio quando è necessario lavorare con un codice che non riconosce i generics. Contrassegnare un delegato con [`delegate`](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) la [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) parola chiave di C e Visual Basic nella dichiarazione. Nell'esempio riportato di seguito viene illustrato come dichiarare un delegato denominato `ThresholdReachedEventHandler`.  
+Per gli scenari in cui i delegati <xref:System.EventHandler> e <xref:System.EventHandler%601> non sono appropriati, è possibile definire un delegato. Gli scenari che richiedono di definire un delegato sono molto rari, ad esempio quando è necessario lavorare con un codice che non riconosce i generics. Si contrassegna un delegato con la [`delegate`](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) parola chiave C# e Visual Basic [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) nella dichiarazione. Nell'esempio riportato di seguito viene illustrato come dichiarare un delegato denominato `ThresholdReachedEventHandler`.  
   
 [!code-csharp[EventsOverview#4](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
 [!code-vb[EventsOverview#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
@@ -92,7 +93,7 @@ Nell'esempio seguente viene illustrato un metodo del gestore eventi denominato `
 |-----------|-----------------|  
 |[Procedura: generare e utilizzare eventi](how-to-raise-and-consume-events.md)|Contiene esempi di generazione e uso di eventi.|  
 |[Procedura: gestire più eventi mediante le relative proprietà](how-to-handle-multiple-events-using-event-properties.md)|Viene illustrato come usare le proprietà degli eventi per gestire più eventi.|  
-|[Modello di progettazione observer](observer-design-pattern.md)|Viene descritto lo schema progettuale che consente a un sottoscrittore di effettuare la registrazione con e ricevere notifiche da un provider.|  
+|[Modello di progettazione Observer](observer-design-pattern.md)|Viene descritto lo schema progettuale che consente a un sottoscrittore di effettuare la registrazione con e ricevere notifiche da un provider.|  
 |[Procedura: Usare eventi in un'applicazione Web Form](how-to-consume-events-in-a-web-forms-application.md)|Viene illustrato come gestire un evento generato da un controllo Web Form.|  
   
 ## <a name="see-also"></a>Vedere anche

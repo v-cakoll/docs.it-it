@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: leggere testo da un file'
+description: In questo articolo, vedere esempi di come leggere il testo in modo sincrono o asincrono da un file di testo, usando la classe StreamReader in .NET per le applicazioni desktop.
 ms.date: 01/03/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET Framework], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: c46ccaf70d4d1aec030fb61bd8b2924d986e19d1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cbdeab3e907b34b6658eef7228fa6567ae198b08
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291760"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447056"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Procedura: leggere testo da un file
 Negli esempi seguenti viene illustrato come leggere il testo in modo sincrono e in modo asincrono da un file di testo usando .NET per le applicazioni desktop. In entrambi gli esempi, quando si crea l'istanza della classe <xref:System.IO.StreamReader>, si immette il percorso relativo o assoluto del file.

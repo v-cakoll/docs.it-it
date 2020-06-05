@@ -12,18 +12,18 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 49b3836f17e91ae8de10d68e97fd662aae80d1ff
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: a4e6f8e43c2ec8c867af9f78bd83b435b78c73d5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249318"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446763"
 ---
 # <a name="switch-c-reference"></a>switch (Riferimenti per C#)
 
-In questo `switch` articolo viene illustrata la dichiarazione. Per informazioni `switch` sull'espressione (introdotta nella versione 8.0 di C,0), vedere l'articolo sulle [ `switch` espressioni](../operators/switch-expression.md) nella sezione [espressioni e operatori.](../operators/index.md)
+In questo articolo viene illustrata l' `switch` istruzione. Per informazioni sull' `switch` espressione (introdotta in C# 8,0), vedere l'articolo sulle [ `switch` espressioni](../operators/switch-expression.md) nella sezione [espressioni e operatori](../operators/index.md) .
 
-`switch`è un'istruzione di selezione che sceglie una singola *sezione switch* da eseguire da un elenco di candidati in base a una corrispondenza di criteri con *l'espressione di corrispondenza.*
+`switch`è un'istruzione di selezione che sceglie un'unica *sezione di commutazione* da eseguire da un elenco di candidati in base a una corrispondenza di criteri con l' *espressione di corrispondenza*.
 
 [!code-csharp[switch#1](~/samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
@@ -46,10 +46,10 @@ L'espressione di ricerca fornisce il valore da confrontare con i modelli nelle e
 In C# 6 e versioni precedenti l'espressione di ricerca deve essere un'espressione che restituisce un valore dei tipi seguenti:
 
 - un [char](../builtin-types/char.md).
-- una [stringa](../builtin-types/reference-types.md).
+- [stringa](../builtin-types/reference-types.md).
 - un [bool](../builtin-types/bool.md).
-- un valore [integrale,](../builtin-types/integral-numeric-types.md) ad esempio un `int` oggetto `long`.
-- un valore [di enumerazione.](../builtin-types/enum.md)
+- valore [integrale](../builtin-types/integral-numeric-types.md) , ad esempio `int` o `long` .
+- valore [enum](../builtin-types/enum.md) .
 
 A partire da C# 7.0, l'espressione di ricerca può essere qualsiasi espressione non null.
 
@@ -61,7 +61,7 @@ Un'istruzione `switch` può contenere qualsiasi numero di sezioni opzioni e ogni
 
 [!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Viene eseguita una sola sezione opzioni in un'istruzione switch. C# non consente di continuare l'esecuzione da una sezione opzioni a quella successiva. Per questo motivo, il codice seguente genera un errore del compilatore, CS0163: "Il controllo non può passare da un'etichetta caso (etichetta\<caso>) a un'altra."
+Viene eseguita una sola sezione opzioni in un'istruzione switch. C# non consente di continuare l'esecuzione da una sezione opzioni a quella successiva. Per questo motivo, il codice seguente genera un errore di compilazione CS0163: "Il controllo non può passare da un'etichetta case ("\<case label>") a un'altra".
 
 ```csharp
 switch (caseSwitch)
@@ -108,7 +108,7 @@ Il case `default` specifica la sezione opzioni da eseguire se l'espressione di r
 
 Il case `default` può essere visualizzato in qualsiasi ordine nell'istruzione `switch`. Indipendentemente dall'ordine nel codice sorgente, viene sempre valutato per ultimo, dopo la valutazione di tutte le etichette `case`.
 
-## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern" /> Criteri di ricerca con istruzione `switch`
+## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern"></a> Criteri di ricerca con istruzione `switch`
 
 Ogni istruzione `case` definisce un criterio che, in caso di corrispondenza con l'espressione di ricerca, provoca l'esecuzione della sezione opzioni che la contiene. Tutte le versioni di C# supportano il criterio costante. I criteri rimanenti sono supportati a partire da C# 7.0.
 
@@ -122,8 +122,8 @@ Il criterio costante verifica se un'espressione di ricerca è uguale a una costa
 
 dove *costant* è il valore su cui eseguire il test. *constant* può essere una delle espressioni costanti seguenti:
 
-- Un valore letterale `true` [bool:](../builtin-types/bool.md) o `false`.
-- Qualsiasi costante [integrale,](../builtin-types/integral-numeric-types.md) ad esempio un `int`oggetto , un `long`, o un `byte`oggetto .
+- Valore letterale [bool](../builtin-types/bool.md) : `true` o `false` .
+- Qualsiasi costante [integrale](../builtin-types/integral-numeric-types.md) , ad esempio un oggetto `int` , un oggetto `long` o un oggetto `byte` .
 - Il nome di una variabile `const` dichiarata.
 - Una costante di enumerazione.
 - Un valore letterale [char](../builtin-types/char.md).
@@ -201,8 +201,8 @@ Per altre informazioni, vedere la sezione relativa all'[istruzione switch](~/_cs
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida di riferimento a C](../index.md)
-- [Guida alla programmazione in C](../../programming-guide/index.md)
-- [Parole chiave di C](index.md)
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Parole chiave di C#](index.md)
 - [if-else](if-else.md)
 - [Criteri di ricerca](../../pattern-matching.md)

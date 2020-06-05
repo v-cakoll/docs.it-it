@@ -1,5 +1,6 @@
 ---
 title: Procedure consigliate per le eccezioni - .NET
+description: Informazioni sulle procedure consigliate per le eccezioni, ad esempio l'utilizzo di try/catch/finally, la gestione di condizioni comuni senza eccezioni e l'utilizzo di tipi di eccezione .NET predefiniti.
 ms.date: 12/05/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 1de231b01e3fa97e78a87ae6b0595a9b5536374e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 90dda00acd32852b032fc383580c5f34022ec9b4
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160170"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447095"
 ---
 # <a name="best-practices-for-exceptions"></a>Procedure consigliate per le eccezioni
 
@@ -110,7 +111,7 @@ Scrivere frasi chiare e includere la punteggiatura finale. Ogni frase della stri
 
 Il messaggio di errore visualizzato all'utente è derivato dalla proprietà <xref:System.Exception.Message?displayProperty=nameWithType> dell'eccezione generata e non dal nome della classe di eccezione. In genere, si assegna un valore alla proprietà <xref:System.Exception.Message?displayProperty=nameWithType> passando la stringa del messaggio all'argomento `message` di un [costruttore di eccezione](xref:System.Exception.%23ctor%2A).
 
-Per le applicazioni localizzate, è necessario specificare una stringa di messaggio localizzata per ogni eccezione che può essere generata dall'applicazione. Usare i file di risorse per specificare i messaggi di errore localizzati. Per informazioni sulla localizzazione di applicazioni e il recupero di stringhe localizzate, vedere gli articoli seguenti:For information on localizing applications and retrieving localized strings, see the following articles:
+Per le applicazioni localizzate, è necessario specificare una stringa di messaggio localizzata per ogni eccezione che può essere generata dall'applicazione. Usare i file di risorse per specificare i messaggi di errore localizzati. Per informazioni sulla localizzazione delle applicazioni e il recupero di stringhe localizzate, vedere gli articoli seguenti:
 
 - [Procedura: Creare eccezioni definite dall'utente con messaggi di eccezione localizzati](how-to-create-localized-exception-messages.md)
 - [Risorse nelle applicazioni desktop](../../framework/resources/index.md)

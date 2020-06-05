@@ -1,5 +1,6 @@
 ---
 title: Implementare un metodo Dispose
+description: In questo articolo viene illustrato come implementare il metodo Dispose, che rilascia le risorse non gestite usate dal codice in .NET.
 ms.date: 05/27/2020
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: a16034b074b518b25244c47a7d00cb484e145c6e
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: c8b4b9a79577776bc049ef77e222d63374178708
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307020"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447173"
 ---
 # <a name="implement-a-dispose-method"></a>Implementare un metodo Dispose
 

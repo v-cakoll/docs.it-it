@@ -5,12 +5,12 @@ description: Elenca le modifiche di rilievo in ASP.NET Core.
 ms.date: 04/29/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 63d39b1aa6e46b6bcbeb5a409efacac01dea4262
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 2e89a14c948365da1e7a04fc8d5ca4008842f8d8
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728326"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446971"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core modifiche di rilievo
 
@@ -55,6 +55,7 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 - [Gheppio: intestazioni del trailer della richiesta spostate in una nuova raccolta](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Gheppio: modifiche ai livelli di astrazione del trasporto](#kestrel-transport-abstractions-removed-and-made-public)
 - [Localizzazione: API contrassegnate come obsolete](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
+- [Localizzazione: API "Pubternal" rimosse](#localization-pubternal-apis-removed)
 - [Localizzazione: classe ResourceManagerWithCultureStringLocalizer e membro dell'interfaccia WithCulture rimossi](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [Registrazione: classe DebugLogger creata internamente](#logging-debuglogger-class-made-internal)
 - [MVC: suffisso asincrono azione controller rimosso](#mvc-async-suffix-trimmed-from-controller-action-names)
@@ -94,6 +95,10 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 ***
 
 [!INCLUDE[HTTP: Kestrel and IIS BadHttpRequestException types marked obsolete and replaced](~/includes/core-changes/aspnetcore/5.0/http-badhttprequestexception-obsolete.md)]
+
+***
+
+[!INCLUDE [Localization: "Pubternal" APIs removed](~/includes/core-changes/aspnetcore/5.0/localization-pubternal-apis-removed.md)]
 
 ***
 
