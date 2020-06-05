@@ -9,22 +9,22 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-ms.openlocfilehash: 276cb1411c66e1f7205507a1b1053cc8642c7cb0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c5ff802a0f6e081acd00d7cdfab4a8296b4daad9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345399"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392857"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Procedura: accedere a una variabile nascosta da una classe derivata (Visual Basic)
 
 Quando il codice in una classe derivata accede a una variabile, il compilatore normalmente risolve il riferimento alla versione accessibile più vicina, ovvero la versione accessibile, il minor numero di passaggi derivazionali dalla classe di accesso. Se la variabile è definita nella classe derivata, il codice accede normalmente a tale definizione.
 
-Se la variabile della classe derivata ombreggia una variabile nella classe di base, nasconde la versione della classe base. È tuttavia possibile accedere alla variabile della classe base qualificando la parola chiave `MyBase`.
+Se la variabile della classe derivata ombreggia una variabile nella classe di base, nasconde la versione della classe base. Tuttavia, è possibile accedere alla variabile della classe base qualificando la `MyBase` parola chiave.
 
 ### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>Per accedere a una variabile della classe di base nascosta da una classe derivata
 
-- In un'espressione o in un'istruzione di assegnazione precede il nome della variabile con la parola chiave `MyBase` e un punto (`.`).
+- In un'espressione o in un'istruzione di assegnazione precedere il nome della variabile con la `MyBase` parola chiave e un punto ( `.` ).
 
     Il compilatore risolve il riferimento alla versione della classe di base della variabile.
 
@@ -45,7 +45,7 @@ Se la variabile della classe derivata ombreggia una variabile nella classe di ba
     End Class
     ```
 
-    Nell'esempio precedente viene dichiarata la variabile `shadowString` nella classe di base e viene ombreggiata nella classe derivata. La procedura `showStrings` nella classe derivata Visualizza la versione di shadowing della stringa quando il nome `shadowString` non è qualificato. Viene quindi visualizzata la versione ombreggiata quando `shadowString` viene qualificato con la parola chiave `MyBase`.
+    Nell'esempio precedente la variabile viene dichiarata `shadowString` nella classe base e viene ombreggiata nella classe derivata. La routine `showStrings` della classe derivata Visualizza la versione di shadowing della stringa quando il nome `shadowString` non è qualificato. Viene quindi visualizzata la versione ombreggiata quando `shadowString` viene qualificato con la `MyBase` parola chiave.
 
 ## <a name="robust-programming"></a>Programmazione efficiente
 
@@ -53,12 +53,12 @@ Per ridurre il rischio di riferimento a una versione non intenzionale di una var
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti a elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [Differenze tra shadowing e override](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
-- [Procedura: nascondere una variabile con lo stesso nome di un'altra variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
-- [Procedura: nascondere una variabile ereditata](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
-- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
-- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Me, My, MyBase e MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
-- [Nozioni fondamentali sull'ereditarietà](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [References to Declared Elements](references-to-declared-elements.md)
+- [Shadowing in Visual Basic](shadowing.md)
+- [Differenze tra shadowing e override](differences-between-shadowing-and-overriding.md)
+- [Procedura: nascondere una variabile con lo stesso nome di un'altra variabile](how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
+- [Procedura: nascondere una variabile ereditata](how-to-hide-an-inherited-variable.md)
+- [Shadows](../../../language-reference/modifiers/shadows.md)
+- [Override](../../../language-reference/modifiers/overrides.md)
+- [Me, My, MyBase e MyClass](../../program-structure/me-my-mybase-and-myclass.md)
+- [Nozioni fondamentali sull'ereditarietà](../objects-and-classes/inheritance-basics.md)

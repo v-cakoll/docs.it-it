@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
-ms.openlocfilehash: 4ce24073896326bb5a68e563e2d34aafa09ef1c1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7b5bda7b1a2ae37eb509c736deae1652dc5e6ab0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593210"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374018"
 ---
-# <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>Struttura '\<nomestruttura >' deve contenere almeno una variabile membro di istanza o dichiarazione di evento almeno un'istanza non contrassegnata 'Custom'
-Una definizione di struttura non include eventuali variabili non condivise o eventi non personalizzati non condivisi.  
+# <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>La struttura '\<structurename>' deve contenere almeno una dichiarazione di evento o di variabile membro di istanza non contrassegnata 'Custom'
+Una definizione di struttura non include variabili non condivise o eventi non personalizzati non condivisi.  
   
- Ogni struttura deve essere una variabile o un evento che si applica a ogni istanza specifica (non condivisa) invece che a tutte le istanze collettivamente ([condiviso](../../../visual-basic/language-reference/modifiers/shared.md)). Procedure, le proprietà e le costanti non condivise non soddisfano questo requisito. Inoltre, se sono presenti un solo evento non condiviso e nessuna variabile non condivisa, tale evento non può essere un `Custom` evento.  
+ Ogni struttura deve avere una variabile o un evento che si applica a ogni istanza specifica (non condivisa) invece che a tutte le istanze collettivamente ([condivise](../modifiers/shared.md)). Le costanti, le proprietà e le routine non condivisi non soddisfano questo requisito. Inoltre, se non sono presenti variabili non condivise e un solo evento non condiviso, l'evento non può essere un `Custom` evento.  
   
  **ID errore:** BC30941  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-- Definire almeno una variabile o un evento che non è `Shared`. Se si definisce un solo evento, deve essere non personalizzati, nonché non condivisa.  
+- Definire almeno una variabile o un evento diverso da `Shared` . Se si definisce un solo evento, deve essere non personalizzato e non condiviso.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strutture](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Procedura: Dichiarare una struttura](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [Istruzione Structure](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Strutture](../../programming-guide/language-features/data-types/structures.md)
+- [Procedura: Dichiarare una struttura](../../programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Istruzione Structure](../statements/structure-statement.md)

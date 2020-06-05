@@ -7,40 +7,40 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: 105fa8da838938d13022c210c1f65cdafd251003
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ee235252d69e6f77ce53b048f45e73d0969e864
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918307"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409452"
 ---
-# <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Namespace o il tipo specificato nelle istruzioni 'Imports a livello di progetto\<nomeelementoqualificato >' non contiene alcun membro pubblico o non è stata trovata
-Namespace o il tipo specificato nelle istruzioni 'Imports a livello di progetto\<nomeelementoqualificato >' non contiene alcun membro pubblico o non è stata trovata. Assicurarsi che lo spazio dei nomi o il tipo sia definito e contenga almeno un membro pubblico. Assicurarsi che il nome di alias non contenga altri alias.  
+# <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Lo spazio dei nomi o il tipo specificato nelle importazioni '\<qualifiedelementname>' a livello di progetto non contiene alcun membro pubblico o non è definito
+Lo spazio dei nomi o il tipo specificato nelle importazioni a livello di progetto ' \<qualifiedelementname> ' non contiene alcun membro pubblico o non è stato trovato. Verificare che lo spazio dei nomi o il tipo sia definito e contenga almeno un membro pubblico. Verificare che il nome dell'alias non contenga altri alias.  
   
- Una proprietà di importazione di un progetto specifica un elemento contenitore che può essere trovato o non definisce alcun `Public` membri.  
+ Una proprietà import di un progetto specifica un elemento contenitore che non può essere trovato o non definisce `Public` membri.  
   
- Oggetto *contenente l'elemento* può essere un spazio dei nomi, classe, struttura, modulo, interfaccia o enumerazione. L'elemento contenitore contiene membri, ad esempio variabili, routine o altri elementi che lo contiene.  
+ Un *elemento contenitore* può essere uno spazio dei nomi, una classe, una struttura, un modulo, un'interfaccia o un'enumerazione. L'elemento contenitore contiene membri, ad esempio variabili, procedure o altri elementi contenenti.  
   
- Lo scopo dell'importazione è di consentire al codice per accedere ai membri dello spazio dei nomi o un tipo senza dover fornire il nome completo. Il progetto potrebbe essere necessario anche aggiungere un riferimento al tipo o dello spazio dei nomi. Per altre informazioni, vedere "Importazione di elementi contenitore" nella [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+ Lo scopo dell'importazione è consentire al codice di accedere ai membri dello spazio dei nomi o ai tipi senza doverli qualificare. Il progetto potrebbe anche dover aggiungere un riferimento allo spazio dei nomi o al tipo. Per ulteriori informazioni, vedere "importazione di elementi contenitore" in [riferimenti a elementi dichiarati](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
- Se il compilatore non trova l'elemento contenitore specificato, non sarà possibile risolvere i riferimenti che lo usano. Se viene trovato l'elemento ma l'elemento non espone alcun `Public` membri, non esiste alcun riferimento può essere esito positivo. In entrambi i casi è significativo per l'elemento import.  
+ Se il compilatore non riesce a trovare l'elemento contenitore specificato, non può risolvere i riferimenti che lo usano. Se trova l'elemento, ma l'elemento non espone `Public` membri, nessun riferimento può avere esito positivo. In entrambi i casi non è significativo importare l'elemento.  
   
- Si utilizza il **Progettazione progetti** per specificare gli elementi da importare. Usare il **spazi dei nomi importati** sezione il **riferimenti** pagina. È possibile ottenere il **creazione progetti** facendo doppio clic sul **My Project** icona nel **Esplora soluzioni**.  
+ Per specificare gli elementi da importare, è possibile utilizzare **Progettazione progetti** . Utilizzare la sezione **spazi dei nomi importati** della pagina **riferimenti** . È possibile ottenere la creazione di **progetti** facendo doppio clic sull'icona del **progetto** in **Esplora soluzioni**.  
   
  **ID errore:** BC40057  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. Aprire il **creazione progetti** e passare alle **riferimento** pagina.  
+1. Aprire **Progettazione progetti** e passare alla pagina di **riferimento** .  
   
-2. Nel **spazi dei nomi importati** sezione, verificare che l'elemento contenitore è accessibile dal progetto.  
+2. Nella sezione **spazi dei nomi importati** verificare che l'elemento contenitore sia accessibile dal progetto.  
   
-3. Verificare che l'elemento contenitore espone ad almeno uno `Public` membro.  
+3. Verificare che l'elemento contenitore esponga almeno un `Public` membro.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Pagina Riferimenti, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
+- [Riferimenti (pagina), Creazione progetti (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [Spazi dei nomi in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [Riferimenti a elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Pubblica](../modifiers/public.md)
+- [Spazi dei nomi in Visual Basic](../../programming-guide/program-structure/namespaces.md)
+- [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

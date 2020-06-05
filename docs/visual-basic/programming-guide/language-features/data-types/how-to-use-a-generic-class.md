@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: utilizzare una classe generica'
+title: 'Procedura: Usare una classe generica'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - type parameters [Visual Basic], defining
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
-ms.openlocfilehash: 87ca0da5095484615666cda505b4f7678d8160de
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 01f1f7ef5963feeb3fe2b5390244e4e516773bad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350052"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393844"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>Procedura: utilizzare una classe generica (Visual Basic)
 Una classe che accetta *parametri di tipo* è chiamato *classe generica*. Se si usa una classe generica, è possibile generare una *classe costruita* da essa fornendo un *argomento di tipo* per ciascuno di questi parametri. È possibile quindi dichiarare una variabile del tipo di classe costruita, creare un'istanza della classe costruita e assegnarla alla variabile.  
@@ -37,7 +37,7 @@ Una classe che accetta *parametri di tipo* è chiamato *classe generica*. Se si 
   
 ### <a name="to-use-a-class-that-takes-a-type-parameter"></a>Per usare una classe che accetta un parametro di tipo  
   
-1. All'inizio del file di origine, includere un' [istruzione Imports (tipo e spazio dei nomi .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) per importare lo spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>. In questo modo è possibile fare riferimento alla classe <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> senza doverla specificare completamente per differenziarla da altre classi queue come <xref:System.Collections.Queue?displayProperty=nameWithType>.  
+1. All'inizio del file di origine, includere un' [istruzione Imports (tipo e spazio dei nomi .NET)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md) per importare lo <xref:System.Collections.Generic?displayProperty=nameWithType> spazio dei nomi. In questo modo è possibile fare riferimento alla classe <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> senza doverla specificare completamente per differenziarla da altre classi queue come <xref:System.Collections.Queue?displayProperty=nameWithType>.  
   
 2. Creare l'oggetto in modo normale, ma aggiungere `(Of type)` immediatamente dopo il nome della classe.  
   
@@ -47,10 +47,10 @@ Una classe che accetta *parametri di tipo* è chiamato *classe generica*. Se si 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Tipi generici in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Tipi di dati](index.md)
+- [Generic Types in Visual Basic](generic-types.md)
 - [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../../../standard/language-independence-and-language-independent-components.md)
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
-- [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [Procedura: Definire una classe in grado di fornire funzionalità identiche con tipi di dati diversi](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
-- [Iteratori](../../../../visual-basic/programming-guide/concepts/iterators.md)
+- [Di](../../../language-reference/statements/of-clause.md)
+- [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Procedura: Definire una classe in grado di fornire funzionalità identiche con tipi di dati diversi](how-to-define-a-class-that-can-provide-identical-functionality.md)
+- [Iterators](../../concepts/iterators.md)

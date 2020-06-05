@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
-ms.openlocfilehash: 5564f95048f6b44a48229c7e5be9331839803439
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: edb2195f4e83c2315aa929936aff8af88ca8556c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662108"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374135"
 ---
-# <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>Funzione '\<nomeroutine >' non restituisce un valore per tutti i percorsi del codice
-Funzione '\<nomeroutine >' non restituisce un valore per tutti i percorsi del codice. Probabilmente manca un'istruzione 'Return'.  
+# <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>La funzione '\<procedurename>' non restituisce un valore in tutti i percorsi del codice
+La funzione ' \<procedurename> ' non restituisce un valore in tutti i percorsi del codice. Manca un'istruzione ' Return '?  
   
- Oggetto `Function` procedure dispone di almeno un possibile percorso all'interno del codice che non restituisce un valore.  
+ Una `Function` routine ha almeno un possibile percorso nel codice che non restituisce un valore.  
   
- È possibile restituire un valore da un `Function` procedure in uno dei modi seguenti:  
+ È possibile restituire un valore da una `Function` routine in uno dei modi seguenti:  
   
-- Includere il valore in una [istruzione Return](../../../visual-basic/language-reference/statements/return-statement.md).  
+- Includere il valore in un' [istruzione return](../statements/return-statement.md).  
   
-- Assegnare il valore per il `Function` procedure assegnare un nome e quindi eseguire un `Exit Function` istruzione.  
+- Assegnare il valore al `Function` nome della stored procedure, quindi eseguire un' `Exit Function` istruzione.  
   
-- Assegnare il valore per il `Function` procedure assegnare un nome e quindi eseguire il `End Function` istruzione.  
+- Assegnare il valore al `Function` nome della stored procedure, quindi eseguire l' `End Function` istruzione.  
   
- Se il controllo passa al `Exit Function` o `End Function` e non è stato assegnato alcun valore per il nome della routine, la procedura restituisce il valore predefinito del tipo di dati restituito. Per altre informazioni, vedere "Comportamento di" nella [istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md).  
+ Se il controllo passa a `Exit Function` o `End Function` e non è stato assegnato alcun valore al nome della stored procedure, la stored procedure restituisce il valore predefinito del tipo di dati restituito. Per ulteriori informazioni, vedere "Behavior" nell' [istruzione Function](../statements/function-statement.md).  
   
  Per impostazione predefinita, si tratta di un messaggio di avviso. Per altre informazioni su come nascondere gli avvisi o considerarli come errori, vedere [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
@@ -35,12 +35,12 @@ Funzione '\<nomeroutine >' non restituisce un valore per tutti i percorsi del co
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-- Controllare la logica del flusso di controllo e assicurarsi che si assegna un valore prima di ogni istruzione che provoca un valore restituito.  
+- Controllare la logica del flusso di controllo e assicurarsi di assegnare un valore prima di ogni istruzione che causa la restituzione.  
   
-     È più semplice garantire che ogni restituito dalla routine restituisce un valore se si usano sempre il `Return` istruzione. Se si esegue questa operazione, l'ultima istruzione che precede `End Function` deve essere un `Return` istruzione.  
+     È più facile garantire che ogni ritorno dalla procedura restituisca un valore se si usa sempre l' `Return` istruzione. In tal caso, l'ultima istruzione prima `End Function` deve essere un' `Return` istruzione.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Routine Function](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
-- [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Pagina Compilazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
+- [Routine Function](../../programming-guide/language-features/procedures/function-procedures.md)
+- [Istruzione Function](../statements/function-statement.md)
+- [Compilazione (pagina), Creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)

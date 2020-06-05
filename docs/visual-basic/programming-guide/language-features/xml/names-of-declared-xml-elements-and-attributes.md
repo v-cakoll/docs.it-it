@@ -8,20 +8,20 @@ helpviewer_keywords:
 - attribute names [XML in Visual Basic]
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
-ms.openlocfilehash: 12fbd1f4332391b1acdcf12e101d82627ebbeaff
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 043243eeee7c24d8c63105047fa3e7e0ed58c7b0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74335991"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374668"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Nomi di elementi e attributi XML dichiarati (Visual Basic)
-In questo argomento vengono fornite Visual Basic linee guida per la denominazione di elementi e attributi XML nei valori letterali XML.  In un valore letterale XML è possibile specificare un nome locale o un nome completo. Un nome completo è costituito da un prefisso dello spazio dei nomi XML, da due punti e da un nome locale. Per ulteriori informazioni sui prefissi degli spazi dei nomi XML, vedere [valore letterale elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+In questo argomento vengono fornite Visual Basic linee guida per la denominazione di elementi e attributi XML nei valori letterali XML.  In un valore letterale XML è possibile specificare un nome locale o un nome completo. Un nome completo è costituito da un prefisso dello spazio dei nomi XML, da due punti e da un nome locale. Per ulteriori informazioni sui prefissi degli spazi dei nomi XML, vedere [valore letterale elemento XML](../../../language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="rules"></a>Regole  
  Il nome locale di un elemento o di un attributo in Visual Basic deve rispettare le regole seguenti.  
   
-- Può iniziare con uno spazio dei nomi. Deve iniziare con un carattere alfabetico o un carattere di sottolineatura (`_`).  
+- Può iniziare con uno spazio dei nomi. Deve iniziare con un carattere alfabetico o un carattere di sottolineatura ( `_` ).  
   
 - Deve contenere solo caratteri alfabetici, cifre decimali, caratteri di sottolineatura, punti (.) e trattini (-).  
   
@@ -42,9 +42,9 @@ In questo argomento vengono fornite Visual Basic linee guida per la denominazion
  Con distinzione tra maiuscole e minuscole. Ciò significa che quando il compilatore di Visual Basic confronta due nomi che differiscono solo per i casi alfabetici, li interpreta come nomi diversi. Ad esempio, interpreta `ABC` e `abc` come riferimento a elementi distinti.  
   
 ## <a name="xml-namespaces"></a>Spazi dei nomi XML  
- Quando si crea un valore letterale elemento XML, è possibile specificare il prefisso dello spazio dei nomi XML per il nome dell'elemento. Per altre informazioni, vedere [valore letterale elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+ Quando si crea un valore letterale elemento XML, è possibile specificare il prefisso dello spazio dei nomi XML per il nome dell'elemento. Per altre informazioni, vedere [valore letterale elemento XML](../../../language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Creazione di XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [Valore letterale elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [Creazione di XML in Visual Basic](creating-xml.md)
+- [Valore letterale di elemento XML](../../../language-reference/xml-literals/xml-element-literal.md)

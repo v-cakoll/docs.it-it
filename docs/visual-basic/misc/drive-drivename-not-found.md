@@ -4,14 +4,14 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_DriveNotFound1
 ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
-ms.openlocfilehash: 9084e885ba98211623781b036e9f7407a44368ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a426130b284a7c09004933bca264e4d52be1df3c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970144"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394596"
 ---
-# <a name="drive-drivename-not-found"></a>Unità '\<NomeUnità >' non trovato
+# <a name="drive-drivename-not-found"></a>Unità '\<drivename>' non trovato
 Non è possibile trovare l'unità. La connessione di rete è stata persa o l'unità a cui si tenta di accedere è offline o non esiste.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
@@ -26,4 +26,4 @@ Non è possibile trovare l'unità. La connessione di rete è stata persa o l'uni
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Tipi di errore](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipi di errore](../programming-guide/language-features/error-types.md)
