@@ -2,14 +2,14 @@
 title: Supporto degli strumenti e IDE di Visual Studio per LINQ
 ms.date: 07/20/2015
 ms.assetid: e3bfe0d9-4a79-49cf-a31c-93297c688829
-ms.openlocfilehash: 36c3b051a0e8577a5e622f4cdf986945043dbdc1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ec9c4acf75a32caa7a078782702c0c8c52386702
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351037"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413284"
 ---
-# <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Supporto degli strumenti e dell'IDE di Visual Studio per LINQ (Visual Basic)
+# <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>IDE di Visual Studio e supporto di strumenti per LINQ (Visual Basic)
 L'ambiente di sviluppo integrato (IDE) di Visual Studio offre le seguenti funzionalità che supportano lo sviluppo di applicazioni LINQ:  
   
 ## <a name="object-relational-designer"></a>Object Relational Designer  
@@ -26,4 +26,4 @@ L'ambiente di sviluppo integrato (IDE) di Visual Studio offre le seguenti funzio
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ (Language-Integrated Query) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [LINQ (Language-Integrated Query) (Visual Basic)](index.md)

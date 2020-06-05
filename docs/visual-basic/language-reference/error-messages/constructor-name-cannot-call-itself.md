@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: 8459ee7fec6d761161a721c88ccdc88e513fc95f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6abb6dde624e129b52fefecf8c51e6cde2567ae1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936695"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409803"
 ---
-# <a name="constructor-name-cannot-call-itself"></a>Costruttore '\<nome >' non può chiamare se stesso
-Oggetto `Sub New` routine in una classe o struttura chiama se stessa.  
+# <a name="constructor-name-cannot-call-itself"></a>Il costruttore '\<name>' non può chiamare se stesso
+Una `Sub New` routine in una classe o in una struttura chiama se stessa.  
   
- È lo scopo di un costruttore per inizializzare un'istanza di una classe o struttura quando viene inizialmente creato. Una classe o struttura può avere diversi costruttori, purché dispongano di elenchi di parametri diversi. Un costruttore è autorizzato a chiamare un altro costruttore per eseguire le funzionalità oltre a un proprio. Ma non ha significato per un costruttore di chiamare se stesso e di fatto il risultato sarà una ricorsione infinita se è consentito.  
+ Lo scopo di un costruttore è di inizializzare un'istanza di una classe o una struttura quando viene creata per la prima volta. Una classe o una struttura può avere più costruttori, purché tutti abbiano elenchi di parametri diversi. Un costruttore è autorizzato a chiamare un altro costruttore per eseguirne la funzionalità oltre a se stesso. Tuttavia, non è significativo per un costruttore chiamare se stesso e in realtà comporterebbe una ricorsione infinita se consentito.  
   
  **ID errore:** BC30298  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. Controllare l'elenco di parametri del costruttore viene chiamato. Deve essere diverso da quello del costruttore effettua la chiamata.  
+1. Controllare l'elenco di parametri del costruttore chiamato. Deve essere diverso da quello del costruttore che effettua la chiamata.  
   
-2. Se non si intende chiamare un costruttore diverso, rimuovere il `Sub New` chiamare interamente.  
+2. Se non si intende chiamare un costruttore diverso, rimuovere `Sub New` completamente la chiamata.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Durata degli oggetti: Come gli oggetti vengono creati ed eliminati](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Durata degli oggetti: come creare e distruggere oggetti](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
