@@ -4,25 +4,25 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Into keyword [Visual Basic]
 ms.assetid: e1534550-8f4b-4978-b043-fad7b8fd79ac
-ms.openlocfilehash: 038cf9b812d3fbdb54afaca072694bbde4bfb600
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4e3648ee9893ca0f4045e28e68b659c01035dee0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348048"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404473"
 ---
-# <a name="into-clause-visual-basic"></a><span data-ttu-id="cf628-102">Clausola Into (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cf628-102">Into Clause (Visual Basic)</span></span>
-<span data-ttu-id="cf628-103">Identifica le funzioni di aggregazione o i raggruppamenti da applicare a una raccolta.</span><span class="sxs-lookup"><span data-stu-id="cf628-103">Identifies aggregate functions or groupings to apply to a collection.</span></span>  
+# <a name="into-clause-visual-basic"></a><span data-ttu-id="f7898-102">Clausola Into (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f7898-102">Into Clause (Visual Basic)</span></span>
+<span data-ttu-id="f7898-103">Identifica le funzioni di aggregazione o i raggruppamenti da applicare a una raccolta.</span><span class="sxs-lookup"><span data-stu-id="f7898-103">Identifies aggregate functions or groupings to apply to a collection.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cf628-104">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="cf628-104">Remarks</span></span>  
- <span data-ttu-id="cf628-105">La parola chiave `Each` viene utilizzata nei contesti seguenti:</span><span class="sxs-lookup"><span data-stu-id="cf628-105">The `Each` keyword is used in the following contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f7898-104">Commenti</span><span class="sxs-lookup"><span data-stu-id="f7898-104">Remarks</span></span>  
+ <span data-ttu-id="f7898-105">La `Each` parola chiave viene usata nei contesti seguenti:</span><span class="sxs-lookup"><span data-stu-id="f7898-105">The `Each` keyword is used in the following contexts:</span></span>  
   
- [<span data-ttu-id="cf628-106">Clausola Aggregate</span><span class="sxs-lookup"><span data-stu-id="cf628-106">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [<span data-ttu-id="f7898-106">Aggregate Clause</span><span class="sxs-lookup"><span data-stu-id="f7898-106">Aggregate Clause</span></span>](../queries/aggregate-clause.md)  
   
- [<span data-ttu-id="cf628-107">Clausola Group By</span><span class="sxs-lookup"><span data-stu-id="cf628-107">Group By Clause</span></span>](../../../visual-basic/language-reference/queries/group-by-clause.md)  
+ [<span data-ttu-id="f7898-107">Clausola Group By</span><span class="sxs-lookup"><span data-stu-id="f7898-107">Group By Clause</span></span>](../queries/group-by-clause.md)  
   
- [<span data-ttu-id="cf628-108">Clausola Group Join</span><span class="sxs-lookup"><span data-stu-id="cf628-108">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="f7898-108">Clausola Group Join</span><span class="sxs-lookup"><span data-stu-id="f7898-108">Group Join Clause</span></span>](../queries/group-join-clause.md)  
   
-## <a name="see-also"></a><span data-ttu-id="cf628-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cf628-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f7898-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f7898-109">See also</span></span>
 
-- [<span data-ttu-id="cf628-110">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="cf628-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="f7898-110">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="f7898-110">Keywords</span></span>](../keywords/index.md)
