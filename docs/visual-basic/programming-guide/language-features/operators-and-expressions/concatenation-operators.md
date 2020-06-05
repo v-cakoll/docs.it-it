@@ -9,12 +9,12 @@ helpviewer_keywords:
 - + operator [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
-ms.openlocfilehash: f86245c649647be4e040a61083d8b93eee4d7422
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c123438a86a2c3293a99770107d970535fcdbdf8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353684"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388790"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Operatori di concatenazione in Visual Basic
 
@@ -32,9 +32,9 @@ Questi operatori possono concatenare anche variabili di tipo `String`, come nell
 
 ## <a name="differences-between-the-two-concatenation-operators"></a>Differenze tra i due operatori di concatenazione
 
-L' [operatore +](../../../../visual-basic/language-reference/operators/addition-operator.md) ha lo scopo principale di aggiungere due numeri. Questo operatore consente però anche di concatenare operandi numerici con operandi stringa. L'operatore `+` include un insieme complesso di regole che determinano se aggiungere, concatenare, segnalare un errore del compilatore oppure generare un'eccezione <xref:System.InvalidCastException> in fase di esecuzione.
+L' [operatore +](../../../language-reference/operators/addition-operator.md) ha lo scopo principale di aggiungere due numeri. Questo operatore consente però anche di concatenare operandi numerici con operandi stringa. L'operatore `+` include un insieme complesso di regole che determinano se aggiungere, concatenare, segnalare un errore del compilatore oppure generare un'eccezione <xref:System.InvalidCastException> in fase di esecuzione.
 
-L' [operatore &](../../../../visual-basic/language-reference/operators/concatenation-operator.md) viene definito solo per gli operandi `String` ed estende sempre gli operandi a `String`, indipendentemente dall'impostazione di `Option Strict`. L'operatore `&` rappresenta la scelta consigliata per la concatenazione delle stringhe poiché viene definito solo per le stringhe e riduce la possibilità di generare conversioni non intenzionali.
+L' [operatore&](../../../language-reference/operators/concatenation-operator.md) viene definito solo per gli `String` operandi e amplia sempre gli operandi a `String` , indipendentemente dall'impostazione di `Option Strict` . L'operatore `&` rappresenta la scelta consigliata per la concatenazione delle stringhe poiché viene definito solo per le stringhe e riduce la possibilità di generare conversioni non intenzionali.
 
 ## <a name="performance-string-and-stringbuilder"></a>Prestazioni: String e StringBuilder
 
@@ -42,8 +42,8 @@ Se una stringa subisce numerose manipolazioni, ad esempio concatenazioni, elimin
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [Tipi di metodi di manipolazione delle stringhe in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)
-- [Operatori aritmetici in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Operatori di confronto in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Operatori logici e bit per bit in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Option Strict Statement](../../../language-reference/statements/option-strict-statement.md)
+- [Tipi di metodi per la gestione delle stringhe in Visual Basic](../strings/types-of-string-manipulation-methods.md)
+- [Operatori aritmetici in Visual Basic](arithmetic-operators.md)
+- [Comparison Operators in Visual Basic](comparison-operators.md)
+- [Operatori logici e bit per bit in Visual Basic](logical-and-bitwise-operators.md)

@@ -13,22 +13,22 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: b99af8ff4d5428f1749bfc1a4c51a136f12405ee
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 49b9c8d1a6db56a56b50c16b4a6bb5b928df6c7d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344868"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388037"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Procedura: definire un operatore (Visual Basic)
-Se è stata definita una classe o una struttura, è possibile definire il comportamento di un operatore standard (ad esempio `*`, `<>`o `And`) quando uno o entrambi gli operandi sono del tipo della classe o della struttura.  
+Se è stata definita una classe o una struttura, è possibile definire il comportamento di un operatore standard, ad esempio `*` , `<>` o, `And` quando uno o entrambi gli operandi sono del tipo della classe o della struttura.  
   
- Definire l'operatore standard come routine di operatore all'interno della classe o della struttura. Tutte le routine degli operatori devono essere `Public` `Shared`.  
+ Definire l'operatore standard come routine di operatore all'interno della classe o della struttura. Tutte le routine degli operatori devono essere `Public` `Shared` .  
   
  La definizione di un operatore in una classe o in una struttura è detta anche *Overload* dell'operatore.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene definito l'operatore `+` per una struttura denominata `height`. La struttura Usa altezze misurate in piedi e pollici. Un *pollice* è 2,54 centimetri e un *piede* è 12 pollici. Per garantire la normalizzazione dei valori (pollici < 12,0), il costruttore esegue l'aritmetica *modulo* 12. L'operatore `+` usa il costruttore per generare valori normalizzati.  
+ Nell'esempio seguente viene definito l' `+` operatore per una struttura denominata `height` . La struttura Usa altezze misurate in piedi e pollici. Un *pollice* è 2,54 centimetri e un *piede* è 12 pollici. Per garantire la normalizzazione dei valori (pollici < 12,0), il costruttore esegue l'aritmetica *modulo* 12. L' `+` operatore utilizza il costruttore per generare valori normalizzati.  
   
  [!code-vb[VbVbcnProcedures#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#25)]  
   
@@ -40,9 +40,9 @@ Se è stata definita una classe o una struttura, è possibile definire il compor
 
 - [Routine di operatore](./operator-procedures.md)
 - [Procedura: Definire un operatore di conversione](./how-to-define-a-conversion-operator.md)
-- [Procedura: Chiamare una routine di operatore](./how-to-call-an-operator-procedure.md)
-- [Procedura: Usare una classe che definisce gli operatori](./how-to-use-a-class-that-defines-operators.md)
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Procedura: Dichiarare una struttura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [Operatore Mod](../../../../visual-basic/language-reference/operators/mod-operator.md)
+- [Procedura: chiamare una routine di operatore](./how-to-call-an-operator-procedure.md)
+- [Procedura: utilizzare una classe che definisce gli operatori](./how-to-use-a-class-that-defines-operators.md)
+- [Operator Statement](../../../language-reference/statements/operator-statement.md)
+- [Istruzione Structure](../../../language-reference/statements/structure-statement.md)
+- [Procedura: Dichiarare una struttura](../data-types/how-to-declare-a-structure.md)
+- [Operatore Mod](../../../language-reference/operators/mod-operator.md)
