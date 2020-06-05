@@ -1,13 +1,13 @@
 ---
-title: 'Procedura: trovare il pari livello immediatamente precedente (XPath-LINQ to XML)'
+title: "Procedura: Trovare l'elemento di pari livello immediatamente precedente (XPath-LINQ to XML)"
 ms.date: 07/20/2015
 ms.assetid: ec046283-9fe2-4440-b295-860bf700099d
-ms.openlocfilehash: b2cb9efba0ef65a1b1ab1d7dadd54759f7d2a26b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8b0071b2f39b8debdd52083718fe928c1f9fb6f3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344629"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364526"
 ---
 # <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a>Procedura: trovare l'elemento di pari livello immediatamente precedente (XPath-LINQ to XML) (Visual Basic)
 
@@ -43,7 +43,7 @@ End If
 Console.WriteLine(el1)
 ```
 
-Questo esempio produce il seguente output:
+Nell'esempio viene prodotto l'output seguente:
 
 ```console
 Results are identical
@@ -52,4 +52,4 @@ Results are identical
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML per gli utenti di XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

@@ -1,13 +1,13 @@
 ---
-title: Contenuto valido di oggetti XElement e XDocument Objects2
+title: Contenuto valido di XElement e XDocument Objects2
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
-ms.openlocfilehash: 5e9b5ec54b3005d18a1a0da10d78d3c8ad5300ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d222f19f6f588968a3ef1515dca522a4a80e1ffb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614354"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364344"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Contenuto valido di oggetti XElement e XDocument
 In questo argomento vengono illustrati gli argomenti validi che è possibile passare a costruttori e i metodi usati per aggiungere contenuto a elementi e documenti.  
@@ -45,7 +45,7 @@ In questo argomento vengono illustrati gli argomenti validi che è possibile pas
   
 - <xref:System.Xml.Linq.XAttribute>  
   
-- Qualsiasi tipo che implementa <xref:System.Collections.Generic.IEnumerable%601>.  
+- Qualsiasi tipo che implementa <xref:System.Collections.Generic.IEnumerable%601>  
   
  Se un oggetto implementa <xref:System.Collections.Generic.IEnumerable%601>, la raccolta nell'oggetto viene enumerata e vengono aggiunti tutti gli elementi della raccolta. Se la raccolta contiene oggetti <xref:System.Xml.Linq.XNode> o <xref:System.Xml.Linq.XAttribute>, ogni elemento della raccolta viene aggiunto separatamente. Se la raccolta contiene testo (oppure oggetti convertiti in testo), il testo della raccolta viene concatenato e aggiunto come un unico nodo di tipo text.  
   
@@ -90,4 +90,4 @@ In questo argomento vengono illustrati gli argomenti validi che è possibile pas
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Creazione di alberi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Creazione di strutture ad albero XML (Visual Basic)](creating-xml-trees.md)

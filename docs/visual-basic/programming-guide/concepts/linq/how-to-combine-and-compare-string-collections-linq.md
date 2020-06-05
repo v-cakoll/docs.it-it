@@ -1,13 +1,13 @@
 ---
-title: 'Procedura: combinare e confrontare raccolte di stringhe (LINQ)'
+title: 'Procedura: Combinare e confrontare raccolte di stringhe (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 2df5db16e51e8f9de8a8e3506eb1f7b737065a14
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 271ef7805cd2285fa2d8796a31257c0f31bb9a76
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337562"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374862"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Procedura: combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic)
 
@@ -165,9 +165,9 @@ End Class
 
 ## <a name="compile-the-code"></a>Compilare il codice
 
-Creare un progetto di applicazione console Visual Basic. Aggiungere un'istruzione `Imports` per lo spazio dei nomi System. Linq.
+Creare un progetto di applicazione console Visual Basic. Aggiungere un' `Imports` istruzione per lo spazio dei nomi System. Linq.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))
+- [LINQ and Strings (Visual Basic)](linq-and-strings.md) (LINQ e le stringhe (Visual Basic))
+- [LINQ and File Directories (Visual Basic)](linq-and-file-directories.md) (LINQ e directory file (Visual Basic))

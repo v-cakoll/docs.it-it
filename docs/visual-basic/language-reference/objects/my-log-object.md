@@ -4,24 +4,24 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Log object
 ms.assetid: 309b14b4-8875-4b2f-9661-a734b8cbff07
-ms.openlocfilehash: 7e40a07449f803790009580071c187713d784bb0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b5cd5cc577e7779b85f64b5779d89d99d9ed8993
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350663"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372492"
 ---
 # <a name="mylog-object"></a>Oggetto My.Log
-Fornisce una proprietà e i metodi per la scrittura di informazioni sugli eventi e sulle eccezioni nei listener di log dell'applicazione.  
+Fornisce la proprietà e i metodi per la scrittura dell'evento e delle informazioni sulle eccezioni nei listener del log dell'applicazione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per informazioni sui metodi e le proprietà dell'oggetto `My.Log` , vedere <xref:Microsoft.VisualBasic.Logging.AspLog>.  
   
- L'oggetto `My.Log` è disponibile solo per le applicazioni ASP.NET. Per le applicazioni client, usare [l'oggetto My. Application. log](../../../visual-basic/language-reference/objects/my-application-log-object.md).  
+ L' `My.Log` oggetto è disponibile solo per le applicazioni ASP.NET. Per le applicazioni client, usare [l'oggetto My. Application. log](my-application-log-object.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** <xref:Microsoft.VisualBasic.Logging>  
   
- **Classe:** <xref:Microsoft.VisualBasic.Logging.AspLog>  
+ **Classe:**<xref:Microsoft.VisualBasic.Logging.AspLog>  
   
  **Assembly:** Libreria di runtime Visual Basic (in Microsoft. VisualBasic. dll)
