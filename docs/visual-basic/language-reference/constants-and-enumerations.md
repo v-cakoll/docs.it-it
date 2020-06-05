@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: 5109bf42c9caa7528c5405bb1a5cff0cfb62a5ac
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 60cd1ddac9bca685ddc5778e7d289710245a183e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705756"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374486"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Costanti ed enumerazioni (Visual Basic)
 
@@ -26,9 +26,9 @@ Visual Basic fornisce una serie di costanti ed enumerazioni predefinite per gli 
 |**Costante**|**Descrizione**|  
 |---|---|  
 |`CONFIG`|Stringa che corrisponde all'impostazione corrente della casella di **configurazione della soluzione attiva** nell' **Configuration Manager**.|  
-|`DEBUG`|Valore `Boolean` che è possibile impostare nella finestra di dialogo **Proprietà progetto** . Per impostazione predefinita, la configurazione di debug per un progetto definisce `DEBUG`. Quando `DEBUG` viene definito, i metodi della classe <xref:System.Diagnostics.Debug> generano l'output nella finestra di **output** . Quando non è definito, i metodi della classe <xref:System.Diagnostics.Debug> non vengono compilati e non viene generato alcun output di debug.|  
-|`TARGET`|Stringa che rappresenta il tipo di output per il progetto o l'impostazione **dell'opzione della** riga di comando. I valori possibili di `TARGET` sono:<br /><br /> -"winexe" per un'applicazione Windows.<br />-"exe" per un'applicazione console.<br />-"Library" per una libreria di classi.<br />-"Module" per un modulo.<br />-L'opzione **-target** può essere impostata in Visual Studio Integrated Development Environment. Per ulteriori informazioni, vedere [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
-|`TRACE`|Valore `Boolean` che è possibile impostare nella finestra di dialogo **Proprietà progetto** . Per impostazione predefinita, tutte le configurazioni per un progetto definiscono `TRACE`. Quando `TRACE` viene definito, i metodi della classe <xref:System.Diagnostics.Trace> generano l'output nella finestra di **output** . Quando non è definito, i metodi della classe <xref:System.Diagnostics.Trace> non vengono compilati e non viene generato alcun output di `Trace`.|  
+|`DEBUG`|`Boolean`Valore che può essere impostato nella finestra di dialogo **Proprietà progetto** . Per impostazione predefinita, la configurazione di debug per un progetto definisce `DEBUG` . Quando `DEBUG` è definito, <xref:System.Diagnostics.Debug> i metodi della classe generano l'output nella finestra di **output** . Quando non è definito, <xref:System.Diagnostics.Debug> i metodi della classe non vengono compilati e non viene generato alcun output di debug.|  
+|`TARGET`|Stringa che rappresenta il tipo di output per il progetto o l'impostazione **dell'opzione della** riga di comando. I valori possibili di `TARGET` sono:<br /><br /> -"winexe" per un'applicazione Windows.<br />-"exe" per un'applicazione console.<br />-"Library" per una libreria di classi.<br />-"Module" per un modulo.<br />-L'opzione **-target** può essere impostata in Visual Studio Integrated Development Environment. Per ulteriori informazioni, vedere [-target (Visual Basic)](../reference/command-line-compiler/target.md).|  
+|`TRACE`|`Boolean`Valore che può essere impostato nella finestra di dialogo **Proprietà progetto** . Per impostazione predefinita, tutte le configurazioni per un progetto definiscono `TRACE` . Quando `TRACE` è definito, <xref:System.Diagnostics.Trace> i metodi della classe generano l'output nella finestra di **output** . Quando non è definito, <xref:System.Diagnostics.Trace> i metodi della classe non vengono compilati e non `Trace` viene generato alcun output.|  
 |`VBC_VER`|Numero che rappresenta la versione di Visual Basic, in *Major*. formato *secondario* .|  
   
 ### <a name="print-and-display-constants"></a>Costanti di stampa e visualizzazione  
@@ -43,7 +43,7 @@ Visual Basic fornisce una serie di costanti ed enumerazioni predefinite per gli 
 |`vbNewLine`|Carattere di nuova riga.|  
 |`vbNullChar`|Carattere null.|  
 |`vbNullString`|Non è uguale a una stringa di lunghezza zero (""); utilizzato per la chiamata di stored procedure esterne.|  
-|`vbObjectError`|Numero errore. I numeri errore definiti dall'utente devono essere maggiori di questo valore. Ad esempio:<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
+|`vbObjectError`|Numero di errore. I numeri errore definiti dall'utente devono essere maggiori di questo valore. Ad esempio:<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
 |`vbTab`|Carattere di tabulazione.|  
 |`vbBack`|Carattere backspace.|  
 |`vbFormFeed`|Non utilizzato in Microsoft Windows.|  
@@ -73,9 +73,9 @@ Visual Basic fornisce una serie di costanti ed enumerazioni predefinite per gli 
 |<xref:Microsoft.VisualBasic.OpenAccess>|Indica la modalità di apertura del file quando si chiamano le funzioni di accesso ai file.|  
 |<xref:Microsoft.VisualBasic.OpenMode>|Indica la modalità di apertura del file quando si chiamano le funzioni di accesso ai file.|  
 |<xref:Microsoft.VisualBasic.OpenShare>|Indica la modalità di apertura del file quando si chiamano le funzioni di accesso ai file.|  
-|<xref:Microsoft.VisualBasic.FileIO.RecycleOption>|Specifica se un file deve essere eliminato in modo permanente o inserito nel Cestino.|  
+|<xref:Microsoft.VisualBasic.FileIO.RecycleOption>|Specifica se è necessario eliminare in modo permanente un file o posizionarlo nel Cestino.|  
 |<xref:Microsoft.VisualBasic.FileIO.SearchOption>|Specifica se eseguire la ricerca in tutte le directory o solo in quelle di primo livello.|  
-|<xref:Microsoft.VisualBasic.TriState>|Indica un valore `Boolean` o se è necessario utilizzare l'oggetto predefinito quando si chiamano le funzioni di formattazione dei numeri.|  
+|<xref:Microsoft.VisualBasic.TriState>|Indica un `Boolean` valore o se è necessario utilizzare l'oggetto predefinito quando si chiamano le funzioni di formattazione dei numeri.|  
 |<xref:Microsoft.VisualBasic.FileIO.UICancelOption>|Specifica le operazioni da eseguire se l'utente fa clic su **Annulla** durante un'operazione.|  
 |<xref:Microsoft.VisualBasic.FileIO.UIOption>|Specifica se visualizzare o meno una finestra di dialogo di stato durante la copia, l'eliminazione o lo sviluppo di file o directory.|  
 |<xref:Microsoft.VisualBasic.VariantType>|Indica il tipo di un oggetto Variant restituito dalla funzione <xref:Microsoft.VisualBasic.Information.VarType%2A>.|  
@@ -83,6 +83,6 @@ Visual Basic fornisce una serie di costanti ed enumerazioni predefinite per gli 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per il linguaggio Visual Basic](../../visual-basic/language-reference/index.md)
-- [Cenni preliminari sulle costanti](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [Cenni preliminari sulle enumerazioni](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+- [Riferimenti al linguaggio Visual Basic](index.md)
+- [Cenni preliminari sulle costanti](../programming-guide/language-features/constants-enums/constants-overview.md)
+- [Cenni preliminari sulle enumerazioni](../programming-guide/language-features/constants-enums/enumerations-overview.md)
