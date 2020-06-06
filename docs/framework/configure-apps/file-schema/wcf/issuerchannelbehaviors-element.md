@@ -12,26 +12,26 @@ no-loc:
 - <issuerChannelBehaviors>
 - <dataContractSerializer>
 ms.openlocfilehash: cbbfb9d3b5af47a360aa82cf837cd6749f61b641
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70893149"
 ---
-# <a name="issuerchannelbehaviors-element"></a><span data-ttu-id="c57e1-102">\<Elemento > issuerChannelBehaviors</span><span class="sxs-lookup"><span data-stu-id="c57e1-102">\<issuerChannelBehaviors> Element</span></span>
+# <a name="issuerchannelbehaviors-element"></a><span data-ttu-id="b116b-102">\<issuerChannelBehaviors> Elemento</span><span class="sxs-lookup"><span data-stu-id="b116b-102">\<issuerChannelBehaviors> Element</span></span>
 
-<span data-ttu-id="c57e1-103">Contiene una raccolta di comportamenti dell'endpoint client di Windows Communication Foundation (WCF) (definiti nella configurazione) da utilizzare durante la comunicazione con i servizi del token del servizio specificati.</span><span class="sxs-lookup"><span data-stu-id="c57e1-103">Contains a collection of Windows Communication Foundation (WCF) client endpoint behaviors (defined in the configuration) to be used when communicating with the specified Service Token Services.</span></span> <span data-ttu-id="c57e1-104">I comportamenti definiti non possono includere [ \<gli elementi ClientCredentials >](clientcredentials.md) .</span><span class="sxs-lookup"><span data-stu-id="c57e1-104">The defined behaviors cannot include any [\<clientCredentials>](clientcredentials.md) elements.</span></span>
+<span data-ttu-id="b116b-103">Contiene una raccolta di comportamenti dell'endpoint client di Windows Communication Foundation (WCF) (definiti nella configurazione) da utilizzare durante la comunicazione con i servizi del token del servizio specificati.</span><span class="sxs-lookup"><span data-stu-id="b116b-103">Contains a collection of Windows Communication Foundation (WCF) client endpoint behaviors (defined in the configuration) to be used when communicating with the specified Service Token Services.</span></span> <span data-ttu-id="b116b-104">I comportamenti definiti non possono includere [\<clientCredentials>](clientcredentials.md) elementi.</span><span class="sxs-lookup"><span data-stu-id="b116b-104">The defined behaviors cannot include any [\<clientCredentials>](clientcredentials.md) elements.</span></span>
 
-<span data-ttu-id="c57e1-105">[\<configuration>](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="c57e1-105">[\<configuration>](../configuration-element.md)</span></span>\
-<span data-ttu-id="c57e1-106">&nbsp;&nbsp;[\<> System. serviceModel](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="c57e1-106">&nbsp;&nbsp;[\<system.serviceModel>](system-servicemodel.md)</span></span>\
-<span data-ttu-id="c57e1-107">&nbsp;&nbsp;&nbsp;&nbsp;[\<comportamenti >](behaviors.md)</span><span class="sxs-lookup"><span data-stu-id="c57e1-107">&nbsp;&nbsp;&nbsp;&nbsp;[\<behaviors>](behaviors.md)</span></span>\
-<span data-ttu-id="c57e1-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<> endpointBehaviors](endpointbehaviors.md)</span><span class="sxs-lookup"><span data-stu-id="c57e1-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<endpointBehaviors>](endpointbehaviors.md)</span></span>\
-<span data-ttu-id="c57e1-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<comportamento >](behavior-of-endpointbehaviors.md)</span><span class="sxs-lookup"><span data-stu-id="c57e1-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<behavior>](behavior-of-endpointbehaviors.md)</span></span>\
-<span data-ttu-id="c57e1-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<> clientCredentials](clientcredentials.md)</span><span class="sxs-lookup"><span data-stu-id="c57e1-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<clientCredentials>](clientcredentials.md)</span></span>\
-<span data-ttu-id="c57e1-111">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<> issuedToken](issuedtoken.md)</span><span class="sxs-lookup"><span data-stu-id="c57e1-111">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<issuedToken>](issuedtoken.md)</span></span>\
-<span data-ttu-id="c57e1-112">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<> issuerChannelBehaviors</span><span class="sxs-lookup"><span data-stu-id="c57e1-112">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<issuerChannelBehaviors></span></span>
+[\<configuration>](../configuration-element.md)\
+&nbsp;&nbsp;[\<system.serviceModel>](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<behaviors>](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<endpointBehaviors>](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<behavior>](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<clientCredentials>](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<issuedToken>](issuedtoken.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<issuerChannelBehaviors>
 
-## <a name="syntax"></a><span data-ttu-id="c57e1-113">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c57e1-113">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="b116b-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b116b-105">Syntax</span></span>
 
 ```xml
 <issuerChannelBehaviors>
@@ -40,41 +40,41 @@ ms.locfileid: "70893149"
 </issuerChannelBehaviors>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="c57e1-114">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="c57e1-114">Attributes and elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="b116b-106">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="b116b-106">Attributes and elements</span></span>
 
-<span data-ttu-id="c57e1-115">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="c57e1-115">The following sections describe attributes, child elements, and parent elements.</span></span>
+<span data-ttu-id="b116b-107">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="b116b-107">The following sections describe attributes, child elements, and parent elements.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="c57e1-116">Attributi</span><span class="sxs-lookup"><span data-stu-id="c57e1-116">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="b116b-108">Attributi</span><span class="sxs-lookup"><span data-stu-id="b116b-108">Attributes</span></span>
 
-<span data-ttu-id="c57e1-117">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="c57e1-117">None.</span></span>
+<span data-ttu-id="b116b-109">No.</span><span class="sxs-lookup"><span data-stu-id="b116b-109">None.</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="c57e1-118">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="c57e1-118">Child elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="b116b-110">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="b116b-110">Child elements</span></span>
 
-|<span data-ttu-id="c57e1-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="c57e1-119">Element</span></span>|<span data-ttu-id="c57e1-120">DESCRIZIONE</span><span class="sxs-lookup"><span data-stu-id="c57e1-120">Description</span></span>|
+|<span data-ttu-id="b116b-111">Elemento</span><span class="sxs-lookup"><span data-stu-id="b116b-111">Element</span></span>|<span data-ttu-id="b116b-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b116b-112">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="c57e1-121">\<add></span><span class="sxs-lookup"><span data-stu-id="c57e1-121">\<add></span></span>](add-of-issuerchannelbehaviors.md)|<span data-ttu-id="c57e1-122">Aggiunge un comportamento alla raccolta.</span><span class="sxs-lookup"><span data-stu-id="c57e1-122">Adds a behavior to the collection.</span></span>|
+|[\<add>](add-of-issuerchannelbehaviors.md)|<span data-ttu-id="b116b-113">Aggiunge un comportamento alla raccolta.</span><span class="sxs-lookup"><span data-stu-id="b116b-113">Adds a behavior to the collection.</span></span>|
 
-### <a name="parent-elements"></a><span data-ttu-id="c57e1-123">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="c57e1-123">Parent elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="b116b-114">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="b116b-114">Parent elements</span></span>
 
-|<span data-ttu-id="c57e1-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="c57e1-124">Element</span></span>|<span data-ttu-id="c57e1-125">DESCRIZIONE</span><span class="sxs-lookup"><span data-stu-id="c57e1-125">Description</span></span>|
+|<span data-ttu-id="b116b-115">Elemento</span><span class="sxs-lookup"><span data-stu-id="b116b-115">Element</span></span>|<span data-ttu-id="b116b-116">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b116b-116">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="c57e1-126">\<issuedToken></span><span class="sxs-lookup"><span data-stu-id="c57e1-126">\<issuedToken></span></span>](issuedtoken.md)|<span data-ttu-id="c57e1-127">Specifica un token personalizzato usato per autenticare un client presso un servizio.</span><span class="sxs-lookup"><span data-stu-id="c57e1-127">Specifies a custom token used to authenticate a client to a service.</span></span>|
+|[\<issuedToken>](issuedtoken.md)|<span data-ttu-id="b116b-117">Specifica un token personalizzato usato per autenticare un client presso un servizio.</span><span class="sxs-lookup"><span data-stu-id="b116b-117">Specifies a custom token used to authenticate a client to a service.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="c57e1-128">Note</span><span class="sxs-lookup"><span data-stu-id="c57e1-128">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="b116b-118">Commenti</span><span class="sxs-lookup"><span data-stu-id="b116b-118">Remarks</span></span>
 
-<span data-ttu-id="c57e1-129">Usare questo elemento quando per comunicare con un servizio è necessario usare comportamenti diversi da quelli includono elementi `<clientCredentials>`,</span><span class="sxs-lookup"><span data-stu-id="c57e1-129">Use this element when any behaviors (other than behaviors that include `<clientCredentials>` elements) must be used to communicate with a service.</span></span> <span data-ttu-id="c57e1-130">Ad esempio, se è [ \<](datacontractserializer-element.md) necessario includere un elemento del comportamento > DataContractSerializer.</span><span class="sxs-lookup"><span data-stu-id="c57e1-130">For example, if a [\<dataContractSerializer>](datacontractserializer-element.md) behavior element must be included.</span></span>
+<span data-ttu-id="b116b-119">Usare questo elemento quando per comunicare con un servizio è necessario usare comportamenti diversi da quelli includono elementi `<clientCredentials>`,</span><span class="sxs-lookup"><span data-stu-id="b116b-119">Use this element when any behaviors (other than behaviors that include `<clientCredentials>` elements) must be used to communicate with a service.</span></span> <span data-ttu-id="b116b-120">Ad esempio, se [\<dataContractSerializer>](datacontractserializer-element.md) è necessario includere un elemento Behavior.</span><span class="sxs-lookup"><span data-stu-id="b116b-120">For example, if a [\<dataContractSerializer>](datacontractserializer-element.md) behavior element must be included.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c57e1-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c57e1-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b116b-121">Vedi anche</span><span class="sxs-lookup"><span data-stu-id="b116b-121">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElementCollection>
 - <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuerChannelBehaviors%2A>
-- [<span data-ttu-id="c57e1-132">Identità del servizio e autenticazione</span><span class="sxs-lookup"><span data-stu-id="c57e1-132">Service Identity and Authentication</span></span>](../../../wcf/feature-details/service-identity-and-authentication.md)
-- [<span data-ttu-id="c57e1-133">Comportamenti di sicurezza</span><span class="sxs-lookup"><span data-stu-id="c57e1-133">Security Behaviors</span></span>](../../../wcf/feature-details/security-behaviors-in-wcf.md)
-- [<span data-ttu-id="c57e1-134">Federazione e token rilasciati</span><span class="sxs-lookup"><span data-stu-id="c57e1-134">Federation and Issued Tokens</span></span>](../../../wcf/feature-details/federation-and-issued-tokens.md)
-- [<span data-ttu-id="c57e1-135">Protezione di servizi e client</span><span class="sxs-lookup"><span data-stu-id="c57e1-135">Securing Services and Clients</span></span>](../../../wcf/feature-details/securing-services-and-clients.md)
-- [<span data-ttu-id="c57e1-136">Protezione di client</span><span class="sxs-lookup"><span data-stu-id="c57e1-136">Securing Clients</span></span>](../../../wcf/securing-clients.md)
-- [<span data-ttu-id="c57e1-137">Procedura: Creazione di un client federato</span><span class="sxs-lookup"><span data-stu-id="c57e1-137">How to: Create a Federated Client</span></span>](../../../wcf/feature-details/how-to-create-a-federated-client.md)
-- [<span data-ttu-id="c57e1-138">Procedura: Configurare un'autorità emittente locale</span><span class="sxs-lookup"><span data-stu-id="c57e1-138">How to: Configure a Local Issuer</span></span>](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [<span data-ttu-id="c57e1-139">Federazione e token rilasciati</span><span class="sxs-lookup"><span data-stu-id="c57e1-139">Federation and Issued Tokens</span></span>](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [<span data-ttu-id="b116b-122">Identità del servizio e autenticazione</span><span class="sxs-lookup"><span data-stu-id="b116b-122">Service Identity and Authentication</span></span>](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [<span data-ttu-id="b116b-123">Comportamenti di sicurezza</span><span class="sxs-lookup"><span data-stu-id="b116b-123">Security Behaviors</span></span>](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [<span data-ttu-id="b116b-124">Federazione e token emessi</span><span class="sxs-lookup"><span data-stu-id="b116b-124">Federation and Issued Tokens</span></span>](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [<span data-ttu-id="b116b-125">Securing Services and Clients</span><span class="sxs-lookup"><span data-stu-id="b116b-125">Securing Services and Clients</span></span>](../../../wcf/feature-details/securing-services-and-clients.md)
+- [<span data-ttu-id="b116b-126">Protezione di client</span><span class="sxs-lookup"><span data-stu-id="b116b-126">Securing Clients</span></span>](../../../wcf/securing-clients.md)
+- [<span data-ttu-id="b116b-127">Procedura: creare un client federato</span><span class="sxs-lookup"><span data-stu-id="b116b-127">How to: Create a Federated Client</span></span>](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [<span data-ttu-id="b116b-128">Procedura: configurare un emittente locale</span><span class="sxs-lookup"><span data-stu-id="b116b-128">How to: Configure a Local Issuer</span></span>](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [<span data-ttu-id="b116b-129">Federazione e token emessi</span><span class="sxs-lookup"><span data-stu-id="b116b-129">Federation and Issued Tokens</span></span>](../../../wcf/feature-details/federation-and-issued-tokens.md)
