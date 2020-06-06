@@ -29,7 +29,7 @@
       href: section-element.md
     - name: Schema delle impostazioni delle app
       href: appsettings/index.md
-    - name: Schema Application Settings
+    - name: Schema delle impostazioni delle applicazioni
       href: application-settings-schema.md
     - name: Schema di impostazioni del compilatore e del provider di linguaggi
       href: compiler/index.md
@@ -51,7 +51,7 @@
       href: wcf/index.md
     - name: Sintassi delle direttive WCF
       href: wcf-directive/index.md
-    - name: Schema di configurazione di WIF
+    - name: Schema di configurazione di Windows Identity Foundation
       href: windows-identity-foundation/index.md
     - name: Sezione di configurazione di Windows Form
       href: winforms/index.md
