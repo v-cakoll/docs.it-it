@@ -25,10 +25,10 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: b2da9600e6947a1efcb13fc8b1127665cea63071
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70972195"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurazione delle app tramite file di configurazione
@@ -40,7 +40,7 @@ ms.locfileid: "70972195"
  Questo argomento illustra la sintassi dei file di configurazione e fornisce informazioni sui tre tipi di file di configurazione: del computer, dell'applicazione e della sicurezza.  
   
 ## <a name="configuration-file-format"></a>Formato dei file di configurazione  
- I file di configurazione contengono elementi costituiti da strutture logiche di dati che definiscono le informazioni di configurazione. All'interno di un file di configurazione vengono usati tag per contrassegnare l'inizio o la fine di un elemento. L'elemento `<runtime>`, ad esempio, è costituito da `<runtime>`*elementi figlio*`</runtime>`. Un elemento vuoto viene scritto come `<runtime/>` o `<runtime></runtime>`.  
+ I file di configurazione contengono elementi costituiti da strutture logiche di dati che definiscono le informazioni di configurazione. All'interno di un file di configurazione vengono usati tag per contrassegnare l'inizio o la fine di un elemento. Ad esempio, l' `<runtime>` elemento è costituito da `<runtime>` *elementi figlio* `</runtime>` . Un elemento vuoto viene scritto come `<runtime/>` o `<runtime></runtime>`.  
   
  Come per tutti i file XML, nella sintassi dei file di configurazione viene fatta distinzione tra maiuscole e minuscole.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "70972195"
 ## <a name="machine-configuration-files"></a>File di configurazione del computer  
  Il file di configurazione del computer, Machine.config, contiene le impostazioni che vengono applicate al computer. Questo file si trova nella directory %*percorso installazione runtime*%\Config. Il file Machine.config contiene le impostazioni di configurazione per l'associazione di assembly del computer, [canali remoti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) predefiniti e ASP.NET.  
   
- Il sistema di configurazione cerca prima di tutto nel file di configurazione del computer l'[**elemento \<appSettings>** ](./file-schema/appsettings/index.md) e altre sezioni di configurazione che possono essere definite dallo sviluppatore. Successivamente analizza il file di configurazione dell'applicazione. Per gestire al meglio la configurazione del computer, è consigliabile definire queste impostazioni nel file di configurazione dell'applicazione. La definizione delle impostazioni nel file di configurazione del computer semplifica tuttavia la manutenzione del sistema. Se ad esempio è disponibile un componente di terze parti usato da entrambe le applicazioni server e client, risulta più semplice definire le impostazioni relative a tale componente in un solo file di configurazione. In questo caso, è appropriato definire le impostazioni nel file di configurazione del computer, senza definire le stesse impostazioni in due file diversi.  
+ Il sistema di configurazione cerca innanzitutto nel file di configurazione del computer l' [ **\<appSettings>** elemento](./file-schema/appsettings/index.md) e altre sezioni di configurazione che uno sviluppatore può definire. Successivamente analizza il file di configurazione dell'applicazione. Per gestire al meglio la configurazione del computer, è consigliabile definire queste impostazioni nel file di configurazione dell'applicazione. La definizione delle impostazioni nel file di configurazione del computer semplifica tuttavia la manutenzione del sistema. Se ad esempio è disponibile un componente di terze parti usato da entrambe le applicazioni server e client, risulta più semplice definire le impostazioni relative a tale componente in un solo file di configurazione. In questo caso, è appropriato definire le impostazioni nel file di configurazione del computer, senza definire le stesse impostazioni in due file diversi.  
   
 > [!NOTE]
 > La distribuzione di un'applicazione mediante XCOPY non comporta la copia delle impostazioni nel file di configurazione del computer.  
@@ -82,7 +82,7 @@ ms.locfileid: "70972195"
   
      Se un'applicazione ospitata in Internet Explorer ha un file di configurazione, il relativo percorso viene specificato in un tag `<link>` con la sintassi seguente:  
   
-     \<link rel="*NomeFileConfigurazione*" href="*posizione*">  
+     \<link rel="*ConfigurationFileName*" href="*location*">  
   
      In questo tag, `location` corrisponde a un URL che fa riferimento al file di configurazione. Questo tag imposta la base dell'applicazione. Il file di configurazione deve risiedere sullo stesso sito Web dell'applicazione.  
   
@@ -100,8 +100,8 @@ ms.locfileid: "70972195"
   
 - File di configurazione dei criteri utente: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Procedura: Individuare gli assembly usando DEVPATH](how-to-locate-assemblies-by-using-devpath.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Procedura: Individuare assembly usando DEVPATH](how-to-locate-assemblies-by-using-devpath.md)  
  Viene descritto come impostare il runtime in modo da usare la variabile di ambiente DEVPATH durante la ricerca degli assembly.  
   
  [Reindirizzamento delle versioni di assembly](redirect-assembly-versions.md)  
@@ -113,18 +113,18 @@ ms.locfileid: "70972195"
  [Configurazione di classi di crittografia](configure-cryptography-classes.md)  
  Viene descritto come associare il nome di un algoritmo a una classe di crittografia e un identificatore di oggetto a un algoritmo di crittografia.  
   
- [Procedura: Creazione di un criterio editore](how-to-create-a-publisher-policy.md)  
+ [Procedura: Creare criteri editore](how-to-create-a-publisher-policy.md)  
  Viene descritto come e quando aggiungere un file dei criteri dell'editore per specificare le impostazioni della codebase e il reindirizzamento degli assembly.  
   
- [Schema dei file di configurazione](./file-schema/index.md)  
+ [Schema del file di configurazione](./file-schema/index.md)  
  Descrive la gerarchia dello schema per l'avvio, il runtime, la rete e altri tipi di impostazioni di configurazione.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Schema dei file di configurazione](./file-schema/index.md)
+- [Schema del file di configurazione](./file-schema/index.md)
 - [Specifica della posizione di un assembly](specify-assembly-location.md)
 - [Reindirizzamento delle versioni di assembly](redirect-assembly-versions.md)
 - [Amministrazione di siti Web ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [Gestione dei criteri di sicurezza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
-- [Caspol.exe (strumento per i criteri di sicurezza dall'accesso di codice)](../tools/caspol-exe-code-access-security-policy-tool.md)
+- [Caspol. exe (strumento per i criteri di sicurezza dall'accesso di codice)](../tools/caspol-exe-code-access-security-policy-tool.md)
 - [Assembly in .NET](../../standard/assembly/index.md)

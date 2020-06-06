@@ -9,17 +9,17 @@ helpviewer_keywords:
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
 ms.openlocfilehash: 2125ce00b0e23f2e93ff251549f9c1276892b16b
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70399448"
 ---
-# <a name="systemservicemodel"></a>\<system.serviceModel>
+# \<system.serviceModel>
 Questa sezione di configurazione contiene tutti gli elementi di configurazione ServiceModel di Windows Communication Foundation (WCF).  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<> System. serviceModel**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.serviceModel>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,33 +58,33 @@ Questa sezione di configurazione contiene tutti gli elementi di configurazione S
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuna  
+ nessuno  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<comportamenti >](behaviors.md)|Questa sezione definisce due raccolte figlio denominate `endpointBehaviors` e `serviceBehaviors`.  Ogni raccolta definisce elementi di comportamento usati rispettivamente da endpoint e servizi. Ogni elemento di comportamento è identificato dal relativo attributo `name` univoco.|  
+|[\<behaviors>](behaviors.md)|Questa sezione definisce due raccolte figlio denominate `endpointBehaviors` e `serviceBehaviors`.  Ogni raccolta definisce elementi di comportamento usati rispettivamente da endpoint e servizi. Ogni elemento di comportamento è identificato dal relativo attributo `name` univoco.|  
 |[\<bindings>](bindings.md)|Questa sezione contiene una raccolta di associazioni standard e personalizzate. Ogni voce è identificata dal relativo attributo `name` univoco. I servizi usano le associazioni collegandole mediante l'oggetto `name`.|  
 |[\<client>](client.md)|Questa sezione include un elenco degli endpoint usati da un client per connettersi a un servizio.|  
 |[\<comContracts>](comcontracts.md)|Questa sezione definisce i contratti COM che consentono l'interoperabilità tra WCF e COM.|  
-|[\<commonBehaviors>](commonbehaviors.md)|Il contenuto di questa sezione può essere definito solo nel file machine.config. e definisce due raccolte figlio denominate `endpointBehaviors` e `serviceBehaviors`.  Ogni raccolta definisce gli elementi di comportamento usati rispettivamente da tutti gli endpoint e i servizi WCF nel computer.  Se un comportamento viene definito in entrambe `<commonBehaviors>` le `<behaviors>` sezioni e \<, il comportamento nella sezione relativa ai comportamenti > viene assegnato alla preferenza.|  
-|[\<> di diagnostica](diagnostics.md)|Questa sezione include le impostazioni per le funzionalità di diagnostica di WCF. L'utente può abilitare o disabilitare tracce, contatori di prestazioni e il provider WMI e può aggiungere filtri dei messaggi personalizzati.|  
-|[\<> estensioni](extensions-section.md)|Questa sezione include una raccolta di estensioni che consentono di creare associazioni definite dall'utente, comportamenti e altri aspetti relativi alle estensioni.|  
-|[\<protocolMapping>](protocolmapping.md)|Questa sezione definisce un set di mapping dei protocolli predefiniti tra gli schemi del protocollo di trasporto (ad esempio http, NET. TCP, NET. pipe e così via) e le associazioni WCF.|  
-|[\<routing>](routing.md)|In questa sezione viene definito un set di filtri di routing che determinano il tipo di Windows Communication Foundation<xref:System.ServiceModel.Dispatcher.MessageFilter> (WCF) da utilizzare durante la valutazione di messaggi in arrivo, nonché di tabelle di routing che definiscono gli endpoint di destinazione ai quali inviare messaggi quando Filtra le corrispondenze.|  
+|[\<commonBehaviors>](commonbehaviors.md)|Il contenuto di questa sezione può essere definito solo nel file machine.config. e definisce due raccolte figlio denominate `endpointBehaviors` e `serviceBehaviors`.  Ogni raccolta definisce gli elementi di comportamento usati rispettivamente da tutti gli endpoint e i servizi WCF nel computer.  Se un comportamento viene definito in entrambe le sezioni `<commonBehaviors>` e `<behaviors>`, la preferenza viene assegnata a quello nella sezione \<behaviors>.|  
+|[\<diagnostics>](diagnostics.md)|Questa sezione include le impostazioni per le funzionalità di diagnostica di WCF. L'utente può abilitare o disabilitare tracce, contatori di prestazioni e il provider WMI e può aggiungere filtri dei messaggi personalizzati.|  
+|[\<extensions>](extensions-section.md)|Questa sezione include una raccolta di estensioni che consentono di creare associazioni definite dall'utente, comportamenti e altri aspetti relativi alle estensioni.|  
+|[\<protocolMapping>](protocolmapping.md)|Questa sezione definisce un set di mapping dei protocolli predefiniti tra gli schemi dei protocolli di trasporto (ad esempio http, net.tcp, net.pipe e così via) e le associazioni di WCF.|  
+|[\<routing>](routing.md)|In questa sezione viene definito un set di filtri di routing che determinano il tipo di Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> da utilizzare durante la valutazione di messaggi in arrivo, nonché di tabelle di routing che definiscono gli endpoint di destinazione ai quali inviare messaggi quando viene individuato un filtro.|  
 |[\<serviceHostingEnvironment>](servicehostingenvironment.md)|Questa sezione definisce il tipo del quale l'ambiente host del servizio crea un'istanza per un determinato trasporto. Se questa sezione è vuota, viene usato il tipo predefinito.|  
 |[\<services>](services.md)|Questa sezione include una raccolta di servizi. Per ogni servizio definito nell'assembly, questo elemento contiene un elemento `service` nel quale vengono specificate le impostazioni per il servizio.|  
 |[\<standardEndpoints>](standardendpoints.md)|Questa sezione definisce una raccolta di endpoint standard rappresentati da endpoint preconfigurati riusabili. Un endpoint standard disporrà di uno o più indirizzi, attributi di associazione e del contratto impostati su un valore fisso. Ad esempio, nell'endpoint di individuazione il contratto è fisso. È inoltre possibile usare endpoint standard per estendere endpoint servizio con nuove proprietà in modo analogo alla definizione di associazioni personalizzate.|
-|[\<rilevamento >](tracking-of-wcf.md)|In questa sezione vengono definite le impostazioni di rilevamento per un servizio del flusso di lavoro.|
+|[\<tracking>](tracking-of-wcf.md)|In questa sezione vengono definite le impostazioni di rilevamento per un servizio del flusso di lavoro.|
 
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |\<configuration>|Elemento radice di tutti gli elementi di configurazione contenuti in un file di configurazione .NET.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
  WCF non aggiunge elementi alle sezioni di configurazione di altri prodotti.  
   
  I servizi WCF vengono definiti nella `services` sezione del file di configurazione. Un assembly può contenere un numero qualsiasi di servizi. Ogni servizio dispone di una propria sezione di configurazione `service`. La sezione e il relativo contenuto definiscono in modo specifico il contratto, il comportamento e gli endpoint del servizio.  

@@ -3,10 +3,10 @@ title: Impostazioni dei criteri della direttiva di runtime
 ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 ms.openlocfilehash: 7a8933decaec45e8000f3f3d1717847f333deddd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "76738501"
 ---
 # <a name="runtime-directive-policy-settings"></a>Impostazioni dei criteri della direttiva di runtime
@@ -16,7 +16,7 @@ ms.locfileid: "76738501"
 
 Le impostazioni dei criteri della direttiva di runtime per .NET Native determinano la disponibilità di metadati per i tipi e i membri dei tipi al runtime. Senza i metadati necessari, le operazioni che si basano su reflection, serializzazione e deserializzazione o sul marshalling dei tipi .NET Framework a COM o Windows Runtime possono avere esito negativo e generare un'eccezione. Le eccezioni più comuni sono [MissingMetadataException](missingmetadataexception-class-net-native.md) e (nel caso dell'interoperabilità) [MissingInteropDataException](missinginteropdataexception-class-net-native.md).
 
-Le impostazioni dei criteri di runtime sono controllate da un file di direttive di runtime (.rd.xml). Ogni direttiva di runtime definisce i criteri per un elemento di programma specifico, ad esempio un assembly (elemento [\<Assembly>](assembly-element-net-native.md)), un tipo (elemento [\<Type>](type-element-net-native.md)) o un metodo (elemento [\<Method>](method-element-net-native.md)). La direttiva include uno o più attributi che definiscono i tipi di criteri di reflection, i tipi di criteri di serializzazione e i tipi di criteri di interoperabilità discussi nella sezione successiva. Il valore dell'attributo definisce l'impostazione dei criteri.
+Le impostazioni dei criteri di runtime sono controllate da un file di direttive di runtime (.rd.xml). Ogni direttiva di runtime definisce i criteri per un particolare elemento di programma, ad esempio un assembly (l' [\<Assembly>](assembly-element-net-native.md) elemento), un tipo (l' [\<Type>](type-element-net-native.md) elemento) o un metodo (l' [\<Method>](method-element-net-native.md) elemento). La direttiva include uno o più attributi che definiscono i tipi di criteri di reflection, i tipi di criteri di serializzazione e i tipi di criteri di interoperabilità discussi nella sezione successiva. Il valore dell'attributo definisce l'impostazione dei criteri.
 
 ## <a name="policy-types"></a>Tipi di criteri
 
@@ -32,7 +32,7 @@ I file di direttive di runtime riconoscono tre categorie di tipi di criteri: ref
 
   Nella seguente tabella sono elencati i tipi di criteri di reflection e gli elementi di programma con cui possono essere usati.
 
-  |Elemento|Attivazione|Browse|Dynamic|
+  |Elemento|Activate|Esplora|Dinamico|
   |-------------|--------------|------------|-------------|
   |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|
   |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|
@@ -63,7 +63,7 @@ I file di direttive di runtime riconoscono tre categorie di tipi di criteri: ref
 
   Nella seguente tabella sono elencati i tipi di criteri di serializzazione e gli elementi di programma con cui possono essere usati.
 
-  |Elemento|Serializza|DataContractSerializer|DataContractJsonSerializer|XmlSerializer|
+  |Elemento|Serialize|DataContractSerializer|DataContractJsonSerializer|XmlSerializer|
   |-------------|---------------|----------------------------|--------------------------------|-------------------|
   |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|✔️|
@@ -111,7 +111,7 @@ I file di direttive di runtime riconoscono tre categorie di tipi di criteri: ref
   |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✔️|✔️|✔️|
   |[\<TypeParameter>](typeparameter-element-net-native.md)|✔️|✔️|✔️|
 
-## <a name="policy-settings"></a>Impostazioni criteri
+## <a name="policy-settings"></a>Impostazioni dei criteri
 
 Ciascun tipo di criteri può essere impostato su uno dei valori elencati nella seguente tabella. Gli elementi che rappresentano i membri dei tipi supportano un set di impostazioni dei criteri diverso rispetto a quello degli altri elementi.
 
@@ -128,7 +128,7 @@ Ciascun tipo di criteri può essere impostato su uno dei valori elencati nella s
 |`Required PublicAndInternal`|Abilita i criteri per i tipi o i membri pubblici e interni e assicura che i metadati per i tipi e i membri pubblici e interni siano sempre disponibili. Questa impostazione è diversa da `PublicAndInternal`, che rende disponibili i metadati per i tipi e i membri pubblici e interni solo se la catena di strumenti li identifica come necessari.|✔️||
 |`Required All`|Richiede alla catena di strumenti di mantenere tutti i tipi e i membri indipendentemente dal loro uso effettivo e abilita i relativi criteri.|✔️||
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementi direttiva di runtime](runtime-directive-elements.md)

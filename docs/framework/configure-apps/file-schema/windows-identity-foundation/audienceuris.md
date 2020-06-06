@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
 author: BrucePerlerMS
 ms.openlocfilehash: bd04e4ebdf5c58adaeea0ff0ca5993d7d9ce38f1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70252174"
 ---
-# <a name="audienceuris"></a>\<audienceUris>
-Specifica il set di URI che sono identificatori accettabili del relying party (RP). I token non verranno accettati a meno che non siano limitati a uno degli URI del gruppo di destinatari consentiti.  
+# \<audienceUris>
+Specifica il set di URI che sono identificatori accettabili del relying party (RP). I token non verranno accettati se non hanno come ambito uno degli URI dei gruppi di destinatari consentiti.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> identityConfiguration**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> securityTokenHandlers**](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> securityTokenHandlerConfiguration**](securitytokenhandlerconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> audienceUris**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlerConfiguration>**](securitytokenhandlerconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<audienceUris>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,9 +43,9 @@ Specifica il set di URI che sono identificatori accettabili del relying party (R
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
-|modalità|<xref:System.IdentityModel.Selectors.AudienceUriMode> Valore che specifica se la restrizione dei destinatari deve essere applicata a un token in ingresso. I valori possibili sono "Always", "Never" e "BearerKeyOnly". Il valore predefinito è "Always". facoltativo.|  
+|mode|<xref:System.IdentityModel.Selectors.AudienceUriMode>Valore che specifica se la restrizione dei destinatari deve essere applicata a un token in ingresso. I valori possibili sono "Always", "Never" e "BearerKeyOnly". Il valore predefinito è "Always". Facoltativa.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -57,17 +57,17 @@ Specifica il set di URI che sono identificatori accettabili del relying party (R
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Fornisce la configurazione per una raccolta di gestori di token di sicurezza.|  
   
-## <a name="remarks"></a>Note  
- Per impostazione predefinita, la raccolta è vuota; utilizzare `<add>`gli `<clear>`elementi, `<remove>` e per modificare la raccolta. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>gli <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> oggetti e usano i valori nella raccolta di URI dei destinatari per configurare eventuali restrizioni degli URI <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> dei destinatari consentiti negli oggetti.  
+## <a name="remarks"></a>Commenti  
+ Per impostazione predefinita, la raccolta è vuota; utilizzare `<add>` `<clear>` `<remove>` gli elementi, e per modificare la raccolta. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler><xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>gli oggetti e usano i valori nella raccolta di URI dei destinatari per configurare eventuali restrizioni degli URI dei destinatari consentiti negli <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> oggetti.  
   
- L' `<audienceUris>` elemento è rappresentato <xref:System.IdentityModel.Configuration.AudienceUriElementCollection> dalla classe. Un singolo URI aggiunto alla raccolta è rappresentato dalla <xref:System.IdentityModel.Configuration.AudienceUriElement> classe.  
+ L' `<audienceUris>` elemento è rappresentato dalla <xref:System.IdentityModel.Configuration.AudienceUriElementCollection> classe. Un singolo URI aggiunto alla raccolta è rappresentato dalla <xref:System.IdentityModel.Configuration.AudienceUriElement> classe.  
   
 > [!NOTE]
-> L'uso dell'elemento `<audienceUris>` come elemento figlio [ \<dell'elemento > IdentityConfiguration](identityconfiguration.md) è stato deprecato, ma è ancora supportato per la compatibilità con le versioni precedenti. Le impostazioni sull' `<securityTokenHandlerConfiguration>` elemento eseguono l'override `<identityConfiguration>` di quelle nell'elemento.  
+> L'uso dell' `<audienceUris>` elemento come elemento figlio dell' [\<identityConfiguration>](identityconfiguration.md) elemento è stato deprecato, ma è ancora supportato per la compatibilità con le versioni precedenti. Le impostazioni sull' `<securityTokenHandlerConfiguration>` elemento eseguono l'override di quelle nell' `<identityConfiguration>` elemento.  
   
 ## <a name="example"></a>Esempio  
  Nel codice XML seguente viene illustrato come configurare gli URI di audience accettabili per un'applicazione. Questo esempio Mostra come configurare un singolo URI. I token con ambito per questo URI verranno accettati, tutti gli altri verranno rifiutati.  

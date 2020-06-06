@@ -3,19 +3,19 @@ title: <messageLogging>
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
 ms.openlocfilehash: 9291c38af28c18d20e23e34e8316b4a9fe523123
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855130"
 ---
-# <a name="messagelogging"></a>\<messageLogging>
+# \<messageLogging>
 Questo elemento definisce le impostazioni per le funzionalità di registrazione dei messaggi di Windows Communication Foundation (WCF).  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di diagnostica**](diagnostics.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> messageLogging**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<diagnostics>**](diagnostics.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<messageLogging>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +41,7 @@ Questo elemento definisce le impostazioni per le funzionalità di registrazione 
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |`logEntireMessage`|Valore che specifica se l'intero messaggio (intestazione e corpo del messaggio) viene registrato. Il valore predefinito è `false` ovvero solo l'intestazione del messaggio viene registrata. Questa impostazione influisce su tutti i livelli di registrazione dei messaggi (servizio, trasporto e formato non valido).|  
 |`logMalformedMessages`|Valore che specifica se i messaggi in formato non valido vengono registrati. I messaggi in formato non valido non vengono conteggiati per `maxMessagesToLog`. Il valore predefinito è `false`.|  
@@ -62,7 +62,7 @@ Questo elemento definisce le impostazioni per le funzionalità di registrazione 
 |-------------|-----------------|  
 |diagnostica|Definisce le impostazioni WCF per l'ispezione e il controllo in fase di esecuzione da parte dell'amministratore.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
  I messaggi vengono registrati a tre livelli diversi nello stack: servizio, trasportare e formato non valido. Ciascun livello può essere attivato separatamente.  
   
  È possibile aggiungere filtri XPath per registrare messaggi specifici a livello di trasporto e di servizio. Se non viene definito nessun filtro, tutti i messaggi vengono registrati. I filtri vengono applicati solo alle intestazioni del messaggio. Il corpo viene ignorato. WCF ignora il corpo del messaggio per migliorare le prestazioni. Se si desidera applicare un filtro in base al contenuto del corpo del messaggio, è possibile creare un listener personalizzato con un filtro appropriato.  

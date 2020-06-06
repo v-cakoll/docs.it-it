@@ -1,24 +1,24 @@
 ---
-title: < elemento > Crst_DisableSpinWait
+title: Elemento <Crst_DisableSpinWait>
 ms.date: 04/18/2019
 f1_keywords:
 - Crst_DisableSpinWait
 helpviewer_keywords:
 - Crst_DisableSpinWait element
 ms.openlocfilehash: 0683081183081e249b2a9c89e1a6a15f638fb339
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73117646"
 ---
-# <a name="crst_disablespinwait-element"></a>\<elemento > Crst_DisableSpinWait
+# <a name="crst_disablespinwait-element"></a>Elemento \<Crst_DisableSpinWait>
 
 Specifica se disabilitare lo spin-waiting per una sezione critica in caso di conflitto.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Crst_DisableSpinWait >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<Crst_DisableSpinWait>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,13 +38,13 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|Value|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |1|Disabilitare la rotazione in attesa quando non è possibile acquisire una sezione critica.|  
-|0|Non disabilitare la rotazione in attesa quando non è possibile acquisire una sezione critica. Questo è il valore predefinito.|  
+|0|Non disabilitare la rotazione in attesa quando non è possibile acquisire una sezione critica. Si tratta del valore predefinito.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuna.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -65,7 +65,7 @@ Nell'esempio seguente viene disabilitata la rotazione in attesa nelle sezioni cr
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Schema delle impostazioni di runtime](index.md)
-- [Schema dei file di configurazione](../index.md)
+- [Schema del file di configurazione](../index.md)

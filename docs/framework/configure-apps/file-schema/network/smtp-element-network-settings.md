@@ -9,19 +9,19 @@ helpviewer_keywords:
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 ms.openlocfilehash: 625c3cb82a8659c742b540724e5cf31be65a705e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74089106"
 ---
-# <a name="smtp-element-network-settings"></a>\<elemento > SMTP (impostazioni di rete)
+# <a name="smtp-element-network-settings"></a>Elemento \<smtp> (impostazioni di rete)
 Configura il formato di recapito, il metodo di recapito e l'indirizzo di posta elettronica per l'invio di messaggi.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<mailSettings**](mailsettings-element-network-settings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**SMTP** >
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<mailSettings>**](mailsettings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<smtp>**
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,7 +57,7 @@ Configura il formato di recapito, il metodo di recapito e l'indirizzo di posta e
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[Elemento \<mailSettings> (impostazioni di rete)](mailsettings-element-network-settings.md)|Configura le opzioni di invio della posta elettronica.|  
+|[\<mailSettings>Elemento (impostazioni di rete)](mailsettings-element-network-settings.md)|Configura le opzioni di invio della posta elettronica.|  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono specificati i parametri SMTP appropriati per inviare messaggi di posta elettronica utilizzando le credenziali di rete predefinite.  
@@ -78,7 +78,7 @@ Configura il formato di recapito, il metodo di recapito e l'indirizzo di posta e
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>

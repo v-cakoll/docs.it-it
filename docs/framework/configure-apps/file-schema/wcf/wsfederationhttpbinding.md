@@ -5,20 +5,20 @@ helpviewer_keywords:
 - wsFederationBinding element
 ms.assetid: 9c3312b4-2137-4e71-bf3f-de1cf8e9be79
 ms.openlocfilehash: 0a77c791d55c6009cf59d5a4b15f3b2a63b7ccf9
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74140469"
 ---
-# <a name="wsfederationhttpbinding"></a>\<wsFederationHttpBinding>
+# \<wsFederationHttpBinding>
 
 Definisce un'associazione che supporta WS-Federation.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<system.serviceModel>** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bindings>** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<wsFederationHttpBinding>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<wsFederationHttpBinding>**  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -116,15 +116,15 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 |hostnameComparisonMode|Specifica la modalità di confronto del nome host HTTP usata per analizzare gli URI. L'attributo è di tipo <xref:System.ServiceModel.HostNameComparisonMode>, che indica se il nome host viene usato per raggiungere il servizio in caso di corrispondenza nell'URI. Il valore predefinito è <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, che ignora il nome host nella corrispondenza.|
 |maxBufferPoolSize|Numero intero che specifica la dimensione del pool di buffer massima per questa associazione. Il valore predefinito è 524.288 byte (512 * 1024). Molte parti di Windows Communication Foundation (WCF) usano buffer. La creazione e l'eliminazione definitiva dei buffer a ogni uso sono operazioni onerose, analogamente a quelle di Garbage Collection dei buffer. Quando si usa un pool di buffer è possibile prelevare un buffer dal pool, usarlo e, al termine delle operazioni, riporlo nel pool. In questo modo è possibile evitare il sovraccarico dovuto alla creazione e all'eliminazione definitiva dei buffer.|
 |maxReceivedMessageSize|Integer positivo che specifica la dimensione massima del messaggio, incluse le intestazioni, che è possibile ricevere su un canale configurato con questa associazione. Il mittente di un messaggio che supera questo limite riceverà un errore SOAP. Il destinatario elimina il messaggio e crea una voce dell'evento nel registro di traccia. Il valore predefinito è 65536.|
-|messageEncoding|Definisce il codificatore usato per codificare il messaggio. Di seguito vengono elencati i valori validi:<br /><br /> -   Text: Use a text message encoder.<br />-   Mtom: Use a Message Transmission Organization Mechanism 1.0 (MTOM) encoder.<br /><br /> L'impostazione predefinita è Text.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.WSMessageEncoding>.|
-|name|Stringa che contiene il nome della configurazione dell'associazione. Questo valore deve essere univoco perché viene usato per identificare l'associazione. Starting with .NET Framework 4, bindings and behaviors are not required to have a name. For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|
+|messageEncoding|Definisce il codificatore usato per codificare il messaggio. I valori validi sono i seguenti:<br /><br /> -Text: usa un codificatore di messaggi di testo.<br />-MTOM: usare un codificatore Message Transmission Organization Mechanism 1,0 (MTOM).<br /><br /> L'impostazione predefinita è Text.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.WSMessageEncoding>.|
+|name|Stringa che contiene il nome della configurazione dell'associazione. Questo valore deve essere univoco perché viene usato per identificare l'associazione. A partire da .NET Framework 4, le associazioni e i comportamenti non devono avere un nome. Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|
 |openTimeout|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di apertura. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|
 |uriInformativaPrivacy|Stringa che specifica l'URI presso cui è disponibile l'informativa sulla privacy.|
 |privacyNoticeVersion|Numero intero che specifica la versione dell'informativa sulla privacy corrente.|
 |proxyAddress|URI che specifica l'indirizzo del proxy HTTP. Se `useDefaultWebProxy` è `true`, questa impostazione deve essere `null`. Il valore predefinito è `null`.|
 |receiveTimeout|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di ricezione. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:10:00.|
 |sendTimeout|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di invio. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|
-|textEncoding|Imposta la codifica del set di caratteri da usare per l'emissione dei messaggi nell'associazione. Di seguito vengono elencati i valori validi:<br /><br /> -   BigEndianUnicode: Unicode BigEndian encoding.<br />-   Unicode: 16-bit encoding.<br />-   UTF8: 8-bit encoding<br /><br /> L'impostazione predefinita è UTF8. L'attributo è di tipo <xref:System.Text.Encoding>.|
+|textEncoding|Imposta la codifica del set di caratteri da usare per l'emissione dei messaggi nell'associazione. I valori validi sono i seguenti:<br /><br /> -BigEndianUnicode: codifica BigEndian Unicode.<br />-Unicode: codifica a 16 bit.<br />-UTF8: codifica a 8 bit<br /><br /> Il valore predefinito è UTF8. L'attributo è di tipo <xref:System.Text.Encoding>.|
 |transactionFlow|Valore booleano che specifica se l'associazione supporta la propagazione di WS-Transactions. Il valore predefinito è `false`.|
 |useDefaultWebProxy|Valore booleano che indica se viene usato il proxy HTTP di sistema configurato automaticamente. L'indirizzo proxy deve essere `null`, ovvero non deve essere impostato, se l'attributo è `true`. Il valore predefinito è `true`.|
 
@@ -142,25 +142,25 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 |-------------|-----------------|
 |[\<bindings>](bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-La federazione è la possibilità di condividere le identità di autenticazione e di autorizzazione fra più sistemi. Queste identità possono fare riferimento agli utenti o ai computer. Il protocollo HTTP federato supporta la sicurezza SOAP e una sicurezza a modalità mista, ma non supporta l'uso esclusivo della sicurezza del trasporto. This binding provides Windows Communication Foundation (WCF) support for the WS-Federation protocol. I servizi configurati con questa associazione devono usare il trasporto HTTP.
+La federazione è la possibilità di condividere le identità di autenticazione e di autorizzazione fra più sistemi. Queste identità possono fare riferimento agli utenti o ai computer. Il protocollo HTTP federato supporta la sicurezza SOAP e una sicurezza a modalità mista, ma non supporta l'uso esclusivo della sicurezza del trasporto. Questa associazione fornisce il supporto Windows Communication Foundation (WCF) per il protocollo WS-Federation. I servizi configurati con questa associazione devono usare il trasporto HTTP.
 
 Le associazioni sono costituite da uno stack di elementi di associazione. Lo stack di elementi di associazione in
 
 `wsFederationHttpBinding` è uguale a quello incluso in `wsHttpBinding`
 
-when [\<security>](security-of-wsfederationhttpbinding.md) is set to the default value of <xref:System.ServiceModel.WSFederationHttpSecurityMode.Message>.
+Quando [\<security>](security-of-wsfederationhttpbinding.md) è impostato sul valore predefinito di <xref:System.ServiceModel.WSFederationHttpSecurityMode.Message> .
 
-The `wsFederationHttpBinding` controls the details of the message security settings in [\<message>](message-element-of-wsfederationhttpbinding.md). Note that the [\<security>](security-of-wsfederationhttpbinding.md) element provides get access only as the security used by the binding cannot be changed once the binding is created.
+Il `wsFederationHttpBinding` controllo Controlla i dettagli delle impostazioni di sicurezza dei messaggi in [\<message>](message-element-of-wsfederationhttpbinding.md) . Si noti che l' [\<security>](security-of-wsfederationhttpbinding.md) elemento fornisce accesso get solo perché la sicurezza utilizzata dall'associazione non può essere modificata dopo la creazione dell'associazione.
 
-The `wsFederationHttpBinding` also provides a privacyNoticeAt attribute to set and retrieve the URI at which the privacy notice is located.
+`wsFederationHttpBinding`Fornisce inoltre un attributo PrivacyNoticeAt per impostare e recuperare l'URI in cui si trova l'informativa sulla privacy.
 
 La sicurezza del criterio è particolarmente importante negli scenari della federazione. Il consiglio è usare qualche forma di sicurezza, ad esempio HTTPS, per proteggere il criterio dagli utenti malintenzionati.
 
 In scenari della federazione che usano questa associazione, il criterio del servizio contiene potenzialmente importanti informazioni quali la chiave da usare per crittografare il token emesso (SAML), il tipo di attestazioni in cui inserire il token e così via. Se questo criterio viene manomesso, un pirata informatico potrebbe individuare la chiave del token emesso per eseguire ulteriori manomissioni, divulgare informazioni e altri comportamenti dannosi. Per aiutare a impedire questa possibilità, il criterio deve essere ottenuto in modo protetto dal servizio, ad esempio usando HTTPS.
 
-For more information on this binding, see [How to: Create a WSFederationHttpBinding](../../../wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).
+Per ulteriori informazioni su questa associazione, vedere [procedura: creare un WSFederationHttpBinding](../../../wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).
 
 ## <a name="example"></a>Esempio
 
@@ -200,7 +200,7 @@ For more information on this binding, see [How to: Create a WSFederationHttpBind
 - <xref:System.ServiceModel.WSFederationHttpBinding>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement>
 - [Procedura: Creare una classe WSFederationHttpBinding](../../../wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [Associazioni](../../../wcf/bindings.md)
+- [Binding](../../../wcf/bindings.md)
 - [Configurazione di associazioni fornite dal sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Uso di associazioni per configurare servizi e client](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

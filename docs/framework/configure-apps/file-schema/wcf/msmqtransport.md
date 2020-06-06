@@ -3,21 +3,21 @@ title: <msmqTransport>
 ms.date: 03/30/2017
 ms.assetid: 19d89f35-76ac-49dc-832b-e8bec2d5e33b
 ms.openlocfilehash: fae7c9fbc82dafc0f6be58f5404397d751033b45
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73738860"
 ---
-# <a name="msmqtransport"></a>\<msmqTransport >
+# \<msmqTransport>
 Impone a un canale di trasferire i messaggi tramite il trasporto MSMQ quando viene incluso in un'associazione personalizzata.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**Binding**](bindings.md)\<
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**customBinding**](custombinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Binding** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<msmqTransport >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<msmqTransport>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,7 +62,7 @@ Impone a un canale di trasferire i messaggi tramite il trasporto MSMQ quando vie
 |maxPoolSize|Numero intero positivo che specifica la dimensione massima del pool. Il valore predefinito è 524288.|  
 |maxReceivedMessageSize|Numero intero positivo che specifica la dimensione massima in byte dei messaggi, comprese le intestazioni. Il mittente di un messaggio riceve un errore SOAP se il messaggio è troppo grande per il destinatario. Il destinatario elimina il messaggio e crea una voce dell'evento nel registro di traccia. Il valore predefinito è 65536.|  
 |maxRetryCycles|Numero intero che indica il numero massimo di cicli di ripetizione dei tentativi di recapito dei messaggi all'applicazione ricevente. Il valore predefinito è <xref:System.Int32.MaxValue>.<br /><br /> Un singolo ciclo di ripetizione tenta di recapitare un messaggio a un'applicazione per un numero di volte specificato. Il numero di tentativi eseguiti è impostato dall'attributo `maxImmediateRetries`. Se l'applicazione non riesce a usare il messaggio dopo che i tentativi di recapito sono stati esauriti, il messaggio viene inviato a una coda di tentativi. I cicli di ripetizione successivi sono costituiti dal messaggio restituito dalla coda di tentativi alla coda dell'applicazione per tentare nuovamente il recapito all'applicazione, dopo un intervallo di tempo specificato dall'attributo `retryCycleDelay`. L'attributo `maxRetryCycles` specifica il numero di cicli di ripetizione che l'applicazione usa per tentare di recapitare il messaggio.|  
-|queueTransferProtocol|Specifica il trasporto del canale delle comunicazioni in coda usato da questa associazione. I valori validi sono:<br /><br /> -Native: usa il protocollo MSMQ nativo.<br />-SRMP: usa il protocollo SRMP (SOAP Reliable Messaging Protocol).<br />-SrmpSecure: utilizzare il trasporto SRMPS (SOAP Reliable Messaging Protocol Secure).<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.QueueTransferProtocol>.<br /><br /> Poiché MSMQ non supporta l'indirizzamento di Active Directory quando si utilizza il protocollo SOAP Reliable Messaging, è consigliabile non impostare questo attributo su Srmp o Srmps quando `useActiveDirectory` è impostato su `true`.|  
+|queueTransferProtocol|Specifica il trasporto del canale delle comunicazioni in coda usato da questa associazione. I valori validi sono:<br /><br /> -Native: usa il protocollo MSMQ nativo.<br />-SRMP: usa il protocollo SRMP (SOAP Reliable Messaging Protocol).<br />-SrmpSecure: utilizzare il trasporto SRMPS (SOAP Reliable Messaging Protocol Secure).<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.QueueTransferProtocol>.<br /><br /> Poiché MSMQ non supporta l'indirizzamento di Active Directory quando si utilizza il protocollo SOAP Reliable Messaging, è consigliabile non impostare questo attributo su Srmp o Srmps quando `useActiveDirectory` è impostato su `true` .|  
 |rejectAfterLastRetry|Valore booleano che indica l'azione da intraprendere per un messaggio non recapitato dopo il numero massimo di tentativi.<br /><br /> `true` indica che al mittente viene restituito un non riconoscimento e che il messaggio viene eliminato. `false` indica che il messaggio viene inviato alla coda dei messaggi non elaborabili. Il valore predefinito è `false`.<br /><br /> Se il valore è `false`, l'applicazione ricevente può leggere la coda dei messaggi non elaborabili per elaborare i messaggi non elaborabili, ovvero i messaggi il cui recapito ha avuto esito negativo.<br /><br /> Poiché MSMQ 3.0 non supporta la restituzione di un non riconoscimento al mittente, questo attributo viene ignorato in MSMQ 3.0.|  
 |retryCycleDelay|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo tra i cicli di ripetizione dei tentativi di recapitare un messaggio che è impossibile recapitare immediatamente. L'impostazione predefinita è 00:10:00.<br /><br /> Un singolo ciclo di ripetizione tenta di recapitare un messaggio a un'applicazione ricevente per uno specificato numero di volte. Il numero di tentativi eseguiti è specificato dall'attributo `maxImmediateRetries`. Se l'applicazione non riesce a usare il messaggio dopo il numero specificato di tentativi immediati, il messaggio viene inviato a una coda di tentativi. I cicli di ripetizione successivi sono costituiti dal messaggio restituito dalla coda di tentativi alla coda dell'applicazione per tentare nuovamente il recapito all'applicazione, dopo un intervallo di tempo specificato dall'attributo `retryCycleDelay`. Il numero di cicli di ripetizione è specificato dall'attributo `maxRetryCycles`.|  
 |timeToLive|Valore <xref:System.TimeSpan> che specifica la durata di validità dei messaggi prima che scadano e vengano inseriti nella coda dei messaggi non recapitabili. Il valore predefinito è 1.00:00:00, che corrisponde a un giorno.<br /><br /> L'attributo è impostato per verificare che i messaggi a scadenza non risultino non aggiornati prima di essere elaborati dalle applicazioni riceventi. Un messaggio in una coda che non viene usato dall'applicazione ricevente entro l'intervallo di tempo specificato viene considerato scaduto. I messaggi scaduti vengono inviati a una coda speciale denominata coda dei messaggi non recapitabili. Il percorso della coda dei messaggi non recapitabili viene impostato con l'attributo `customDeadLetterQueue` o sul valore appropriato predefinito, in base alle garanzie.|  
@@ -74,20 +74,20 @@ Impone a un canale di trasferire i messaggi tramite il trasporto MSMQ quando vie
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<msmqTransportSecurity >](msmqtransportsecurity.md)|Specifica le impostazioni di sicurezza del trasporto per questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|[\<msmqTransportSecurity>](msmqtransportsecurity.md)|Specifica le impostazioni di sicurezza del trasporto per questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<binding >](bindings.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
+|[\<binding>](bindings.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
  L'elemento `msmqTransport` consente all'utente di impostare le proprietà per il canale delle comunicazioni in coda. Il canale delle comunicazioni in coda usa l'accodamento dei messaggi per il trasporto.  
   
  Questo è l'elemento di associazione predefinito usato dall'associazione standard dell'accodamento dei messaggi (`netMsmqBinding`).  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.ServiceModel.Configuration.MsmqTransportElement>
 - <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
@@ -96,7 +96,7 @@ Impone a un canale di trasferire i messaggi tramite il trasporto MSMQ quando vie
 - [Code in WCF](../../../wcf/feature-details/queues-in-wcf.md)
 - [Trasporti](../../../wcf/feature-details/transports.md)
 - [Scelta di un trasporto](../../../wcf/feature-details/choosing-a-transport.md)
-- [Associazioni](../../../wcf/bindings.md)
+- [Binding](../../../wcf/bindings.md)
 - [Estensione delle associazioni](../../../wcf/extending/extending-bindings.md)
 - [Associazioni personalizzate](../../../wcf/extending/custom-bindings.md)
-- [\<CustomBinding >](custombinding.md)
+- [\<customBinding>](custombinding.md)

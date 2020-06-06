@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
 ms.openlocfilehash: c5029a7d1e53c28d0abb232efdc3e0bd2c9658d4
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088413"
 ---
-# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<elemento > defaultHttpCachePolicy (impostazioni di rete)
+# <a name="defaulthttpcachepolicy-element-network-settings"></a>Elemento \<defaultHttpCachePolicy> (impostazioni di rete)
 Descrive se la memorizzazione nella cache HTTP è attiva e descrive i criteri di memorizzazione nella cache predefiniti.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<RequestCaching**](requestcaching-element-network-settings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<DefaultHttpCachePolicy** >
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<requestCaching>**](requestcaching-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<defaultHttpCachePolicy>**
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,7 +47,7 @@ Descrive se la memorizzazione nella cache HTTP è attiva e descrive i criteri di
 |`policyLevel`|Specifica se i criteri di memorizzazione nella cache sono automatici o se la cache è stata ignorata. Il valore predefinito è `BypassCache`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -55,10 +55,10 @@ Descrive se la memorizzazione nella cache HTTP è attiva e descrive i criteri di
 |-------------|-----------------|  
 |[requestCaching](requestcaching-element-network-settings.md)|Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.|  
   
-## <a name="remarks"></a>Note  
- Il valore per l'attributo `policyLevel` è `BypassCache` o `Default`.  
+## <a name="remarks"></a>Commenti  
+ Il valore dell' `policyLevel` attributo è `BypassCache` o `Default` .  
   
- I valori per gli elementi `maximumAge`, `maximumStale`e `minimumFresh` sono un intervallo di tempo esplicito con formato *d*. *HH*:*mm*:*SS* (giorni, ore, minuti e secondi) o costanti `minValue` o `maxValue`, in base alle esigenze.  
+ I valori per `maximumAge` gli `maximumStale` elementi, e `minimumFresh` sono un intervallo di tempo esplicito con un formato *d*.* HH*:*mm*:*SS* (giorni, ore, minuti e secondi) o costanti `minValue` o `maxValue` , a seconda dei casi.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
@@ -80,7 +80,7 @@ Descrive se la memorizzazione nella cache HTTP è attiva e descrive i criteri di
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>

@@ -1,15 +1,15 @@
 ---
-title: <AttributeImplies>Elemento (.NET native)
+title: <AttributeImplies>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
 ms.openlocfilehash: 2ab1fdc71bc43f61f69a0d9b7bea7acb35e14ea5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79181069"
 ---
-# <a name="attributeimplies-element-net-native"></a>\<AttribuToImplies> elemento (.NET nativo)AttributeImplies> Element (.NET Native)
+# <a name="attributeimplies-element-net-native"></a>\<AttributeImplies>Elemento (.NET Native)
 Definisce i criteri per gli elementi di codice a cui viene applicato l'attributo contenitore.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -30,7 +30,7 @@ Definisce i criteri per gli elementi di codice a cui viene applicato l'attributo
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Tipo di attributo|Descrizione|  
 |---------------|--------------------|-----------------|  
@@ -47,7 +47,7 @@ Definisce i criteri per gli elementi di codice a cui viene applicato l'attributo
   
 ## <a name="all-attributes"></a>Tutti gli attributi  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
@@ -58,16 +58,16 @@ Definisce i criteri per gli elementi di codice a cui viene applicato l'attributo
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<Tipo>](type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
+|[\<Type>](type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'elemento `<AttributeImplies>` viene usato se il relativo tipo contenitore è un attributo (cioè, una classe derivata da <xref:System.Attribute?displayProperty=nameWithType>). Se l'attributo viene applicato a un particolare elemento di programma, il criterio definito dall'elemento `<AttributeImplies>` viene applicato a tale elemento di programma.  
   
  Gli attributi di reflection, serializzazione e interoperabilità sono tutti facoltativi, ma è necessario usarne almeno uno.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [\<Tipo> elemento](type-element-net-native.md)
+- [\<Type>Elemento](type-element-net-native.md)
 - [Riferimento a file di configurazione di direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementi direttiva di runtime](runtime-directive-elements.md)
-- [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime)
+- [Impostazioni dei criteri della direttiva di runtime](runtime-directive-policy-settings.md)

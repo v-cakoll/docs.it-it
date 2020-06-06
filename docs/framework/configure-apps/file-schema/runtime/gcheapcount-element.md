@@ -5,19 +5,19 @@ helpviewer_keywords:
 - gcHeapCount element
 - <gcHeapCount> element
 ms.openlocfilehash: 3d6cac4185af182758cb82e6bfd9d96ed24869b4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74283078"
 ---
-# <a name="gcheapcount-element"></a>\<elemento > GCHeapCount
+# <a name="gcheapcount-element"></a>Elemento \<GCHeapCount>
 
 Specifica il numero di heap/thread da usare per il Garbage Collection server.
 
-> di configurazione di \<\
-&nbsp;&nbsp;\<Runtime > \
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapCount >
+\<configuration>\
+&nbsp;&nbsp;\<runtime>\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapCount>
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,7 +28,7 @@ Specifica il numero di heap/thread da usare per il Garbage Collection server.
 
 ## <a name="attributes-and-elements"></a>Attributi ed elementi
 
-Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.
+Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.
 
 ### <a name="attributes"></a>Attributi
 
@@ -38,13 +38,13 @@ Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi
 
 #### <a name="enabled-attribute"></a>attributo enabled
 
-|Value|Descrizione|
+|Valore|Description|
 |-----------|-----------------|
 |`nn`|Numero di heap da utilizzare per GC del server.|
 
-### <a name="child-elements"></a>Elemento figlio
+### <a name="child-elements"></a>Elementi figlio
 
-Nessuno.
+No.
 
 ### <a name="parent-elements"></a>Elementi padre
 
@@ -53,7 +53,7 @@ Nessuno.
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, i thread GC del server sono creata un'affinità con la rispettiva CPU, in modo da avere un heap GC, un thread GC server e un thread GC del server in background per ogni processore. A partire da .NET Framework 4.6.2, è possibile usare l'elemento **GCHeapCount** per limitare il numero di heap usati dall'applicazione per il Garbage Collector del server. La limitazione del numero di heap utilizzati per il Garbage Collector del server è particolarmente utile per i sistemi che eseguono più istanze di un'applicazione server.
 
@@ -93,11 +93,11 @@ L'esempio seguente non creare affinità tra i thread GC del server e limita il n
 </configuration>
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [Elemento GCNoAffinitize](gcnoaffinitize-element.md)
 - [Elemento GCHeapAffinitizeMask](gcheapaffinitizemask-element.md)
-- [Principi fondamentali di Garbage Collection](../../../../standard/garbage-collection/fundamentals.md)
+- [Nozioni fondamentali di Garbage Collection](../../../../standard/garbage-collection/fundamentals.md)
 - [Schema delle impostazioni di runtime](index.md)
-- [Schema dei file di configurazione](../index.md)
+- [Schema del file di configurazione](../index.md)

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
 ms.openlocfilehash: f3c1a1670139a8262dea449bfff99c7c1c19f088
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088940"
 ---
-# <a name="assert-element"></a>\<elemento > Assert
+# <a name="assert-element"></a>\<assert> Elemento
 Specifica se visualizzare una finestra di messaggio quando si chiama il metodo <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>. Specifica anche il nome del file in cui scrivere i messaggi.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<assert >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<assert>**
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,13 +40,13 @@ Specifica se visualizzare una finestra di messaggio quando si chiama il metodo <
   
 ## <a name="assertuienabled-attribute"></a>Attributo AssertUiEnabled  
   
-|Value|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
-|`true`|Consente di visualizzare la finestra di messaggio. Questa è l'impostazione predefinita.|  
+|`true`|Consente di visualizzare la finestra di messaggio. Questo è il valore predefinito.|  
 |`false`|La finestra di messaggio non viene visualizzata.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuna.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -55,11 +55,11 @@ Specifica se visualizzare una finestra di messaggio quando si chiama il metodo <
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`system.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
   
-## <a name="remarks"></a>Note  
- Entrambi gli attributi nell'elemento **\<assert >** sono facoltativi. È possibile disabilitare le finestre di messaggio senza specificare un file in cui scrivere i messaggi. in alternativa, è possibile specificare un file in cui scrivere i messaggi lasciando abilitate le finestre di messaggio.  
+## <a name="remarks"></a>Commenti  
+ Entrambi gli attributi nell' **\<assert>** elemento sono facoltativi. È possibile disabilitare le finestre di messaggio senza specificare un file in cui scrivere i messaggi. in alternativa, è possibile specificare un file in cui scrivere i messaggi lasciando abilitate le finestre di messaggio.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come disabilitare la visualizzazione di finestre di messaggio quando si chiama **debug. Assert** e si scrivono i messaggi in `c:\log.txt`.  
+ Nell'esempio seguente viene illustrato come disabilitare la visualizzazione di finestre di messaggio quando si chiama **debug. Assert** e si scrivono i messaggi in `c:\log.txt` .  
   
 ```xml  
 <configuration>  
@@ -69,7 +69,7 @@ Specifica se visualizzare una finestra di messaggio quando si chiama il metodo <
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Diagnostics.Debug>
 - [Schema delle impostazioni di traccia e debug](index.md)

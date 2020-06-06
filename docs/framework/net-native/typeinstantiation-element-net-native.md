@@ -1,15 +1,15 @@
 ---
-title: Elemento <TypeInstantiation> (.NET Native)
+title: <TypeInstantiation>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 ms.openlocfilehash: 9069856b3d8739724d148b5eea5d4188c8b8b9e1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128672"
 ---
-# <a name="typeinstantiation-element-net-native"></a>\<elemento TypeInstantiation > (.NET Native)
+# <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation>Elemento (.NET Native)
 Applica i criteri di reflection di runtime a un tipo generico costruito.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +36,7 @@ Applica i criteri di reflection di runtime a un tipo generico costruito.
   
 |Attributo|Tipo di attributo|Descrizione|  
 |---------------|--------------------|-----------------|  
-|`Name`|Generale|Attributo obbligatorio. Specifica il nome del tipo.|  
+|`Name`|Generale|Attributo obbligatorio. Specifica il nome tipo.|  
 |`Arguments`|Generale|Attributo obbligatorio. Specifica gli argomenti tipo generico. Se sono presenti più argomenti, saranno separati da virgole.|  
 |`Activate`|Reflection|Attributo facoltativo. Controlla l'accesso in fase di esecuzione ai costruttori per abilitare l'attivazione di istanze.|  
 |`Browse`|Reflection|Attributo facoltativo. Controlla le query per le informazioni sugli elementi di programma, ma non abilita l'accesso in fase di esecuzione.|  
@@ -51,19 +51,19 @@ Applica i criteri di reflection di runtime a un tipo generico costruito.
   
 ## <a name="name-attribute"></a>Name (attributo)  
   
-|Value|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
-|*type_name*|Nome del tipo. Se questo elemento `<TypeInstantiation>` è figlio di un elemento [\<Namespace>](namespace-element-net-native.md), un elemento [\<Type>](type-element-net-native.md) o di un altro elemento `<TypeInstantiation>`, *type_name* può specificare il nome del tipo senza il relativo spazio dei nomi. In caso contrario, *type_name* deve includere il nome completo del tipo. Il nome del tipo non è decorato. Ad esempio, per un oggetto <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, l'elemento `<TypeInstantiation>` può apparire come segue:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
+|*type_name*|Nome del tipo. Se questo `<TypeInstantiation>` elemento è figlio di un [\<Namespace>](namespace-element-net-native.md) elemento, un [\<Type>](type-element-net-native.md) elemento o un altro `<TypeInstantiation>` elemento, *type_name* possibile specificare il nome del tipo senza il relativo spazio dei nomi. In caso contrario, *type_name* deve includere il nome completo del tipo. Il nome del tipo non è decorato. Ad esempio, per un oggetto <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, l'elemento `<TypeInstantiation>` può apparire come segue:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>Attributo di argomenti  
   
-|Value|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |*type_argument*|Specifica gli argomenti tipo generico. Se sono presenti più argomenti, saranno separati da virgole. Ogni argomento deve essere costituito dal nome completo del tipo.|  
   
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi  
   
-|Value|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri per il tipo generico costruito. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
@@ -91,17 +91,17 @@ Applica i criteri di reflection di runtime a un tipo generico costruito.
 |[\<Type>](type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
 |`<TypeInstantiation>`|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
  La reflection, la serializzazione e gli attributi di interoperabilità sono facoltativi. ma è necessario usarne almeno uno.  
   
- Se un elemento `<TypeInstantiation>` è figlio di un elemento [\<Assembly>](assembly-element-net-native.md), [\<Namespace>](namespace-element-net-native.md) o [\<Type>](type-element-net-native.md), sottopone a override le impostazioni dei criteri definite dall'elemento padre. Se un elemento [\<Type>](type-element-net-native.md) definisce una corrispondente definizione di tipo generico, l'elemento `<TypeInstantiation>` esegue l'override dei criteri di reflection di runtime solo per le istanze del tipo generico costruito specificato.  
+ Se un `<TypeInstantiation>` elemento è figlio di un [\<Assembly>](assembly-element-net-native.md) elemento, [\<Namespace>](namespace-element-net-native.md) o, [\<Type>](type-element-net-native.md) sostituisce le impostazioni dei criteri definite dall'elemento padre. Se un [\<Type>](type-element-net-native.md) elemento definisce una definizione di tipo generico corrispondente, l' `<TypeInstantiation>` elemento esegue l'override dei criteri di reflection di runtime solo per le creazioni di istanze del tipo generico costruito specificato.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene usata la reflection per recuperare la definizione di tipo generico da un oggetto <xref:System.Collections.Generic.Dictionary%602> costruito. Viene anche usata la reflection per visualizzare informazioni sugli oggetti <xref:System.Type> che rappresentano tipi generici costruiti e definizioni di tipo generico. La variabile `b` nell'esempio è un controllo <xref:Windows.UI.Xaml.Controls.TextBlock>.  
+ Nell'esempio seguente viene usata la reflection per recuperare la definizione di tipo generico da un oggetto <xref:System.Collections.Generic.Dictionary%602> costruito. Viene anche usata la reflection per visualizzare informazioni sugli oggetti <xref:System.Type> che rappresentano tipi generici costruiti e definizioni di tipo generico. La variabile `b` nell'esempio è un <xref:Windows.UI.Xaml.Controls.TextBlock> controllo.  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- Dopo la compilazione con la catena di strumenti .NET Native, l'esempio genera un'eccezione [MissingMetadataException](missingmetadataexception-class-net-native.md) sulla riga che chiama il metodo <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType>. È possibile eliminare l'eccezione e fornire i metadati necessari aggiungendo il seguente elemento `<TypeInstantiation>` al file di direttive di runtime:  
+ Dopo la compilazione con la catena di strumenti .NET Native, l'esempio genera un'eccezione [MissingMetadataException](missingmetadataexception-class-net-native.md) sulla riga che chiama il <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> metodo. È possibile eliminare l'eccezione e fornire i metadati necessari aggiungendo il seguente elemento `<TypeInstantiation>` al file di direttive di runtime:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -114,8 +114,8 @@ Applica i criteri di reflection di runtime a un tipo generico costruito.
 </Directives>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementi direttiva di runtime](runtime-directive-elements.md)
-- [Impostazioni dei criteri delle direttive di runtime](runtime-directive-policy-settings.md)
+- [Impostazioni dei criteri della direttiva di runtime](runtime-directive-policy-settings.md)

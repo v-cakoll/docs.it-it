@@ -10,21 +10,21 @@ helpviewer_keywords:
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
 ms.openlocfilehash: 475b7df55ed509157c1da0aeb8f979de238c72b5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70971881"
 ---
-# <a name="codebase-element"></a>\<Elemento codeBase >
+# <a name="codebase-element"></a>\<codeBase> Elemento
 
 Specifica la posizione in cui il Common Language Runtime può trovare un assembly.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di associazione**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> dependentAssembly**](dependentassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<codeBase>**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dependentAssembly>**](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<codeBase>**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -47,30 +47,30 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ## <a name="version-attribute"></a>Attributo Version
 
-|Value|Descrizione|
+|Valore|Description|
 |-----------|-----------------|
 |I valori validi per ogni parte del numero di versione sono compresi tra 0 e 65535.|Non applicabile.|
 
 ### <a name="child-elements"></a>Elementi figlio
 
-Nessuno.
+No.
 
 ### <a name="parent-elements"></a>Elementi padre
 
-|Elemento|DESCRIZIONE|
+|Elemento|Descrizione|
 |-------------|-----------------|
 |`buildproviders`|Definisce una raccolta di provider di compilazione utilizzati per compilare file di risorse personalizzati. Possono essere presenti più provider di compilazione.|
 |`compilation`|Configura tutte le impostazioni di compilazione utilizzate da ASP.NET.|
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|
 |`System.web`|Consente di specificare l'elemento radice per la sezione di configurazione ASP.NET.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Affinché il runtime usi l'  **\<impostazione codebase >** in un file di configurazione del computer o in un file dei criteri editore, il file deve anche reindirizzare la versione dell'assembly. I file di configurazione dell'applicazione possono avere un'impostazione codebase senza reindirizzamento della versione dell'assembly. Dopo aver determinato quale versione dell'assembly utilizzare, il runtime applica l'impostazione codebase dal file che determina la versione. Se non è indicata alcuna codebase, il runtime esegue il probe per l'assembly nel modo consueto.
+Affinché il runtime usi l' **\<codeBase>** impostazione in un file di configurazione del computer o in un file dei criteri editore, il file deve anche reindirizzare la versione dell'assembly. I file di configurazione dell'applicazione possono avere un'impostazione codebase senza reindirizzamento della versione dell'assembly. Dopo aver determinato quale versione dell'assembly utilizzare, il runtime applica l'impostazione codebase dal file che determina la versione. Se non è indicata alcuna codebase, il runtime esegue il probe per l'assembly nel modo consueto.
 
 Se l'assembly ha un nome sicuro, l'impostazione codebase può trovarsi in qualsiasi punto della rete Intranet locale o Internet. Se l'assembly è un assembly privato, l'impostazione codebase deve essere un percorso relativo alla directory dell'applicazione.
 
-Per gli assembly senza nome sicuro, la versione viene ignorata e il caricatore usa il primo \<aspetto di codebase \<> all'interno di dependentAssembly >. Se nel file di configurazione dell'applicazione è presente una voce che reindirizza il binding a un altro assembly, il reindirizzamento avrà la precedenza anche se la versione dell'assembly non corrisponde alla richiesta di associazione.
+Per gli assembly senza nome sicuro, la versione viene ignorata e il caricatore usa il primo aspetto di \<codebase> all'interno di \<dependentAssembly> . Se nel file di configurazione dell'applicazione è presente una voce che reindirizza il binding a un altro assembly, il reindirizzamento avrà la precedenza anche se la versione dell'assembly non corrisponde alla richiesta di associazione.
 
 ## <a name="example"></a>Esempio
 
@@ -92,7 +92,7 @@ Nell'esempio seguente viene illustrato come specificare la posizione in cui il r
 </configuration>
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Schema delle impostazioni di runtime](index.md)
 - [Schema dei file di configurazione](../index.md)

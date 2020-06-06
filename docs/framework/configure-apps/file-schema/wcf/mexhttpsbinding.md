@@ -3,19 +3,19 @@ title: <mexHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: f2ed3774-78b9-4a15-b79b-655f1ad68b86
 ms.openlocfilehash: 924d68dd828622b74c5e424a695f80874391b453
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74430335"
 ---
-# <a name="mexhttpsbinding"></a>\<mexHttpsBinding >
+# \<mexHttpsBinding>
 Specifica le impostazioni per un'associazione usata per lo scambio di messaggi WS-MetadataExchange (WS-MEX) tramite HTTPS.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**Binding**](bindings.md)\<>\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexHttpsBinding** >  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<mexHttpsBinding>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -31,7 +31,7 @@ Specifica le impostazioni per un'associazione usata per lo scambio di messaggi W
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
+ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
   
@@ -44,28 +44,28 @@ Specifica le impostazioni per un'associazione usata per lo scambio di messaggi W
 |`sendTimeout`|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di invio. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[associazioni di \<>](bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[\<bindings>](bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
  Questa associazione fondamentalmente un'associazione `WSHttpBinding` che supporta la sicurezza a livello di trasporto mediante certificati. Per altre informazioni sulla configurazione e sull'uso di un endpoint di metadati di questo tipo, vedere [procedura: configurare un'associazione WS-Metadata Exchange personalizzata](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md), [procedura: recuperare metadati su un'associazione non MEX](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)e l' [endpoint dei metadati protetti personalizzati](../../../wcf/samples/custom-secure-metadata-endpoint.md)di esempio.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpsBinding%2A>
 - <xref:System.ServiceModel.Configuration.MexHttpsBindingElement>
-- [Procedura: Pubblicare metadati per un servizio usando un file di configurazione](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Procedura: pubblicare metadati per un servizio usando un file di configurazione](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Pubblicazione e recupero di metadati su un'associazione personalizzata](../../../wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
-- [Procedura: Configurare un'associazione WS-Metadata Exchange personalizzata](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
-- [Procedura: Recuperare metadati attraverso un'associazione non MEX](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+- [Procedura: configurare un'associazione WS-Metadata Exchange personalizzata](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
+- [Procedura: recuperare metadati attraverso un'associazione non MEX](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
 - [Endpoint di metadati protetto personalizzato](../../../wcf/samples/custom-secure-metadata-endpoint.md)
 - [Metadati](../../../wcf/feature-details/metadata.md)
-- [Associazioni](../../../wcf/bindings.md)
+- [Binding](../../../wcf/bindings.md)
 - [Configurazione di associazioni fornite dal sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Uso di associazioni per configurare servizi e client](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [Binding \<>](bindings.md)
+- [\<binding>](bindings.md)

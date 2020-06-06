@@ -3,20 +3,20 @@ title: <discoveryEndpoint>
 ms.date: 03/30/2017
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
 ms.openlocfilehash: 32b14f8fb3235040a51455f2099a403c8312c699
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855402"
 ---
-# <a name="discoveryendpoint"></a>\<discoveryEndpoint>
+# \<discoveryEndpoint>
 
 Questo elemento di configurazione definisce un endpoint standard con un contratto di individuazione fisso. Quando viene aggiunto alla configurazione del servizio, specifica la posizione di ascolto dei messaggi di individuazione. Quando viene aggiunto alla configurazione del client, specifica la posizione di invio delle query di individuazione.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> standardEndpoints**](standardendpoints.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> discoveryEndpoint**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<standardEndpoints>**](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<discoveryEndpoint>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,18 +41,18 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 | Attributo        | Descrizione |  
 | ---------------- | ----------- |  
-| discoveryMode    | Stringa che specifica la modalità del protocollo di individuazione. I valori validi sono "Adhoc" e "Managed". Nella modalità gestita il protocollo si basa su un proxy di individuazione che viene usato come un repository di servizi individuabili. Con la modalità Adhoc è necessario che il protocollo utilizzi il meccanismo multicast UDP per l'individuazione dei servizi disponibili. Per ulteriori informazioni sulla proprietà, vedere <xref:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryMode%2A>. |  
+| discoveryMode    | Stringa che specifica la modalità del protocollo di individuazione. I valori validi sono "Adhoc" e "Managed". Nella modalità gestita il protocollo si basa su un proxy di individuazione che viene usato come un repository di servizi individuabili. Con la modalità Adhoc è necessario che il protocollo utilizzi il meccanismo multicast UDP per l'individuazione dei servizi disponibili. Per ulteriori informazioni sulla proprietà, vedere <xref:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryMode%2A> . |  
 | discoveryVersion | Stringa che specifica una delle due versioni del protocollo WS-Discovery. I valori validi sono WSDiscovery11 e WSDiscoveryApril2005. Questo valore è di tipo <xref:System.ServiceModel.Discovery.DiscoveryVersion>. |  
 | maxResponseDelay | Valore TimeSpan che specifica il valore massimo per il tempo di attesa del protocollo di individuazione prima dell'invio di determinati messaggi, ad esempio Probe Match o Resolve Match.<br /><br /> Se tutti i messaggi ProbeMatch vengono inviati contemporaneamente, potrebbero verificarsi problemi di rete. Per evitare questo problema, i messaggi ProbeMatch vengono inviati con un ritardo casuale tra ogni ProbeMatch. Il ritardo casuale è compreso nell'intervallo tra 0 e il valore impostato da questo attributo. Se questo attributo viene impostato su 0, i messaggi ProbeMatch vengono inviati in un ciclo breve senza alcun ritardo. In caso contrario, i messaggi ProbeMatch vengono inviati con un ritardo casuale, in modo che il tempo totale richiesto per l'invio di tutti i messaggi ProbeMatch non superi il valore di maxResponseDelay. Questo valore è importante solo per i servizi e non viene usato dai client. |  
 | `name`           | Stringa che specifica il nome della configurazione dell'endpoint standard. Il nome viene usato nell'attributo `endpointConfiguration` dell'endpoint del servizio per collegare un endpoint standard alla relativa configurazione. |  
   
 ### <a name="child-elements"></a>Elementi figlio
 
-Nessuno.  
+No.  
   
 ### <a name="parent-elements"></a>Elementi padre
 
-| Elemento | DESCRIZIONE |  
+| Elemento | Descrizione |  
 | ------- | ----------- |  
 | [\<standardEndpoints>](standardendpoints.md) | Raccolta di endpoint standard rappresentati da endpoint predefiniti con una o più delle relative proprietà (indirizzo, associazione, contratto) fisse. |  
   

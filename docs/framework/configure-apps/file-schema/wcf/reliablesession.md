@@ -3,21 +3,21 @@ title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
 ms.openlocfilehash: 95f6646041dc2dd7bae7691a0a9f748c844f50b6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73738755"
 ---
-# <a name="reliablesession"></a>\<reliableSession >
+# \<reliableSession>
 Definisce l'impostazione per WS-Reliable Messaging. Quando questo elemento viene aggiunto a un'associazione personalizzata, il canale risultante può supportare assicurazioni di recapito una volta esatta.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**Binding**](bindings.md)\<
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**customBinding**](custombinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Binding** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<reliableSession >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<reliableSession>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,15 +49,15 @@ Definisce l'impostazione per WS-Reliable Messaging. Quando questo elemento viene
 |reliableMessagingVersion|Un valore valido da <xref:System.ServiceModel.ReliableMessagingVersion> che specifica la versione di WS-ReliableMessaging da usare.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<binding >](bindings.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
+|[\<binding>](bindings.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
  Le sessioni affidabili forniscono funzionalità per la messaggistica affidabile e le sessioni. La messaggistica affidabile ritenta la comunicazione in caso di errore e consente di specificare assicurazioni del recapito quali l'arrivo nell'ordine di invio dei messaggi. Le sessioni gestiscono lo stato per i client tra le chiamate. Questo elemento fornisce inoltre il recapito ordinato dei messaggi (facoltativo). Questa sessione implementata può attraversare intermediari SOAP e di trasporto.  
   
  Ogni elemento di associazione rappresenta una fase di elaborazione durante l'invio o la ricezione di messaggi. In fase di esecuzione gli elementi di associazione creano le channel factory e i listener necessari per compilare stack di canali in uscita e in ingresso richiesti per l'invio e la ricezione di messaggi. La classe `reliableSession` fornisce un livello facoltativo nello stack che può stabilire una sessione affidabile tra endpoint e configurare il comportamento di questa sessione.  
@@ -120,13 +120,13 @@ Definisce l'impostazione per WS-Reliable Messaging. Quando questo elemento viene
 </configuration>
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.ServiceModel.Configuration.ReliableSessionElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>
 - [Sessioni affidabili](../../../wcf/feature-details/reliable-sessions.md)
-- [Associazioni](../../../wcf/bindings.md)
+- [Binding](../../../wcf/bindings.md)
 - [Estensione delle associazioni](../../../wcf/extending/extending-bindings.md)
 - [Associazioni personalizzate](../../../wcf/extending/custom-bindings.md)
-- [\<CustomBinding >](custombinding.md)
+- [\<customBinding>](custombinding.md)

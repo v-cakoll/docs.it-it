@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
 ms.openlocfilehash: d562bd4e3d46a1bdf41fc4065fee926850a49aa1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152171"
 ---
-# <a name="etwtracking"></a>\<> etwTracking
+# \<etwTracking>
 Comportamento del servizio che consente a un servizio di utilizzare il rilevamento ETW mediante un oggetto <xref:System.Activities.Tracking.EtwTrackingParticipant>.  
   
-[**\<>di configurazione**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<Sistema.>ServiceModelServiceModel>**](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<comportamenti>**](behaviors-of-workflow.md)\
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors-of-workflow.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>di comportamento**](behavior-of-servicebehaviors-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>etwTracking**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<etwTracking>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,7 +35,7 @@ Comportamento del servizio che consente a un servizio di utilizzare il rilevamen
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
@@ -48,9 +48,9 @@ Comportamento del servizio che consente a un servizio di utilizzare il rilevamen
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<comportamento> \<di serviceBehaviors>](behavior-of-servicebehaviors-of-workflow.md)|Specifica un elemento di comportamento.|  
+|[\<behavior>di\<serviceBehaviors>](behavior-of-servicebehaviors-of-workflow.md)|Specifica un elemento di comportamento.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando viene aggiunto alla configurazione del comportamento del servizio, questo elemento di configurazione configura un partecipante del rilevamento su un servizio flusso di lavoro.  
   
  I partecipanti del rilevamento vengono usati per ottenere i dati di rilevamento generati dal flusso di lavoro e archiviarli in supporti differenti. Analogamente, è anche possibile eseguire qualsiasi operazione di post-elaborazione sui record di rilevamento all'interno del partecipante del rilevamento.  
@@ -58,7 +58,7 @@ Comportamento del servizio che consente a un servizio di utilizzare il rilevamen
 ## <a name="example"></a>Esempio  
  Nell'esempio di configurazione seguente viene mostrato il partecipante del rilevamento ETW standard configurato nel file Web.config.  
   
- L'ID provider utilizzato dal partecipante del rilevamento ETW per scrivere i record di rilevamento in ETW è definito nella sezione relativa alla>di ** \<diagnostica.** Al partecipante di rilevamento è associato un profilo per specificare i record di rilevamento che ha sottoscritto. Questo è definito dall'attributo **profileName** dell'elemento ** \<add>.** Una volta definiti, il partecipante di rilevamento viene aggiunto al comportamento del servizio ** \<etwTracking>.** che aggiungerà i partecipanti del rilevamento selezionati alle estensioni dell'istanza del flusso di lavoro, in modo che inizino a ricevere i record di rilevamento.  
+ L'ID del provider utilizzato dal partecipante del rilevamento ETW per la scrittura dei record di rilevamento in ETW è definito nella **\<diagnostics>** sezione. Al partecipante di rilevamento è associato un profilo per specificare i record di rilevamento che ha sottoscritto. Questa operazione viene definita dall'attributo **ProfileName** dell' **\<add>** elemento. Una volta definite, il partecipante del rilevamento viene aggiunto al **\<etwTracking>** comportamento del servizio. che aggiungerà i partecipanti del rilevamento selezionati alle estensioni dell'istanza del flusso di lavoro, in modo che inizino a ricevere i record di rilevamento.  
   
 ```xml  
 <configuration>
@@ -85,7 +85,7 @@ Comportamento del servizio che consente a un servizio di utilizzare il rilevamen
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>

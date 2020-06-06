@@ -1,15 +1,15 @@
 ---
-title: Elemento <Parameter> (.NET Native)
+title: <Parameter>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 ms.openlocfilehash: c6dfc347d44a794ee8496c45ca879f9daab12b22
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128191"
 ---
-# <a name="parameter-element-net-native"></a>Elemento \<> Parameter (.NET Native)
+# <a name="parameter-element-net-native"></a>\<Parameter>Elemento (.NET Native)
 Applica criteri di reflection al tipo di argomento passato a un metodo.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -49,18 +49,18 @@ Applica criteri di reflection al tipo di argomento passato a un metodo.
   
 ## <a name="name-attribute"></a>Name (attributo)  
   
-|Value|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |*parameter_name*|Il nome del parametro del metodo a cui è applicato il criterio. Ad esempio, per la firma del metodo `String.CompareTo(Object value)`, il valore dell'attributo `Name` è "value".|  
   
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi  
   
-|Value|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuna.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -68,12 +68,12 @@ Applica criteri di reflection al tipo di argomento passato a un metodo.
 |-------------|-----------------|  
 |[\<Method>](method-element-net-native.md)|Applica i criteri di reflection di runtime a un costruttore o a un metodo.|  
   
-## <a name="remarks"></a>Note  
- L'elemento `<Parameter>` è figlio dell'elemento [\<Method>](method-element-net-native.md) e viene usato per applicare criteri a un parametro di metodo specifico. Il parametro del metodo specifico viene specificato per nome anziché in base al tipo. Almeno un attributo che rappresenta un tipo di criterio, ad esempio `Activate` o `Dynamic`, deve essere presente.  
+## <a name="remarks"></a>Commenti  
+ L' `<Parameter>` elemento è figlio dell' [\<Method>](method-element-net-native.md) elemento e viene usato per applicare i criteri a un determinato parametro del metodo. Il parametro del metodo specifico viene specificato per nome anziché in base al tipo. Almeno un attributo che rappresenta un tipo di criterio, ad esempio `Activate` o `Dynamic`, deve essere presente.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Elemento \<Method>](method-element-net-native.md)
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
-- [Impostazioni dei criteri delle direttive di runtime](runtime-directive-policy-settings.md)
+- [\<Method>Elemento](method-element-net-native.md)
+- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Impostazioni dei criteri della direttiva di runtime](runtime-directive-policy-settings.md)
 - [Elementi direttiva di runtime](runtime-directive-elements.md)

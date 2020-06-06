@@ -10,10 +10,10 @@ helpviewer_keywords:
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
 ms.openlocfilehash: e9c7ba250995db1c7a701de346b18661892e7e23
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84291552"
 ---
 # <a name="how-to-serialize-an-object"></a>Procedura: serializzare un oggetto
@@ -51,7 +51,7 @@ Per serializzare un oggetto, creare prima l'oggetto da serializzare e impostarne
     myWriter.Close();  
     ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Introduzione alla serializzazione XML](introducing-xml-serialization.md)
 - [Procedura: Deserializzare un oggetto](how-to-deserialize-an-object.md)

@@ -3,17 +3,17 @@ title: Elemento <uri> (impostazioni URI)
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
 ms.openlocfilehash: a492baf9951466383ca0277a2927b8554e5bb332
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "71697445"
 ---
-# <a name="uri-element-uri-settings"></a>\<Uri > elemento (impostazioni URI)
+# <a name="uri-element-uri-settings"></a>Elemento \<uri> (impostazioni URI)
 Contiene le impostazioni che specificano il modo in cui il .NET Framework gestisce gli indirizzi Web espressi tramite URI (Uniform Resource Identifier).  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;**uri\<>**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;**\<uri>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -23,32 +23,32 @@ Contiene le impostazioni che specificano il modo in cui il .NET Framework gestis
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
+ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuno.  
+ No.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[idn](idn-element-uri-settings.md)|Specifica se l'analisi IDN (Internationalized Domain Name) viene applicata ai nomi di dominio.|  
-|[iriParsing](iriparsing-element-uri-settings.md)|Specifica se l'analisi IRI (International Resource Identifier) viene applicata a <xref:System.Uri> e se devono essere applicate le regole di analisi IRI.|  
+|[IDN](idn-element-uri-settings.md)|Specifica se l'analisi IDN (Internationalized Domain Name) viene applicata ai nomi di dominio.|  
+|[iriParsing](iriparsing-element-uri-settings.md)|Specifica se viene applicata l'analisi IRI (International Resource Identifier) a <xref:System.Uri> e se devono essere applicate le regole di analisi IRI.|  
 |[schemeSettings](schemesettings-element-uri-settings.md)|Specifica come verrà analizzato un <xref:System.Uri> per schemi specifici.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[configuration](../configuration-element.md)|Contiene le impostazioni per tutti gli spazi dei nomi.|  
+|[configurazione](../configuration-element.md)|Contiene le impostazioni per tutti gli spazi dei nomi.|  
   
-## <a name="remarks"></a>Osservazioni  
- L'elemento `uri` contiene le impostazioni per i membri della classe <xref:System.Uri> utilizzata dalle classi nello spazio dei nomi <xref:System.Net>. Le impostazioni configurano il supporto per IRI e IDN.  
+## <a name="remarks"></a>Commenti  
+ L' `uri` elemento contiene le impostazioni per i membri della <xref:System.Uri> classe utilizzata dalle classi nello <xref:System.Net> spazio dei nomi. Le impostazioni configurano il supporto per IRI e IDN.  
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>description  
- Nell'esempio seguente viene illustrata una configurazione utilizzata dalla classe <xref:System.Uri> per supportare l'analisi IRI e i nomi IDN. Nell'esempio vengono cancellate anche tutte le impostazioni dello schema e viene aggiunto il supporto per non eseguire l'escape dei delimitatori di percorso codificati in percentuale per lo schema http.  
+### <a name="description"></a>Descrizione  
+ Nell'esempio seguente viene illustrata una configurazione utilizzata dalla <xref:System.Uri> classe per supportare l'analisi IRI e i nomi IDN. Nell'esempio vengono cancellate anche tutte le impostazioni dello schema e viene aggiunto il supporto per non eseguire l'escape dei delimitatori di percorso codificati in percentuale per lo schema http.  
   
 ### <a name="code"></a>Codice  
   
@@ -65,6 +65,6 @@ Contiene le impostazioni che specificano il modo in cui il .NET Framework gestis
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Schema delle impostazioni di rete](index.md)

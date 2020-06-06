@@ -4,10 +4,10 @@ description: In questo esempio viene illustrata la capacità CLR di serializzare
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: 3f2273e6afb3a72f9734444ffe92d30871fb762b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84276569"
 ---
 # <a name="basic-serialization-technology-sample"></a>Esempio di tecnologia di serializzazione di base
@@ -43,7 +43,7 @@ Per ulteriori informazioni sulla serializzazione, vedere i commenti nei file di 
   > [!NOTE]
   > L'esempio compila un'applicazione console. Per visualizzare l'output dell'applicazione, è necessario avviarla dalla finestra del prompt dei comandi.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'applicazione di esempio accetta parametri della riga di comando che indicano il test da eseguire. Per serializzare un elenco costituito da 10 nodi in un file denominato **Test.xml** tramite il formattatore SOAP, usare i parametri **sx Test.xml 10**.
 
@@ -87,7 +87,7 @@ Nell'elenco riportato di seguito vengono descritte in modo sintetico le classi e
 
   - <xref:System.IO.FileStream> - Consente di eseguire la serializzazione e la deserializzazione di elenchi collegati.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.IO>
 - <xref:System.IO.File>

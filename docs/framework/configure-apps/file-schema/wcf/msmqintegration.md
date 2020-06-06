@@ -3,21 +3,21 @@ title: <msmqIntegration>
 ms.date: 03/30/2017
 ms.assetid: ab677405-1ffe-457a-803f-00c1770e51e2
 ms.openlocfilehash: 143557833457f379d410c3b71d87199a5b9e783b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73738888"
 ---
-# <a name="msmqintegration"></a>\<msmqIntegration >
+# \<msmqIntegration>
 Specifica un trasporto MSMQ per un'associazione personalizzata.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**Binding**](bindings.md)\<
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**customBinding**](custombinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Binding** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<msmqIntegration >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<msmqIntegration>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +42,7 @@ Specifica un trasporto MSMQ per un'associazione personalizzata.
 </msmqIntegration>
 ```  
   
-## <a name="type"></a>Digitare  
+## <a name="type"></a>Tipo  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -78,9 +78,9 @@ Specifica un trasporto MSMQ per un'associazione personalizzata.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<binding >](bindings.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
+|[\<binding>](bindings.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
@@ -88,7 +88,7 @@ Specifica un trasporto MSMQ per un'associazione personalizzata.
 - [Trasporti](../../../wcf/feature-details/transports.md)
 - [Code in WCF](../../../wcf/feature-details/queues-in-wcf.md)
 - [Scelta di un trasporto](../../../wcf/feature-details/choosing-a-transport.md)
-- [Associazioni](../../../wcf/bindings.md)
+- [Binding](../../../wcf/bindings.md)
 - [Estensione delle associazioni](../../../wcf/extending/extending-bindings.md)
 - [Associazioni personalizzate](../../../wcf/extending/custom-bindings.md)
-- [\<CustomBinding >](custombinding.md)
+- [\<customBinding>](custombinding.md)

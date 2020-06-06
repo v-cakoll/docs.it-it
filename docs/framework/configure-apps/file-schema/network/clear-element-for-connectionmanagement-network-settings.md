@@ -11,19 +11,19 @@ helpviewer_keywords:
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 ms.openlocfilehash: a76df48a9de084e1121a5e96b22edf7aa3acba23
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088477"
 ---
-# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<elemento clear > per connectionManagement (impostazioni di rete)
+# <a name="clear-element-for-connectionmanagement-network-settings"></a>Elemento \<clear> per connectionManagement (impostazioni di rete)
 Cancella l'elenco di gestione connessione.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<connectionManagement**](connectionmanagement-element-network-settings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Cancella** >
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<connectionManagement>**](connectionmanagement-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,10 +35,10 @@ Cancella l'elenco di gestione connessione.
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuna.  
+ No.  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuna.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -46,8 +46,8 @@ Cancella l'elenco di gestione connessione.
 |-----------------|---------------------|  
 |[connectionManagement](connectionmanagement-element-network-settings.md)|Specifica il numero massimo di connessioni a un host di rete.|  
   
-## <a name="remarks"></a>Note  
- L'elemento `clear` Cancella tutte le voci dall'elenco di gestione della connessione.  
+## <a name="remarks"></a>Commenti  
+ L' `clear` elemento Cancella tutte le voci dall'elenco di gestione della connessione.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
@@ -67,7 +67,7 @@ Cancella l'elenco di gestione connessione.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>

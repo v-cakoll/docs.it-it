@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <gcServer> element
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 ms.openlocfilehash: 8eab5e36bab90510aff4f1a3e15328197ac59ed7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73968940"
 ---
-# <a name="gcserver-element"></a>\<elemento > gcServer
+# <a name="gcserver-element"></a>Elemento \<gcServer>
 
 Specifica se Common Language Runtime esegue Garbage Collection per server.
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<runtime >](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<gcServer >
+&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<gcServer>
 
 ## <a name="syntax"></a>Sintassi
 
@@ -42,14 +42,14 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 #### <a name="enabled-attribute"></a>attributo enabled
 
-|Value|Descrizione|
+|Valore|Description|
 |-----------|-----------------|
-|`false`|Non esegue Garbage Collection per server. Questa è l'impostazione predefinita.|
+|`false`|Non esegue Garbage Collection per server. Questo è il valore predefinito.|
 |`true`|Esegue Garbage Collection per server.|
 
 ### <a name="child-elements"></a>Elementi figlio
 
-Nessuna.
+No.
 
 ### <a name="parent-elements"></a>Elementi padre
 
@@ -58,7 +58,7 @@ Nessuna.
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Common Language Runtime (CLR) supporta due tipi di Garbage Collection: Garbage Collection per workstation, disponibile in tutti i sistemi, e Garbage Collection per server, disponibile nei sistemi con più processori. Utilizzare l'elemento **gcserver** per controllare il tipo di Garbage Collection eseguita da CLR. Usare la proprietà <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> per determinare se l'operazione Garbage Collection per server è abilitata.
 
@@ -67,7 +67,7 @@ Per i computer con un solo processore, l'operazione di Garbage Collection per wo
 Questo elemento può essere usato solo nel file di configurazione dell'applicazione. Se è nel file di configurazione del computer, viene ignorato.
 
 > [!NOTE]
-> In .NET Framework 4 e versioni precedenti, la modalità di Garbage Collection simultanea non è disponibile quando l'operazione di Garbage Collection per server è abilitata. A partire da .NET Framework 4.5, l'operazione di Garbage Collection per server è simultanea. Per utilizzare il Garbage Collection server non simultaneo, impostare l'elemento **gcserver** su `true` e l' [elemento gcConcurrent](gcconcurrent-element.md) su `false`.
+> In .NET Framework 4 e versioni precedenti, la modalità di Garbage Collection simultanea non è disponibile quando l'operazione di Garbage Collection per server è abilitata. A partire da .NET Framework 4.5, l'operazione di Garbage Collection per server è simultanea. Per utilizzare il Garbage Collection server non simultaneo, impostare l'elemento **gcserver** su `true` e l' [elemento gcConcurrent](gcconcurrent-element.md) su `false` .
 
 A partire da .NET Framework 4.6.2, è anche possibile usare gli elementi seguenti per configurare GC del server:
 
@@ -89,9 +89,9 @@ Nell'esempio seguente viene abilitata l'Garbage Collection server:
 </configuration>
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [Schema delle impostazioni di runtime](index.md)
-- [Schema dei file di configurazione](../index.md)
+- [Schema del file di configurazione](../index.md)
 - [Per disabilitare Garbage Collection simultanee](gcconcurrent-element.md#to-disable-background-garbage-collection)

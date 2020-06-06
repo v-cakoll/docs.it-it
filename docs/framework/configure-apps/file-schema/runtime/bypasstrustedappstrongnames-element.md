@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 ms.openlocfilehash: 96361a6742d1d2f76cb237344189d3277d7c8069
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73739090"
 ---
-# <a name="bypasstrustedappstrongnames-element"></a>Elemento \<bypassTrustedAppStrongNames>
+# <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> Elemento
 
-Specifica se ignorare la convalida di nomi sicuri in assembly con attendibilità totale caricati in un <xref:System.AppDomain>con attendibilità totale.
+Specifica se ignorare la convalida di nomi sicuri in assembly con attendibilità totale caricati in un attendibilità totale <xref:System.AppDomain> .
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<elemento bypasstrustedappstrongnames >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<bypassTrustedAppStrongNames>**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -41,14 +41,14 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ## <a name="enabled-attribute"></a>Attributo enabled
 
-|Value|Descrizione|
+|Valore|Description|
 |-----------|-----------------|
-|`true`|Le firme con nome sicuro in assembly con attendibilità totale non vengono convalidate quando gli assembly vengono caricati in un <xref:System.AppDomain>con attendibilità totale. Questa è l'impostazione predefinita.|
-|`false`|Le firme con nome sicuro per gli assembly con attendibilità totale vengono convalidate quando gli assembly vengono caricati in un <xref:System.AppDomain>con attendibilità totale. La firma con nome sicuro viene verificata solo per la correttezza della firma; non viene confrontato con un altro nome sicuro per una corrispondenza.|
+|`true`|Le firme con nome sicuro in assembly con attendibilità totale non vengono convalidate quando gli assembly vengono caricati in un attendibilità totale <xref:System.AppDomain> . Questo è il valore predefinito.|
+|`false`|Le firme con nome sicuro per gli assembly con attendibilità totale vengono convalidate quando gli assembly vengono caricati in un attendibilità totale <xref:System.AppDomain> . La firma con nome sicuro viene verificata solo per la correttezza della firma; non viene confrontato con un altro nome sicuro per una corrispondenza.|
 
 ### <a name="child-elements"></a>Elementi figlio
 
-Nessuna.
+No.
 
 ### <a name="parent-elements"></a>Elementi padre
 
@@ -57,13 +57,13 @@ Nessuna.
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 La funzionalità di bypass con nome sicuro evita l'overhead della verifica della firma con nome sicuro degli assembly con attendibilità totale.
 
 Questa funzionalità si applica a qualsiasi assembly firmato con un nome sicuro e che ha le caratteristiche seguenti:
 
-- Completamente attendibile senza l'evidenza <xref:System.Security.Policy.StrongName> (ad esempio, ha `MyComputer` evidenza della zona).
+- Completamente attendibile senza l' <xref:System.Security.Policy.StrongName> evidenza, ad esempio con l' `MyComputer` evidenza della zona.
 
 - Viene caricato in un dominio <xref:System.AppDomain> completamente attendibile.
 
@@ -86,8 +86,8 @@ Nell'esempio seguente viene illustrato come specificare il comportamento che con
 </configuration>
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Schema delle impostazioni di runtime](index.md)
-- [Schema dei file di configurazione](../index.md)
+- [Schema del file di configurazione](../index.md)
 - [Procedura: disabilitare la funzionalità di bypass con nome sicuro](../../../../standard/assembly/disable-strong-name-bypass-feature.md)

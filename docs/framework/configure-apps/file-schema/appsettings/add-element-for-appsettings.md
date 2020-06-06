@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 ms.openlocfilehash: 5c7de79ec626966e71d461dd3865b294a8979db2
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77214791"
 ---
-# <a name="add-element-for-appsettings"></a>\<aggiungere > elemento per \<appSettings >
+# <a name="add-element-for-appsettings"></a>Elemento \<add> per \<appSettings>
 
 Aggiunge un'impostazione dell'applicazione personalizzata.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<appSettings >** ](appsettings-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<aggiungi >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,7 +30,7 @@ Aggiunge un'impostazione dell'applicazione personalizzata.
 </appSettings>
 ```
 
-## <a name="attributes"></a>Attributes
+## <a name="attributes"></a>Attributi
 
 |           | Descrizione |
 | --------- | ----------- |
@@ -41,7 +41,7 @@ Aggiunge un'impostazione dell'applicazione personalizzata.
 
 |     | Descrizione |
 | --- | ----------- |
-| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Contiene le impostazioni dell'applicazione personalizzate, ad esempio i percorsi di file, gli URL del servizio Web XML o qualsiasi altra informazione di configurazione personalizzata per un'applicazione. |
+| [**\<appSettings>**](appsettings-element-for-configuration.md) | Contiene le impostazioni dell'applicazione personalizzate, ad esempio i percorsi di file, gli URL del servizio Web XML o qualsiasi altra informazione di configurazione personalizzata per un'applicazione. |
 
 ## <a name="child-elements"></a>Elementi figlio
 
@@ -57,7 +57,7 @@ Nell'esempio seguente viene illustrato come aggiungere un'impostazione di config
 </appSettings>
 ```
 
-Nell'esempio seguente viene usato l'elemento `<add>` per definire due impostazioni di compatibilità in un'applicazione ASP.NET:
+Nell'esempio seguente viene usato l' `<add>` elemento per definire due impostazioni di compatibilità in un'applicazione ASP.NET:
 
 ```xml
 <appSettings>
@@ -66,6 +66,6 @@ Nell'esempio seguente viene usato l'elemento `<add>` per definire due impostazio
 </appSettings>
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Schema del file di configurazione per il .NET Framework](../index.md)

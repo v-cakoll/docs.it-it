@@ -3,10 +3,10 @@ title: 'Esempio: Risoluzione dei problemi di programmazione dinamica'
 ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 ms.openlocfilehash: ff179854066d024a89cb5a84a19d0b9bb054d6e5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128446"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Esempio: Risoluzione dei problemi di programmazione dinamica
@@ -48,7 +48,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
   
  In questo caso, l'aggiunta di una direttiva di runtime per `App.Core.ViewModels` ha risolto il problema. La causa radice è stata una chiamata API al metodo <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> che ha restituito **null** e l'applicazione ha automaticamente ignorato il problema fino a quando non si è verificato un arresto anomalo del sistema.  
   
- Nella programmazione dinamica, una procedura consigliata quando si usano le API di reflection in .NET Native consiste nell'usare gli overload <xref:System.Type.GetType%2A?displayProperty=nameWithType> che generano un'eccezione in caso di errore.  
+ Nella programmazione dinamica, una procedura consigliata quando si usano le API di reflection in .NET Native consiste nell'usare gli <xref:System.Type.GetType%2A?displayProperty=nameWithType> Overload che generano un'eccezione in caso di errore.  
   
 ## <a name="is-this-an-isolated-case"></a>Si tratta di un caso isolato?  
  Quando si usa `App.Core.ViewModels` potrebbero insorgere altri problemi.  È necessario decidere se vale la pena identificare e correggere ogni eccezione dei metadati mancanti, oppure risparmiare tempo e aggiungere le direttive per una classe di tipi maggiore.  In questo caso, l'aggiunta dei metadati `dynamic` per `App.Core.ViewModels` potrebbe essere l'approccio migliore se l'aumento delle dimensioni del file binario di output risultante non è un problema.  
@@ -56,7 +56,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 ## <a name="could-the-code-be-rewritten"></a>È possibile riscrivere il codice?  
  Se l'app aveva usato `typeof(LayoutApplicationVM)` invece di `Type.GetType("LayoutApplicationVM")`, la catena di strumenti potrebbe aver preservato i metadati di `browse`.  I metadati `invoke` tuttavia non sarebbero stati comunque creati e ciò avrebbe prodotto un'eccezione [MissingMetadataException](missingmetadataexception-class-net-native.md) durante la creazione dell'istanza del tipo. Per prevenire l'eccezione, sarebbe comunque necessario aggiungere una direttiva di runtime per lo spazio dei nomi o per il tipo che specifica i criteri `dynamic`. Per informazioni sulle direttive di runtime, vedere [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md).  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Introduzione](getting-started-with-net-native.md)
-- [Esempio: Gestione delle eccezioni al momento del data binding](example-handling-exceptions-when-binding-data.md)
+- [Per iniziare](getting-started-with-net-native.md)
+- [Esempio: Gestione delle eccezioni durante il data binding](example-handling-exceptions-when-binding-data.md)

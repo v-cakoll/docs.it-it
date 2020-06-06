@@ -4,25 +4,25 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ebea5e7c-ad58-43c5-8f2d-cca25ae1b721
 ms.openlocfilehash: 1a7c839a5ff8fac9470aea71a4886d9000086e9e
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70398612"
 ---
-# <a name="states"></a>\<Stati >
+# \<states>
 Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro rilevata che si riferiscono alla fase di creazione dei record di rilevamento.  
   
  Per ulteriori informazioni sulle query del profilo di rilevamento, vedere [profili di rilevamento](../../../windows-workflow-foundation/tracking-profiles.md)  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<sistema. > ServiceModel**](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<rilevamento >** ](tracking.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di trackingProfile**](trackingprofile.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> flusso di lavoro**](workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> workflowInstanceQueries**](workflowinstancequeries.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> workflowInstanceQuery**](workflowinstancequery.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Stati >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<trackingProfile>**](trackingprofile.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflow>**](workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflowInstanceQueries>**](workflowinstancequeries.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflowInstanceQuery>**](workflowinstancequery.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<states>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,7 +46,7 @@ Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuno.  
+ No.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -56,29 +56,29 @@ Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<workflowInstanceQuery>](workflowinstancequery.md)|Query che rileva modifiche del ciclo di vita dell'istanza del flusso di lavoro, come l'avvio o il completamento di un evento.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
  I record restituiti vengono filtrati in base agli stati di questa raccolta.  
   
  I valori possibili dello stato sono descritti nella tabella seguente.  
   
-|Stato|DESCRIZIONE|  
+|State|Descrizione|  
 |-----------|-----------------|  
 |Aborted|L'istanza del flusso di lavoro viene interrotta.|  
-|Operazione completata|L'istanza del flusso di lavoro viene completata.|  
-|Eliminato|L'istanza del flusso di lavoro viene eliminata.|  
+|Completato|L'istanza del flusso di lavoro viene completata.|  
+|Eliminata|L'istanza del flusso di lavoro viene eliminata.|  
 |Idle|L'istanza del flusso di lavoro è inattiva.|  
 |Persisted|L'istanza del flusso di lavoro è persistente.|  
 |Resumed|L'istanza del flusso di lavoro viene ripresa.|  
-|Started|L'istanza del flusso di lavoro è avviata.|  
+|Avviato|L'istanza del flusso di lavoro è avviata.|  
 |UnhandledException|L'istanza del flusso di lavoro ha rilevato un'eccezione non gestita.|  
-|Scaricato|L'istanza del flusso di lavoro viene scaricata.|  
-|Annullato|L'istanza del flusso di lavoro viene annullata.|  
+|Unloaded|L'istanza del flusso di lavoro viene scaricata.|  
+|Cancellati|L'istanza del flusso di lavoro viene annullata.|  
 |Suspended|L'istanza del flusso di lavoro è sospesa.|  
-|Terminated|L'istanza del flusso di lavoro è terminata.|  
+|Terminato|L'istanza del flusso di lavoro è terminata.|  
 |Unsuspended|L'istanza del flusso di lavoro non è sospesa.|  
   
 ## <a name="example"></a>Esempio  
@@ -94,7 +94,7 @@ Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro
 </workflowInstanceQueries>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>

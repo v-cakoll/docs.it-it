@@ -3,20 +3,20 @@ title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
 ms.openlocfilehash: cdaaacf0dfa75209d001f6e8d6ac7175816048aa
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74140800"
 ---
-# <a name="custombinding"></a>\<CustomBinding >
+# \<customBinding>
 
 Fornisce il controllo completo dello stack di messaggistica per l'utente.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**Binding**](bindings.md)\<
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**customBinding**\<  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<customBinding>**  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -191,13 +191,13 @@ Nelle sezioni seguenti vengono descritti attributi, elementi figlio ed elementi 
 
 |Elemento|Descrizione|
 |-------------|-----------------|
-|[\<compositeDuplex >](compositeduplex.md)|Specifica la messaggistica bidirezionale sull'associazione personalizzata. Viene usato con trasporti che non consentono comunicazioni duplex a livello nativo, ad esempio, HTTP. TCP, al contrario, consente comunicazioni duplex a livello nativo e non richiede l'uso di questo elemento di associazione affinché il servizio invii messaggi a un client.<br /><br /> Il client deve esporre un indirizzo affinché il servizio crei un contatto e stabilisca una connessione. Questo indirizzo client è fornito dall'attributo `ClientBaseAddress`.<br /><br /> L'elemento è di tipo <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|
-|[\<pnrpPeerResolver >](pnrppeerresolver.md)|Specifica un resolver dei nomi peer PNRP (Peer Name Resolution Protocol). L'elemento è di tipo <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|
-|[\<reliableSession >](reliablesession.md)|Specifica l'impostazione per WS-Reliable Messaging. Quando questo elemento viene aggiunto a un'associazione personalizzata, il canale risultante può supportare assicurazioni di recapito una volta esatta. L'elemento è di tipo <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|
-|[> di sicurezza \<](security-of-custombinding.md)|Specifica le opzioni di sicurezza per l'associazione personalizzata. L'elemento è di tipo <xref:System.ServiceModel.Configuration.SecurityElement>.|
-|[\<sslStreamSecurity >](sslstreamsecurity.md)|Specifica le impostazioni di sicurezza per l'associazione del flusso SSL. L'elemento è di tipo <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|
-|[\<transactionFlow >](transactionflow.md)|Specifica che l'associazione supporta il flusso delle transazioni e il protocollo che deve essere usato dall'attributo `transactionProtocol`. L'elemento è di tipo <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|
-|[\<windowsStreamSecurity >](windowsstreamsecurity.md)|Specifica le opzioni di sicurezza del flusso per un'associazione personalizzata. L'elemento è di tipo <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|
+|[\<compositeDuplex>](compositeduplex.md)|Specifica la messaggistica bidirezionale sull'associazione personalizzata. Viene usato con trasporti che non consentono comunicazioni duplex a livello nativo, ad esempio, HTTP. TCP, al contrario, consente comunicazioni duplex a livello nativo e non richiede l'uso di questo elemento di associazione affinché il servizio invii messaggi a un client.<br /><br /> Il client deve esporre un indirizzo affinché il servizio crei un contatto e stabilisca una connessione. Questo indirizzo client è fornito dall'attributo `ClientBaseAddress`.<br /><br /> L'elemento è di tipo <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|
+|[\<pnrpPeerResolver>](pnrppeerresolver.md)|Specifica un resolver dei nomi peer PNRP (Peer Name Resolution Protocol). L'elemento è di tipo <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|
+|[\<reliableSession>](reliablesession.md)|Specifica l'impostazione per WS-Reliable Messaging. Quando questo elemento viene aggiunto a un'associazione personalizzata, il canale risultante può supportare assicurazioni di recapito una volta esatta. L'elemento è di tipo <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|
+|[\<security>](security-of-custombinding.md)|Specifica le opzioni di sicurezza per l'associazione personalizzata. L'elemento è di tipo <xref:System.ServiceModel.Configuration.SecurityElement>.|
+|[\<sslStreamSecurity>](sslstreamsecurity.md)|Specifica le impostazioni di sicurezza per l'associazione del flusso SSL. L'elemento è di tipo <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|
+|[\<transactionFlow>](transactionflow.md)|Specifica che l'associazione supporta il flusso delle transazioni e il protocollo che deve essere usato dall'attributo `transactionProtocol`. L'elemento è di tipo <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|
+|[\<windowsStreamSecurity>](windowsstreamsecurity.md)|Specifica le opzioni di sicurezza del flusso per un'associazione personalizzata. L'elemento è di tipo <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|
 
 ### <a name="parent-elements"></a>Elementi padre
 
@@ -205,7 +205,7 @@ Nelle sezioni seguenti vengono descritti attributi, elementi figlio ed elementi 
 |-------------|-----------------|
 |associazioni|Contiene tutte le associazioni per le applicazioni Windows Communication Foundation (WCF).|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Le associazioni personalizzate forniscono il controllo completo dello stack dei messaggi WCF. È possibile creare associazioni speciali su misura aggiungendo gli elementi di configurazione per le entità specifiche. Ad esempio, l'utente può combinare la sezione `httpsTransport`, la sezione `reliableSession` e la sezione `security` per creare un'associazione affidabile e protetto basata su HTTPS.
 
@@ -279,31 +279,31 @@ Un'associazione personalizzata viene costruita usando uno dei <xref:System.Servi
 
 Nella tabella seguente viene fornito un riepilogo delle opzioni per ogni livello.
 
-|Livello|Opzioni|Richiesto|
+|Livello|Opzioni|Necessario|
 |-----------|-------------|--------------|
 |Flusso transazioni|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|No|
 |Affidabilità|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|No|
 |Sicurezza|Simmetrico, asimmetrico, livello di trasporto|No|
 |Cambio di forma|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|No|
 |Aggiornamenti del trasporto|Flusso SSL, flusso di Windows, resolver Peer|No|
-|Codifica|Testo, binario, MTOM, personalizzata|Yes|
-|Trasporto|TCP, named pipe, HTTP, HTTPS, versioni di MSMQ, personalizzato|Yes|
+|Codifica|Testo, binario, MTOM, personalizzata|Sì|
+|Trasporto|TCP, named pipe, HTTP, HTTPS, versioni di MSMQ, personalizzato|Sì|
 
 È inoltre possibile definire elementi di associazione personalizzati e inserirli tra i livelli appena elencati.
 
 Per una discussione su come usare un'associazione personalizzata per modificare un'associazione fornita dal sistema, vedere [procedura: personalizzare un'associazione fornita dal sistema](../../../wcf/extending/how-to-customize-a-system-provided-binding.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.Configuration.BindingsSection>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Binding \<](bindings.md)
-- [Associazioni](../../../wcf/bindings.md)
+- [\<binding>](bindings.md)
+- [Binding](../../../wcf/bindings.md)
 - [Estensione delle associazioni](../../../wcf/extending/extending-bindings.md)
 - [Associazioni personalizzate](../../../wcf/extending/custom-bindings.md)
 - [CustomBinding (elemento)](custombinding.md)
-- [Associazioni](../../../wcf/bindings.md)
+- [Binding](../../../wcf/bindings.md)
 - [Configurazione di associazioni fornite dal sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Uso di associazioni per configurare servizi e client](../../../wcf/using-bindings-to-configure-services-and-clients.md)

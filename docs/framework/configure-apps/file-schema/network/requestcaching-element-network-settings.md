@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
 ms.openlocfilehash: afee69eb894518b1c88483e34a1d64d452019244
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74802123"
 ---
 # <a name="requestcaching-element-network-settings"></a>Elemento \<requestCaching> (impostazioni di rete)
 Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<requestCaching >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<requestCaching>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +36,7 @@ Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
+ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
   
@@ -49,7 +49,7 @@ Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.
   
 ## <a name="policylevel-attribute"></a>policyLevel (attributo)  
   
-|Valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |`Default`|Restituisce la risorsa memorizzata nella cache se la risorsa è aggiornata, la lunghezza del contenuto è precisa e sono presenti gli attributi relativi alla scadenza, alla modifica e alla lunghezza del contenuto.|  
 |`BypassCache`|Restituisce la risorsa dal server.|  
@@ -65,7 +65,7 @@ Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|Elemento facoltativo.<br /><br /> Descrive se la memorizzazione nella cache HTTP è attiva e descrive i criteri di memorizzazione nella cache predefiniti.|  
-|[\<elemento > defaultFtpCachePolicy (impostazioni di rete)](defaultftpcachepolicy-element-network-settings.md)|Elemento facoltativo.<br /><br /> Descrive se la memorizzazione nella cache FTP è attiva e descrive i criteri di memorizzazione nella cache predefiniti.|  
+|[\<defaultFtpCachePolicy>Elemento (impostazioni di rete)](defaultftpcachepolicy-element-network-settings.md)|Elemento facoltativo.<br /><br /> Descrive se la memorizzazione nella cache FTP è attiva e descrive i criteri di memorizzazione nella cache predefiniti.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -86,7 +86,7 @@ Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Net.Cache?displayProperty=nameWithType>
 - [Schema delle impostazioni di rete](index.md)

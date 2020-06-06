@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 ms.openlocfilehash: b7333016fea2d46285d3c98181c0ca4904c376f8
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74089123"
 ---
-# <a name="servicepointmanager-element-network-settings"></a>Elemento > di \<servicePointManager (impostazioni di rete)
+# <a name="servicepointmanager-element-network-settings"></a>Elemento \<servicePointManager> (impostazioni di rete)
 Configura le connessioni alle risorse di rete.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**Impostazioni**](settings-element-network-settings.md)\<
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**ServicePointManager** >
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<servicePointManager>**
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,12 +48,12 @@ Configura le connessioni alle risorse di rete.
 |`checkCertificateRevocationList`|Specifica se il sistema deve controllare se il certificato è stato revocato prima di utilizzare il certificato. Il valore predefinito è `false`.|  
 |`dnsRefreshTimeout`|Specifica la durata della memorizzazione nella cache delle risoluzioni di Domain Name Service (DNS) in combinazione con l'opzione del round robin DNS, in millisecondi. Il valore predefinito è 120.000 millisecondi (due minuti).|  
 |`enableDnsRoundRobin`|Specifica se le risoluzioni DNS dei nomi host con più indirizzi IP (Internet Protocol) restituiscono tutti gli indirizzi oppure solo la prima. Il valore predefinito è `false`.|  
-|`encryptionPolicy`|Specifica i criteri di crittografia applicati a una sessione SSL/TLS in un'istanza di <xref:System.Net.ServicePointManager>. I valori possibili sono equivalenti ai valori per l'enumerazione <xref:System.Net.Security.EncryptionPolicy>. Quando i criteri di crittografia sono impostati su `NoEncryption`, è necessario utilizzare <xref:System.Security.Authentication.CipherAlgorithmType.Null>. Il valore predefinito è `RequireEncryption`.|  
-|`expect100Continue`|Specifica se i metodi POST devono ricevere una risposta `100-continue` dal server. Il valore predefinito è `true`.|  
+|`encryptionPolicy`|Specifica i criteri di crittografia applicati a una sessione SSL/TLS in un' <xref:System.Net.ServicePointManager> istanza di. I valori possibili sono equivalenti ai valori per l' <xref:System.Net.Security.EncryptionPolicy> enumerazione. L'utilizzo di <xref:System.Security.Authentication.CipherAlgorithmType.Null> è obbligatorio quando il criterio di crittografia è impostato su `NoEncryption` . Il valore predefinito è `RequireEncryption`.|  
+|`expect100Continue`|Specifica se i metodi POST devono prevedere la ricezione di una `100-continue` risposta dal server. Il valore predefinito è `true`.|  
 |`useNagleAlgorithm`|Specifica se le connessioni controllate da Gestione punti di servizio utilizzano l'algoritmo Nagle. Il valore predefinito è `true`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuna.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -61,12 +61,12 @@ Configura le connessioni alle risorse di rete.
 |-----------------|---------------------|  
 |[Impostazioni](settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Net.ServicePointManager>
 - <xref:System.Net.Security.EncryptionPolicy>

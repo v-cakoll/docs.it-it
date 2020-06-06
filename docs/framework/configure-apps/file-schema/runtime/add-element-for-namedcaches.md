@@ -6,20 +6,20 @@ helpviewer_keywords:
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 ms.openlocfilehash: c1345022b79df371ad9c89a39a0a8b625e26608c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154505"
 ---
-# <a name="add-element-for-namedcaches"></a>\<Add> \<Element per namedCaches>
-Aggiunge `namedCache` una voce `namedCaches` alla raccolta per una cache di memoria.  
+# <a name="add-element-for-namedcaches"></a>Elemento \<add> per \<namedCaches>
+Aggiunge una `namedCache` voce alla `namedCaches` raccolta per una cache in memoria.  
   
-[**\<>di configurazione**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<>memoryCache**](memorycache-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>namedCaches**](namedcaches-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<aggiungere>**  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<memoryCache>**](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namedCaches>**](namedcaches-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -30,20 +30,20 @@ Aggiunge `namedCache` una voce `namedCaches` alla raccolta per una cache di memo
  </namedCaches>  
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>Tipo  
  `None`  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |-|-|  
-|`CacheMemoryLimitMegabytes`|Valore intero che specifica la dimensione massima consentita (in <xref:System.Runtime.Caching.MemoryCache> megabyte) fino a cui può aumentare un'istanza. Il valore predefinito è 0, <xref:System.Runtime.Caching.MemoryCache> il che significa che le euristiche di ridimensionamento automatico della classe vengono utilizzate per impostazione predefinita.|  
+|`CacheMemoryLimitMegabytes`|Valore intero che specifica le dimensioni massime consentite (in megabyte) che un'istanza di un oggetto <xref:System.Runtime.Caching.MemoryCache> può raggiungere. Il valore predefinito è 0, che indica che <xref:System.Runtime.Caching.MemoryCache> per impostazione predefinita vengono usate le euristiche di ridimensionamento automatico della classe.|  
 |`Name`|Nome della cache.|  
-|`PhysicalMemoryLimitPercentage`|Valore intero compreso tra 0 e 100 che specifica la percentuale massima di memoria del computer installata fisicamente che può essere utilizzata dalla cache. Il valore predefinito è 0, <xref:System.Runtime.Caching.MemoryCache> il che significa che le euristiche di ridimensionamento automatico della classe vengono utilizzate per impostazione predefinita.|  
-|`PollingInterval`|Un valore che indica l'intervallo di tempo dopo il quale l'implementazione della cache confronta il carico di memoria corrente con i limiti di memoria percentuali e assoluti impostati per l'istanza della cache. Questo valore viene immesso nel formato "HH:MM:SS".|  
+|`PhysicalMemoryLimitPercentage`|Valore intero compreso tra 0 e 100 che specifica la percentuale massima di memoria del computer installata fisicamente che può essere utilizzata dalla cache. Il valore predefinito è 0, che indica che <xref:System.Runtime.Caching.MemoryCache> per impostazione predefinita vengono usate le euristiche di ridimensionamento automatico della classe.|  
+|`PollingInterval`|Un valore che indica l'intervallo di tempo dopo il quale l'implementazione della cache confronta il carico di memoria corrente con i limiti di memoria percentuali e assoluti impostati per l'istanza della cache. Questo valore viene immesso nel formato "HH: MM: SS".|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  `None`  
@@ -52,13 +52,13 @@ Aggiunge `namedCache` una voce `namedCaches` alla raccolta per una cache di memo
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<>namedCaches](namedcaches-element-cache-settings.md)|Contiene una raccolta di impostazioni <xref:System.Runtime.Caching.MemoryCache> di configurazione per le istanze denominate.|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|Contiene una raccolta di impostazioni di configurazione per le istanze denominate <xref:System.Runtime.Caching.MemoryCache> .|  
   
-## <a name="remarks"></a>Osservazioni  
- L'elemento `add` aggiunge una `namedCaches` voce alla raccolta per una cache di memoria. È possibile [clear](clear-element-for-namedcaches.md) utilizzare l'elemento `add` clear prima di utilizzare l'elemento per essere certi che non siano presenti altre cache denominate nella raccolta. Questo elemento può essere utilizzato nel file machine.config e nel file Web.config.  
+## <a name="remarks"></a>Commenti  
+ L' `add` elemento aggiunge una voce alla `namedCaches` raccolta per una cache in memoria. È possibile utilizzare l'elemento [Clear](clear-element-for-namedcaches.md) prima di utilizzare l' `add` elemento per verificare che non siano presenti altre cache denominate nella raccolta. Questo elemento può essere utilizzato nel file Machine. config e nel file Web. config.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come `namedCache` definire `namedCaches` le impostazioni per la voce predefinita nella raccolta per una cache di memoria.  
+ Nell'esempio seguente viene illustrato come definire le impostazioni per la `namedCache` voce predefinita della `namedCaches` raccolta per una cache in memoria.  
   
 ```xml  
 <configuration>  
@@ -77,6 +77,6 @@ Aggiunge `namedCache` una voce `namedCaches` alla raccolta per una cache di memo
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [\<Elemento> namedCaches (impostazioni cache)](namedcaches-element-cache-settings.md)
+- [\<namedCaches>Elemento (impostazioni cache)](namedcaches-element-cache-settings.md)
