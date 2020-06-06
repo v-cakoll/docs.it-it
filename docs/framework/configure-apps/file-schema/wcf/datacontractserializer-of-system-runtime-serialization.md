@@ -1,20 +1,20 @@
 ---
-title: <dataContractSerializer>di < System. Runtime. Serialization >
+title: <dataContractSerializer>di <System. Runtime. Serialization>
 ms.date: 03/30/2017
 ms.assetid: d9b3d625-be3f-4768-8e0d-1b7e6929f6a8
 ms.openlocfilehash: eb556f533af1f99049382e9a2e34465f88d563db
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70398088"
 ---
-# <a name="datacontractserializer-of-systemruntimeserialization"></a>\<> DataContractSerializer di \<System. Runtime. Serialization >
+# <a name="datacontractserializer-of-systemruntimeserialization"></a>\<dataContractSerializer> di \<system.runtime.serialization>
 Contiene dati di configurazione per <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Runtime. Serialization >** ](system-runtime-serialization.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> dataContractSerializer**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.runtime.serialization>**](system-runtime-serialization.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<dataContractSerializer>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,11 +58,11 @@ Contiene dati di configurazione per <xref:System.Runtime.Serialization.DataContr
 |-------------|-----------------|  
 |[\<system.runtime.serialization>](system-runtime-serialization.md)|Rappresenta l'elemento radice della sezione dello spazio dei nomi <xref:System.Runtime.Serialization> e contiene elementi per l'impostazione delle opzioni del serializzatore <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
  Per ulteriori informazioni sui tipi noti, vedere <xref:System.Runtime.Serialization.DataContractSerializer> e [tipi noti del contratto dati](../../../wcf/feature-details/data-contract-known-types.md).  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
-- [Tipi noti di contratto di dati](../../../wcf/feature-details/data-contract-known-types.md)
+- [Tipi conosciuti di contratto dati](../../../wcf/feature-details/data-contract-known-types.md)

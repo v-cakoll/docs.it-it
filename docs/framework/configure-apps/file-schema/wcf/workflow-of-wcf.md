@@ -3,20 +3,20 @@ title: <workflow>di WCF
 ms.date: 03/30/2017
 ms.assetid: c0443eba-d3b4-4fae-886e-9878daf77691
 ms.openlocfilehash: c6c9e14a4ad3d9713ae2d35d6ade20690e0c3575
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69932786"
 ---
-# <a name="workflow-of-wcf"></a>\<> del flusso di lavoro di WCF
+# <a name="workflow-of-wcf"></a>\<workflow>di WCF
 Configurare un partecipante del rilevamento che ascolta i record di rilevamento generati direttamente durante la fase di esecuzione e li elabora in base alle impostazioni configurate. Tali impostazioni includono la scrittura in un output specifico, ad esempio file, console, ETW, l'elaborazione/aggregazione dei record o qualsiasi altra combinazione che potrebbe essere richiesta.  
   
  Per altre informazioni sui partecipanti di rilevamento e rilevamento del flusso di lavoro, vedere Rilevamento e traccia [del flusso di lavoro](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) [partecipanti](../../../windows-workflow-foundation/tracking-participants.md).  
   
  \<system.serviceModel>  
-\<rilevamento >  
-\<partecipanti >  
+\<tracking>  
+\<participants>  
 \<add>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -40,18 +40,18 @@ Configurare un partecipante del rilevamento che ascolta i record di rilevamento 
 |-------------|-----------------|  
 |name|Stringa che specifica il nome di un partecipante del rilevamento.|  
 |profileName|Stringa che specifica il nome del profilo di rilevamento che definisce i record di rilevamento sottoscritti dal partecipante del rilevamento.|  
-|type|Stringa che specifica il tipo di un partecipante del rilevamento.|  
+|tipo|Stringa che specifica il tipo di un partecipante del rilevamento.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<participants>](../windows-workflow-foundation/participants.md)|Elenco di partecipanti del rilevamento.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
  I partecipanti del rilevamento vengono usati per ottenere i dati di rilevamento generati dal flusso di lavoro e archiviarli in supporti differenti. Analogamente, è anche possibile eseguire qualsiasi operazione di post-elaborazione sui record di rilevamento all'interno del partecipante del rilevamento.  
   
  Più partecipanti del rilevamento possono usare simultaneamente gli eventi di rilevamento. Ogni partecipante del rilevamento può essere associato a un profilo di rilevamento diverso.  
@@ -88,7 +88,7 @@ Configurare un partecipante del rilevamento che ascolta i record di rilevamento 
 </configuration>
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>

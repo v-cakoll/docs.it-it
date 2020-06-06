@@ -3,22 +3,22 @@ title: Elemento <localServiceSettings>
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
 ms.openlocfilehash: 4883fd563ecf989d67c369085df4fc43d0c5f078
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400308"
 ---
-# <a name="localservicesettings-element"></a>\<elemento > localServiceSettings
+# <a name="localservicesettings-element"></a>Elemento \<localServiceSettings>
 Specifica le impostazioni di sicurezza di un servizio locale per questa associazione.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<CustomBinding >** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di sicurezza**](security-of-custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> localServiceSettings**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<localServiceSettings>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,10 +46,10 @@ Specifica le impostazioni di sicurezza di un servizio locale per questa associaz
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |`detectReplays`|Valore booleano che specifica se gli attacchi di tipo replay contro il canale vengono rilevati e gestiti automaticamente. Il valore predefinito è `false`.|  
-|`inactivityTimeout`|<xref:System.TimeSpan> positivo che specifica il periodo di inattività del canale prima che scada. L'impostazione predefinita è "01:00:00".|  
+|`inactivityTimeout`|Valore positivo <xref:System.TimeSpan> che specifica la durata dell'inattività del canale prima del timeout. Il valore predefinito è "01:00:00".|  
 |`issuedCookieLifeTime`|<xref:System.TimeSpan> specifica la durata di tutti i nuovi cookie di sicurezza. I cookie che superano la durata vengono riciclati e devono essere negoziati di nuovo. Il valore predefinito è "10:00:00".|  
 |`maxCachedCookies`|Un numero intero positivo che specifica il numero massimo di cookie che possono essere memorizzati nella cache. Il valore predefinito è 1000.|  
 |`maxClockSkew`|<xref:System.TimeSpan> specifica la differenza massima di tempo tra gli orologi di sistema delle due parti che stanno comunicando. Il valore predefinito è "00:05:00".<br /><br /> Quando l'impostazione di questo valore è quella predefinita, il destinatario accetta i messaggi con timestamp relativi all'ora di invio precedenti o successivi all'ora in cui il messaggio è stato ricevuto. I messaggi che non passano i test dell'ora di invio vengono rifiutati. Questa impostazione viene usata in combinazione con l'attributo `replayWindow`.|  
@@ -64,7 +64,7 @@ Specifica le impostazioni di sicurezza di un servizio locale per questa associaz
 |`timestampValidityDuration`|<xref:System.TimeSpan> positivo che specifica il periodo di validità di un timestamp. L'impostazione predefinita è "00:15:00".|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -73,7 +73,7 @@ Specifica le impostazioni di sicurezza di un servizio locale per questa associaz
 |[\<security>](security-of-custombinding.md)|Specifica le opzioni di sicurezza di un'associazione personalizzata.|  
 |[\<secureConversationBootstrap>](secureconversationbootstrap.md)|Specifica i valori predefiniti usati per iniziare un servizio di conversazione protetta.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
  Le impostazioni sono locali perché non vengono pubblicate unitamente ai criteri di sicurezza del servizio e non influiscono sull'associazione del client.  
   
  Gli attributi seguenti dell'elemento `localServiceSecuritySettings` consentono di attenuare un attacco di tipo Denial of Service (DoS):  
@@ -88,16 +88,16 @@ Specifica le impostazioni di sicurezza di un servizio locale per questa associaz
   
  In una sessione di conversazione protetta, entrambi gli attributi `inactivityTimeout` e `receiveTimeout` nell'associazione influiscono sul timeout della sessione. Il valore inferiore tra i due determina quando si verificano i timeout.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
 - <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalServiceSettings%2A>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Associazioni](../../../wcf/bindings.md)
+- [Binding](../../../wcf/bindings.md)
 - [Estensione delle associazioni](../../../wcf/extending/extending-bindings.md)
 - [Associazioni personalizzate](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
-- [Procedura: Creare un'associazione personalizzata usando SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Procedura: creare un'associazione personalizzata usando SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Sicurezza delle associazioni personalizzate](../../../wcf/samples/custom-binding-security.md)

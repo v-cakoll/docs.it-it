@@ -22,10 +22,10 @@ helpviewer_keywords:
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
 ms.openlocfilehash: 35ed53fc480e218df595794f80af2458f3ecec38
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73039151"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>Schema dei file di configurazione per .NET Framework
@@ -37,21 +37,21 @@ Per informazioni sui tipi, il formato e la posizione dei file di configurazione,
 > [!IMPORTANT]
 > Gli attributi e i tag XML nei file di configurazione fanno distinzione tra maiuscole e minuscole.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
-[ **\<elemento > di configurazione** ](configuration-element.md)\
+[**\<configuration>** Elemento](configuration-element.md)\
 Elemento di primo livello per tutti i file di configurazione.
 
-[ **\<elemento > di associazione** ](assemblybinding-element-for-configuration.md)\
+[**\<assemblyBinding>** Elemento](assemblybinding-element-for-configuration.md)\
 Specifica i criteri di associazione degli assembly al livello di configurazione.
 
-[ **\<elemento > linkedConfiguration** ](linkedconfiguration-element.md)\
+[**\<linkedConfiguration>** Elemento](linkedconfiguration-element.md)\
 Specifica un file di configurazione da includere.
 
 [Schema delle impostazioni di avvio](./startup/index.md)\
 Elementi che specificano la versione del Common Language Runtime da usare.
 
-[Schema delle impostazioni di Runtime](./runtime/index.md)\
+[Schema delle impostazioni di runtime](./runtime/index.md)\
 Elementi che configurano il comportamento del runtime e dell'associazione di assembly.
 
 [Schema delle impostazioni di rete](./network/index.md)\
@@ -63,16 +63,16 @@ Elementi che consentono di eseguire il mapping di nomi di algoritmi descrittivi 
 [Schema delle sezioni di configurazione](configuration-sections-schema.md)\
 Elementi usati per creare e usare le sezioni di configurazione per le impostazioni personalizzate.
 
-[Schema delle impostazioni di traccia e Debug](./trace-debug/index.md)\
+[Schema delle impostazioni di traccia e debug](./trace-debug/index.md)\
 Elementi che specificano i listener e le opzioni di traccia.
 
-[Schema delle impostazioni del compilatore e del provider di linguaggio](./compiler/index.md)\
+[Schema delle impostazioni del compilatore e del provider del linguaggio](./compiler/index.md)\
 Elementi che specificano la configurazione del compilatore per i provider di lingue disponibili.
 
 [Schema delle impostazioni dell'applicazione](application-settings-schema.md)\
 Elementi che consentono a un'applicazione Windows Forms o ASP.NET di archiviare e recuperare le impostazioni con ambito di applicazione e con ambito di utente.
 
-[Schema delle impostazioni dell'App](./appsettings/index.md)\
+[Schema delle impostazioni dell'app](./appsettings/index.md)\
 Contiene le impostazioni dell'applicazione personalizzate, ad esempio i percorsi di file, gli URL del servizio Web XML o qualsiasi altra informazione di configurazione personalizzata per un'applicazione.
 
 [Schema delle impostazioni Web](./web/index.md)\
@@ -81,13 +81,13 @@ Elementi per la configurazione del funzionamento di ASP.NET con un'applicazione 
 [Schema di configurazione Windows Forms](winforms/index.md)\
 Tutti gli elementi nella sezione di configurazione Windows Forms Application, che include personalizzazioni quali il supporto di più monitor e DPI.
 
-[Schema di configurazione WCF](./wcf/index.md)\
+[Schema di configurazione di WCF](./wcf/index.md)\
 Tutti gli elementi che consentono di configurare il servizio WCF e le applicazioni client.
 
-\ [della sintassi delle direttive WCF](./wcf-directive/index.md)
-Viene descritta la direttiva `@ServiceHost`, che definisce gli attributi specifici della pagina utilizzati dal compilatore svc.
+[Sintassi delle direttive WCF](./wcf-directive/index.md)\
+Viene descritta la `@ServiceHost` direttiva, che definisce gli attributi specifici della pagina utilizzati dal compilatore svc.
 
-[Schema di configurazione di Windows Identity Foundation](windows-identity-foundation/index.md)\
+[Schema di configurazione di WIF](windows-identity-foundation/index.md)\
 Tutti gli elementi dello schema di configurazione di Windows Identity Foundation (WIF).
 
 ## <a name="related-sections"></a>Sezioni correlate

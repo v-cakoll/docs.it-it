@@ -3,23 +3,23 @@ title: <transport> di <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
 ms.openlocfilehash: 1afeed62fcbf3b083d69a7cedb7eb80b81f5c17b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73732733"
 ---
-# <a name="transport-of-wshttpbinding"></a>\<> di trasporto di \<WSHttpBinding >
+# <a name="transport-of-wshttpbinding"></a>\<transport> di \<wsHttpBinding>
 
 Definisce le impostazioni di autenticazione per il trasporto HTTP.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**Binding**](bindings.md)\<
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**wsHttpBinding**](wshttpbinding.md)\<
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Binding** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**sicurezza**](security-of-wshttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Transport** >  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<wsHttpBinding>**](wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -41,7 +41,7 @@ Definisce le impostazioni di autenticazione per il trasporto HTTP.
 </wsHttpBinding>
 ```
 
-## <a name="type"></a>Digitare
+## <a name="type"></a>Tipo
 
 <xref:System.ServiceModel.HttpTransportSecurity>
 
@@ -60,7 +60,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ## <a name="clientcredentialtype-attribute"></a>Attributo clientCredentialType
 
-|Value|Descrizione|
+|Valore|Description|
 |-----------|-----------------|
 |`None`|La sicurezza è disabilitata.|
 |`Basic`|Usa l'autenticazione di base.|
@@ -71,7 +71,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ## <a name="proxycredentialtype-attribute"></a>Attributo proxyCredentialType
 
-|Value|Descrizione|
+|Valore|Description|
 |-----------|-----------------|
 |`None`|La sicurezza è disabilitata.|
 |`Basic`|Usa l'autenticazione di base.|
@@ -82,22 +82,22 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ### <a name="child-elements"></a>Elementi figlio
 
-Nessuna.
+No.
 
 ### <a name="parent-elements"></a>Elementi padre
 
 |Elemento|Descrizione|
 |-------------|-----------------|
-|[\<security >](security-of-wshttpbinding.md)|Rappresenta le funzionalità di sicurezza di [\<wshttpbinding >](wshttpbinding.md).|
+|[\<security>](security-of-wshttpbinding.md)|Rappresenta le funzionalità di sicurezza di [\<wsHttpBinding>](wshttpbinding.md) .|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.ServiceModel.HttpTransportSecurity>
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
-- [Protezione di servizi e client](../../../wcf/feature-details/securing-services-and-clients.md)
-- [Associazioni](../../../wcf/bindings.md)
+- [Securing Services and Clients](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Binding](../../../wcf/bindings.md)
 - [Configurazione di associazioni fornite dal sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Uso di associazioni per configurare servizi e client](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding >](bindings.md)
+- [\<binding>](bindings.md)

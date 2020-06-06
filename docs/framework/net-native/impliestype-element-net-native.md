@@ -1,15 +1,15 @@
 ---
-title: <ImpliesType>Elemento (.NET native)
+title: <ImpliesType>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 ms.openlocfilehash: 57f4208233cd5e8544b4f1c254e3b0e0eaacd508
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79181011"
 ---
-# <a name="impliestype-element-net-native"></a>\<ImpliesType> elemento (.NET native)
+# <a name="impliestype-element-net-native"></a>\<ImpliesType>Elemento (.NET Native)
 Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al tipo contenitore.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -31,7 +31,7 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Tipo di attributo|Descrizione|  
 |---------------|--------------------|-----------------|  
@@ -49,13 +49,13 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
   
 ## <a name="name-attribute"></a>Name (attributo)  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
-|*Type_name*|Nome del tipo. Se il tipo rappresentato da questo elemento `<ImpliesType>` si trova nello stesso spazio dei nomi dell'elemento `<Type>` contenitore, *type_name* può includere il nome del tipo senza lo spazio dei nomi. In caso contrario, *type_name* deve includere il nome completo del tipo.|  
+|*type_name*|Nome del tipo. Se il tipo rappresentato da questo elemento `<ImpliesType>` si trova nello stesso spazio dei nomi dell'elemento `<Type>` contenitore, *type_name* può includere il nome del tipo senza lo spazio dei nomi. In caso contrario, *type_name* deve includere il nome completo del tipo.|  
   
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
@@ -66,11 +66,11 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<Tipo>](type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
-|[\<>TypeInstantiation](typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
-|[\<>del metodo](method-element-net-native.md)|Applica i criteri di reflection a un metodo.|  
+|[\<Type>](type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
+|[\<Method>](method-element-net-native.md)|Applica i criteri di reflection a un metodo.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'elemento `<ImpliesType>` viene usato principalmente dalle librerie. Consente di risolvere il seguente scenario:  
   
 - Se una routine deve eseguire la reflection su un tipo, deve necessariamente eseguirla anche su un secondo tipo.  
@@ -89,7 +89,7 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
   
  Questa direttiva non ha alcun effetto a meno che non sia stata definita un'impostazione di criteri `Explicit` per un'istanza di `Dynamic`. Se, ad esempio, è il caso per `Explicit<Int32>`, viene creata un'istanza di `Implicit<Int32>` con membri pubblici che contengono una radice e i relativi metadati vengono resi accessibili per la programmazione dinamica.  
   
- Di seguito è riportato un esempio reale che si applica ad almeno un serializzatore. Le direttive acquisiscono il requisito che `IList<`riflette su un elemento tipizzato come *qualcosa* `>` comporta anche riflettere sul tipo `List<` *di elemento* `>` corrispondente senza richiedere alcuna annotazione per applicazione.  
+ Di seguito è riportato un esempio reale che si applica ad almeno un serializzatore. Le direttive acquisiscono il requisito che la reflection su un elemento tipizzato come `IList<` *elemento* `>` comporta anche la reflection sul tipo di `List<` *elemento* corrispondente `>` senza richiedere annotazioni per ogni applicazione.  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  
@@ -108,8 +108,8 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
 </Type>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Riferimento a file di configurazione di direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementi direttiva di runtime](runtime-directive-elements.md)
-- [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime)
+- [Impostazioni dei criteri della direttiva di runtime](runtime-directive-policy-settings.md)

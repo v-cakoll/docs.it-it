@@ -6,18 +6,18 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
 ms.openlocfilehash: 7aa3755be97a839cb576d53852b75cfe50e39276
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "72773938"
 ---
-# <a name="client"></a>> client di \<
+# \<client>
 L'elemento `client` definisce un elenco di endpoint ai quali può connettersi un client.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<client** >
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<client>**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -36,14 +36,14 @@ L'elemento `client` definisce un elenco di endpoint ai quali può connettersi un
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.
 
 ### <a name="attributes"></a>Attributi
- Nessuno
+ nessuno
 
 ### <a name="child-elements"></a>Elementi figlio
 
 |Elemento|Descrizione|
 |-------------|-----------------|
-|[\<endpoint >](endpoint-of-client.md)|Contiene una raccolta di elementi endpoint che specificano gli endpoint a cui il client può connettersi.|
-|[\<metadati >](metadata.md)|Contiene impostazioni per l'elaborazione di metadati.|
+|[\<endpoint>](endpoint-of-client.md)|Contiene una raccolta di elementi endpoint che specificano gli endpoint a cui il client può connettersi.|
+|[\<metadata>](metadata.md)|Contiene impostazioni per l'elaborazione di metadati.|
 
 ### <a name="parent-elements"></a>Elementi padre
 
@@ -51,7 +51,7 @@ L'elemento `client` definisce un elenco di endpoint ai quali può connettersi un
 |-------------|-----------------|
 |[\<system.serviceModel>](system-servicemodel.md)|L'elemento radice di tutti gli elementi di configurazione di Windows Communication Foundation (WCF).|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
  La sezione `client` definisce un elenco di endpoint ai quali può connettersi un client. Ogni endpoint elencato nella sezione client definisce la propria associazione, comportamento e contratto. È identificato in modo univoco dalla combinazione degli attributi `name` e `contract`. Il codice client specifica il `name` al quale connettere un endpoint per il servizio implementato dal client. Se l'attributo `name` è omesso, l'endpoint si comporta come endpoint predefinito per il contratto che implementa.
 
  In aggiunta, questa sezione specifica anche impostazioni per l'elaborazione di metadati.

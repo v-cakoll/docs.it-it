@@ -1,15 +1,15 @@
 ---
-title: Elemento <Type> (.NET Native)
+title: <Type>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 ms.openlocfilehash: 4e88b49b82513079ddcf6f0bafe02d44235a406a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73091846"
 ---
-# <a name="type-element-net-native"></a>Elemento > di tipo \<(.NET Native)
+# <a name="type-element-net-native"></a>\<Type>Elemento (.NET Native)
 
 Applica i criteri di runtime a un determinato tipo, ad esempio una classe o una struttura.
 
@@ -37,7 +37,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 |Attributo|Tipo di attributo|Descrizione|
 |---------------|--------------------|-----------------|
-|`Name`|Generale|Attributo obbligatorio. Specifica il nome del tipo.|
+|`Name`|Generale|Attributo obbligatorio. Specifica il nome tipo.|
 |`Activate`|Reflection|Attributo facoltativo. Controlla l'accesso in fase di esecuzione ai costruttori per abilitare l'attivazione di istanze.|
 |`Browse`|Reflection|Attributo facoltativo. Controlla le query per le informazioni sugli elementi di programma, ma non abilita l'accesso in fase di esecuzione.|
 |`Dynamic`|Reflection|Attributo facoltativo. Controlla l'accesso in fase di esecuzione a tutti i membri dei tipi, inclusi costruttori, metodi, campi, proprietà ed eventi, per abilitare la programmazione dinamica.|
@@ -51,13 +51,13 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ## <a name="name-attribute"></a>Name (attributo)
 
-|Value|Descrizione|
+|Valore|Description|
 |-----------|-----------------|
-|*type_name*|Nome del tipo. Se questo elemento `<Type>` è figlio di un elemento [\<Namespace>](namespace-element-net-native.md) o di un altro elemento `<Type>`, *type_name* può includere il nome del tipo senza il relativo spazio dei nomi. In caso contrario, *type_name* deve includere il nome completo del tipo.|
+|*type_name*|Nome del tipo. Se questo `<Type>` elemento è figlio di un [\<Namespace>](namespace-element-net-native.md) elemento o di un altro `<Type>` elemento, *type_name* possibile includere il nome del tipo senza il relativo spazio dei nomi. In caso contrario, *type_name* deve includere il nome completo del tipo.|
 
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi
 
-|Value|Descrizione|
+|Valore|Description|
 |-----------|-----------------|
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|
 
@@ -88,23 +88,23 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 |`<Type>`|Applica i criteri di reflection a un tipo e a tutti i membri.|
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 La reflection, la serializzazione e gli attributi di interoperabilità sono facoltativi. Se non è presente, l'elemento `<Type>` funge da contenitore i cui tipi figlio definiscono criteri per i singoli membri.
 
-Se un elemento `<Type>` è figlio di un elemento [\<Assembly>](assembly-element-net-native.md), [\<Namespace>](namespace-element-net-native.md), `<Type>` o [\<TypeInstantiation>](typeinstantiation-element-net-native.md), sottopone a override le impostazioni dei criteri definite dall'elemento padre.
+Se un `<Type>` elemento è figlio di un [\<Assembly>](assembly-element-net-native.md) elemento, [\<Namespace>](namespace-element-net-native.md) , `<Type>` o [\<TypeInstantiation>](typeinstantiation-element-net-native.md) , sostituisce le impostazioni dei criteri definite dall'elemento padre.
 
-Un elemento `<Type>` di un tipo generico applica i relativi criteri a tutte le istanze che non dispongono di propri criteri. I criteri di tipi generici costruiti sono definiti dall'elemento [\<TypeInstantiation>](typeinstantiation-element-net-native.md).
+Un elemento `<Type>` di un tipo generico applica i relativi criteri a tutte le istanze che non dispongono di propri criteri. Il criterio dei tipi generici costruiti viene definito dall' [\<TypeInstantiation>](typeinstantiation-element-net-native.md) elemento.
 
 Se il tipo è un tipo generico, il nome è decorato da un simbolo di accento grave ( \`) seguito dal relativo numero di parametri generici. Ad esempio, l'attributo `Name` di un elemento `<Type>` per la classe <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> viene visualizzato come ``Name="System.Collections.Generic.List`1"``.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene usata la reflection per visualizzare le informazioni su campi, proprietà e metodi della classe <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. La variabile `b` nell'esempio è un controllo <xref:Windows.UI.Xaml.Controls.TextBlock>. Poiché l'esempio recupera semplicemente le informazioni sul tipo, la disponibilità dei metadati è controllata dall'impostazione dei criteri `Browse`.
+Nell'esempio seguente viene usata la reflection per visualizzare le informazioni su campi, proprietà e metodi della classe <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. La variabile `b` nell'esempio è un <xref:Windows.UI.Xaml.Controls.TextBlock> controllo. Poiché l'esempio recupera semplicemente le informazioni sul tipo, la disponibilità dei metadati è controllata dall'impostazione dei criteri `Browse`.
 
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]
 
- Poiché i metadati per la classe <xref:System.Collections.Generic.List%601> non vengono inclusi automaticamente dalla catena di strumenti .NET Native, nell'esempio non vengono visualizzate le informazioni sul membro richieste in fase di esecuzione. Per fornire i metadati necessari, aggiungere il seguente elemento `<Type>` al file di direttive di runtime. Da notare che dal momento che è stato fornito un elemento [<Namespace\>](namespace-element-net-native.md) padre, non è necessario fornire un nome di tipo completo nell'elemento `<Type>`.
+ Poiché i metadati per la <xref:System.Collections.Generic.List%601> classe non vengono inclusi automaticamente dalla catena di strumenti .NET native, l'esempio non riesce a visualizzare le informazioni sul membro richieste in fase di esecuzione. Per fornire i metadati necessari, aggiungere il seguente elemento `<Type>` al file di direttive di runtime. Da notare che dal momento che è stato fornito un elemento [<Namespace\>](namespace-element-net-native.md) padre, non è necessario fornire un nome di tipo completo nell'elemento `<Type>`.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -118,11 +118,11 @@ Nell'esempio seguente viene usata la reflection per visualizzare le informazioni
 ```
 
 ## <a name="example"></a>Esempio
- Nell'esempio seguente viene usata la reflection per recuperare un oggetto <xref:System.Reflection.PropertyInfo> che rappresenta la proprietà <xref:System.String.Chars%2A?displayProperty=nameWithType>. Viene quindi usato il metodo <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> per recuperare il valore del settimo carattere in una stringa e visualizzare tutti i caratteri nella stringa. La variabile `b` nell'esempio è un controllo <xref:Windows.UI.Xaml.Controls.TextBlock>.
+ Nell'esempio seguente viene usata la reflection per recuperare un oggetto <xref:System.Reflection.PropertyInfo> che rappresenta la proprietà <xref:System.String.Chars%2A?displayProperty=nameWithType>. Viene quindi usato il metodo <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> per recuperare il valore del settimo carattere in una stringa e visualizzare tutti i caratteri nella stringa. La variabile `b` nell'esempio è un <xref:Windows.UI.Xaml.Controls.TextBlock> controllo.
 
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]
 
- Poiché i metadati per l'oggetto <xref:System.String> non sono disponibili, la chiamata al metodo <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> genera un'eccezione <xref:System.NullReferenceException> in fase di esecuzione quando viene compilata con la catena di strumenti .NET Native. Per eliminare l'eccezione e fornire i metadati necessari, aggiungere il seguente elemento `<Type>` al file di direttive di runtime:
+ Poiché i metadati per l' <xref:System.String> oggetto non sono disponibili, la chiamata al <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metodo genera un' <xref:System.NullReferenceException> eccezione in fase di esecuzione quando viene compilata con la catena di strumenti .NET native. Per eliminare l'eccezione e fornire i metadati necessari, aggiungere il seguente elemento `<Type>` al file di direttive di runtime:
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -133,8 +133,8 @@ Nell'esempio seguente viene usata la reflection per visualizzare le informazioni
 </Directives>
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementi direttiva di runtime](runtime-directive-elements.md)
-- [Impostazioni dei criteri delle direttive di runtime](runtime-directive-policy-settings.md)
+- [Impostazioni dei criteri della direttiva di runtime](runtime-directive-policy-settings.md)

@@ -3,10 +3,10 @@ title: Reflection e .NET Native
 ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 ms.openlocfilehash: 65921377be9b8bf1c2d147b384c85cbd037d15f2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128177"
 ---
 # <a name="reflection-and-net-native"></a>Reflection e .NET Native
@@ -29,9 +29,9 @@ In .NET Framework, lo sviluppo gestito supporta la metaprogrammazione attraverso
   
 - [Riferimento all'API Reflection](net-native-reflection-api-reference.md)  
   
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)  
+- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Compilazione di app con .NET Native](index.md)
-- [.NET Native e compilazione](net-native-and-compilation.md)
+- [Compilazione e .NET Native](net-native-and-compilation.md)

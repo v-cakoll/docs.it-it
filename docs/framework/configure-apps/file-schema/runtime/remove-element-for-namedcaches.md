@@ -6,20 +6,20 @@ helpviewer_keywords:
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
 ms.openlocfilehash: 991ad0eb9c04c27ded4d566115107ac7b47a71e1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70252344"
 ---
-# <a name="remove-element-for-namedcaches"></a>\<Rimuovi elemento > per \<namedCaches >
+# <a name="remove-element-for-namedcaches"></a>Elemento \<remove> per \<namedCaches>
 Rimuove una cache denominata dalla raccolta `namedCaches` per una cache in memoria.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Runtime. Caching >** ](system-runtime-caching-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> memoryCache**](memorycache-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> namedCaches**](namedcaches-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Rimuovi >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<memoryCache>**](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namedCaches>**](namedcaches-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -30,7 +30,7 @@ Rimuove una cache denominata dalla raccolta `namedCaches` per una cache in memor
  </namedCaches>  
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>Tipo  
  `None`  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -46,11 +46,11 @@ Rimuove una cache denominata dalla raccolta `namedCaches` per una cache in memor
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<namedCaches>](namedcaches-element-cache-settings.md)|Contiene una raccolta di impostazioni di configurazione per le <xref:System.Runtime.Caching.MemoryCache> istanze denominate.|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|Contiene una raccolta di impostazioni di configurazione per le istanze denominate <xref:System.Runtime.Caching.MemoryCache> .|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
  L' `remove` elemento rimuove una `namedCache` voce dalla raccolta di cache denominata per una cache in memoria.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [\<Elemento > namedCaches (impostazioni cache)](namedcaches-element-cache-settings.md)
+- [\<namedCaches>Elemento (impostazioni cache)](namedcaches-element-cache-settings.md)

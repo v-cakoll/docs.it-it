@@ -3,19 +3,19 @@ title: Elemento <idn> (impostazioni URI)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 ms.openlocfilehash: 533b2562f6e5c8d6c2bf452e56dff9a8bf8ab376
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "71698169"
 ---
-# <a name="idn-element-uri-settings"></a>\<elemento > IDN (impostazioni URI)
+# <a name="idn-element-uri-settings"></a>Elemento \<idn> (impostazioni URI)
 
 Specifica se l'analisi del nome di dominio internazionale (IDN) viene applicata a un nome di dominio.
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **uri\<>** ](uri-element-uri-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<idn >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<uri>**](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<idn>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -26,7 +26,7 @@ Specifica se l'analisi del nome di dominio internazionale (IDN) viene applicata 
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
+ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
 
@@ -34,19 +34,19 @@ Specifica se l'analisi del nome di dominio internazionale (IDN) viene applicata 
 |-----------------|---------------------|  
 |`enabled`|Specifica se l'analisi del nome di dominio internazionale (IDN) viene applicata a un nome di dominio. il valore predefinito è None.|  
 
-### <a name="child-elements"></a>Elemento figlio
+### <a name="child-elements"></a>Elementi figlio
 
-None
+nessuno
   
 ### <a name="parent-elements"></a>Elementi padre
 
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[uri](uri-element-uri-settings.md)|Contiene le impostazioni che specificano il modo in cui il .NET Framework gestisce gli indirizzi Web espressi tramite URI (Uniform Resource Identifier).|  
+|[URI](uri-element-uri-settings.md)|Contiene le impostazioni che specificano il modo in cui il .NET Framework gestisce gli indirizzi Web espressi tramite URI (Uniform Resource Identifier).|  
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La classe <xref:System.Uri> esistente è stata estesa in .NET Framework 3,5. 3,0 SP1 e 2,0 SP1 con supporto per gli identificatori di risorse internazionali (IRI) e i nomi di dominio internazionali (IDN). Gli utenti correnti non vedranno alcuna modifica rispetto al comportamento di .NET Framework 2,0, a meno che non vengano specificamente abilitati il supporto di IRI e IDN. Questo garantisce la compatibilità delle applicazioni con le versioni precedenti di .NET Framework.
+La <xref:System.Uri> classe esistente è stata estesa in .NET Framework 3,5. 3,0 SP1 e 2,0 SP1 con supporto per gli identificatori di risorse internazionali (IRI) e i nomi di dominio internazionali (IDN). Gli utenti correnti non vedranno alcuna modifica rispetto al comportamento di .NET Framework 2,0, a meno che non vengano specificamente abilitati il supporto di IRI e IDN. Questo garantisce la compatibilità delle applicazioni con le versioni precedenti di .NET Framework.
 
 Per abilitare il supporto per IRI, sono necessarie le due modifiche seguenti:
 
@@ -62,7 +62,7 @@ Per abilitare il supporto per IRI, sono necessarie le due modifiche seguenti:
 
 - IDN abilitato = tutti  
 
-     Questo valore convertirà i nomi di dominio Unicode negli equivalenti Punycode (nomi IDN).
+     Questo valore convertirà qualsiasi nome di dominio Unicode negli equivalenti Punycode (nomi IDN).
 
 - IDN abilitato = AllExceptIntranet
 
@@ -70,7 +70,7 @@ Per abilitare il supporto per IRI, sono necessarie le due modifiche seguenti:
 
 - IDN abilitato = None
 
-     Con questo valore non verrà convertito alcun nome di dominio Unicode per l'utilizzo di Punycode. Si tratta del valore predefinito, coerente con il comportamento .NET Framework 2,0.
+     Questo valore non convertirà alcun nome di dominio Unicode per l'utilizzo di Punycode Si tratta del valore predefinito coerente con il comportamento di .NET Framework 2.0.
 
  L'abilitazione degli IDN comporta la conversione di tutte le etichette Unicode in un nome di dominio nei rispettivi equivalenti Punycode. I nomi Punycode contengono solo caratteri ASCII e iniziano sempre con il prefisso "xn--". Questo avviene per supportare i server DNS esistenti in Internet, in quanto la maggior parte dei server DNS supporta solo caratteri ASCII. Vedere il documento RFC 3940.
 
@@ -80,7 +80,7 @@ Questo elemento può essere usato nel file di configurazione dell'applicazione o
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrata una configurazione utilizzata dalla classe <xref:System.Uri> per supportare l'analisi IRI e i nomi IDN:
+Nell'esempio seguente viene illustrata una configurazione utilizzata dalla <xref:System.Uri> classe per supportare l'analisi IRI e i nomi IDN:
 
 ```xml
 <configuration>
@@ -91,7 +91,7 @@ Nell'esempio seguente viene illustrata una configurazione utilizzata dalla class
 </configuration>
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

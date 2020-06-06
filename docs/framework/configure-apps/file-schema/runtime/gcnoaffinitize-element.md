@@ -5,13 +5,13 @@ helpviewer_keywords:
 - gcNoAffinitize element
 - <gcNoAffinitize> element
 ms.openlocfilehash: 16d6e5adefe2b632d7251669650058d7df7cea70
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84004738"
 ---
-# <a name="gcnoaffinitize-element"></a>elemento \<GCNoAffinitize>
+# <a name="gcnoaffinitize-element"></a>Elemento \<GCNoAffinitize>
 
 Specifica se creare affinità tra i thread GC del server con CPU.
 
@@ -38,7 +38,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 #### <a name="enabled-attribute"></a>attributo enabled
 
-|valore|Description|
+|Valore|Description|
 |-----------|-----------------|
 |`false`|Thread GC del server cui con CPU. Questo è il valore predefinito.|
 |`true`|Non creare affinità tra i thread GC del server con CPU.|
@@ -87,7 +87,7 @@ L'esempio seguente non creare affinità tra i thread GC del server e limita il n
 </configuration>
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [Elemento GCHeapAffinitizeMask](gcheapaffinitizemask-element.md)

@@ -3,10 +3,10 @@ title: Risoluzione dei problemi generale per .NET Native
 ms.date: 03/30/2017
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
 ms.openlocfilehash: 2bea81e380fed6c456898e9883658ef874c8dd97
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128234"
 ---
 # <a name="net-native-general-troubleshooting"></a>Risoluzione dei problemi generale per .NET Native
@@ -29,7 +29,7 @@ Questo argomento descrive come risolvere i potenziali problemi che possono verif
 
   **Risoluzione:** Se il compilatore .NET Native viene richiamato, si noterà che i tempi di compilazione sono più lunghi e gestione attività visualizzerà vari processi di .NET Native componente, ad esempio ILC. exe e nutc_driver. exe.
 
-  Dopo aver compilato correttamente il progetto con .NET Native, è possibile trovare l'output in obj\\*config*\ *Arch*\\*NomeProgetto*. ilc\out.  I contenuti del pacchetto nativo finale sono disponibili in bin\\*arch*\\*config*\AppX. I contenuti del pacchetto nativo finale sono disponibili in \bin\\*arch*\\*config*\AppX se l'app è stata distribuita.
+  Dopo aver compilato correttamente il progetto con .NET native, l'output verrà trovato in obj \\ *config* \  *Arch* \\ *NomeProgetto*. ilc\out.  I contenuti del pacchetto nativo finale sono disponibili in bin \\ *Arch* \\ *config*\AppX. Il contenuto del pacchetto nativo finale si trova in \bin \\ *Arch* \\ *config*\AppX se è stata distribuita l'app.
 
 - **Problema:** l'app compilata in .NET Native sta generando eccezioni di runtime (in genere eccezioni [MissingMetadataException](missingmetadataexception-class-net-native.md) o [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)) che non sono state generate al momento della compilazione senza .NET Native.
 
@@ -41,6 +41,6 @@ Questo argomento descrive come risolvere i potenziali problemi che possono verif
 
   Per altre informazioni, vedere [Reflection e .NET Native](reflection-and-net-native.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Migrating Your Windows Store App to .NET Native](migrating-your-windows-store-app-to-net-native.md) (Migrazione dell'app di Windows Store a .NET Native)
+- [Migrazione dell'app di Windows Store a .NET Native](migrating-your-windows-store-app-to-net-native.md)

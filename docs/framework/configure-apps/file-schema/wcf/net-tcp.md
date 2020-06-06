@@ -3,18 +3,18 @@ title: <net.tcp>
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
 ms.openlocfilehash: 4a3a17655f5469fe84c0b684ebdac9848bbfba84
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70397689"
 ---
-# <a name="nettcp"></a>\<net.tcp>
+# \<net.tcp>
 Specifica le impostazioni di configurazione per il servizio di condivisione porte NET.TCP, che consente a più processi di condividere la stessa porta TCP.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel. Activation >** ](system-servicemodel-activation.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> NET. TCP**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel.activation>**](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<net.tcp>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +43,7 @@ Specifica le impostazioni di configurazione per il servizio di condivisione port
 </configuration>
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>Tipo  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -67,14 +67,14 @@ Specifica le impostazioni di configurazione per il servizio di condivisione port
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<system.serviceModel.activation>](system-servicemodel-activation.md)|Contiene impostazioni di configurazione per il processo del listener SMSvcHost.exe.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
  Per ulteriori informazioni sulla condivisione delle porte, vedere la pagina relativa alla [condivisione delle porte net. TCP](../../../wcf/feature-details/net-tcp-port-sharing.md). Per informazioni su come configurare il servizio di condivisione delle porte, vedere [configurazione del servizio di condivisione porte net. TCP](../../../wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>
 - [Condivisione delle porte Net.TCP](../../../wcf/feature-details/net-tcp-port-sharing.md)

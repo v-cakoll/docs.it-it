@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 42c7f291-2ec3-43c5-8872-35897ff3c660
 author: BrucePerlerMS
 ms.openlocfilehash: 653dd9cfadbfd33f5371b77172199b946321bc8c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70251863"
 ---
-# <a name="servicecertificate"></a>\<serviceCertificate>
+# \<serviceCertificate>
 Configura il certificato X. 509 usato per crittografare e decrittografare i token.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. identityModel. Services >** ](system-identitymodel-services.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> federationConfiguration**](federationconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> serviceCertificate**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel.services>**](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<federationConfiguration>**](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceCertificate>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,7 +33,7 @@ Configura il certificato X. 509 usato per crittografare e decrittografare i toke
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuna  
+ nessuno  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -45,10 +45,10 @@ Configura il certificato X. 509 usato per crittografare e decrittografare i toke
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](federationconfiguration.md)|Contiene le impostazioni che configurano <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) <xref:System.IdentityModel.Services.SessionAuthenticationModule> e (Sam).|  
+|[\<federationConfiguration>](federationconfiguration.md)|Contiene le impostazioni che configurano <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) e <xref:System.IdentityModel.Services.SessionAuthenticationModule> (Sam).|  
   
 ## <a name="example"></a>Esempio  
- Nel codice XML seguente viene illustrato l'utilizzo \<dell'elemento > serviceCertificate. Il codice XML viene tratto dall' `CustomToken` esempio.  
+ Nel codice XML seguente viene illustrato l'utilizzo dell' \<serviceCertificate> elemento. Il codice XML viene tratto dall' `CustomToken` esempio.  
   
 ```xml  
 <serviceCertificate>  
