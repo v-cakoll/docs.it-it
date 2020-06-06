@@ -8,7 +8,7 @@
       items:
         - name: 'Esempio: Risoluzione dei problemi di programmazione dinamica'
           href: example-troubleshooting-dynamic-programming.md
-        - name: 'Esempio: gestione delle eccezioni durante il data binding'
+        - name: 'Esempio: Gestione delle eccezioni durante il data binding'
           href: example-handling-exceptions-when-binding-data.md
         - name: Eccezioni di runtime in app .NET
           href: runtime-exceptions-in-net-native-apps.md
