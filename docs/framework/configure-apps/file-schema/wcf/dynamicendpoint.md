@@ -3,21 +3,21 @@ title: <dynamicEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 929f223d-176d-4205-9505-234ddb6dbff4
 ms.openlocfilehash: da57ca3ba3bc0036727a749f1cab9ec3657a4fda
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855347"
 ---
-# <a name="dynamicendpoint"></a><span data-ttu-id="4a3e0-101">\<dynamicEndpoint></span><span class="sxs-lookup"><span data-stu-id="4a3e0-101">\<dynamicEndpoint></span></span>
-<span data-ttu-id="4a3e0-102">Questo elemento di configurazione definisce un endpoint standard contenente le informazioni che consentono a un'applicazione di essere usata come un programma client in grado di individuare l'indirizzo dell'endpoint in modo dinamico durante la fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="4a3e0-102">This configuration element defines a standard endpoint that contains information to enable an application to function as a client program that can find the endpoint address dynamically at runtime.</span></span>  
+# \<dynamicEndpoint>
+<span data-ttu-id="5a23b-101">Questo elemento di configurazione definisce un endpoint standard contenente le informazioni che consentono a un'applicazione di essere usata come un programma client in grado di individuare l'indirizzo dell'endpoint in modo dinamico durante la fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="5a23b-101">This configuration element defines a standard endpoint that contains information to enable an application to function as a client program that can find the endpoint address dynamically at runtime.</span></span>  
   
-<span data-ttu-id="4a3e0-103">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="4a3e0-103">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="4a3e0-104">&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="4a3e0-104">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
-<span data-ttu-id="4a3e0-105">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> standardEndpoints**](standardendpoints.md)</span><span class="sxs-lookup"><span data-stu-id="4a3e0-105">&nbsp;&nbsp;&nbsp;&nbsp;[**\<standardEndpoints>**](standardendpoints.md)</span></span>\
-<span data-ttu-id="4a3e0-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> dynamicEndpoint**</span><span class="sxs-lookup"><span data-stu-id="4a3e0-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<dynamicEndpoint>**</span></span>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<standardEndpoints>**](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<dynamicEndpoint>**  
   
-## <a name="syntax"></a><span data-ttu-id="4a3e0-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4a3e0-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5a23b-102">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5a23b-102">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -44,25 +44,25 @@ ms.locfileid: "70855347"
 </system.serviceModel>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="4a3e0-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="4a3e0-108">Attributes and Elements</span></span>  
- <span data-ttu-id="4a3e0-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="4a3e0-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="5a23b-103">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="5a23b-103">Attributes and Elements</span></span>  
+ <span data-ttu-id="5a23b-104">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="5a23b-104">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="4a3e0-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="4a3e0-110">Attributes</span></span>  
- <span data-ttu-id="4a3e0-111">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="4a3e0-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="5a23b-105">Attributi</span><span class="sxs-lookup"><span data-stu-id="5a23b-105">Attributes</span></span>  
+ <span data-ttu-id="5a23b-106">No.</span><span class="sxs-lookup"><span data-stu-id="5a23b-106">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="4a3e0-112">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="4a3e0-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="5a23b-107">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="5a23b-107">Child Elements</span></span>  
   
-|<span data-ttu-id="4a3e0-113">Elemento</span><span class="sxs-lookup"><span data-stu-id="4a3e0-113">Element</span></span>|<span data-ttu-id="4a3e0-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4a3e0-114">Description</span></span>|  
+|<span data-ttu-id="5a23b-108">Elemento</span><span class="sxs-lookup"><span data-stu-id="5a23b-108">Element</span></span>|<span data-ttu-id="5a23b-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="5a23b-109">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="4a3e0-115">\<discoveryClientSettings></span><span class="sxs-lookup"><span data-stu-id="4a3e0-115">\<discoveryClientSettings></span></span>](discoveryclientsettings.md)|<span data-ttu-id="4a3e0-116">Contiene le impostazioni necessarie a un'applicazione per partecipare al processo di individuazione del servizio come client.</span><span class="sxs-lookup"><span data-stu-id="4a3e0-116">Contains the settings needed by an application to participate in the service discovery process as a client.</span></span>|  
+|[\<discoveryClientSettings>](discoveryclientsettings.md)|<span data-ttu-id="5a23b-110">Contiene le impostazioni necessarie a un'applicazione per partecipare al processo di individuazione del servizio come client.</span><span class="sxs-lookup"><span data-stu-id="5a23b-110">Contains the settings needed by an application to participate in the service discovery process as a client.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="4a3e0-117">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="4a3e0-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="5a23b-111">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="5a23b-111">Parent Elements</span></span>  
   
-|<span data-ttu-id="4a3e0-118">Elemento</span><span class="sxs-lookup"><span data-stu-id="4a3e0-118">Element</span></span>|<span data-ttu-id="4a3e0-119">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4a3e0-119">Description</span></span>|  
+|<span data-ttu-id="5a23b-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="5a23b-112">Element</span></span>|<span data-ttu-id="5a23b-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="5a23b-113">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="4a3e0-120">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="4a3e0-120">\<standardEndpoints></span></span>](standardendpoints.md)|<span data-ttu-id="4a3e0-121">Raccolta di endpoint standard rappresentati da endpoint predefiniti con una o più delle relative proprietà (indirizzo, associazione, contratto) fisse.</span><span class="sxs-lookup"><span data-stu-id="4a3e0-121">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
+|[\<standardEndpoints>](standardendpoints.md)|<span data-ttu-id="5a23b-114">Raccolta di endpoint standard rappresentati da endpoint predefiniti con una o più delle relative proprietà (indirizzo, associazione, contratto) fisse.</span><span class="sxs-lookup"><span data-stu-id="5a23b-114">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="4a3e0-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4a3e0-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a23b-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5a23b-115">See also</span></span>
 
 - <xref:System.ServiceModel.Discovery.DynamicEndpoint>
 - <xref:System.ServiceModel.Discovery.Configuration.DynamicEndpointElement>
