@@ -9,17 +9,17 @@ helpviewer_keywords:
 - <UseRandomizedStringHashAlgorithm> element
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 ms.openlocfilehash: a9afa0db516a542b74d08a4c3754a3244abbbea7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153777"
 ---
-# <a name="userandomizedstringhashalgorithm-element"></a>\<Elemento UseRandomizedStringHashAlgorithm>
-Determina se Common Language Runtime calcola i codici hash per le stringhe in base al dominio applicazione.  
+# <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm> Elemento
+Determina se il Common Language Runtime calcola i codici hash per le stringhe in base al dominio dell'applicazione.  
   
-[**\<>di configurazione**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<>di runtime**](runtime-element.md)\
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<UseRandomizedStringHashAlgorithm>**  
   
 ## <a name="syntax"></a>Sintassi  
@@ -32,18 +32,18 @@ Determina se Common Language Runtime calcola i codici hash per le stringhe in ba
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`enabled`|Attributo obbligatorio.<br /><br /> Specifica se i codici hash per le stringhe vengono calcolati in base al dominio applicazione.|  
+|`enabled`|Attributo obbligatorio.<br /><br /> Specifica se i codici hash per le stringhe vengono calcolati in base al dominio dell'applicazione.|  
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
-|`0`|Common Language Runtime non calcola i codici hash per le stringhe in base al dominio applicazione. un singolo algoritmo viene utilizzato per calcolare i codici hash delle stringhe. Questa è la modalità predefinita.|  
-|`1`|Common Language Runtime calcola i codici hash per le stringhe in base al dominio applicazione. Stringhe identiche in domini applicazione diversi e in processi diversi avranno codici hash diversi.|  
+|`0`|Il Common Language Runtime non calcola i codici hash per le stringhe in base al dominio dell'applicazione. viene utilizzato un singolo algoritmo per calcolare i codici hash della stringa. Questo è il valore predefinito.|  
+|`1`|Il Common Language Runtime calcola i codici hash per le stringhe in base al dominio dell'applicazione. Stringhe identiche in domini applicazione diversi e in processi diversi avranno codici hash diversi.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  No.  
@@ -55,15 +55,15 @@ Determina se Common Language Runtime calcola i codici hash per le stringhe in ba
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`runtime`|Contiene informazioni sulle opzioni di inizializzazione in fase di esecuzione.|  
   
-## <a name="remarks"></a>Osservazioni  
- Per impostazione <xref:System.StringComparer> predefinita, <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> la classe e il metodo utilizzano un singolo algoritmo hash che produce un codice hash coerente tra i domini applicazione. Equivale a impostare `enabled` l'attributo dell'elemento `<UseRandomizedStringHashAlgorithm>` su `0`. Si tratta dell'algoritmo hash utilizzato in .NET Framework 4.  
+## <a name="remarks"></a>Commenti  
+ Per impostazione predefinita, la <xref:System.StringComparer> classe e il <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> Metodo usano un unico algoritmo di hashing che produce un codice hash coerente tra i domini applicazione. Equivale a impostare l' `enabled` attributo dell' `<UseRandomizedStringHashAlgorithm>` elemento su `0` . Si tratta dell'algoritmo hash utilizzato nel .NET Framework 4.  
   
- La <xref:System.StringComparer> classe <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> e il metodo possono inoltre utilizzare un algoritmo hash diverso che calcola i codici hash in base al dominio applicazione. Di conseguenza, i codici hash per le stringhe equivalenti saranno diversi tra i domini applicazione. Questa è una funzione di opt-in; per trarne vantaggio, è `enabled` necessario impostare l'attributo dell'elemento `<UseRandomizedStringHashAlgorithm>` su `1`.  
+ La <xref:System.StringComparer> classe e il <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> metodo possono anche usare un algoritmo di hash diverso che calcola i codici hash in base al dominio dell'applicazione. Di conseguenza, i codici hash per le stringhe equivalenti si differenziano tra domini applicazione. Si tratta di una funzionalità di consenso esplicito; per sfruttarlo, è necessario impostare l' `enabled` attributo dell' `<UseRandomizedStringHashAlgorithm>` elemento su `1` .  
   
- La ricerca di stringhe in una tabella hash è in genere un'operazione O(1). Tuttavia, quando si verifica un numero elevato di conflitti, la ricerca può diventare un'operazione O(n<sup>2</sup>). È possibile `<UseRandomizedStringHashAlgorithm>` utilizzare l'elemento configuration per generare un algoritmo hash casuale per ogni dominio applicazione, che a sua volta limita il numero di potenziali conflitti, in particolare quando le chiavi da cui vengono calcolati i codici hash sono basate sull'immissione di dati da parte degli utenti.  
+ La ricerca di stringhe in una tabella hash è in genere un'operazione O (1). Tuttavia, quando si verifica un numero elevato di conflitti, la ricerca può diventare un'operazione O (n<sup>2</sup>). È possibile usare l' `<UseRandomizedStringHashAlgorithm>` elemento di configurazione per generare un algoritmo di hashing casuale per ogni dominio dell'applicazione, che a sua volta limita il numero di potenziali collisioni, in particolare quando le chiavi da cui vengono calcolati i codici hash sono basate sull'input dei dati da parte degli utenti.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio riportato `DisplayString` di seguito viene definita `s`una classe che include una costante di stringa privata, , il cui valore è "This is a string". Viene inoltre incluso un metodo `ShowStringHashCode` tramite cui vengono visualizzati il valore stringa e il codice hash con il nome del dominio applicazione in cui il metodo è in esecuzione.  
+ Nell'esempio seguente viene definita una `DisplayString` classe che include una costante di stringa privata, `s` , il cui valore è "This is a String". Viene inoltre incluso un metodo `ShowStringHashCode` tramite cui vengono visualizzati il valore stringa e il codice hash con il nome del dominio applicazione in cui il metodo è in esecuzione.  
   
  [!code-csharp[System.String.GetHashCode#2](../../../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.String.GetHashCode/CS/perdomain.cs#2)]
  [!code-vb[System.String.GetHashCode#2](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.String.GetHashCode/VB/perdomain.vb#2)]  

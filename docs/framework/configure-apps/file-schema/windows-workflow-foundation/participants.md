@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 560dd0bb-f9fb-423c-8857-2101a3654b06
 ms.openlocfilehash: e6e996bd1cc32258167e30287e9338a4773ce921
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152028"
 ---
-# <a name="participants"></a>\<partecipanti>
+# \<participants>
 Configurare un elenco di partecipanti del rilevamento che ascoltano i record di rilevamento generati direttamente durante la fase di esecuzione e li elaborano in base alle impostazioni configurate. Tali impostazioni includono la scrittura in un output specifico, ad esempio file, console, ETW, l'elaborazione/aggregazione dei record o qualsiasi altra combinazione che potrebbe essere richiesta.  
   
- Per ulteriori informazioni sui partecipanti di rilevamento e rilevamento del flusso di lavoro, vedere Tracciabilità del flusso di [lavoro e tracciabilità](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) dei [partecipanti.](../../../windows-workflow-foundation/tracking-participants.md)  
+ Per altre informazioni sui partecipanti di rilevamento e rilevamento del flusso di lavoro, vedere Rilevamento e traccia [del flusso di lavoro](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) [partecipanti](../../../windows-workflow-foundation/tracking-participants.md).  
   
-[**\<>di configurazione**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<Sistema.>ServiceModelServiceModel>**](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<>di tracciamento**](tracking.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<partecipanti>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<participants>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,22 +35,22 @@ Configurare un elenco di partecipanti del rilevamento che ascoltano i record di 
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attributi  
  No.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<aggiungere>](add-of-participants.md)|Contiene impostazioni per un partecipante del rilevamento.|  
+|[\<add>](add-of-participants.md)|Contiene impostazioni per un partecipante del rilevamento.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<>di tracciamento](tracking.md)|Rappresenta una sezione di configurazione per la definizione delle impostazioni di rilevamento di un servizio flusso di lavoro.|  
+|[\<tracking>](tracking.md)|Rappresenta una sezione di configurazione per la definizione delle impostazioni di rilevamento di un servizio flusso di lavoro.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I partecipanti del rilevamento vengono usati per ottenere i dati di rilevamento generati dal flusso di lavoro e archiviarli in supporti differenti. Analogamente, è anche possibile eseguire qualsiasi operazione di post-elaborazione sui record di rilevamento all'interno del partecipante del rilevamento.  
   
  Più partecipanti del rilevamento possono usare simultaneamente gli eventi di rilevamento. Ogni partecipante del rilevamento può essere associato a un profilo di rilevamento diverso.  
@@ -60,7 +60,7 @@ Configurare un elenco di partecipanti del rilevamento che ascoltano i record di 
 ## <a name="example"></a>Esempio  
  Nell'esempio di configurazione seguente viene mostrato il partecipante del rilevamento ETW standard configurato nel file Web.config.  
   
- L'ID provider utilizzato dal partecipante del rilevamento ETW per scrivere i record di rilevamento in ETW è definito nella sezione relativa alla>di ** \<diagnostica.** Al partecipante di rilevamento è associato un profilo per specificare i record di rilevamento che ha sottoscritto. Questo è definito dall'attributo **profileName** dell'elemento ** \<add>.** Una volta definiti, il partecipante di rilevamento viene aggiunto al comportamento del servizio ** \<etwTracking>.** che aggiungerà i partecipanti del rilevamento selezionati alle estensioni dell'istanza del flusso di lavoro, in modo che inizino a ricevere i record di rilevamento.  
+ L'ID del provider utilizzato dal partecipante del rilevamento ETW per la scrittura dei record di rilevamento in ETW è definito nella **\<diagnostics>** sezione. Al partecipante di rilevamento è associato un profilo per specificare i record di rilevamento che ha sottoscritto. Questa operazione viene definita dall'attributo **ProfileName** dell' **\<add>** elemento. Una volta definite, il partecipante del rilevamento viene aggiunto al **\<etwTracking>** comportamento del servizio. che aggiungerà i partecipanti del rilevamento selezionati alle estensioni dell'istanza del flusso di lavoro, in modo che inizino a ricevere i record di rilevamento.  
   
 ```xml
 <configuration>
@@ -87,7 +87,7 @@ Configurare un elenco di partecipanti del rilevamento che ascoltano i record di 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
 ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69913039"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico
@@ -24,18 +24,18 @@ I reindirizzamenti di binding automatici sono abilitati per impostazione predefi
 
 Se si dispone di Visual Studio 2017 versione 15,7 o successiva, è possibile disabilitare facilmente i reindirizzamenti di binding generati automaticamente nelle pagine delle proprietà del progetto.
 
-1. Fare clic con il pulsante destro del mouse in **Esplora soluzioni** e scegliere **Proprietà**.
+1. Fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliere **Proprietà**.
 
 2. Nella pagina dell' **applicazione** deselezionare l'opzione per la **generazione automatica dei reindirizzamenti di binding** .
 
-3. Premere **CTRL**+**S** per salvare la modifica.
+3. Premere **CTRL** + **S** per salvare la modifica.
 
 ### <a name="disable-manually-in-the-project-file"></a>Disabilitare manualmente nel file di progetto
 
 1. Aprire il file di progetto per la modifica utilizzando uno dei metodi seguenti:
 
    - In Visual Studio selezionare il progetto in **Esplora soluzioni**, quindi scegliere **Apri cartella in Esplora file** dal menu di scelta rapida. In Esplora file trovare il file di progetto (con estensione csproj o vbproj) e aprirlo nel blocco note.
-   - In Visual Studio, in **Esplora soluzioni**, fare clic con il pulsante destro del mouse sul progetto e scegliere **Scarica progetto**. Fare di nuovo clic con il pulsante destro del mouse sul progetto scaricato, quindi scegliere **modifica [NomeProgetto. csproj]** .
+   - In Visual Studio, in **Esplora soluzioni**, fare clic con il pulsante destro del mouse sul progetto e scegliere **Scarica progetto**. Fare di nuovo clic con il pulsante destro del mouse sul progetto scaricato, quindi scegliere **modifica [NomeProgetto. csproj]**.
 
 2. Nel file di progetto trovare la voce di proprietà seguente:
 
@@ -56,9 +56,9 @@ Se si dispone di Visual Studio 2017 versione 15,7 o successiva, è possibile dis
 1. Aprire il file di progetto per la modifica utilizzando uno dei metodi seguenti:
 
    - In Visual Studio selezionare il progetto in **Esplora soluzioni**, quindi scegliere **Apri cartella in Esplora file** dal menu di scelta rapida. In Esplora file trovare il file di progetto (con estensione csproj o vbproj) e aprirlo nel blocco note.
-   - In Visual Studio, in **Esplora soluzioni**, fare clic con il pulsante destro del mouse sul progetto e scegliere **Scarica progetto**. Fare di nuovo clic con il pulsante destro del mouse sul progetto scaricato, quindi scegliere **modifica [NomeProgetto. csproj]** .
+   - In Visual Studio, in **Esplora soluzioni**, fare clic con il pulsante destro del mouse sul progetto e scegliere **Scarica progetto**. Fare di nuovo clic con il pulsante destro del mouse sul progetto scaricato, quindi scegliere **modifica [NomeProgetto. csproj]**.
 
-2. Aggiungere l'elemento seguente al primo gruppo di proprietà di configurazione (sotto \<il tag PropertyGroup >):
+2. Aggiungere l'elemento seguente al primo gruppo di proprietà di configurazione (sotto il \<PropertyGroup> tag):
 
    ```xml
    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -91,15 +91,15 @@ Per aggiungere reindirizzamenti di binding a un file **Web. config** :
 
 1. In Visual Studio compilare l'app e cercare eventuali avvisi di compilazione.
 
-   ![Avviso di compilazione per conflitti di riferimento all'assembly](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
+   ![Avviso di compilazione per conflitti di riferimenti all'assembly](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
 
 2. In caso di conflitti di associazione a livello di assembly, viene visualizzato un avviso. Fare doppio clic sull'avviso oppure selezionare l'avviso e premere **invio**.
 
    Viene visualizzata una finestra di dialogo che consente di aggiungere automaticamente i reindirizzamenti di binding necessari al file **Web. config** di origine.
 
-   ![Finestra di dialogo di autorizzazione Reindirizzamento binding](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
+   ![Finestra di dialogo dell'autorizzazione reindirizzamento associazione](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [\<Elemento > bindingRedirect](./file-schema/runtime/bindingredirect-element.md)
+- [\<bindingRedirect>Elemento](./file-schema/runtime/bindingredirect-element.md)
 - [Reindirizzamento delle versioni di assembly](redirect-assembly-versions.md)

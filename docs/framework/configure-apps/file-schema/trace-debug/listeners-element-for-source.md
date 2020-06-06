@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
 ms.openlocfilehash: 0eee325e01b41a15a19e4f40f479596f9d70f73b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153412"
 ---
-# <a name="listeners-element-for-source"></a>\<elementi di> \<dei listener per i> di origine
-Aggiunge o rimuove i <xref:System.Diagnostics.TraceSource.Listeners%2A> listener <xref:System.Diagnostics.TraceSource>nella raccolta per un oggetto . Un listener indirizza l'output di traccia a una destinazione appropriata, ad esempio un log, una finestra o un file di testo.  
+# <a name="listeners-element-for-source"></a>Elemento \<listeners> per \<source>
+Aggiunge o rimuove i listener nella <xref:System.Diagnostics.TraceSource.Listeners%2A> raccolta per un oggetto <xref:System.Diagnostics.TraceSource> . Un listener indirizza l'output di traccia a una destinazione appropriata, ad esempio un log, una finestra o un file di testo.  
   
-[**\<>di configurazione**](../configuration-element.md)  
-&nbsp;&nbsp;[**\<>system.diagnostics**](system-diagnostics-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<fonti>**](sources-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>**](source-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>di ascoltatori**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<sources>**](sources-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<source>**](source-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<listeners>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,16 +36,16 @@ Aggiunge o rimuove i <xref:System.Diagnostics.TraceSource.Listeners%2A> listener
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attributi  
  No.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<aggiungere>](add-element-for-listeners-for-source.md)|Aggiunge un listener alla raccolta `Listeners`.|  
-|[\<rimuovere>](remove-element-for-listeners-for-source.md)|Rimuove un listener `Listeners` dalla raccolta.|  
-|[\<>chiari](clear-element-for-listeners-for-source.md)|Cancella la raccolta `Listeners` per un'origine di traccia.|  
+|[\<add>](add-element-for-listeners-for-source.md)|Aggiunge un listener alla raccolta `Listeners`.|  
+|[\<remove>](remove-element-for-listeners-for-source.md)|Rimuove un listener dalla `Listeners` raccolta.|  
+|[\<clear>](clear-element-for-listeners-for-source.md)|Cancella la raccolta `Listeners` per un'origine di traccia.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -56,13 +56,13 @@ Aggiunge o rimuove i <xref:System.Diagnostics.TraceSource.Listeners%2A> listener
 |`sources`|Contiene le origini di traccia che avviano i messaggi di traccia.|  
 |`source`|Specifica un'origine di traccia che avvia i messaggi di traccia.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="configuration-file"></a>File di configurazione  
- Questo elemento può essere utilizzato nel file di configurazione del computer (Machine.config) e nel file di configurazione dell'applicazione.  
+ Questo elemento può essere utilizzato nel file di configurazione del computer (Machine. config) e nel file di configurazione dell'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene `<listeners>` illustrato come utilizzare l'elemento `mySource` per aggiungere un listener di traccia della console all'origine e rimuovere il listener di traccia predefinito.  
+ Nell'esempio seguente viene illustrato come utilizzare l' `<listeners>` elemento per aggiungere un listener di traccia della console all' `mySource` origine e per rimuovere il listener di traccia predefinito.  
   
 ```xml  
 <configuration>  
@@ -87,7 +87,7 @@ Aggiunge o rimuove i <xref:System.Diagnostics.TraceSource.Listeners%2A> listener
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Diagnostics.TraceListener>
 - [Schema delle impostazioni di traccia e debug](index.md)

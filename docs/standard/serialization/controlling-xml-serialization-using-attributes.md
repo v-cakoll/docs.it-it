@@ -17,10 +17,10 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
 ms.openlocfilehash: 79c5541b4c384e91fbec8c8f1b2130887e79a252
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84289681"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Controllo della serializzazione XML mediante attributi
@@ -316,7 +316,7 @@ Al contrario, se si fosse dovuta serializzare un'istanza della classe, nel docum
 
 Potrebbero presentarsi delle situazioni in cui un campo o una proprietà pubblica non necessitano della serializzazione. Ad esempio, un campo o una proprietà possono essere utilizzati per contenere metadati. In tali casi, applicare <xref:System.Xml.Serialization.XmlIgnoreAttribute> al campo o alla proprietà e <xref:System.Xml.Serialization.XmlSerializer> permetterà di ignorarli.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Attributi che controllano la serializzazione XML](attributes-that-control-xml-serialization.md)
 - [Attributi che controllano la serializzazione SOAP codificata](attributes-that-control-encoded-soap-serialization.md)

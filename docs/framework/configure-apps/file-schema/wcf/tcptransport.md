@@ -3,21 +3,21 @@ title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
 ms.openlocfilehash: f2c1335795ffd3cb395a7006bfaeb3cf7b39636b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77448621"
 ---
-# <a name="tcptransport"></a>\<tcpTransport >
+# \<tcpTransport>
 Definisce un trasporto TCP che può essere usato da un canale ai messaggi dei trasferimenti per un'associazione personalizzata.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**Binding**](bindings.md)\<>\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**customBinding**](custombinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Binding** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<tcpTransport >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<tcpTransport>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +44,7 @@ Definisce un trasporto TCP che può essere usato da un canale ai messaggi dei tr
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
+ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
   
@@ -67,20 +67,20 @@ Definisce un trasporto TCP che può essere usato da un canale ai messaggi dei tr
 |impostazioniPoolConnessioni|Specifica impostazioni aggiuntive del pool di connessioni per un'associazione con named pipe.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- None  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[Binding \<>](bindings.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
+|[\<binding>](bindings.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Commenti  
  Questo trasporto usa URI nel formato "net.tcp://nomehost:porta/percorso". Gli altri componenti URI sono facoltativi.  
   
  L'elemento `tcpTransport` rappresenta il punto iniziale per la creazione di un'associazione personalizzata che implementa il protocollo di trasporto TCP. Il trasporto è ottimizzato per le comunicazioni da WCF a WCF.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.ServiceModel.Configuration.TcpTransportElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
@@ -88,7 +88,7 @@ Definisce un trasporto TCP che può essere usato da un canale ai messaggi dei tr
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Trasporti](../../../wcf/feature-details/transports.md)
 - [Scelta di un trasporto](../../../wcf/feature-details/choosing-a-transport.md)
-- [Associazioni](../../../wcf/bindings.md)
+- [Binding](../../../wcf/bindings.md)
 - [Estensione delle associazioni](../../../wcf/extending/extending-bindings.md)
 - [Associazioni personalizzate](../../../wcf/extending/custom-bindings.md)
-- [\<CustomBinding >](custombinding.md)
+- [\<customBinding>](custombinding.md)

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - CompatSortNLSVersion element
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 ms.openlocfilehash: 30afeb2ab9380db75cbeb723ea15a23e4313c9e8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154270"
 ---
-# <a name="compatsortnlsversion-element"></a>\<Elemento di> CompatSortNLSVersion
+# <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion> Elemento
 Specifica che nel runtime devono essere utilizzati ordinamenti legacy quando si eseguono confronti di stringhe.  
   
-[**\<>di configurazione**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<>di runtime**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<>CompatSortNLSVersion**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<CompatSortNLSVersion>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,7 +32,7 @@ Specifica che nel runtime devono essere utilizzati ordinamenti legacy quando si 
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
@@ -40,9 +40,9 @@ Specifica che nel runtime devono essere utilizzati ordinamenti legacy quando si 
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
-|4096|ID impostazioni locali mediante il quale viene rappresentato un ordinamento alternativo. In questo caso, 4096 rappresenta l'ordinamento di .NET Framework 3.5 e versioni precedenti.|  
+|4096|ID impostazioni locali mediante il quale viene rappresentato un ordinamento alternativo. In questo caso, 4096 rappresenta l'ordinamento di .NET Framework 3,5 e versioni precedenti.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  No.  
@@ -54,8 +54,8 @@ Specifica che nel runtime devono essere utilizzati ordinamenti legacy quando si 
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`runtime`|Contiene informazioni sulle opzioni di inizializzazione in fase di esecuzione.|  
   
-## <a name="remarks"></a>Osservazioni  
- Poiché le operazioni di confronto tra <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> stringhe, ordinamento e utilizzo di maiuscole e minuscole eseguite dalla classe <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> in <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> .NET Framework 4 sono conformi allo standard Unicode 5.1, i risultati dei metodi di confronto tra stringhe, ad esempio e possono differire dalle versioni precedenti di .NET Framework. Se l'applicazione dipende dal comportamento legacy, è possibile ripristinare le regole di confronto e ordinamento delle stringhe utilizzate in .NET Framework 3.5 e versioni precedenti includendo l'elemento `<CompatSortNLSVersion>` nel file di configurazione dell'applicazione.  
+## <a name="remarks"></a>Commenti  
+ Poiché le operazioni di confronto tra stringhe, ordinamento e maiuscole e minuscole eseguite dalla <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> classe nel .NET Framework 4 sono conformi allo standard Unicode 5,1, i risultati dei metodi di confronto tra stringhe quali <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> e <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> possono differire dalle versioni precedenti del .NET Framework. Se l'applicazione dipende dal comportamento legacy, è possibile ripristinare le regole di ordinamento e confronto delle stringhe utilizzate nel .NET Framework 3,5 e nelle versioni precedenti includendo l' `<CompatSortNLSVersion>` elemento nel file di configurazione dell'applicazione.  
   
 > [!IMPORTANT]
 > Per il ripristino del confronto di stringhe legacy e delle regole di ordinamento è necessaria inoltre la disponibilità della libreria di collegamento dinamico sort00001000.dll nel sistema locale.  
@@ -74,13 +74,13 @@ Specifica che nel runtime devono essere utilizzati ordinamenti legacy quando si 
 sta follows a in the sort order.  
 ```  
   
- Questo è completamente diverso dall'output che viene visualizzato quando si esegue l'esempio in.NET Framework 3.5:
+ Questo è completamente diverso dall'output visualizzato quando si esegue l'esempio nella .NET Framework 3,5:
   
 ```console
 sta equals a in the sort order.  
 ```  
   
- Tuttavia, se si aggiunge il file di configurazione seguente alla directory dell'esempio e quindi si esegue l'esempio in .NET Framework 4, l'output sarà identico a quello prodotto dall'esempio quando viene eseguito in .NET Framework 3.5.  
+ Tuttavia, se si aggiunge il file di configurazione seguente alla directory dell'esempio e quindi si esegue l'esempio in .NET Framework 4, l'output sarà identico a quello prodotto dall'esempio quando viene eseguito nel .NET Framework 3,5.  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -91,7 +91,7 @@ sta equals a in the sort order.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Schema delle impostazioni di runtime](index.md)
 - [Schema del file di configurazione](../index.md)

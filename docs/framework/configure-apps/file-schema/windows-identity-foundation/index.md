@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
 ms.openlocfilehash: 14d596ae77019932d169e1a84732fb8522bfc46c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152723"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a>Schema di configurazione di Windows Identity Foundation
 
-Gli argomenti in questa sezione contengono informazioni sullo schema di configurazione di WIF (Windows Identity Foundation). È inoltre possibile configurare un'applicazione per l'utilizzo di WIF tramite le classi esposte dal framework. Queste classi sono segnalate nelle sezioni dedicate agli elementi pertinenti nello schema. Di seguito viene illustrata la struttura di tag XML di base esposta dallo schema di configurazione di WIF. Gli attributi sono omessi. I commenti evidenziati indicano i principali componenti dello schema.  
+Gli argomenti in questa sezione contengono informazioni sullo schema di configurazione di WIF (Windows Identity Foundation). È anche possibile configurare un'applicazione per l'uso di WIF tramite le classi esposte dal Framework. Queste classi sono segnalate nelle sezioni dedicate agli elementi pertinenti nello schema. Di seguito viene illustrata la struttura di tag XML di base esposta dallo schema di configurazione di WIF. Gli attributi sono omessi. I commenti evidenziati indicano i principali componenti dello schema.  
   
 ```xml  
 <configuration>  
@@ -111,6 +111,6 @@ Gli argomenti in questa sezione contengono informazioni sullo schema di configur
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
 
-[ \<>system.identityModel](system-identitymodel.md) Fornisce la configurazione per l'abilitazione delle opzioni WIF nelle applicazioni.  
+[\<system.identityModel>](system-identitymodel.md)Fornisce la configurazione per abilitare le opzioni WIF nelle applicazioni.  
   
-[ \<>system.identityModel.services](system-identitymodel-services.md) Fornisce la configurazione per la federazione passiva tramite WIF. Configura il modulo di autenticazione della sessione (SAM) e il modulo di autenticazione federata (WSFAM).
+[\<system.identityModel.services>](system-identitymodel-services.md)Fornisce la configurazione per la federazione passiva con WIF. Configura il modulo di autenticazione della sessione (SAM) e il modulo di autenticazione federata (WSFAM).

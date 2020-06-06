@@ -10,18 +10,18 @@ helpviewer_keywords:
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
 ms.openlocfilehash: 2a76816ee73f516b3c7544877a77531acaa8e09c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153269"
 ---
-# <a name="sources-element"></a>\<origini>elemento
+# <a name="sources-element"></a>\<sources> Elemento
 Specifica le origini di traccia che avviano i messaggi di traccia.  
 
-[**\<>di configurazione**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<>system.diagnostics**](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<fonti>**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<sources>**
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,14 +34,14 @@ Specifica le origini di traccia che avviano i messaggi di traccia.
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attributi  
  No.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<>](source-element.md)|Elemento obbligatorio.<br /><br /> Specifica un'origine di traccia che avvia i messaggi di traccia.|  
+|[\<source>](source-element.md)|Elemento obbligatorio.<br /><br /> Specifica un'origine di traccia che avvia i messaggi di traccia.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -50,11 +50,11 @@ Specifica le origini di traccia che avviano i messaggi di traccia.
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`system.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
   
-## <a name="remarks"></a>Osservazioni  
- Questo elemento può essere utilizzato nel file di configurazione del computer (Machine.config) e nel file di configurazione dell'applicazione.  
+## <a name="remarks"></a>Commenti  
+ Questo elemento può essere utilizzato nel file di configurazione del computer (Machine. config) e nel file di configurazione dell'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio riportato di `<sources>` seguito viene illustrato `mySource` come utilizzare l'elemento per `sourceSwitch`aggiungere l'origine di traccia e impostare il livello per l'opzione di origine denominata . Viene aggiunto un listener di traccia della console che scrive le informazioni di traccia nella console.  
+ Nell'esempio seguente viene illustrato come utilizzare l' `<sources>` elemento per aggiungere l'origine di traccia `mySource` e impostare il livello per l'opzione di origine denominata `sourceSwitch` . Viene aggiunto un listener di traccia della console che scrive le informazioni di traccia nella console.  
   
 ```xml  
 <configuration>  
@@ -79,7 +79,7 @@ Specifica le origini di traccia che avviano i messaggi di traccia.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
@@ -88,4 +88,4 @@ Specifica le origini di traccia che avviano i messaggi di traccia.
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
 - [Schema delle impostazioni di traccia e debug](index.md)
-- [\<>](source-element.md)
+- [\<source>](source-element.md)

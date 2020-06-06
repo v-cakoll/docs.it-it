@@ -3,10 +3,10 @@ title: <netHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: ff122116-6042-4792-9f21-275b4f97a105
 ms.openlocfilehash: 842f2acb3be03be8171bcf7312f230fc06754511
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84201037"
 ---
 # \<netHttpsBinding>
@@ -53,7 +53,7 @@ Rappresenta un'associazione che può essere utilizzata da un servizio Windows Co
 </netHttpsBinding>
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>Tipo  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -173,7 +173,7 @@ Rappresenta un'associazione che può essere utilizzata da un servizio Windows Co
   
  Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>

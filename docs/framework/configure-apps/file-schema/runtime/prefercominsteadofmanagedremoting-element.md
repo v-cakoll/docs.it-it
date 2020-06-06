@@ -6,18 +6,18 @@ helpviewer_keywords:
 - PreferComInsteadOfManagedRemoting element
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 ms.openlocfilehash: 1376df4efd56734f2b8da9bd76033afcce8a285b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77452253"
 ---
-# <a name="prefercominsteadofmanagedremoting-element"></a>\<elemento > PreferComInsteadOfManagedRemoting
+# <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting> Elemento
 Specifica se il runtime utilizzerà l'interoperabilità COM anziché la comunicazione remota per tutte le chiamate tra i limiti del dominio applicazione.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<runtime >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<PreferComInsteadOfManagedRemoting >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<PreferComInsteadOfManagedRemoting>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -26,7 +26,7 @@ Specifica se il runtime utilizzerà l'interoperabilità COM anziché la comunica
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
+ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
   
@@ -36,13 +36,13 @@ Specifica se il runtime utilizzerà l'interoperabilità COM anziché la comunica
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|Valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
-|`false`|Il runtime userà la comunicazione remota tra i limiti del dominio applicazione. Questa è l'impostazione predefinita.|  
+|`false`|Il runtime userà la comunicazione remota tra i limiti del dominio applicazione. Questo è il valore predefinito.|  
 |`true`|Il runtime utilizzerà l'interoperabilità COM tra i limiti del dominio applicazione.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -51,12 +51,12 @@ Specifica se il runtime utilizzerà l'interoperabilità COM anziché la comunica
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
-## <a name="remarks"></a>Note  
- Quando si imposta l'attributo `enabled` su `true`, il runtime si comporta come segue:  
+## <a name="remarks"></a>Commenti  
+ Quando si imposta l' `enabled` attributo su `true` , il runtime si comporta come segue:  
   
 - Il runtime non chiama [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) per un'interfaccia [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) quando un'interfaccia [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) immette il dominio tramite un'interfaccia com. Costruisce invece un [runtime callable wrapper](../../../../standard/native-interop/runtime-callable-wrapper.md) (RCW) intorno all'oggetto.  
   
-- Il runtime restituisce E_NOINTERFACE quando riceve una chiamata `QueryInterface` per un'interfaccia [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) per qualsiasi CCW ( [COM Callable Wrapper](../../../../standard/native-interop/com-callable-wrapper.md) ) creato in questo dominio.  
+- Il runtime restituisce E_NOINTERFACE quando riceve una `QueryInterface` chiamata per un'interfaccia [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) per qualsiasi [COM Callable Wrapper](../../../../standard/native-interop/com-callable-wrapper.md) (CCW) creato in questo dominio.  
   
  Questi due comportamenti assicurano che tutte le chiamate su interfacce COM tra oggetti gestiti tra i limiti del dominio dell'applicazione usino l'interoperabilità COM e COM anziché la comunicazione remota.  
   
@@ -71,7 +71,7 @@ Specifica se il runtime utilizzerà l'interoperabilità COM anziché la comunica
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Schema delle impostazioni di runtime](index.md)
-- [Schema dei file di configurazione](../index.md)
+- [Schema del file di configurazione](../index.md)

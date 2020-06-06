@@ -4,10 +4,10 @@ description: Il generatore di serializzatori XML crea un assembly di serializzaz
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
 ms.openlocfilehash: b6d9406ca6a69f7bdff3129b55c89dd5d1589d3f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84288940"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Strumento per la generazione di serializzatori XML (Sgen.exe)
@@ -44,7 +44,7 @@ sgen [options]
 |**/v \[ erbose\]**|Visualizza output dettagliato per il debug. Elenca i tipi dell'assembly di destinazione che non possono essere serializzati con <xref:System.Xml.Serialization.XmlSerializer>.|  
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando lo strumento per la generazione di serializzatori XML non viene utilizzato, un oggetto <xref:System.Xml.Serialization.XmlSerializer> genera codice e un assembly di serializzazione per ogni tipo ogni volta che viene eseguita un'applicazione. Per migliorare le prestazioni dell'avvio della serializzazione XML, utilizzare lo strumento Sgen. exe per generare in anticipo tali assembly. Tali assembly potranno quindi essere distribuiti insieme all'applicazione.  
   
  Lo strumento per la generazione di serializzatori XML può inoltre migliorare le prestazioni dei client che utilizzano i proxy del servizio Web XML per comunicare con i server, in quanto il processo di serializzazione non influisce sulle prestazioni quando il tipo viene caricato per la prima volta.  
@@ -53,7 +53,7 @@ sgen [options]
   
  Se l'assembly contenente il tipo da serializzare è denominato MyType.dll, l'assembly di serializzazione associato verrà denominato MyType.XmlSerializers.dll.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Il comando seguente crea un assembly denominato Data.XmlSerializers.dll per la serializzazione di tutti i tipi contenuti nell'assembly denominato Data.dll.  
   
 ```console  
@@ -62,7 +62,7 @@ sgen Data.dll
   
  Il codice che deve serializzare e deserializzare i tipi in Data.dll può fare riferimento all'assembly Data.XmlSerializers.dll.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Strumenti](../../framework/tools/index.md)
 - [Prompt dei comandi](../../framework/tools/developer-command-prompt-for-vs.md)

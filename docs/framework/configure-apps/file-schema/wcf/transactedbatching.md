@@ -3,22 +3,22 @@ title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
 ms.openlocfilehash: 6167a4ad56a9481a9f695b770605991a0a88d2d9
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70399406"
 ---
-# <a name="transactedbatching"></a>\<> transactedBatching
+# \<transactedBatching>
 
 Specifica se il batch delle transazioni è supportato per le operazioni di ricezione.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamenti >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamento >** ](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> transactedBatching**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transactedBatching>**  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,13 +32,13 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ### <a name="attributes"></a>Attributi
 
-|Attributo|DESCRIZIONE|
+|Attributo|Descrizione|
 |---------------|-----------------|
 |`maxBatchSize`|Numero intero che specifica il numero massimo di operazioni di ricezione che possono essere raggruppate in una transazione. Il valore predefinito è 0.|
 
 ### <a name="child-elements"></a>Elementi figlio
 
-Nessuno.
+No.
 
 ### <a name="parent-elements"></a>Elementi padre
 
@@ -46,7 +46,7 @@ Nessuno.
 |-------------|-----------------|
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Specifica un comportamento dell'endpoint.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Un trasporto configurato il batch delle transazioni tenta di eseguire il batch di alcune operazioni di ricezione in una transazione. In tal modo, viene evitato il costo relativamente elevato della creazione di una transazione e del relativo commit in ogni operazione di ricezione.
 

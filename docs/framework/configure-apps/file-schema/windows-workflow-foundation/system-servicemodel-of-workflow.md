@@ -1,20 +1,20 @@
 ---
-title: <> system.serviceModel del flusso di lavoro
+title: <System. serviceModel> del flusso di lavoro
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
 ms.openlocfilehash: 9aa2bf0fdfd6fe4528a3fda4d05b3ba8f23637d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79151949"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel> del flusso di lavoro
+# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel>del flusso di lavoro
 Contenuto della sezione di configurazione sono contenuti tutti gli elementi di configurazione del flusso di lavoro.  
 
-[**\<>di configurazione**](../configuration-element.md)\
-&nbsp;&nbsp;**\<Sistema.>ServiceModelServiceModel>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.ServiceModel>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -97,18 +97,18 @@ Contenuto della sezione di configurazione sono contenuti tutti gli elementi di c
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attributi  
  nessuno  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<comportamenti>](behaviors-of-workflow.md)|Questa sezione definisce la raccolta **serviceBehaviors.**  Ogni elemento della raccolta definisce elementi di comportamento utilizzati dai servizi. Ogni elemento behavior è identificato dal relativo attributo **name** univoco.|  
-|[\<>di tracciamento](tracking.md)|Rappresenta una sezione di configurazione per la definizione delle impostazioni di rilevamento di un servizio flusso di lavoro.<br /><br /> Per ulteriori informazioni sul rilevamento del flusso di lavoro e sulla relativa configurazione, vedere [Rilevamento e traccia del flusso di lavoro](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) e Configurazione del [rilevamento per un flusso di lavoro](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
+|[\<behaviors>](behaviors-of-workflow.md)|Questa sezione definisce la raccolta **serviceBehaviors** .  Ogni elemento della raccolta definisce elementi di comportamento utilizzati dai servizi. Ogni elemento di comportamento è identificato dall'attributo del **nome** univoco.|  
+|[\<tracking>](tracking.md)|Rappresenta una sezione di configurazione per la definizione delle impostazioni di rilevamento di un servizio flusso di lavoro.<br /><br /> Per ulteriori informazioni sul rilevamento del flusso di lavoro e sulla relativa configurazione, vedere [rilevamento e traccia del flusso di lavoro](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) e [configurazione del rilevamento per un flusso di lavoro](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<>di configurazione](../configuration-element.md)|Elemento radice di tutti gli elementi di configurazione contenuti in un file di configurazione .NET.|
+|[\<configuration>](../configuration-element.md)|Elemento radice di tutti gli elementi di configurazione contenuti in un file di configurazione .NET.|

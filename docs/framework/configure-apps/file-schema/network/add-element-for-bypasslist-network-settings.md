@@ -11,20 +11,20 @@ helpviewer_keywords:
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
 ms.openlocfilehash: 652b8738a201aaa98fa2c5c435fee1a6da91673b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155077"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>\<add> Element for bypasslist (Impostazioni di rete)
-Aggiunge un indirizzo IP o un nome DNS all'elenco di esclusione proxy.  
+# <a name="add-element-for-bypasslist-network-settings"></a>Elemento \<add> per bypasslist (impostazioni di rete)
+Aggiunge un indirizzo IP o un nome DNS all'elenco di bypass del proxy.  
   
-[**\<>di configurazione**](../configuration-element.md)  
-&nbsp;&nbsp;[**\<>system.net**](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<>defaultProxy**](defaultproxy-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<elenco di>**](bypasslist-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<aggiungere>**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<bypasslist>**](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,11 +37,11 @@ Aggiunge un indirizzo IP o un nome DNS all'elenco di esclusione proxy.
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attributi  
   
 |**Attributo**|**Descrizione**|  
 |-------------------|---------------------|  
-|**Indirizzo**|Espressione regolare che descrive un indirizzo IP o un nome DNS.|  
+|**address**|Espressione regolare che descrive un indirizzo IP o un nome DNS.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  No.  
@@ -50,22 +50,22 @@ Aggiunge un indirizzo IP o un nome DNS all'elenco di esclusione proxy.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[elenco di bypass](bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non utilizzano un proxy.|  
+|[BypassList](bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non utilizzano un proxy.|  
   
-## <a name="remarks"></a>Osservazioni  
- L'elemento `add` inserisce espressioni regolari che descrivono gli indirizzi IP o i nomi dei server DNS nell'elenco di indirizzi che ignorano un server proxy.  
+## <a name="remarks"></a>Commenti  
+ L' `add` elemento inserisce le espressioni regolari che descrivono gli indirizzi IP o i nomi dei server DNS nell'elenco degli indirizzi che ignorano un server proxy.  
   
- Il valore `address` dell'attributo deve essere un'espressione regolare che descrive un set di indirizzi IP o nomi host.  
+ Il valore dell' `address` attributo deve essere un'espressione regolare che descrive un set di indirizzi IP o nomi host.  
   
- Prestare attenzione quando si specifica un'espressione regolare per questo elemento. L'espressione regolare "[a-z]-contoso\\.com"\\corrisponde a qualsiasi host nel dominio contoso.com, ma corrisponde anche a qualsiasi host nel dominio contoso.com.cpandl.com. Per trovare una corrispondenza solo con un host nel dominio contoso.com,\\utilizzare\\un ancoraggio (sezione "): "[a-z] .  
+ È necessario prestare attenzione quando si specifica un'espressione regolare per questo elemento. L'espressione regolare "[a-z] + \\ . contoso \\ . com" corrisponde a qualsiasi host nel dominio contoso.com, ma corrisponde anche a qualsiasi host nel dominio contoso.com.cpandl.com. Per trovare la corrispondenza solo con un host nel dominio contoso.com, usare un ancoraggio ("$"): "[a-z] + \\ . contoso \\ . com $".  
   
- Per ulteriori informazioni sulle espressioni regolari, vedere . [Espressioni regolari di .NET Framework](../../../../standard/base-types/regular-expressions.md).  
+ Per ulteriori informazioni sulle espressioni regolari, vedere. [.NET Framework espressioni regolari](../../../../standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente vengono aggiunti due indirizzi all'elenco di esclusione. Il primo ignora il proxy per tutti i server nel dominio contoso.com; il secondo ignora il proxy per tutti i server il cui indirizzo IP inizia con 192.168.  
+ Nell'esempio seguente vengono aggiunti due indirizzi all'elenco di bypass. Il primo ignora il proxy per tutti i server nel dominio contoso.com. il secondo ignora il proxy per tutti i server il cui indirizzo IP inizia con 192,168.  
   
 ```xml  
 <configuration>  
@@ -80,7 +80,7 @@ Aggiunge un indirizzo IP o un nome DNS all'elenco di esclusione proxy.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Schema delle impostazioni di rete](index.md)
