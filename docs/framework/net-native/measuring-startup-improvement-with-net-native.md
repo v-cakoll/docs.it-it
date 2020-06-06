@@ -3,10 +3,10 @@ title: Misurazione dei miglioramenti dell'avvio con .NET Native
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 ms.openlocfilehash: 41a693f18ffea0e5ce0ca742bc251d147e8e3784
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79181004"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Misurazione dei miglioramenti dell'avvio con .NET Native
@@ -93,7 +93,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  Selezionare tutti gli eventi elencati nel riquadro di sinistra (CTRL+A) e premere **INVIO**. A questo punto, dovrebbero essere visualizzati i timestamp di tutti gli eventi. Questi timestamp sono relativi all'inizio della traccia, quindi è necessario sottrarre il tempo di ciascun evento dall'ora di inizio del processo per identificare il tempo trascorso dall'avvio. Se si usa CTRL + clic per selezionare due timestamp, la differenza tra di essi verrà visualizzata nella barra di stato nella parte inferiore della pagina. Questo consente di visualizzare facilmente il tempo trascorso tra due eventi nella visualizzazione (compreso l'avvio del processo). È possibile aprire il menu di scelta rapida per la visualizzazione e selezionare diverse opzioni utili, ad esempio l'esportazione in file CSV o l'apertura di Microsoft Excel per salvare o elaborare i dati.  
   
- Ripetendo la procedura sia per l'app originale che per la versione compilata tramite la catena di strumenti .NET Native, è possibile confrontare la differenza nelle prestazioni.   Le app native di .NET in genere vengono avviate più velocemente di quanto non-.NET app native. Se si desidera, PerfView fornisce anche informazioni dettagliate che consentono di identificare le parti di codice che richiedono più tempo. Per altre informazioni, guardare le [esercitazioni di PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) o leggere il [post di blog di Vance Morrison](https://docs.microsoft.com/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool).  
+ Ripetendo la procedura per l'app originale e la versione compilata con la catena di strumenti .NET Native, è possibile confrontare le prestazioni.   Le app .NET Native in genere iniziano più velocemente rispetto alle app native di non-.NET. Se si desidera, PerfView fornisce anche informazioni dettagliate che consentono di identificare le parti di codice che richiedono più tempo. Per altre informazioni, guardare le [esercitazioni di PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) o leggere il [post di blog di Vance Morrison](https://docs.microsoft.com/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool).  
   
 ## <a name="see-also"></a>Vedere anche
 

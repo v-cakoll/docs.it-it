@@ -9,18 +9,18 @@ helpviewer_keywords:
 - container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 ms.openlocfilehash: 202b063ad3f0f9696cdc12aff434d61fe5a813e6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154322"
 ---
-# <a name="assemblybinding-element-for-runtime"></a>\<Elemento> assemblyBinding per \<la> di runtime
+# <a name="assemblybinding-element-for-runtime"></a>Elemento \<assemblyBinding> per \<runtime>
 Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.  
   
-[**\<>di configurazione**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<>di runtime**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<>assemblyBinding**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<assemblyBinding>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,21 +33,21 @@ Contiene le informazioni sul reindirizzamento della versione degli assembly e i 
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |**xmlns**|Attributo obbligatorio.<br /><br /> Specifica lo spazio dei nomi XML necessario per il binding di assembly. Usare la stringa "urn:schemas-microsoft-com:asm.v1" come valore.|  
-|**Appliesto**|Specifica la versione di runtime a cui si applica il reindirizzamento di assembly .NET Framework. Questo attributo facoltativo usa un numero di versione di .NET Framework per indicare la versione a cui deve essere applicato. Se non si specifica l'attributo **appliesTo** l'elemento **\<assemblyBinding>** viene applicato a tutte le versioni di .NET Framework. L'attributo **appliesTo** è stato introdotto in .NET Framework versione 1.1; viene ignorato da .NET Framework versione 1.0. Ciò significa ** \<** che tutti gli elementi assemblyBinding>vengono applicati quando si utilizza .NET Framework versione 1.0, anche se viene specificato un attributo **appliesTo** .|  
+|**appliesTo**|Specifica la versione di runtime a cui si applica il reindirizzamento di assembly .NET Framework. Questo attributo facoltativo usa un numero di versione di .NET Framework per indicare la versione a cui deve essere applicato. Se non è specificato alcun attributo **appliesTo** , l' **\<assemblyBinding>** elemento si applica a tutte le versioni del .NET Framework. L'attributo **appliesTo** è stato introdotto nella versione .NET Framework 1,1; viene ignorato dalla versione di .NET Framework 1,0. Ciò significa che tutti **\<assemblyBinding>** gli elementi vengono applicati quando si usa la versione di .NET Framework 1,0, anche se viene specificato un attributo **appliesTo** .|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<dependentAssembly>](dependentassembly-element.md)|Incapsula i criteri di binding e il percorso dell'assembly per ciascun assembly. Utilizzare ** \<** un tag dependentAssembly>per ogni assieme.|  
-|[\<>di sonda](probing-element.md)|Specifica le sottodirectory in cui in Common Language Runtime viene effettuata la ricerca al momento del caricamento degli assembly. |  
-|[\<>publisherPolicy](publisherpolicy-element.md)|Specifica se il runtime applica i criteri dell'editore.|  
-|[\<qualificareAssembly>](qualifyassembly-element.md)|Specifica il nome completo dell'assembly da caricare in modo dinamico quando viene usato un nome parziale.|  
+|[\<dependentAssembly>](dependentassembly-element.md)|Incapsula i criteri di binding e il percorso dell'assembly per ciascun assembly. Usare un **\<dependentAssembly>** tag per ogni assembly.|  
+|[\<probing>](probing-element.md)|Specifica le sottodirectory in cui in Common Language Runtime viene effettuata la ricerca al momento del caricamento degli assembly. |  
+|[\<publisherPolicy>](publisherpolicy-element.md)|Specifica se il runtime applica i criteri dell'editore.|  
+|[\<qualifyAssembly>](qualifyassembly-element.md)|Specifica il nome completo dell'assembly da caricare in modo dinamico quando viene usato un nome parziale.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -90,7 +90,7 @@ Contiene le informazioni sul reindirizzamento della versione degli assembly e i 
 </runtime>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Schema delle impostazioni di runtime](index.md)
 - [Schema del file di configurazione](../index.md)

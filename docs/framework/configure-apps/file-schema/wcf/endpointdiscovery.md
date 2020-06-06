@@ -3,21 +3,21 @@ title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
 ms.openlocfilehash: 98b1655f42b7b43604ed4ab9d66870ec204a9590
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70398012"
 ---
-# <a name="endpointdiscovery"></a>\<endpointDiscovery>
+# \<endpointDiscovery>
 Specifica le varie impostazioni di individuazione per un endpoint, quali l'individuazione, gli ambiti e le eventuali estensioni personalizzate ai relativi metadati.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamenti >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamento >** ](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> endpointDiscovery**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<endpointDiscovery>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,27 +43,27 @@ Specifica le varie impostazioni di individuazione per un endpoint, quali l'indiv
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|enabled|Valore booleano che specifica se è abilitata l'individuabilità sull'endpoint. Il valore predefinito è `false`.|  
+|Enabled|Valore booleano che specifica se è abilitata l'individuabilità sull'endpoint. Il valore predefinito è `false`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<ambiti >](scopes.md)|Raccolta di URI di ambito per l'endpoint. A un singolo endpoint è possibile associare più URI di ambito.|  
-|estensioni > [of \<endpointDiscovery >] [ \<](extensions.md)|Raccolta di elementi XML che consente di specificare metadati personalizzati da pubblicare per un endpoint.|  
-|\<tipi >|Raccolta di interfacce da cercare.|  
+|[\<scopes>](scopes.md)|Raccolta di URI di ambito per l'endpoint. A un singolo endpoint è possibile associare più URI di ambito.|  
+|[\<extensions>](extensions.md)[di \<endpointDiscovery> ]|Raccolta di elementi XML che consente di specificare metadati personalizzati da pubblicare per un endpoint.|  
+|\<types>|Raccolta di interfacce da cercare.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Specifica un elemento di comportamento.|  
 |||  
   
-## <a name="remarks"></a>Note  
- L'aggiunta di questo elemento di configurazione alla configurazione di comportamento dell'endpoint con l'attributo `enabled` impostato su `true` ne determina l'abilitazione dell'individuazione. Inoltre, è possibile utilizzare gli [ \<ambiti >](scopes.md)elemento figlio per specificare gli URI di ambito personalizzati che possono essere utilizzati per filtrare gli endpoint di servizio durante la query, nonché le [ \<estensioni >](extensions.md) elemento figlio per specificare Custom metadati che devono essere pubblicati insieme ai metadati individuabili standard (EPR, ContractTypeName, BindingName, scope e ListenURI).  
+## <a name="remarks"></a>Commenti  
+ L'aggiunta di questo elemento di configurazione alla configurazione di comportamento dell'endpoint con l'attributo `enabled` impostato su `true` ne determina l'abilitazione dell'individuazione. Inoltre, è possibile utilizzare l' [\<scopes>](scopes.md) elemento figlio per specificare gli URI di ambito personalizzati che possono essere utilizzati per filtrare gli endpoint di servizio durante la query, nonché l' [\<extensions>](extensions.md) elemento figlio per specificare metadati personalizzati da pubblicare insieme ai metadati individuabili standard (EPR, ContractTypeName, BindingName, scope e ListenUri).  
   
- Questo elemento di configurazione dipende [ \<dall'elemento > serviceDiscovery](servicediscovery.md) che fornisce il controllo del livello di servizio dell'individuabilità. Questo significa che le impostazioni di questo elemento vengono ignorate se [ \<serviceDiscovery >](servicediscovery.md) non è presente nella configurazione.  
+ Questo elemento di configurazione dipende dall' [\<serviceDiscovery>](servicediscovery.md) elemento che fornisce il controllo del livello di servizio dell'individuabilità. Ciò significa che le impostazioni di questo elemento vengono ignorate se [\<serviceDiscovery>](servicediscovery.md) non è presente nella configurazione.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio di configurazione seguente vengono specificati ambiti di filtro e metadati di estensione da pubblicare per un endpoint.  

@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
 ms.openlocfilehash: 209e702da80f2569f2b6c068f50f1af4489157f6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70251959"
 ---
-# <a name="issuernameregistry"></a>\<issuerNameRegistry>
+# \<issuerNameRegistry>
 Configura il registro di sistema dei nomi delle autorità emittenti utilizzato dai gestori nella raccolta di gestori di token.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> identityConfiguration**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> securityTokenHandlers**](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> securityTokenHandlerConfiguration**](securitytokenhandlerconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> issuerNameRegistry**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlerConfiguration>**](securitytokenhandlerconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuerNameRegistry>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,31 +41,31 @@ Configura il registro di sistema dei nomi delle autorità emittenti utilizzato d
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
-|type|Tipo che deriva dalla <xref:System.IdentityModel.Tokens.IssuerNameRegistry> classe. Per ulteriori informazioni su come specificare un oggetto personalizzato `type`, vedere [riferimenti ai tipi personalizzati].|  
+|type|Tipo che deriva dalla <xref:System.IdentityModel.Tokens.IssuerNameRegistry> classe. Per ulteriori informazioni su come specificare un oggetto personalizzato `type` , vedere [riferimenti ai tipi personalizzati].|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<trustedIssuers>](trustedissuers.md)|Quando l' `type` attributo specifica il registro dei nomi delle autorità emittenti basato sulla configurazione <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> (la classe), è necessario specificare l' [ \<elemento > TrustedIssuers](trustedissuers.md) . L' `<add>` `<clear>` [ \<elemento > TrustedIssuers](trustedissuers.md) può assumere elementi, o `<remove>` come elementi figlio.|  
+|[\<trustedIssuers>](trustedissuers.md)|Quando l' `type` attributo specifica il registro dei nomi delle autorità emittenti basato sulla configurazione (la <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe), [\<trustedIssuers>](trustedissuers.md) è necessario specificare l'elemento. L' [\<trustedIssuers>](trustedissuers.md) elemento può assumere `<add>` `<clear>` elementi, o `<remove>` come elementi figlio.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Fornisce la configurazione per una raccolta di gestori di token di sicurezza.|  
   
-## <a name="remarks"></a>Note  
- Tutti i token dell'autorità emittente vengono convalidati utilizzando un registro di sistema del nome dell'autorità emittente. Si tratta di un oggetto che deriva dalla <xref:System.IdentityModel.Tokens.IssuerNameRegistry> classe. Il registro dei nomi delle autorità emittenti viene utilizzato per associare un nome mnemonico al materiale crittografico necessario per verificare le firme dei token prodotti dall'emittente corrispondente. Il registro dei nomi delle autorità emittenti gestisce un elenco di autorità di certificazione ritenute attendibili dall'applicazione relying party (RP). Il tipo del registro dei nomi delle autorità emittenti viene specificato mediante `type` l'attributo. L' `<issuerNameRegistry>` elemento può avere uno o più elementi figlio che forniscono la configurazione per il tipo specificato. Si fornisce la logica che elabora questi elementi figlio eseguendo l'override del <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> metodo.  
+## <a name="remarks"></a>Commenti  
+ Tutti i token dell'autorità emittente vengono convalidati utilizzando un registro di sistema del nome dell'autorità emittente. Si tratta di un oggetto che deriva dalla <xref:System.IdentityModel.Tokens.IssuerNameRegistry> classe. Il registro dei nomi delle autorità emittenti viene utilizzato per associare un nome mnemonico al materiale crittografico necessario per verificare le firme dei token prodotti dall'emittente corrispondente. Il registro dei nomi delle autorità emittenti gestisce un elenco di autorità di certificazione ritenute attendibili dall'applicazione relying party (RP). Il tipo del registro dei nomi delle autorità emittenti viene specificato mediante l' `type` attributo. L' `<issuerNameRegistry>` elemento può avere uno o più elementi figlio che forniscono la configurazione per il tipo specificato. Si fornisce la logica che elabora questi elementi figlio eseguendo l'override del <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> metodo.  
   
- WIF fornisce un singolo tipo di registro dei nomi delle autorità emittenti, ovvero la <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe. Questa classe usa un set di certificati Autorità di certificazione attendibili specificati nella configurazione. Richiede un elemento di configurazione figlio, `<trustedIssuers>`, in cui è configurata la raccolta di certificati dell'autorità emittente attendibile. I certificati attendibili vengono specificati utilizzando il formato con codifica ASN. 1 dell'identificazione personale del certificato e vengono aggiunti o rimossi dalla raccolta `<add>`tramite gli elementi, `<remove>` `<clear>`o.  
+ WIF fornisce un singolo tipo di registro dei nomi delle autorità emittenti, ovvero la <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe. Questa classe usa un set di certificati Autorità di certificazione attendibili specificati nella configurazione. Richiede un elemento di configurazione figlio, `<trustedIssuers>` , in cui è configurata la raccolta di certificati dell'autorità emittente attendibile. I certificati attendibili vengono specificati utilizzando il formato con codifica ASN. 1 dell'identificazione personale del certificato e vengono aggiunti o rimossi dalla raccolta tramite `<add>` `<clear>` `<remove>` gli elementi, o.  
   
- L' `<issuerNameRegistry>` elemento è rappresentato <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> dalla classe.  
+ L' `<issuerNameRegistry>` elemento è rappresentato dalla <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> classe.  
   
 > [!NOTE]
-> Specificare l' `<issuerNameRegistry>` elemento come elemento figlio [ \<dell'elemento > IdentityConfiguration](identityconfiguration.md) è stato deprecato, ma è ancora supportato per la compatibilità con le versioni precedenti. Le impostazioni sull' `<securityTokenHandlerConfiguration>` elemento eseguono l'override `<identityConfiguration>` di quelle nell'elemento.  
+> Specificare l' `<issuerNameRegistry>` elemento come elemento figlio dell' [\<identityConfiguration>](identityconfiguration.md) elemento è stato deprecato, ma è ancora supportato per la compatibilità con le versioni precedenti. Le impostazioni sull' `<securityTokenHandlerConfiguration>` elemento eseguono l'override di quelle nell' `<identityConfiguration>` elemento.  
   
 ## <a name="example"></a>Esempio  
  Nel codice XML seguente viene illustrato come specificare il registro dei nomi delle autorità emittenti basato sulla configurazione.  

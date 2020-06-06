@@ -3,21 +3,21 @@ title: <add> di <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
 ms.openlocfilehash: a0f68717f765482f53e675458fae63d1a374d6fb
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70850324"
 ---
-# <a name="add-of-serviceactivations"></a>\<aggiungere > di \<serviceActivations >
+# <a name="add-of-serviceactivations"></a>\<add> di \<serviceActivations>
 
 Elemento di configurazione che consente di definire le impostazioni di attivazione del servizio virtuale che vengono mappate ai tipi di servizio Windows Communication Foundation (WCF). In questo modo è possibile attivare servizi ospitati in WAS/IIS senza un file con estensione svc.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceHostingEnvironment**](servicehostingenvironment.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceActivations**](serviceactivations.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Aggiungi >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceHostingEnvironment>**](servicehostingenvironment.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceActivations>**](serviceactivations.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,20 +39,20 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 |Attributo|Descrizione|
 |---------------|-----------------|
 |factory|Stringa che specifica il tipo CLR della factory che genera un elemento di attivazione del servizio.|
-|servizio|ServiceType che implementa il servizio, ossia il Typename completo o il Typename breve, quando viene inserito nella cartella App_Code.|
-|relativeAddress|Indirizzo relativo all'interno dell'applicazione IIS corrente, ad esempio “Service.svc". In WCF 4.0 questo indirizzo relativo deve contenere una delle estensioni di file note (svc, xamlx, ecc.). Nessun file fisico deve esistere per l'URL relativo|
+|service|ServiceType che implementa il servizio, ossia il Typename completo o il Typename breve, quando viene inserito nella cartella App_Code.|
+|relativeAddress|Indirizzo relativo all'interno dell'applicazione IIS corrente, ad esempio “Service.svc". In WCF 4,0 questo indirizzo relativo deve contenere una delle estensioni di file note (SVC, xamlx,...). Nessun file fisico deve esistere per relativeUrl|
 
 ### <a name="child-elements"></a>Elementi figlio
 
-Nessuno.
+No.
 
 ### <a name="parent-elements"></a>Elementi padre
 
-|Elemento|DESCRIZIONE|
+|Elemento|Descrizione|
 |-------------|-----------------|
 |[\<serviceHostingEnvironment>](servicehostingenvironment.md)|Sezione di configurazione in cui vengono descritte le impostazioni di attivazione.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Nell'esempio seguente viene illustrato come configurare le impostazioni di attivazione all'interno del file web.config.
 

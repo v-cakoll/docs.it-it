@@ -1,15 +1,15 @@
 ---
-title: <Event>Elemento (.NET native)
+title: <Event>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
 ms.openlocfilehash: 60da48d5872d7ce61afcffa7977411bc6e1efc7f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79181033"
 ---
-# <a name="event-element-net-native"></a>\<Elemento> eventi (.NET Native)Event> Element (.NET Native)
+# <a name="event-element-net-native"></a>\<Event>Elemento (.NET Native)
 Applica i criteri di reflection di runtime a un evento.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -23,7 +23,7 @@ Applica i criteri di reflection di runtime a un evento.
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Tipo di attributo|Descrizione|  
 |---------------|--------------------|-----------------|  
@@ -33,13 +33,13 @@ Applica i criteri di reflection di runtime a un evento.
   
 ## <a name="name-attribute"></a>Name (attributo)  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
-|*method_name*|Nome dell'evento. Il tipo dell'evento è definito dall'elemento [ \<>type](type-element-net-native.md) o [ \<TypeInstanti>ation](typeinstantiation-element-net-native.md) padre.|  
+|*method_name*|Nome dell'evento. Il tipo dell'evento viene definito dall' [\<Type>](type-element-net-native.md) elemento padre o [\<TypeInstantiation>](typeinstantiation-element-net-native.md) .|  
   
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri per l'evento. I valori consentiti sono `Auto`, `Excluded`, `Included` e `Required`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
@@ -50,14 +50,14 @@ Applica i criteri di reflection di runtime a un evento.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<Tipo>](type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
-|[\<>TypeInstantiation](typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
+|[\<Type>](type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se i criteri di un evento non sono definiti esplicitamente, l'evento eredita i criteri di runtime dell'elemento padre.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Riferimento a file di configurazione di direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementi direttiva di runtime](runtime-directive-elements.md)
-- [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime)
+- [Impostazioni dei criteri della direttiva di runtime](runtime-directive-policy-settings.md)

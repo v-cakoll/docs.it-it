@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 52b9caf2d5b3d44c0c6349501dafc371541fdd70
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: b1fb9647091cecb80b9c2f04ec9b6bb156eb39ba
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396341"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84466817"
 ---
 ### <a name="pubternal-apis-removed"></a>API "Pubternal" rimosse
 
@@ -22,7 +22,7 @@ Le API interessate sono contrassegnate con il `public` modificatore di accesso e
 
 #### <a name="new-behavior"></a>Nuovo comportamento
 
-Le API interessate sono contrassegnate con il modificatore di accesso [interno (~/docs/CSharp/Language-Reference/Keywords/Internal.MD) e non possono più essere utilizzate dal codice esterno a tale assembly.
+Le API interessate sono contrassegnate con il modificatore di accesso [interno](/dotnet/csharp/language-reference/keywords/internal) e non possono più essere utilizzate dal codice esterno a tale assembly.
 
 #### <a name="reason-for-change"></a>Motivo della modifica
 
@@ -49,7 +49,7 @@ In un progetto ASP.NET Core 3,0, sostituire la `EnableRewind` chiamata con una c
 HttpContext.Request.EnableBuffering();
 ```
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 ASP.NET Core
 

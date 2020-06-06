@@ -3,13 +3,13 @@ title: <claimTypeRequirements> per <message>
 ms.date: 03/30/2017
 ms.assetid: f95c5ecd-abb6-4b77-a6d7-a38727f4a142
 ms.openlocfilehash: db6717022bf3af0c4922818668595dd3937e9c71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "61704407"
 ---
-# <a name="claimtyperequirements-for-message"></a>\<claimTypeRequirements > per \<messaggio >
+# <a name="claimtyperequirements-for-message"></a>\<claimTypeRequirements> per \<message>
 Specifica una raccolta di tipi di attestazione obbligatori.  
   
  La raccolta viene usata dal servizio per specificare tutte le attestazioni obbligatorie e facoltative che devono essere presenti nel token rilasciato usato dal client per accedere al servizio. Se la pubblicazione WSDL è attiva, il servizio espone i tipi di attestazione obbligatori nei metadati. Tuttavia, WCF non richiede che il token emesso contenga i tipi di attestazione specificati. I servizi che desiderano imporre la presenza di tipi di attestazione obbligatori devono ricorrere ai criteri di autorizzazione.  

@@ -4,10 +4,10 @@ description: Il generatore di serializzatori XML crea un assembly di serializzaz
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
 ms.openlocfilehash: 0275ecfebd427feb104013024654d4a0bc98748a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84288979"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
@@ -78,7 +78,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 |------------|-----------------|
 |**/t \[ IPO \] :**_typeName_|Specifica il nome del tipo per il quale creare uno schema. È possibile specificare più argomenti type. Se *nometipo* non specifica uno spazio dei nomi, Xsd.exe associa tutti i tipi nell'assembly con il tipo specificato. Se *nometipo* specifica uno spazio dei nomi, viene associato solo il tipo specifico. Se *nometipo* termina con un asterisco (\*), vengono associati tutti i tipi che iniziano con la stringa che precede \*. Se si omette l'opzione `/type`, verranno generati schemi per tutti i tipi dell'assembly.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Nella tabella riportata di seguito vengono illustrate le operazioni eseguite da Xsd.exe.
 
@@ -204,7 +204,7 @@ Nella tabella riportata di seguito sono descritti gli attributi che è possibile
 |nologo|Evita la visualizzazione del messaggio di avvio. Impostare su `true` o `false`.|
 |help|Visualizza la sintassi e le opzioni di comando dello strumento. Impostare su `true` o `false`.|
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
  Il comando che segue genera uno schema XML da `myFile.xdr` e lo salva nella directory corrente.
 
 ```console
@@ -229,7 +229,7 @@ Il comando che segue genera schemi XML per tutti i tipi dell'assembly `myAssembl
 xsd myAssembly.dll
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Data.DataSet>
 - <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>

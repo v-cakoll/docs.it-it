@@ -12,24 +12,24 @@ no-loc:
 - <issuerChannelBehaviors>
 - <dataContractSerializer>
 ms.openlocfilehash: cbbfb9d3b5af47a360aa82cf837cd6749f61b641
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70893149"
 ---
-# <a name="issuerchannelbehaviors-element"></a>\<Elemento > issuerChannelBehaviors
+# <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors> Elemento
 
-Contiene una raccolta di comportamenti dell'endpoint client di Windows Communication Foundation (WCF) (definiti nella configurazione) da utilizzare durante la comunicazione con i servizi del token del servizio specificati. I comportamenti definiti non possono includere [ \<gli elementi ClientCredentials >](clientcredentials.md) .
+Contiene una raccolta di comportamenti dell'endpoint client di Windows Communication Foundation (WCF) (definiti nella configurazione) da utilizzare durante la comunicazione con i servizi del token del servizio specificati. I comportamenti definiti non possono includere [\<clientCredentials>](clientcredentials.md) elementi.
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<> System. serviceModel](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<comportamenti >](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<> endpointBehaviors](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<comportamento >](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<> clientCredentials](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<> issuedToken](issuedtoken.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<> issuerChannelBehaviors
+&nbsp;&nbsp;[\<system.serviceModel>](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<behaviors>](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<endpointBehaviors>](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<behavior>](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<clientCredentials>](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<issuedToken>](issuedtoken.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<issuerChannelBehaviors>
 
 ## <a name="syntax"></a>Sintassi
 
@@ -46,25 +46,25 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ### <a name="attributes"></a>Attributi
 
-Nessuno.
+No.
 
 ### <a name="child-elements"></a>Elementi figlio
 
-|Elemento|DESCRIZIONE|
+|Elemento|Descrizione|
 |-------------|-----------------|
 |[\<add>](add-of-issuerchannelbehaviors.md)|Aggiunge un comportamento alla raccolta.|
 
 ### <a name="parent-elements"></a>Elementi padre
 
-|Elemento|DESCRIZIONE|
+|Elemento|Descrizione|
 |-------------|-----------------|
 |[\<issuedToken>](issuedtoken.md)|Specifica un token personalizzato usato per autenticare un client presso un servizio.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Usare questo elemento quando per comunicare con un servizio è necessario usare comportamenti diversi da quelli includono elementi `<clientCredentials>`, Ad esempio, se è [ \<](datacontractserializer-element.md) necessario includere un elemento del comportamento > DataContractSerializer.
+Usare questo elemento quando per comunicare con un servizio è necessario usare comportamenti diversi da quelli includono elementi `<clientCredentials>`, Ad esempio, se [\<dataContractSerializer>](datacontractserializer-element.md) è necessario includere un elemento Behavior.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>
@@ -72,9 +72,9 @@ Usare questo elemento quando per comunicare con un servizio è necessario usare 
 - <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuerChannelBehaviors%2A>
 - [Identità del servizio e autenticazione](../../../wcf/feature-details/service-identity-and-authentication.md)
 - [Comportamenti di sicurezza](../../../wcf/feature-details/security-behaviors-in-wcf.md)
-- [Federazione e token rilasciati](../../../wcf/feature-details/federation-and-issued-tokens.md)
-- [Protezione di servizi e client](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Federazione e token emessi](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Securing Services and Clients](../../../wcf/feature-details/securing-services-and-clients.md)
 - [Protezione di client](../../../wcf/securing-clients.md)
-- [Procedura: Creazione di un client federato](../../../wcf/feature-details/how-to-create-a-federated-client.md)
-- [Procedura: Configurare un'autorità emittente locale](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [Federazione e token rilasciati](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Procedura: creare un client federato](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [Procedura: configurare un emittente locale](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Federazione e token emessi](../../../wcf/feature-details/federation-and-issued-tokens.md)

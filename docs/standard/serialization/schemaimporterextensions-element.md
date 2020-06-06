@@ -8,10 +8,10 @@ helpviewer_keywords:
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
 ms.openlocfilehash: c46c5cb6e01463723f0f2ce3873fb4a6ec0b4e60
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84278402"
 ---
 # <a name="schemaimporterextensions-element"></a>\<schemaImporterExtensions> Elemento
@@ -51,7 +51,7 @@ Contiene tipi utilizzati da <xref:System.Xml.Serialization.XmlSchemaImporter> pe
 </system.xml.serialization>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>

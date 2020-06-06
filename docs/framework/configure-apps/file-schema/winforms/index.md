@@ -3,10 +3,10 @@ title: Sezione di configurazione di Windows Form
 ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 ms.openlocfilehash: 4de61ae3cb5eb8a3fc226881e2b7f842030dfddf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79151832"
 ---
 # <a name="windows-forms-configuration-section"></a>Sezione di configurazione di Windows Form
@@ -28,7 +28,7 @@ Le impostazioni di configurazione dell'applicazione Windows Form sono archiviate
 
 Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attributi
 
 No.
 
@@ -42,15 +42,15 @@ Elemento  |Descrizione |
 
 Elemento  |Descrizione |
 ---------|---------|
-[\<>di configurazione](../configuration-element.md) | Elemento radice in ogni file di configurazione usato in Common Language Runtime e nelle applicazioni Windows Form |
+[\<configuration>](../configuration-element.md) | Elemento radice in ogni file di configurazione usato in Common Language Runtime e nelle applicazioni Windows Form |
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 A partire da .NET Framework 4.7, l'elemento `<System.Windows.Forms.ApplicationConfigurationSection>` consente di configurare le applicazioni Windows Form in modo da sfruttare i vantaggi delle funzionalità aggiunte nelle versioni recenti di .NET Framework.
 
-L'elemento `<System.Windows.Forms.ApplicationConfigurationSection>` può includere [`<add>`](windows-forms-add-configuration-element.md) uno o più elementi figlio, ognuno dei quali definisce un'impostazione di configurazione specifica.
+L' `<System.Windows.Forms.ApplicationConfigurationSection>` elemento può includere uno o più [`<add>`](windows-forms-add-configuration-element.md) elementi figlio, ognuno dei quali definisce un'impostazione di configurazione specifica.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Schema del file di configurazione](../index.md)
-- [Supporto di valori DPI elevati in Windows FormHigh DPI Support in Windows Forms](../../../winforms/high-dpi-support-in-windows-forms.md)
+- [Supporto di valori DPI alti in Windows Forms](../../../winforms/high-dpi-support-in-windows-forms.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
 ms.openlocfilehash: a5aebac2d392d4540581dfe7c7afff0819968ac0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69912547"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Mapping di identificatori di oggetti ad algoritmi di crittografia
@@ -38,9 +38,9 @@ Le firme digitali garantiscono che i dati non vengano manomessi quando vengono i
 </configuration>  
 ```  
   
- [ L'\<elemento > oidEntry](./file-schema/cryptography/oidentry-element.md) contiene due attributi. L'attributo **OID** è il numero di identificatore dell'oggetto. L'attributo **Name** è il valore dell' [ \<attributo Name dell'elemento nameEntry >](./file-schema/cryptography/nameentry-element.md). Deve essere presente un mapping da un nome di algoritmo a una classe prima che sia possibile eseguire il mapping di un identificatore di oggetto a un nome semplice.  
+ L' [ \<oidEntry> elemento](./file-schema/cryptography/oidentry-element.md) contiene due attributi. L'attributo **OID** è il numero di identificatore dell'oggetto. L'attributo **Name** è il valore dell'attributo **Name** dell' [ \<nameEntry> elemento](./file-schema/cryptography/nameentry-element.md). Deve essere presente un mapping da un nome di algoritmo a una classe prima che sia possibile eseguire il mapping di un identificatore di oggetto a un nome semplice.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Configurazione di classi di crittografia](configure-cryptography-classes.md)
-- [Cryptographic Services](../../standard/security/cryptographic-services.md)
+- [Servizi di crittografia](../../standard/security/cryptographic-services.md)

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
 ms.openlocfilehash: fd12be1b775d7611ef3f16d23147470313bf9866
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153373"
 ---
-# <a name="listeners-element-for-trace"></a>\<listener>elemento \<per l'elemento> di traccia
+# <a name="listeners-element-for-trace"></a>Elemento \<listeners> per \<trace>
 Specifica un listener che raccoglie, archivia e instrada i messaggi. I listener indirizzano l'output di traccia a una destinazione appropriata.  
 
-[**\<>di configurazione**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<>system.diagnostics**](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<>traccia**](trace-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>di ascoltatori**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<trace>**](trace-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<listeners>**
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,16 +35,16 @@ Specifica un listener che raccoglie, archivia e instrada i messaggi. I listener 
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attributi  
  No.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<aggiungere>](add-element-for-listeners-for-trace.md)|Aggiunge un listener alla raccolta `Listeners`.|  
-|[\<>chiari](clear-element-for-listeners-for-trace.md)|Cancella la raccolta `Listeners` per una traccia.|  
-|[\<rimuovere>](remove-element-for-listeners-for-trace.md)|Rimuove un listener `Listeners` dalla raccolta.|  
+|[\<add>](add-element-for-listeners-for-trace.md)|Aggiunge un listener alla raccolta `Listeners`.|  
+|[\<clear>](clear-element-for-listeners-for-trace.md)|Cancella la raccolta `Listeners` per una traccia.|  
+|[\<remove>](remove-element-for-listeners-for-trace.md)|Rimuove un listener dalla `Listeners` raccolta.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -54,14 +54,14 @@ Specifica un listener che raccoglie, archivia e instrada i messaggi. I listener 
 |`system.diagnostics`|Consente di specificare l'elemento radice per la sezione di configurazione ASP.NET.|  
 |`trace`|Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di traccia.|  
   
-## <a name="remarks"></a>Osservazioni  
- Le <xref:System.Diagnostics.Debug> <xref:System.Diagnostics.Trace> classi e condividono la stessa raccolta **Listeners.** Se si aggiunge un oggetto listener alla raccolta in una di queste classi, l'altra classe utilizza lo stesso listener. Le classi listener fornite con .NET <xref:System.Diagnostics.TraceListener> Framework derivano dalla classe .  
+## <a name="remarks"></a>Commenti  
+ Le <xref:System.Diagnostics.Debug> <xref:System.Diagnostics.Trace> classi e condividono la stessa raccolta **Listeners** . Se si aggiunge un oggetto listener alla raccolta in una di queste classi, l'altra classe utilizzerà lo stesso listener. Le classi del listener fornite con la .NET Framework derivano dalla <xref:System.Diagnostics.TraceListener> classe.  
   
 ## <a name="configuration-file"></a>File di configurazione  
- Questo elemento può essere utilizzato nel file di configurazione del computer (Machine.config) e nel file di configurazione dell'applicazione.  
+ Questo elemento può essere utilizzato nel file di configurazione del computer (Machine. config) e nel file di configurazione dell'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare i `MyListener` `MyEventListener` ** \<listener>elemento** per aggiungere i listener e per il **Listeners** insieme. `MyListener`crea un `MyListener.log` file chiamato e scrive l'output nel file. `MyEventListener`crea una voce nel registro eventi.  
+ Nell'esempio seguente viene illustrato come utilizzare l' **\<listeners>** elemento per aggiungere i listener `MyListener` e `MyEventListener` alla raccolta **Listeners** . `MyListener`Crea un file denominato `MyListener.log` e scrive l'output nel file. `MyEventListener`Crea una voce nel log eventi.  
   
 ```xml  
 <configuration>  
@@ -84,7 +84,7 @@ Specifica un listener che raccoglie, archivia e instrada i messaggi. I listener 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Diagnostics.TraceListener>
 - [Schema delle impostazioni di traccia e debug](index.md)

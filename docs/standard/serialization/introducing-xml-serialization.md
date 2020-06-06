@@ -14,10 +14,10 @@ helpviewer_keywords:
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
 ms.openlocfilehash: d9b71b7530debde7708ee107c990541e2b97cd44
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84277960"
 ---
 # <a name="xml-serialization"></a>serializzazione XML
@@ -176,7 +176,7 @@ Per un elenco completo dei mapping dei tipi, vedere la proprietà **DataType** p
 
 - <xref:System.Xml.Serialization.XmlRootAttribute>
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - <xref:System.Runtime.Serialization.DataContractSerializer>

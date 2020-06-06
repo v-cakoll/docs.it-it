@@ -3,22 +3,22 @@ title: <transport> di <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
 ms.openlocfilehash: b975015a9c9a0af53117900c45d917ce1c1a53e9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73732819"
 ---
-# <a name="transport-of-nethttpbinding"></a>\<> di trasporto di \<netHttpBinding >
+# <a name="transport-of-nethttpbinding"></a>\<transport> di \<netHttpBinding>
 Definisce proprietà che controllano i parametri di autenticazione per il trasporto HTTP.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**Binding**](bindings.md)\<
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**NetHttpBinding**](nethttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Binding** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**sicurezza**](security-of-nethttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Transport** >  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<netHttpBinding>**](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -55,33 +55,33 @@ Definisce proprietà che controllano i parametri di autenticazione per il traspo
   
 ## <a name="clientcredentialtype-attribute"></a>Attributo clientCredentialType  
   
-|Value|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|Nessuno|I messaggi non vengono protetti durante il trasferimento.|  
+|nessuno|I messaggi non vengono protetti durante il trasferimento.|  
 |Basic|Specifica l'autenticazione di base.|  
 |Digest|Specifica l'autenticazione digest.|  
-|Ntlm|Specifica l'autenticazione NTLM quando possibile e se l'autenticazione di Windows non riesce.|  
-|WINDOWS|Specifica l'autenticazione integrata di Windows.|  
+|NTLM|Specifica l'autenticazione NTLM quando possibile e se l'autenticazione di Windows non riesce.|  
+|Windows|Specifica l'autenticazione Windows integrata.|  
   
 ## <a name="proxycredentialtype-attribute"></a>Attributo proxyCredentialType  
   
-|Value|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|Nessuno|-I messaggi non vengono protetti durante il trasferimento.|  
+|nessuno|-I messaggi non vengono protetti durante il trasferimento.|  
 |Basic|Specifica l'autenticazione di base come definita da RFC 2617 – HTTP Authentication: Basic and Digest Authentication.|  
 |Digest|Specifica l'autenticazione digest come definita da RFC 2617 – HTTP Authentication: Basic and Digest Authentication.|  
-|Ntlm|Specifica l'autenticazione NTLM quando possibile e se l'autenticazione di Windows non riesce.|  
-|WINDOWS|Specifica l'autenticazione integrata di Windows.|  
+|NTLM|Specifica l'autenticazione NTLM quando possibile e se l'autenticazione di Windows non riesce.|  
+|Windows|Specifica l'autenticazione Windows integrata.|  
 |Certificato|Esegue l'autenticazione client mediante un certificato. Questa opzione funziona solo se l'attributo `Mode` dell'elemento `security` padre è impostato su Transport, mentre non funzionerà se viene impostato su TransportCredentialOnly.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<security >](security-of-nethttpbinding.md)|Definisce le funzionalità di sicurezza per il [\<> NetHttpBinding](nethttpbinding.md).|  
+|[\<security>](security-of-nethttpbinding.md)|Definisce le funzionalità di sicurezza per [\<netHttpBinding>](nethttpbinding.md) .|  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente è dimostrato l'uso della sicurezza del trasporto SSL con l'associazione di base. Per impostazione predefinita, l'associazione di base supporta la comunicazione HTTP.  
@@ -118,13 +118,13 @@ Definisce proprietà che controllano i parametri di autenticazione per il traspo
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
 - <xref:System.ServiceModel.HttpTransportSecurity>
-- [Protezione di servizi e client](../../../wcf/feature-details/securing-services-and-clients.md)
-- [Associazioni](../../../wcf/bindings.md)
+- [Securing Services and Clients](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Binding](../../../wcf/bindings.md)
 - [Configurazione di associazioni fornite dal sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Uso di associazioni per configurare servizi e client](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding >](bindings.md)
+- [\<binding>](bindings.md)

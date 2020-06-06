@@ -11,10 +11,10 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.openlocfilehash: 7ad2721f12c5d14b61b35ecf7696ff0d6a6f27da
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84289512"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Come serializzare e deserializzare (effettuare il marshalling e unmarshalling) JSON in .NET
@@ -383,11 +383,11 @@ Per escludere tutte le proprietà con valore null, impostare la <xref:System.Tex
 
 Di seguito è riportato un esempio di oggetto da serializzare e output JSON:
 
-|Proprietà |valore  |
+|Proprietà |Valore  |
 |---------|---------|
 | Data    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureCelsius| 25 |
-| Summary| Null|
+| Riepilogo| Null|
 
 ```json
 {
@@ -639,11 +639,11 @@ Se si deserializza il codice JSON mostrato nel tipo visualizzato, le `DatesAvail
 
 Quando si deserializza il codice JSON illustrato in precedenza in questo tipo di esempio, i dati aggiuntivi diventano coppie chiave-valore della `ExtensionData` proprietà:
 
-|Proprietà |valore  |Note  |
+|Proprietà |Valore  |Note  |
 |---------|---------|---------|
 | Data    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | Mancata corrispondenza tra maiuscole e minuscole ( `temperatureCelsius` in JSON), quindi la proprietà non è impostata. |
-| Summary | Accesso frequente ||
+| Riepilogo | Accesso frequente ||
 | ExtensionData | temperatureCelsius: 25 |Poiché il caso non corrisponde, questa proprietà JSON è un oggetto aggiuntivo e diventa una coppia chiave-valore nel dizionario.|
 || DatesAvailable:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |Una proprietà aggiuntiva da JSON diventa una coppia chiave-valore, con una matrice come oggetto valore.|
 | |SummaryWords:<br>Accesso sporadico<br>Ventoso<br>Umido |Una proprietà aggiuntiva da JSON diventa una coppia chiave-valore, con una matrice come oggetto valore.|

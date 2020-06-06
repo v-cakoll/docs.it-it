@@ -1,15 +1,15 @@
 ---
-title: <Namespace>Elemento (.NET native)
+title: <Namespace>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 ms.openlocfilehash: 06d88a7b0f95c7c1dbe98818b847c92e08a57a19
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79180959"
 ---
-# <a name="namespace-element-net-native"></a>\<Elemento> dello spazio dei nomi (.NET native)Namespace> Element (.NET Native)
+# <a name="namespace-element-net-native"></a>\<Namespace>Elemento (.NET Native)
 Applica i criteri di reflection di runtime a tutti i tipi in un determinato spazio dei nomi.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -31,7 +31,7 @@ Applica i criteri di reflection di runtime a tutti i tipi in un determinato spaz
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Tipo di attributo|Descrizione|  
 |---------------|--------------------|-----------------|  
@@ -49,13 +49,13 @@ Applica i criteri di reflection di runtime a tutti i tipi in un determinato spaz
   
 ## <a name="name-attribute"></a>Name (attributo)  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
-|*namespace_name*|Nome dello spazio dei nomi. Se \<l'elemento> Namespace è un elemento figlio di un [ \<elemento Application>](application-element-net-native.md), [ \<Library>](library-element-net-native.md)o [ \<Assembly>](assembly-element-net-native.md) , *namespace_name* deve essere un nome completo dello spazio dei nomi. Se l'elemento \<Namespace> è figlio di un altro elemento \<Namespace>, *namespace_name* deve essere un nome relativo dello spazio dei nomi.|  
+|*namespace_name*|Nome dello spazio dei nomi. Se l' \<Namespace> elemento è figlio di un [\<Application>](application-element-net-native.md) elemento, [\<Library>](library-element-net-native.md) o [\<Assembly>](assembly-element-net-native.md) , *namespace_name* deve essere un nome completo dello spazio dei nomi. Se l' \<Namespace> elemento è figlio di un altro \<Namespace> elemento, *namespace_name* deve essere un nome relativo dello spazio dei nomi.|  
   
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri per tutti i tipi nello spazio dei nomi. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
@@ -64,25 +64,25 @@ Applica i criteri di reflection di runtime a tutti i tipi in un determinato spaz
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |`<Namespace>`|Applica i criteri di reflection di runtime a tutti i tipi in uno spazio dei nomi padre.|  
-|[\<Tipo>](type-element-net-native.md)|Applica i criteri di reflection a un tipo.|  
-|[\<>TypeInstantiation](typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito.|  
+|[\<Type>](type-element-net-native.md)|Applica i criteri di reflection a un tipo.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<>dell'applicazione](application-element-net-native.md)|Viene usato come contenitore per i tipi e i membri dei tipi a livello di applicazione i cui metadati sono disponibili per la reflection al runtime. [ \<L'elemento>Application](application-element-net-native.md) può avere zero, uno o più [ \<](assembly-element-net-native.md) elementi Assembly>.|  
-|[\<>di montaggio](assembly-element-net-native.md)|Applica i criteri di reflection di runtime a tutti i tipi in un determinato assembly.|  
-|[\<>libreria](library-element-net-native.md)|Definisce l'assembly che contiene i tipi e i membri dei tipi i cui metadati sono disponibili per la reflection al runtime. L'elemento [ \<Library>](library-element-net-native.md) può avere zero o un [ \<](assembly-element-net-native.md) elemento Assembly>.|  
+|[\<Application>](application-element-net-native.md)|Viene usato come contenitore per i tipi e i membri dei tipi a livello di applicazione i cui metadati sono disponibili per la reflection al runtime. L' [\<Application>](application-element-net-native.md) elemento può contenere zero, uno o più [\<Assembly>](assembly-element-net-native.md) elementi.|  
+|[\<Assembly>](assembly-element-net-native.md)|Applica i criteri di reflection di runtime a tutti i tipi in un determinato assembly.|  
+|[\<Library>](library-element-net-native.md)|Definisce l'assembly che contiene i tipi e i membri dei tipi i cui metadati sono disponibili per la reflection al runtime. L' [\<Library>](library-element-net-native.md) elemento può contenere zero o un [\<Assembly>](assembly-element-net-native.md) elemento.|  
 |`<Namespace>`|Applica i criteri di reflection a tutti i tipi in uno spazio dei nomi padre.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Gli attributi `Activate`, `Browse`, `Dynamic` e `Serialize` sono tutti facoltativi. Se non ne è presente nessuno, l'elemento `<Namespace>` funge solo da contenitore per gli elementi figlio. Se sono presenti, l'elemento `<Namespace>` consente di applicare criteri di reflection di runtime a tutti i tipi dello spazio dei nomi specificato.  
   
- Quando è un elemento [ \<](assembly-element-net-native.md) figlio del `<Namespace>` Assembly>elemento, l'elemento esegue l'override dei criteri di reflection di [ \<](assembly-element-net-native.md) runtime definiti dal Assembly>elemento.  
+ Quando è figlio dell' [\<Assembly>](assembly-element-net-native.md) elemento, l' `<Namespace>` elemento esegue l'override dei criteri di reflection di runtime definiti dall' [\<Assembly>](assembly-element-net-native.md) elemento.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime)
+- [Impostazioni dei criteri della direttiva di runtime](runtime-directive-policy-settings.md)
 - [Riferimento a file di configurazione di direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementi direttiva di runtime](runtime-directive-elements.md)

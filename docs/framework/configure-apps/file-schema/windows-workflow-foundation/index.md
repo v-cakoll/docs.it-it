@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 7ae70357-b150-4342-8f2a-d5eb6f9c6a0d
 ms.openlocfilehash: 77c55262271843b31330e5e8bf9dbdde5fdd38df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69946291"
 ---
 # <a name="windows-workflow-foundation-configuration-schema"></a>Schema di configurazione di Windows Workflow Foundation
@@ -15,6 +15,6 @@ Gli elementi di configurazione Windows Workflow Foundation (WF) consentono di co
   
  Poiché i file di configurazione sono in formato XML, per modificarli manualmente utilizzando un editor di testo è necessario avere familiarità con il linguaggio XML. In caso contrario, è possibile che si verifichino problemi. È ad esempio possibile che un tag di elemento XML o un attributo venga digitato in modo errato. Per i tag di elemento XML e gli attributi viene applicata la distinzione tra maiuscole e minuscole.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [\<system.serviceModel>](system-servicemodel-of-workflow.md)  
  Viene descritto l'elemento **ServiceModel**.

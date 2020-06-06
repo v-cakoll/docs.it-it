@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
 ms.openlocfilehash: c735d30920fd3c8cd13243b4a5a29489ce05b262
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84289694"
 ---
 # <a name="binary-serialization"></a>Serializzazione binaria
@@ -339,7 +339,7 @@ Con la serializzazione binaria è possibile modificare membri privati all'intern
 > | <xref:System.Xml.Xsl.XsltCompileException?displayProperty=nameWithType> | A partire da .NET Core 2.0.4. |
 > | <xref:System.Xml.Xsl.XsltException?displayProperty=nameWithType> | A partire da .NET Core 2.0.4. |
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Runtime.Serialization>\
 Contiene classi utilizzabili per la serializzazione e la deserializzazione di oggetti.

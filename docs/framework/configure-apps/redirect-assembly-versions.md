@@ -9,10 +9,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 ms.openlocfilehash: 0d55171e37ec056b3470d238a60bc32f2feb04fb
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "81646048"
 ---
 # <a name="redirecting-assembly-versions"></a>Reindirizzamento delle versioni di assembly
@@ -23,7 +23,7 @@ ms.locfileid: "81646048"
 ## <a name="assembly-unification-and-default-binding"></a>Unificazione e associazione predefinita degli assembly
  Le associazioni agli assembly .NET Framework vengono talvolta reindirizzate mediante un processo denominato *unificazione degli assembly*. .NET Framework è costituito da una versione di Common Language Runtime e da oltre venti assembly .NET Framework che costituiscono la libreria dei tipi. Questi assembly .NET Framework vengono gestiti dal runtime come una singola unità. Per impostazione predefinita, quando viene avviata un'app, tutti i riferimenti ai tipi nel codice eseguito dal runtime vengono indirizzati agli assembly .NET Framework che hanno lo stesso numero di versione del runtime caricato in un processo. I reindirizzamenti eseguiti con questo modello rappresentano il comportamento predefinito per il runtime.
 
- Ad esempio, se l'app fa riferimento ai tipi nello spazio dei nomi System.XML ed è stata compilata utilizzando .NET Framework 4.5, contiene riferimenti statici all'assembly System.XML fornito con la versione runtime 4.5. Per reindirizzare il riferimento dell'associazione in modo da puntare all'assembly System.XML fornito con .NET Framework 4, si possono inserire le informazioni di reindirizzamento nel file di configurazione dell'app. Il reindirizzamento di un'associazione in un file di configurazione per un assembly .NET Framework unificato determina l'annullamento dell'unificazione per tale assembly.
+ Ad esempio, se l'app fa riferimento ai tipi nello spazio dei nomi System. XML ed è stata compilata usando il .NET Framework 4,5, contiene riferimenti statici all'assembly System. XML fornito con la versione di runtime 4,5. Per reindirizzare il riferimento dell'associazione in modo da puntare all'assembly System.XML fornito con .NET Framework 4, si possono inserire le informazioni di reindirizzamento nel file di configurazione dell'app. Il reindirizzamento di un'associazione in un file di configurazione per un assembly .NET Framework unificato determina l'annullamento dell'unificazione per tale assembly.
 
  Inoltre, è possibile reindirizzare manualmente l'associazione di assembly per gli assembly di terze parti in caso di più versioni disponibili.
 
@@ -55,9 +55,9 @@ ms.locfileid: "81646048"
 
 ### <a name="relying-on-automatic-binding-redirection"></a>Reindirizzamento di associazione automatico
 
-Quando crei un'app desktop in Visual Studio destinata a .NET Framework 4.5.1 o versione successiva, l'app usa il reindirizzamento automatico dell'associazione. Ciò significa che se due componenti fanno riferimento a versioni diverse dello stesso assembly con nome sicuro, il runtime aggiunge automaticamente un reindirizzamento di associazione alla versione più recente dell'assembly nel file di output di configurazione dell'app (app.config). Il reindirizzamento esegue l'override dell'unificazione di assembly che in caso contrario potrebbe essere eseguito. Il file app.config di origine non viene modificato. Si supponga, ad esempio, che l'app faccia riferimento direttamente a un componente di .NET Framework fuori banda, ma viene usata una libreria di terze parti destinata a una versione precedente dello stesso componente. Quando si compila l'app, il file di configurazione dell'app di output viene modificato in modo da contenere un reindirizzamento di associazione alla versione più recente del componente. Se si crea un'app Web, si riceve un avviso di compilazione relativo al conflitto di associazione, che a sua volta offre la possibilità di aggiungere il reindirizzamento di associazione necessario al file di configurazione Web di origine.
+Quando si crea un'app desktop in Visual Studio destinata a .NET Framework 4.5.1 o versione successiva, l'app usa il reindirizzamento di associazione automatico. Ciò significa che se due componenti fanno riferimento a versioni diverse dello stesso assembly con nome sicuro, il runtime aggiunge automaticamente un reindirizzamento di associazione alla versione più recente dell'assembly nel file di output di configurazione dell'app (app.config). Il reindirizzamento esegue l'override dell'unificazione di assembly che in caso contrario potrebbe essere eseguito. Il file app.config di origine non viene modificato. Si supponga, ad esempio, che l'app faccia riferimento direttamente a un componente di .NET Framework fuori banda, ma viene usata una libreria di terze parti destinata a una versione precedente dello stesso componente. Quando si compila l'app, il file di configurazione dell'app di output viene modificato in modo da contenere un reindirizzamento di associazione alla versione più recente del componente. Se si crea un'app Web, si riceve un avviso di compilazione relativo al conflitto di associazione, che a sua volta offre la possibilità di aggiungere il reindirizzamento di associazione necessario al file di configurazione Web di origine.
 
-Se si aggiungono manualmente reindirizzamenti di associazione al file app.config di origine, in fase di compilazione, Visual Studio tenta di unificare gli assembly in base ai reindirizzamenti di associazione aggiunti. Ad esempio, si inserisce il seguente reindirizzamento dell'associazione per un assembly:
+Se si aggiungono manualmente reindirizzamenti di binding al file app. config di origine, in fase di compilazione, Visual Studio tenterà di unificare gli assembly in base ai reindirizzamenti di binding aggiunti. Ad esempio, si inserisce il seguente reindirizzamento dell'associazione per un assembly:
 
 `<bindingRedirect oldVersion="3.0.0.0" newVersion="2.0.0.0" />`
 
@@ -65,11 +65,11 @@ Se un altro progetto nell'app fa riferimento alla versione 1.0.0.0 dello stesso 
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-Puoi abilitare il reindirizzamento automatico dell'associazione se l'app è destinata a versioni precedenti di .NET Framework. È possibile eseguire l'override di questo comportamento predefinito fornendo informazioni di reindirizzamento dell'associazione nel file app.config per qualsiasi assembly o disattivando la funzionalità di reindirizzamento dell'associazione. Per informazioni su come attivare o disattivare questa funzionalità, vedere [Procedura: abilitare e disabilitare il reindirizzamento automatico dell'associazione](how-to-enable-and-disable-automatic-binding-redirection.md).
+È possibile abilitare il reindirizzamento di associazione automatico se l'app è destinata alle versioni precedenti del .NET Framework. È possibile eseguire l'override di questo comportamento predefinito fornendo le informazioni di reindirizzamento dell'associazione nel file app. config per qualsiasi assembly o disabilitando la funzionalità di reindirizzamento di associazione. Per informazioni su come attivare o disattivare questa funzionalità, vedere [procedura: abilitare e disabilitare il reindirizzamento di associazione automatico](how-to-enable-and-disable-automatic-binding-redirection.md).
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>Esclusione dei criteri editore
- È possibile eseguire l'override dei criteri editore nel file di configurazione dell'app, se necessario. Ad esempio, le nuove versioni degli assembly, anche se si presentano come compatibili con le versioni precedenti, possono causare problemi per l'esecuzione di un'app. Se si desidera ignorare i criteri editore, **apply** aggiungere un **no** **yes** [ \<](./file-schema/runtime/publisherpolicy-element.md) elemento publisherPolicy>all'elemento [ \<dependentAssembly>](./file-schema/runtime/dependentassembly-element.md) nel file di configurazione dell'app e impostare l'attributo apply su no , che esegue l'override di eventuali impostazioni yes precedenti.
+ È possibile eseguire l'override dei criteri editore nel file di configurazione dell'app, se necessario. Ad esempio, le nuove versioni degli assembly, anche se si presentano come compatibili con le versioni precedenti, possono causare problemi per l'esecuzione di un'app. Se si vuole ignorare i criteri dell'editore, aggiungere un [\<publisherPolicy>](./file-schema/runtime/publisherpolicy-element.md) elemento all' [\<dependentAssembly>](./file-schema/runtime/dependentassembly-element.md) elemento nel file di configurazione dell'app e impostare l'attributo **Apply** su **No**, che sostituisce le impostazioni **Yes** precedenti.
 
  `<publisherPolicy apply="no" />`
 
@@ -81,11 +81,11 @@ Puoi abilitare il reindirizzamento automatico dell'associazione se l'app è dest
 
 <a name="BKMK_Specifyingassemblybindinginconfigurationfiles"></a>
 ## <a name="specifying-assembly-binding-in-configuration-files"></a>Specifica dell'associazione di assembly nei file di configurazione
- Si usa lo stesso formato XML per specificare i reindirizzamenti delle associazioni, indipendentemente dal fatto che venga usato il file di configurazione dell'app, il file di configurazione del computer o il file dei criteri editore. Per reindirizzare una versione dell'assembly a un'altra, utilizzare l'elemento [ \<bindingRedirect>.](./file-schema/runtime/bindingredirect-element.md) L'attributo **oldVersion** può specificare una singola versione di assembly oppure un insieme di versioni. L'attributo `newVersion` deve specificare una singola versione.  Se si imposta `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` , ad esempio, il runtime userà la versione 2.0.0.0 anziché una versione di assembly compresa tra 1.1.0.0 e 1.2.0.0.
+ Si usa lo stesso formato XML per specificare i reindirizzamenti delle associazioni, indipendentemente dal fatto che venga usato il file di configurazione dell'app, il file di configurazione del computer o il file dei criteri editore. Per reindirizzare una versione dell'assembly a un'altra, usare l' [\<bindingRedirect>](./file-schema/runtime/bindingredirect-element.md) elemento. L'attributo **oldVersion** può specificare una singola versione di assembly oppure un insieme di versioni. L'attributo `newVersion` deve specificare una singola versione.  Se si imposta `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` , ad esempio, il runtime userà la versione 2.0.0.0 anziché una versione di assembly compresa tra 1.1.0.0 e 1.2.0.0.
 
  Nell'esempio di codice seguente viene illustrata una varietà di scenari di reindirizzamento dell'associazione. L'esempio specifica un reindirizzamento per un intervallo delle versioni per `myAssembly`e un singolo reindirizzamento dell'associazione per `mySecondAssembly`. L'esempio specifica inoltre che il file dei criteri editore non esegue l'override di reindirizzamenti delle associazioni per `myThirdAssembly`.
 
- Per associare un assembly, è necessario specificare la stringa "urn:schemas-microsoft-com:asm.v1" con l'attributo **xmlns** nel tag [ \<>assemblyBinding.](./file-schema/runtime/assemblybinding-element-for-runtime.md)
+ Per associare un assembly, è necessario specificare la stringa "urn: schemas-microsoft-com: ASM. V1" con l'attributo **xmlns** nel [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) tag.
 
 ```xml
 <configuration>
@@ -119,7 +119,7 @@ Puoi abilitare il reindirizzamento automatico dell'associazione se l'app è dest
 ```
 
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>Limitazione delle associazioni di assembly a una versione specifica
- È possibile usare l'attributo **appliesTo** nell'elemento [ \<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) in un file di configurazione dell'app per reindirizzare i riferimenti all'associazione di assembly a una versione specifica di .NET Framework. Questo attributo facoltativo usa un numero di versione di .NET Framework per indicare la versione a cui deve essere applicato. Se non si specifica l'attributo **appliesTo** l'elemento [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) viene applicato a tutte le versioni di .NET Framework.
+ È possibile usare l'attributo **appliesTo** [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) nell'elemento in un file di configurazione dell'applicazione per reindirizzare i riferimenti di associazione di assembly a una versione specifica del .NET Framework. Questo attributo facoltativo usa un numero di versione di .NET Framework per indicare la versione a cui deve essere applicato. Se non è specificato alcun attributo **appliesTo** , l' [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) elemento si applica a tutte le versioni del .NET Framework.
 
  Per reindirizzare l'associazione di assembly per un assembly .NET Framework 3.5, ad esempio, verrà incluso il codice XML riportato di seguito nel file di configurazione dell'app.
 
@@ -152,15 +152,15 @@ Puoi abilitare il reindirizzamento automatico dell'associazione se l'app è dest
 </assemblyBinding>
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Procedura: abilitare e disabilitare il reindirizzamento di associazione automatico](how-to-enable-and-disable-automatic-binding-redirection.md)
-- [\<Elemento> bindingRedirect](./file-schema/runtime/bindingredirect-element.md)
+- [Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico](how-to-enable-and-disable-automatic-binding-redirection.md)
+- [\<bindingRedirect>Elemento](./file-schema/runtime/bindingredirect-element.md)
 - [Autorizzazione di sicurezza per il reindirizzamento delle versioni di assembly](assembly-binding-redirection-security-permission.md)
 - [Assembly in .NET](../../standard/assembly/index.md)
 - [Programmazione con gli assembly](../../standard/assembly/index.md)
-- [Come il runtime individua gli assembly](../deployment/how-the-runtime-locates-assemblies.md)
+- [Modalità di individuazione degli assembly da parte del runtime](../deployment/how-the-runtime-locates-assemblies.md)
 - [Configurazione di applicazioni](index.md)
 - [Schema delle impostazioni di runtime](./file-schema/runtime/index.md)
 - [Schema del file di configurazione](./file-schema/index.md)
-- [Procedura: creare criteri editore](how-to-create-a-publisher-policy.md)
+- [Procedura: Creare criteri editore](how-to-create-a-publisher-policy.md)

@@ -11,19 +11,19 @@ helpviewer_keywords:
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
 ms.openlocfilehash: d171fea193bbae068e69b8976abb8e56a5623f02
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154777"
 ---
-# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<rimuovere>elemento per authenticationModules (impostazioni di rete)
+# <a name="remove-element-for-authenticationmodules-network-settings"></a>Elemento \<remove> per authenticationModules (impostazioni di rete)
 Rimuove un modulo di autenticazione dall'applicazione.  
 
-[**\<>di configurazione**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<>system.net**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<authenticationModuli>**](authenticationmodules-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<rimuovere>**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<authenticationModules>**](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +36,7 @@ Rimuove un modulo di autenticazione dall'applicazione.
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attributi  
   
 |**Attributo**|**Descrizione**|  
 |-------------------|---------------------|  
@@ -49,12 +49,12 @@ Rimuove un modulo di autenticazione dall'applicazione.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[authenticationModules](authenticationmodules-element-network-settings.md)|Specifica i moduli utilizzati per autenticare le richieste di rete.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Specifica i moduli usati per autenticare le richieste di rete.|  
   
-## <a name="remarks"></a>Osservazioni  
- L'elemento `remove` rimuove i moduli di autenticazione definiti in precedenza nel file di configurazione o a un livello superiore nella gerarchia di configurazione.  
+## <a name="remarks"></a>Commenti  
+ L' `remove` elemento rimuove i moduli di autenticazione definiti in precedenza nel file di configurazione o a un livello superiore nella gerarchia di configurazione.  
   
- Il valore `type` per l'attributo deve essere un nome di classe valido.  
+ Il valore dell' `type` attributo deve essere un nome di classe valido.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
@@ -72,7 +72,7 @@ Rimuove un modulo di autenticazione dall'applicazione.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>

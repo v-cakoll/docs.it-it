@@ -10,10 +10,10 @@ helpviewer_keywords:
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
 ms.openlocfilehash: e08ae0d77539219223650fd3bcbd1bcee4df2739
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "83379108"
 ---
 # <a name="how-to-deserialize-an-object-using-xmlserializer"></a>Come deserializzare un oggetto utilizzando XmlSerializer
@@ -47,7 +47,7 @@ Quando si deserializza un oggetto, il formato di trasporto determina se verrà c
     var myObject = (MySerializableClass) mySerializer.Deserialize(myFileStream)
     ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Introduzione alla serializzazione XML](introducing-xml-serialization.md)
 - [Procedura: serializzare un oggetto](how-to-serialize-an-object.md)

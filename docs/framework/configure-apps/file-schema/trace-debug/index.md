@@ -12,10 +12,10 @@ helpviewer_keywords:
 - elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
 ms.openlocfilehash: 037d08b33e9aa6a64d236b36ebcf821b604b03df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69927124"
 ---
 # <a name="trace-and-debug-settings-schema"></a>Schema delle impostazioni di traccia e debug
@@ -47,9 +47,9 @@ Le impostazioni di traccia e debug specificano i listener di traccia per raccogl
 |[\<system.diagnostics>](system-diagnostics-element.md)|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
 |[\<trace>](trace-element.md)|Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di traccia.|  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.Debug>
-- [Schema dei file di configurazione](../index.md)
+- [Schema del file di configurazione](../index.md)
