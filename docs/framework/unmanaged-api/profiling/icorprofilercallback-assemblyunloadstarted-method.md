@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-ms.openlocfilehash: 0a677e33950f178b916a5e9e9cbb7bd918c1349b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 80054a8292c69b957664cb3573b0a8694c7f9fd2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866611"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500403"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>Metodo ICorProfilerCallback::AssemblyUnloadStarted
 Notifica al profiler che è in corso lo scaricamento di un assembly.  
@@ -38,17 +38,17 @@ HRESULT AssemblyUnloadStarted(
 
   \[in] identifica l'assembly da scaricare.
 
-## <a name="remarks"></a>Note  
- Il valore di `assemblyId` non è valido per una richiesta di informazioni dopo la restituzione del metodo `AssemblyUnloadStarted`, ovvero l'ultima possibilità del profiler di ottenere informazioni su questo assembly.  
+## <a name="remarks"></a>Osservazioni  
+ Il valore di `assemblyId` non è valido per una richiesta di informazioni dopo la `AssemblyUnloadStarted` restituzione del metodo. si tratta dell'ultima possibilità del profiler di ottenere informazioni su questo assembly.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

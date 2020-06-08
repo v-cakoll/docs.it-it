@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 277c3344-d0cb-431e-beae-eb1eeeba8eea
 topic_type:
 - apiref
-ms.openlocfilehash: 75a9a7174f105d99e9d1c9b220cfc5bf928d46ec
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: ff4b32185e604611eaaead2847c11bc139d405a6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866970"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500689"
 ---
 # <a name="functionenter3withinfo-function"></a>Funzione FunctionEnter3WithInfo
 Notifica al profiler che il controllo viene passato a una funzione e fornisce un handle che può essere passato al [Metodo ICorProfilerInfo3:: GetFunctionEnter3Info](icorprofilerinfo3-getfunctionenter3info-method.md) per recuperare il stack frame e gli argomenti della funzione.  
@@ -40,12 +40,12 @@ void __stdcall FunctionEnter3WithInfo(
 
 - `eltInfo`
 
-  \[in] handle opaco che rappresenta le informazioni relative a una stack frame specificata. Questo handle è valido solo durante il callback a cui viene passato.
+  \[in] handle opaco che rappresenta le informazioni su un determinato stack frame. Questo handle è valido solo durante il callback a cui viene passato.
 
-## <a name="remarks"></a>Note  
- Il metodo di callback `FunctionEnter3WithInfo` notifica al profiler la chiamata di funzioni e consente al profiler di usare il [Metodo ICorProfilerInfo3:: GetFunctionEnter3Info](icorprofilerinfo3-getfunctionenter3info-method.md) per esaminare i valori degli argomenti. Per accedere alle informazioni sugli argomenti, è necessario impostare il flag di `COR_PRF_ENABLE_FUNCTION_ARGS`. Il profiler può usare il [Metodo ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) per impostare i flag di evento e quindi usare il [Metodo ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) per registrare l'implementazione di questa funzione.  
+## <a name="remarks"></a>Osservazioni  
+ Il `FunctionEnter3WithInfo` metodo di callback invia una notifica al profiler quando vengono chiamate le funzioni e consente al profiler di usare il [Metodo ICorProfilerInfo3:: GetFunctionEnter3Info](icorprofilerinfo3-getfunctionenter3info-method.md) per esaminare i valori degli argomenti. Per accedere alle informazioni sugli argomenti, `COR_PRF_ENABLE_FUNCTION_ARGS` è necessario impostare il flag. Il profiler può usare il [Metodo ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) per impostare i flag di evento e quindi usare il [Metodo ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) per registrare l'implementazione di questa funzione.  
   
- La funzione `FunctionEnter3WithInfo` è un callback. è necessario implementarla. L'implementazione deve usare l'`__declspec(naked)` attributo della classe di archiviazione.  
+ La `FunctionEnter3WithInfo` funzione è un callback. è necessario implementarla. L'implementazione deve usare l' `__declspec(naked)` attributo della classe di archiviazione.  
   
  Il motore di esecuzione non salva i registri prima di chiamare questa funzione.  
   
@@ -53,18 +53,18 @@ void __stdcall FunctionEnter3WithInfo(
   
 - All'uscita è necessario ripristinare lo stack scegliendo tutti i parametri di cui è stato eseguito il push dal chiamante.  
   
- L'implementazione di `FunctionEnter3WithInfo` non deve bloccarsi perché ritarda Garbage Collection. L'implementazione non deve tentare un Garbage Collection, perché lo stack potrebbe non essere in uno stato descrittivo Garbage Collection. Se viene effettuato un tentativo di Garbage Collection, il runtime si bloccherà fino a quando `FunctionEnter3WithInfo` non restituisce.  
+ L'implementazione di `FunctionEnter3WithInfo` non deve essere bloccata, perché ritarderà Garbage Collection. L'implementazione non deve tentare un Garbage Collection, perché lo stack potrebbe non essere in uno stato descrittivo Garbage Collection. Se viene effettuato un tentativo di Garbage Collection, il runtime si bloccherà fino a quando non viene `FunctionEnter3WithInfo` restituito.  
   
- La funzione `FunctionEnter3WithInfo` non deve chiamare codice gestito o causare un'allocazione di managed memory in alcun modo.  
+ La `FunctionEnter3WithInfo` funzione non deve chiamare nel codice gestito o causare un managed memory allocazione in qualsiasi modo.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf. idl  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

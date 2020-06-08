@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8dcd7537-d0c6-498c-8a56-2c060310ef65
 topic_type:
 - apiref
-ms.openlocfilehash: f1cfef464569b577923fbb16624c99358998d29c
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 0da67f0d4be779cc21481d03a21209620289888e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866247"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500059"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>Metodo ICorProfilerCallback::JITCompilationFinished
 Notifica al profiler che il compilatore just-in-time (JIT) ha terminato la compilazione di una funzione.  
@@ -46,18 +46,18 @@ HRESULT JITCompilationFinished(
 
 - `fIsSafeToBlock`
 
-  \[in] valore che indica al profiler se il blocco influirà sul funzionamento del runtime. Il valore è `true` se il blocco può causare la restituzione del thread chiamante da parte del runtime. in caso contrario, `false`.
+  \[in] valore che indica al profiler se il blocco influirà sul funzionamento del runtime. Il valore è `true` se il blocco può far sì che il runtime attenda che il thread chiamante restituisca da questo callback; in caso contrario, `false` .
 
-  Sebbene il valore `true` non danneggi il runtime, può alterare i risultati della profilatura.
+  Sebbene il valore di `true` non danneggi il runtime, può alterare i risultati della profilatura.
 
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

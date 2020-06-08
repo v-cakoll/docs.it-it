@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e2d88c6-8a3a-4fbe-900b-b4f4c06bf6bf
 topic_type:
 - apiref
-ms.openlocfilehash: 91a19e5e15dddd446208dfa3b2c32826282067eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a031cdb875b5eb046428d4d235d3093caddb7a6a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175395"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491290"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>Metodo IMetaDataImport::GetFieldMarshal
 Ottiene un puntatore al tipo nativo non gestito del campo rappresentato dal token di metadati del campo specificato.  
@@ -37,24 +37,24 @@ HRESULT GetFieldMarshal (
   
 ## <a name="parameters"></a>Parametri  
  `tk`  
- [in] Token di metadati per cui rappresenta il campo per cui ottenere informazioni sul marshalling di interoperabilità.  
+ in Token di metadati che rappresenta il campo per il quale ottenere le informazioni di marshalling di interoperabilità.  
   
  `ppvNativeType`  
- [fuori] Puntatore alla firma dei metadati del tipo nativo del campo.  
+ out Puntatore alla firma dei metadati del tipo nativo del campo.  
   
  `pcbNativeType`  
- [fuori] Dimensione in byte `ppvNativeType`di .  
+ out Dimensioni in byte di `ppvNativeType` .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](imetadataimport2-interface.md)

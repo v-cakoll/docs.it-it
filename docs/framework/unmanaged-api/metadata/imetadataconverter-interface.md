@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9caea662-0167-4267-b14a-2fa42c3be4ea
 topic_type:
 - apiref
-ms.openlocfilehash: b6ca7c619d32e69ffac20b80561171d0320db2d4
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 7a2a5080872f49a84e36c53ac337d91738c15e45
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008378"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501339"
 ---
 # <a name="imetadataconverter-interface"></a>Interfaccia IMetaDataConverter
 Fornisce metodi per eseguire il mapping delle librerie dei tipi alle relative firme di metadati e per eseguire la conversione da una all'altra.  
@@ -28,7 +28,7 @@ Fornisce metodi per eseguire il mapping delle librerie dei tipi alle relative fi
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo GetMetaDataFromTypeInfo](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-getmetadatafromtypeinfo-method.md)|Ottiene un puntatore a un'istanza di [IMetaDataImport](imetadataimport-interface.md) che rappresenta la firma dei metadati per la libreria dei tipi a cui fa riferimento l' `ITypeInfo` istanza specificata.|  
+|[Metodo GetMetaDataFromTypeInfo](imetadataconverter-getmetadatafromtypeinfo-method.md)|Ottiene un puntatore a un'istanza di [IMetaDataImport](imetadataimport-interface.md) che rappresenta la firma dei metadati per la libreria dei tipi a cui fa riferimento l' `ITypeInfo` istanza specificata.|  
 |[Metodo GetMetaDataFromTypeLib](imetadataconverter-getmetadatafromtypelib-method.md)|Ottiene un puntatore a un' `IMetaDataImport` istanza di che rappresenta la firma dei metadati per la libreria dei tipi rappresentata dall'istanza di specificata `ITypeLib` .|  
 |[Metodo GetTypeLibFromMetaData](imetadataconverter-gettypelibfrommetadata-method.md)|Ottiene un puntatore a un' `ITypeLib` istanza di che rappresenta la libreria dei tipi con i nomi di modulo e di libreria specificati.|  
   

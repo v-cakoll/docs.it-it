@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31214d3a-715e-49af-92b3-0fd11e4f218a
 topic_type:
 - apiref
-ms.openlocfilehash: 64c70fe0b657047ae35dccb763fa57120403deef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8ab16ad5b2b2838125e07511ef47be737f40671c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177147"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501209"
 ---
 # <a name="imetadatatablesgetcodedtokeninfo-method"></a>Metodo IMetaDataTables::GetCodedTokenInfo
 Ottiene un puntatore a una matrice di token associati all'indice di riga specificato.  
@@ -38,27 +38,27 @@ HRESULT GetCodedTokenInfo (
   
 ## <a name="parameters"></a>Parametri  
  `ixCdTkn`  
- [in] Tipo di token codificato da restituire.  
+ in Tipo di token codificato da restituire.  
   
  `pcTokens`  
- [fuori] Puntatore alla lunghezza `ppTokens`di .  
+ out Puntatore alla lunghezza di `ppTokens` .  
   
  `ppTokens`  
- [fuori] Puntatore a un puntatore a una matrice che contiene l'elenco di token restituiti.  
+ out Puntatore a un puntatore a una matrice che contiene l'elenco dei token restituiti.  
   
  `ppName`  
- [fuori] Puntatore a un puntatore al `ixCdTkn`nome del token in .  
+ out Puntatore a un puntatore al nome del token in `ixCdTkn` .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [Interfaccia IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [Interfaccia IMetaDataTables](imetadatatables-interface.md)
+- [Interfaccia IMetaDataTables2](imetadatatables2-interface.md)

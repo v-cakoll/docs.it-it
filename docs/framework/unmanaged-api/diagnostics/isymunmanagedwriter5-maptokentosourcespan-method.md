@@ -2,17 +2,17 @@
 title: Metodo ISymUnmanagedWriter5::MapTokenToSourceSpan
 ms.date: 03/30/2017
 ms.assetid: d0fbbf61-71c6-4fb1-8c9f-d619ca5d7d68
-ms.openlocfilehash: f5898cab08f332314fb33684399dcb4f2ff71cc7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 0f00dd34ffbdd58a46260132d8d7ace74ec2f294
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609456"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501677"
 ---
 # <a name="isymunmanagedwriter5maptokentosourcespan-method"></a>Metodo ISymUnmanagedWriter5::MapTokenToSourceSpan
 Esegue il mapping del token di metadati specificato all'intervallo di righe di origine specificato nel file di origine specificato.  
   
- Deve essere chiamato tra le chiamate al [Metodo OpenMapTokensToSourceSpans](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-openmaptokenstosourcespans-method.md) e al [Metodo CloseMapTokensToSourceSpans](isymunmanagedwriter5-closemaptokenstosourcespans-method.md).  
+ Deve essere chiamato tra le chiamate al [Metodo OpenMapTokensToSourceSpans](isymunmanagedwriter5-openmaptokenstosourcespans-method.md) e al [Metodo CloseMapTokensToSourceSpans](isymunmanagedwriter5-closemaptokenstosourcespans-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -22,7 +22,7 @@ HRESULT MapTokenToSourceSpan(    [in] mdToken token,    [in] ISymUnmanagedDocume
   
 ## <a name="parameters"></a>Parametri  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |`token`||  
 |`document`||  

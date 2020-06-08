@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab894dc4-f7b6-4afc-bfcb-582a4b7e53a2
 topic_type:
 - apiref
-ms.openlocfilehash: 5af59e158a34b06d304a98db1dfaa46585b22eb6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d795f90c458b7fcf1a191b2763ac5f5bb55fb438
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177199"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490898"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>Metodo IMetaDataImport::GetSigFromToken
 Ottiene la firma binaria dei metadati associata al token specificato.  
@@ -37,24 +37,24 @@ HRESULT GetSigFromToken (
   
 ## <a name="parameters"></a>Parametri  
  `mdSig`  
- [in] Token per cui restituire la firma di metadati binari.  
+ in Token per il quale restituire la firma dei metadati binari.  
   
  `ppvSig`  
- [fuori] Puntatore alla firma dei metadati restituita.  
+ out Puntatore alla firma dei metadati restituita.  
   
  `pcbSig`  
- [fuori] Dimensione in byte della firma dei metadati binari.  
+ out Dimensioni in byte della firma dei metadati binari.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](imetadataimport2-interface.md)

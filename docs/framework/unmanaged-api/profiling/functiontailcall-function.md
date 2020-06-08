@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 66347e03-9a97-41e8-8f9d-89b80803f7b5
 topic_type:
 - apiref
-ms.openlocfilehash: bd03eccc923049c4a49062d18bd11659f3316e8a
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 42ea497bdcab71518bec08514b827d76f0317d57
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866823"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500598"
 ---
 # <a name="functiontailcall-function"></a>Funzione FunctionTailcall
 Notifica al profiler che la funzione attualmente in esecuzione sta per eseguire una chiamata tail a un'altra funzione.  
   
 > [!NOTE]
-> La funzione `FunctionTailcall` è deprecata nella versione .NET Framework 2,0. Continuerà a funzionare, ma comporterà una riduzione delle prestazioni. Usare invece la funzione [FunctionTailcall2](functiontailcall2-function.md) .  
+> La `FunctionTailcall` funzione è deprecata nella versione .NET Framework 2,0. Continuerà a funzionare, ma comporterà una riduzione delle prestazioni. Usare invece la funzione [FunctionTailcall2](functiontailcall2-function.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,10 +41,10 @@ void __stdcall FunctionTailcall (
 
   \[in] identificatore della funzione attualmente in esecuzione che sta per effettuare una chiamata tail.
 
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  La funzione di destinazione della chiamata tail utilizzerà l'stack frame corrente e tornerà direttamente al chiamante della funzione che ha eseguito la chiamata tail. Ciò significa che non verrà emesso un callback [FunctionLeave](functionleave-function.md) per una funzione che è la destinazione di una chiamata tail.  
   
- La funzione `FunctionTailcall` è un callback. è necessario implementarla. L'implementazione deve usare l'attributo della classe di archiviazione `__declspec`(`naked`).  
+ La `FunctionTailcall` funzione è un callback. è necessario implementarla. L'implementazione deve usare l' `__declspec` `naked` attributo della classe di archiviazione ().  
   
  Il motore di esecuzione non salva i registri prima di chiamare questa funzione.  
   
@@ -52,12 +52,12 @@ void __stdcall FunctionTailcall (
   
 - All'uscita è necessario ripristinare lo stack scegliendo tutti i parametri di cui è stato eseguito il push dal chiamante.  
   
- L'implementazione di `FunctionTailcall` non deve bloccarsi perché ritarda Garbage Collection. L'implementazione non deve tentare un Garbage Collection perché lo stack potrebbe non essere in uno stato descrittivo Garbage Collection. Se viene effettuato un tentativo di Garbage Collection, il runtime si bloccherà fino a quando `FunctionTailcall` non restituisce.  
+ L'implementazione di `FunctionTailcall` non deve essere bloccata perché ritarderà Garbage Collection. L'implementazione non deve tentare un Garbage Collection perché lo stack potrebbe non essere in uno stato descrittivo Garbage Collection. Se viene effettuato un tentativo di Garbage Collection, il runtime si bloccherà fino a quando non viene `FunctionTailcall` restituito.  
   
- Inoltre, la funzione `FunctionTailcall` non deve chiamare nel codice gestito o in alcun modo causare un'allocazione di managed memory.  
+ Inoltre, la `FunctionTailcall` funzione non deve chiamare nel codice gestito o in alcun modo causare un'allocazione managed memory.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf. idl  
   

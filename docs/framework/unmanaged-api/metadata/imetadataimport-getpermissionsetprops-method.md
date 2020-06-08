@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9855f0e4-12c0-4d3d-ab5d-d6bc52d25eae
 topic_type:
 - apiref
-ms.openlocfilehash: 5faf1a6ae89045b2ef17fab789ee6e5bf23eecf2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54c75156c32e5b40aa933ef6530b2cc33edf7de4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175343"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490991"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>Metodo IMetaDataImport::GetPermissionSetProps
-Ottiene i metadati <xref:System.Security.PermissionSet?displayProperty=nameWithType> associati ai rappresentati dal token di autorizzazione specificato.  
+Ottiene i metadati associati all'oggetto <xref:System.Security.PermissionSet?displayProperty=nameWithType> rappresentato dal token di autorizzazione specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,28 +38,28 @@ HRESULT GetPermissionSetProps (
   
 ## <a name="parameters"></a>Parametri  
  `pm`  
- [in] Token di metadati Permission che rappresenta il set di autorizzazioni per cui ottenere le proprietà dei metadati.  
+ in Token di metadati dell'autorizzazione che rappresenta il set di autorizzazioni per il quale ottenere le proprietà dei metadati.  
   
  `pdwAction`  
- [fuori] Puntatore al set di autorizzazioni.  
+ out Puntatore al set di autorizzazioni.  
   
  `ppvPermission`  
- [fuori] Puntatore alla firma dei metadati binari del set di autorizzazioni.  
+ out Puntatore alla firma dei metadati binari del set di autorizzazioni.  
   
  `pcbPermission`  
- [fuori] Dimensione in byte `ppvPermission`di .  
+ out Dimensioni in byte di `ppvPermission` .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Security.PermissionSet>
-- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](imetadataimport2-interface.md)

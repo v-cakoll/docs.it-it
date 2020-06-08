@@ -1,5 +1,6 @@
 ---
 title: Accesso a Internet con un proxy
+description: Informazioni su come configurare un'istanza del proxy per consentire all'applicazione .NET Framework di comunicare con il proxy Web.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Networking
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-ms.openlocfilehash: 76566d06cac81d8ba4138369c6ee3ef807a99634
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 77f46cdcedbeb9b1809621d64f239a6681e82590
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71049044"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502743"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Accesso a Internet con un proxy
 Se nel sito viene usato un proxy per l'accesso a Internet, sarà necessario configurare un'istanza del proxy per consentire all'applicazione di comunicare con il proxy Web.  
@@ -35,4 +36,4 @@ Se nel sito viene usato un proxy per l'accesso a Internet, sarà necessario conf
 ## <a name="see-also"></a>Vedere anche
 
 - [Uso di protocolli applicativi](using-application-protocols.md)
-- [Programmazione di rete in .NET Framework](index.md)
+- [Programmazione di rete nel .NET Framework](index.md)

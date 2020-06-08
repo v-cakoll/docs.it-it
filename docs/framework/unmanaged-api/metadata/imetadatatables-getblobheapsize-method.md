@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6330a9ee-8cd5-4299-86f1-b4de2c701a0d
 topic_type:
 - apiref
-ms.openlocfilehash: c32407c3fc0bc5a045b80ec48937699826d981af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 68e29e932e477f286db00b0c989a3346bd13c9bc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177169"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501222"
 ---
 # <a name="imetadatatablesgetblobheapsize-method"></a>Metodo IMetaDataTables::GetBlobHeapSize
-Ottiene le dimensioni, in byte, dell'heap BLOB (Binary Large Object).  
+Ottiene la dimensione, in byte, dell'heap di oggetti binari di grandi dimensioni (BLOB).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,18 +35,18 @@ HRESULT GetBlobHeapSize (
   
 ## <a name="parameters"></a>Parametri  
  `pcbBlobs`  
- [fuori] Puntatore alla dimensione, in byte, dell'heap BLOB.  
+ out Puntatore alla dimensione, in byte, dell'heap BLOB.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [Interfaccia IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [Interfaccia IMetaDataTables](imetadatatables-interface.md)
+- [Interfaccia IMetaDataTables2](imetadatatables2-interface.md)

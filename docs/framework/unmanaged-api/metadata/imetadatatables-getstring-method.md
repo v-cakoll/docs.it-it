@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 895c35cf-b95d-4e3b-93b5-cfc1cf9044fc
 topic_type:
 - apiref
-ms.openlocfilehash: 216a1f7bd2ff5a596fa7abf7874b5e603d5a9f7b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 41e7b8193ce3288d526db8d7d8c289b0a053ee4e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175239"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84489756"
 ---
 # <a name="imetadatatablesgetstring-method"></a>Metodo IMetaDataTables::GetString
-Ottiene la stringa in corrispondenza dell'indice specificato dalla colonna della tabella nell'ambito di riferimento corrente.  
+Ottiene la stringa in corrispondenza dell'indice specificato dalla colonna della tabella nell'ambito del riferimento corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,21 +36,21 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>Parametri  
  `ixString`  
- [in] Indice in corrispondenza del quale iniziare la ricerca del valore successivo.  
+ in Indice in corrispondenza del quale iniziare la ricerca del valore successivo.  
   
  `ppString`  
- [fuori] Puntatore a un puntatore al valore stringa restituito.  
+ out Puntatore a un puntatore al valore stringa restituito.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [Interfaccia IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [Interfaccia IMetaDataTables](imetadatatables-interface.md)
+- [Interfaccia IMetaDataTables2](imetadatatables2-interface.md)

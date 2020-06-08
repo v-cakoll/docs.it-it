@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1e48243f-5de6-4bd6-a1d0-e1d248bca4b8
 topic_type:
 - apiref
-ms.openlocfilehash: 3bedb2c5f55f608b1153272437c0f55b730c2dfc
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 55955cd47bd32fb4294b0b8e852dd692702bd74f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866856"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500533"
 ---
 # <a name="functiontailcall3-function"></a>Funzione FunctionTailcall3
 Notifica al profiler che la funzione attualmente in esecuzione sta per eseguire una chiamata tail a un'altra funzione.  
@@ -36,10 +36,10 @@ void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);
 
   \[in] identificatore della funzione attualmente in esecuzione che sta per effettuare una chiamata tail.
 
-## <a name="remarks"></a>Note  
- La funzione di callback `FunctionTailcall3` notifica al profiler la chiamata di funzioni. Usare il [Metodo ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) per registrare l'implementazione di questa funzione.  
+## <a name="remarks"></a>Osservazioni  
+ La `FunctionTailcall3` funzione di callback notifica al profiler la chiamata di funzioni. Usare il [Metodo ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) per registrare l'implementazione di questa funzione.  
   
- La funzione `FunctionTailcall3` è un callback. è necessario implementarla. L'implementazione deve usare l'`__declspec(naked)` attributo della classe di archiviazione.  
+ La `FunctionTailcall3` funzione è un callback. è necessario implementarla. L'implementazione deve usare l' `__declspec(naked)` attributo della classe di archiviazione.  
   
  Il motore di esecuzione non salva i registri prima di chiamare questa funzione.  
   
@@ -47,18 +47,18 @@ void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);
   
 - All'uscita è necessario ripristinare lo stack scegliendo tutti i parametri di cui è stato eseguito il push dal chiamante.  
   
- L'implementazione di `FunctionTailcall3` non deve bloccarsi perché ritarda Garbage Collection. L'implementazione non deve tentare un Garbage Collection, perché lo stack potrebbe non essere in uno stato descrittivo Garbage Collection. Se viene effettuato un tentativo di Garbage Collection, il runtime si bloccherà fino a quando `FunctionTailcall3` non restituisce.  
+ L'implementazione di `FunctionTailcall3` non deve essere bloccata, perché ritarderà Garbage Collection. L'implementazione non deve tentare un Garbage Collection, perché lo stack potrebbe non essere in uno stato descrittivo Garbage Collection. Se viene effettuato un tentativo di Garbage Collection, il runtime si bloccherà fino a quando non viene `FunctionTailcall3` restituito.  
   
- La funzione `FunctionTailcall3` non deve chiamare codice gestito o causare un'allocazione di managed memory in alcun modo.  
+ La `FunctionTailcall3` funzione non deve chiamare nel codice gestito o causare un managed memory allocazione in qualsiasi modo.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf. idl  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4bae06f7-94d7-4ba8-b250-648b2da78674
 topic_type:
 - apiref
-ms.openlocfilehash: 891cca8ac47a3f8391bd7ab7b27b35d6318bbe0a
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 6a53b9b1b061c2ca07a469abc78c07ed9e710069
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866287"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500091"
 ---
 # <a name="icorprofilercallback-interface"></a>Interfaccia ICorProfilerCallback
 Fornisce i metodi utilizzati dal Common Language Runtime (CLR) per notificare a un Code Profiler quando si verificano gli eventi sottoscritti dal profiler.  
@@ -42,8 +42,8 @@ Fornisce i metodi utilizzati dal Common Language Runtime (CLR) per notificare a 
 |[Metodo ClassUnloadStarted](icorprofilercallback-classunloadstarted-method.md)|Notifica al profiler che una classe viene scaricata.|  
 |[Metodo COMClassicVTableCreated](icorprofilercallback-comclassicvtablecreated-method.md)|Notifica al profiler che è stato creato un Runtime Callable Wrapper (RCW) per l'IID e la classe specificati.|  
 |[Metodo COMClassicVTableDestroyed](icorprofilercallback-comclassicvtabledestroyed-method.md)|Notifica al profiler che un RCW viene eliminato definitivamente.|  
-|[Metodo ExceptionCatcherEnter](icorprofilercallback-exceptioncatcherenter-method.md)|Notifica al profiler che il controllo viene passato al blocco `catch` appropriato.|  
-|[Metodo ExceptionCatcherLeave](icorprofilercallback-exceptioncatcherleave-method.md)|Notifica al profiler che il controllo viene passato all'esterno del blocco di `catch` appropriato.|  
+|[Metodo ExceptionCatcherEnter](icorprofilercallback-exceptioncatcherenter-method.md)|Notifica al profiler che il controllo viene passato al `catch` blocco appropriato.|  
+|[Metodo ExceptionCatcherLeave](icorprofilercallback-exceptioncatcherleave-method.md)|Notifica al profiler che il controllo viene passato all'esterno del `catch` blocco appropriato.|  
 |[Metodo ExceptionCLRCatcherExecute](icorprofilercallback-exceptionclrcatcherexecute-method.md)|Obsoleto nella versione .NET Framework 2,0.|  
 |[Metodo ExceptionCLRCatcherFound](icorprofilercallback-exceptionclrcatcherfound-method.md)|Obsoleto nella .NET Framework 2,0.|  
 |[Metodo ExceptionOSHandlerEnter](icorprofilercallback-exceptionoshandlerenter-method.md)|Non implementato. Un profiler che necessita di informazioni sulle eccezioni non gestite deve ottenere tali informazioni tramite altri mezzi.|  
@@ -54,8 +54,8 @@ Fornisce i metodi utilizzati dal Common Language Runtime (CLR) per notificare a 
 |[Metodo ExceptionSearchFunctionEnter](icorprofilercallback-exceptionsearchfunctionenter-method.md)|Notifica al profiler che la fase di ricerca della gestione delle eccezioni è stata immessa in una funzione.|  
 |[Metodo ExceptionSearchFunctionLeave](icorprofilercallback-exceptionsearchfunctionleave-method.md)|Notifica al profiler che la fase di ricerca della gestione delle eccezioni ha terminato la ricerca di una funzione.|  
 |[Metodo ExceptionThrown](icorprofilercallback-exceptionthrown-method.md)|Notifica al profiler che è stata generata un'eccezione.|  
-|[Metodo ExceptionUnwindFinallyEnter](icorprofilercallback-exceptionunwindfinallyenter-method.md)|Notifica al profiler che la fase di rimozione della gestione delle eccezioni sta immettendo una clausola `finally` contenuta nella funzione specificata.|  
-|[Metodo ExceptionUnwindFinallyLeave](icorprofilercallback-exceptionunwindfinallyleave-method.md)|Notifica al profiler che la fase di rimozione della gestione delle eccezioni ha lasciato una clausola `finally`.|  
+|[Metodo ExceptionUnwindFinallyEnter](icorprofilercallback-exceptionunwindfinallyenter-method.md)|Notifica al profiler che la fase di rimozione della gestione delle eccezioni sta immettendo una `finally` clausola contenuta nella funzione specificata.|  
+|[Metodo ExceptionUnwindFinallyLeave](icorprofilercallback-exceptionunwindfinallyleave-method.md)|Notifica al profiler che la fase di rimozione della gestione delle eccezioni ha lasciato una `finally` clausola.|  
 |[Metodo ExceptionUnwindFunctionEnter](icorprofilercallback-exceptionunwindfunctionenter-method.md)|Notifica al profiler che la fase di rimozione della gestione delle eccezioni è stata immessa in una funzione.|  
 |[Metodo ExceptionUnwindFunctionLeave](icorprofilercallback-exceptionunwindfunctionleave-method.md)|Notifica al profiler che la fase di rimozione della gestione delle eccezioni ha terminato la rimozione di una funzione.|  
 |[Metodo FunctionUnloadStarted](icorprofilercallback-functionunloadstarted-method.md)|Notifica al profiler che il runtime ha iniziato a scaricare una funzione.|  
@@ -98,24 +98,24 @@ Fornisce i metodi utilizzati dal Common Language Runtime (CLR) per notificare a 
 |[Metodo ThreadDestroyed](icorprofilercallback-threaddestroyed-method.md)|Notifica al profiler che un thread è stato eliminato definitivamente.|  
 |[Metodo UnmanagedToManagedTransition](icorprofilercallback-unmanagedtomanagedtransition-method.md)|Notifica al profiler che è stata eseguita una transizione dal codice non gestito al codice gestito.|  
   
-## <a name="remarks"></a>Note  
- CLR chiama un metodo nell'interfaccia `ICorProfilerCallback` (o [ICorProfilerCallback2](icorprofilercallback2-interface.md)) per notificare al profiler quando si verifica un evento in cui è stato sottoscritto il profiler. Si tratta dell'interfaccia di callback primaria tramite la quale CLR comunica con il Code Profiler.  
+## <a name="remarks"></a>Osservazioni  
+ CLR chiama un metodo nell' `ICorProfilerCallback` interfaccia (o [ICorProfilerCallback2](icorprofilercallback2-interface.md)) per notificare al profiler quando si verifica un evento in cui è stato sottoscritto il profiler. Si tratta dell'interfaccia di callback primaria tramite la quale CLR comunica con il Code Profiler.  
   
- Un Code Profiler deve implementare i metodi dell'interfaccia `ICorProfilerCallback`. Per il .NET Framework versione 2,0 o successiva, il profiler deve implementare anche i metodi di `ICorProfilerCallback2`. Ogni implementazione del metodo deve restituire un valore HRESULT che ha un valore di S_OK in caso di esito positivo o E_FAIL in caso di errore. Attualmente CLR ignora il valore HRESULT restituito da ogni callback eccetto [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md).  
+ Un Code Profiler deve implementare i metodi dell' `ICorProfilerCallback` interfaccia. Per il .NET Framework versione 2,0 o successiva, il profiler deve implementare anche i `ICorProfilerCallback2` metodi. Ogni implementazione del metodo deve restituire un valore HRESULT che ha un valore di S_OK in caso di esito positivo o E_FAIL in caso di errore. Attualmente CLR ignora il valore HRESULT restituito da ogni callback eccetto [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md).  
   
- Nel registro di sistema di Microsoft Windows, un Code Profiler deve registrare il proprio oggetto Component Object Model (COM) che implementa le interfacce di `ICorProfilerCallback` e `ICorProfilerCallback2`. Un Code Profiler sottoscrive gli eventi per i quali vuole ricevere una notifica chiamando [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md). Questa operazione viene in genere eseguita nell'implementazione del profiler di [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md). Il profiler può quindi ricevere una notifica dal runtime quando un evento sta per verificarsi o si è appena verificato in un processo di runtime in esecuzione.  
+ Nel registro di sistema di Microsoft Windows, un Code Profiler deve registrare l'oggetto Component Object Model (COM) che implementa le `ICorProfilerCallback` `ICorProfilerCallback2` interfacce e. Un Code Profiler sottoscrive gli eventi per i quali vuole ricevere una notifica chiamando [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md). Questa operazione viene in genere eseguita nell'implementazione del profiler di [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md). Il profiler può quindi ricevere una notifica dal runtime quando un evento sta per verificarsi o si è appena verificato in un processo di runtime in esecuzione.  
   
 > [!NOTE]
-> Il profiler registra un singolo oggetto COM. Se il profiler è destinato alla .NET Framework versione 1,0 o 1,1, tale oggetto COM deve implementare solo i metodi di `ICorProfilerCallback`. Se la destinazione è .NET Framework versione 2,0 o successiva, l'oggetto COM deve implementare anche i metodi di `ICorProfilerCallback2`.  
+> Il profiler registra un singolo oggetto COM. Se il profiler è destinato alla .NET Framework versione 1,0 o 1,1, tale oggetto COM deve implementare solo i metodi di `ICorProfilerCallback` . Se la destinazione è .NET Framework versione 2,0 o successiva, l'oggetto COM deve implementare anche i metodi di `ICorProfilerCallback2` .  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

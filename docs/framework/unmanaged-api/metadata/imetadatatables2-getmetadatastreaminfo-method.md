@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8b280627-cc74-4789-95da-1fefc966de05
 topic_type:
 - apiref
-ms.openlocfilehash: 279e34689169d31ad89772e90155e7f50bdbac08
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7d39d089c348b7320651ed21ea14ba07d7877fd4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426225"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501095"
 ---
 # <a name="imetadatatables2getmetadatastreaminfo-method"></a>Metodo IMetaDataTables2::GetMetaDataStreamInfo
 Ottiene il nome, le dimensioni e il contenuto del flusso di metadati in corrispondenza dell'indice specificato.  
@@ -47,18 +47,18 @@ HRESULT GetMetaDataStreamInfo (
  out Puntatore al flusso di metadati.  
   
  `pcb`  
- out Dimensione, in byte, del `ppv`.  
+ out Dimensione, in byte, di `ppv` .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
  **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
-- [Interfaccia IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [Interfaccia IMetaDataTables2](imetadatatables2-interface.md)
+- [Interfaccia IMetaDataTables](imetadatatables-interface.md)
