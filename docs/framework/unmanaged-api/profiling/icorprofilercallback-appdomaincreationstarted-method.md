@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2a8240b-07fe-4859-bb2b-7d3adbfa0a9f
 topic_type:
 - apiref
-ms.openlocfilehash: 49c3ab4901537805a1ae1be79097c55cc331d29d
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: fcebe65b7f39dd2849946e445a694ad5e9b1a65d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866715"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500481"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>Metodo ICorProfilerCallback::AppDomainCreationStarted
 Notifica al profiler che è in corso la creazione di un dominio applicazione.  
@@ -38,17 +38,17 @@ HRESULT AppDomainCreationStarted(
 
   \[in] identifica il dominio in fase di creazione.
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'ID non è valido per tutte le richieste di informazioni fino a quando non viene chiamato il metodo [ICorProfilerCallback:: AppDomainCreationFinished](icorprofilercallback-appdomaincreationfinished-method.md) .  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

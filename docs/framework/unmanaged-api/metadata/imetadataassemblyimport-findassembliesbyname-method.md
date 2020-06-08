@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4db97cf9-e4c1-4233-8efa-cbdc0e14a8e4
 topic_type:
 - apiref
-ms.openlocfilehash: 05902436c09d082f90af01f48c7e918650317ce7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: d2693a94f02214df6d7265b26e3d70d91adcf8a7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009418"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503835"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>Metodo IMetaDataAssemblyImport::FindAssembliesByName
 Ottiene una matrice di assembly con il `szAssemblyName` parametro specificato, utilizzando le regole standard utilizzate dal Common Language Runtime (CLR) per la risoluzione dei riferimenti.  
@@ -64,10 +64,10 @@ HRESULT FindAssembliesByName (
 |`S_OK`|`FindAssembliesByName`la restituzione è riuscita.|  
 |`S_FALSE`|Nessun assembly.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Dato il nome di un assembly, il `FindAssembliesByName` metodo trova l'assembly seguendo le regole standard per la risoluzione dei riferimenti ad assembly. Per ulteriori informazioni, vedere [come il runtime individua gli assembly](../../deployment/how-the-runtime-locates-assemblies.md). `FindAssembliesByName`consente al chiamante di configurare vari aspetti del contesto del resolver dell'assembly, ad esempio il percorso di ricerca privato e di base dell'applicazione.  
   
- Il `FindAssembliesByName` metodo richiede l'inizializzazione di CLR nel processo per richiamare la logica di risoluzione dell'assembly. Pertanto, è necessario chiamare [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (passando COINITEE_DEFAULT) prima di chiamare `FindAssembliesByName` e quindi seguire con una chiamata a [CoUninitializeCor](../hosting/couninitializecor-function.md).  
+ Il `FindAssembliesByName` metodo richiede l'inizializzazione di CLR nel processo per richiamare la logica di risoluzione dell'assembly. Pertanto, è necessario chiamare [CoInitializeEE](../hosting/coinitializeee-function.md) (passando COINITEE_DEFAULT) prima di chiamare `FindAssembliesByName` e quindi seguire con una chiamata a [CoUninitializeCor](../hosting/couninitializecor-function.md).  
   
  `FindAssembliesByName`Restituisce un puntatore [IMetaDataImport](imetadataimport-interface.md) al file contenente il manifesto dell'assembly per il nome dell'assembly passato. Se il nome dell'assembly specificato non è completamente specificato (ad esempio, se non include una versione), potrebbero essere restituiti più assembly.  
   

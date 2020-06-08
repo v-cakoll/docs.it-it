@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce8f6aa6-4ebf-4a86-b429-4bbc8af41a8f
 topic_type:
 - apiref
-ms.openlocfilehash: 945cf84e6f6201879514e29a21f7f5462aa33fdb
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 7f1276e1adeece086ca7b6791eb6e870faf4d010
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868664"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502873"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>Metodo ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs
-Ottiene l'`FunctionID` di una funzione utilizzando il token di metadati specificato, la classe contenente e i valori di `ClassID` di qualsiasi argomento di tipo.  
+Ottiene l'oggetto `FunctionID` di una funzione utilizzando il token di metadati specificato, la classe contenente e `ClassID` i valori di qualsiasi argomento di tipo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +42,7 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
  in ID del modulo in cui risiede la funzione.  
   
  `funcDef`  
- in Token di metadati `mdMethodDef` che fa riferimento alla funzione.  
+ in `mdMethodDef`Token di metadati che fa riferimento alla funzione.  
   
  `classId`  
  in ID della classe che contiene la funzione.  
@@ -51,26 +51,26 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
  in Numero di parametri di tipo per la funzione specificata. Questo valore deve essere zero per le funzioni non generiche.  
   
  `typeArgs`  
- in Matrice di valori di `ClassID`, ognuno dei quali è un argomento della funzione. Se `cTypeArgs` è impostato su zero, il valore di `typeArgs` può essere NULL.  
+ in Matrice di `ClassID` valori, ognuno dei quali è un argomento della funzione. Il valore di `typeArgs` può essere null se `cTypeArgs` è impostato su zero.  
   
  `pFunctionID`  
- out Puntatore al `FunctionID` della funzione specificata.  
+ out Puntatore alla `FunctionID` della funzione specificata.  
   
-## <a name="remarks"></a>Note  
- La chiamata al metodo `GetFunctionFromTokenAndTypeArgs` con un `mdMethodRef` metadati anziché un token di metadati `mdMethodDef` può avere risultati imprevedibili. I chiamanti devono risolvere il `mdMethodRef` in un `mdMethodDef` quando viene passato.  
+## <a name="remarks"></a>Osservazioni  
+ La chiamata al `GetFunctionFromTokenAndTypeArgs` metodo con i `mdMethodRef` metadati anziché un `mdMethodDef` token di metadati può avere risultati imprevedibili. I chiamanti devono risolvere `mdMethodRef` in un oggetto `mdMethodDef` quando lo passano.  
   
- Se la funzione non è già caricata, la chiamata `GetFunctionFromTokenAndTypeArgs` provocherà il caricamento, che è un'operazione pericolosa in molti contesti. Ad esempio, la chiamata di questo metodo durante il caricamento di moduli o tipi può causare un ciclo infinito perché il runtime tenta di caricare elementi in modo circolare.  
+ Se la funzione non è già caricata, la chiamata a provocherà il `GetFunctionFromTokenAndTypeArgs` caricamento, che è un'operazione pericolosa in molti contesti. Ad esempio, la chiamata di questo metodo durante il caricamento di moduli o tipi può causare un ciclo infinito perché il runtime tenta di caricare elementi in modo circolare.  
   
- In generale, l'uso di `GetFunctionFromTokenAndTypeArgs` è sconsigliato. Se i profiler sono interessati agli eventi per una funzione specifica, devono archiviare il `ModuleID` e `mdMethodDef` di tale funzione e usare [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) per verificare se un determinato `FunctionID` è quello della funzione desiderata.  
+ In generale, l'uso di `GetFunctionFromTokenAndTypeArgs` è sconsigliato. Se i profiler sono interessati agli eventi per una funzione specifica, devono archiviare `ModuleID` e `mdMethodDef` della funzione e usare [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) per verificare se un dato `FunctionID` è quello della funzione desiderata.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

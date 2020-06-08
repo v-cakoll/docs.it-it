@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-ms.openlocfilehash: 021ef8de602d6dd928f49e69e36f8d4a61425745
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 12a32b5d2f0647ea2d9b696d08d6644e30be0c65
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008365"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501365"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>Metodo IMetaDataDispenser::DefineScope
 Crea una nuova area in memoria in cui è possibile creare nuovi metadati.  
@@ -51,10 +51,10 @@ HRESULT DefineScope (
  `ppIUnk`  
  out Puntatore all'interfaccia restituita.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  `DefineScope`Crea un set di tabelle di metadati in memoria, genera un GUID univoco (identificatore della versione del modulo o MVID) per i metadati e crea una voce nella tabella dei moduli per l'unità di compilazione da emettere.  
   
- È possibile alleghi gli attributi all'ambito dei metadati nel suo complesso usando il metodo [IMetaDataEmit:: SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) o [IMetaDataEmit::D efinecustomattribute](imetadataemit-definecustomattribute-method.md) , a seconda dei casi.  
+ È possibile alleghi gli attributi all'ambito dei metadati nel suo complesso usando il metodo [IMetaDataEmit:: SetModuleProps](imetadataemit-setmoduleprops-method.md) o [IMetaDataEmit::D efinecustomattribute](imetadataemit-definecustomattribute-method.md) , a seconda dei casi.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforma:** Vedere [requisiti di sistema](../../get-started/system-requirements.md).  

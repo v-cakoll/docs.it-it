@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8d4ff73e-739b-40f6-9349-359fbc99c2f9
 topic_type:
 - apiref
-ms.openlocfilehash: 8446960d0746a864c44febbbe4a4d0313d6dcd4d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7a6553de31d4f9627809af7691218c39dc734c6f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616717"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501664"
 ---
 # <a name="cor_gc_stats-structure"></a>Struttura COR_GC_STATS
 Fornisce statistiche sul meccanismo di Garbage Collection del Common Language Runtime (CLR).  
@@ -44,7 +44,7 @@ typedef struct _COR_GC_STATS {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Description|  
+|Membro|Descrizione|  
 |------------|-----------------|  
 |`Flags`|Indica i valori dei campi da calcolare e restituire.|  
 |`ExplicitGCCount`|Indica il numero di operazioni di Garbage Collection forzate dalla richiesta esterna.|  
@@ -59,7 +59,7 @@ typedef struct _COR_GC_STATS {
 |`KBytesPromotedFromGen1`|Dimensioni, in kilobyte, degli oggetti promossi dalla generazione 1 alla seconda generazione.|  
   
 ## <a name="remarks"></a>Osservazioni  
- Il metodo [ICLRGCManager:: GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) richiede `Flags` che il campo della `COR_GC_STATS` struttura sia impostato su uno o più valori dell'enumerazione [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) per specificare le statistiche da impostare.  
+ Il metodo [ICLRGCManager:: GetStats](iclrgcmanager-getstats-method.md) richiede `Flags` che il campo della `COR_GC_STATS` struttura sia impostato su uno o più valori dell'enumerazione [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) per specificare le statistiche da impostare.  
   
  Nella tabella seguente viene eseguito il mapping delle statistiche fornite da questa struttura ai due [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) valori di enumerazione, `COR_GC_COUNTS` e `COR_GC_MEMORYUSAGE` .  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c826ba3-8258-49bc-a417-78807915fcaf
 topic_type:
 - apiref
-ms.openlocfilehash: afb25ad9e1760f390aa8dfb3e1de39ea60f185c2
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9d1c7f4f5b881f7f55539602c152b557a7950472
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616619"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504407"
 ---
 # <a name="corbindtoruntimehost-function"></a>Funzione CorBindToRuntimeHost
 Consente agli host di caricare una versione specificata del Common Language Runtime (CLR) in un processo.  
@@ -69,7 +69,7 @@ HRESULT CorBindToRuntimeHost (
  in Set di flag che controlla il Garbage Collection simultaneo, il codice indipendente dal dominio e il comportamento del `pwszVersion` parametro. Il valore predefinito è Single Domain se non è impostato alcun flag. Per un elenco dei valori supportati, vedere l' [enumerazione STARTUP_FLAGS](startup-flags-enumeration.md).  
   
  `rclsid`  
- in `CLSID`Della coclasse che implementa l'interfaccia [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) o [ICLRRuntimeHost](iclrruntimehost-interface.md) . I valori supportati sono CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
+ in `CLSID`Della coclasse che implementa l'interfaccia [ICorRuntimeHost](icorruntimehost-interface.md) o [ICLRRuntimeHost](iclrruntimehost-interface.md) . I valori supportati sono CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
   
  `riid`  
  in `IID`Dell'interfaccia richiesta. I valori supportati sono IID_ICorRuntimeHost o IID_ICLRRuntimeHost.  

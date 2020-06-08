@@ -1,5 +1,6 @@
 ---
 title: Uso di socket client
+description: Questo esempio illustra come creare una connessione TCP/IP a un servizio remoto usando un socket nel .NET Framework.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-ms.openlocfilehash: fe2ad55c3f60347369c0e92bc834d81d98f3870e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1dc02d0b3651d5766d1d30752566217d8417af0c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71046948"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502002"
 ---
 # <a name="using-client-sockets"></a>Uso di socket client
 Prima di poter avviare una conversazione tramite un <xref:System.Net.Sockets.Socket>, è necessario creare una pipe di dati tra l'applicazione e il dispositivo remoto. Anche se esistono altre famiglie di indirizzi di rete e protocolli, questo esempio mostra come creare una connessione TCP/IP a un servizio remoto.  
@@ -82,4 +83,4 @@ try {
 - [Uso di un socket client sincrono](using-a-synchronous-client-socket.md)
 - [Uso di un socket client asincrono](using-an-asynchronous-client-socket.md)
 - [Procedura: Creare un socket](how-to-create-a-socket.md)
-- [socket](sockets.md)
+- [Socket](sockets.md)

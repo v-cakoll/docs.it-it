@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-ms.openlocfilehash: 72e14ea0414ebdeb8f54a4bdef8ce5208fc8ef72
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0357444aa8fa38bce5a7175cf6aacfe1a2b2b16e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177222"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503640"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>Metodo IMetaDataImport::GetMemberProps
-Ottiene le informazioni archiviate nei metadati per una definizione di membro specificata, inclusi il nome, la firma binaria e l'indirizzo <xref:System.Type> virtuale relativo, del membro a cui fa riferimento il token di metadati specificato. Questo è un metodo helper semplice: se *mb* è un MethodDef, quindi **GetMethodProps** viene chiamato; se *mb* è un FieldDef, quindi **GetFieldProps** viene chiamato. Vedere questi altri metodi per i dettagli.
+Ottiene le informazioni archiviate nei metadati per una definizione di membro specificata, inclusi il nome, la firma binaria e l'indirizzo virtuale relativo, del <xref:System.Type> membro a cui fa riferimento il token di metadati specificato. Si tratta di un semplice metodo helper: se *MB* è un MethodDef, viene chiamato **GetMethodProps** . Se *MB* è un FieldDef, viene chiamato **GetFieldProps** . Per informazioni dettagliate, vedere gli altri metodi.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,54 +47,54 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>Parametri  
  `mb`  
- [in] Token che fa riferimento al membro per cui ottenere i metadati associati.  
+ in Token che fa riferimento al membro per il quale ottenere i metadati associati.  
   
  `pClass`  
- [fuori] Puntatore al token di metadati che rappresenta la classe del membro.  
+ out Puntatore al token di metadati che rappresenta la classe del membro.  
   
  `szMember`  
- [fuori] Nome del membro.  
+ out Nome del membro.  
   
  `cchMember`  
- [in] Dimensione in caratteri di `szMember` tipo "wide" del buffer.  
+ in Dimensioni in caratteri wide del `szMember` buffer.  
   
  `pchMember`  
- [fuori] Dimensione in caratteri di tipo "wide" del nome restituito.  
+ out Dimensioni in caratteri wide del nome restituito.  
   
  `pdwAttr`  
- [fuori] Eventuali valori di flag applicati al membro.  
+ out Qualsiasi valore del flag applicato al membro.  
   
  `ppvSigBlob`  
- [fuori] Puntatore alla firma dei metadati binari del membro.  
+ out Puntatore alla firma dei metadati binari del membro.  
   
  `pcbSigBlob`  
- [fuori] Dimensione in byte `ppvSigBlob`di .  
+ out Dimensioni in byte di `ppvSigBlob` .  
   
  `pulCodeRVA`  
- [fuori] Puntatore all'indirizzo virtuale relativo del membro.  
+ out Puntatore all'indirizzo virtuale relativo del membro.  
   
  `pdwImplFlags`  
- [fuori] Qualsiasi flag di implementazione del metodo associato al membro.  
+ out Qualsiasi flag di implementazione del metodo associato al membro.  
   
  `pdwCPlusTypeFlag`  
- [fuori] Una bandiera che <xref:System.ValueType>contrassegna un oggetto . È uno dei `ELEMENT_TYPE_*` valori.
+ out Flag che contrassegna un oggetto <xref:System.ValueType> . È uno dei valori di `ELEMENT_TYPE_*` .
   
  `ppValue`  
- [fuori] Valore stringa costante restituito da questo membro.  
+ out Valore stringa costante restituito da questo membro.  
   
  `pcchValue`  
- [fuori] La dimensione in `ppValue`caratteri di `ppValue` , o zero se non contiene una stringa.  
+ out Dimensioni in caratteri di `ppValue` oppure zero se non `ppValue` dispone di una stringa.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](imetadataimport2-interface.md)

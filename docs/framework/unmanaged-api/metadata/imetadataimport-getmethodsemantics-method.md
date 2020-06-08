@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e018eaa-d60e-4a0b-a2c5-8c36bd09d905
 topic_type:
 - apiref
-ms.openlocfilehash: 0542c518b64764ad27aa00b8d595be1191059436
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2cfb66203d8f2d69ea188f6913a5ef34dd74791e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437454"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503601"
 ---
 # <a name="imetadataimportgetmethodsemantics-method"></a>Metodo IMetaDataImport::GetMethodSemantics
 Ottiene i flag che indicano la relazione tra il metodo a cui fa riferimento il token MethodDef specificato e la proprietà abbinata e l'evento a cui fa riferimento il token EventProp specificato.  
@@ -43,21 +43,21 @@ HRESULT GetMethodSemantics (
  in Token che rappresenta la proprietà abbinata e l'evento per il quale ottenere il ruolo del metodo.  
   
  `pdwSemanticsFlags`  
- out Puntatore ai flag di semantica associati. Questo valore è una maschera di maschera dall'enumerazione [CorMethodSemanticsAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodsemanticsattr-enumeration.md) .  
+ out Puntatore ai flag di semantica associati. Questo valore è una maschera di maschera dall'enumerazione [CorMethodSemanticsAttr](cormethodsemanticsattr-enumeration.md) .  
   
-## <a name="remarks"></a>Note  
- Il metodo [IMetaDataEmit::D efineproperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md) imposta i flag di semantica di un metodo.  
+## <a name="remarks"></a>Osservazioni  
+ Il metodo [IMetaDataEmit::D efineproperty](imetadataemit-defineproperty-method.md) imposta i flag di semantica di un metodo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
  **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](imetadataimport2-interface.md)

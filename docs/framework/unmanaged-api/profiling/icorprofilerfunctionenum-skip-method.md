@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 051465b9-e479-494a-804b-c880323b4cbe
 topic_type:
 - apiref
-ms.openlocfilehash: 5f4ef55561c23997fca51dc7d463e2eefdba7d65
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 0f096f76ec47cfe3399e9184eb82bf20040efbbb
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76864310"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503042"
 ---
 # <a name="icorprofilerfunctionenumskip-method"></a>Metodo ICorProfilerFunctionEnum::Skip
 Sposta in avanti il cursore dell'enumeratore dalla posizione corrente, in modo che venga ignorato il numero specificato di elementi.  
@@ -40,20 +40,20 @@ HRESULT Skip([in] ULONG celt);
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|gli elementi `celt` sono stati ignorati.|  
-|S_FALSE|Sono stati ignorati meno di `celt` elementi, a indicare che non sono presenti altri elementi.|  
+|S_OK|`celt`gli elementi sono stati ignorati.|  
+|S_FALSE|`celt`Sono stati ignorati meno di elementi, a indicare che non sono presenti altri elementi.|  
   
-## <a name="remarks"></a>Note  
- La nuova posizione del cursore di questo enumeratore è (posizione corrente) + `celt`.  
+## <a name="remarks"></a>Osservazioni  
+ La nuova posizione del cursore di questo enumeratore è (posizione corrente) + `celt` .  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

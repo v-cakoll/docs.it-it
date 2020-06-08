@@ -1,5 +1,6 @@
 ---
 title: Cache Policy
+description: Informazioni sui criteri di cache, le regole che determinano se una richiesta può essere soddisfatta usando una copia memorizzata nella cache della risorsa richiesta.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - time-based cache policies
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-ms.openlocfilehash: 2d3d85ebd80f417ebd0fa0e619097e15f2a6a39b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d63d2b6bf8426968d2120647c8ecea2b7602825a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048780"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502665"
 ---
 # <a name="cache-policy"></a>Cache Policy
 I criteri di cache definiscono le regole usate per determinare se è possibile soddisfare una richiesta usando una copia della risorsa richiesta memorizzata nella cache. Anche se nelle applicazioni vengono specificati i requisiti di cache del client relativi alla validità, l'efficacia dei criteri di cache è determinata non solo dai requisiti di cache del client, ma anche dai requisiti di scadenza del contenuto del server e di riconvalida del server. Per garantire che all'applicazione client venga restituito il contenuto più aggiornato, l'interazione tra i criteri di cache del client e i requisiti del server determina sempre la creazione dei criteri di cache più conservativi.  
@@ -32,7 +33,7 @@ I criteri di cache definiscono le regole usate per determinare se è possibile s
 |<xref:System.Net.Cache.HttpRequestCacheLevel>|Specifica i valori usati per creare oggetti <xref:System.Net.Cache.HttpRequestCachePolicy> basati sulla posizione e sul tempo.|  
 |<xref:System.Net.Cache.RequestCacheLevel>|Specifica i valori usati per creare oggetti <xref:System.Net.Cache.RequestCachePolicy> basati sulla posizione o <xref:System.Net.Cache.RequestCacheLevel.Default> basati sul tempo.|  
   
- È possibile definire criteri di cache per tutte le richieste eseguite dall'applicazione o per singole richieste. Quando si specificano criteri di cache a livello sia di applicazione sia di richiesta, vengono usati quelli a livello di richiesta. È possibile specificare criteri di cache a livello di applicazione usando i file di configurazione dell'applicazione o del computer oppure a livello di codice. Per ulteriori informazioni, vedere [ \<requestCaching> Element (Network Settings)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
+ È possibile definire criteri di cache per tutte le richieste eseguite dall'applicazione o per singole richieste. Quando si specificano criteri di cache a livello sia di applicazione sia di richiesta, vengono usati quelli a livello di richiesta. È possibile specificare criteri di cache a livello di applicazione usando i file di configurazione dell'applicazione o del computer oppure a livello di codice. Per ulteriori informazioni, vedere [ \<requestCaching> elemento (impostazioni di rete)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
  Per creare criteri di cache, è necessario definire un oggetto criteri tramite un'istanza della classe <xref:System.Net.Cache.RequestCachePolicy> o <xref:System.Net.Cache.HttpRequestCachePolicy>. Per specificare i criteri in una richiesta, impostare la proprietà <xref:System.Net.WebRequest.CachePolicy%2A> della richiesta sull'oggetto criteri. Quando si impostano a livello di codice criteri a livello di applicazione, impostare la proprietà <xref:System.Net.HttpWebRequest.DefaultCachePolicy%2A> sull'oggetto criteri.  
   

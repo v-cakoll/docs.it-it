@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5245d4b5-b6c3-48df-9cb9-8caf059f43fb
 topic_type:
 - apiref
-ms.openlocfilehash: 7271fe8e28da0bb5fd878aae5d36ab703e64ebf0
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: c95b787101d4d0302ce4d2a5cd3bdc7e11f9cd63
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803017"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501430"
 ---
 # <a name="ihosttaskalert-method"></a>Metodo IHostTask::Alert
 Richiede che l'host risvegli l'attività rappresentata dall'istanza corrente di [IHostTask](ihosttask-interface.md) , in modo che l'attività possa essere interrotta.  
@@ -46,7 +46,7 @@ HRESULT Alert ();
  CLR chiama il `Alert` metodo quando <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> viene chiamato dal codice utente o quando l'oggetto associato all'oggetto <xref:System.AppDomain> corrente viene <xref:System.Threading.Thread> arrestato. L'host deve restituire immediatamente, perché la chiamata viene eseguita in modo asincrono. Se l'host non è in grado di avvisare immediatamente l'attività, deve riattivarsi la volta successiva che entra in uno stato in cui può essere avvisato.  
   
 > [!NOTE]
-> `Alert`influiscono solo sulle attività a cui il runtime ha passato un valore [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) di WAIT_ALERTABLE a metodi come [join](ihosttask-join-method.md).  
+> `Alert`influiscono solo sulle attività a cui il runtime ha passato un valore [WAIT_OPTION](wait-option-enumeration.md) di WAIT_ALERTABLE a metodi come [join](ihosttask-join-method.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  

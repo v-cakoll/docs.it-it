@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb3187d7-74cf-44b1-aeeb-7a8d2b60e3b7
 topic_type:
 - apiref
-ms.openlocfilehash: ff9827174e43fd62f3a995e9f477c6fff66b227a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c991c0af845bc6825db6b3bf258fe0809d5db804
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449963"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503696"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>Metodo IMetaDataImport::EnumUnresolvedMethods
 Enumera i token MemberDef che rappresentano i metodi non risolti nell'ambito dei metadati corrente.  
@@ -47,30 +47,30 @@ HRESULT EnumUnresolvedMethods (
  [in] Dimensione massima della matrice `rMethods`.  
   
  `pcTokens`  
- out Numero di token MemberDef restituiti in `rMethods`.  
+ out Numero di token MemberDef restituiti in `rMethods` .  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUnresolvedMethods` ha restituito un esito positivo.|  
+|`S_OK`|`EnumUnresolvedMethods`la restituzione è riuscita.|  
 |`S_FALSE`|Nessun token da enumerare. In tal caso, `pcTokens` è zero.|  
   
 ## <a name="remarks"></a>Osservazioni  
- Un metodo non risolto è uno che è stato dichiarato ma non implementato. Un metodo è incluso nell'enumerazione se il metodo è contrassegnato `miForwardRef` e `mdPinvokeImpl` o `miRuntime` è impostato su zero. In altre parole, un metodo non risolto è un metodo della classe contrassegnato `miForwardRef` ma che non è implementato in codice non gestito (raggiunto tramite PInvoke) né implementato internamente dal runtime stesso  
+ Un metodo non risolto è uno che è stato dichiarato ma non implementato. Un metodo è incluso nell'enumerazione se il metodo è contrassegnato `miForwardRef` e `mdPinvokeImpl` o `miRuntime` è impostato su zero. In altre parole, un metodo non risolto è un metodo della classe contrassegnato `miForwardRef` ma non implementato nel codice non gestito (raggiunto tramite PInvoke), né internamente dal runtime stesso  
   
  L'enumerazione esclude tutti i metodi definiti nell'ambito del modulo (Globals) o in interfacce o classi astratte.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
  **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](imetadataimport2-interface.md)

@@ -1,5 +1,6 @@
 ---
 title: Richiesta di dati
+description: Informazioni su come i protocolli di collegamento consentono di sviluppare applicazioni che usano una singola interfaccia per recuperare dati da più protocolli.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 1f367caf7656a83597b6262a5746686df15d33b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 19350d685a81d56657ca0a117d61b50ae24fab6a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047323"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502184"
 ---
 # <a name="requesting-data"></a>Richiesta di dati
 Lo sviluppo di applicazioni in esecuzione nell'ambiente operativo distribuito dell'attuale rete Internet richiede un metodo efficace e semplice da usare per il recupero dei dati da risorse di tutti i tipi. I protocolli di collegamento consentono di sviluppare applicazioni che usano una singola interfaccia per recuperare i dati da più protocolli Internet.  
@@ -54,6 +55,6 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione di rete in .NET Framework](index.md)
+- [Programmazione di rete nel .NET Framework](index.md)
 - [Procedura: Richiedere una pagina Web e recuperare i risultati sotto forma di flusso](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
 - [Procedura: Recuperare un oggetto WebResponse specifico del protocollo corrispondente a un oggetto WebRequest](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

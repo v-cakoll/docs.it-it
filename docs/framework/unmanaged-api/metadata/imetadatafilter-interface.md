@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ec0856ef-8c56-40ba-bf60-86e0ce8b337f
 topic_type:
 - apiref
-ms.openlocfilehash: e8b15f478eb3b94b7cdcab3b69d54e7cc99be13b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 821936d20a421739e8eb3d5df228888df7f022e3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440172"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503783"
 ---
 # <a name="imetadatafilter-interface"></a>Interfaccia IMetaDataFilter
 Fornisce metodi per contrassegnare e filtrare i token di metadati per evitare la ripetizione di azioni che sono già state eseguite.  
@@ -28,19 +28,19 @@ Fornisce metodi per contrassegnare e filtrare i token di metadati per evitare la
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo IsTokenMarked](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-istokenmarked-method.md)|Ottiene un valore che indica se il token di metadati specificato è stato elaborato.|  
-|[Metodo MarkToken](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-marktoken-method.md)|Imposta un valore che indica che il token di metadati specificato è stato elaborato.|  
-|[Metodo UnmarkAll](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-unmarkall-method.md)|Rimuove i contrassegni di elaborazione da tutti i token nell'ambito dei metadati corrente.|  
+|[Metodo IsTokenMarked](imetadatafilter-istokenmarked-method.md)|Ottiene un valore che indica se il token di metadati specificato è stato elaborato.|  
+|[Metodo MarkToken](imetadatafilter-marktoken-method.md)|Imposta un valore che indica che il token di metadati specificato è stato elaborato.|  
+|[Metodo UnmarkAll](imetadatafilter-unmarkall-method.md)|Rimuove i contrassegni di elaborazione da tutti i token nell'ambito dei metadati corrente.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
  **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce di metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [Interfacce di metadati](metadata-interfaces.md)

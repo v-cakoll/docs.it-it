@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 308183ee-fd44-4432-9d86-ef00d181b49b
 topic_type:
 - apiref
-ms.openlocfilehash: 0c9f667edf30feb23e1cdaa28950503283fce42e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 84cf5ac9eab5749d3bdc63670fe5c31bfb62abcd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445219"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490407"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>Metodo IMetaDataImport2::GetVersionString
 Ottiene il numero di versione del runtime utilizzato per compilare l'assembly.  
@@ -40,24 +40,24 @@ HRESULT GetVersionString (
  out Una matrice in cui archiviare la stringa che specifica la versione.  
   
  `ccBufSize`  
- in Dimensione, in caratteri wide, della matrice `pwzBuf`.  
+ in Dimensione, in caratteri wide, della `pwzBuf` matrice.  
   
  `pccBufSize`  
- out Il numero di caratteri wide, incluso un carattere di terminazione null, restituito nella matrice `pwzBuf`.  
+ out Il numero di caratteri wide, incluso un carattere di terminazione null, restituito nella `pwzBuf` matrice.  
   
 ## <a name="remarks"></a>Osservazioni  
- Il metodo `GetVersionString` ottiene la versione predefinita dell'ambito dei metadati corrente. Se l'ambito non è mai stato salvato, non sarà presente una versione predefinita e verrà restituita una stringa vuota.  
+ Il `GetVersionString` metodo ottiene la versione predefinita dell'ambito dei metadati corrente. Se l'ambito non è mai stato salvato, non sarà presente una versione predefinita e verrà restituita una stringa vuota.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
  **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](imetadataimport-interface.md)

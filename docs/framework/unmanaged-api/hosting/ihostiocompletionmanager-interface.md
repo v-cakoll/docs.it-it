@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c28d1983-83f7-46e2-990f-dbb9dc07c818
 topic_type:
 - apiref
-ms.openlocfilehash: 90675d9be71342efa903767abbf63102b40a2c35
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 095872f8d4bd4f7d3351b8b3e3f8f8445b615cd8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804683"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501537"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>Interfaccia IHostIoCompletionManager
 Fornisce metodi che consentono all'Common Language Runtime (CLR) di interagire con le porte di completamento I/O fornite dall'host.  
@@ -36,7 +36,7 @@ Fornisce metodi che consentono all'Common Language Runtime (CLR) di interagire c
 |[Metodo GetMaxThreads](ihostiocompletionmanager-getmaxthreads-method.md)|Ottiene il numero massimo di thread che l'host può allocare alle richieste di I/O del servizio.|  
 |[Metodo GetMinThreads](ihostiocompletionmanager-getminthreads-method.md)|Ottiene il numero minimo di thread fornito dall'host alle richieste di I/O del servizio.|  
 |[Metodo InitializeHostOverlapped](ihostiocompletionmanager-initializehostoverlapped-method.md)|Fornisce all'host la possibilità di inizializzare tutti i dati personalizzati relativi a una richiesta di I/O.|  
-|[Metodo SetCLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setclriocompletionmanager-method.md)|Fornisce all'host un puntatore di interfaccia a un'istanza di [ICLRIoCompletionManager](iclriocompletionmanager-interface.md) implementata da CLR.|  
+|[Metodo SetCLRIoCompletionManager](ihostiocompletionmanager-setclriocompletionmanager-method.md)|Fornisce all'host un puntatore di interfaccia a un'istanza di [ICLRIoCompletionManager](iclriocompletionmanager-interface.md) implementata da CLR.|  
 |[Metodo SetMaxThreads](ihostiocompletionmanager-setmaxthreads-method.md)|Imposta il numero massimo di thread allocati dall'host alle richieste di I/O del servizio.|  
 |[Metodo SetMinThreads](ihostiocompletionmanager-setminthreads-method.md)|Imposta il numero minimo di thread che l'host deve assegnare al completamento I/O.|  
   

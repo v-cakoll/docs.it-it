@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: 60276327617ae24e9bdcebf958613c21d3808429
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cb7e21e0c6aad5ebb328ae5d1a993716f96e8d47
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175187"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500572"
 ---
 # <a name="functiontailcall2-function"></a>Funzione FunctionTailcall2
-Notifica al profiler che la funzione attualmente in esecuzione sta per eseguire una chiamata tail a un'altra funzione e fornisce informazioni sullo stack frame.  
+Notifica al profiler che la funzione attualmente in esecuzione sta per eseguire una chiamata tail a un'altra funzione e fornisce informazioni sul stack frame.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,43 +38,43 @@ void __stdcall FunctionTailcall2 (
 
 - `funcId`
 
-  \[in] L'identificatore della funzione attualmente in esecuzione che sta per effettuare una chiamata tail.
+  \[in] identificatore della funzione attualmente in esecuzione che sta per effettuare una chiamata tail.
 
 - `clientData`
 
-  \[in] L'identificatore di funzione rimappato, specificato in precedenza dal profiler tramite [FunctionIDMapper](functionidmapper-function.md), della funzione attualmente in esecuzione che sta per effettuare una chiamata tail.
+  \[in] identificatore della funzione di cui è stato eseguito il mapping, che il profiler ha specificato in precedenza tramite [FunctionIDMapper](functionidmapper-function.md), della funzione attualmente in esecuzione che sta per effettuare una chiamata tail.
   
 - `func`
 
-  \[in] `COR_PRF_FRAME_INFO` Un valore che punta alle informazioni sullo stack frame.
+  \[in] `COR_PRF_FRAME_INFO` valore che punta alle informazioni relative all'stack frame.
 
-  Il profiler deve considerare questo come un handle opaco che può essere passato al motore di esecuzione nel [metodo ICorProfilerInfo2::GetFunctionInfo2.](icorprofilerinfo2-getfunctioninfo2-method.md)
+  Il profiler deve considerarlo come un handle opaco che può essere passato di nuovo al motore di esecuzione nel metodo [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) .
 
 ## <a name="remarks"></a>Osservazioni  
- La funzione di destinazione della chiamata tail utilizzerà lo stack frame corrente e tornerà direttamente al chiamante della funzione che ha effettuato la chiamata tail. Ciò significa che un callback [FunctionLeave2](functionleave2-function.md) non verrà generato per una funzione che è la destinazione di una chiamata tail.  
+ La funzione di destinazione della chiamata tail utilizzerà l'stack frame corrente e tornerà direttamente al chiamante della funzione che ha eseguito la chiamata tail. Ciò significa che non verrà emesso un callback [FunctionLeave2](functionleave2-function.md) per una funzione che è la destinazione di una chiamata tail.  
   
- Il valore `func` del parametro non `FunctionTailcall2` è valido dopo la restituzione della funzione perché il valore può cambiare o essere eliminato.  
+ Il valore del `func` parametro non è valido dopo la `FunctionTailcall2` restituzione della funzione perché il valore può essere modificato o eliminato.  
   
- La `FunctionTailcall2` funzione è un callback; è necessario implementarlo. L'implementazione `__declspec`deve`naked`utilizzare l'attributo della classe di archiviazione ( ).  
+ La `FunctionTailcall2` funzione è un callback. è necessario implementarla. L'implementazione deve usare l' `__declspec` `naked` attributo della classe di archiviazione ().  
   
  Il motore di esecuzione non salva i registri prima di chiamare questa funzione.  
   
-- All'ingresso, è necessario salvare tutti i registri utilizzati, inclusi quelli nell'unità a virgola mobile (FPU).  
+- In ingresso è necessario salvare tutti i registri utilizzati, inclusi quelli nell'unità a virgola mobile (FPU).  
   
-- All'uscita, è necessario ripristinare lo stack rimuovendo tutti i parametri inseriti dal chiamante.  
+- All'uscita è necessario ripristinare lo stack scegliendo tutti i parametri di cui è stato eseguito il push dal chiamante.  
   
- L'implementazione di non deve bloccarsi perché ritarderà la procedura di `FunctionTailcall2` Garbage Collection. L'implementazione non deve tentare un'operazione di Garbage Collection perché lo stack potrebbe non essere in uno stato compatibile con garbage collection. Se viene tentata un'operazione `FunctionTailcall2` di Garbage Collection, il runtime si bloccherà fino a quando non viene restituito.  
+ L'implementazione di `FunctionTailcall2` non deve essere bloccata perché ritarderà Garbage Collection. L'implementazione non deve tentare un Garbage Collection perché lo stack potrebbe non essere in uno stato descrittivo Garbage Collection. Se viene effettuato un tentativo di Garbage Collection, il runtime si bloccherà fino a quando non viene `FunctionTailcall2` restituito.  
   
- Inoltre, `FunctionTailcall2` la funzione non deve chiamare nel codice gestito o in alcun modo causare un'allocazione di memoria gestita.  
+ Inoltre, la `FunctionTailcall2` funzione non deve chiamare nel codice gestito o in alcun modo causare un'allocazione managed memory.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** CorProf.idl  
+ **Intestazione:** CorProf. idl  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

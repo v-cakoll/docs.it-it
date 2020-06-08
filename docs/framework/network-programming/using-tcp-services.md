@@ -1,5 +1,6 @@
 ---
 title: Uso dei servizi TCP
+description: La classe TcpClient astrae i dettagli per creare un socket per richiedere e ricevere dati tramite TCP. Usare .NET Framework gestione dei flussi per leggere e scrivere i dati.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-ms.openlocfilehash: 3678586647dcf9c47b4494197fbf56cab865b3d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 329701e8f11ca7f87c40ee8b2cc6a337435242b5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73039484"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501963"
 ---
 # <a name="using-tcp-services"></a>Uso dei servizi TCP
 
@@ -31,7 +32,7 @@ Il protocollo TCP stabilisce una connessione con un endpoint remoto e quindi usa
 
 Per stabilire una connessione TCP, è necessario conoscere l'indirizzo del dispositivo di rete che ospita il servizio necessario ed è necessario conoscere la porta TCP usata dal servizio per comunicare. IANA (Internet Assigned Numbers Authority) definisce i numeri di porta per i servizi comuni. Vedere [Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) (Registro dei numeri di porta per nomi di servizio e protocolli di trasporto). I servizi non presenti nell'elenco IANA possono avere numeri di porta nell'intervallo da 1.024 a 65.535.
 
-Nell'esempio seguente viene illustrata la configurazione di un TcpClient per la connessione a un server di database temporale sulla porta TCP 13:The following example demonstrates setting up a **TcpClient** to connect to a time server on TCP port 13:
+Nell'esempio seguente viene illustrata la configurazione di un **TcpClient** per connettersi a un server di ora sulla porta TCP 13:
 
 ```vb
 Imports System.Net.Sockets
@@ -105,7 +106,7 @@ public class TcpTimeClient
 }
 ```
 
-<xref:System.Net.Sockets.TcpListener>viene utilizzato per monitorare una porta TCP per le richieste in ingresso e quindi creare un **Socket** o un **TcpClient** che gestisce la connessione al client. Il metodo <xref:System.Net.Sockets.TcpListener.Start%2A> abilita l'ascolto sulla porta e il metodo <xref:System.Net.Sockets.TcpListener.Stop%2A> lo disabilita. Il metodo <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> accetta le richieste di connessione in ingresso e crea un **TcpClient** per gestire la richiesta e il metodo <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> accetta le richieste di connessione in ingresso e crea un **Socket** per gestire la richiesta.
+<xref:System.Net.Sockets.TcpListener>viene usato per monitorare una porta TCP per le richieste in ingresso e quindi creare un **socket** o un **TcpClient** che gestisce la connessione al client. Il metodo <xref:System.Net.Sockets.TcpListener.Start%2A> abilita l'ascolto sulla porta e il metodo <xref:System.Net.Sockets.TcpListener.Stop%2A> lo disabilita. Il metodo <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> accetta le richieste di connessione in ingresso e crea un **TcpClient** per gestire la richiesta e il metodo <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> accetta le richieste di connessione in ingresso e crea un **Socket** per gestire la richiesta.
 
 L'esempio seguente dimostra la creazione di un server di riferimento ora di rete con **TcpListener** per monitorare la porta TCP 13. Quando viene accettata una richiesta di connessione in ingresso, il server di riferimento ora risponde con la data e ora correnti dal server host.
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8196f2a3-bbf2-45d3-a6cd-74502c356644
 topic_type:
 - apiref
-ms.openlocfilehash: ab864b251a989056bc34b2c7c6658964556f9ac1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: df02def0c14beb4e9ffd1b9260002767586a59b5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449508"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490198"
 ---
 # <a name="imetadatatablesgetnumtables-method"></a>Metodo IMetaDataTables::GetNumTables
-Ottiene il numero di tabelle nell'ambito dell'istanza di `IMetaDataTables` corrente.  
+Ottiene il numero di tabelle nell'ambito dell' `IMetaDataTables` istanza corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,15 +38,15 @@ HRESULT GetNumTables (
  out Puntatore al numero di tabelle nell'ambito dell'istanza corrente.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
  **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [Interfaccia IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [Interfaccia IMetaDataTables](imetadatatables-interface.md)
+- [Interfaccia IMetaDataTables2](imetadatatables2-interface.md)

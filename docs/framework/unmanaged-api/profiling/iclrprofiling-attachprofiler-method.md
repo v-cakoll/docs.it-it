@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 29aecd530d18b931420467e9127bcbf96d3a4a5f
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 48ac09e1862ae58e79707235e891f72920de1251
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866764"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500559"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>Metodo ICLRProfiling::AttachProfiler
 Connette il profiler specificato al processo specificato.  
@@ -45,7 +45,7 @@ HRESULT AttachProfiler(
 
 - `dwMillisecondsMax`
 
-  \[in] periodo di tempo, in millisecondi, per il completamento del `AttachProfiler`. Il processo trigger deve passare un timeout sufficiente a garantire l'effettivo completamento dell'inizializzazione del profiler specifico.
+  \[in] durata del tempo, in millisecondi, per il `AttachProfiler` completamento di. Il processo trigger deve passare un timeout sufficiente a garantire l'effettivo completamento dell'inizializzazione del profiler specifico.
   
 - `pClsidProfiler`
 
@@ -61,7 +61,7 @@ HRESULT AttachProfiler(
 
 - `cbClientData`
 
-  \[in] dimensione, in byte, dei dati a cui punta `pvClientData`.
+  \[in] dimensione, in byte, dei dati `pvClientData` a cui punta.
 
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli HRESULT seguenti.  
@@ -79,21 +79,21 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32(ERROR_TIMEOUT)|Si è verificato il timeout prima dell'inizio del caricamento del profiler. È possibile ritentare l'operazione di connessione. I timeout si verificano quando un finalizzatore nel processo di destinazione viene eseguito per un tempo maggiore del valore di timeout.|  
 |E_INVALIDARG|Uno o più parametri presentano valori non validi.|  
 |E_FAIL|Si è verificato un errore non specificato di altro tipo.|  
-|Altri codici di errore|Se il metodo [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) del profiler restituisce un valore HRESULT che indica l'esito negativo, `AttachProfiler` restituisce lo stesso valore HRESULT. In questo caso, E_NOTIMPL viene convertito in CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
+|Altri codici di errore|Se il metodo [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) del profiler restituisce un valore HRESULT che indica un errore, `AttachProfiler` restituisce lo stesso valore HRESULT. In questo caso, E_NOTIMPL viene convertito in CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="memory-management"></a>Gestione della memoria  
  In conformità alle convenzioni COM, il chiamante di `AttachProfiler` (ad esempio, il codice del trigger creato dallo sviluppatore del profiler) è responsabile dell'allocazione e della deallocazione della memoria dei dati a cui punta il parametro `pvClientData`. Quando CLR esegue la chiamata a `AttachProfiler` fa una copia della memoria a cui `pvClientData` punta e la trasmette al processo di destinazione. Quando il runtime CLR nel processo di destinazione riceve la propria copia del blocco `pvClientData` lo passa al profiler tramite il metodo `InitializeForAttach`, quindi dealloca la propria copia del blocco `pvClientData` dal processo di destinazione.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

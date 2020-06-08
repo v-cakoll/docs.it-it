@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35b8f0d6-9aba-4714-adb2-62020a38fb7e
 topic_type:
 - apiref
-ms.openlocfilehash: 5936ca837c9ab452e992fcb09aacb476ab37316a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 21ce66722e069573b651ada950b64ef6d97220fb
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431427"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501144"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>Metodo IMetaDataTables::GetUserString
 
@@ -42,20 +42,20 @@ HRESULT GetUserString (
 in Valore di indice da cui verrà recuperata la stringa hardcoded.
 
 `pcbData`\
-out Puntatore alla dimensione del `ppData`.
+out Puntatore alla dimensione di `ppData` .
 
 `ppData`\
 out Puntatore a un puntatore alla stringa restituita.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
 **Intestazione:** Cor. h
 
 **Libreria:** Usato come risorsa in MsCorEE. dll
 
-**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
 

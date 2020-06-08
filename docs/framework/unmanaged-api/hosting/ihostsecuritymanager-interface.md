@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-ms.openlocfilehash: b2c334c7a757c2f4044d08787bdae93ffc2804e4
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 237fe23493460df77a79ba3aed9f0a809cd8aa23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803888"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501469"
 ---
 # <a name="ihostsecuritymanager-interface"></a>Interfaccia IHostSecurityManager
 Fornisce metodi che consentono l'accesso e il controllo sul contesto di sicurezza del thread attualmente in esecuzione.  
@@ -28,7 +28,7 @@ Fornisce metodi che consentono l'accesso e il controllo sul contesto di sicurezz
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)|Ottiene l'oggetto [IHostSecurityContext](ihostsecuritycontext-interface.md) richiesto dall'host.|  
+|[Metodo GetSecurityContext](ihostsecuritymanager-getsecuritycontext-method.md)|Ottiene l'oggetto [IHostSecurityContext](ihostsecuritycontext-interface.md) richiesto dall'host.|  
 |[Metodo ImpersonateLoggedOnUser](ihostsecuritymanager-impersonateloggedonuser-method.md)|Richiede che il codice venga eseguito utilizzando le credenziali dell'identità utente corrente.|  
 |[Metodo OpenThreadToken](ihostsecuritymanager-openthreadtoken-method.md)|Apre il token di accesso discrezionale associato al thread corrente.|  
 |[Metodo RevertToSelf](ihostsecuritymanager-reverttoself-method.md)|Termina la rappresentazione dell'identità dell'utente corrente e restituisce il token del thread originale.|  

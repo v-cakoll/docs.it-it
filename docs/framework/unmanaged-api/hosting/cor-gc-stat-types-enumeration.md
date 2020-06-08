@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fc51d6db-f7f8-408b-b93d-c166fc712c99
 topic_type:
 - apiref
-ms.openlocfilehash: cca393ae34144787ab7800baec7c58209394f30e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d7e78dfc4beba67cc376b221d0cd49f7200f5d23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616716"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501703"
 ---
 # <a name="cor_gc_stat_types-enumeration"></a>Enumerazione COR_GC_STAT_TYPES
 Specifica le statistiche da registrare per un Garbage Collection.  
@@ -34,11 +34,11 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>Osservazioni  
- Questa enumerazione specifica quali statistiche della struttura [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) devono essere impostate dal metodo [ICLRGCManager:: GetStatistics](iclrgcmanager-getstats-method.md) .  
+ Questa enumerazione specifica quali statistiche della struttura [COR_GC_STATS](cor-gc-stats-structure.md) devono essere impostate dal metodo [ICLRGCManager:: GetStatistics](iclrgcmanager-getstats-method.md) .  
   
 ## <a name="members"></a>Membri  
   
-|Membro|Description|  
+|Membro|Descrizione|  
 |------------|-----------------|  
 |`COR_GC_COUNTS`|Registra il numero di operazioni di Garbage Collection eseguite per ogni generazione.|  
 |`COR_GC_MEMORYUSAGE`|Registra l'utilizzo della memoria e le statistiche delle dimensioni del Garbage Collection.|  

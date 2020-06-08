@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 556bccfb-61bc-4761-b1d5-de4b1c18a38f
 topic_type:
 - apiref
-ms.openlocfilehash: 800b15bb75e74898cee9d838900ea14b60620940
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f55af87e21b48430807166cb03e1d41271e830a1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431467"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503440"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>Metodo IMetaDataImport::ResolveTypeRef
-Risolve un riferimento <xref:System.Type> rappresentato dal token TypeRef specificato.  
+Risolve un <xref:System.Type> riferimento rappresentato dal token TypeRef specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +41,7 @@ HRESULT ResolveTypeRef (
  in Token di metadati TypeRef per cui restituire le informazioni sul tipo a cui si fa riferimento.  
   
  `riid`  
- in IID dell'interfaccia da restituire in `ppIScope`. In genere, questo IID_IMetaDataImport.  
+ in IID dell'interfaccia da restituire in `ppIScope` . In genere, questo IID_IMetaDataImport.  
   
  `ppIScope`  
  out Interfaccia per l'ambito del modulo in cui è definito il tipo a cui si fa riferimento.  
@@ -54,20 +54,20 @@ HRESULT ResolveTypeRef (
 > [!IMPORTANT]
 > Non usare questo metodo se vengono caricati più domini applicazione. Il metodo non rispetta i limiti del dominio applicazione. Se vengono caricate più versioni di un assembly e contengono lo stesso tipo con lo stesso spazio dei nomi, il metodo restituisce l'ambito del modulo del primo tipo trovato.  
   
- Il metodo `ResolveTypeRef` cerca la definizione del tipo in altri moduli. Se viene trovata la definizione del tipo, `ResolveTypeRef` restituisce un'interfaccia a tale ambito del modulo e il token TypeDef per il tipo.  
+ Il `ResolveTypeRef` metodo cerca la definizione del tipo in altri moduli. Se viene trovata la definizione del tipo, `ResolveTypeRef` restituisce un'interfaccia a tale ambito del modulo e il token typedef per il tipo.  
   
- Se il riferimento al tipo da risolvere ha un ambito di risoluzione di AssemblyRef, il metodo `ResolveTypeRef` cerca una corrispondenza solo negli ambiti dei metadati già aperti con le chiamate al metodo [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) o [IMetaDataDispenser:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) . Ciò è dovuto al fatto che `ResolveTypeRef` non è in grado di determinare solo dall'ambito AssemblyRef in cui è archiviato su disco o nel Global Assembly Cache assembly.  
+ Se il riferimento al tipo da risolvere ha un ambito di risoluzione di AssemblyRef, il `ResolveTypeRef` metodo cerca una corrispondenza solo negli ambiti dei metadati già aperti con le chiamate al metodo [IMetaDataDispenser:: OpenScope](imetadatadispenser-openscope-method.md) o [IMetaDataDispenser:: OpenScopeOnMemory](imetadatadispenser-openscopeonmemory-method.md) . Ciò è dovuto `ResolveTypeRef` al fatto che non è in grado di determinare solo dall'ambito AssemblyRef in cui è archiviato l'assembly su disco o nel Global assembly cache.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
  **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](imetadataimport2-interface.md)

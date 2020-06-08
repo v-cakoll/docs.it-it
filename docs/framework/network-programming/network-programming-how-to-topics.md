@@ -1,5 +1,6 @@
 ---
 title: Procedure per la programmazione di rete
+description: Usare queste procedure per apprendere i diversi aspetti della programmazione di rete nel .NET Framework.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - network resources
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: 5f8f1a3ca9aaf4bea56f342857d2df0bb18a9ba8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f091f0f675fcf22cb7c6be83a5766fcc8d279be7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047625"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502275"
 ---
 # <a name="network-programming-how-to-topics"></a>Procedure per la programmazione di rete
 Di seguito vengono elencati i collegamenti ad alcune procedure contenute nella documentazione concettuale relativa alla programmazione di rete.  
@@ -41,11 +42,11 @@ Di seguito vengono elencati i collegamenti ad alcune procedure contenute nella d
   
 - [Procedura: Scaricare file con FTP](how-to-download-files-with-ftp.md)  
   
-- [Procedura: caricare file con FTPHow to: Upload Files with FTP](how-to-upload-files-with-ftp.md)  
+- [Procedura: caricare file con FTP](how-to-upload-files-with-ftp.md)  
   
-- [Procedura: elencare il contenuto della directory con FTPHow to: List Directory Contents with FTP](how-to-list-directory-contents-with-ftp.md)  
+- [Procedura: elencare il contenuto della directory con FTP](how-to-list-directory-contents-with-ftp.md)  
   
- **Protocollo Internet Versione 6:**  
+ **Protocollo IP versione 6:**  
   
 - [Procedura: Modificare il file di configurazione del computer per abilitare il supporto IPv6](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)  
   
@@ -63,7 +64,7 @@ Di seguito vengono elencati i collegamenti ad alcune procedure contenute nella d
   
 - [Procedura: Impostare criteri di cache per una richiesta](how-to-set-cache-policy-for-a-request.md)  
   
- **Utilizzo dei proxy:**  
+ **Uso di proxy:**  
   
 - [Procedura: Consentire a un elemento WebRequest di usare un proxy per comunicare con Internet](how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
@@ -79,6 +80,6 @@ Di seguito vengono elencati i collegamenti ad alcune procedure contenute nella d
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione di rete in .NET Framework](index.md)
+- [Programmazione di rete nel .NET Framework](index.md)
 - [Esempi di programmazione di rete](network-programming-samples.md)
 - [Esempi di rete per .NET in MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

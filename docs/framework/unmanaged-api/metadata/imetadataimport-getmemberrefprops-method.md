@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-ms.openlocfilehash: a61254ba751e47b0089a3f7528aca337a32e2db3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 00693f1a87334620442e8865e76183b2dab68878
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175369"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503615"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>Metodo IMetaDataImport::GetMemberRefProps
 Ottiene i metadati associati al membro a cui fa riferimento il token specificato.  
@@ -41,36 +41,36 @@ HRESULT GetMemberRefProps (
   
 ## <a name="parameters"></a>Parametri  
  `mr`  
- [in] Token MemberRef per cui restituire i metadati associati.  
+ in Token MemberRef per il quale restituire i metadati associati.  
   
  `ptk`  
- [fuori] Token TypeDef o TypeRef o TypeSpec che rappresenta la classe che dichiara il membro oppure un token ModuleRef che rappresenta la classe del modulo che dichiara il membro o un MethodDef che rappresenta il membro.  
+ out Token TypeDef o TypeRef o TypeSpec che rappresenta la classe che dichiara il membro o un token ModuleRef che rappresenta la classe modulo che dichiara il membro o un MethodDef che rappresenta il membro.  
   
  `szMember`  
- [fuori] Un buffer di stringa per il nome del membro.  
+ out Buffer di stringa per il nome del membro.  
   
  `cchMember`  
- [in] Dimensione richiesta in caratteri `szMember`di tipo "wide" di .  
+ in Dimensioni richieste in caratteri wide di `szMember` .  
   
  `pchMember`  
- [fuori] Dimensione restituita in caratteri `szMember`di tipo "wide" di .  
+ out Dimensione restituita in caratteri wide di `szMember` .  
   
  `ppvSibBlob`  
- [fuori] Puntatore alla firma dei metadati binari per il membro.  
+ out Puntatore alla firma dei metadati binaria per il membro.  
   
  `pbSig`  
- [fuori] Dimensione in byte `ppvSigBlob`di .  
+ out Dimensioni in byte di `ppvSigBlob` .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](imetadataimport2-interface.md)

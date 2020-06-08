@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: richiedere dati utilizzando la classe WebRequest'
+title: 'Procedura: richiedere dati tramite la classe WebRequest'
+description: Informazioni su come richiedere una risorsa, ad esempio una pagina Web o un file, da un server usando la classe WebRequest nell'.NET Framework.
 ms.date: 03/21/2019
 dev_langs:
 - csharp
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-ms.openlocfilehash: e670a2a503ce704eff847e9e0b3ee340ab52fe62
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5dcc1a7dad226288e3f74969b86e2dd457c0eed0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048159"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502470"
 ---
-# <a name="how-to-request-data-by-using-the-webrequest-class"></a>Procedura: richiedere dati utilizzando la classe WebRequest
+# <a name="how-to-request-data-by-using-the-webrequest-class"></a>Procedura: richiedere dati tramite la classe WebRequest
 
 La procedura seguente descrive i passaggi per richiedere una risorsa da un server, ad esempio una pagina Web o un file. La risorsa deve essere identificata da un URI.
 
@@ -101,7 +102,7 @@ L'esempio di codice seguente illustra come creare una richiesta a un server Web 
 ## <a name="see-also"></a>Vedere anche
 
 - [Creazione di richieste Internet](creating-internet-requests.md)
-- [Utilizzo dei flussi in rete](using-streams-on-the-network.md)
+- [Uso di flussi nella rete](using-streams-on-the-network.md)
 - [Accesso a Internet con un proxy](accessing-the-internet-through-a-proxy.md)
 - [Richiesta di dati](requesting-data.md)
-- [Procedura: inviare dati utilizzando la classe WebRequest](how-to-send-data-using-the-webrequest-class.md)
+- [Procedura: inviare dati tramite la classe WebRequest](how-to-send-data-using-the-webrequest-class.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 46ff70f4-13e9-40a0-802a-0a40abcfc6a0
 topic_type:
 - apiref
-ms.openlocfilehash: 8ad04a7a6705b961686317c9473b885fb90676ce
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: ea66474e809b3813faceef79a69dd8a639a72a3b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861918"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502795"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>Metodo ICorProfilerInfo4::GetFunctionFromIP2
 Esegue il mapping di un puntatore all'istruzione di codice gestito alla versione di una funzione ricompilata in JIT.  
@@ -44,20 +44,20 @@ HRESULT GetFunctionFromIP2(
  `pReJitId`  
  out Identità della versione ricompilata in JIT della funzione.  
   
-## <a name="remarks"></a>Note  
- `GetFunctionFromIP2` è simile a `GetFunctionFromIP`, ad eccezione del fatto che ottiene l'ID ricompilata JIT anziché l'ID funzione della funzione che contiene l'indirizzo IP specificato.  
+## <a name="remarks"></a>Osservazioni  
+ `GetFunctionFromIP2`è simile a `GetFunctionFromIP` , ad eccezione del fatto che ottiene l'ID ricompilato JIT anziché l'ID funzione della funzione che contiene l'indirizzo IP specificato.  
   
 > [!NOTE]
-> `GetFunctionFromIP2` possibile attivare un Garbage Collection, mentre `GetFunctionFromIP` non lo è.  Per ulteriori informazioni, vedere [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](corprof-e-unsupported-call-sequence-hresult.md).  
+> `GetFunctionFromIP2`può attivare un Garbage Collection, mentre `GetFunctionFromIP` non lo è.  Per ulteriori informazioni, vedere [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](corprof-e-unsupported-call-sequence-hresult.md).  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

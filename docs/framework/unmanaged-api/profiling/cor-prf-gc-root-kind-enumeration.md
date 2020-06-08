@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9fb1c03-417f-41d4-aed4-02cb4ade8def
 topic_type:
 - apiref
-ms.openlocfilehash: bff45e6f6f57b95d07ac5073cb70020818cce000
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 0ea584bfff4340e5e9635d6c31e177e88765b582
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867165"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500871"
 ---
 # <a name="cor_prf_gc_root_kind-enumeration"></a>Enumerazione COR_PRF_GC_ROOT_KIND
 Indica il tipo di Garbage Collection radice esposto dal callback [ICorProfilerCallback2:: RootReferences2](icorprofilercallback2-rootreferences2-method.md) .  
@@ -37,21 +37,21 @@ typedef enum {
   
 ## <a name="members"></a>Membri  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
 |`COR_PRF_GC_ROOT_STACK`|La radice è una variabile nello stack.|  
 |`COR_PRF_GC_ROOT_FINALIZER`|La radice è una voce nella coda del finalizzatore.|  
 |`COR_PRF_GC_ROOT_HANDLE`|La radice è un handle Garbage Collection.|  
 |`COR_PRF_GC_ROOT_OTHER`|Il tipo di radice non è specificato.|  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

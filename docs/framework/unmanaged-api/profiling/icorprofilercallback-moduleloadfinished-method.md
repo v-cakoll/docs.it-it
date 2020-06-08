@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 050649e5-ffc0-4458-a0a4-d9ee128a219e
 topic_type:
 - apiref
-ms.openlocfilehash: 661229e5fbd5d106662f0e823a1753bd76c33311
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 481fc2c40331e31f6a018d012fb2b2543d4fd9b5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866169"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503367"
 ---
 # <a name="icorprofilercallbackmoduleloadfinished-method"></a>Metodo ICorProfilerCallback::ModuleLoadFinished
 Notifica al profiler che un modulo ha terminato il caricamento.  
@@ -40,19 +40,19 @@ HRESULT ModuleLoadFinished(
  `hrStatus`  
  in HRESULT che indica se il modulo è stato caricato correttamente.  
   
-## <a name="remarks"></a>Note  
- Il valore di `moduleId` non è valido per una richiesta di informazioni fino a quando non viene chiamato il metodo di `ModuleLoadFinished`.  
+## <a name="remarks"></a>Osservazioni  
+ Il valore di `moduleId` non è valido per una richiesta di informazioni fino a quando non `ModuleLoadFinished` viene chiamato il metodo.  
   
- Alcune parti del caricamento del modulo possono continuare dopo il callback `ModuleLoadFinished`. Un HRESULT di errore in `hrStatus` indica un errore. Tuttavia, un HRESULT di esito positivo in `hrStatus` indica solo che la prima parte del caricamento del modulo è riuscita.  
+ Alcune parti del caricamento del modulo possono continuare dopo il `ModuleLoadFinished` callback. Un errore HRESULT in `hrStatus` indica un errore. Tuttavia, un HRESULT con esito positivo in `hrStatus` indica solo che la prima parte del caricamento del modulo è riuscita.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

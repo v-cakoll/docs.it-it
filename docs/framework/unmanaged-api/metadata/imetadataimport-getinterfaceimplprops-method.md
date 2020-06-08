@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: be3f5985-b1e4-4036-8602-c16e8508d4af
 topic_type:
 - apiref
-ms.openlocfilehash: 4b8ddf7fec12d175f030c0ea0ed982c6fb334aee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c9d9647084aa729817eeeb17ee3f5cd320c0d29
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175382"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491244"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>Metodo IMetaDataImport::GetInterfaceImplProps
-Ottiene un puntatore ai <xref:System.Type> token di metadati per il che implementa il metodo specificato e per l'interfaccia che dichiara tale metodo.
+Ottiene un puntatore ai token di metadati per l'oggetto <xref:System.Type> che implementa il metodo specificato e per l'interfaccia che dichiara il metodo.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,25 +37,25 @@ HRESULT GetInterfaceImplProps (
   
 ## <a name="parameters"></a>Parametri  
  `iiImpl`  
- [in] Token di metadati che rappresenta il metodo per cui restituire la classe e i token di interfaccia.  
+ in Token di metadati che rappresenta il metodo per restituire i token di interfaccia e di classe per.  
   
  `pClass`  
- [fuori] Token di metadati che rappresenta la classe che implementa il metodo.  
+ out Token di metadati che rappresenta la classe che implementa il metodo.  
   
  `ptkIface`  
- [fuori] Token di metadati che rappresenta l'interfaccia che definisce il metodo implementato.  
+ out Token di metadati che rappresenta l'interfaccia che definisce il metodo implementato.  
 
 ## <a name="remarks"></a>Osservazioni
 
- È possibile ottenere `iImpl` il valore per chiamando il [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) metodo.
+ Per ottenere il valore `iImpl` di, chiamare il metodo [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) .
 
- Si supponga, ad esempio, `mdTypeDef` che una classe abbia un valore token pari a 0x02000007 e che implementi tre interfacce i cui tipi dispongono di token:For example, suppose that a class has an token value of 0x02000007 and that it implements three interfaces whose types have tokens:
+ Si supponga, ad esempio, che una classe disponga `mdTypeDef` di un valore token di 0x02000007 e che implementi tre interfacce i cui tipi includono token:
 
 - 0x02000003 (TypeDef)
 - 0x0100000A (TypeRef)
 - 0x0200001C (TypeDef)
 
-Concettualmente, queste informazioni vengono archiviate in una tabella di implementazione dell'interfaccia come segue:Conceptually, this information is stored into an interface implementation table as:
+Concettualmente, queste informazioni vengono archiviate in una tabella di implementazione dell'interfaccia come:
 
 | Numero di riga | Token di classe | Token di interfaccia |
 |------------|-------------|-----------------|
@@ -65,23 +65,23 @@ Concettualmente, queste informazioni vengono archiviate in una tabella di implem
 | 7          |             |                 |
 | 8          | 02000007    | 0200001C        |
 
-Ricordiamo che il token è un valore a 4 byte:Recall, the token is a 4-byte value:
+Si ricordi che il token è un valore a 4 byte:
 
-- I 3 byte inferiori contengono il numero di riga o RID.
-- Il byte superiore contiene il tipo di `mdtInterfaceImpl`token – 0x09 per .
+- I 3 byte inferiori contengono il numero di riga o il RID.
+- Il byte superiore include il tipo di token – 0x09 per `mdtInterfaceImpl` .
 
-`GetInterfaceImplProps`restituisce le informazioni contenute nella riga `iImpl` di cui si fornisce il token nell'argomento.
+`GetInterfaceImplProps`Restituisce le informazioni contenute nella riga il cui token è stato fornito nell' `iImpl` argomento.
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](imetadataimport2-interface.md)

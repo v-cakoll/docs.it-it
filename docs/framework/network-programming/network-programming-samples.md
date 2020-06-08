@@ -1,13 +1,14 @@
 ---
 title: Esempi di programmazione di rete
+description: Usare questi esempi di programmazione di rete scaricabili per .NET Framework System.Net e le classi estese.
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: 860ee2ee766a4c0c1ea158662f195e6e29628687
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 087b4b85c705ddfcda850422fa6d0392ba0bdc23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180706"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502262"
 ---
 # <a name="network-programming-samples"></a>Esempi di programmazione di rete
 Questa sezione contiene descrizioni e collegamenti per esempi di programmazione di rete scaricabili, che usano le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets> e negli spazi dei nomi correlati.
@@ -25,7 +26,7 @@ Questa sezione contiene descrizioni e collegamenti per esempi di programmazione 
  [HttpListener Technology Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/y7cbb2y2(v=vs.85)) (Esempio di tecnologia HttpListener)  
  Mostra come elaborare le richieste HTTP da un'applicazione.  
 
- Esempio di [applicazione host ASPX HttpListener](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90)) Viene illustrato come utilizzare <xref:System.Net.HttpListener?displayProperty=nameWithType> le funzionalità della classe per creare un server HTTP che instrada le chiamate a un'applicazione ospitata ASP.NET.
+ [Esempio di applicazione host HTTPLISTENER aspx](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90)) Viene illustrato come utilizzare le funzionalità della <xref:System.Net.HttpListener?displayProperty=nameWithType> classe per creare un server http che instrada le chiamate a un'applicazione ASP.NET ospitata.
   
  [Esempio relativo alle tecnologie del Mailer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/whw7xbk2(v=vs.85))  
  Mostra come inviare messaggi di posta elettronica da un'applicazione client.  
@@ -58,5 +59,5 @@ Questa sezione contiene descrizioni e collegamenti per esempi di programmazione 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione di rete in .NET Framework](index.md)
+- [Programmazione di rete nel .NET Framework](index.md)
 - [Procedure per la programmazione di rete](network-programming-how-to-topics.md)

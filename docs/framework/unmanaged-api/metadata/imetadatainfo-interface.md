@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 137cb264-64de-46ac-bc6e-2a7db97e8abe
 topic_type:
 - apiref
-ms.openlocfilehash: be08e27bd98eccdffca654972eca775e2ecd0a95
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c63302b53d035edb13ccacf8ceef817bd3107fd7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442102"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503406"
 ---
 # <a name="imetadatainfo-interface"></a>Interfaccia IMetaDataInfo
 Fornisce un metodo che ottiene informazioni sul mapping dei metadati da un file su disco in memoria.  
@@ -28,18 +28,18 @@ Fornisce un metodo che ottiene informazioni sul mapping dei metadati da un file 
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)|Ottiene l'area di memoria del file mappato e il tipo di mapping.|  
+|[Metodo GetFileMapping](imetadatainfo-getfilemapping-method.md)|Ottiene l'area di memoria del file mappato e il tipo di mapping.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
  **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce di metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [Enumerazione CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)
+- [Interfacce di metadati](metadata-interfaces.md)
+- [Enumerazione CorFileMapping](corfilemapping-enumeration.md)

@@ -1,5 +1,6 @@
 ---
 title: Uso di flussi nella rete
+description: Il .NET Framework rappresenta le risorse di rete come flussi. La classe NetworkStream implementa la classe Stream da usare con le risorse di rete.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: 7d5a2e3eec9b49731a09f6eb41a8d8500a59b45c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f8d35b43c9b46a77bfd0c78f7d0118093b6fe824
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180615"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501976"
 ---
 # <a name="using-streams-on-the-network"></a>Uso di flussi nella rete
 Le risorse di rete sono rappresentate in .NET Framework come flussi. Grazie alla possibilità di gestire i flussi in modo generico, .NET Framework offre le opportunità seguenti:  
@@ -35,7 +36,7 @@ Le risorse di rete sono rappresentate in .NET Framework come flussi. Grazie alla
   
  Lo spazio dei nomi <xref:System.Net.Sockets> contiene una classe **NetworkStream** che implementa la classe <xref:System.IO.Stream> appositamente per l'uso con le risorse di rete. Le classi nello spazio dei nomi <xref:System.Net.Sockets> usano la classe **NetworkStream** per rappresentare i flussi.  
   
- Per inviare dati alla rete usando il flusso restituito, chiamare <xref:System.Net.WebRequest.GetRequestStream%2A> su <xref:System.Net.WebRequest>. **WebRequest** invierà le intestazioni di richiesta al server; è quindi possibile inviare dati alla <xref:System.IO.Stream.BeginWrite%2A> <xref:System.IO.Stream.EndWrite%2A>risorsa <xref:System.IO.Stream.Write%2A> di rete chiamando il metodo , , o sul flusso restituito. Alcuni protocolli, ad esempio HTTP, potrebbero richiedere di impostare proprietà specifiche del protocollo prima di inviare dati. L'esempio di codice seguente illustra come impostare le proprietà specifiche di HTTP per l'invio dei dati. Presuppone che la variabile `sendData` contenga i dati da inviare e che la variabile `sendLength` corrisponda al numero di byte di dati da inviare.  
+ Per inviare dati alla rete usando il flusso restituito, chiamare <xref:System.Net.WebRequest.GetRequestStream%2A> su <xref:System.Net.WebRequest>. **WebRequest** invierà le intestazioni della richiesta al server. è quindi possibile inviare i dati alla risorsa di rete chiamando il <xref:System.IO.Stream.BeginWrite%2A> <xref:System.IO.Stream.EndWrite%2A> metodo, o <xref:System.IO.Stream.Write%2A> sul flusso restituito. Alcuni protocolli, ad esempio HTTP, potrebbero richiedere di impostare proprietà specifiche del protocollo prima di inviare dati. L'esempio di codice seguente illustra come impostare le proprietà specifiche di HTTP per l'invio dei dati. Presuppone che la variabile `sendData` contenga i dati da inviare e che la variabile `sendLength` corrisponda al numero di byte di dati da inviare.  
   
 ```csharp  
 HttpWebRequest request =

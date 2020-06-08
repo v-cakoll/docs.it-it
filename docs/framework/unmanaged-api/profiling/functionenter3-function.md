@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef782c53-dae7-4990-b4ad-fddb1e690d4e
 topic_type:
 - apiref
-ms.openlocfilehash: 3ba014cbae4a71713f29968f0137ac053033c661
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b435e1a3504dd623421f977ffc48264f8b0dcb5a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866957"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500702"
 ---
 # <a name="functionenter3-function"></a>Funzione FunctionEnter3
 Notifica al profiler che il controllo viene passato a una funzione.  
@@ -36,10 +36,10 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
 
   \[in] identificatore della funzione a cui viene passato il controllo.
 
-## <a name="remarks"></a>Note  
- La funzione di callback `FunctionEnter3` notifica al profiler che le funzioni vengono chiamate, ma non supporta l'ispezione degli argomenti. Usare il [Metodo ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) per registrare l'implementazione di questa funzione.  
+## <a name="remarks"></a>Osservazioni  
+ La `FunctionEnter3` funzione di callback invia una notifica al profiler mentre le funzioni vengono chiamate, ma non supporta l'ispezione degli argomenti. Usare il [Metodo ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) per registrare l'implementazione di questa funzione.  
   
- La funzione `FunctionEnter3` è un callback. è necessario implementarla. L'implementazione deve usare l'`__declspec(naked)` attributo della classe di archiviazione.  
+ La `FunctionEnter3` funzione è un callback. è necessario implementarla. L'implementazione deve usare l' `__declspec(naked)` attributo della classe di archiviazione.  
   
  Il motore di esecuzione non salva i registri prima di chiamare questa funzione.  
   
@@ -47,14 +47,14 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   
 - All'uscita è necessario ripristinare lo stack scegliendo tutti i parametri di cui è stato eseguito il push dal chiamante.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf. idl  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

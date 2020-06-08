@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a945d439-3b34-4aa4-b575-8413dd7806ce
 topic_type:
 - apiref
-ms.openlocfilehash: 4e7e76a4a3ab291ee97ad0912e3d6224cdf96fba
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 09b4a06892cdc450eed9dead503a990b6f19804e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804493"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501508"
 ---
 # <a name="ihostmemorymanager-interface"></a>Interfaccia IHostMemoryManager
 Fornisce metodi che consentono all'Common Language Runtime (CLR) di effettuare richieste di memoria virtuale attraverso l'host, anziché utilizzare le funzioni di memoria virtuale Win32 standard.  
@@ -29,7 +29,7 @@ Fornisce metodi che consentono all'Common Language Runtime (CLR) di effettuare r
 |Metodo|Descrizione|  
 |------------|-----------------|  
 |[Metodo AcquiredVirtualAddressSpace](ihostmemorymanager-acquiredvirtualaddressspace-method.md)|Notifica all'host che la Common Language Runtime (CLR) ha acquisito la memoria specificata dal sistema operativo.|  
-|[Metodo CreateMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md)|Ottiene un puntatore a interfaccia a un'istanza di [IHostMalloc](ihostmalloc-interface.md) utilizzata per richiedere allocazioni di memoria da un heap creato dall'host.|  
+|[Metodo CreateMAlloc](ihostmemorymanager-createmalloc-method.md)|Ottiene un puntatore a interfaccia a un'istanza di [IHostMalloc](ihostmalloc-interface.md) utilizzata per richiedere allocazioni di memoria da un heap creato dall'host.|  
 |[Metodo GetMemoryLoad](ihostmemorymanager-getmemoryload-method.md)|Ottiene la quantità di memoria fisica attualmente in uso, come segnalato dall'host.|  
 |[Metodo NeedsVirtualAddressSpace](ihostmemorymanager-needsvirtualaddressspace-method.md)|Notifica all'host che CLR tenterà di utilizzare la memoria specificata.|  
 |[Metodo RegisterMemoryNotificationCallback](ihostmemorymanager-registermemorynotificationcallback-method.md)|Registra un puntatore a una funzione di callback richiamata dall'host per notificare a CLR il carico di memoria corrente nel computer.|  
