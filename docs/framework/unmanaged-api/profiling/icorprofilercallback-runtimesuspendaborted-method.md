@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5a8a4277-345b-448b-a028-fc8cff9998aa
 topic_type:
 - apiref
-ms.openlocfilehash: 285bdd3f2a96d3c6cb0039382d9944e48c49971a
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: a3fb5c398b8ccd7caba0b005bcf03e64ecef4ba5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865909"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503250"
 ---
 # <a name="icorprofilercallbackruntimesuspendaborted-method"></a>Metodo ICorProfilerCallback::RuntimeSuspendAborted
 Notifica al profiler che il runtime ha interrotto la sospensione di runtime che era in corso.  
@@ -31,21 +31,21 @@ Notifica al profiler che il runtime ha interrotto la sospensione di runtime che 
 HRESULT RuntimeSuspendAborted();  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  La sospensione della fase di esecuzione può essere interrotta se due thread tentano contemporaneamente di sospendere il Runtime.  
   
- Il callback [ICorProfilerCallback:: RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md) o il callback di `RuntimeSuspendAborted` si verificherà in un singolo thread che segue un callback [ICorProfilerCallback:: RuntimeSuspendStarted](icorprofilercallback-runtimesuspendstarted-method.md) .  
+ Il callback [ICorProfilerCallback:: RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md) o il `RuntimeSuspendAborted` callback si verificherà in un singolo thread che segue un callback [ICorProfilerCallback:: RuntimeSuspendStarted](icorprofilercallback-runtimesuspendstarted-method.md) .  
   
- Si garantisce che il callback `RuntimeSuspendAborted` venga eseguito sullo stesso thread del callback di `RuntimeSuspendStarted`.  
+ `RuntimeSuspendAborted`Si garantisce che il callback venga eseguito sullo stesso thread della `RuntimeSuspendStarted` richiamata.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

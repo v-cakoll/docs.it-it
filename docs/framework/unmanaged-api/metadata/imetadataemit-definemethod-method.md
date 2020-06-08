@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e2102c5-48b7-4c0e-b805-7e2b5e156e3d
 topic_type:
 - apiref
-ms.openlocfilehash: 514f227e3c0c385f61090079d2f5214dac9b3924
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: fbf6ce8c8c9628b08872058a794fb0e005764ab1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004530"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501300"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>Metodo IMetaDataEmit::DefineMethod
 Crea una definizione per un metodo o una funzione globale con la firma specificata e restituisce un token a tale definizione del metodo.  
@@ -65,7 +65,7 @@ HRESULT DefineMethod (
  `pmd`  
  out Token del membro.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  L'API dei metadati garantisce la conservazione dei metodi nello stesso ordine in cui il chiamante li emette per una classe o un'interfaccia contenitore specificata, specificata nel `td` parametro.  
   
  Di seguito sono riportate informazioni aggiuntive sull'utilizzo di `DefineMethod` e delle impostazioni dei parametri particolari.  
@@ -81,7 +81,7 @@ HRESULT DefineMethod (
  Non definire metodi duplicati. In altre parole, non è necessario chiamare `DefineMethod` con un set di valori duplicati `td` nei `wzName` parametri, e `pvSig` . Questi tre parametri definiscono insieme in modo univoco il metodo. Tuttavia, è possibile usare una tripla duplicata purché, per una delle definizioni del metodo, si imposti il `mdPrivateScope` bit nel `dwMethodFlags` parametro. Il `mdPrivateScope` bit indica che il compilatore non genererà un riferimento a questa definizione del metodo.  
   
 ## <a name="method-implementation-information"></a>Informazioni sull'implementazione del metodo  
- Le informazioni sull'implementazione del metodo spesso non sono note nel momento in cui viene dichiarato il metodo. Non è quindi necessario passare i valori nei `ulCodeRVA` parametri e quando si `dwImplFlags` chiama `DefineMethod` . I valori possono essere specificati in un secondo momento tramite [IMetaDataEmit:: SetMethodImplFlags](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md) o [IMetaDataEmit:: SetRVA](imetadataemit-setrva-method.md), a seconda dei casi.  
+ Le informazioni sull'implementazione del metodo spesso non sono note nel momento in cui viene dichiarato il metodo. Non è quindi necessario passare i valori nei `ulCodeRVA` parametri e quando si `dwImplFlags` chiama `DefineMethod` . I valori possono essere specificati in un secondo momento tramite [IMetaDataEmit:: SetMethodImplFlags](imetadataemit-setmethodimplflags-method.md) o [IMetaDataEmit:: SetRVA](imetadataemit-setrva-method.md), a seconda dei casi.  
   
  In alcune situazioni, ad esempio gli scenari di chiamata della piattaforma (PInvoke) o di interoperabilità COM, il corpo del metodo non verrà fornito e `ulCodeRVA` deve essere impostato su zero. In queste situazioni, il metodo non deve essere contrassegnato come abstract, perché il runtime individuerà l'implementazione.  
   

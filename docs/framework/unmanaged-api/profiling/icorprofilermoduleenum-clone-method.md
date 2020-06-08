@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7dec7e36-8d88-416d-b437-abf98b76c1df
 topic_type:
 - apiref
-ms.openlocfilehash: a6b36883ec0914426b4f4c937390c1622faead25
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: ccbb051ac30fb25199ce12c16fff74bb0b9944fa
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868291"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495086"
 ---
 # <a name="icorprofilermoduleenumclone-method"></a>Metodo ICorProfilerModuleEnum::Clone
 Ottiene un puntatore a interfaccia a una copia di questa interfaccia [ICorProfilerModuleEnum](icorprofilermoduleenum-interface.md) .  
@@ -35,14 +35,14 @@ HRESULT Clone([out] ICorProfilerObjectEnum **ppEnum);
  `ppEnum`  
  out Puntatore al puntatore a interfaccia che a sua volta punta alla copia dell'interfaccia [ICorProfilerModuleEnum](icorprofilermoduleenum-interface.md) . La copia dell'enumeratore mantiene il proprio stato di enumerazione separatamente da questo enumeratore. Tuttavia, la posizione iniziale del cursore della copia corrisponde alla posizione corrente del cursore dell'enumeratore.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

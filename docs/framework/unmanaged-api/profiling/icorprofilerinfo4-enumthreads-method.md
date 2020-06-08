@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bca7a5b4-c207-4894-918c-0733926296dd
 topic_type:
 - apiref
-ms.openlocfilehash: 5bea1b75e94d8011d3582d4f07d36bbc7a560502
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: d42c86a458661d3559f99235a6d5b208c82d1963
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862217"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502808"
 ---
 # <a name="icorprofilerinfo4enumthreads-method"></a>Metodo ICorProfilerInfo4::EnumThreads
 Restituisce un enumeratore che fornisce i metodi per scorrere in sequenza l'insieme di tutti i thread gestiti nel processo profilato.  
@@ -36,16 +36,16 @@ HRESULT EnumThreads([out]
  `ppEnum`  
  out Puntatore a un'interfaccia [ICorProfilerThreadEnum](icorprofilerthreadenum-interface.md) .  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

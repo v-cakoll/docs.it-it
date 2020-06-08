@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea102e62-0454-4477-bcf3-126773acd184
 topic_type:
 - apiref
-ms.openlocfilehash: dbcf9230a953069d311c3908aa3ed21fcfd5075c
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 627df3600b920e2fe2250f2fc3da51c852edc774
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420266"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496241"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>Metodo ICorProfilerInfo3::RequestProfilerDetach
 Indica al runtime di disconnettere il profiler.  
@@ -39,7 +39,7 @@ HRESULT RequestProfilerDetach(
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
   
-|HRESULT|Description|  
+|HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|La richiesta di disconnessione è valida e ora la procedura di disconnessione sta continuando in un altro thread. Quando la disconnessione è completa viene generato un evento `ProfilerDetachSucceeded`.|  
 |E_CORPROF_E_CALLBACK3_REQUIRED|Il profiler non ha superato un tentativo [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) per l'interfaccia [ICorProfilerCallback3](icorprofilercallback3-interface.md) , che deve implementare per supportare l'operazione di scollegamento. Non è stato eseguito alcun tentativo di disconnessione.|  
@@ -56,7 +56,7 @@ HRESULT RequestProfilerDetach(
  Se il profiler specifica 0 (zero) per `dwExpectedCompletionMilliseconds`, CLR usa il valore predefinito pari a 5000, a indicare che eseguirà una verifica dopo 5 secondi, nuovamente dopo 10 secondi e quindi ogni 10 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

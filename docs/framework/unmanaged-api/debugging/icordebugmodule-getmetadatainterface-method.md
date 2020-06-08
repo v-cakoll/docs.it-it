@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 30d906f2-cf35-4fa9-9d4c-0c31b58c9f3a
 topic_type:
 - apiref
-ms.openlocfilehash: 8f3cc16054d4b5340c9460e9c3fbcba6e563567a
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: f5d0dd7a99087b21a5f827e4dce0f6342ae7b25a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212555"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501768"
 ---
 # <a name="icordebugmodulegetmetadatainterface-method"></a>Metodo ICorDebugModule::GetMetaDataInterface
 Ottiene un oggetto di interfaccia di metadati che può essere utilizzato per esaminare i metadati per il modulo.  
@@ -42,7 +42,7 @@ HRESULT GetMetaDataInterface (
  out Puntatore all'indirizzo di un `T:IUnknown` oggetto che corrisponde a una delle interfacce di [metadati](../metadata/metadata-interfaces.md).  
   
 ## <a name="remarks"></a>Osservazioni  
- Il debugger può usare il `GetMetaDataInterface` metodo per creare una copia dei metadati originali per un modulo, che deve eseguire per modificare il modulo. Il debugger chiama `GetMetaDataInterface` per ottenere un oggetto di interfaccia [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) per il modulo, quindi chiama [IMetaDataEmit:: SaveToMemory](../metadata/imetadataemit-savetomemory-method.md) per salvare una copia dei metadati del modulo in memoria.  
+ Il debugger può usare il `GetMetaDataInterface` metodo per creare una copia dei metadati originali per un modulo, che deve eseguire per modificare il modulo. Il debugger chiama `GetMetaDataInterface` per ottenere un oggetto di interfaccia [IMetaDataEmit](../metadata/imetadataemit-interface.md) per il modulo, quindi chiama [IMetaDataEmit:: SaveToMemory](../metadata/imetadataemit-savetomemory-method.md) per salvare una copia dei metadati del modulo in memoria.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  

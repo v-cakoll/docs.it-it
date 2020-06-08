@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: badddccd-f85c-416e-9f0f-419eab2c9d42
 topic_type:
 - apiref
-ms.openlocfilehash: 0ab383f0968061667b3580a2058687eecda99dde
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 0a4cb365ca8f7d52be505368a3d769a9728983bf
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76870042"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502964"
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>Metodo ICorProfilerInfo::GetInprocInspectionIThisThread
 Ottiene un oggetto su cui è possibile eseguire query per l'interfaccia ICorDebugThread. Questo metodo è obsoleto nella versione .NET Framework 2,0.  
@@ -34,13 +34,13 @@ HRESULT GetInprocInspectionIThisThread(
   
 ## <a name="parameters"></a>Parametri  
  `ppicd`  
- oggetto [out su](/cpp/atl/iunknown) cui è possibile eseguire query per l'interfaccia `ICorDebugThread`.  
+ oggetto [out su](/cpp/atl/iunknown) cui è possibile eseguire query per l' `ICorDebugThread` interfaccia.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  I servizi di debug di Common Language Runtime (CLR) supportano il debug in-process limitato nella versione .NET Framework 1,0. Il debug in-process ha consentito a un profiler di usare le parti di ispezione dell'API di debug. In seguito ai suggerimenti dei clienti, il debug in-process è stato rimosso dal .NET Framework nella versione 2,0 e sostituito con un set di funzionalità più in linea con l'API di profilatura.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

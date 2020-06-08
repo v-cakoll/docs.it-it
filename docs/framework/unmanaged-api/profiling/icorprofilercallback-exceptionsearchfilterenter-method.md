@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: acc239ce-3eef-418c-b1df-c5a6dd8e8a4c
 topic_type:
 - apiref
-ms.openlocfilehash: 710dbe70b0a2498a3d521cdc813c4ead7ba6442e
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 304b8da670786851a70e38e6623d44b1bde71a04
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866429"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500234"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a>Metodo ICorProfilerCallback::ExceptionSearchFilterEnter
 Notifica al profiler che è iniziata l'esecuzione di un filtro eccezioni definito dall'utente per la fase di ricerca della gestione delle eccezioni.  
@@ -38,14 +38,14 @@ HRESULT ExceptionSearchFilterEnter(
 
   \[in] ID della funzione che contiene il filtro.
 
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

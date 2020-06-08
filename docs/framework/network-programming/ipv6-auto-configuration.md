@@ -1,13 +1,14 @@
 ---
 title: Configurazione automatica di IPv6
+description: Informazioni su come IPv6 supporta il Plug and Play di nodi, in cui un nodo viene aggiunto a una rete IPv6 e viene configurato senza intervento umano.
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 95d9dce36c70b8f6c6b9f963c0842305a111d436
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d65bc453478ac4679556e931b1758c18cfedcf3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047812"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502327"
 ---
 # <a name="ipv6-auto-configuration"></a>Configurazione automatica di IPv6
 Un obiettivo importante per IPv6 consiste nel supportare la modalità Plug and Play per i nodi. Questo significa che deve essere possibile collegare un nodo in una rete IPv6 perché il nodo venga automaticamente configurato senza alcun intervento manuale.  
@@ -26,5 +27,5 @@ Un obiettivo importante per IPv6 consiste nel supportare la modalità Plug and P
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protocollo Internet versione 6](internet-protocol-version-6.md)
-- [socket](sockets.md)
+- [Protocollo IP versione 6](internet-protocol-version-6.md)
+- [Socket](sockets.md)

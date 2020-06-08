@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-ms.openlocfilehash: caea1d3d526017c0118f95bb138ee4ac45d2c137
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 52870c7446987817ff00b90db26c3265bccdd096
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866996"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500728"
 ---
 # <a name="functionenter-function"></a>Funzione FunctionEnter
 Notifica al profiler che il controllo viene passato a una funzione.  
   
 > [!NOTE]
-> La funzione `FunctionEnter` è deprecata nel .NET Framework versione 2,0 e il suo utilizzo comporterà una riduzione delle prestazioni. Usare invece la funzione [FunctionEnter2](functionenter2-function.md) .  
+> La `FunctionEnter` funzione è deprecata nel .NET Framework versione 2,0 e il suo utilizzo comporterà una riduzione delle prestazioni. Usare invece la funzione [FunctionEnter2](functionenter2-function.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,8 +41,8 @@ void __stdcall FunctionEnter (
 
   \[in] identificatore della funzione a cui viene passato il controllo.
 
-## <a name="remarks"></a>Note  
- La funzione `FunctionEnter` è un callback. è necessario implementarla. L'implementazione deve usare l'attributo della classe di archiviazione `__declspec`(`naked`).  
+## <a name="remarks"></a>Osservazioni  
+ La `FunctionEnter` funzione è un callback. è necessario implementarla. L'implementazione deve usare l' `__declspec` `naked` attributo della classe di archiviazione ().  
   
  Il motore di esecuzione non salva i registri prima di chiamare questa funzione.  
   
@@ -50,12 +50,12 @@ void __stdcall FunctionEnter (
   
 - All'uscita è necessario ripristinare lo stack scegliendo tutti i parametri di cui è stato eseguito il push dal chiamante.  
   
- L'implementazione di `FunctionEnter` non deve bloccarsi perché ritarda Garbage Collection. L'implementazione non deve tentare un Garbage Collection perché lo stack potrebbe non essere in uno stato descrittivo Garbage Collection. Se viene effettuato un tentativo di Garbage Collection, il runtime si bloccherà fino a quando `FunctionEnter` non restituisce.  
+ L'implementazione di `FunctionEnter` non deve essere bloccata perché ritarderà Garbage Collection. L'implementazione non deve tentare un Garbage Collection perché lo stack potrebbe non essere in uno stato descrittivo Garbage Collection. Se viene effettuato un tentativo di Garbage Collection, il runtime si bloccherà fino a quando non viene `FunctionEnter` restituito.  
   
- Inoltre, la funzione `FunctionEnter` non deve chiamare nel codice gestito o in alcun modo causare un'allocazione di managed memory.  
+ Inoltre, la `FunctionEnter` funzione non deve chiamare nel codice gestito o in alcun modo causare un'allocazione managed memory.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf. idl  
   

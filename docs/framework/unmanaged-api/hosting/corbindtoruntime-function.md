@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 799740aa-46ec-4532-95da-6444565b4971
 topic_type:
 - apiref
-ms.openlocfilehash: 0bcfe42a70d64c091851a1eec81d03e49dbde52b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 52594c36c54c74941371f9950fbc6fb543b86de0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616668"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493552"
 ---
 # <a name="corbindtoruntime-function"></a>Funzione CorBindToRuntime
 Consente agli host non gestiti di caricare il Common Language Runtime (CLR) in un processo.  
@@ -55,7 +55,7 @@ HRESULT CorBindToRuntime (
  Se `pwszBuildFlavor` è impostato su null, viene caricata la compilazione della workstation. Quando è in esecuzione in un computer a processore singolo, la compilazione della workstation viene sempre caricata, anche se `pwszBuildFlavor` è impostato su `svr` . Tuttavia, se `pwszBuildFlavor` è impostato su `svr` e viene specificato Garbage Collection simultaneo (vedere la descrizione del `flags` parametro), viene caricata la compilazione del server.  
   
  `rclsid`  
- in `CLSID`Della coclasse che implementa l'interfaccia [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) o [ICLRRuntimeHost](iclrruntimehost-interface.md) . I valori supportati sono CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
+ in `CLSID`Della coclasse che implementa l'interfaccia [ICorRuntimeHost](icorruntimehost-interface.md) o [ICLRRuntimeHost](iclrruntimehost-interface.md) . I valori supportati sono CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
   
  `riid`  
  in `IID`Dell'interfaccia richiesta da `rclsid` . I valori supportati sono IID_ICorRuntimeHost o IID_ICLRRuntimeHost.  
@@ -75,7 +75,7 @@ HRESULT CorBindToRuntime (
   
 2. Modificando la modalità predefinita del processo con la modalità di compatibilità versione 1, in cui l' <xref:System.Security.Principal.WindowsIdentity> oggetto non viene propagato in alcun punto asincrono, indipendentemente dalle <xref:System.Threading.ExecutionContext> impostazioni nel thread corrente. La modalità di modifica della modalità predefinita varia a seconda che si usi un eseguibile gestito o un'interfaccia di hosting non gestita per caricare il CLR:  
   
-    1. Per i file eseguibili gestiti, è necessario impostare l' `enabled` attributo dell'elemento [ \<>legacyImpersonationPolicy](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) su `true` .  
+    1. Per i file eseguibili gestiti, è necessario impostare l' `enabled` attributo dell' [\<legacyImpersonationPolicy>](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) elemento su `true` .  
   
     2. Per le interfacce di hosting non gestite, impostare il `STARTUP_LEGACY_IMPERSONATION` flag nel `flags` parametro quando si chiama la `CorBindToRuntimeEx` funzione.  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 634ac28c-a5b7-4fc3-af84-256c24ca8177
 topic_type:
 - apiref
-ms.openlocfilehash: 9069498a4f62f4d9dbb50a7075323b14c3cc5ab9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: ba15440df79dded95a8afa9438657d064e167f36
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868447"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495970"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>Metodo ICorProfilerInfo4::GetReJITIDs
 Restituisce una matrice di ID che identificano tutte le versioni ricompilate in JIT della funzione specificata ancora allocate. Sono incluse le versioni ricompilate tramite JIT di funzioni che sono state successivamente ripristinate ma non ancora liberate, ad esempio quando il dominio dell'applicazione che contiene la funzione ripristinata è ancora in uso.  
@@ -37,10 +37,10 @@ HRESULT GetReJITIDs (
   
 ## <a name="parameters"></a>Parametri  
  `functionId`  
- in `FunctionID` dell'istanza della funzione per la quale enumerare le versioni.  
+ in `FunctionID`Dell'istanza della funzione per la quale enumerare le versioni.  
   
  `cReJitIds`  
- in Numero di ID ricompilati in modalità JIT allocati nella matrice `reJitIds`.  
+ in Numero di ID ricompilati in modalità JIT allocati nella `reJitIds` matrice.  
   
  `pcReJitIds`  
  out Numero effettivo di ID ricompilati in JIT.  
@@ -48,17 +48,17 @@ HRESULT GetReJITIDs (
  `reJitIds`  
  out Matrice allocata dal chiamante che conterrà gli ID ricompilati JIT per la funzione specificata.  
   
-## <a name="remarks"></a>Note  
- `GetReJITIDs` enumera gli ID ricompilati JIT attivi per un'istanza di funzione specificata. Segue lo stesso modello di utilizzo di altre funzioni `ICorProfilerInfo` che accettano buffer allocati dal chiamante.  
+## <a name="remarks"></a>Osservazioni  
+ `GetReJITIDs`Enumera gli ID ricompilati JIT attivi per un'istanza di funzione specificata. Segue lo stesso modello di utilizzo di altre `ICorProfilerInfo` funzioni che accettano buffer allocati dal chiamante.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

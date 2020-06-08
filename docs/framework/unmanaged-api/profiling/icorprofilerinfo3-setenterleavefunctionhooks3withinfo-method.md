@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ca8ea534-e441-47b8-be85-466410988c0a
 topic_type:
 - apiref
-ms.openlocfilehash: 4fe18b4f07e6f282571b13faff5ce51b66ce416b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: d40cb424306535cc502d930dd61e6a1e254667da
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868486"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496178"
 ---
 # <a name="icorprofilerinfo3setenterleavefunctionhooks3withinfo-method"></a>Metodo ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo
 Specifica le funzioni implementate dal profiler che verranno chiamate sugli hook [FunctionEnter3WithInfo](functionenter3withinfo-function.md), [FunctionLeave3WithInfo](functionleave3withinfo-function.md)e [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) delle funzioni gestite.  
@@ -36,29 +36,29 @@ HRESULT SetEnterLeaveFunctionHooks3WithInfo(
   
 ## <a name="parameters"></a>Parametri  
  `pFuncEnter3`  
- in Puntatore all'implementazione da utilizzare come callback `FunctionEnter3WithInfo`.  
+ in Puntatore all'implementazione da utilizzare come `FunctionEnter3WithInfo` callback.  
   
  `pFuncLeave3`  
- in Puntatore all'implementazione da utilizzare come callback `FunctionLeave3WithInfo`.  
+ in Puntatore all'implementazione da utilizzare come `FunctionLeave3WithInfo` callback.  
   
  `pFuncTailcall3`  
- in Puntatore all'implementazione da utilizzare come callback `FunctionTailcall3WithInfo`.  
+ in Puntatore all'implementazione da utilizzare come `FunctionTailcall3WithInfo` callback.  
   
-## <a name="remarks"></a>Note  
- Gli hook [FunctionEnter3WithInfo](functionenter3withinfo-function.md), [FunctionLeave3WithInfo](functionleave3withinfo-function.md)e [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) forniscono stack frame e l'ispezione degli argomenti. Per accedere a tali informazioni, è necessario impostare i flag `COR_PRF_ENABLE_FUNCTION_ARGS`, `COR_PRF_ENABLE_FUNCTION_RETVAL`e/o `COR_PRF_ENABLE_FRAME_INFO`. Il profiler può usare il metodo [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) per impostare i flag di evento e quindi usare il metodo `SetEnterLeaveFunctionHooks3WithInfo` per registrare l'implementazione di questa funzione.  
+## <a name="remarks"></a>Osservazioni  
+ Gli hook [FunctionEnter3WithInfo](functionenter3withinfo-function.md), [FunctionLeave3WithInfo](functionleave3withinfo-function.md)e [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) forniscono stack frame e l'ispezione degli argomenti. Per accedere a tali informazioni, `COR_PRF_ENABLE_FUNCTION_ARGS` `COR_PRF_ENABLE_FUNCTION_RETVAL` è necessario impostare i flag, e/o `COR_PRF_ENABLE_FRAME_INFO` . Il profiler può usare il metodo [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) per impostare i flag di evento e quindi usare il `SetEnterLeaveFunctionHooks3WithInfo` metodo per registrare l'implementazione di questa funzione.  
   
- Solo un set di callback può essere attivo alla volta e la versione più recente ha la precedenza. Se pertanto un profiler chiama sia [SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md) che `SetEnterLeaveFunctionHooks3WithInfo`, viene utilizzato `SetEnterLeaveFunctionHooks3WithInfo`.  
+ Solo un set di callback può essere attivo alla volta e la versione più recente ha la precedenza. Se pertanto un profiler chiama sia [SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md) che `SetEnterLeaveFunctionHooks3WithInfo` , `SetEnterLeaveFunctionHooks3WithInfo` viene utilizzato.  
   
- Il metodo `SetEnterLeaveFunctionHooks3WithInfo` può essere chiamato solo dal callback [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) del profiler.  
+ Il `SetEnterLeaveFunctionHooks3WithInfo` metodo può essere chiamato solo dal callback [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) del profiler.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

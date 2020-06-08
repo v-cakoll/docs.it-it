@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-ms.openlocfilehash: b535fdd5027a26cc4dd0eafec9883f0186773dd1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 910c40413075131765a37e00703ac892e3f39641
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175499"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492200"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>Metodo IMetaDataImport::EnumInterfaceImpls
-Enumera tutte le interfacce `TypeDef`implementate dall'oggetto specificato.
+Enumera tutte le interfacce implementate dall'oggetto specificato `TypeDef` .
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,38 +42,38 @@ HRESULT EnumInterfaceImpls (
  [in, out] Puntatore all'enumeratore.  
   
  `td`  
- [in] Token del TypeDef i cui token MethodDef rappresentano le implementazioni dell'interfaccia devono essere enumerati.  
+ in Token del TypeDef i cui token MethodDef che rappresentano le implementazioni dell'interfaccia devono essere enumerati.  
   
  `rImpls`  
- [fuori] Matrice utilizzata per archiviare i token MethodDef.  
+ out Matrice utilizzata per archiviare i token MethodDef.  
   
  `cMax`  
- [in] Lunghezza massima della `rImpls` matrice.  
+ in Lunghezza massima della `rImpls` matrice.  
   
  `pcImpls`  
- [fuori] Numero effettivo di token restituiti in `rImpls`.  
+ out Numero effettivo di token restituiti in `rImpls` .  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls`restituito con successo.|  
-|`S_FALSE`|Non sono presenti token MethodDef da enumerare. In tal `pcImpls` caso, è impostato su zero.|  
+|`S_OK`|`EnumInterfaceImpls`la restituzione è riuscita.|  
+|`S_FALSE`|Nessun token MethodDef da enumerare. In tal caso, `pcImpls` è impostato su zero.|  
 
 ## <a name="remarks"></a>Osservazioni
 
-L'enumerazione restituisce una raccolta di `mdInterfaceImpl` token `TypeDef`per ogni interfaccia implementata dall'oggetto specificato. I token di interfaccia vengono restituiti nell'ordine `DefineTypeDef` `SetTypeDefProps`in cui sono state specificate le interfacce (tramite o ). È possibile eseguire `mdInterfaceImpl` una query sulle proprietà dei token restituiti utilizzando [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).
+L'enumerazione restituisce una raccolta di `mdInterfaceImpl` token per ogni interfaccia implementata dall'oggetto specificato `TypeDef` . I token di interfaccia vengono restituiti nell'ordine in cui sono state specificate le interfacce (tramite `DefineTypeDef` o `SetTypeDefProps` ). `mdInterfaceImpl`È possibile eseguire query sulle proprietà dei token restituiti usando [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](imetadataimport2-interface.md)

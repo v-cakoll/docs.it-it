@@ -6,17 +6,17 @@ helpviewer_keywords:
 - profiling interfaces [.NET Framework]
 - interfaces [.NET Framework profiling]
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
-ms.openlocfilehash: 8b6b9acff2945e2d8fd684bfa31e4af086ea5ab9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f073794b4fdf89f289b70fed9967ee37b5f4e133
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868148"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494033"
 ---
 # <a name="profiling-interfaces"></a>Interfacce di profilatura
 Questa sezione descrive le interfacce non gestite che consentono di definire il profilo di un programma eseguito da Common Language Runtime (CLR).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Interfaccia ICLRProfiling](iclrprofiling-interface.md)  
  Fornisce il metodo [AttachProfiler](iclrprofiling-attachprofiler-method.md) , che consente a un profiler di connettersi a un processo in esecuzione.  
   
@@ -63,7 +63,7 @@ Fornisce un metodo di callback utilizzato dal Common Language Runtime per notifi
  Estende l'interfaccia `ICorProfilerInfo` con metodi supportati in .NET Framework 2.0 e versioni successive.  
   
  [Interfaccia ICorProfilerInfo3](icorprofilerinfo3-interface.md)  
- Estende l'interfaccia `ICorProfilerInfo2` con i metodi supportati in .NET Framework 4 e versioni successive.  
+ Estende l' `ICorProfilerInfo2` interfaccia con i metodi supportati in .NET Framework 4 e versioni successive.  
   
  [Interfaccia ICorProfilerInfo4](icorprofilerinfo4-interface.md)  
  Fornisce metodi che i Code Profiler possono usare per comunicare con CLR allo scopo di controllare il monitoraggio di eventi e richiedere informazioni.  
@@ -81,7 +81,7 @@ Fornisce un metodo di callback utilizzato dal Common Language Runtime per notifi
  Fornisce metodi che consentono di eseguire l'iterazione sequenziale con una raccolta di moduli caricati dall'applicazione o dal profiler.  
   
  [Interfaccia ICorProfilerObjectEnum](icorprofilerobjectenum-interface.md)  
- Fornisce metodi per scorrere in sequenza una raccolta di oggetti bloccati generati da [NGen. exe (Generatore di immagini native)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Fornisce metodi per scorrere in sequenza una raccolta di oggetti bloccati generati da [NGen. exe (Generatore di immagini native)](../../tools/ngen-exe-native-image-generator.md).  
   
  [Interfaccia ICorProfilerThreadEnum](icorprofilerthreadenum-interface.md)  
  Fornisce metodi che consentono di eseguire l'iterazione sequenziale con una raccolta di thread in CLR.  

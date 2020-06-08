@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aec05744-e8d4-44c6-b4a8-e583229ac34e
 topic_type:
 - apiref
-ms.openlocfilehash: 98af9931e219c384b017d3c70fe21cdb6e052ac1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 21ebd0c64d6c8bbdac327258ad4c7ffec83a1ce9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615956"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504316"
 ---
 # <a name="iclrassemblyidentitymanagergetprobingassembliesfromreference-method"></a>Metodo ICLRAssemblyIdentityManager::GetProbingAssembliesFromReference
 Ottiene un enumeratore [ICLRProbingAssemblyEnum](iclrprobingassemblyenum-interface.md) per le identità di assembly a cui fa riferimento l'assembly con il tipo di identità specificato.  
@@ -44,14 +44,14 @@ HRESULT GetProbingAssembliesFromReference (
  in Fornito per l'estendibilità futura. CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT è l'unico valore supportato dalla versione corrente di Common Language Runtime (CLR).  
   
  `pwzReferenceIdentity`  
- in Identità di associazione di assembly opaca, in genere restituita da una chiamata al metodo [ICLRAssemblyIdentityManager:: GetBindingIdentityFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getbindingidentityfromfile-method.md) o [ICLRAssemblyIdentityManager:: GetBindingIdentityFromStream](iclrassemblyidentitymanager-getbindingidentityfromstream-method.md) .  
+ in Identità di associazione di assembly opaca, in genere restituita da una chiamata al metodo [ICLRAssemblyIdentityManager:: GetBindingIdentityFromFile](iclrassemblyidentitymanager-getbindingidentityfromfile-method.md) o [ICLRAssemblyIdentityManager:: GetBindingIdentityFromStream](iclrassemblyidentitymanager-getbindingidentityfromstream-method.md) .  
   
  `ppProbingAssemblyEnum`  
  out Puntatore a un'interfaccia a un `ICLRProbingAssemblyEnum` enumeratore che contiene riferimenti agli assembly a cui fa riferimento l'assembly identificato da `pwzReferenceIdentity` .  
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|Description|  
+|HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|Il metodo è stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  

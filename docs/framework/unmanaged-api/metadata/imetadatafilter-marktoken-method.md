@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd492834-6529-4d39-b93d-f8cdbd3e297f
 topic_type:
 - apiref
-ms.openlocfilehash: ae105a60969e819f7974735ed8f075c60ba93916
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 28a5f79f6fa8d25fd254c4093b0f76e0308edbad
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440352"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492525"
 ---
 # <a name="imetadatafiltermarktoken-method"></a>Metodo IMetaDataFilter::MarkToken
 Imposta un valore che indica che il token di metadati specificato è stato elaborato.  
@@ -38,14 +38,14 @@ HRESULT MarkToken (
  in Token da contrassegnare come elaborato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
  **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataFilter](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+- [Interfaccia IMetaDataFilter](imetadatafilter-interface.md)

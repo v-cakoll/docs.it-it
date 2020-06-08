@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6f8ad36-61e1-42b0-9db2-add575646d18
 topic_type:
 - apiref
-ms.openlocfilehash: 7079a915c0402df62afa5648317619af82c943b0
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 4037ffe63d8ebfca67cbd0b3293d36be7481b1bd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841984"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501417"
 ---
 # <a name="ihosttaskmanagercreatetask-method"></a>Metodo IHostTaskManager::CreateTask
 Richiede che l'host crei una nuova attività.  
@@ -47,11 +47,11 @@ HRESULT CreateTask (
  in Puntatore ai dati utente da passare alla funzione oppure null se la funzione non accetta parametri.  
   
  `ppTask`  
- out Puntatore all'indirizzo di un'istanza di [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) creato dall'host oppure null se non è possibile creare l'attività. L'attività rimane in stato sospeso fino a quando non viene avviata in modo esplicito da una chiamata a [IHostTask:: Start](ihosttask-start-method.md).  
+ out Puntatore all'indirizzo di un'istanza di [IHostTask](ihosttask-interface.md) creato dall'host oppure null se non è possibile creare l'attività. L'attività rimane in stato sospeso fino a quando non viene avviata in modo esplicito da una chiamata a [IHostTask:: Start](ihosttask-start-method.md).  
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|Description|  
+|HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|`CreateTask`la restituzione è riuscita.|  
 |HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  

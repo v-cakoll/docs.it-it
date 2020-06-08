@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 9b5059d9e4bf9b79dc67664c7a7971041d1cf35b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: eaf33f3b0de7a18e400cd16d29c046784e2e190f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861684"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495320"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>Metodo ICorProfilerInfo8:: GetDynamicFunctionInfo
 
@@ -54,31 +54,31 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 - `cchName`
 
-  \[in] dimensione massima della matrice di `wszName`.
+  \[in] dimensione massima della `wszName` matrice.
 
 - `pcchName`
 
-  \[out] numero di caratteri nella matrice di `wszName`.
+  \[out] numero di caratteri nella `wszName` matrice.
 
 - `wszName`
 
   \[out] matrice di `WCHAR` che rappresenta il nome della funzione, se disponibile.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Alcuni metodi come gli stub IL o LCG non dispongono di metadati associati che possono essere recuperati tramite le API [IMetaDataImport](../metadata/imetadataimport-interface.md) e [IMetaDataImport2](../metadata/imetadataimport2-interface.md) . Questi metodi possono essere rilevati dai profiler tramite i puntatori all'istruzione oppure ascoltando [ICorProfilerCallback8::D ynamicmethodjitcompilationstarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md).
 
 Questa API può essere usata per recuperare informazioni sui metodi dinamici, incluso un nome descrittivo, se disponibile.
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
 **Intestazione:** CorProf.idl, CorProf.h
 
 **Libreria:** CorGuids.lib
 
-**Versioni .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**Versioni .NET Framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Vedere anche
 

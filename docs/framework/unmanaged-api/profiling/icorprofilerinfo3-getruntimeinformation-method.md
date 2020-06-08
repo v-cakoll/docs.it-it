@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4400fb8c-0407-4791-8557-f011fd2aee51
 topic_type:
 - apiref
-ms.openlocfilehash: e3d167be9a4091ae57a3283424186142e90ca7a1
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b8e503af11fa1d02aac2ec83edde0ffbd562d8e5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868551"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496399"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>Metodo ICorProfilerInfo3::GetRuntimeInformation
 Fornisce informazioni sulla versione per il Common Language Runtime (CLR) sottofilato.  
@@ -43,7 +43,7 @@ HRESULT GetRuntimeInformation(
   
 ## <a name="parameters"></a>Parametri  
  `pClrInstanceId`  
- out ID rappresentativo di un'istanza CLR in esecuzione in un processo. Si tratta dello stesso `ClrInstanceID` che l'evento di avvio di Event Tracing for Windows (ETW).  
+ out ID rappresentativo di un'istanza CLR in esecuzione in un processo. Si tratta dello stesso oggetto `ClrInstanceID` che segnala l'evento di avvio di Event Tracing for Windows (ETW).  
   
  `pRuntimeType`  
  out Tipo di Runtime. Questo parametro restituisce `COR_PRF_DESKTOP_CLR` per la versione desktop di CLR o `COR_PRF_CORE_CLR` per la versione principale di CLR utilizzata in Silverlight.  
@@ -61,25 +61,25 @@ HRESULT GetRuntimeInformation(
  out Numero di versione di CLR associato a un aggiornamento software.  
   
  `cchVersionString`  
- in Lunghezza, in caratteri, del buffer a cui punta il `szVersionString`.  
+ in Lunghezza, in caratteri, del buffer `szVersionString` a cui punta.  
   
  `pcchVersionString`  
- out Lunghezza, in caratteri, del `szVersionString`.  
+ out Lunghezza, in caratteri, di `szVersionString` .  
   
  `szVersionString`  
  out Stringa della versione CLR.  
   
-## <a name="remarks"></a>Note  
- È possibile passare null per qualsiasi parametro. Tuttavia, `pcchVersionString` non può essere null a meno che anche `szVersionString` non sia null.  
+## <a name="remarks"></a>Osservazioni  
+ È possibile passare null per qualsiasi parametro. Tuttavia, `pcchVersionString` non può essere null a meno che `szVersionString` anche non sia null.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

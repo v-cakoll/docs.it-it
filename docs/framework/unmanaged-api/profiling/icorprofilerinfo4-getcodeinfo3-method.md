@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb8c105e-4d9a-4684-8c05-ed6909cc1b8c
 topic_type:
 - apiref
-ms.openlocfilehash: 164e042ab0f1a275ff07b917658024e22c2d7b0b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 54e522aaaf23ae81b96b6be7168a9a13f28a16d2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862035"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496139"
 ---
 # <a name="icorprofilerinfo4getcodeinfo3-method"></a>Metodo ICorProfilerInfo4::GetCodeInfo3
 Ottiene gli ambiti di codice nativo associati alla versione ricompilata in JIT della funzione specificata.  
@@ -53,26 +53,26 @@ HRESULT GetCodeInfo3(
  `codeInfos`  
  [out] Buffer fornito dal chiamante. Una volta completato, il metodo contiene una matrice di strutture `COR_PRF_CODE_INFO`, ognuna delle quali descrive un blocco di codice nativo.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il `GetCodeInfo3` metodo è simile a [GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md), ad eccezione del fatto che otterrà l'ID ricompilata in JIT della funzione che contiene l'indirizzo IP specificato.  
   
 > [!NOTE]
-> `GetCodeInfo3` possibile attivare un Garbage Collection, mentre [GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md) non lo è. Per ulteriori informazioni, vedere il [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](corprof-e-unsupported-call-sequence-hresult.md) HRESULT.  
+> `GetCodeInfo3`può attivare una Garbage Collection, mentre [GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md) non lo è. Per ulteriori informazioni, vedere il [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](corprof-e-unsupported-call-sequence-hresult.md) HRESULT.  
   
  Gli ambiti vengono ordinati in sequenza crescente in base all'offset CIL (Common Intermediate Language).  
   
- Quando `GetCodeInfo3` restituisce, è necessario verificare che il buffer di `codeInfos` sia sufficientemente grande da contenere tutte le strutture di [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) . A tale scopo, confrontare il valore di `cCodeInfos` con il valore del parametro `cchName`. Se `cCodeInfos` diviso per la dimensione di una struttura [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) è inferiore a `pcCodeInfos`, allocare un `codeInfos` buffer più grande, aggiornare `cCodeInfos` con la nuova dimensione maggiore e chiamare `GetCodeInfo3` di nuovo.  
+ Dopo `GetCodeInfo3` la restituzione di, è necessario verificare che il `codeInfos` buffer sia abbastanza grande per contenere tutte le strutture di [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) . A tale scopo, confrontare il valore di `cCodeInfos` con il valore del parametro `cchName`. Se `cCodeInfos` il valore è diviso per la dimensione di una struttura [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) è inferiore a `pcCodeInfos` , allocare un buffer più grande `codeInfos` , aggiornare `cCodeInfos` con la nuova dimensione maggiore e chiamare di `GetCodeInfo3` nuovo.  
   
- In alternativa, è possibile chiamare innanzitutto `GetCodeInfo3` con un buffer `codeInfos` di lunghezza zero per ottenere le dimensioni del buffer corrette. È quindi possibile impostare le dimensioni del buffer `codeInfos` sul valore restituito in `pcCodeInfos`, moltiplicato per la dimensione di una struttura [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) e chiamare nuovamente `GetCodeInfo3`.  
+ In alternativa, è possibile chiamare innanzitutto `GetCodeInfo3` con un buffer `codeInfos` di lunghezza zero per ottenere le dimensioni del buffer corrette. È quindi possibile impostare le `codeInfos` dimensioni del buffer sul valore restituito in `pcCodeInfos` , moltiplicato per la dimensione di una struttura di [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) e chiamare di `GetCodeInfo3` nuovo.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
