@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44cf6908-f555-4ae8-b2cf-24bd974bf2fe
 topic_type:
 - apiref
-ms.openlocfilehash: 8a5dda5861343865a139f6b6b9e2794179b0727a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d477976952d2c1875a620d1397fd43e5c5e2836f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434724"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503471"
 ---
 # <a name="imetadataimportisglobal-method"></a>Metodo IMetaDataImport::IsGlobal
 Ottiene un valore che indica se il campo, il metodo o il tipo rappresentato dal token di metadati specificato ha ambito globale.  
@@ -42,15 +42,15 @@ HRESULT IsGlobal (
  [out] 1 se l'oggetto ha ambito globale; in caso contrario, 0 (zero).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
  **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](imetadataimport2-interface.md)

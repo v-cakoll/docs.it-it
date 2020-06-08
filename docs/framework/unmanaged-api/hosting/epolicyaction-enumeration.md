@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72dd76ba-239e-45ac-9ded-318fb07d6c6d
 topic_type:
 - apiref
-ms.openlocfilehash: 8788d6e2220778a3f0926d5ed3dd59142487bcca
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 901c62e6f2519fc4f9251f348c77b11bbe0992be
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616190"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504345"
 ---
 # <a name="epolicyaction-enumeration"></a>Enumerazione EPolicyAction
-Descrive le azioni dei criteri che l'host può impostare per le operazioni descritte da [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) ed errori descritti da [EClrFailure](eclrfailure-enumeration.md).  
+Descrive le azioni dei criteri che l'host può impostare per le operazioni descritte da [EClrOperation](eclroperation-enumeration.md) ed errori descritti da [EClrFailure](eclrfailure-enumeration.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +43,7 @@ typedef enum {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Description|  
+|Membro|Descrizione|  
 |------------|-----------------|  
 |`eAbortThread`|Specifica che il Common Language Runtime (CLR) deve interrompere normalmente il thread. Un'interruzione normale include i tentativi di eseguire tutti i `finally` blocchi, i `catch` blocchi correlati a interruzioni di thread e i finalizzatori.|  
 |`eDisableRuntime`|Specifica che CLR deve immettere uno stato disabilitato. Non è possibile eseguire ulteriori codice gestito nel processo interessato e i thread non possono accedere a CLR.|  
@@ -57,7 +57,7 @@ typedef enum {
 |`eUnloadAppDomain`|Specifica che <xref:System.AppDomain> deve essere scaricato. CLR tenta di eseguire i finalizzatori.|  
   
 ## <a name="remarks"></a>Osservazioni  
- L'host imposta le azioni dei criteri chiamando i metodi dell'interfaccia [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) . Per informazioni sulle interruzioni scortesi e aggraziate, vedere l'enumerazione [EClrOperation](eclroperation-enumeration.md) .  
+ L'host imposta le azioni dei criteri chiamando i metodi dell'interfaccia [ICLRPolicyManager](iclrpolicymanager-interface.md) . Per informazioni sulle interruzioni scortesi e aggraziate, vedere l'enumerazione [EClrOperation](eclroperation-enumeration.md) .  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  

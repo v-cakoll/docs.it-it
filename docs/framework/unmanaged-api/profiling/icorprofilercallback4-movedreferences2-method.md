@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d17a065b-5bc6-4817-b3e1-1e413fcb33a8
 topic_type:
 - apiref
-ms.openlocfilehash: 2f305852ae218417aa1f4d4fe9d2076c0163fd60
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 79e54cde8757bbe690f9b7c4344a2a3cb19cf627
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865272"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499383"
 ---
 # <a name="icorprofilercallback4movedreferences2-method"></a>Metodo ICorProfilerCallback4::MovedReferences2
 Chiamato per segnalare il nuovo layout degli oggetti nell'heap a seguito di un'operazione di Garbage Collection con compattazione. Questo metodo viene chiamato se il profiler ha implementato l'interfaccia [ICorProfilerCallback4](icorprofilercallback4-interface.md) . Questo callback sostituisce il metodo [ICorProfilerCallback:: MovedReferences](icorprofilercallback-movedreferences-method.md) , perché può segnalare intervalli più grandi di oggetti le cui lunghezze superano quelle che possono essere espresse in un ULONG.  
@@ -52,7 +52,7 @@ HRESULT MovedReferences2(
   
  Viene specificata una dimensione per ogni blocco a cui viene fatto riferimento nelle matrici `oldObjectIDRangeStart` e `newObjectIDRangeStart`.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Un Garbage Collector di compattazione recupera la memoria occupata dagli oggetti inutilizzati e compatta lo spazio liberato. Gli oggetti attivi possono quindi essere spostati all'interno dell'heap e i valori di `ObjectID` distribuiti dalle notifiche precedenti possono cambiare.  
   
  Si supponga che un valore `ObjectID` esistente (`oldObjectID`) rientri nell'intervallo seguente:  
@@ -65,24 +65,24 @@ HRESULT MovedReferences2(
   
  Per qualsiasi valore di `i` compreso nell'intervallo seguente:  
   
- 0 <= `i` < `cMovedObjectIDRanges`  
+ 0 <=`i` < `cMovedObjectIDRanges`  
   
  è possibile calcolare il nuovo `ObjectID` come segue:  
   
- `newObjectID` = `newObjectIDRangeStart[i]` + (`oldObjectID` – `oldObjectIDRangeStart[i]`)  
+ `newObjectID` = `newObjectIDRangeStart[i]`+ ( `oldObjectID` - `oldObjectIDRangeStart[i]` )  
   
  Nessuno dei valori di `ObjectID` passati da `MovedReferences2` è valido durante il callback vero e proprio, perché è possibile che il Garbage Collector stia ancora spostando gli oggetti dalle vecchie posizioni a quelle nuove. I profiler non devono quindi tentare di verificare gli oggetti durante una chiamata a `MovedReferences2`. Un callback [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md) indica che tutti gli oggetti sono stati spostati nelle nuove posizioni ed è possibile eseguire il controllo.  
   
- Se il profiler implementa sia le interfacce [ICorProfilerCallback](icorprofilercallback-interface.md) che [ICorProfilerCallback4](icorprofilercallback4-interface.md) , il metodo `MovedReferences2` viene chiamato prima del metodo [ICorProfilerCallback:: MovedReferences](icorprofilercallback-movedreferences-method.md) , ma solo se il `MovedReferences2` metodo restituisce correttamente. I profiler possono restituire un valore HRESULT indicante un errore nel metodo `MovedReferences2` per evitare di chiamare il secondo metodo.  
+ Se il profiler implementa entrambe le interfacce [ICorProfilerCallback](icorprofilercallback-interface.md) e [ICorProfilerCallback4](icorprofilercallback4-interface.md) , il `MovedReferences2` metodo viene chiamato prima del metodo [ICorProfilerCallback:: MovedReferences](icorprofilercallback-movedreferences-method.md) , ma solo se il `MovedReferences2` metodo viene restituito correttamente. I profiler possono restituire un valore HRESULT indicante un errore nel metodo `MovedReferences2` per evitare di chiamare il secondo metodo.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

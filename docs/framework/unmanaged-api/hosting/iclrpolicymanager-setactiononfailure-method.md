@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4664033f-db97-4388-b988-2ec470796e58
 topic_type:
 - apiref
-ms.openlocfilehash: fb2ecc80f272a3fc9b63b20c5956e7a28f117784
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 727cd82226b9a59c4879ffea5e87f93dd5fe38c9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703465"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504108"
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>Metodo ICLRPolicyManager::SetActionOnFailure
 Specifica l'azione del criterio che il Common Language Runtime (CLR) deve eseguire quando si verifica l'errore specificato.  
@@ -43,7 +43,7 @@ HRESULT SetActionOnFailure (
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|Description|  
+|HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|`SetActionOnFailure`la restituzione è riuscita.|  
 |HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
@@ -54,7 +54,7 @@ HRESULT SetActionOnFailure (
 |E_INVALIDARG|Non è possibile impostare un'azione del criterio per l'operazione specificata oppure è stata specificata un'azione del criterio non valida per l'operazione.|  
   
 ## <a name="remarks"></a>Osservazioni  
- Per impostazione predefinita, CLR genera un'eccezione quando non riesce ad allocare una risorsa, ad esempio la memoria. `SetActionOnFailure`consente all'host di eseguire l'override di questo comportamento specificando l'azione del criterio da eseguire quando si verifica un errore. Nella tabella seguente vengono illustrate le combinazioni di valori [EClrFailure](eclrfailure-enumeration.md) e [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) supportati. Il prefisso FAIL_ viene omesso dai valori [EClrFailure](eclrfailure-enumeration.md) .  
+ Per impostazione predefinita, CLR genera un'eccezione quando non riesce ad allocare una risorsa, ad esempio la memoria. `SetActionOnFailure`consente all'host di eseguire l'override di questo comportamento specificando l'azione del criterio da eseguire quando si verifica un errore. Nella tabella seguente vengono illustrate le combinazioni di valori [EClrFailure](eclrfailure-enumeration.md) e [EPolicyAction](epolicyaction-enumeration.md) supportati. Il prefisso FAIL_ viene omesso dai valori [EClrFailure](eclrfailure-enumeration.md) .  
   
 ||NonCriticalResource|CriticalResource|FatalRuntime|OrphanedLock|StackOverflow|AccessViolation|Codecontract|  
 |-|-------------------------|----------------------|------------------|------------------|-------------------|---------------------|------------------|  

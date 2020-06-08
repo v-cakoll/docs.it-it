@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c6c3ace6-e5e7-4450-8cc5-a9a48208c493
 topic_type:
 - apiref
-ms.openlocfilehash: 822b51531b7afc1c824c74b9580d9208e347e13b
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 71afc5e9772f82b922e8f428e6d808e46d092704
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703557"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504212"
 ---
 # <a name="iclriocompletionmanager-interface"></a>Interfaccia ICLRIoCompletionManager
 Implementa un metodo di callback che consente all'host di notificare al Common Language Runtime (CLR) lo stato delle richieste di I/O specificate.  
@@ -28,7 +28,7 @@ Implementa un metodo di callback che consente all'host di notificare al Common L
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo OnComplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md)|Notifica a CLR lo stato di una richiesta di I/O effettuata mediante una chiamata al metodo [IHostIoCompletionManager:: bind](ihostiocompletionmanager-bind-method.md) .|  
+|[Metodo OnComplete](iclriocompletionmanager-oncomplete-method.md)|Notifica a CLR lo stato di una richiesta di I/O effettuata mediante una chiamata al metodo [IHostIoCompletionManager:: bind](ihostiocompletionmanager-bind-method.md) .|  
   
 ## <a name="remarks"></a>Osservazioni  
  L'host implementa l'astrazione di completamento I/O usando l'interfaccia [IHostIoCompletionManager](ihostiocompletionmanager-interface.md) . CLR esegue richieste di I/O tramite questa interfaccia e l'host notifica al runtime il risultato di tali richieste usando l' `ICLRIoCompletionManager` interfaccia.  

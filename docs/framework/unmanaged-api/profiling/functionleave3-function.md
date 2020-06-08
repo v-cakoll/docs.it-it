@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5d798088-7992-48a0-ae55-d2a7ee31913f
 topic_type:
 - apiref
-ms.openlocfilehash: 32d86f19e9c50694c7d113195e6967645b710666
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 456d9a0e8236948ac69ed069495b1999ebf7e80a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866869"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500611"
 ---
 # <a name="functionleave3-function"></a>Funzione FunctionLeave3
 Notifica al profiler che il controllo viene restituito da una funzione.  
@@ -36,10 +36,10 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
 
   \[in] identificatore della funzione da cui viene restituito il controllo.
   
-## <a name="remarks"></a>Note  
- La funzione di callback `FunctionLeave3` notifica al profiler che le funzioni vengono chiamate, ma non supporta l'ispezione del valore restituito. Usare il [Metodo ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) per registrare l'implementazione di questa funzione.  
+## <a name="remarks"></a>Osservazioni  
+ La `FunctionLeave3` funzione di callback notifica al profiler che le funzioni vengono chiamate, ma non supporta l'ispezione del valore restituito. Usare il [Metodo ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) per registrare l'implementazione di questa funzione.  
   
- La funzione `FunctionLeave3` è un callback. è necessario implementarla. L'implementazione deve usare l'`__declspec(naked)` attributo della classe di archiviazione.  
+ La `FunctionLeave3` funzione è un callback. è necessario implementarla. L'implementazione deve usare l' `__declspec(naked)` attributo della classe di archiviazione.  
   
  Il motore di esecuzione non salva i registri prima di chiamare questa funzione.  
   
@@ -47,18 +47,18 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
   
 - All'uscita è necessario ripristinare lo stack scegliendo tutti i parametri di cui è stato eseguito il push dal chiamante.  
   
- L'implementazione di `FunctionLeave3` non deve bloccarsi perché ritarda Garbage Collection. L'implementazione non deve tentare un Garbage Collection, perché lo stack potrebbe non essere in uno stato descrittivo Garbage Collection. Se viene effettuato un tentativo di Garbage Collection, il runtime si bloccherà fino a quando `FunctionLeave3` non restituisce.  
+ L'implementazione di `FunctionLeave3` non deve essere bloccata, perché ritarderà Garbage Collection. L'implementazione non deve tentare un Garbage Collection, perché lo stack potrebbe non essere in uno stato descrittivo Garbage Collection. Se viene effettuato un tentativo di Garbage Collection, il runtime si bloccherà fino a quando non viene `FunctionLeave3` restituito.  
   
- La funzione `FunctionLeave3` non deve chiamare codice gestito o causare un'allocazione di managed memory in alcun modo.  
+ La `FunctionLeave3` funzione non deve chiamare nel codice gestito o causare un managed memory allocazione in qualsiasi modo.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf. idl  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

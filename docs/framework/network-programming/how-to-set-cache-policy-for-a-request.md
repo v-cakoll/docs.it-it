@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: Impostare criteri di cache per una richiesta'
+description: Informazioni su come impostare criteri di cache per una richiesta nel .NET Framework. Questo criterio di cache consente di usare una risorsa dalla cache per un massimo di un giorno.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 4ad74d69391da0e815faf9c278f2d9bea03937d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 248cbdd0921564898c5d3459cffa304793e85584
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180762"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502431"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Procedura: Impostare criteri di cache per una richiesta
 L'esempio seguente illustra l'impostazione di criteri di cache per una richiesta. L'input di esempio è un URI, ad esempio `http://www.contoso.com/`.  
@@ -108,7 +109,7 @@ End Namespace
 ## <a name="see-also"></a>Vedere anche
 
 - [Gestione della cache per le applicazioni di rete](cache-management-for-network-applications.md)
-- [Criteri cache](cache-policy.md)
+- [Criteri di cache](cache-policy.md)
 - [Criteri di cache basati sulla posizione](location-based-cache-policies.md)
 - [Time-Based Cache Policies](time-based-cache-policies.md)
-- [\<elemento> requestCaching (impostazioni di rete)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [\<requestCaching>Elemento (impostazioni di rete)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

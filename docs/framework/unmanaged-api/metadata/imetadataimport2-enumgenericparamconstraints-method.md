@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8a7d4e40-28fe-4e14-b801-4049880130e7
 topic_type:
 - apiref
-ms.openlocfilehash: d1683965193801dbdee038ab06366178891fd978
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: af226f9317b67b23e03d06614ed5b9c956939c22
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426728"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503419"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>Metodo IMetaDataImport2::EnumGenericParamConstraints
 Ottiene un enumeratore per una matrice di vincoli di parametri generici associati al parametro generico rappresentato dal token specificato.  
@@ -48,28 +48,28 @@ HRESULT EnumGenericParamConstraints (
  out Matrice di vincoli di parametro generico da enumerare.  
   
  `cMax`  
- in   Numero massimo di token richiesto da inserire in `rGenericParamConstraints`.  
+ in   Numero massimo di token richiesto da inserire in `rGenericParamConstraints` .  
   
  `pcGenericParamConstraints`  
- out Puntatore al numero di token inseriti in `rGenericParamConstraints`.  
+ out Puntatore al numero di token inseriti in `rGenericParamConstraints` .  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParameterConstraints` ha restituito un esito positivo.|  
-|`S_FALSE`|`phEnum` non dispone di elementi Member. In questo caso, `pcGenericParameterConstraints` è impostato su 0 (zero).|  
+|`S_OK`|`EnumGenericParameterConstraints`la restituzione è riuscita.|  
+|`S_FALSE`|`phEnum`non contiene elementi Member. In questo caso, `pcGenericParameterConstraints` è impostato su 0 (zero).|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
  **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](imetadataimport-interface.md)

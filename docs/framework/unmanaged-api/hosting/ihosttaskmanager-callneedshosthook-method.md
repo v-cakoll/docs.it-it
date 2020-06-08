@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b60f1f59-9825-4b57-961f-d2979518e6a7
 topic_type:
 - apiref
-ms.openlocfilehash: 5bc5752d4d2b772b1d18f438c4daaa1b8938da9e
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 8cbac3b4ad25ba7dc01413f0c1b44541c43b3999
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842348"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503874"
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>Metodo IHostTaskManager::CallNeedsHostHook
 Consente all'host di specificare se il Common Language Runtime (CLR) può incorporare la chiamata specificata a una funzione non gestita.  
@@ -43,7 +43,7 @@ HRESULT CallNeedsHostHook (
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|Description|  
+|HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|`CallNeedsHostHook`la restituzione è riuscita.|  
 |HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
@@ -55,7 +55,7 @@ HRESULT CallNeedsHostHook (
 ## <a name="remarks"></a>Osservazioni  
  Per ottimizzare l'esecuzione del codice, CLR esegue un'analisi di ogni chiamata di platform invoke durante la compilazione per determinare se la chiamata può essere impostata come inline. `CallNeedsHostHook`consente all'host di eseguire l'override di tale decisione richiedendo l'hook di una chiamata a una funzione non gestita. Se l'host richiede un hook, il runtime non inlineerà la chiamata.  
   
- L'host richiede in genere un hook in cui deve modificare uno stato a virgola mobile o quando riceve una notifica che indica che una chiamata entra in uno stato in cui l'host non è in grado di tenere traccia delle richieste di memoria del runtime o di eventuali blocchi acquisiti. Quando l'host richiede l'associazione della chiamata, il Runtime notifica all'host le transizioni da e verso il codice gestito usando le chiamate a [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md), [ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)e [ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md).  
+ L'host richiede in genere un hook in cui deve modificare uno stato a virgola mobile o quando riceve una notifica che indica che una chiamata entra in uno stato in cui l'host non è in grado di tenere traccia delle richieste di memoria del runtime o di eventuali blocchi acquisiti. Quando l'host richiede l'associazione della chiamata, il Runtime notifica all'host le transizioni da e verso il codice gestito usando le chiamate a [EnterRuntime](ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](ihosttaskmanager-leaveruntime-method.md), [ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md)e [ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  

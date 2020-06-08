@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 98ae174f-bff0-48f1-9e05-6cb63b451824
 topic_type:
 - apiref
-ms.openlocfilehash: 7d201962976d198372226eb686696fcdccf3eb69
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: aa02d42511a863434fef236f90afae2c5417a78d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762162"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504017"
 ---
 # <a name="iclrruntimeinfosetdefaultstartupflags-method"></a>Metodo ICLRRuntimeInfo::SetDefaultStartupFlags
-Imposta i flag di avvio e il file di configurazione host che verranno usati per avviare il Runtime. Questo metodo sostituisce l'utilizzo del `startupFlags` parametro nelle funzioni [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) e [CorBindToRuntimeHost](corbindtoruntimehost-function.md) .  
+Imposta i flag di avvio e il file di configurazione host che verranno usati per avviare il Runtime. Questo metodo sostituisce l'utilizzo del `startupFlags` parametro nelle funzioni [CorBindToRuntimeEx](corbindtoruntimeex-function.md) e [CorBindToRuntimeHost](corbindtoruntimehost-function.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,7 +35,7 @@ HRESULT SetDefaultStartupFlags(
   
 ## <a name="parameters"></a>Parametri  
  `dwStartupFlags`  
- in Flag di avvio dell'host da impostare. Utilizzare gli stessi flag delle funzioni [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) e [CorBindToRuntimeHost](corbindtoruntimehost-function.md) .  
+ in Flag di avvio dell'host da impostare. Utilizzare gli stessi flag delle funzioni [CorBindToRuntimeEx](corbindtoruntimeex-function.md) e [CorBindToRuntimeHost](corbindtoruntimehost-function.md) .  
   
  `pwzHostConfigFile`  
  in Percorso della directory del file di configurazione host da impostare.  

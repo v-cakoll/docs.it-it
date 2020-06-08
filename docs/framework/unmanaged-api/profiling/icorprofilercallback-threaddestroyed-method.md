@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c2b66fd-0595-40a3-8931-f9c4fff97ac8
 topic_type:
 - apiref
-ms.openlocfilehash: 07041d06668d474a3d30968fb623854a24ebf0eb
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: c63b91c39ded58ed208f6920c2bfaeba410c093c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865818"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499857"
 ---
 # <a name="icorprofilercallbackthreaddestroyed-method"></a>Metodo ICorProfilerCallback::ThreadDestroyed
 Notifica al profiler che un thread è stato eliminato definitivamente.  
@@ -36,17 +36,17 @@ HRESULT ThreadDestroyed(
  `threadId`  
  in ID del thread che è stato eliminato definitivamente.  
   
-## <a name="remarks"></a>Note  
- Il valore `threadId` non è più valido al momento della chiamata.  
+## <a name="remarks"></a>Osservazioni  
+ Il `threadId` valore non è più valido al momento della chiamata.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

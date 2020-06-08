@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f4c2cd88-ac28-4bad-9ab1-2cf9d2de41e6
 topic_type:
 - apiref
-ms.openlocfilehash: b1b1c557eea62cae6d2ad09303441e4635abc899
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5485f43afe08fafa559d0418327a8f4f186860e7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437847"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491511"
 ---
 # <a name="imetadataimportfindtypedefbyname-method"></a>Metodo IMetaDataImport::FindTypeDefByName
-Ottiene un puntatore al token di metadati TypeDef per la <xref:System.Type> con il nome specificato.  
+Ottiene un puntatore al token di metadati TypeDef per l'oggetto <xref:System.Type> con il nome specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,15 +46,15 @@ HRESULT FindTypeDefByName
  out Puntatore al token TypeDef corrispondente.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
  **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](imetadataimport2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b38bbc9a-872c-41a9-b8c3-ca011d25456a
 topic_type:
 - apiref
-ms.openlocfilehash: 81b6f009ea61294f398a21c4def927ef2609f32b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f63b761497b3e9a19a9b939b45acf60d5a7d37b0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615746"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504238"
 ---
 # <a name="iclrdebugmanagersetconnectiontasks-method"></a>Metodo ICLRDebugManager::SetConnectionTasks
 Associa un elenco di istanze di [ICLRTask](iclrtask-interface.md) a un identificatore e a un nome descrittivo.  
@@ -47,7 +47,7 @@ HRESULT SetConnectionTasks (
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|Description|  
+|HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|`SetConnectionTasks`la restituzione è riuscita.|  
 |HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
@@ -58,7 +58,7 @@ HRESULT SetConnectionTasks (
 |E_INVALIDARG|[BeginConnection](iclrdebugmanager-beginconnection-method.md) non è stato chiamato utilizzando questo valore di `id` , oppure `dwCount` o `id` è zero oppure uno degli elementi di `ppCLRTask` è null.|  
   
 ## <a name="remarks"></a>Osservazioni  
- [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md) fornisce tre metodi, `BeginConnection` , `SetConnectionTasks` e [EndConnection](iclrdebugmanager-endconnection-method.md), per l'associazione di elenchi di attività con identificatori e nomi descrittivi.  
+ [ICLRDebugManager](iclrdebugmanager-interface.md) fornisce tre metodi, `BeginConnection` , `SetConnectionTasks` e [EndConnection](iclrdebugmanager-endconnection-method.md), per l'associazione di elenchi di attività con identificatori e nomi descrittivi.  
   
 > [!IMPORTANT]
 > Questi tre metodi devono essere chiamati in un ordine specifico per ogni set di attività. `BeginConnection`viene chiamato per primo per stabilire una nuova connessione. `SetConnectionTasks`viene chiamato Next per fornire il set di attività da associare a tale connessione. `EndConnection`viene chiamato per ultimo per rimuovere l'associazione tra l'elenco attività e l'identificatore e il nome descrittivo. Tuttavia, le chiamate per connessioni diverse possono essere nidificate.  

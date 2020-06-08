@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e508711-da92-4381-aaf8-6803075cdaa2
 topic_type:
 - apiref
-ms.openlocfilehash: 2d6e86a7f5a93b900e79907f8ee0762869d7f737
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cdfd4e10236d546af2555b125d44233172849a21
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177290"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503731"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>Metodo IMetaDataImport::EnumTypeDefs
 Enumera i token TypeDef che rappresentano tutti i tipi all'interno dell'ambito corrente.  
@@ -38,37 +38,37 @@ HRESULT EnumTypeDefs (
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [fuori] Puntatore al nuovo enumeratore. Deve essere NULL per la prima chiamata di questo metodo.  
+ out Puntatore al nuovo enumeratore. Deve essere NULL per la prima chiamata di questo metodo.  
   
  `rTypeDefs`  
- [in] Matrice utilizzata per archiviare i token TypeDef.  
+ in Matrice utilizzata per archiviare i token TypeDef.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rTypeDefs`.  
   
  `pcTypeDefs`  
- [fuori] Numero di token TypeDef restituiti in `rTypeDefs`.  
+ out Numero di token TypeDef restituiti in `rTypeDefs` .  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs`restituito con successo.|  
-|`S_FALSE`|Non sono presenti token da enumerare. In tal `pcTypeDefs` caso, è zero.|  
+|`S_OK`|`EnumTypeDefs`la restituzione è riuscita.|  
+|`S_FALSE`|Nessun token da enumerare. In tal caso, `pcTypeDefs` è zero.|  
   
 ## <a name="remarks"></a>Osservazioni  
- Il token TypeDef rappresenta un tipo, ad esempio una classe o un'interfaccia, nonché qualsiasi tipo aggiunto tramite un meccanismo di estensibilità.  
+ Il token TypeDef rappresenta un tipo come una classe o un'interfaccia, nonché qualsiasi tipo aggiunto tramite un meccanismo di estendibilità.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](imetadataimport2-interface.md)

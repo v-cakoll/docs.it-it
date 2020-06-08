@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a10749f1-ab91-47cf-982f-d8ccd2e81bd2
 topic_type:
 - apiref
-ms.openlocfilehash: a0d6496e014b767b2bdaf68cdc62017813e1e57f
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: d482e25c7bf0f028e2478c8e7b7863bc54d7aeb9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703630"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504193"
 ---
 # <a name="iclrmetahostgetruntime-method"></a>Metodo ICLRMetaHost::GetRuntime
-Ottiene l'interfaccia [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) che corrisponde a una particolare versione di Common Language Runtime (CLR). Questo metodo sostituisce la funzione [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) utilizzata con il flag [STARTUP_LOADER_SAFEMODE](startup-flags-enumeration.md) .  
+Ottiene l'interfaccia [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) che corrisponde a una particolare versione di Common Language Runtime (CLR). Questo metodo sostituisce la funzione [CorBindToRuntimeEx](corbindtoruntimeex-function.md) utilizzata con il flag [STARTUP_LOADER_SAFEMODE](startup-flags-enumeration.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,13 +53,13 @@ HRESULT GetRuntime (
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
   
-|HRESULT|Description|  
+|HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
 |E_POINTER|`pwzVersion` o `ppRuntime` è null.|  
   
 ## <a name="remarks"></a>Osservazioni  
- Questo metodo interagisce costantemente con le interfacce legacy, ad esempio l'interfaccia [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) e le funzioni legacy, ad esempio le funzioni deprecate `CorBindTo*` (vedere [funzioni di hosting CLR deprecate](deprecated-clr-hosting-functions.md) nell'API di hosting .NET Framework 2,0). Ovvero, i runtime caricati con l'API legacy sono visibili alla nuova API e i runtime caricati con la nuova API sono visibili all'API legacy.  
+ Questo metodo interagisce costantemente con le interfacce legacy, ad esempio l'interfaccia [ICorRuntimeHost](icorruntimehost-interface.md) e le funzioni legacy, ad esempio le funzioni deprecate `CorBindTo*` (vedere [funzioni di hosting CLR deprecate](deprecated-clr-hosting-functions.md) nell'API di hosting .NET Framework 2,0). Ovvero, i runtime caricati con l'API legacy sono visibili alla nuova API e i runtime caricati con la nuova API sono visibili all'API legacy.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  

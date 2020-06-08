@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bed097b3-6d52-46c9-bee7-ac7910b6fc3f
 topic_type:
 - apiref
-ms.openlocfilehash: d0219751987b1f2d78ee37a1553b323014c1ccfe
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 9bff594d0307153fb468b28c1535977f06997748
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865688"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499714"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>Metodo ICorProfilerCallback3::InitializeForAttach
 Chiamato da Common Language Runtime (CLR) per dare al profiler la possibilità di inizializzare il proprio stato dopo un'operazione di connessione.  
@@ -39,22 +39,22 @@ HRESULT InitializeForAttach(
  [in] Puntatore all'interfaccia `ICorProfilerInfo*`.  
   
  `pvClientData`  
- in Puntatore ai dati passati al metodo [ICLRProfiling:: AttachProfiler](iclrprofiling-attachprofiler-method.md) nel parametro `pvClientData`. Se questo parametro è null, `cbClientData` sarà 0 (zero). CLR libera questa memoria quando ottiene un risultato da `InitializeForAttach`.  
+ in Puntatore ai dati passati al metodo [ICLRProfiling:: AttachProfiler](iclrprofiling-attachprofiler-method.md) nel `pvClientData` parametro. Se questo parametro è null, `cbClientData` sarà 0 (zero). CLR libera questa memoria quando ottiene un risultato da `InitializeForAttach`.  
   
  `cbClientData`  
  [in] Dimensioni in byte dei dati a cui `pvClientData` punta.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  CLR chiama `InitializeForAttach` per dare al profiler la possibilità di richiedere callback.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

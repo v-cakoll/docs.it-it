@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a4de6805-e159-4280-99e5-3390c86166d0
 topic_type:
 - apiref
-ms.openlocfilehash: 4b82a334d8c64dde824802fcf2a7d0ad17457af0
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 354736061a2c50b7db16070c3d4ff9c2548d394d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866000"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499948"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationreturned-method"></a>Metodo ICorProfilerCallback::RemotingServerInvocationReturned
 Notifica al profiler che il processo ha completato la chiamata a un metodo in risposta a una richiesta di chiamata al metodo remoto.  
@@ -31,14 +31,14 @@ Notifica al profiler che il processo ha completato la chiamata a un metodo in ri
 HRESULT RemotingServerInvocationReturned();  
 ```  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

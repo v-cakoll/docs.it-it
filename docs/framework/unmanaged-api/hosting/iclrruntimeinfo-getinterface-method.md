@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc7b0e5b-48c3-4509-8ebb-611ddb1f7ec2
 topic_type:
 - apiref
-ms.openlocfilehash: c8ac959c192814562488ab916c8462b0baa0d8e6
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 9cf9d48bf50ffc1fc56270c13215acfef6d9c3af
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703642"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504056"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>Metodo ICLRRuntimeInfo::GetInterface
-Carica CLR nel processo corrente e restituisce i puntatori dell'interfaccia di runtime, ad esempio [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)e [IMetaDataDispenserEx](../metadata/imetadatadispenser-interface.md).  
+Carica CLR nel processo corrente e restituisce i puntatori dell'interfaccia di runtime, ad esempio [ICLRRuntimeHost](iclrruntimehost-interface.md), [ICLRStrongName](iclrstrongname-interface.md)e [IMetaDataDispenserEx](../metadata/imetadatadispenser-interface.md).  
   
  Questo metodo sostituisce tutte le `CorBindTo` funzioni * nella sezione [funzioni di hosting CLR deprecate](deprecated-clr-hosting-functions.md) .  
   
@@ -49,7 +49,7 @@ HRESULT GetInterface(
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
   
-|HRESULT|Description|  
+|HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
 |E_POINTER|`ppUnk` è null.|  

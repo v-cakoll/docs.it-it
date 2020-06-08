@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0970f10c-4304-4c12-91c0-83e51455afb4
 topic_type:
 - apiref
-ms.openlocfilehash: a216a2925382016adeb100554bdceefdf3ee902b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bbf5e299285071ba6d43fd2c40fc724d19bc7b2a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616060"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504355"
 ---
 # <a name="iactiononclreventonevent-method"></a>Metodo IActionOnCLREvent::OnEvent
 Esegue callback per gli eventi che sono stati registrati tramite una chiamata al metodo [ICLROnEventManager:: RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) .  
@@ -43,7 +43,7 @@ HRESULT OnEvent (
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|Description|  
+|HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|`OnEvent`la restituzione è riuscita.|  
 |HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
@@ -55,7 +55,7 @@ HRESULT OnEvent (
 ## <a name="remarks"></a>Osservazioni  
  Il `data` parametro è un puntatore a un oggetto di tipo non specificato. Se il `event` parametro è `Event_DomainUnload` , `data` è l'identificatore numerico per l'oggetto <xref:System.AppDomain> che è stato scaricato. L'host può intraprendere l'azione appropriata utilizzando questo identificatore come chiave.  
   
- Se `event` è `Event_MDAFired` , `data` è un puntatore a un'istanza di [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) che contiene l'output del messaggio da un assistente al debug gestito (MDA). MDA sono una funzionalità di CLR che consente agli sviluppatori di eseguire il debug, generando messaggi XML sugli eventi che altrimenti sarebbero difficili da intercettare. Tali messaggi possono essere particolarmente utili per il debug di transizioni tra codice gestito e non gestito. Per ulteriori informazioni, vedere la pagina relativa alla [diagnosi degli errori con gli assistenti al debug gestito](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+ Se `event` è `Event_MDAFired` , `data` è un puntatore a un'istanza di [MDAInfo](mdainfo-structure.md) che contiene l'output del messaggio da un assistente al debug gestito (MDA). MDA sono una funzionalità di CLR che consente agli sviluppatori di eseguire il debug, generando messaggi XML sugli eventi che altrimenti sarebbero difficili da intercettare. Tali messaggi possono essere particolarmente utili per il debug di transizioni tra codice gestito e non gestito. Per ulteriori informazioni, vedere la pagina relativa alla [diagnosi degli errori con gli assistenti al debug gestito](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  

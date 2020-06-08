@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e835062c-c7d6-4945-8a44-2de7ebf3928e
 topic_type:
 - apiref
-ms.openlocfilehash: 717a3d12528a34eafbd918c29d8e13bb87097d82
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 653c8d1d3edd38e646b4e90c0e48dbe15bed102a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615776"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504264"
 ---
 # <a name="iclrdebugmanager-interface"></a>Interfaccia ICLRDebugManager
 Fornisce metodi che consentono a un host di associare un set di attività con un identificatore e un nome descrittivo.  
@@ -32,7 +32,7 @@ Fornisce metodi che consentono a un host di associare un set di attività con un
 |[Metodo EndConnection](iclrdebugmanager-endconnection-method.md)|Rimuove l'associazione tra un elenco di attività e un identificatore e un nome descrittivo.|  
 |[Metodo GetDacl](iclrdebugmanager-getdacl-method.md)|Questo metodo non è implementato.|  
 |[Metodo IsDebuggerAttached](iclrdebugmanager-isdebuggerattached-method.md)|Ottiene un valore che indica se un debugger è collegato al processo.|  
-|[Metodo SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)|Associa un elenco di istanze di [ICLRTask](iclrtask-interface.md) a un identificatore e a un nome descrittivo.|  
+|[Metodo SetConnectionTasks](iclrdebugmanager-setconnectiontasks-method.md)|Associa un elenco di istanze di [ICLRTask](iclrtask-interface.md) a un identificatore e a un nome descrittivo.|  
 |[Metodo SetDacl](iclrdebugmanager-setdacl-method.md)|Questo metodo non è implementato.|  
 |[Metodo SetSymbolReadingPolicy](iclrdebugmanager-setsymbolreadingpolicy-method.md)|Imposta i criteri per la lettura dei file di database di programma (PDB). Il criterio determina se le informazioni sui numeri di riga e sui file sono incluse negli stack di chiamate.|  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdc5a3a7-71ff-4025-99a1-59e4ee0bfe1b
 topic_type:
 - apiref
-ms.openlocfilehash: 3275a69683a312340f35841815685066def10b23
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 45e27ac3c2d4912d2ed3e5d43ea3020b9db5dbdc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762526"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504030"
 ---
 # <a name="iclrruntimeinfoisloaded-method"></a>Metodo ICLRRuntimeInfo::IsLoaded
 Indica se il Common Language Runtime (CLR) associato all'interfaccia [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) viene caricato in un processo. È possibile caricare un runtime anche senza avviare.  
@@ -57,7 +57,7 @@ HRESULT IsLoaded(
   
 - Funzioni deprecate `CorBindTo*` (vedere [funzioni di hosting CLR deprecate](deprecated-clr-hosting-functions.md) nell'API di hosting .NET Framework 2,0).  
   
- Un host può chiamare una delle funzioni deprecate `CorBindTo*` , ad esempio la funzione [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) , per creare un'istanza di una specifica versione di CLR. L'host può quindi chiamare il metodo [ICLRMetaHost:: GetRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) e specificare lo stesso numero di versione per ottenere un'interfaccia [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) .  
+ Un host può chiamare una delle funzioni deprecate `CorBindTo*` , ad esempio la funzione [CorBindToRuntime](corbindtoruntime-function.md) , per creare un'istanza di una specifica versione di CLR. L'host può quindi chiamare il metodo [ICLRMetaHost:: GetRuntime](iclrmetahost-getruntime-method.md) e specificare lo stesso numero di versione per ottenere un'interfaccia [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) .  
   
  Se l'host chiama quindi il `IsLoaded` metodo sull'interfaccia [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) restituita, `pbLoaded` restituisce `true` ; in caso contrario, restituisce `false` .  
   

@@ -1,5 +1,6 @@
 ---
 title: Elemento <add> per authenticationModules (impostazioni di rete)
+description: L' <add> elemento impostazioni di rete per connectionManagement aggiunge un indirizzo IP o un nome DNS all'elenco di gestione connessione nella .NET Framework.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: 4181a045079bdb455a63ebda722dd6b0daf33c4d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1a6d0f79f076a69cec33ac14f0e0f33f7c3c6577
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155115"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504641"
 ---
 # <a name="add-element-for-authenticationmodules-network-settings"></a>Elemento \<add> per authenticationModules (impostazioni di rete)
 Aggiunge un modulo di autenticazione all'applicazione.  
@@ -51,7 +52,7 @@ Aggiunge un modulo di autenticazione all'applicazione.
 |-----------------|---------------------|  
 |[authenticationModules](authenticationmodules-element-network-settings.md)|Specifica i moduli usati per autenticare le richieste di rete.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Con l'elemento `add` viene aggiunto un modulo di autenticazione alla fine dell'elenco dei moduli di autenticazione registrati. I moduli di autenticazione vengono chiamati nell'ordine in cui sono stati aggiunti all'elenco.  
   
  Il valore dell' `type` attributo deve essere un nome di tipo valido e un nome di assembly corrispondente, separati da una virgola.  
@@ -81,7 +82,7 @@ Aggiunge un modulo di autenticazione all'applicazione.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
