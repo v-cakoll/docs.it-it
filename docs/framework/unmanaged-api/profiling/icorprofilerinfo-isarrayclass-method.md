@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7f230961-23a6-4d56-ad2d-7a876d65705f
 topic_type:
 - apiref
-ms.openlocfilehash: a6e483d820d183afc8ba6a68fc4635730ffd1e51
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 2a3f5bb0c54935e524cc955a5e11aac75b0c0923
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76869338"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84497556"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>Metodo ICorProfilerInfo::IsArrayClass
 Determina se la classe specificata è una classe di matrici.  
@@ -48,17 +48,17 @@ HRESULT IsArrayClass(
  `pcRank`  
  out Puntatore a un intero che indica il rango, ovvero il numero di dimensioni, della matrice.  
   
-## <a name="remarks"></a>Note  
- Se la classe specificata è una classe di matrici, il metodo `IsArrayClass` restituisce un S_OK HRESULT e i valori per tutti i parametri di output non null. In caso contrario, restituisce S_FALSE.  
+## <a name="remarks"></a>Osservazioni  
+ Se la classe specificata è una classe di matrici, il `IsArrayClass` metodo restituisce un S_OK HRESULT e i valori per tutti i parametri di output non null. In caso contrario, restituisce S_FALSE.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

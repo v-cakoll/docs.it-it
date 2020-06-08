@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-ms.openlocfilehash: 8841fab0517353849ef99594bcbd03dda772c766
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 426b39aa3d1ada5ae44565a742b70681a7bcf6d3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616502"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493457"
 ---
 # <a name="_corvalidateimage-function"></a>Funzione _CorValidateImage
 Convalida le immagini del modulo gestito e invia una notifica al caricatore del sistema operativo dopo che sono state caricate.  
@@ -43,7 +43,7 @@ STDAPI _CorValidateImage (
 ## <a name="return-value"></a>Valore restituito  
  Questa funzione restituisce i valori standard `E_INVALIDARG` , `E_OUTOFMEMORY` , `E_UNEXPECTED` e `E_FAIL` , nonché i valori seguenti.  
   
-|Valore restituito|Description|  
+|Valore restituito|Descrizione|  
 |------------------|-----------------|  
 |`STATUS_INVALID_IMAGE_FORMAT`|L'immagine non è valida. Questo valore dispone del valore HRESULT 0xC000007BL.|  
 |`STATUS_SUCCESS`|L'immagine è valida. Questo valore dispone del valore HRESULT 0x00000000L.|  
@@ -59,7 +59,7 @@ STDAPI _CorValidateImage (
   
 - Torna al caricatore quando vengono caricate le immagini del modulo gestito.  
   
- Per le immagini eseguibili, il caricatore del sistema operativo chiama la funzione [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) , indipendentemente dal punto di ingresso specificato nell'eseguibile. Per le immagini di assembly DLL, il caricatore chiama la funzione [_CorDllMain](cordllmain-function.md) .  
+ Per le immagini eseguibili, il caricatore del sistema operativo chiama la funzione [_CorExeMain](corexemain-function.md) , indipendentemente dal punto di ingresso specificato nell'eseguibile. Per le immagini di assembly DLL, il caricatore chiama la funzione [_CorDllMain](cordllmain-function.md) .  
   
  `_CorExeMain`oppure `_CorDllMain` esegue le azioni seguenti:  
   

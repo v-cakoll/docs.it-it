@@ -1,5 +1,6 @@
 ---
 title: Indirizzamento IPv6
+description: Informazioni sugli indirizzi IPv6 (Internet Protocol Version 6), inclusi la rappresentazione testuale e i tipi di indirizzo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Internet Protocol version 6, addresses in
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: 1bad43b96fc6f66724e5e40cdf0ae6d76b46d867
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fbf68cb5f40450c2f9ecf4900801ee55e326fcb4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047846"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502340"
 ---
 # <a name="ipv6-addressing"></a>Indirizzamento IPv6
 
@@ -41,7 +42,7 @@ La lunghezza degli indirizzi IPv6 (Internet Protocol version 6) è di 128 bit. U
 
 Di seguito vengono mostrati tre formati convenzionali usati per rappresentare gli indirizzi IPv6 come stringhe di testo:
 
-- **Formato con valori esadecimali separati da due punti**. Questo è il formato preferito: n:n:n:n:n:n:n:n. Ogni n rappresenta il valore esadecimale di uno degli otto elementi a 16 bit dell'indirizzo. Ad esempio `3FFE:FFFF:7654:FEDA:1245:BA98:3210:4562`.
+- **Formato con valori esadecimali separati da due punti**. Questo è il formato preferito: n:n:n:n:n:n:n:n. Ogni n rappresenta il valore esadecimale di uno degli otto elementi a 16 bit dell'indirizzo. Ad esempio: `3FFE:FFFF:7654:FEDA:1245:BA98:3210:4562`.
 
 - **Formato compresso**. A causa della lunghezza degli indirizzi, alcuni indirizzi contengono una lunga stringa di zeri. Per semplificare la scrittura di questi indirizzi, usare il formato compresso, in cui una singola sequenza contigua di blocchi di zeri viene rappresentata da un simbolo costituito da un doppio carattere di due punti (::). Questo simbolo può apparire una sola volta in un indirizzo. Ad esempio, l'indirizzo multicast `FFED:0:0:0:0:BA98:3210:4562` in formato compresso è `FFED::BA98:3210:4562`. L'indirizzo unicast `3FFE:FFFF:0:0:8:800:20C4:0` in formato compresso è `3FFE:FFFF::8:800:20C4:0`. L'indirizzo di loopback `0:0:0:0:0:0:0:1` in formato compresso è `::`1. L'indirizzo non specificato `0:0:0:0:0:0:0:0` in formato compresso è `::`.
 
@@ -77,5 +78,5 @@ In generale, un nodo ha sempre un indirizzo locale rispetto al collegamento. Pu�
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Protocollo Internet versione 6](internet-protocol-version-6.md)
-- [socket](sockets.md)
+- [Protocollo IP versione 6](internet-protocol-version-6.md)
+- [Socket](sockets.md)

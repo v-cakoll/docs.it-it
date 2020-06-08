@@ -3,12 +3,12 @@ title: Convertire da .NET Framework a .NET Core
 description: Informazioni sul processo di trasferimento e sugli strumenti che possono risultare utili durante il trasferimento di un progetto .NET Framework in .NET Core.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: c6797a5b3a97ddd01f86498d896e859baf8997be
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 74fe4519e41a07bc78a4dc346f8d1b52b5c7d092
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158285"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502769"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>Panoramica del porting da .NET Framework a .NET Core
 
@@ -39,6 +39,9 @@ Per identificare i progetti di ordine da migrare, è possibile usare gli strumen
 
 - I [diagrammi di dipendenza in Visual Studio](/visualstudio/modeling/create-layer-diagrams-from-your-code) possono creare un grafico diretto del codice in una soluzione.
 - Eseguire `msbuild _SolutionPath_ /t:GenerateRestoreGraphFile /p:RestoreGraphOutputPath=graph.dg.json` per generare un documento JSON che include l'elenco dei riferimenti al progetto.
+- Eseguire [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) con l' `-r DGML` opzione per recuperare un diagramma delle dipendenze degli assembly. Per altre informazioni, vedere [qui](../../standard/analyzers/portability-analyzer.md#solution-wide-view).
+
+Una volta fornite le informazioni sulle dipendenze, è possibile usare tali informazioni per iniziare dai nodi foglia e lavorare fino all'albero delle dipendenze applicando i passaggi nella sezione successiva.
 
 ## <a name="per-project-steps"></a>Passaggi per progetto
 
@@ -66,7 +69,7 @@ Quando si trasferisce il progetto a .NET Core, è consigliabile usare il process
 
    Durante la lettura dei report generati dall'analizzatore, le informazioni importanti sono le API effettivamente in uso e non necessariamente la percentuale di supporto per la piattaforma di destinazione. Molte API hanno opzioni equivalenti in .NET Standard/Core e, di conseguenza, per comprendere gli scenari in cui la libreria o l'applicazione necessita dell'API, è possibile determinare le implicazioni per la portabilità.
 
-   Ci sono alcuni casi in cui le API non sono equivalenti ed è necessario eseguire alcune direttive del preprocessore del compilatore ( `#if NET45`ovvero) per il caso speciale delle piattaforme. A questo punto, il progetto sarà ancora destinato .NET Framework. Per ognuno di questi casi di destinazione, è consigliabile utilizzare le condizioni note che possono essere comprese come uno scenario.  Ad esempio, il supporto di AppDomain in .NET Core è limitato, ma per lo scenario di caricamento e scaricamento degli assembly, esiste una nuova API che non è disponibile in .NET Core. Un modo comune per gestire questa operazione nel codice è simile al seguente:
+   Ci sono alcuni casi in cui le API non sono equivalenti ed è necessario eseguire alcune direttive del preprocessore del compilatore (ovvero `#if NET45` ) per il caso speciale delle piattaforme. A questo punto, il progetto sarà ancora destinato .NET Framework. Per ognuno di questi casi di destinazione, è consigliabile utilizzare le condizioni note che possono essere comprese come uno scenario.  Ad esempio, il supporto di AppDomain in .NET Core è limitato, ma per lo scenario di caricamento e scaricamento degli assembly, esiste una nuova API che non è disponibile in .NET Core. Un modo comune per gestire questa operazione nel codice è simile al seguente:
 
    ```csharp
    #if FEATURE_APPDOMAIN_LOADING
@@ -78,9 +81,9 @@ Quando si trasferisce il progetto a .NET Core, è consigliabile usare il process
    #endif
    ```
 
-1. Installare l' [analizzatore di API .NET](../../standard/analyzers/api-analyzer.md) nei progetti per identificare le API <xref:System.PlatformNotSupportedException> che generano alcune piattaforme e altri potenziali problemi di compatibilità.
+1. Installare l' [analizzatore di API .NET](../../standard/analyzers/api-analyzer.md) nei progetti per identificare le API che generano <xref:System.PlatformNotSupportedException> alcune piattaforme e altri potenziali problemi di compatibilità.
 
-   Questo strumento è simile a Portability Analyzer, ma invece di analizzare se il codice può essere compilato in .NET Core, analizza se si sta usando un'API in modo da generare un' <xref:System.PlatformNotSupportedException> eccezione in fase di esecuzione. Sebbene questo non sia comune se si passa da .NET Framework 4.7.2 o versione successiva, è opportuno verificare. Per altre informazioni sulle API che generano eccezioni in .NET Core, vedere [API che generano sempre eccezioni in .NET Core](../compatibility/unsupported-apis.md).
+   Questo strumento è simile a Portability Analyzer, ma invece di analizzare se il codice può essere compilato in .NET Core, analizza se si sta usando un'API in modo da generare un'eccezione in fase di <xref:System.PlatformNotSupportedException> esecuzione. Sebbene questo non sia comune se si passa da .NET Framework 4.7.2 o versione successiva, è opportuno verificare. Per altre informazioni sulle API che generano eccezioni in .NET Core, vedere [API che generano sempre eccezioni in .NET Core](../compatibility/unsupported-apis.md).
 
 1. A questo punto, è possibile passare alla destinazione di .NET Core (in genere per le applicazioni) o .NET Standard (per le librerie).
 
@@ -109,6 +112,6 @@ Quando si trasferisce il progetto a .NET Core, è consigliabile usare il process
 ## <a name="next-steps"></a>Passaggi successivi
 
 > [!div class="nextstepaction"]
-> [Analizzare](third-party-deps.md)i pacchetti[NuGet](../deploying/creating-nuget-packages.md)
-> del pacchetto[ASP.NET per ASP.NET Core migrazione](/aspnet/core/migration/proper-to-2x) 
-> 
+> [Analizzare le dipendenze](third-party-deps.md) 
+>  Pacchetto [NuGet pacchetto](../deploying/creating-nuget-packages.md) 
+>  [Migrazione da ASP.NET a ASP.NET Core](/aspnet/core/migration/proper-to-2x)

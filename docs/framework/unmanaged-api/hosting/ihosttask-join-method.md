@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2cffcc52-19e0-4ced-a440-fc7375078ac9
 topic_type:
 - apiref
-ms.openlocfilehash: 8fa59e065042565b4a543106fff714558cef42ec
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 20919bd9889408821cf57817082e3c7d5cebc240
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842244"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503918"
 ---
 # <a name="ihosttaskjoin-method"></a>Metodo IHostTask::Join
-Blocca l'attività chiamante fino a quando l'attività rappresentata dall'istanza corrente di [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) non viene completata, l'intervallo di tempo specificato scade oppure [IHostTask:: Alert](ihosttask-alert-method.md) viene chiamato.  
+Blocca l'attività chiamante fino a quando l'attività rappresentata dall'istanza corrente di [IHostTask](ihosttask-interface.md) non viene completata, l'intervallo di tempo specificato scade oppure [IHostTask:: Alert](ihosttask-alert-method.md) viene chiamato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +43,7 @@ HRESULT Join (
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|Description|  
+|HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|`Join`la restituzione è riuscita.|  
 |HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  

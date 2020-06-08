@@ -1,5 +1,6 @@
 ---
 title: Schema delle impostazioni di rete
+description: Informazioni sullo schema per le impostazioni di rete che specificano il modo in cui il .NET Framework si connette a Internet e gestisce gli URI.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - elements [.NET Framework], network configuration elements
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - connections [.NET Framework], network configuration elements
 - network resources, network configuration elements
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-ms.openlocfilehash: 5e3bd1b1734fc7fba50b72785531a8b001d6d741
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6a22d7f1608db2e8909d0ead11e9110ec8a8a2c5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71698157"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504576"
 ---
 # <a name="network-settings-schema"></a>Schema delle impostazioni di rete
 Tramite le impostazioni di rete viene specificata la modalità di connessione a Internet di .NET Framework.
@@ -41,7 +42,7 @@ Le \<uri> impostazioni specificano il modo in cui il .NET Framework gestisce gli
 |[\<iriParsing>Elemento (impostazioni URI)](iriparsing-element-uri-settings.md)|Specifica se l'analisi IRI (International Resource Identifier) viene applicata a un <xref:System.Uri> e se devono essere applicate le regole di analisi IRI.|  
 |[\<schemeSettings>Elemento (impostazioni URI)](schemesettings-element-uri-settings.md)|Specifica come verrà analizzato un <xref:System.Uri> per schemi specifici.|  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Configurazione di applicazioni Internet](../../../network-programming/configuring-internet-applications.md)
 - [Schema del file di configurazione](../index.md)
