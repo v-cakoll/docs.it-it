@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0eed759f-cce8-405d-88dc-9ee293a38928
 topic_type:
 - apiref
-ms.openlocfilehash: 2b2d619c5940376806e9873a528b4f08886593e9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 18c3b6e840ec1f6cb1481c8d752e6399dcdae077
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863556"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498141"
 ---
 # <a name="icorprofilerinfogetfunctionfromtoken-method"></a>Metodo ICorProfilerInfo::GetFunctionFromToken
 Ottiene l'ID di una funzione. Questo metodo è obsoleto nella versione .NET Framework 2,0. Usare invece il metodo [ICorProfilerInfo2:: GetFunctionFromTokenAndTypeArgs](icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) .  
@@ -34,11 +34,11 @@ HRESULT GetFunctionFromToken(
     [out] FunctionID *pFunctionId);  
 ```  
   
-## <a name="remarks"></a>Note  
- Il metodo `GetFunctionFromToken` non funzionerà per funzioni o funzioni generiche nei tipi generici; è ora obsoleto. Usare `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` per tutte le funzioni.  
+## <a name="remarks"></a>Osservazioni  
+ Il `GetFunctionFromToken` metodo non funzionerà per funzioni o funzioni generiche nei tipi generici; ora è obsoleto. Usare `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` per tutte le funzioni.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

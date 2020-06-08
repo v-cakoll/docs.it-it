@@ -1,5 +1,6 @@
 ---
 title: Elemento <defaultProxy> (impostazioni di rete)
+description: L' <defaultProxy> elemento impostazioni di rete configura il server proxy Hypertext Transfer Protocol (http) nel .NET Framework.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultProxy
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 0945629c1395917bc1cf825f2ba84d20afa99957
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 915fdc96dbd4d417f9c9e6aa3ff96de3026491ef
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71698201"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504602"
 ---
 # <a name="defaultproxy-element-network-settings"></a>Elemento \<defaultProxy> (impostazioni di rete)
 Configura il server proxy Hypertext Transfer Protocol (HTTP).  
@@ -58,7 +59,7 @@ Configura il server proxy Hypertext Transfer Protocol (HTTP).
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se l'elemento defaultProxy è vuoto, verranno usate le impostazioni proxy di Internet Explorer. Questo comportamento è diverso da quello di .NET Framework versione 1.1.  
   
  Viene generata un'eccezione se l'elemento [modulo](module-element-network-settings.md) specifica un tipo non pubblico, il tipo non deriva dalla <xref:System.Net.IWebProxy> classe, un'eccezione dal costruttore senza parametri di questo oggetto o si è verificata un'eccezione durante il recupero del proxy predefinito specificato dal sistema. La proprietà <xref:System.Exception.InnerException%2A> nell'eccezione dovrebbe contenere altre informazioni sulla causa radice dell'errore.  
@@ -86,7 +87,7 @@ Configura il server proxy Hypertext Transfer Protocol (HTTP).
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Schema delle impostazioni di rete](index.md)

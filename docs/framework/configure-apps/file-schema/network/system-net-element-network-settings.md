@@ -1,5 +1,6 @@
 ---
 title: Elemento <system.Net> (impostazioni di rete)
+description: L'elemento impostazioni di rete <system.Net> contiene le impostazioni che specificano il modo in cui il .NET Framework si connette alle opzioni di rete nel .NET Framework.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.Net
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 88098f2afaad9728e38c4f9935b45f45826a0ca9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9f18c7a3586948c03391d609f437e216a91bc27f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154556"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504485"
 ---
 # <a name="systemnet-element-network-settings"></a>Elemento \<system.Net> (impostazioni di rete)
 Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.  
@@ -52,7 +53,7 @@ Contiene le impostazioni di rete che specificano la modalità di connessione all
 |-----------------|---------------------|  
 |[configurazione](../configuration-element.md)|Contiene le impostazioni per tutti gli spazi dei nomi.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  L' [\<system.net>](system-net-element-network-settings.md) elemento contiene le impostazioni per le classi in <xref:System.Net> e gli spazi dei nomi figlio correlati. Le impostazioni configurano i moduli di autenticazione, la gestione della connessione, le impostazioni di posta elettronica, il server proxy e i moduli di richiesta Internet per ricevere informazioni dagli host Internet.  
   
 ## <a name="example"></a>Esempio  
@@ -92,6 +93,6 @@ Contiene le impostazioni di rete che specificano la modalità di connessione all
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Schema delle impostazioni di rete](index.md)

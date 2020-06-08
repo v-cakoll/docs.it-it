@@ -1,5 +1,6 @@
 ---
 title: Tracciatura di rete in .NET Framework
+description: Informazioni sulla traccia di rete nella .NET Framework, che fornisce informazioni sulle chiamate ai metodi e sul traffico di rete per un'applicazione gestita.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging [.NET Framework], network tracing
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - output, network tracing
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
-ms.openlocfilehash: afb9c3a04258b543e373b6973e576f71f90d7003
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 172f8ce4a50fe9294ee34cf65c0a39eb2f29badc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047585"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502249"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>Tracciatura di rete in .NET Framework
 La funzionalità di traccia di rete in .NET Framework consente di accedere alle informazioni sulle chiamate ai metodi e sul traffico di rete generato da un'applicazione gestita. Questa funzionalità è utile per il debug delle applicazioni in fase di sviluppo, nonché per l'analisi delle applicazioni distribuite. È possibile personalizzare l'output generato dalla tracciatura della rete per supportare differenti scenari di utilizzo in fase di sviluppo e nell'ambiente di produzione.  

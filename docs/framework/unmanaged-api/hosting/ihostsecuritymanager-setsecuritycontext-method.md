@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4372384-ee69-48d7-97e0-8fab7866597a
 topic_type:
 - apiref
-ms.openlocfilehash: 79ef08ef70ad1132ceacc3e2b997651e57032b9a
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 6a6b4d0351e22026dc873aad8281d0259d871a14
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803815"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501482"
 ---
 # <a name="ihostsecuritymanagersetsecuritycontext-method"></a>Metodo IHostSecurityManager::SetSecurityContext
 Imposta il contesto di sicurezza del thread attualmente in esecuzione.  
@@ -53,7 +53,7 @@ HRESULT SetSecurityContext (
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Osservazioni  
- CLR chiama `SetSecurityContext` in diversi scenari. Prima di eseguire i costruttori e i finalizzatori della classe e del modulo, CLR chiama `SetSecurityContext` per proteggere l'host dagli errori di esecuzione. Reimposta quindi il contesto di sicurezza sullo stato originale dopo l'esecuzione del costruttore o del finalizzatore, usando un'altra chiamata a `SetSecurityContext` . Un modello simile si verifica con il completamento di I/O. Se l'host implementa [IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md), il CLR chiama `SetSecurityContext` [ICLRIoCompletionManager:: OnComplete](iclriocompletionmanager-oncomplete-method.md)quando l'host chiama.  
+ CLR chiama `SetSecurityContext` in diversi scenari. Prima di eseguire i costruttori e i finalizzatori della classe e del modulo, CLR chiama `SetSecurityContext` per proteggere l'host dagli errori di esecuzione. Reimposta quindi il contesto di sicurezza sullo stato originale dopo l'esecuzione del costruttore o del finalizzatore, usando un'altra chiamata a `SetSecurityContext` . Un modello simile si verifica con il completamento di I/O. Se l'host implementa [IHostIoCompletionManager](ihostiocompletionmanager-interface.md), il CLR chiama `SetSecurityContext` [ICLRIoCompletionManager:: OnComplete](iclriocompletionmanager-oncomplete-method.md)quando l'host chiama.  
   
  Nei punti asincroni nei thread di lavoro, CLR chiama `SetSecurityContext` all'interno <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> o all'interno di [IHostThreadPoolManager:: QueueUserWorkItem](ihostthreadpoolmanager-queueuserworkitem-method.md), a seconda che l'host o CLR implementi il pool di thread.  
   

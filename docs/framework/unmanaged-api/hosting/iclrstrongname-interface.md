@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 04260429dd69f5ba1d6a94b6628979341d12b9e8
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 0b6efcbe4458977e8e938afabd7ae59171bc065a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762076"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501651"
 ---
 # <a name="iclrstrongname-interface"></a>Interfaccia ICLRStrongName
 Fornisce funzioni statiche globali di base per la firma di assembly con nomi sicuri. Tutti i `ICLRStrongName` metodi restituiscono HRESULT COM standard.  
@@ -35,7 +35,7 @@ Fornisce funzioni statiche globali di base per la firma di assembly con nomi sic
 |[Metodo GetHashFromFileW](iclrstrongname-gethashfromfilew-method.md)|Genera un hash basato sul contenuto del file specificato da una stringa Unicode.|  
 |[Metodo GetHashFromHandle](iclrstrongname-gethashfromhandle-method.md)|Genera un hash basato sul contenuto del file con l'handle di file specificato, usando l'algoritmo hash specificato.|  
 |[Metodo StrongNameCompareAssemblies](iclrstrongname-strongnamecompareassemblies-method.md)|Determina se due assembly differiscono solo per le firme con nome sicuro.|  
-|[Metodo StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)|Libera la memoria allocata con una precedente chiamata a un metodo con nome sicuro, ad esempio [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)o [StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md).|  
+|[Metodo StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md)|Libera la memoria allocata con una precedente chiamata a un metodo con nome sicuro, ad esempio [StrongNameGetPublicKey](iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey](iclrstrongname-strongnametokenfrompublickey-method.md)o [StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md).|  
 |[Metodo StrongNameGetBlob](iclrstrongname-strongnamegetblob-method.md)|Completa il buffer specificato con la rappresentazione binaria del file eseguibile presente all'indirizzo specificato.|  
 |[Metodo StrongNameGetBlobFromImage](iclrstrongname-strongnamegetblobfromimage-method.md)|Ottiene una rappresentazione binaria dell'immagine dell'assembly in corrispondenza dell'indirizzo di memoria specificato.|  
 |[Metodo StrongNameGetPublicKey](iclrstrongname-strongnamegetpublickey-method.md)|Ottiene la chiave pubblica da una coppia di chiavi pubblica/privata.|  

@@ -7,61 +7,23 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: f04ff902743c91147a6f056bca3292ee47952bbd
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 813558299b40e0b90e8047f22b788c8f1419eb5e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420552"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504654"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Indipendenza del linguaggio e componenti indipendenti dal linguaggio
 
 .NET è indipendente dal linguaggio. Questo significa che gli sviluppatori possono lavorare in uno dei diversi linguaggi che hanno come destinazione le implementazioni di .NET, ad esempio C#, F# e Visual Basic. È possibile accedere a tipi e membri di librerie di classi sviluppate per le implementazioni di .NET senza dover conoscere il linguaggio in cui sono stati originariamente scritti e senza dover seguire nessuna delle convenzioni del linguaggio originale. Se si è uno sviluppatore di componenti, è possibile accedere al componente da qualsiasi applicazione .NET, indipendentemente dal linguaggio.
 
 > [!NOTE]
-> La prima parte di questo articolo illustra la creazione di componenti indipendenti dal linguaggio, vale a dire componenti che possono essere usati da applicazioni scritte in qualsiasi linguaggio. È anche possibile creare un singolo componente o applicazione dal codice sorgente scritto in più linguaggi. Vedere [Interoperabilità tra linguaggi diversi](#cross-language-interoperability) nella seconda parte di questo articolo.
+> Questa prima parte di questo articolo illustra la creazione di componenti indipendenti dal linguaggio, ovvero componenti che possono essere usati da app scritte in qualsiasi linguaggio. È anche possibile creare un singolo componente o applicazione dal codice sorgente scritto in più linguaggi. Vedere [Interoperabilità tra linguaggi diversi](#cross-language-interoperability) nella seconda parte di questo articolo.
 
 È necessario che gli oggetti espongano ai chiamanti solo le funzionalità comuni a tutti i linguaggi, affinché sia garantita un'interazione completa con altri oggetti scritti in uno qualsiasi dei linguaggi. Questo set comune di funzionalità è definito dalle specifiche CLS (Common Language Specification), un set di regole che si applicano agli assembly generati. Le specifiche CLS (Common Language Specification) sono definite nella partizione I, clausole da 7 a 11 dello [standard ECMA-335 di Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
-Se il componente è conforme alle specifiche CLS (Common Language Specification), ne è garantita la conformità a CLS ed è possibile accedervi dal codice negli assembly scritti in qualsiasi linguaggio di programmazione che supporti CLS. È possibile determinare se il componente è conforme alle specifiche CLS (Common Language Specification) in fase di compilazione applicando l'attributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) al codice sorgente. Per ulteriori informazioni, vedere l' [attributo CLSCompliantAttribute](#the-clscompliantattribute-attribute).
-
-Contenuto dell'articolo:
-
-* [Regole di conformità a CLS](#cls-compliance-rules)
-
-  * [Tipi e firme dei membri di tipo](#types-and-type-member-signatures)
-
-  * [Convenzioni di denominazione](#naming-conventions)
-
-  * [Conversione di tipi](#type-conversion)
-
-  * [Matrici](#arrays)
-
-  * [Interfacce](#interfaces)
-
-  * [Enumerazioni](#enumerations)
-
-  * [Membri dei tipi di in generale](#type-members-in-general)
-
-  * [Accessibilità del membro](#member-accessibility)
-
-  * [Tipi e membri generici](#generic-types-and-members)
-
-  * [Costruttori](#constructors)
-
-  * [Proprietà](#properties)
-
-  * [Events](#events)
-
-  * [Overload](#overloads)
-
-  * [Eccezioni](#exceptions)
-
-  * [Attributi](#attributes)
-
-* [Attributo CLSCompliantAttribute](#the-clscompliantattribute-attribute)
-
-* [Interoperabilità tra linguaggi diversi](#cross-language-interoperability)
+Se il componente è conforme alle specifiche CLS (Common Language Specification), ne è garantita la conformità a CLS ed è possibile accedervi dal codice negli assembly scritti in qualsiasi linguaggio di programmazione che supporti CLS. È possibile determinare se il componente è conforme alle specifiche CLS (Common Language Specification) in fase di compilazione applicando l'attributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) al codice sorgente. Per altre informazioni, vedere [Attributo CLSCompliantAttribute](#the-clscompliantattribute-attribute).
 
 ## <a name="cls-compliance-rules"></a>Regole di conformità a CLS
 
@@ -156,10 +118,10 @@ Category | Vedere | Regola | Numero regola
 -------- | --- | ---- | -----------
 Accessibilità | [Accessibilità del membro](#member-accessibility) | L'accessibilità non sarà modificata quando si esegue l'override di metodi ereditati, tranne nel caso in cui si esegue l'override di un metodo ereditato da un assembly diverso con accessibilità `family-or-assembly`. In questo caso, l'override disporrà dell'accessibilità `family`. | 10
 Accessibilità | [Accessibilità del membro](#member-accessibility) | La visibilità e l'accessibilità di tipi e membri saranno tali che i tipi nella firma di qualsiasi membro saranno visibili e accessibili ogni volta che il membro stesso è visibile e accessibile. Ad esempio, in un metodo pubblico che è visibile all'esterno del relativo assembly non deve essere presente un argomento il cui tipo è visibile solo nell'assembly. La visibilità e l'accessibilità di tipi che compongono un tipo generico con istanze usato nella firma di qualsiasi membro saranno visibili e accessibili ogni volta che il membro stesso è visibile e accessibile. Ad esempio, in un tipo generico con istanze presente nella firma di un membro visibile all'esterno del relativo assembly non deve essere disponibile un argomento generico il cui tipo è visibile solo nell'assembly. | 12
-Matrici | [Matrici](#arrays) | Le matrici devono disporre di elementi con un tipo conforme a CLS e i limiti inferiori di tutte le dimensioni della matrice devono essere pari a zero. Solo per il fatto che un elemento sia una matrice, il tipo di elemento della matrice sarà richiesto per eseguire una distinzione tra gli overload. Quando l'overload è basato su due o più i tipi di matrice, i tipi di elemento vengono denominati tipi. | 16
-Attributi | [Attributi](#attributes) | Gli attributi devono essere di tipo [System.Attribute](xref:System.Attribute) o derivati da questo tipo. | 41
-Attributi | [Attributi](#attributes) | La specifica CLS consente solo un subset delle codifiche di attributi personalizzati. Gli unici tipi che verranno visualizzati in queste codifiche sono (vedere la partizione IV): [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double) e qualsiasi tipo di enumerazione basato su un tipo Integer di base conforme a CLS. | 34
-Attributi | [Attributi](#attributes) | La specifica CLS non consente i modificatori necessari visibili pubblicamente (`modreq`, vedere la partizione II), ma consente i modificatori facoltativi (`modopt`, vedere la partizione II) che non riconosce. | 35
+Matrici | [Matrici](#arrays) | Le matrici devono disporre di elementi con un tipo conforme a CLS e i limiti inferiori di tutte le dimensioni della matrice devono essere pari a zero. Solo per il fatto che un elemento sia una matrice, il tipo di elemento della matrice sarà richiesto per eseguire una distinzione tra gli overload. Quando l'overload è basato su due o più tipi di matrice, i tipi di elemento devono essere tipi denominati. | 16
+Attributi | [Attributes (Attributi)](#attributes) | Gli attributi devono essere di tipo [System.Attribute](xref:System.Attribute) o derivati da questo tipo. | 41
+Attributi | [Attributes (Attributi)](#attributes) | La specifica CLS consente solo un subset delle codifiche di attributi personalizzati. Gli unici tipi che verranno visualizzati in queste codifiche sono (vedere la partizione IV): [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double) e qualsiasi tipo di enumerazione basato su un tipo Integer di base conforme a CLS. | 34
+Attributi | [Attributes (Attributi)](#attributes) | La specifica CLS non consente i modificatori necessari visibili pubblicamente (`modreq`, vedere la partizione II), ma consente i modificatori facoltativi (`modopt`, vedere la partizione II) che non riconosce. | 35
 Costruttori | [Costruttori](#constructors) | Prima di un eventuale accesso ai dati di istanza ereditati, tramite un costruttore di oggetti deve essere effettuata una chiamata a un costruttore di istanze della relativa classe di base. Ciò non si applica ai tipi di valore, che non devono disporre di costruttori.  | 21
 Costruttori | [Costruttori](#constructors) | Un costruttore di oggetti non deve essere chiamato se non come parte della creazione di un oggetto e un oggetto non deve essere inizializzato due volte. | 22
 Enumerazioni | [Enumerazioni](#enumerations) | Il tipo sottostante di un'enumerazione deve essere un tipo Integer CLS incorporato, il nome del campo deve essere "value__" e il campo deve essere contrassegnato come `RTSpecialName`. |  7
@@ -184,9 +146,9 @@ Interfacce | [Interfacce](#interfaces) | Tramite le interfacce conformi a CLS no
 Membri | [Membri dei tipi di in generale](#type-members-in-general) | I metodi e i campi static globali non sono conformi a CLS. | 36
 Membri | -- | Il valore di un valore statico letterale viene specificato attraverso l'uso dei metadati di inizializzazione del campo. Un valore letterale conforme a CLS deve disporre di un valore specificato nei metadati di inizializzazione del campo che sia esattamente dello stesso tipo del valore letterale, o del tipo sottostante, se questo valore letterale è un oggetto `enum`. | 13
 Membri | [Membri dei tipi di in generale](#type-members-in-general) | Il vincolo vararg non fa parte delle specifiche CLS e l'unica convenzione di chiamata supportata da CLS è la convenzione di chiamata gestita standard. | 15
-Convenzioni di denominazione | [Convenzioni di denominazione](#naming-conventions) | Gli assembly seguiranno l'allegato 7 del rapporto tecnico 15 di Unicode Standard 3.0 con cui viene controllato il set di caratteri che possono essere usati all'inizio e all'interno degli identificatori, disponibili online nella pagina [Unicode Normalization Forms](https://www.unicode.org/unicode/reports/tr15/tr15-18.html) (Formati di normalizzazione Unicode). Gli identificatori dovranno essere nel formato canonico definito dal formato di normalizzazione Unicode C. Per scopi correlati a CLS, due identificatori sono identici se i rispettivi mapping delle minuscole (come specificato dai mapping di minuscole di tipo uno a uno, senza distinzione tra le impostazioni locali Unicode) sono uguali. Vale a dire, affinché due identificatori vengano considerati differenti nella specifica CLS, devono presentare differenze che vanno oltre la semplice distinzione tra maiuscole e minuscole. Tuttavia, per eseguire l'override di una definizione non ereditata, CLI richiede l'uso della codifica precisa della dichiarazione originale. | 4
+Convenzioni di denominazione | [Convenzioni di denominazione](#naming-conventions) | Gli assembly seguiranno l'allegato 7 del rapporto tecnico 15 di Unicode Standard 3.0 con cui viene controllato il set di caratteri che possono essere usati all'inizio e all'interno degli identificatori, disponibili online nella pagina [Unicode Normalization Forms](https://unicode.org/reports/tr15/) (Formati di normalizzazione Unicode). Gli identificatori dovranno essere nel formato canonico definito dal formato di normalizzazione Unicode C. Per scopi correlati a CLS, due identificatori sono identici se i rispettivi mapping delle minuscole (come specificato dai mapping di minuscole di tipo uno a uno, senza distinzione tra le impostazioni locali Unicode) sono uguali. Vale a dire, affinché due identificatori vengano considerati differenti nella specifica CLS, devono presentare differenze che vanno oltre la semplice distinzione tra maiuscole e minuscole. Tuttavia, per eseguire l'override di una definizione non ereditata, CLI richiede l'uso della codifica precisa della dichiarazione originale. | 4
 Overload | [Convenzioni di denominazione](#naming-conventions) | Tutti i nomi introdotti in un ambito conforme a CLS devono essere di tipo indipendente e distinto, fatta eccezione per i casi in cui i nomi sono identici e vengono risolti tramite l'overload. Ad esempio, mentre CTS consente a un unico tipo di usare lo stesso nome per un metodo e per un campo, CLS non lo consente. | 5
-Overload | [Convenzioni di denominazione](#naming-conventions) | I campi e i tipi annidati devono essere distinti in base al solo confronto tra identificatori, anche se CTS permette la distinzione di firme distinte. I metodi, le proprietà e gli eventi che hanno lo stesso nome (in base al confronto degli identificatori) dovranno presentare differenze che vanno oltre il tipo restituito, ad eccezione di quanto specificato nella regola CLS 39. | 6
+Overload | [Convenzioni di denominazione](#naming-conventions) | I campi e i tipi annidati devono essere distinti in base al solo confronto tra identificatori, anche se CTS permette la distinzione di firme distinte. I metodi, le proprietà e gli eventi che hanno lo stesso nome (in base al confronto degli identificatori) dovranno presentare differenze più del solo tipo restituito, ad eccezione di quanto specificato nella regola CLS 39 | 6
 Overload | [Overload](#overloads) | È possibile eseguire l'overload solo di proprietà e metodi. | 37
 Overload | [Overload](#overloads) |Le proprietà e i metodi possono essere sottoposti a overload solo in base al numero e ai tipi dei relativi parametri, a eccezione degli operatori di conversione denominati `op_Implicit` e `op_Explicit`, i quali possono essere anche sottoposti a overload in base al relativo tipo restituito. | 38
 Overload | -- | Se due o più metodi conformi a CLS dichiarati in un tipo hanno lo stesso nome e, per un set specifico di creazioni di istanze del tipo, hanno lo stesso parametro e gli stesi tipi restituiti, tutti questi metodi saranno semanticamente equivalenti alle creazioni di istanze del tipo. | 48
@@ -201,6 +163,24 @@ Tipi | [Tipi e firme dei membri di tipo](#types-and-type-member-signatures) | I 
 Tipi | [Tipi e firme dei membri di tipo](#types-and-type-member-signatures) | I tipi di puntatore non gestiti non sono conformi a CLS. | 17
 Tipi | [Tipi e firme dei membri di tipo](#types-and-type-member-signatures) | Per le classi, i tipi di valore e le interfacce conformi a CLS non è necessaria l'implementazione di membri non conformi a CLS | 20
 Tipi | [Tipi e firme dei membri di tipo](#types-and-type-member-signatures) | [System.Object](xref:System.Object) è conforme a CLS. Qualsiasi altra classe conforme a CLS deve ereditare da una classe conforme a CLS. | 23
+
+Indice delle sottosezioni:
+
+* [Tipi e firme dei membri di tipo](#types-and-type-member-signatures)
+* [Convenzioni di denominazione](#naming-conventions)
+* [Conversione di tipi](#type-conversion)
+* [Matrici](#arrays)
+* [Interfacce](#interfaces)
+* [Enumerazioni](#enumerations)
+* [Membri dei tipi di in generale](#type-members-in-general)
+* [Accessibilità del membro](#member-accessibility)
+* [Tipi e membri generici](#generic-types-and-members)
+* [Costruttori](#constructors)
+* [Proprietà](#properties)
+* [Events](#events)
+* [Overload](#overloads)
+* [Eccezioni](#exceptions)
+* [Attributes (Attributi)](#attributes)
 
 ### <a name="types-and-type-member-signatures"></a>Tipi e firme dei membri di tipo
 
@@ -315,14 +295,14 @@ Tutti i tipi visualizzati nelle firme dei membri, incluso il tipo restituito di 
 
 In [common type system](common-type-system.md) di .NET Framework è incluso un numero di tipi incorporati supportati direttamente da Common Language Runtime, codificati in particolare nei metadati di un assembly. Di questi tipi intrinseci, i tipi elencati nella tabella seguente sono conformi a CLS.
 
-Tipo conforme a CLS | Description
+Tipo conforme a CLS | Descrizione
 ------------------ | -----------
 [Byte](xref:System.Byte) | Unsigned Integer a 8 bit
 [Int16](xref:System.Int16) | Signed Integer a 16 bit
 [Int32](xref:System.Int32) | Intero con segno a 32 bit
 [Int64](xref:System.Int64) | Intero con segno a 64 bit
-[Singolo](xref:System.Single) | Valore a virgola mobile e precisione singola
-[Doppio](xref:System.Double) | Valore a virgola mobile a precisione doppia
+[Single](xref:System.Single) | Valore a virgola mobile e precisione singola
+[Double](xref:System.Double) | Valore a virgola mobile a precisione doppia
 [Boolean](xref:System.Boolean) | tipo di valore true o false
 [Char](xref:System.Char) | Unità di codice codificata UTF-16
 [Decimale](xref:System.Decimal) | Numero decimale non a virgola mobile
@@ -331,7 +311,7 @@ Tipo conforme a CLS | Description
 
 I tipi intrinseci elencati nella tabella seguente non sono conformi a CLS.
 
-Tipo non conforme | Description | Alternativa conforme a CLS
+Tipo non conforme | Descrizione | Alternativa conforme a CLS
 ------------------ | ----------- | -------------------------
 [SByte](xref:System.SByte) | Tipo di dati Signed Integer a 8 bit | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | Intero senza segno a 16 bit | [Int32](xref:System.Int32)
@@ -607,11 +587,11 @@ public class person
 //    Naming1.cs(6,14): (Location of symbol related to previous warning)
 ```
 
-Gli identificatori del linguaggio di programmazione, ad esempio i nomi degli spazi dei nomi, i tipi e i membri, devono essere conformi allo [standard Unicode 3.0, rapporto tecnico 15, allegato 7](https://www.unicode.org/reports/tr15/tr15-18.html). Ciò significa che:
+Gli identificatori del linguaggio di programmazione, ad esempio i nomi degli spazi dei nomi, i tipi e i membri, devono essere conformi allo [standard Unicode](https://unicode.org/reports/tr15/). Ciò significa che:
 
 * Il primo carattere di un identificatore può essere qualsiasi carattere Unicode, una lettera maiuscola, una lettera minuscola, tutte iniziali maiuscole, una lettera di modificatore, un'altra lettera o un numero rappresentato dalla lettera. Per informazioni sulle categorie di caratteri Unicode, vedere l'enumerazione [System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory).
 
-* I caratteri successivi possono provenire da una qualsiasi delle categorie come primo carattere e in essi possono anche essere inclusi contrassegni senza spaziatura, contrassegni di combinazioni di spazi, numeri decimali, punteggiature del connettore e codici di formattazione.
+* I caratteri successivi possono provenire da una qualsiasi delle categorie come primo carattere e possono includere anche segni di non spaziatura, contrassegni di combinazione di spaziatura, numeri decimali, punteggiatura del connettore e codici di formattazione.
 
 Prima di confrontare gli identificatori, è necessario filtrare i codici di formattazione e convertire gli identificatori nel formato di normalizzazione Unicode C, poiché un singolo carattere può essere rappresentato da più unità di codice codificate UTF-16. Le sequenze di caratteri che producono le stesse unità di codice nel formato di normalizzazione Unicode C non sono conformi a CLS. L'esempio seguente definisce una proprietà denominata `Å`, costituita dal carattere SEGNO di ANGSTROM (U+212B) e una seconda proprietà denominata `Å`, costituita dal carattere LETTERA LATINA A MAIUSCOLA CON UN CERCHIO SOPRA (U+00C5). Il compilatore C# contrassegna il codice sorgente come non conforme a CLS.
 
@@ -802,7 +782,7 @@ Tramite le specifiche CLS (Common Language Specification) vengono definiti due o
 
 Tuttavia, non tutti i linguaggi supportano l'overload degli operatori o la definizione di operatori personalizzati. Se si sceglie di implementare questi operatori di conversione, è necessario fornire anche un modo alternativo per eseguire la conversione. È consigliabile fornire i metodi `From`Xxx e `To`Xxx.
 
-Nell'esempio seguente vengono definite le convenzioni esplicite e implicite conformi a CLS. Viene creata una classe `UDouble` che rappresenta un numero a virgola mobile e precisione doppia con segno. Viene usato per le conversioni implicite da `UDouble` a `Double` e per le conversioni esplicite da `UDouble` a `Single`, da `Double` a `UDouble` e da `Single` a `UDouble`. Vengono anche definiti un metodo `ToDouble` come alternativa all'operatore di conversione implicito e i metodi `ToSingle`, `FromDouble` e `FromSingle` come alternative agli operatori di conversione espliciti.
+Nell'esempio seguente vengono definite le convenzioni esplicite e implicite conformi a CLS. Viene creata una `UDouble` classe che rappresenta un numero a virgola mobile e precisione doppia con segno. Viene usato per le conversioni implicite da `UDouble` a `Double` e per le conversioni esplicite da `UDouble` a `Single`, da `Double` a `UDouble` e da `Single` a `UDouble`. Vengono anche definiti un metodo `ToDouble` come alternativa all'operatore di conversione implicito e i metodi `ToSingle`, `FromDouble` e `FromSingle` come alternative agli operatori di conversione espliciti.
 
 ```csharp
 using System;
@@ -949,7 +929,7 @@ End Structure
 
 Le matrici conformi a CLS sono conformi alle regole seguenti:
 
-* Il limite inferiore di tutte le dimensioni di una matrice deve essere uguale a zero. Nell'esempio seguente viene creata una matrice non conforme a CLS con un limite inferiore pari a uno. Si noti che, nonostante la presenza dell'attributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute), il compilatore non rileva che la matrice restituita dal metodo `Numbers.GetTenPrimes` non è conforme a CLS.
+* Il limite inferiore di tutte le dimensioni di una matrice deve essere uguale a zero. Nell'esempio seguente viene creata una matrice non conforme a CLS con un limite inferiore pari a uno. Nonostante la presenza dell'attributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) , il compilatore non rileva che la matrice restituita dal `Numbers.GetTenPrimes` metodo non è conforme a CLS.
 
   ```csharp
   [assembly: CLSCompliant(true)]
@@ -1849,7 +1829,7 @@ End Class
 
 Le specifiche CLS (Common Language Specification) impongono un modello conservativo per creazione di istanze per tipi annidati e membri protetti. Tramite i tipi generici aperti non è possibile esporre campi o membri con firme contenenti la creazione di un'istanza specifica di un tipo generico annidato e protetto. Tramite i tipi non generici, mediante i quali viene estesa la creazione di un'istanza specifica di un'interfaccia o di una classe di base generica, non è possibile esporre i campi o i membri con firme contenenti la creazione di un'istanza differente di un tipo generico annidato e protetto.
 
-Nell'esempio seguente vengono definiti un tipo generico, `C1<T>`, e una classe protetta `C1<T>.N`. L'oggetto `C1<T>` dispone di due metodi: `M1` e `M2`. Tuttavia, `M1` non è conforme a CLS poiché tenta di restituire un oggetto `C1<int>.N` da `C1<T>`. Una seconda classe, `C2`, viene derivata da `C1<long>`. Dispone di due metodi, `M3` e `M4`. `M3` non è conforme a CLS perché prova a restituire un oggetto `C1<int>.N` da una sottoclasse di `C1<long>`. Si noti che i compilatori di linguaggio possono essere anche più restrittivi. In questo esempio in Visual Basic viene visualizzato un errore quando viene eseguito un tentativo di compilazione di `M4`.
+Nell'esempio seguente vengono definiti un tipo generico, `C1<T>`, e una classe protetta `C1<T>.N`. L'oggetto `C1<T>` dispone di due metodi: `M1` e `M2`. Tuttavia, `M1` non è conforme a CLS poiché tenta di restituire un oggetto `C1<int>.N` da `C1<T>`. Una seconda classe, `C2`, viene derivata da `C1<long>`. Dispone di due metodi, `M3` e `M4`. `M3` non è conforme a CLS perché prova a restituire un oggetto `C1<int>.N` da una sottoclasse di `C1<long>`. I compilatori di linguaggio possono essere ancora più restrittivi. In questo esempio in Visual Basic viene visualizzato un errore quando viene eseguito un tentativo di compilazione di `M4`.
 
 ```csharp
 using System;
@@ -2501,7 +2481,7 @@ End Module
 
 Negli assembly .NET Framework, gli attributi personalizzati forniscono un meccanismo estensibile per archiviare gli attributi personalizzati e recuperare i metadati sugli oggetti di programmazione, ad esempio assembly, tipi, membri e parametri di metodo. Gli attributi personalizzati devono derivare da [System.Attribute](xref:System.Attribute) o da un tipo derivato da `System.Attribute`.
 
-Nell'esempio riportato di seguito viene violata questa regola. Viene definita una classe `NumericAttribute` che non deriva da `System.Attribute`. Si noti che un errore del compilatore viene visualizzato solo quando viene applicato l'attributo non conforme a CLS, non quando la classe è definita.
+Nell'esempio riportato di seguito viene violata questa regola. Viene definita una classe `NumericAttribute` che non deriva da `System.Attribute`. Un errore del compilatore risulta solo quando viene applicato l'attributo non conforme a CLS, non quando la classe è definita.
 
 ```csharp
 using System;
@@ -2570,7 +2550,7 @@ Tramite il costruttore o le proprietà di un attributo conforme a CLS possono es
 
 * [Char](xref:System.Char)
 
-* [Doppio](xref:System.Double)
+* [Double](xref:System.Double)
 
 * [Int16](xref:System.Int16)
 
@@ -2578,15 +2558,15 @@ Tramite il costruttore o le proprietà di un attributo conforme a CLS possono es
 
 * [Int64](xref:System.Int64)
 
-* [Singolo](xref:System.Single)
+* [Single](xref:System.Single)
 
 * [Stringa](xref:System.String)
 
-* [Type](xref:System.Type)
+* [Tipo](xref:System.Type)
 
 * Qualsiasi tipo di enumerazione il cui tipo sottostante è `Byte`, `Int16`, `Int32` o `Int64`.
 
-Nell'esempio seguente viene definita una classe `DescriptionAttribute` che deriva da [Attribute](xref:System.Attribute). Il costruttore di classe dispone di un parametro di tipo `Descriptor`, pertanto la classe non è conforme a CLS. Si noti che il compilatore C# genera un avviso, ma la compilazione viene eseguita correttamente.
+Nell'esempio seguente viene definita una classe `DescriptionAttribute` che deriva da [Attribute](xref:System.Attribute). Il costruttore di classe dispone di un parametro di tipo `Descriptor`, pertanto la classe non è conforme a CLS. Il compilatore C# genera un avviso, ma viene compilato correttamente.
 
 ```csharp
 using System;

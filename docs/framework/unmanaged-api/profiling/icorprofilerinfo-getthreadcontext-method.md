@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 79446216-4b8b-484c-8fe3-e87dbf9df2fd
 topic_type:
 - apiref
-ms.openlocfilehash: f8eff85392d355ea54980ac6b29e3c4cebb1b240
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 45ae164e79f077549a1d685aa060484240546a10
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76869595"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84497959"
 ---
 # <a name="icorprofilerinfogetthreadcontext-method"></a>Metodo ICorProfilerInfo::GetThreadContext
 Ottiene l'identità del contesto attualmente associata al thread specificato.  
@@ -40,14 +40,14 @@ HRESULT GetThreadContext(
  `pContextId`  
  out Puntatore all'ID del contesto attualmente associato al thread specificato. Se al thread non è attualmente associato alcun contesto, questa funzione restituirà CORPROF_E_DATAINCOMPLETE.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

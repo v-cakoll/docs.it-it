@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4a0b05b9-3ef1-4607-b7c8-bd4dd43647a0
 topic_type:
 - apiref
-ms.openlocfilehash: b742f717f4caa0ba23d5a4c1438ed3ce4dcc60d7
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 190908c675b96b8ea2d81fb0203aa16a80d6a8b4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842257"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501401"
 ---
 # <a name="ihosttaskmanager-interface"></a>Interfaccia IHostTaskManager
 Fornisce metodi che consentono all'Common Language Runtime (CLR) di utilizzare le attività attraverso l'host anziché utilizzare il threading del sistema operativo standard o le funzioni fiber.  
@@ -40,7 +40,7 @@ Fornisce metodi che consentono all'Common Language Runtime (CLR) di utilizzare l
 |[Metodo LeaveRuntime](ihosttaskmanager-leaveruntime-method.md)|Notifica all'host che il codice gestito sta per effettuare una chiamata a una funzione non gestita.|  
 |[Metodo ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md)|Notifica all'host che viene effettuata una chiamata al Common Language Runtime (CLR) dal codice non gestito.|  
 |[Metodo ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md)|Notifica all'host che il controllo sta lasciando il CLR e immettendo una funzione non gestita che, a sua volta, è stata chiamata dal codice gestito.|  
-|[Metodo SetCLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setclrtaskmanager-method.md)|Fornisce all'host un puntatore di interfaccia a un'istanza di [ICLRTaskManager](iclrtaskmanager-interface.md) implementata da CLR.|  
+|[Metodo SetCLRTaskManager](ihosttaskmanager-setclrtaskmanager-method.md)|Fornisce all'host un puntatore di interfaccia a un'istanza di [ICLRTaskManager](iclrtaskmanager-interface.md) implementata da CLR.|  
 |[Metodo SetLocale](ihosttaskmanager-setlocale-method.md)|Notifica all'host che CLR ha modificato le impostazioni locali nell'attività corrente.|  
 |[Metodo SetStackGuarantee](ihosttaskmanager-setstackguarantee-method.md)|Riservato esclusivamente per uso interno.|  
 |[Metodo SetUILocale](ihosttaskmanager-setuilocale-method.md)|Notifica all'host che le impostazioni locali dell'interfaccia utente sono state modificate nell'attività corrente.|  

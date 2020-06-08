@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ded1e492-a782-4185-9c66-709e421c1782
 topic_type:
 - apiref
-ms.openlocfilehash: 9326484c6a9f96d245e3c61a0ac3e3465a8a6dcd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8b7dcdcc6d9d0106af1bb83ee591cff76239b416
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616645"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504433"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>Funzione CorBindToRuntimeByCfg
 Carica il Common Language Runtime (CLR) in un processo utilizzando le informazioni sulla versione lette da un file XML.  
@@ -50,7 +50,7 @@ HRESULT CorBindToRuntimeByCfg (
  in Valore dell'enumerazione [STARTUP_FLAGS](startup-flags-enumeration.md) che specifica il comportamento di avvio di CLR.  
   
  `rclsid`  
- in `CLSID`Della coclasse che implementa l'interfaccia [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) o [ICLRRuntimeHost](iclrruntimehost-interface.md) . I valori supportati sono CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
+ in `CLSID`Della coclasse che implementa l'interfaccia [ICorRuntimeHost](icorruntimehost-interface.md) o [ICLRRuntimeHost](iclrruntimehost-interface.md) . I valori supportati sono CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
   
  `riid`  
  in Oggetto `IID` dell' `ICorRuntimeHost` `ICLRRuntimeHost` interfaccia o. I valori supportati sono IID_ICorRuntimeHost o IID_ICLRRuntimeHost.  

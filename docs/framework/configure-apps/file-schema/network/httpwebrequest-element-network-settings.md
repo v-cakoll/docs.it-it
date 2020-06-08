@@ -1,5 +1,6 @@
 ---
 title: Elemento <httpWebRequest> (impostazioni di rete)
+description: L' <httpWebRequest> elemento impostazioni di rete Personalizza i parametri delle richieste Web nel .NET Framework.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: d33dadc14510feb00e05ca557b507b0cf8fa0dd0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 59ab425dcef8ac5283035910a9d78a89a16be8b1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74087452"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504589"
 ---
 # <a name="httpwebrequest-element-network-settings"></a>Elemento \<httpWebRequest> (impostazioni di rete)
 Personalizza i parametri della richiesta Web.  
@@ -55,7 +56,7 @@ Personalizza i parametri della richiesta Web.
 |-----------------|---------------------|  
 |[impostazioni](settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Per impostazione predefinita, il .NET Framework impone rigorosamente RFC 2616 per l'analisi dell'URI. Alcune risposte al server possono includere caratteri di controllo in campi non consentiti, che determinano la <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> generazione di un oggetto da parte del metodo <xref:System.Net.WebException> . Se **UseUnsafeHeaderParsing** è impostato su **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> in questo caso non verrà generata un'operazione. Tuttavia, l'applicazione sarà vulnerabile a diverse forme di attacchi di analisi URI. La soluzione migliore consiste nel modificare il server in modo che la risposta non includa i caratteri di controllo.  
   
 ## <a name="configuration-files"></a>File di configurazione  
@@ -76,7 +77,7 @@ Personalizza i parametri della richiesta Web.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>
 - [Schema delle impostazioni di rete](index.md)

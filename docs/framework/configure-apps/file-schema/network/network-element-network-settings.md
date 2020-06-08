@@ -1,5 +1,6 @@
 ---
 title: Elemento <network> (impostazioni di rete)
+description: L' <network> elemento impostazioni di rete configura le opzioni di rete per le opzioni del server SMTP esterno nel .NET Framework.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#network
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: f7cfcc3b9d5a717c23175cd15aa48ae97c828e57
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 36857e63871b4672df349934594f0887a042609e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154816"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504550"
 ---
 # <a name="network-element-network-settings"></a>Elemento \<network> (impostazioni di rete)
 Configura le opzioni di rete per un server SMTP (Simple Mail Transport Protocol) esterno.  
@@ -64,7 +65,7 @@ Configura le opzioni di rete per un server SMTP (Simple Mail Transport Protocol)
 |-------------|-----------------|  
 |[\<smtp>Elemento (impostazioni di rete)](smtp-element-network-settings.md)|Configura le opzioni di invio di posta elettronica SMTP (Simple Mail Transport Protocol).|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Per alcuni server SMTP è necessario eseguire l'autenticazione al server prima dell'utilizzo. Se si desidera eseguire l'autenticazione utilizzando le credenziali di rete predefinite nell'host, impostare l' `defaultCredentials` attributo su `true` . <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A?displayProperty=nameWithType>È possibile utilizzare la proprietà per ottenere il valore corrente dell' `defaultCredentials` attributo dai file di configurazione applicabili.  
   
  È inoltre possibile utilizzare l'autenticazione di base (nome utente e password) per eseguire l'autenticazione al server SMTP. Per utilizzare questa opzione, è necessario specificare un nome utente e una password validi per il server SMTP specificato.  
@@ -109,7 +110,7 @@ Configura le opzioni di rete per un server SMTP (Simple Mail Transport Protocol)
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>

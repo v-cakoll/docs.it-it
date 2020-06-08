@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dfec05bb-3cd7-4bd5-b396-a4f097c3a636
 topic_type:
 - apiref
-ms.openlocfilehash: 8106dd70f6c4099b2246530622f0845f22a0c53f
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 4e32a36a4cf751bf7c5a2c918fde0122f21b7878
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805046"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501592"
 ---
 # <a name="ihostassemblymanager-interface"></a>Interfaccia IHostAssemblyManager
 Fornisce metodi che consentono a un host di specificare set di assembly che devono essere caricati dal Common Language Runtime (CLR) o dall'host.  
@@ -28,8 +28,8 @@ Fornisce metodi che consentono a un host di specificare set di assembly che devo
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo GetAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getassemblystore-method.md)|Ottiene un puntatore a interfaccia a un [IHostAssemblyStore](ihostassemblystore-interface.md) che rappresenta l'elenco di assembly caricati dall'host.|  
-|[Metodo GetNonHostStoreAssemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)|Ottiene un puntatore a interfaccia a un [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) che rappresenta l'elenco di assembly che l'host prevede venga caricato da CLR.|  
+|[Metodo GetAssemblyStore](ihostassemblymanager-getassemblystore-method.md)|Ottiene un puntatore a interfaccia a un [IHostAssemblyStore](ihostassemblystore-interface.md) che rappresenta l'elenco di assembly caricati dall'host.|  
+|[Metodo GetNonHostStoreAssemblies](ihostassemblymanager-getnonhoststoreassemblies-method.md)|Ottiene un puntatore a interfaccia a un [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) che rappresenta l'elenco di assembly che l'host prevede venga caricato da CLR.|  
   
 ## <a name="remarks"></a>Osservazioni  
  L'host non deve implementare `IHostAssemblyManager` o `IHostAssemblyStore` . Se l'host implementa `IHostAssemblyManager` , deve implementare anche `IHostAssemblyStore` .  

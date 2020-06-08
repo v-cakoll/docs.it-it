@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0afc1197-2a5b-424f-8b82-9cb59a7e00db
 topic_type:
 - apiref
-ms.openlocfilehash: 841953625235406f013e9f140ad91c7b65680e47
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 12b4b897f9dc51175037d39c0368b6ce59fefefb
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863953"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498479"
 ---
 # <a name="icorprofilerinfogetclassfromtoken-method"></a>Metodo ICorProfilerInfo::GetClassFromToken
 Ottiene l'ID della classe, dato il token di metadati. Questo metodo è obsoleto nella versione .NET Framework 2,0. Usare invece [ICorProfilerInfo2:: GetClassFromTokenAndTypeArgs](icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) .  
@@ -39,16 +39,16 @@ HRESULT GetClassFromToken(
  in ID del modulo che contiene la classe.  
   
  `typeDef`  
- in Token di metadati `mdTypeDef` che fa riferimento alla classe.  
+ in `mdTypeDef`Token di metadati che fa riferimento alla classe.  
   
  `cTypeArgs`  
  out Puntatore all'ID della classe.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo è obsoleto; usare invece `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` per tutti i tipi.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

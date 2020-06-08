@@ -9,12 +9,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
-ms.openlocfilehash: 6fbb86fc63a26599ae83c81817dbcb9abfb88cc8
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: c7e53816c2f571fe6ff68b517ed827459a0f1562
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76864689"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499090"
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>Metodo ICorProfilerCallback7:: ModuleInMemorySymbolsUpdated
 [Supportata in .NET Framework 4.6.1 e versioni successive]  
@@ -33,22 +33,22 @@ HRESULT ModuleInMemorySymbolsUpdated(
  [in] `moduleId`  
  Identificatore del modulo in memoria di cui viene aggiornato il flusso di simboli.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questo callback viene controllato impostando il flag della maschera di evento [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](cor-prf-high-monitor-enumeration.md) quando si chiama il metodo [ICorProfilerCallback5:: SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) .  
   
 > [!NOTE]
-> Questo evento non è attualmente generato per i simboli creati o modificati in modo implicito tramite <xref:System.Reflection.Emit> API.  
+> Questo evento non è attualmente generato per i simboli creati o modificati in modo implicito tramite le <xref:System.Reflection.Emit> API.  
   
- Anche quando i simboli vengono forniti in primo piano in una chiamata a uno degli overload dei metodi <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> gestiti che includono un argomento `rawSymbolStore` per specificare i simboli per l'assembly, il runtime potrebbe non associare i dati simbolici al modulo fino a quando non si è verificato il callback [ModuleLoadFinished](icorprofilercallback-moduleloadfinished-method.md) . Questo evento consente di raccogliere i simboli per tali moduli in un secondo momento.  
+ Anche quando i simboli vengono forniti in primo piano in una chiamata a uno degli overload dei <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metodi gestiti che includono un `rawSymbolStore` argomento per specificare i simboli per l'assembly, il runtime potrebbe non associare effettivamente i dati simbolici al modulo fino a quando non si è verificato il callback [ModuleLoadFinished](icorprofilercallback-moduleloadfinished-method.md) . Questo evento consente di raccogliere i simboli per tali moduli in un secondo momento.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
