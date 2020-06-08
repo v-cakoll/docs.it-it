@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a11b264-8540-4732-aa35-bc2d95b95b8e
 topic_type:
 - apiref
-ms.openlocfilehash: 7c1ee1c39fbf2dcc1f16df3bc94a235676a216dd
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 70535f8bcee95c2596c43617eb5893e2d92a355b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862568"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496780"
 ---
 # <a name="icorprofilerinfo2getthreadappdomain-method"></a>Metodo ICorProfilerInfo2::GetThreadAppDomain
 Ottiene l'ID del dominio dell'applicazione in cui il thread specificato esegue attualmente il codice.  
@@ -40,14 +40,14 @@ HRESULT GetThreadAppDomain(
  `pAppDomainId`  
  out Puntatore all'ID del dominio dell'applicazione.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

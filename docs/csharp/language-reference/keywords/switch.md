@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: a4e6f8e43c2ec8c867af9f78bd83b435b78c73d5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9335399be2d4909a02fecbf2959c6f5608664732
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446763"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493669"
 ---
 # <a name="switch-c-reference"></a>switch (Riferimenti per C#)
 
@@ -86,7 +86,7 @@ L'esecuzione dell'elenco di istruzioni nella sezione opzioni con un'etichetta ca
 
 Ogni etichetta case specifica un criterio da confrontare con l'espressione di ricerca (la variabile `caseSwitch` negli esempi precedenti). Se corrispondono, il controllo viene trasferito alla sezione opzioni che contiene la **prima** etichetta case corrispondente. Se nessun criterio di etichetta case corrisponde all'espressione di ricerca, il controllo viene trasferito alla sezione con etichetta case `default`, se presente. Se non è presente alcun case `default`, non vengono eseguite istruzioni in nessuna sezione opzioni e il controllo viene trasferito al di fuori dell'istruzione `switch`.
 
-Per informazioni sull'istruzione `switch` e sui criteri di ricerca, vedere [Criteri di ricerca con la sezione `switch` istruzione](#pattern).
+Per informazioni sull'istruzione `switch` e sui criteri di ricerca, vedere [Criteri di ricerca con la sezione `switch` istruzione](#pattern-matching with-the-switch-statement).
 
 Poiché C# 6 supporta solo il criterio costante e non consente la ripetizione di valori costanti, le etichette case definiscono valori che si escludono a vicenda e solo un criterio può corrispondere all'espressione di ricerca. Di conseguenza, l'ordine in cui vengono visualizzate le istruzioni `case` non è rilevante.
 
@@ -100,7 +100,7 @@ Nell'esempio seguente viene illustrata un'istruzione `switch` che usa un'ampia g
 
 - Modificando l'ordine delle sezioni opzioni.
 
-- Usando una [clausola when](#when) nell'etichetta `case`.
+- Usando una [clausola when](#the-case-statement-and-the-when-clause) nell'etichetta `case`.
 
 ## <a name="the-default-case"></a>Case `default`
 
@@ -108,7 +108,7 @@ Il case `default` specifica la sezione opzioni da eseguire se l'espressione di r
 
 Il case `default` può essere visualizzato in qualsiasi ordine nell'istruzione `switch`. Indipendentemente dall'ordine nel codice sorgente, viene sempre valutato per ultimo, dopo la valutazione di tutte le etichette `case`.
 
-## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern"></a> Criteri di ricerca con istruzione `switch`
+## <a name="pattern-matching-with-the-switch-statement"></a> Criteri di ricerca con istruzione `switch`
 
 Ogni istruzione `case` definisce un criterio che, in caso di corrispondenza con l'espressione di ricerca, provoca l'esecuzione della sezione opzioni che la contiene. Tutte le versioni di C# supportano il criterio costante. I criteri rimanenti sono supportati a partire da C# 7.0.
 
@@ -185,7 +185,7 @@ Senza criteri di ricerca, questo codice potrebbe essere scritto come segue. L'us
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="the-case-statement-and-the-when-clause"></a><a name="when" /> Istruzione `case` e clausola `when`
+## <a name="the-case-statement-and-the-when-clause"></a>L'istruzione `case` e la clausola `when`
 
 A partire da C# 7.0, poiché le istruzioni case non devono escludersi a vicenda, è possibile aggiungere una clausola `when` per specificare una condizione aggiuntiva che deve essere soddisfatta perché l'istruzione case restituisca true. La clausola `when` può essere qualsiasi espressione che restituisce un valore booleano.
 

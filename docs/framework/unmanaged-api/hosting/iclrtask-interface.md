@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3a44df3-578a-4451-b55e-70c8e7695f5e
 topic_type:
 - apiref
-ms.openlocfilehash: 419baaf64397830ef86cfd9e5c3437e3f5b57795
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: b1327e13006ca4b3f9074c1348b1817c9a1b3728
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763007"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503952"
 ---
 # <a name="iclrtask-interface"></a>Interfaccia ICLRTask
 Fornisce metodi che consentono all'host di effettuare richieste di Common Language Runtime (CLR) o di fornire notifiche a CLR sull'attività associata.  
@@ -41,7 +41,7 @@ Fornisce metodi che consentono all'host di effettuare richieste di Common Langua
 |[Metodo YieldTask](iclrtask-yieldtask-method.md)|Richiede che CLR renda disponibile il tempo del processore ad altre attività. CLR non garantisce che l'attività venga inserita in uno stato in cui può produrre tempo di elaborazione.|  
   
 ## <a name="remarks"></a>Osservazioni  
- Un oggetto `ICLRTask` è la rappresentazione di un'attività per CLR. In qualsiasi momento durante l'esecuzione del codice, un'attività può essere descritta come in esecuzione o in attesa di esecuzione. L'host chiama il `ICLRTask::SwitchIn` metodo per notificare a CLR che l'attività `ICLRTask` rappresentata dall'istanza corrente è ora in uno stato eseguibile. Dopo una chiamata a `ICLRTask::SwitchIn` , l'host può pianificare l'attività su qualsiasi thread del sistema operativo, tranne nei casi in cui il runtime richiede l'affinità di thread, come specificato dalle chiamate ai metodi [IHostTaskManager:: BeginThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md) e [IHostTaskManager:: EndThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md) . In un secondo momento, il sistema operativo potrebbe decidere di rimuovere l'attività dal thread e inserirla in uno stato non in esecuzione. Questa situazione può ad esempio verificarsi ogni volta che l'attività si blocca sulle primitive di sincronizzazione o attende il completamento delle operazioni di I/O. L'host chiama l' [opzione](iclrtask-switchout-method.md) per notificare a CLR che l'attività rappresentata dall' `ICLRTask` istanza corrente non è più in uno stato eseguibile.  
+ Un oggetto `ICLRTask` è la rappresentazione di un'attività per CLR. In qualsiasi momento durante l'esecuzione del codice, un'attività può essere descritta come in esecuzione o in attesa di esecuzione. L'host chiama il `ICLRTask::SwitchIn` metodo per notificare a CLR che l'attività `ICLRTask` rappresentata dall'istanza corrente è ora in uno stato eseguibile. Dopo una chiamata a `ICLRTask::SwitchIn` , l'host può pianificare l'attività su qualsiasi thread del sistema operativo, tranne nei casi in cui il runtime richiede l'affinità di thread, come specificato dalle chiamate ai metodi [IHostTaskManager:: BeginThreadAffinity](ihosttaskmanager-beginthreadaffinity-method.md) e [IHostTaskManager:: EndThreadAffinity](ihosttaskmanager-endthreadaffinity-method.md) . In un secondo momento, il sistema operativo potrebbe decidere di rimuovere l'attività dal thread e inserirla in uno stato non in esecuzione. Questa situazione può ad esempio verificarsi ogni volta che l'attività si blocca sulle primitive di sincronizzazione o attende il completamento delle operazioni di I/O. L'host chiama l' [opzione](iclrtask-switchout-method.md) per notificare a CLR che l'attività rappresentata dall' `ICLRTask` istanza corrente non è più in uno stato eseguibile.  
   
  Un'attività viene in genere terminata al termine dell'esecuzione del codice. In quel momento, l'host chiama `ICLRTask::ExitTask` per eliminare l'oggetto associato `ICLRTask` . Tuttavia, le attività possono essere riciclate anche tramite una chiamata a `ICLRTask::Reset` , che consente `ICLRTask` di riutilizzare l'istanza. Questo approccio impedisce il sovraccarico dovuto alla creazione e all'eliminazione ripetute di istanze.  
   

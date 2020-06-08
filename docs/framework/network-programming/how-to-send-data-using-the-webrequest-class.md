@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: inviare dati utilizzando la classe WebRequest'
+title: 'Procedura: inviare dati tramite la classe WebRequest'
+description: Informazioni su come inviare dati a un server usando la classe WebRequest nell'.NET Framework. Questa procedura viene comunemente usata per inserire i dati in una pagina Web.
 ms.date: 03/25/2019
 dev_langs:
 - csharp
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: 2467b289df7a0361b51ad91d4458d32742c42275
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b353250fec778ee8b352f13de6d7faaf15c13ee
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70040825"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502444"
 ---
-# <a name="how-to-send-data-by-using-the-webrequest-class"></a>Procedura: inviare dati utilizzando la classe WebRequest
+# <a name="how-to-send-data-by-using-the-webrequest-class"></a>Procedura: inviare dati tramite la classe WebRequest
 
 La procedura seguente descrive i passaggi per inviare dati a un server. Questa procedura viene comunemente usata per pubblicare dati in una pagina Web.
 
@@ -158,7 +159,7 @@ L'esempio seguente illustra come inviare dati a un server Web ed eseguire la let
 ## <a name="see-also"></a>Vedere anche
 
 - [Creazione di richieste Internet](creating-internet-requests.md)
-- [Utilizzo dei flussi in rete](using-streams-on-the-network.md)
+- [Uso di flussi nella rete](using-streams-on-the-network.md)
 - [Accesso a Internet con un proxy](accessing-the-internet-through-a-proxy.md)
 - [Richiesta di dati](requesting-data.md)
-- [Procedura: richiedere dati utilizzando la classe WebRequest](how-to-request-data-using-the-webrequest-class.md)
+- [Procedura: richiedere dati tramite la classe WebRequest](how-to-request-data-using-the-webrequest-class.md)

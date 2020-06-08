@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8653bd4c-2290-43d2-a3e1-cbbd50033f4f
 topic_type:
 - apiref
-ms.openlocfilehash: af881d23ff77f05dadbbc745b973979e35ebe9f7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a82a2150f32b1b335da083ca235ed9d2966a0b6e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447563"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494202"
 ---
 # <a name="imethodmallocalloc-method"></a>Metodo IMethodMalloc::Alloc
 
@@ -43,16 +43,16 @@ in Numero di byte da allocare per il corpo del metodo.
 
  La memoria allocata inizierà in corrispondenza di un indirizzo maggiore dell'indirizzo di base del modulo associato a questo allocatore. In altre parole, ogni allocatore viene creato per un particolare modulo e tenterà di allocare memoria a un offset positivo dal relativo indirizzo di base. Se `Alloc` non riesce ad allocare il numero richiesto di byte in un indirizzo maggiore dell'indirizzo di base del modulo, restituisce E_OUTOFMEMORY, indipendentemente dalla quantità effettiva di spazio di memoria disponibile.
 
- È necessario usare il metodo `Alloc` insieme al metodo [ICorProfilerInfo:: SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) .
+ Il `Alloc` metodo deve essere usato in combinazione con il metodo [ICorProfilerInfo:: SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) .
 
 ## <a name="requirements"></a>Requisiti
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
  **Intestazione:** CorProf.idl, CorProf.h
 
  **Libreria:** CorGuids.lib
 
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47b2a3b6-907d-43dc-858d-1ae7dca1316a
 topic_type:
 - apiref
-ms.openlocfilehash: 1868d13a9dbb73dbdf64e49c395bdbff02ce89d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e4401ea8a70e7ace8d8efc5e0a6d29f6db51b3df
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177447"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503811"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>Metodo IMetaDataEmit2::DefineGenericParam
-Crea una definizione per un parametro di tipo generico e ottiene un token per tale parametro di tipo generico.  
+Crea una definizione per un parametro di tipo generico e ottiene un token per il parametro di tipo generico.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,36 +41,36 @@ HRESULT DefineGenericParam (
   
 ## <a name="parameters"></a>Parametri  
  `tk`  
- [in] Un `mdTypeDef` `mdMethodDef` o token che rappresenta il metodo o il costruttore per il quale definire un parametro generico.  
+ in `mdTypeDef`Token o `mdMethodDef` che rappresenta il metodo o il costruttore per il quale definire un parametro generico.  
   
  `ulParamSeq`  
- [in] Indice del parametro generico.  
+ in Indice del parametro generico.  
   
  `dwParamFlags`  
- [in] Valore dell'enumerazione [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) che descrive il tipo per il parametro generico.  
+ in Valore dell'enumerazione [CorGenericParamAttr](corgenericparamattr-enumeration.md) che descrive il tipo per il parametro generico.  
   
  `szname`  
- [in] Nome del parametro.  
+ in Nome del parametro.  
   
  `reserved`  
- [in] Questo parametro è riservato per l'estensibilità futura.  
+ in Questo parametro è riservato per l'estendibilità futura.  
   
  `rtkConstraints`  
- [in] Matrice con terminazione zero di vincoli di tipo. I membri della `mdTypeDef` `mdTypeRef`matrice `mdTypeSpec` devono essere un token , o di metadati.  
+ in Matrice con terminazione zero di vincoli di tipo. I membri della matrice devono essere un `mdTypeDef` `mdTypeRef` token di metadati, o `mdTypeSpec` .  
   
  `pgp`  
- [fuori] Token che rappresenta il parametro generico.  
+ out Token che rappresenta il parametro generico.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interfaccia IMetaDataEmit2](imetadataemit2-interface.md)
+- [Interfaccia IMetaDataEmit](imetadataemit-interface.md)

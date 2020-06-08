@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60573ad7-8821-4721-a068-3f7a6d25926a
 topic_type:
 - apiref
-ms.openlocfilehash: 4fed7dbe4ec8343a3854d1f277e3228b14c0bf21
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 39343ffc88fc9b421b916e33e3e75e4e34fc233d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450019"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503791"
 ---
 # <a name="imetadataimportenumproperties-method"></a>Metodo IMetaDataImport::EnumProperties
 Enumera i token PropertyDef che rappresentano le proprietà del tipo a cui fa riferimento il token TypeDef specificato.  
@@ -51,25 +51,25 @@ HRESULT EnumProperties (
  [in] Dimensione massima della matrice `rProperties`.  
   
  `pcProperties`  
- out Numero di token PropertyDef restituiti in `rProperties`.  
+ out Numero di token PropertyDef restituiti in `rProperties` .  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumProperties` ha restituito un esito positivo.|  
+|`S_OK`|`EnumProperties`la restituzione è riuscita.|  
 |`S_FALSE`|Nessun token da enumerare. In tal caso, `pcProperties` è zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
  **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](imetadataimport2-interface.md)

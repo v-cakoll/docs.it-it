@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 37b95cce-9bfb-4ecf-a00b-33dcba782c67
 topic_type:
 - apiref
-ms.openlocfilehash: e07210203d8a8010890eeb511ff1c08821bfc4a7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: fa2b5052a1d569487f0c6c72699ff9ab571beefc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616333"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504394"
 ---
 # <a name="eclrfailure-enumeration"></a>Enumerazione EClrFailure
 Descrive il set di errori per i quali un host può impostare le azioni dei criteri.  
@@ -40,7 +40,7 @@ typedef enum {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Description|  
+|Membro|Descrizione|  
 |------------|-----------------|  
 |`FAIL_NonCriticalResource`|Si è verificato un errore durante il tentativo di allocare una risorsa, ad esempio un thread, un blocco di memoria o un blocco, in un'area di codice non critica.|  
 |`FAIL_CriticalResource`|Si è verificato un errore durante il tentativo di allocare una risorsa, ad esempio un thread, un blocco di memoria o un blocco, in un'area critica del codice.|  
@@ -51,7 +51,7 @@ typedef enum {
 |`FAIL_CodeContract`|Si è verificato un errore del contratto di codice. Vedere [contratti di codice](../../debug-trace-profile/code-contracts.md).|  
   
 ## <a name="remarks"></a>Osservazioni  
- Vedere il metodo [ICLRPolicyManager:: SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) per un elenco di valori [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) che l'host può usare per specificare le azioni dei criteri per le condizioni di errore. Per ulteriori informazioni sulle aree di codice critiche e non critiche, vedere [EClrOperation](eclroperation-enumeration.md).  
+ Vedere il metodo [ICLRPolicyManager:: SetActionOnFailure](iclrpolicymanager-setactiononfailure-method.md) per un elenco di valori [EPolicyAction](epolicyaction-enumeration.md) che l'host può usare per specificare le azioni dei criteri per le condizioni di errore. Per ulteriori informazioni sulle aree di codice critiche e non critiche, vedere [EClrOperation](eclroperation-enumeration.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  

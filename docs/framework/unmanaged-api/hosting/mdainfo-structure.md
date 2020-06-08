@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb8c14f7-d461-43d1-8b47-adb6723b9b93
 topic_type:
 - apiref
-ms.openlocfilehash: 33b3044c7b5237e586fdb993a16b6144c271782c
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 517e0ae7fb5d5151f94f82d9146ebbf40bad2ef9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007715"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503861"
 ---
 # <a name="mdainfo-structure"></a>Struttura MDAInfo
 Fornisce informazioni dettagliate sull' `Event_MDAFired` evento, che attiva la creazione di un assistente al debug gestito (MDA).  
@@ -40,12 +40,12 @@ typedef struct _MDAInfo {
 |`lpMDACaption`|Titolo dell'assistente al debug gestito corrente. Il titolo descrive il tipo di errore che ha attivato l' `Event_MDAFired` evento.|  
 |`lpMDAMessage`|Messaggio di output fornito dall'assistente al debug gestito corrente.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Gli assistenti al debug gestito (MDA) sono strumenti di debug che interagiscono con il Common Language Runtime (CLR) per eseguire attività quali l'identificazione di condizioni non valide nel motore di esecuzione di runtime o il dump di informazioni aggiuntive sullo stato del motore. MDA generano messaggi XML sugli eventi altrimenti difficili da intercettare. Sono particolarmente utili per il debug di transizioni tra codice gestito e non gestito.  
   
  Il runtime esegue i passaggi seguenti quando viene attivato un evento che attiva la creazione di un assistente al debug gestito:  
   
-- Se l'host non ha registrato un'istanza di [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) chiamando [ICLROnEventManager:: RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) per ricevere una notifica di un `Event_MDAFired` evento, il runtime procede con il comportamento predefinito non ospitato.  
+- Se l'host non ha registrato un'istanza di [IActionOnCLREvent](iactiononclrevent-interface.md) chiamando [ICLROnEventManager:: RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) per ricevere una notifica di un `Event_MDAFired` evento, il runtime procede con il comportamento predefinito non ospitato.  
   
 - Se l'host ha registrato un gestore per questo evento, il runtime verifica se un debugger è collegato al processo. In caso contrario, il runtime si interrompe nel debugger. Quando il debugger continua, chiama nell'host. Se non è stato collegato alcun debugger, il runtime chiama `IActionOnCLREvent::OnEvent` e passa un puntatore a un' `MDAInfo` istanza come `data` parametro.  
   

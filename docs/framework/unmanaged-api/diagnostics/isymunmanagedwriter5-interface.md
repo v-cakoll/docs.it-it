@@ -2,12 +2,12 @@
 title: Interfaccia ISymUnmanagedWriter5
 ms.date: 03/30/2017
 ms.assetid: 15b8526e-4f5d-475c-a1e3-d8b2d145c879
-ms.openlocfilehash: bdc630c3c94c7d03b736efa0a95665f10aac7c6e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d9204457b71b670e1c96ed228ad11116bdf41fe6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609430"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493578"
 ---
 # <a name="isymunmanagedwriter5-interface"></a>Interfaccia ISymUnmanagedWriter5
 Interfaccia Metodo ISymUnmanagedWriter5.  
@@ -24,7 +24,7 @@ Interfaccia Metodo ISymUnmanagedWriter5.
 |Metodo|Descrizione|  
 |------------|-----------------|  
 |[Metodo CloseMapTokensToSourceSpans](isymunmanagedwriter5-closemaptokenstosourcespans-method.md)|Chiudere la sezione relativa ai dati personalizzati speciali per informazioni sul mapping di intervalli da token a origine. Al termine della chiusura, non è possibile aggiungere altre informazioni sul mapping.|  
-|[Metodo MapTokenToSourceSpan](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-maptokentosourcespan-method.md)|Esegue il mapping del token di metadati specificato all'intervallo di righe di origine specificato nel file di origine specificato.<br /><br /> Deve essere chiamato tra le chiamate al [Metodo OpenMapTokensToSourceSpans](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-openmaptokenstosourcespans-method.md) e al [Metodo CloseMapTokensToSourceSpans](isymunmanagedwriter5-closemaptokenstosourcespans-method.md).|  
+|[Metodo MapTokenToSourceSpan](isymunmanagedwriter5-maptokentosourcespan-method.md)|Esegue il mapping del token di metadati specificato all'intervallo di righe di origine specificato nel file di origine specificato.<br /><br /> Deve essere chiamato tra le chiamate al [Metodo OpenMapTokensToSourceSpans](isymunmanagedwriter5-openmaptokenstosourcespans-method.md) e al [Metodo CloseMapTokensToSourceSpans](isymunmanagedwriter5-closemaptokenstosourcespans-method.md).|  
 |[Metodo OpenMapTokensToSourceSpans](isymunmanagedwriter5-openmaptokenstosourcespans-method.md)|Aprire una sezione di dati personalizzata speciale per creare informazioni sul mapping di intervalli da token a origine in. L'apertura di questa sezione quando un metodo è già aperto o viceversa è un errore.|  
   
 ## <a name="requirements"></a>Requisiti  

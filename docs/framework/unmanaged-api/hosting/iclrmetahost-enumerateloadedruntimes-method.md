@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 22fc0a3f-dce4-4766-9a3c-9fab15f4b4ca
 topic_type:
 - apiref
-ms.openlocfilehash: 2e22b8a2d0213b3bd766d80218d6f396721a90e1
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 7b09bb9c3abcb23997bfd412c3ea939404e583c1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703762"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504173"
 ---
 # <a name="iclrmetahostenumerateloadedruntimes-method"></a>Metodo ICLRMetaHost::EnumerateLoadedRuntimes
-Restituisce un'enumerazione che include un puntatore all'interfaccia [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) valido per ogni versione di Common Language Runtime (CLR) caricata in un determinato processo. Questo metodo sostituisce la funzione [GetVersionFromProcess](getversionfromprocess-function.md) .  
+Restituisce un'enumerazione che include un puntatore all'interfaccia [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) valido per ogni versione di Common Language Runtime (CLR) caricata in un determinato processo. Questo metodo sostituisce la funzione [GetVersionFromProcess](getversionfromprocess-function.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +44,7 @@ HRESULT EnumerateLoadedRuntimes (
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
   
-|HRESULT|Description|  
+|HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
 |E_POINTER|`ppEnumerator` è null.|  

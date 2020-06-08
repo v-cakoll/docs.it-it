@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a71dbbd5-64b8-47eb-9f03-8e8c85fbe2bc
 topic_type:
 - apiref
-ms.openlocfilehash: f8f476f681764a46700dd5ec83c8f9b2739f18f6
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 1b7209a36f8e9d6f02bd4cc1882adeef8af30c3d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842491"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503925"
 ---
 # <a name="ihosttask-interface"></a>Interfaccia IHostTask
 Fornisce metodi che consentono all'Common Language Runtime (CLR) di comunicare con l'host per gestire le attività.  
@@ -30,8 +30,8 @@ Fornisce metodi che consentono all'Common Language Runtime (CLR) di comunicare c
 |------------|-----------------|  
 |[Metodo Alert](ihosttask-alert-method.md)|Richiede che l'host risvegli l'attività rappresentata dall' `IHostTask` istanza corrente, in modo che l'attività possa essere interrotta.|  
 |[Metodo GetPriority](ihosttask-getpriority-method.md)|Ottiene il livello di priorità del thread dell'attività rappresentata dall' `IHostTask` istanza corrente.|  
-|[Metodo join](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md)|Blocca l'attività chiamante fino a quando l'attività rappresentata dall'istanza corrente non `IHostTask` viene completata, l'intervallo di tempo specificato scade oppure [IHostTask:: Alert](ihosttask-alert-method.md) viene chiamato.|  
-|[Metodo SetCLRTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md)|Associa un'istanza dell' [interfaccia ICLRTask](iclrtask-interface.md) all' `IHostTask` istanza corrente.|  
+|[Metodo join](ihosttask-join-method.md)|Blocca l'attività chiamante fino a quando l'attività rappresentata dall'istanza corrente non `IHostTask` viene completata, l'intervallo di tempo specificato scade oppure [IHostTask:: Alert](ihosttask-alert-method.md) viene chiamato.|  
+|[Metodo SetCLRTask](ihosttask-setclrtask-method.md)|Associa un'istanza dell' [interfaccia ICLRTask](iclrtask-interface.md) all' `IHostTask` istanza corrente.|  
 |[Metodo SetPriority](ihosttask-setpriority-method.md)|Richiede che l'host modifichi il livello di priorità del thread per l'attività rappresentata dall' `IHostTask` istanza corrente.|  
 |[Metodo Start](ihosttask-start-method.md)|Richiede che l'host sposti l'attività rappresentata dall' `IHostTask` istanza corrente da uno stato sospeso a uno stato attivo, in cui è possibile eseguire il codice.|  
   

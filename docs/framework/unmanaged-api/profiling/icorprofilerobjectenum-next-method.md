@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-ms.openlocfilehash: b6e26d1538cab30db66e887aee89b8fbae501bdb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 850f05520e4146b5016bb574f02aa800dfcaaf32
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177007"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494579"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>Metodo ICorProfilerObjectEnum::Next
 Ottiene il numero specificato di oggetti contigui da una raccolta sequenziale di oggetti, a partire dalla posizione corrente dell'enumeratore nella sequenza.  
@@ -41,19 +41,19 @@ HRESULT Next (
  [in] Numero di oggetti da recuperare.  
   
  `objects`  
- [fuori] Matrice di `ObjectID` valori, ognuno dei quali rappresenta un oggetto recuperato.  
+ out Matrice di `ObjectID` valori, ognuno dei quali rappresenta un oggetto recuperato.  
   
  `pceltFetched`  
  [out] Puntatore al numero di elementi effettivamente restituiti nella matrice `objects`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
