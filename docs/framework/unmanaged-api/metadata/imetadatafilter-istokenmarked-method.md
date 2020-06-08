@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d90dcee-0206-4540-807b-06982fe65f1a
 topic_type:
 - apiref
-ms.openlocfilehash: 47377e892aaf2bdd96a297630c47fe52215b0564
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb0ebab0f4e05d81730d5beb2b5345e319e8e274
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177386"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492538"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>Metodo IMetaDataFilter::IsTokenMarked
 Ottiene un valore che indica se il token di metadati specificato è stato contrassegnato come elaborato.  
@@ -36,20 +36,20 @@ HRESULT IsTokenMarked (
   
 ## <a name="parameters"></a>Parametri  
  `tk`  
- [in] Token da esaminare per un contrassegno di elaborazione.  
+ in Token da esaminare per un contrassegno di elaborazione.  
   
  `pIsMarked`  
- [fuori] Valore che `true` è `tk` se è stato elaborato; in `false`caso contrario.  
+ out Valore che è `true` se `tk` è stato elaborato; in caso contrario, `false` .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Utilizzato come risorsa in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataFilter](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+- [Interfaccia IMetaDataFilter](imetadatafilter-interface.md)

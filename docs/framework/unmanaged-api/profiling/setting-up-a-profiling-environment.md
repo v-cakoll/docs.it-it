@@ -10,16 +10,16 @@ helpviewer_keywords:
 - COR_ENABLE_PROFILING environment variable
 - profiling API [.NET Framework], enabling
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
-ms.openlocfilehash: 32ebb868ea64a24fba80133b1a0eb539f51cb411
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: adf790e0b2d2b72b5a1f0b2a41b80db6d5026869
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176968"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494020"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Configurazione di un ambiente di profilatura
 > [!NOTE]
-> Sono state apportate modifiche sostanziali alla profilatura in .NET Framework 4.  
+> Sono state apportate modifiche sostanziali alla profilatura nell'.NET Framework 4.  
   
  Quando viene avviato un processo gestito (applicazione o servizio), viene caricato Common Language Runtime (CLR). Quando CLR viene inizializzato, valuta le due variabili di ambiente seguenti per decidere se è necessario connettere il processo a un profiler:  
   
@@ -35,43 +35,43 @@ ms.locfileid: "79176968"
  Per profilare un'applicazione CLR, è necessario impostare le variabili di ambiente COR_ENABLE_PROFILING e COR_PROFILER prima di eseguire l'applicazione. È anche necessario assicurarsi che il file DLL del profiler sia registrato.  
   
 > [!NOTE]
-> A partire da .NET Framework 4.NET Framework 4, non è necessario registrare i profiler.  
+> A partire da .NET Framework 4, i profiler non devono essere registrati.  
   
 > [!NOTE]
-> Per utilizzare i profiler di .NET Framework versioni 2.0, 3.0 e 3.5 in .NET Framework 4 e versioni successive, è necessario impostare la variabile di ambiente COMPLUS_ProfAPI_ProfilerCompatibilitySetting.  
+> Per usare .NET Framework le versioni 2,0, 3,0 e 3,5 dei profiler in .NET Framework 4 e versioni successive, è necessario impostare la variabile di ambiente COMPLUS_ProfAPI_ProfilerCompatibilitySetting.  
   
 ## <a name="environment-variable-scope"></a>Ambito della variabile di ambiente  
  La modalità di impostazione delle variabili di ambiente COR_ENABLE_PROFILING e COR_PROFILER ne determina l'ambito di influenza. È possibile impostare queste variabili in uno dei modi seguenti:  
   
-- Se si impostano le variabili in una chiamata [ICorDebug::CreateProcess,](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) verranno applicate solo all'applicazione in esecuzione al momento. Si applicheranno anche ad altre applicazioni avviate dall'applicazione che eredita l'ambiente.  
+- Se si impostano le variabili in una chiamata [ICorDebug:: CreateProcess](../debugging/icordebug-createprocess-method.md) , verranno applicate solo all'applicazione in esecuzione al momento. Si applicheranno anche ad altre applicazioni avviate dall'applicazione che eredita l'ambiente.  
   
 - Se si impostano le variabili in una finestra del prompt dei comandi, verranno applicate a tutte le applicazioni avviate da questa finestra.  
   
-- Se le variabili vengono impostate a livello di utente, verranno applicate a tutte le applicazioni avviate con Esplora file. Una finestra del prompt dei comandi aperta dopo aver impostato le variabili avrà queste impostazioni di ambiente, così come tutte le applicazioni avviate da tale finestra. Per impostare le variabili di ambiente a livello di utente, fare clic con il pulsante destro del mouse su **Risorse del computer**, scegliere **Proprietà**, fare clic sulla scheda **Avanzate** , fare clic su Variabili di **ambiente**e aggiungere le variabili all'elenco **Variabili utente.**  
+- Se le variabili vengono impostate a livello di utente, verranno applicate a tutte le applicazioni avviate con Esplora file. Una finestra del prompt dei comandi aperta dopo aver impostato le variabili avrà queste impostazioni di ambiente, così come tutte le applicazioni avviate da tale finestra. Per impostare le variabili di ambiente a livello di utente, fare clic con il pulsante destro del mouse su **computer locale**, scegliere **Proprietà**, fare clic sulla scheda **Avanzate** , quindi su **variabili di ambiente**e aggiungere le variabili all'elenco **variabili utente** .  
   
-- Se si impostano le variabili a livello di computer, verranno applicate a tutte le applicazioni avviate su tale computer. Una finestra del prompt dei comandi aperta nel computer avrà le impostazioni di ambiente specificate, così come tutte le applicazioni avviate da tale finestra. Ciò significa che ogni processo gestito nel computer verrà avviato con il profiler. Per impostare le variabili di ambiente a livello di computer, fare clic con il pulsante destro del mouse su **Risorse del computer**, scegliere **Proprietà**, Fare clic sulla scheda **Avanzate** , fare clic su Variabili **di ambiente**, aggiungere le variabili all'elenco **Variabili** di sistema e quindi riavviare il computer. Dopo il riavvio le variabili saranno disponibili in tutto il sistema.  
+- Se si impostano le variabili a livello di computer, verranno applicate a tutte le applicazioni avviate su tale computer. Una finestra del prompt dei comandi aperta nel computer avrà le impostazioni di ambiente specificate, così come tutte le applicazioni avviate da tale finestra. Ciò significa che ogni processo gestito nel computer verrà avviato con il profiler. Per impostare le variabili di ambiente a livello di computer, fare clic con il pulsante destro del mouse su **computer locale**, scegliere **Proprietà**, fare clic sulla scheda **Avanzate** , scegliere **variabili di ambiente**, aggiungere le variabili all'elenco variabili di **sistema** , quindi riavviare il computer. Dopo il riavvio le variabili saranno disponibili in tutto il sistema.  
   
- Se si esegue la profilatura di un servizio di Windows è necessario riavviare il computer dopo aver impostato le variabili di ambiente e registrare la DLL del profiler. Per altre informazioni su queste considerazioni, vedere la sezione [Profiling di un servizio Windows](#windows_service).  
+ Se si esegue la profilatura di un servizio di Windows è necessario riavviare il computer dopo aver impostato le variabili di ambiente e registrare la DLL del profiler. Per ulteriori informazioni su queste considerazioni, vedere la sezione [profiling di un servizio Windows](#windows_service).  
   
 ## <a name="additional-considerations"></a>Ulteriori considerazioni  
   
-- La classe del profiler implementa le interfacce [ICorProfilerCallback](icorprofilercallback-interface.md) e [ICorProfilerCallback2.](icorprofilercallback2-interface.md) In .NET Framework versione 2.0, un profiler deve implementare `ICorProfilerCallback2`. In caso contrario, `ICorProfilerCallback2` non verrà caricato.  
+- La classe profiler implementa le interfacce [ICorProfilerCallback](icorprofilercallback-interface.md) e [ICorProfilerCallback2](icorprofilercallback2-interface.md) . In .NET Framework versione 2.0, un profiler deve implementare `ICorProfilerCallback2`. In caso contrario, `ICorProfilerCallback2` non verrà caricato.  
   
 - Un processo può essere profilato da un solo profiler in momento e in un ambiente specifici. È possibile registrare due profiler diversi in ambienti diversi, ma ognuno deve profilare processi separati. Il profiler deve essere implementato come file DLL del server COM in-process, mappato allo stesso spazio degli indirizzi del processo che si sta profilando. Ciò significa che il profiler viene eseguito in-process. .NET Framework non supporta altri tipi di server COM. Ad esempio, per monitorare le applicazioni da un computer remoto, il profiler deve implementare agenti di raccolta in ogni computer. Questi agenti raccolgono i risultati e li comunicano al computer di raccolta dati centrale.  
   
 - Poiché il profiler è un oggetto COM di cui viene creata un'istanza in-process, ogni applicazione profilata disporrà della propria copia del profiler. Pertanto, una singola istanza del profiler non deve gestire i dati da più applicazioni. Tuttavia, sarà necessario aggiungere una logica al codice di registrazione del profiler per impedire che il file di log sia sovrascritto da altre applicazioni profilate.  
   
 ## <a name="initializing-the-profiler"></a>Inizializzazione del profiler  
- Quando vengono superati entrambi i controlli delle variabili di ambiente, CLR crea un'istanza del profiler in modo simile alla funzione COM `CoCreateInstance`. Il profiler non viene caricato tramite una chiamata diretta a `CoCreateInstance`. Di conseguenza si evita la chiamata a `CoInitialize`, che richiede l'impostazione del modello di threading. CLR chiama quindi il metodo [ICorProfilerCallback::Initialize](icorprofilercallback-initialize-method.md) nel profiler. La firma di questo metodo è la seguente.  
+ Quando vengono superati entrambi i controlli delle variabili di ambiente, CLR crea un'istanza del profiler in modo simile alla funzione COM `CoCreateInstance`. Il profiler non viene caricato tramite una chiamata diretta a `CoCreateInstance`. Di conseguenza si evita la chiamata a `CoInitialize`, che richiede l'impostazione del modello di threading. CLR chiama quindi il metodo [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) nel profiler. La firma di questo metodo è la seguente.  
   
 ```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
- Il profiler `pICorProfilerInfoUnk` deve eseguire una query per un puntatore a interfaccia [ICorProfilerInfo](icorprofilerinfo-interface.md) o [ICorProfilerInfo2](icorprofilerinfo2-interface.md) e salvarlo in modo che possa richiedere ulteriori informazioni in un secondo momento durante la profilatura.  
+ Il profiler deve eseguire `pICorProfilerInfoUnk` una query per ottenere un puntatore a interfaccia [ICorProfilerInfo](icorprofilerinfo-interface.md) o [ICorProfilerInfo2](icorprofilerinfo2-interface.md) e salvarlo in modo da poter richiedere altre informazioni successivamente durante la profilatura.  
   
 ## <a name="setting-event-notifications"></a>Impostazione delle notifiche degli eventi  
- Il profiler chiama quindi il [metodo ICorProfilerInfo::SetEventMask](icorprofilerinfo-seteventmask-method.md) per specificare le categorie di notifiche a cui è interessato. Ad esempio, se il profiler è interessato solo alle notifiche di entrata e uscita dalla funzione e alle notifiche di Garbage Collection, viene specificato quanto segue.  
+ Il profiler chiama quindi il metodo [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) per specificare le categorie di notifiche a cui è interessato. Ad esempio, se il profiler è interessato solo alle notifiche di entrata e uscita dalla funzione e alle notifiche di Garbage Collection, viene specificato quanto segue.  
   
 ```cpp  
 ICorProfilerInfo* pInfo;  
@@ -91,7 +91,7 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
   
  Queste modifiche abiliteranno la profilatura a livello di sistema. Per evitare la profilatura di tutte le applicazioni gestite eseguite successivamente, è necessario eliminare le variabili di ambiente del sistema dopo aver riavviato il computer di destinazione.  
   
- Questa tecnica comporta anche la profilatura di tutti i processi CLR. Il profiler deve aggiungere logica al callback [di ICorProfilerCallback::Initialize](icorprofilercallback-initialize-method.md) per rilevare se il processo corrente è di interesse. Se non lo è, il profiler può interrompere il callback senza eseguire l'inizializzazione.  
+ Questa tecnica comporta anche la profilatura di tutti i processi CLR. Il profiler deve aggiungere la logica al callback [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) per rilevare se il processo corrente è di interesse. Se non lo è, il profiler può interrompere il callback senza eseguire l'inizializzazione.  
   
 ## <a name="see-also"></a>Vedere anche
 

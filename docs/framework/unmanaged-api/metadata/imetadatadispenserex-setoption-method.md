@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f1c7ccd-7fb2-41d8-aa00-24b823376527
 topic_type:
 - apiref
-ms.openlocfilehash: 0cb0dee7db7faa4c1324d705218934489ec6a4b6
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 28aea8534eed3bcd1f645844e28849be89e130d0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005856"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501326"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>Metodo IMetaDataDispenserEx::SetOption
 Imposta l'opzione specificata su un valore specificato per l'ambito dei metadati corrente. L'opzione consente di controllare il modo in cui vengono gestite le chiamate all'ambito dei metadati corrente.  
@@ -41,16 +41,16 @@ HRESULT SetOption (
  `pValue`  
  in Valore da utilizzare per impostare l'opzione. Il tipo di questo valore deve essere una variante del tipo dell'opzione specificata.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente sono elencati i GUID disponibili a cui il `optionId` parametro può puntare e i valori validi corrispondenti per il `pValue` parametro.  
   
 |GUID|Descrizione|`pValue`Parametro|  
 |----------|-----------------|------------------------|  
-|MetaDataCheckDuplicatesFor|Controlla gli elementi di cui verificare la presenza di duplicati. Ogni volta che si chiama un metodo [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) per la creazione di un nuovo elemento, è possibile chiedere al metodo di controllare se l'elemento esiste già nell'ambito corrente. Ad esempio, è possibile verificare l'esistenza di `mdMethodDef` elementi. in questo caso, quando si chiama [IMetaDataEmit::D efinemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md), viene verificato che il metodo non esista già nell'ambito corrente. Questo controllo Usa la chiave che identifica in modo univoco un metodo specifico: tipo padre, nome e firma.|Deve essere una variante di tipo UI4 e deve contenere una combinazione dei valori dell'enumerazione [CorCheckDuplicatesFor](corcheckduplicatesfor-enumeration.md) .|  
+|MetaDataCheckDuplicatesFor|Controlla gli elementi di cui verificare la presenza di duplicati. Ogni volta che si chiama un metodo [IMetaDataEmit](imetadataemit-interface.md) per la creazione di un nuovo elemento, è possibile chiedere al metodo di controllare se l'elemento esiste già nell'ambito corrente. Ad esempio, è possibile verificare l'esistenza di `mdMethodDef` elementi. in questo caso, quando si chiama [IMetaDataEmit::D efinemethod](imetadataemit-definemethod-method.md), viene verificato che il metodo non esista già nell'ambito corrente. Questo controllo Usa la chiave che identifica in modo univoco un metodo specifico: tipo padre, nome e firma.|Deve essere una variante di tipo UI4 e deve contenere una combinazione dei valori dell'enumerazione [CorCheckDuplicatesFor](corcheckduplicatesfor-enumeration.md) .|  
 |MetaDataRefToDefCheck|Controlla quali elementi a cui si fa riferimento vengono convertiti in definizioni. Per impostazione predefinita, il motore dei metadati ottimizza il codice convertendo un elemento a cui si fa riferimento nella definizione se l'elemento a cui si fa riferimento è effettivamente definito nell'ambito corrente.|Deve essere una variante di tipo UI4 e deve contenere una combinazione dei valori dell'enumerazione [CorRefToDefCheck](correftodefcheck-enumeration.md) .|  
-|MetaDataNotificationForTokenMovement|Controlla quali rimappe del token che si verificano durante un'Unione di metadati generano callback. Usare il metodo [IMetaDataEmit::](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) SetValue per stabilire l'interfaccia [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) .|Deve essere una variante di tipo UI4 e deve contenere una combinazione dei valori dell'enumerazione [CorNotificationForTokenMovement](cornotificationfortokenmovement-enumeration.md) .|  
+|MetaDataNotificationForTokenMovement|Controlla quali rimappe del token che si verificano durante un'Unione di metadati generano callback. Usare il metodo [IMetaDataEmit::](imetadataemit-sethandler-method.md) SetValue per stabilire l'interfaccia [IMapToken](imaptoken-interface.md) .|Deve essere una variante di tipo UI4 e deve contenere una combinazione dei valori dell'enumerazione [CorNotificationForTokenMovement](cornotificationfortokenmovement-enumeration.md) .|  
 |MetaDataSetENC|Controlla il comportamento di modifica e continuazione (ENC). È possibile impostare una sola modalità di comportamento alla volta.|Deve essere una variante di tipo UI4 e deve contenere un valore dell'enumerazione [CorSetENC](corsetenc-enumeration.md) . Il valore non è una maschera di maschera.|  
-|MetaDataErrorIfEmitOutOfOrder|I controlli che generano errori non ordinati generano i callback. L'emissione di metadati non ordinati non è irreversibile. Tuttavia, se si generano metadati in un ordine favorito dal motore dei metadati, i metadati sono più compatti e pertanto possono essere cercati in modo più efficiente. Usare il `IMetaDataEmit::SetHandler` metodo per stabilire l'interfaccia [IMetaDataError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) .|Deve essere una variante di tipo UI4 e deve contenere una combinazione dei valori dell'enumerazione [CorErrorIfEmitOutOfOrder](corerrorifemitoutoforder-enumeration.md) .|  
+|MetaDataErrorIfEmitOutOfOrder|I controlli che generano errori non ordinati generano i callback. L'emissione di metadati non ordinati non è irreversibile. Tuttavia, se si generano metadati in un ordine favorito dal motore dei metadati, i metadati sono più compatti e pertanto possono essere cercati in modo più efficiente. Usare il `IMetaDataEmit::SetHandler` metodo per stabilire l'interfaccia [IMetaDataError](imetadataerror-interface.md) .|Deve essere una variante di tipo UI4 e deve contenere una combinazione dei valori dell'enumerazione [CorErrorIfEmitOutOfOrder](corerrorifemitoutoforder-enumeration.md) .|  
 |MetaDataImportOption|Controlla quali tipi di elementi sono stati eliminati durante un'operazione ENC vengono recuperati da un enumeratore.|Deve essere una variante di tipo UI4 e deve contenere una combinazione dei valori dell'enumerazione Enumerazione [CorImportOptions](corimportoptions-enumeration.md) .|  
 |MetaDataThreadSafetyOptions|Controlla se il motore dei metadati ottiene i blocchi reader/writer, garantendo in tal modo thread safety. Per impostazione predefinita, il motore presuppone che l'accesso sia a thread singolo dal chiamante, quindi non viene ottenuto alcun blocco. I client hanno la responsabilità di mantenere la sincronizzazione dei thread corretta quando si usa l'API dei metadati.|Deve essere una variante di tipo UI4 e deve contenere un valore dell'enumerazione [CorThreadSafetyOptions](corthreadsafetyoptions-enumeration.md) . Il valore non è una maschera di maschera.|  
 |MetaDataGenerateTCEAdapters|Controlla se l'utilità di importazione della libreria dei tipi deve generare gli adapter per gli eventi strettamente associati per i contenitori dei punti di connessione COM.|Deve essere una variante di tipo BOOL. Se `pValue` è impostato su `true` , l'utilità di importazione della libreria dei tipi genera le schede TCE.|  

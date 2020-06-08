@@ -1,5 +1,6 @@
 ---
 title: Procedure consigliate per le classi System.Net
+description: Seguire queste indicazioni per usare le classi contenute in System.Net per il migliore vantaggio nella programmazione .NET Framework.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - sending data, best practices
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-ms.openlocfilehash: c7324dcbc27c95c7d799592700d46c195e7d952b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 583fa5e57c7c4d60252dddfd425596e7acad7c0d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048885"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502678"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>Procedure consigliate per le classi System.Net
 I suggerimenti seguenti consentono di usare al meglio le classi contenute in <xref:System.Net>:  
@@ -34,4 +35,4 @@ I suggerimenti seguenti consentono di usare al meglio le classi contenute in <xr
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione di rete in .NET Framework](index.md)
+- [Programmazione di rete nel .NET Framework](index.md)

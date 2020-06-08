@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-ms.openlocfilehash: 61b5678a546bdbadbcc6d8ee86447cb17ce72b99
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b0da8a06259fe99da52497da3011da94289d301
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175525"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492317"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>Metodo IMetaDataImport::EnumCustomAttributes
-Enumera i token di definizione di attributo personalizzati associati al tipo o al membro specificato.  
+Enumera i token di definizione degli attributi personalizzati associati al tipo o al membro specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,37 +43,37 @@ HRESULT EnumCustomAttributes (
  [in, out] Puntatore all'enumeratore restituito.  
   
  `tk`  
- [in] Token per l'ambito dell'enumerazione oppure zero per tutti gli attributi personalizzati.  
+ in Token per l'ambito dell'enumerazione o zero per tutti gli attributi personalizzati.  
   
  `tkType`  
- [in] Token per il costruttore del tipo di attributi `null` da enumerare o per tutti i tipi.  
+ in Token per il costruttore del tipo degli attributi da enumerare o `null` per tutti i tipi.  
   
  `rCustomAttributes`  
- [fuori] Matrice di token di attributo personalizzati.  
+ out Matrice di token di attributi personalizzati.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rCustomAttributes`.  
   
  `pcCustomAttributes`  
- [out, opzionale] Numero effettivo di valori di `rCustomAttributes`token restituiti in .  
+ [out, facoltativo] Numero effettivo di valori di token restituiti in `rCustomAttributes` .  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes`restituito con successo.|  
-|`S_FALSE`|Non sono presenti attributi personalizzati da enumerare. In tal `pcCustomAttributes` caso, è zero.|  
+|`S_OK`|`EnumCustomAttributes`la restituzione è riuscita.|  
+|`S_FALSE`|Nessun attributo personalizzato da enumerare. In tal caso, `pcCustomAttributes` è zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Biblioteca:** Incluso come risorsa in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](imetadataimport2-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-ms.openlocfilehash: 0b1ecd1266528f8a08ef114de2f111dd0f71ca8b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: a2a3d58e0631fceab96c32f9d86fef25973fed84
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866931"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500663"
 ---
 # <a name="functionleave2-function"></a>Funzione FunctionLeave2
 Notifica al profiler che una funzione sta per tornare al chiamante e fornisce informazioni sull'stack frame e sul valore restituito della funzione.  
@@ -47,7 +47,7 @@ void __stdcall FunctionLeave2 (
 
 - `func`
 
-  \[in] valore `COR_PRF_FRAME_INFO` che punta alle informazioni relative al stack frame.
+  \[in] `COR_PRF_FRAME_INFO` valore che punta alle informazioni relative all'stack frame.
 
   Il profiler deve considerarlo come un handle opaco che può essere passato di nuovo al motore di esecuzione nel metodo [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) .  
   
@@ -55,12 +55,12 @@ void __stdcall FunctionLeave2 (
 
   \[in] puntatore a una struttura [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) che specifica la posizione di memoria del valore restituito della funzione.
 
-  Per accedere alle informazioni sul valore restituito, è necessario impostare il flag di `COR_PRF_ENABLE_FUNCTION_RETVAL`. Il profiler può usare il metodo [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) per impostare i flag di evento.
+  Per accedere alle informazioni sul valore restituito, `COR_PRF_ENABLE_FUNCTION_RETVAL` è necessario impostare il flag. Il profiler può usare il metodo [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) per impostare i flag di evento.
 
-## <a name="remarks"></a>Note  
- I valori dei parametri `func` e `retvalRange` non sono validi dopo che la funzione `FunctionLeave2` restituisce il risultato perché i valori possono essere modificati o eliminati.  
+## <a name="remarks"></a>Osservazioni  
+ I valori dei `func` parametri e `retvalRange` non sono validi dopo la `FunctionLeave2` restituzione della funzione perché i valori possono essere modificati o eliminati.  
   
- La funzione `FunctionLeave2` è un callback. è necessario implementarla. L'implementazione deve usare l'attributo della classe di archiviazione `__declspec`(`naked`).  
+ La `FunctionLeave2` funzione è un callback. è necessario implementarla. L'implementazione deve usare l' `__declspec` `naked` attributo della classe di archiviazione ().  
   
  Il motore di esecuzione non salva i registri prima di chiamare questa funzione.  
   
@@ -68,18 +68,18 @@ void __stdcall FunctionLeave2 (
   
 - All'uscita è necessario ripristinare lo stack scegliendo tutti i parametri di cui è stato eseguito il push dal chiamante.  
   
- L'implementazione di `FunctionLeave2` non deve bloccarsi perché ritarda Garbage Collection. L'implementazione non deve tentare un Garbage Collection perché lo stack potrebbe non essere in uno stato descrittivo Garbage Collection. Se viene effettuato un tentativo di Garbage Collection, il runtime si bloccherà fino a quando `FunctionLeave2` non restituisce.  
+ L'implementazione di `FunctionLeave2` non deve essere bloccata perché ritarderà Garbage Collection. L'implementazione non deve tentare un Garbage Collection perché lo stack potrebbe non essere in uno stato descrittivo Garbage Collection. Se viene effettuato un tentativo di Garbage Collection, il runtime si bloccherà fino a quando non viene `FunctionLeave2` restituito.  
   
- Inoltre, la funzione `FunctionLeave2` non deve chiamare nel codice gestito o in alcun modo causare un'allocazione di managed memory.  
+ Inoltre, la `FunctionLeave2` funzione non deve chiamare nel codice gestito o in alcun modo causare un'allocazione managed memory.  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf. idl  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

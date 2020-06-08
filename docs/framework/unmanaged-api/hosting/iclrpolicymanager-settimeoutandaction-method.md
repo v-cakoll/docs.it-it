@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60454f91-d855-4ddf-bb6d-60a02f5eabab
 topic_type:
 - apiref
-ms.openlocfilehash: efd30ef04c148d5e098110efcb37e50f143884e4
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 02e836601be72d54f561e077cd3c466470bafb25
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703433"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504095"
 ---
 # <a name="iclrpolicymanagersettimeoutandaction-method"></a>Metodo ICLRPolicyManager::SetTimeoutAndAction
 Imposta un valore di timeout per l'operazione specificata e specifica l'azione del criterio che il Common Language Runtime (CLR) deve eseguire quando si verifica l'operazione.  
@@ -55,7 +55,7 @@ HRESULT SetTimeoutAndAction (
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|Description|  
+|HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|`SetTimeoutAndAction`la restituzione è riuscita.|  
 |HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
@@ -66,7 +66,7 @@ HRESULT SetTimeoutAndAction (
 |E_INVALIDARG|Non è possibile impostare un timeout per l'oggetto specificato `operation` oppure è stato fornito un valore non valido per `action` .|  
   
 ## <a name="remarks"></a>Osservazioni  
- `SetTimeoutAndAction`Incapsula le funzionalità dei metodi [ICLRPolicyManager:: Setime](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md) out e [ICLRPolicyManager:: SetActionOnTimeout](iclrpolicymanager-setactionontimeout-method.md) e può essere chiamato al posto di chiamate sequenziali a questi due metodi.  
+ `SetTimeoutAndAction`Incapsula le funzionalità dei metodi [ICLRPolicyManager:: Setime](iclrpolicymanager-settimeout-method.md) out e [ICLRPolicyManager:: SetActionOnTimeout](iclrpolicymanager-setactionontimeout-method.md) e può essere chiamato al posto di chiamate sequenziali a questi due metodi.  
   
 > [!IMPORTANT]
 > Non tutti i valori dell'azione del criterio possono essere specificati come comportamento di timeout per le operazioni CLR. Vedere le sezioni Note degli argomenti per questi due metodi per i valori validi.  

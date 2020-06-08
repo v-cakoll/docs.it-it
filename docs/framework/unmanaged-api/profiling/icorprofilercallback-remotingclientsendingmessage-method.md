@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54d9a5a5-3877-49c1-a503-ce7c7943bc2a
 topic_type:
 - apiref
-ms.openlocfilehash: 8ae58344a7a17637bf08b9b5179abdba7e7060d6
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 820a37c8ca16f4962bf1d72b1f0f404cffd92a1a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866026"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499961"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>Metodo ICorProfilerCallback::RemotingClientSendingMessage
 Notifica al profiler che il client sta inviando una richiesta al server.  
@@ -46,16 +46,16 @@ HRESULT RemotingClientSendingMessage(
  Questo consente di associare facilmente le chiamate remote e la creazione di uno stack di chiamate logico.  
   
  `fIsAsync`  
- in Valore `true` se la chiamata è asincrona. in caso contrario, `false`.  
+ in Valore che è `true` se la chiamata è asincrona; in caso contrario, `false` .  
   
-## <a name="requirements"></a>Requisiti di  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
