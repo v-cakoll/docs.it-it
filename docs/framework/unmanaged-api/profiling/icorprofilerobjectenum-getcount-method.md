@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 166b0761-ed80-4ccd-9973-dc20e61bf8fa
 topic_type:
 - apiref
-ms.openlocfilehash: a1a616c1289867864eb9eb449c7d6f47f9a8352b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 4c867a9e263f022fc6f8d90a883562e2560ad1b2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861294"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494657"
 ---
-# <a name="icorprofilerobjectenumgetcount-method"></a><span data-ttu-id="0a9a1-102">Metodo ICorProfilerObjectEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="0a9a1-102">ICorProfilerObjectEnum::GetCount Method</span></span>
-<span data-ttu-id="0a9a1-103">Ottiene il numero totale di oggetti bloccati nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="0a9a1-103">Gets the total number of frozen objects in the collection.</span></span>  
+# <a name="icorprofilerobjectenumgetcount-method"></a><span data-ttu-id="debef-102">Metodo ICorProfilerObjectEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="debef-102">ICorProfilerObjectEnum::GetCount Method</span></span>
+<span data-ttu-id="debef-103">Ottiene il numero totale di oggetti bloccati nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="debef-103">Gets the total number of frozen objects in the collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0a9a1-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="0a9a1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="debef-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="debef-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCount (  
@@ -33,21 +33,21 @@ HRESULT GetCount (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0a9a1-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="0a9a1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="debef-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="debef-105">Parameters</span></span>  
  `pcelt`  
- <span data-ttu-id="0a9a1-106">out Puntatore al numero di oggetti bloccati nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="0a9a1-106">[out] A pointer to the number of frozen objects in the collection.</span></span>  
+ <span data-ttu-id="debef-106">out Puntatore al numero di oggetti bloccati nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="debef-106">[out] A pointer to the number of frozen objects in the collection.</span></span>  
   
- <span data-ttu-id="0a9a1-107">Questo metodo restituirà sempre zero in .NET Framework versione 3,5 Service Pack 1 (SP1) e versioni successive.</span><span class="sxs-lookup"><span data-stu-id="0a9a1-107">This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.</span></span>  
+ <span data-ttu-id="debef-107">Questo metodo restituirà sempre zero in .NET Framework versione 3,5 Service Pack 1 (SP1) e versioni successive.</span><span class="sxs-lookup"><span data-stu-id="debef-107">This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0a9a1-108">Requisiti di</span><span class="sxs-lookup"><span data-stu-id="0a9a1-108">Requirements</span></span>  
- <span data-ttu-id="0a9a1-109">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0a9a1-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="debef-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="debef-108">Requirements</span></span>  
+ <span data-ttu-id="debef-109">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="debef-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0a9a1-110">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0a9a1-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="debef-110">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="debef-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="0a9a1-111">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0a9a1-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="debef-111">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="debef-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0a9a1-112">**Versioni .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0a9a1-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="debef-112">**Versioni .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="debef-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a9a1-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0a9a1-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="debef-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="debef-113">See also</span></span>
 
-- [<span data-ttu-id="0a9a1-114">Interfaccia ICorProfilerObjectEnum</span><span class="sxs-lookup"><span data-stu-id="0a9a1-114">ICorProfilerObjectEnum Interface</span></span>](icorprofilerobjectenum-interface.md)
+- [<span data-ttu-id="debef-114">Interfaccia ICorProfilerObjectEnum</span><span class="sxs-lookup"><span data-stu-id="debef-114">ICorProfilerObjectEnum Interface</span></span>](icorprofilerobjectenum-interface.md)
