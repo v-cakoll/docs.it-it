@@ -2,12 +2,12 @@
 title: Problemi di sicurezza e suggerimenti utili per la traccia
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 5ced4f3a3a5e83564703db88b28ee2b3c6eeb1a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a09e387a4f964441f11d07a84bd492345d5b691
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185713"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578877"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Problemi di sicurezza e suggerimenti utili per la traccia
 In questo argomento viene descritto come proteggere informazioni riservate e vengono elencati suggerimenti utili durante l'utilizzo di WebHost.  
@@ -84,12 +84,12 @@ In questo argomento viene descritto come proteggere informazioni riservate e ven
   
  Le modifiche diventano effettive solo dopo l'avvio o il riavvio dell'applicazione. Un evento viene registrato all'avvio quando entrambi gli attributi sono impostati su `true`. Un evento viene inoltre registrato se `logKnownPii` è impostato su `true` ma `enableLoggingKnownPii` è `false`.  
   
- Per altre informazioni sulla registrazione delle informazioni personali, vedere Esempio di [blocco di sicurezza delle informazioni personali.](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md)  
+ Per ulteriori informazioni sulla registrazione di informazioni personali, vedere l'esempio relativo al [blocco di sicurezza pii](../../samples/pii-security-lockdown.md) .  
   
- L'amministratore del computer e il distributore di applicazioni devono prestare molta attenzione durante l'utilizzo di queste due opzioni. Se la registrazione di informazioni personali è abilitata, vengono registrate chiavi di sicurezza e informazioni personali. Se è disabilitata, i dati riservati e le informazioni specifiche dell'applicazione vengono comunque registrati nell'intestazione e nel corpo dei messaggi. Per una discussione più approfondita sulla privacy e sulla protezione delle informazioni personali dall'esposizione, vedere [Privacy degli](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10))utenti .  
+ L'amministratore del computer e il distributore di applicazioni devono prestare molta attenzione durante l'utilizzo di queste due opzioni. Se la registrazione di informazioni personali è abilitata, vengono registrate chiavi di sicurezza e informazioni personali. Se è disabilitata, i dati riservati e le informazioni specifiche dell'applicazione vengono comunque registrati nell'intestazione e nel corpo dei messaggi. Per una discussione più approfondita sulla privacy e sulla protezione delle informazioni personali da esporre, vedere [privacy degli utenti](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10)).  
   
  L'indirizzo IP del mittente del messaggio, inoltre, viene registrato una volta per ogni connessione per trasporti orientati alla connessione e una volta per ogni messaggio inviato diversamente. Ciò avviene senza il consenso del mittente. Questa registrazione, tuttavia, avviene solo ai livelli di traccia Informazioni o Dettagliato, ovvero i livelli non predefiniti né consigliati in produzione, tranne che per il debug attivo.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Traccia](index.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - routing [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 334e9fe7ca6931f87c75023f3322638b36001b6a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 455a6e42aea064d48846994b4e729b90667bc8e1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923060"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590501"
 ---
 # <a name="routing-scenarios"></a>Scenari di routing
 Sebbene il servizio di routing sia notevolmente personalizzabile, può risultare difficile progettare una logica di routing efficiente quando si crea una nuova configurazione da zero.  Esistono tuttavia diversi scenari comuni seguiti dalla maggior parte delle configurazioni dei servizi di routing. Tali scenari possono non essere direttamente applicabili a una configurazione specifica, tuttavia comprendere le modalità di configurazione del servizio di routing per tali scenari consente di acquisire familiarità con le potenzialità del servizio stesso.  
@@ -34,17 +34,17 @@ Sebbene il servizio di routing sia notevolmente personalizzabile, può risultare
   
  Con il servizio di routing è possibile esporre un endpoint affinché riceva i messaggi dalle applicazioni client e quindi indirizzare ogni messaggio alla versione corretta del servizio in base al contenuto del messaggio. L'implementazione più semplice prevede l'aggiunta di un'intestazione personalizzata al messaggio, la quale indichi la versione del servizio da cui deve essere elaborato il messaggio. Il servizio di routing può usare XPathMessageFilter per verificare in ogni messaggio la presenza dell'intestazione personalizzata e indirizzare il messaggio all'endpoint di destinazione appropriato.  
   
- Per i passaggi da eseguire per creare una configurazione di controllo delle versioni [del servizio, vedere Procedura: Controllo delle versioni](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)dei servizi.
+ Per i passaggi usati per creare una configurazione di controllo delle versioni del servizio, vedere [procedura: controllo delle versioni dei servizi](how-to-service-versioning.md).
   
 ### <a name="service-data-partitioning"></a>Partizionamento dei dati del servizio  
  Quando si progetta un ambiente distribuito, è spesso consigliabile suddividere il carico di elaborazione tra più computer in modo da offrire disponibilità elevata, ridurre il carico sui singoli computer o fornire risorse dedicate per uno specifico subset di messaggi. Sebbene il servizio di routing non sostituisca una soluzione di bilanciamento del carico dedicata, la possibilità di eseguire il routing basato sul contenuto consente di indirizzare messaggi simili a specifiche destinazioni. Potrebbe essere ad esempio necessario elaborare i messaggi di un determinato cliente separatamente da quelli ricevuti da altri client.  
   
- Per i passaggi usati per creare una configurazione di partizionamento dei dati del [servizio, vedere Procedura: Partizionamento dei dati](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)del servizio.  
+ Per i passaggi usati per creare una configurazione di partizionamento dei dati del servizio, vedere [procedura: partizionamento dei dati del servizio](how-to-service-data-partitioning.md).  
   
 ### <a name="dynamic-routing"></a>Routing dinamico  
  È spesso necessario modificare la configurazione di routing per soddisfare nuove esigenze aziendali, ad esempio con l'aggiunta di una route a una versione più recente di un servizio, la modifica dei criteri di routing oppure la modifica dell'endpoint di destinazione di uno specifico messaggio. Queste modifiche sono possibile tramite <xref:System.ServiceModel.Routing.RoutingExtension> grazie al quale è possibile specificare una nuova configurazione di routing in fase di esecuzione. La nuova configurazione viene applicata immediatamente, ma influisce solo sulle nuove sessioni elaborate dal servizio di routing.  
   
- Per i passaggi usati per implementare il routing dinamico, [vedere Procedura: Aggiornamento](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)dinamico.
+ Per i passaggi usati per implementare il routing dinamico, vedere [procedura: aggiornamento dinamico](how-to-dynamic-update.md).
   
 ### <a name="multicast"></a>Multicast  
  Il routing dei messaggi avviene in genere a uno specifico endpoint di destinazione.  Può tuttavia risultare talvolta necessario indirizzare una copia del messaggio a più endpoint di destinazione. Per il routing multicast, è necessario che siano soddisfatte le condizioni seguenti:  
@@ -63,17 +63,17 @@ Sebbene il servizio di routing sia notevolmente personalizzabile, può risultare
   
  Il servizio di routing offre affidabili funzionalità di gestione degli errori di rete e di comunicazione allo scopo di rimediare a tali scenari. Creando un elenco di possibili endpoint di destinazione da associare a ogni filtro messaggi, è possibile evitare il singolo punto di errore determinato dalla presenza di un'unica possibile destinazione. In caso di errore, il servizio di routing tenta di recapitare il messaggio all'endpoint successivo nell'elenco finché l'operazione non ha esito positivo, si verifica un errore non di comunicazione o si esauriscono tutti gli endpoint.  
   
- Per i passaggi usati per configurare la gestione degli errori [, vedere Procedura: Gestione degli](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)errori.
+ Per i passaggi usati per configurare la gestione degli errori, vedere [procedura: gestione degli errori](how-to-error-handling.md).
   
-### <a name="in-this-section"></a>In questa sezione  
- [Procedura: Controllo delle versioni dei servizi](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+### <a name="in-this-section"></a>Contenuto della sezione  
+ [Procedura: controllo delle versioni dei servizi](how-to-service-versioning.md)  
   
- [Procedura: Partizionamento dei dati del servizio](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [Procedura: partizionamento dei dati del servizio](how-to-service-data-partitioning.md)  
   
- [Procedura: Aggiornamento dinamico](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [Procedura: Aggiornamento dinamico](how-to-dynamic-update.md)  
   
- [Procedura: Gestione degli errori](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [Procedura: gestione degli errori](how-to-error-handling.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Introduzione al routing](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+- [Introduzione al routing](routing-introduction.md)

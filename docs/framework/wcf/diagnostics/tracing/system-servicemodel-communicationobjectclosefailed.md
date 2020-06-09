@@ -2,12 +2,12 @@
 title: System.ServiceModel.CommunicationObjectCloseFailed
 ms.date: 03/30/2017
 ms.assetid: 60270eab-6f57-4136-bec5-62d3edd23880
-ms.openlocfilehash: 5ff21b10bf886d4134a8222d5938b2617328a924
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 680b58e49ce0e8fd104116e032c5689b16048230
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968363"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84581464"
 ---
 # <a name="systemservicemodelcommunicationobjectclosefailed"></a>System.ServiceModel.CommunicationObjectCloseFailed
 Chiusura non riuscita di un oggetto di comunicazione.  
@@ -17,6 +17,6 @@ Chiusura non riuscita di un oggetto di comunicazione.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Traccia](index.md)
+- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](using-tracing-to-troubleshoot-your-application.md)
+- [Amministrazione e diagnostica](../index.md)

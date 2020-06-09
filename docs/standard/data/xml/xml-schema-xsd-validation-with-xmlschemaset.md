@@ -1,5 +1,6 @@
 ---
 title: Convalida di XML Schema (XSD) con XmlSchemaSet
+description: Informazioni su come convalidare i documenti XML rispetto a uno schema di XML Schema Definition Language (XSD), usando una classe XmlSchemaSet in .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
-ms.openlocfilehash: 1729380180d4440ac107885a39eff706c7fc8e5c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 995323d1882da13d45cdac516518d5b67845715a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290292"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594504"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>Convalida di XML Schema (XSD) con XmlSchemaSet
 

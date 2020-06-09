@@ -1,5 +1,6 @@
 ---
 title: Gestione degli errori di I/O in .NET
+description: Informazioni su come gestire gli errori di I/O in .NET. Eseguire il mapping di codici di errore alle eccezioni, gestire le eccezioni nelle operazioni di I/O e gestire IOException.
 ms.date: 08/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c592039b3b12eedcfceda45c2f54403a8e04b5d5
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 45f3951b727d3b615d8384541ff169e8840acab0
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242673"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599802"
 ---
 # <a name="handling-io-errors-in-net"></a>Gestione degli errori di I/O in .NET
 
@@ -71,7 +72,7 @@ Si noti che nel codice di gestione dell'eccezione, si dovrà gestire sempre per 
 
 Nel caso di <xref:System.IO.IOException>, è possibile ottenere altre informazioni sull'errore dalla proprietà [IOException.HResult](xref:System.Exception.HResult). Per convertire il valore HResult in un codice di errore Win32, si rimuovono i 16 bit superiori del valore da 32 bit. La tabella seguente elenca i codici di errore di cui potrebbe essere eseguito il wrapping in un'eccezione <xref:System.IO.IOException>.
 
-| HResult | Costante | Description |
+| HResult | Costante | Descrizione |
 | --- | --- | --- |
 | ERROR_SHARING_VIOLATION | 32 | Il nome del file è mancante oppure il file o la directory è in uso. |
 | ERROR_FILE_EXISTS | 80 | File già esistente. |
