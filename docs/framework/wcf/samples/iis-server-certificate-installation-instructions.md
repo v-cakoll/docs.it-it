@@ -2,12 +2,12 @@
 title: Istruzioni di installazione certificato server IIS (Internet Information Services)
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 300d689925d60998ef475ad63f3878bf6d066850
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 301a10c615a13a42e1a6e1b89d2724476ca4fbae
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989860"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594660"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Istruzioni di installazione certificato server IIS (Internet Information Services)
 Per eseguire gli esempi che comunicano in modo sicuro con IIS (Internet Information Services) è necessario creare e installare un certificato server.  
@@ -19,7 +19,7 @@ Per eseguire gli esempi che comunicano in modo sicuro con IIS (Internet Informat
 makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exchange -sk ServiceModelSamples-HTTPS-Key  
 ```  
   
-## <a name="step-2-installing-certificates"></a>Passaggio 2. Installazione dei certificati  
+## <a name="step-2-installing-certificates"></a>Passaggio 2: Installazione dei certificati  
  I passaggi necessari per installare i certificati appena creati dipendono dalla versione di IIS che si sta utilizzando.  
   
 #### <a name="to-install-iis-on-iis-51-windows-xp-and-iis-60-windows-server-2003"></a>Installazione di IIS su IIS 5.1 (Windows XP) e IIS 6.0 (Windows Server 2003)  
@@ -34,9 +34,9 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
 5. Completare la procedura guidata. Selezionare l'opzione per assegnare un certificato. Selezionare il certificato server HTTPS ServiceModelSamples nell'elenco di certificati visualizzati.  
   
-     ![Creazione guidata certificato IIS](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
+     ![Gestione guidata certificati IIS](media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   
-6. Testare l'accesso al servizio in un browser tramite l'indirizzo `https://localhost/servicemodelsamples/service.svc`HTTPS.  
+6. Testare l'accesso al servizio in un browser tramite l'indirizzo HTTPS `https://localhost/servicemodelsamples/service.svc` .  
   
 #### <a name="if-ssl-was-previously-configured-by-using-httpcfgexe"></a>Se SSL è stato precedentemente configurato utilizzando Httpcfg.exe  
   
@@ -65,7 +65,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 5. Selezionare **servicemodelsamples-https-server** dall'elenco a discesa **certificato SSL** e fare clic su **OK**.  
   
-6. Testare l'accesso al servizio in un browser tramite l'indirizzo `https://localhost/servicemodelsamples/service.svc`HTTPS.  
+6. Testare l'accesso al servizio in un browser tramite l'indirizzo HTTPS `https://localhost/servicemodelsamples/service.svc` .  
   
 > [!NOTE]
 > Dato che il certificato di prova appena installato non è un certificato attendibile, possono essere visualizzati avvisi di sicurezza di Internet Explorer aggiuntivi quando si visitano indirizzi Web locali protetti da questo certificato.  

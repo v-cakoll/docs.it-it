@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.RecoveredCoordinatorInvalidMetadata
 ms.date: 03/30/2017
 ms.assetid: 99ebe70b-8980-447f-b785-ecfcbdbaea72
-ms.openlocfilehash: 3a3323357e2be4c6986da4458d130dc67ca92df9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf7a7f25d6b7d46d8c32e9eb6221e28d1c1d4844
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997654"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596233"
 ---
 # <a name="microsofttransactionstransactionbridgerecoveredcoordinatorinvalidmetadata"></a>Microsoft.Transactions.TransactionBridge.RecoveredCoordinatorInvalidMetadata
 Trovato riferimento all'endpoint con metadati non validi o incompatibili in una voce del registro di ripristino del coordinatore.  
@@ -20,6 +20,6 @@ Trovato riferimento all'endpoint con metadati non validi o incompatibili in una 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Traccia](index.md)
+- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](using-tracing-to-troubleshoot-your-application.md)
+- [Amministrazione e diagnostica](../index.md)

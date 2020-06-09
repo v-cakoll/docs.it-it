@@ -10,12 +10,12 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: 7037daf299d7c750ab398c21c1d7ccb541620701
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6220365d5c43299a75d1e0fa8e46a7392b0ccaa2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943070"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590371"
 ---
 # <a name="saml-tokens-and-claims"></a>Attestazioni e token SAML
 I *token* SAML (Security Assertion Markup Language) sono rappresentazioni XML di attestazioni. Per impostazione predefinita, i token SAML Windows Communication Foundation (WCF) usano negli scenari di sicurezza federati vengono *emessi token*.  
@@ -31,13 +31,13 @@ I *token* SAML (Security Assertion Markup Language) sono rappresentazioni XML di
 4. La firma sul token SAML dimostra al componente che il servizio token di sicurezza ha rilasciato il token. La firma del messaggio creata con la chiave di prova dimostra al componente che il token è stato rilasciato al client.  
   
 ## <a name="from-claims-to-samlattributes"></a>Da attestazioni a SamlAttributes  
- In WCF, le istruzioni nei token SAML sono modellate come <xref:System.IdentityModel.Tokens.SamlAttribute> oggetti, che possono essere popolati direttamente <xref:System.IdentityModel.Claims.Claim> dagli oggetti, purché <xref:System.IdentityModel.Claims.Claim> l'oggetto abbia <xref:System.IdentityModel.Claims.Claim.Right%2A> una proprietà <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> di e <xref:System.IdentityModel.Claims.Claim.Resource%2A> la proprietà sia di tipo Digitare <xref:System.String>. Ad esempio:  
+ In WCF, le istruzioni nei token SAML sono modellate come <xref:System.IdentityModel.Tokens.SamlAttribute> oggetti, che possono essere popolati direttamente dagli <xref:System.IdentityModel.Claims.Claim> oggetti, purché l' <xref:System.IdentityModel.Claims.Claim> oggetto disponga di una <xref:System.IdentityModel.Claims.Claim.Right%2A> proprietà di <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> e la <xref:System.IdentityModel.Claims.Claim.Resource%2A> proprietà sia di tipo <xref:System.String> . Ad esempio:  
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  
   
 > [!NOTE]
-> Quando i token SAML vengono serializzati nei messaggi, quando sono rilasciati da un servizio token di sicurezza o quando sono presentati dai client ai servizi nell'ambito dell'autenticazione, la quota della dimensione massima del messaggio deve essere sufficientemente grande da contenere il token SAML e le altre parti del messaggio. Normalmente la quota della dimensione predefinita del messaggio è sufficiente. È tuttavia possibile, nei casi in cui un token SAML sia di grandi dimensioni perché contiene centinaia di attestazioni, che risulti necessario aumentare le quote per contenere il token serializzato. Per ulteriori informazioni, vedere [considerazioni sulla sicurezza per i dati](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+> Quando i token SAML vengono serializzati nei messaggi, quando sono rilasciati da un servizio token di sicurezza o quando sono presentati dai client ai servizi nell'ambito dell'autenticazione, la quota della dimensione massima del messaggio deve essere sufficientemente grande da contenere il token SAML e le altre parti del messaggio. Normalmente la quota della dimensione predefinita del messaggio è sufficiente. È tuttavia possibile, nei casi in cui un token SAML sia di grandi dimensioni perché contiene centinaia di attestazioni, che risulti necessario aumentare le quote per contenere il token serializzato. Per ulteriori informazioni, vedere [considerazioni sulla sicurezza per i dati](security-considerations-for-data.md).  
   
 ## <a name="from-samlattributes-to-claims"></a>Da SamlAttributes ad attestazioni  
  Quando i token SAML vengono ricevuti nei messaggi, le varie istruzioni contenute nel token SAML vengono trasformate in oggetti <xref:System.IdentityModel.Policy.IAuthorizationPolicy> inseriti in <xref:System.IdentityModel.Policy.AuthorizationContext>. Le attestazioni di ogni istruzione SAML sono restituite dalla proprietà <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> di <xref:System.IdentityModel.Policy.AuthorizationContext> e possono essere esaminate per determinare se autenticare e autorizzare l'utente.  
@@ -47,10 +47,10 @@ I *token* SAML (Security Assertion Markup Language) sono rappresentazioni XML di
 - <xref:System.IdentityModel.Policy.AuthorizationContext>
 - <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
 - <xref:System.IdentityModel.Claims.ClaimSet>
-- [Federazione](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Procedura: Creazione di un client federato](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Procedura: Configurare le credenziali in un Servizio federativo](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Gestione delle attestazioni e dell'autorizzazione con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
-- [Attestazioni e token](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
-- [Creazione di attestazioni e valori delle risorse](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
-- [Procedura: Creare un'attestazione personalizzata](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [Federazione](federation.md)
+- [Procedura: creare un client federato](how-to-create-a-federated-client.md)
+- [Procedura: configurare le credenziali in un servizio federativo](how-to-configure-credentials-on-a-federation-service.md)
+- [Gestione di attestazioni e autorizzazioni con il modello di identità](managing-claims-and-authorization-with-the-identity-model.md)
+- [Attestazioni e token](claims-and-tokens.md)
+- [Creazione di attestazioni e valori delle risorse](claim-creation-and-resource-values.md)
+- [Procedura: Creare un'attestazione personalizzata](../extending/how-to-create-a-custom-claim.md)

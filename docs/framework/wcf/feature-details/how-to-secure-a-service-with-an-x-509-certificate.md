@@ -1,25 +1,25 @@
 ---
-title: 'Procedura: Proteggere un servizio con un certificato X.509'
+title: 'Procedura: proteggere un servizio con un certificato X.509'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: 69db887bf8e7b51c4450c04bd1a08d3d952e84f7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 10d6db63368ee55040f85f922b9483982e8ff264
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643568"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596968"
 ---
-# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Procedura: Proteggere un servizio con un certificato X.509
-Protezione di un servizio con un certificato X.509 è una tecnica di base che utilizzano la maggior parte dei binding in Windows Communication Foundation (WCF). In questo argomento vengono illustrati i passaggi di configurazione di un servizio indipendente con un certificato X.509.  
+# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Procedura: proteggere un servizio con un certificato X.509
+La protezione di un servizio con un certificato X. 509 è una tecnica di base utilizzata dalla maggior parte delle associazioni in Windows Communication Foundation (WCF). In questo argomento vengono illustrati i passaggi di configurazione di un servizio indipendente con un certificato X.509.  
   
- Un prerequisito è un certificato valido utilizzabile per autenticare il server. Il certificato deve essere emesso al server da un autorità di certificazione attendibile. Se il certificato non è valido, nessun client che tenti di utilizzare il servizio lo reputerà attendibile e, di conseguenza, non verrà stabilita nessuna connessione. Per altre informazioni sull'uso dei certificati, vedere [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Un prerequisito è un certificato valido utilizzabile per autenticare il server. Il certificato deve essere emesso al server da un autorità di certificazione attendibile. Se il certificato non è valido, nessun client che tenti di utilizzare il servizio lo reputerà attendibile e, di conseguenza, non verrà stabilita nessuna connessione. Per ulteriori informazioni sull'utilizzo dei certificati, vedere [utilizzo dei certificati](working-with-certificates.md).  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>Per configurare un servizio con un certificato utilizzando codice.  
   
-1. Creare il contratto di servizio e il servizio implementato. Per altre informazioni, vedere [progettazione e implementazione di servizi](../../../../docs/framework/wcf/designing-and-implementing-services.md).  
+1. Creare il contratto di servizio e il servizio implementato. Per ulteriori informazioni, vedere [progettazione e implementazione di servizi](../designing-and-implementing-services.md).  
   
 2. Creare un'istanza della classe <xref:System.ServiceModel.WSHttpBinding> e impostarne la modalità sicura su <xref:System.ServiceModel.SecurityMode.Message>, come illustrato nel codice seguente.  
   
@@ -31,7 +31,7 @@ Protezione di un servizio con un certificato X.509 è una tecnica di base che ut
      [!code-csharp[C_SecureWithCertificate#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#2)]
      [!code-vb[C_SecureWithCertificate#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#2)]  
   
-4. Creare un'istanza della classe <xref:System.Uri> per l'indirizzo di base del servizio. Poiché il `WSHttpBinding` viene utilizzato il trasporto HTTP, l'identificatore URI (Uniform Resource) deve iniziare con lo schema, o Windows Communication Foundation (WCF) genera un'eccezione quando viene aperto il servizio.  
+4. Creare un'istanza della classe <xref:System.Uri> per l'indirizzo di base del servizio. Poiché `WSHttpBinding` utilizza il trasporto HTTP, il Uniform Resource Identifier (URI) deve iniziare con tale schema oppure Windows Communication Foundation (WCF) genererà un'eccezione quando il servizio viene aperto.  
   
      [!code-csharp[C_SecureWithCertificate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#3)]
      [!code-vb[C_SecureWithCertificate#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#3)]  
@@ -46,7 +46,7 @@ Protezione di un servizio con un certificato X.509 è una tecnica di base che ut
      [!code-csharp[C_SecureWithCertificate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#5)]
      [!code-vb[C_SecureWithCertificate#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#5)]  
   
-7. Facoltativo. Per recuperare metadati dal servizio, creare un nuovo oggetto <xref:System.ServiceModel.Description.ServiceMetadataBehavior> e impostare la proprietà <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> su `true`.  
+7. Facoltativa. Per recuperare metadati dal servizio, creare un nuovo oggetto <xref:System.ServiceModel.Description.ServiceMetadataBehavior> e impostare la proprietà <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> su `true`.  
   
      [!code-csharp[C_SecureWithCertificate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#6)]
      [!code-vb[C_SecureWithCertificate#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#6)]  
@@ -84,4 +84,4 @@ Protezione di un servizio con un certificato X.509 è una tecnica di base che ut
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Uso di certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Working with Certificates](working-with-certificates.md)

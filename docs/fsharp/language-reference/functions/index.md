@@ -1,13 +1,13 @@
 ---
 title: Funzioni
-description: Informazioni sulle funzioni in F# e su F# come supporta costrutti comuni di programmazione funzionale.
+description: 'Informazioni sulle funzioni in F # e su come F # supporta i costrutti di programmazione funzionale comuni.'
 ms.date: 05/16/2016
-ms.openlocfilehash: c6b8307f51ffcdc77fe4352b2305fca1f247ccbb
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e49183e0634dee1750757abadbfe9e9c824f51a8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423946"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596474"
 ---
 # <a name="functions"></a>Funzioni
 
@@ -24,7 +24,7 @@ let [inline] function-name parameter-list [ : return-type ] = function-body
 let rec function-name parameter-list = recursive-function-body
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 *Function-name* (nome_funzione) è un identificatore che rappresenta la funzione. *Parameter-list* (elenco_parametri) consiste di parametri successivi separati da spazi. È possibile specificare un tipo esplicito per ogni parametro, come illustrato nella sezione Parametri. Se non si specifica un tipo di argomento specifico, il compilatore prova a dedurre il tipo dal corpo della funzione. *Function-body* (corpo_funzione) è costituito da un'espressione. L'espressione che costituisce il corpo della funzione è in genere un'espressione composta che consiste di un numero di espressioni che terminano con un'espressione finale, che è il valore restituito. *Return-type* (tipo_restituito) è rappresentato dai due punti seguiti da un tipo ed è facoltativo. Se non si specifica il tipo del valore restituito in modo esplicito, il compilatore determina il tipo restituito dall'espressione finale.
 
@@ -36,9 +36,9 @@ let f x = x + 1
 
 Nell'esempio precedente, il nome della funzione è `f`, l'argomento è `x` ed è di tipo `int`, il corpo della funzione è `x + 1` e il valore restituito è di tipo `int`.
 
-Le funzioni possono essere contrassegnate `inline`. Per informazioni su `inline`, vedere [Funzioni inline](../functions/inline-functions.md).
+Le funzioni possono essere contrassegnate `inline`. Per informazioni su `inline`, vedere [Funzioni inline](inline-functions.md).
 
-## <a name="scope"></a>Scope
+## <a name="scope"></a>Ambito
 
 A qualsiasi livello di ambito diverso dall'ambito del modulo, non è un errore riusare un nome di funzione o un valore. Se si riusa un nome, il nome dichiarato successivamente sostituisce il nome dichiarato in precedenza. Tuttavia, nell'ambito di livello superiore in un modulo, i nomi devono essere univoci. Ad esempio, il codice seguente genera un errore quando viene visualizzato nell'ambito del modulo, ma non quando viene visualizzato all'interno di una funzione:
 
@@ -112,7 +112,7 @@ Verrà quindi specificato l'argomento aggiuntivo necessario per varie lunghezze 
 
 ## <a name="recursive-functions"></a>Funzioni ricorsive
 
-Le *funzioni ricorsive* sono funzioni che chiamano se stesse. Richiedono di specificare la parola chiave **rec** seguita dalla parola chiave **let**. È possibile richiamare la funzione ricorsiva dall'interno del corpo della funzione esattamente come si richiama qualsiasi chiamata di funzione. La funzione ricorsiva seguente calcola il numero *di Fibonacci*<sup></sup> . La sequenza dei numeri di Fibonacci è nota dall'antichità ed è una sequenza in cui ogni numero successivo è la somma di due numeri precedenti nella sequenza.
+Le *funzioni ricorsive* sono funzioni che chiamano se stesse. Richiedono di specificare la parola chiave **rec** seguita dalla parola chiave **let**. È possibile richiamare la funzione ricorsiva dall'interno del corpo della funzione esattamente come si richiama qualsiasi chiamata di funzione. La funzione ricorsiva seguente calcola il numero *di Fibonacci*<sup>th</sup> . La sequenza dei numeri di Fibonacci è nota dall'antichità ed è una sequenza in cui ogni numero successivo è la somma di due numeri precedenti nella sequenza.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
@@ -142,7 +142,7 @@ Un'*espressione lambda* è una funzione senza nome. Negli esempi precedenti, inv
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-Le espressioni lambda vengono definite usando la parola chiave `fun`. Un'espressione lambda è simile a una definizione di funzione, con la differenza che al posto del token `=`, viene usato il token `->` per separare l'elenco di argomenti dal corpo della funzione. Analogamente a una definizione di funzione regolare, i tipi di argomenti possono essere dedotti o specificati in modo esplicito e il tipo restituito dell'espressione lambda viene dedotto dal tipo dell'ultima espressione nel corpo. Per altre informazioni, vedere [Espressioni lambda: parola chiave `fun`](../functions/lambda-expressions-the-fun-keyword.md).
+Le espressioni lambda vengono definite usando la parola chiave `fun`. Un'espressione lambda è simile a una definizione di funzione, con la differenza che al posto del token `=`, viene usato il token `->` per separare l'elenco di argomenti dal corpo della funzione. Analogamente a una definizione di funzione regolare, i tipi di argomenti possono essere dedotti o specificati in modo esplicito e il tipo restituito dell'espressione lambda viene dedotto dal tipo dell'ultima espressione nel corpo. Per altre informazioni, vedere [Espressioni lambda: parola chiave `fun`](lambda-expressions-the-fun-keyword.md).
 
 ## <a name="function-composition-and-pipelining"></a>Composizione di funzioni e pipelining
 
@@ -205,4 +205,4 @@ let result4 = Pipeline2 2
 ## <a name="see-also"></a>Vedere anche
 
 - [Valori](../values/index.md)
-- [Riferimenti per il linguaggio F#](../index.md)
+- [Riferimenti per il linguaggio F #](../index.md)

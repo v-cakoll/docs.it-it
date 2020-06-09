@@ -3,12 +3,12 @@ title: Disinstalla strumento
 description: Panoramica dello strumento di disinstallazione di .NET Core, uno strumento guidato che consente la pulizia controllata degli SDK e dei runtime di .NET Core.
 author: sfoslund
 ms.date: 05/27/2020
-ms.openlocfilehash: 4e70fd3438b582bd5a0d6a52d7e58ed5e07f8811
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: dcfa12a3ec5fe0e8a29c5897ee4c71bfc7352eda
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446906"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590799"
 ---
 # <a name="net-core-uninstall-tool"></a>Strumento di disinstallazione di .NET Core
 
@@ -27,7 +27,7 @@ A causa di queste limitazioni, lo strumento potrebbe non essere in grado di disi
 
 ## <a name="install-the-tool"></a>Installare lo strumento
 
-È possibile scaricare lo strumento di disinstallazione di .NET Core da [qui](https://aka.ms/dotnet-core-uninstall-tool) e trovare il codice sorgente nel repository GitHub [DotNet/CLI-Lab](https://github.com/dotnet/cli-lab) .
+È possibile scaricare lo strumento di disinstallazione di .NET Core dalla [pagina delle versioni dello strumento](https://aka.ms/dotnet-core-uninstall-tool) e trovare il codice sorgente nel repository GitHub [DotNet/CLI-Lab](https://github.com/dotnet/cli-lab) .
 
 > [!NOTE]
 > Per disinstallare SDK e runtime di .NET Core, lo strumento richiede l'elevazione dei privilegi. Pertanto, deve essere installato in una directory protetta da scrittura, ad esempio *c:\Programmi* in Windows o */usr/local/bin* in MacOS. Vedere anche [accesso con privilegi elevati per i comandi DotNet](../tools/elevated-access.md). Per ulteriori informazioni, vedere le [istruzioni dettagliate](https://aka.ms/dotnet-core-uninstall-tool)per l'installazione.

@@ -2,12 +2,12 @@
 title: Esempio trasmissione feed
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: 7a887fa1eceac4d8ee323f03fd5bc536bb1dc579
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 551a97f3cc54915a831fc28eca6ae0ff23101e0b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143967"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589786"
 ---
 # <a name="streaming-feeds-sample"></a>Esempio trasmissione feed
 Questo esempio illustra come gestire feed che contengono numerosi elementi. Nel server, l'esempio illustra come rimandare la creazione di oggetti <xref:System.ServiceModel.Syndication.SyndicationItem> singoli all'interno del feed fino a immediatamente prima della scrittura dell'elemento nel flusso della rete.  
@@ -16,7 +16,7 @@ Questo esempio illustra come gestire feed che contengono numerosi elementi. Nel 
   
  Per dimostrare al meglio la funzionalità del flusso di diffusione API, questo esempio utilizza uno scenario piuttosto improbabile nel quale il server espone un feed che contiene un numero infinito di elementi. In questo caso, il server continua a generare nuovi elementi nel feed fino a determinare che il client ha letto un numero specificato di elementi dal feed (10, per impostazione predefinita). Per semplicità, sia il client che il server vengono implementati nello stesso processo e utilizzano un oggetto `ItemCounter` condiviso per tenere traccia del numero di elementi prodotti dal client. Il tipo `ItemCounter` esiste solo allo scopo di consentire allo scenario di esempio di terminare in modo pulito e non è un elemento principale dello schema illustrato.  
   
- Nella dimostrazione vengono utilizzati gli iteratori di Visual C, ad esempio il `yield return` costrutto della parola chiave. Per ulteriori informazioni sugli iteratori, vedere l'argomento "Utilizzo di iteratori" su MSDN.  
+ La dimostrazione usa gli iteratori di Visual C# (usando il `yield return` costrutto di parola chiave). Per ulteriori informazioni sugli iteratori, vedere l'argomento relativo all'utilizzo degli iteratori su MSDN.  
   
 ## <a name="service"></a>Service  
  Il servizio implementa un contratto <xref:System.ServiceModel.Web.WebGetAttribute> di base che è costituito da un'operazione, come mostra il codice seguente.  
@@ -65,7 +65,7 @@ public Atom10FeedFormatter StreamedFeed()
 }  
 ```  
   
- Di conseguenza, il flusso dell'elemento non viene mai memorizzato pienamente nel buffer. È possibile osservare questo comportamento `yield return` impostando un `ItemGenerator.GenerateItems()` punto di interruzione sull'istruzione all'interno del metodo e notando `StreamedFeed()` che questo punto di interruzione viene rilevato per la prima volta dopo che il servizio ha restituito il risultato del metodo.  
+ Di conseguenza, il flusso dell'elemento non viene mai memorizzato pienamente nel buffer. È possibile osservare questo comportamento impostando un punto di interruzione sull' `yield return` istruzione all'interno del `ItemGenerator.GenerateItems()` metodo e notando che il punto di interruzione viene rilevato per la prima volta dopo che il servizio ha restituito il risultato del `StreamedFeed()` metodo.  
   
 ## <a name="client"></a>Client  
  Il client in questo esempio utilizza un'implementazione personalizzata della classe <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> che rimanda la materializzazione di elementi singoli nel feed invece di memorizzarli nel buffer. Di seguito viene illustrata l'istanza personalizzata di `StreamedAtom10FeedFormatter`:  
@@ -97,27 +97,27 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 }  
 ```  
   
- Di conseguenza, ogni elemento non viene letto dalla rete fino a che l'applicazione client che attraversa i risultati di `ReadItems()` non è pronta a utilizzarli. È possibile osservare questo comportamento `yield return` impostando un `StreamedAtom10FeedFormatter.DelayReadItems()` punto di interruzione sull'istruzione all'interno di e `ReadFrom()` notando che questo punto di interruzione viene rilevato per la prima volta dopo il completamento della chiamata.  
+ Di conseguenza, ogni elemento non viene letto dalla rete fino a che l'applicazione client che attraversa i risultati di `ReadItems()` non è pronta a utilizzarli. È possibile osservare questo comportamento impostando un punto di interruzione sull' `yield return` istruzione all'interno di `StreamedAtom10FeedFormatter.DelayReadItems()` e notando che il punto di interruzione viene rilevato per la prima volta dopo il completamento della chiamata a `ReadFrom()` .  
   
  Nelle istruzioni seguenti viene illustrato come compilare ed eseguire l'esempio. Notare che anche se il server smette di generare elementi dopo che il client ha letto 10 elementi, l'output mostra che il client ne legge molti più di 10. Ciò avviene perché l'associazione di rete utilizzata dall'esempio trasmette dati in segmenti di quattro kilobyte (KB). Di conseguenza, il client riceve 4 KB di dati dell'elemento prima che abbia la possibilità di leggere il primo elemento. Si tratta di un comportamento normale (trasmettere dati HTTP in segmenti di dimensioni ragionevolmente grandi aumenta le prestazioni).  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Assicurarsi di aver eseguito la procedura di [installazione una tantera per Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](building-the-samples.md).  
   
-3. Per eseguire l'esempio in una configurazione su un singolo o più computer, seguire le istruzioni in Esecuzione di [Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](running-the-samples.md).  
   
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) Esempi per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) ed [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Feed di diagnostica autonomo](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)
+- [Feed di diagnostica autonomo](stand-alone-diagnostics-feed-sample.md)

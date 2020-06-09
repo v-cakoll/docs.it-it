@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Impostare una conferma della firma'
+title: 'Procedura: impostare una conferma della firma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,44 +8,44 @@ helpviewer_keywords:
 - signature confirmation
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-ms.openlocfilehash: 6f44ae5e3615df7f529a25f4097ef042feba544d
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 9423922753efee7aac32e430f97307c715e43464
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425429"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586921"
 ---
-# <a name="how-to-set-up-a-signature-confirmation"></a>Procedura: Impostare una conferma della firma
+# <a name="how-to-set-up-a-signature-confirmation"></a>Procedura: impostare una conferma della firma
 
-*Conferma della firma* è un meccanismo iniziatore del messaggio garantire che una risposta ricevuta sia stata generata in risposta al messaggio originale del mittente. La conferma della firma è definita nella specifica WS-Security 1.1. Se un endpoint supporta WS-Security 1.0, non è possibile utilizzare la conferma della firma.
+La *conferma della firma* è un meccanismo che consente a un iniziatore di messaggi di garantire che una risposta ricevuta sia stata generata in risposta al messaggio originale del mittente. La conferma della firma è definita nella specifica WS-Security 1.1. Se un endpoint supporta WS-Security 1.0, non è possibile utilizzare la conferma della firma.
 
-Nelle procedure seguenti viene illustrato come consentire la conferma della firma utilizzando un <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. È possibile utilizzare la stessa procedura con un <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>. La procedura è basata sui passaggi di base illustrati [come: Creare un'associazione personalizzata usando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).
+Nelle procedure seguenti viene illustrato come consentire la conferma della firma utilizzando un <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. È possibile utilizzare la stessa procedura con un <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>. La procedura si basa sui passaggi di base disponibili in [procedura: creare un'associazione personalizzata usando SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md).
 
 ### <a name="to-enable-signature-confirmation-in-code"></a>Per consentire la conferma della firma nel codice
 
 1. Creare un'istanza della classe <xref:System.ServiceModel.Channels.BindingElementCollection>.
 
-2. Creare un'istanza di <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> classe.
+2. Creare un'istanza della <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> classe.
 
 3. Impostare <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> su `true`.
 
 4. Aggiungere l'elemento di sicurezza alla raccolta di associazioni.
 
-5. Creare un'associazione personalizzata, come specificato in [come: Creare un'associazione personalizzata usando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).
+5. Creare un'associazione personalizzata, come specificato in [procedura: creare un'associazione personalizzata usando SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md).
 
 ### <a name="to-enable-signature-confirmation-in-configuration"></a>Per consentire la conferma della firma nella configurazione
 
-1. Aggiungere un elemento `<customBinding>` alla sezione`<bindings>` del file di configurazione.
+1. Aggiungere un elemento `<customBinding>` del file di configurazione.
 
 2. Aggiungere un elemento `<binding>` e impostare l'attributo del nome su un valore appropriato.
 
 3. Aggiungere un elemento di codifica appropriato. Nell'esempio seguente viene aggiunto un elemento `<TextMessageEncoding>`.
 
-4. Aggiungere un elemento figlio  `<security>`requireSignatureConfirmation e impostare l'attributo`requireSignatureConfirmation`true su`true`.
+4. Aggiungere un elemento figlio `<security>``requireSignatureConfirmation`.
 
-5. Facoltativo. Per consentire la conferma della firma durante il bootstrap, aggiungere un [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) elemento figlio e impostare il `requireSignatureConfirmation` attributo `true`.
+5. Facoltativa. Per abilitare la conferma della firma durante il bootstrap, aggiungere un [\<secureConversationBootstrap>](../../configure-apps/file-schema/wcf/secureconversationbootstrap.md) elemento figlio e impostare l' `requireSignatureConfirmation` attributo su `true` .
 
-6. Aggiungere un elemento di trasporto appropriato. L'esempio seguente aggiunge un' [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):
+6. Aggiungere un elemento di trasporto appropriato. Nell'esempio seguente viene aggiunto un [\<httpTransport>](../../configure-apps/file-schema/wcf/httptransport.md) :
 
     ```xml
     <bindings>
@@ -73,5 +73,5 @@ Nel codice seguente viene creata un'istanza di <xref:System.ServiceModel.Channel
 - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>
-- [Procedura: Creare un'associazione personalizzata usando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Procedura: Creare un elemento SecurityBindingElement per una modalità di autenticazione specificata](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [Procedura: creare un'associazione personalizzata usando SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Procedura: creare un elemento SecurityBindingElement per una modalità di autenticazione specificata](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

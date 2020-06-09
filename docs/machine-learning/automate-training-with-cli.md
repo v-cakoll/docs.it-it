@@ -1,14 +1,14 @@
 ---
 title: Automatizzare il training del modello con l'interfaccia della riga di comando ML.NET
 description: Informazioni su come usare lo strumento dell'interfaccia della riga di comando ML.NET per eseguire automaticamente il training del modello migliore dalla riga di comando.
-ms.date: 12/17/2019
+ms.date: 06/03/2020
 ms.custom: how-to, mlnet-tooling
-ms.openlocfilehash: 2e8bade898adfc3fc4af92c880b62c646343eb2f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d7c6102c2257be1daa613fde0edabce83d04b414
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212412"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589662"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>Automatizzare il training del modello con l'interfaccia della riga di comando ML.NET
 
@@ -33,24 +33,24 @@ Poiché questi asset si possono generare dal proprio set di dati senza scrivere 
 
 Attualmente, le attività di Machine Learning supportate dall'interfaccia della riga di comando di ML.NET sono:
 
-- `binary-classification`
-- `multiclass-classification`
-- `regression`
-- In futuro: altre attività di apprendimento automatico, ad esempio `recommendation`, `ranking`, `anomaly-detection`, `clustering`
+- classificazione (binaria e multiclasse)
+- Regressione
+- Suggerimento
+- Futuro: altre attività di Machine Learning, ad esempio classificazione delle immagini, rango, rilevamento di anomalie, clustering
 
-Esempio di utilizzo:
+Esempio di utilizzo (scenario di classificazione):
 
 ```console
-mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet classification --dataset "yelp_labelled.txt" --label-col 1 --has-header false --train-time 10
 ```
 
-![image](media/automate-training-with-cli/cli-model-generation.gif)
+![image](media/automate-training-with-cli/mlnet-classification-powershell.gif)
 
 È possibile eseguirlo nello stesso modo in *Windows PowerShell*, *MacOS/Linux Bash*o *Windows cmd*. Tuttavia, il completamento automatico in formato tabella (suggerimento dei parametri) non funzionerà nella *finestra di comando di Windows*.
 
 ## <a name="output-assets-generated"></a>Asset di output generati
 
-Il comando `auto-train` dell'interfaccia della riga di comando genera gli asset seguenti nella cartella di output:
+I comandi dell'attività ML nell'interfaccia della riga di comando generano gli asset seguenti nella cartella di output:
 
 - Un file ZIP di modello serializzato ("modello ottimale") pronto per l'uso nell'esecuzione di stime.
 - Soluzione C# con:
@@ -68,23 +68,15 @@ Quando si genera un modello "migliore" con lo strumento dell'interfaccia della r
 
 Queste metriche vengono riepilogate raggruppate per attività di Machine Learning, in modo che sia possibile comprendere la qualità del "modello migliore" generato automaticamente.
 
-### <a name="metrics-for-binary-classification-models"></a>Metriche per i modelli di classificazione binaria
+### <a name="metrics-for-classification-models"></a>Metriche per i modelli di classificazione
 
-Di seguito è visualizzato l'elenco delle metriche delle attività di apprendimento automatico per la classificazione binaria dei primi cinque modelli individuati dall'interfaccia della riga di comando:
-
-![image](media/automate-training-with-cli/cli-binary-classification-metrics.png)
-
-L'accuratezza è una metrica diffusa per i problemi di classificazione, tuttavia l'accuratezza non è sempre la metrica migliore per selezionare il modello migliore da come illustrato nei riferimenti seguenti. Vi sono casi in cui è necessario valutare la qualità del modello con metriche supplementari.
-
-Per esplorare e comprendere le metriche restituite dall'interfaccia della riga di comando, vedere [metriche di valutazione per la classificazione binaria](resources/metrics.md#evaluation-metrics-for-binary-classification).
-
-### <a name="metrics-for-multi-class-classification-models"></a>Metriche per i modelli di classificazione multiclasse
-
-Di seguito è visualizzato l'elenco delle metriche delle attività di apprendimento automatico per la classificazione multiclasse dei primi cinque modelli individuati dall'interfaccia della riga di comando:
+Di seguito viene visualizzato l'elenco delle metriche di classificazione per i primi cinque modelli trovati dall'interfaccia della riga di comando:
 
 ![image](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
-Per esplorare e comprendere le metriche restituite dall'interfaccia della riga di comando, vedere [metriche di valutazione per la classificazione multiclasse](resources/metrics.md#evaluation-metrics-for-multi-class-classification).
+ L'accuratezza è una metrica diffusa per i problemi di classificazione, tuttavia l'accuratezza non è sempre la metrica migliore per selezionare il modello migliore da come illustrato nei riferimenti seguenti. Vi sono casi in cui è necessario valutare la qualità del modello con metriche supplementari.
+
+Per esplorare e comprendere le metriche restituite dall'interfaccia della riga di comando, vedere [metriche di valutazione per la classificazione](resources/metrics.md#evaluation-metrics-for-multi-class-classification).
 
 ### <a name="metrics-for-regression-and-recommendation-models"></a>Metriche per i modelli di regressione e di raccomandazione
 
