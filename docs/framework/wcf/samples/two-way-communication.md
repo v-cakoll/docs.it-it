@@ -2,12 +2,12 @@
 title: Comunicazione bidirezionale
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-ms.openlocfilehash: 56f789fe185cb2885c215e9512e82ae2fbb64a36
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 291380d656b0e22c7fdf1cb291c45d05359a95c8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143759"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591267"
 ---
 # <a name="two-way-communication"></a>Comunicazione bidirezionale
 Questo esempio dimostra come eseguire comunicazioni transazionali bidirezionali in coda su MSQM. In questo esempio viene usata l'associazione `netMsmqBinding`. In questo caso, il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.  
@@ -15,7 +15,7 @@ Questo esempio dimostra come eseguire comunicazioni transazionali bidirezionali 
 > [!NOTE]
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
- Questo esempio è basato [sull'associazione MSMQ transazionale.](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
+ Questo esempio è basato sull' [associazione MSMQ transazionale](transacted-msmq-binding.md).  
   
  Nella comunicazione in coda, il client comunica al servizio usando una coda. Il client invia messaggi a una coda e il servizio riceve i messaggi dalla coda. Di conseguenza, per comunicare mediante una coda il servizio e il client non devono essere in esecuzione contemporaneamente.  
   
@@ -73,9 +73,9 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
  Il nome della coda MSMQ è specificato in una sezione appSettings del file di configurazione. L'endpoint per il servizio è definito nella sezione System.ServiceModel del file di configurazione.  
   
 > [!NOTE]
-> Il nome della coda MSMQ e l'indirizzo endpoint usano convenzioni di indirizzamento leggermente diverse. Nel nome della coda MSMQ viene usato un punto (.) per il computer locale e il separatore barra rovesciata nel percorso. L'indirizzo dell'endpoint di Windows Communication Foundation (WCF) specifica uno schema net.msmq: utilizza "localhost" per il computer locale e utilizza le barre nel percorso. Per leggere da una coda ospitata sul computer remoto, sostituire "." e "localhost" con il nome computer remoto.  
+> Il nome della coda MSMQ e l'indirizzo endpoint usano convenzioni di indirizzamento leggermente diverse. Nel nome della coda MSMQ viene usato un punto (.) per il computer locale e il separatore barra rovesciata nel percorso. L'indirizzo dell'endpoint Windows Communication Foundation (WCF) specifica uno schema net. MSMQ:, utilizza "localhost" per il computer locale e usa le barre nel percorso. Per leggere da una coda ospitata sul computer remoto, sostituire "." e "localhost" con il nome computer remoto.  
   
- Il servizio è indipendente. Quando si usa il trasporto MSMQ, la coda usata deve essere creata in anticipo. Questa operazione può essere eseguita manualmente o mediante il codice. In questo esempio, il servizio verifica l'esistenza della coda e la crea se necessario. Il nome della coda viene letto dal file di configurazione. L'indirizzo di base viene utilizzato dallo [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare il proxy per il servizio.  
+ Il servizio è indipendente. Quando si usa il trasporto MSMQ, la coda usata deve essere creata in anticipo. Questa operazione può essere eseguita manualmente o mediante il codice. In questo esempio, il servizio verifica l'esistenza della coda e la crea se necessario. Il nome della coda viene letto dal file di configurazione. L'indirizzo di base viene utilizzato dallo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) per generare il proxy per il servizio.  
 
 ```csharp
 // Host the service within this EXE console application.  
@@ -218,16 +218,16 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Assicurarsi di aver eseguito la procedura di [installazione una tantera per Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](building-the-samples.md).  
   
-3. Per eseguire l'esempio in una configurazione su un singolo o più computer, seguire le istruzioni in Esecuzione di [Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](running-the-samples.md).  
   
     > [!NOTE]
     > Se si usa Svcutil.exe per rigenerare la configurazione di questo esempio, assicurarsi di modificare i nomi degli endpoint nella configurazione client in modo che corrisponda al codice client.  
   
- Per impostazione predefinita con l'associazione <xref:System.ServiceModel.NetMsmqBinding>, la sicurezza del trasporto è abilitata. Esistono due proprietà rilevanti per la <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` sicurezza del trasporto MSMQ `Windows` e, per impostazione predefinita, la modalità di autenticazione è impostata su e il livello di protezione è impostato su `Sign`. Affinché MSMQ fornisca la funzionalità di autenticazione e firma, è necessario che faccia parte di un dominio e che sia installata l'opzione di integrazione di Active Directory per MSMQ. Se si esegue questo esempio in un computer che non soddisfà questi criteri si riceve un errore.  
+ Per impostazione predefinita con l'associazione <xref:System.ServiceModel.NetMsmqBinding>, la sicurezza del trasporto è abilitata. Esistono due proprietà rilevanti per la sicurezza del trasporto MSMQ <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> e, per <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign` . Affinché MSMQ fornisca la funzionalità di autenticazione e firma, è necessario che faccia parte di un dominio e che sia installata l'opzione di integrazione di Active Directory per MSMQ. Se si esegue questo esempio in un computer che non soddisfà questi criteri si riceve un errore.  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Per eseguire l'esempio in un computer appartenente a un gruppo di lavoro o privo di integrazione con Active Directory  
   
@@ -327,6 +327,6 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) Esempi per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) ed [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  

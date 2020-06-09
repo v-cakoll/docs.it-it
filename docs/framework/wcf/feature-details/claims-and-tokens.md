@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: 6d148bca56cfa4e28c2d3e6c0d9fcb564861a7cd
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: cbc97f2224bce640757e1cef88fe325db477cfd7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663465"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587027"
 ---
 # <a name="claims-and-tokens"></a>Attestazioni e token
 
-Questo argomento descrive i vari tipi di attestazione che Windows Communication Foundation (WCF) Crea dai token predefiniti supportati.
+In questo argomento vengono descritti i vari tipi di attestazione creati da Windows Communication Foundation (WCF) dai token predefiniti supportati.
 
 È possibile esaminare le attestazioni di una credenziale client usando le classi <xref:System.IdentityModel.Claims.ClaimSet> e <xref:System.IdentityModel.Claims.Claim>. L'elemento `ClaimSet` contiene una raccolta di oggetti `Claim`. Ogni oggetto `Claim` comprende i membri seguenti:
 
-- La proprietà <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> restituisce un URI (Uniform Resource Identifier) che specifica il tipo di attestazione che viene creato. Ad esempio, un tipo di attestazione può essere un'identificazione personale di un certificato, nel qual caso l'URI è `http://schemas.microsoft.com/ws/20005/05/identity/claims/thumprint`.
+- La proprietà <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> restituisce un URI (Uniform Resource Identifier) che specifica il tipo di attestazione che viene creato. Ad esempio, un tipo di attestazione può essere un'identificazione personale di un certificato, nel qual caso l'URI è `http://schemas.microsoft.com/ws/20005/05/identity/claims/thumprint` .
 
 - La proprietà <xref:System.IdentityModel.Claims.Claim.Right%2A> restituisce un URI che specifica il diritto dell'attestazione. I diritti predefiniti si trovano nella classe <xref:System.IdentityModel.Claims.Rights> (<xref:System.IdentityModel.Claims.Rights.Identity%2A>, <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>).
 
@@ -53,15 +53,15 @@ Quando la credenziale client è un certificato, la classe <xref:System.IdentityM
 
   - Un elemento `Claim` con una proprietà `ClaimType` con valore Thumbprint, una proprietà `Right` con valore PossessProperty e una proprietà `Resource` che corrisponde a una matrice di byte contenente l'identificazione personale del certificato.
 
-  - Attestazioni PossessProperty aggiuntive di vario tipo, tra cui X500DistinguishedName, Dns, Name, Upn e Rsa rappresentano le varie proprietà del certificato. La risorsa per l'attestazione Rsa è la chiave pubblica associata al certificato. **Nota** in cui il tipo di credenziale client è un certificato che il servizio esegue il mapping a un Windows dell'account, due `ClaimSet` gli oggetti vengono generati. Il primo contiene tutte le attestazioni relative all'account di Windows e il secondo contiene tutte le attestazioni relative al certificato.
+  - Attestazioni PossessProperty aggiuntive di vario tipo, tra cui X500DistinguishedName, Dns, Name, Upn e Rsa rappresentano le varie proprietà del certificato. La risorsa per l'attestazione RSA è la chiave pubblica associata al certificato. **Nota** Se il tipo di credenziale client è un certificato di cui il servizio esegue il mapping a un account di Windows, `ClaimSet` vengono generati due oggetti. Il primo contiene tutte le attestazioni relative all'account di Windows e il secondo contiene tutte le attestazioni relative al certificato.
 
 ## <a name="user-namepassword"></a>Nome utente/Password
 
-Quando la credenziale client è un nome utente/password (o equivalente) che non esegue il mapping a un account di Windows, l'oggetto `ClaimSet` risultante viene pubblicato dalla proprietà <xref:System.IdentityModel.Claims.ClaimSet.System%2A> statica della classe `ClaimSet`. Il `ClaimSet` contiene un `Identity` di attestazione di tipo <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> la cui risorsa è il nome utente del client fornito. Un'attestazione corrispondente ha una proprietà `Right` di tipo `PossessProperty`.
+Quando la credenziale client è un nome utente/password (o equivalente) che non esegue il mapping a un account di Windows, l'oggetto `ClaimSet` risultante viene pubblicato dalla proprietà <xref:System.IdentityModel.Claims.ClaimSet.System%2A> statica della classe `ClaimSet`. `ClaimSet`Contiene un' `Identity` attestazione di tipo la <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> cui risorsa è il nome utente fornito dal client. Un'attestazione corrispondente ha una proprietà `Right` di tipo `PossessProperty`.
 
 ## <a name="rsa-keys"></a>Chiavi RSA
 
-Quando viene usata una chiave RSA non associata a un certificato, l'oggetto risultante `ClaimSet` è autocertificato e contiene un `Identity` di attestazione di tipo <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> cui risorsa è la chiave RSA. Un'attestazione corrispondente ha una proprietà `Right` di tipo `PossessProperty`.
+Quando viene usata una chiave RSA non associata a un certificato, l'oggetto risultante `ClaimSet` è autocertificato e contiene un' `Identity` attestazione di tipo <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> la cui risorsa è la chiave RSA. Un'attestazione corrispondente ha una proprietà `Right` di tipo `PossessProperty`.
 
 ## <a name="saml"></a>SAML
 
@@ -69,7 +69,7 @@ Quando il client esegue l'autenticazione con un token SAML (Security Assertions 
 
 ## <a name="identity-claims-and-servicesecuritycontextisanonymous"></a>Attestazioni d'identità e ServiceSecurityContext.IsAnonymous
 
-Se nessuna del `ClaimSet` gli oggetti risultanti dalle credenziali client contengano un'attestazione con un `Right` dei `Identity,` il <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> restituisce proprietà `true`. Se sono presenti una o più di tali attestazioni, la proprietà `IsAnonymous` restituisce `false`.
+Se nessuno degli `ClaimSet` oggetti risultanti dalle credenziali client contiene un'attestazione con un valore `Right` di `Identity,` , la <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> proprietà restituisce `true` . Se sono presenti una o più di tali attestazioni, la proprietà `IsAnonymous` restituisce `false`.
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -77,4 +77,4 @@ Se nessuna del `ClaimSet` gli oggetti risultanti dalle credenziali client conten
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.Rights>
 - <xref:System.IdentityModel.Claims.ClaimTypes>
-- [Gestione delle attestazioni e dell'autorizzazione con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Gestione di attestazioni e autorizzazioni con il modello di identità](managing-claims-and-authorization-with-the-identity-model.md)

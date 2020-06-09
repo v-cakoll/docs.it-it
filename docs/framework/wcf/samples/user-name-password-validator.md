@@ -2,12 +2,12 @@
 title: Validator del nome utente e password
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: e66188cfe1874c4d4097f3f842fd19cfdd4c79f1
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 5fbca30ef2dff0aebc13bda12c06adfd1989ea20
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141282"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596513"
 ---
 # <a name="user-name-password-validator"></a>Validator del nome utente e password
 In questo esempio viene illustrato come implementare un validator di UserNamePassword personalizzato. Questo processo è utile nei casi in cui nessuna delle modalità di convalida UserNamePassword incorporate è appropriata per i requisiti dell'applicazione; ad esempio, quando le coppie di nome utente/password sono archiviate in un archivio esterno, ad esempio un database. In questo esempio viene illustrato un servizio con un validator personalizzato che verifica due particolari coppie di nome utente/password. Il cliente utilizza tale coppia di nome utente/password per l'autenticazione nel servizio.
@@ -17,7 +17,7 @@ In questo esempio viene illustrato come implementare un validator di UserNamePas
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) ed [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
   
@@ -32,7 +32,7 @@ In questo esempio viene illustrato come implementare un validator di UserNamePas
 
 - Il server viene autenticato tramite il certificato X.509 del server.
 
- Il servizio espone un singolo endpoint per la comunicazione con il servizio, definito utilizzando il file di configurazione, app. config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. Per impostazione predefinita, l'associazione viene `wsHttpBinding` configurata con uno standard che utilizza WS-Security e l'autenticazione del nome utente. Il comportamento del servizio specifica la modalità `Custom` per la convalida delle coppie nome utente/password client insieme al tipo di classe del validator. Il comportamento specifica inoltre il certificato server mediante l'elemento `serviceCertificate`. Il certificato del server deve contenere lo stesso valore per l' `SubjectName` oggetto `findValue` nel [ \<>ServiceCertificate ](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
+ Il servizio espone un singolo endpoint per la comunicazione con il servizio, definito utilizzando il file di configurazione, app. config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. Per impostazione predefinita, l'associazione viene configurata con uno standard `wsHttpBinding` che utilizza WS-Security e l'autenticazione del nome utente. Il comportamento del servizio specifica la modalità `Custom` per la convalida delle coppie nome utente/password client insieme al tipo di classe del validator. Il comportamento specifica inoltre il certificato server mediante l'elemento `serviceCertificate`. Il certificato del server deve contenere lo stesso valore per l'oggetto `SubjectName` `findValue` in [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) .
 
 ```xml
 <system.serviceModel>
@@ -279,7 +279,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
 #### <a name="to-set-up-and-build-the-sample"></a>Per impostare e compilare l'esempio
 
-1. Per compilare la soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+1. Per compilare la soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](building-the-samples.md).
 
 2. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni seguenti.
 

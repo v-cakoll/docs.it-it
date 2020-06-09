@@ -2,18 +2,18 @@
 title: Creazione di tracce di codice utente
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 93da2eb74705a0581923d0317315e628f374be3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8b2031165a83e24ba15a2fcf847a170f47e696a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998133"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589292"
 ---
 # <a name="emitting-user-code-traces"></a>Creazione di tracce di codice utente
 
-Oltre ad abilitare la traccia nella configurazione per raccogliere dati di strumentazione generati da Windows Communication Foundation (WCF), è possibile creare tracce a livello di programmazione nel codice utente. In questo modo è possibile creare attivamente dati di strumentazione che possono essere successivamente usati a scopo diagnostico. In questo argomento viene illustrata la procedura da seguire.
+Oltre ad abilitare la traccia nella configurazione per raccogliere i dati di strumentazione generati da Windows Communication Foundation (WCF), è anche possibile creare tracce a livello di codice nel codice utente. In questo modo è possibile creare attivamente dati di strumentazione che possono essere successivamente usati a scopo diagnostico. In questo argomento viene illustrata la procedura da seguire.
 
-Inoltre, il [estendendo traccia](../../../../../docs/framework/wcf/samples/extending-tracing.md) esempio include tutto il codice illustrato nelle sezioni seguenti.
+Inoltre, l'esempio di [estensione della traccia](../../samples/extending-tracing.md) include tutto il codice illustrato nelle sezioni seguenti.
 
 ## <a name="creating-a-trace-source"></a>Creazione di un'origine di traccia
 
@@ -72,9 +72,9 @@ Trace.CorrelationManager.ActivityId = oldID;
 Se si imposta l'attributo `propagateActivity` su `true` per l'origine di traccia `System.ServiceModel` in entrambi i file di configurazione del client e del servizio, l'elaborazione del servizio per la richiesta Add si verifica nella stessa attività definita nel client. Se il servizio definisce attività e trasferimenti specifici, le tracce del servizio non vengono visualizzate nell'attività propagata dal client. Vengono invece visualizzate in un'attività correlata mediante tracce di trasferimento all'attività il cui ID viene propagato dal client.
 
 > [!NOTE]
-> Se il `propagateActivity` attributo è impostato su `true` sia il client di servizio, l'attività di ambiente nell'ambito dell'operazione del servizio è impostata da WCF.
+> Se l' `propagateActivity` attributo è impostato `true` su sia nel client che nel servizio, l'attività di ambiente nell'ambito dell'operazione del servizio viene impostata da WCF.
 
-È possibile usare il codice seguente per verificare se un'attività è stata impostata nell'ambito da WCF.
+È possibile utilizzare il codice seguente per verificare se un'attività è stata impostata nell'ambito da WCF.
 
 ```csharp
 // Check if an activity was set in scope by WCF, if it was
@@ -109,13 +109,13 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
 
 ## <a name="viewing-user-traces-in-the-service-trace-viewer-tool"></a>Visualizzazione di tracce utente nello strumento di visualizzazione delle tracce dei servizi
 
-In questa sezione è riportate le schermate relative alle tracce generate eseguendo il [estendendo Tracing](../../../../../docs/framework/wcf/samples/extending-tracing.md) di esempio, quando viene visualizzato utilizzando il [strumento Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).
+In questa sezione sono contenute le schermate delle tracce generate eseguendo l'esempio di [estensione della traccia](../../samples/extending-tracing.md) , quando vengono visualizzate tramite lo [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer. exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md).
 
-Nel diagramma seguente, l'attività "Add request" creata in precedenza viene selezionato nel Pannello di sinistra. L'attività è riportata insieme ad attività di operazioni matematiche (Divide, Subtract, Multiply) che costituiscono l'applicazione client. Il codice utente ha definito una nuova attività per consentire a ogni operazione di isolare potenziali occorrenze di errore in richieste diverse.
+Nel diagramma seguente l'attività "Aggiungi richiesta" creata in precedenza è selezionata nel riquadro sinistro. L'attività è riportata insieme ad attività di operazioni matematiche (Divide, Subtract, Multiply) che costituiscono l'applicazione client. Il codice utente ha definito una nuova attività per consentire a ogni operazione di isolare potenziali occorrenze di errore in richieste diverse.
 
-Per illustrare l'utilizzo di trasferimenti nel [estendendo traccia](../../../../../docs/framework/wcf/samples/extending-tracing.md) esempio, un'attività di calcolo che incapsula le quattro richieste di operazione viene anche creata. Per ogni richiesta si verifica un trasferimento dall'attività di calcolo all'attività di richiesta e viceversa (nella figura la traccia è evidenziata nel riquadro in alto a destra).
+Per illustrare l'utilizzo dei trasferimenti nell'esempio [Extending Tracing](../../samples/extending-tracing.md) , viene creata anche un'attività Calculator che incapsula le quattro richieste di operazione. Per ogni richiesta si verifica un trasferimento dall'attività di calcolo all'attività di richiesta e viceversa (nella figura la traccia è evidenziata nel riquadro in alto a destra).
 
-Quando si seleziona un'attività nel riquadro sinistro, le tracce incluse da questa attività vengono mostrate nel riquadro in alto a destra. Se `propagateActivity` è `true` in ogni endpoint nel percorso della richiesta, le tracce contenute nell'attività di richiesta provengono da tutti i processi che fanno parte della richiesta. In questo esempio, nella quarta colonna del riquadro sono visualizzate tracce relative a entrambi il client e il servizio.
+Quando si seleziona un'attività nel riquadro sinistro, le tracce incluse da questa attività vengono mostrate nel riquadro in alto a destra. Se `propagateActivity` si trova `true` a ogni endpoint nel percorso della richiesta, le tracce nell'attività di richiesta proverranno da tutti i processi che partecipano alla richiesta. In questo esempio, nella quarta colonna del riquadro sono visualizzate tracce relative a entrambi il client e il servizio.
 
 Questa attività mostra l'ordine di elaborazione seguente:
 
@@ -131,24 +131,24 @@ Tutte queste tracce vengono create a livello di informazioni. Facendo clic su un
 
 Nel diagramma seguente è inoltre possibile vedere tracce di trasferimento da e verso l'attività di calcolo, nonché due coppie di tracce Start e Stop per ogni attività di richiesta, una per il client e una per il servizio (una per ogni origine di traccia).
 
-![Visualizzatore di tracce: Creazione utente&#45;tracce di codice](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd") elenco di attività dall'ora di creazione (riquadro sinistro) e alle relative attività annidate (riquadro superiore destro)
+![Visualizzatore di tracce: creazione di tracce di codice&#45;utente](media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd") Elenco di attività in base all'ora di creazione (riquadro sinistro) e alle relative attività annidate (riquadro superiore destro)
 
-Se il codice del servizio genera un'eccezione che determina a sua volta la generazione di un'eccezione nel client (ad esempio, quando il client non ha ottenuto la risposta alla richiesta), entrambi i messaggi di errore o di avviso del client e del servizio vengono restituiti nella stessa attività per correlazione diretta. Nell'immagine seguente, il servizio genera un'eccezione indicante "il servizio rifiuta di elaborare la richiesta nel codice utente". Anche il client genera un'eccezione indicante "il server non è riuscito a elaborare la richiesta a causa di un errore interno".
+Se il codice del servizio genera un'eccezione che determina a sua volta la generazione di un'eccezione nel client (ad esempio, quando il client non ha ottenuto la risposta alla richiesta), entrambi i messaggi di errore o di avviso del client e del servizio vengono restituiti nella stessa attività per correlazione diretta. Nell'immagine seguente il servizio genera un'eccezione che indica "il servizio rifiuta di elaborare la richiesta nel codice utente". Il client genera inoltre un'eccezione che indica che il server non è stato in grado di elaborare la richiesta a causa di un errore interno.
 
-Le immagini seguenti viene illustrato che gli errori tra gli endpoint per una determinata richiesta vengono visualizzati nella stessa attività se è stata propagata l'id attività:
+Le immagini seguenti mostrano che gli errori tra gli endpoint per una determinata richiesta vengono visualizzati nella stessa attività se l'ID attività della richiesta è stato propagato:
 
-![Screenshot che mostra gli errori tra gli endpoint per una determinata richiesta.](./media/emitting-user-code-traces/trace-viewer-endpoint-errors.gif)
+![Screenshot che Mostra gli errori tra gli endpoint per una determinata richiesta.](./media/emitting-user-code-traces/trace-viewer-endpoint-errors.gif)
 
 Facendo doppio clic sull'attività Multiply nel riquadro sinistro è possibile visualizzare il grafico seguente, con le tracce relative all'attività Multiply per ogni processo coinvolto. Si può notare un avviso verificatosi inizialmente nel servizio (eccezione generata), seguito da avvisi ed errori nel client in quanto la richiesta non è stata elaborata. Si può pertanto presupporre la relazione di errore causale tra gli endpoint e derivare la causa radice dell'errore.
 
-L'immagine seguente mostra una visualizzazione grafico della correlazione tra errori:
+La figura seguente mostra una visualizzazione grafico della correlazione degli errori:
 
-![Screenshot che mostra la visualizzazione del grafico della correlazione degli errori.](./media/emitting-user-code-traces/trace-viewer-error-correlation.gif)
+![Screenshot che mostra la visualizzazione grafico della correlazione degli errori.](./media/emitting-user-code-traces/trace-viewer-error-correlation.gif)
 
-Per ottenere le tracce precedenti è stato impostato `ActivityTracing` per le origini di traccia dell'utente e `propagateActivity=true` per l'origine di traccia `System.ServiceModel`. Non è stato impostato `ActivityTracing` per l'origine di traccia `System.ServiceModel` per attivare la propagazione di attività codice utente-codice utente. (Quando la traccia attività ServiceModel è attivata, l'ID attività definito nel client non viene propagato fino al codice utente del servizio; I trasferimenti, tuttavia, mettere in correlazione le attività di codice utente di client e servizio per le attività WCF intermedi.)
+Per ottenere le tracce precedenti è stato impostato `ActivityTracing` per le origini di traccia dell'utente e `propagateActivity=true` per l'origine di traccia `System.ServiceModel`. Non è stato impostato `ActivityTracing` per l'origine di traccia `System.ServiceModel` per attivare la propagazione di attività codice utente-codice utente. Quando la traccia attività ServiceModel è attiva, l'ID attività definito nel client non viene propagato fino al codice utente del servizio. I trasferimenti, tuttavia, mettono in correlazione le attività del client e del codice utente del servizio alle attività WCF intermedie.
 
 La definizione delle attività e la propagazione dell'ID attività consentono di eseguire la correlazione diretta degli errori sui vari endpoint. In questo modo è possibile individuare più rapidamente la causa radice di un errore.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Estensione della funzionalità di traccia](../../../../../docs/framework/wcf/samples/extending-tracing.md)
+- [Estensione della funzionalità di traccia](../../samples/extending-tracing.md)

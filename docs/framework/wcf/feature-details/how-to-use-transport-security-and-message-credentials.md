@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Usare la sicurezza del trasporto e le credenziali per il messaggio'
+title: 'Procedura: usare le funzionalità di sicurezza a livello di trasporto e le credenziali a livello di messaggio'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: f9c90ac93a27f90479ee7225f62afb98a5000fe9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f49c0eb46141081b91100a5ae1869cbcf556e353
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047175"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579384"
 ---
-# <a name="how-to-use-transport-security-and-message-credentials"></a>Procedura: Usare la sicurezza del trasporto e le credenziali per il messaggio
-Protezione di un servizio con le credenziali di trasporto e messaggio utilizza il meglio delle modalità di sicurezza di trasporto e messaggio di Windows Communication Foundation (WCF). Complessivamente, le funzionalità di sicurezza a livello di trasporto garantiscono integrità e riservatezza, mentre le funzionalità di sicurezza a livello di messaggio offrono vari tipi di credenziali non disponibili quando si utilizzano meccanismi di sicurezza basati esclusivamente sul livello di trasporto. In questo argomento vengono illustrati i passaggi di base per implementare il trasporto con credenziali messaggio utilizzando le associazioni <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding>. Per altre informazioni sull'impostazione della modalità di sicurezza, vedere [come: Impostare la modalità di sicurezza](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+# <a name="how-to-use-transport-security-and-message-credentials"></a>Procedura: usare le funzionalità di sicurezza a livello di trasporto e le credenziali a livello di messaggio
+La protezione di un servizio con credenziali di trasporto e di messaggio utilizza il meglio delle modalità di sicurezza del trasporto e dei messaggi in Windows Communication Foundation (WCF). Complessivamente, le funzionalità di sicurezza a livello di trasporto garantiscono integrità e riservatezza, mentre le funzionalità di sicurezza a livello di messaggio offrono vari tipi di credenziali non disponibili quando si utilizzano meccanismi di sicurezza basati esclusivamente sul livello di trasporto. In questo argomento vengono illustrati i passaggi di base per implementare il trasporto con credenziali messaggio utilizzando le associazioni <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding>. Per altre informazioni sull'impostazione della modalità di sicurezza, vedere [procedura: impostare la modalità di sicurezza](../how-to-set-the-security-mode.md).  
   
  Quando si imposta la modalità di sicurezza su `TransportWithMessageCredential`, il trasporto determina il meccanismo di sicurezza a livello di trasporto effettivamente utilizzato. Nel caso del protocollo HTTP, il meccanismo è Secure Sockets Layer (SSL) su HTTP (HTTPS). Nel caso del protocollo TCP, invece, il meccanismo è SSL su TCP oppure Windows.  
   
@@ -25,11 +25,11 @@ Protezione di un servizio con le credenziali di trasporto e messaggio utilizza i
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>Per utilizzare l'associazione WSHttpBinding con un certificato allo scopo di fornire la protezione a livello di trasporto (in codice)  
   
-1. Usare lo strumento HttpCfg.exe per associare un certificato SSL a una porta del computer. Per altre informazioni, vedere [Procedura: Configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1. Usare lo strumento HttpCfg.exe per associare un certificato SSL a una porta del computer. Per altre informazioni, vedere [procedura: configurare una porta con un certificato SSL](how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 2. Creare un'istanza della classe <xref:System.ServiceModel.WSHttpBinding> e impostare la proprietà <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> su <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
-3. Impostare la proprietà <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> su un valore appropriato. (Per altre informazioni, vedere [la selezione di un tipo di credenziale](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) Nel codice seguente viene utilizzato il valore <xref:System.ServiceModel.MessageCredentialType.Certificate>.  
+3. Impostare la proprietà <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> su un valore appropriato. Per ulteriori informazioni, vedere [selezione di un tipo di credenziale](selecting-a-credential-type.md). Il codice seguente usa il <xref:System.ServiceModel.MessageCredentialType.Certificate> valore.  
   
 4. Creare un'istanza della classe <xref:System.Uri> con un indirizzo di base appropriato. Si noti che l'indirizzo deve utilizzare lo schema "HTTPS" e deve contenere il nome effettivo del computer e il numero della porta a cui il certificato SSL è associato. In alternativa è possibile impostare l'indirizzo di base in configurazione.  
   
@@ -84,9 +84,9 @@ Protezione di un servizio con le credenziali di trasporto e messaggio utilizza i
   
 #### <a name="to-use-the-wshttpbinding"></a>Per utilizzare l'associazione WSHttpBinding  
   
-1. Configurare il computer con un certificato SSL associato a una porta. (Per altre informazioni, vedere [come: Configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Non è necessario impostare una <`transport`> valore dell'elemento con questa configurazione.  
+1. Configurare il computer con un certificato SSL associato a una porta. Per altre informazioni, vedere [procedura: configurare una porta con un certificato SSL](how-to-configure-a-port-with-an-ssl-certificate.md). Non è necessario impostare un <`transport`> valore dell'elemento con questa configurazione.  
   
-2. Specificare il tipo di credenziale client della protezione a livello di messaggio. L'esempio seguente imposta la `clientCredentialType` attributo del <`message`> elemento `UserName`.  
+2. Specificare il tipo di credenziale client della protezione a livello di messaggio. Nell'esempio seguente viene impostato l' `clientCredentialType` attributo dell' `message` elemento <> su `UserName` .  
   
     ```xml  
     <wsHttpBinding>  
@@ -115,13 +115,13 @@ Protezione di un servizio con le credenziali di trasporto e messaggio utilizza i
     </behaviors>  
     ```  
   
-2. Aggiungere un [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) alla sezione delle associazioni  
+2. Aggiungere un [\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md) alla sezione bindings  
   
 3. Aggiungere un elemento di associazione e quindi impostare l'attributo `name` su un valore appropriato.  
   
-4. Aggiungere un <`security`> e impostare il `mode` dell'attributo `TransportWithMessageCredential`.  
+4. Aggiungere un `security` elemento <> e impostare l' `mode` attributo su `TransportWithMessageCredential` .  
   
-5. Aggiungere un <`message>` e impostare il `clientCredentialType` attributo su un valore appropriato.  
+5. Aggiungere un `message>` elemento <e impostare l' `clientCredentialType` attributo su un valore appropriato.  
   
     ```xml  
     <bindings>  
@@ -137,15 +137,15 @@ Protezione di un servizio con le credenziali di trasporto e messaggio utilizza i
   
 #### <a name="to-use-the-nettcpbinding-with-windows-for-transport-security"></a>Per utilizzare l'associazione NetTcpBinding con Windows allo scopo di fornire la protezione a livello di trasporto  
   
-1. Aggiungere un [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) alla sezione delle associazioni,  
+1. Aggiungere un [\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md) alla sezione bindings,  
   
-2. Aggiungere un <`binding`> e impostare il `name` attributo su un valore appropriato.  
+2. Aggiungere un `binding` elemento <> e impostare l' `name` attributo su un valore appropriato.  
   
-3. Aggiungere un <`security`> e impostare il `mode` dell'attributo `TransportWithMessageCredential`.  
+3. Aggiungere un `security` elemento <> e impostare l' `mode` attributo su `TransportWithMessageCredential` .  
   
-4. Aggiungere un <`transport`> e impostare il `clientCredentialType` dell'attributo `Windows`.  
+4. Aggiungere un `transport` elemento <> e impostare l' `clientCredentialType` attributo su `Windows` .  
   
-5. Aggiungere un <`message`> e impostare il `clientCredentialType` attributo su un valore appropriato. Nel codice seguente il valore viene impostato su un certificato.  
+5. Aggiungere un `message` elemento <> e impostare l' `clientCredentialType` attributo su un valore appropriato. Nel codice seguente il valore viene impostato su un certificato.  
   
     ```xml  
     <bindings>  
@@ -162,6 +162,6 @@ Protezione di un servizio con le credenziali di trasporto e messaggio utilizza i
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Impostare la modalità di sicurezza](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
-- [Protezione dei servizi](../../../../docs/framework/wcf/securing-services.md)
-- [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Procedura: Impostare la modalità di sicurezza](../how-to-set-the-security-mode.md)
+- [Protezione dei servizi](../securing-services.md)
+- [Securing Services and Clients](securing-services-and-clients.md)

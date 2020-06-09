@@ -2,24 +2,24 @@
 title: Protezione dei messaggi mediante protezione a livello di messaggio
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: a6b062d0d6a74ce2a2ff9afa7e8a0a18853dbd22
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 70c645101033c31da01d79f624ab03ce328dd3a6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746439"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589981"
 ---
 # <a name="securing-messages-using-message-security"></a>Protezione dei messaggi mediante protezione a livello di messaggio
-In questa sezione viene illustrata la sicurezza del messaggio WCF quando si utilizza <xref:System.ServiceModel.NetMsmqBinding>.  
+In questa sezione viene illustrata la sicurezza del messaggio WCF quando si utilizza <xref:System.ServiceModel.NetMsmqBinding> .  
   
 > [!NOTE]
-> Prima di leggere questo argomento, è consigliabile leggere i [concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
+> Prima di leggere questo argomento, è consigliabile leggere i [concetti relativi alla sicurezza](security-concepts.md).  
   
  Nella figura seguente viene illustrato un modello concettuale di comunicazione in coda con WCF. L'illustrazione e la terminologia vengono utilizzate nella spiegazione  
   
  dei concetti della protezione del trasporto.  
   
- ![Diagramma dell'applicazione in coda](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Queue-Figure")  
+ ![Diagramma di applicazioni in coda](media/distributed-queue-figure.jpg "Distributed-Queue-Figure")  
   
  Quando si inviano messaggi in coda tramite WCF, il messaggio WCF viene allegato come corpo del messaggio di Accodamento messaggi (MSMQ). Mentre la protezione del trasporto protegge l'intero messaggio MSMQ, la protezione del messaggio, o SOAP, protegge il corpo del messaggio MSMQ.  
   
@@ -34,7 +34,7 @@ In questa sezione viene illustrata la sicurezza del messaggio WCF quando si util
   
  Contenuto della sezione vengono illustrati i diversi tipi di credenziali e viene spiegato come utilizzarli con le code.  
   
-### <a name="certificate"></a>Certificate  
+### <a name="certificate"></a>Certificato  
  Il tipo di credenziale del certificato utilizza un certificato X.509 per identificare il servizio e il client.  
   
  In uno scenario tipico il client e il servizio ricevono un certificato valido rilasciato da un'autorità di certificazione attendibile. La connessione viene quindi stabilita, il client autentica la validità del servizio utilizzando il certificato del servizio per decidere se il servizio è attendibile. Analogamente il servizio utilizza il certificato del client per verificare l'attendibilità del client.  
@@ -43,7 +43,7 @@ In questa sezione viene illustrata la sicurezza del messaggio WCF quando si util
   
  Nei computer che eseguono Windows i certificati sono contenuti in vari tipi di archivio. Per ulteriori informazioni sui diversi archivi, vedere [archivi certificati](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).  
   
-### <a name="windows"></a>WINDOWS  
+### <a name="windows"></a>Windows  
  Il tipo di credenziale del messaggio di Windows utilizza il protocollo Kerberos.  
   
  Il protocollo Kerberos è un meccanismo di sicurezza che esegue l'autenticazione degli utenti in un dominio e consente agli utenti autenticati di stabilire una connessione protetta con le altre entità del dominio.  
@@ -65,7 +65,7 @@ In questa sezione viene illustrata la sicurezza del messaggio WCF quando si util
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protezione dei messaggi mediante la sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
-- [Sicurezza dei messaggi nell'accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
-- [Concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Protezione dei messaggi mediante protezione del trasporto](securing-messages-using-transport-security.md)
+- [Sicurezza dei messaggi nell'accodamento messaggi](../samples/message-security-over-message-queuing.md)
+- [Concetti relativi alla sicurezza](security-concepts.md)
+- [Securing Services and Clients](securing-services-and-clients.md)

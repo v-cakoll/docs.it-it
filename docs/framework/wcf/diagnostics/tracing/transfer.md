@@ -2,18 +2,18 @@
 title: Trasferimento
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: e0ebfff97cd33e7a588a1ab92399a97a0fbec039
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 52b0cf35a2f8bab17252d3711f3143738c2bc39c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185702"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587768"
 ---
 # <a name="transfer"></a>Trasferimento
-In questo argomento viene descritto il trasferimento nel modello di traccia delle attività di Windows Communication Foundation (WCF).  
+In questo argomento viene descritto il trasferimento nel modello di traccia attività Windows Communication Foundation (WCF).  
   
 ## <a name="transfer-definition"></a>Definizione di trasferimento  
- I trasferimenti tra le attività rappresentano le relazioni causali tra eventi nelle attività correlate all'interno di endpoint. Due attività sono correlate con i trasferimenti quando controllano i flussi tra queste attività, ad esempio, una chiamata al metodo che supera i limiti di attività. In WCF, quando i byte sono in ingresso nel servizio, l'attività Listen At viene trasferita all'attività Receive Bytes in cui viene creato l'oggetto messaggio. Per un elenco degli scenari di analisi end-to-end e della rispettiva progettazione di attività e tracciatura, vedere Scenari di [traccia end-to-end](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
+ I trasferimenti tra le attività rappresentano le relazioni causali tra eventi nelle attività correlate all'interno di endpoint. Due attività sono correlate con i trasferimenti quando controllano i flussi tra queste attività, ad esempio, una chiamata al metodo che supera i limiti di attività. In WCF, quando i byte sono in ingresso nel servizio, l'attività Listen at viene trasferita all'attività Receive bytes in cui viene creato l'oggetto Message. Per un elenco degli scenari di traccia end-to-end e la rispettiva attività e progettazione di traccia, vedere [scenari di traccia end-to-end](end-to-end-tracing-scenarios.md).  
   
  Per emettere tracce di trasferimento, usare l'impostazione `ActivityTracing` nell'origine di traccia, come illustrato nel codice di configurazione seguente.  
   
@@ -26,7 +26,7 @@ In questo argomento viene descritto il trasferimento nel modello di traccia dell
   
  Una traccia di trasferimento viene emessa dall'attività M all'attività N quando è presente un flusso di controllo tra M e N. N, ad esempio, esegue un lavoro per M a causa di una chiamata al metodo che attraversa i limiti delle attività. N potrebbe esistere già o può essere stato creato. N viene generato da M quando N è una nuova attività che esegue dei lavori per M.  
   
- Un trasferimento da M a N potrebbe non essere seguito da un trasferimento da N a M. Ciò accade perché M può generare lavoro in N e non tiene traccia di quando N lo completa. Di fatto, M può terminare prima che N completi l'attività. Ciò si verifica nell'attività "Open ServiceHost" (M) che genera le attività del listener (N) e quindi termina. Un ritrasferimento da N a M significa che N ha completato il lavoro correlato a M.  
+ Un trasferimento da M a N potrebbe non essere seguito da un trasferimento da N a M. Ciò accade perché M può generare lavoro in N e non tiene traccia di quando N lo completa. Di fatto, M può terminare prima che N completi l'attività. Questo errore si verifica nell'attività "Open ServiceHost" (M) che genera le attività del listener (N) e quindi termina. Un ritrasferimento da N a M significa che N ha completato il lavoro correlato a M.  
   
  N può continuare a eseguire altre elaborazioni non correlate a M, ad esempio, un'attività dell'autenticatore esistente (N) che continua a ricevere richieste di accesso (M) da diverse attività di accesso.  
   
@@ -104,7 +104,7 @@ ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Configurazione delle funzionalità di traccia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Scenari di analisi end-to-end](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Configurazione delle funzionalità di traccia](configuring-tracing.md)
+- [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Scenari di analisi end-to-end](end-to-end-tracing-scenarios.md)
+- [Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)
