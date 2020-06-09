@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: 000cc13bc6e80914e9a21b6ee60e91127809ee08
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: d8c9879ea2f62bfbeaa378d0aaee806623ea1c55
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307085"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579112"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 
@@ -26,13 +26,13 @@ Specifica che uno o più elementi di programmazione dichiarati sono associati a 
 
 La condivisione di un membro di una classe o di una struttura lo rende disponibile per ogni istanza, anziché *non condivisa*, in cui ogni istanza mantiene la propria copia. Questa operazione è utile, ad esempio, se il valore di una variabile viene applicato all'intera applicazione. Se si dichiara tale variabile come `Shared` , tutte le istanze accedono allo stesso percorso di archiviazione e se un'istanza modifica il valore della variabile, tutte le istanze accedono al valore aggiornato.
 
-La condivisione non modifica il livello di accesso di un membro. Un membro di una classe, ad esempio, può essere condiviso e privato (accessibile solo dall'interno della classe) o non condiviso e pubblico. Per altre informazioni, vedere [livelli di accesso in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+La condivisione non modifica il livello di accesso di un membro. Un membro di una classe, ad esempio, può essere condiviso e privato (accessibile solo dall'interno della classe) o non condiviso e pubblico. Per altre informazioni, vedere [livelli di accesso in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
 
 ## <a name="rules"></a>Regole
 
 - **Contesto della dichiarazione. ** Si può usare `Shared` solo a livello di modulo. Ciò significa che il contesto di dichiarazione per un `Shared` elemento deve essere una classe o una struttura e non può essere un file di origine, uno spazio dei nomi o una procedura.
 
-- **Modificatori combinati.** Non è possibile specificare `Shared` insieme a [override](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)o [static](../../../visual-basic/language-reference/modifiers/static.md) nella stessa dichiarazione.
+- **Modificatori combinati.** Non è possibile specificare `Shared` insieme a [override](overrides.md), [Overridable](overridable.md), [NotOverridable](notoverridable.md), [MustOverride](mustoverride.md)o [static](static.md) nella stessa dichiarazione.
 
 - **Accesso.** Per accedere a un elemento condiviso, è necessario qualificarlo con il nome della classe o della struttura, non con il nome della variabile di un'istanza specifica della classe o della struttura. Non è nemmeno necessario creare un'istanza di una classe o di una struttura per accedere ai relativi membri condivisi.
 
@@ -42,7 +42,7 @@ La condivisione non modifica il livello di accesso di un membro. Un membro di un
      If Double.IsNaN(result) Then Console.WriteLine("Result is mathematically undefined.")
      ```
 
-- **Condivisione implicita.** Non è possibile usare il `Shared` modificatore in un' [istruzione Const](../../../visual-basic/language-reference/statements/const-statement.md), ma le costanti sono implicitamente condivise. Analogamente, non è possibile dichiarare un membro di un modulo o un'interfaccia come `Shared` , ma sono implicitamente condivisi.
+- **Condivisione implicita.** Non è possibile usare il `Shared` modificatore in un' [istruzione Const](../statements/const-statement.md), ma le costanti sono implicitamente condivise. Analogamente, non è possibile dichiarare un membro di un modulo o un'interfaccia come `Shared` , ma sono implicitamente condivisi.
 
 ## <a name="behavior"></a>Comportamento
 

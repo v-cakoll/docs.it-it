@@ -2,15 +2,15 @@
 title: Propagazione
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: ab8b6c003f9e483dccd7b9c7b2687a409f27fdc3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 732ae5cb1ce311b78728f8d5de0fd9102bf32499
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600023"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578955"
 ---
 # <a name="propagation"></a>Propagazione
-In questo argomento viene descritta la propagazione di attività nel modello di traccia di Windows Communication Foundation (WCF).  
+In questo argomento viene descritta la propagazione delle attività nel modello di traccia Windows Communication Foundation (WCF).  
   
 ## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>Utilizzo della propagazione per correlare attività attraverso endpoint  
  La propagazione fornisce all'utente la correlazione diretta delle tracce di errore per la stessa unità di elaborazione attraverso endpoint dell'applicazione, ad esempio, una richiesta. Gli errori generati in endpoint diversi per la stessa unità di elaborazione vengono raggruppati nella stessa attività, anche attraverso domini applicazione. Questa operazione viene eseguita tramite la propagazione dell'ID attività nelle intestazioni del messaggio. Se, pertanto, un client va in timeout a causa di un errore interno nel server, entrambi gli errori vengono visualizzati nella stessa attività per la correlazione diretta.  
@@ -21,7 +21,7 @@ In questo argomento viene descritta la propagazione di attività nel modello di 
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- Propagazione di attività è una funzionalità configurabile che fa sì che WCF aggiungere un'intestazione ai messaggi in uscita, che include l'ID attività in TLS. Includendo questa intestazione nelle tracce successive lato server, è possibile correlare le attività di client e server.  
+ La propagazione delle attività è una funzionalità configurabile che consente a WCF di aggiungere un'intestazione ai messaggi in uscita, che include l'ID attività in TLS. Includendo questa intestazione nelle tracce successive lato server, è possibile correlare le attività di client e server.  
   
 ## <a name="propagation-definition"></a>Definizione di propagazione  
  Il gAId dell'attività M viene propagato all'attività N se si applicano tutte le condizioni seguenti.  
@@ -78,7 +78,7 @@ In questo argomento viene descritta la propagazione di attività nel modello di 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Configurazione delle funzionalità di traccia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Scenari di traccia end-to-end](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Configurazione delle funzionalità di traccia](configuring-tracing.md)
+- [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Scenari di analisi end-to-end](end-to-end-tracing-scenarios.md)
+- [Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)

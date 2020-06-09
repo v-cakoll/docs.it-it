@@ -2,23 +2,23 @@
 title: Interoperabilità con applicazioni POX
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-ms.openlocfilehash: 17b85ab41589a130e950cd52c759305cc17e92b7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 64a6d850a32b14bc60cd43466e04b53a7a39be81
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591044"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579267"
 ---
 # <a name="interoperability-with-pox-applications"></a>Interoperabilità con applicazioni POX
 
-"Plain Old XML" applicazioni (POX) comunicano scambiando messaggi HTTP non elaborati che contengono solo dati di applicazioni XML non inclusi all'interno di una SOAP envelope. Windows Communication Foundation (WCF) può fornire servizi e client che utilizzano messaggi POX. Nel servizio, WCF è utilizzabile per implementare servizi che espongono endpoint a client, ad esempio i browser Web e linguaggi di scripting che inviano e ricevono messaggi POX. Sul client, il modello di programmazione WCF è utilizzabile per implementare i client che comunicano con servizi basati su POX.  
+Le applicazioni POX (Plain Old XML) comunicano scambiando messaggi HTTP non elaborati che contengono solo dati di applicazioni XML non inclusi in una busta SOAP. Windows Communication Foundation (WCF) può fornire sia i servizi che i client che utilizzano messaggi POX. Nel servizio WCF può essere utilizzato per implementare servizi che espongono endpoint a client quali Web browser e linguaggi di scripting che inviano e ricevono messaggi POX. Sul client, il modello di programmazione WCF può essere utilizzato per implementare client che comunicano con servizi basati su POX.  
   
 > [!NOTE]
-> Questo documento è stato scritto originariamente per .NET Framework 3.0.  .NET framework 3.5 include supporto predefinito per l'utilizzo con applicazioni POX. Per altre informazioni, vedere [modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
+> Questo documento è stato scritto in origine per il .NET Framework 3,0.  .NET Framework 3,5 dispone di supporto incorporato per l'utilizzo di applicazioni POX. Per ulteriori informazioni su, vedere [modello di programmazione HTTP Web WCF](wcf-web-http-programming-model.md).
   
 ## <a name="pox-programming-with-wcf"></a>Programmazione POX con WCF
 
-I servizi WCF che comunicano su HTTP tramite messaggi POX utilizzano un' [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).
+I servizi WCF che comunicano tramite HTTP tramite messaggi POX utilizzano un [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md) .
 
 ```xml
 <customBinding>
@@ -31,13 +31,13 @@ I servizi WCF che comunicano su HTTP tramite messaggi POX utilizzano un' [ \<cus
 
 Questa associazione personalizzata contiene due elementi:
 
-- [\<httpTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)
+- [\<httpTransport>](../../configure-apps/file-schema/wcf/httptransport.md)
 
-- [\<textMessageEncoding>](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)
+- [\<textMessageEncoding>](../../configure-apps/file-schema/wcf/textmessageencoding.md)
 
-Lo standard di codificatore di messaggi di testo di WCF è configurato per l'utilizzo di <xref:System.ServiceModel.Channels.MessageVersion.None%2A> valore, che consente di elaborare payload di messaggi XML che non arrivano incapsulati in una SOAP envelope.
+Il codificatore di messaggi di testo WCF standard è stato configurato in modo specifico per l'utilizzo del <xref:System.ServiceModel.Channels.MessageVersion.None%2A> valore, che consente di elaborare payload di messaggi XML che non arrivano incapsulati in una busta SOAP.
 
-I client WCF che comunicano su HTTP tramite messaggi POX utilizzano un'associazione simile (illustrata nel codice imperativo seguente).
+I client WCF che comunicano tramite HTTP tramite messaggi POX utilizzano un'associazione simile (illustrata nel codice imperativo seguente).
 
 ```csharp
 private static Binding CreatePoxBinding()
@@ -52,13 +52,13 @@ private static Binding CreatePoxBinding()
 
 Poiché i client POX devono specificare in modo esplicito gli URI ai quali inviano messaggi, devono in genere configurare <xref:System.ServiceModel.Channels.HttpTransportBindingElement> come modalità di indirizzamento manuale impostando la proprietà <xref:System.ServiceModel.Channels.TransportBindingElement.ManualAddressing%2A> su `true` nell'elemento. Ciò consente ai messaggi di essere indirizzati in modo esplicito dal codice dell'applicazione e non sarà quindi necessario creare un nuovo <xref:System.ServiceModel.ChannelFactory> ogni volta che un'applicazione invia un messaggio a un URI HTTP diverso.
 
-Poiché i messaggi POX non utilizzano intestazioni SOAP per trasmettere informazioni importanti sul protocollo, i client e i servizi POX spesso devono modificare parti della richiesta HTTP sottostante utilizzata per inviare o ricevere un messaggio. Informazioni sul protocollo HTTP-specifiche, ad esempio le intestazioni HTTP e i codici di stato vengono rilevate nel modello di programmazione WCF di due classi:
+Poiché i messaggi POX non utilizzano intestazioni SOAP per trasmettere informazioni importanti sul protocollo, i client e i servizi POX spesso devono modificare parti della richiesta HTTP sottostante utilizzata per inviare o ricevere un messaggio. Le informazioni sul protocollo specifiche di HTTP come le intestazioni HTTP e i codici di stato sono riportate nel modello di programmazione WCF tramite due classi:
 
 - <xref:System.ServiceModel.Channels.HttpRequestMessageProperty> che contiene informazioni sulla richiesta HTTP, ad esempio le intestazioni di metodo e di richiesta HTTP.
 
 - <xref:System.ServiceModel.Channels.HttpResponseMessageProperty> che contiene informazioni sulla risposta HTTP, ad esempio il codice di stato e la descrizione dello stato HTTP, come pure qualsiasi intestazione di risposta HTTP.
   
-Esempio di codice seguente viene illustrato come creare un messaggio di richiesta HTTP GET indirizzato a `http://localhost:8100/customers`.
+Nell'esempio di codice seguente viene illustrato come creare un messaggio di richiesta HTTP GET a cui è destinato `http://localhost:8100/customers` .
 
 ```csharp
 Message request = Message.CreateMessage( MessageVersion.None, String.Empty );

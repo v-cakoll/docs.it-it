@@ -2,12 +2,12 @@
 title: Creazione di un'intestazione personalizzata firmata e/o crittografata
 ms.date: 03/30/2017
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
-ms.openlocfilehash: d737647f8c0442a3d6fa0d077a1ffe2c251ea043
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0adb4100bca1add2c23ff2c802ddb5e2cb1c368c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856179"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579658"
 ---
 # <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Creazione di un'intestazione personalizzata firmata e/o crittografata
 Quando si chiama un servizio non WCF tramite un client WCF, è talvolta necessario usare intestazioni SOAP personalizzate. In WCF è presente un bug di canonizzazione che impedisce l'uso di intestazioni personalizzate firmate e crittografate con un servizio non WCF. Il problema è causato dalla canonizzazione errata degli spazi dei nomi XML predefiniti ed è significativo solo in caso di chiamata di servizi non WCF con intestazioni personalizzate firmate e/o crittografate.  Quando il servizio riceve il messaggio che contiene l'intestazione firmata e/o crittografata non è in grado di verificare la firma. Questa soluzione evita il bug di canonizzazione, consente l'interoperabilità con i servizi non WCF, ma non impedisce l'interoperabilità con i servizi WCF.  
@@ -58,6 +58,6 @@ public  class MyMessageContract
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Impostazione predefinita dei contratti di messaggio](../../../../docs/framework/wcf/samples/default-message-contract.md)
-- [Contratti di messaggio](../../../../docs/framework/wcf/samples/message-contracts.md)
-- [Uso di contratti di messaggio](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+- [Impostazione predefinita dei contratti di messaggio](../samples/default-message-contract.md)
+- [Contratti di messaggio](../samples/message-contracts.md)
+- [Utilizzo dei contratti di messaggio](using-message-contracts.md)
