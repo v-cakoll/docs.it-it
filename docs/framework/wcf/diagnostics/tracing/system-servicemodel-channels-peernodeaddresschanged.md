@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.PeerNodeAddressChanged
 ms.date: 03/30/2017
 ms.assetid: 14bd4be6-1ff1-4df5-b89f-af7950f62ef4
-ms.openlocfilehash: b19df29dc3500d8513d07e668b44c99b6f267155
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f0b2bcf8996743ff6bfe007d638d733e9078919
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949955"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84577344"
 ---
 # <a name="systemservicemodelchannelspeernodeaddresschanged"></a>System.ServiceModel.Channels.PeerNodeAddressChanged
 Uno o più indirizzi del PeerNode sono stati modificati.  
@@ -17,6 +17,6 @@ Uno o più indirizzi del PeerNode sono stati modificati.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Traccia](index.md)
+- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](using-tracing-to-troubleshoot-your-application.md)
+- [Amministrazione e diagnostica](../index.md)

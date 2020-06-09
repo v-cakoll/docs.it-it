@@ -2,23 +2,23 @@
 title: Scelta di un filtro
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: 282f6e9e2bc986feee0d1825ee9d87217d453e50
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: e951c472543239df0c01dcba3e46f120ced9e192
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964808"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587495"
 ---
 # <a name="choosing-a-filter"></a>Scelta di un filtro
 Quando si configura il servizio di routing, è importante selezionare i filtri messaggi corretti e configurarli per consentire l'individuazione di corrispondenze esatte con i messaggi ricevuti. Se i filtri selezionati non sono sufficientemente precisi o non sono configurati correttamente, i messaggi vengono indirizzati in modo non corretto. Se i filtri sono troppo restrittivi, è possibile che non vengano individuate route valide disponibili per alcuni messaggi.
 
-## <a name="filter-types"></a>Tipi di filtro
+## <a name="filter-types"></a>Tipo di filtro
 
 Se si selezionano filtri utilizzati dal servizio di routing, è importante comprenderne il funzionamento ed essere a conoscenza delle informazioni disponibili all'interno dei messaggi in ingresso. Se ad esempio tutti i messaggi vengono ricevuti sullo stesso endpoint, i filtri Address e EndpointName non sono utili perché tutti i messaggi corrispondono a questi filtri.
 
 ### <a name="action"></a>Azione
 
-Il filtro Action controlla la proprietà <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>. Se il contenuto dell'intestazione Action nel messaggio corrisponde al valore dei dati specificato nella configurazione del filtro, viene restituito `true`. Nell'esempio seguente viene definito un `FilterElement` che utilizza il filtro Action per trovare la corrispondenza con i messaggi con un'intestazione Action contenente un valore `http://namespace/contract/operation/`.
+Il filtro Action controlla la proprietà <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>. Se il contenuto dell'intestazione Action nel messaggio corrisponde al valore dei dati specificato nella configurazione del filtro, viene restituito `true`. Nell'esempio seguente viene definito un oggetto `FilterElement` che utilizza il filtro Action per trovare una corrispondenza tra i messaggi e un'intestazione Action che contiene il valore `http://namespace/contract/operation/` .
 
 ```xml
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />
@@ -32,7 +32,7 @@ Questo filtro deve essere utilizzato per il routing dei messaggi contenenti un'i
 
 ### <a name="endpointaddress"></a>EndpointAddress
 
-Il filtro EndpointAddress controlla il valore EndpointAddress indicante l'indirizzo di ricezione del messaggio. Se l'indirizzo a cui arriva il messaggio corrisponde esattamente all'indirizzo specificato nella configurazione del filtro, quest'ultimo restituisce `true`. Nell'esempio seguente viene definito un `FilterElement` che utilizza il filtro degli indirizzi per trovare la corrispondenza con qualsiasi messaggio indirizzato a "http://\<hostname >/vdir/s.svc/b".
+Il filtro EndpointAddress controlla il valore EndpointAddress indicante l'indirizzo di ricezione del messaggio. Se l'indirizzo a cui arriva il messaggio corrisponde esattamente all'indirizzo specificato nella configurazione del filtro, quest'ultimo restituisce `true`. Nell'esempio seguente viene definito un oggetto `FilterElement` che utilizza il filtro degli indirizzi per trovare la corrispondenza con qualsiasi messaggio indirizzato a "http:// \<hostname> /vdir/s.svc/b".
 
 ```xml
 <filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b" />
@@ -51,7 +51,7 @@ EndpointAddressMessageFilter address1 = new EndpointAddressMessageFilter(new End
 
 ### <a name="endpointaddressprefix"></a>EndpointAddressPrefix
 
-Il filtro EndpointAddressPrefix è analogo al filtro EndpointAddress. Il filtro EndpointAddressPrefix controlla il valore EndpointAddress indicante l'indirizzo di ricezione del messaggio. Tuttavia, il filtro EndpointAddressPrefix viene utilizzato come un carattere jolly che individua le corrispondenze con gli indirizzi che iniziano con il valore specificato nella configurazione del filtro. Nell'esempio seguente viene definito un `FilterElement` che utilizza il filtro EndpointAddressPrefix per trovare la corrispondenza con tutti i messaggi destinati a `http://<hostname>/vdir*`.
+Il filtro EndpointAddressPrefix è analogo al filtro EndpointAddress. Il filtro EndpointAddressPrefix controlla il valore EndpointAddress indicante l'indirizzo di ricezione del messaggio. Tuttavia, il filtro EndpointAddressPrefix viene utilizzato come un carattere jolly che individua le corrispondenze con gli indirizzi che iniziano con il valore specificato nella configurazione del filtro. Nell'esempio seguente viene definito un oggetto `FilterElement` che utilizza il filtro EndpointAddressPrefix per trovare la corrispondenza con tutti i messaggi a cui è stato inviato `http://<hostname>/vdir*` .
 
 ```xml
 <filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/vdir" />
@@ -96,11 +96,11 @@ Quando si seleziona il tipo di filtro personalizzato, è necessario specificare 
 MyCustomMsgFilter custom1=new MyCustomMsgFilter("Custom Data");
 ```
 
-Se è necessario eseguire una logica di corrispondenza personalizzata per un messaggio non incluso nei filtri forniti con [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], è necessario creare un filtro personalizzato che è un'implementazione della classe **MessageFilter** . È ad esempio possibile creare un filtro personalizzato che confronta un campo nel messaggio in ingresso rispetto a un elenco di valori noti specificato nella configurazione del filtro o che esegue l'hashing di un messaggio e quindi esamina il valore per determinare se il filtro deve restituire `true` o `false`.
+Se è necessario eseguire una logica di corrispondenza personalizzata per un messaggio non incluso nei filtri forniti con [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] , è necessario creare un filtro personalizzato che è un'implementazione della classe **MessageFilter** . È ad esempio possibile creare un filtro personalizzato che confronta un campo nel messaggio in ingresso rispetto a un elenco di valori noti specificato nella configurazione del filtro o che esegue l'hashing di un messaggio e quindi esamina il valore per determinare se il filtro deve restituire `true` o `false`.
 
 ### <a name="endpointname"></a>EndpointName
 
-Il filtro EndpointName controlla il nome dell'endpoint che ha ricevuto il messaggio. Nell'esempio seguente viene definito un `FilterElement` che utilizza il filtro EndpointName per indirizzare i messaggi ricevuti su "SvcEndpoint".
+Il filtro EndpointName controlla il nome dell'endpoint che ha ricevuto il messaggio. Nell'esempio seguente viene definito un oggetto `FilterElement` che utilizza il filtro EndpointName per indirizzare i messaggi ricevuti su "SvcEndpoint".
 
 ```xml
 <filter name="name1" filterType="Endpoint" filterData="SvcEndpoint" />
@@ -128,7 +128,7 @@ MatchAllMessageFilter matchAll1 = new MatchAllMessageFilter();
 
 ### <a name="xpath"></a>XPath
 
-Il filtro XPath consente di specificare una query XPath utilizzata per controllare un elemento specifico all'interno del messaggio. L'applicazione di filtri XPath rappresenta un'opzione particolarmente efficace per consentire il controllo diretto di qualsiasi voce indirizzabile XML nel messaggio, tuttavia richiede una conoscenza specifica della struttura dei messaggi in ricezione. Nell'esempio seguente viene definito un `FilterElement` che utilizza il filtro XPath per esaminare il messaggio per un elemento denominato "element" nello spazio dei nomi a cui fa riferimento il prefisso dello spazio dei nomi "NS".
+Il filtro XPath consente di specificare una query XPath utilizzata per controllare un elemento specifico all'interno del messaggio. L'applicazione di filtri XPath rappresenta un'opzione particolarmente efficace per consentire il controllo diretto di qualsiasi voce indirizzabile XML nel messaggio, tuttavia richiede una conoscenza specifica della struttura dei messaggi in ricezione. Nell'esempio seguente viene definito un oggetto `FilterElement` che utilizza il filtro XPath per esaminare il messaggio per un elemento denominato "element" nello spazio dei nomi a cui fa riferimento il prefisso dello spazio dei nomi "NS".
 
 ```xml
 <filter name="xpath1" filterType="XPath" filterData="//ns:element" />
@@ -140,11 +140,11 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
 
 Questo filtro è utile se si è certi che i messaggi in ricezione contengono un determinato valore. Se ad esempio si ospitano due versioni dello stesso servizio e si sa che messaggi indirizzati alla versione più recente del servizio contengono un valore univoco in un'intestazione personalizzata, è possibile creare un filtro che utilizza XPath per passare a questa intestazione e confrontare il valore presente nell'intestazione con un altro specificato nella configurazione del filtro per determinare le corrispondenze.
 
-Poiché le query XPath spesso contengono spazi dei nomi univoci, che spesso sono valori stringa lunghi o complessi, il filtro XPath consente di utilizzare la tabella degli spazi dei nomi per definire prefissi univoci per gli spazi dei nomi. Per ulteriori informazioni sulla tabella dello spazio dei nomi, vedere [filtri messaggi](../../../../docs/framework/wcf/feature-details/message-filters.md).
+Poiché le query XPath spesso contengono spazi dei nomi univoci, che spesso sono valori stringa lunghi o complessi, il filtro XPath consente di utilizzare la tabella degli spazi dei nomi per definire prefissi univoci per gli spazi dei nomi. Per ulteriori informazioni sulla tabella dello spazio dei nomi, vedere [filtri messaggi](message-filters.md).
 
 Per ulteriori informazioni sulla progettazione di query XPath, vedere [sintassi XPath](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256471(v=vs.100)).
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Filtri per messaggi](../../../../docs/framework/wcf/feature-details/message-filters.md)
-- [Procedura: Usare filtri](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+- [Filtri messaggi](message-filters.md)
+- [Procedura: usare i filtri](how-to-use-filters.md)

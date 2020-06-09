@@ -2,15 +2,15 @@
 title: "Procedura: implementare un'applicazione client che usa il proxy di individuazione per cercare un servizio"
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 33ee5d2c9206b16b1667abd5f6d6c811ff955969
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a1e770531a196d73dfc7d93bf70ed432df343c88
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185378"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587014"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Procedura: implementare un'applicazione client che usa il proxy di individuazione per cercare un servizio
-Quello che segue è il terzo di tre argomenti incentrato sull'implementazione di un proxy di individuazione. Nell'argomento precedente, [Procedura: implementare un servizio individuabile che si registra con il proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)di individuazione , è stato implementato un servizio WCF che si registra con il proxy di individuazione. In questo argomento si crea un client WCF che utilizza il proxy di individuazione per trovare il servizio WCF.  
+Quello che segue è il terzo di tre argomenti incentrato sull'implementazione di un proxy di individuazione. Nell'argomento precedente, [procedura: implementare un servizio individuabile che esegue la registrazione con il proxy di individuazione](discoverable-service-that-registers-with-the-discovery-proxy.md), è stato implementato un servizio WCF che si registra con il proxy di individuazione. In questo argomento viene creato un client WCF che utilizza il proxy di individuazione per trovare il servizio WCF.  
   
 ### <a name="implement-the-client"></a>Implementare il client  
   
@@ -101,7 +101,7 @@ Quello che segue è il terzo di tre argomenti incentrato sull'implementazione di
     }  
     ```  
   
- L'implementazione dell'applicazione client è stata completata. Continuare con [Procedura: Testare il proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).  
+ L'implementazione dell'applicazione client è stata completata. Continuare con [la procedura: testare il proxy di individuazione](how-to-test-the-discovery-proxy.md).  
   
 ## <a name="example"></a>Esempio  
  Di seguito è riportato il codice completo per questo argomento.  
@@ -283,6 +283,6 @@ namespace Microsoft.Samples.Discovery
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Procedura: implementare un proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Procedura: implementare un servizio individuabile che esegue la registrazione al proxy di individuazione](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Panoramica di WCF Discovery](wcf-discovery-overview.md)
+- [Procedura: implementare un proxy di individuazione](how-to-implement-a-discovery-proxy.md)
+- [Procedura: implementare un servizio individuabile che esegue la registrazione al proxy di individuazione](discoverable-service-that-registers-with-the-discovery-proxy.md)
