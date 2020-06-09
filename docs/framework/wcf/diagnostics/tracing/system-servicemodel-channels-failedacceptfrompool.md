@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.FailedAcceptFromPool
 ms.date: 03/30/2017
 ms.assetid: d535b1b5-ee58-45e8-b400-7d9570f4eb9a
-ms.openlocfilehash: de0bdd9e5ab922b09249bf550fde745042be8e58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5bfa31d0eaf3b00017512eddc60bfa99eda619e3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666755"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84582582"
 ---
 # <a name="systemservicemodelchannelsfailedacceptfrompool"></a>System.ServiceModel.Channels.FailedAcceptFromPool
 Tentativo di riutilizzare una connessione in pool non riuscito. Verrà effettuato un altro tentativo entro il periodo di timeout specificato.  
@@ -17,6 +17,6 @@ Tentativo di riutilizzare una connessione in pool non riuscito. Verrà effettuat
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Traccia](index.md)
+- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](using-tracing-to-troubleshoot-your-application.md)
+- [Amministrazione e diagnostica](../index.md)

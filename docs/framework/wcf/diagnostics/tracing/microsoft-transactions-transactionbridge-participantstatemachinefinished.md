@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.ParticipantStateMachineFinished
 ms.date: 03/30/2017
 ms.assetid: 54b677f7-03ad-40f2-9c5d-297a8ad9bf90
-ms.openlocfilehash: 7f37cb5d9ee3d2d9d56519f785388f278b3333b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0652b3b76c155431b68c5ee0dc8f83977f9845a5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997880"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594361"
 ---
 # <a name="microsofttransactionstransactionbridgeparticipantstatemachinefinished"></a>Microsoft.Transactions.TransactionBridge.ParticipantStateMachineFinished
 La macchina a stati dell'integrazione di un partecipante è passata allo stato di operazione completata.  
@@ -17,6 +17,6 @@ La macchina a stati dell'integrazione di un partecipante è passata allo stato d
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Traccia](index.md)
+- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](using-tracing-to-troubleshoot-your-application.md)
+- [Amministrazione e diagnostica](../index.md)
