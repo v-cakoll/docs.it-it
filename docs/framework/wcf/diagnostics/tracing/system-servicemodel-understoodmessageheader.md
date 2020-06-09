@@ -2,21 +2,21 @@
 title: System.ServiceModel.UnderstoodMessageHeader
 ms.date: 03/30/2017
 ms.assetid: 8a8560bf-d13b-452d-bfb5-a5221cb191bd
-ms.openlocfilehash: 68e9769d17e0eeca3063555bf2d7e856a74ec8ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a88677b1a511c824b78e2d82daf097e15baafa1f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914264"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595609"
 ---
-# <a name="systemservicemodelunderstoodmessageheader"></a><span data-ttu-id="c03d0-102">System.ServiceModel.UnderstoodMessageHeader</span><span class="sxs-lookup"><span data-stu-id="c03d0-102">System.ServiceModel.UnderstoodMessageHeader</span></span>
-<span data-ttu-id="c03d0-103">System.ServiceModel.UnderstoodMessageHeader</span><span class="sxs-lookup"><span data-stu-id="c03d0-103">System.ServiceModel.UnderstoodMessageHeader</span></span>  
+# <a name="systemservicemodelunderstoodmessageheader"></a><span data-ttu-id="711dc-102">System.ServiceModel.UnderstoodMessageHeader</span><span class="sxs-lookup"><span data-stu-id="711dc-102">System.ServiceModel.UnderstoodMessageHeader</span></span>
+<span data-ttu-id="711dc-103">System.ServiceModel.UnderstoodMessageHeader</span><span class="sxs-lookup"><span data-stu-id="711dc-103">System.ServiceModel.UnderstoodMessageHeader</span></span>  
   
-## <a name="description"></a><span data-ttu-id="c03d0-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="c03d0-104">Description</span></span>  
- <span data-ttu-id="c03d0-105">L'intestazione del messaggio è stata intesa.</span><span class="sxs-lookup"><span data-stu-id="c03d0-105">Understood message header.</span></span>  
+## <a name="description"></a><span data-ttu-id="711dc-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="711dc-104">Description</span></span>  
+ <span data-ttu-id="711dc-105">L'intestazione del messaggio è stata intesa.</span><span class="sxs-lookup"><span data-stu-id="711dc-105">Understood message header.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c03d0-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c03d0-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="711dc-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="711dc-106">See also</span></span>
 
-- [<span data-ttu-id="c03d0-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="c03d0-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="c03d0-108">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="c03d0-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="c03d0-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="c03d0-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="711dc-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="711dc-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="711dc-108">Utilizzo delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="711dc-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="711dc-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="711dc-109">Administration and Diagnostics</span></span>](../index.md)
