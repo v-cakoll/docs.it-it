@@ -1,22 +1,22 @@
 ---
-title: 'Procedura: Usare un moniker del servizio con i contratti WSDL'
+title: 'Procedura: usare un moniker di servizio con i contratti WSDL'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: 7bc628952d4a7198f0b5545014ae931bbf73dab3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 70d7e9ff45616f832597ebc48db00198967935c6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70968993"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601140"
 ---
-# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Procedura: Usare un moniker del servizio con i contratti WSDL
+# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Procedura: usare un moniker di servizio con i contratti WSDL
 In alcune situazioni può essere necessario disporre di un client per l'interoperabilità COM completamente autonomo. Il servizio che si desidera chiamare può non esporre un endpoint MEX e la DLL del client WCF può non essere registrata per l'interoperabilità COM. In questi casi è possibile creare un file WSDL che descriva il servizio e lo passi nel moniker del servizio WCF. In questo argomento viene illustrato come chiamare l'esempio WCF della Guida introduttiva utilizzando un moniker WSDL WCF.  
   
 ### <a name="using-the-wsdl-service-moniker"></a>Utilizzo del moniker del servizio WSDL  
   
 1. Aprire e compilare la soluzione di esempio GettingStarted.  
   
-2. Aprire Internet Explorer e passare `http://localhost/ServiceModelSamples/Service.svc` a per verificare che il servizio sia funzionante.  
+2. Aprire Internet Explorer e passare a `http://localhost/ServiceModelSamples/Service.svc` per verificare che il servizio sia funzionante.  
   
 3. Nel file Service.cs aggiungere l'attributo seguente alla classe CalculatorService:  
   
@@ -24,7 +24,7 @@ In alcune situazioni può essere necessario disporre di un client per l'interope
   
 4. Aggiungere un spazio dei nomi dell'associazione al servizio App.config:  
 
-5. Creare un file WSDL che deve essere letto dall'applicazione. Poiché gli spazi dei nomi sono stati aggiunti nei passaggi 3 e 4, è possibile utilizzare IE per eseguire una query per l'intera descrizione WSDL del servizio `http://localhost/ServiceModelSamples/Service.svc?wsdl`passando a. È quindi possibile salvare il file da Internet Explorer come serviceWSDL.xml. Se non si specificano gli spazi dei nomi nei passaggi 3 e 4, il documento WSDL restituito dalla query sull'URL precedente non sarà il WSDL completo. Il documento WSDL restituito includerà molte istruzioni di importazione che consentono di importare altri documenti WSDL. Sarà quindi necessario esaminare ogni istruzione di importazione e compilare il documento WSDL completo, combinando il WSDL restituito dal servizio con il WSDL importato.  
+5. Creare un file WSDL che deve essere letto dall'applicazione. Poiché gli spazi dei nomi sono stati aggiunti nei passaggi 3 e 4, è possibile utilizzare IE per eseguire una query per l'intera descrizione WSDL del servizio passando a `http://localhost/ServiceModelSamples/Service.svc?wsdl` . È quindi possibile salvare il file da Internet Explorer come serviceWSDL.xml. Se non si specificano gli spazi dei nomi nei passaggi 3 e 4, il documento WSDL restituito dalla query sull'URL precedente non sarà il WSDL completo. Il documento WSDL restituito includerà molte istruzioni di importazione che consentono di importare altri documenti WSDL. Sarà quindi necessario esaminare ogni istruzione di importazione e compilare il documento WSDL completo, combinando il WSDL restituito dal servizio con il WSDL importato.  
   
 6. Aprire Visual Basic 6.0 e creare un nuovo file standard con estensione exe. Aggiungere un pulsante al form e fare doppio clic su di esso per aggiungere il codice seguente al gestore Click:  
   
@@ -56,5 +56,5 @@ In alcune situazioni può essere necessario disporre di un client per l'interope
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [Panoramica dell'integrazione con applicazioni COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+- [Per iniziare](../samples/getting-started-sample.md)
+- [Panoramica dell'integrazione con applicazioni COM](integrating-with-com-applications-overview.md)

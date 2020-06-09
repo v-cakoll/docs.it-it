@@ -2,12 +2,12 @@
 title: Provider di token SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: d599992949b87f0ac3f178d8f79f244781eda6fa
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: db1307b0f440f8bd55f1728b6645aec706dfe442
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976715"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602414"
 ---
 # <a name="saml-token-provider"></a>Provider di token SAML
 Questo esempio dimostra come implementare un provider di token SAML client personalizzato. Un provider di token in Windows Communication Foundation (WCF) viene utilizzato per fornire le credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. WCF viene fornito con il provider di token di gestione credenziali predefinito. WCF viene inoltre fornito con un provider di token CardSpace. I provider di token personalizzati sono utili nei casi seguenti:
@@ -352,9 +352,9 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
 
 #### <a name="to-set-up-and-build-the-sample"></a>Per impostare e compilare l'esempio
 
-1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Per compilare la soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Per compilare la soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](building-the-samples.md).
 
 > [!NOTE]
 > Se si usa Svcutil.exe per rigenerare la configurazione di questo esempio, assicurarsi di modificare il nome dell'endpoint nella configurazione client in modo che corrisponda al codice client.

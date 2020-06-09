@@ -2,12 +2,12 @@
 title: System.ServiceModel.TxCompletionStatusCompletedForAsyncAbort
 ms.date: 03/30/2017
 ms.assetid: 155c3203-2e17-4709-b896-2254e22da45e
-ms.openlocfilehash: f84cc9336d6cce7d8c477a1feb6caf45b0662177
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8371dba79573f480b264ed6185b8cf0098e3cb2a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996931"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576577"
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedforasyncabort"></a>System.ServiceModel.TxCompletionStatusCompletedForAsyncAbort
 La transazione specificata per l'operazione indicata è stata completata a causa di un'interruzione asincrona.  
@@ -20,6 +20,6 @@ La transazione specificata per l'operazione indicata è stata completata a causa
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Traccia](index.md)
+- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](using-tracing-to-troubleshoot-your-application.md)
+- [Amministrazione e diagnostica](../index.md)

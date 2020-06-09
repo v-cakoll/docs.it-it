@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-ms.openlocfilehash: 79772d19ddaec041aa1fac936b9951731507b6e6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1d04a7bb756cccb33b436c1f57decc0249764828
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184461"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600335"
 ---
 # <a name="servicemodel-transaction-configuration"></a>Configurazione delle transazioni ServiceModel
-Windows Communication Foundation (WCF) fornisce tre attributi per `transactionFlow`la `transactionProtocol`configurazione `transactionTimeout`delle transazioni per un servizio: , e .  
+Windows Communication Foundation (WCF) fornisce tre attributi per la configurazione delle transazioni per un servizio: `transactionFlow` , `transactionProtocol` e `transactionTimeout` .  
   
 ## <a name="configuring-transactionflow"></a>Configurazione di transactionFlow  
- La maggior parte delle associazioni predefinite `transactionFlow` `transactionProtocol` fornite da WCF contiene gli attributi e , in modo che sia possibile configurare l'associazione per accettare le transazioni in ingresso per un endpoint specifico usando un protocollo del flusso di transazioni specifico. È inoltre possibile utilizzare l'elemento `transactionFlow` e il relativo attributo `transactionProtocol` per compilare un'associazione personalizzata. Per ulteriori informazioni sull'impostazione degli elementi di configurazione, vedere [ \<>di associazione](../../configure-apps/file-schema/wcf/bindings.md) e Schema di [configurazione WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
+ La maggior parte delle associazioni predefinite fornite da WCF contiene gli `transactionFlow` `transactionProtocol` attributi e, in modo che sia possibile configurare l'associazione in modo che accetti le transazioni in ingresso per un endpoint specifico utilizzando un protocollo di flusso di transazione specifico. È inoltre possibile utilizzare l'elemento `transactionFlow` e il relativo attributo `transactionProtocol` per compilare un'associazione personalizzata. Per ulteriori informazioni sull'impostazione degli elementi di configurazione, vedere [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) e [schema di configurazione WCF](../../configure-apps/file-schema/wcf/index.md).  
   
  L'attributo `transactionFlow` specifica se il flusso delle transazioni è attivo presso gli endpoint di servizio che utilizzano l'associazione.  
   
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) fornisce tre attributi per `transactionFl
 ```  
   
 ## <a name="configuring-transactiontimeout"></a>Configurazione di transactionTimeout  
- È possibile `transactionTimeout` configurare l'attributo `behavior` per il servizio WCF nell'elemento del file di configurazione. Nell'esempio di codice seguente viene illustrato come eseguire questa operazione.  
+ È possibile configurare l' `transactionTimeout` attributo per il servizio WCF nell' `behavior` elemento del file di configurazione. Nell'esempio di codice seguente viene illustrato come eseguire questa operazione.  
   
 ```xml  
 <configuration>  
@@ -64,5 +64,5 @@ Windows Communication Foundation (WCF) fornisce tre attributi per `transactionFl
   
 ## <a name="see-also"></a>Vedere anche
 
-- [\<>di associazione](../../configure-apps/file-schema/wcf/bindings.md)
-- [Schema di configurazione WCFWCF Configuration Schema](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)
+- [\<binding>](../../configure-apps/file-schema/wcf/bindings.md)
+- [Schema di configurazione di WCF](../../configure-apps/file-schema/wcf/index.md)

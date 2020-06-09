@@ -1,5 +1,6 @@
 ---
 title: Confronto di stringhe in .NET
+description: Vedere i metodi per confrontare le stringhe in .NET. Informazioni sui metodi di confronto, CompareOrdinal, CompareTo, StartsWith, EndsWith, Equals, IndexOf, & LastIndexOf.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-ms.openlocfilehash: 7997f3098265b76f8fe2ef4fc7ab0e17f6e81d69
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5ed73d18341c3b9c6e61e12fdf322b9a67affd4a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289330"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602193"
 ---
 # <a name="comparing-strings-in-net"></a>Confronto di stringhe in .NET
 .NET offre diversi metodi per confrontare i valori delle stringhe. La tabella seguente elenca e descrive i metodi di confronto di valori.  

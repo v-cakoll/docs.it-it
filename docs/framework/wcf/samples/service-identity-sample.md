@@ -2,15 +2,15 @@
 title: Esempio identità del servizio
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 868bd6e0ac7429224462c973c1c48132ec3860ba
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: e4b5e739db04fbb3270c9870468433aec7787061
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919369"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599906"
 ---
 # <a name="service-identity-sample"></a>Esempio identità del servizio
-Questo esempio di identità del servizio illustra come impostare l'identità di un servizio. In fase di progettazione, un client può recuperare l'identità utilizzando i metadati del servizio e quindi al runtime il client può autenticare l'identità del servizio. Il concetto di identità del servizio serve per consentire a un client di autenticare un servizio prima di chiamare qualsiasi operazione, proteggendo in questo modo il client da chiamate non autenticate. Su una connessione sicura il servizio autentica anche le credenziali di un client prima di consentirgli l'accesso, ma questo non è il punto centrale dell'esempio. Vedere gli esempi nel [client](../../../../docs/framework/wcf/samples/client.md) che mostrano l'autenticazione server.
+Questo esempio di identità del servizio illustra come impostare l'identità di un servizio. In fase di progettazione, un client può recuperare l'identità utilizzando i metadati del servizio e quindi al runtime il client può autenticare l'identità del servizio. Il concetto di identità del servizio serve per consentire a un client di autenticare un servizio prima di chiamare qualsiasi operazione, proteggendo in questo modo il client da chiamate non autenticate. Su una connessione sicura il servizio autentica anche le credenziali di un client prima di consentirgli l'accesso, ma questo non è il punto centrale dell'esempio. Vedere gli esempi nel [client](client.md) che mostrano l'autenticazione server.
 
 > [!NOTE]
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.
@@ -107,22 +107,22 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio
 
-1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](building-the-samples.md).
 
-3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](running-the-samples.md).
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Per eseguire l'esempio nello stesso computer
 
-1. In Windows XP o Windows Vista importare il file di certificato Identity. pfx nella cartella Identity Solution nell'archivio certificati LocalMachine/My (Personal) utilizzando lo snap-in MMC. Questo file è protetto da password. Durante l'importazione viene richiesta una password. Digitare `xyz` nella casella password. Per ulteriori informazioni, vedere l'argomento [procedura: visualizzare i certificati con lo snap-in MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) . Al termine, eseguire Setup. bat in una Prompt dei comandi per gli sviluppatori per Visual Studio con privilegi di amministratore, che copia il certificato nell'archivio CurrentUser/Trusted People per l'utilizzo nel client.
+1. In Windows XP o Windows Vista importare il file di certificato Identity. pfx nella cartella Identity Solution nell'archivio certificati LocalMachine/My (Personal) utilizzando lo snap-in MMC. Questo file è protetto da password. Durante l'importazione viene richiesta una password. Digitare `xyz` nella casella password. Per ulteriori informazioni, vedere l'argomento [procedura: visualizzare i certificati con lo snap-in MMC](../feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) . Al termine, eseguire Setup. bat in una Prompt dei comandi per gli sviluppatori per Visual Studio con privilegi di amministratore, che copia il certificato nell'archivio CurrentUser/Trusted People per l'utilizzo nel client.
 
 2. In Windows Server 2003, eseguire Setup. bat dalla cartella di installazione dell'esempio all'interno di un prompt dei comandi di Visual Studio 2012 con privilegi di amministratore. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.
 
     > [!NOTE]
     > Il file batch Setup. bat è progettato per essere eseguito da un prompt dei comandi di Visual Studio 2012. La variabile di ambiente PATH impostata nel prompt dei comandi di Visual Studio 2012 punta alla directory che contiene i file eseguibili richiesti dallo script Setup. bat. Assicurarsi di rimuovere i certificati eseguendo Cleanup.bat una volta completato l'esempio. Negli altri esempi relativi alla sicurezza vengono usati gli stessi certificati.  
   
-3. Avviare Service.exe dalla directory \service\bin. Verificare che il servizio indichi che è pronto e visualizza una richiesta di premere \<immettere > per terminare il servizio.  
+3. Avviare Service.exe dalla directory \service\bin. Verificare che il servizio indichi che è pronto e visualizza una richiesta di premere \<Enter> per terminare il servizio.  
   
 4. Avviare Client.exe dalla directory \client\bin o premendo F5 in Visual Studio per compilare ed eseguire l'esempio. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
@@ -140,7 +140,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 5. Copiare i file di programma del client nella directory del client sul computer relativo e i file Setup.bat, Cleanup.bat e ImportServiceCert.bat nel client.  
   
-6. Nel servizio eseguire `setup.bat service` in un Prompt dei comandi per gli sviluppatori per Visual Studio aperto con privilegi di amministratore. Quando si esegue `setup.bat` con l'argomento `service` viene creato un certificato di servizio con il nome di dominio completo del computer e il certificato del servizio viene esportato in un file denominato Service. cer.  
+6. Nel servizio eseguire `setup.bat service` in un prompt dei comandi per gli sviluppatori per Visual Studio aperto con privilegi di amministratore. Quando `setup.bat` si esegue con l' `service` argomento viene creato un certificato del servizio con il nome di dominio completo del computer e il certificato del servizio viene esportato in un file denominato Service. cer.  
   
 7. Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.  
   

@@ -2,15 +2,15 @@
 title: Integrazione di System.Web.Routing
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: a80b5c3b336b4fd18b347a25ceaf509baf6461b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 059f14c94bb7502a2e4f4616ca2c5e6ac5273afa
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184386"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600737"
 ---
 # <a name="systemwebrouting-integration"></a>Integrazione di System.Web.Routing
-Quando si ospita un servizio Windows Communication Foundation (WCF) in Internet Information Service (IIS) si inserisce un file con estensione svc nella directory virtuale. Questo file con estensione svc specifica la factory di host del servizio da utilizzare e la classe che implementa il servizio. Quando si effettuano richieste al servizio si specifica il `http://contoso.com/EmployeeServce.svc`file con estensione svc nell'URI, ad esempio: . Per i programmatori che scrivono servizi REST, questo tipo di URI non è ottimale. Gli URI per i servizi REST indicano una risorsa specifica e in genere non presentano estensioni. La <xref:System.Web.Routing> funzionalità di integrazione consente di ospitare un servizio REST WCF che risponde agli URI senza un'estensione. Per ulteriori informazioni sul [routing,](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))vedere ASP.NET Routing .  
+Quando si ospita un servizio Windows Communication Foundation (WCF) in Internet Information Services (IIS), si inserisce un file con estensione svc nella directory virtuale. Questo file con estensione svc specifica la factory di host del servizio da utilizzare e la classe che implementa il servizio. Quando si effettuano richieste al servizio, si specifica il file con estensione svc nell'URI, ad esempio: `http://contoso.com/EmployeeServce.svc` . Per i programmatori che scrivono servizi REST, questo tipo di URI non è ottimale. Gli URI per i servizi REST indicano una risorsa specifica e in genere non presentano estensioni. La <xref:System.Web.Routing> funzionalità di integrazione consente di ospitare un servizio WCF REST che risponde a URI senza estensione. Per ulteriori informazioni sul routing, vedere [ASP.NET routing](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100)).  
   
 ## <a name="using-systemwebrouting-integration"></a>Utilizzo dell'integrazione System.Web.Routing  
  Per utilizzare la funzionalità di integrazione <xref:System.Web.Routing>, viene utilizzata la classe <xref:System.ServiceModel.Activation.ServiceRoute> per creare una o più route e aggiungerle a <xref:System.Web.Routing.RouteTable> in un file Global.asax. Queste route specificano i relativi URI a cui risponde il servizio. L'esempio seguente illustra come farlo.  
@@ -49,7 +49,7 @@ Quando si ospita un servizio Windows Communication Foundation (WCF) in Internet 
     </system.webServer>  
 ```  
   
- Vengono caricati un modulo e il gestore necessario per il routing. Per altre informazioni, vedere [Routing](../../../../docs/framework/wcf/feature-details/routing.md). È inoltre necessario impostare l'attributo `aspNetCompatibilityEnabled` su `true` nell'elemento `<serviceHostingEnvironment>`, come indicato nel codice seguente.  
+ Vengono caricati un modulo e il gestore necessario per il routing. Per altre informazioni, vedere [Routing](routing.md). È inoltre necessario impostare l'attributo `aspNetCompatibilityEnabled` su `true` nell'elemento `<serviceHostingEnvironment>`, come indicato nel codice seguente.  
   
 ```xml  
 <system.serviceModel>  
@@ -71,5 +71,5 @@ Quando si ospita un servizio Windows Communication Foundation (WCF) in Internet 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Modello di programmazione HTTP Web WCF](wcf-web-http-programming-model.md)
 - [Routing di ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 3660877194931c2be5b9b1c9aa54e2595701697f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b2717bc68da9f07cd38e10a5d75b2a7df9add45
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184652"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602635"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Protezione dei messaggi con un client di certificato
-Nello scenario seguente viene illustrato un client Windows Communication Foundation (WCF) e un servizio protetto tramite la modalità di sicurezza dei messaggi. Sia il client che il servizio sono autenticati mediante certificati. Per ulteriori informazioni, vedere [Distributed Application Security](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).
+Nello scenario seguente vengono illustrati un client e un servizio Windows Communication Foundation (WCF) protetti mediante la modalità di sicurezza del messaggio. Sia il client che il servizio sono autenticati mediante certificati. Per altre informazioni, vedere [sicurezza delle applicazioni distribuite](distributed-application-security.md).
 
  ![Screenshot che mostra un client con certificato.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
- Per un'applicazione di esempio, vedere [Certificato di sicurezza dei](../../../../docs/framework/wcf/samples/message-security-certificate.md)messaggi .  
+ Per un'applicazione di esempio, vedere [certificato di sicurezza dei messaggi](../samples/message-security-certificate.md).  
 
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
@@ -28,7 +28,7 @@ Nello scenario seguente viene illustrato un client Windows Communication Foundat
 |Integrità|Sì|  
 |Riservatezza|Sì|  
 |Trasporto|HTTP|  
-|Associazione|<xref:System.ServiceModel.WSHttpBinding>|  
+|Binding|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Service  
  Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
@@ -101,7 +101,7 @@ Nello scenario seguente viene illustrato un client Windows Communication Foundat
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>Configurazione  
- Nella configurazione seguente il certificato client è specificato utilizzando un comportamento dell'endpoint. Per altre informazioni sui certificati, vedere [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Il codice utilizza `identity` anche un elemento> <per specificare un DNS (Domain Name System) dell'identità del server prevista. Per ulteriori informazioni sull'identità, vedere [Identità e autenticazione del servizio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Nella configurazione seguente il certificato client è specificato utilizzando un comportamento dell'endpoint. Per altre informazioni sui certificati, vedere [Utilizzo dei certificati](working-with-certificates.md). Nel codice viene inoltre utilizzato un `identity` elemento <> per specificare un Domain Name System (DNS) dell'identità server prevista. Per ulteriori informazioni sull'identità, vedere [identità e autenticazione del servizio](service-identity-and-authentication.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -145,7 +145,7 @@ Nello scenario seguente viene illustrato un client Windows Communication Foundat
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Panoramica della sicurezza](security-overview.md)
+- [Identità del servizio e autenticazione](service-identity-and-authentication.md)
+- [Working with Certificates](working-with-certificates.md)
 - [Sicurezza e protezione](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

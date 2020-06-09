@@ -1,16 +1,16 @@
 ---
-title: Cenni preliminari sulla sicurezza
+title: Panoramica della sicurezza
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 1e551572fa6d94e9fd1170eb7e3b258f2e8fb926
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 517d80395e09598fcbd067034223dc6ba58cbe2e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76728898"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600438"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Panoramica della sicurezza Windows Communication Foundation
 Windows Communication Foundation (WCF) è una piattaforma di programmazione distribuita basata su messaggi SOAP e la protezione dei messaggi tra client e servizi è essenziale per la protezione dei dati. WCF offre una piattaforma versatile e interoperativa per lo scambio di messaggi protetti basati sull'infrastruttura di sicurezza esistente e sugli standard di sicurezza riconosciuti per i messaggi SOAP.  
@@ -18,7 +18,7 @@ Windows Communication Foundation (WCF) è una piattaforma di programmazione dist
 > [!NOTE]
 > Per una guida completa alla sicurezza di WCF, vedere [Guida alla sicurezza di WCF](https://archive.codeplex.com/?p=WCFSecurity).  
   
- WCF utilizza concetti familiari se sono state create applicazioni distribuite sicure con tecnologie esistenti quali HTTPS, la sicurezza integrata di Windows o nomi utente e password per autenticare gli utenti. WCF non si integra solo con le infrastrutture di sicurezza esistenti, ma estende la sicurezza distribuita anche oltre i domini solo Windows utilizzando messaggi SOAP protetti. Prendere in considerazione WCF un'implementazione dei meccanismi di sicurezza esistenti con il vantaggio principale dell'utilizzo di SOAP come protocollo, oltre ai protocolli esistenti. Ad esempio, le credenziali che identificano un client o un servizio, quali nome utente e password o certificati X.509, hanno profili SOAP interoperativi basati su XML. Se si usano questi profili, i messaggi vengono scambiati in modo protetto usufruendo dei vantaggi delle specifiche aperte quali le firme digitali e la crittografia XML. Per un elenco delle specifiche, vedere [protocolli di servizi Web supportati da associazioni di interoperabilità fornite dal sistema](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
+ WCF utilizza concetti familiari se sono state create applicazioni distribuite sicure con tecnologie esistenti quali HTTPS, la sicurezza integrata di Windows o nomi utente e password per autenticare gli utenti. WCF non si integra solo con le infrastrutture di sicurezza esistenti, ma estende la sicurezza distribuita anche oltre i domini solo Windows utilizzando messaggi SOAP protetti. Prendere in considerazione WCF un'implementazione dei meccanismi di sicurezza esistenti con il vantaggio principale dell'utilizzo di SOAP come protocollo, oltre ai protocolli esistenti. Ad esempio, le credenziali che identificano un client o un servizio, quali nome utente e password o certificati X.509, hanno profili SOAP interoperativi basati su XML. Se si usano questi profili, i messaggi vengono scambiati in modo protetto usufruendo dei vantaggi delle specifiche aperte quali le firme digitali e la crittografia XML. Per un elenco delle specifiche, vedere [protocolli di servizi Web supportati da associazioni di interoperabilità fornite dal sistema](web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
   
  Un altro servizio parallelo è COM (Component Object Model) sulla piattaforma Windows, che consente applicazioni distribuite protette. COM dispone di un meccanismo di sicurezza completo mediante il quale il contesto di sicurezza può essere propagato tra i componenti. Questo meccanismo applica l'integrità, la riservatezza e l'autenticazione. COM, tuttavia, non consente la messaggistica protetta multipiattaforma come WCF. Con WCF è possibile creare servizi e client che si estendono da domini Windows su Internet. I messaggi interoperativi di WCF sono essenziali per la creazione di servizi dinamici e basati sull'azienda che consentono di ottenere la sicurezza delle informazioni.  
   
@@ -85,32 +85,32 @@ Windows Communication Foundation (WCF) è una piattaforma di programmazione dist
   
 - La *modalità di sicurezza del messaggio*, d'altra parte, USA WS-Security (e altre specifiche) per implementare la sicurezza del trasferimento. Poiché la sicurezza del messaggio viene applicata direttamente ai messaggi SOAP ed è contenuta negli elementi SOAP Envelope unitamente ai dati dell'applicazione, ha il vantaggio di essere indipendente dal protocollo di trasporto, di essere maggiormente estensibile e di garantire la sicurezza end-to-end (anziché point-to-point). Ha lo svantaggio di essere notevolmente più lenta rispetto alla modalità di sicurezza del trasporto perché deve trattare con la natura XML dei messaggi SOAP.  
   
- Per ulteriori informazioni su queste differenze, vedere [protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
+ Per ulteriori informazioni su queste differenze, vedere [protezione di servizi e client](securing-services-and-clients.md).  
   
  Una terza modalità di sicurezza usa entrambe le modalità precedenti e sfrutta i vantaggi di entrambe. Questa modalità è detta `TransportWithMessageCredential`. In questa modalità la sicurezza del messaggio viene usata per autenticare il client e la sicurezza del trasporto viene usata per autenticare il server e fornire riservatezza e integrità dei messaggi. La modalità di sicurezza `TransportWithMessageCredential` è infatti veloce quasi quanto la modalità di sicurezza del trasporto e fornisce estensibilità per l'autenticazione client ugualmente alla modalità di sicurezza del messaggio. A differenza della modalità di sicurezza del messaggio, tuttavia, non fornisce la sicurezza end-to-end completa.  
   
-### <a name="access-control"></a>Access Control  
+### <a name="access-control"></a>Controllo di accesso  
  Il *controllo di accesso* è noto anche come autorizzazione. L' *autorizzazione* consente a utenti diversi di disporre di privilegi diversi per la visualizzazione dei dati. Ad esempio, poiché i file relativi alle risorse umane di un'azienda contengono dati riservati sui dipendenti, la visualizzazione di questi dati è consentita soltanto ai dirigenti, che possono tuttavia visualizzare soltanto i dati relativi ai propri subalterni. In questo caso, il controllo di accesso è basato sia sul ruolo ("dirigente") che sull'identità specifica del dirigente (per impedire a un dirigente di accedere ai record relativi ai subalterni di un altro dirigente).  
   
- In WCF, le funzionalità di controllo di accesso vengono fornite tramite l'integrazione con il Common Language Runtime (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute> e tramite un set di API noto come *modello di identità*. Per informazioni dettagliate sul controllo di accesso e sull'autorizzazione basata sulle attestazioni, vedere [estensione della protezione](../../../../docs/framework/wcf/extending/extending-security.md).  
+ In WCF, le funzionalità di controllo di accesso vengono fornite tramite l'integrazione con il Common Language Runtime (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute> e tramite un set di API noto come *modello di identità*. Per informazioni dettagliate sul controllo di accesso e sull'autorizzazione basata sulle attestazioni, vedere [estensione della protezione](../extending/extending-security.md).  
   
 ### <a name="auditing"></a>Controllo  
- Il *controllo* è la registrazione degli eventi di sicurezza nel registro eventi di Windows. È possibile registrare eventi relativi alla sicurezza, ad esempio le operazioni di autenticazione riuscite o non riuscite. Per ulteriori informazioni, vedere [controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Per informazioni dettagliate sulla programmazione, vedere [procedura: controllare gli eventi di sicurezza](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
+ Il *controllo* è la registrazione degli eventi di sicurezza nel registro eventi di Windows. È possibile registrare eventi relativi alla sicurezza, ad esempio le operazioni di autenticazione riuscite o non riuscite. Per ulteriori informazioni, vedere [controllo](auditing-security-events.md). Per informazioni dettagliate sulla programmazione, vedere [procedura: controllare gli eventi di sicurezza](how-to-audit-wcf-security-events.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [Protezione dei servizi](../../../../docs/framework/wcf/securing-services.md)
-- [Scenari di sicurezza comuni](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
-- [Associazioni e sicurezza](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Autenticazione](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
-- [Autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [Federazione e token rilasciati](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Linee guida e procedure consigliate per la sicurezza](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
-- [Configurazione dei servizi tramite file di configurazione](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
-- [Associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Panoramica della creazione di endpoint](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Estensione della sicurezza](../../../../docs/framework/wcf/extending/extending-security.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Protezione dei servizi](../securing-services.md)
+- [Scenari di sicurezza comuni](common-security-scenarios.md)
+- [Associazioni e protezione](bindings-and-security.md)
+- [Securing Services and Clients](securing-services-and-clients.md)
+- [autenticazione](authentication-in-wcf.md)
+- [Autorizzazione](authorization-in-wcf.md)
+- [Federazione e token emessi](federation-and-issued-tokens.md)
+- [Controllo](auditing-security-events.md)
+- [Indicazioni di sicurezza e procedure consigliate](security-guidance-and-best-practices.md)
+- [Configurazione dei servizi tramite file di configurazione](../configuring-services-using-configuration-files.md)
+- [Associazioni fornite dal sistema](../system-provided-bindings.md)
+- [Cenni preliminari sulla creazione di endpoint](../endpoint-creation-overview.md)
+- [Estensione della protezione](../extending/extending-security.md)
+- [Sicurezza e protezione](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

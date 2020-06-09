@@ -1,5 +1,6 @@
 ---
 title: Tipi di raccolte comunemente utilizzate
+description: Informazioni sui tipi di raccolta comunemente usati in .NET, ad esempio tabelle hash, code, stack, sacchetti, dizionari ed elenchi.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: 47e54bb76c65dd5acc8ce1921ee385a5cb55cf95
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d0f2abc71524408c2bd2fa35a1a2dde0e664d273
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287991"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600841"
 ---
 # <a name="commonly-used-collection-types"></a>Tipi di raccolte comunemente utilizzate
 I tipi di raccolta sono le varianti comuni delle raccolte di dati, ad esempio tabelle hash, code, stack, contenitori, dizionari ed elenchi.  

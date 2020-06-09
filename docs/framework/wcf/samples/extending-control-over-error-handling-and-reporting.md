@@ -2,15 +2,15 @@
 title: Estensione del controllo sulla gestione e sulla segnalazione degli errori
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 68f3381e8db9d7c0222720dda335b47e30f57ac7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c7ca8d85220d65905bc4d9d220de366c331504a4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183678"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600542"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Estensione del controllo sulla gestione e sulla segnalazione degli errori
-In questo esempio viene illustrato come estendere il controllo sulla gestione degli <xref:System.ServiceModel.Dispatcher.IErrorHandler> errori e la segnalazione degli errori in un servizio Windows Communication Foundation (WCF) utilizzando l'interfaccia . L'esempio è basato sulla [Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) con codice aggiuntivo aggiunto al servizio per gestire gli errori. Il client forza diverse condizioni di errore. Il servizio intercetta gli errori e li registra in un file.  
+In questo esempio viene illustrato come estendere il controllo sulla gestione degli errori e la segnalazione degli errori in un servizio Windows Communication Foundation (WCF) utilizzando l' <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfaccia. L'esempio è basato sul [Introduzione](getting-started-sample.md) con codice aggiuntivo aggiunto al servizio per la gestione degli errori. Il client forza diverse condizioni di errore. Il servizio intercetta gli errori e li registra in un file.  
   
 > [!NOTE]
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
@@ -132,7 +132,7 @@ FaultException: FaultException - Invalid Argument: The argument must be greater 
 Press <ENTER> to terminate client.  
 ```  
   
- Il file c:\logs\errors.txt contiene le informazioni registrate sugli errori dal servizio. Si noti che per il servizio di scrivere nella directory è necessario assicurarsi che il processo in cui il servizio è in esecuzione (in genere ASP.NET o servizio di rete) disponga dell'autorizzazione per scrivere nella directory.  
+ Il file c:\logs\errors.txt contiene le informazioni registrate sugli errori dal servizio. Si noti che per la scrittura del servizio nella directory è necessario assicurarsi che il processo in cui è in esecuzione il servizio (in genere ASP.NET o servizio di rete) disponga delle autorizzazioni per scrivere nella directory.  
   
 ```txt
 Fault: Reason = Invalid Argument: The second argument must not be zero.  
@@ -141,19 +141,19 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Assicurarsi di aver eseguito la procedura di [installazione una tantera per Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Per compilare la soluzione, seguire le istruzioni in [Compilazione di Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare la soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](building-the-samples.md).  
   
 3. Assicurarsi di aver creato la directory c:\logs per il file error.txt. In alternativa, modificare il nome file utilizzato in `CalculatorErrorHandler.HandleError`.  
   
-4. Per eseguire l'esempio in una configurazione su un singolo o più computer, seguire le istruzioni in Esecuzione di [Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](running-the-samples.md).  
   
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) Esempi per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) ed [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  

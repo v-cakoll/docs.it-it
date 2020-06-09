@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.MessageReceived
 ms.date: 03/30/2017
 ms.assetid: 9e6942a4-051f-416c-9674-7e729b9edd33
-ms.openlocfilehash: fc2de674bf6a112ff6800ea4a1b2d02e7ead2094
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0211244909e6302752985f3958c2d07ac30b34f8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792431"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601998"
 ---
 # <a name="systemservicemodelchannelsmessagereceived"></a>System.ServiceModel.Channels.MessageReceived
 System.ServiceModel.Channels.MessageReceived  
@@ -15,10 +15,10 @@ System.ServiceModel.Channels.MessageReceived
 ## <a name="description"></a>Descrizione  
  Ricevuto un messaggio su un canale.  
   
- Questa traccia viene emessa quando viene ricevuto un messaggio WCF se il `System.ServiceModel` origine di traccia è abilitata al livello informazioni o dettagliato. Questa traccia è necessaria per la visualizzazione del tasto di direzione della correlazione tra i messaggi nella visualizzazione del grafico delle attività.  
+ Questa traccia viene generata quando viene ricevuto un messaggio WCF se l' `System.ServiceModel` origine di traccia è abilitata a livello di informazioni o dettagliato. Questa traccia è necessaria per la visualizzazione del tasto di direzione della correlazione tra i messaggi nella visualizzazione del grafico delle attività.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Traccia](index.md)
+- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](using-tracing-to-troubleshoot-your-application.md)
+- [Amministrazione e diagnostica](../index.md)

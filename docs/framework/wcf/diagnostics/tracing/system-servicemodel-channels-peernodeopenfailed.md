@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.PeerNodeOpenFailed
 ms.date: 03/30/2017
 ms.assetid: fd908a42-30d1-4301-bc33-35b503896634
-ms.openlocfilehash: 1aada8e4784af8f304b6ddb4842b79e149e06bd9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b44c477b9ddaf775a3cfcec3db39b0908513255
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774947"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84577149"
 ---
 # <a name="systemservicemodelchannelspeernodeopenfailed"></a>System.ServiceModel.Channels.PeerNodeOpenFailed
 Tentativo di apertura di una connessione con un router adiacente non riuscito.  
@@ -20,6 +20,6 @@ Tentativo di apertura di una connessione con un router adiacente non riuscito.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Traccia](index.md)
+- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](using-tracing-to-troubleshoot-your-application.md)
+- [Amministrazione e diagnostica](../index.md)

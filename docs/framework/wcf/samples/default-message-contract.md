@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 46b69697616ad7983daed16f8a180a4da7f61a16
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 404fd9ddc911327bbc09c65d74da22bd88d08e2e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183761"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602570"
 ---
 # <a name="default-message-contract"></a>Impostazione predefinita dei contratti di messaggio
-L'esempio Impostazione predefinita dei contratti di messaggio illustra un servizio in cui un messaggio personalizzato definito dall'utente viene passato da e verso le operazioni del servizio. Questo esempio è basato sulla [Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un'interfaccia calcolatrice come servizio tipizzato. Anziché le singole operazioni di servizio per l'addizione, la sottrazione, la moltiplicazione e la divisione utilizzate in [Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md), in questo esempio viene superato un messaggio personalizzato contenente sia gli operandi che l'operatore e viene restituito il risultato del calcolo aritmetico.  
+L'esempio Impostazione predefinita dei contratti di messaggio illustra un servizio in cui un messaggio personalizzato definito dall'utente viene passato da e verso le operazioni del servizio. Questo esempio si basa sul [Introduzione](getting-started-sample.md) che implementa un'interfaccia del calcolatore come servizio tipizzato. Anziché le singole operazioni di servizio per addizioni, sottrazioni, moltiplicazioni e divisioni utilizzate nella [Introduzione](getting-started-sample.md), questo esempio passa un messaggio personalizzato che contiene gli operandi e l'operatore e restituisce il risultato del calcolo aritmetico.  
   
  Il client è un programma console (estensione exe) e la libreria (estensione dll) del servizio è ospitata su Internet Information Services (IIS). L'attività del client è visibile nella finestra della console.  
   
@@ -131,7 +131,7 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- Il codice client generato per il client è stato creato con lo strumento [ServiceModel Metadata Utility Tool (Svcutil.exe).](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Lo strumento crea automaticamente i tipi di contratto del messaggio nel codice client generato se necessario. L'opzione di comando `/messageContract` può essere specificata per forzare la generazione di contratti del messaggio.  
+ Il codice client generato per il client è stato creato con lo strumento [ServiceModel Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) . Lo strumento crea automaticamente i tipi di contratto del messaggio nel codice client generato se necessario. L'opzione di comando `/messageContract` può essere specificata per forzare la generazione di contratti del messaggio.  
   
 ```console  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  
@@ -170,17 +170,17 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Assicurarsi di aver eseguito la procedura di [installazione una tantera per Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](building-the-samples.md).  
   
-3. Per eseguire l'esempio in una configurazione su un singolo o più computer, seguire le istruzioni in Esecuzione di [Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](running-the-samples.md).  
   
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) Esempi per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) ed [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  

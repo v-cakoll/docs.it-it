@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: 62d26b24b5d46427c1871fccf48b063c45781beb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 186dd4a7fc2beae848e5cbd167a204352ee6ed4e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185116"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601296"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Procedura: controllare gli eventi di sicurezza di Windows Communication Foundation
-Windows Communication Foundation (WCF) consente di registrare gli eventi di protezione nel registro eventi di Windows, che può essere visualizzato utilizzando il Visualizzatore eventi di Windows. In questo argomento viene illustrato come configurare un'applicazione in modo che registri eventi di sicurezza. Per altre informazioni sul controllo WCF, vedere [Controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+Windows Communication Foundation (WCF) consente di registrare gli eventi di sicurezza nel registro eventi di Windows, che possono essere visualizzati tramite la Visualizzatore eventi di Windows. In questo argomento viene illustrato come configurare un'applicazione in modo che registri eventi di sicurezza. Per ulteriori informazioni sul controllo WCF, vedere [controllo](auditing-security-events.md).  
   
 ### <a name="to-audit-security-events-in-code"></a>Per controllare gli eventi di sicurezza nel codice  
   
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF) consente di registrare gli eventi di prot
      [!code-csharp[AuditingSecurityEvents#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#2)]
      [!code-vb[AuditingSecurityEvents#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#2)]  
   
-     <xref:System.ServiceModel.AuditLogLocation> L'enumerazione ha `Application` `Security`tre `Default`valori: , , o . Il valore specifica uno dei log visibili nel Visualizzatore eventi, il registro protezione o il registro applicazioni. Se si usa il valore `Default`, il log effettivo dipenderà dal sistema operativo su cui è in esecuzione l'applicazione. Se il controllo è attivato e il percorso del log non viene specificato, verrà usato, per impostazione predefinita, il registro `Security`, per le piattaforme che supportano la scrittura nel registro protezione, altrimenti verrà usato il registro `Application`. Solo Windows Server 2003 e Windows Vista supportano la scrittura nel registro di protezione per impostazione predefinita.  
+     L' <xref:System.ServiceModel.AuditLogLocation> enumerazione ha tre valori: `Application` , `Security` o `Default` . Il valore specifica uno dei log visibili nel Visualizzatore eventi, il registro protezione o il registro applicazioni. Se si usa il valore `Default`, il log effettivo dipenderà dal sistema operativo su cui è in esecuzione l'applicazione. Se il controllo è attivato e il percorso del log non viene specificato, verrà usato, per impostazione predefinita, il registro `Security`, per le piattaforme che supportano la scrittura nel registro protezione, altrimenti verrà usato il registro `Application`. Per impostazione predefinita, solo Windows Server 2003 e Windows Vista supportano la scrittura nel registro di sicurezza.  
   
 2. Impostare i tipi di eventi da controllare. È possibile controllare simultaneamente eventi a livello di servizio o eventi di autorizzazione a livello di messaggio. A questo scopo, impostare la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A> o <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A> su uno dei valori dell'enumerazione <xref:System.ServiceModel.AuditLevel>, come illustrato nel codice seguente.  
   
@@ -45,7 +45,7 @@ Windows Communication Foundation (WCF) consente di registrare gli eventi di prot
   
 ### <a name="to-set-up-auditing-in-configuration"></a>Per impostare il controllo nella configurazione  
   
-1. Per impostare il controllo [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) nella configurazione, aggiungere un elemento di>di comportamento alla sezione [ \<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) del file web.config. Aggiungere quindi [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) un elemento>serviceSecurityAudit e impostare i vari attributi, come illustrato nell'esempio seguente.  
+1. Per impostare il controllo nella configurazione, aggiungere un [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elemento alla [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) sezione del file Web. config. Aggiungere quindi un [\<serviceSecurityAudit>](../../configure-apps/file-schema/wcf/servicesecurityaudit.md) elemento e impostare i vari attributi, come illustrato nell'esempio seguente.  
   
     ```xml  
     <behaviors>  
@@ -79,17 +79,17 @@ Windows Communication Foundation (WCF) consente di registrare gli eventi di prot
  [!code-vb[AuditingSecurityEvents#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#1)]  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
- Se si imposta la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true`, viene evitata la visualizzazione di qualsiasi errore per generare controlli di sicurezza (se la proprietà viene impostata su `false`, viene generata un'eccezione). Tuttavia, se si attiva la seguente proprietà **Di Protezione locale** di Windows, un errore di generazione degli eventi di controllo causerà l'arresto immediato di Windows:  
+ Se si imposta la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true`, viene evitata la visualizzazione di qualsiasi errore per generare controlli di sicurezza (se la proprietà viene impostata su `false`, viene generata un'eccezione). Tuttavia, se si Abilita la seguente proprietà di **impostazione di sicurezza locale** di Windows, un errore di generazione di eventi di controllo causerà l'arresto immediato di Windows:  
   
  **Controllo: arresto del sistema immediato se non è possibile registrare i controlli di sicurezza**  
   
- Per impostare la proprietà, aprire la finestra di dialogo **Impostazioni protezione locale.** In **Impostazioni protezione**fare clic su Criteri **locali.** Quindi fare clic su **Opzioni di protezione**.  
+ Per impostare la proprietà, aprire la finestra di dialogo **impostazioni di sicurezza locali** . In **impostazioni di sicurezza**fare clic su **criteri locali**. Fare quindi clic su **Opzioni di sicurezza**.  
   
- Se <xref:System.ServiceModel.AuditLogLocation> la proprietà <xref:System.ServiceModel.AuditLogLocation.Security> è impostata su e **Controlla accesso** agli oggetti non è impostato nei criteri di **protezione locali,** gli eventi di controllo non verranno scritti nel registro di protezione. Si noti che non viene restituito alcun errore, ma non vengono scritte voci di controllo nel registro protezione.  
+ Se la <xref:System.ServiceModel.AuditLogLocation> proprietà è impostata su <xref:System.ServiceModel.AuditLogLocation.Security> e l' **accesso agli oggetti di controllo** non è impostato nei criteri di **sicurezza locali**, gli eventi di controllo non verranno scritti nel registro di sicurezza. Si noti che non viene restituito alcun errore, ma non vengono scritte voci di controllo nel registro protezione.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>
-- [Controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+- [Controllo](auditing-security-events.md)

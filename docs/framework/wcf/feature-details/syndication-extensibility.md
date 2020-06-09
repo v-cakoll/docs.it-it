@@ -2,12 +2,12 @@
 title: Estendibilità della diffusione
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-ms.openlocfilehash: 688b31f3c87b7c9ad4842cfe6834b0dbc9e5b85b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5e8f47b45897f46e15847c793c986e953523e66b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585945"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600724"
 ---
 # <a name="syndication-extensibility"></a>Estendibilità della diffusione
 L'API di diffusione è progettata per fornire un modello di programmazione di formato neutro che consente di scrivere in rete il contenuto diffuso in molteplici formati. Il modello di dati astratto è costituito dalle classi seguenti:  
@@ -24,7 +24,7 @@ L'API di diffusione è progettata per fornire un modello di programmazione di fo
   
  Queste classi eseguono il mapping in modo rigoroso ai costrutti definiti nella specifica Atom 1.0, anche se alcuni dei nomi sono diversi.  
   
- Una funzionalità chiave dei protocolli di diffusione è l'estensibilità. Sia Atom 1.0 che RSS 2.0 aggiungono attributi ed elementi ai feed di diffusione che non sono definiti nelle specifiche. Il modello di programmazione di diffusione di Windows Communication Foundation (WCF) offre le seguenti modalità di utilizzo di attributi personalizzati ed estensioni, accesso non fortemente tipizzato e derivazione di una nuova classe.  
+ Una funzionalità chiave dei protocolli di diffusione è l'estensibilità. Sia Atom 1.0 che RSS 2.0 aggiungono attributi ed elementi ai feed di diffusione che non sono definiti nelle specifiche. Il modello di programmazione della diffusione Windows Communication Foundation (WCF) fornisce le seguenti modalità di utilizzo di attributi ed estensioni personalizzati, accesso con tipizzazione debole e derivazione di una nuova classe.  
   
 ## <a name="loosely-typed-access"></a>Accesso non fortemente tipizzato  
  L'aggiunta di estensioni tramite la derivazione di una nuova classe richiede che venga scritto codice aggiuntivo. Un'altra opzione consiste nell'accedere alle estensioni in modo non fortemente tipizzato. Tutti i tipi definiti nel modello di dati astratto di diffusione contengono le proprietà denominate `AttributeExtensions` e `ElementExtensions` (con un'eccezione, <xref:System.ServiceModel.Syndication.SyndicationContent> ha una proprietà `AttributeExtensions` ma nessuna proprietà `ElementExtensions`). Queste proprietà sono raccolte di estensioni non elaborate rispettivamente dai metodi `TryParseAttribute` e `TryParseElement`. È possibile accedere a queste estensioni non elaborate chiamando <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection.ReadElementExtensions%2A?displayProperty=nameWithType> sulla proprietà `ElementExtensions` di <xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem>, <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationPerson> e <xref:System.ServiceModel.Syndication.SyndicationCategory>. Questo set di metodi cerca tutte le estensioni con il nome e lo spazio dei nomi specificati, le deserializza singolarmente in istanze di `TExtension` e le restituisce come una raccolta di oggetti `TExtension`.  
@@ -46,5 +46,5 @@ L'API di diffusione è progettata per fornire un modello di programmazione di fo
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica della diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
-- [Architettura della diffusione](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
+- [Panoramica della diffusione WCF](wcf-syndication-overview.md)
+- [Architettura di diffusione](architecture-of-syndication.md)

@@ -2,25 +2,25 @@
 title: Elenco delle attività
 ms.date: 03/30/2017
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-ms.openlocfilehash: d048dc9851a3b07b6c7457de95f2c752b0ffa964
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d43cc878d54efbd4908f92c3405bef2c7956f94
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933587"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602167"
 ---
 # <a name="activity-list"></a>Elenco delle attività
 In questo argomento vengono elencate tutte le attività definite da Windows Communication Foundation (WCF).  
   
 > [!NOTE]
-> È inoltre possibile definire attività a livello di programmazione allo scopo di raggruppare più tracce utente. Per altre informazioni, vedere [creazione di tracce di codice utente](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
+> È inoltre possibile definire attività a livello di programmazione allo scopo di raggruppare più tracce utente. Per altre informazioni, vedere [creazione di tracce di codice utente](emitting-user-code-traces.md).  
   
 ## <a name="servicemodel-activities"></a>Attività ServiceModel  
  Nella tabella seguente sono elencate tutte le attività relative ai principali scenari di utilizzo.  
   
-|Label|Nome attività|Tipo attività:|Descrizione|  
+|Label|Nome attività|Tipo di attività|Descrizione|  
 |-----------|-------------------|-------------------|-----------------|  
-|A, M|Attività di ambiente|N/D (non controllata da ServiceModel)|Attività il cui ID viene impostato in TLS prima che venga effettuata qualsiasi chiamata al codice di ServiceModel, sia esso lato client o lato server.<br /><br /> Esempio: Attività in cui viene chiamato il metodo Open sul client WCF o viene chiamato serviceHost. Open.|  
+|A, M|Attività di ambiente|N/D (non controllata da ServiceModel)|Attività il cui ID viene impostato in TLS prima che venga effettuata qualsiasi chiamata al codice di ServiceModel, sia esso lato client o lato server.<br /><br /> Esempio: un'attività in cui viene chiamato il metodo Open sul client WCF o viene chiamato serviceHost. Open.|  
 |b|Costrutto<br /><br /> ChannelFactory. ContractType : "[tipo]".|Costrutto||  
 |C|Apri<br /><br /> [ClientBase&#124;ChannelFactory]. ContractType : "[tipo]".|Apri||  
 |I|Close [ClientBase&#124;ChannelFactory]. ContractType : "[tipo]".|Chiudi||  
@@ -36,22 +36,22 @@ In questo argomento vengono elencate tutte le attività definite da Windows Comm
 ## <a name="security-activities"></a>Attività di sicurezza  
  Nella tabella seguente sono elencate tutte le attività riferite alla sicurezza.  
   
-|Nome attività|Tipo attività:|DESCRIZIONE|  
+|Nome attività|Tipo di attività|Descrizione|  
 |-------------------|-------------------|-----------------|  
-|Impostazione sessione protetta|SetupSecurity|Esiste soltanto sul lato client. Contiene tutti gli scambi RST*/SCT per eseguire l'autenticazione e l'impostazione del contesto di sicurezza. Se `propagateActivity` =\*, questa attività viene unita alle attività di RST/SCT dell'azione di processo corrispondente del servizio. `true`|  
-|Chiusura sessione protetta|SetupSecurity|Esiste sul lato client. Contiene lo scambio di messaggi di annullamento per eseguire la chiusura della sessione protetta. Se `propagateActivity` ,questaattività`true`viene unita all'azione di elaborazione "Annulla" del servizio. =|  
+|Impostazione sessione protetta|SetupSecurity|Esiste soltanto sul lato client. Contiene tutti gli scambi RST*/SCT per eseguire l'autenticazione e l'impostazione del contesto di sicurezza. Se `propagateActivity` = `true` , questa attività viene unita alle attività di RST/SCT dell'azione di processo corrispondente del servizio \* .|  
+|Chiusura sessione protetta|SetupSecurity|Esiste sul lato client. Contiene lo scambio di messaggi di annullamento per eseguire la chiusura della sessione protetta. Se `propagateActivity` = `true` , questa attività viene unita all'azione di elaborazione "Annulla" del servizio.|  
   
  Nella tabella seguente sono elencate tutte le attività riferite a COM+.  
   
-|Nome attività|Tipo attività:|DESCRIZIONE|  
+|Nome attività|Tipo di attività|Descrizione|  
 |-------------------|-------------------|-----------------|  
 |Creazione istanza COM+|TransferToCOMPlus|1 istanza di attività per ogni chiamata COM+ dal codice WCF|  
-|Esegui operazione \<com+ >|TransferToCOMPlus|1 istanza di attività per ogni chiamata COM+ dal codice WCF|  
+|Esegui COM+\<operation>|TransferToCOMPlus|1 istanza di attività per ogni chiamata COM+ dal codice WCF|  
   
 ## <a name="wmi-activities"></a>Attività WMI  
  Nella tabella seguente sono elencate tutte le attività riferite a WMI.  
   
-|Nome attività|Tipo attività:|DESCRIZIONE|  
+|Nome attività|Tipo di attività|Descrizione|  
 |-------------------|-------------------|-----------------|  
 |Ottenimento WMI|WMIGetObject|Questa attività prevede il recupero di dati da WMI da parte dell'utente.|  
 |Inserimento WMI|WmiPutInstance|Questa attività prevede l'aggiornamento dei dati tramite WMI da parte dell'utente|

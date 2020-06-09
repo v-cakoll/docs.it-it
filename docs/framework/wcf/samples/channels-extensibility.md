@@ -2,31 +2,31 @@
 title: Estensibilità dei canali
 ms.date: 03/30/2017
 ms.assetid: 4cc3b20b-778a-4ae8-b58c-a3822fb13065
-ms.openlocfilehash: aeff683b786d81fc782914bd2df70adb10bcbcec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9dbae26a548bdc8a8cfb05a3dd90db91475b55ba
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944053"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600633"
 ---
 # <a name="channels-extensibility"></a>Estensibilità dei canali
 Contenuto della sezione sono inclusi esempi che descrivono canali personalizzati.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Canale locale](../../../../docs/framework/wcf/samples/local-channel.md)  
- Viene illustrato il canale locale, un canale di trasporto WCF che viene usato per la comunicazione all'interno del dominio dell'applicazione stessa.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Canale locale](local-channel.md)  
+ Viene illustrato il canale locale, ovvero un canale di trasporto WCF utilizzato per la comunicazione all'interno dello stesso dominio applicazione.  
   
- [Reliable Secure Profile](../../../../docs/framework/wcf/samples/reliable-secure-profile.md)  
- Viene descritto come creare WCF e Reliable Secure Profile (RSP).  
+ [Reliable Secure Profile](reliable-secure-profile.md)  
+ Viene illustrato come comporre WCF e un profilo sicuro affidabile (RSP).  
   
- [Dispatcher di canali personalizzati](../../../../docs/framework/wcf/samples/custom-channel-dispatcher.md)  
+ [Dispatcher di canali personalizzati](custom-channel-dispatcher.md)  
  Viene descritto come compilare lo stack di canali in modo personalizzato implementando direttamente <xref:System.ServiceModel.ServiceHostBase> e come creare un dispatcher del canale personalizzato in un ambiente host Web.  
   
- [Canale per la suddivisione in blocchi](../../../../docs/framework/wcf/samples/chunking-channel.md)  
- Viene illustrato come limitare la quantità di memoria utilizzata per memorizzare nel buffer di messaggi di grandi dimensioni inviati utilizzando WCF.
+ [Chunking del canale](chunking-channel.md)  
+ Viene illustrato come limitare la quantità di memoria utilizzata per memorizzare nel buffer messaggi di grandi dimensioni inviati tramite WCF.
   
- [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)  
+ [HttpCookieSession](httpcookiesession.md)  
  Viene illustrato come compilare un canale di protocollo personalizzato per utilizzare cookie HTTP per la gestione della sessione.  
   
- [Intercettore dei messaggi personalizzati](../../../../docs/framework/wcf/samples/custom-message-interceptor.md)  
+ [Intercettore dei messaggi personalizzati](custom-message-interceptor.md)  
  Viene illustrato come implementare un elemento di associazione personalizzato che crea channel factory e listener del canale per intercettare tutti i messaggi in ingresso e in uscita in un particolare punto nello stack di runtime.

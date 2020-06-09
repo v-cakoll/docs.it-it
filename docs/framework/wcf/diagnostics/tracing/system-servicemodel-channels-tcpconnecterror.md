@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.TcpConnectError
 ms.date: 03/30/2017
 ms.assetid: 22d93797-072e-405d-a3e0-5c519ddf290b
-ms.openlocfilehash: 0bfd35e2b3ca421745701a91f2a5bfc91f3063aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5675547108c5d8c5bc4248a5fa98c76f7e29ce23
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942207"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601855"
 ---
 # <a name="systemservicemodelchannelstcpconnecterror"></a>System.ServiceModel.Channels.TcpConnectError
 Operazione di connessione TCP non riuscita.  
@@ -17,6 +17,6 @@ Operazione di connessione TCP non riuscita.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Traccia](index.md)
+- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](using-tracing-to-troubleshoot-your-application.md)
+- [Amministrazione e diagnostica](../index.md)

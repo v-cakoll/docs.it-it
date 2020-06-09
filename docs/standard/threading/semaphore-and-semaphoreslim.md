@@ -1,5 +1,6 @@
 ---
 title: Semaphore e SemaphoreSlim
+description: Informazioni sul semaforo & SemaphoreSlim. Il semaforo della classe è un wrapper sottile intorno all'oggetto semaforo Win32. La classe SemaphoreSlim è un semaforo leggero veloce.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-ms.openlocfilehash: 9a18a6517548bb402e1e3b9ac02e95aae32a8f4a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 21f0d7e3fb446a7b750c45cfe8ef3f087a77888a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291136"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600451"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore e SemaphoreSlim
 La classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> rappresenta un semaforo denominato (systemwide) o locale. È un semplice wrapper per l'oggetto semaforo Win32. I semafori Win32 sono semafori di conteggio che possono essere usati per controllare l'accesso a un pool di risorse.  

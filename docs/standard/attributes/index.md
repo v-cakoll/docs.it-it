@@ -1,5 +1,6 @@
 ---
 title: Estensione di metadati mediante attributi
+description: Informazioni su come estendere i metadati usando gli attributi in .NET. Gli attributi sono dichiarazioni descrittive simili a parole chiave per aggiungere annotazioni a elementi di programmazione, ad esempio tipi e campi.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - runtime, attributes
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
-ms.openlocfilehash: d27dc3d77a8f72123f23d9f5a893d144bacee662
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c77de970c5550bd896e83854414592d70eb9dc48
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276270"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598632"
 ---
 # <a name="extending-metadata-using-attributes"></a>Estensione di metadati mediante attributi
 Common Language Runtime consente di aggiungere dichiarazioni descrittive simili a parole chiave, dette attributi, per annotare gli elementi di programmazione quali tipi, campi, metodi e proprietà. Quando si compila il codice per il runtime, viene convertito in Microsoft Intermediate Language (MSIL) e inserito in un file eseguibile portabile (PE) insieme ai metadati generati dal compilatore. Gli attributi consentono di inserire informazioni descrittive aggiuntive nei metadati che possono essere estratte mediante i servizi di reflection di runtime. Il compilatore crea attributi quando si dichiarano istanze di classi speciali che derivano da <xref:System.Attribute?displayProperty=nameWithType>.  

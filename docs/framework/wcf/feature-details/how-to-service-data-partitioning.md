@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Partizionamento dei dati del servizio'
+title: 'Procedura: partizionamento dei dati del servizio'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 49aefd88d73732a139a79f8c53d5beca44d4d4ba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3b2f86ee6a4dea25fb5c972d4cecb1b9ed411b29
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947864"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601192"
 ---
-# <a name="how-to-service-data-partitioning"></a>Procedura: Partizionamento dei dati del servizio
+# <a name="how-to-service-data-partitioning"></a>Procedura: partizionamento dei dati del servizio
 In questo argomento vengono descritti i passaggi di base necessari per partizionare messaggi tra più istanze dello stesso servizio di destinazione. Il partizionamento dei dati del servizio viene in genere utilizzato quando è necessario ridimensionare un servizio per fornire un livello migliore di qualità del servizio o gestire richieste da diversi clienti in modo specifico. Ad esempio, potrebbe essere necessario elaborare i messaggi di clienti di valore elevato o "Gold" con una priorità più alta rispetto ai messaggi di un cliente standard.  
   
  In questo esempio i messaggi vengono indirizzati a una o due istanze del servizio regularCalc. Entrambe le istanze del servizio sono identiche. Il servizio rappresentato dall'endpoint di calculator1 elabora tuttavia i messaggi ricevuti dai clienti di valore elevato, mentre l'endpoint di calculator2 elabora i messaggi ricevuti dagli altri clienti  
@@ -175,4 +175,4 @@ In questo argomento vengono descritti i passaggi di base necessari per partizion
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Servizi di routing](../../../../docs/framework/wcf/samples/routing-services.md)
+- [Servizi di routing](../samples/routing-services.md)

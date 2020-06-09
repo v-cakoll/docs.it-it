@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 7eb640576bc00bc767ba16f8dc4a5d5952a479c6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b02d1efc98f02390555861871d280f9800ced1e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184733"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598879"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Client e servizio non protetti in Internet
-Nella figura seguente viene illustrato un esempio di un servizio e un client e un servizio Windows Communication Foundation (WCF) Windows pubblici e non protetti:The following illustration shows an example of a public, unsecured Windows Communication Foundation (WCF) client and service:  
+Nella figura seguente viene illustrato un esempio di un client e di un servizio Windows Communication Foundation (WCF) pubblico e non protetto:  
   
  ![Screenshot che mostra uno scenario Internet non protetto](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
   
@@ -21,7 +21,7 @@ Nella figura seguente viene illustrato un esempio di un servizio e un client e u
 |--------------------|-----------------|  
 |Modalità di sicurezza|nessuno|  
 |Trasporto|HTTP|  
-|Associazione|<xref:System.ServiceModel.BasicHttpBinding>nel codice o l'elemento [ \<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) nella configurazione.|  
+|Binding|<xref:System.ServiceModel.BasicHttpBinding>nel codice o nell' [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) elemento nella configurazione.|  
 |Interoperabilità|Con servizi e client di servizi Web esistenti|  
 |Authentication|nessuno|  
 |Integrità|nessuno|  
@@ -78,7 +78,7 @@ Nella figura seguente viene illustrato un esempio di un servizio e un client e u
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Codice  
- Il codice seguente illustra un client WCF di base che accede a un endpoint non protetto.  
+ Nel codice seguente viene illustrato un client WCF di base che accede a un endpoint non protetto.  
   
  [!code-csharp[C_UnsecuredClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#1)]
  [!code-vb[C_UnsecuredClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#1)]  
@@ -111,6 +111,6 @@ Nella figura seguente viene illustrato un esempio di un servizio e un client e u
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Scenari di sicurezza comuni](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
-- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Scenari di sicurezza comuni](common-security-scenarios.md)
+- [Panoramica della sicurezza](security-overview.md)
 - [Sicurezza e protezione](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

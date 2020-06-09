@@ -3,16 +3,16 @@ title: Usare Chiudi e Interrompi per rilasciare risorse client WCF
 description: Dispose può avere esito negativo e generare eccezioni in caso di errore di rete. Questo può causare un comportamento indesiderato. In alternativa, usare Chiudi e Interrompi per rilasciare le risorse client quando la rete non è riuscita.
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-ms.openlocfilehash: 38861252a470f71a6fa88554e289344e2918d710
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b338b760f461d7b773f43dd1f5e6dbce98f9e15a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715326"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599919"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>Chiudi e Interrompi le risorse di rilascio in modo sicuro quando le connessioni di rete
 
-Questo esempio illustra l'uso dei metodi `Close` e `Abort` per pulire le risorse quando si usa un client tipizzato. L'istruzione `using` genera eccezioni quando la connessione di rete non è affidabile. Questo esempio si basa sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice. In questo esempio, il client è un'applicazione console (.exe) e il servizio è ospitato da Internet Information Services (IIS).
+In questo esempio viene illustrato l'utilizzo dei `Close` `Abort` metodi e per pulire le risorse quando si utilizza un client tipizzato. L' `using` istruzione genera eccezioni quando la connessione di rete non è affidabile. Questo esempio si basa sul [Introduzione](getting-started-sample.md) che implementa un servizio di calcolatrice. In questo esempio, il client è un'applicazione console (.exe) e il servizio è ospitato da Internet Information Services (IIS).
 
 > [!NOTE]
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.
@@ -46,7 +46,7 @@ using (CalculatorClient client = new CalculatorClient())
 
 Poiché `Dispose`() si verifica in un blocco "finally", `ApplicationException` non viene mai visualizzato al di fuori del blocco "using" se si verifica un errore in `Dispose`(). Se il codice esterno deve essere in grado di rilevare quando si verifica `ApplicationException`, si potrebbero verificare problemi se il costrutto "using" maschera questa eccezione.
 
-Nell'esempio viene infine illustrato come pulire correttamente le eccezioni che si verificano in `DemonstrateCleanupWithExceptions`. Questa operazione utilizza un blocco try/catch per segnalare gli errori e chiamare `Abort`. Per ulteriori informazioni sull'intercettazione delle eccezioni dalle chiamate client, vedere l'esempio di [eccezioni previste](../../../../docs/framework/wcf/samples/expected-exceptions.md) .
+Nell'esempio viene infine illustrato come pulire correttamente le eccezioni che si verificano in `DemonstrateCleanupWithExceptions`. Questa operazione utilizza un blocco try/catch per segnalare gli errori e chiamare `Abort`. Per ulteriori informazioni sull'intercettazione delle eccezioni dalle chiamate client, vedere l'esempio di [eccezioni previste](expected-exceptions.md) .
 
 ```csharp
 try
@@ -105,17 +105,17 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio
 
-1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](building-the-samples.md).
 
-3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](running-the-samples.md).
 
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) ed [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\UsingUsing`

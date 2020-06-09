@@ -2,12 +2,12 @@
 title: WSDL e criteri
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: b032f91999695d848f20fac5009047dcc2e20451
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 201920a8ebf639c74acfb20b2e990c8bbc0c5b55
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144682"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600101"
 ---
 # <a name="wsdl-and-policy"></a>WSDL e criteri
 In questo argomento vengono illustrati i dettagli di implementazione di Windows Communication Foundation (WCF) WSDL 1,1, WS-Policy e WS-PolicyAttachment, nonché le asserzioni WS-Policy aggiuntive e le estensioni WSDL 1,1 introdotte da WCF.  
@@ -72,8 +72,8 @@ In questo argomento vengono illustrati i dettagli di implementazione di Windows 
 |mssp:MustNotSendCancel|annidata|Specifica un requisito secondo cui all'autorità emittente di un determinato SecurityContextToken non devono essere inviati messaggi di richiesta di un token RST (Request Security Token) [WS-Trust] usando l'associazione Cancel [WS-Trust, WS-SC]. Se questa asserzione è presente, tali messaggi di richiesta non devono essere inviati all'autorità emittente. Se questa asserzione non è presente, tali messaggi di richiesta possono essere inviati all'autorità emittente.|  
 |mssp:RequireClientCertificate|annidata|Questo elemento facoltativo specifica un requisito secondo cui deve essere fornito un certificato client come parte del protocollo TLSNEGO. Se questa asserzione è presente, deve essere fornito un certificato client. Se questa asserzione non è presente, non deve essere fornito un certificato client. Questa asserzione non deve essere usata al di fuori di mssp:SslContextToken.|  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Pubblicazione WSDL personalizzata](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [Procedura: esportare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Procedura: importare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Pubblicazione WSDL personalizzata](../samples/custom-wsdl-publication.md)
+- [Procedura: esportare informazioni WSDL personalizzate](../extending/how-to-export-custom-wsdl.md)
+- [Procedura: importare informazioni WSDL personalizzate](../extending/how-to-import-custom-wsdl.md)

@@ -2,12 +2,12 @@
 title: Filtro messaggi personalizzato
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 896407a218073eba53676baa4bcbd125593c80ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e4da0f2283fd537afe3cacdddfb36c327cfd3b4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183879"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600044"
 ---
 # <a name="custom-message-filter"></a>Filtro messaggi personalizzato
 In questo esempio viene illustrato come sostituire i filtri messaggi utilizzati da Windows Communication Foundation (WCF) per inviare messaggi agli endpoint.  
@@ -19,7 +19,7 @@ In questo esempio viene illustrato come sostituire i filtri messaggi utilizzati 
   
  Ogni endpoint di un servizio ha un solo <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>. La classe <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> è dotata delle proprietà <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> e <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>. L'unione di questi due filtri è il filtro messaggi utilizzato per quell'endpoint.  
   
- Per impostazione predefinita, la proprietà <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> per un endpoint corrisponde a qualsiasi messaggio indirizzato a un indirizzo che corrisponde alla classe <xref:System.ServiceModel.EndpointAddress> dell'endpoint del servizio. Per impostazione <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> predefinita, l'endpoint per un endpoint controlla l'azione del messaggio in arrivo e corrisponde a qualsiasi `IsInitiating` = `true` messaggio con un'azione che corrisponde a una delle azioni delle operazioni del contratto dell'endpoint del servizio (vengono considerate solo le azioni). Di conseguenza, per impostazione predefinita il filtro per un endpoint corrisponde solo se l'intestazione di destinazione del messaggio rappresenta la classe <xref:System.ServiceModel.EndpointAddress> dell'endpoint e l'azione del messaggio corrisponde a una delle azioni dell'operazione dell'endpoint.  
+ Per impostazione predefinita, la proprietà <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> per un endpoint corrisponde a qualsiasi messaggio indirizzato a un indirizzo che corrisponde alla classe <xref:System.ServiceModel.EndpointAddress> dell'endpoint del servizio. Per impostazione predefinita, <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> per un endpoint controlla l'azione del messaggio in arrivo e corrisponde a qualsiasi messaggio con un'azione che corrisponde a una delle azioni delle operazioni del contratto dell'endpoint di servizio ( `IsInitiating` = `true` vengono considerate solo le azioni). Di conseguenza, per impostazione predefinita il filtro per un endpoint corrisponde solo se l'intestazione di destinazione del messaggio rappresenta la classe <xref:System.ServiceModel.EndpointAddress> dell'endpoint e l'azione del messaggio corrisponde a una delle azioni dell'operazione dell'endpoint.  
   
  Questi filtri possono essere modificati utilizzando un comportamento. Nell'esempio, il servizio crea un'interfaccia <xref:System.ServiceModel.Description.IEndpointBehavior> che sostituisce le proprietà <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> e <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> nella classe <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>:  
   
@@ -116,17 +116,17 @@ Hello
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) Esempi per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) ed [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageFilter`  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Per compilare la soluzione, seguire le istruzioni in [Compilazione di Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Per compilare la soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](building-the-samples.md).  
   
-2. Per eseguire l'esempio in una configurazione a computer singolo, seguire le istruzioni in Esecuzione di [Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+2. Per eseguire l'esempio in una configurazione a computer singolo, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](running-the-samples.md).  
   
-3. Per eseguire l'esempio in una configurazione tra computer, seguire le istruzioni in [Esecuzione di Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md) e modificare la riga seguente in Client.cs.  
+3. Per eseguire l'esempio in una configurazione tra computer, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](running-the-samples.md) e modificare la riga seguente in client.cs.  
   
     ```csharp
     Uri serviceVia = new Uri("http://localhost/ServiceModelSamples/service.svc");  
