@@ -2,21 +2,21 @@
 title: System.ServiceModel.ServiceHostBaseAddresses
 ms.date: 03/30/2017
 ms.assetid: a36b8d38-8719-4d51-923a-420ec6c009e7
-ms.openlocfilehash: fe16208a3ff277fe8322d75f27bcdd961f031ae8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d4a01f5e74616ee87a55aea280891d8a85993d00
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703439"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597826"
 ---
-# <a name="systemservicemodelservicehostbaseaddresses"></a><span data-ttu-id="0c567-102">System.ServiceModel.ServiceHostBaseAddresses</span><span class="sxs-lookup"><span data-stu-id="0c567-102">System.ServiceModel.ServiceHostBaseAddresses</span></span>
-<span data-ttu-id="0c567-103">System.ServiceModel.ServiceHostBaseAddresses</span><span class="sxs-lookup"><span data-stu-id="0c567-103">System.ServiceModel.ServiceHostBaseAddresses</span></span>  
+# <a name="systemservicemodelservicehostbaseaddresses"></a><span data-ttu-id="34f62-102">System.ServiceModel.ServiceHostBaseAddresses</span><span class="sxs-lookup"><span data-stu-id="34f62-102">System.ServiceModel.ServiceHostBaseAddresses</span></span>
+<span data-ttu-id="34f62-103">System.ServiceModel.ServiceHostBaseAddresses</span><span class="sxs-lookup"><span data-stu-id="34f62-103">System.ServiceModel.ServiceHostBaseAddresses</span></span>  
   
-## <a name="description"></a><span data-ttu-id="0c567-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0c567-104">Description</span></span>  
- <span data-ttu-id="0c567-105">Gli utenti possono visualizzare tutti gli indirizzi di base registrati dal servizio.</span><span class="sxs-lookup"><span data-stu-id="0c567-105">Users can view all the base addresses the service registers.</span></span>  
+## <a name="description"></a><span data-ttu-id="34f62-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="34f62-104">Description</span></span>  
+ <span data-ttu-id="34f62-105">Gli utenti possono visualizzare tutti gli indirizzi di base registrati dal servizio.</span><span class="sxs-lookup"><span data-stu-id="34f62-105">Users can view all the base addresses the service registers.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0c567-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0c567-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="34f62-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="34f62-106">See also</span></span>
 
-- [<span data-ttu-id="0c567-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="0c567-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="0c567-108">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="0c567-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="0c567-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="0c567-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="34f62-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="34f62-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="34f62-108">Utilizzo delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="34f62-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="34f62-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="34f62-109">Administration and Diagnostics</span></span>](../index.md)
