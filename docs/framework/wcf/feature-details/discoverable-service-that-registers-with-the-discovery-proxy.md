@@ -1,16 +1,16 @@
 ---
-title: 'Procedura: Implementare un servizio individuabile per eseguire la registrazione al proxy di individuazione'
+title: 'Procedura: implementare un servizio individuabile che esegue la registrazione al proxy di individuazione'
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: 053ace300610cd4129c4541f4e2658ac8d09da85
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf878dff59a9a258567ff99098b0b3f8761194e2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626977"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599230"
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Procedura: Implementare un servizio individuabile per eseguire la registrazione al proxy di individuazione
-Quello che segue è il secondo di quattro argomenti incentrato sull'implementazione di un proxy di individuazione. Nell'argomento precedente, [come: Implementare un Proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), è stato implementato un proxy di individuazione. In questo argomento, si crea un servizio WCF che invia messaggi di annuncio (`Hello` e `Bye`) al proxy di individuazione, in modo da registrare e annullare la registrazione di se stesso con il proxy di individuazione.
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Procedura: implementare un servizio individuabile che esegue la registrazione al proxy di individuazione
+Quello che segue è il secondo di quattro argomenti incentrato sull'implementazione di un proxy di individuazione. Nell'argomento precedente, [procedura: implementare un proxy di individuazione](how-to-implement-a-discovery-proxy.md), è stato implementato un proxy di individuazione. In questo argomento viene creato un servizio WCF che invia messaggi di annuncio ( `Hello` e `Bye` ) al proxy di individuazione, causando la registrazione e l'annullamento della registrazione con il proxy di individuazione.
 
 ### <a name="to-define-the-service-contract"></a>Per definire il contratto di servizio
 
@@ -156,7 +156,7 @@ Quello che segue è il secondo di quattro argomenti incentrato sull'implementazi
     }
     ```
 
-L'implementazione di un servizio individuabile è quindi completata. Continuare a [come: Implementare un'applicazione Client che usa il Proxy di individuazione per cercare un servizio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).
+L'implementazione di un servizio individuabile è quindi completata. Continuare con [la procedura: implementare un'applicazione client che usa il proxy di individuazione per trovare un servizio](client-app-discovery-proxy-to-find-a-service.md).
 
 ## <a name="example"></a>Esempio
  Quello che segue è l'elenco completo del codice usato in questo argomento.
@@ -291,6 +291,6 @@ namespace Microsoft.Samples.Discovery
 
 ## <a name="see-also"></a>Vedere anche
 
-- [WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
-- [Procedura: Implementare un Proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Procedura: Implementare un'applicazione Client che usa il Proxy di individuazione per cercare un servizio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [WCF Discovery](wcf-discovery.md)
+- [Procedura: implementare un proxy di individuazione](how-to-implement-a-discovery-proxy.md)
+- [Procedura: implementare un'applicazione client che usa il proxy di individuazione per cercare un servizio](client-app-discovery-proxy-to-find-a-service.md)

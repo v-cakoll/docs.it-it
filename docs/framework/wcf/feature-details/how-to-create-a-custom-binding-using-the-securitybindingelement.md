@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Creare un'associazione personalizzata usando SecurityBindingElement"
+title: "Procedura: creare un'associazione personalizzata usando SecurityBindingElement"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: da67d923b36d673c87c90ba79b72ad4e1fc64a0c
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 15fdd50b05bd2217cb9819373cd1c015da52b15b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988754"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599009"
 ---
-# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Procedura: Creare un'associazione personalizzata usando SecurityBindingElement
-Windows Communication Foundation (WCF) include diverse associazioni fornite dal sistema che possono essere configurate, ma non offrono la massima flessibilità durante la configurazione di tutte le opzioni di sicurezza supportate da WCF. In questo argomento viene illustrato come creare direttamente un'associazione personalizzata di singoli elementi di associazione e vengono evidenziate alcune impostazioni di sicurezza che è possibile specificare durante la creazione di tale associazione. Per ulteriori informazioni sulla creazione di associazioni personalizzate, vedere [estensione di binding](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Procedura: creare un'associazione personalizzata usando SecurityBindingElement
+Windows Communication Foundation (WCF) include diverse associazioni fornite dal sistema che possono essere configurate, ma non offrono la massima flessibilità durante la configurazione di tutte le opzioni di sicurezza supportate da WCF. In questo argomento viene illustrato come creare direttamente un'associazione personalizzata di singoli elementi di associazione e vengono evidenziate alcune impostazioni di sicurezza che è possibile specificare durante la creazione di tale associazione. Per ulteriori informazioni sulla creazione di associazioni personalizzate, vedere [estensione di binding](../extending/extending-bindings.md).  
   
 > [!WARNING]
 > <xref:System.ServiceModel.Channels.SecurityBindingElement> non supporta la forma di <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, vale a dire la forma di canale predefinita utilizzata dal trasporto TCP quando l'oggetto <xref:System.ServiceModel.TransferMode> è impostato su <xref:System.ServiceModel.TransferMode.Buffered>. È necessario impostare <xref:System.ServiceModel.TransferMode> su <xref:System.ServiceModel.TransferMode.Streamed> per utilizzare <xref:System.ServiceModel.Channels.SecurityBindingElement> in questo scenario.  
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) include diverse associazioni fornite dal 
   
  Al contrario, per creare un'associazione personalizzata, vengono creati e configurati gli elementi di associazione dai quali viene creato <xref:System.ServiceModel.Channels.CustomBinding>.  
   
- A tale scopo, vengono aggiunti singoli elementi di associazione a una raccolta rappresentata da un'istanza della classe <xref:System.ServiceModel.Channels.BindingElementCollection>, quindi la proprietà `Elements` di `CustomBinding` viene impostata allo stesso modo dell'oggetto. È necessario aggiungere gli elementi di associazione nell'ordine seguente: Flusso delle transazioni, sessione affidabile, sicurezza, duplex composito, unidirezionale, sicurezza del flusso, codifica dei messaggi e trasporto. Si noti che non tutti gli elementi di associazione elencati sono necessari in ogni associazione.  
+ A tale scopo, vengono aggiunti singoli elementi di associazione a una raccolta rappresentata da un'istanza della classe <xref:System.ServiceModel.Channels.BindingElementCollection>, quindi la proprietà `Elements` di `CustomBinding` viene impostata allo stesso modo dell'oggetto. È necessario aggiungere gli elementi di associazione nell'ordine seguente: Transaction Flow, Reliable Session, Security, Composite Duplex, One-way, Stream Security, Message Encoding e Transport. Si noti che non tutti gli elementi di associazione elencati sono necessari in ogni associazione.  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
  Tre elementi di associazione sono correlati alla protezione a livello di messaggio e sono tutti derivati dalla classe <xref:System.ServiceModel.Channels.SecurityBindingElement>. I tre elementi sono <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> e <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> viene utilizzato per fornire una protezione in modalità mista. Gli altri due elementi sono utilizzati quando la protezione è fornita dal livello di messaggio.  
@@ -61,7 +61,7 @@ Windows Communication Foundation (WCF) include diverse associazioni fornite dal 
 |||OneWayBindingElement|||  
 |||SSL o Windows StreamSecurityBindingElement|SSL o Windows StreamSecurityBindingElement|SSL o Windows StreamSecurityBindingElement|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
-|Messaggio|Http|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement (modalità di autenticazione = SecureConversation)|  
+|Message|Http|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement (modalità di autenticazione = SecureConversation)|  
 |||||CompositeDuplexBindingElement|  
 |||OneWayBindingElement||OneWayBindingElement|  
 |||HttpTransportBindingElement|HttpTransportBindingElement|HttpTransportBindingElement|  
@@ -75,9 +75,9 @@ Windows Communication Foundation (WCF) include diverse associazioni fornite dal 
 |||SSL o Windows StreamSecurityBindingElement|SSL o Windows StreamSecurityBindingElement|SSL o Windows StreamSecurityBindingElement|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
   
- Si noti che esistono molte impostazioni configurabili in SecurityBindingElements. Per altre informazioni, vedere [modalità di autenticazione di SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ Si noti che esistono molte impostazioni configurabili in SecurityBindingElements. Per altre informazioni, vedere [modalità di autenticazione di SecurityBindingElement](securitybindingelement-authentication-modes.md).  
   
- Per altre informazioni, vedere [conversazioni sicure e sessioni sicure](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
+ Per altre informazioni, vedere [conversazioni sicure e sessioni sicure](secure-conversations-and-secure-sessions.md).  
   
 ## <a name="procedures"></a>Procedure  
   
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF) include diverse associazioni fornite dal 
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>DESCRIZIONE  
+### <a name="description"></a>Descrizione  
  Nell'esempio seguente è riportata una funzione completa per creare un'associazione personalizzata che utilizza un <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
 ### <a name="code"></a>Codice  
@@ -112,5 +112,5 @@ Windows Communication Foundation (WCF) include diverse associazioni fornite dal 
 - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Estensione delle associazioni](../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Estensione delle associazioni](../extending/extending-bindings.md)
+- [Associazioni fornite dal sistema](../system-provided-bindings.md)

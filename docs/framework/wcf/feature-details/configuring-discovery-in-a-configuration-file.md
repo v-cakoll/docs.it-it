@@ -2,12 +2,12 @@
 title: Configurazione dell'individuazione in un file di configurazione
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-ms.openlocfilehash: 934b04b51b9954cf943f57f33250951048e5671b
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 59eaecb7e34b9105bc694f444d98c13c036d552f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81464211"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597553"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Configurazione dell'individuazione in un file di configurazione
 Nell'individuazione vengono usati quattro gruppi principali di impostazioni di configurazione. In questo argomento viene illustrato brevemente ciascuno di questi gruppi e vengono mostrati esempi per poterli configurare. Al termine di ogni sezione sarà disponibile un collegamento a documenti più dettagliati su ogni area.  
@@ -29,7 +29,7 @@ Nell'individuazione vengono usati quattro gruppi principali di impostazioni di c
 </behaviors>  
 ```  
   
- Dopo aver specificato il comportamento, `service` fare riferimento a un elemento> <, come illustrato nell'esempio seguente.  
+ Una volta specificato il comportamento, farvi riferimento da un `service` elemento <>, come illustrato nell'esempio seguente.  
   
 ```xml  
 <system.serviceModel>  
@@ -48,7 +48,7 @@ Nell'individuazione vengono usati quattro gruppi principali di impostazioni di c
   
  Affinché un servizio sia individuabile, è necessario aggiungere anche un endpoint di individuazione. Nell'esempio precedente viene aggiunto un endpoint <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard.  
   
- Quando si aggiungono endpoint annuncio, è necessario aggiungere `services` anche un servizio listener di annunci all'elemento> <, come illustrato nell'esempio seguente.  
+ Quando si aggiungono endpoint degli annunci, è necessario aggiungere anche un servizio listener di annunci all' `services` elemento <>, come illustrato nell'esempio seguente.  
   
 ```xml  
 <services>  
@@ -141,7 +141,7 @@ Nell'individuazione vengono usati quattro gruppi principali di impostazioni di c
 </behavior>  
 ```  
   
- Per ulteriori <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> informazioni <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> e vedere [Cenni preliminari sull'individuazione WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).  
+ Per ulteriori informazioni su <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> e <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> vedere [Cenni preliminari sull'individuazione WCF](wcf-discovery-overview.md).  
   
 ## <a name="binding-element-configuration"></a>Configurazione di elementi di associazione  
  La configurazione degli elementi di associazione è particolarmente interessante nel lato client. È possibile usare la configurazione per specificare i criteri di ricerca usata per individuare servizi da un'applicazione client WCF.  Nell'esempio seguente viene creata un'associazione personalizzata con il canale <xref:System.ServiceModel.Discovery.DiscoveryClient> e vengono specificati criteri di ricerca che includono un tipo e un ambito. Vengono inoltre specificati valori per le proprietà <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> e <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>.  
@@ -183,10 +183,10 @@ Nell'individuazione vengono usati quattro gruppi principali di impostazioni di c
 </client>  
 ```  
   
- Per ulteriori informazioni sui criteri di ricerca, vedere [Discovery Find e FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Per altre informazioni sugli elementi di individuazione e associazione, vedere Cenni preliminari [sull'individuazione WCFFor](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md) more information about discovery and binding elements see, WCF Discovery Overview  
+ Per ulteriori informazioni sui criteri di ricerca [, vedere Discovery Find e FindCriteria](discovery-find-and-findcriteria.md). Per ulteriori informazioni sull'individuazione e sugli elementi di associazione, vedere [Cenni preliminari sull'individuazione WCF](wcf-discovery-overview.md)  
   
 ## <a name="standard-endpoint-configuration"></a>Configurazione di endpoint standard  
- Gli endpoint standard sono endpoint con valori predefiniti per una o più proprietà (indirizzo, associazione o contratto) o uno o più valori di proprietà non modificabili. .NET 4 viene fornito con 3 endpoint standard relativi all'individuazione: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> e <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> è un endpoint standard preconfigurato per le operazioni di individuazione su un'associazione multicast UDP. <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> è un endpoint standard preconfigurato per l'invio di messaggi di annuncio su un'associazione multicast UDP. <xref:System.ServiceModel.Discovery.DynamicEndpoint> è un endpoint standard che usa l'individuazione per cercare l'indirizzo endpoint di un servizio individuato in modo dinamico al runtime.  Le associazioni standard vengono `endpoint` specificate con un <elemento> che contiene l'attributo Kind che specifica il tipo di endpoint standard da aggiungere. Nell'esempio seguente viene illustrato come aggiungere un elemento <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> e un elemento <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
+ Gli endpoint standard sono endpoint con valori predefiniti per una o più proprietà (indirizzo, associazione o contratto) o uno o più valori di proprietà non modificabili. .NET 4 viene fornito con 3 endpoint standard relativi all'individuazione: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> e <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> è un endpoint standard preconfigurato per le operazioni di individuazione su un'associazione multicast UDP. <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> è un endpoint standard preconfigurato per l'invio di messaggi di annuncio su un'associazione multicast UDP. <xref:System.ServiceModel.Discovery.DynamicEndpoint> è un endpoint standard che usa l'individuazione per cercare l'indirizzo endpoint di un servizio individuato in modo dinamico al runtime.  Le associazioni standard vengono specificate con un `endpoint` elemento <> contenente l'attributo kind che specifica il tipo di endpoint standard da aggiungere. Nell'esempio seguente viene illustrato come aggiungere un elemento <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> e un elemento <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
   
 ```xml  
 <services>  
@@ -200,7 +200,7 @@ Nell'individuazione vengono usati quattro gruppi principali di impostazioni di c
 </services>  
 ```  
   
- Gli endpoint standard sono `standardEndpoints` configurati in un <> elemento. Nell'esempio seguente viene illustrato come configurare l'elemento <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> e l'elemento <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
+ Gli endpoint standard vengono configurati in un `standardEndpoints` elemento <>. Nell'esempio seguente viene illustrato come configurare l'elemento <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> e l'elemento <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
   
 ```xml  
 <standardEndpoints>  
@@ -233,7 +233,7 @@ Nell'individuazione vengono usati quattro gruppi principali di impostazioni di c
 </standardEndpoints>
 ```  
   
- Dopo aver aggiunto la configurazione dell'endpoint standard, `endpoint` fare riferimento alla configurazione nell'elemento> <per ogni endpoint, come illustrato nell'esempio seguente.  
+ Dopo aver aggiunto la configurazione dell'endpoint standard, fare riferimento alla configurazione nel <`endpoint` elemento> per ogni endpoint, come illustrato nell'esempio seguente.  
   
 ```xml  
 <services>  
@@ -276,4 +276,4 @@ Nell'individuazione vengono usati quattro gruppi principali di impostazioni di c
 </system.ServiceModel>  
 ```  
   
- Per ulteriori informazioni sugli endpoint [standard,](standard-endpoints.md)vedere Endpoint standard .
+ Per altre informazioni sugli endpoint standard, vedere [endpoint standard](standard-endpoints.md).

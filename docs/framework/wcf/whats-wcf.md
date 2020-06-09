@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 01470bd7f317acca068b3c1be1c751e3050ee7e8
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: fd78f2cd8266f94c577801623a84b56919c82973
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320205"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600854"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Informazioni su Windows Communication Foundation
 Windows Communication Foundation (WCF) è un Framework per la compilazione di applicazioni orientate ai servizi. Con WCF è possibile inviare dati come messaggi asincroni da un endpoint del servizio a un altro. Un endpoint del servizio può appartenere a un servizio disponibile in modo continuo ospitato da IIS oppure essere un servizio ospitato in un'applicazione. Un endpoint può essere un client di un servizio che richiede dati da un endpoint del servizio. Il messaggio può essere semplice come una parola o come un singolo carattere inviato in formato XML o complesso come un flusso di dati binari. Di seguito vengono indicati alcuni scenari di esempio:
@@ -52,11 +52,11 @@ WCF include il set di funzionalità seguente. Per ulteriori informazioni, vedere
 
 - **Contratti dati**
 
-     Poiché WCF viene compilato utilizzando la .NET Framework, include anche metodi descrittivi per fornire i contratti che si desidera applicare. Uno dei tipi di contratti più generali è il contratto dati. In pratica, quando si crea il codice del servizio in Visual C# o Visual Basic, il modo più semplice di gestire i dati è costituito dalla creazione di classi che rappresentano un'entità dati con proprietà che appartengono all'entità stessa. In WCF è incluso un sistema completo per l'utilizzo dei dati in modo semplice. Dopo che sono state create le classi che rappresentano i dati, il servizio genera automaticamente i metadati che consentono ai client di essere conformi ai tipi di dati progettati. Per ulteriori informazioni, vedere [utilizzo di contratti dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md).
+     Poiché WCF viene compilato utilizzando la .NET Framework, include anche metodi descrittivi per fornire i contratti che si desidera applicare. Uno dei tipi di contratti più generali è il contratto dati. In pratica, quando si crea il codice del servizio in Visual C# o Visual Basic, il modo più semplice di gestire i dati è costituito dalla creazione di classi che rappresentano un'entità dati con proprietà che appartengono all'entità stessa. In WCF è incluso un sistema completo per l'utilizzo dei dati in modo semplice. Dopo che sono state create le classi che rappresentano i dati, il servizio genera automaticamente i metadati che consentono ai client di essere conformi ai tipi di dati progettati. Per ulteriori informazioni, vedere [utilizzo di contratti dati](feature-details/using-data-contracts.md).
 
-- **Security**
+- **Sicurezza**
 
-     È possibile crittografare i dati per proteggere la privacy nonché chiedere agli utenti di eseguire l'autenticazione prima che siano in grado di ricevere messaggi. La sicurezza può essere implementata utilizzando standard noti, ad esempio SSL o WS-SecureConversation. Per ulteriori informazioni, vedere [Sicurezza](./feature-details/security.md).
+     È possibile crittografare i dati per proteggere la privacy nonché chiedere agli utenti di eseguire l'autenticazione prima che siano in grado di ricevere messaggi. La sicurezza può essere implementata utilizzando standard noti, ad esempio SSL o WS-SecureConversation. Per altre informazioni, vedere [Sicurezza](./feature-details/security.md).
 
 - **Più trasporti e codifiche**
 
@@ -72,13 +72,13 @@ WCF include il set di funzionalità seguente. Per ulteriori informazioni, vedere
 
 - **Transazioni**
 
-     WCF supporta inoltre le transazioni che utilizzano uno dei tre modelli di transazione seguenti: WS-AtomicTransactions, le API nello spazio dei nomi <xref:System.Transactions> e Microsoft Distributed Transaction Coordinator. Per ulteriori informazioni sul supporto delle transazioni in WCF, vedere [transazioni](./feature-details/transactions-in-wcf.md).
+     WCF supporta inoltre le transazioni che utilizzano uno dei tre modelli di transazione seguenti: WS-AtomicTransactions, le API nello <xref:System.Transactions> spazio dei nomi e Microsoft Distributed Transaction Coordinator. Per ulteriori informazioni sul supporto delle transazioni in WCF, vedere [transazioni](./feature-details/transactions-in-wcf.md).
 
 - **Supporto AJAX e REST**
 
      REST è un esempio di una tecnologia Web 2.0 in evoluzione. WCF può essere configurato per elaborare dati XML "semplici" che non sono incapsulati in una busta SOAP. È anche possibile estendere WCF per supportare formati XML specifici, ad esempio ATOM (uno standard RSS diffuso) e anche formati non XML, ad esempio JavaScript Object Notation (JSON).
 
-- **Estendibilità**
+- **Estensibilità**
 
      L'architettura WCF dispone di un numero di punti di estensibilità. Se è necessaria ulteriore capacità, sono disponibili punti di ingresso che consentono di personalizzare il comportamento di un servizio. Per ulteriori informazioni sui punti di estendibilità disponibili, vedere [estensione di WCF](./extending/index.md).
 
@@ -100,7 +100,7 @@ Le funzionalità di hosting del server applicazioni di Windows Server AppFabric 
 - [Concetti fondamentali di Windows Communication Foundation](fundamental-concepts.md)
 - [Architettura di Windows Communication Foundation](architecture.md)
 - [Linee guida e procedure consigliate](guidelines-and-best-practices.md)
-- [Esercitazione introduttiva](getting-started-tutorial.md)
+- [Esercitazione Introduzione](getting-started-tutorial.md)
 - [Guida alla documentazione](guide-to-the-documentation.md)
 - [Programmazione WCF di base](basic-wcf-programming.md)
 - [Esempi di Windows Communication Foundation](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751514%28v=vs.90%29)

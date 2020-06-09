@@ -2,15 +2,15 @@
 title: Protocolli di transazione versione 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: 6063c643be4c60e9830a020d10ac9fbcd236dac2
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: f725361b9a90c9336b763cc7f292ae043e445966
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144773"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598710"
 ---
 # <a name="transaction-protocols-version-10"></a>Protocolli di transazione versione 1.0
-Windows Communication Foundation (WCF) versione 1 implementa la versione 1,0 dei protocolli WS-Atomic Transaction e WS-Coordination. Per ulteriori informazioni sulla versione 1,1, vedere [protocolli di transazione](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
+Windows Communication Foundation (WCF) versione 1 implementa la versione 1,0 dei protocolli WS-Atomic Transaction e WS-Coordination. Per ulteriori informazioni sulla versione 1,1, vedere [protocolli di transazione](transaction-protocols.md).  
   
 |Specifica/documento|Collegamento|  
 |-----------------------------|----------|  
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF) versione 1 implementa la versione 1,0 dei
 #### <a name="activation-message-binding-configuration"></a>Configurazione dell'associazione dei messaggi di attivazione  
  I messaggi di attivazione in genere non partecipano all'interoperabilità perché si verificano normalmente tra un'applicazione e il suo gestore transazioni locale.  
   
- B1221: WCF usa l'associazione HTTPS duplex (descritta in [protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) per i messaggi di attivazione. I messaggi di richiesta e risposta sono correlati utilizzando WS-Addressing 2004/08.  
+ B1221: WCF usa l'associazione HTTPS duplex (descritta in [protocolli di messaggistica](messaging-protocols.md)) per i messaggi di attivazione. I messaggi di richiesta e risposta sono correlati utilizzando WS-Addressing 2004/08.  
   
  La specifica WS-Atomic Transaction, sezione 8, descrive più dettagliatamente la correlazione e i modelli di scambio dei messaggi.  
   
@@ -110,11 +110,11 @@ Windows Communication Foundation (WCF) versione 1 implementa la versione 1,0 dei
  `t:IssuedTokens`Per la connessione al messaggio in uscita deve essere generata una nuova intestazione `wscoor:CreateCoordinationContextResponse` .  
   
 #### <a name="registration-message-binding-configuration"></a>Configurazione dell'associazione dei messaggi di registrazione  
- B1231: WCF usa l'associazione HTTPS duplex (descritta in [protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). I messaggi di richiesta e risposta sono correlati utilizzando WS-Addressing 2004/08.  
+ B1231: WCF usa l'associazione HTTPS duplex (descritta in [protocolli di messaggistica](messaging-protocols.md)). I messaggi di richiesta e risposta sono correlati utilizzando WS-Addressing 2004/08.  
   
  In WS-AtomicTransaction, Sezione 8, vengono descritti più dettagliatamente la correlazione e i modelli di scambio dei messaggi.  
   
- R1232: `wscoor:Register` i messaggi in uscita devono utilizzare la `IssuedTokenOverTransport` modalità di autenticazione descritta in [protocolli di sicurezza](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
+ R1232: `wscoor:Register` i messaggi in uscita devono utilizzare la `IssuedTokenOverTransport` modalità di autenticazione descritta in [protocolli di sicurezza](security-protocols.md).  
   
  L' `wsse:Timestamp` elemento deve essere firmato utilizzando l'oggetto `SecurityContextToken STx` emesso. Questa firma è una prova del possesso del token associato a una particolare transazione ed è utilizzata per autenticare l'inserimento di un partecipante nella transazione. Il messaggio RegistrationResponse viene inviato su HTTPS.  
   

@@ -2,12 +2,12 @@
 title: Accesso ai servizi WCF con un'applicazione client Windows Store
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: b4b91c103aa91e3b2c9e811c642a8347c7db1a88
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ff6638936f476bd8fe75a065d3e61e96790cb7f4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185478"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597696"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Accesso ai servizi WCF con un'applicazione client Windows Store
 In Windows 8 è stato introdotto un nuovo tipo di applicazione denominato applicazioni Windows Store. Queste applicazioni sono progettate in base a un'interfaccia del touchscreen. .NET Framework 4.5 consente alle applicazioni Windows Store di chiamare i servizi WCF.  
@@ -52,10 +52,10 @@ In Windows 8 è stato introdotto un nuovo tipo di applicazione denominato applic
   
 9. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
- Sono supportate sia la codifica testo sia quella binaria. Inoltre, sono supportate tutte le modalità di trasferimento WCF. Per altre informazioni, vedere [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md).  
+ Sono supportate sia la codifica testo sia quella binaria. Inoltre, sono supportate tutte le modalità di trasferimento WCF. Per altre informazioni, vedere [Streaming Message Transfer](streaming-message-transfer.md).  
   
 ### <a name="add-service-reference"></a>Aggiungi riferimento al servizio  
- Per chiamare un servizio WCF da un'applicazione Windows Store, usare la funzionalità Aggiungi riferimento al servizio di Visual Studio 2012. Si noteranno alcune modifiche di tale funzionalità quando eseguita in un'applicazione Windows Store. Innanzitutto non viene generato alcun file di configurazione. Nelle applicazioni Windows Store non vengono usati i file di configurazione, pertanto devono essere configurati nel codice. Questo codice di configurazione è disponibile nel file References.cs generato da Aggiungi riferimento al servizio. Per visualizzare questo file, assicurarsi di selezionare "Mostra tutti i file" in Esplora soluzioni. Il file si trova nei riferimenti al servizio, quindi nei nodi Reference.svcmap del progetto. Tutte le operazioni generate per i servizi WCF in un'applicazione Windows Store saranno asincrone mediante il modello asincrono basato su attività. Per altre informazioni, vedere [Attività asincrone - Semplificare la programmazione asincrona con le attività](https://docs.microsoft.com/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks).  
+ Per chiamare un servizio WCF da un'applicazione Windows Store, usare la funzionalità Aggiungi riferimento al servizio di Visual Studio 2012. Si noteranno alcune modifiche di tale funzionalità quando eseguita in un'applicazione Windows Store. Innanzitutto non viene generato alcun file di configurazione. Nelle applicazioni Windows Store non vengono usati i file di configurazione, pertanto devono essere configurati nel codice. Questo codice di configurazione è disponibile nel file References.cs generato da Aggiungi riferimento al servizio. Per visualizzare questo file, assicurarsi di selezionare "Mostra tutti i file" in Esplora soluzioni. Il file si trova nei riferimenti al servizio, quindi nei nodi Reference.svcmap del progetto. Tutte le operazioni generate per i servizi WCF in un'applicazione Windows Store saranno asincrone mediante il modello asincrono basato su attività. Per altre informazioni, vedere [attività asincrone-semplificare la programmazione asincrona con le attività](https://docs.microsoft.com/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks).  
   
  Poiché la configurazione viene generata nel codice, tutte le modifiche apportate al file Reference.cs verranno sovrascritte ogni volta che il riferimento al servizio viene aggiornato. Per risolvere questa situazione, il codice di configurazione viene generato all'interno di un metodo parziale, che è possibile implementare nella classe proxy del client. Il metodo parziale viene dichiarato come riportato di seguito:  
   
@@ -106,9 +106,9 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 > [!WARNING]
 > XmlDictionaryWriter.Write (DateTime) consente ora di scrivere un oggetto DateTime come stringa.  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>Sicurezza  
 
-Nelle applicazioni di Windows Store sono supportate le seguenti modalità di sicurezza:
+Nelle applicazioni Windows Store sono supportate le modalità di sicurezza seguenti:
   
 1. <xref:System.ServiceModel.SecurityMode.None>  
   
@@ -118,11 +118,11 @@ Nelle applicazioni di Windows Store sono supportate le seguenti modalità di sic
   
 4. <xref:System.ServiceModel.SecurityMode.Message>
   
-Nelle applicazioni di Windows Store sono supportati i tipi di credenziali client seguenti:
+Nelle applicazioni Windows Store sono supportati i tipi di credenziali client seguenti:
   
 1. nessuno  
   
-2. Basic  
+2. Di base  
   
 3. Digest  
   
@@ -136,10 +136,10 @@ Nelle applicazioni di Windows Store sono supportati i tipi di credenziali client
   
 8. Windows (sicurezza del trasporto)  
   
- Per consentire alle applicazioni Windows Store di accedere e inviare le credenziali di Windows predefinite, è necessario abilitare questa funzionalità nel file Package.appmanifest. Aprire questo file e selezionare la scheda Funzionalità e selezionare "Credenziali predefinite di Windows". In questo modo le applicazioni possono connettersi alle risorse Intranet che richiedono le credenziali del dominio.  
+ Per consentire alle applicazioni Windows Store di accedere e inviare le credenziali di Windows predefinite, è necessario abilitare questa funzionalità nel file Package.appmanifest. Aprire il file e selezionare la scheda funzionalità e selezionare "credenziali di Windows predefinite". In questo modo le applicazioni possono connettersi alle risorse Intranet che richiedono le credenziali del dominio.  
   
 > [!IMPORTANT]
-> Affinché le applicazioni Windows Store esecano chiamate tra computer, è necessario abilitare un'altra funzionalità denominata "Rete domestica/lavoro". Questa impostazione si trova anche nel file Package.appmanifest nella scheda Funzionalità. In questo modo viene fornito l'accesso in ingresso e in uscita dell'applicazione in uso alle reti delle posizioni affidabili dell'utente come casa e lavoro. Le porte critiche in ingresso sono sempre bloccate. Per accedere ai servizi su Internet è inoltre necessario abilitare la funzionalità Internet (client).  
+> Affinché le applicazioni Windows Store effettuino chiamate tra computer, è necessario abilitare un'altra funzionalità denominata "rete domestica/aziendale". Questa impostazione è inoltre presente nel file Package. AppManifest nella scheda funzionalità. Selezionare la casella di controllo rete domestica/aziendale. In questo modo viene fornito l'accesso in ingresso e in uscita dell'applicazione in uso alle reti delle posizioni affidabili dell'utente come casa e lavoro. Le porte critiche in ingresso sono sempre bloccate. Per accedere ai servizi su Internet è inoltre necessario abilitare la funzionalità Internet (client).  
   
 ### <a name="misc"></a>Varie  
  L'uso delle classi seguenti è supportato per le applicazioni Windows Store:  
@@ -180,5 +180,5 @@ void async SomeMethod()
 - [Client e sicurezza di Windows Store WCF](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
 - [App e chiamate tra computer di Windows Store](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
 - [Chiamata di un servizio WCF distribuito in Azure da un'app di Windows Store](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
-- [Programmazione delle funzionalità di sicurezza di WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
-- [Associazioni](../../../../docs/framework/wcf/bindings.md)
+- [Programmazione delle funzionalità di sicurezza di WCF](programming-wcf-security.md)
+- [Binding](../bindings.md)

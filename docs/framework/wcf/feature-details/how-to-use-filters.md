@@ -2,17 +2,17 @@
 title: 'Procedura: usare i filtri'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 34ea961b0ef5db51efcae0b86f2c06171d6d756c
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 434171138e75a0f4c336cd80cc2beb574b10001e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81464107"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598892"
 ---
 # <a name="how-to-use-filters"></a>Procedura: usare i filtri
 In questo argomento vengono descritti i passaggi di base necessari per creare una configurazione di routing che usa più filtri. In questo esempio, i messaggi vengono indirizzati a due implementazioni di un servizio di calcolo, regularCalc e roundingCalc. Entrambe le implementazioni supportano le stesse operazioni; tuttavia uno dei servizi arrotonda tutti i calcoli all'integer più vicino prima della restituzione. Un'applicazione client deve essere in grado di indicare se usare la versione del servizio che esegue l'arrotondamento. Se non viene espressa alcuna preferenza in merito al servizio da usare, il carico viene bilanciato tra i due servizi. Le operazioni esposte da entrambi servizi sono:  
   
-- Add  
+- Aggiunta  
   
 - Sottrazione  
   
@@ -71,7 +71,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
     </services>  
     ```  
   
-     Con questa configurazione, il servizio di routing espone tre endpoint separati. A seconda delle scelte di runtime, l'applicazione client invia messaggi a uno di questi indirizzi. I messaggi che arrivano a uno degli endpoint del servizio "virtuali" ("arrotondamento/calcolo" o "normale/calcolatore") vengono inoltrati all'implementazione della calcolatrice corrispondente. Se l'applicazione client non invia la richiesta a un determinato endpoint, il messaggio viene indirizzato all'endpoint generale. Indipendentemente dall'endpoint scelto, è inoltre possibile che l'applicazione client scelga di includere l'intestazione personalizzata per indicare che il messaggio deve essere inoltrato all'implementazione del servizio di calcolo che esegue l'arrotondamento.  
+     Con questa configurazione, il servizio di routing espone tre endpoint separati. A seconda delle scelte di runtime, l'applicazione client invia messaggi a uno di questi indirizzi. I messaggi che arrivano a uno degli endpoint di servizio "virtuali" ("arrotondamento/calcolo" o "normale/calcolatrice") vengono inviati all'implementazione del calcolatore corrispondente. Se l'applicazione client non invia la richiesta a un determinato endpoint, il messaggio viene indirizzato all'endpoint generale. Indipendentemente dall'endpoint scelto, è inoltre possibile che l'applicazione client scelga di includere l'intestazione personalizzata per indicare che il messaggio deve essere inoltrato all'implementazione del servizio di calcolo che esegue l'arrotondamento.  
   
 2. Nell'esempio di codice vengono definiti gli endpoint client (destinazione) a cui il servizio di routing indirizza i messaggi.  
   
@@ -93,7 +93,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
   
 ### <a name="define-filters"></a>Definisci filtri  
   
-1. Per instradare i messaggi in base all'intestazione personalizzata "RoundingCalculator" che l'applicazione client aggiunge al messaggio, definire un filtro che utilizza una query XPath per verificare la presenza di questa intestazione. Poiché questa intestazione viene definita utilizzando uno spazio dei nomi personalizzato, aggiungere anche una voce dello spazio dei nomi che definisce un prefisso dello spazio dei nomi personalizzato "custom" utilizzato nella query XPath. Nell'esempio seguente vengono definiti la sezione di routing, la tabella dello spazio dei nomi e il filtro XPath necessari.  
+1. Per instradare i messaggi in base all'intestazione personalizzata "RoundingCalculator" aggiunta dall'applicazione client al messaggio, definire un filtro che usa una query XPath per verificare la presenza di questa intestazione. Poiché questa intestazione viene definita usando uno spazio dei nomi personalizzato, aggiungere anche una voce dello spazio dei nomi che definisce un prefisso dello spazio dei nomi personalizzato "Custom" usato nella query XPath. Nell'esempio seguente vengono definiti la sezione di routing, la tabella dello spazio dei nomi e il filtro XPath necessari.  
   
     ```xml  
     <routing>  
@@ -113,18 +113,18 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
      Questo **MessageFilter** cerca un'intestazione RoundingCalculator nel messaggio che contiene il valore "rounding". Questa intestazione viene impostata dal client per indicare che il messaggio deve essere indirizzato al servizio roundingCalc.  
   
     > [!NOTE]
-    > Il prefisso dello spazio dei nomi s12 è `http://www.w3.org/2003/05/soap-envelope`definito per impostazione predefinita nella tabella dello spazio dei nomi e rappresenta lo spazio dei nomi .
+    > Il prefisso dello spazio dei nomi S12 è definito per impostazione predefinita nella tabella dello spazio dei nomi e rappresenta lo spazio dei nomi `http://www.w3.org/2003/05/soap-envelope` .
   
-2. È inoltre necessario definire filtri che cercano i messaggi ricevuti nei due endpoint virtuali. Il primo endpoint virtuale è l'endpoint "regolare/calcolatore". Il client può inviare richieste all'endpoint per indicare che il messaggio deve essere indirizzato al servizio regularCalc. Nella configurazione seguente viene definito un filtro che usa <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> per determinare se il messaggio è arrivato tramite un endpoint con il nome specificato in filterData.  
+2. È inoltre necessario definire filtri che cercano i messaggi ricevuti nei due endpoint virtuali. Il primo endpoint virtuale è l'endpoint "regular/calculator". Il client può inviare richieste all'endpoint per indicare che il messaggio deve essere indirizzato al servizio regularCalc. Nella configurazione seguente viene definito un filtro che usa <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> per determinare se il messaggio è arrivato tramite un endpoint con il nome specificato in filterData.  
   
     ```xml  
     <!--define an endpoint name filter looking for messages that show up on the virtual regular calculator endpoint-->  
     <filter name="EndpointNameFilter" filterType="EndpointName" filterData="calculatorEndpoint"/>  
     ```  
   
-     Se un messaggio viene ricevuto dall'endpoint del servizio denominato `true`"calculatorEndpoint", questo filtro restituisce .  
+     Se un messaggio viene ricevuto dall'endpoint di servizio denominato "calculatorEndpoint", questo filtro restituisce `true` .  
   
-3. A questo punto, definire un filtro che cerchi i messaggi inviati all'indirizzo di roundingEndpoint. Il client può inviare richieste all'endpoint per indicare che il messaggio deve essere indirizzato al servizio roundingCalc. La configurazione seguente definisce un <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> filtro che utilizza per determinare se il messaggio è arrivato all'endpoint "rounding/calculator".  
+3. A questo punto, definire un filtro che cerchi i messaggi inviati all'indirizzo di roundingEndpoint. Il client può inviare richieste all'endpoint per indicare che il messaggio deve essere indirizzato al servizio roundingCalc. La configurazione seguente definisce un filtro che usa <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> per determinare se il messaggio è arrivato all'endpoint "arrotondamento/calcolo".  
   
     ```xml  
     <!--define a filter looking for messages that show up with the address prefix.  The corresponds to the rounding calc virtual endpoint-->  
@@ -132,7 +132,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     Se un messaggio viene ricevuto a `http://localhost/routingservice/router/rounding/` un indirizzo che inizia con, il filtro restituisce **true**. Poiché l'indirizzo di `http://localhost/routingservice/router` base utilizzato da questa configurazione è e l'indirizzo specificato per roundingEndpoint è `http://localhost/routingservice/router/rounding/calculator`"rounding/calculator", l'indirizzo completo utilizzato per comunicare con questo endpoint è , che corrisponde a questo filtro.  
+     Se un messaggio viene ricevuto a un indirizzo che inizia con `http://localhost/routingservice/router/rounding/` , il filtro restituisce **true**. Poiché l'indirizzo di base usato da questa configurazione è `http://localhost/routingservice/router` e l'indirizzo specificato per roundingEndpoint è "rounding/calculator", l'indirizzo completo usato per comunicare con l'endpoint è `http://localhost/routingservice/router/rounding/calculator` , che corrisponde al filtro.  
   
     > [!NOTE]
     > Il filtro PrefixEndpointAddress non valuta il nome host in caso di corrispondenza poiché è possibile fare riferimento a un singolo host usando diversi nomi host che potrebbero essere tutti riferimenti validi all'host da parte dell'applicazione client. Ad esempio, tutti i valori seguenti possono fare riferimento allo stesso host:  
@@ -156,7 +156,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
                     filterData="group1"/>  
     ```  
   
-     Al runtime, questo tipo di filtro alterna tutte le istanze di filtro definite di questo tipo configurate come medesimo gruppo in una raccolta. In questo modo i messaggi elaborati da `true` `RoundRobinFilter1` questo `RoundRobinFilter2`filtro personalizzato alternano la restituzione di for e .  
+     Al runtime, questo tipo di filtro alterna tutte le istanze di filtro definite di questo tipo configurate come medesimo gruppo in una raccolta. In questo modo i messaggi elaborati da questo filtro personalizzato si alternano alla restituzione `true` di per `RoundRobinFilter1` e `RoundRobinFilter2` .  
   
 ### <a name="define-filter-tables"></a>Definire tabelle dei filtri  
   
@@ -165,7 +165,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
     > [!NOTE]
     > Sebbene l'impostazione di una priorità dei filtri consenta di controllare l'ordine in cui essi vengono elaborati, questa soluzione può influire negativamente sulle prestazioni del servizio di routing. Se possibile, costruire la logica di filtro in modo che non sia necessario assegnare priorità ai filtri.  
   
-     Di seguito viene definita la tabella dei filtri e il "XPathFilter" definito in precedenza alla tabella con priorità 2. Questa voce specifica inoltre `XPathFilter` che se corrisponde al messaggio, il `roundingCalcEndpoint`messaggio verrà instradato al file .  
+     Nell'esempio seguente viene definita la tabella dei filtri e viene aggiunto il valore "XPathFilter" definito in precedenza alla tabella con priorità 2. Questa voce specifica inoltre che se `XPathFilter` corrisponde al messaggio, il messaggio verrà indirizzato a `roundingCalcEndpoint` .  
   
     ```xml  
     <routing>  
@@ -327,4 +327,4 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Servizi di routing](../../../../docs/framework/wcf/samples/routing-services.md)
+- [Servizi di routing](../samples/routing-services.md)

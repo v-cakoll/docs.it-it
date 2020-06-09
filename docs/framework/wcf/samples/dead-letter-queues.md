@@ -2,21 +2,21 @@
 title: Code di messaggi non recapitabili
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: eab1c52f4d0b3d0f82cf561a9478ea8233598e1c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8ea2ea530db8745c3802f9f39793ffd77ddd0008
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144948"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575290"
 ---
 # <a name="dead-letter-queues"></a>Code di messaggi non recapitabili
-Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non è riuscito. Si basa sull'esempio di [associazione TRANSACTed MSMQ.](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) In questo esempio viene usata l'associazione `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
+Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non è riuscito. Si basa sull'esempio di [associazione MSMQ transazionale](transacted-msmq-binding.md) . In questo esempio viene usata l'associazione `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
 
 > [!NOTE]
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.
 
 > [!NOTE]
-> In questo esempio viene illustrata ogni coda di messaggi non recapitabili dell'applicazione disponibile solo in Windows Vista. L'esempio può essere modificato per utilizzare le code predefinite a livello di sistema per MSMQ 3.0 in Windows Server 2003 e Windows XP.
+> In questo esempio viene illustrata ogni coda di messaggi non recapitabili dell'applicazione disponibile solo in Windows Vista. È possibile modificare l'esempio per utilizzare le code predefinite a livello di sistema per MSMQ 3,0 in Windows Server 2003 e Windows XP.
 
  Nella comunicazione in coda, il client comunica al servizio usando una coda. Più precisamente, il client invia messaggi a una coda. Il servizio riceve messaggi dalla coda. Di conseguenza, per comunicare mediante una coda il servizio e il client non devono essere in esecuzione contemporaneamente.
 
@@ -32,7 +32,7 @@ Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non �
 
 - `Custom`: per archiviare i messaggi non recapitati viene usata una coda di messaggi non recapitabili personalizzata specificata usando la proprietà <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>. Questa funzionalità è disponibile solo in Windows Vista. Viene usata quando l'applicazione deve usare la propria coda di messaggi non recapitabili invece di condividerla con altre applicazioni in esecuzione nello stesso computer.
 
-- Proprietà <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> per esprimere la coda specifica da usare come coda di messaggi non recapitabili. Questa opzione è disponibile solo in Windows Vista.
+- Proprietà <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> per esprimere la coda specifica da usare come coda di messaggi non recapitabili. Questa operazione è disponibile solo in Windows Vista.
 
  In questo esempio, il client invia un gruppo di messaggi al servizio dall'interno dell'ambito di una transazione e specifica un valore arbitrariamente basso per la "durata" di questi messaggi (circa 2 secondi). Il client specifica anche una coda di messaggi non recapitabili personalizzata da usare per accodare i messaggi che sono scaduti.
 
@@ -49,7 +49,7 @@ public interface IOrderProcessor
 }
 ```
 
- Il codice del servizio nell'esempio è quello [dell'associazione Transacted MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).
+ Il codice del servizio nell'esempio è quello dell' [associazione MSMQ transazionale](transacted-msmq-binding.md).
 
  La comunicazione con il servizio avviene all'interno dell'ambito di una transazione. Il servizio legge messaggi dalla coda, esegue l'operazione e quindi visualizza i risultati dell'operazione. L'applicazione crea anche una coda per i messaggi non recapitabili.
 
@@ -169,9 +169,9 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- I messaggi nella coda di messaggi non recapitabili sono indirizzati al servizio che sta elaborando il messaggio. Pertanto, quando il servizio messaggi non recapitabili legge i messaggi dalla coda, il livello di canale di Windows Communication Foundation (WCF) rileva la mancata corrispondenza negli endpoint e non invia il messaggio. In questo caso, il messaggio è indirizzato al servizio di elaborazione ordini ma viene ricevuto dal servizio messaggi non recapitabili. Per ricevere un messaggio indirizzato a un altro endpoint, in `ServiceBehavior` viene specificato un filtro degli indirizzi con il quale confrontare qualsiasi indirizzo. Questo è necessario per elaborare correttamente i messaggi che vengono letti dalla coda di messaggi non recapitabili.
+ I messaggi nella coda di messaggi non recapitabili sono indirizzati al servizio che sta elaborando il messaggio. Pertanto, quando il servizio messaggi non recapitabili legge messaggi dalla coda, il livello del canale Windows Communication Foundation (WCF) trova la mancata corrispondenza negli endpoint e non invia il messaggio. In questo caso, il messaggio è indirizzato al servizio di elaborazione ordini ma viene ricevuto dal servizio messaggi non recapitabili. Per ricevere un messaggio indirizzato a un altro endpoint, in `ServiceBehavior` viene specificato un filtro degli indirizzi con il quale confrontare qualsiasi indirizzo. Questo è necessario per elaborare correttamente i messaggi che vengono letti dalla coda di messaggi non recapitabili.
 
- In questo esempio, il servizio messaggi non recapitabili invia nuovamente il messaggio se il motivo dell'errore è che il messaggio è sforverato. Per tutti gli altri motivi, viene visualizzato l'errore di recapito, come illustrato nel codice di esempio seguente:For all other reasons, it displays the delivery failure, as shown in the following sample code:
+ In questo esempio, il servizio messaggi non recapitabili invia nuovamente il messaggio se il motivo dell'errore è che si è verificato il timeout del messaggio. Per tutti gli altri motivi, viene visualizzato l'errore di recapito, come illustrato nel codice di esempio seguente:
 
 ```csharp
 // Service class that implements the service contract.
@@ -310,23 +310,23 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio
 
-1. Assicurarsi di aver eseguito la procedura di [installazione una tantera per Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
 2. Se il servizio viene eseguito prima, verificherà la presenza della coda. Se la coda non è presente, il servizio ne creerà una. È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ. Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.
 
     1. Aprire Server Manager in Visual Studio 2012.
 
-    2. Espandere la scheda **Funzionalità.**
+    2. Espandere la scheda **funzionalità** .
 
-    3. Fare clic con il pulsante destro del mouse su **Code messaggi privati**e scegliere **Nuovo**, **Coda privata**.
+    3. Fare clic con il pulsante destro del mouse su **code di messaggi private**e selezionare **nuova**, **coda privata**.
 
-    4. Selezionare la casella **Transazionale.**
+    4. Controllare la casella **transazionale** .
 
-    5. Immettere `ServiceModelSamplesTransacted` il nome della nuova coda.
+    5. Immettere `ServiceModelSamplesTransacted` come nome della nuova coda.
 
-3. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](building-the-samples.md).
 
-4. Per eseguire l'esempio in modo appropriato in un nome di coda di modifica della configurazione a singolo o tra più computer, sostituire localhost con il nome completo del computer e seguire le istruzioni riportate in Esecuzione di [Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Per eseguire l'esempio in una configurazione singola o tra più computer, modificare i nomi della coda in modo appropriato, sostituendo localhost con il nome completo del computer e seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](running-the-samples.md).
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Per eseguire l'esempio in un computer appartenente a un gruppo di lavoro
 
@@ -357,6 +357,6 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) Esempi per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) ed [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 10e257a1cbc8778565a9838aeef423522f9d2970
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9e3cf262ef617a1ae5ee92bcc3d6fd5c691602f9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290617"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600413"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Oggetti e classi in Visual Basic
 
@@ -110,7 +110,7 @@ Usare i campi nei casi seguenti:
 
 - La proprietà è un tipo dati `String`. Non è presente alcun vincolo riguardo alle dimensioni o al valore della stringa.
 
-- Per altre informazioni, vedere [Routine Property](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md).
+- Per altre informazioni, vedere [Routine Property](../procedures/property-procedures.md).
 
 > [!TIP]
 > Mantieni sempre i campi non costanti privati. Quando si desidera renderla pubblica, utilizzare invece una proprietà.

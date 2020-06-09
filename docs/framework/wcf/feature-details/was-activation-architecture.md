@@ -2,12 +2,12 @@
 title: Architettura di attivazione WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 67ddcd97ac75ddeb0765c38bb9ce7b5e8f039272
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cfbfd91f9e7bc2e1b4f8485d5ae22c1fb2b5228b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184247"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600672"
 ---
 # <a name="was-activation-architecture"></a>Architettura di attivazione WAS
 In questo argomento vengono definiti e illustrati i componenti del servizio di attivazione dei processi di Windows (noto anche come WAS).  
@@ -30,11 +30,11 @@ In questo argomento vengono definiti e illustrati i componenti del servizio di a
  ![Screenshot che mostra l'architettura di WAS.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>Adattatori listener  
- Gli adattatori listener sono servizi di Windows singoli che implementano la logica di comunicazione di rete utilizzata per ricevere i messaggi tramite il protocollo di rete sul quale ascoltano. Nella tabella seguente sono elencati gli adattatori listener per i protocolli Windows Communication Foundation (WCF).  
+ Gli adattatori listener sono servizi di Windows singoli che implementano la logica di comunicazione di rete utilizzata per ricevere i messaggi tramite il protocollo di rete sul quale ascoltano. Nella tabella seguente sono elencati gli adapter listener per i protocolli Windows Communication Foundation (WCF).  
   
 |Nome del servizio dell’adattatore listener|Protocollo|Note|  
 |-----------------------------------|--------------|-----------|  
-|W3SVC|http|Componente comune che fornisce l'attivazione HTTP sia per IIS 7.0 che per WCF.|  
+|W3SVC|http|Componente comune che fornisce l'attivazione HTTP sia per IIS 7,0 che per WCF.|  
 |NetTcpActivator|net.tcp|Dipende dal servizio NetTcpPortSharing.|  
 |NetPipeActivator|net.pipe||  
 |NetMsmqActivator|net.msmq|Per l'utilizzo con le applicazioni di Accodamento messaggi basate su WCF.|  
@@ -87,5 +87,5 @@ In questo argomento vengono definiti e illustrati i componenti del servizio di a
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Configurazione di WAS per l'uso con WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
+- [Configurazione di WAS per l'uso con WCF](configuring-the-wpa--service-for-use-with-wcf.md)
 - [Funzionalità di hosting di Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

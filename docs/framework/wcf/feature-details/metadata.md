@@ -4,38 +4,38 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
-ms.openlocfilehash: 10b93f94a5a5193513e20eed4571aaf8f6c882a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7cb70e00bfd2558c3949bfd3d3597f7156572620
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039078"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598827"
 ---
 # <a name="metadata"></a>Metadati
-Windows Communication Foundation (WCF) offre un'infrastruttura per l'esportazione, pubblicare, recuperare e importare i metadati del servizio. Servizi WCF utilizzano metadati per descrivere come interagire con gli endpoint del servizio affinché strumenti quali Svcutil.exe, possono generare automaticamente codice client per l'accesso al servizio.  
+Il Windows Communication Foundation (WCF) fornisce un'infrastruttura per esportare, pubblicare, recuperare e importare metadati del servizio. I servizi WCF utilizzano i metadati per descrivere come interagire con gli endpoint del servizio in modo che gli strumenti, ad esempio Svcutil. exe, possano generare automaticamente il codice client per accedere al servizio.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Panoramica dell'architettura dei metadati](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Panoramica dell'architettura dei metadati](metadata-architecture-overview.md)  
  Panoramica dettagliata dell'architettura dei metadati.  
   
- [Formati dei metadati](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
+ [Formati dei metadati](metadata-formats.md)  
  Descrive i vari formati dei metadati.  
   
- [Esportazione e importazione di metadati](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
+ [Esportazione e importazione di metadati](exporting-and-importing-metadata.md)  
  Descrive come esportare e importare metadati.  
   
- [Pubblicazione di metadati](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- Viene descritto come WCF pubblica i metadati.  
+ [Pubblicazione di metadati](publishing-metadata.md)  
+ Viene descritto il modo in cui WCF pubblica i metadati.  
   
- [Recupero di metadati](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
+ [Recupero di metadati](retrieving-metadata.md)  
  Descrive le varie modalità di recupero dei metadati.  
   
- [Uso di metadati](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [Uso di metadati](using-metadata.md)  
  Descrive le varie modalità di utilizzo dei metadati del servizio.  
   
- [Considerazioni sulla sicurezza con i metadati](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
+ [Considerazioni sulla sicurezza con metadati](security-considerations-with-metadata.md)  
  Descrive considerazioni di sicurezza importanti relative ai metadati del servizio.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Estensione del sistema di metadati](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+- [Estensione del sistema di metadati](../extending/extending-the-metadata-system.md)
