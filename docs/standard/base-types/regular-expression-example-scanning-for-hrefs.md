@@ -1,5 +1,6 @@
 ---
 title: 'Esempio di espressione regolare: ricerca di HREF'
+description: Vedere un esempio di espressioni regolari in .NET. Nell'esempio viene eseguita la ricerca di una stringa di input e vengono visualizzati tutti i valori degli attributi href e le relative posizioni
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: 47364aef49bb0f43b79b805e2adf305c549d7340
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 36273901ac9afb762ac70ee5d6dcd80ff0ede11d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276161"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84583492"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Esempio di espressione regolare: ricerca di HREF
 Nell'esempio riportato di seguito viene cercata una stringa di input e vengono visualizzati tutti i valori href="…" e le relative posizioni nella stringa.  

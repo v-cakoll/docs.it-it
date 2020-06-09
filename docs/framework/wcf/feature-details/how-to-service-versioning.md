@@ -2,12 +2,12 @@
 title: 'Procedura: controllo delle versioni dei servizi'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: f1178a0bedfe8665d7b3ec463e99183809538c28
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: beb7de63d300ad7986bfc59093006b074b9456ba
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81464119"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586936"
 ---
 # <a name="how-to-service-versioning"></a>Procedura: controllo delle versioni dei servizi
 In questo argomento vengono descritti i passaggi di base necessari per creare una configurazione del routing che indirizza messaggi a versioni diverse dello stesso servizio. In questo esempio i messaggi vengono indirizzati a due versioni diverse di un servizio di calcolo, `roundingCalc` (v1) e `regularCalc` (v2). Entrambe le implementazioni supportano le stesse operazioni; tuttavia il primo servizio, `roundingCalc`, arrotonda tutti i calcoli al valore intero più vicino prima della restituzione. Un'applicazione client deve essere in grado di indicare se utilizzare il secondo servizio, `regularCalc`.  
@@ -17,7 +17,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
   
  Le operazioni esposte da entrambi servizi sono:  
   
-- Add  
+- Aggiunta  
   
 - Sottrazione  
   
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2. Definire i filtri usati per indirizzare messaggi agli endpoint di destinazione.  Per questo esempio, il filtro XPath viene utilizzato per rilevare il valore dell'intestazione personalizzata "CalcVer" per determinare a quale versione deve essere instradato il messaggio. Un filtro XPath viene utilizzato anche per rilevare i messaggi che non contengono l'intestazione "CalcVer". Nell'esempio seguente vengono definiti la tabella dello spazio dei nomi e dei filtri necessari.  
+2. Definire i filtri usati per indirizzare messaggi agli endpoint di destinazione.  Per questo esempio, il filtro XPath viene usato per rilevare il valore dell'intestazione personalizzata "CalcVer" per determinare la versione a cui deve essere indirizzato il messaggio. Viene inoltre utilizzato un filtro XPath per rilevare i messaggi che non contengono l'intestazione "CalcVer". Nell'esempio seguente vengono definiti la tabella dello spazio dei nomi e dei filtri necessari.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -94,9 +94,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    > Il prefisso dello spazio dei nomi s12 è `http://www.w3.org/2003/05/soap-envelope`definito per impostazione predefinita nella tabella dello spazio dei nomi e rappresenta lo spazio dei nomi .
+    > Il prefisso dello spazio dei nomi S12 è definito per impostazione predefinita nella tabella dello spazio dei nomi e rappresenta lo spazio dei nomi `http://www.w3.org/2003/05/soap-envelope` .
   
-3. Definire la tabella dei filtri, che associa ogni filtro a un endpoint client. Se il messaggio contiene l'intestazione "CalcVer" con un valore pari a 1, verrà inviato al servizio regularCalc. Se l'intestazione contiene il valore 2, verrà inviato al servizio roundingCalc. Se non è presente alcuna intestazione, il messaggio verrà indirizzato a regularCalc.  
+3. Definire la tabella dei filtri, che associa ogni filtro a un endpoint client. Se il messaggio contiene l'intestazione "CalcVer" con il valore 1, verrà inviato al servizio regularCalc. Se l'intestazione contiene il valore 2, verrà inviato al servizio roundingCalc. Se non è presente alcuna intestazione, il messaggio verrà indirizzato a regularCalc.  
   
      Di seguito viene definita la tabella dei filtri e vengono aggiunti i filtri definiti in precedenza.  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4. Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella rispettiva tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing. Nell'esempio seguente `filterTable1` viene illustrata l'associazione agli endpoint del servizio:The following example demonstrates associating with the service endpoints:  
+4. Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella rispettiva tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing. Nell'esempio seguente viene illustrata l'associazione `filterTable1` con gli endpoint del servizio:  
   
     ```xml  
     <behaviors>  
@@ -326,4 +326,4 @@ namespace Microsoft.Samples.AdvancedFilters
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Servizi di routing](../../../../docs/framework/wcf/samples/routing-services.md)
+- [Servizi di routing](../samples/routing-services.md)

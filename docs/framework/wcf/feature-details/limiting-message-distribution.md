@@ -2,12 +2,12 @@
 title: Limitazione della distribuzione di messaggi
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 36d9d43760e68f6bcf0099ac17dec5a8278d0e49
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 188d7bd365caad7d4cd438744c78ae8e7cd95e7e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211903"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586312"
 ---
 # <a name="limiting-message-distribution"></a>Limitazione della distribuzione di messaggi
 
@@ -49,7 +49,7 @@ Quando si rileva uno scenario in cui è necessario limitare la distribuzione di 
 
 Le risposte a queste domande possono essere utili per stabilire se utilizzare un conteggio hop, un filtro di propagazione dei messaggi, un filtro locale o una connessione diretta. Si considerino le seguenti linee guida generali:
 
-- **Who**
+- **Che**
 
   - *Singolo nodo*: filtro locale o connessione diretta.
 
@@ -57,13 +57,13 @@ Le risposte a queste domande possono essere utili per stabilire se utilizzare un
 
   - *Subset complesso della mesh*: MessagePropagationFilter.
 
-- **Frequenza**
+- **Con quale frequenza**
 
   - *Molto frequente*: connessione diretta, PeerHopCount, MessagePropagationFilter.
 
   - *Occasionale*: filtro locale.
 
-- **Uso della larghezza di banda**
+- **Utilizzo della larghezza di banda**
 
   - *Alta*: connessione diretta, meno consigliabile per l'uso di MessagePropagationFilter o di un filtro locale.
 
@@ -71,4 +71,4 @@ Le risposte a queste domande possono essere utili per stabilire se utilizzare un
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Creazione di un'applicazione del canale peer](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+- [Creazione di un'applicazione del canale peer](building-a-peer-channel-application.md)

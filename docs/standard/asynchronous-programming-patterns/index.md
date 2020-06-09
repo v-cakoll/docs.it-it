@@ -1,23 +1,24 @@
 ---
 title: Modelli di programmazione asincrona
+description: Informazioni sul modello asincrono basato su attività (TAP), il modello asincrono basato su eventi (EAP), & il modello di programmazione asincrona (APM) in .NET.
 ms.date: 10/16/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - asynchronous design patterns, .NET
 - .NET Framework, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
-ms.openlocfilehash: e1efe9c3eb57f317def91e527506c358eb086679
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bd4d44d8de8a64be82e9ce6af593a86719b59fcf
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160053"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84583505"
 ---
 # <a name="asynchronous-programming-patterns"></a>Modelli di programmazione asincrona
 
 In .NET sono disponibili tre modelli per l'esecuzione di operazioni asincrone:  
 
-- **Modello asincrono basato su attività (TAP, Task-based Asynchronous Pattern),** che utilizza un singolo metodo per rappresentare l'avvio e il completamento di un'operazione asincrona. Il modello TAP è stato introdotto in .NET Framework 4. **È l'approccio consigliato per la programmazione asincrona in .NET.** Le parole chiave [async](../../csharp/language-reference/keywords/async.md) e [await](../../csharp/language-reference/operators/await.md) in C# e gli operatori [Async](../../visual-basic/language-reference/modifiers/async.md) e [Await](../../visual-basic/language-reference/operators/await-operator.md) in Visual Basic aggiungono il supporto del linguaggio per TAP. Per altre informazioni, vedere [Task-based Asynchronous Pattern (TAP)](task-based-asynchronous-pattern-tap.md) (Modello asincrono basato su attività, TAP).  
+- **Modello asincrono basato su attività (TAP)**, che usa un unico metodo per rappresentare l'inizio e il completamento di un'operazione asincrona. Il modello TAP è stato introdotto in .NET Framework 4. **È l'approccio consigliato per la programmazione asincrona in .NET.** Le parole chiave [async](../../csharp/language-reference/keywords/async.md) e [await](../../csharp/language-reference/operators/await.md) in C# e gli operatori [Async](../../visual-basic/language-reference/modifiers/async.md) e [Await](../../visual-basic/language-reference/operators/await-operator.md) in Visual Basic aggiungono il supporto del linguaggio per TAP. Per altre informazioni, vedere [Task-based Asynchronous Pattern (TAP)](task-based-asynchronous-pattern-tap.md) (Modello asincrono basato su attività, TAP).  
 
 - **Modello asincrono basato su eventi (EAP)**, ovvero il modello legacy basato su eventi per fornire il comportamento asincrono. Richiede un metodo con il suffisso `Async` e uno o più eventi, i tipi delegati del gestore eventi e i tipi derivati da `EventArg`. EAP è stato introdotto in .NET Framework 2.0. Questo modello non è più consigliato per i nuovi progetti di sviluppo. Per ulteriori informazioni, vedere [Event-based Asynchronous Pattern (EAP)](event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP).  
 

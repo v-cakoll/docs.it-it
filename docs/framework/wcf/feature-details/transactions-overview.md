@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-ms.openlocfilehash: 1c3589b336ee8982cd6d694112e4c1f784f59ad2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8e3306612e016568ad7cfd5138ab538af771a17
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585790"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585831"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Panoramica sulle transazioni di Windows Communication Foundation
 Le transazioni consentono di radunare un set di azioni o operazioni in un'unica unità di esecuzione indivisibile. Una transazione è una raccolta di operazioni con le proprietà seguenti:  
@@ -24,11 +24,11 @@ Le transazioni consentono di radunare un set di azioni o operazioni in un'unica 
   
 - Durabilità. Implica che, quando è stato eseguito il commit, gli aggiornamenti alle risorse gestite (ad esempio un record di database) verranno resi persistenti rispetto agli errori.  
   
- Windows Communication Foundation (WCF) offre un'ampia gamma di funzionalità che consentono di creare transazioni distribuite nell'applicazione di servizio Web.  
+ Windows Communication Foundation (WCF) fornisce un set completo di funzionalità che consentono di creare transazioni distribuite nell'applicazione di servizio Web.  
   
- WCF implementa il supporto per il protocollo WS-AtomicTransaction (WS-AT) che consente alle applicazioni WCF di propagare transazioni alle applicazioni interoperative, ad esempio servizi Web interoperativi creati mediante la tecnologia di terze parti. WCF implementa anche il supporto per il protocollo delle transazioni OLE che può essere utilizzato in scenari in cui non è necessaria la funzionalità di interoperabilità per abilitare il flusso delle transazioni.  
+ WCF implementa il supporto per il protocollo WS-AtomicTransaction (WS-AT) che consente alle applicazioni WCF di eseguire il flusso delle transazioni alle applicazioni interoperative, ad esempio i servizi Web interoperativi compilati con la tecnologia di terze parti. WCF implementa anche il supporto per il protocollo delle transazioni OLE, che può essere utilizzato in scenari in cui non è necessaria la funzionalità di interoperabilità per abilitare il flusso delle transazioni.  
   
- È possibile usare un file di configurazione dell'applicazione per configurare associazioni che abilitano o disabilitano il flusso delle transazioni, nonché impostare il protocollo delle transazioni desiderato su un'associazione. È inoltre possibile impostare timeout delle transazioni a livello di servizio usando il file di configurazione. Per altre informazioni, vedere [abilitazione della transazione propagata](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
+ È possibile usare un file di configurazione dell'applicazione per configurare associazioni che abilitano o disabilitano il flusso delle transazioni, nonché impostare il protocollo delle transazioni desiderato su un'associazione. È inoltre possibile impostare timeout delle transazioni a livello di servizio usando il file di configurazione. Per ulteriori informazioni, vedere [Abilitazione del flusso delle transazioni](enabling-transaction-flow.md).  
   
  Gli attributi delle transazioni nello spazio dei nomi <xref:System.ServiceModel> consentono di eseguire le operazioni seguenti:  
   
@@ -38,9 +38,9 @@ Le transazioni consentono di radunare un set di azioni o operazioni in un'unica 
   
 - Usare gli attributi <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> su un metodo del contratto per richiedere, consentire o negare il flusso delle transazioni.  
   
- Per altre informazioni, vedere [attributi delle transazioni ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
+ Per ulteriori informazioni, vedere [attributi di transazione ServiceModel](servicemodel-transaction-attributes.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Attributi delle transazioni ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)
-- [Attivazione del flusso delle transazioni](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
+- [Attributi della transazione di ServiceModel](servicemodel-transaction-attributes.md)
+- [Attivazione del flusso delle transazioni](enabling-transaction-flow.md)
