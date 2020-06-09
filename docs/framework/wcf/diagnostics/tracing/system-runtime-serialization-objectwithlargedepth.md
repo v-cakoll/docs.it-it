@@ -2,21 +2,21 @@
 title: System.Runtime.Serialization.ObjectWithLargeDepth
 ms.date: 03/30/2017
 ms.assetid: 5837891d-104b-4e9b-bfba-5434a9524b33
-ms.openlocfilehash: fc7226680b45e50c9d17ad7d4d975103550ce8b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f53aad635a9f84b82fdadff23268b4e636788776
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784657"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84582855"
 ---
-# <a name="systemruntimeserializationobjectwithlargedepth"></a><span data-ttu-id="b4d40-102">System.Runtime.Serialization.ObjectWithLargeDepth</span><span class="sxs-lookup"><span data-stu-id="b4d40-102">System.Runtime.Serialization.ObjectWithLargeDepth</span></span>
-<span data-ttu-id="b4d40-103">System.Runtime.Serialization.ObjectWithLargeDepth</span><span class="sxs-lookup"><span data-stu-id="b4d40-103">System.Runtime.Serialization.ObjectWithLargeDepth</span></span>  
+# <a name="systemruntimeserializationobjectwithlargedepth"></a><span data-ttu-id="16999-102">System.Runtime.Serialization.ObjectWithLargeDepth</span><span class="sxs-lookup"><span data-stu-id="16999-102">System.Runtime.Serialization.ObjectWithLargeDepth</span></span>
+<span data-ttu-id="16999-103">System.Runtime.Serialization.ObjectWithLargeDepth</span><span class="sxs-lookup"><span data-stu-id="16999-103">System.Runtime.Serialization.ObjectWithLargeDepth</span></span>  
   
-## <a name="description"></a><span data-ttu-id="b4d40-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b4d40-104">Description</span></span>  
- <span data-ttu-id="b4d40-105">La scrittura di un oggetto con struttura ricorsiva e notevole profondità presenta alcune limitazioni.</span><span class="sxs-lookup"><span data-stu-id="b4d40-105">Writing an object with a recursive structure has limitations when it has large depth.</span></span> <span data-ttu-id="b4d40-106">Provare a ridurre la profondità dell'oggetto.</span><span class="sxs-lookup"><span data-stu-id="b4d40-106">Consider reducing the depth of the object.</span></span>  
+## <a name="description"></a><span data-ttu-id="16999-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="16999-104">Description</span></span>  
+ <span data-ttu-id="16999-105">La scrittura di un oggetto con struttura ricorsiva e notevole profondità presenta alcune limitazioni.</span><span class="sxs-lookup"><span data-stu-id="16999-105">Writing an object with a recursive structure has limitations when it has large depth.</span></span> <span data-ttu-id="16999-106">Provare a ridurre la profondità dell'oggetto.</span><span class="sxs-lookup"><span data-stu-id="16999-106">Consider reducing the depth of the object.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b4d40-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b4d40-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="16999-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="16999-107">See also</span></span>
 
-- [<span data-ttu-id="b4d40-108">Traccia</span><span class="sxs-lookup"><span data-stu-id="b4d40-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="b4d40-109">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="b4d40-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="b4d40-110">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="b4d40-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="16999-108">Traccia</span><span class="sxs-lookup"><span data-stu-id="16999-108">Tracing</span></span>](index.md)
+- [<span data-ttu-id="16999-109">Utilizzo delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="16999-109">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="16999-110">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="16999-110">Administration and Diagnostics</span></span>](../index.md)
