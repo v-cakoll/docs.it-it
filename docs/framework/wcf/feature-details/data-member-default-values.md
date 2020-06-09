@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: 17e73ab2aa777ae53f31596fa364a4feac297842
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e4eaaec880ecfcff24d9d5b4e8347a84738e070b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962922"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593479"
 ---
 # <a name="data-member-default-values"></a>Valori predefiniti dei membri dati
 Nella .NET Framework i tipi hanno un concetto di *valori predefiniti*. Ad esempio, per i tipi di riferimento il valore predefinito è `null` mentre per un tipo Integer è zero. Talvolta, quando un membro dati è impostato sul relativo valore predefinito, conviene ometterlo dai dati serializzati. Infatti, poiché il membro ha un valore predefinito, non occorre serializzare un valore effettivo. Ciò risulta vantaggioso in termini di prestazioni.  
@@ -45,16 +45,16 @@ Nella .NET Framework i tipi hanno un concetto di *valori predefiniti*. Ad esempi
  L'attributo `xsi:nil` è un attributo speciale dello spazio dei nomi delle istanze dell'XML Schema del W3C (World Wide Web Consortium) che fornisce un modo interoperativo per rappresentare in modo esplicito un valore nullo. Si noti che il codice XML non contiene alcuna informazione sui membri dati "position", "salary" e "bonus". Il destinatario può interpretare questa assenza di dati come possibilità di impostare tali membri rispettivamente come `null`, zero e `null`. Non esiste alcuna garanzia che un deserializzatore di terze parti esegua correttamente l'impostazione dei valori. È per questo motivo che è consigliabile evitare di utilizzare questo modello. La classe <xref:System.Runtime.Serialization.DataContractSerializer> imposta sempre correttamente i valori dei membri mancanti.  
   
 ### <a name="interaction-with-isrequired"></a>Interazione con IsRequired  
- Come descritto in [controllo delle versioni dei contratti dati](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md), l' <xref:System.Runtime.Serialization.DataMemberAttribute> attributo <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> ha una proprietà (il `false`valore predefinito è). indica se un determinato membro dati deve essere presente nei dati serializzati quando viene deserializzato. Se la proprietà `IsRequired` viene impostata su `true` (a indicare che un valore deve essere presente) e la proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> viene impostata su `false` (a indicare che il valore non deve essere presente se è impostato sul valore predefinito), i valori predefiniti del membro dati non possono essere serializzati perché i risultati sarebbero contraddittori. Se il membro dati è impostato sul valore predefinito (in genere `null` o zero) e si tenta di eseguire una serializzazione, viene generata un'eccezione <xref:System.Runtime.Serialization.SerializationException>.  
+ Come descritto in [controllo delle versioni dei contratti dati](data-contract-versioning.md), l' <xref:System.Runtime.Serialization.DataMemberAttribute> attributo ha una <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> Proprietà (il valore predefinito è `false` ). indica se un determinato membro dati deve essere presente nei dati serializzati quando viene deserializzato. Se la proprietà `IsRequired` viene impostata su `true` (a indicare che un valore deve essere presente) e la proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> viene impostata su `false` (a indicare che il valore non deve essere presente se è impostato sul valore predefinito), i valori predefiniti del membro dati non possono essere serializzati perché i risultati sarebbero contraddittori. Se il membro dati è impostato sul valore predefinito (in genere `null` o zero) e si tenta di eseguire una serializzazione, viene generata un'eccezione <xref:System.Runtime.Serialization.SerializationException>.  
   
 ### <a name="schema-representation"></a>Rappresentazione dello schema  
- I dettagli della rappresentazione dello schema XSD (XML Schema Definition Language) dei membri dati quando la `EmitDefaultValue` proprietà è impostata su `false` sono descritti in [riferimento allo schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Di seguito viene invece fornita una descrizione di carattere più generale:  
+ I dettagli della rappresentazione dello schema XSD (XML Schema Definition Language) dei membri dati quando la `EmitDefaultValue` proprietà è impostata su `false` sono descritti in [riferimento allo schema del contratto dati](data-contract-schema-reference.md). Di seguito viene invece fornita una descrizione di carattere più generale:  
   
-- Quando è impostato su `false`, viene rappresentato nello schema come un'annotazione specifica per Windows Communication Foundation (WCF). <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> Non esiste alcuna modalità interoperativa per rappresentare queste informazioni. In particolare, l'attributo "default" dello schema non viene utilizzato per indicare un valore predefinito, l'attributo `minOccurs` dipende esclusivamente dall'impostazione <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> e l'attributo `nillable` dipende soltanto dal tipo del membro dati.  
+- Quando <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> è impostato su `false` , viene rappresentato nello schema come un'annotazione specifica per Windows Communication Foundation (WCF). Non esiste alcuna modalità interoperativa per rappresentare queste informazioni. In particolare, l'attributo "default" dello schema non viene utilizzato per indicare un valore predefinito, l'attributo `minOccurs` dipende esclusivamente dall'impostazione <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> e l'attributo `nillable` dipende soltanto dal tipo del membro dati.  
   
 - Il valore predefinito effettivo da utilizzare non è presente nello schema. La corretta impostazione di un elemento mancante spetta all'endpoint di destinazione.  
   
- Durante l'importazione dello schema <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> , la proprietà viene impostata `false` automaticamente su ogni volta che viene rilevata l'annotazione specifica di WCF indicata in precedenza. Viene inoltre impostata su `false` per i tipi di riferimento la `nillable` cui proprietà è impostata `false` su per supportare scenari di interoperabilità specifici che in genere si verificano durante l'utilizzo dei servizi Web ASP.NET.  
+ Durante l'importazione dello schema, la <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> proprietà viene impostata automaticamente su `false` ogni volta che viene rilevata l'annotazione specifica di WCF indicata in precedenza. Viene inoltre impostata su `false` per i tipi di riferimento la cui `nillable` proprietà è impostata su `false` per supportare scenari di interoperabilità specifici che in genere si verificano durante l'utilizzo dei servizi Web ASP.NET.  
   
 ## <a name="see-also"></a>Vedere anche
 

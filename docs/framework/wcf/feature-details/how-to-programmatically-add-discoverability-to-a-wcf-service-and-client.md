@@ -2,21 +2,21 @@
 title: 'Procedura: aggiungere capacità di individuazione a un client e un servizio WCF a livello di codice'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: bf89c793cbd72a0a3980e6ec8e42c688dcedec26
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: c28815d1d208d3e91785a13d95e03c09c0f02ed9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344970"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596994"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procedura: aggiungere capacità di individuazione a un client e un servizio WCF a livello di codice
-In questo argomento viene illustrato come rendere individuabile un servizio Windows Communication Foundation (WCF). Si basa sull'esempio [Self-Host.](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host)  
+In questo argomento viene illustrato come rendere individuabile un servizio di Windows Communication Foundation (WCF). Si basa sull'esempio [self-host](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) .  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Per configurare l'esempio di servizio indipendente esistente per l'individuazione  
   
-1. Aprire la soluzione Self-Host in Visual Studio 2012. L'esempio si trova nella directory TechnologySamples\Basic\Service\Hosting\SelfHost.  
+1. Aprire la soluzione self-host in Visual Studio 2012. L'esempio si trova nella directory TechnologySamples\Basic\Service\Hosting\SelfHost.  
   
-2. Aggiungere al progetto di servizio un riferimento a `System.ServiceModel.Discovery.dll`. È possibile che venga visualizzato un messaggio di errore che indica "Sistema. ServiceModel.Discovery.dll o una delle relative dipendenze richiede una versione successiva di .NET Framework rispetto a quella specificata nel progetto ..." Se viene visualizzato questo messaggio, fare clic con il pulsante destro del mouse sul progetto in Esplora soluzioni e scegliere **Proprietà**. Nella finestra **Proprietà progetto** verificare che il Framework di **destinazione** sia [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2. Aggiungere al progetto di servizio un riferimento a `System.ServiceModel.Discovery.dll`. Potrebbe essere visualizzato un messaggio di errore che informa che "System. ServiceModel. Discovery. dll o una delle relative dipendenze richiede una versione successiva del .NET Framework rispetto a quella specificata nel progetto... " Se viene visualizzato questo messaggio, fare clic con il pulsante destro del mouse sul progetto nella Esplora soluzioni e scegliere **Proprietà**. Nella finestra delle **proprietà del progetto** verificare che il Framework di **destinazione** sia [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] .  
   
 3. Aprire il file Service.cs e aggiungere l'istruzione `using` seguente.  
   
@@ -60,7 +60,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
   
 2. Aggiungere un riferimento a `System.ServiceModel.dll` e `System.ServiceModel.Discovery.dll`  
   
-3. Copiare i file GeneratedClient.cs e App.config dal progetto client esistente al nuovo progetto DiscoveryClientApp. A tale scopo, fare clic con il pulsante destro del mouse sui file in **Esplora soluzioni**, scegliere **Copia**, quindi selezionare il progetto **DiscoveryClientApp** , fare clic con il pulsante destro del mouse e **scegliere Incolla**.  
+3. Copiare i file GeneratedClient.cs e App.config dal progetto client esistente al nuovo progetto DiscoveryClientApp. A tale scopo, fare clic con il pulsante destro del mouse sui file nel **Esplora soluzioni**, selezionare **copia**, quindi selezionare il progetto **DiscoveryClientApp** , fare clic con il pulsante destro del mouse e scegliere **Incolla**.  
   
 4. Aprire Program.cs.  
   
@@ -92,7 +92,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
     }  
     ```  
   
-     Ciò indica <xref:System.ServiceModel.Discovery.DiscoveryClient> a WCF che la classe deve utilizzare l'endpoint di individuazione UDP standard per inviare e ricevere messaggi di individuazione.  
+     Indica a WCF che la <xref:System.ServiceModel.Discovery.DiscoveryClient> classe deve utilizzare l'endpoint di individuazione UDP standard per inviare e ricevere messaggi di individuazione.  
   
 8. Alla riga successiva, chiamare il metodo <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> e specificare un'istanza <xref:System.ServiceModel.Discovery.FindCriteria> che contiene il contratto di servizio che si desiderare cercare. In questo caso specificare `ICalculator`.  
   
@@ -124,7 +124,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
   
      Questo metodo utilizza l'indirizzo endpoint restituito da `FindCalculatorServiceAddress` per chiamare il servizio di calcolo.  
   
-11. Creare all'interno del metodo `InvokeCalculatorService` un'istanza della classe `CalculatorServiceClient`. Questa classe è definita dall'esempio [Self-Host.This](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) class is defined by the Self-Host sample. È stata generata utilizzando Svcutil.exe.  
+11. Creare all'interno del metodo `InvokeCalculatorService` un'istanza della classe `CalculatorServiceClient`. Questa classe è definita dall'esempio [self-host](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) . È stata generata utilizzando Svcutil.exe.  
   
     ```csharp  
     // Create a client  
@@ -220,7 +220,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
     ```  
   
 ## <a name="example"></a>Esempio  
- Di seguito è riportato un elenco del codice per questo esempio. Poiché questo codice è basato sull'esempio [Self-Host,](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) vengono elencati solo i file modificati. Per ulteriori informazioni sull'esempio Self-Host, vedere [Istruzioni di installazione](https://docs.microsoft.com/dotnet/framework/wcf/samples/set-up-instructions).  
+ Di seguito è riportato un elenco del codice per questo esempio. Poiché questo codice è basato sull'esempio [self-host](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) , vengono elencati solo i file modificati. Per ulteriori informazioni sull'esempio Self-host, vedere [istruzioni di installazione](https://docs.microsoft.com/dotnet/framework/wcf/samples/set-up-instructions).  
   
 ```csharp  
 // Service.cs  
@@ -342,5 +342,5 @@ namespace DiscoveryClientApp
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Modello a oggetti WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+- [Panoramica di WCF Discovery](wcf-discovery-overview.md)
+- [Modello a oggetti WCF Discovery](wcf-discovery-object-model.md)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: bcfeb5f863b1dd6cf9171a7fc53c8984ea68ecb3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dcb311523c6ec41b62f6e69fe6bc7635b9d49708
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184620"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595232"
 ---
 # <a name="message-security-with-a-windows-client"></a>Protezione dei messaggi con un client Windows
-In questo scenario vengono illustrati un client e un server Windows Communication Foundation (WCF) protetti dalla modalità di sicurezza dei messaggi. Il client e il servizio vengono autenticati utilizzando le credenziali di Windows.  
+Questo scenario mostra un client Windows Communication Foundation (WCF) e un server protetti dalla modalità di sicurezza del messaggio. Il client e il servizio vengono autenticati utilizzando le credenziali di Windows.  
   
- ![Sicurezza dei messaggi con un client WindowsMessage security with a Windows client](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
+ ![Sicurezza dei messaggi con un client Windows](media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
@@ -26,7 +26,7 @@ In questo scenario vengono illustrati un client e un server Windows Communicatio
 |Integrità|Sì, usando un contesto di sicurezza condiviso|  
 |Riservatezza|Sì, usando un contesto di sicurezza condiviso|  
 |Trasporto|NET.TCP|  
-|Associazione|<xref:System.ServiceModel.NetTcpBinding>|  
+|Binding|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Service  
  Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
@@ -118,5 +118,5 @@ In questo scenario vengono illustrati un client e un server Windows Communicatio
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Panoramica della sicurezza](security-overview.md)
 - [Sicurezza e protezione](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

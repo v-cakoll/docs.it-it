@@ -1,5 +1,6 @@
 ---
 title: Parallelismo dei dati (Task Parallel Library)
+description: Leggere il modo in cui il Task Parallel Library (TPL) supporta il parallelismo dei dati per eseguire la stessa operazione simultaneamente su una raccolta di origine o sugli elementi di una matrice in .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: d7500666f12624d1a81d399a325827a416e5af3c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 513c5dde1526a8a21f68171f304b245d0a34f563
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276777"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594465"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Parallelismo dei dati (Task Parallel Library)
 Con l'espressione *parallelismo dei dati* ci si riferisce a scenari in cui la stessa operazione viene eseguita contemporaneamente (ovvero in parallelo) sugli elementi di una matrice o una raccolta di origine. Nelle operazioni in parallelo su dati la raccolta di origine viene suddivisa in partizioni in modo che più thread possano agire simultaneamente su segmenti diversi.  

@@ -1,21 +1,21 @@
 ---
-title: 'Procedura: Scambiare messaggi in coda con endpoint WCF'
+title: 'Procedura: scambiare messaggi in coda con endpoint WCF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: 09b21c9483b4f2716409b560dbbb478fe5a6badd
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 7da7ba1b680bae2b29eeff8fe669e097ea8eda32
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972229"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595375"
 ---
-# <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Procedura: Scambiare messaggi in coda con endpoint WCF
+# <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Procedura: scambiare messaggi in coda con endpoint WCF
 Le code assicurano che la messaggistica affidabile possa essere eseguita tra un client e un servizio Windows Communication Foundation (WCF), anche se il servizio non è disponibile al momento della comunicazione. Nelle procedure riportate di seguito viene illustrato come garantire la comunicazione durevole tra un client e un servizio utilizzando l'associazione in coda standard durante l'implementazione del servizio WCF.  
   
- In questa sezione viene illustrato come <xref:System.ServiceModel.NetMsmqBinding> utilizzare per la comunicazione in coda tra un client WCF e un servizio WCF.  
+ In questa sezione viene illustrato come utilizzare <xref:System.ServiceModel.NetMsmqBinding> per la comunicazione in coda tra un client WCF e un servizio WCF.  
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>Per utilizzare l'accodamento in un servizio WCF  
   
@@ -78,10 +78,10 @@ Le code assicurano che la messaggistica affidabile possa essere eseguita tra un 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ServiceModel.NetMsmqBinding>
-- [Associazioni MSMQ transazionali](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)
-- [Accodamento in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Procedura: Scambiare messaggi con gli endpoint WCF e le applicazioni di Accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [Da Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
-- [Installazione accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
-- [Accodamento messaggi in Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
-- [Sicurezza dei messaggi nell'accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+- [Associazioni MSMQ transazionali](../samples/transacted-msmq-binding.md)
+- [Accodamento in WCF](queuing-in-wcf.md)
+- [Procedura: scambiare messaggi con endpoint WCF e con applicazioni del sistema di accodamento dei messaggi](how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Da Windows Communication Foundation a Accodamento messaggi](../samples/wcf-to-message-queuing.md)
+- [Installazione accodamento messaggi (MSMQ)](../samples/installing-message-queuing-msmq.md)
+- [Accodamento messaggi in Windows Communication Foundation](../samples/message-queuing-to-wcf.md)
+- [Sicurezza dei messaggi nell'accodamento messaggi](../samples/message-security-over-message-queuing.md)

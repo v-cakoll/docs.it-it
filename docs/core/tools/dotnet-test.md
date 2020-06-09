@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: Il comando dotnet test viene usato per eseguire unit test in un determinato progetto.
 ms.date: 04/29/2020
-ms.openlocfilehash: 1190ecb75e83c9930c60726e7cd83203b11928cb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cbe9e7cce1722efb808c68ee49bb9012be6dcff7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283936"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594452"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -192,8 +192,8 @@ Dove `Microsoft.NET.Test.Sdk` è l'host di test, `xunit` è il Framework di test
   ```dotnetcli
   dotnet test --logger "console;verbosity=detailed"
   ```
-  
-  - Eseguire i test nel progetto nella directory corrente e segnalare i test in corso quando l'host di test si è arrestato in modo anomalo:
+
+- Eseguire i test nel progetto nella directory corrente e segnalare i test in corso quando l'host di test si è arrestato in modo anomalo:
 
   ```dotnetcli
   dotnet test --blame
@@ -230,7 +230,7 @@ Le espressioni possono essere unite con operatori condizionali:
 
 | Operatore            | Funzione |
 | ------------------- | -------- |
-| <code>&#124;</code> | OR       |
+| <code>&#124;</code> | OPPURE       |
 | `&`                 | AND      |
 
 È possibile racchiudere le espressioni tra parentesi quando si usano gli operatori condizionali (ad esempio, `(Name~TestMethod1) | (Name~TestMethod2)`).

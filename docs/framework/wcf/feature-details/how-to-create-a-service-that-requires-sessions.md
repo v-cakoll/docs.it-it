@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8a7613ef-0df9-47c3-b8dc-47f42cb1fd8b
-ms.openlocfilehash: 495de5a926cfc0c5aab88337f5f33b991c49e71a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29c2a87daaf763a50aa657c9badc002ff2fa27e1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184985"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593334"
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>Procedura: creare un servizio che richiede sessioni
-Le sessioni creano un stato condiviso tra due o più endpoint che abilita funzionalità utili quali i callback, la sicurezza multihop e le associazioni tra istanze di client e servizi. Per ulteriori informazioni sulle sessioni nelle applicazioni Windows Communication Foundation (WCF), vedere [Utilizzo delle sessioni](../../../../docs/framework/wcf/using-sessions.md).  
+Le sessioni creano un stato condiviso tra due o più endpoint che abilita funzionalità utili quali i callback, la sicurezza multihop e le associazioni tra istanze di client e servizi. Per ulteriori informazioni sulle sessioni nelle applicazioni Windows Communication Foundation (WCF), vedere [Using Sessions](../using-sessions.md).  
   
 ### <a name="to-specify-that-a-contract-require-its-binding-to-support-sessions"></a>Per specificare che un contratto richiede l'associazione per supportare sessioni  
   
-1. Creare un contratto di servizio con almeno un'operazione. Per un esempio di creazione di un contratto di assistenza, vedere [Procedura: definire un contratto](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)di assistenza .  
+1. Creare un contratto di servizio con almeno un'operazione. Per un esempio di come creare un contratto di servizio, vedere [procedura: definire un contratto di servizio](../how-to-define-a-wcf-service-contract.md).  
   
 2. Modificare la classe <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> che dichiara il contratto impostando la proprietà <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> su uno dei seguenti elementi:  
   

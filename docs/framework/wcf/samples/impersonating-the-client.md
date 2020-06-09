@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 10a8d243b3f053879f183864e955d9260c07865b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5272d8b4dbac60e14fe87accbb08a2073ed65ab
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183616"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594634"
 ---
 # <a name="impersonating-the-client"></a>Rappresentazione di client
 L'esempio Rappresentazione di client mostra come rappresentare l'applicazione del chiamante al servizio così che il servizio possa accedere a risorse di sistema per conto del chiamante.  
   
- Questo esempio è basato sull'esempio [Self-Host.](../../../../docs/framework/wcf/samples/self-host.md) I file di configurazione del servizio e del client sono gli stessi dell'esempio [Self-Host.](../../../../docs/framework/wcf/samples/self-host.md)  
+ Questo esempio è basato sull'esempio [self-host](self-host.md) . Il servizio e i file di configurazione client corrispondono a quelli dell'esempio [self-host](self-host.md) .  
   
 > [!NOTE]
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
@@ -102,18 +102,18 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nelle finestre della console client e del servizio. Premere INVIO in tutte le finestre della console per arrestare il servizio e il client.  
   
 > [!NOTE]
-> Il servizio deve essere eseguito con un account amministrativo oppure `http://localhost:8000/ServiceModelSamples` all'account in cui viene eseguito devono essere concessi i diritti per registrare l'URI con il livello HTTP. Tali diritti possono essere concessi impostando una [prenotazione dello spazio dei nomi](/windows/win32/http/namespace-reservations-registrations-and-routing) utilizzando lo strumento [Httpcfg.exe](/windows/win32/http/httpcfg-exe).  
+> Il servizio deve essere eseguito con un account amministrativo o l'account con cui viene eseguito deve disporre dei diritti per la registrazione dell' `http://localhost:8000/ServiceModelSamples` URI con il livello http. Tali diritti possono essere concessi impostando una [prenotazione dello spazio dei nomi](/windows/win32/http/namespace-reservations-registrations-and-routing) utilizzando lo [strumento HttpCfg. exe](/windows/win32/http/httpcfg-exe).  
   
 > [!NOTE]
-> Nei computer che eseguono Windows Server 2003, la rappresentazione è supportata solo se l'applicazione Host.exe dispone del privilegio di rappresentazione. Per impostazione predefinita, solo gli amministratori dispongono di questa autorizzazione. Per aggiungere questo privilegio a un account con cui il servizio è in esecuzione, passare a **Strumenti di amministrazione**, aprire Criteri di protezione **locali**, aprire **Criteri locali**, fare clic su **Assegnazione diritti utente**e selezionare Rappresenta un client dopo **l'autenticazione** e fare doppio clic su **Proprietà** per aggiungere un utente o un gruppo.  
+> Nei computer che eseguono Windows Server 2003, la rappresentazione è supportata solo se l'applicazione host. exe dispone del privilegio di rappresentazione. Per impostazione predefinita, solo gli amministratori dispongono di questa autorizzazione. Per aggiungere questo privilegio a un account con cui il servizio è in esecuzione, passare a **strumenti di amministrazione**, aprire **criteri di sicurezza locali**, aprire **criteri locali**, fare clic su **assegnazione diritti utente**e selezionare **rappresenta un client dopo l'autenticazione** e fare doppio clic su **Proprietà** per aggiungere un utente o un gruppo.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Assicurarsi di aver eseguito la procedura di [installazione una tantera per Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](building-the-samples.md).  
   
-3. Per eseguire l'esempio in una configurazione su un singolo o più computer, seguire le istruzioni in Esecuzione di [Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](running-the-samples.md).  
   
 4. Per dimostrare che il servizio rappresenta il chiamante, eseguire il client sotto un account diverso rispetto a quello sotto cui il servizio è in esecuzione. A tale scopo, al prompt dei comandi, digitare:  
   

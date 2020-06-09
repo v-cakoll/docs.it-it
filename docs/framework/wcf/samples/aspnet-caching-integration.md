@@ -2,18 +2,18 @@
 title: Integrazione della memorizzazione nella cache di ASP.NET
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 23c10e56dba7daec2d1027de92e8252c8fe69055
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c541f3caad8a500b9fdb33d00b58706bac876e37
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716169"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594751"
 ---
 # <a name="aspnet-caching-integration"></a>Integrazione della memorizzazione nella cache di ASP.NET
 
 In questo esempio viene descritto come usare la cache di output ASP.NET con il modello di programmazione HTTP Web WCF. In questo argomento viene illustrata la funzionalità di integrazione della cache di output ASP.NET.
 
-## <a name="demonstrates"></a>Dimostrazione
+## <a name="demonstrates"></a>Dimostra
 
 Integrazione con la cache di output ASP.NET
 
@@ -22,17 +22,17 @@ Integrazione con la cache di output ASP.NET
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) ed [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetCachingIntegration`
 
 ## <a name="discussion"></a>Discussione
 
-Nell'esempio viene utilizzata la <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> per utilizzare la memorizzazione nella cache dell'output ASP.NET con il servizio Windows Communication Foundation (WCF). <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> viene applicato alle operazioni del servizio e fornisce il profilo della cache in un file di configurazione che deve essere applicato alle risposte dell'operazione specifica.
+Nell'esempio viene utilizzato <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> per utilizzare la memorizzazione nella cache dell'output ASP.NET con il servizio Windows Communication Foundation (WCF). <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> viene applicato alle operazioni del servizio e fornisce il profilo della cache in un file di configurazione che deve essere applicato alle risposte dell'operazione specifica.
 
-Nel file Service.cs del progetto di servizio di esempio, entrambe le operazioni `GetCustomer` e `GetCustomers` sono contrassegnate con il <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, che fornisce il nome del profilo della cache "CacheFor60Seconds". Nel file Web. config del progetto di servizio, il profilo della cache "CacheFor60Seconds" viene fornito nell'elemento <`caching`> di <`system.web`>. Per questo profilo di cache, il valore dell'attributo `duration` è "60", quindi le risposte associate a questo profilo vengono memorizzate nella cache di output ASP.NET per 60 secondi. Inoltre, per questo profilo della cache, l'attributo `varmByParam` è impostato su "Format", pertanto le risposte alle richieste con valori diversi per il parametro della stringa di query `format` sono memorizzate nella cache separatamente. Infine, l'attributo `varyByHeader` del profilo della cache è impostato su "Accept", pertanto le risposte alle richieste con valori di intestazione Accept diversi sono memorizzate nella cache separatamente.
+Nel file Service.cs del progetto di servizio di esempio, entrambe le `GetCustomer` `GetCustomers` operazioni e sono contrassegnate con <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> , che fornisce il nome del profilo della cache "CacheFor60Seconds". Nel file Web. config del progetto di servizio, il profilo della cache "CacheFor60Seconds" viene fornito nell'elemento < `caching` > di < `system.web` >. Per questo profilo di cache, il valore dell' `duration` attributo è "60", quindi le risposte associate a questo profilo vengono memorizzate nella cache di output ASP.NET per 60 secondi. Per questo profilo della cache, inoltre, l' `varmByParam` attributo è impostato su "Format", pertanto le risposte alle richieste con valori diversi per il `format` parametro della stringa di query vengono memorizzate nella cache separatamente. Infine, l'attributo del profilo della cache `varyByHeader` è impostato su "Accept", pertanto le risposte alle richieste con valori di intestazione Accept diversi sono memorizzate nella cache separatamente.
 
-Il file Program.cs nel progetto Client dimostra come è possibile creare tale client usando <xref:System.Net.HttpWebRequest>. È importante sottolineare che quella descritta è solo una delle modalità per accedere a un servizio WCF. È anche possibile accedere al servizio utilizzando altre classi .NET Framework come la channel factory WCF e <xref:System.Net.WebClient>. Altri esempi nell'SDK, ad esempio l'esempio di [servizio http di base](../../../../docs/framework/wcf/samples/basic-http-service.md) , illustrano come usare queste classi per comunicare con un servizio WCF.
+Il file Program.cs nel progetto Client dimostra come è possibile creare tale client usando <xref:System.Net.HttpWebRequest>. È importante sottolineare che quella descritta è solo una delle modalità per accedere a un servizio WCF. È anche possibile accedere al servizio utilizzando altre classi .NET Framework come la channel factory WCF e <xref:System.Net.WebClient> . Altri esempi nell'SDK, ad esempio l'esempio di [servizio http di base](basic-http-service.md) , illustrano come usare queste classi per comunicare con un servizio WCF.
 
 ## <a name="to-run-the-sample"></a>Per eseguire l'esempio
 
@@ -50,7 +50,7 @@ Quando viene eseguita l'applicazione console Client, il client effettua richiest
 
 1. Aprire la soluzione per l'esempio relativo all'integrazione della memorizzazione nella cache di ASP.NET.
 
-2. Per compilare la soluzione, premere CTRL+MAIUSC+B.
+2. Premere CTRL+MAIUSC+B per compilare la soluzione.
 
 3. Se la finestra **Esplora soluzioni** non è già aperta, premere CTRL + W + S.
 

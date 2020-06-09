@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: d3b05a1786131a119d516edeba0d6e8e24289f87
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 7845bc45d0baecb07e4c03531f21d900c4e23bf7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212034"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595245"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Sicurezza dei messaggi con un client Windows senza negoziazione delle credenziali
 
@@ -19,24 +19,24 @@ Nello scenario seguente vengono illustrati un client e un servizio Windows Commu
 Il servizio e il client sono nello stesso dominio o sono entrambi in domini attendibili.
 
 > [!NOTE]
-> La differenza tra questo scenario e la [sicurezza dei messaggi con un client Windows](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md) è che questo scenario non negozia le credenziali del servizio con il servizio prima di inviare il messaggio dell'applicazione. Inoltre, poiché ciò richiede il protocollo Kerberos, questo scenario richiede un dominio Windows.
+> La differenza tra questo scenario e la [sicurezza dei messaggi con un client Windows](message-security-with-a-windows-client.md) è che questo scenario non negozia le credenziali del servizio con il servizio prima di inviare il messaggio dell'applicazione. Inoltre, poiché ciò richiede il protocollo Kerberos, questo scenario richiede un dominio Windows.
 
-![Sicurezza del messaggio senza negoziazione delle credenziali](../../../../docs/framework/wcf/feature-details/media/0c9f9baa-2439-4ef9-92f4-43c242d85d0d.gif "0c9f9baa-2439-4ef9-92f4-43c242d85d0d")
+![Sicurezza dei messaggi senza negoziazione delle credenziali](media/0c9f9baa-2439-4ef9-92f4-43c242d85d0d.gif "0c9f9baa-2439-4ef9-92f4-43c242d85d0d")
 
 |Caratteristica|Descrizione|
 |--------------------|-----------------|
-|Modalità di sicurezza|Messaggio|
+|Modalità di sicurezza|Message|
 |Interoperabilità|Sì, WS-Security con client compatibili con il profilo del token Kerberos|
 |Autenticazione (server)|Autenticazione reciproca del server e del client|
 |Autenticazione (client)|Autenticazione reciproca del server e del client|
 |Integrità|Sì|
 |Riservatezza|Sì|
-|Transport|HTTP|
-|Associazione|<xref:System.ServiceModel.WSHttpBinding>|
+|Trasporto|HTTP|
+|Binding|<xref:System.ServiceModel.WSHttpBinding>|
 
-## <a name="service"></a>Servizio
+## <a name="service"></a>Service
 
-Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Effettuare una delle seguenti operazioni:
+Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:
 
 - Creare un servizio autonomo usando il codice senza alcuna configurazione.
 
@@ -47,18 +47,18 @@ Il codice e la configurazione seguenti devono essere eseguiti in modo indipenden
 Il codice seguente crea un endpoint del servizio che usa la sicurezza del messaggio. Il codice disabilita la negoziazione della credenziale del servizio e la definizione di un token del contesto di sicurezza (SCT, Security Context Token).
 
 > [!NOTE]
-> Per usare il tipo di credenziale di Windows senza negoziazione, l'account utente del servizio deve avere accesso al nome dell'entità servizio (SPN, Service Principal Name) registrato con il dominio di Active Directory. Tale operazione può essere eseguita in due modi:
+> Per usare il tipo di credenziale di Windows senza negoziazione, l'account utente del servizio deve avere accesso al nome dell'entità servizio (SPN, Service Principal Name) registrato con il dominio di Active Directory. Questa operazione può essere eseguita in due modi:
 
-1. Usare l'account `NetworkService` o `LocalSystem` per eseguire il servizio. Poiché questi account hanno accesso al nome SPN del computer stabilito quando il computer viene aggiunto al dominio Active Directory, WCF genera automaticamente l'elemento SPN appropriato all'interno dell'endpoint del servizio nei metadati del servizio (descrizione dei servizi Web Lingua o WSDL.
+1. Usare l'account `NetworkService` o `LocalSystem` per eseguire il servizio. Poiché questi account hanno accesso al nome SPN del computer stabilito quando il computer viene aggiunto al dominio Active Directory, WCF genera automaticamente l'elemento SPN appropriato all'interno dell'endpoint del servizio nei metadati del servizio (Web Services Description Language o WSDL).
 
 2. Usare un account di dominio Active Directory arbitrario per eseguire il servizio. In questo caso è necessario definire un SPN per questo account di dominio. A tale scopo è possibile usare l'utilità Setspn.exe. Una volta creato il nome SPN per l'account del servizio, configurare WCF per la pubblicazione di tale SPN nei client del servizio tramite i relativi metadati (WSDL). Questa operazione viene eseguita impostando l'identità per l'endpoint esposto o tramite un file di configurazione dell'applicazione o tramite codice. Nell'esempio seguente l'identità viene pubblicata a livello di programmazione.
 
-Per ulteriori informazioni sui nomi SPN, sul protocollo Kerberos e Active Directory, vedere [supplemento tecnico Kerberos per Windows](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10)). Per altre informazioni sulle identità degli endpoint, vedere [modalità di autenticazione di SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).
+Per ulteriori informazioni sui nomi SPN, sul protocollo Kerberos e Active Directory, vedere [supplemento tecnico Kerberos per Windows](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10)). Per altre informazioni sulle identità degli endpoint, vedere [modalità di autenticazione di SecurityBindingElement](securitybindingelement-authentication-modes.md).
 
 [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
 [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]
 
-### <a name="configuration"></a>Configurazione di
+### <a name="configuration"></a>Configurazione
 
 Invece del codice, è possibile usare la configurazione seguente:
 
@@ -98,7 +98,7 @@ Invece del codice, è possibile usare la configurazione seguente:
 
 ## <a name="client"></a>Client
 
-Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Effettuare una delle seguenti operazioni:
+Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:
 
 - Creare un client autonomo usando il codice (e il codice client).
 
@@ -112,16 +112,16 @@ Il codice e la configurazione seguenti devono essere eseguiti in modo indipenden
 Nel codice seguente viene configurato il client. La modalità di sicurezza è impostata su Messaggio e il tipo di credenziale client è impostato su Windows. Le proprietà <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> e <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> sono impostate su `false`.
 
 > [!NOTE]
-> Per usare un tipo di credenziale di Windows senza negoziazione, il client deve essere configurato con il nome di entità servizio dell'account del servizio prima di iniziare la comunicazione con il servizio. Il client usa il nome dell'entità servizio (SPN) per ottenere il token Kerberos per autenticare e proteggere la comunicazione con il servizio. L'esempio seguente mostra come configurare il client con l'SPN del servizio. Se si utilizza lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare il client, l'SPN del servizio verrà propagato automaticamente al client dai metadati (WSDL) del servizio, se i metadati del servizio contengono tali informazioni. Per ulteriori informazioni su come configurare il servizio in modo da includere il relativo nome SPN nei metadati del servizio, vedere la sezione "servizio" più avanti in questo argomento.
+> Per usare un tipo di credenziale di Windows senza negoziazione, il client deve essere configurato con il nome di entità servizio dell'account del servizio prima di iniziare la comunicazione con il servizio. Il client usa il nome dell'entità servizio (SPN) per ottenere il token Kerberos per autenticare e proteggere la comunicazione con il servizio. L'esempio seguente mostra come configurare il client con l'SPN del servizio. Se si utilizza lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) per generare il client, l'SPN del servizio verrà propagato automaticamente al client dai metadati (WSDL) del servizio, se i metadati del servizio contengono tali informazioni. Per ulteriori informazioni su come configurare il servizio in modo da includere il relativo nome SPN nei metadati del servizio, vedere la sezione "servizio" più avanti in questo argomento.
 >
-> Per ulteriori informazioni sui nomi SPN, Kerberos e Active Directory, vedere [supplemento tecnico Kerberos per Windows](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10)). Per ulteriori informazioni sulle identità degli endpoint, vedere [l'](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) argomento relativo alle modalità di autenticazione di SecurityBindingElement.
+> Per ulteriori informazioni sui nomi SPN, Kerberos e Active Directory, vedere [supplemento tecnico Kerberos per Windows](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10)). Per ulteriori informazioni sulle identità degli endpoint, vedere [l'](securitybindingelement-authentication-modes.md) argomento relativo alle modalità di autenticazione di SecurityBindingElement.
 
 [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
 [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]
 
-### <a name="configuration"></a>Configurazione di
+### <a name="configuration"></a>Configurazione
 
-Nel codice seguente viene configurato il client. Si noti che è necessario impostare l'elemento [\<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) in modo che corrisponda al nome SPN del servizio come registrato per l'account del servizio nel dominio Active Directory.
+Nel codice seguente viene configurato il client. Si noti che l' [\<servicePrincipalName>](../../configure-apps/file-schema/wcf/serviceprincipalname.md) elemento deve essere impostato in modo che corrisponda al nome SPN del servizio come registrato per l'account del servizio nel dominio Active Directory.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -155,6 +155,6 @@ Nel codice seguente viene configurato il client. Si noti che è necessario impos
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Panoramica della sicurezza](security-overview.md)
+- [Identità del servizio e autenticazione](service-identity-and-authentication.md)
+- [Sicurezza e protezione](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

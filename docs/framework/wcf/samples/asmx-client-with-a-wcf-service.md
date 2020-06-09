@@ -2,12 +2,12 @@
 title: Client ASMX con un servizio WCF
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: a560650dba250d1ee4f0b959ead70a2915c9997f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: fd13d4907f1be09440387a36e14ecdc4926ba7e7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716133"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594777"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Client ASMX con un servizio WCF
 
@@ -35,7 +35,7 @@ public interface ICalculator
 }
 ```
 
-<xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Xml.Serialization.XmlSerializer> eseguono il mapping dei tipi CLR a una rappresentazione XML. <xref:System.Runtime.Serialization.DataContractSerializer> interpreta alcune rappresentazioni XML in modo diverso da XmlSerializer. I generatori di proxy non WCF, ad esempio WSDL. exe, generano un'interfaccia più utilizzabile quando si utilizza XmlSerializer. Il <xref:System.ServiceModel.XmlSerializerFormatAttribute> viene applicato all'interfaccia `ICalculator` per assicurarsi che XmlSerializer venga utilizzato per il mapping di tipi CLR a XML. L'implementazione del servizio calcola e restituisce il risultato appropriato.
+<xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Xml.Serialization.XmlSerializer> eseguono il mapping dei tipi CLR a una rappresentazione XML. <xref:System.Runtime.Serialization.DataContractSerializer> interpreta alcune rappresentazioni XML in modo diverso da XmlSerializer. I generatori di proxy non WCF, ad esempio WSDL. exe, generano un'interfaccia più utilizzabile quando si utilizza XmlSerializer. <xref:System.ServiceModel.XmlSerializerFormatAttribute>Viene applicato all'interfaccia per `ICalculator` assicurarsi che XmlSerializer venga utilizzato per il mapping di tipi CLR a XML. L'implementazione del servizio calcola e restituisce il risultato appropriato.
 
 Il servizio espone un solo endpoint per comunicare con il servizio che viene definito mediante un file di configurazione (Web.config). L'endpoint è costituito da un indirizzo, un'associazione e un contratto. Il servizio espone l'endpoint dell'indirizzo di base fornito dall'host IIS. L'attributo `binding` è impostato su basicHttpBinding  per fornire la comunicazione HTTP mediante SOAP 1.1, che è conforme a WS-BasicProfile 1.1, come illustrato nella configurazione di esempio seguente.
 
@@ -51,7 +51,7 @@ Il servizio espone un solo endpoint per comunicare con il servizio che viene def
 </services>
 ```
 
-Il client ASMX comunica con il servizio WCF utilizzando un proxy tipizzato generato dall'utilità Web Services Description Language (WSDL) (WSDL. exe). Il proxy tipizzato è contenuto nel file generatedClient.cs. L'utilità WSDL recupera i metadati per il servizio specificato e genera un proxy tipizzato che può essere utilizzato da un client per comunicare. Per impostazione predefinita, il framework non espone metadati. Per esporre i metadati necessari per generare il proxy, è necessario aggiungere un [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) e impostare il relativo attributo `httpGetEnabled` su `True`, come illustrato nella configurazione seguente.
+Il client ASMX comunica con il servizio WCF utilizzando un proxy tipizzato generato dall'utilità Web Services Description Language (WSDL) (WSDL. exe). Il proxy tipizzato è contenuto nel file generatedClient.cs. L'utilità WSDL recupera i metadati per il servizio specificato e genera un proxy tipizzato che può essere utilizzato da un client per comunicare. Per impostazione predefinita, il framework non espone metadati. Per esporre i metadati necessari per generare il proxy, è necessario aggiungere un [\<serviceMetadata>](../../configure-apps/file-schema/wcf/servicemetadata.md) e impostare il relativo `httpGetEnabled` attributo su, `True` come illustrato nella configurazione seguente.
 
 ```xml
 <behaviors>
@@ -132,20 +132,20 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio
 
-1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](building-the-samples.md).
 
-3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](running-the-samples.md).
 
 > [!NOTE]
-> Per ulteriori informazioni sul passaggio e la restituzione di tipi di dati complessi, vedere: [Data Binding in a Windows Forms client](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [associazione dati in un client di Windows Presentation Foundation](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md)e [data binding in un client ASP.NET](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)
+> Per ulteriori informazioni sul passaggio e la restituzione di tipi di dati complessi, vedere: [Data Binding in a Windows Forms client](data-binding-in-a-windows-forms-client.md), [associazione dati in un client di Windows Presentation Foundation](data-binding-in-a-wpf-client.md)e [data binding in un client ASP.NET](data-binding-in-an-aspnet-client.md)
 
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) ed [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\ASMX`

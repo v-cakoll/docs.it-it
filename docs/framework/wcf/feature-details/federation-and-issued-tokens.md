@@ -6,45 +6,45 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: d566388279f9210f70ebdb5c42512aea0425a47e
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: aeffc1e2a7b61dfd9406b9f06678064533ea61ec
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964586"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595505"
 ---
 # <a name="federation-and-issued-tokens"></a>Federazione e token emessi
 Con Windows Communication Foundation (WCF) è possibile creare client che comunicano in modo sicuro con servizi che implementano le specifiche WS-Federation e WS-Trust. Le specifiche utilizzano XML, SOAP e Web Services Description Language (WSDL) per fornire meccanismi che consentano l'autenticazione e l'autorizzazione in diverse aree di attendibilità.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Federazione](../../../../docs/framework/wcf/feature-details/federation.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Federazione](federation.md)  
  Fornisce una panoramica della federazione.  
   
- [Federazione e attendibilità](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
+ [Federazione e attendibilità](federation-and-trust.md)  
  Elenca i problemi di progettazione da tenere in considerazione durante la creazione di servizi o di client federati.  
   
- [Procedura: Creare un client federato](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Procedura: creare un client federato](how-to-create-a-federated-client.md)  
  Vengono descritte le nozioni di base sulla creazione di un client federato con WCF.  
   
- [Procedura: Configurare le credenziali in un servizio federativo](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Procedura: configurare le credenziali in un servizio federativo](how-to-configure-credentials-on-a-federation-service.md)  
  Descrive i passaggi necessari per la creazione di un servizio federato.  
   
- [Procedura: Creare una classe WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [Procedura: Creare una classe WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md)  
  Descrive come configurare client e servizi che utilizzano `WSFederationHttpBinding`.  
   
- [Procedura: Creare un servizio token di sicurezza](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
+ [Procedura: creare un servizio token di sicurezza](how-to-create-a-security-token-service.md)  
  Descrive i passaggi necessari per la creazione di un servizio token di sicurezza.  
   
- [Attestazioni e token SAML (Security Assertions Markup Language)](../../../../docs/framework/wcf/feature-details/saml-tokens-and-claims.md)  
+ [Attestazioni e token SAML (Security Assertions Markup Language)](saml-tokens-and-claims.md)  
  Descrive i token Security Assertions Markup Language (SAML) che sono flessibili e consentono di creare tipi di attestazione dettagliati.  
   
- [Procedura: Configurare un emittente locale](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [Procedura: configurare un emittente locale](how-to-configure-a-local-issuer.md)  
  Descrive come creare un emittente locale di token di sicurezza.  
   
- [Procedura: Disabilitare sessioni sicure in un'associazione WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Procedura: disattivare sessioni protette in un'associazione WSFederationHttpBinding](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  Descrive come disattivare sessioni protette in `WSFederationHttpBinding`. La disattivazione di sessioni protette è necessaria in caso di creazione di una Web farm che richiede una sessione per ogni client.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Informazioni di riferimento  
  <xref:System.IdentityModel.Claims>  
   
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
@@ -63,6 +63,6 @@ Con Windows Communication Foundation (WCF) è possibile creare client che comuni
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [Token personalizzati](../../../../docs/framework/wcf/extending/custom-tokens.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Autorizzazione](authorization-in-wcf.md)
+- [Token personalizzati](../extending/custom-tokens.md)
+- [Sicurezza e protezione](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
