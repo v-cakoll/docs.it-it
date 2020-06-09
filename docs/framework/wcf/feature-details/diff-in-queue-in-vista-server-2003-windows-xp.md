@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: 0d7b952382b50daae0291ed6afb22bb612447670
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: abd81b5e7bf611fc6b4f446a82628b83130f2d54
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920152"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599204"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Differenze nelle funzionalità di accodamento in Windows Vista, Windows Server 2003 e Windows XP
 In questo argomento vengono riepilogate le differenze nella funzionalità di Accodamento Windows Communication Foundation (WCF) tra Windows Vista, Windows Server 2003 e Windows XP.  
@@ -26,7 +26,7 @@ In questo argomento vengono riepilogate le differenze nella funzionalità di Acc
   
  Di seguito sono riportate le differenze principali tra Accodamento messaggi (MSMQ) in Windows Vista, Windows Server 2003 e Windows XP rilevanti per la gestione dei veleni:  
   
-- MSMQ in Windows Vista supporta le code secondarie, mentre Windows Server 2003 e Windows XP non supportano le code secondarie. Le code secondarie vengono utilizzate nella gestione dei messaggi non elaborabili. Le code di tentativi e la coda non elaborabile sono code secondarie della coda dell'applicazione creata in base alle impostazioni di gestione dei messaggi non elaborabili. `MaxRetryCycles` stabilisce il numero delle code secondarie dei tentativi che verranno create. Pertanto, in caso di esecuzione in Windows Server 2003 o Windows XP, `MaxRetryCycles` vengono ignorati e `ReceiveErrorHandling.Move` non è consentito.  
+- MSMQ in Windows Vista supporta le code secondarie, mentre Windows Server 2003 e Windows XP non supportano le code secondarie. Le code secondarie vengono utilizzate nella gestione dei messaggi non elaborabili. Le code di tentativi e la coda non elaborabile sono code secondarie della coda dell'applicazione creata in base alle impostazioni di gestione dei messaggi non elaborabili. `MaxRetryCycles` stabilisce il numero delle code secondarie dei tentativi che verranno create. Pertanto, in caso di esecuzione in Windows Server 2003 o Windows XP, `MaxRetryCycles` viene ignorato e `ReceiveErrorHandling.Move` non è consentito.  
   
 - MSMQ in Windows Vista supporta il riconoscimento negativo, mentre Windows Server 2003 e Windows XP non lo sono. Un negative acknowledgment dal gestore delle code ricevente determina l'inserimento, da parte del gestore delle code mittente, del messaggio respinto nella coda dei messaggi non recapitabili. Di conseguenza, `ReceiveErrorHandling.Reject` non è consentito con Windows Server 2003 e Windows XP.  
   
@@ -37,5 +37,5 @@ In questo argomento vengono riepilogate le differenze nella funzionalità di Acc
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Uso di code di messaggi non recapitabili per gestire gli errori di trasferimento dei messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
-- [Gestione dei messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [Uso di code di messaggi non recapitabili per gestire errori di trasferimento dei messaggi](using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [Gestione dei messaggi non elaborabili](poison-message-handling.md)

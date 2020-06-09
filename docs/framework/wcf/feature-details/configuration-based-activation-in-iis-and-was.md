@@ -2,12 +2,12 @@
 title: Attivazione basata sulla configurazione in IIS e WAS
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: 6515d6621798a9dab67aa7b73a39b9481c1779fc
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 5e1672f4dd67950178c95d3e043e16072fcd0ef4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963491"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593581"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Attivazione basata sulla configurazione in IIS e WAS
 
@@ -15,10 +15,10 @@ In genere, quando si ospita un servizio Windows Communication Foundation (WCF) i
 
 ## <a name="configuration-based-activation"></a>Attivazione basata sulla configurazione
 
-L'attivazione basata sulla configurazione acquisisce i metadati posizionati nel file con estensione svc e li sposta nel file Web.config. All'interno dell'elemento <`serviceHostingEnvironment`> è presente un elemento <`serviceActivations`>. All'interno dell'<`serviceActivations`> elemento sono uno o più <`add`> elementi, uno per ogni servizio ospitato. L'elemento <`add`> contiene attributi che consentono di impostare l'indirizzo relativo per il servizio e il tipo di servizio o una factory di host del servizio. Nell'esempio di codice di configurazione riportato di seguito viene illustrato come utilizzare questa sezione.
+L'attivazione basata sulla configurazione acquisisce i metadati posizionati nel file con estensione svc e li sposta nel file Web.config. All'interno dell' `serviceHostingEnvironment` elemento<> è presente un `serviceActivations` elemento <>. All'interno dell' `serviceActivations` elemento <> sono presenti uno o più `add` elementi <>, uno per ogni servizio ospitato. L' `add` elemento <> contiene attributi che consentono di impostare l'indirizzo relativo per il servizio e il tipo di servizio o una factory di host del servizio. Nell'esempio di codice di configurazione riportato di seguito viene illustrato come utilizzare questa sezione.
 
 > [!NOTE]
-> Ogni elemento <`add`> deve specificare un servizio o un attributo Factory. È consentita la specifica sia degli attributi del servizio che della factory.
+> Ogni `add` elemento <> deve specificare un servizio o un attributo Factory. È consentita la specifica sia degli attributi del servizio che della factory.
 
 ```xml
 <serviceHostingEnvironment>
@@ -33,7 +33,7 @@ L'attivazione basata sulla configurazione acquisisce i metadati posizionati nel 
 > [!NOTE]
 >
 > - Quando si utilizza l'attivazione basata sulla configurazione, il codice inline presente nei file con estensione svc non è supportato.
-> - L'attributo `relativeAddress` deve essere impostato su un indirizzo relativo, ad esempio "\<sottodirectory >/Service.svc" o "~/\<Sub-Directory/Service. svc".
+> - L' `relativeAddress` attributo deve essere impostato su un indirizzo relativo, ad esempio " \<sub-directory> /Service.svc" o "~/ \< Sub-Directory/Service. svc".
 > - Se si registra un indirizzo relativo che non dispone di un'estensione nota associata a WCF, viene generata un'eccezione di configurazione.
 > - L'indirizzo specificato è relativo alla radice dell'applicazione virtuale.
 > - A causa del modello gerarchico della configurazione, gli indirizzi relativi registrati a livello del computer e del sito vengono ereditati dalle applicazioni virtuali.
@@ -43,7 +43,7 @@ L'attivazione basata sulla configurazione acquisisce i metadati posizionati nel 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection.ServiceActivations%2A>
-- [Servizi di hosting](../../../../docs/framework/wcf/hosting-services.md)
-- [Panoramica dell'hosting dei servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
-- [\<serviceHostingEnvironment>](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)
+- [Servizi di hosting](../hosting-services.md)
+- [Panoramica dell'hosting dei servizi flusso di lavoro](hosting-workflow-services-overview.md)
+- [\<serviceHostingEnvironment>](../../configure-apps/file-schema/wcf/servicehostingenvironment.md)
 - [Funzionalità di hosting di Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 2fa13a12a377cc16a95318367605d8b5d92769a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 591f7db0f6b4e928a991961d3bc7c404f41028bf
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184690"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579280"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Client e servizio Intranet non protetti
-Nella figura seguente viene illustrato un semplice servizio Windows Communication Foundation (WCF) sviluppato per fornire informazioni su una rete privata protetta a un'applicazione WCF. La sicurezza non è necessaria perché i dati sono di scarsa importanza, la rete dovrebbe essere intrinsecamente sicura o la sicurezza viene fornita da un livello inferiore all'infrastruttura WCF.  
+Nella figura seguente viene illustrato un semplice servizio di Windows Communication Foundation (WCF) sviluppato per fornire informazioni su una rete privata protetta a un'applicazione WCF. La protezione non è necessaria perché i dati sono di importanza bassa, la rete deve essere intrinsecamente sicura oppure la sicurezza viene fornita da un livello al di sotto dell'infrastruttura WCF.  
   
- ![Scenario di servizio e client non protetto Intranet.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
+ ![Scenario client e servizio non protetto Intranet.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Modalità di sicurezza|nessuno|  
 |Trasporto|TCP|  
-|Associazione|<xref:System.ServiceModel.NetTcpBinding>|  
+|Binding|<xref:System.ServiceModel.NetTcpBinding>|  
 |Interoperabilità|Solo WCF|  
 |Authentication|nessuno|  
 |Integrità|nessuno|  
@@ -81,7 +81,7 @@ Nella figura seguente viene illustrato un semplice servizio Windows Communicatio
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Codice  
- Il codice seguente illustra un client WCF di base che accede a un endpoint non protetto usando il protocollo TCP.  
+ Nel codice seguente viene illustrato un client WCF di base che accede a un endpoint non protetto utilizzando il protocollo TCP.  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
@@ -115,5 +115,5 @@ Nella figura seguente viene illustrato un semplice servizio Windows Communicatio
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ServiceModel.NetTcpBinding>
-- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Panoramica della sicurezza](security-overview.md)
 - [Sicurezza e protezione](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

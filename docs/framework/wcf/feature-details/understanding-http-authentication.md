@@ -2,29 +2,29 @@
 title: Informazioni sull'autenticazione HTTP
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: ebfb5920fcd5c1a8faac8780dc1c32c92f9f6255
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a31c9f96185364c59dca1ff26251a30f5d7a88bc
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614820"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595089"
 ---
 # <a name="understanding-http-authentication"></a>Informazioni sull'autenticazione HTTP
 L'autenticazione è il processo che consente di stabilire se un client è idoneo per accedere a una risorsa. Il protocollo HTTP supporta l'autenticazione come mezzo per negoziare l'accesso a una risorsa protetta.  
   
- La richiesta iniziale proveniente da un client è in genere una richiesta anonima, non contenente alcuna informazione di autenticazione. Le applicazioni server HTTP possono negare la richiesta anonima continuando a indicare che l'autenticazione è obbligatoria. L'applicazione server invia intestazioni WWW-Authenticate per indicare gli schemi di autenticazione supportati. Questo documento vengono descritti numerosi schemi di autenticazione per HTTP e illustra il relativo supporto in Windows Communication Foundation (WCF).  
+ La richiesta iniziale proveniente da un client è in genere una richiesta anonima, non contenente alcuna informazione di autenticazione. Le applicazioni server HTTP possono negare la richiesta anonima continuando a indicare che l'autenticazione è obbligatoria. L'applicazione server invia intestazioni WWW-Authenticate per indicare gli schemi di autenticazione supportati. In questo documento vengono descritti diversi schemi di autenticazione per HTTP e viene illustrato il relativo supporto in Windows Communication Foundation (WCF).  
   
 ## <a name="http-authentication-schemes"></a>Schemi di autenticazione HTTP  
  Il server può specificare vari schemi di autenticazione tra i quali il client ha la possibilità di scegliere. Nella tabella seguente vengono illustrati alcuni degli schemi di autenticazione più frequenti nelle applicazioni Windows.  
   
 |Schema di autenticazione|Descrizione|  
 |---------------------------|-----------------|  
-|Anonymous|Una richiesta anonima non contiene informazioni di autenticazione. Equivale a concedere l'accesso alla risorsa a qualsiasi richiedente.|  
+|Anonima|Una richiesta anonima non contiene informazioni di autenticazione. Equivale a concedere l'accesso alla risorsa a qualsiasi richiedente.|  
 |Basic|L'autenticazione di base invia una stringa con codifica Base64 contenente un nome utente e una password per il client. Base64 non è una forma di crittografia e deve essere considerata equivalente a inviare nome utente e password in testo non crittografato. Se è necessario proteggere una risorsa, è consigliabile prendere in considerazione uno schema di autenticazione diverso dall'autenticazione di base.|  
-|Digest|L'autenticazione digest è uno schema In attesa/Risposta che sostituisce l'autenticazione di base. Il server invia una stringa di dati casuali denominata un *nonce* al client come una sfida. Il client risponde con un hash che comprende, fra le altre informazioni, nome utente, password e parametro nonce. La complessità introdotta da questo scambio e l'hash dei dati fanno sì che con questo schema di autenticazione sia più difficile entrare in possesso delle credenziali dell'utente per riutilizzarle.<br /><br /> L'autenticazione digest richiede l'utilizzo di account del dominio Windows. Il digest *realm* è il nome di dominio di Windows. Pertanto, è possibile utilizzare un server in esecuzione in un sistema operativo che non supporta domini Windows, ad esempio Windows XP Home Edition, con l'autenticazione del Digest. Quando invece il client è in esecuzione in un sistema operativo che non supporta domini Windows, è necessario specificare in modo esplicito un account di dominio durante l'autenticazione.|  
+|Digest|L'autenticazione digest è uno schema In attesa/Risposta che sostituisce l'autenticazione di base. Il server invia una stringa di dati casuali denominata *nonce* al client come una sfida. Il client risponde con un hash che comprende, fra le altre informazioni, nome utente, password e parametro nonce. La complessità introdotta da questo scambio e l'hash dei dati fanno sì che con questo schema di autenticazione sia più difficile entrare in possesso delle credenziali dell'utente per riutilizzarle.<br /><br /> L'autenticazione digest richiede l'utilizzo di account del dominio Windows. L' *area di autenticazione* del digest è il nome di dominio di Windows. Pertanto, non è possibile utilizzare un server in esecuzione in un sistema operativo che non supporta domini Windows, ad esempio Windows XP Home Edition, con l'autenticazione digest. Quando invece il client è in esecuzione in un sistema operativo che non supporta domini Windows, è necessario specificare in modo esplicito un account di dominio durante l'autenticazione.|  
 |NTLM|L'autenticazione NTLM (NT LAN Manager) è uno schema In attesa/Risposta che si presenta come una variante più protetta dell'autenticazione digest. Nello schema NTLM vengono utilizzate le credenziali di Windows, anziché nome utente e password non codificati, per trasformare i dati della richiesta. L'autenticazione NTLM richiede più scambi tra client e server. Il server e gli eventuali proxy devono supportare connessioni permanenti per completare correttamente l'autenticazione.|  
 |Negotiate|L'autenticazione Negotiate sceglie automaticamente tra protocollo Kerberos e autenticazione NTLM a seconda della disponibilità. Il protocollo Kerberos viene utilizzato se disponibile, in caso contrario viene scelta l'autenticazione NTLM. L'autenticazione Kerberos è significativamente migliore di NTLM. È più veloce e consente l'utilizzo reciproco dell'autenticazione e della delega di credenziali ai computer remoti.|  
-|Windows Live ID|Il servizio HTTP Windows sottostante comprende l'autenticazione realizzata con protocolli federati. Tuttavia, i trasporti standard HTTP in WCF non supportano l'utilizzo di schemi di autenticazione federati, ad esempio Microsoft Windows Live ID. Il supporto di questa funzionalità è attualmente disponibile mediante l'utilizzo della protezione dei messaggi. Per altre informazioni, vedere [federazione e token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|Windows Live ID|Il servizio HTTP Windows sottostante comprende l'autenticazione realizzata con protocolli federati. Tuttavia, i trasporti HTTP standard in WCF non supportano l'utilizzo di schemi di autenticazione federati, ad esempio Microsoft Windows Live ID. Il supporto di questa funzionalità è attualmente disponibile mediante l'utilizzo della protezione dei messaggi. Per altre informazioni, vedere [Federazione e token emessi](federation-and-issued-tokens.md).|  
   
 ## <a name="choosing-an-authentication-scheme"></a>Scelta di uno schema di autenticazione  
  Quando si scelgono i potenziali schemi di autenticazione per un server HTTP, è necessario prendere in considerazione alcuni elementi:  
@@ -37,6 +37,6 @@ L'autenticazione è il processo che consente di stabilire se un client è idoneo
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica della sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
-- [Uso della rappresentazione con la sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
-- [Delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [Panoramica sulla sicurezza del trasporto](transport-security-overview.md)
+- [Utilizzo della rappresentazione con la sicurezza del trasporto](using-impersonation-with-transport-security.md)
+- [Delega e rappresentazione](delegation-and-impersonation-with-wcf.md)

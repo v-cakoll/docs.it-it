@@ -2,12 +2,12 @@
 title: Protezione del canale peer
 ms.date: 03/30/2017
 ms.assetid: 2c59b164-3729-44f0-a967-f247c42de662
-ms.openlocfilehash: bc17c35bf088472cfbf36b2c6d7c868c8cc85f20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8015f41254d17f908f3665db65af3d82eaa2b6a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769395"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576083"
 ---
 # <a name="peer-channel-security"></a>Protezione del canale peer
 Il canale peer attiva diversi tipi di applicazioni distribuite che dipendono da messaggistica a più parti. Ne è un esempio la distribuzione di contenuto Internet, in cui un'origine attendibile distribuisce il contenuto (ad esempio aggiornamenti di supporti o software), un gruppo di amici si scambiano musica e foto o un team di colleghi lavora in modo collaborativo a un documento. Ognuno di questi scenari richiede un modello di sicurezza univoco. Il modello di sicurezza del canale peer ha lo scopo di affrontare tali scenari e offrire un modello sicuro per le rispettive esigenze di diversi modelli di identità, autenticazione e autorizzazione.  
@@ -35,6 +35,6 @@ Il canale peer attiva diversi tipi di applicazioni distribuite che dipendono da 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protezione di applicazioni del canale peer](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
-- [Concetti relativi al canale peer](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
-- [Creazione di un'applicazione del canale peer](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+- [Protezione di applicazioni del canale peer](securing-peer-channel-applications.md)
+- [Concetti relativi al canale peer](peer-channel-concepts.md)
+- [Creazione di un'applicazione del canale peer](building-a-peer-channel-application.md)

@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.HttpChannelResponseAborted
 ms.date: 03/30/2017
 ms.assetid: 2fd1836e-4b62-400d-aa76-b3ab9f479015
-ms.openlocfilehash: 6cc69bdcf08f42e6182a5abcdf92856be679f381
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c82d2e8aa78a68adab6776abc5fc80063531e2a8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61915667"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594049"
 ---
 # <a name="systemservicemodelchannelshttpchannelresponseaborted"></a>System.ServiceModel.Channels.HttpChannelResponseAborted
 Impossibile inviare un messaggio di risposta su HTTP.  
@@ -17,6 +17,6 @@ Impossibile inviare un messaggio di risposta su HTTP.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Traccia](index.md)
+- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](using-tracing-to-troubleshoot-your-application.md)
+- [Amministrazione e diagnostica](../index.md)

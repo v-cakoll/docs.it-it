@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: 99e3c2f4445673f3b74048a2b466203af7bc2795
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c283e7cbc4cb4b8bc37dd1313480410df93a93bf
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045890"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596825"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Panoramica sull'integrazione con applicazioni COM
 
@@ -18,7 +18,7 @@ Windows Communication Foundation (WCF) fornisce allo sviluppatore del codice ges
 > [!NOTE]
 > Il moniker del servizio utilizza un canale di comunicazione WCF per tutte le comunicazioni. I meccanismi di sicurezza e identità per tale canale differiscono da quelli utilizzati nei proxy COM e DCOM standard. Inoltre, poiché il moniker del servizio utilizza un canale di comunicazione WCF, il periodo di timeout predefinito è di un minuto per tutte le chiamate.
 
-Il moniker del servizio viene utilizzato con `GetObject` la funzione per fornire allo sviluppatore non gestito un approccio specifico com e fortemente tipizzato per la chiamata ai servizi Web WCF. Questa operazione richiede una definizione locale visibile a COM del contratto del servizio Web WCF e l'associazione da utilizzare. Analogamente ad altri client WCF, il moniker del servizio deve creare un canale tipizzato per il servizio, anche se questa costruzione del canale si verifica in modo trasparente al programmatore COM sulla prima chiamata al metodo.
+Il moniker del servizio viene utilizzato con la `GetObject` funzione per fornire allo sviluppatore non gestito un approccio specifico com e fortemente tipizzato per la chiamata ai servizi Web WCF. Questa operazione richiede una definizione locale visibile a COM del contratto del servizio Web WCF e l'associazione da utilizzare. Analogamente ad altri client WCF, il moniker del servizio deve creare un canale tipizzato per il servizio, anche se questa costruzione del canale si verifica in modo trasparente al programmatore COM sulla prima chiamata al metodo.
 
 In comune con altri client WCF, quando si usa il moniker, le applicazioni specificano l'indirizzo, l'associazione e il contratto per comunicare con un servizio. Il contratto può essere specificato in uno dei modi seguenti:
 
@@ -69,4 +69,4 @@ Nella tabella seguente vengono illustrati i parametri supportati dal moniker del
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Registrare e configurare un moniker servizio](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+- [Procedura: registrare e configurare un moniker servizio](how-to-register-and-configure-a-service-moniker.md)

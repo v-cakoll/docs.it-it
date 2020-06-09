@@ -2,43 +2,43 @@
 title: Gestione
 ms.date: 03/30/2017
 ms.assetid: 52f4825b-91a2-4f23-94f4-cfd76a7980cf
-ms.openlocfilehash: b5bb0b72f5290548bb844ac4f00b6fbbd9891cb7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53c53252e5798ffb01d42b143971a66d1c067851
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787543"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591787"
 ---
 # <a name="management"></a>Gestione
-In questa sezione è inclusi esempi che illustrano management di Windows Communication Foundation (WCF).  
+Questa sezione contiene esempi che illustrano la gestione di Windows Communication Foundation (WCF).  
   
-## <a name="in-this-section"></a>In questa sezione  
- [WCF Services e Event Tracing for Windows](../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)  
- Di seguito viene illustrato come utilizzare la traccia analitica WCF per generare eventi di Event Tracing for Windows (ETW).  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Servizi WCF e traccia eventi per Windows](wcf-services-and-event-tracing-for-windows.md)  
+ Viene illustrato come utilizzare la traccia analitica in WCF per generare eventi in Event Tracing for Windows (ETW).  
   
- [Traccia analitica WCF](../../../../docs/framework/wcf/samples/wcf-analytic-tracing.md)  
- Viene illustrato come aggiungere eventi di traccia nel flusso di tracce analitiche che WCF consente di scrivere in ETW in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+ [Traccia analitica WCF](wcf-analytic-tracing.md)  
+ Viene illustrato come aggiungere eventi di traccia nel flusso di tracce analitiche scritte da WCF in ETW in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] .  
   
- [Analisi circolare](../../../../docs/framework/wcf/samples/circular-tracing.md)  
+ [Analisi circolare](circular-tracing.md)  
  Viene descritta l'implementazione di un listener di traccia circolare del buffer.  
   
- [Traccia ETW](../../../../docs/framework/wcf/samples/etw-tracing.md)  
+ [Traccia ETW](etw-tracing.md)  
  Viene illustrato come implementare la traccia End-to-End (E2E) utilizzando Traccia eventi per Windows (ETW).  
   
- [Estensione della funzionalità di traccia](../../../../docs/framework/wcf/samples/extending-tracing.md)  
- Viene illustrato come estendere la funzionalità di traccia WCF scrivendo le tracce di attività definite dall'utente nel codice client e del servizio.  
+ [Estensione della funzionalità di traccia](extending-tracing.md)  
+ Viene illustrato come estendere la funzionalità di traccia di WCF scrivendo tracce di attività definite dall'utente nel codice del client e del servizio.  
   
- [Blocco della sicurezza delle informazioni personali](../../../../docs/framework/wcf/samples/pii-security-lockdown.md)  
+ [Blocco della sicurezza delle informazioni personali](pii-security-lockdown.md)  
  Viene illustrato come controllare diverse funzionalità correlate alla sicurezza di un servizio WCF.  
   
- [Uso dei contatori delle prestazioni](../../../../docs/framework/wcf/samples/using-performance-counters.md)  
+ [Utilizzo dei contatori delle prestazioni](using-performance-counters.md)  
  Viene illustrato come accedere ai contatori delle prestazioni WCF e come creare contatori delle prestazioni definiti dall'utente.  
   
- [Traccia e registrazione dei messaggi](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)  
+ [Traccia e registrazione dei messaggi](tracing-and-message-logging.md)  
  Viene illustrato come abilitare la registrazione di tracce e messaggi.  
   
- [Convalida della sicurezza](../../../../docs/framework/wcf/samples/security-validation.md)  
+ [Convalida della sicurezza](security-validation.md)  
  Viene illustrato come utilizzare un comportamento personalizzato per convalidare i servizi in un computer allo scopo di garantire che soddisfino criteri specifici.  
   
- [Provider WMI](../../../../docs/framework/wcf/samples/wmi-provider.md)  
- Viene illustrato come raccogliere dati dai servizi WCF in fase di esecuzione usando il provider di Strumentazione gestione Windows (WMI) incorporato in WCF.
+ [Provider WMI](wmi-provider.md)  
+ Viene illustrato come raccogliere dati dai servizi WCF in fase di esecuzione utilizzando il provider di Strumentazione gestione Windows (WMI) incorporato in WCF.

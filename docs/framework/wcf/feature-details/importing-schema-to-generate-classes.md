@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: dc33088c3519bfd088ed64a4de087c5086890804
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 01f5162727a213fa5dcdf8a70e4e8e4c3627f086
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918472"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596903"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importazione dello schema per generare classi
 Per generare classi da schemi utilizzabili con Windows Communication Foundation (WCF), utilizzare la <xref:System.Runtime.Serialization.XsdDataContractImporter> classe. In questo argomento viene descritto il processo e le relative varianti.  
@@ -23,15 +23,15 @@ Per generare classi da schemi utilizzabili con Windows Communication Foundation 
   
  Il `XmlSchemaSet` fa parte del modello SOM (Schema Object Model) del .NET Framework che rappresenta un set di documenti dello schema XSD (XML Schema Definition Language). Per creare un oggetto `XmlSchemaSet` da un set di documenti XSD, deserializzare ogni documento in un oggetto <xref:System.Xml.Schema.XmlSchema> (mediante <xref:System.Xml.Serialization.XmlSerializer>) e aggiungere questi oggetti a una nuova classe `XmlSchemaSet`.  
   
- `CodeCompileUnit` Fa parte della Code Document Object Model (CodeDom) del .NET Framework che rappresenta .NET Framework codice in modo astratto. Per generare il codice effettivo da una classe `CodeCompileUnit`, usare una sottoclasse della classe <xref:System.CodeDom.Compiler.CodeDomProvider>, ad esempio la classe <xref:Microsoft.CSharp.CSharpCodeProvider> o <xref:Microsoft.VisualBasic.VBCodeProvider>.  
+ `CodeCompileUnit`Fa parte della Code Document Object Model (CodeDom) del .NET Framework che rappresenta .NET Framework codice in modo astratto. Per generare il codice effettivo da una classe `CodeCompileUnit`, usare una sottoclasse della classe <xref:System.CodeDom.Compiler.CodeDomProvider>, ad esempio la classe <xref:Microsoft.CSharp.CSharpCodeProvider> o <xref:Microsoft.VisualBasic.VBCodeProvider>.  
   
 ### <a name="to-import-a-schema"></a>Per importare uno schema  
   
 1. Creare un'istanza di <xref:System.Runtime.Serialization.XsdDataContractImporter>.  
   
-2. facoltativo. Passare `CodeCompileUnit` nel costruttore. I tipi generati durante l'importazione dello schema vengono aggiunti a questa istanza di `CodeCompileUnit` anziché iniziare con un'istanza `CodeCompileUnit` vuota.  
+2. Facoltativa. Passare `CodeCompileUnit` nel costruttore. I tipi generati durante l'importazione dello schema vengono aggiunti a questa istanza di `CodeCompileUnit` anziché iniziare con un'istanza `CodeCompileUnit` vuota.  
   
-3. facoltativo. Chiamare uno dei metodi <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> . Il metodo determina se lo schema specificato è un schema del contratto dati valido e può essere importato. Il metodo `CanImport` presenta gli stessi overload di `Import` (il passaggio successivo).  
+3. Facoltativa. Chiamare uno dei metodi <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> . Il metodo determina se lo schema specificato è un schema del contratto dati valido e può essere importato. Il metodo `CanImport` presenta gli stessi overload di `Import` (il passaggio successivo).  
   
 4. Chiamare uno dei metodi `Import` di overload, ad esempio il metodo <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%28System.Xml.Schema.XmlSchemaSet%29>.  
   
@@ -44,11 +44,11 @@ Per generare classi da schemi utilizzabili con Windows Communication Foundation 
   
 5. Accedere a `CodeCompileUnit` mediante la proprietà <xref:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit%2A> .  
   
-### <a name="import-options-customizing-the-generated-types"></a>Opzioni di importazione: Personalizzazione dei tipi generati  
+### <a name="import-options-customizing-the-generated-types"></a>Opzioni di importazione: personalizzazione dei tipi generati  
  È possibile impostare la proprietà <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> di <xref:System.Runtime.Serialization.XsdDataContractImporter> su un'istanza della classe <xref:System.Runtime.Serialization.ImportOptions> per controllare vari aspetti del processo di importazione. Alcune opzioni influenzano direttamente i tipi generati.  
   
 #### <a name="controlling-the-access-level-generateinternal-or-the-internal-switch"></a>Controllo del livello di accesso (opzione GenerateInternal o /internal)  
- Corrisponde all'opzione **/Internal** dello [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ Corrisponde all'opzione **/Internal** dello [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
  In genere, i tipi pubblici vengono generati dallo schema, con campi privati e proprietà dei membri dati pubblici corrispondenti. Per generare invece tipi interni, impostare la proprietà <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> su `true`.  
   
@@ -58,23 +58,23 @@ Per generare classi da schemi utilizzabili con Windows Communication Foundation 
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
   
 #### <a name="controlling-namespaces-namespaces-or-the-namespace-switch"></a>Controllo degli spazi dei nomi (opzione Namespaces o /namespace)  
- Corrisponde all'opzione `Svcutil.exe` **/namespace** dello strumento.  
+ Corrisponde all'opzione **/namespace** dello `Svcutil.exe` strumento.  
   
- In genere, i tipi generati dallo schema vengono generati in .NET Framework spazi dei nomi, con ogni spazio dei nomi XSD corrispondente a un particolare .NET Framework spazio dei nomi in base a un mapping descritto in [riferimento allo schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). È possibile personalizzare questo mapping impostando la proprietà <xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A> su <xref:System.Collections.Generic.Dictionary%602>. Se un determinato spazio dei nomi XSD viene trovato nel dizionario, anche lo spazio dei nomi .NET Framework corrispondente viene tratto dal dizionario.  
+ In genere, i tipi generati dallo schema vengono generati in .NET Framework spazi dei nomi, con ogni spazio dei nomi XSD corrispondente a un particolare .NET Framework spazio dei nomi in base a un mapping descritto in [riferimento allo schema del contratto dati](data-contract-schema-reference.md). È possibile personalizzare questo mapping impostando la proprietà <xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A> su <xref:System.Collections.Generic.Dictionary%602>. Se un determinato spazio dei nomi XSD viene trovato nel dizionario, anche lo spazio dei nomi .NET Framework corrispondente viene tratto dal dizionario.  
   
  Si consideri ad esempio lo schema seguente.  
   
  [!code-xml[c_SchemaImportExport#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  
   
- Nell'esempio seguente viene utilizzata `Namespaces` la proprietà per eseguire `http://schemas.contoso.com/carSchema` il mapping dello spazio dei nomi a "contoso. Cars".  
+ Nell'esempio seguente viene utilizzata la `Namespaces` proprietà per eseguire il mapping dello `http://schemas.contoso.com/carSchema` spazio dei nomi a "contoso. Cars".  
   
  [!code-csharp[c_SchemaImportExport#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#8)]
  [!code-vb[c_SchemaImportExport#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#8)]  
   
 #### <a name="adding-the-serializableattribute-generateserializable-or-the-serializable-switch"></a>Aggiunta di SerializableAttribute (opzione GenerateSerializable o /serializable)  
- Corrisponde all'opzione `Svcutil.exe` **/Serializable** dello strumento.  
+ Corrisponde all'opzione **/Serializable** dello `Svcutil.exe` strumento.  
   
- A volte è importante che i tipi generati dallo schema siano utilizzabili con i motori di serializzazione di Runtime .NET Framework (ad <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType> esempio, <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> le classi e). Questa operazione è utile quando si usano i tipi per .NET Framework comunicazione remota. Per abilitare questo aspetto è necessario applicare l'attributo <xref:System.SerializableAttribute> ai tipi generati in aggiunta all'attributo <xref:System.Runtime.Serialization.DataContractAttribute> normale. L'attributo viene generato automaticamente se l'opzione di importazione `GenerateSerializable` è impostata su `true`.  
+ A volte è importante che i tipi generati dallo schema siano utilizzabili con i motori di serializzazione di Runtime .NET Framework (ad esempio, le <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> classi e). Questa operazione è utile quando si usano i tipi per .NET Framework comunicazione remota. Per abilitare questo aspetto è necessario applicare l'attributo <xref:System.SerializableAttribute> ai tipi generati in aggiunta all'attributo <xref:System.Runtime.Serialization.DataContractAttribute> normale. L'attributo viene generato automaticamente se l'opzione di importazione `GenerateSerializable` è impostata su `true`.  
   
  Nell'esempio seguente viene illustrata la classe `Vehicle` generata con l'opzione di importazione `GenerateSerializable` impostata su `true`.  
   
@@ -84,14 +84,14 @@ Per generare classi da schemi utilizzabili con Windows Communication Foundation 
 #### <a name="adding-data-binding-support-enabledatabinding-or-the-enabledatabinding-switch"></a>Aggiunta del supporto dei data binding (opzione EnableDataBinding o /enableDataBinding)  
  Corrisponde all'opzione **/EnableDataBinding** dello strumento Svcutil. exe.  
   
- In alcuni casi può essere necessario associare i tipi generati dallo schema ai componenti dell'interfaccia utente grafica in modo che qualsiasi aggiornamento alle istanze di questi tipi aggiorni automaticamente l'interfaccia utente. La classe `XsdDataContractImporter` può generare tipi che implementano l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged> in modo che qualsiasi modifica delle proprietà generi un evento. Se si generano tipi da usare con un ambiente di programmazione dell'interfaccia utente client che supporta questa interfaccia (ad esempio Windows Presentation Foundation (WPF)) <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> , impostare `true` la proprietà su per abilitare questa funzionalità.  
+ In alcuni casi può essere necessario associare i tipi generati dallo schema ai componenti dell'interfaccia utente grafica in modo che qualsiasi aggiornamento alle istanze di questi tipi aggiorni automaticamente l'interfaccia utente. La classe `XsdDataContractImporter` può generare tipi che implementano l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged> in modo che qualsiasi modifica delle proprietà generi un evento. Se si generano tipi da usare con un ambiente di programmazione dell'interfaccia utente client che supporta questa interfaccia (ad esempio Windows Presentation Foundation (WPF)), impostare la <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> proprietà su `true` per abilitare questa funzionalità.  
   
  Nell'esempio seguente viene illustrata la classe `Vehicle` generata con la proprietà <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> impostata su `true`.  
   
  [!code-csharp[C_SchemaImportExport#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#5)]
  [!code-vb[C_SchemaImportExport#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#5)]  
   
-### <a name="import-options-choosing-collection-types"></a>Opzioni di importazione: Scelta di tipi di raccolta  
+### <a name="import-options-choosing-collection-types"></a>Opzioni di importazione: scelta dei tipi di raccolta  
  Due modelli speciali in XML rappresentano raccolte di elementi: elenchi di elementi e associazioni tra due elementi. Di seguito è riportato un esempio di un elenco di stringhe.  
   
  [!code-xml[C_SchemaImportExport#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#11)]  
@@ -101,9 +101,9 @@ Per generare classi da schemi utilizzabili con Windows Communication Foundation 
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
-> Qualsiasi associazione può essere considerata un elenco. Ad esempio, è possibile visualizzare l'associazione precedente come un elenco di oggetti `city` complessi che presentano due campi (un campo stringa e un campo numero intero). Entrambi i modelli sono rappresentati nello schema XSD. Non esiste alcun modo per distinguere tra un elenco e un'associazione, quindi tali modelli vengono sempre considerati come elenchi, a meno che nello schema non sia presente un'annotazione speciale specifica di WCF. L'annotazione indica che un modello specifico rappresenta un'associazione. Per ulteriori informazioni, vedere [riferimento allo schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+> Qualsiasi associazione può essere considerata un elenco. Ad esempio, è possibile visualizzare l'associazione precedente come un elenco di oggetti `city` complessi che presentano due campi (un campo stringa e un campo numero intero). Entrambi i modelli sono rappresentati nello schema XSD. Non esiste alcun modo per distinguere tra un elenco e un'associazione, quindi tali modelli vengono sempre considerati come elenchi, a meno che nello schema non sia presente un'annotazione speciale specifica di WCF. L'annotazione indica che un modello specifico rappresenta un'associazione. Per ulteriori informazioni, vedere [riferimento allo schema del contratto dati](data-contract-schema-reference.md).  
   
- In genere, un elenco viene importato come contratto dati della raccolta che deriva da un elenco generico o come matrice di .NET Framework, a seconda che lo schema segua o meno il modello di denominazione standard per le raccolte. Questa operazione viene descritta più dettagliatamente nei [tipi di raccolta nei contratti dati](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Le associazioni normalmente vengono importate come un tipo <xref:System.Collections.Generic.Dictionary%602> o un contratto dati della raccolta che deriva dall'oggetto dizionario. Si consideri ad esempio lo schema seguente.  
+ In genere, un elenco viene importato come contratto dati della raccolta che deriva da un elenco generico o come matrice di .NET Framework, a seconda che lo schema segua o meno il modello di denominazione standard per le raccolte. Questa operazione viene descritta più dettagliatamente nei [tipi di raccolta nei contratti dati](collection-types-in-data-contracts.md). Le associazioni normalmente vengono importate come un tipo <xref:System.Collections.Generic.Dictionary%602> o un contratto dati della raccolta che deriva dall'oggetto dizionario. Si consideri ad esempio lo schema seguente.  
   
  [!code-xml[c_SchemaImportExport#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#13)]  
   
@@ -129,12 +129,12 @@ Per generare classi da schemi utilizzabili con Windows Communication Foundation 
   
  La `ReferencedCollectionTypes` proprietà corrisponde all'opzione **opzione/collectionType** dello strumento Svcutil. exe. Si noti che per fare riferimento a più tipi di raccolta, l'opzione **opzione/collectionType** deve essere specificata più volte. Se il tipo non è presente in MsCorLib. dll, è necessario fare riferimento anche all'assembly usando l'opzione **/Reference** .  
   
-#### <a name="import-options-referencing-existing-types"></a>Opzioni di importazione: Riferimento ai tipi esistenti  
+#### <a name="import-options-referencing-existing-types"></a>Opzioni di importazione: riferimento ai tipi esistenti  
  Occasionalmente, i tipi nello schema corrispondono ai tipi di .NET Framework esistenti e non è necessario generare questi tipi da zero. (questa sezione si applica solo ai tipi non di raccolta. Per i tipi di raccolta, vedere la sezione precedente).  
   
  Ad esempio, è possibile che si disponga di un contratto dati "Person" standard per tutta l'azienda che si desidera usare sempre quando si rappresenta una persona. Ogni volta che un servizio usa questo tipo e lo schema è presente nei metadati del servizio, è possibile riutilizzare il tipo `Person` esistente durante l'importazione di questo schema anziché generare un nuovo tipo per ogni servizio.  
   
- A tale scopo, passare un elenco di tipi di .NET Framework che si desidera riutilizzare nella raccolta restituita dalla <xref:System.Runtime.Serialization.ImportOptions.ReferencedTypes%2A> proprietà <xref:System.Runtime.Serialization.ImportOptions> sulla classe. Se uno di questi tipi presenta un nome del contratto dati e un spazio dei nomi corrispondenti al nome e allo spazio dei nomi di un tipo di schema, viene eseguito un confronto strutturale. Se viene determinato che i tipi hanno sia nomi corrispondenti che strutture corrispondenti, il tipo di .NET Framework esistente viene riutilizzato anziché generarne uno nuovo. Se corrisponde solo il nome ma non la struttura, viene generata un'eccezione. Si noti che non è consentito il controllo delle versioni quando si fa riferimento ai tipi (ad esempio, aggiungendo nuovi membri dati facoltativi). Le strutture devono corrispondere perfettamente.  
+ A tale scopo, passare un elenco di tipi di .NET Framework che si desidera riutilizzare nella raccolta <xref:System.Runtime.Serialization.ImportOptions.ReferencedTypes%2A> restituita dalla proprietà sulla <xref:System.Runtime.Serialization.ImportOptions> classe. Se uno di questi tipi presenta un nome del contratto dati e un spazio dei nomi corrispondenti al nome e allo spazio dei nomi di un tipo di schema, viene eseguito un confronto strutturale. Se viene determinato che i tipi hanno sia nomi corrispondenti che strutture corrispondenti, il tipo di .NET Framework esistente viene riutilizzato anziché generarne uno nuovo. Se corrisponde solo il nome ma non la struttura, viene generata un'eccezione. Si noti che non è consentito il controllo delle versioni quando si fa riferimento ai tipi (ad esempio, aggiungendo nuovi membri dati facoltativi). Le strutture devono corrispondere perfettamente.  
   
  È possibile aggiungere più tipi con lo stesso nome del contratto dati e lo stesso spazio dei nomi alla raccolta di tipi a cui si fa riferimento, fintanto che non vengono importati tipi dello schema con tale nome e spazio dei nomi. In questo modo è possibile aggiungere facilmente tutti i tipi di un assembly alla raccolta senza temere che vengano creati duplicati dei tipi che non sono presenti nello schema.  
   
@@ -143,16 +143,16 @@ Per generare classi da schemi utilizzabili con Windows Communication Foundation 
 > [!NOTE]
 > Quando si usa Svcutil. exe o (in Visual Studio) gli strumenti di **Aggiungi riferimento al servizio** , viene fatto automaticamente riferimento a tutti i tipi in mscorlib. dll.  
   
-#### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>Opzioni di importazione: Importazione dello schema non-DataContract come tipi IXmlSerializable  
+#### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>Opzioni di importazione: importazione di schemi diversi dal contratto dati come tipi IXmlSerializable  
  <xref:System.Runtime.Serialization.XsdDataContractImporter> supporta un sottoinsieme limitato dello schema. Se sono presenti costrutti dello schema non supportati (ad esempio, attributi XML), il tentativo di importazione non riesce e viene generata un'eccezione. Tuttavia, l'impostazione della proprietà <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> su `true` estende l'intervallo di schemi supportati. Se impostato su `true`, <xref:System.Runtime.Serialization.XsdDataContractImporter> genera tipi che implementano l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable>. In questo modo viene consentito l'accesso diretto alla rappresentazione XML di questi tipi.  
   
-##### <a name="design-considerations"></a>Considerazioni di progettazione  
+##### <a name="design-considerations"></a>Considerazioni sulla progettazione  
   
-- Può risultare difficile lavorare direttamente con la rappresentazione XML con tipizzazione debole, pertanto è consigliabile usare un motore di serializzazione alternativo, ad esempio <xref:System.Xml.Serialization.XmlSerializer>, per lavorare con schemi non compatibili con i contratti dati in modo fortemente tipizzato. Per ulteriori informazioni, vedere [utilizzo della classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+- Può risultare difficile lavorare direttamente con la rappresentazione XML con tipizzazione debole, pertanto è consigliabile usare un motore di serializzazione alternativo, ad esempio <xref:System.Xml.Serialization.XmlSerializer>, per lavorare con schemi non compatibili con i contratti dati in modo fortemente tipizzato. Per ulteriori informazioni, vedere [utilizzo della classe XmlSerializer](using-the-xmlserializer-class.md).  
   
 - Alcuni costrutti dello schema non possono essere importati da <xref:System.Runtime.Serialization.XsdDataContractImporter> anche se la proprietà <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> è impostata su `true`. Anche in questo caso, è consigliabile usare <xref:System.Xml.Serialization.XmlSerializer>.  
   
-- <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> I costrutti dello schema supportati sia quando `false` è `true` che in sono descritti in [riferimento allo schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+- I costrutti dello schema supportati sia quando è che <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> `true` `false` in sono descritti in [riferimento allo schema del contratto dati](data-contract-schema-reference.md).  
   
 - Gli schemi per i tipi <xref:System.Xml.Serialization.IXmlSerializable> generati non conservano la fedeltà quando vengono importati ed esportati. In altre parole, se si esporta lo schema dai tipi generati e lo si importa come classi, non si ottiene lo schema originale.  
   
@@ -167,17 +167,17 @@ Per generare classi da schemi utilizzabili con Windows Communication Foundation 
   
  È possibile eseguire il processo di esportazione dello schema sulle classi `IXmlSerializable` generate. Come illustrato in precedenza, non è possibile ottenere lo schema originale. Si otterrà invece il tipo XSD standard "anyType", che è un carattere jolly per qualsiasi tipo XSD.  
   
- Questa operazione viene eseguita applicando <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> l'attributo alle classi `IXmlSerializable` generate e specificando un metodo che <xref:System.Runtime.Serialization.XmlSerializableServices.AddDefaultSchema%2A> chiama il metodo per generare il tipo "anyType".  
+ Questa operazione viene eseguita applicando l' <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> attributo alle classi generate `IXmlSerializable` e specificando un metodo che chiama il <xref:System.Runtime.Serialization.XmlSerializableServices.AddDefaultSchema%2A> metodo per generare il tipo "anyType".  
   
 > [!NOTE]
 > Il tipo <xref:System.Runtime.Serialization.XmlSerializableServices> esiste esclusivamente per supportare questa particolare funzionalità. Non è consigliabile usarlo per qualsiasi altro scopo.  
   
-#### <a name="import-options-advanced-options"></a>Opzioni di importazione: Opzioni avanzate  
+#### <a name="import-options-advanced-options"></a>Opzioni di importazione: opzioni avanzate  
  Di seguito sono elencate le opzioni importazione avanzate:  
   
-- Proprietà <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>. Specifica la classe <xref:System.CodeDom.Compiler.CodeDomProvider> da usare per generare il codice per le classi generate. Il meccanismo di importazione tenta di evitare funzionalità non supportate da <xref:System.CodeDom.Compiler.CodeDomProvider>. Se non <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> è impostato, viene utilizzato il set completo di .NET Framework funzionalità senza restrizioni.  
+- Proprietà <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>. Specifica la classe <xref:System.CodeDom.Compiler.CodeDomProvider> da usare per generare il codice per le classi generate. Il meccanismo di importazione tenta di evitare funzionalità non supportate da <xref:System.CodeDom.Compiler.CodeDomProvider>. Se <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> non è impostato, viene utilizzato il set completo di .NET Framework funzionalità senza restrizioni.  
   
-- Proprietà <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. È possibile specificare un'implementazione <xref:System.Runtime.Serialization.IDataContractSurrogate> con questa proprietà. <xref:System.Runtime.Serialization.IDataContractSurrogate> personalizza il processo di importazione. Per ulteriori informazioni, vedere [surrogati del contratto dati](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Per impostazione predefinita, non viene usato alcun surrogato.  
+- Proprietà <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. È possibile specificare un'implementazione <xref:System.Runtime.Serialization.IDataContractSurrogate> con questa proprietà. <xref:System.Runtime.Serialization.IDataContractSurrogate> personalizza il processo di importazione. Per ulteriori informazioni, vedere [surrogati del contratto dati](../extending/data-contract-surrogates.md). Per impostazione predefinita, non viene usato alcun surrogato.  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -185,8 +185,8 @@ Per generare classi da schemi utilizzabili con Windows Communication Foundation 
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>
 - <xref:System.Runtime.Serialization.ImportOptions>
-- [Informazioni di riferimento sullo schema del contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
-- [Surrogati di contratti di dati](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)
-- [Importazione ed esportazione di schemi](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
-- [Esportazione di schemi da classi](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
-- [Informazioni di riferimento sullo schema del contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [Informazioni di riferimento sullo schema del contratto di dati](data-contract-schema-reference.md)
+- [Surrogati del contratto dati](../extending/data-contract-surrogates.md)
+- [Importazione ed esportazione degli schemi](schema-import-and-export.md)
+- [Esportazione di schemi da classi](exporting-schemas-from-classes.md)
+- [Informazioni di riferimento sullo schema del contratto di dati](data-contract-schema-reference.md)

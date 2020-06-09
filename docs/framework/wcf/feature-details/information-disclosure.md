@@ -1,15 +1,15 @@
 ---
-title: Diffusione di informazioni
+title: Divulgazione di informazioni
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 0bcf1aa04d7ba7477a6c3f1559a77bbda1f974af
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: a58ac4dd3715052031c7fb5c1da480c0d01396ea
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211948"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596864"
 ---
-# <a name="information-disclosure"></a>Diffusione di informazioni
+# <a name="information-disclosure"></a>Divulgazione di informazioni
 
 La diffusione di informazioni consente all'autore di un attacco di acquisire informazioni importanti su un sistema. Considerare sempre, pertanto, quali informazioni vengono rivelate e se possono essere utilizzate da un utente malintenzionato. Di seguito vengono elencati i possibili attacchi dovuti alla diffusione di informazioni e per ognuno di essi vengono fornite mitigazioni.
 
@@ -19,7 +19,7 @@ Se si sta utilizzando la protezione a livello di messaggio su un livello di tras
 
 ## <a name="policy-information"></a>Informazioni sul criterio
 
-La protezione del criterio è importante, specialmente negli scenari di federazioni dove i requisiti di riservatezza dei token emessi o le informazioni sugli emittenti dei token vengono esposti nel criterio. In questi casi, si consiglia di proteggere l'endpoint del criterio del servizio federato per impedire agli autori di attacchi di ottenere informazioni sul servizio, ad esempio il tipo di attestazioni da inserire nel token emesso, o di reindirizzare client a emittenti di token dannosi. L'autore di un attacco, ad esempio, potrebbe individuare coppie di nome utente/password riconfigurando la catena di trust federata in modo tale che termini in un emittente che esegua un attacco di tipo man-in-the-middle. È inoltre consigliabile che i client federati che ottengono le proprie associazioni tramite recupero dei criteri verifichino l'attendibilità degli emittenti nella catena di certificati federata ottenuta. Per ulteriori informazioni sugli scenari di federazione, vedere [Federazione](../../../../docs/framework/wcf/feature-details/federation.md).
+La protezione del criterio è importante, specialmente negli scenari di federazioni dove i requisiti di riservatezza dei token emessi o le informazioni sugli emittenti dei token vengono esposti nel criterio. In questi casi, si consiglia di proteggere l'endpoint del criterio del servizio federato per impedire agli autori di attacchi di ottenere informazioni sul servizio, ad esempio il tipo di attestazioni da inserire nel token emesso, o di reindirizzare client a emittenti di token dannosi. L'autore di un attacco, ad esempio, potrebbe individuare coppie di nome utente/password riconfigurando la catena di trust federata in modo tale che termini in un emittente che esegua un attacco di tipo man-in-the-middle. È inoltre consigliabile che i client federati che ottengono le proprie associazioni tramite recupero dei criteri verifichino l'attendibilità degli emittenti nella catena di certificati federata ottenuta. Per ulteriori informazioni sugli scenari di federazione, vedere [Federazione](federation.md).
 
 ## <a name="memory-dumps-can-reveal-claim-information"></a>Le immagini della memoria possono rivelare informazioni sulle attestazioni
 
@@ -55,7 +55,7 @@ Nell'ambiente di dominio Windows, l'autenticazione di Windows utilizza per impos
 
 Quando si crea un client, la specifica di credenziali client senza un nome di dominio o la specifica di un'identità server non valida, provoca l'utilizzo di NTLM al posto del protocollo Kerberos (se la proprietà `AllowNtlm` è impostata su `true`). Poiché l'autenticazione server non viene eseguita in NTLM, è possibile che le informazioni vengano diffuse.
 
-Ad esempio, è possibile specificare le credenziali client di Windows senza un nome di dominio, come illustrato nel codice visuale C# seguente.
+Ad esempio, è possibile specificare le credenziali client di Windows senza un nome di dominio, come illustrato nel codice Visual C# seguente.
 
 ```csharp
 MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCredential("username", "password");
@@ -63,13 +63,13 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
 
 Il codice non specifica un nome di dominio e pertanto verrà utilizzato NTLM.
 
-NTLM viene utilizzato se viene specificato il dominio, ma viene specificato un nome dell'entità servizio non valido tramite la funzionalità di identità endpoint. Per ulteriori informazioni sulla modalità di specifica dell'identità dell'endpoint, vedere [identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).
+NTLM viene utilizzato se viene specificato il dominio, ma viene specificato un nome dell'entità servizio non valido tramite la funzionalità di identità endpoint. Per ulteriori informazioni sulla modalità di specifica dell'identità dell'endpoint, vedere [identità del servizio e autenticazione](service-identity-and-authentication.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Elevazione dei privilegi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Negazione del servizio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Manomissioni](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [Scenari non supportati](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
-- [Attacchi di tipo replay](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Security Considerations](security-considerations-in-wcf.md)
+- [Elevazione dei privilegi](elevation-of-privilege.md)
+- [Attacco Denial of Service](denial-of-service.md)
+- [Manomissione](tampering.md)
+- [Scenari non supportati](unsupported-scenarios.md)
+- [Attacchi di tipo replay](replay-attacks.md)

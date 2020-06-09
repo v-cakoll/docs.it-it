@@ -9,20 +9,20 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-ms.openlocfilehash: 3fd22cc0842c51b331905369915bd055235680c4
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0d11b48d3021bf0d92d74ab67bc18c2bdd2bdd0e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592194"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594998"
 ---
 # <a name="using-data-contracts"></a>Uso di contratti dati
 Un *contratto dati* è un accordo formale tra un servizio e un client che descrive astrattamente i dati da scambiare. Per comunicare, non è necessario che il client e il servizio condividano gli stessi tipi, ma solo gli stessi contratti dati. Un contratto dati definisce con precisione, per ogni parametro o tipo restituito, i dati serializzati (trasformati in XML) che verranno scambiati.  
   
 ## <a name="data-contract-basics"></a>Nozioni fondamentali dei contratti dati  
- Windows Communication Foundation (WCF) usa un motore di serializzazione denominato serializzatore dei contratti dati per impostazione predefinita per serializzare e deserializzare i dati (convertendoli in / da XML). Tutti i tipi primitivi .NET Framework, ad esempio numeri interi e stringhe, nonché alcuni tipi trattati come primitivi, ad esempio <xref:System.DateTime> e <xref:System.Xml.XmlElement>, può essere serializzato senza ulteriore preparazione e vengono considerate come dotate di contratti dati predefiniti. Inoltre, molti tipi di .NET Framework hanno contratti dati esistenti. Per un elenco completo dei tipi serializzabili, vedere [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Per impostazione predefinita, Windows Communication Foundation (WCF) utilizza un motore di serializzazione denominato serializzatore dei contratti dati per serializzare e deserializzare i dati, ovvero convertirli in e da XML. Tutti .NET Framework tipi primitivi, ad esempio numeri interi e stringhe, nonché alcuni tipi trattati come primitivi, ad esempio <xref:System.DateTime> e <xref:System.Xml.XmlElement> , possono essere serializzati senza altre preparazioni e vengono considerati come con contratti dati predefiniti. Molti tipi di .NET Framework hanno anche contratti dati esistenti. Per un elenco completo dei tipi serializzabili, vedere [Types Supported by the Data Contract Serializer](types-supported-by-the-data-contract-serializer.md).  
   
- Per poter essere serializzabili, è necessario che i nuovi tipi complessi creati dispongano di un contratto dati appositamente definito. Per impostazione predefinita, tramite <xref:System.Runtime.Serialization.DataContractSerializer> viene dedotto il contratto dati e vengono serializzati tutti i tipi visibili pubblicamente. Vengono serializzati i campi e le proprietà di lettura/scrittura pubblici del tipo. È possibile rifiutare esplicitamente i membri per la serializzazione tramite <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>. È inoltre possibile creare in modo esplicito un contratto dati utilizzando gli attributi <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> . Ciò viene di norma realizzato applicando l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> al tipo. Questo attributo può essere applicato a classi, strutture ed enumerazioni. L'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> deve quindi essere applicato a ogni membro del tipo di contratto dati per indicare che si tratta di un *membro dati*, ovvero che deve essere serializzato. Per altre informazioni, vedere [tipi serializzabili](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
+ Per poter essere serializzabili, è necessario che i nuovi tipi complessi creati dispongano di un contratto dati appositamente definito. Per impostazione predefinita, tramite <xref:System.Runtime.Serialization.DataContractSerializer> viene dedotto il contratto dati e vengono serializzati tutti i tipi visibili pubblicamente. Vengono serializzati i campi e le proprietà di lettura/scrittura pubblici del tipo. È possibile rifiutare esplicitamente i membri per la serializzazione tramite <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>. È inoltre possibile creare in modo esplicito un contratto dati utilizzando gli attributi <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> . Ciò viene di norma realizzato applicando l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> al tipo. Questo attributo può essere applicato a classi, strutture ed enumerazioni. L'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> deve quindi essere applicato a ogni membro del tipo di contratto dati per indicare che si tratta di un *membro dati*, ovvero che deve essere serializzato. Per ulteriori informazioni, vedere [tipi serializzabili](serializable-types.md).  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato un contratto di servizio (un'interfaccia) a cui sono stati applicati in modo esplicito gli attributi <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> . Nell'esempio viene mostrato che i tipi primitivi non richiedono un contratto dati, diversamente da un tipo complesso.  
@@ -52,7 +52,7 @@ Un *contratto dati* è un accordo formale tra un servizio e un client che descri
   
 - Durante la deserializzazione il codice della proprietà set viene chiamato per i membri dati della proprietà per impostare le proprietà sul valore in fase di deserializzazione.  
   
-- Perché un contratto dati sia valido, deve essere possibile serializzare tutti i relativi membri dati. Per un elenco completo dei tipi serializzabili, vedere [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+- Perché un contratto dati sia valido, deve essere possibile serializzare tutti i relativi membri dati. Per un elenco completo dei tipi serializzabili, vedere [Types Supported by the Data Contract Serializer](types-supported-by-the-data-contract-serializer.md).  
   
      I tipi generici sono gestiti esattamente nello stesso modo dei tipi non generici. Non vi sono requisiti speciali per i parametri generici. Si consideri ad esempio il tipo seguente:  
   
@@ -64,20 +64,20 @@ Un *contratto dati* è un accordo formale tra un servizio e un client che descri
  [!code-csharp[C_DataContract#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#4)]
  [!code-vb[C_DataContract#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#4)]  
   
- Per un esempio di codice completo di un servizio WCF che definisce un contratto dati, vedere l'esempio [Basic Data Contract](../../../../docs/framework/wcf/samples/basic-data-contract.md) .  
+ Per un esempio di codice completo di un servizio WCF che definisce un contratto dati, vedere l'esempio [Basic Data Contract](../samples/basic-data-contract.md) .  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
-- [Tipi serializzabili](../../../../docs/framework/wcf/feature-details/serializable-types.md)
-- [Nomi di contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
-- [Equivalenza dei contratti di dati](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
-- [Ordine dei membri dati](../../../../docs/framework/wcf/feature-details/data-member-order.md)
-- [Tipi noti di contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [Contratti di dati compatibili con versioni successive](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
-- [Controllo delle versioni dei contratti di dati](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
-- [Callback di serializzazione a tolleranza di versione](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
-- [Valori predefiniti dei membri dati](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)
-- [Tipi supportati dal serializzatore dei contratti di dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
-- [Procedura: Creare un contratto di dati di base per una classe o struttura](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+- [Tipi serializzabili](serializable-types.md)
+- [Nomi di contratto dati](data-contract-names.md)
+- [Data Contract Equivalence](data-contract-equivalence.md)
+- [Ordine dei membri dati](data-member-order.md)
+- [Tipi conosciuti di contratto dati](data-contract-known-types.md)
+- [Contratti dati compatibili con le versioni successive](forward-compatible-data-contracts.md)
+- [Controllo delle versioni dei contratti dati](data-contract-versioning.md)
+- [Callback di serializzazione a tolleranza di versione](version-tolerant-serialization-callbacks.md)
+- [Valori predefiniti dei membri dati](data-member-default-values.md)
+- [Types Supported by the Data Contract Serializer](types-supported-by-the-data-contract-serializer.md)
+- [Procedura: creare un contratto dati di base per una classe o una struttura](how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

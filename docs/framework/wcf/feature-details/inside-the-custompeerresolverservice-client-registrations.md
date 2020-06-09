@@ -1,15 +1,15 @@
 ---
-title: 'In CustomPeerResolverService: registrazioni client'
+title: 'CustomPeerResolverService: registrazioni client'
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: 3d1e1c6493da54bc3ae0e74a33985da59382ea52
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ce694408edbb40309d1750be49b8414ebcbce3f7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619786"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596838"
 ---
-# <a name="inside-the-custompeerresolverservice-client-registrations"></a>In CustomPeerResolverService: registrazioni client
+# <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService: registrazioni client
 Ogni nodo della rete pubblica le informazioni sull'endpoint relative nel servizio resolver tramite la funzione `Register`. Il servizio resolver archivia queste informazioni come record di registrazione. Questo record contiene un identificatore univoco (RegistrationID) e informazioni sull'endpoint (PeerNodeAddress) per il nodo.  
   
 ## <a name="stale-records-and-expiration-time"></a>Record non aggiornati e data di scadenza  
@@ -26,13 +26,13 @@ Ogni nodo della rete pubblica le informazioni sull'endpoint relative nel servizi
   
  Per implementare il proprio servizio resolver, è necessario scrivere una funzione di manutenzione per rimuovere i record di registrazione non aggiornati. Sono disponibili diversi modi per eseguire questa operazione:  
   
-- **Manutenzione periodica**: Impostare un timer di spengano periodicamente ed esaminare l'archivio dati per eliminare i record obsoleti. Questo approccio è utilizzato da <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>.  
+- **Manutenzione periodica**: impostare un timer in modo che venga disattivato periodicamente e scorrere l'archivio dati per eliminare i record obsoleti. Questo approccio è utilizzato da <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>.  
   
-- **Eliminazione passiva**: Anziché cercare attivamente i record non aggiornati a intervalli regolari, è possibile identificare ed eliminare i record non aggiornati quando il servizio è già in esecuzione un'altra funzione. Questo approccio potrebbe potenzialmente rallentare i tempi di risposta alle richieste dei client resolver, ma elimina la necessità di un timer e potrebbe rivelarsi più efficiente qualora si preveda che un numero ridotto di nodi abbandoni la rete senza chiamare `Unregister`.  
+- **Eliminazione passiva**: anziché eseguire attivamente la ricerca di record non aggiornati a intervalli regolari, è possibile identificare ed eliminare i record non aggiornati quando il servizio sta già eseguendo un'altra funzione. Questo approccio potrebbe potenzialmente rallentare i tempi di risposta alle richieste dei client resolver, ma elimina la necessità di un timer e potrebbe rivelarsi più efficiente qualora si preveda che un numero ridotto di nodi abbandoni la rete senza chiamare `Unregister`.  
   
 ## <a name="registrationlifetime-and-refresh"></a>RegistrationLifetime e Refresh  
  Quando un nodo effettua la registrazione con un servizio resolver, riceve un oggetto <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> dal servizio. La proprietà `RegistrationLifetime` di questo oggetto indica al nodo il tempo a sua disposizione prima che scada la registrazione e venga rimosso dal servizio resolver. Se, ad esempio, `RegistrationLifetime` è pari a 2 minuti, il nodo deve chiamare `Refresh` in meno di 2 minuti per assicurarsi che il record rimanga aggiornato e non venga eliminato. Quando il servizio resolver riceve una richiesta `Refresh`, cerca il record e reimposta la data di scadenza. Refresh restituisce un oggetto <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> con una proprietà `RegistrationLifetime`.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Resolver del peer](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+- [Resolver del peer](peer-resolvers.md)

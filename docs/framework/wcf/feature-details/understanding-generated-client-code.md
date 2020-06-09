@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-ms.openlocfilehash: 6bc921355e54023ead3a308a7877ab609f868221
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f04b67ae13307fb3c2a2981204526880f55d58f1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968630"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595063"
 ---
 # <a name="understanding-generated-client-code"></a>Informazioni sul codice client generato
-Lo [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) genera il codice client e un file di configurazione dell'applicazione client da usare per la compilazione di applicazioni client. In questo argomento viene fornita una panoramica degli esempi di codice generati per gli scenari del contratto di servizio standard. Per ulteriori informazioni sulla compilazione di un'applicazione client utilizzando il codice generato, vedere [Panoramica dei client WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
+Lo [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) genera il codice client e un file di configurazione dell'applicazione client da usare per la compilazione di applicazioni client. In questo argomento viene fornita una panoramica degli esempi di codice generati per gli scenari del contratto di servizio standard. Per ulteriori informazioni sulla compilazione di un'applicazione client utilizzando il codice generato, vedere [Panoramica dei client WCF](../wcf-client-overview.md).  
   
 ## <a name="overview"></a>Panoramica  
  Se si utilizza Visual Studio per generare tipi di client Windows Communication Foundation (WCF) per il progetto, in genere non è necessario esaminare il codice client generato. Se non si usa un ambiente di sviluppo che esegue automaticamente gli stessi servizi, è possibile usare uno strumento quale Svcutil.exe per generare codice client e usare tale codice per sviluppare l'applicazione client.  
@@ -39,14 +39,14 @@ Lo [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- È possibile utilizzare l'interfaccia del contratto di servizio generata insieme <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> alla classe per creare un oggetto canale WCF con cui richiamare le operazioni del servizio. Per altre informazioni, vedere [Procedura: Usare ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md).  
+ È possibile utilizzare l'interfaccia del contratto di servizio generata insieme alla <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> classe per creare un oggetto canale WCF con cui richiamare le operazioni del servizio. Per altre informazioni, vedere [procedura: usare ChannelFactory](how-to-use-the-channelfactory.md).  
   
 ### <a name="finding-wcf-client-classes"></a>Ricerca della classi client WCF  
- Per individuare la classe client WCF che implementa il contratto di servizio che si desidera utilizzare, cercare un'estensione di <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>, in cui il parametro di tipo è l'interfaccia del contratto di servizio precedentemente individuata e che estende tale interfaccia. Nell'esempio di codice seguente viene illustrata la classe <xref:System.ServiceModel.ClientBase%601> del tipo `ISampleService`.  
+ Per individuare la classe client WCF che implementa il contratto di servizio che si desidera utilizzare, cercare un'estensione di <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> , in cui il parametro di tipo è l'interfaccia del contratto di servizio precedentemente individuata e che estende tale interfaccia. Nell'esempio di codice seguente viene illustrata la classe <xref:System.ServiceModel.ClientBase%601> del tipo `ISampleService`.  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
- È possibile usare questa classe client WCF creandone una nuova istanza e chiamando i metodi che implementa. Tali metodi richiamano l'operazione del servizio con la quale è progettato e configurato per interagire. Per ulteriori informazioni, vedere [Cenni preliminari sul client WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
+ È possibile usare questa classe client WCF creandone una nuova istanza e chiamando i metodi che implementa. Tali metodi richiamano l'operazione del servizio con la quale è progettato e configurato per interagire. Per ulteriori informazioni, vedere [Cenni preliminari sul client WCF](../wcf-client-overview.md).  
   
 > [!NOTE]
 > Quando SvcUtil.exe genera una classe client WCF, aggiunge <xref:System.Diagnostics.DebuggerStepThroughAttribute> alla classe client che impedisce ai debugger di eseguire la classe client WCF un'istruzione alla volta.  
@@ -60,10 +60,10 @@ Lo [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework
   
  [!code-csharp[C_GeneratedCodeFiles#30](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#30)]  
   
- In questo caso il tipo di dati è il tipo di dettaglio generato da un'eccezione specifica sul client, una <xref:System.ServiceModel.FaultException%601> in cui il parametro di tipo del dettaglio è `microsoft.wcf.documentation.SampleFault`. Per ulteriori informazioni sui tipi di dati, vedere [specifica trasferimento dati nei contratti di servizio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Per ulteriori informazioni sulla gestione delle eccezioni nei client, vedere [invio e ricezione di errori](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  
+ In questo caso il tipo di dati è il tipo di dettaglio generato da un'eccezione specifica sul client, una <xref:System.ServiceModel.FaultException%601> in cui il parametro di tipo del dettaglio è `microsoft.wcf.documentation.SampleFault`. Per ulteriori informazioni sui tipi di dati, vedere [specifica trasferimento dati nei contratti di servizio](specifying-data-transfer-in-service-contracts.md). Per ulteriori informazioni sulla gestione delle eccezioni nei client, vedere [invio e ricezione di errori](../sending-and-receiving-faults.md).  
   
 ### <a name="finding-callback-contracts-for-duplex-services"></a>Individuazione dei contratti di callback per i servizi duplex  
- Se si individua un contratto di servizio per il quale l'interfaccia del contratto specifica un valore per la proprietà <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> , quel contratto specifica un contratto duplex. I contratti duplex richiedono che l'applicazione client crei una classe di callback che implementa il contratto di callback e passa un'istanza di quella classe all'oggetto <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> o <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> usato per comunicare con il servizio. Per ulteriori informazioni sui client duplex, vedere [procedura: Accedere ai servizi con un contratto](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)duplex.  
+ Se si individua un contratto di servizio per il quale l'interfaccia del contratto specifica un valore per la proprietà <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> , quel contratto specifica un contratto duplex. I contratti duplex richiedono che l'applicazione client crei una classe di callback che implementa il contratto di callback e passa un'istanza di quella classe all'oggetto <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> o <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> usato per comunicare con il servizio. Per altre informazioni sui client duplex, vedere [procedura: accedere ai servizi con un contratto duplex](how-to-access-services-with-a-duplex-contract.md).  
   
  Nel contratto seguente viene specificato un contratto di callback di tipo `SampleDuplexHelloCallback`.  
   
@@ -82,4 +82,4 @@ Lo [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica dei client WCF](../../../../docs/framework/wcf/wcf-client-overview.md)
+- [Panoramica dei client WCF](../wcf-client-overview.md)
