@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 3dd21268d4ea7dc59c74889ac94dc86678e91865
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9447487012cae370d35880e5b780465f9434051b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184644"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602622"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Protezione dei messaggi tramite client con tipo di credenziale UserName
-Nella figura seguente viene illustrato un servizio Windows Communication Foundation (WCF) e un client protetto tramite la sicurezza a livello di messaggio. Il servizio viene autenticato con un certificato X.509. Il client esegue l'autenticazione utilizzando un nome utente e una password.  
+Nella figura seguente vengono illustrati un servizio Windows Communication Foundation (WCF) e un client protetti tramite la sicurezza a livello di messaggio. Il servizio viene autenticato con un certificato X.509. Il client esegue l'autenticazione utilizzando un nome utente e una password.  
   
- Per un'applicazione di esempio, vedere [Nome utente di sicurezza dei messaggi](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
+ Per un'applicazione di esempio, vedere [nome utente](../samples/message-security-user-name.md)per la sicurezza dei messaggi.  
   
- ![Sicurezza dei messaggi con l'autenticazione del nome utente](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
+ ![Sicurezza dei messaggi con l'autenticazione del nome utente](media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
@@ -28,7 +28,7 @@ Nella figura seguente viene illustrato un servizio Windows Communication Foundat
 |Integrità|Sì, usando un contesto di sicurezza condiviso|  
 |Riservatezza|Sì, usando un contesto di sicurezza condiviso|  
 |Trasporto|HTTP|  
-|Associazione|<xref:System.ServiceModel.WSHttpBinding>|  
+|Binding|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Service  
  Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
@@ -127,8 +127,8 @@ Nella figura seguente viene illustrato un servizio Windows Communication Foundat
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Sicurezza dei messaggi tramite nome utente](../../../../docs/framework/wcf/samples/message-security-user-name.md)
-- [Identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identità>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Panoramica della sicurezza](security-overview.md)
+- [Sicurezza dei messaggi tramite nome utente](../samples/message-security-user-name.md)
+- [Identità del servizio e autenticazione](service-identity-and-authentication.md)
+- [\<identity>](../../configure-apps/file-schema/wcf/identity.md)
 - [Sicurezza e protezione](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

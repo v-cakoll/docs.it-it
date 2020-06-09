@@ -2,19 +2,19 @@
 title: Sito Web che ospita un'applicazione in coda
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: 36c35fe0590ad9fc728641313d4175a432d7ccaa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 17c3d2167d3f98017c5f366ab0d700d9fb889f82
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951570"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600140"
 ---
 # <a name="web-hosting-a-queued-application"></a>Sito Web che ospita un'applicazione in coda
-Il servizio Attivazione processo Windows (WAS) gestisce l'attivazione e la durata dei processi di lavoro che contengono applicazioni che ospitano i servizi Windows Communication Foundation (WCF). Il modello di processo WAS generalizza il modello di processo IIS 6,0 per il server HTTP rimuovendo la dipendenza da HTTP. Questo consente ai servizi WCF di utilizzare protocolli HTTP e non HTTP, ad esempio NET. MSMQ e MSMQ. FormatName, in un ambiente host che supporta l'attivazione basata su messaggi e offre la possibilità di ospitare un numero elevato di applicazioni in un determinato computer.  
+Il servizio WAS (Windows Process Activation Service, Attivazione processo Windows) gestisce l'attivazione e la durata dei processi di lavoro contenenti le applicazioni che ospitano i servizi WCF (Windows Communication Foundation). Il modello di processo WAS consente di generalizzare il modello di processo IIS 6.0 per il server HTTP eliminando la dipendenza da HTTP. Questo consente ai servizi WCF di utilizzare protocolli HTTP e non HTTP, ad esempio NET. MSMQ e MSMQ. FormatName, in un ambiente host che supporta l'attivazione basata su messaggi e offre la possibilità di ospitare un numero elevato di applicazioni in un determinato computer.  
   
  WAS include un servizio di attivazione di Accodamento messaggi (MSMQ) che attiva un'applicazione in coda quando uno o più i messaggi vengono posizionati in una delle code usate dall'applicazione. Il servizio di attivazione MSMQ è un servizio NT che viene automaticamente avviato per impostazione predefinita.  
   
- Per ulteriori informazioni su WAS e sui relativi vantaggi, vedere [hosting nel servizio di attivazione dei processi di Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). Per ulteriori informazioni su MSMQ, vedere [Cenni preliminari sulle code](../../../../docs/framework/wcf/feature-details/queues-overview.md).
+ Per ulteriori informazioni su WAS e sui relativi vantaggi, vedere [hosting nel servizio di attivazione dei processi di Windows](hosting-in-windows-process-activation-service.md). Per ulteriori informazioni su MSMQ, vedere [Cenni preliminari sulle code](queues-overview.md).
   
 ## <a name="queue-addressing-in-was"></a>Indirizzamento delle code in WAS  
  Le applicazioni WAS hanno indirizzi URL (Uniform Resource Identifier). Gli indirizzi delle applicazioni sono composti di due parti: un prefisso URI di base e un indirizzo relativo specifico dell'applicazione (percorso). Quando vengono congiunte, queste due parti forniscono l'indirizzo esterno di un'applicazione. Il prefisso URI di base viene costruito dal binding del sito e viene usato per tutte le applicazioni nel sito, ad esempio, "NET. MSMQ://localhost", "MSMQ. formatname://localhost" o "NET. TCP://localhost". Gli indirizzi delle applicazioni vengono quindi costruiti prendendo i frammenti di percorso specifici dell'applicazione, ad esempio "/applicationOne", e aggiungendoli al prefisso URI di base per arrivare all'URI dell'applicazione completo, ad esempio "NET. MSMQ://localhost/applicationOne".  
@@ -43,5 +43,5 @@ Il servizio Attivazione processo Windows (WAS) gestisce l'attivazione e la durat
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Gestione dei messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
-- [Endpoint di servizio e indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+- [Gestione dei messaggi non elaborabili](poison-message-handling.md)
+- [Mapping fra gli endpoint di servizio e l'indirizzamento delle code](service-endpoints-and-queue-addressing.md)

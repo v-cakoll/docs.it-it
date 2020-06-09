@@ -1,21 +1,21 @@
 ---
-title: Protezione applicazioni distribuite
+title: Protezione delle applicazioni distribuite
 ms.date: 03/30/2017
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: cb271bcf8fb27bae4c8ef6b60df0f8d2940ecb9a
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 3cae20cfe8d52497646ca173740533a22326c8f8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964832"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599152"
 ---
-# <a name="distributed-application-security"></a>Protezione applicazioni distribuite
+# <a name="distributed-application-security"></a>Protezione delle applicazioni distribuite
 La sicurezza Windows Communication Foundation (WCF) è suddivisa in tre aree funzionali principali: protezione del trasferimento, controllo di accesso e controllo. La protezione di trasferimento, oltre a offrire funzionalità di autenticazione, garantisce integrità e riservatezza. Questa area funzionale utilizza uno dei meccanismi seguenti: protezione a livello di trasporto, protezione a livello di messaggio e `TransportWithMessageCredential`.  
   
- Per una panoramica della sicurezza dei messaggi WCF, vedere [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md). Per ulteriori informazioni sulle altre due parti della sicurezza WCF, vedere [autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) e [controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Per una panoramica della sicurezza dei messaggi WCF, vedere [Panoramica della sicurezza](security-overview.md). Per ulteriori informazioni sulle altre due parti della sicurezza WCF, vedere [autorizzazione](authorization-in-wcf.md) e [controllo](auditing-security-events.md).  
   
 ## <a name="transfer-security-scenarios"></a>Scenari di utilizzo della protezione di trasferimento  
  Tra gli scenari comuni che utilizzano la sicurezza del trasferimento WCF sono inclusi i seguenti:  
@@ -33,18 +33,18 @@ La sicurezza Windows Communication Foundation (WCF) è suddivisa in tre aree fun
 |--------------|-----------------|  
 |Integrità|L' *integrità* è la garanzia che i dati siano completi e accurati, specialmente dopo che è stato attraversato da un punto a un altro ed è possibile che siano stati letti da molti attori. L'integrità garantisce che i dati non subiscano manomissioni e in genere si basa sull'utilizzo di firme digitali nei messaggi.|  
 |Riservatezza|La *riservatezza* è la garanzia che un messaggio non è stato letto da altri utenti del lettore previsto. È ad esempio fondamentale garantire la riservatezza dei numeri di carta di credito trasmessi via Internet. La riservatezza spesso si basa sulla crittografia dei dati mediante uno schema chiave pubblica/chiave privata.|  
-|Autenticazione|L' *autenticazione* è la verifica di un'identità richiesta. Ad esempio, quando si utilizza un conto bancario, è fondamentale garantire che solo il titolare effettivo del conto sia in grado di prelevare fondi. L'autenticazione può essere eseguita in vari modi. Un metodo comune è il sistema utente/password. Un altro metodo è l'utilizzo di un certificato X.509 fornito da terzi.|  
+|Authentication|L' *autenticazione* è la verifica di un'identità richiesta. Ad esempio, quando si utilizza un conto bancario, è fondamentale garantire che solo il titolare effettivo del conto sia in grado di prelevare fondi. L'autenticazione può essere eseguita in vari modi. Un metodo comune è il sistema utente/password. Un altro metodo è l'utilizzo di un certificato X.509 fornito da terzi.|  
   
 ## <a name="security-modes"></a>Modalità di sicurezza  
  In WCF sono disponibili diverse modalità di sicurezza del trasferimento, descritte nella tabella seguente.  
   
 |Modalità|Descrizione|  
 |----------|-----------------|  
-|nessuna|Non viene fornita alcuna protezione né a livello di trasporto né a livello di messaggio. Per impostazione predefinita, nessuna delle associazioni predefinite usa questa modalità, ad eccezione dell'elemento [\<basichttpbinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) oppure, quando si usa il codice, la classe <xref:System.ServiceModel.BasicHttpBinding>.|  
-|Transport|Per implementare la funzionalità di autenticazione reciproca e per garantire l'integrità e la riservatezza dei messaggi viene utilizzato un trasporto protetto, ad esempio HTTPS.|  
-|Messaggio|Per implementare la funzionalità di autenticazione reciproca e per garantire l'integrità e la riservatezza dei messaggi viene utilizzato un sistema di sicurezza basato sui messaggi SOAP. I messaggi SOAP sono protetti in conformità agli standard WS-Security.|  
-|modalità mista|Per implementare la funzionalità di autenticazione del server e per garantire l'integrità e la riservatezza dei messaggi viene utilizzato un trasporto protetto. Per implementare la funzionalità di autenticazione del client viene invece utilizzato un sistema di sicurezza a livello di messaggio conforme a uno standard di sicurezza, ad esempio WS-Security.<br /><br /> L'enumerazione di questa modalità è `TransportWithMessageCredential`.|  
-|Entrambi|Le funzionalità di protezione e autenticazione vengono implementate sia a livello di trasporto sia a livello di messaggio. Questa modalità è disponibile solo nell'elemento [\<netmsmqbinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) .|  
+|nessuno|Non viene fornita alcuna protezione né a livello di trasporto né a livello di messaggio. Per impostazione predefinita, nessuna delle associazioni predefinite usa questa modalità, ad eccezione dell' [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) elemento o, quando si usa il codice, la <xref:System.ServiceModel.BasicHttpBinding> classe.|  
+|Trasporto|Per implementare la funzionalità di autenticazione reciproca e per garantire l'integrità e la riservatezza dei messaggi viene utilizzato un trasporto protetto, ad esempio HTTPS.|  
+|Message|Per implementare la funzionalità di autenticazione reciproca e per garantire l'integrità e la riservatezza dei messaggi viene utilizzato un sistema di sicurezza basato sui messaggi SOAP. I messaggi SOAP sono protetti in conformità agli standard WS-Security.|  
+|Modalità mista|Per implementare la funzionalità di autenticazione del server e per garantire l'integrità e la riservatezza dei messaggi viene utilizzato un trasporto protetto. Per implementare la funzionalità di autenticazione del client viene invece utilizzato un sistema di sicurezza a livello di messaggio conforme a uno standard di sicurezza, ad esempio WS-Security.<br /><br /> L'enumerazione di questa modalità è `TransportWithMessageCredential`.|  
+|Entrambi|Le funzionalità di protezione e autenticazione vengono implementate sia a livello di trasporto sia a livello di messaggio. Questa modalità è disponibile solo nell' [\<netMsmqBinding>](../../configure-apps/file-schema/wcf/netmsmqbinding.md) elemento.|  
   
 ## <a name="credentials-and-transfer-security"></a>Protezione di trasferimento basata sull'utilizzo di credenziali  
  Una *credenziale* è costituita dai dati presentati per stabilire un'identità o funzionalità rivendicate. Quando si presenta una credenziale, è necessario presentare sia i dati sia la prova di possesso dei dati. WCF supporta un'ampia gamma di tipi di credenziali a livello di sicurezza del trasporto e del messaggio. È possibile specificare un tipo di credenziale per un'associazione WCF.  
@@ -57,28 +57,28 @@ La sicurezza Windows Communication Foundation (WCF) è suddivisa in tre aree fun
   
  Nel secondo tipo di credenziale, il nome del soggetto, il nome alternativo del soggetto o i campi specifici del certificato possono essere utilizzati per rappresentare l'attestazione di identità e/o di funzionalità. La prova di possesso dei dati in questo caso viene fornita tramite una firma creata mediante la chiave privata associata alla credenziale.  
   
- Per ulteriori informazioni sulla sicurezza del trasferimento di programmazione e sulla specifica delle credenziali, vedere [Binding e](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) comportamenti di sicurezza e [sicurezza](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
+ Per ulteriori informazioni sulla sicurezza del trasferimento di programmazione e sulla specifica delle credenziali, vedere [Binding e](bindings-and-security.md) comportamenti di sicurezza e [sicurezza](security-behaviors-in-wcf.md).  
   
 ### <a name="transport-client-credential-types"></a>Tipi di credenziale utilizzati nella protezione client a livello di trasporto  
  La tabella seguente mostra i valori utilizzabili quando si crea un'applicazione che utilizza la protezione a livello di trasporto. I valori riportati possono essere utilizzati nelle impostazioni del codice o delle associazioni.  
   
-|Impostazione di|Descrizione|  
+|Impostazione|Descrizione|  
 |-------------|-----------------|  
-|nessuna|Specifica che il client non deve presentare alcuna credenziale. Il client viene pertanto autenticato come anonimo.|  
+|nessuno|Specifica che il client non deve presentare alcuna credenziale. Il client viene pertanto autenticato come anonimo.|  
 |Basic|Specifica l'autenticazione di base. Per ulteriori informazioni, vedere documento RFC2617, "[autenticazione http: autenticazione di base e digest](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)".|  
 |Digest|Specifica l'autenticazione digest. Per ulteriori informazioni, vedere documento RFC2617, "[autenticazione http: autenticazione di base e digest](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)".|  
-|Ntlm|Specifica l'autenticazione di Windows basata sulla negoziazione SSPI in un dominio di Windows.<br /><br /> La negoziazione SSPI comporta l'utilizzo del protocollo Kerberos o del protocollo NTLM (NT LanMan).|  
-|Portale di|Specifica l'autenticazione di Windows basata su SSPI in un dominio di Windows. L'interfaccia SSPI sceglie come servizio di autenticazione il protocollo Kerberos oppure il protocollo NTLM.<br /><br /> In particolare, tenta prima di scegliere il protocollo Kerberos e, se il tentativo non riesce, utilizza il protocollo NTLM.|  
+|NTLM|Specifica l'autenticazione di Windows basata sulla negoziazione SSPI in un dominio di Windows.<br /><br /> La negoziazione SSPI comporta l'utilizzo del protocollo Kerberos o del protocollo NTLM (NT LanMan).|  
+|Windows|Specifica l'autenticazione di Windows basata su SSPI in un dominio di Windows. L'interfaccia SSPI sceglie come servizio di autenticazione il protocollo Kerberos oppure il protocollo NTLM.<br /><br /> In particolare, tenta prima di scegliere il protocollo Kerberos e, se il tentativo non riesce, utilizza il protocollo NTLM.|  
 |Certificato|L'autenticazione del client viene eseguita tramite un certificato, in genere X.509.|  
   
 ### <a name="message-client-credential-types"></a>Tipi di credenziale usati nella sicurezza client a livello di messaggio  
  La tabella seguente mostra i valori utilizzabili quando si crea un'applicazione che utilizza la protezione a livello di messaggio. I valori riportati possono essere utilizzati nelle impostazioni del codice o delle associazioni.  
   
-|Impostazione di|Descrizione|  
+|Impostazione|Descrizione|  
 |-------------|-----------------|  
-|nessuna|Consente al servizio di interagire con client anonimi.|  
-|Portale di|Consente lo scambio di messaggi SOAP all'interno di un contesto autenticato di una credenziale Windows. Viene utilizzato il meccanismo di negoziazione SSPI per scegliere il protocollo Kerberos o il protocollo NTLM come servizio di autenticazione.|  
-|Nome utente|Consente al servizio di richiedere che l'autenticazione del client si basi su una credenziale di tipo nome utente. Si noti che WCF non consente operazioni di crittografia con il nome utente, ad esempio la generazione di una firma o la crittografia di dati. Di conseguenza, WCF impone che il trasporto sia protetto quando si utilizzano le credenziali del nome utente.|  
+|nessuno|Consente al servizio di interagire con client anonimi.|  
+|Windows|Consente lo scambio di messaggi SOAP all'interno di un contesto autenticato di una credenziale Windows. Viene utilizzato il meccanismo di negoziazione SSPI per scegliere il protocollo Kerberos o il protocollo NTLM come servizio di autenticazione.|  
+|Username|Consente al servizio di richiedere che l'autenticazione del client si basi su una credenziale di tipo nome utente. Si noti che WCF non consente operazioni di crittografia con il nome utente, ad esempio la generazione di una firma o la crittografia di dati. Di conseguenza, WCF impone che il trasporto sia protetto quando si utilizzano le credenziali del nome utente.|  
 |Certificato|Consente al servizio di richiedere che l'autenticazione del client si basi su un certificato.|  
 |CardSpace|Consente al servizio di richiedere che il client venga autenticato tramite CardSpace.|  
   
@@ -96,7 +96,7 @@ La sicurezza Windows Communication Foundation (WCF) è suddivisa in tre aree fun
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica della creazione di endpoint](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Cenni preliminari sulla creazione di endpoint](../endpoint-creation-overview.md)
+- [Associazioni fornite dal sistema](../system-provided-bindings.md)
+- [Panoramica della sicurezza](security-overview.md)
+- [Sicurezza e protezione](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

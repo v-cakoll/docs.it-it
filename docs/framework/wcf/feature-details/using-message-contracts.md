@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 18d0ea97f1de40044d40fa85c9792c809fb73346
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1b102b97c62df0bb8b031ded0f9165a11f8a8911
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959888"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600270"
 ---
 # <a name="using-message-contracts"></a>Utilizzo dei contratti di messaggio
-In genere, quando si compilano applicazioni Windows Communication Foundation (WCF), gli sviluppatori prestano particolare attenzione alle strutture dei dati e ai problemi di serializzazione e non devono preoccuparsi della struttura dei messaggi in cui sono trasportati i dati. Per queste applicazioni, la creazione dei contratti dati per i parametri o dei valori restituiti è semplice. Per ulteriori informazioni, vedere [specifica trasferimento dati nei contratti di servizio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
+In genere, quando si compilano applicazioni Windows Communication Foundation (WCF), gli sviluppatori prestano particolare attenzione alle strutture dei dati e ai problemi di serializzazione e non devono preoccuparsi della struttura dei messaggi in cui sono trasportati i dati. Per queste applicazioni, la creazione dei contratti dati per i parametri o dei valori restituiti è semplice. Per ulteriori informazioni, vedere [specifica trasferimento dati nei contratti di servizio](specifying-data-transfer-in-service-contracts.md).  
   
  Talvolta, tuttavia, il controllo completo della struttura di un messaggio SOAP è importante quanto quello del suo contenuto. Questo è particolarmente vero quando l'interoperabilità è importante o per controllare in modo specifico problemi di sicurezza a livello di messaggio o di parte di esso. In questi casi, è possibile creare un *contratto di messaggio* che consente di specificare la struttura del messaggio SOAP preciso necessario.  
   
@@ -31,7 +31,7 @@ In genere, quando si compilano applicazioni Windows Communication Foundation (WC
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- Un contratto dati è in genere sufficiente per definire lo schema per i messaggi. Nell'esempio precedente, è sufficiente per la maggior parte delle applicazioni se `BankingTransaction` e `BankingTransactionResponse` hanno contratti dati per definire il contenuto dei messaggi SOAP sottostanti. Per ulteriori informazioni sui contratti dati, vedere [utilizzo di contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Un contratto dati è in genere sufficiente per definire lo schema per i messaggi. Nell'esempio precedente, è sufficiente per la maggior parte delle applicazioni se `BankingTransaction` e `BankingTransactionResponse` hanno contratti dati per definire il contenuto dei messaggi SOAP sottostanti. Per ulteriori informazioni sui contratti dati, vedere [utilizzo di contratti dati](using-data-contracts.md).  
   
  Talvolta è tuttavia necessario controllare esattamente la modalità di trasmissione in rete della struttura del messaggio SOAP. Lo scenario più comune è l'inserimento di intestazioni SOAP personalizzate. Un altro scenario comune è quello della definizione di proprietà di sicurezza per le intestazioni e il corpo del messaggio, ovvero, quando è necessario decidere se questi elementi devono essere firmati digitalmente e crittografati. Infine, alcuni stack SOAP di terze parti richiedono che i messaggi abbiano un formato specifico. Questo controllo è fornito da operazioni in stile messaggistica.  
   
@@ -154,7 +154,7 @@ public class BankingTransaction
 > La presenza di più di una parte del corpo del messaggio in messaggi non incapsulati non è conforme a WS-I Basic Profile 1.1 e non è consigliata quando si progettano nuovi contratti di messaggio. In certi scenari di interoperabilità, può tuttavia essere necessario avere più di una parte del corpo del messaggio non incapsulato. Se si ha intenzione di trasmettere più di un pezzo di dati in un corpo del messaggio, è consigliato utilizzare la modalità predefinita (incapsulata). La presenza di più di un'intestazione del messaggio nei messaggi non incapsulati è completamente accettabile.  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>Utilizzo di tipi personalizzati nei contratti di messaggio  
- Ogni singola intestazione del messaggio e parte del corpo del messaggio viene serializzata (trasformata in XML) utilizzando il motore di serializzazione scelto per il contratto di servizio in cui il messaggio è utilizzato. Il motore di serializzazione predefinito, `XmlFormatter`, è in grado di gestire qualsiasi tipo che abbia un contratto dati, in modo esplicito (con <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) o implicito (se si tratta di un tipo primitivo, con <xref:System.SerializableAttribute?displayProperty=nameWithType> e così via). Per ulteriori informazioni, vedere [utilizzo di contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Ogni singola intestazione del messaggio e parte del corpo del messaggio viene serializzata (trasformata in XML) utilizzando il motore di serializzazione scelto per il contratto di servizio in cui il messaggio è utilizzato. Il motore di serializzazione predefinito, `XmlFormatter`, è in grado di gestire qualsiasi tipo che abbia un contratto dati, in modo esplicito (con <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) o implicito (se si tratta di un tipo primitivo, con <xref:System.SerializableAttribute?displayProperty=nameWithType> e così via). Per ulteriori informazioni, vedere [utilizzo di contratti dati](using-data-contracts.md).  
   
  Nell'esempio precedente, i tipi `Operation` e `BankingTransactionData` devono avere un contratto dati e `transactionDate` è serializzabile perché <xref:System.DateTime> è un primitivo e, di conseguenza, ha un contratto dati implicito.  
   
@@ -303,7 +303,7 @@ bt.documentApprover.MustUnderstand = false; // override the static default of 't
  Quando si riceve un messaggio e quindi lo si invia nuovamente all'origine, il roundtrip delle impostazioni degli attributi SOAP viene eseguito solo per le intestazioni di tipo <xref:System.ServiceModel.MessageHeader%601>.  
   
 ## <a name="order-of-soap-body-parts"></a>Ordine delle parti del corpo SOAP  
- In alcune circostanze, potrebbe essere necessario controllare l'ordine delle parti del corpo. Per impostazione predefinita, l'ordine degli elementi del corpo è alfabetico ma può essere controllato dalla proprietà <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType>. Questa proprietà ha la stessa semantica della proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType>, a parte il comportamento negli scenari di ereditarietà. Nei contratti di messaggio, i membri del corpo di tipo base non sono ordinati prima dei membri del corpo di tipo derivato. Per ulteriori informazioni, vedere l' [ordine dei membri dati](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+ In alcune circostanze, potrebbe essere necessario controllare l'ordine delle parti del corpo. Per impostazione predefinita, l'ordine degli elementi del corpo è alfabetico ma può essere controllato dalla proprietà <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType>. Questa proprietà ha la stessa semantica della proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType>, a parte il comportamento negli scenari di ereditarietà. Nei contratti di messaggio, i membri del corpo di tipo base non sono ordinati prima dei membri del corpo di tipo derivato. Per ulteriori informazioni, vedere l' [ordine dei membri dati](data-member-order.md).  
   
  Nell'esempio seguente, `amount` normalmente verrebbe per primo perché è primo alfabeticamente. La proprietà <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> l'inserisce tuttavia nella terza posizione.  
   
@@ -359,7 +359,7 @@ public class PatientRecord : PersonRecord
  La classe `PatientRecord` descrive un messaggio con un'intestazione chiamata `ID`. L'intestazione corrisponde a `personID` e non al membro `patientID`, perché viene scelto il membro più di base. Pertanto, in questo caso il campo `patientID` è inutile. Il corpo del messaggio contiene l'elemento `diagnosis` seguito dall'elemento `patientName`, perché questo è l'ordine alfabetico. Si noti che nell'esempio viene illustrato uno schema assolutamente sconsigliato: sia il contratto di messaggio di base che quello del messaggio derivato hanno parti di corpo del messaggio.  
   
 ## <a name="wsdl-considerations"></a>Considerazioni su WSDL  
- Quando si genera un contratto Web Services Description Language (WSDL) da un servizio che utilizza contratti di messaggio, è importante ricordare che non tutte le funzionalità del contratto di messaggio vengono riflesse nel WSDL risultante. Si considerino i punti seguenti:  
+ Quando si genera un contratto Web Services Description Language (WSDL) da un servizio che utilizza contratti di messaggio, è importante ricordare che non tutte le funzionalità del contratto di messaggio vengono riflesse nel WSDL risultante. Tenere presente quanto segue:  
   
 - WSDL non è in grado di esprimere il concetto di una matrice di intestazioni. Quando si creano messaggi con una matrice di intestazioni utilizzando <xref:System.ServiceModel.MessageHeaderArrayAttribute>, il WSDL risultante riflette solo un'intestazione anziché la matrice.  
   
@@ -449,5 +449,5 @@ public class OperationDetails
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Uso di contratti di dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Progettazione e implementazione di servizi](../../../../docs/framework/wcf/designing-and-implementing-services.md)
+- [Using Data Contracts](using-data-contracts.md)
+- [Progettazione e implementazione di servizi](../designing-and-implementing-services.md)

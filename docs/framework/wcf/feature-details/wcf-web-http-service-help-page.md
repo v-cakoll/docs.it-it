@@ -2,15 +2,15 @@
 title: Pagina della Guida del servizio HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: 8d798c8080bf1afee87305cd00a27db2ece7e970
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ef42457dea8bfe12a3e5054c5eacdf5a2964fdc7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975931"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600166"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Pagina della Guida del servizio HTTP Web WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] include una pagina automatica della Guida per i servizi HTTP WEB WCF. Questa pagina della Guida contiene una descrizione di ogni operazione, formato di richiesta e risposta e schema. Per impostazione predefinita, questa funzionalità è disabilitata. Quando un utente passa a un servizio HTTP WEB WCF e aggiunge "/Help" alla fine dell'URL, ad esempio `http://localhost:8000/Customers/Help`, viene visualizzata una pagina della guida simile alla seguente.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] include una pagina automatica della Guida per i servizi HTTP WEB WCF. Questa pagina della Guida contiene una descrizione di ogni operazione, formato di richiesta e risposta e schema. Per impostazione predefinita, questa funzionalità è disabilitata. Quando un utente accede a un servizio HTTP WEB WCF e aggiunge "/Help" alla fine dell'URL, ad esempio `http://localhost:8000/Customers/Help` , viene visualizzata una pagina della guida simile alla seguente.  
   
  ![Un browser con la pagina della Guida di WCF REST aperta.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
@@ -240,4 +240,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- Per ulteriori informazioni sullo schema di serializzazione del contratto dati, vedere [riferimento allo schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).
+ Per ulteriori informazioni sullo schema di serializzazione del contratto dati, vedere [riferimento allo schema del contratto dati](data-contract-schema-reference.md).

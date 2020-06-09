@@ -1,19 +1,19 @@
 ---
-title: "Procedura: Controllare l'istanza del servizio"
+title: "Procedura: controllare l'istanza del servizio"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e0b12b34-8004-443a-a46d-83a5c00f2601
-ms.openlocfilehash: e8efbc5a3dec5f60dbefc8f6dc377d97b29b7653
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a73dd90d268c61e0df974861753119e205a870f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699617"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599074"
 ---
-# <a name="how-to-control-service-instancing"></a>Procedura: Controllare l'istanza del servizio
-L'impostazione della modalità di istanza di un servizio consente di specificare quando vengono creati una classe <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> e il relativo oggetto servizio definito dall'utente associato. Per un elenco delle modalità possibili, vedere l'enumerazione <xref:System.ServiceModel.InstanceContextMode>. Per altre informazioni sui comportamenti, vedere [configurazione ed estensione del Runtime dei comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md). Per alcuni esempi funzionanti, vedere [comportamenti](../../../../docs/framework/wcf/samples/behaviors.md).  
+# <a name="how-to-control-service-instancing"></a>Procedura: controllare l'istanza del servizio
+L'impostazione della modalità di istanza di un servizio consente di specificare quando vengono creati una classe <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> e il relativo oggetto servizio definito dall'utente associato. Per un elenco delle modalità possibili, vedere l'enumerazione <xref:System.ServiceModel.InstanceContextMode>. Per ulteriori informazioni sui comportamenti, vedere [configurazione ed estensione del runtime con i comportamenti](../extending/configuring-and-extending-the-runtime-with-behaviors.md). Per esempi funzionanti, vedere [comportamenti](../samples/behaviors.md).  
   
 ### <a name="to-control-the-service-instance-lifetime-using-code"></a>Per controllare la durata dell'istanza del servizio tramite codice  
   
@@ -35,4 +35,4 @@ L'impostazione della modalità di istanza di un servizio consente di specificare
 - <xref:System.ServiceModel.ServiceBehaviorAttribute>
 - <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>
 - <xref:System.ServiceModel.InstanceContextMode>
-- [Servizio: Esempi di comportamenti](../samples/behaviors.md)
+- [Servizio: esempi di comportamento](../samples/behaviors.md)

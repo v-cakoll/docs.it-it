@@ -6,17 +6,17 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: 6751513b72f732bd7392de11a203467a9ead1bce
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a07d7c6da71f4195cb1641ae8ac7585b4158ed63
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743352"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600971"
 ---
 # <a name="wcf-security-terminology"></a>Terminologia di sicurezza di WCF
 Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza possono risultare poco chiari. Questo argomento fornisce brevi spiegazioni di alcuni termini di sicurezza, senza tuttavia offrire una descrizione dettagliata per ognuno degli argomenti correlati.  
   
- Per ulteriori informazioni sui termini utilizzati nella documentazione di Windows Communication Foundation (WCF), vedere [concetti di base Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Per ulteriori informazioni sui termini utilizzati nella documentazione di Windows Communication Foundation (WCF), vedere [concetti di base Windows Communication Foundation](../fundamental-concepts.md).  
   
  elenco di controllo di accesso (ACL)  
  Elenco di protezioni applicate a un oggetto, Un oggetto può essere un file, un processo, un evento o qualsiasi altro elemento con un descrittore di sicurezza. Una voce in un ACL è una voce di controllo di accesso (ACE). Esistono due tipi di ACL: discrezionale e di sistema.  
@@ -24,7 +24,7 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  autenticazione  
  Processo di verifica dell'attestazione di identità di un utente, un computer, un servizio o un processo.  
   
- autorizzazione  
+ authorization  
  Controllo dell'accesso e dei diritti di accesso a una determinata risorsa. È ad esempio possibile autorizzare i membri di un gruppo a leggere un file, ma consentire esclusivamente ai membri di un altro gruppo di modificare tale file.  
   
  Certificato dell'autorità di certificazione (CA)  
@@ -41,7 +41,7 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  archivio certificati  
  Un archivio certificati è in genere un archivio permanente in cui vengono memorizzati i certificati, gli elenchi di revoche di certificati (CRL, Certificate Revocation List) e gli elenchi di certificati attendibili (CTL, Certificate Trust List). Quando si utilizzano certificati che non richiedono un'archiviazione permanente è tuttavia possibile creare e aprire un archivio certificati che risiede soltanto in memoria.  
   
- attestazioni  
+ claims  
  Informazioni passate da un'entità a un'altra per verificare l'identità del mittente. Un token nome utente/password e un certificato X.509 sono esempi di attestazioni.  
   
  certificato client  
@@ -56,7 +56,7 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  firma digitale  
  Dati che associano l'identità di un mittente alle informazioni inviate. Una firma digitale può essere inviata come entità a parte oppure insieme a un messaggio, un file o un qualsiasi altro contenuto con codifica digitale. Le firme digitali vengono utilizzate negli ambienti a chiave pubblica e forniscono servizi di autenticazione e integrità.  
   
- encoding  
+ codifica  
  Modalità di conversione dei dati in flussi di bit. La codifica è una parte del processo di serializzazione che converte i dati in un flusso di zero e uno.  
   
  coppia di chiavi di scambio  
@@ -68,7 +68,7 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  algoritmo di hash  
  Algoritmo utilizzato per generare un valore hash relativo a un dato, ad esempio un messaggio o una chiave di sessione. Alcuni esempi tipici di algoritmi di hash sono MD2, MD4, MD5 e SHA-1.  
   
- protocollo Kerberos  
+ Protocollo Kerberos  
  Protocollo che definisce la modalità di interazione fra i client e il servizio di autenticazione di rete. I client ottengono ticket dal centro di distribuzione chiave Kerberos (KDC, Kerberos Key Distribution Center) e quindi presentano questi ticket ai server durante la procedura di connessione. I ticket Kerberos rappresentano le credenziali di rete del client.  
   
  autorità di sicurezza locale (LSA, Local Security Authority)  
@@ -77,7 +77,7 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  Negotiate  
  Provider SSP (Security Support Provider) che funziona da livello applicazione tra l'interfaccia SSPI (Security Support Provider Interface) e gli altri provider SSP. Un'applicazione che chiama l'interfaccia SSPI per accedere a una rete può specificare un provider SSP per l'elaborazione della richiesta. Se l'applicazione specifica l'elemento `Negotiate`, il provider `Negotiate` analizza la richiesta e sceglie il miglior provider SSP per gestire la richiesta in base ai criteri di sicurezza configurati dall'utente.  
   
- parametro nonce  
+ nonce  
  Valore generato casualmente utilizzato per respingere gli attacchi di tipo "replay".  
   
  non ripudio  
@@ -89,16 +89,16 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  PKCS #7  
  Standard della sintassi dei messaggi crittografati. Si tratta di una sintassi generale per dati crittografabili, come firme digitali e crittografia, che inoltre fornisce una sintassi per distribuire al messaggio certificati o elenchi di revoche di certificati e altri attributi dei messaggi, ad esempio un timestamp.  
   
- testo non crittografato  
+ plaintext  
  Messaggio I messaggi in testo non crittografato vengono talvolta indicati come messaggi non *crittografati* .  
   
- privilege  
+ privilegio  
  Diritto di un utente a eseguire varie operazioni di sistema, come l'arresto del sistema, il caricamento dei driver di periferica o la modifica dell'ora del sistema. Il token di accesso di un utente contiene l'elenco dei privilegi assegnati a tale utente o ai gruppi di appartenenza di tale utente.  
   
  chiave privata  
  Metà segreta di una coppia di chiavi utilizzata in un algoritmo a chiave pubblica. Le chiavi private vengono in genere utilizzate per crittografare una chiave di sessione simmetrica, includere una firma digitale in un messaggio o decrittografare un messaggio crittografato con la chiave pubblica corrispondente. Vedere anche il termine "chiave pubblica".  
   
- SAP  
+ processo  
  Contesto di sicurezza in cui un'applicazione viene eseguita. In genere, il contesto di sicurezza è associato a un utente, pertanto tutte le applicazioni che sono in esecuzione all'interno di un dato processo ereditano le autorizzazioni e i privilegi dell'utente che le possiede.  
   
  coppia di chiavi pubblica/privata  
@@ -143,7 +143,7 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  certificato server  
  Certificato utilizzato per l'autenticazione del server, ad esempio durante l'autenticazione di un server Web da parte di un browser Web. Quando un client tenta di utilizzare un browser Web per accedere a un server Web protetto, il server invia il proprio certificato al browser per consentire a quest'ultimo di verificare l'identità del server.  
   
- di peering privata  
+ sessione  
  Scambio di messaggi protetto mediante un solo elemento di materiale per le chiavi. Ad esempio, le sessioni SSL utilizzano un'unica chiave per proteggere lo scambio di più messaggi.  
   
  chiave di sessione  
@@ -173,7 +173,7 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  Software che decide se un determinato file è attendibile. La decisione si basa sul certificato associato al file.  
   
  nome UPN (User Principal Name)  
- Un nome di account utente (talvolta definito nome di *accesso dell'utente*) e un nome di dominio che identifica il dominio in cui si trova l'account utente. Questo nome rappresenta il formato standard dei nomi di accesso a un dominio Windows. Il formato è: someone@example.com (per un indirizzo di posta elettronica).  
+ Un nome di account utente (talvolta definito nome di *accesso dell'utente*) e un nome di dominio che identifica il dominio in cui si trova l'account utente. Questo nome rappresenta il formato standard dei nomi di accesso a un dominio Windows. Il formato è: someone@example.com (come per un indirizzo di posta elettronica).  
   
 > [!NOTE]
 > Oltre al formato UPN standard, WCF accetta UPN nel formato di livello inferiore, ad esempio cohowinery. com\someone.  
@@ -183,6 +183,6 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Concetti fondamentali di Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md)
-- [Concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Concetti fondamentali di Windows Communication Foundation](../fundamental-concepts.md)
+- [Concetti relativi alla sicurezza](security-concepts.md)
+- [Sicurezza e protezione](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

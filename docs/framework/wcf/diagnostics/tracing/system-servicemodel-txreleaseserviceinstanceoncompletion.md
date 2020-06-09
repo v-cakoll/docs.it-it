@@ -2,12 +2,12 @@
 title: System.ServiceModel.TxReleaseServiceInstanceOnCompletion
 ms.date: 03/30/2017
 ms.assetid: e167bad3-861f-43e4-9e78-9c275cf64a29
-ms.openlocfilehash: 5edde9eebf2f11ebdb55e12c2a225e55afdeb11d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2efcd9c4ed81441bc12c17d0afea6521a5014e64
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779509"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601387"
 ---
 # <a name="systemservicemodeltxreleaseserviceinstanceoncompletion"></a>System.ServiceModel.TxReleaseServiceInstanceOnCompletion
 L'istanza del servizio è stata rilasciata al completamento della transazione '{0}' perché la classe ServiceBehaviorAttribute di ReleaseServiceInstanceOnTransactionComplete è stata impostata su true.  
@@ -17,6 +17,6 @@ L'istanza del servizio è stata rilasciata al completamento della transazione '{
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Traccia](index.md)
+- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](using-tracing-to-troubleshoot-your-application.md)
+- [Amministrazione e diagnostica](../index.md)

@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: 38ad03d64d95e0653fba8018c59c62db9a698096
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 0be5bf0dbe6416febb898fb5150c5a516c8b0969
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715115"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591527"
 ---
 # <a name="service-transaction-behavior"></a>Comportamento delle transazioni di un servizio
 
-In questo esempio vengono illustrati l'uso di una transazione coordinata dal client e le impostazioni di ServiceBehaviorAttribute e OperationBehaviorAttribute per controllare il comportamento delle transazioni di un servizio. Questo esempio si basa sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice, ma viene esteso per gestire un log del server delle operazioni eseguite in una tabella di database e un totale di esecuzione con stato per le operazioni della calcolatrice. Le scritture rese permanenti nella tabella del registro sul server dipendono dal risultato di una transazione coordinata dal client: se la transazione client non viene completata, la transazione del servizio Web assicura che non venga eseguito il commit degli aggiornamenti al database.
+In questo esempio vengono illustrati l'uso di una transazione coordinata dal client e le impostazioni di ServiceBehaviorAttribute e OperationBehaviorAttribute per controllare il comportamento delle transazioni di un servizio. Questo esempio si basa sul [Introduzione](getting-started-sample.md) che implementa un servizio di calcolatrice, ma viene esteso per gestire un log del server delle operazioni eseguite in una tabella di database e un totale di esecuzione con stato per le operazioni della calcolatrice. Le scritture rese permanenti nella tabella del registro sul server dipendono dal risultato di una transazione coordinata dal client: se la transazione client non viene completata, la transazione del servizio Web assicura che non venga eseguito il commit degli aggiornamenti al database.
 
 > [!NOTE]
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.
@@ -101,7 +101,7 @@ Nel servizio sono presenti tre attribuiti che influiscono sul comportamento dell
 
   - La proprietà `ReleaseServiceInstanceOnTransactionComplete` specifica se l'istanza del servizio sottostante viene riciclata al completamento di una transazione. Impostando questa proprietà su `false`, il servizio gestisce la stessa istanza del servizio tra varie richieste di operazione. Questo aspetto è necessario per gestire il totale parziale. Se la proprietà è impostata su `true`, viene generata una nuova istanza dopo ogni azione completata.
 
-  - La proprietà `TransactionAutoCompleteOnSessionClose` specifica se alla chiusura della sessione corrente vengono completate le transazioni in attesa. Impostando la proprietà su `false`, le singole operazioni sono necessarie per impostare la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType> su `true` o per richiedere in modo esplicito una chiamata al metodo <xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType> per completare le transazioni. Nell'esempio vengono illustrati entrambi gli approcci.
+  - La proprietà `TransactionAutoCompleteOnSessionClose` specifica se alla chiusura della sessione corrente vengono completate le transazioni in attesa. Impostando la `false` proprietà su, le singole operazioni devono impostare la <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType> proprietà su `true` o per richiedere in modo esplicito una chiamata al <xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType> metodo per completare le transazioni. Nell'esempio vengono illustrati entrambi gli approcci.
 
 - Per `ServiceContractAttribute`:
 
@@ -209,11 +209,11 @@ Il risultato di queste proceduta è che non viene eseguito il commit di nessuna 
 
 1. Verificare di avere installato SQL Server 2005 Express Edition o SQL Server 2005. Nel file App.config del servizio, può essere impostato il database `connectionString` oppure le interazioni del database possono essere disabilitate impostando il valore `usingSql` di appSettings su `false`.
 
-2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](building-the-samples.md).
 
-3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](running-the-samples.md).
 
-Se si esegue l'esempio tra più computer, è necessario configurare Microsoft Distributed Transaction Coordinator (MSDTC) per abilitare il flusso delle transazioni di rete e usare lo strumento WsatConfig. exe per abilitare la rete delle transazioni Windows Communication Foundation (WCF) supporto.
+Se si esegue l'esempio tra più computer, è necessario configurare Microsoft Distributed Transaction Coordinator (MSDTC) per abilitare il flusso delle transazioni di rete e usare lo strumento WsatConfig. exe per abilitare il supporto di rete delle transazioni Windows Communication Foundation (WCF).
 
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>Per configurare Microsoft Distributed Transaction Coordinator (MSDTC) allo scopo di supportare l'esecuzione dell'esempio tra diversi computer
 
@@ -262,6 +262,6 @@ Se si esegue l'esempio tra più computer, è necessario configurare Microsoft Di
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) ed [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`

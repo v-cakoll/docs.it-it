@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Esporre un feed come Atom e RSS'
+title: 'Procedura: esporre un feed come Atom e RSS'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: f31f24cfc18f2c56539fe2b4623d54fe77a27797
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e4ce1fa7b494c2317a1bddc57ee6b150c84b9a96
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950602"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593146"
 ---
-# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Procedura: Esporre un feed come Atom e RSS
-Windows Communication Foundation (WCF) consente di creare un servizio che espone un feed di diffusione. In questo argomento viene illustrato come creare un servizio di diffusione che espone un feed di diffusione usando sia Atom 1.0 sia RSS 2.0. Questo servizio espone un endpoint che può restituire uno dei due formati di diffusione. Per motivi di semplicità, il servizio usato in questo esempio è indipendente. In un ambiente di produzione un servizio di questo tipo verrebbe ospitato da IIS o WAS. Per ulteriori informazioni sulle diverse opzioni di hosting WCF, vedere [hosting](../../../../docs/framework/wcf/feature-details/hosting.md).  
+# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Procedura: esporre un feed come Atom e RSS
+Windows Communication Foundation (WCF) consente di creare un servizio che espone un feed di diffusione. In questo argomento viene illustrato come creare un servizio di diffusione che espone un feed di diffusione usando sia Atom 1.0 sia RSS 2.0. Questo servizio espone un endpoint che può restituire uno dei due formati di diffusione. Per motivi di semplicità, il servizio usato in questo esempio è indipendente. In un ambiente di produzione un servizio di questo tipo verrebbe ospitato da IIS o WAS. Per ulteriori informazioni sulle diverse opzioni di hosting WCF, vedere [hosting](hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Per creare un servizio di diffusione di base  
   
@@ -64,9 +64,9 @@ Windows Communication Foundation (WCF) consente di creare un servizio che espone
   
 ### <a name="to-call-getblog-with-an-http-get"></a>Per chiamare GetBlog con HTTP GET  
   
-1. Aprire Internet Explorer, digitare l'URL seguente e premere INVIO: `http://localhost:8000/BlogService/GetBlog`.
+1. Aprire Internet Explorer, digitare l'URL seguente e premere INVIO: `http://localhost:8000/BlogService/GetBlog` .
   
-     L'URL contiene l'indirizzo di base del servizio (`http://localhost:8000/BlogService`), l'indirizzo relativo dell'endpoint e l'operazione del servizio da chiamare.  
+     L'URL contiene l'indirizzo di base del servizio ( `http://localhost:8000/BlogService` ), l'indirizzo relativo dell'endpoint e l'operazione del servizio da chiamare.  
   
 ### <a name="to-call-getblog-from-code"></a>Per chiamare GetBlog() dal codice  
   

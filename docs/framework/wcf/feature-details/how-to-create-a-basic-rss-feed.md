@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Creare un feed RSS di base'
+title: 'Procedura: creare un feed RSS di base'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: 9a07754e8fdad700bd5488f392f80b5c5f907f6e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 872fe325a6705e79d026cd7f6e1f7cfef5145307
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968449"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599022"
 ---
-# <a name="how-to-create-a-basic-rss-feed"></a>Procedura: Creare un feed RSS di base
+# <a name="how-to-create-a-basic-rss-feed"></a>Procedura: creare un feed RSS di base
 Windows Communication Foundation (WCF) consente di creare un servizio che espone un feed di diffusione. In questo argomento viene illustrato come creare un servizio di diffusione che espone un feed di diffusione RSS.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Per creare un servizio di diffusione di base  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) consente di creare un servizio che espone
      [!code-vb[htRssBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    > Tutte le operazioni del servizio che applicano l'attributo <xref:System.ServiceModel.Web.WebGetAttribute> vengono mappate alle richieste HTTP GET. Per eseguire il mapping dell'operazione a un metodo HTTP diverso, utilizzare invece <xref:System.ServiceModel.Web.WebInvokeAttribute>. Per altre informazioni, vedere [Procedura: Creare un servizio](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)http Web WCF di base.  
+    > Tutte le operazioni del servizio che applicano l'attributo <xref:System.ServiceModel.Web.WebGetAttribute> vengono mappate alle richieste HTTP GET. Per eseguire il mapping dell'operazione a un metodo HTTP diverso, utilizzare invece <xref:System.ServiceModel.Web.WebInvokeAttribute>. Per altre informazioni, vedere [procedura: creare un servizio HTTP Web WCF di base](how-to-create-a-basic-wcf-web-http-service.md).  
   
 2. Implementare il contratto di servizio  
   
@@ -64,7 +64,7 @@ Windows Communication Foundation (WCF) consente di creare un servizio che espone
   
 ### <a name="to-call-getblog-with-an-http-get"></a>Per chiamare GetBlog() con un HTTP GET  
   
-1. Aprire Internet Explorer, digitare l'URL seguente e premere INVIO: `http://localhost:8000/BlogService/GetBlog`. L'URL contiene l'indirizzo di base del servizio (`http://localhost:8000/BlogService`), l'indirizzo relativo dell'endpoint e l'operazione del servizio da chiamare.  
+1. Aprire Internet Explorer, digitare l'URL seguente e premere INVIO: `http://localhost:8000/BlogService/GetBlog` . L'URL contiene l'indirizzo di base del servizio ( `http://localhost:8000/BlogService` ), l'indirizzo relativo dell'endpoint e l'operazione del servizio da chiamare.  
   
 ### <a name="to-call-getblog-from-code"></a>Per chiamare GetBlog() dal codice  
   

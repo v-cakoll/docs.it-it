@@ -2,26 +2,26 @@
 title: 'Procedura: ospitare un servizio flusso di lavoro con Windows Server AppFabric'
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: ecc7a954b2d88cdbcf934cc836e9ad6e3ef7ed52
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 519c76e3e46e01b5e8c696234e39fefbb9f8ad06
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964755"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593308"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Procedura: ospitare un servizio flusso di lavoro con Windows Server AppFabric
 
-L'hosting di servizi di flusso di lavoro in AppFabric è simile all'hosting in IIS/WAS. L'unica differenza consiste nel fatto che tramite gli strumenti di AppFabric sono garantiti la distribuzione, il monitoraggio e la gestione dei servizi di flusso di lavoro. In questo argomento viene utilizzato il servizio del flusso di lavoro creato in [creazione di un servizio flusso di lavoro a esecuzione prolungata](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). in cui viene presentata la procedura dettagliata per la creazione di un servizio di flusso di lavoro. In questo argomento verrà invece illustrato come ospitare il servizio di flusso di lavoro mediante AppFabric. Per ulteriori informazioni su Windows Server AppFabric, vedere la [documentazione di Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))AppFabric. Prima di completare i passaggi seguenti, assicurarsi di aver installato Windows Server AppFabric.  A tale scopo, aprire Internet Information Services (inetmgr. exe), fare clic sul nome del server nella visualizzazione **connessioni** , fare clic su siti e quindi su **sito Web predefinito**. Sul lato destro dello schermo dovrebbe essere visualizzata una sezione denominata **infrastruttura dell'app**. Se tale sezione non viene visualizzata (controllare nella parte superiore del riquadro di destra), AppFabric non è installato. Per altre informazioni sull'installazione di Windows Server AppFabric, vedere [installazione di Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee790960(v=azure.10))AppFabric.  
+L'hosting di servizi di flusso di lavoro in AppFabric è simile all'hosting in IIS/WAS. L'unica differenza consiste nel fatto che tramite gli strumenti di AppFabric sono garantiti la distribuzione, il monitoraggio e la gestione dei servizi di flusso di lavoro. In questo argomento viene utilizzato il servizio del flusso di lavoro creato in [creazione di un servizio flusso di lavoro a esecuzione prolungata](creating-a-long-running-workflow-service.md). in cui viene presentata la procedura dettagliata per la creazione di un servizio di flusso di lavoro. In questo argomento verrà invece illustrato come ospitare il servizio di flusso di lavoro mediante AppFabric. Per ulteriori informazioni su Windows Server AppFabric, vedere la [documentazione di Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))AppFabric. Prima di completare i passaggi seguenti, assicurarsi di aver installato Windows Server AppFabric.  A tale scopo, aprire Internet Information Services (inetmgr. exe), fare clic sul nome del server nella visualizzazione **connessioni** , fare clic su siti e quindi su **sito Web predefinito**. Sul lato destro dello schermo dovrebbe essere visualizzata una sezione denominata **infrastruttura dell'app**. Se tale sezione non viene visualizzata (controllare nella parte superiore del riquadro di destra), AppFabric non è installato. Per altre informazioni sull'installazione di Windows Server AppFabric, vedere [installazione di Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee790960(v=azure.10))AppFabric.  
   
 ### <a name="creating-a-simple-workflow-service"></a>Creazione di un servizio di flusso di lavoro semplice  
   
-1. Aprire Visual Studio 2012 e caricare la soluzione OrderProcessing creata nell'argomento [creazione di un servizio di flusso di lavoro a esecuzione prolungata](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md) .  
+1. Aprire Visual Studio 2012 e caricare la soluzione OrderProcessing creata nell'argomento [creazione di un servizio di flusso di lavoro a esecuzione prolungata](creating-a-long-running-workflow-service.md) .  
   
 2. Fare clic con il pulsante destro del mouse sul progetto **OrderService** e selezionare **Proprietà** e selezionare la scheda **Web** .  
   
 3. Nella sezione **azione di avvio** della pagina delle proprietà selezionare una **pagina specifica** e digitare Service1. xamlx nella casella di modifica.  
   
-4. Nella sezione **Server** della pagina delle proprietà selezionare **Usa server Web IIS locale** e digitare l'URL seguente: `http://localhost/OrderService`.  
+4. Nella sezione **Server** della pagina delle proprietà selezionare **Usa server Web IIS locale** e digitare l'URL seguente: `http://localhost/OrderService` .  
   
 5. Fare clic sul pulsante **Crea directory virtuale** . In questo modo verrà creata una nuova directory virtuale e verrà configurato il progetto per copiare i file necessari nella directory virtuale quando il progetto viene compilato.  In alternativa, è possibile copiare manualmente il file con estensione xamlx, il file web.config e qualsiasi DLL necessaria per la directory virtuale.  
   
@@ -31,33 +31,33 @@ L'hosting di servizi di flusso di lavoro in AppFabric è simile all'hosting in I
   
 2. Passare alla directory virtuale OrderService nel riquadro **connessioni** .  
   
-3. Fare clic con il pulsante destro del mouse su OrderService e scegliere **Gestisci servizi WCF e WF**, **Configura...** . Viene visualizzata la finestra **di dialogo Configura WCF e WF per l'applicazione** .  
+3. Fare clic con il pulsante destro del mouse su OrderService e scegliere **Gestisci servizi WCF e WF**, **Configura...**. Viene visualizzata la finestra **di dialogo Configura WCF e WF per l'applicazione** .  
   
 4. Selezionare la scheda **generale** per visualizzare informazioni generali sull'applicazione, come illustrato nello screenshot seguente.  
   
-     ![Scheda generale della finestra di dialogo di configurazione di App Fabric](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-general.gif "AppFabricConfiguration-generale")  
+     ![Scheda generale della finestra di dialogo per configurazione di App Fabric](media/appfabricconfiguration-general.gif "AppFabricConfiguration-generale")  
   
 5. Selezionare la scheda **monitoraggio** . Vengono visualizzate diverse impostazioni di monitoraggio, come illustrato nella schermata seguente.  
   
-     ![Scheda monitoraggio della configurazione di App Fabric](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-monitoring.gif "AppFabricConfiguration-monitoraggio")  
+     ![Configurazione App Fabric - Scheda monitoraggio](media/appfabricconfiguration-monitoring.gif "AppFabricConfiguration-monitoraggio")  
   
      Per altre informazioni sulla configurazione del monitoraggio dei servizi del flusso di lavoro in AppFabric, vedere [configurazione del monitoraggio con l'infrastruttura di app](https://docs.microsoft.com/previous-versions/appfabric/ee677384(v=azure.10)).  
   
 6. Selezionare la scheda **persistenza del flusso di lavoro** . In questo modo è possibile configurare l'applicazione per l'uso del provider di persistenza predefinito di App Fabric, come illustrato nello screenshot seguente.  
   
-     ![Persistenza della &#45; configurazione di App Fabric](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-persistence.gif "AppFabricConfiguration-persistenza")  
+     ![Configurazione di App Fabric &#45; persistenza](media/appfabricconfiguration-persistence.gif "AppFabricConfiguration-persistenza")  
   
      Per altre informazioni sulla configurazione della persistenza del flusso di lavoro in Windows Server AppFabric, vedere [configurazione della persistenza del flusso di lavoro in infrastruttura di app](https://docs.microsoft.com/previous-versions/appfabric/ee677353(v=azure.10))  
   
 7. Selezionare la scheda **Gestione host del flusso di lavoro** . In questo modo è possibile specificare quando le istanze del servizio flusso di lavoro inattivo devono essere scaricate e rese permanente come illustrato nello screenshot seguente.  
   
-     ![Gestione host flusso di lavoro configurazione di App Fabric](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-management.gif "AppFabricConfiguration-gestione")  
+     ![Gestione host flusso di lavoro configurazione di App Fabric](media/appfabricconfiguration-management.gif "AppFabricConfiguration-gestione")  
   
      Per altre informazioni sulla configurazione di gestione host del flusso di lavoro, vedere [configurazione della gestione host del flusso di lavoro in infrastruttura di app](https://docs.microsoft.com/previous-versions/appfabric/ff383424(v=azure.10))  
   
 8. Selezionare la scheda **avvio automatico** . Ciò consente di specificare le impostazioni di avvio automatico per i servizi del flusso di lavoro nell'applicazione, come illustrato nello screenshot seguente.  
   
-     ![Screenshot che mostra la configurazione dell'&#45;avvio automatico di App Fabric.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-auto-start-configuration.gif)  
+     ![Screenshot che mostra la configurazione di avvio automatico&#45;dell'infrastruttura di app.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-auto-start-configuration.gif)  
   
      Per altre informazioni sulla configurazione dell'avvio automatico, vedere [configurazione dell'avvio automatico con l'infrastruttura di app](https://docs.microsoft.com/previous-versions/appfabric/ee677261(v=azure.10)).  
   
@@ -69,7 +69,7 @@ L'hosting di servizi di flusso di lavoro in AppFabric è simile all'hosting in I
   
 10. Selezionare la scheda **sicurezza** . In questo modo è possibile configurare le impostazioni di sicurezza per l'applicazione, come illustrato nello screenshot seguente.  
   
-     ![Configurazione della sicurezza di App Fabric](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-security.gif "AppFabricConfiguration-sicurezza")  
+     ![Configurazione App Fabric - Sicurezza](media/appfabricconfiguration-security.gif "AppFabricConfiguration-sicurezza")  
   
      Per altre informazioni sulla configurazione della sicurezza con Windows Server AppFabric, vedere [configurazione della sicurezza con l'infrastruttura di app](https://docs.microsoft.com/previous-versions/appfabric/ee677278(v=azure.10)).  
   
@@ -93,7 +93,7 @@ L'hosting di servizi di flusso di lavoro in AppFabric è simile all'hosting in I
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Creazione di un servizio flusso di lavoro a esecuzione prolungata](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)
+- [Creazione di un servizio flusso di lavoro a esecuzione prolungata](creating-a-long-running-workflow-service.md)
 - [Funzionalità di hosting di Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
 - [Installazione di Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee790960(v=azure.10))
 - [Documentazione di Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))
