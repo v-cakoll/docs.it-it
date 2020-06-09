@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: e2aaf1a5e6ae1074a81c08fc798f22ea5e9ce139
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44d06762bf66950ea0cc06986c61ecd548ae2e0c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184614"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576408"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Protezione dei messaggi con certificati reciproci
-Nello scenario seguente viene illustrato un servizio Windows Communication Foundation (WCF) e un client protetto tramite la modalità di sicurezza dei messaggi. Il client e il servizio sono autenticati mediante certificati.  
+Nello scenario seguente vengono illustrati un servizio Windows Communication Foundation (WCF) e un client protetti tramite la modalità di sicurezza del messaggio. Il client e il servizio sono autenticati mediante certificati.  
   
  Questo scenario è interoperativo perché utilizza WS-Security con la specifica X.509 Certificate Token Profile.  
   
 > [!NOTE]
 > Nello scenario non viene eseguita la negoziazione del certificato del servizio. È necessario che il certificato del servizio venga fornito al client prima di qualsiasi comunicazione. Il certificato del server può essere distribuito con l'applicazione o fornito in una comunicazione fuori banda.  
   
- ![Sicurezza dei messaggi con certificati reciprociMessage security with mutual certificates](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
+ ![Sicurezza dei messaggi con certificati reciproci](media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
@@ -30,7 +30,7 @@ Nello scenario seguente viene illustrato un servizio Windows Communication Found
 |Integrità|Sì|  
 |Riservatezza|Sì|  
 |Trasporto|HTTP|  
-|Associazione|<xref:System.ServiceModel.WSHttpBinding>|  
+|Binding|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Service  
  Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
@@ -107,7 +107,7 @@ Nello scenario seguente viene illustrato un servizio Windows Communication Found
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
 ### <a name="configuration"></a>Configurazione  
- Il codice seguente consente di configurare il client. È necessario specificare un certificato client utilizzando [ \<clientCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Inoltre, il certificato del servizio viene specificato utilizzando il [ \<>defaultCertificate ](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
+ Il codice seguente consente di configurare il client. È necessario specificare un certificato client usando [\<clientCertificate>](../../configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md) . Inoltre, il certificato del servizio viene specificato utilizzando [\<defaultCertificate>](../../configure-apps/file-schema/wcf/defaultcertificate-element.md) .  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -160,6 +160,6 @@ Nello scenario seguente viene illustrato un servizio Windows Communication Found
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Panoramica della sicurezza](security-overview.md)
 - [Sicurezza e protezione](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
-- [Procedura: creare e installare certificati temporanei in WCF per la sicurezza del trasporto durante lo sviluppoHow to: Create and Install Temporary Certificates in WCF for Transport Security During Development](https://docs.microsoft.com/previous-versions/msp-n-p/ff648498(v=pandp.10))
+- [Procedura: creare e installare certificati temporanei in WCF per la sicurezza del trasporto durante lo sviluppo](https://docs.microsoft.com/previous-versions/msp-n-p/ff648498(v=pandp.10))

@@ -9,23 +9,23 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 2ab0a41e87a9b14d1beac9fb0c39586f0ea16a4a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b7d78def4d656dea59af5400c7ed7deeef28cd0c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040188"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597449"
 ---
 # <a name="data-contract-known-types"></a>Tipi conosciuti di contratto dati
-La classe <xref:System.Runtime.Serialization.KnownTypeAttribute> consente di specificare, in anticipo, i tipi che devono essere presi in considerazione durante la deserializzazione. Per un esempio pratico, vedere l'esempio [Known Types](../../../../docs/framework/wcf/samples/known-types.md) .  
+La classe <xref:System.Runtime.Serialization.KnownTypeAttribute> consente di specificare, in anticipo, i tipi che devono essere presi in considerazione durante la deserializzazione. Per un esempio pratico, vedere l'esempio [Known Types](../samples/known-types.md) .  
   
  In genere, quando si passano parametri e valori restituiti tra un client e un servizio, entrambi gli endpoint condividono tutti i contratti dati dei dati da trasmettere. Nelle circostanze seguenti, tuttavia, la situazione è diversa:  
   
-- Il contratto dati inviato deriva dal contratto dati previsto. Per ulteriori informazioni, vedere la sezione relativa all'ereditarietà nell' [equivalenza dei contratti dati](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md). In tale caso, i dati trasmessi non hanno lo stesso contratto dati previsto dall'endpoint di destinazione.  
+- Il contratto dati inviato deriva dal contratto dati previsto. Per ulteriori informazioni, vedere la sezione relativa all'ereditarietà nell' [equivalenza dei contratti dati](data-contract-equivalence.md). In tale caso, i dati trasmessi non hanno lo stesso contratto dati previsto dall'endpoint di destinazione.  
   
 - Il tipo dichiarato per le informazioni da trasmettere è un'interfaccia, anziché una classe, una struttura o un'enumerazione. Non è pertanto possibile conoscere in anticipo quale tipo che implementa l'interfaccia viene effettivamente inviato e, di conseguenza, l'endpoint di destinazione non è in grado di determinare, in anticipo, il contratto dati per i dati trasmessi.  
   
-- Il tipo dichiarato per le informazioni da trasmettere è <xref:System.Object>. Dato che ogni tipo eredita da <xref:System.Object>e che non è possibile sapere in anticipo qual è il tipo effettivamente inviato, l'endpoint di destinazione non è in grado di determinare in anticipo il contratto dati per i dati trasmessi. Questo è un caso speciale del primo elemento: Ogni contratto dati deriva dall'impostazione predefinita, un contratto dati vuoto generato per <xref:System.Object>.  
+- Il tipo dichiarato per le informazioni da trasmettere è <xref:System.Object>. Dato che ogni tipo eredita da <xref:System.Object>e che non è possibile sapere in anticipo qual è il tipo effettivamente inviato, l'endpoint di destinazione non è in grado di determinare in anticipo il contratto dati per i dati trasmessi. Questo è un caso speciale del primo elemento: ogni contratto dati deriva dall'impostazione predefinita, un contratto dati vuoto generato per <xref:System.Object>.  
   
 - Alcuni tipi, che includono .NET Framework tipi, hanno membri che si trovano in una delle tre categorie precedenti. <xref:System.Collections.Hashtable> , ad esempio, utilizza <xref:System.Object> per memorizzare gli oggetti effettivi nella tabella hash. Durante la serializzazione di questi tipi, il lato di destinazione non è in grado di determinare in anticipo il contratto dati per questi membri.  
   
@@ -67,7 +67,7 @@ La classe <xref:System.Runtime.Serialization.KnownTypeAttribute> consente di spe
  [!code-csharp[C_KnownTypeAttribute#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#4)]
  [!code-vb[C_KnownTypeAttribute#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#4)]  
   
-#### <a name="example-3"></a>Esempio 3  
+#### <a name="example-3"></a>Esempio 3:  
  Nell'esempio seguente, un <xref:System.Collections.Hashtable> memorizza internamente il contenuto come <xref:System.Object>. Per deserializzare correttamente una tabella hash, il motore di deserializzazione deve conoscere il set dei tipi possibili che possono verificarsi. In questo caso, si sa in anticipo che solo gli oggetti `Book` e `Magazine` vengono memorizzati in `Catalog`, pertanto vengono aggiunti utilizzando l'attributo <xref:System.Runtime.Serialization.KnownTypeAttribute> .  
   
  [!code-csharp[C_KnownTypeAttribute#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#5)]
@@ -100,7 +100,7 @@ La classe <xref:System.Runtime.Serialization.KnownTypeAttribute> consente di spe
 ## <a name="known-types-using-open-generic-methods"></a>Tipi conosciuti che utilizzano metodi generici aperti  
  Potrebbe essere necessario aggiungere un tipo generico come tipo conosciuto. Non è tuttavia possibile passare un tipo generico aperto come parametro all'attributo `KnownTypeAttribute` .  
   
- Questo problema può essere risolto utilizzando un meccanismo alternativo: Scrivere un metodo che restituisca un elenco di tipi da aggiungere alla raccolta di tipi noti. Specificare quindi il nome del metodo come argomento di tipo stringa per l'attributo `KnownTypeAttribute` , per far fronte ad alcune restrizioni.  
+ Questo problema può essere risolto utilizzando un meccanismo alternativo, ovvero scrivere un metodo che restituisca un elenco di tipi da aggiungere alla raccolta di tipi noti. Specificare quindi il nome del metodo come argomento di tipo stringa per l'attributo `KnownTypeAttribute` , per far fronte ad alcune restrizioni.  
   
  Il metodo deve esistere nel tipo al quale è applicato l'attributo `KnownTypeAttribute` , deve essere statico, non deve accettare parametri e deve restituire un oggetto che possa essere assegnato a <xref:System.Collections.IEnumerable> di <xref:System.Type>.  
   
@@ -174,6 +174,6 @@ La classe <xref:System.Runtime.Serialization.KnownTypeAttribute> consente di spe
 - <xref:System.Object>
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>
-- [Tipi conosciuti](../../../../docs/framework/wcf/samples/known-types.md)
-- [Equivalenza dei contratti di dati](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
-- [Progettazione dei contratti di servizio](../../../../docs/framework/wcf/designing-service-contracts.md)
+- [Tipi conosciuti](../samples/known-types.md)
+- [Data Contract Equivalence](data-contract-equivalence.md)
+- [Progettazione dei contratti di servizio](../designing-service-contracts.md)

@@ -2,25 +2,25 @@
 title: Concetti relativi al canale peer
 ms.date: 03/30/2017
 ms.assetid: 379c2c0b-a44f-4423-9480-4739e7f18614
-ms.openlocfilehash: 8955f6ab18e7fddac2f99b30be38532781c7ae21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9a63784b685ce57a7878934ddd042afd70c32b9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769434"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576343"
 ---
 # <a name="peer-channel-concepts"></a>Concetti relativi al canale peer
-In questa sezione illustra brevemente i concetti che costituiscono il canale Peer di Windows Communication Foundation (WCF).  
+In questa sezione vengono illustrati brevemente i concetti che costituiscono i Peer Channel di Windows Communication Foundation (WCF).  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Le reti mesh peer](../../../../docs/framework/wcf/feature-details/peer-meshes.md):  Descrive le caratteristiche delle reti create utilizzando il canale Peer.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Mesh peer](peer-meshes.md): descrive le caratteristiche dei mesh creati con Peer Channel.  
   
- [Eseguire il peering di nodi](../../../../docs/framework/wcf/feature-details/peer-nodes.md):  Descrive i nodi peer.  
+ [Nodi peer](peer-nodes.md): descrive i nodi peer.  
   
- [Protezione del canale peer](../../../../docs/framework/wcf/feature-details/peer-channel-security.md):  Vengono descritti gli scenari di sicurezza e soluzioni fornite dal canale Peer.  
+ [Sicurezza Peer Channel](peer-channel-security.md): vengono descritti gli scenari di sicurezza e le soluzioni fornite da Peer Channel.  
   
- [I resolver del peer](../../../../docs/framework/wcf/feature-details/peer-resolvers.md):  Viene illustrato l'utilizzo di Peer Name Resolution Protocol (PRNP) e altri resolver personalizzati.  
+ [Resolver del peer](peer-resolvers.md): illustra l'uso di PNRP (Peer Name Resolution Protocol) e di altri resolver personalizzati.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Creazione di un'applicazione del canale peer](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+- [Creazione di un'applicazione del canale peer](building-a-peer-channel-application.md)

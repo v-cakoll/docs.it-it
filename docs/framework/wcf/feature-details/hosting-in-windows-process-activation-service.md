@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 1882feee4e8071f1d32fb59ab02519c6e6fe2684
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: d0253202b0fad9a452507ed4296bc4a09b78e569
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84143563"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597306"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosting nel servizio di attivazione dei processi di Windows
 Il servizio WAS (Windows Process Activation Service, Attivazione processo Windows) gestisce l'attivazione e la durata dei processi di lavoro contenenti le applicazioni che ospitano i servizi WCF (Windows Communication Foundation). Il modello di processo WAS consente di generalizzare il modello di processo IIS 6.0 per il server HTTP eliminando la dipendenza da HTTP. Questo consente ai servizi WCF di utilizzare sia protocolli HTTP che non HTTP, ad esempio NET. TCP, in un ambiente host che supporta l'attivazione basata su messaggi e offre la possibilità di ospitare un numero elevato di applicazioni in un determinato computer.  
   
- Per ulteriori informazioni sulla compilazione di un servizio WCF in esecuzione nell'ambiente di hosting WAS, vedere [procedura: ospitare un servizio WCF in was](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Per ulteriori informazioni sulla compilazione di un servizio WCF in esecuzione nell'ambiente di hosting WAS, vedere [procedura: ospitare un servizio WCF in was](how-to-host-a-wcf-service-in-was.md).  
   
  Il modello di processo WAS prevede diverse funzionalità che consentono una modalità di hosting delle applicazioni più efficace e gestibile e in cui le risorse vengono usate in maniera efficiente:  
   
@@ -48,10 +48,10 @@ Il servizio WAS (Windows Process Activation Service, Attivazione processo Window
 ## <a name="the-was-runtime"></a>Runtime WAS  
  Le applicazioni vengono organizzate in siti a scopo di indirizzamento e gestione. In fase di esecuzione, le applicazioni vengono inoltre raggruppate in pool. Un pool di applicazioni può contenere molte applicazioni diverse di molti siti diversi. Tutte le applicazioni in un pool di applicazioni condividono una serie comune di caratteristiche runtime. Ad esempio, vengono eseguite tutte nella stessa versione di Common Language Runtime (CLR) e tutte condividono un'identità di processo comune. Ogni pool di applicazioni corrisponde a un'istanza di un processo di lavoro (w3wp.exe). Ogni applicazione gestita in esecuzione in un pool di applicazioni condiviso è isolata dalle altre applicazioni da un AppDomain CLR.  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Architettura di attivazione WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
-- [Configurazione di WAS per l'uso con WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [Procedura: installare e configurare componenti di attivazione WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
-- [Procedura: ospitare un servizio WCF in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Architettura di attivazione WAS](was-activation-architecture.md)
+- [Configurazione di WAS per l'uso con WCF](configuring-the-wpa--service-for-use-with-wcf.md)
+- [Procedura: installare e configurare componenti di attivazione WCF](how-to-install-and-configure-wcf-activation-components.md)
+- [Procedura: ospitare un servizio WCF in WAS](how-to-host-a-wcf-service-in-was.md)
 - [Funzionalità di hosting di Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
