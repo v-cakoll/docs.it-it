@@ -2,23 +2,23 @@
 title: System.ServiceModel.Channels.MessageReceived
 ms.date: 03/30/2017
 ms.assetid: 9e6942a4-051f-416c-9674-7e729b9edd33
-ms.openlocfilehash: fc2de674bf6a112ff6800ea4a1b2d02e7ead2094
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0211244909e6302752985f3958c2d07ac30b34f8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792431"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601998"
 ---
-# <a name="systemservicemodelchannelsmessagereceived"></a><span data-ttu-id="38112-102">System.ServiceModel.Channels.MessageReceived</span><span class="sxs-lookup"><span data-stu-id="38112-102">System.ServiceModel.Channels.MessageReceived</span></span>
-<span data-ttu-id="38112-103">System.ServiceModel.Channels.MessageReceived</span><span class="sxs-lookup"><span data-stu-id="38112-103">System.ServiceModel.Channels.MessageReceived</span></span>  
+# <a name="systemservicemodelchannelsmessagereceived"></a><span data-ttu-id="2c6da-102">System.ServiceModel.Channels.MessageReceived</span><span class="sxs-lookup"><span data-stu-id="2c6da-102">System.ServiceModel.Channels.MessageReceived</span></span>
+<span data-ttu-id="2c6da-103">System.ServiceModel.Channels.MessageReceived</span><span class="sxs-lookup"><span data-stu-id="2c6da-103">System.ServiceModel.Channels.MessageReceived</span></span>  
   
-## <a name="description"></a><span data-ttu-id="38112-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="38112-104">Description</span></span>  
- <span data-ttu-id="38112-105">Ricevuto un messaggio su un canale.</span><span class="sxs-lookup"><span data-stu-id="38112-105">Received a message over a channel.</span></span>  
+## <a name="description"></a><span data-ttu-id="2c6da-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="2c6da-104">Description</span></span>  
+ <span data-ttu-id="2c6da-105">Ricevuto un messaggio su un canale.</span><span class="sxs-lookup"><span data-stu-id="2c6da-105">Received a message over a channel.</span></span>  
   
- <span data-ttu-id="38112-106">Questa traccia viene emessa quando viene ricevuto un messaggio WCF se il `System.ServiceModel` origine di traccia è abilitata al livello informazioni o dettagliato.</span><span class="sxs-lookup"><span data-stu-id="38112-106">This trace is emitted when a WCF message is received if the `System.ServiceModel` trace source is enabled at information or verbose level.</span></span> <span data-ttu-id="38112-107">Questa traccia è necessaria per la visualizzazione del tasto di direzione della correlazione tra i messaggi nella visualizzazione del grafico delle attività.</span><span class="sxs-lookup"><span data-stu-id="38112-107">This trace is necessary to see the message correlation arrow in the activity graph view.</span></span>  
+ <span data-ttu-id="2c6da-106">Questa traccia viene generata quando viene ricevuto un messaggio WCF se l' `System.ServiceModel` origine di traccia è abilitata a livello di informazioni o dettagliato.</span><span class="sxs-lookup"><span data-stu-id="2c6da-106">This trace is emitted when a WCF message is received if the `System.ServiceModel` trace source is enabled at information or verbose level.</span></span> <span data-ttu-id="2c6da-107">Questa traccia è necessaria per la visualizzazione del tasto di direzione della correlazione tra i messaggi nella visualizzazione del grafico delle attività.</span><span class="sxs-lookup"><span data-stu-id="2c6da-107">This trace is necessary to see the message correlation arrow in the activity graph view.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38112-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="38112-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2c6da-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2c6da-108">See also</span></span>
 
-- [<span data-ttu-id="38112-109">Traccia</span><span class="sxs-lookup"><span data-stu-id="38112-109">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="38112-110">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="38112-110">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="38112-111">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="38112-111">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="2c6da-109">Traccia</span><span class="sxs-lookup"><span data-stu-id="2c6da-109">Tracing</span></span>](index.md)
+- [<span data-ttu-id="2c6da-110">Utilizzo delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="2c6da-110">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="2c6da-111">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="2c6da-111">Administration and Diagnostics</span></span>](../index.md)
