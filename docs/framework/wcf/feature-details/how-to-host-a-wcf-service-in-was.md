@@ -2,17 +2,17 @@
 title: 'Procedura: ospitare un servizio WCF in WAS'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 823c3b8452a3fd1c95758d2d09a9effdf02075c8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e338440b3a630840230df838e46579e3725bb60
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184906"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593113"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Procedura: ospitare un servizio WCF in WAS
-In questo argomento vengono descritti i passaggi di base necessari per creare un servizio Windows Communication Foundation (WCF) ospitato di Servizi di attivazione processo Windows (noto anche come WAS). WAS è il nuovo servizio di attivazione dei processi che rappresenta una generalizzazione delle funzionalità di Internet Information Services (IIS) utilizzabili con protocolli di trasporto non HTTP. WCF utilizza l'interfaccia dell'adapter listener per comunicare le richieste di attivazione ricevute tramite i protocolli non HTTP supportati da WCF, ad esempio TCP, named pipe e Accodamento messaggi.  
+Questo argomento descrive i passaggi di base necessari per creare un servizio di attivazione dei processi di Windows (noto anche come WAS) hosted Windows Communication Foundation (WCF). WAS è il nuovo servizio di attivazione dei processi che rappresenta una generalizzazione delle funzionalità di Internet Information Services (IIS) utilizzabili con protocolli di trasporto non HTTP. WCF utilizza l'interfaccia dell'adattatore listener per comunicare le richieste di attivazione ricevute tramite i protocolli non HTTP supportati da WCF, ad esempio TCP, named pipe e Accodamento messaggi.  
   
- Questa opzione di hosting richiede che i componenti di attivazione WAS vengano installati e configurati correttamente, ma non richiede la scrittura di codice di hosting come parte dell'applicazione. Per ulteriori informazioni sull'installazione e la configurazione di WAS, vedere [procedura: installare e configurare i componenti](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)di attivazione WCF .  
+ Questa opzione di hosting richiede che i componenti di attivazione WAS vengano installati e configurati correttamente, ma non richiede la scrittura di codice di hosting come parte dell'applicazione. Per ulteriori informazioni sull'installazione e la configurazione di WAS, vedere [How to: install and Configure WCF Activation Components](how-to-install-and-configure-wcf-activation-components.md).  
   
 > [!WARNING]
 > L'attivazione di WAS non è supportata se la pipeline di elaborazione delle richieste del server Web è impostata sulla modalità classica. Se è necessario utilizzare l'attivazione WAS, la pipeline di elaborazione delle richieste del server Web deve essere impostata sulla modalità integrata.  
@@ -35,7 +35,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
   
  In caso contrario, l'endpoint che viene inizializzato per primo determina sempre i valori di queste proprietà e gli endpoint aggiunti in seguito generano un'eccezione <xref:System.ServiceModel.ServiceActivationException>, se non corrispondono alle impostazioni in questione.  
   
- Per la copia di origine di questo esempio, vedere [Attivazione TCP](../../../../docs/framework/wcf/samples/tcp-activation.md).  
+ Per la copia di origine di questo esempio, vedere [attivazione TCP](../samples/tcp-activation.md).  
   
 ### <a name="to-create-a-basic-service-hosted-by-was"></a>Per creare un servizio di base ospitato in WAS  
   
@@ -74,7 +74,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
   
 ### <a name="to-create-a-client-to-use-the-service"></a>Per creare un client che utilizzi il servizio  
   
-1. Utilizzare [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) dalla riga di comando per generare codice dai metadati del servizio.  
+1. Utilizzare [lo strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) dalla riga di comando per generare codice dai metadati del servizio.  
   
     ```console
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -100,5 +100,5 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Attivazione TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
+- [Attivazione TCP](../samples/tcp-activation.md)
 - [Funzionalità di hosting di Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

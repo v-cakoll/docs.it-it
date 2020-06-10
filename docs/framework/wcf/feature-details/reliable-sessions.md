@@ -9,38 +9,38 @@ helpviewer_keywords:
 - instances [WCF]
 - sessions [WCF]
 ms.assetid: 143951b3-3aa0-4540-b4b7-d33e77e874a1
-ms.openlocfilehash: 9a2cd06c4c5a73d9fb5c4c7f09632e10c3eb0d87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 910ad952192243c6aa8a79417ad711d8c2a4ba2e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991159"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590540"
 ---
 # <a name="reliable-sessions"></a>Sessioni affidabili
 
-In questa sezione vengono descritte quali un Windows Communication Foundation (WCF) è una sessione affidabile, ciò che viene utilizzata, come e quando utilizzarla, quali configurazioni di binding supportano. vengono inoltre definite le procedure consigliate. Nella tabella seguente sono riepilogati i dettagli sui punti essenziali e gli argomenti correlati in questa sezione.
+In questa sezione viene descritta la modalità di utilizzo di una sessione affidabile Windows Communication Foundation (WCF), come e quando utilizzarne una, le configurazioni di binding che la supportano e i puntatori alle procedure consigliate. Nella tabella seguente sono riepilogati i dettagli sui punti essenziali e gli argomenti correlati in questa sezione.
 
-La sessione affidabile WCF fornisce funzionalità di garantire che i messaggi inviati tra gli endpoint vengono trasferiti su intermediari SOAP o di trasporto e recapitati solo una volta e, facoltativamente, nello stesso ordine in cui sono stati inviati.
+La sessione affidabile WCF fornisce funzionalità che assicurano che i messaggi inviati tra gli endpoint vengano trasferiti tra gli intermediari SOAP o di trasporto e vengano recapitati solo una volta e, facoltativamente, nello stesso ordine in cui sono stati inviati.
 
-Per usare una sessione affidabile con un'applicazione WCF, utilizzare una delle associazioni fornite dal sistema in WCF che supportano una sessione affidabile per impostazione predefinita o come opzione o creare un'associazione personalizzata che supporti la sessione.
+Per utilizzare una sessione affidabile con un'applicazione WCF, utilizzare una delle associazioni fornite dal sistema in WCF che supportano una sessione affidabile per impostazione predefinita o come opzione oppure creare un'associazione personalizzata che supporti la sessione.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
-[Panoramica delle sessioni affidabili](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md) descrive le sessioni affidabili, quando utilizzarle, le diverse associazioni che supportano sessioni affidabili, e sul relativo funzionamento.
+[Panoramica delle sessioni affidabili](reliable-sessions-overview.md) Descrive le sessioni affidabili, quando utilizzarle, le diverse associazioni che supportano sessioni affidabili e il loro funzionamento.
 
-[Procedura: Scambio dei messaggi all'interno di una sessione affidabile](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md) viene descritto come creare una sessione affidabile su HTTP utilizzando un'associazione personalizzata specificata nella configurazione.
+[Procedura: scambiare messaggi in una sessione affidabile](how-to-exchange-messages-within-a-reliable-session.md) Viene descritto come creare una sessione affidabile su HTTP utilizzando un'associazione personalizzata specificata nella configurazione.
 
-[Procedura: Proteggere i messaggi in sessioni affidabili](../../../../docs/framework/wcf/feature-details/how-to-secure-messages-within-reliable-sessions.md) descrive come proteggere una sessione affidabile.
+[Procedura: proteggere i messaggi all'interno di sessioni affidabili](how-to-secure-messages-within-reliable-sessions.md) Viene descritto come proteggere una sessione affidabile.
 
-[Procedura: Creare un'associazione di sessione affidabile di personalizzata con HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md) viene descritto come creare una sessione affidabile su HTTPS.
+[Procedura: creare un'associazione di sessione affidabile personalizzata con https](how-to-create-a-custom-reliable-session-binding-with-https.md) Viene descritto come creare una sessione affidabile su HTTPS.
 
-[Procedure consigliate per le sessioni affidabili](../../../../docs/framework/wcf/feature-details/best-practices-for-reliable-sessions.md) descrive alcune delle procedure consigliate correlate all'utilizzo di una sessione affidabile.
+[Procedure consigliate per le sessioni affidabili](best-practices-for-reliable-sessions.md) Vengono descritte alcune delle procedure consigliate associate all'utilizzo di una sessione affidabile.
 
-## <a name="reference"></a>Riferimenti
+## <a name="reference"></a>Informazioni di riferimento
 
 <xref:System.ServiceModel.ReliableSession>
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Code e sessioni affidabili](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)
-- [Sessioni, istanze e concorrenza](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
+- [Code e sessioni affidabili](queues-and-reliable-sessions.md)
+- [Sessioni, istanze e concorrenza](sessions-instancing-and-concurrency.md)

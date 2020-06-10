@@ -1,23 +1,23 @@
 ---
-title: Denial of Service (Negazione del servizio)
+title: Denial of Service
 ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 55120430a9aaafe7d8bbf2b26f07806e4f1aa44a
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 1c1778ace6abc332517786f910d0442eeed577c9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964428"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599269"
 ---
-# <a name="denial-of-service"></a>Denial of Service (Negazione del servizio)
+# <a name="denial-of-service"></a>Denial of Service
 Si verifica un attacco Denial of Service quando un sistema viene sommerso da una quantità di messaggi tale da non poter essere elaborata o da poter essere elaborata solo molto lentamente.  
   
 ## <a name="excess-memory-consumption"></a>Eccessivo consumo di memoria  
  Quando viene letto un documento XML con un numero elevato di nomi locali, spazi dei nomi o prefissi univoci, può verificarsi un problema. Se si usa una classe che deriva da <xref:System.Xml.XmlReader> e si chiama la proprietà <xref:System.Xml.XmlReader.LocalName%2A>, <xref:System.Xml.XmlReader.Prefix%2A> o <xref:System.Xml.XmlReader.NamespaceURI%2A> per ogni elemento, la stringa restituita viene aggiunta a una classe <xref:System.Xml.NameTable>. Le dimensioni della raccolta contenuta nella classe <xref:System.Xml.NameTable> non diminuiscono mai, creando una "perdita di memoria" virtuale degli handle di stringa.  
   
- Le strategie risolutive includono:  
+ Le mitigazioni includono:  
   
 - Derivare dalla classe <xref:System.Xml.NameTable> e imporre una quota della dimensione massima. Non è possibile impedire l'uso di una classe <xref:System.Xml.NameTable> o cambiare la classe <xref:System.Xml.NameTable> quando è completa.  
   
@@ -44,10 +44,10 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
 ## <a name="auditing-event-log-can-be-filled"></a>Possibilità di riempimento del registro eventi di controllo  
  Se un utente malintenzionato comprende che è attivato il controllo, può inviare messaggi non validi che causano la scrittura di voci di controllo. Ciò comporta a sua volta la generazione di errori nel sistema di controllo.  
   
- Per ridurre questo problema, impostare la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true` e usare le proprietà del Visualizzatore eventi per controllare il comportamento di controllo. Per ulteriori informazioni sull'utilizzo del Visualizzatore eventi per visualizzare e gestire i registri eventi, vedere [Visualizzatore eventi](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11)). Per ulteriori informazioni, vedere [controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Per ridurre questo problema, impostare la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true` e usare le proprietà del Visualizzatore eventi per controllare il comportamento di controllo. Per ulteriori informazioni sull'utilizzo del Visualizzatore eventi per visualizzare e gestire i registri eventi, vedere [Visualizzatore eventi](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11)). Per ulteriori informazioni, vedere [controllo](auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Le implementazioni di IAuthorizationPolicy non valide possono causare la mancata risposta del servizio  
- La chiamata del metodo <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> su un'implementazione non corretta dell'interfaccia <xref:System.IdentityModel.Policy.IAuthorizationPolicy> può causare la mancata risposta da parte del servizio.  
+ La chiamata al <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> metodo su un'implementazione non corretta dell' <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interfaccia può causare la mancata risposta da parte del servizio.  
   
  Mitigazione: usare solo codice attendibile. In altre parole, usare solo codice scritto e verificato o proveniente da un provider attendibile. Non consentire l'aggiunta nel codice di estensioni non attendibili di <xref:System.IdentityModel.Policy.IAuthorizationPolicy> senza la dovuta considerazione. Questo vale per tutte le estensioni usate in un'implementazione del servizio. In WCF non viene fatta alcuna distinzione tra il codice dell'applicazione e il codice esterno collegato utilizzando i punti di estendibilità.  
   
@@ -59,7 +59,7 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
   
  L'effetto è che i servizi WCF potrebbero non riuscire ad aprirsi nei domini con registrazione automatica. Ciò si verifica perché i criteri predefiniti per la ricerca delle credenziali X.509 del servizio potrebbero essere ambigui, dal momento che esistono più certificati con il nome DNS (Domain Name System) completo del computer. Un certificato ha origine dalla registrazione automatica, l'altro potrebbe invece essere un certificato autorilasciato.  
   
- Per attenuare questo problema, fare riferimento al certificato esatto da usare utilizzando un criterio di ricerca più preciso nel [\<ServiceCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Usare, ad esempio, l'opzione <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> e specificare il certificato in base all'identificazione personale univoca (hash).  
+ Per attenuare questo problema, fare riferimento al certificato esatto da usare usando un criterio di ricerca più preciso nell'oggetto [\<serviceCredentials>](../../configure-apps/file-schema/wcf/servicecredentials.md) . Usare, ad esempio, l'opzione <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> e specificare il certificato in base all'identificazione personale univoca (hash).  
   
  Per ulteriori informazioni sulla funzionalità di registrazione automatica, vedere [registrazione automatica dei certificati in Windows Server 2003](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc778954(v%3dws.10)).  
   
@@ -75,16 +75,16 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
  Quando un client viene correttamente autenticato da un servizio e viene stabilita una sessione protetta con il servizio, il servizio tiene traccia della sessione fino a quando il client non la annulla o la sessione non scade. Ogni sessione stabilita viene conteggiata a fronte del numero massimo consentito di sessioni attive simultanee con un servizio. Quando viene raggiunto questo limite, i client che tentano di creare una nuova sessione con il servizio in questione vengono rifiutati fino a quando una o più sessioni attive non scadono o non vengono annullate da un client. Un client può avere più sessioni con un servizio e ognuna di esse viene conteggiata per il raggiungimento del limite.  
   
 > [!NOTE]
-> Se si usano sessioni con stato, non vale quanto detto nel paragrafo precedente. Per altre informazioni sulle sessioni con stato, vedere [procedura: creare un token del contesto di sicurezza per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+> Se si usano sessioni con stato, non vale quanto detto nel paragrafo precedente. Per altre informazioni sulle sessioni con stato, vedere [procedura: creare un token del contesto di sicurezza per una sessione protetta](how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Per prevenire il problema, impostare il limite per il numero massimo di sessioni attive e la durata massima di una sessione impostando la proprietà <xref:System.ServiceModel.Channels.SecurityBindingElement> della classe <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Divulgazione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Elevazione dei privilegi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Negazione del servizio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Attacchi di tipo replay](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
-- [Manomissioni](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [Scenari non supportati](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [Security Considerations](security-considerations-in-wcf.md)
+- [Divulgazione di informazioni](information-disclosure.md)
+- [Elevazione dei privilegi](elevation-of-privilege.md)
+- [Attacco Denial of Service](denial-of-service.md)
+- [Attacchi di tipo replay](replay-attacks.md)
+- [Manomissione](tampering.md)
+- [Scenari non supportati](unsupported-scenarios.md)

@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: Usare lo strumento di configurazione del modello di servizi di COM+'
+title: 'Procedura: usare lo strumento di configurazione del modello di servizi di COM+'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 67bacade0435f1c63bc79b3282f6bded55b67304
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: f9e761bafd84726b51a2010a932c68c67c37f899
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991578"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595284"
 ---
-# <a name="how-to-use-the-com-service-model-configuration-tool"></a>Procedura: Usare lo strumento di configurazione del modello di servizi di COM+
+# <a name="how-to-use-the-com-service-model-configuration-tool"></a>Procedura: usare lo strumento di configurazione del modello di servizi di COM+
 Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strumento della riga di comando per la configurazione del modello di servizi COM+ (ComSvcConfig.exe) per configurare le interfacce dell'applicazione da esporre come servizi Web.  
   
 > [!NOTE]
@@ -19,7 +19,7 @@ Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strume
   
  Quando si utilizza ComSvcConfig.exe su un computer con Windows 7, attenersi alla procedura riportata di seguito per configurare un servizio Web al fine di utilizzare l'ultima versione del modello di servizi (attualmente v4.5):  
   
-1. Impostare la chiave `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` del registro di sistema su un valore DWORD pari a 0x00000001  
+1. Impostare la chiave del registro `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` di sistema su un valore DWORD pari a 0x00000001  
   
 2. Eseguire comsvcconfig.exe  
   
@@ -41,7 +41,7 @@ Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strume
   
      Il comando aggiunge l'interfaccia `IFinances` del componente `ItemOrders.IFinancial` dell'applicazione COM+ OnlineStore al set di interfacce da esporre come servizi Web. Il servizio utilizza la modalità di hosting COM+ e pertanto richiede l’attivazione esplicita dell'applicazione.  
   
-     Sebbene sia possibile utilizzare il\*carattere jolly asterisco () per il componente e l'interfaccia, evitare di utilizzarlo perché potrebbe essere necessario esporre solo le funzionalità selezionate come servizio Web. Se si esegue l'applicazione con una versione successiva di questo componente, l'utilizzo del carattere jolly può comportare l'esposizione indesiderata delle interfacce non presenti al momento della determinazione della sintassi di configurazione.  
+     Sebbene sia possibile utilizzare il carattere jolly asterisco ( \* ) per il componente e l'interfaccia, evitare di utilizzarlo perché potrebbe essere necessario esporre solo le funzionalità selezionate come servizio Web. Se si esegue l'applicazione con una versione successiva di questo componente, l'utilizzo del carattere jolly può comportare l'esposizione indesiderata delle interfacce non presenti al momento della determinazione della sintassi di configurazione.  
   
      L'opzione /verbose consente di visualizzare sia gli avvisi sia gli errori.  
   
@@ -111,4 +111,4 @@ Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strume
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica dell'integrazione con applicazioni COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+- [Panoramica sull'integrazione con applicazioni COM+](integrating-with-com-plus-applications-overview.md)

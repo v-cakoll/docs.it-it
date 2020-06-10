@@ -1,33 +1,33 @@
 ---
 title: Come installare lo strumento dell'interfaccia della riga di comando (CLI) di ML.NET
-description: Informazioni su come installare, aggiornare, eseguire il downgrade e disinstallare lo strumento ML.NET command-line interface (CLI).
-ms.date: 12/18/2019
+description: Informazioni su come installare, aggiornare, eseguire il downgrade e disinstallare lo strumento dell'interfaccia della riga di comando ML.NET.
+ms.date: 06/08/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 9f678c7117d32bf817139951db7eef2c3d0f5eb2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 13203246411deadf3ab13a5eba0d2c8e6e9027c5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78848639"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602271"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Come installare lo strumento dell'interfaccia della riga di comando (CLI) di ML.NET
 
-Scopri come installare l'interfaccia della riga di comando ML.NET (interfaccia della riga di comando) su Windows, Mac o Linux.
+Informazioni su come installare l'interfaccia della riga di comando di ML.NET in Windows, Mac o Linux.
 
-L'interfaccia della riga di comando ML.NET genera modelli ML.NET di buona qualità e codice sorgente usando l'apprendimento automatico automatico (AutoML) e un set di dati di training.
+L'interfaccia della riga di comando di ML.NET genera modelli ML.NET e codice sorgente di qualità elevata usando l'apprendimento automatico automatico (AutoML) e un set di dati di training.
 
 > [!NOTE]
 > Questo argomento fa riferimento all'interfaccia della riga di comando di ML.NET e al Machine Learning automatico, attualmente in anteprima, e il materiale può essere soggetto a modifiche.
 
 ## <a name="pre-requisites"></a>Prerequisiti
 
-- [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [SDK di .NET Core 3,1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-- (Facoltativo) [Visual Studio 2017 o 2019](https://visualstudio.microsoft.com/vs/)
+- Opzionale [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 
-È possibile eseguire i progetti di codice C `F5` , `dotnet run` generati con Visual Studio premendo il tasto o con (.NET Core CLI).
+È possibile eseguire i progetti di codice C# generati con Visual Studio premendo il `F5` tasto o con `dotnet run` (interfaccia della riga di comando di .NET Core).
 
-Nota: se dopo l'installazione di `dotnet tool` [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) il comando non funziona, disconnettersi da Windows e accedere di nuovo.
+Nota: se dopo l'installazione .NET Core SDK il `dotnet tool` comando non funziona, disconnettersi da Windows ed eseguire di nuovo l'accesso.
 
 ## <a name="install"></a>Installazione
 
@@ -54,7 +54,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 mlnet
 ```
 
-Verranno visualizzate le informazioni della Guida per i comandi disponibili per lo strumento mlnet, ad esempio per il comando 'auto-train'.
+Dovrebbe essere visualizzata la guida per i comandi disponibili per lo strumento mlnet, ad esempio il comando "classificazione".
 
 ## <a name="install-a-specific-release-version"></a>Installare una versione specifica
 
@@ -137,6 +137,6 @@ In questo caso l'interfaccia della riga di comando di .NET Core non aggiunge aut
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica dell'interfaccia della riga di comando ML.NET](../automate-training-with-cli.md)
-- [Esercitazione: Analizzare il sentiment con l'interfaccia della riga di comando del ML.NET](../tutorials/sentiment-analysis-cli.md)
+- [Esercitazione: analizzare i sentimenti con l'interfaccia della riga di comando di ML.NET](../tutorials/sentiment-analysis-cli.md)
 - [Guida di riferimento per i comandi di training automatico dell'interfaccia della riga di comando ML.NET](../reference/ml-net-cli-reference.md)
 - [Telemetria nell'interfaccia della riga di comando ML.NET](../resources/ml-net-cli-telemetry.md)

@@ -2,15 +2,15 @@
 title: Surrogato di DataContract
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 7ef78c4361c055d7be35c03a3c8717e86aceddab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9677e3cf024e6c1e5b2f3360423ab55536748495
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183827"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600036"
 ---
 # <a name="datacontract-surrogate"></a>Surrogato di DataContract
-In questo esempio viene illustrato come la serializzazione, la deserializzazione, l'esportazione e l'importazione di schemi possano essere personalizzate utilizzando una classe surrogata del contratto dati. In questo esempio viene illustrato come utilizzare un surrogato in uno scenario client e server in cui i dati vengono serializzati e trasmessi tra un servizio e un client Windows Communication Foundation (WCF).  
+In questo esempio viene illustrato come la serializzazione, la deserializzazione, l'esportazione e l'importazione di schemi possano essere personalizzate utilizzando una classe surrogata del contratto dati. In questo esempio viene illustrato come utilizzare un surrogato in uno scenario client e server in cui i dati vengono serializzati e trasmessi tra un client e un servizio Windows Communication Foundation (WCF).  
   
 > [!NOTE]
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
@@ -220,7 +220,7 @@ private static void ApplyDataContractSurrogate(OperationDescription description)
   
  È necessario eseguire altri passaggi per inserire il surrogato perché possa essere utilizzato durante la generazione di metadati. Un modo di eseguire questa operazione è di fornire un `IWsdlExportExtension`, come illustrato in questo esempio. Un altro modo è di modificare direttamente `WsdlExporter`.  
   
- L'attributo `AllowNonSerializableTypesAttribute` implementa `IWsdlExportExtension` e `IContractBehavior`. L'estensione può `IContractBehavior` essere `IEndpointBehavior` un o in questo caso. L'implementazione del metodo `IWsdlExportExtension.ExportContract` abilita il surrogato aggiungendolo al `XsdDataContractExporter` utilizzato durante la generazione degli schemi DataContract. Nel frammento di codice seguente viene illustrato come eseguire questa operazione.  
+ L' `AllowNonSerializableTypesAttribute` attributo implementa `IWsdlExportExtension` e `IContractBehavior` . L'estensione può essere `IContractBehavior` o `IEndpointBehavior` in questo caso. L'implementazione del metodo `IWsdlExportExtension.ExportContract` abilita il surrogato aggiungendolo al `XsdDataContractExporter` utilizzato durante la generazione degli schemi DataContract. Nel frammento di codice seguente viene illustrato come eseguire questa operazione.  
   
 ```csharp
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
@@ -247,24 +247,24 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 }  
 ```  
   
- Quando si esegue l'esempio, il client chiama AddEmployee, quindi chiama GetEmployee per verificare se la prima chiamata è stata completata correttamente. Il risultato della richiesta di un'operazione GetEmployee viene visualizzato nella finestra della console client. L'operazione GetEmployee deve riuscire a trovare il dipendente e stampare "trovato".  
+ Quando si esegue l'esempio, il client chiama AddEmployee, quindi chiama GetEmployee per verificare se la prima chiamata è stata completata correttamente. Il risultato della richiesta di un'operazione GetEmployee viene visualizzato nella finestra della console client. L'operazione GetEmployee deve avere esito positivo per trovare il dipendente e stampare "Found".  
   
 > [!NOTE]
-> In questo esempio viene illustrato come inserire un surrogato per la serializzazione, la deserializzazione e la generazione di metadati. Non viene descritto come inserire un surrogato per la generazione di codice dai metadati. Per visualizzare un esempio di come un surrogato può essere utilizzato per inserire la generazione di codice client, vedere l'esempio di [pubblicazione WSDL personalizzata.](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
+> In questo esempio viene illustrato come inserire un surrogato per la serializzazione, la deserializzazione e la generazione di metadati. Non viene descritto come inserire un surrogato per la generazione di codice dai metadati. Per un esempio di come è possibile usare un surrogato per collegare la generazione di codice client, vedere l'esempio di [pubblicazione WSDL personalizzata](custom-wsdl-publication.md) .  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Assicurarsi di aver eseguito la procedura di [installazione una tantera per Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Per compilare l'edizione della soluzione in linguaggio C, seguire le istruzioni in [Compilazione degli](../../../../docs/framework/wcf/samples/building-the-samples.md)esempi di Windows Communication Foundation .  
+2. Per compilare l'edizione C# della soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](building-the-samples.md).  
   
-3. Per eseguire l'esempio in una configurazione su un singolo o più computer, seguire le istruzioni in Esecuzione di [Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](running-the-samples.md).  
   
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) Esempi per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti gli esempi e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) ed [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  
