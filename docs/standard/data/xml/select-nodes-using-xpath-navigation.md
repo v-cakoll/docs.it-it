@@ -1,17 +1,18 @@
 ---
 title: Selezione di nodi utilizzando la navigazione XPath
+description: Informazioni su come selezionare i nodi XML in .NET. Usare i metodi Document Object Model (DOM) che consentono di usare la navigazione XPath (XML Path Language) per eseguire query sulle informazioni DOM.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-ms.openlocfilehash: 85f3ae9ec9f3b4d0949a893dd1e59fbbda139066
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: aa8b6d93e25d974a0e1b53ae8be9868f6bf64be6
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291461"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662511"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>Selezione di nodi utilizzando la navigazione XPath
 Il DOM (Document Object Model) XML contiene metodi che consentono di usare la navigazione XPath (XML Path Language) per eseguire query sulle informazioni del DOM. È possibile usare XPath per individuare un singolo nodo specifico o tutti i nodi che corrispondono a certi criteri.  

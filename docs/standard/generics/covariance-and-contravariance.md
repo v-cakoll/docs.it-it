@@ -1,5 +1,6 @@
 ---
 title: Covarianza e controvarianza nei generics
+description: Informazioni sulla covarianza, che consente di usare un tipo più derivato e la controvarianza, che consente di usare un tipo meno derivato, in generics di .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: b11b5fc93d9b7289e62d6abc9d3ca19027a107c5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 12de1554bb6e33b69d0d2bba24001e7e4c2d8a65
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287558"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663044"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covarianza e controvarianza nei generics
  La covarianza e la controvarianza sono termini che fanno riferimento alla possibilità di usare un tipo più derivato (più specifico) o un tipo meno derivato (meno specifico) di quanto specificato in origine. I parametri di tipo generico supportano la covarianza e la controvarianza per offrire la massima flessibilità nell'assegnazione e nell'utilizzo dei tipi generici. Quando si fa riferimento a un sistema di tipi, la covarianza, la controvarianza e l'invarianza hanno le seguenti definizioni. Negli esempi si presuppone una classe di base denominata `Base` e una classe derivata denominata `Derived`.  

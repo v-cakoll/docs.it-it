@@ -1,6 +1,6 @@
 ---
 title: Tipi numerici a virgola mobile - Riferimenti per C#
-description: Informazioni sui tipi a virgola mobile incorporati in C, float, double e decimal
+description: 'Informazioni sui tipi a virgola mobile C# predefiniti: float, Double e Decimal'
 ms.date: 02/10/2020
 f1_keywords:
 - float
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: a277215d438b5f6b0bbbef72e5e0121b6ce41990
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: a1142d1aa04003ae1942902672cfc7a05edc99c0
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121475"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662667"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipi numerici a virgola mobile (riferimenti per C#)
 
-I *tipi numerici* a virgola mobile rappresentano numeri reali. Tutti i tipi numerici a virgola mobile sono [tipi di valore](value-types.md). Sono anche [tipi semplici](value-types.md#built-in-value-types) e possono essere inizializzati con valori [letterali](#real-literals). Tutti i tipi numerici a virgola mobile supportano gli operatori [aritmetici,](../operators/arithmetic-operators.md) [di confronto](../operators/comparison-operators.md)e [di uguaglianza.](../operators/equality-operators.md)
+I *tipi numerici a virgola mobile* rappresentano i numeri reali. Tutti i tipi numerici a virgola mobile sono [tipi di valore](value-types.md). Sono anche [tipi semplici](value-types.md#built-in-value-types) e possono essere inizializzati con [valori letterali](#real-literals). Tutti i tipi numerici a virgola mobile supportano gli operatori [aritmetici](../operators/arithmetic-operators.md), di [confronto](../operators/comparison-operators.md)e di [uguaglianza](../operators/equality-operators.md) .
 
 ## <a name="characteristics-of-the-floating-point-types"></a>Caratteristiche dei tipi a virgola mobile
 
@@ -50,14 +50,14 @@ Il valore predefinito di ogni tipo a virgola mobile è zero `0`. Ogni tipo a vir
 
 Dato che il tipo `decimal` è caratterizzato da una maggiore precisione e da un intervallo più piccolo rispetto a `float` e `double`, è appropriato per calcoli finanziari e monetari.
 
-È possibile combinare tipi `float` `double` [integrali](integral-numeric-types.md) e tipi e in un'espressione. In questo caso, i tipi integrali vengono convertiti in modo implicito in uno dei tipi a virgola mobile e, se necessario, il `float` tipo viene convertito in modo implicito in `double`. L'espressione viene valutata nel modo seguente:
+È possibile combinare i tipi [integrali](integral-numeric-types.md) e `float` i `double` tipi e in un'espressione. In questo caso, i tipi integrali vengono convertiti in modo implicito in uno dei tipi a virgola mobile e, se necessario, il `float` tipo viene convertito in modo implicito in `double` . L'espressione viene valutata nel modo seguente:
 
-- Se è `double` presente un tipo nell'espressione, l'espressione restituisce `double`o a nei confronti relazionali e di [`bool`](bool.md) uguaglianza.
-- Se nell'espressione non è presente alcun `double` `float`tipo, `bool` l'espressione restituisce o a i confronti relazionali e di uguaglianza.
+- Se è presente `double` un tipo nell'espressione, l'espressione restituisce `double` o a [`bool`](bool.md) nei confronti relazionali e di uguaglianza.
+- Se non è presente alcun `double` tipo nell'espressione, l'espressione restituisce `float` o a `bool` nei confronti relazionali e di uguaglianza.
 
-È inoltre possibile combinare `decimal` tipi integrali e il tipo in un'espressione. In questo caso, i tipi integrali vengono convertiti in modo implicito nel `decimal` tipo e l'espressione restituisce o `decimal`nei `bool` confronti relazionali e di uguaglianza.
+È anche possibile combinare tipi integrali e il `decimal` tipo in un'espressione. In questo caso, i tipi integrali vengono convertiti in modo implicito nel `decimal` tipo e l'espressione restituisce `decimal` oppure a `bool` nei confronti relazionali e di uguaglianza.
 
-Non è `decimal` possibile combinare `float` `double` il tipo con i tipi e in un'espressione. In questo caso, se si desidera eseguire operazioni aritmetiche, di confronto o di uguaglianza, è necessario convertire in modo esplicito gli operandi da o nel tipo, come illustrato nell'esempio `decimal` seguente:
+Non è possibile combinare il `decimal` tipo con `float` i `double` tipi e in un'espressione. In questo caso, se si desidera eseguire operazioni aritmetiche, di confronto o di uguaglianza, è necessario convertire in modo esplicito gli operandi dal o al `decimal` tipo, come illustrato nell'esempio seguente:
 
 ```csharp-interactive
 double a = 1.0;
@@ -70,13 +70,13 @@ Console.WriteLine((decimal)a + b);
 
 ## <a name="real-literals"></a>Valori letterali reali
 
-Il tipo di un valore letterale reale è determinato dal relativo suffisso come segue:
+Il tipo di un valore letterale reale è determinato dal suffisso, come indicato di seguito:
 
-- Il valore letterale `d` senza `D` suffisso o con il suffisso o è di tipo`double`
-- Il valore `f` letterale con il suffisso o `F` è di tipo`float`
-- Il valore `m` letterale con il suffisso o `M` è di tipo`decimal`
+- Il valore letterale senza suffisso o con il `d` `D` suffisso o è di tipo`double`
+- Il valore letterale con il `f` `F` suffisso o è di tipo`float`
+- Il valore letterale con il `m` `M` suffisso o è di tipo`decimal`
 
-Il codice seguente illustra un esempio di ogni codice:The following code demonstrates an example of each:
+Il codice seguente illustra un esempio di ogni:
 
 ```csharp
 double d = 3D;
@@ -90,13 +90,13 @@ decimal myMoney = 3_000.5m;
 myMoney = 400.75M;
 ```
 
-Nell'esempio precedente viene illustrato `_` anche l'utilizzo di come separatore di *cifre*, che è supportato a partire da C . È possibile utilizzare il separatore di cifre con tutti i tipi di valori letterali numerici.
+Nell'esempio precedente viene inoltre illustrato l'utilizzo di `_` come *separatore di cifre*, supportato a partire da C# 7,0. È possibile usare il separatore di cifre con tutti i tipi di valori letterali numerici.
 
-È anche possibile usare la notazione scientifica, ovvero specificare una parte esponente di un valore letterale reale, come illustrato nell'esempio seguente:You can also use scientific notation, that is, specify an exponent part of a real literal, as the following example shows:
+È anche possibile usare la notazione scientifica, ovvero specificare una parte dell'esponente di un valore letterale reale, come illustrato nell'esempio seguente:
 
 ```csharp-interactive
 double d = 0.42e2;
-Console.WriteLine(d);  // output 42;
+Console.WriteLine(d);  // output 42
 
 float f = 134.45E-2f;
 Console.WriteLine(f);  // output: 1.3445
@@ -107,14 +107,14 @@ Console.WriteLine(m);  // output: 1500000
 
 ## <a name="conversions"></a>Conversioni
 
-Esiste una sola conversione implicita tra `float` tipi `double`numerici a virgola mobile: da a . Tuttavia, è possibile convertire qualsiasi tipo a virgola mobile in qualsiasi altro tipo a virgola mobile con il [cast esplicito](../operators/type-testing-and-cast.md#cast-expression). Per ulteriori informazioni, consultate [Conversioni numeriche predefinite.](numeric-conversions.md)
+Esiste una sola conversione implicita tra tipi numerici a virgola mobile: da `float` a `double` . Tuttavia, è possibile convertire qualsiasi tipo a virgola mobile in qualsiasi altro tipo a virgola mobile con il [cast esplicito](../operators/type-testing-and-cast.md#cast-expression). Per altre informazioni, vedere [conversioni numeriche predefinite](numeric-conversions.md).
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
 Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguaggio C#](~/_csharplang/spec/introduction.md):
 
 - [Tipi a virgola mobile](~/_csharplang/spec/types.md#floating-point-types)
-- [Il tipo decimale](~/_csharplang/spec/types.md#the-decimal-type)
+- [Tipo decimale](~/_csharplang/spec/types.md#the-decimal-type)
 - [Valori letterali reali](~/_csharplang/spec/lexical-structure.md#real-literals)
 
 ## <a name="see-also"></a>Vedere anche

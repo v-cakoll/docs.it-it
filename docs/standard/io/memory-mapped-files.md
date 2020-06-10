@@ -1,5 +1,6 @@
 ---
 title: File mappati alla memoria
+description: Esplorare i file mappati alla memoria in .NET, che contengono contenuto di file nella memoria virtuale e consentire alle applicazioni di modificare il file scrivendo direttamente nella memoria.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: 1a8c087449ed623e93f8c8ea467200f5e3e7e70f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: db63c15357b0670c55b1174b91b02e2f49a0c4c1
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278792"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84661979"
 ---
 # <a name="memory-mapped-files"></a>File mappati alla memoria
 Un file mappato alla memoria include il contenuto di un file nella memoria virtuale. Questo mapping tra un file e uno spazio di memoria consente a un'applicazione, inclusi più processi, di modificare il file leggendo e scrivendo direttamente nella memoria. A partire da NET Framework 4, è possibile usare il codice gestito per accedere ai file mappati alla memoria nello stesso modo in cui le funzioni Windows native accedono ai file mappati alla memoria, come descritto in [Managing Memory-Mapped Files](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)) (Gestione di file mappati alla memoria).  

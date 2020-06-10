@@ -1,5 +1,6 @@
 ---
 title: Costrutti di raggruppamento nelle espressioni regolari
+description: Informazioni su come usare i costrutti di raggruppamento in .NET. I costrutti di raggruppamento delineano sottoespressioni di un'espressione regolare e acquisiscono sottostringhe di una stringa di input.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: 5be98a5a213592b169bee430d84c4fc3a1d5fcef
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d737e5758ee7a940aeea3ded9a7937d687393116
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290526"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662628"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Costrutti di raggruppamento nelle espressioni regolari
 I costrutti di raggruppamento delineano sottoespressioni di un'espressione regolare e acquisiscono sottostringhe di una stringa di input. È possibile usare i costrutti di raggruppamento per effettuare le operazioni seguenti:  
@@ -118,7 +119,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Un criterio di ricerca di espressioni regolari semplice illustra in che modo è possibile fare riferimento a gruppi denominati e numerati (non denominati) a livello di codice o tramite la sintassi del linguaggio delle espressioni regolari. L'espressione regolare `((?<One>abc)\d+)?(?<Two>xyz)(.*)` crea i gruppi di acquisizione seguenti in base a numero e nome. Il primo gruppo di acquisizione (numero 0) fa sempre riferimento all'intero criterio.  
   
-|Number|Nome|Modello|  
+|Numero|Nome|Modello|  
 |------------|----------|-------------|  
 |0|0 (nome predefinito)|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
 |1|1 (nome predefinito)|`((?<One>abc)\d+)`|  

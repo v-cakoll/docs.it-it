@@ -1,5 +1,6 @@
 ---
 title: Panoramica della libreria di classi .NET
+description: Informazioni sulla libreria di classi .NET. Le implementazioni di .NET includono classi, interfacce, delegati e tipi di valore per consentire l'accesso alle funzionalità di sistema.
 ms.date: 02/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: b076298a5a5f90a3c2dd39e4c5c9684e02a291c4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7eb9aa9714dcb920118a6422b9f6c78775bf1a5c
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289239"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662927"
 ---
 # <a name="net-class-library-overview"></a>Panoramica della libreria di classi .NET
 
@@ -86,7 +87,7 @@ Le implementazioni .NET includono classi, interfacce, delegati e tipi di valore 
   
 |Category|Nome di classe|Descrizione|Tipo di dati di Visual Basic|Tipo di dati di C#|Tipo di dati C++/CLI|Tipo di dati F#|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
-|Intero|<xref:System.Byte>|Intero senza segno a 8 bit.|**Byte**|**byte**|**unsigned char**|**byte**|  
+|Integer|<xref:System.Byte>|Intero senza segno a 8 bit.|**Byte**|**byte**|**unsigned char**|**byte**|  
 ||<xref:System.SByte>|Numero intero con segno a 8 bit.<br /><br /> Non conforme a CLS.|**SByte**|**sbyte**|**char**<br /> -oppure-<br /> **signed** **char**|**sbyte**|  
 ||<xref:System.Int16>|Intero con segno a 16 bit.|**Breve**|**short**|**short**|**int16**|  
 ||<xref:System.Int32>|Intero con segno a 32 bit.|**Intero**|**int**|**int**<br /><br /> -oppure-<br /><br /> **long**|**int**|  
@@ -94,10 +95,10 @@ Le implementazioni .NET includono classi, interfacce, delegati e tipi di valore 
 ||<xref:System.UInt16>|Numero intero non firmato a 16 bit.<br /><br /> Non conforme a CLS.|**UShort**|**ushort**|**unsigned short**|**UInt16**|  
 ||<xref:System.UInt32>|Intero senza segno a 32 bit.<br /><br /> Non conforme a CLS.|**UInteger**|**uint**|**int senza segno**<br /> -oppure-<br /> **long senza segno**|**uint32**|  
 ||<xref:System.UInt64>|Intero senza segno a 64 bit.<br /><br /> Non conforme a CLS.|**ULong**|**ULONG**|**unsigned __int64**|**uint64**|  
-|Virgola mobile|<xref:System.Single>|Un numero a virgola mobile e precisione singola a 32 bit.|**Singolo**|**float**|**float**|**float32**<br> o<br>**single**|  
-||<xref:System.Double>|Un numero a virgola mobile e precisione doppia a 64 bit.|**Doppio**|**double**|**double**|**float**<br> o <br> **double**|  
+|A virgola mobile|<xref:System.Single>|Un numero a virgola mobile e precisione singola a 32 bit.|**Single**|**float**|**float**|**float32**<br> oppure<br>**single**|  
+||<xref:System.Double>|Un numero a virgola mobile e precisione doppia a 64 bit.|**Double**|**double**|**double**|**float**<br> oppure <br> **double**|  
 |Logico|<xref:System.Boolean>|Un valore Boolean (true o false).|**Boolean**|**bool**|**bool**|**bool**|  
-|Altro|<xref:System.Char>|Un carattere Unicode a 16 bit.|**Char**|**char**|**wchar_t**|**char**|  
+|Altri|<xref:System.Char>|Un carattere Unicode a 16 bit.|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|Un valore decimale a 128 bit.|**Decimale**|**decimal**|**Decimale**|**decimal**|  
 ||<xref:System.IntPtr>|Un intero con segno la cui dimensione dipende dalla piattaforma sottostante (un valore a 32 bit su una piattaforma a 32 bit e un valore a 64 bit su una piattaforma a 64 bit).|**IntPtr**<br /><br /> Nessun tipo incorporato.|**IntPtr**<br /><br /> Nessun tipo incorporato.|**IntPtr**<br /><br /> Nessun tipo incorporato.|**unativeint**|  
 ||<xref:System.UIntPtr>|Un intero senza segno la cui dimensione dipende dalla piattaforma sottostante (un valore a 32 bit su una piattaforma a 32 bit e un valore a 64 bit su una piattaforma a 64 bit).<br /><br /> Non conforme a CLS.|**UIntPtr**<br /><br /> Nessun tipo incorporato.|**UIntPtr**<br /><br /> Nessun tipo incorporato.|**UIntPtr**<br /><br /> Nessun tipo incorporato.|**unativeint**|  

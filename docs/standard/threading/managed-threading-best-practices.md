@@ -1,5 +1,6 @@
 ---
 title: Suggerimenti per l'utilizzo del threading gestito
+description: Informazioni sulle procedure consigliate per il threading gestito in .NET. Usare situazioni difficili, ad esempio il coordinamento di molti thread o la gestione dei thread di blocco.
 ms.date: 10/15/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: 30d746d739654ecad2b485b9d69cfe300caca2ff
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fa0af1461ba568583127316934b9d55577dd4c5a
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291188"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662823"
 ---
 # <a name="managed-threading-best-practices"></a>Suggerimenti per l'uso del threading gestito
 Il multithreading richiede un'attenta programmazione. È possibile ridurre la complessità della maggior parte delle attività accodando le richieste di esecuzione tramite thread di pool di thread. In questo argomento vengono analizzate situazioni più complesse, come il coordinamento del lavoro di più thread o la gestione di thread che effettuano un blocco.  

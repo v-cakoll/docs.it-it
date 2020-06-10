@@ -1,5 +1,6 @@
 ---
 title: Annullamento in thread gestiti
+description: Informazioni sull'annullamento nei thread gestiti. Informazioni sui token di annullamento nell'annullamento cooperativo di operazioni sincrone asincrone o con esecuzione prolungata.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: e56d0f71afdc9281271b7d15316a133e7c720bd0
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9af4a64e50eff65023d5ed5bda868af2f8323a96
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277882"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662836"
 ---
 # <a name="cancellation-in-managed-threads"></a>Annullamento in thread gestiti
 A partire da .NET Framework 4, .NET Framework usa un modello unificato per l'annullamento cooperativo di operazioni asincrone o di operazioni sincrone a esecuzione prolungata. Questo modello è basato su un oggetto leggero chiamato token di annullamento. L'oggetto che richiama una o più operazioni annullabili, ad esempio tramite la creazione di nuovi thread o attività, passa il token a ogni operazione. Singole operazioni possono a loro volta passare copie del token ad altre operazioni. In un secondo momento, l'oggetto che ha creato il token può usarlo per richiedere che le operazioni arrestino le rispettive attività. Solo l'oggetto richiedente può inviare la richiesta di annullamento e ogni listener è responsabile del rilevamento della richiesta e della relativa risposta in modo appropriato e tempestivo.  

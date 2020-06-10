@@ -1,5 +1,6 @@
 ---
 title: Recupero di informazioni memorizzate negli attributi
+description: Informazioni su come recuperare le informazioni archiviate negli attributi, ad esempio per un'istanza di attributo, molte istanze per lo stesso ambito, & molte istanze per ambiti diversi.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: fc8dcb38471d80d01d1f87993783af3d24868506
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cf147a0ae6833039247c4c0878996973cc3db545
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276135"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84661861"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Recupero di informazioni memorizzate negli attributi
 Il recupero di un attributo personalizzato è un processo semplice. Dichiarare prima di tutto un'istanza dell'attributo da recuperare. Usare quindi il metodo <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> per inizializzare il nuovo attributo per il valore dell'attributo da recuperare. Dopo avere inizializzato il nuovo attributo, è sufficiente usarne le proprietà per ottenere i valori.  
@@ -87,4 +88,4 @@ The attribute was not found.
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
-- [Attributi](index.md)
+- [Attributes (Attributi)](index.md)

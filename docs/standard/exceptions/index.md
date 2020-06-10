@@ -1,5 +1,6 @@
 ---
 title: Gestione e generazione di eccezioni in .NET
+description: Informazioni su come gestire e generare eccezioni in .NET. Le eccezioni sono il modo in cui le operazioni .NET indicano errori alle applicazioni.
 ms.date: 06/19/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - exceptions [.NET]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-ms.openlocfilehash: 8e78b2a8d7a815637e143eeb88bcfb51ded33771
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89d88e3128917125d1a09466ed4e230604d6978c
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75741351"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662771"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Gestione e generazione di eccezioni in .NET
 
@@ -60,7 +61,7 @@ Nella tabella seguente sono elencate alcune eccezioni comuni con esempi di possi
 
 - [Classe e proprietà dell'eccezione](exception-class-and-properties.md)
 - [Procedura: Usare il blocco try/catch per intercettare le eccezioni](how-to-use-the-try-catch-block-to-catch-exceptions.md)
-- [Procedura: utilizzare eccezioni specifiche in un blocco CatchHow to: Use Specific Exceptions in a Catch Block](how-to-use-specific-exceptions-in-a-catch-block.md)
+- [Procedura: usare eccezioni specifiche in un blocco catch](how-to-use-specific-exceptions-in-a-catch-block.md)
 - [Procedura: Come generare in modo esplicito le eccezioni](how-to-explicitly-throw-exceptions.md)
 - [Procedura: creare eccezioni definite dall'utente](how-to-create-user-defined-exceptions.md)
 - [Utilizzo di gestori eccezioni filtrati dall'utente](using-user-filtered-exception-handlers.md)

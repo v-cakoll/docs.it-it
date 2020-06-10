@@ -1,16 +1,17 @@
 ---
-title: Come scrivere un metodo dell'asse LINQ to XML (C )How to write a LINQ to XML axis method (C
+title: Come scrivere un metodo dell'asse LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 7810afd1a181523fb30f6702993bc0ad469f66aa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf1542471f44115bd787e7be6c8ffb836a842a4f
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168544"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662446"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Come scrivere un metodo dell'asse LINQ to XML (C )How to write a LINQ to XML axis method (C
-È possibile scrivere metodi dell'asse personalizzati per recuperare raccolte da un albero XML. Uno dei modi migliori per eseguire questa operazione consiste nello scrivere un metodo di estensione che restituisce una raccolta di elementi o attributi. È possibile scrivere il metodo di estensione per restituire subset specifici di elementi o attributi, in base ai requisiti dell'applicazione.  
+# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Come scrivere un metodo dell'asse LINQ to XML (C#)
+
+Un [metodo dell'asse](linq-to-xml-axes-overview.md) XML recupera una raccolta di elementi XML da un documento XML o da un elemento predecessore. È possibile scrivere metodi dell'asse personalizzati per recuperare raccolte da un albero XML. Uno dei modi migliori per eseguire questa operazione consiste nello scrivere un metodo di estensione che restituisce una raccolta di elementi o attributi. È possibile scrivere il metodo di estensione per restituire subset specifici di elementi o attributi, in base ai requisiti dell'applicazione.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono usati due metodi di estensione: Il primo metodo di estensione, `GetXPath`, opera su <xref:System.Xml.Linq.XObject> e restituisce un'espressione XPath che, quando viene valutata, restituisce il nodo o l'attributo. Il secondo metodo di estensione, `Find`, opera su <xref:System.Xml.Linq.XElement>. Restituisce una raccolta di oggetti <xref:System.Xml.Linq.XAttribute> e oggetti <xref:System.Xml.Linq.XElement> che contengono un testo specificato.  

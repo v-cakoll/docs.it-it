@@ -1,5 +1,6 @@
 ---
 title: "Procedura: Annullare un'attività e i relativi figli"
+description: Vedere esempi di come annullare un'attività e i relativi elementi figlio in .NET. Gli esempi illustrano i passaggi della creazione di un'attività annullabile, fino alla nota che l'attività è stata annullata.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-ms.openlocfilehash: ca6b5f10840d935aa45cb660da86685d1c90554b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 66daf00680b65aace1ce6367761e3ed81596d33b
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290032"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662680"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>Procedura: Annullare un'attività e i relativi figli
 Questi esempi mostrano come eseguire le attività seguenti:  

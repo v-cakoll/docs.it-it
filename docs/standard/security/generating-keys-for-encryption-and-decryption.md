@@ -1,5 +1,6 @@
 ---
 title: Generazione di chiavi per crittografia e decrittografia
+description: Informazioni su come creare e gestire chiavi simmetriche e asimmetriche per la crittografia e la decrittografia in .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - asymmetric keys [.NET Framework]
 - cryptography [.NET Framework], keys
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
-ms.openlocfilehash: 992ac30310d138e04b8408497c5e49166a356ab4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f8c3633d18e200037235502487d0d91d42083241
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291539"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84661809"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Generazione di chiavi per crittografia e decrittografia
 La creazione e la gestione di chiavi sono due momenti importanti del processo di crittografia. Per gli algoritmi simmetrici è richiesta la creazione di una chiave e un vettore di inizializzazione (IV). La chiave deve rimanere segreta per chiunque non debba decrittografare i dati. Il vettore di inizializzazione non deve rimanere segreto, ma dovrebbe essere modificato per ogni sessione. Gli algoritmi asimmetrici richiedono la creazione di una chiave pubblica e di una chiave privata. La chiave pubblica può essere resa pubblica a chiunque, mentre quella privata deve essere nota solo alla parte che decrittograferà i dati crittografati con la chiave pubblica. Questa sezione descrive come generare e gestire chiavi sia per gli algoritmi simmetrici che per quelli asimmetrici.  

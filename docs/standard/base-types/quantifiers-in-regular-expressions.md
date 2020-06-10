@@ -1,5 +1,6 @@
 ---
 title: quantificatori in espressioni regolari
+description: Informazioni sui quantificatori di espressioni regolari, che specificano il numero di istanze di un carattere, un gruppo o una classe di caratteri che deve essere presente nell'input per la corrispondenza.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: dbfe4422b89b6223988ec9c6034d4b91b6ec8b5d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2fc47a834f8f5b18021aa4f321345b8d7e4e8459
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276148"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662888"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>quantificatori in espressioni regolari
 I quantificatori specificano il numero di istanze di un carattere, un gruppo o una classe di caratteri che deve essere presente nell'input affinché venga trovata una corrispondenza.  Nella tabella seguente vengono elencati i quantificatori supportati da .NET.  

@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: Estrarre il giorno della settimana da una data specifica'
+description: Informazioni su come determinare il giorno ordinale della settimana per una data specifica in .NET. Informazioni su come visualizzare il nome del giorno della settimana localizzato per una data specifica.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - DateTimeOffset.ToString method
 - full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-ms.openlocfilehash: 128ff4887601431f75981f13b51a11469e65d65c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fa0eb6c36b88594543d08680af104b5408c295f9
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290474"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662615"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Procedura: Estrarre il giorno della settimana da una data specifica
 .NET Framework consente di determinare in modo semplice il giorno ordinale della settimana e di visualizzare il nome del giorno della settimana localizzato per una data specifica. Un valore enumerato che indica il giorno della settimana corrispondente a una determinata data è specificato dalla proprietà <xref:System.DateTime.DayOfWeek%2A> o <xref:System.DateTimeOffset.DayOfWeek%2A>. Al contrario, il recupero del nome del giorno della settimana è un'operazione di formattazione che può essere eseguita effettuando la chiamata a un metodo di formattazione, ad esempio il metodo `ToString` del valore di data e ora o il metodo <xref:System.String.Format%2A?displayProperty=nameWithType>. In questo argomento viene illustrato come eseguire queste operazioni di formattazione.  

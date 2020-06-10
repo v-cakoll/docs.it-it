@@ -1,5 +1,6 @@
 ---
 title: Nomi di membri dei tipi
+description: Informazioni sulle linee guida per la denominazione dei membri dei tipi in .NET, ad esempio metodi, proprietà, eventi e campi.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: 87cf793229cfc7d8d0547af935369a3febee41a3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: de613673989bd174ac80adda566d04600059642d
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290188"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662498"
 ---
 # <a name="names-of-type-members"></a>Nomi di membri dei tipi
 I tipi sono costituiti da membri: metodi, proprietà, eventi, costruttori e campi. Le sezioni seguenti illustrano le linee guida per assegnare nomi ai membri dei tipi.

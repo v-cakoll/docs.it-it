@@ -1,5 +1,6 @@
 ---
 title: Flusso di dati (Task Parallel Library)
+description: Informazioni su come usare i componenti del flusso di data nel Task Parallel Library (TPL) per migliorare l'affidabilità delle applicazioni abilitate per la concorrenza.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-ms.openlocfilehash: e1d4dc596f57a4c75c11806f95099ee5593c6c03
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2c7bbc9bf935159ab66bd2a61a60b9484e67018a
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285534"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662550"
 ---
 # <a name="dataflow-task-parallel-library"></a>Flusso di dati (Task Parallel Library)
 La libreria Task Parallel Library (TPL) fornisce componenti del flusso di dati per aumentare l'affidabilità delle applicazioni abilitate per la concorrenza. Questi componenti del flusso di dati vengono definiti collettivamente *libreria del flusso di dati TPL*. Con questo modello del flusso di dati viene promossa la programmazione basata su attori fornendo il passaggio di messaggi in-process per attività di pipelining e per un flusso di dati con granularità grossolana. I componenti del flusso di dati sono basati sui tipi e sull'infrastruttura di pianificazione della libreria TPL e si integrano con il supporto dei linguaggi C#, Visual Basic e F# per la programmazione asincrona. Questi componenti sono utili qualora siano presenti più operazioni che devono comunicare tra loro in modo asincrono o qualora si desideri elaborare i dati non appena diventano disponibili. Si consideri, ad esempio, un'applicazione tramite cui vengono elaborati i dati immagine di una webcam. Tramite il modello del flusso di dati, l'applicazione è in grado di elaborare i fotogrammi delle immagini quando diventano disponibili. Se tramite l'applicazione vengono migliorati i fotogrammi dell'immagine, ad esempio, eseguendo la correzione della luce o la riduzione occhi rossi, è possibile creare una *pipeline* di componenti del flusso di dati. In ogni fase della pipeline è possibile utilizzare la funzionalità di parallelismo con maggiore granulosità grossolana, ad esempio la funzionalità fornita dalla libreria TPL, per trasformare l'immagine.  

@@ -1,5 +1,6 @@
 ---
 title: Concatenamento di attività tramite attività di continuazione
+description: Informazioni su come concatenare l'attività usando le attività di continuazione in .NET. Un'attività di continuazione è un'attività asincrona richiamata da un'altra attività.
 ms.date: 02/11/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: c6952b4b341a76e15d9699a06cd64ae7b6b4f047
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 90317f3db5bcf2371494e14a1ca1dd16d049e0bd
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285612"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662472"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Concatenamento di attività tramite attività di continuazione
 Nella programmazione asincrona è comune che, dopo il completamento, un'operazione asincrona chiami una seconda operazione e passi i dati a tale operazione. Tradizionalmente le continuazioni venivano eseguite tramite metodi di callback. In Task Parallel Library la stessa funzionalità viene resa possibile dalle *attività di continuazione*. Un'attivazione di continuazione, chiamata anche semplicemente continuazione, è un'attività asincrona richiamata da un'altra attività, denominata *attività precedente*, al termine di quest'ultima.  
