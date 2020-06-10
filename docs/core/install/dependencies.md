@@ -3,14 +3,14 @@ title: Dipendenze di .NET Core SDK e Runtime-.NET Core
 description: Informazioni dettagliate sui prerequisiti per l'architettura del sistema operativo e della CPU per installare il .NET Core SDK e il runtime in Windows, Linux e macOS.
 author: leecow
 ms.author: leecow
-ms.date: 04/30/2020
+ms.date: 06/01/2020
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 280aa1431686ff99257580bb024a84b1e57f85c0
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 81f6ab436428d71f71d9fd0f560bd2b0512a519b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895480"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590760"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>Dipendenze e requisiti di .NET Core
 
@@ -23,7 +23,7 @@ In questo articolo vengono illustrati i sistemi operativi e l'architettura della
 <!-- markdownlint-disable MD025 -->
 <!-- markdownlint-disable MD024 -->
 
-# <a name="net-core-31"></a>[.NET Core 3,1](#tab/netcore31)
+# <a name="net-core-31"></a>[.NET Core 3.1](#tab/netcore31)
 
 Con .NET Core 3,1 sono supportate le seguenti versioni di Windows:
 
@@ -57,7 +57,7 @@ Con .NET Core 3,0 sono supportate le seguenti versioni di Windows:
 
 Per altre informazioni sui sistemi operativi, le distribuzioni e i criteri del ciclo di vita supportati di .NET Core 3,0, vedere [versioni del sistema operativo supportate da .net core 3,0](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md).
 
-# <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
+# <a name="net-core-22"></a>[.NET Core 2,2](#tab/netcore22)
 
 *.NET Core 2,2 attualmente non è supportato. Per ulteriori informazioni, vedere i [criteri di supporto di .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
 
@@ -120,13 +120,13 @@ I requisiti indicati sopra sono necessari anche se si verifica uno degli errori 
 >
 > \- - oppure -
 >
-> La libreria *hostfxr. dll* è stata trovata, ma il caricamento da *C\\\<: path_to_app \\>hostfxr. dll* non è riuscita.
+> La libreria *hostfxr. dll* è stata trovata, ma il caricamento da *C: \\ \<path_to_app> \\ hostfxr. dll* non è riuscito.
 
 ::: zone-end
 
 ::: zone pivot="os-linux"
 
-# <a name="net-core-31"></a>[.NET Core 3,1](#tab/netcore31)
+# <a name="net-core-31"></a>[.NET Core 3.1](#tab/netcore31)
 
 .NET Core 3,1 considera Linux come un singolo sistema operativo. È disponibile una singola Build Linux (per ogni architettura chip) per le distribuzioni di Linux supportate.
 
@@ -183,7 +183,7 @@ Per altre informazioni sui sistemi operativi, le distribuzioni e i criteri del c
 
 Per altre informazioni su come installare .NET Core 3.0 su ARM64, vedere [Installing .NET Core 3.0 on Linux ARM64](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213) (Installazione di .NET Core 3.0 su Linux ARM64).
 
-# <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
+# <a name="net-core-22"></a>[.NET Core 2,2](#tab/netcore22)
 
 *.NET Core 2,2 attualmente non è supportato. Per ulteriori informazioni, vedere i [criteri di supporto di .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
 

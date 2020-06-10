@@ -2,12 +2,12 @@
 title: Validator del certificato X.509
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: ba73381bb6211dcbd1ddad1457f9ae8611008d43
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 32d99b93ef014967aa04bc70f73fbd2ebcfe2c60
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141205"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594829"
 ---
 # <a name="x509-certificate-validator"></a>Validator del certificato X.509
 
@@ -23,7 +23,7 @@ In sintesi, nell'esempio viene illustrato in che modo eseguire le operazioni seg
 
 - Il server viene autenticato tramite il certificato X.509 del server.
 
-Il servizio espone un singolo endpoint per la comunicazione con il servizio, definito utilizzando il file di configurazione app. config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione viene configurata con `wsHttpBinding` uno standard che usa `WSSecurity` per impostazione predefinita e l'autenticazione del certificato client. Il comportamento del servizio specifica la modalità personalizzata per la convalida dei certificati X.509 client insieme al tipo di classe del validator. Il comportamento specifica inoltre il certificato server mediante l'elemento serviceCertificate. Il certificato del server deve contenere lo stesso valore per l' `SubjectName` oggetto `findValue` nel [ \<>ServiceCertificate ](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
+Il servizio espone un singolo endpoint per la comunicazione con il servizio, definito utilizzando il file di configurazione app. config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione viene configurata con uno standard `wsHttpBinding` che usa per impostazione predefinita `WSSecurity` e l'autenticazione del certificato client. Il comportamento del servizio specifica la modalità personalizzata per la convalida dei certificati X.509 client insieme al tipo di classe del validator. Il comportamento specifica inoltre il certificato server mediante l'elemento serviceCertificate. Il certificato del server deve contenere lo stesso valore per l'oggetto `SubjectName` `findValue` in [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) .
 
 ```xml
   <system.serviceModel>
@@ -305,7 +305,7 @@ Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch
 
 #### <a name="to-set-up-and-build-the-sample"></a>Per impostare e compilare l'esempio
 
-1. Per compilare la soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+1. Per compilare la soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](building-the-samples.md).
 
 2. Per eseguire l'esempio su un solo computer o tra computer diversi, seguire le istruzioni indicate di seguito.
 
@@ -332,9 +332,9 @@ Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch
 
 4. Copiare i file di programma del client nella directory del client sul computer relativo e i file Setup.bat, Cleanup.bat e ImportServiceCert.bat nel client.
 
-5. Sul server, eseguire `setup.bat service` in un prompt dei comandi per gli sviluppatori per Visual Studio aperto con privilegi di amministratore. Quando `setup.bat` si esegue `service` con l'argomento viene creato un certificato del servizio con il nome di dominio completo del computer e il certificato del servizio viene esportato in un file denominato Service. cer.
+5. Sul server, eseguire `setup.bat service` in un prompt dei comandi per gli sviluppatori per Visual Studio aperto con privilegi di amministratore. Quando `setup.bat` si esegue con l' `service` argomento viene creato un certificato del servizio con il nome di dominio completo del computer e il certificato del servizio viene esportato in un file denominato Service. cer.
 
-6. Modificare Service. exe. config per riflettere il nuovo nome del certificato (nell' `findValue` attributo in [ \<ServiceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), che corrisponde al nome di dominio completo del computer. Modificare anche il nome del computer nell' \<elemento Service>\</baseAddresses> da localhost al nome completo del computer del servizio.
+6. Modificare Service. exe. config per riflettere il nuovo nome del certificato (nell' `findValue` attributo in [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ) che corrisponde al nome di dominio completo del computer. Modificare anche il nome del computer nell' \<service> / \<baseAddresses> elemento da localhost al nome completo del computer del servizio.
 
 7. Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.
 

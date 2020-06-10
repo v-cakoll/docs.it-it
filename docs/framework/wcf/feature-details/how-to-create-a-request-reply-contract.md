@@ -2,12 +2,12 @@
 title: 'Procedura: creare un contratto request/reply'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 793f7214f8319e87c3e344990577841fc029bc55
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a09c265c77edc584b591477e64314f1e76e332b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185025"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593438"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>Procedura: creare un contratto request/reply
 Un contratto di tipo request/reply specifica un metodo che restituisce una risposta La replica deve essere inviata e correlata alla richiesta in base ai termini di questo contratto. Anche se il metodo non restituisce alcuna risposta (`void` in C# o `Sub` in Visual Basic), nell'infrastruttura viene creato e inviato un messaggio vuoto al chiamante. Per impedire l'invio di un messaggio di risposta vuoto, utilizzare un contratto unidirezionale per l'operazione.  
@@ -43,12 +43,12 @@ public interface ICalculator
 }
 ```
   
-- Per altre informazioni su come specificare <xref:System.ServiceModel.OperationContractAttribute> i contratti <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> di operazione, vedere la classe e la proprietà .  
+- Per ulteriori informazioni su come specificare i contratti di operazione, vedere la <xref:System.ServiceModel.OperationContractAttribute> classe e la <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> Proprietà.  
   
 - L'applicazione degli attributi <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> determina la generazione automatica delle definizioni del contratto di servizio in un documento del linguaggio di descrizione dei servizi Web (WSDL, Web Services Description Language) dopo la distribuzione del servizio. Il documento viene scaricato aggiungendo l'elemento `?wsdl` all'indirizzo di base HTTP per il servizio, Ad esempio, usare `http://microsoft/CalculatorService?wsdl`  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ServiceModel.OperationContractAttribute>
-- [Progettazione dei contratti di servizio](../../../../docs/framework/wcf/designing-service-contracts.md)
-- [Procedura: creare un contratto duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Progettazione dei contratti di servizio](../designing-service-contracts.md)
+- [Procedura: creare un contratto duplex](how-to-create-a-duplex-contract.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Configurare le impostazioni del servizio COM+'
+title: 'Procedura: configurare le impostazioni del servizio COM+'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 31096ca510c868cf43ca6ef60126c98a8832d2c5
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 3fb4b31038845d223248e72d32b3e7413f2aef63
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895119"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597176"
 ---
-# <a name="how-to-configure-com-service-settings"></a>Procedura: Configurare le impostazioni del servizio COM+
-Quando l'interfaccia di un'applicazione viene aggiunta o rimossa usando lo strumento di configurazione del servizio COM+, la configurazione del servizio Web viene aggiornata nel file di configurazione dell'applicazione. In modalità hosted com+, il file Application. config si trova nella directory radice dell'applicazione (%programmi%\COMPlus Applications Applications\\{AppID} è l'impostazione predefinita). In entrambe le modalità di hosting Web il file Web.config è posizionato nella directory vroot specificata.  
+# <a name="how-to-configure-com-service-settings"></a>Procedura: configurare le impostazioni del servizio COM+
+Quando l'interfaccia di un'applicazione viene aggiunta o rimossa usando lo strumento di configurazione del servizio COM+, la configurazione del servizio Web viene aggiornata nel file di configurazione dell'applicazione. In modalità hosted COM+, il file Application. config si trova nella directory radice dell'applicazione (%programmi%\COMPlus Applications Applications \\ {AppID} è l'impostazione predefinita). In entrambe le modalità di hosting Web il file Web.config è posizionato nella directory vroot specificata.  
   
 > [!NOTE]
 > Per evitare la manomissione dei messaggi tra un client e un server è necessario firmare i messaggi. Inoltre, per evitare la diffusione di informazioni dai messaggi scambiati tra un client e un server è necessario usare la crittografia a livello di messaggio o di trasporto. Come per i servizi Windows Communication Foundation (WCF), è consigliabile usare la limitazione delle richieste per limitare il numero di chiamate simultanee, connessioni, istanze e operazioni in sospeso. Ciò consente di evitare un utilizzo eccessivo di risorse. Il comportamento della limitazione delle richieste viene specificato tramite impostazioni del file di configurazione del servizio.  
@@ -55,7 +55,7 @@ public interface IFinancesContract : IDisposable
   
 - Modifica dell'indirizzo endpoint dal modulo ApplicationName/ComponentName/InterfaceName predefinito in un modulo maggiormente utilizzabile.  
   
-- Modifica dello spazio dei nomi del servizio dal modulo `http://tempuri.org/InterfaceID` predefinito a un form più pertinente.  
+- Modifica dello spazio dei nomi del servizio dal `http://tempuri.org/InterfaceID` modulo predefinito a un form più pertinente.  
   
 - Modifica dell'endpoint per l'uso di un'associazione del trasporto differente.  
   
@@ -98,4 +98,4 @@ public interface IFinancesContract : IDisposable
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Integrazione con applicazioni COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Integrazione con applicazioni COM+](integrating-with-com-plus-applications.md)

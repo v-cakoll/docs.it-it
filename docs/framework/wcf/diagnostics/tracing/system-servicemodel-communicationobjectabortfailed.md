@@ -2,12 +2,12 @@
 title: System.ServiceModel.CommunicationObjectAbortFailed
 ms.date: 03/30/2017
 ms.assetid: f3cab70b-ec5d-412c-a7c2-e09377bc6d46
-ms.openlocfilehash: bfe4d8a171b879c78927b138efa1b4bbe57ee915
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b58ca6a3853f7ebdbf30d7a50c155c2b783c5e1f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968532"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598307"
 ---
 # <a name="systemservicemodelcommunicationobjectabortfailed"></a>System.ServiceModel.CommunicationObjectAbortFailed
 Impossibile interrompere un oggetto di comunicazione.  
@@ -17,6 +17,6 @@ Impossibile interrompere un oggetto di comunicazione.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Traccia](index.md)
+- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](using-tracing-to-troubleshoot-your-application.md)
+- [Amministrazione e diagnostica](../index.md)

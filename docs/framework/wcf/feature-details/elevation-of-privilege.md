@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: 8838b139efa20bc796fc21567cc6fc9ee8691eee
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 823b41f86080d4802f76fe69865279a7c3506238
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283238"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597410"
 ---
 # <a name="elevation-of-privilege"></a>Elevazione dei privilegi
 L' *elevazione dei privilegi* risulta da concedere a un utente malintenzionato autorizzazioni di autorizzazione oltre a quelle inizialmente concesse. L'autore di un attacco con, ad esempio, un set di privilegi di autorizzazioni "di sola lettura" eleva il set per includere "lettura e scrittura".  
@@ -18,14 +18,14 @@ L' *elevazione dei privilegi* risulta da concedere a un utente malintenzionato a
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>Un servizio token di sicurezza affidabile deve firmare le attestazioni del token SAML  
  Un token SAML (Security Assertions Markup Language) è un token XML generico che è il tipo predefinito per i token emessi. Un token SAML può essere costruito da un servizio token di sicurezza (STS, Security Token Service) ritenuto affidabile dal servizio Web finale in uno scambio tipico. Nelle istruzioni, i token SAML contengono attestazioni. L'autore di un attacco può copiare le attestazioni da un token valido, creare un nuovo token SAML e firmarlo con un emittente diverso. Lo scopo è quello di determinare se il server sta convalidando gli emittenti e, in caso negativo, utilizzare la debolezza per costruire token SAML che consentano privilegi oltre quelli previsti da un servizio token di sicurezza.  
   
- La classe <xref:System.IdentityModel.Tokens.SamlAssertion> verifica la firma digitale contenuta in un token SAML e l'oggetto <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> predefinito richiede che i token SAML siano firmati da un certificato X.509 che sia valido quando l'oggetti <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> della classe <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> è impostata su <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. `ChainTrust` modalità da solo non è sufficiente per determinare se l'emittente del token SAML è attendibile. I servizi che richiedono un modello di affidabilità più granulare possono utilizzare i criteri di autorizzazione e di imposizione per controllare l'emittente dei set di attestazioni prodotti dall'autenticazione del token emesso oppure utilizzare le impostazioni di convalida X.509 in <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> per limitare il set di certificati di firma consentiti. Per ulteriori informazioni, vedere [gestione di attestazioni e autorizzazioni con il modello di identità e la](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) [Federazione e i token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ La classe <xref:System.IdentityModel.Tokens.SamlAssertion> verifica la firma digitale contenuta in un token SAML e l'oggetto <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> predefinito richiede che i token SAML siano firmati da un certificato X.509 che sia valido quando l'oggetti <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> della classe <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> è impostata su <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. La sola modalità `ChainTrust` non è sufficiente per stabilire se l'emittente del token SAML è affidabile. I servizi che richiedono un modello di affidabilità più granulare possono utilizzare i criteri di autorizzazione e di imposizione per controllare l'emittente dei set di attestazioni prodotti dall'autenticazione del token emesso oppure utilizzare le impostazioni di convalida X.509 in <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> per limitare il set di certificati di firma consentiti. Per ulteriori informazioni, vedere [gestione di attestazioni e autorizzazioni con il modello di identità e la](managing-claims-and-authorization-with-the-identity-model.md) [Federazione e i token emessi](federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>Cambio di identità senza un contesto di sicurezza  
  Le condizioni seguenti si applicano solo a WinFX.  
   
  Quando viene stabilita una connessione tra un client e un server, l'identità del client non cambia, tranne che in una situazione: dopo l'apertura del client WCF, se vengono soddisfatte tutte le condizioni seguenti:  
   
-- Le procedure per stabilire un contesto di sicurezza (utilizzando una sessione di sicurezza del trasporto o una sessione di sicurezza dei messaggi) vengono disattivate (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> proprietà è impostata su `false` in caso di sicurezza del messaggio o il trasporto non idoneo per la definizione di sessioni di sicurezza viene utilizzato nei casi di sicurezza del trasporto. HTTPS è un esempio di questo tipo di trasporto.  
+- Le procedure per stabilire un contesto di sicurezza (utilizzando una sessione di sicurezza del trasporto o una sessione di sicurezza del messaggio) sono disattivate (la <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> proprietà è impostata su `false` in caso di sicurezza del messaggio o il trasporto che non è in grado di stabilire sessioni di sicurezza viene utilizzato nei casi di sicurezza del trasporto. HTTPS è un esempio di questo tipo di trasporto.  
   
 - Viene utilizzata l'autenticazione di Windows.  
   
@@ -46,7 +46,7 @@ L' *elevazione dei privilegi* risulta da concedere a un utente malintenzionato a
 > Quando si utilizza il metodo `BeginOpen`, non è possibile garantire che le credenziali acquisite siano quelle del processo che chiama il metodo.  
   
 ## <a name="token-caches-allow-replay-using-obsolete-data"></a>I token memorizzati nella cache consentono la riproduzione utilizzando dati obsoleti  
- WCF utilizza la funzione `LogonUser` dell'autorità di sicurezza locale (LSA) per autenticare gli utenti in base al nome utente e alla password. Poiché la funzione Logon è un'operazione costosa, WCF consente di memorizzare nella cache i token che rappresentano gli utenti autenticati per migliorare le prestazioni. Il meccanismo di memorizzazione nella cache salva i risultati ottenuti da `LogonUser` per utilizzi successivi. Questo meccanismo è disabilitato per impostazione predefinita. per abilitarla, impostare la proprietà <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> su `true`oppure utilizzare l'attributo `cacheLogonTokens` della [\<> UserNameAuthentication](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
+ WCF utilizza la funzione autorità di sicurezza locale (LSA) `LogonUser` per autenticare gli utenti in base al nome utente e alla password. Poiché la funzione Logon è un'operazione costosa, WCF consente di memorizzare nella cache i token che rappresentano gli utenti autenticati per migliorare le prestazioni. Il meccanismo di memorizzazione nella cache salva i risultati ottenuti da `LogonUser` per utilizzi successivi. Questo meccanismo è disabilitato per impostazione predefinita. per abilitarla, impostare la <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> proprietà su `true` oppure utilizzare l' `cacheLogonTokens` attributo dell'oggetto [\<userNameAuthentication>](../../configure-apps/file-schema/wcf/usernameauthentication.md) .  
   
  È possibile impostare la durata (TTL) per i token memorizzati nella cache, impostando la proprietà <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> su un <xref:System.TimeSpan>, oppure utilizzare l'attributo `cachedLogonTokenLifetime` dell'elemento `userNameAuthentication`. L'impostazione predefinita è 15 minuti. Si noti che quando un token è memorizzato nella cache, può essere utilizzato da qualsiasi client che presenti lo stesso nome utente e la stessa password, anche se l'account utente viene eliminato da Windows o se la sua password è stata modificata. Fino alla scadenza della durata (TTL) e il token viene rimosso dalla cache, WCF consente all'utente (probabilmente dannoso) di eseguire l'autenticazione.  
   
@@ -72,7 +72,7 @@ L' *elevazione dei privilegi* risulta da concedere a un utente malintenzionato a
 ## <a name="the-service-uses-a-different-certificate-than-the-client-intended"></a>Il servizio utilizza un certificato diverso da quello previsto dal client  
  In certe condizioni, un client può firmare digitalmente un messaggio con un certificato X.509 e far sì che il servizio recuperi un certificato diverso da quello previsto.  
   
- Ciò può verificarsi nelle seguenti circostanze:  
+ Ciò può verificarsi nelle circostanze seguenti:  
   
 - Il client firma digitalmente un messaggio utilizzando un certificato X.509 e non allega il certificato X.509 al messaggio, ma fa semplicemente riferimento al certificato utilizzando il suo identificatore chiave del soggetto.  
   
@@ -84,9 +84,9 @@ L' *elevazione dei privilegi* risulta da concedere a un utente malintenzionato a
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Divulgazione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Negazione del servizio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Attacchi di tipo replay](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
-- [Manomissioni](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [Scenari non supportati](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [Security Considerations](security-considerations-in-wcf.md)
+- [Divulgazione di informazioni](information-disclosure.md)
+- [Attacco Denial of Service](denial-of-service.md)
+- [Attacchi di tipo replay](replay-attacks.md)
+- [Manomissione](tampering.md)
+- [Scenari non supportati](unsupported-scenarios.md)

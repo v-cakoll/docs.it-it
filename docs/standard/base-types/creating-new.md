@@ -1,5 +1,6 @@
 ---
 title: Creazione di nuove stringhe in .NET
+description: Informazioni su come creare stringhe usando l'assegnazione, i costruttori di classi o metodi System. String che combinano più stringhe, matrici di stringhe o oggetti in .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - strings [.NET Framework], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-ms.openlocfilehash: a5dfe6429ac135202874f0524a252a7af900bd8d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b44d0f8e1717ead72e28f0be644644961d1482b6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279012"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596448"
 ---
 # <a name="creating-new-strings-in-net"></a>Creazione di nuove stringhe in .NET
 .NET Framework consente di creare stringhe usando una semplice assegnazione, oltre a eseguire l'overload del costruttore di classe per supportare la creazione di stringhe tramite una serie di parametri diversi. .NET Framework offre anche diversi metodi nella classe <xref:System.String?displayProperty=nameWithType> per creare nuovi oggetti stringa combinando più stringhe, matrici di stringhe o oggetti.  
@@ -40,7 +41,7 @@ ms.locfileid: "84279012"
 |<xref:System.String.Insert%2A?displayProperty=nameWithType>|Compila una nuova stringa inserendo una stringa in corrispondenza dell'indice specificato di una stringa esistente.|  
 |<xref:System.String.CopyTo%2A?displayProperty=nameWithType>|Copia i caratteri specificati di una stringa in una determinata posizione all'interno di una matrice di caratteri.|  
   
-### <a name="format"></a>Format  
+### <a name="format"></a>Formato  
  È possibile usare il metodo **String.Format** per creare stringhe formattate e concatenare stringhe che rappresentano più oggetti. Qualsiasi oggetto venga passato a questo metodo viene automaticamente convertito in una stringa. Se ad esempio l'applicazione deve visualizzare un valore **Int32** e un valore **DateTime**, è possibile costruire con facilità una stringa che rappresenti tali valori usando il metodo **Format**. Per altre informazioni sulle convenzioni di formattazione usate con questo metodo, vedere la sezione relativa alla [formattazione composita](composite-formatting.md).  
   
  L'esempio di codice seguente usa il metodo **Format** per creare una stringa che usa una variabile integer.  

@@ -2,12 +2,12 @@
 title: Hosting in un'applicazione di servizio Windows
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: a07aade4619b644dadd1d5acdcb5252b305b94d0
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: ba49d123508ceb8da677d1e9c67721e4f86aa7c3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964482"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597332"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hosting in un'applicazione di servizio Windows
 I servizi Windows, precedentemente noti come servizi Windows NT, offrono un modello di processo particolarmente adatto ad applicazioni che devono risiedere in un eseguibile a esecuzione prolungata e che non visualizzano alcuna forma di interfaccia utente. La durata del processo di un'applicazione di servizio Windows viene gestita da Gestione controllo servizi (SCM), che consente di avviare, interrompere e sospendere le applicazioni di servizio Windows. È possibile configurare un processo del servizio Windows per l'avvio automatico all'avvio del computer, rendendolo un ambiente host appropriato per le applicazioni "always on". Per ulteriori informazioni sulle applicazioni di servizio Windows, vedere [applicazioni di servizio Windows](https://go.microsoft.com/fwlink/?LinkId=89450).  
@@ -30,7 +30,7 @@ I servizi Windows, precedentemente noti come servizi Windows NT, offrono un mode
   
     - Eseguire l'override di <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> per aprire una o più istanze di <xref:System.ServiceModel.ServiceHost>. Una singola applicazione di servizio Windows può ospitare più servizi WCF che si avviano e si arrestano come gruppo.  
   
-    - Eseguire l'override <xref:System.ServiceProcess.ServiceBase.OnStop%2A> per chiamare <xref:System.ServiceModel.Channels.CommunicationObject.Closed> sul <xref:System.ServiceModel.ServiceHost> tutti i servizi WCF in esecuzione avviati durante <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>.  
+    - Eseguire l'override <xref:System.ServiceProcess.ServiceBase.OnStop%2A> di per chiamare <xref:System.ServiceModel.Channels.CommunicationObject.Closed> su <xref:System.ServiceModel.ServiceHost> tutti i servizi WCF in esecuzione avviati durante <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> .  
   
     - Eseguire la sottoscrizione all'evento <xref:System.ServiceModel.Channels.CommunicationObject.Faulted> di <xref:System.ServiceModel.ServiceHost> e usare la classe <xref:System.ServiceProcess.ServiceController> per arrestare l'applicazione di servizio Windows in caso di errore.  
   
@@ -40,7 +40,7 @@ I servizi Windows, precedentemente noti come servizi Windows NT, offrono un mode
 
 - <xref:System.ServiceProcess>
 - [Procedura dettagliata: creazione di un'applicazione di servizio Windows in Progettazione componenti](https://go.microsoft.com/fwlink/?LinkId=94875)
-- [Procedura: Ospitare un servizio WCF in un servizio di Windows gestito](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
-- [Host del servizio Windows](../../../../docs/framework/wcf/samples/windows-service-host.md)
+- [Procedura: ospitare un servizio WCF in un servizio Windows gestito](how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [Host del servizio Windows](../samples/windows-service-host.md)
 - [Architettura di programmazione delle applicazioni di servizio](https://go.microsoft.com/fwlink/?LinkId=94876)
 - [Funzionalità di hosting di Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

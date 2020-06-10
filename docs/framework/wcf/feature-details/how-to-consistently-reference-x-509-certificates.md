@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Riferimenti coerenti ai certificati X.509'
+title: 'Procedura: riferimenti coerenti ai certificati X.509'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], referencing X.509 certificates
 ms.assetid: a6de1c63-e450-4640-ad08-ad7302dbfbfc
-ms.openlocfilehash: 2214517784d311cbd0fe487fd6db2cbf48189955
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c13dd5ebb18df62ce64fc74da53f3f5a2e8cadb7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662798"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599087"
 ---
-# <a name="how-to-consistently-reference-x509-certificates"></a>Procedura: Riferimenti coerenti ai certificati X.509
-È possibile identificare un certificato in diversi modi: in base all'hash del certificato, l'identificatore SKI e l'autorità emittente con il numero di serie. L'identificatore SKI offre un sistema di identificazione univoca per la chiave pubblica del soggetto del certificato e viene spesso utilizzato con le firme digitali XML. Il valore SKI generalmente fa parte del certificato X.509 come un *estensione del certificato X.509*. Windows Communication Foundation (WCF) è un valore predefinito *stile di riferimento* che usa l'autorità emittente e il numero di serie se l'estensione SKI non è presente il certificato. Se il certificato contiene l'estensione SKI, lo stile di riferimento predefinito utilizza l'identificatore SKI per puntare al certificato. Se a metà strada durante lo sviluppo di un'applicazione, si passa dall'utilizzo di certificati che non usano l'estensione SKI a certificati che utilizzano l'estensione SKI, lo stile di riferimento utilizzato nei messaggi WCF generato viene inoltre modificato.  
+# <a name="how-to-consistently-reference-x509-certificates"></a>Procedura: riferimenti coerenti ai certificati X.509
+È possibile identificare un certificato in diversi modi: in base all'hash del certificato, l'identificatore SKI e l'autorità emittente con il numero di serie. L'identificatore SKI offre un sistema di identificazione univoca per la chiave pubblica del soggetto del certificato e viene spesso utilizzato con le firme digitali XML. Il valore SKI è in genere parte del certificato X. 509 come *estensione del certificato x. 509*. Windows Communication Foundation (WCF) dispone di uno *stile di riferimento* predefinito che utilizza l'autorità emittente e il numero di serie se l'estensione Ski non è presente nel certificato. Se il certificato contiene l'estensione SKI, lo stile di riferimento predefinito utilizza l'identificatore SKI per puntare al certificato. Se a metà dello sviluppo di un'applicazione si passa dall'uso di certificati che non usano l'estensione SKI ai certificati che usano l'estensione SKI, viene modificato anche lo stile di riferimento usato nei messaggi generati da WCF.  
   
  Se è necessario un stile di riferimento coerente indipendentemente dalla presenza dell'estensione SKI, è possibile configurare lo stile desiderato come illustrato nel codice seguente.  
   
@@ -38,4 +38,4 @@ ms.locfileid: "64662798"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Uso di certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Working with Certificates](working-with-certificates.md)

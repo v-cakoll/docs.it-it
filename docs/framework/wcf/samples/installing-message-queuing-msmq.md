@@ -2,12 +2,12 @@
 title: Installazione accodamento messaggi (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 8ecbd07adfb6bfb4e9898f9b8508809480d17e16
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 1bf79ed5dbcb9f2ace903260cc440e77df3aef09
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921094"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592294"
 ---
 # <a name="installing-message-queuing-msmq"></a>Installazione accodamento messaggi (MSMQ)
 Le procedure seguenti mostrano come installare Accodamento messaggi 4.0 e Accodamento messaggi 3.0.  
@@ -35,7 +35,7 @@ Le procedure seguenti mostrano come installare Accodamento messaggi 4.0 e Accoda
   
 2. Fare clic su **programmi** e quindi in **programmi e funzionalità**fare clic **su attivazione e disattivazione delle funzionalità Windows**.  
   
-3. Espandere Microsoft Message Queue (MSMQ) Server, espandere Componenti di base di Microsoft Message Queue (MSMQ) Server, quindi selezionare le caselle di controllo per l'installazione delle funzionalità di Accodamento messaggi seguenti:  
+3. Espandere il server di accodamento messaggi Microsoft (MSMQ), espandere il server di base di accodamento messaggi Microsoft (MSMQ) e quindi selezionare le caselle di controllo per l’installazione delle funzionalità di Accodamento messaggi seguenti:  
   
     - Integrazione dei Servizi di dominio Active Directory MSMQ (per computer aggiunti a un Dominio).  
   
@@ -64,4 +64,4 @@ Le procedure seguenti mostrano come installare Accodamento messaggi 4.0 e Accoda
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzioni di configurazione](../../../../docs/framework/wcf/samples/set-up-instructions.md)
+- [Istruzioni di configurazione](set-up-instructions.md)

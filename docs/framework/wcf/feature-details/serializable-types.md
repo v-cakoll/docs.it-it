@@ -2,12 +2,12 @@
 title: Tipi serializzabili
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: 0913d523e93505934b1cf231284e356baba5ded3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e65fcb93c5c36bb289b825cef58b3adc6f5155f5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591667"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586104"
 ---
 # <a name="serializable-types"></a>Tipi serializzabili
 Per impostazione predefinita, <xref:System.Runtime.Serialization.DataContractSerializer> serializza tutti i tipi visibili pubblicamente. Vengono serializzati i campi e le proprietà di lettura/scrittura pubblici del tipo.  
@@ -36,7 +36,7 @@ Per impostazione predefinita, <xref:System.Runtime.Serialization.DataContractSer
 - Per rifiutare esplicitamente il processo di serializzazione per membri, proprietà o campi pubblici, applicare l'attributo <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> a tale membro.  
   
 ## <a name="inheritance"></a>Ereditarietà  
- I tipi non contrassegnati (tipi senza l'attributo <xref:System.Runtime.Serialization.DataContractAttribute>) possono ereditare da tipi che dispongono di tale attributo, ma l'operazione opposta non è consentita, pertanto i tipi con l'attributo non possono ereditare da tipi non contrassegnati. Questa regola viene applicata principalmente per garantire la compatibilità con le versioni precedenti con il codice scritto in versioni precedenti di .NET Framework.  
+ I tipi non contrassegnati (tipi senza l'attributo <xref:System.Runtime.Serialization.DataContractAttribute>) possono ereditare da tipi che dispongono di tale attributo, ma l'operazione opposta non è consentita, pertanto i tipi con l'attributo non possono ereditare da tipi non contrassegnati. Questa regola viene applicata principalmente per garantire la compatibilità con il codice scritto nelle versioni precedenti di .NET Framework.  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -44,4 +44,4 @@ Per impostazione predefinita, <xref:System.Runtime.Serialization.DataContractSer
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Tipi supportati dal serializzatore dei contratti di dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Types Supported by the Data Contract Serializer](types-supported-by-the-data-contract-serializer.md)
