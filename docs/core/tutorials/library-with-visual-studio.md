@@ -1,26 +1,23 @@
 ---
-title: Creare una libreria di classi .NET Standard in Visual Studio
+title: Creare una libreria di classi di .NET Standard con Visual Studio
 description: Informazioni su come creare una libreria di classi .NET Standard usando Visual Studio.
-ms.date: 05/21/2020
+ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 7d64ca32bdbe20f949ae575bc4c3f9bbb594fffd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ef9c62b0378e1064d8cfd90a8c59aed74ea312b2
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283624"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701565"
 ---
-# <a name="tutorial-create-a-net-standard-library-in-visual-studio"></a>Esercitazione: creare una libreria di .NET Standard in Visual Studio
-
-La *libreria di classi* definisce tipi e metodi chiamati da un'applicazione. Una libreria di classi destinata a .NET Standard 2,0 consente la chiamata della libreria da qualsiasi implementazione di .NET che supporti tale versione di .NET Standard. Dopo aver completato la libreria di classi, è possibile decidere se si vuole distribuirla come componente di terze parti o se si vuole includerla come componente in bundle con una o più applicazioni.
-
-> [!NOTE]
-> Per un elenco delle versioni di .NET Standard e delle piattaforme supportate, vedere [.NET standard](../../standard/net-standard.md).
+# <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>Esercitazione: creare una libreria di .NET Standard con Visual Studio
 
 In questa esercitazione si creerà una semplice libreria di utilità contenente un solo metodo di gestione delle stringhe. Viene implementato come metodo di [estensione](../../csharp/programming-guide/classes-and-structs/extension-methods.md) in modo che sia possibile chiamarlo come se fosse un membro della <xref:System.String> classe.
+
+La *libreria di classi* definisce tipi e metodi chiamati da un'applicazione. Una libreria di classi destinata a .NET Standard 2,0 consente la chiamata della libreria da qualsiasi implementazione di .NET che supporti tale versione di .NET Standard. Una volta completata la libreria di classi, è possibile distribuirla come componente di terze parti o come componente in bundle con una o più applicazioni.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -28,13 +25,13 @@ In questa esercitazione si creerà una semplice libreria di utilità contenente 
 
   Per ulteriori informazioni, vedere la sezione [install with Visual Studio](../install/sdk.md?pivots=os-windows#install-with-visual-studio) nell'articolo [Install the .NET Core SDK](../install/sdk.md?pivots=os-windows) .
 
-## <a name="create-a-visual-studio-solution"></a>Creare una soluzione di Visual Studio
+## <a name="create-a-solution"></a>Creare una soluzione
 
 Iniziare creando una soluzione vuota in cui inserire il progetto libreria di classi. Una soluzione di Visual Studio funge da contenitore per uno o più progetti. Verranno aggiunti altri progetti correlati alla stessa soluzione.
 
 Per creare la soluzione vuota:
 
-1. Aprire Visual Studio.
+1. Avviare Visual Studio.
 
 2. Nella finestra Start scegliere **Crea un nuovo progetto**.
 
@@ -75,7 +72,7 @@ Per creare la soluzione vuota:
 
 ## <a name="add-a-console-app-to-the-solution"></a>Aggiungere un'app console alla soluzione
 
-Utilizzare la libreria di classi in un'applicazione console che richiede all'utente di immettere una stringa e indica se la stringa inizia con un carattere maiuscolo.
+Aggiungere un'applicazione console che usa la libreria di classi. L'app chiede all'utente di immettere una stringa e segnala se la stringa inizia con un carattere maiuscolo.
 
 1. Aggiungere alla soluzione una nuova applicazione console .NET Core denominata "ShowCase".
 
@@ -87,18 +84,6 @@ Utilizzare la libreria di classi in un'applicazione console che richiede all'ute
 
    1. Nella pagina **Configura nuovo progetto** immettere **Showcase** nella casella **nome progetto** . Scegli quindi **Crea**.
 
-1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto **ShowCase** e selezionare **Imposta come progetto di avvio** nel menu di scelta rapida.
-
-   ![Menu di scelta rapida del progetto di Visual Studio per impostare il progetto di avvio](media/library-with-visual-studio/set-startup-project-context-menu.png)
-
-1. Inizialmente, il nuovo progetto di app console non ha accesso alla libreria di classi. Per consentire la chiamata di metodi nella libreria di classi, creare un riferimento di progetto al progetto libreria di classi. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul `ShowCase` nodo **dipendenze** del progetto e scegliere **Aggiungi riferimento al progetto**.
-
-   ![Menu di scelta rapida Aggiungi riferimento in Visual Studio](media/library-with-visual-studio/add-reference-context-menu.png)
-
-1. Nella finestra di dialogo **Gestione riferimenti** selezionare il progetto **StringLibrary** e fare clic su **OK**.
-
-   ![Finestra di dialogo Gestione riferimenti con StringLibrary selezionato](media/library-with-visual-studio/manage-project-references.png)
-
 1. Nella finestra del codice per il file *Program.cs* o *Program. vb* sostituire tutto il codice con il codice seguente.
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
@@ -106,19 +91,42 @@ Utilizzare la libreria di classi in un'applicazione console che richiede all'ute
 
    Il codice usa la variabile `row` per mantenere il conteggio del numero di righe di dati scritti nella finestra della console. Ogni volta che è maggiore o uguale a 25, il codice Cancella la finestra della console e visualizza un messaggio all'utente.
 
-   Il programma richiede all'utente di immettere una stringa. Indica se la stringa inizia con un carattere maiuscolo. Se l'utente preme il tasto INVIO senza immettere una stringa, l'applicazione termina e la finestra della console si chiude.
+   Il programma richiede all'utente di immettere una stringa. Indica se la stringa inizia con un carattere maiuscolo. Se l'utente preme il tasto <kbd>invio</kbd> senza immettere una stringa, l'applicazione termina e la finestra della console si chiude.
 
-1. Se necessario, modificare la barra degli strumenti per compilare la versione di **debug** del progetto `ShowCase`. Compilare ed eseguire il programma selezionando la freccia verde nel pulsante **ShowCase**.
+## <a name="add-a-project-reference"></a>Aggiungere un riferimento al progetto
+
+Inizialmente, il nuovo progetto di app console non ha accesso alla libreria di classi. Per consentire la chiamata di metodi nella libreria di classi, creare un riferimento di progetto al progetto libreria di classi.
+
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul `ShowCase` nodo **dipendenze** del progetto e scegliere **Aggiungi riferimento al progetto**.
+
+   ![Menu di scelta rapida Aggiungi riferimento in Visual Studio](media/library-with-visual-studio/add-reference-context-menu.png)
+
+1. Nella finestra di dialogo **Gestione riferimenti** selezionare il progetto **StringLibrary** e fare clic su **OK**.
+
+   ![Finestra di dialogo Gestione riferimenti con StringLibrary selezionato](media/library-with-visual-studio/manage-project-references.png)
+
+## <a name="run-the-app"></a>Eseguire l'app
+
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto **ShowCase** e selezionare **Imposta come progetto di avvio** nel menu di scelta rapida.
+
+   ![Menu di scelta rapida del progetto di Visual Studio per impostare il progetto di avvio](media/library-with-visual-studio/set-startup-project-context-menu.png)
+
+1. Premere <kbd>MAIUSC</kbd> + <kbd>F5</kbd> per compilare ed eseguire il programma senza debug.
 
    ![Barra degli strumenti del progetto di Visual Studio con il pulsante debug](media/library-with-visual-studio/visual-studio-project-toolbar.png)
 
-1. Per provare il programma, immettere le stringhe e premere **invio**, quindi premere **invio** per uscire.
+1. Per provare il programma, immettere le stringhe e premere <kbd>invio</kbd>, quindi premere <kbd>invio</kbd> per uscire.
 
    :::image type="content" source="media/library-with-visual-studio/run-showcase.png" alt-text="Finestra della console con presentazione in esecuzione":::
+
+## <a name="additional-resources"></a>Risorse aggiuntive
+
+* [Sviluppare librerie con la interfaccia della riga di comando di .NET Core](libraries.md)
+* [.NET standard le versioni e le piattaforme supportate](../../standard/net-standard.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 In questa esercitazione è stata creata una soluzione, è stato aggiunto un progetto di libreria e è stato aggiunto un progetto di app console che usa la libreria. Nell'esercitazione successiva si aggiunge un progetto di unit test alla soluzione.
 
 > [!div class="nextstepaction"]
-> [Testare una libreria di .NET Standard con .NET Core in Visual Studio](testing-library-with-visual-studio.md)
+> [Testare una libreria di .NET Standard con .NET Core con Visual Studio](testing-library-with-visual-studio.md)

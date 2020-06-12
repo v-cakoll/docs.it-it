@@ -1,15 +1,15 @@
 ---
-title: Pubblicare un'applicazione Hello World .NET Core con Visual Studio Code
+title: Pubblicare un'applicazione console .NET Core usando Visual Studio Code
 description: La pubblicazione crea il set di file necessari per eseguire un'applicazione .NET Core.
-ms.date: 05/28/2020
-ms.openlocfilehash: b49b12bf41e3ea7be8dbc459eb7d9b1fbef25790
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.date: 06/08/2020
+ms.openlocfilehash: 442d08c9b016407327ba30db0aae78b5cf6b6fe3
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84246682"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701450"
 ---
-# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio-code"></a>Esercitazione: pubblicare un'applicazione console .NET Core con Visual Studio Code
+# <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>Esercitazione: pubblicare un'applicazione console .NET Core usando Visual Studio Code
 
 Questa esercitazione illustra come pubblicare un'app console in modo che gli altri utenti possano eseguirla. La pubblicazione crea il set di file necessari per eseguire un'applicazione. Per distribuire i file, copiarli nel computer di destinazione.
 
@@ -21,7 +21,7 @@ Il interfaccia della riga di comando di .NET Core viene usato per pubblicare l'a
 
 ## <a name="publish-the-app"></a>Pubblicare l'app
 
-1. Aprire Visual Studio Code.
+1. Avviare Visual Studio Code.
 
 1. Aprire la cartella del progetto *HelloWorld* creata in [creare un'applicazione console .net core in Visual Studio Code](with-visual-studio-code.md).
 
@@ -71,7 +71,7 @@ Nei passaggi seguenti verranno esaminati i file creati dal processo di pubblicaz
 
       Si tratta della versione della [distribuzione dipendente dal Framework](../deploying/deploy-with-cli.md#framework-dependent-deployment) dell'applicazione. Per eseguire questa libreria a collegamento dinamico, immettere `dotnet HelloWorld.dll` al prompt dei comandi. Questo metodo di esecuzione dell'app funziona in qualsiasi piattaforma in cui è installato il runtime di .NET Core.
 
-   * *HelloWorld. exe* (*HelloWorld* in Linux, non creato in MacOS).
+   * *HelloWorld.exe* (*HelloWorld* in Linux, non creato in MacOS).
 
       Si tratta della versione [eseguibile dipendente dal Framework](../deploying/deploy-with-cli.md#framework-dependent-executable) dell'applicazione. Il file è specifico del sistema operativo.
 
@@ -85,7 +85,7 @@ Nei passaggi seguenti verranno esaminati i file creati dal processo di pubblicaz
 
 ## <a name="run-the-published-app"></a>Eseguire l'app pubblicata
 
-1. In **Esplora risorse**fare clic con il pulsante destro del mouse sulla cartella di *pubblicazione* (oppure <kbd>premere CTRL</kbd>+ clic su MacOS) e selezionare **Apri nel terminale**.
+1. In **Esplora risorse**fare clic con il pulsante destro del mouse sulla cartella *Publish* (<kbd>CTRL +</kbd>clic su MacOS) e scegliere **Apri in terminale**.
 
    :::image type="content" source="media/publishing-with-visual-studio-code/open-in-terminal.png" alt-text="Menu di scelta rapida che mostra Apri nel terminale":::
 
@@ -109,10 +109,7 @@ Nei passaggi seguenti verranno esaminati i file creati dal processo di pubblicaz
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In questa esercitazione è stata pubblicata un'app console. Per informazioni su come compilare le librerie, vedere [sviluppare librerie con il interfaccia della riga di comando di .NET Core](libraries.md).
-
-<!--In the next tutorial, you create a class library.
+In questa esercitazione è stata pubblicata un'app console. Nell'esercitazione successiva verrà creata una libreria di classi.
 
 > [!div class="nextstepaction"]
-> [Create a .NET Standard library in Visual Studio](library-with-visual-studio.md)
--->
+> [Creare una libreria di .NET Standard in Visual Studio per Mac](library-with-visual-studio-mac.md)

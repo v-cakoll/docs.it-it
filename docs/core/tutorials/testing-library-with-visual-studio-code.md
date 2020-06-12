@@ -1,15 +1,15 @@
 ---
-title: Testare una libreria di classi .NET Standard con .NET Core in Visual Studio Code
+title: Testare una libreria di classi .NET Standard con .NET Core usando Visual Studio Code
 description: Creare un progetto unit test per una libreria di classi .NET Core. Verificare che una libreria di classi .NET Core funzioni correttamente con gli unit test.
-ms.date: 05/29/2020
-ms.openlocfilehash: be227453bd441028cc6ce348c00fad944140238f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 06/08/2020
+ms.openlocfilehash: a61fd952eea2dec0d5a9f351d3f3d01c738e8fad
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292189"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701033"
 ---
-# <a name="tutorial-test-a-net-standard-library-with-net-core-in-visual-studio-code"></a>Esercitazione: testare una libreria di .NET Standard con .NET Core in Visual Studio Code
+# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>Esercitazione: testare una libreria di classi .NET Standard con .NET Core usando Visual Studio Code
 
 Questa esercitazione illustra come automatizzare gli unit test aggiungendo un progetto di test a una soluzione.
 
@@ -19,7 +19,9 @@ Questa esercitazione illustra come automatizzare gli unit test aggiungendo un pr
 
 ## <a name="create-a-unit-test-project"></a>Creare un progetto di unit test
 
-1. Aprire Visual Studio Code.
+Gli unit test forniscono test software automatici durante le fasi di sviluppo e pubblicazione. Il Framework di test usato in questa esercitazione è MSTest. [MSTest](https://github.com/Microsoft/testfx-docs) è uno dei tre Framework di test tra cui è possibile scegliere. Gli altri sono [xUnit](https://xunit.net/) e [NUnit](https://nunit.org/).
+
+1. Avviare Visual Studio Code.
 
 1. Aprire la `ClassLibraryProjects` soluzione creata in [creare una libreria di .NET standard in Visual Studio](library-with-visual-studio.md).
 
@@ -55,16 +57,17 @@ Questa esercitazione illustra come automatizzare gli unit test aggiungendo un pr
 
    Ogni metodo contrassegnato con [[TestMethod]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) in una classe di test contrassegnata con [[TestClass]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) viene eseguito automaticamente quando viene eseguito il unit test.
 
-   > [!NOTE]
-   > MSTest è uno dei tre Framework di test tra cui è possibile scegliere. Gli altri sono xUnit e nUnit.
-
 1. Aggiungere il progetto di test alla soluzione.
 
    ```dotnetcli
    dotnet sln add StringLibraryTest/StringLibraryTest.csproj
    ```
 
-1. Creare un riferimento al progetto di libreria di classi eseguendo il comando seguente:
+## <a name="add-a-project-reference"></a>Aggiungere un riferimento al progetto
+
+Per usare il progetto di test con la `StringLibrary` classe, aggiungere un riferimento al progetto nel progetto `StringLibraryTest` `StringLibrary` .
+
+1. Eseguire il comando seguente:
 
    ```dotnetcli
    dotnet add StringLibraryTest/StringLibraryTest.csproj reference StringLibrary/StringLibrary.csproj
@@ -89,7 +92,7 @@ Durante il test del metodo `StringLibrary.StartsWithUpper`, è possibile specifi
 
 Poiché il metodo della libreria gestisce le stringhe, è anche necessario assicurarsi che gestisca correttamente una [stringa vuota ( `String.Empty` )](xref:System.String.Empty) e un oggetto e una `null` stringa. Una stringa vuota non contiene caratteri e il cui valore <xref:System.String.Length> è 0. Una `null` stringa è una stringa che non è stata inizializzata. È possibile chiamare `StartsWithUpper` direttamente come metodo statico e passare un singolo <xref:System.String> argomento. In alternativa, è possibile chiamare `StartsWithUpper` come metodo di estensione su una `string` variabile assegnata a `null` .
 
-Verranno definiti tre metodi, ognuno dei quali chiama <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> ripetutamente un metodo per ogni elemento in una matrice di stringhe. Poiché il metodo di test ha esito negativo non appena viene trovato il primo errore, verrà chiamato un overload del metodo che consente di passare una stringa che indica il valore stringa usato nella chiamata al metodo.
+Verranno definiti tre metodi, ognuno dei quali chiama un <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> metodo per ogni elemento in una matrice di stringhe. Si chiamerà un overload del metodo che consente di specificare un messaggio di errore da visualizzare in caso di errore del test. Il messaggio identifica la stringa che ha causato l'errore.
 
 Per creare i metodi di test:
 
@@ -122,7 +125,7 @@ Per creare i metodi di test:
 
 ## <a name="handle-test-failures"></a>Gestione degli errori di test
 
-Se si sta eseguendo lo sviluppo basato su test (TDD), si scrivono prima i test e hanno esito negativo la prima volta che vengono eseguiti. Si aggiunge quindi il codice all'app che rende il test riuscito. In questo caso, il test è stato creato dopo la scrittura del codice dell'app che convalida, quindi non si è visto che il test non è riuscito. Per convalidare l'esito negativo di un test quando si prevede che abbia esito negativo, aggiungere un valore non valido all'input di test.
+Se si sta eseguendo lo sviluppo basato su test (TDD), si scrivono prima i test e hanno esito negativo la prima volta che vengono eseguiti. Si aggiunge quindi il codice all'app che rende il test riuscito. Per questa esercitazione è stato creato il test dopo la scrittura del codice dell'app che convalida, quindi non si è visto che il test non è riuscito. Per convalidare l'esito negativo di un test quando si prevede che abbia esito negativo, aggiungere un valore non valido all'input di test.
 
 1. Modificare la matrice `words` del metodo `TestDoesNotStartWithUpper` per includere la stringa "Error".
 
@@ -137,7 +140,7 @@ Se si sta eseguendo lo sviluppo basato su test (TDD), si scrivono prima i test e
    dotnet test StringLibraryTest/StringLibraryTest.csproj
    ```
 
-   L'output del terminale mostra che un test ha esito negativo e fornisce un messaggio di errore per il test non superato.
+   L'output del terminale mostra che un test ha esito negativo e fornisce un messaggio di errore per il test non superato: "Assert. false non riuscito. Expected for 'Error': false; actual: True". A causa dell'errore, non sono state testate stringhe nella matrice dopo l'errore.
 
    ```
    Starting test execution, please wait...
@@ -157,11 +160,11 @@ Se si sta eseguendo lo sviluppo basato su test (TDD), si scrivono prima i test e
    Total time: 1.7825 Seconds
    ```
 
-1. Annullare la modifica apportata nel passaggio 1 e rimuovere la stringa "Error". Eseguire di nuovo il test e i test superati.
+1. Rimuovere la stringa "Error" aggiunta nel passaggio 1. Eseguire di nuovo il test e i test superati.
 
 ## <a name="test-the-release-version-of-the-library"></a>Testare la versione di rilascio della libreria
 
-Ora che i test sono stati superati quando si esegue la versione di debug della libreria, eseguire i test per un ulteriore tempo rispetto alla build di rilascio della libreria. Esistono infatti alcuni fattori, ad esempio le ottimizzazioni del compilatore, in grado di generare a volte comportamenti diversi tra la versione di debug e quella di rilascio.
+Ora che i test sono stati superati quando si esegue la build di debug della libreria, eseguire i test per un ulteriore tempo rispetto alla build di rilascio della libreria. Esistono infatti alcuni fattori, ad esempio le ottimizzazioni del compilatore, in grado di generare a volte comportamenti diversi tra la versione di debug e quella di rilascio.
 
 1. Eseguire i test con la configurazione della build di rilascio:
 
@@ -173,7 +176,7 @@ Ora che i test sono stati superati quando si esegue la versione di debug della l
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- [Testing unità in .NET Core e .NET Standard](../testing/index.md)
+* [Testing unità in .NET Core e .NET Standard](../testing/index.md)
 
 ## <a name="next-steps"></a>Passaggi successivi
 

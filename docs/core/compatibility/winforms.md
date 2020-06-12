@@ -2,12 +2,12 @@
 title: Windows Forms modifiche di rilievo
 description: Elenca le modifiche di rilievo apportate Windows Forms per .NET Core.
 ms.date: 01/08/2020
-ms.openlocfilehash: 75d369c7fb999da81a50fe46716e125c3840eb7a
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: bd87e438ecf9930bfcd5377f9a3799d5f3693f49
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158437"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84702468"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Modifiche di rilievo in Windows Forms
 
@@ -20,6 +20,7 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 | [Rimossi controlli barra di stato](#removed-status-bar-controls) | 5.0 |
 | [I metodi WinForms ora generano ArgumentException](#winforms-methods-now-throw-argumentexception) | 5.0 |
 | [I metodi WinForms ora generano ArgumentNullException](#winforms-methods-now-throw-argumentnullexception) | 5.0 |
+| [Le proprietà di WinForms ora generano ArgumentOutOfRangeException](#winforms-properties-now-throw-argumentoutofrangeexception) | 5.0 |
 | [Controlli rimossi](#removed-controls) | 3.1 |
 | [Evento CellFormatting non generato se viene visualizzata la descrizione comando](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3.1 |
 | [Control. DefaultFont modificato in Segoe UI 9 PT](#default-control-font-changed-to-segoe-ui-9-pt) | 3.0 |
@@ -50,7 +51,11 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 
 ***
 
-## <a name="net-core-31"></a>.NET Core 3,1
+[!INCLUDE [invalid-args-cause-argumentoutofrangeexception](../../../includes/core-changes/windowsforms/5.0/invalid-args-cause-argumentoutofrangeexception.md)]
+
+***
+
+## <a name="net-core-31"></a>.NET Core 3.1
 
 [!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/3.1/remove-controls-3.1.md)]
 
@@ -114,6 +119,6 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 
 ***
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Trasferire un'app Windows Forms a .NET Core](../porting/winforms.md)

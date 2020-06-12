@@ -1,13 +1,13 @@
 ---
-title: Eseguire il debug di un'applicazione console .NET Core con Visual Studio Code
-description: Informazioni su come eseguire il debug di un'app console .NET Core con Visual Studio Code.
+title: Eseguire il debug di un'applicazione console .NET Core usando Visual Studio Code
+description: Informazioni su come eseguire il debug di un'app console .NET Core usando Visual Studio Code.
 ms.date: 05/26/2020
-ms.openlocfilehash: 82b2798397d702aa2a50c04bf6e4d569b97e3666
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 40e9b114df1bd12fb05bfb773781d6009d087a06
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241513"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84702127"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Esercitazione: eseguire il debug di un'applicazione console .NET Core usando Visual Studio Code
 
@@ -19,25 +19,25 @@ Questa esercitazione introduce gli strumenti di debug disponibili in Visual Stud
 
 ## <a name="use-debug-build-configuration"></a>Usa configurazione build di debug
 
-Il *debug* e la *versione* sono due delle configurazioni della build di .NET Core. Usare la configurazione della build di debug per il debug e la configurazione di rilascio per la distribuzione finale della versione.
+Il *debug* e la *versione* sono configurazioni di compilazione predefinite di .NET Core. Usare la configurazione della build di debug per il debug e la configurazione di rilascio per la distribuzione finale della versione.
 
 Nella configurazione di debug, un programma viene compilato con informazioni di debug simboliche complete e senza ottimizzazione. L'ottimizzazione rende più difficile il debug perché la relazione tra il codice sorgente e le istruzioni generate è più complessa. La configurazione di rilascio di un programma non dispone di informazioni di debug simboliche ed è completamente ottimizzata.
 
- Per impostazione predefinita, Visual Studio Code Usa la configurazione della build di debug, pertanto non è necessario modificarla prima del debug.
+Per impostazione predefinita, Visual Studio Code impostazioni di avvio usano la configurazione della build di debug, pertanto non è necessario modificarla prima del debug.
+
+1. Avviare Visual Studio Code.
+
+1. Aprire la cartella del progetto creato in [creare un'applicazione console .NET Core in Visual Studio Code](with-visual-studio-code.md).
 
 ## <a name="set-a-breakpoint"></a>Imposta punto di interruzione
 
-Un punto di interruzione interrompe temporaneamente l'esecuzione dell'applicazione *prima* che venga eseguita la riga con il punto di interruzione.
-
-1. Aprire Visual Studio Code.
-
-1. Aprire la cartella del progetto *HelloWorld* creata in [creare un'applicazione console .net core in Visual Studio Code](with-visual-studio-code.md).
+Un punto di *interruzione* interrompe temporaneamente l'esecuzione dell'applicazione prima che venga eseguita la riga con il punto di interruzione.
 
 1. Aprire il file *Program.cs* .
 
-1. Impostare un punto di *interruzione* nella riga in cui vengono visualizzati il nome, la data e l'ora facendo clic sul margine sinistro della finestra del codice. Il margine sinistro è a sinistra dei numeri di riga. Un altro modo per impostare un punto di interruzione consiste nel posizionare il cursore nella riga di codice e quindi premere <kbd>F9</kbd>.
+1. Impostare un punto di *interruzione* nella riga in cui vengono visualizzati il nome, la data e l'ora facendo clic sul margine sinistro della finestra del codice. Il margine sinistro è a sinistra dei numeri di riga. Altri modi per impostare un punto di interruzione sono premendo <kbd>F9</kbd> o selezionando **Esegui**  >  **Imposta/Rimuovi** punto di interruzione dal menu mentre è selezionata la riga di codice.
 
-   Come illustrato nell'immagine seguente, Visual Studio Code indica la riga in cui è impostato il punto di interruzione visualizzando un punto rosso nel margine sinistro.
+   Visual Studio Code indica la riga in cui è impostato il punto di interruzione visualizzando un punto rosso nel margine sinistro.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/breakpoint-set.png" alt-text="Set di punti di interruzione":::
 
@@ -45,7 +45,7 @@ Un punto di interruzione interrompe temporaneamente l'esecuzione dell'applicazio
 
 Il punto di interruzione si trova dopo una `Console.ReadLine` chiamata al metodo. Il **console di debug** non accetta l'input del terminale per un programma in esecuzione. Per gestire l'input del terminale durante il debug, è possibile usare il terminale integrato (uno dei Visual Studio Code Windows) o un terminale esterno. Per questa esercitazione si userà il terminale integrato.
 
-1. Aprire *. VSCODE/Launch. JSON*.
+1. Aprire *. VSCODE/launch.js*.
 
 1. Modificare l' `console` impostazione in `integratedTerminal` .
 
@@ -69,7 +69,7 @@ Il punto di interruzione si trova dopo una `Console.ReadLine` chiamata al metodo
 
    :::image type="content" source="media/debugging-with-visual-studio-code/select-debug-pane.png" alt-text="Aprire la scheda Debug in Visual Studio Code":::
 
-1. Avviare il debug selezionando la freccia verde nella parte superiore del riquadro, accanto a **.NET Core Launch (console)**.  Un altro modo per avviare il debug è premere <kbd>F5</kbd>.
+1. Selezionare la freccia verde nella parte superiore del riquadro accanto a **.NET Core Launch (console)**. Un altro modo per avviare il programma in modalità di debug è scegliere **Esegui**  >  **Avvia debug** dal menu.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/start-debugging.png" alt-text="Consente di iniziare il debug":::
 
@@ -83,7 +83,7 @@ Il punto di interruzione si trova dopo una `Console.ReadLine` chiamata al metodo
 
    :::image type="content" source="media/debugging-with-visual-studio-code/breakpoint-hit.png" alt-text="Raggiunto punto di interruzione, che Mostra variabili locali":::
 
-## <a name="change-variable-values"></a>Modificare i valori delle variabili
+## <a name="use-the-debug-console"></a>Usare il Console di debug
 
 La finestra di **console di debug** consente di interagire con l'applicazione di cui si sta eseguendo il debug. È possibile modificare il valore delle variabili per vedere come influiscono sul programma.
 
@@ -113,7 +113,7 @@ La finestra di **console di debug** consente di interagire con l'applicazione di
 
 Il programma Visualizza la stringa che l'utente immette. Ma cosa succede se l'utente non immette alcuna stringa? È possibile eseguire il test con una funzionalità di debug utile denominata punto di *interruzione condizionale*.
 
-1. Fare clic con il pulsante destro del mouse (<kbd>CTRL</kbd>+ clic su MacOS) sul punto rosso che rappresenta il punto di interruzione. Nel menu di scelta rapida selezionare **modifica** punto di interruzione per aprire una finestra di dialogo che consente di immettere un'espressione condizionale.
+1. Fare clic con il pulsante destro del mouse (<kbd>CTRL +</kbd>clic su MacOS) sul punto rosso che rappresenta il punto di interruzione. Nel menu di scelta rapida selezionare **modifica** punto di interruzione per aprire una finestra di dialogo che consente di immettere un'espressione condizionale.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/breakpoint-context-menu.png" alt-text="Menu di scelta rapida Punto di interruzione":::
 
@@ -127,7 +127,7 @@ Il programma Visualizza la stringa che l'utente immette. Ma cosa succede se l'ut
 
    Ogni volta che viene raggiunto il punto di interruzione, il debugger chiama il `String.IsNullOrEmpty(name)` metodo e si interrompe in questa riga solo se la chiamata al metodo restituisce `true` .
 
-   Anziché un'espressione condizionale, è possibile specificare un numero di *passaggi*, che interrompe l'esecuzione del programma prima che un'istruzione venga eseguita un numero specificato di volte o una *condizione di filtro*, che interrompe l'esecuzione del programma in base a tali attributi come identificatore del thread, nome del processo o nome del thread.
+   Anziché un'espressione condizionale, è possibile specificare un numero di *passaggi*che interrompe l'esecuzione del programma prima che un'istruzione venga eseguita un numero specificato di volte. Un'altra opzione consiste nello specificare una *condizione di filtro*, che interrompe l'esecuzione del programma in base a tali attributi come identificatore del thread, nome del processo o nome del thread.
 
 1. Avviare il programma con il debug premendo <kbd>F5</kbd>.
 
@@ -149,7 +149,7 @@ Il programma Visualizza la stringa che l'utente immette. Ma cosa succede se l'ut
 
 1. Selezionare la scheda **terminale** e premere un tasto qualsiasi per uscire dal programma e arrestare il debug.
 
-1. Cancellare il punto di interruzione facendo clic sul punto sul margine sinistro della finestra del codice. Un altro modo per cancellare un punto di interruzione consiste nel premere <kbd>F9</kbd> mentre è selezionata la riga di codice.
+1. Cancellare il punto di interruzione facendo clic sul punto sul margine sinistro della finestra del codice. Altre modalità di cancellazione di un punto di interruzione sono premendo <kbd>F9</kbd> o scegliendo **Esegui > Imposta/Rimuovi** punto di interruzione dal menu mentre è selezionata la riga di codice.
 
 1. Se viene visualizzato un avviso che indica che la condizione del punto di interruzione andrà persa, selezionare Rimuovi punto di **interruzione**.
 
@@ -165,17 +165,17 @@ Visual Studio Code consente inoltre di passare riga per riga attraverso un progr
 
    A questo punto, nella finestra **variabili** viene indicato che la `args` matrice è vuota e `name` e `date` hanno valori predefiniti.
 
-1. Selezionare **Esegui istruzione** o premere <kbd>F11</kbd>.
+1. Selezionare **Esegui**  >  **istruzione** o premere <kbd>F11</kbd>.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/step-into.png" alt-text="Pulsante Esegui istruzione":::
 
    Visual Studio Code evidenzia la riga successiva.
 
-1. Selezionare **Esegui istruzione** o premere <kbd>F11</kbd>.
+1. Selezionare **Esegui**  >  **istruzione** o premere <kbd>F11</kbd>.
 
    Visual Studio Code esegue `Console.WriteLine` per la richiesta del nome ed evidenzia la riga successiva di esecuzione. La riga successiva è `Console.ReadLine` per `name` . La finestra **variabili** è invariata e la scheda **terminale** Mostra "Qual è il nome?" prompt.
 
-1. Selezionare **Esegui istruzione** o premere <kbd>F11</kbd>.
+1. Selezionare **Esegui**  >  **istruzione** o premere <kbd>F11</kbd>.
 
    Visual Studio evidenzia l' `name` assegnazione della variabile. La finestra **variabili** Mostra che `name` è ancora `null` .
 
@@ -183,19 +183,19 @@ Visual Studio Code consente inoltre di passare riga per riga attraverso un progr
 
    La scheda **terminale** potrebbe non visualizzare la stringa immessa durante l'immissione, ma il <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> Metodo acquisirà l'input.
 
-1. Selezionare **Esegui istruzione** o premere <kbd>F11</kbd>.
+1. Selezionare **Esegui**  >  **istruzione** o premere <kbd>F11</kbd>.
 
    Visual Studio Code evidenzia l' `date` assegnazione della variabile. Nella finestra **variabili** viene visualizzato il valore restituito dalla chiamata al <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> metodo. Nella scheda **terminale** viene visualizzata la stringa immessa al prompt.
 
-1. Selezionare **Esegui istruzione** o premere <kbd>F11</kbd>.
+1. Selezionare **Esegui**  >  **istruzione** o premere <kbd>F11</kbd>.
 
    Nella finestra **variabili** viene visualizzato il valore della `date` variabile dopo l'assegnazione dalla <xref:System.DateTime.Now?displayProperty=nameWithType> Proprietà.
 
-1. Selezionare **Esegui istruzione** o premere <kbd>F11</kbd>.
+1. Selezionare **Esegui**  >  **istruzione** o premere <kbd>F11</kbd>.
 
    Visual Studio Code chiama il <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType> metodo. Nella finestra della console viene visualizzata la stringa formattata.
 
-1. Selezionare **Esci da istruzione/uscita** o premere <kbd>MAIUSC</kbd> + <kbd>F11</kbd>.
+1. Selezionare **Esegui**  >  **istruzione/uscita** o premere <kbd>MAIUSC</kbd> + <kbd>F11</kbd>.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/step-out.png" alt-text="Pulsante Esci da istruzione/uscita":::
 
@@ -205,7 +205,7 @@ Visual Studio Code consente inoltre di passare riga per riga attraverso un progr
 
 1. Premere un tasto qualsiasi per uscire dal programma.
 
-## <a name="select-release-build-configuration"></a>Selezionare la configurazione della build di rilascio
+## <a name="use-release-build-configuration"></a>Usa configurazione build di rilascio
 
 Dopo aver testato la versione di debug dell'applicazione, è necessario compilare e testare anche la versione di rilascio. La versione di rilascio incorpora le ottimizzazioni del compilatore che possono influire sul comportamento di un'applicazione. Ad esempio, le ottimizzazioni del compilatore progettate per migliorare le prestazioni possono creare race condition nelle applicazioni multithread.
 

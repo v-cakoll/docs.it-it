@@ -1,22 +1,19 @@
 ---
-title: Creare una libreria di classi .NET Standard in Visual Studio Code
+title: Creare una libreria di classi .NET Standard usando Visual Studio Code
 description: Informazioni su come creare una libreria di classi .NET Standard usando Visual Studio Code.
-ms.date: 05/29/2020
-ms.openlocfilehash: 5720ac374d50ef27a07d463e57af1bd95a352d83
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.date: 06/08/2020
+ms.openlocfilehash: f7d2319bcea58f63ca40e43ba39745bdf1b394ce
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446952"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701799"
 ---
-# <a name="tutorial-create-a-net-standard-library-in-visual-studio-code"></a>Esercitazione: creare una libreria di .NET Standard in Visual Studio Code
-
-La *libreria di classi* definisce tipi e metodi chiamati da un'applicazione. Una libreria di classi destinata a .NET Standard 2,0 consente la chiamata della libreria da qualsiasi implementazione di .NET che supporti tale versione di .NET Standard. Al termine della libreria di classi, è possibile decidere se si vuole distribuirla come pacchetto NuGet o includerla come componente in bundle con una o più applicazioni.
-
-> [!NOTE]
-> Per un elenco delle versioni di .NET Standard e delle piattaforme supportate, vedere [.NET standard](../../standard/net-standard.md).
+# <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>Esercitazione: creare una libreria di .NET Standard usando Visual Studio Code
 
 In questa esercitazione si creerà una semplice libreria di utilità contenente un solo metodo di gestione delle stringhe. Viene implementato come metodo di [estensione](../../csharp/programming-guide/classes-and-structs/extension-methods.md) in modo che sia possibile chiamarlo come se fosse un membro della <xref:System.String> classe.
+
+La *libreria di classi* definisce tipi e metodi chiamati da un'applicazione. Una libreria di classi destinata a .NET Standard 2,0 consente la chiamata della libreria da qualsiasi implementazione di .NET che supporti tale versione di .NET Standard. Una volta completata la libreria di classi, è possibile distribuirla come componente di terze parti o come componente in bundle con una o più applicazioni.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -27,9 +24,11 @@ In questa esercitazione si creerà una semplice libreria di utilità contenente 
 
 Iniziare creando una soluzione vuota in cui inserire il progetto libreria di classi. Una soluzione funge da contenitore per uno o più progetti. Verranno aggiunti altri progetti correlati alla stessa soluzione.
 
-1. Aprire Visual Studio Code.
+1. Avviare Visual Studio Code.
 
-1. Selezionare **file**  >  **Apri cartella** / **Apri...** dal menu principale, creare una cartella *ClassLibraryProjects* e fare clic su **Seleziona cartella** / **Apri**.
+1. Selezionare **file**  >  **Apri cartella** (**Apri...** in MacOS) dal menu principale
+
+1. Nella finestra di dialogo **Apri cartella** creare una cartella *ClassLibraryProjects* e fare clic su **Seleziona cartella** (**Apri** in MacOS).
 
 1. Aprire il **terminale** in Visual Studio Code selezionando **Visualizza**  >  **terminale** dal menu principale.
 
@@ -156,7 +155,21 @@ Aggiungere un'applicazione console che usa la libreria di classi. L'app chiede a
    Project `ShowCase\ShowCase.csproj` added to the solution.
    ```
 
-1. Inizialmente, il nuovo progetto di app console non ha accesso alla libreria di classi. Per consentire la chiamata di metodi nella libreria di classi, creare un riferimento di progetto al progetto di libreria di classi eseguendo il comando seguente:
+1. Aprire *Showcase/Program. cs* e sostituire tutto il codice con il codice seguente.
+
+   :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
+
+   Il codice usa la variabile `row` per mantenere il conteggio del numero di righe di dati scritti nella finestra della console. Ogni volta che è maggiore o uguale a 25, il codice Cancella la finestra della console e visualizza un messaggio all'utente.
+
+   Il programma richiede all'utente di immettere una stringa. Indica se la stringa inizia con un carattere maiuscolo. Se l'utente preme il tasto <kbd>invio</kbd> senza immettere una stringa, l'applicazione termina e la finestra della console si chiude.
+
+1. Salvare le modifiche.
+
+## <a name="add-a-project-reference"></a>Aggiungere un riferimento al progetto
+
+Inizialmente, il nuovo progetto di app console non ha accesso alla libreria di classi. Per consentire la chiamata di metodi nella libreria di classi, creare un riferimento di progetto al progetto libreria di classi.
+
+1. Eseguire il comando seguente:
 
    ```dotnetcli
    dotnet add ShowCase/Showcase.csproj reference StringLibrary/StringLibrary.csproj
@@ -168,17 +181,9 @@ Aggiungere un'applicazione console che usa la libreria di classi. L'app chiede a
    Reference `..\StringLibrary\StringLibrary.csproj` added to the project.
    ```
 
-1. Aprire *Showcase/Program. cs* e sostituire tutto il codice con il codice seguente.
+## <a name="run-the-app"></a>Eseguire l'app
 
-   :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
-
-   Il codice usa la variabile `row` per mantenere il conteggio del numero di righe di dati scritti nella finestra della console. Ogni volta che è maggiore o uguale a 25, il codice Cancella la finestra della console e visualizza un messaggio all'utente.
-
-   Il programma richiede all'utente di immettere una stringa. Indica se la stringa inizia con un carattere maiuscolo. Se l'utente preme il tasto INVIO senza immettere una stringa, l'applicazione termina e la finestra della console si chiude.
-
-1. Salvare le modifiche.
-
-1. Eseguire il programma.
+1. Eseguire il comando seguente nel terminale:
 
    ```dotnetcli
    dotnet run --project ShowCase/ShowCase.csproj
@@ -203,10 +208,11 @@ Aggiungere un'applicazione console che usa la libreria di classi. L'app chiede a
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
 * [Sviluppare librerie con la interfaccia della riga di comando di .NET Core](libraries.md)
+* [.NET standard le versioni e le piattaforme supportate](../../standard/net-standard.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 In questa esercitazione è stata creata una soluzione, è stato aggiunto un progetto di libreria e è stato aggiunto un progetto di app console che usa la libreria. Nell'esercitazione successiva si aggiunge un progetto di unit test alla soluzione.
 
 > [!div class="nextstepaction"]
-> [Testare una libreria di .NET Standard con .NET Core in Visual Studio Code](testing-library-with-visual-studio-code.md)
+> [Testare una libreria di .NET Standard con .NET Core usando Visual Studio Code](testing-library-with-visual-studio-code.md)

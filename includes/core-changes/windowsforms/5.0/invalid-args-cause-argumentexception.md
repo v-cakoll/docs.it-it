@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f1fc70075ef09a4f036c69788342c07ee51d72ce
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: aab7d8538c875e35c832acc2a6c64beb84d4fb47
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702446"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84702441"
 ---
 ### <a name="winforms-methods-now-throw-argumentexception"></a>I metodi WinForms ora generano ArgumentException
 
@@ -19,12 +19,13 @@ La generazione di un oggetto è <xref:System.ArgumentException> conforme al comp
 Nella tabella seguente sono elencati i metodi e i parametri interessati:
 
 | Metodo | Nome parametro | Condizione | Versione aggiunta |
-|-|-|-|
+|-|-|-|-|
 | <xref:System.Windows.Forms.TabControl.GetToolTipText(System.Object)?displayProperty=fullName> | `item` | L'argomento non è di tipo <xref:System.Windows.Forms.TabPage> . | 5,0 Anteprima 1 |
+| <xref:System.Windows.Forms.DataFormats.GetFormat(System.String)?displayProperty=fullName> | `format` | L'argomento è `null` , <xref:System.String.Empty?displayProperty=nameWithType> o uno spazio vuoto. | 5,0 Preview 5 |
 
 #### <a name="version-introduced"></a>Versione introdotta
 
-.NET 5,0 Preview 1
+.NET 5,0
 
 #### <a name="recommended-action"></a>Azione consigliata
 
@@ -33,16 +34,18 @@ Nella tabella seguente sono elencati i metodi e i parametri interessati:
 
 #### <a name="category"></a>Category
 
-Windows Forms
+Windows Form
 
 #### <a name="affected-apis"></a>API interessate
 
 - <xref:System.Windows.Forms.TabControl.GetToolTipText(System.Object)?displayProperty=fullName>
+- <xref:System.Windows.Forms.DataFormats.GetFormat(System.String)?displayProperty=fullName>
 
 <!-- 
 
 #### Affected APIs
 
 - `M:System.Windows.Forms.TabControl.GetToolTipText(System.Object)`
+- `M:System.Windows.Forms.DataFormats.GetFormat(System.String)`
 
 -->

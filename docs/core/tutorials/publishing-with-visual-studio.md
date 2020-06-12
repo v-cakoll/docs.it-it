@@ -1,21 +1,19 @@
 ---
-title: Pubblicare l'applicazione Hello World .NET Core con Visual Studio
-description: Con la pubblicazione viene creato il set di file necessari per eseguire l'applicazione .NET Core.
-author: BillWagner
-ms.author: wiwagn
-ms.date: 05/20/2020
+title: Pubblicare un'applicazione console .NET Core con Visual Studio
+description: La pubblicazione crea il set di file necessari per eseguire un'applicazione .NET Core.
+ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 745fb2af332afa278c78ec9baeea7230fe725c02
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 44646a307d230db395b55b9dec5acfd168605940
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241494"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701284"
 ---
-# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio"></a>Esercitazione: pubblicare un'applicazione console .NET Core con Visual Studio
+# <a name="tutorial-publish-a-net-core-console-application-using-visual-studio"></a>Esercitazione: pubblicare un'applicazione console .NET Core con Visual Studio
 
 Questa esercitazione illustra come pubblicare un'app console in modo che gli altri utenti possano eseguirla. Con la pubblicazione viene creato il set di file necessari per eseguire l'applicazione. Per distribuire i file, copiarli nel computer di destinazione.
 
@@ -25,7 +23,11 @@ Questa esercitazione illustra come pubblicare un'app console in modo che gli alt
 
 ## <a name="publish-the-app"></a>Pubblicare l'app
 
-1. Verificare che Visual Studio compili la versione di rilascio dell'applicazione. Se necessario, modificare la configurazione di compilazione nella barra degli strumenti da **Debug** in **Rilascio**.
+1. Avviare Visual Studio.
+
+1. Aprire il progetto *HelloWorld* creato in [creare un'applicazione console .NET Core in Visual Studio](with-visual-studio.md).
+
+1. Assicurarsi che Visual Studio usi la configurazione della build di rilascio. Se necessario, modificare la configurazione di compilazione nella barra degli strumenti da **Debug** in **Rilascio**.
 
    ![Barra degli strumenti Visual Studio con la build di rilascio selezionata](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
@@ -47,7 +49,7 @@ Questa esercitazione illustra come pubblicare un'app console in modo che gli alt
 
 ## <a name="inspect-the-files"></a>Esaminare i file
 
-Il processo di pubblicazione crea una distribuzione dipendente dal Framework, ovvero un tipo di distribuzione in cui l'applicazione pubblicata viene eseguita nel computer in cui è installato il runtime di .NET Core. Gli utenti possono eseguire l'app pubblicata facendo doppio clic sul file eseguibile o eseguendo il `dotnet HelloWorld.dll` comando da un prompt dei comandi.
+Per impostazione predefinita, il processo di pubblicazione crea una distribuzione dipendente dal Framework, ovvero un tipo di distribuzione in cui l'applicazione pubblicata viene eseguita nel computer in cui è installato il runtime di .NET Core. Gli utenti possono eseguire l'app pubblicata facendo doppio clic sul file eseguibile o eseguendo il `dotnet HelloWorld.dll` comando da un prompt dei comandi.
 
 Nei passaggi seguenti verranno esaminati i file creati dal processo di pubblicazione.
 
@@ -67,7 +69,7 @@ Nei passaggi seguenti verranno esaminati i file creati dal processo di pubblicaz
 
       Si tratta della versione della [distribuzione dipendente dal Framework](../deploying/deploy-with-cli.md#framework-dependent-deployment) dell'applicazione. Per eseguire questa libreria a collegamento dinamico, immettere `dotnet HelloWorld.dll` al prompt dei comandi. Questo metodo di esecuzione dell'app funziona in qualsiasi piattaforma in cui è installato il runtime di .NET Core.
 
-   * *HelloWorld. exe*
+   * *HelloWorld.exe*
 
       Si tratta della versione [eseguibile dipendente dal Framework](../deploying/deploy-with-cli.md#framework-dependent-executable) dell'applicazione. Per eseguirlo, immettere `HelloWorld.exe` al prompt dei comandi. Il file è specifico del sistema operativo.
 
@@ -83,7 +85,7 @@ Nei passaggi seguenti verranno esaminati i file creati dal processo di pubblicaz
 
 1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla cartella *Publish* e scegliere **Copia percorso completo**.
 
-1. Aprire un prompt dei comandi e passare alla cartella di *pubblicazione* . Immettere `cd` e incollare il percorso completo. Ad esempio:
+1. Aprire un prompt dei comandi e passare alla cartella di *pubblicazione* . A tale scopo, immettere `cd` e incollare il percorso completo. Ad esempio:
 
    ```
    cd C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\
