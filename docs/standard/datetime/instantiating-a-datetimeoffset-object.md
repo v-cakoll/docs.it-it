@@ -1,5 +1,6 @@
 ---
 title: Creazione di un'istanza di un oggetto DateTimeOffset
+description: Informazioni su come creare un'istanza di un oggetto DateTimeOffset (creare un'istanza di) in .NET. Informazioni sui valori letterali data & ora, sui costruttori, sulla conversione implicita dei tipi & altro.
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - DateTimeOffset structure, converting to DateTime
 - DateTimeOffset structure, instantiating
 ms.assetid: 9648375f-d368-4373-a976-3332ece00c0a
-ms.openlocfilehash: c290af0c9cef619000a6620ba35209489856c5b8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c2b71a2a98353a4ec9ed249acf18939dd4740e99
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281596"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768898"
 ---
 # <a name="instantiating-a-datetimeoffset-object"></a>Creazione di un'istanza di un oggetto DateTimeOffset
 

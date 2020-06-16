@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 199245aa0017d9232e3c9889c7845c3b9ec9877b
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: b4f6457c4fab8549b3efec2e25f7c23213698414
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144747"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767780"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Esercitazione: rilevare oggetti con ONNX in ML.NET
 
@@ -94,7 +94,7 @@ Ora che sono state apprese le nozioni generali su ONNX e sul funzionamento di Ti
     - Scegliere "nuget.org" come origine del pacchetto, selezionare la scheda Sfoglia e cercare **Microsoft.ML**.
     - Selezionare il pulsante **Installa**.
     - Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo **Accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati.
-    - Ripetere questi passaggi per **Microsoft.ML.ImageAnalytics** e **Microsoft.ML.OnnxTransformer**.
+    - Ripetere questi passaggi per **Microsoft. ml. ImageAnalytics**, **Microsoft. ml. OnnxTransformer** e **Microsoft. ml. OnnxRuntime**.
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>Preparare i dati e il modello già sottoposto a training
 
@@ -665,7 +665,7 @@ Dopo l'istruzione try-catch aggiungere logica aggiuntiva per indicare che l'esec
 
 [!code-csharp [EndProcessLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L62-L63)]
 
-L'operazione è stata completata.
+Ecco fatto!
 
 ## <a name="results"></a>Risultati
 

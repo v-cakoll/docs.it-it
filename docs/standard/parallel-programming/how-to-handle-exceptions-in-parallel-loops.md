@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: Gestire le eccezioni nei cicli paralleli'
+description: Informazioni su come gestire le eccezioni nei cicli paralleli in .NET. Vedere un esempio di come eseguire il wrapping di tutte le eccezioni dal ciclo in un oggetto System. AggregateException.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to handle exceptions
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
-ms.openlocfilehash: 87405425e85ed16d10b3e8b382c6e414fff10ddf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 61c22d6e82282f8aeb54818c813d4489e3bc9641
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278532"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768976"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>Procedura: Gestire le eccezioni nei cicli paralleli
 Gli overload dei metodi <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> non presentano alcun meccanismo speciale per gestire le eccezioni eventualmente generate. In questo senso, sono simili ai `for` cicli e ai `foreach` cicli ( `For` e `For Each` in Visual Basic); un'eccezione non gestita causa la terminazione del ciclo non appena tutte le iterazioni attualmente in esecuzione vengono completate.

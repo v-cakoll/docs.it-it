@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: generare e utilizzare eventi'
+description: Generare & utilizzare eventi in .NET. Vedere esempi che usano il delegato EventHandler, il <TEventArgs> delegato EventHandler, & un delegato personalizzato.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - raising events
 - events [.NET Framework], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-ms.openlocfilehash: 4d0b24b8a6f1b914745d819b90b973752e32447c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4054e1a26c3392870af994a6eceafae92176a332
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279958"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769275"
 ---
 # <a name="how-to-raise-and-consume-events"></a>Procedura: generare e utilizzare eventi
 Gli esempi in questo argomento illustrano come usare gli eventi. Sono inclusi esempi del delegato <xref:System.EventHandler>, del delegato <xref:System.EventHandler%601> e di un delegato personalizzato, per illustrare gli eventi con e senza dati.  

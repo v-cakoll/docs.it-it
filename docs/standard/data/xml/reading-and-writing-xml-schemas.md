@@ -1,5 +1,6 @@
 ---
 title: Lettura e scrittura di schemi XML
+description: Lettura e scrittura di schemi XSD (XML Schema Definition Language) da file o altre origini in .NET tramite l'API del modello SOM (Schema Object Model).
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
-ms.openlocfilehash: bf1078d52f5e9056da6b28acc8dd2fc257eb3636
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 874b0bdb0e13d545cfff4c813881f1398a8f9487
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291253"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767663"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>Lettura e scrittura di schemi XML
 È possibile usare l'API del modello SOM (Schema Object Model) per scrivere e leggere gli schemi XSD (XML Schema Definition Language) da file o altre origini e compilare schemi XML in memoria usando le classi nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType> associato alle strutture definite nella raccomandazione W3C (World Wide Web Consortium) "XML Schema".  

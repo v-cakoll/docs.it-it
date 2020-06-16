@@ -1,14 +1,15 @@
 ---
 title: Gestione di spazi dei nomi in un documento XML
+description: Informazioni su come gestire gli spazi dei nomi in un documento XML. Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e degli elementi di un documento XML a URI personalizzati e predefiniti.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: b60e773183bd008c99022946a2ec53932234fe23
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3a3abd2e932b1afecab85e285b0e2c42eb1eb20f
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289148"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769262"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Gestione di spazi dei nomi in un documento XML
 Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e degli elementi di un documento XML a URI personalizzati e predefiniti. Per creare queste associazioni, è possibile definire i prefissi per gli URI dello spazio dei nomi e usare i prefissi in questione per qualificare i nomi degli attributi e degli elementi nei dati XML. Con gli spazi dei nomi è possibile evitare i conflitti tra i nomi degli elementi e degli attributi e consentire la gestione e la convalida degli elementi e degli attributi con lo stesso nome in modi diversi.  

@@ -1,5 +1,6 @@
 ---
 title: Task Parallel Library (TPL)
+description: Esplorare il Task Parallel Library (TPL), un set di tipi e API pubblici per semplificare il processo di aggiunta del parallelismo & concorrenza alle applicazioni in .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - .NET, parallel programming in
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
-ms.openlocfilehash: 45c9f43e67b66b00758afa0659897971aef317c2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 42768d99e7f3a15751ccf4c980edb9373666d49f
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284975"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768601"
 ---
 # <a name="task-parallel-library-tpl"></a>Task Parallel Library (TPL)
 La libreria Task Parallel Library (TPL) è un set di tipi e API pubblici negli spazi dei nomi <xref:System.Threading?displayProperty=nameWithType> e <xref:System.Threading.Tasks?displayProperty=nameWithType>. Lo scopo di TPL è di rendere gli sviluppatori più produttivi mediante la semplificazione del processo di aggiunta di parallelismo e concorrenza alle applicazioni. La libreria TPL ridimensiona il grado di concorrenza dinamicamente per utilizzare in modo efficace tutti i processori disponibili. La libreria TPL gestisce inoltre il partizionamento del lavoro, la pianificazione dei thread in <xref:System.Threading.ThreadPool>, il supporto per l'annullamento, la gestione dello stato e altri dettagli di basso livello. Quando si utilizza TPL, è possibile ottimizzare le prestazioni del codice concentrandosi sulle operazioni per cui il programma è stato progettato.  

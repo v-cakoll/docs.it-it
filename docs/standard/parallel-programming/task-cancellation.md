@@ -1,5 +1,6 @@
 ---
 title: Annullamento delle attività
+description: Informazioni sull'annullamento delle attività, supportato nelle classi attività e attività, <TResult> tramite l'uso di token di annullamento in .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - tasks, cancellation
 - asynchronous task cancellation
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
-ms.openlocfilehash: 9f17b11699195e5b2186d008ebefce306834ea8d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1d9b7b35341961c27107f007e0eafa51ef49e232
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285274"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768664"
 ---
 # <a name="task-cancellation"></a>Annullamento delle attività
 Le classi <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> supportano l'annullamento tramite l'utilizzo dei token di annullamento in .NET Framework. Per altre informazioni, vedere [annullamento in thread gestiti](../threading/cancellation-in-managed-threads.md). Nelle classi Task l'annullamento comporta la cooperazione tra il delegato dell'utente, che rappresenta un'operazione annullabile, e il codice che ha richiesto l'annullamento.  Un annullamento riuscito prevede una chiamata al metodo <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> da parte del codice richiedente, nonché l'interruzione tempestiva dell'operazione da parte del delegato dell'utente. L'operazione può essere interrotta tramite una di queste opzioni:  

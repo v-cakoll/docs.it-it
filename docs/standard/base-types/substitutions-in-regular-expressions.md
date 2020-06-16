@@ -1,5 +1,6 @@
 ---
 title: Sostituzioni nelle espressioni regolari
+description: Eseguire sostituzioni per sostituire il testo corrispondente usando le espressioni regolari in .NET. Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno di modelli di sostituzione.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 6e5773c220dccd4d139b4f85e19b55048a64e7ef
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ab2ed6ff87f2d50d0f518ac64188bf8b5c98351c
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288004"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768105"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Sostituzioni nelle espressioni regolari
 Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei criteri di sostituzione. Utilizzano un modello di espressione regolare per definire in tutto o in parte il testo che sostituirà il testo corrispondente nella stringa di input. Il criterio di sostituzione può essere costituito da una o più sostituzioni insieme a caratteri letterali. I criteri di sostituzione vengono forniti agli overload del metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> che dispongono di un parametro `replacement` e al metodo <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> . I metodi sostituiscono il criterio di ricerca con il criterio definito dal parametro `replacement` .  

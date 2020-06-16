@@ -1,5 +1,6 @@
 ---
 title: 'Procedura dettagliata: Creazione di una pipeline del flusso di dati'
+description: Creare una pipeline del flusso di elementi, ovvero una serie di componenti o blocchi di flussi di data. Un blocco di flussi di lavoro esegue una determinata attività per contribuire a un obiettivo più grande.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-ms.openlocfilehash: cfe3296815dc344b0d9d1f7bad1ab4a130380e2b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7fe12b63b04d403334e4b64a421b105550467ca4
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284611"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767871"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Procedura dettagliata: Creazione di una pipeline del flusso di dati
 Sebbene sia possibile usare i metodi <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> per ricevere messaggi da blocchi di origine, è anche possibile connettere blocchi di messaggi per formare una *pipeline del flusso di dati*. Una pipeline del flusso di dati è costituita da una serie di componenti o *blocchi di flussi di dati*, ognuno dei quali esegue un'attività specifica che contribuisce a un obiettivo più grande. In ogni blocco di flussi di dati di una pipeline del flusso di dati viene eseguito un lavoro quando si riceve un messaggio da un altro blocco di flussi di dati. Un'analogia a questo è data da una catena di montaggio per la produzione di automobili. Man mano che ciascun veicolo passa attraverso la catena di montaggio, in una postazione viene assemblato il telaio, nella successiva viene installato il motore e così via. Grazie alla catena di montaggio in cui è possibile eseguire il montaggio di più veicoli contemporaneamente, si ottiene una maggiore produzione rispetto al montaggio completo dei veicoli uno alla volta.
@@ -53,7 +54,7 @@ Sebbene sia possibile usare i metodi <xref:System.Threading.Tasks.Dataflow.Dataf
  [!code-csharp[TPLDataflow_Palindromes#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#3)]
  [!code-vb[TPLDataflow_Palindromes#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#3)]  
   
-|Membro|Type|Description|  
+|Membro|Type|Descrizione|  
 |------------|----------|-----------------|  
 |`downloadString`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Scarica il testo del libro dal Web.|  
 |`createWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Suddivide il testo del libro in una matrice di parole.|  

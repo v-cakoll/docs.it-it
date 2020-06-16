@@ -1,6 +1,6 @@
 ---
 title: Common Type System
-description: Informazioni sul sistema dei tipi in .NET.
+description: Esplorare il sistema di tipi in .NET. Informazioni sui tipi in .NET (tipi di valore o tipi di riferimento), definizione del tipo, membri dei tipi e caratteristiche dei membri dei tipi.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: a1aa244d470402823fc22e12cb5e32bbbdcd87fe
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: db0ecd59f122228d33b74be6dec51371413d68b3
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289343"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767832"
 ---
 # <a name="common-type-system"></a>Common Type System
 
@@ -170,7 +170,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
 - Le definizioni per ciascuno dei membri del tipo.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attributi  
  Gli attributi forniscono metadati aggiuntivi definiti dall'utente. Comunemente vengono utilizzati per archiviare informazioni aggiuntive su un tipo nell'assembly o per modificare il comportamento di un membro del tipo nella fase di progettazione o nell'ambiente di runtime.  
   
  Gli attributi stessi sono classi che ereditano da <xref:System.Attribute?displayProperty=nameWithType>. I linguaggi che supportano l'utilizzo di attributi forniscono ognuno la sintassi necessaria per l'applicazione degli attributi a un elemento del linguaggio. Gli attributi possono essere applicati a quasi tutti gli elementi del linguaggio. Gli elementi specifici a cui è possibile applicare un attributo sono definiti dall'oggetto <xref:System.AttributeUsageAttribute> applicato a tale classe di attributi.  
@@ -306,6 +306,6 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Browser API .NET](/dotnet/api)
+- [Browser per le API .NET](/dotnet/api)
 - [Common Language Runtime](../clr.md)
 - [Conversione di tipi in .NET](type-conversion.md)

@@ -1,5 +1,6 @@
 ---
 title: Convenzioni per l'utilizzo di maiuscole e minuscole
+description: Applicare le convenzioni di utilizzo delle maiuscole per identificatori, parole composte e termini comuni. Informazioni sul funzionamento della distinzione tra maiuscole e minuscole in .NET.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-ms.openlocfilehash: 10d628700a9cbf0e842416878ec2c7febfa3d6f5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4903dc587d84ef36bfaa641cfbda59484266c23c
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280400"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767793"
 ---
 # <a name="capitalization-conventions"></a>Convenzioni per l'utilizzo di maiuscole e minuscole
 Le linee guida in questo capitolo definiscono un metodo semplice per l'utilizzo di case che, quando vengono applicate in modo coerente, rendono facili da leggere gli identificatori di tipi, membri e parametri.
@@ -54,7 +55,7 @@ Le linee guida in questo capitolo definiscono un metodo semplice per l'utilizzo 
 |Interfaccia|Pascal|`public interface IEnumerable { ... }`|
 |Metodo|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
 |Proprietà|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
-|Event|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
+|Evento|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
 |Campo|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
 |Valore enum|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|
 |Parametro|notazione Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|

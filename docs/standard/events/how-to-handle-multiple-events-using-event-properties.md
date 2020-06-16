@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: gestire più eventi mediante le relative proprietà'
+description: Informazioni su come gestire molti eventi usando le proprietà dell'evento. Definire raccolte di delegati, chiavi di evento, & proprietà dell'evento. Implementare i metodi Add & Remove della funzione di accesso.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - event handling [.NET Framework], with multiple events
 - events [.NET Framework], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
-ms.openlocfilehash: c5be541c1a40c5d16a0502e76adef24f6a41cc89
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5b528aa2145ba703ce605ce22ae7d643f1e5b8d0
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288472"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769015"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Procedura: gestire più eventi mediante le relative proprietà
 Per utilizzare le proprietà evento è necessario definire queste proprietà nella classe tramite cui vengono generati gli eventi e, successivamente, impostarne i delegati nelle classi mediante cui vengono gestiti gli eventi. Per implementare più proprietà evento in una classe, la classe deve archiviare e mantenere internamente il delegato definito per ogni evento. Uno degli approcci più comuni consiste nell'implementare una raccolta di delegati indicizzata da una chiave evento.  

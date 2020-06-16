@@ -1,5 +1,6 @@
 ---
 title: Convenzioni di denominazione generali
+description: Usare le convenzioni di denominazione generali relative alla scelta delle parole, le linee guida sull'uso delle abbreviazioni e degli acronimi e istruzioni per evitare nomi specifici della lingua.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: c90987fd28d5157cfb7f7eea4680b5ab4be1a200
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b7f06a57c57800afcfa7febf9452094b4ad5ddc1
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290954"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769080"
 ---
 # <a name="general-naming-conventions"></a>Convenzioni di denominazione generali
 
@@ -64,12 +65,12 @@ In questa sezione vengono descritte le convenzioni di denominazione generali che
 |**byte**|**Byte**|**unsigned char**|**Byte**|
 |**short**|**Breve**|**short**|**Int16**|
 |**ushort**|**UInt16**|**unsigned short**|**UInt16**|
-|**int**|**Intero**|**int**|**Int32**|
+|**int**|**Integer**|**int**|**Int32**|
 |**uint**|**UInt32**|**int senza segno**|**UInt32**|
 |**long**|**Long**|**__int64**|**Int64**|
 |**ULONG**|**UInt64**|**unsigned __int64**|**UInt64**|
-|**float**|**Singolo**|**float**|**Singolo**|
-|**double**|**Doppio**|**double**|**Doppio**|
+|**float**|**Single**|**float**|**Single**|
+|**double**|**Double**|**double**|**Double**|
 |**bool**|**Boolean**|**bool**|**Boolean**|
 |**char**|**Char**|**wchar_t**|**Char**|
 |**string**|**Stringa**|**Stringa**|**Stringa**|

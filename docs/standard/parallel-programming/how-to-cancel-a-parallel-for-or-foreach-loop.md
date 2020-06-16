@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: Annullare un ciclo Parallel.For o ForEach'
+description: Annullare un ciclo Parallel. for o Parallel. ForEach in .NET fornendo un oggetto token di annullamento al metodo nel parametro ParallelOptions.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - parallel foreach loop, how to cancel
 - parallel for loops, how to cancel
 ms.assetid: 9d19b591-ea95-4418-8ea7-b6266af9905b
-ms.openlocfilehash: d29137127dd47844f8f08d3ac689cf2827d9efe2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0a22794f3c45e685a80d36a42ecd849461936c7b
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288225"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769002"
 ---
 # <a name="how-to-cancel-a-parallelfor-or-foreach-loop"></a>Procedura: Annullare un ciclo Parallel.For o ForEach
 I metodi <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> supportano l'annullamento tramite l'uso di token di annullamento. Per altre informazioni generali sull'annullamento, vedere [Annullamento](../threading/cancellation-in-managed-threads.md). In un ciclo parallelo è necessario fornire <xref:System.Threading.CancellationToken> al metodo nel parametro <xref:System.Threading.Tasks.ParallelOptions> e quindi racchiudere la chiamata parallela in un blocco Try-Catch.  

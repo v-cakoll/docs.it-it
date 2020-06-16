@@ -1,5 +1,6 @@
 ---
 title: Modello di programmazione asincrona (APM)
+description: Informazioni sul modello di programmazione asincrona (APM) in .NET. Scopri come iniziare e terminare un'operazione asincrona.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-ms.openlocfilehash: 96ad18e613d68ee97f4e5666afe77febadc6f991
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5ab5d15d24aac80ef4a31c039f7af9dacce4a8d8
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289980"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769184"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Modello di programmazione asincrona (APM)
 Un'operazione asincrona in cui viene usato il modello di progettazione dell'oggetto <xref:System.IAsyncResult> viene implementata come due metodi denominati `BeginOperationName` e `EndOperationName` tramite cui viene rispettivamente avviata e terminata l'operazione asincrona *NomeOperazione*. La classe <xref:System.IO.FileStream> fornisce ad esempio i metodi <xref:System.IO.FileStream.BeginRead%2A> e <xref:System.IO.FileStream.EndRead%2A> per la lettura asincrona dei byte da un file. Tali metodi implementano la versione asincrona del metodo <xref:System.IO.FileStream.Read%2A> .  

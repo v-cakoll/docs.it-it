@@ -1,5 +1,6 @@
 ---
 title: Stringhe di formato TimeSpan standard
+description: Esaminare le stringhe di formato TimeSpan standard, che usano un singolo identificatore di formato per definire la rappresentazione testuale di un valore TimeSpan in .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 2ed9ca7337e40b5520ddbfc92925c5bedb45f701
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 31e4158d42d794e830d9acfe666729846c43a1ee
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289278"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768118"
 ---
 # <a name="standard-timespan-format-strings"></a>Stringhe di formato TimeSpan standard
 
@@ -58,8 +59,8 @@ Nella tabella seguente sono elencati gli identificatori di formato di intervallo
 |*-*|Un segno negativo facoltativo, che indica un intervallo di tempo negativo.|  
 |*d*|Numero di giorni facoltativo, senza zeri iniziali.|  
 |*hh*|Numero di ore, nell'intervallo compreso tra "00" e "23".|  
-|*MM*|Numero di minuti, nell'intervallo compreso tra "00" e "59".|  
-|*ss*|Numero di secondi, nell'intervallo compreso tra "0" e "59".|  
+|*mm*|Numero di minuti, nell'intervallo compreso tra "00" e "59".|  
+|*SS*|Numero di secondi, nell'intervallo compreso tra "0" e "59".|  
 |*fffffff*|La parte frazionaria facoltativa di un secondo.  Il valore può variare da "0000001" (un tick oppure un decimilionesimo di secondo) e "9999999" (9.999.999 decimilionesimi di secondo, o un secondo meno di un tick).|  
   
  A differenza degli identificatori di formato "g" e "G", l'identificatore di formato "c" non è dipendente dalle impostazioni cultura. Produce la rappresentazione di stringa di un valore <xref:System.TimeSpan> invariabile e comune a tutte le versioni di .NET Framework precedenti a .NET Framework 4. "c" è la stringa di formato <xref:System.TimeSpan> predefinita; il metodo <xref:System.TimeSpan.ToString?displayProperty=nameWithType> formatta un valore di intervallo di tempo usando la stringa di formato "c".  
@@ -84,8 +85,8 @@ Nella tabella seguente sono elencati gli identificatori di formato di intervallo
 |*-*|Un segno negativo facoltativo, che indica un intervallo di tempo negativo.|  
 |*d*|Numero di giorni facoltativo, senza zeri iniziali.|  
 |*h*|Numero di ore, compreso tra "0" e "23", senza zeri iniziali.|  
-|*MM*|Numero di minuti, compreso tra "00" e "59".|  
-|*ss*|Numero di secondi, compreso tra "00" e "59".|  
+|*mm*|Numero di minuti, compreso tra "00" e "59".|  
+|*SS*|Numero di secondi, compreso tra "00" e "59".|  
 |*.*|Il separatore dei secondi frazionari. È equivalente alla proprietà <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> della cultura specificata senza gli override dell'utente.|  
 |*FFFFFFF*|Frazioni di secondo. Viene visualizzato il minor numero di cifre possibile.|  
   
@@ -108,8 +109,8 @@ Nella tabella seguente sono elencati gli identificatori di formato di intervallo
 |*-*|Un segno negativo facoltativo, che indica un intervallo di tempo negativo.|  
 |*d*|Il numero di giorni, senza zeri iniziali.|  
 |*hh*|Numero di ore, nell'intervallo compreso tra "00" e "23".|  
-|*MM*|Numero di minuti, nell'intervallo compreso tra "00" e "59".|  
-|*ss*|Numero di secondi, nell'intervallo compreso tra "00" e "59".|  
+|*mm*|Numero di minuti, nell'intervallo compreso tra "00" e "59".|  
+|*SS*|Numero di secondi, nell'intervallo compreso tra "00" e "59".|  
 |*.*|Il separatore dei secondi frazionari. È equivalente alla proprietà <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> della cultura specificata senza gli override dell'utente.|  
 |*fffffff*|Frazioni di secondo.|  
   

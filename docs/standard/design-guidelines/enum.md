@@ -1,5 +1,6 @@
 ---
 title: Progettazione di enum
+description: Progettazione per le enumerazioni, che sono un tipo speciale di tipo di valore. Le enumerazioni semplici contengono set di scelte ridotte e chiuse. Le enumerazioni di flag supportano operazioni bit per bit sui valori enum.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-ms.openlocfilehash: efdfcda95a67941f0fde5f7a96467af7dd374396
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 40a9faf53dc8a03674cd59074244c15cd304bdd2
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280140"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768537"
 ---
 # <a name="enum-design"></a>Progettazione di enum
 
