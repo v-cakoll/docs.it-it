@@ -1,23 +1,23 @@
 ---
-title: Tipi incorporati - Informazioni di riferimento su C
-description: Imparare i tipi di riferimento e valori predefiniti di C
+title: Tipi predefiniti-riferimenti per C#
+description: Informazioni sui tipi di valore e riferimento incorporati in C#
 ms.date: 02/04/2020
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: bf8823c6674b1ff3f0028a50df8ce8d0f803cfc1
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 3366f718cd83a28f475fae9b4e65ce37fe7d8c7b
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389485"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803197"
 ---
-# <a name="built-in-types-c-reference"></a><span data-ttu-id="8a2c6-103">Tipi incorporati (riferimenti in C</span><span class="sxs-lookup"><span data-stu-id="8a2c6-103">Built-in types (C# reference)</span></span>
+# <a name="built-in-types-c-reference"></a><span data-ttu-id="337e7-103">Tipi incorporati (riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="337e7-103">Built-in types (C# reference)</span></span>
 
-<span data-ttu-id="8a2c6-104">Nella tabella seguente sono elencati i tipi di [valore](value-types.md) incorporati di C' :</span><span class="sxs-lookup"><span data-stu-id="8a2c6-104">The following table lists the C# built-in [value](value-types.md) types:</span></span>
+<span data-ttu-id="337e7-104">Nella tabella seguente sono elencati i tipi di [valore](value-types.md) predefiniti C#:</span><span class="sxs-lookup"><span data-stu-id="337e7-104">The following table lists the C# built-in [value](value-types.md) types:</span></span>
 
-|<span data-ttu-id="8a2c6-105">Parola chiave del tipo C</span><span class="sxs-lookup"><span data-stu-id="8a2c6-105">C# type keyword</span></span>|<span data-ttu-id="8a2c6-106">Tipo .NET</span><span class="sxs-lookup"><span data-stu-id="8a2c6-106">.NET type</span></span>|
+|<span data-ttu-id="337e7-105">Parola chiave di tipo C#</span><span class="sxs-lookup"><span data-stu-id="337e7-105">C# type keyword</span></span>|<span data-ttu-id="337e7-106">Tipo .NET</span><span class="sxs-lookup"><span data-stu-id="337e7-106">.NET type</span></span>|
 |--------------|-------------------------|
 |[`bool`](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|
 |[`byte`](integral-numeric-types.md)|<xref:System.Byte?displayProperty=nameWithType>|
@@ -33,24 +33,24 @@ ms.locfileid: "81389485"
 |[`short`](integral-numeric-types.md)|<xref:System.Int16?displayProperty=nameWithType>|
 |[`ushort`](integral-numeric-types.md)|<xref:System.UInt16?displayProperty=nameWithType>|
 
-<span data-ttu-id="8a2c6-107">Nella tabella seguente sono elencati i tipi di [riferimento](../keywords/reference-types.md) incorporati in C' :</span><span class="sxs-lookup"><span data-stu-id="8a2c6-107">The following table lists the C# built-in [reference](../keywords/reference-types.md) types:</span></span>
+<span data-ttu-id="337e7-107">Nella tabella seguente sono elencati i tipi di [riferimento](../keywords/reference-types.md) incorporati in C#:</span><span class="sxs-lookup"><span data-stu-id="337e7-107">The following table lists the C# built-in [reference](../keywords/reference-types.md) types:</span></span>
 
-|<span data-ttu-id="8a2c6-108">Parola chiave del tipo C</span><span class="sxs-lookup"><span data-stu-id="8a2c6-108">C# type keyword</span></span>|<span data-ttu-id="8a2c6-109">Tipo .NET</span><span class="sxs-lookup"><span data-stu-id="8a2c6-109">.NET type</span></span>|
+|<span data-ttu-id="337e7-108">Parola chiave di tipo C#</span><span class="sxs-lookup"><span data-stu-id="337e7-108">C# type keyword</span></span>|<span data-ttu-id="337e7-109">Tipo .NET</span><span class="sxs-lookup"><span data-stu-id="337e7-109">.NET type</span></span>|
 |--------------|-------------------------|
 |[`object`](reference-types.md#the-object-type)|<xref:System.Object?displayProperty=nameWithType>|
 |[`string`](reference-types.md#the-string-type)|<xref:System.String?displayProperty=nameWithType>|
+|[`dynamic`](reference-types.md#the-dynamic-type)|<xref:System.Object?displayProperty=nameWithType>|
 
-<span data-ttu-id="8a2c6-110">Nelle tabelle precedenti, ogni parola chiave di tipo C , dalla colonna di sinistra è un alias per il tipo .NET corrispondente.</span><span class="sxs-lookup"><span data-stu-id="8a2c6-110">In the preceding tables, each C# type keyword from the left column is an alias for the corresponding .NET type.</span></span> <span data-ttu-id="8a2c6-111">Sono intercambiabili.</span><span class="sxs-lookup"><span data-stu-id="8a2c6-111">They are interchangeable.</span></span> <span data-ttu-id="8a2c6-112">Ad esempio, le dichiarazioni seguenti dichiarano variabili dello stesso tipo:</span><span class="sxs-lookup"><span data-stu-id="8a2c6-112">For example, the following declarations declare variables of the same type:</span></span>
+<span data-ttu-id="337e7-110">Nelle tabelle precedenti ogni parola chiave di tipo C# della colonna sinistra è un alias per il tipo .NET corrispondente.</span><span class="sxs-lookup"><span data-stu-id="337e7-110">In the preceding tables, each C# type keyword from the left column is an alias for the corresponding .NET type.</span></span> <span data-ttu-id="337e7-111">Sono intercambiabili.</span><span class="sxs-lookup"><span data-stu-id="337e7-111">They are interchangeable.</span></span> <span data-ttu-id="337e7-112">Ad esempio, le dichiarazioni seguenti dichiarano variabili dello stesso tipo:</span><span class="sxs-lookup"><span data-stu-id="337e7-112">For example, the following declarations declare variables of the same type:</span></span>
 
 ```csharp
 int a = 123;
 System.Int32 b = 123;
 ```
 
-<span data-ttu-id="8a2c6-113">La [`void`](void.md) parola chiave rappresenta l'assenza di un tipo.</span><span class="sxs-lookup"><span data-stu-id="8a2c6-113">The [`void`](void.md) keyword represents the absence of a type.</span></span> <span data-ttu-id="8a2c6-114">Utilizzarlo come il tipo restituito di un metodo che non restituisce un valore.</span><span class="sxs-lookup"><span data-stu-id="8a2c6-114">You use it as the return type of a method that doesn't return a value.</span></span>
+<span data-ttu-id="337e7-113">La [`void`](void.md) parola chiave rappresenta l'assenza di un tipo.</span><span class="sxs-lookup"><span data-stu-id="337e7-113">The [`void`](void.md) keyword represents the absence of a type.</span></span> <span data-ttu-id="337e7-114">Viene usato come tipo restituito di un metodo che non restituisce un valore.</span><span class="sxs-lookup"><span data-stu-id="337e7-114">You use it as the return type of a method that doesn't return a value.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="8a2c6-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8a2c6-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="337e7-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="337e7-115">See also</span></span>
 
-- [<span data-ttu-id="8a2c6-116">Informazioni di riferimento su C#</span><span class="sxs-lookup"><span data-stu-id="8a2c6-116">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="8a2c6-117">Valori predefiniti dei tipi c'è</span><span class="sxs-lookup"><span data-stu-id="8a2c6-117">Default values of C# types</span></span>](default-values.md)
-- [<span data-ttu-id="8a2c6-118">`dynamic`Parola chiave</span><span class="sxs-lookup"><span data-stu-id="8a2c6-118">`dynamic` keyword</span></span>](reference-types.md#the-dynamic-type)
+- [<span data-ttu-id="337e7-116">Informazioni di riferimento su C#</span><span class="sxs-lookup"><span data-stu-id="337e7-116">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="337e7-117">Valori predefiniti dei tipi C#</span><span class="sxs-lookup"><span data-stu-id="337e7-117">Default values of C# types</span></span>](default-values.md)
