@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 5db2797870b6c2e1998f17f1d8e4df8aa3f95c9e
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 0f9c0f053e531a44640084a35dc5d8e844ee0b46
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241409"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803181"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metodi di estensione (Guida per programmatori C#)
 
@@ -54,7 +54,7 @@ In generale, probabilmente si chiamerà metodi di estensione molto più spesso r
 using System.Linq;
 ```
 
-Potrebbe anche essere necessario aggiungere un riferimento a System. Core. dll. Si noterà che gli operatori di query standard vengono ora visualizzati in IntelliSense come metodi aggiuntivi disponibili per la maggior parte dei <xref:System.Collections.Generic.IEnumerable%601> tipi.
+Potrebbe anche essere necessario aggiungere un riferimento a System.Core.dll. Si noterà che gli operatori di query standard vengono ora visualizzati in IntelliSense come metodi aggiuntivi disponibili per la maggior parte dei <xref:System.Collections.Generic.IEnumerable%601> tipi.
 
 ## <a name="binding-extension-methods-at-compile-time"></a>Associazione di metodi di estensione in fase di compilazione
 
@@ -80,7 +80,7 @@ In passato, era comune creare "classi di raccolta" che implementavano l' <xref:S
 
 Quando si usa un'architettura a cipolla o un'altra progettazione di applicazioni a più livelli, è comune avere un set di entità di dominio o oggetti Trasferimento dati che possono essere usati per comunicare tra i limiti dell'applicazione. Questi oggetti in genere non contengono funzionalità o solo funzionalità minime che si applicano a tutti i livelli dell'applicazione. I metodi di estensione possono essere usati per aggiungere funzionalità specifiche per ogni livello dell'applicazione senza caricare l'oggetto con metodi non necessari o desiderati in altri livelli.
 
-```aspx-csharp
+```csharp
 public class DomainEntity
 {
     public int Id { get; set; }

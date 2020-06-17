@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: b10d1c4579f10ca4fb84797ee67342825aaa9c32
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 83d4b9327b55c511e2a46486e519e3cd0c77b1a3
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662940"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803221"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Uso della classe StringBuilder in .NET
 L'oggetto <xref:System.String> non è modificabile. Ogni volta che si usa uno dei metodi nella classe <xref:System.String?displayProperty=nameWithType>, si crea un nuovo oggetto stringa in memoria che richiede una nuova allocazione di spazio. In situazioni in cui è necessario modificare ripetutamente una stringa, il sovraccarico associato alla creazione di un nuovo oggetto <xref:System.String> può essere dispendioso. La classe <xref:System.Text.StringBuilder?displayProperty=nameWithType> può essere usata per modificare una stringa senza creare un nuovo oggetto. Ad esempio, l'uso della classe <xref:System.Text.StringBuilder> può migliorare le prestazioni quando si concatenano più stringhe in un ciclo.  
@@ -67,7 +67,7 @@ L'oggetto <xref:System.String> non è modificabile. Ogni volta che si usa uno de
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|Sostituisce un identificatore di formato passato in una stringa con il testo formattato.|  
 |<xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType>|Inserisce una stringa o un oggetto nell'indice specificato dell'oggetto **StringBuilder** corrente.|  
 |<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|Rimuove un numero specificato di caratteri dall'oggetto **StringBuilder** corrente.|  
-|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Sostituisce un determinato carattere nell'indice specificato.|  
+|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Sostituisce tutte le occorrenze di un carattere o di una stringa specificata nell'oggetto **StringBuilder** corrente con un altro carattere o stringa specificata.|  
   
 ### <a name="append"></a>Accoda  
  Il metodo **Append** può essere usato per aggiungere testo o una rappresentazione di stringa di un oggetto alla fine di una stringa rappresentata dall'oggetto **StringBuilder** corrente. Nell'esempio seguente viene inizializzato un oggetto **StringBuilder** su "Hello World" e quindi viene aggiunto il testo alla fine dell'oggetto. Lo spazio viene allocato automaticamente in base alle esigenze.  
@@ -90,7 +90,7 @@ L'oggetto <xref:System.String> non è modificabile. Ogni volta che si usa uno de
  [!code-csharp[Conceptual.StringBuilder#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#6)]
  [!code-vb[Conceptual.StringBuilder#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#6)]  
   
-### <a name="remove"></a>Remove  
+### <a name="remove"></a>Rimuovere  
  È possibile usare il metodo **Remove** per rimuovere un numero specificato di caratteri dall'oggetto <xref:System.Text.StringBuilder> corrente, a partire dall'indice in base zero specificato. L'esempio seguente usa il metodo **Remove** per abbreviare un oggetto <xref:System.Text.StringBuilder>.  
   
  [!code-cpp[Conceptual.StringBuilder#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#7)]

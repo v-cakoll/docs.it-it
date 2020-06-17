@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: ffa5372678362e47eb59d8b041da55c79bf8475d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1e78b920eb6a1eae870a425b91711ac9d87b6530
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447043"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84811675"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opzioni del compilatore C# elencate per categoria
 
@@ -47,7 +47,7 @@ Le seguenti opzioni del compilatore sono ordinate per categoria. Per un elenco a
 |[-addmodule](addmodule-compiler-option.md)|Specifica uno o più moduli che devono fare parte di questo assembly.|
 |[-delaysign](delaysign-compiler-option.md)|Indica al compilatore di aggiungere la chiave pubblica e di lasciare l'assembly non firmato.|
 |[-keycontainer](keycontainer-compiler-option.md)|Specifica il nome del contenitore di chiavi crittografiche.|
-|[-filefile](keyfile-compiler-option.md)|Specifica il nome file contenente la chiave crittografica.|
+|[-keyfile](keyfile-compiler-option.md)|Specifica il nome file contenente la chiave crittografica.|
 |[-lib](lib-compiler-option.md)|Specifica la posizione degli assembly a cui si fa riferimento tramite [-reference](reference-compiler-option.md).|
 |[-nostdlib](nostdlib-compiler-option.md)|Indica al compilatore non di non fare importare la libreria standard (mscorlib.dll).|
 |[-publicsign](publicsign-compiler-option.md)|Applica una chiave pubblica senza firmare l'assembly, ma imposta il bit nell'assembly che indica che l'assembly è firmato.|
@@ -62,12 +62,12 @@ Le seguenti opzioni del compilatore sono ordinate per categoria. Per un elenco a
 |Opzione|Scopo|
 |------------|-------------|
 |[-bugreport](bugreport-compiler-option.md)|Crea un file contenente informazioni che rendono più semplice segnalare un bug.|
-|[-selezionato](checked-compiler-option.md)|Specifica se il calcolo di interi che supera i limiti del tipo di dati genererà un'eccezione in fase di esecuzione.|
+|[-checked](checked-compiler-option.md)|Specifica se il calcolo di interi che supera i limiti del tipo di dati genererà un'eccezione in fase di esecuzione.|
 |[-debug](debug-compiler-option.md)|Indica al compilatore di generare informazioni di debug.|
 |[-errorreport](errorreport-compiler-option.md)|Imposta il comportamento relativo alla segnalazione degli errori.|
 |[-fullpaths](fullpaths-compiler-option.md)|Specifica il percorso assoluto del file nell'output del compilatore.|
 |[-nowarn](nowarn-compiler-option.md)|Elimina la generazione degli avvisi specificati da parte del compilatore.|
-|[-Nullable](nullable-compiler-option.md)|Specifica l'opzione di contesto Nullable.|
+|[-nullable](nullable-compiler-option.md)|Specifica l'opzione di contesto Nullable.|
 |[-warn](warn-compiler-option.md)|Imposta il livello degli avvisi.|
 |[-warnaserror](warnaserror-compiler-option.md)|Alza il livello degli avvisi a errori.|
 |RuleSet\<file>|Specificare un file di set di regole che disabilita la diagnostica specifica.|
@@ -99,7 +99,7 @@ Le seguenti opzioni del compilatore sono ordinate per categoria. Per un elenco a
 |[-Guida](help-compiler-option.md)|Elenca le opzioni del compilatore in stdout.|
 |[-highentropyva](highentropyva-compiler-option.md)|Specifica che il file eseguibile supporta ASLR (Address Space Layout Randomization).|
 |[-langversion](langversion-compiler-option.md)|Specifica la versione del linguaggio: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 o Latest |
-|[-main](main-compiler-option.md)|Specifica il percorso del metodo **Main**.|
+|[-principale](main-compiler-option.md)|Specifica il percorso del metodo **Main**.|
 |[-noconfig](noconfig-compiler-option.md)|Indica al compilatore di non eseguire la compilazione con csc.rsp.|
 |[-nologo](nologo-compiler-option.md)|Elimina i messaggi informativi del compilatore.|
 |[-recurse](recurse-compiler-option.md)|Cerca nelle sottodirectory i file di origine da compilare.|
@@ -107,7 +107,7 @@ Le seguenti opzioni del compilatore sono ordinate per categoria. Per un elenco a
 |[-unsafe](unsafe-compiler-option.md)|Abilita la compilazione del codice che usa la parola chiave [unsafe](../keywords/unsafe.md).|
 |[-utf8output](utf8output-compiler-option.md)|Visualizza l'output del compilatore usando la codifica UTF-8.|
 |-parallel[+&#124;-]|Specifica se usare la compilazione simultanea (+).|
-|-checksumalgorithm:\<alg>|Specificare l'algoritmo per il calcolo del checksum del file di origine archiviato nel file PDB.  I valori supportati sono: SHA1 (predefinito) o SHA256.<br>A causa di problemi di conflitto con SHA1, Microsoft consiglia SHA256.|
+|-checksumalgorithm:\<alg>|Specificare l'algoritmo per il calcolo del checksum del file di origine archiviato nel file PDB.  I valori supportati sono: SHA256 (impostazione predefinita) o SHA1.<br>A causa di problemi di conflitto con SHA1, Microsoft consiglia SHA256.|
 
 ## <a name="obsolete-options"></a>Opzioni obsolete
 

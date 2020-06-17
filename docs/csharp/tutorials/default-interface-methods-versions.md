@@ -1,17 +1,17 @@
 ---
-title: 'Aggiornare in modo sicuro le interfacce utilizzando i metodi di interfaccia predefiniti in C #'
+title: 'Aggiornare in modo sicuro le interfacce usando i metodi di interfaccia predefiniti in C #'
 description: Questa esercitazione avanzata esplora come sia possibile aggiungere in modo sicuro nuove funzionalità alle definizioni di interfaccia esistenti senza interrompere tutte le classi e gli struct che implementano tale interfaccia.
 ms.date: 05/06/2019
 ms.technlogy: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 650aea78b421783b3f249b3670578aa60e800ab2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e73f9001414631975248f1a1658833d2785169b
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156779"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803207"
 ---
-# <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>Esercitazione: Aggiornare le interfacce con i metodi di interfaccia predefiniti in C
+# <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>Esercitazione: aggiornare le interfacce con i metodi di interfaccia predefiniti in C# 8,0
 
 A partire da C# 8.0 su .NET Core 3.0 è possibile definire un'implementazione quando si dichiara un membro di un'interfaccia. Lo scenario più comune consiste nell'aggiunta sicura di membri a un'interfaccia già rilasciata e usata da innumerevoli client.
 
@@ -23,9 +23,9 @@ In questa esercitazione si apprenderà come:
 > * Creare implementazioni con parametri per una maggiore flessibilità.
 > * Abilitare gli implementatori per fornire un'implementazione più specifica sotto forma di override.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
-È necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore c'è 8.0. È disponibile il compilatore di C'è 8.0 a partire da [Visual Studio 2019 versione 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o [.NET Core 3.0 SDK.](https://dotnet.microsoft.com/download)
+È necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore C# 8,0. Il compilatore C# 8,0 è disponibile a partire da [Visual Studio 2019 versione 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download).
 
 ## <a name="scenario-overview"></a>Panoramica dello scenario
 
@@ -41,17 +41,17 @@ Da queste interfacce il team potrebbe realizzare una raccolta per consentire agl
 
 Ora è il momento di aggiornare la raccolta per la versione successiva. Una delle funzionalità richieste è la definizione di uno sconto fedeltà per i clienti con molti ordini. Questo nuovo sconto fedeltà viene applicato ogni volta che un cliente effettua un ordine. Lo sconto specifico è una proprietà di ogni singolo cliente. Ogni implementazione di `ICustomer` può impostare regole diverse per lo sconto fedeltà.
 
-Il modo più naturale per aggiungere questa funzionalità consiste nell'ottimizzare l'interfaccia `ICustomer` con un metodo per applicare qualsiasi sconto fedeltà. Questo suggerimento di progettazione ha causato preoccupazione tra gli sviluppatori esperti: "Le interfacce sono immutabili una volta che sono stati rilasciati! a meno di generare errori. In C# 8.0 sono state aggiunte *implementazioni di interfaccia predefinite* per l'aggiornamento delle interfacce. Gli autori della raccolta possono aggiungere nuovi membri all'interfaccia a cui applicare un'implementazione predefinita.
+Il modo più naturale per aggiungere questa funzionalità consiste nell'ottimizzare l'interfaccia `ICustomer` con un metodo per applicare qualsiasi sconto fedeltà. Questo suggerimento di progettazione ha causato problemi tra gli sviluppatori esperti: "le interfacce non sono modificabili dopo il rilascio. a meno di generare errori. In C# 8.0 sono state aggiunte *implementazioni di interfaccia predefinite* per l'aggiornamento delle interfacce. Gli autori della raccolta possono aggiungere nuovi membri all'interfaccia a cui applicare un'implementazione predefinita.
 
 Le implementazioni di interfaccia predefinite consentono agli sviluppatori di aggiornare un'interfaccia, ma possono comunque essere sottoposte a override da qualsiasi implementatore. Gli utenti della raccolta possono accettare l'implementazione predefinita come modifica che non causa interruzioni. Se le regole business sono diverse, possono eseguire l'override.
 
-## <a name="upgrade-with-default-interface-methods"></a>Eseguire l'aggiornamento con i metodi di interfaccia predefinitiUpgrade with default interface methods
+## <a name="upgrade-with-default-interface-methods"></a>Aggiornare con i metodi di interfaccia predefiniti
 
 Il team concorda sull'implementazione predefinita più probabile: uno sconto fedeltà per i clienti.
 
-L'aggiornamento dovrà fornire la funzionalità per impostare due proprietà: il numero di ordini necessario per avere diritto allo sconto e la percentuale dello sconto. Questo lo rende uno scenario perfetto per i metodi di interfaccia predefiniti. È possibile aggiungere un `ICustomer` metodo all'interfaccia e fornire l'implementazione più probabile. Tutte le implementazioni esistenti e quelle nuove possono usare l'implementazione predefinita o una personalizzata.
+L'aggiornamento dovrà fornire la funzionalità per impostare due proprietà: il numero di ordini necessario per avere diritto allo sconto e la percentuale dello sconto. Questo lo rende uno scenario perfetto per i metodi di interfaccia predefiniti. È possibile aggiungere un metodo all' `ICustomer` interfaccia e fornire l'implementazione più probabile. Tutte le implementazioni esistenti e quelle nuove possono usare l'implementazione predefinita o una personalizzata.
 
-Prima di tutto aggiungere il nuovo metodo all'implementazione:
+Aggiungere prima di tutto il nuovo metodo all'interfaccia, incluso il corpo del metodo:
 
 [!code-csharp[InitialOrderInterface](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionOne)]
 
@@ -71,7 +71,7 @@ Anche se si tratta di un buon inizio, l'implementazione predefinita è troppo re
 
 [!code-csharp[VersionTwoImplementation](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionTwo)]
 
-Esistono molte nuove funzionalità del linguaggio illustrate in quel piccolo frammento di codice. Le interfacce possono ora includere membri statici, tra cui campi e metodi. Sono inoltre abilitati diversi modificatori di accesso. I campi aggiuntivi sono privati, mentre il nuovo metodo è pubblico. Per i membri dell'interfaccia è consentito qualsiasi modificatore.
+Sono disponibili molte nuove funzionalità del linguaggio in questo piccolo frammento di codice. Le interfacce possono ora includere membri statici, tra cui campi e metodi. Sono inoltre abilitati diversi modificatori di accesso. I campi aggiuntivi sono privati, mentre il nuovo metodo è pubblico. Per i membri dell'interfaccia è consentito qualsiasi modificatore.
 
 Per le applicazioni in cui si usa la formula generale per calcolare lo sconto fedeltà, ma con parametri diversi, non è necessario fornire un'implementazione personalizzata perché è possibile impostare gli argomenti tramite un metodo statico. Il codice seguente imposta ad esempio un "apprezzamento del cliente" che premia qualsiasi cliente che si sia iscritto da più di un mese:
 

@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: Il comando dotnet test viene usato per eseguire unit test in un determinato progetto.
 ms.date: 04/29/2020
-ms.openlocfilehash: cbe9e7cce1722efb808c68ee49bb9012be6dcff7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 911d10917c2262c0bd32ef30d48da0f85ac39a39
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594452"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803164"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -90,7 +90,7 @@ Dove `Microsoft.NET.Test.Sdk` è l'host di test, `xunit` è il Framework di test
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Impone l'uso di `dotnet` o .NET Framework host di test per i file binari del test. Questa opzione determina solo il tipo di host da usare. La versione effettiva del Framework da usare è determinata da *runtimeconfig. JSON* del progetto di test. Quando non è specificato, viene usato l' [attributo dell'assembly TargetFramework](/dotnet/api/system.runtime.versioning.targetframeworkattribute) per determinare il tipo di host. Quando tale attributo viene rimosso dal file con *estensione dll*, viene utilizzato l'host .NET Framework.
+  Impone l'uso di `dotnet` o .NET Framework host di test per i file binari del test. Questa opzione determina solo il tipo di host da usare. La versione effettiva del Framework da utilizzare è determinata dalla *runtimeconfig.js* del progetto di test. Quando non è specificato, viene usato l' [attributo dell'assembly TargetFramework](/dotnet/api/system.runtime.versioning.targetframeworkattribute) per determinare il tipo di host. Quando tale attributo viene rimosso dal file con *estensione dll*, viene utilizzato l'host .NET Framework.
 
 - **`--filter <EXPRESSION>`**
 
@@ -134,7 +134,7 @@ Dove `Microsoft.NET.Test.Sdk` è l'host di test, `xunit` è il Framework di test
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  Il file `.runsettings` da usare per l'esecuzione dei test. L' `TargetPlatform` elemento (x86 | x64) non ha alcun effetto per `dotnet test` . Per eseguire test destinati a x86, installare la versione x86 di .NET Core. Il bit di *dotnet. exe* che si trova nel percorso è quello che verrà usato per l'esecuzione dei test. Per altre informazioni, vedere le seguenti risorse:
+  Il file `.runsettings` da usare per l'esecuzione dei test. L' `TargetPlatform` elemento (x86 | x64) non ha alcun effetto per `dotnet test` . Per eseguire test destinati a x86, installare la versione x86 di .NET Core. Il bit del *dotnet.exe* che si trova nel percorso è quello che verrà usato per l'esecuzione dei test. Per altre informazioni, vedere le seguenti risorse:
 
   - [Configurare unit test usando un file `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
   - [Configurare un agente di test](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)
@@ -175,7 +175,7 @@ Dove `Microsoft.NET.Test.Sdk` è l'host di test, `xunit` è il Framework di test
   dotnet test --logger trx
   ```
 
-- Eseguire i test nel progetto nella directory corrente e generare un file di code coverage (dopo l'installazione di [copriletto](https://github.com/tonerdo/coverlet/blob/master/README.md)):
+- Eseguire i test nel progetto nella directory corrente e generare un file di code coverage (dopo l'installazione dell'integrazione di [copriletto](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/VSTestIntegration.md) Collectors):
 
   ```dotnetcli
   dotnet test --collect:"XPlat Code Coverage"
