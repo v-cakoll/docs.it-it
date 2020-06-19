@@ -1,17 +1,17 @@
 ---
-title: Ordina unit test
+title: Ordinare unit test
 description: Informazioni su come ordinare unit test con .NET Core.
 author: IEvangelist
 ms.date: 05/18/2020
 zone_pivot_groups: unit-testing-framework-set-one
-ms.openlocfilehash: ce0d01c924075ffcc9ad49ef8aca49222c10c921
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 3400ae440a828054624d67c14807ee72783e466a
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83704559"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989255"
 ---
-# <a name="order-unit-tests"></a>Ordina unit test
+# <a name="order-unit-tests"></a>Ordinare unit test
 
 In alcuni casi può essere necessario eseguire unit test in un ordine specifico. Idealmente, l'ordine in cui vengono eseguiti gli unit test _non_ è rilevante ed è [consigliabile evitare di ordinare](unit-testing-best-practices.md) unit test. A prescindere, potrebbe essere necessario eseguire questa operazione. In tal caso, in questo articolo viene illustrato come ordinare le esecuzioni di test.
 
@@ -84,4 +84,4 @@ Per ordinare i test in modo esplicito, NUnit fornisce un [`OrderAttribute`](http
 ## <a name="next-steps"></a>Passaggi successivi
 
 > [!div class="nextstepaction"]
-> [Procedure consigliate per gli unit test](unit-testing-best-practices.md)
+> [code coverage unit test](unit-testing-code-coverage.md)

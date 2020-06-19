@@ -7,16 +7,16 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Forms
 - rapid application development (RAD), My.WebServices
 ms.assetid: de930027-9108-4f0c-b97c-5e7db4d6ef79
-ms.openlocfilehash: 847724450ee2bc8bc591371f71171e8ba4ed9337
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 141f2f5f98499498d3c6732f7ae8d0abe6259ed9
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411740"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990250"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>Istanze predefinite degli oggetti fornite da My.Forms e My.WebServices (Visual Basic)
 
-Gli oggetti [My. Forms](../../language-reference/objects/my-forms-object.md) e [My. WebServices](../../language-reference/objects/my-webservices-object.md) consentono di accedere ai moduli, alle origini dati e ai servizi Web XML utilizzati dall'applicazione. A tale scopo, vengono fornite raccolte di *istanze predefinite* di ognuno di questi oggetti.  
+Gli oggetti [My. Forms](../../language-reference/objects/my-forms-object.md) e [My. WebServices](../../language-reference/objects/my-webservices-object.md) consentono di accedere ai moduli, alle origini dati e ai servizi Web XML utilizzati dall'applicazione. Forniscono l'accesso tramite raccolte di *istanze predefinite* di ognuno di questi oggetti.  
   
 ## <a name="default-instances"></a>Istanze predefinite  
 

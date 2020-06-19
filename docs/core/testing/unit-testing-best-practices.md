@@ -4,12 +4,12 @@ description: Informazioni sulle procedure consigliate per la scrittura di unit t
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 586373381bcb18384cbf29bb2ca2bd220a2b2d3d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9115ff69b269e3723820fd8505d1a9f8ca278d12
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240961"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989369"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Procedure consigliate di testing unità con .NET Core e .NET Standard
 
@@ -44,10 +44,16 @@ La scrittura di test per il codice ha l'effetto di disaccoppiare naturalmente il
 ## <a name="characteristics-of-a-good-unit-test"></a>Caratteristiche di un buon unit test
 
 - **Veloce**. Non è insolito per i progetti maturi comprendere migliaia di unit test. La durata dell'esecuzione degli unit test dovrebbe essere molto breve. Millisecondi.
-- **Isolato**. Gli unit test sono autonomi, possono essere eseguiti in modo isolato e non hanno dipendenze verso fattori esterni, ad esempio file system o database.
+- **Isolamento**. Gli unit test sono autonomi, possono essere eseguiti in modo isolato e non hanno dipendenze verso fattori esterni, ad esempio file system o database.
 - **Ripetibile**. Uno unit test deve generare risultati costanti, vale a dire, deve restituire sempre lo stesso risultato se tra le esecuzioni non si modifica alcun elemento.
 - **Autonomo**. Il test deve essere in grado di rilevare automaticamente se ha avuto esito positivo o meno senza alcun intervento.
 - **Rispetta i tempi previsti**. Il tempo richiesto per la scrittura di uno unit test deve essere proporzionale al tempo richiesto per la scrittura del codice sottoposto a test. Se il test del codice richiede una quantità di tempo molto maggiore rispetto alla scrittura del codice, prendere in considerazione una struttura che risulti più testabile.
+
+## <a name="code-coverage"></a>Code coverage
+
+Una percentuale di code coverage elevata è spesso associata a una maggiore qualità del codice. Tuttavia, la misurazione stessa *non è in grado* di determinare la qualità del codice. L'impostazione di un obiettivo code coverage percentuale eccessivamente ambizioso può essere controproducente. Immaginate un progetto complesso con migliaia di rami condizionali e immaginiamo di impostare un obiettivo del 95% code coverage. Attualmente il progetto mantiene il 90% code coverage. La quantità di tempo necessaria per tenere conto di tutti i casi perimetrali nel 5% rimanente potrebbe essere un'impresa massiccia e la proposta di valore diminuisce rapidamente.
+
+Una percentuale di code coverage elevata non è un indicatore di esito positivo, né implica una elevata qualità del codice. Jusst rappresenta la quantità di codice analizzata dagli unit test. Per ulteriori informazioni, vedere [unit testing code coverage](unit-testing-code-coverage.md).
 
 ## <a name="lets-speak-the-same-language"></a>Terminologia
 Il termine *mock* è purtroppo usato in modo improprio quando si parla di testing. Di seguito vengono definiti i tipi più comuni di *fake* per la scrittura di unit test:
@@ -111,7 +117,7 @@ Il nome del test deve essere costituito da tre parti:
 - Scenario in cui si sta testando.
 - Comportamento previsto quando viene richiamato lo scenario.
 
-#### <a name="why"></a>Perché?
+#### <a name="why"></a>Questo problema dipende
 
 - Gli standard di denominazione sono importanti perché esprimono in modo esplicito l'intento del test.
 
@@ -130,7 +136,7 @@ I test non si limitano a verificare che il codice funzioni, ma documentano anche
 - *Agire* su un oggetto.
 - *Asserire* che un dato comportamento è come previsto.
 
-#### <a name="why"></a>Perché?
+#### <a name="why"></a>Questo problema dipende
 
 - Separare nettamente l'oggetto del test dai passaggi *disporre* e *asserire*.
 - Il rischio di mescolare le asserzioni con il codice "agire" è minore.
@@ -146,7 +152,7 @@ La leggibilità è uno degli aspetti più importanti da considerare durante la s
 ### <a name="write-minimally-passing-tests"></a>Scrivere test più semplici possibile
 L'input da usare in uno unit test deve essere il più semplice possibile per verificare il comportamento che si sta testando.
 
-#### <a name="why"></a>Perché?
+#### <a name="why"></a>Questo problema dipende
 
 - I test diventano più adattabili alle modifiche future nella base codice.
 - I test hanno un comportamento più simile a quello dell'implementazione.
@@ -162,7 +168,7 @@ Test che includono più informazioni rispetto a quelle necessarie per la verific
 ### <a name="avoid-magic-strings"></a>Evitare le "stringhe magiche"
 La denominazione delle variabili negli unit test è importante quanto la denominazione delle variabili nel codice di produzione o anche di più. Gli unit test non devono contenere "stringhe magiche".
 
-#### <a name="why"></a>Perché?
+#### <a name="why"></a>Questo problema dipende
 
 - Impediscono a chi legge il test di controllare il codice di produzione per scoprire ciò che rende il valore speciale.
 - Illustrano in modo esplicito ciò che si sta tentando di *dimostrare* anziché ciò che si tenta di *compiere*.
@@ -181,7 +187,7 @@ Le "stringhe magiche" possono causare confusione a chi legge il test. Se una str
 ### <a name="avoid-logic-in-tests"></a>Evitare la logica nei test
 Quando si scrivono gli unit test bisogna evitare la concatenazione manuale di stringhe e le condizioni logiche, ad esempio `if`, `while`, `for`, `switch` e così via.
 
-#### <a name="why"></a>Perché?
+#### <a name="why"></a>Questo problema dipende
 
 - Minore possibilità di introdurre un bug nei test.
 - Per concentrarsi sul risultato finale anziché sui dettagli di implementazione.
@@ -200,7 +206,7 @@ Se si introduce la logica nel gruppo di test, la possibilità di introdurre un b
 ### <a name="prefer-helper-methods-to-setup-and-teardown"></a>Prediligere i metodi helper agli attributi Setup e Teardown
 Se si richiede un oggetto o uno stato simile per i test, prediligere un metodo helper piuttosto che utilizzare gli attributi Setup e Teardown, se presenti.
 
-#### <a name="why"></a>Perché?
+#### <a name="why"></a>Questo problema dipende
 
 - La lettura dei test è più agevole dal momento che la totalità del codice è visibile nel test.
 - Minore rischio di configurare troppo o troppo poco per il test specificato.
@@ -235,7 +241,7 @@ Quando si scrivono i test, puntare a includere una sola asserzione per ogni test
 - Creare un test separato per ogni asserzione.
 - Usare test con parametri.
 
-#### <a name="why"></a>Perché?
+#### <a name="why"></a>Questo problema dipende
 
 - Se un'asserzione ha esito negativo, le asserzioni successive non verranno valutate.
 - Garantisce che l'asserzione non venga applicata a più test case.

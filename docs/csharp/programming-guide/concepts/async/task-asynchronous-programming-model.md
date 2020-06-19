@@ -2,12 +2,12 @@
 title: Modello di programmazione asincrona dell'attività con async e await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: d575a369a3c9766938e3996c527e27539e3e62e2
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 90bee745a393ac35ac968e9f4f6b6c83ad8fbb46
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241955"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990081"
 ---
 # <a name="task-asynchronous-programming-model"></a>Modello di programmazione asincrona attività
 
@@ -40,7 +40,7 @@ L'approccio basato su modalità asincrona aggiunge l'equivalente di una trasmiss
 
 Le parole chiave [async](../../../language-reference/keywords/async.md) e [await](../../../language-reference/operators/await.md) in C# sono il punto centrale della programmazione asincrona. Usando queste due parole chiave, è possibile usare le risorse in .NET Framework, .NET Core o i Windows Runtime per creare un metodo asincrono con la stessa facilità con cui si crea un metodo sincrono. I metodi asincroni definiti con la parola chiave `async` sono denominati *metodi asincroni*.
 
-Nell'esempio seguente viene illustrato un metodo asincrono. Quasi tutti gli elementi del codice dovrebbe essere completamente noti all'utente.
+Nell'esempio seguente viene illustrato un metodo asincrono. Quasi tutti gli elementi del codice dovrebbero avere un aspetto familiare.
 
 È possibile trovare il file di esempio completo Windows Presentation Foundation (WPF) alla fine di questo argomento e scaricare l'esempio dalla pagina [Async Sample: Example from "Asynchronous Programming with Async and Await"](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs/) (Esempio di attività asincrona: Programmazione asincrona con async e await).
 
@@ -171,7 +171,7 @@ Un metodo asincrono contiene in genere una o più occorrenze di un `await` opera
 `async` e `await` sono parole chiave contestuali. Per ulteriori informazioni ed esempi, vedere gli argomenti seguenti:
 
 - [async](../../../language-reference/keywords/async.md)
-- [attendono](../../../language-reference/operators/await.md)
+- [await](../../../language-reference/operators/await.md)
 
 ## <a name="return-types-and-parameters"></a><a name="BKMK_ReturnTypesandParameters"></a>Tipi restituiti e parametri
 
@@ -234,7 +234,7 @@ Nella programmazione Windows Runtime le API asincrone hanno uno dei tipi restitu
 
 ## <a name="naming-convention"></a><a name="BKMK_NamingConvention"></a>Convenzione di denominazione
 
-Per convenzione, i metodi che restituiscono tipi comunemente awaitable (ad esempio `Task`, `Task<T>`, `ValueTask`, `ValueTask<T>`) dovrebbero avere nomi che terminano con "Async". I metodi che avviano un'operazione asincrona, ma non restituiscono un tipo awaitable, non devono avere nomi che terminano con "Async", ma possono iniziare con "Begin", "Start" o altri verbi per suggerire che questo metodo non restituisce o genera il risultato dell'operazione.
+Per convenzione, i metodi che restituiscono tipi comunemente awaitable, ad esempio,,, `Task` `Task<T>` `ValueTask` `ValueTask<T>` devono avere nomi che terminano con "Async". I metodi che avviano un'operazione asincrona, ma non restituiscono un tipo awaitable, non devono avere nomi che terminano con "Async", ma possono iniziare con "Begin", "Start" o altri verbi per suggerire che questo metodo non restituisce o genera il risultato dell'operazione.
 
 È possibile ignorare la convenzione se un evento, una classe base o un contratto di interfaccia suggerisce un nome diverso. Ad esempio, non è necessario rinominare i gestori eventi comuni, ad esempio `Button1_Click` .
 
@@ -264,6 +264,6 @@ Il codice seguente è il file *MainWindow.XAML.cs* dell'applicazione WPF descrit
 ## <a name="see-also"></a>Vedere anche
 
 - [async](../../../language-reference/keywords/async.md)
-- [attendono](../../../language-reference/operators/await.md)
+- [await](../../../language-reference/operators/await.md)
 - [Programmazione asincrona](../../../async.md)
 - [Panoramica asincrona](../../../../standard/async.md)

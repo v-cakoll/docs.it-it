@@ -11,12 +11,12 @@ helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: d59f368f21964c07d371df604f0728fa6ca8ac00
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 438188b6d694bdeab772c43ef92e5621c68facff
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307033"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990225"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Principi fondamentali di Garbage Collection
 
@@ -60,7 +60,7 @@ Nell'elenco seguente sono riepilogati concetti importanti relativi alla memoria 
 
 - Se lo spazio degli indirizzi virtuali da riservare o lo spazio fisico di cui eseguire il commit non è sufficiente, è possibile che si esaurisca la memoria.
 
-  Il file di paging viene utilizzato anche se la pressione della memoria fisica (ovvero la richiesta di memoria fisica) è bassa. La prima volta che la quantità di memoria fisica è elevata, il sistema operativo deve fare spazio nella memoria fisica per archiviare i dati e quindi eseguire il backup di alcuni dei dati presenti nella memoria fisica nel file di paging. I dati non vengono sottoposto a paging fino a quando non sono necessari, quindi è possibile che si verifichi il paging in situazioni in cui la pressione della memoria fisica è insufficiente.
+  Il file di paging viene utilizzato anche se la pressione della memoria fisica (ovvero la richiesta di memoria fisica) è bassa. La prima volta che la pressione della memoria fisica è elevata, il sistema operativo deve fare spazio nella memoria fisica per archiviare i dati e quindi eseguire il backup di alcuni dei dati presenti nella memoria fisica nel file di paging. I dati non vengono sottoposto a paging fino a quando non sono necessari, quindi è possibile che si verifichi il paging in situazioni in cui la pressione della memoria fisica è insufficiente.
   
 ### <a name="memory-allocation"></a>Allocazione di memoria
 

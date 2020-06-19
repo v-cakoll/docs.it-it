@@ -1,5 +1,5 @@
 ---
-title: Shared
+title: Condiviso
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Shared
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: d8c9879ea2f62bfbeaa378d0aaee806623ea1c55
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b51c88e1af3a720912af8ba6aaf8ae4016af9cfa
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579112"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990190"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 
@@ -24,7 +24,7 @@ Specifica che uno o più elementi di programmazione dichiarati sono associati a 
 
 ## <a name="when-to-use-shared"></a>Quando usare Shared
 
-La condivisione di un membro di una classe o di una struttura lo rende disponibile per ogni istanza, anziché *non condivisa*, in cui ogni istanza mantiene la propria copia. Questa operazione è utile, ad esempio, se il valore di una variabile viene applicato all'intera applicazione. Se si dichiara tale variabile come `Shared` , tutte le istanze accedono allo stesso percorso di archiviazione e se un'istanza modifica il valore della variabile, tutte le istanze accedono al valore aggiornato.
+La condivisione di un membro di una classe o di una struttura lo rende disponibile per ogni istanza, anziché *non condivisa*, in cui ogni istanza mantiene la propria copia. La condivisione è utile, ad esempio, se il valore di una variabile viene applicato all'intera applicazione. Se si dichiara tale variabile come `Shared` , tutte le istanze accedono allo stesso percorso di archiviazione e se un'istanza modifica il valore della variabile, tutte le istanze accedono al valore aggiornato.
 
 La condivisione non modifica il livello di accesso di un membro. Un membro di una classe, ad esempio, può essere condiviso e privato (accessibile solo dall'interno della classe) o non condiviso e pubblico. Per altre informazioni, vedere [livelli di accesso in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
 
@@ -50,7 +50,7 @@ La condivisione non modifica il livello di accesso di un membro. Un membro di un
 
 - **Accesso tramite una variabile di istanza.** È possibile accedere a un elemento condiviso qualificando il nome di una variabile che contiene un'istanza specifica della classe o della struttura. Sebbene questo in genere funzioni come previsto, il compilatore genera un messaggio di avviso e rende l'accesso tramite la classe o il nome della struttura anziché la variabile.
 
-- **Accesso tramite un'espressione di istanza.** Se si accede a un elemento condiviso tramite un'espressione che restituisce un'istanza della relativa classe o struttura, il compilatore consente di accedere tramite il nome della classe o della struttura anziché di valutare l'espressione. Ciò produce risultati imprevisti se si desidera che l'espressione esegua altre azioni e restituisca l'istanza. Questa condizione è illustrata nell'esempio seguente.
+- **Accesso tramite un'espressione di istanza.** Se si accede a un elemento condiviso tramite un'espressione che restituisce un'istanza della relativa classe o struttura, il compilatore consente di accedere tramite il nome della classe o della struttura anziché di valutare l'espressione. Questo accesso produce risultati imprevisti se si desidera che l'espressione esegua altre azioni, oltre a restituire l'istanza. Nell'esempio seguente viene illustrata questa situazione.
   
     ```vb
     Sub Main()
@@ -82,7 +82,7 @@ La condivisione non modifica il livello di accesso di un membro. Un membro di un
     End Class
     ```
 
-     Nell'esempio precedente, il compilatore genera un messaggio di avviso entrambe le volte che il codice accede alla proprietà condivisa `Total` tramite un'istanza. In ogni caso rende l'accesso direttamente tramite la classe `ShareTotal` e non usa alcuna istanza. Nel caso della chiamata prevista alla procedura `ReturnClass` , ciò significa che non viene anche generata una chiamata a `ReturnClass` , quindi non viene eseguita l'azione aggiuntiva di visualizzazione della funzione "ReturnClass () chiamata".
+     Nell'esempio precedente, il compilatore genera un messaggio di avviso entrambe le volte che il codice accede alla proprietà condivisa `Total` tramite un'istanza. In ogni caso, consente di accedere direttamente alla classe e non `ShareTotal` usa alcuna istanza. Nel caso della chiamata prevista alla procedura `ReturnClass` , ciò significa che non viene anche generata una chiamata a `ReturnClass` , quindi non viene eseguita l'azione aggiuntiva di visualizzazione della funzione "ReturnClass () chiamata".
 
 Il modificatore `Shared` può essere usato nei contesti seguenti:
 

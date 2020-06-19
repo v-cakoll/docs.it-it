@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: f5e355d66d9b022a037d53e1241e76282852888e
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 71cbf8278b3a8092e93a8ae3d8be291540f16cc3
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241461"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990107"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Classi statiche e membri di classi statiche (Guida per programmatori C#)
 
@@ -54,7 +54,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  La creazione di una classe statica è pertanto analoga alla creazione di una classe che contiene solo membri statici e un costruttore privato, che impedisce la creazione di istanze della classe. Una classe statica presenta un indubbio vantaggio. Consente infatti al compilatore di verificare che non vengano aggiunti accidentalmente membri di istanze e quindi di garantire che non vengano create istanze di questa classe.  
   
- Le classi statiche sono sealed e pertanto non possono essere ereditate. Possono ereditare solo dalla classe <xref:System.Object>. Le classi statiche non possono contenere un costruttore di istanza; possono però contenere un costruttore statico. Le classi non statiche devono definire anche un costruttore statico se la classe contiene membri statici che richiedono un'inizializzazione più complessa. Per altre informazioni, vedere [Costruttori statici](./static-constructors.md).  
+ Le classi statiche sono sealed e pertanto non possono essere ereditate. Possono ereditare solo dalla classe <xref:System.Object>. Le classi statiche non possono contenere un costruttore di istanza. Tuttavia, possono contenere un costruttore statico. Le classi non statiche devono definire anche un costruttore statico se la classe contiene membri statici che richiedono un'inizializzazione più complessa. Per altre informazioni, vedere [Costruttori statici](./static-constructors.md).  
   
 ## <a name="example"></a>Esempio  
  Di seguito è riportato un esempio di una classe statica contenente due metodi che consentono di convertire i valori relativi alla temperatura da gradi Celsius a gradi Fahrenheit e viceversa:  
@@ -62,15 +62,15 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  [!code-csharp[csProgGuideObjects#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#31)]  
   
 ## <a name="static-members"></a>Membri static  
- Una classe non statica può contenere metodi, campi, proprietà o eventi statici. È possibile chiamare il membro statico di una classe anche quando non sono state create istanze della classe. Al membro statico si accede sempre tramite il nome della classe, non tramite il nome dell'istanza. Di un membro statico esiste una sola copia, indipendentemente dal numero di istanze della classe create. Proprietà e metodi statici non possono accedere a campi non statici ed eventi nel tipo che li contiene e non possono accedere a una variabile dell'istanza di qualsiasi oggetto a meno che non venga esplicitamente passata in un parametro del metodo.  
+ Una classe non statica può contenere metodi, campi, proprietà o eventi statici. È possibile chiamare il membro statico di una classe anche quando non sono state create istanze della classe. Al membro statico si accede sempre tramite il nome della classe, non tramite il nome dell'istanza. Di un membro statico esiste una sola copia, indipendentemente dal numero di istanze della classe create. I metodi e le proprietà statici non possono accedere a eventi e campi non statici nel tipo contenitore e non possono accedere a una variabile di istanza di un oggetto a meno che non venga passato in modo esplicito in un parametro del metodo.  
   
  È più frequente dichiarare una classe non statica con alcuni membri statici, che dichiarare un'intera classe come statica. Due utilizzi comuni di campi statici sono: tenere un conteggio del numero di oggetti di cui è stata creata un'istanza o archiviare un valore che deve essere condiviso fra tutte le istanze.  
   
  I metodi statici possono essere sottoposti a overload ma non a override, perché appartengono alla classe e non a qualsiasi istanza della classe.  
   
- Sebbene non sia possibile dichiarare un campo come `static const`, il campo [const](../../language-reference/keywords/const.md) è essenzialmente statico nel comportamento. Appartiene al tipo, non a istanze del tipo. Pertanto, non è possibile accedere ai campi const tramite la stessa notazione `ClassName.MemberName` usata per i campi statici. Non è richiesta alcuna istanza dell'oggetto.  
+ Sebbene non sia possibile dichiarare un campo come `static const`, il campo [const](../../language-reference/keywords/const.md) è essenzialmente statico nel comportamento. Appartiene al tipo, non a istanze del tipo. È pertanto `const` possibile accedere ai campi utilizzando la stessa `ClassName.MemberName` notazione utilizzata per i campi statici. Non è richiesta alcuna istanza dell'oggetto.  
   
- C# non supporta variabili locali statiche (variabili dichiarate nell'ambito del metodo).  
+ C# non supporta variabili locali statiche, ovvero variabili dichiarate nell'ambito del metodo.  
   
  I membri delle classi statiche vengono dichiarati tramite la parola chiave `static` prima del tipo restituito, come illustrato nell'esempio seguente:  
   
@@ -82,7 +82,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  Se la classe contiene campi statici, fornire un costruttore statico che li inizializzi al caricamento della classe.  
   
- Una chiamata a un metodo statico genera un'istruzione call in Microsoft Intermediate Language (MSIL), mentre una chiamata a un metodo di istanza genera un'istruzione `callvirt` che verifica anche la presenza di riferimenti a un oggetto null. Tuttavia, nella maggior parte dei casi, la differenza di prestazioni tra i due non è significativa.  
+ Una chiamata a un metodo statico genera un'istruzione Call in Microsoft Intermediate Language (MSIL), mentre una chiamata a un metodo di istanza genera un' `callvirt` istruzione, che verifica anche la presenza di riferimenti a oggetti null. Tuttavia, nella maggior parte dei casi, la differenza di prestazioni tra i due non è significativa.  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 
@@ -91,7 +91,7 @@ Per altre informazioni, vedere [Classi statiche](~/_csharplang/spec/classes.md#s
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
-- [static](../../language-reference/keywords/static.md)
+- [statico](../../language-reference/keywords/static.md)
 - [Classi](./classes.md)
 - [classe](../../language-reference/keywords/class.md)
 - [Costruttori statici](./static-constructors.md)

@@ -5,12 +5,12 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, background
 - background garbage collection
-ms.openlocfilehash: 8134c0af55d74e57dcfce8c7174265b8c9902feb
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 780503288d3474cd99a595bdbd52c3a5abba5308
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307072"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990226"
 ---
 # <a name="background-garbage-collection"></a>Garbage Collection in background
 
@@ -57,7 +57,7 @@ Nella figura seguente viene illustrato il *Server* in background Garbage Collect
 
 In workstation o server Garbage Collection è possibile [abilitare la Garbage Collection simultanea](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md), che consente di eseguire i thread contemporaneamente a un thread dedicato che esegue l'Garbage Collection per la maggior parte della durata della raccolta. Questa opzione ha effetto solo sulle operazioni di Garbage Collection nella generazione 2. le generazioni 0 e 1 sono sempre non simultanee perché terminano rapidamente.
 
-La modalità simultanea consente alle applicazioni interattive una maggiore efficienza di risposta riducendo al minimo le pause di una raccolta. È possibile continuare a eseguire i thread gestiti per la maggior parte del tempo in cui viene eseguito il thread di Garbage Collection in modalità simultanea. Il risultato saranno pause più brevi durante l'esecuzione di un'operazione di Garbage Collection.
+La modalità simultanea consente alle applicazioni interattive una maggiore efficienza di risposta riducendo al minimo le pause di una raccolta. È possibile continuare a eseguire i thread gestiti per la maggior parte del tempo in cui viene eseguito il thread di Garbage Collection in modalità simultanea. Questa progettazione comporta pause più brevi mentre è in corso un Garbage Collection.
 
 La modalità simultanea di Garbage Collection viene eseguita in un thread dedicato. Per impostazione predefinita, CLR esegue Garbage Collection di workstation con Garbage Collection simultanea abilitata nei computer a processore singolo e a più processori.
 
