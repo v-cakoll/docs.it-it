@@ -4,12 +4,12 @@ description: Informazioni su come usare le funzionalità di code coverage per gl
 author: IEvangelist
 ms.author: dapine
 ms.date: 06/16/2020
-ms.openlocfilehash: 47f10ae367f511d5d02d32bfcb35bf4775a3e946
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: d19975283bf60e5cf3a9656c1b6f7966e12d2176
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990279"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105412"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>Usare code coverage per unit test
 
@@ -266,10 +266,11 @@ Di seguito è riportato il file di esempio *coverage.cobertura.xml* .
 > In alternativa, è possibile usare il pacchetto MSBuild se il sistema di compilazione usa già MSBuild. Al prompt dei comandi passare alla directory del progetto *xUnit. copriletto. MSBuild* ed eseguire il `dotnet test` comando:
 >
 > ```dotnetcli
-> dotnet test --collect:"XPlat Code Coverage"
+> dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
 > ```
 >
-> Il file di *coverage.cobertura.xml* risultante è output.
+> Il file di *coverage.cobertura.xml* risultante è output.  
+> È possibile seguire [la guida integraton](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md) di MSBuild
 
 ## <a name="generate-reports"></a>Generare report
 
