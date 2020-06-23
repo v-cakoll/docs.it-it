@@ -29,6 +29,8 @@ items:
             href: install/linux.md
           - name: Ubuntu
             href: install/linux-ubuntu.md
+          - name: Alpine
+            href: install/linux-alpine.md
           - name: CentOS
             href: install/linux-centos.md
           - name: Debian
@@ -403,25 +405,25 @@ items:
         href: testing/unit-testing-best-practices.md
       - name: xUnit
         items:
-          - name: 'Testing unità C#'
+          - name: Testing unità C#
             href: testing/unit-testing-with-dotnet-test.md
-          - name: 'Testing unità F#'
+          - name: Testing unità F#
             href: testing/unit-testing-fsharp-with-dotnet-test.md
           - name: Testing unità VB
             href: testing/unit-testing-visual-basic-with-dotnet-test.md
       - name: NUnit
         items:
-          - name: 'Testing unità C#'
+          - name: Testing unità C#
             href: testing/unit-testing-with-nunit.md
-          - name: 'Testing unità F#'
+          - name: Testing unità F#
             href: testing/unit-testing-fsharp-with-nunit.md
           - name: Testing unità VB
             href: testing/unit-testing-visual-basic-with-nunit.md
       - name: MSTest
         items:
-          - name: 'Testing unità C#'
+          - name: Testing unità C#
             href: testing/unit-testing-with-mstest.md
-          - name: 'Testing unità F#'
+          - name: Testing unità F#
             href: testing/unit-testing-fsharp-with-mstest.md
           - name: Testing unità VB
             href: testing/unit-testing-visual-basic-with-mstest.md
@@ -429,6 +431,8 @@ items:
         href: testing/selective-unit-tests.md
       - name: Ordinare unit test
         href: testing/order-unit-tests.md
+      - name: Code coverage di unit test
+        href: testing/unit-testing-code-coverage.md
       - name: Output pubblicato degli unit test
         href: testing/unit-testing-published-output.md
       - name: Live Unit Testing di progetti .NET Core con Visual Studio
