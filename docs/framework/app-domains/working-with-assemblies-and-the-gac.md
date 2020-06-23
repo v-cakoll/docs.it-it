@@ -1,5 +1,6 @@
 ---
 title: Utilizzo di assembly e della Global Assembly Cache
+description: Utilizzare gli assembly e la Global Assembly Cache (GAC) in .NET. Esaminare i motivi per cui potrebbe essere necessario installare un assembly nella global assembly cache (GAC).
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), benefits
 - access control lists [.NET Framework]
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
-ms.openlocfilehash: 7834fbc4d74b44c4bc5204ac451e92cac22e1ef5
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 16cfd9faf02d5b58acad1cc0cf19be61c9814d35
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645425"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105158"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Utilizzo di assembly e della Global Assembly Cache
 
@@ -51,7 +52,7 @@ Vengono descritte le modalità di installazione di un assembly nella Global Asse
 [Procedura: Visualizzare il contenuto della Global Assembly Cache](how-to-view-the-contents-of-the-gac.md)  
 Illustra come usare [lo strumento Global Assembly Cache (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) per visualizzare i contenuti della Global Assembly Cache.  
   
-[Procedura: rimuovere un assembly dalla Global Assembly Cache](how-to-remove-an-assembly-from-the-gac.md)  
+[Procedura: Rimuovere un assembly dalla Global Assembly Cache](how-to-remove-an-assembly-from-the-gac.md)  
 Illustra come usare [lo strumento Global Assembly Cache (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) per rimuovere un assembly dalla Global Assembly Cache.  
   
 [Utilizzo dei componenti serviti con la Global Assembly Cache](use-serviced-components-with-the-gac.md)  
@@ -62,7 +63,7 @@ Illustra come usare [lo strumento Global Assembly Cache (Gacutil.exe)](../tools/
 [Creazione di assembly](../../standard/assembly/create.md)  
 Offre una panoramica della creazione di assembly.  
   
-[Global assembly cache](gac.md)  
+[Global Assembly Cache](gac.md)  
 Descrive la Global Assembly Cache.  
   
 [Procedura: Visualizzare il contenuto dell'assembly](../../standard/assembly/view-contents.md)  

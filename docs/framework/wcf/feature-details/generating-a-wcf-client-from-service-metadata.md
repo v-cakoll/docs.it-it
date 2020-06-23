@@ -1,13 +1,14 @@
 ---
 title: Generazione di un client WCF dai metadati del servizio
+description: Individuare le varie opzioni di Svcutil.exe utilizzate per generare client WFC da documenti di metadati del servizio in base a WSDL o a un file di criteri dal servizio.
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: ebf124b75e7c2b0feabfffb8c7e790b44749edb5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f755a092fb3596349a6878c61fe414f4e0a9f9d1
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597371"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247273"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generazione di un client WCF dai metadati del servizio
 In questo argomento viene illustrato come utilizzare le varie opzioni in Svcutil.exe per generare client da documenti dei metadati.  

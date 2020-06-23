@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: Individuare assembly usando DEVPATH'
+description: Verificare che un assembly condiviso funzioni correttamente con molte applicazioni in .NET utilizzando un file di configurazione del computer XML e la variabile di ambiente DEVPATH.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DEVPATH
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
-ms.openlocfilehash: 6fa864f814d6a9ce04f2bce92c61cd0075ab5145
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 50b61eedddabd660b1834565a61738f460ae9ff9
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69912992"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105382"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>Procedura: Individuare assembly usando DEVPATH
 Gli sviluppatori potrebbero voler assicurarsi che un assembly condiviso che compilano funzioni correttamente con più applicazioni. Anziché inserire continuamente l'assembly nel Global Assembly Cache durante il ciclo di sviluppo, lo sviluppatore può creare una variabile di ambiente DEVPATH che punti alla directory di output di compilazione per l'assembly.  
@@ -43,6 +44,6 @@ Gli sviluppatori potrebbero voler assicurarsi che un assembly condiviso che comp
 > [!NOTE]
 > Usare questa impostazione solo in fase di sviluppo. Il runtime non controlla le versioni in assembly con nome sicuro presenti in DEVPATH. Usa semplicemente il primo assembly trovato.  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Configurazione delle app tramite file di configurazione](index.md)

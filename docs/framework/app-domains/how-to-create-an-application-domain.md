@@ -1,5 +1,6 @@
 ---
 title: "Procedura: Creare un dominio dell'applicazione"
+description: Vedere come creare un dominio applicazione in .NET. È possibile creare un dominio dell'applicazione per caricare gli assembly per gestirli personalmente o crearne uno per eseguire il codice.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - application domains, creating
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
-ms.openlocfilehash: 83bf0ad96b352ed5c015723dd89aee7913d2a88e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8e44e682f64854dbc0181b26f6ed3fa2905b7814
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119879"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104801"
 ---
 # <a name="how-to-create-an-application-domain"></a>Procedura: Creare un dominio dell'applicazione
 I domini dell'applicazione vengono creati automaticamente dall'host Common Language Runtime quando necessario. È tuttavia possibile creare i propri domini dell'applicazione e caricarvi gli assembly che si vuole gestire personalmente. È anche possibile creare domini dell'applicazione da cui eseguire codice.  

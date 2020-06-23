@@ -1,15 +1,16 @@
 ---
 title: 'Procedura: autenticare con un nome utente e una password'
+description: Informazioni su come abilitare un servizio WCF per autenticare un client usando un nome utente e una password di dominio Windows, con codice di esempio.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: e8dc9177afc590a6467855decfa8450b37c6fc77
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1f938f8041b2577b3705266948f29b42f23a6fd7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601283"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247247"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Procedura: autenticare con un nome utente e una password
 
@@ -32,7 +33,7 @@ Nel client è necessario richiedere all'utente il nome utente e la password e sp
     // ...
     ```
 
-2. Specificare il certificato del server utilizzato per crittografare le informazioni relative al nome utente e alla password inviate tramite la rete. Questo codice deve seguire immediatamente il codice illustrato sopra. Nell'esempio seguente viene utilizzato il certificato creato dal file Setup. bat dall'esempio di [nome utente](../samples/message-security-user-name.md) per la sicurezza dei messaggi:
+2. Specificare il certificato del server utilizzato per crittografare le informazioni relative al nome utente e alla password inviate tramite la rete. Questo codice deve seguire immediatamente il codice illustrato sopra. Nell'esempio seguente viene utilizzato il certificato creato dal file di setup.bat dall'esempio [relativo al nome utente](../samples/message-security-user-name.md) per la sicurezza dei messaggi:
 
     ```csharp
     // ...
@@ -40,7 +41,7 @@ Nel client è necessario richiedere all'utente il nome utente e la password e sp
     // ...
     ```
 
-    È possibile utilizzare il proprio certificato; è sufficiente modificare il codice in modo che faccia riferimento a tale certificato. Per ulteriori informazioni sulla creazione e sull'utilizzo di certificati, vedere [Working with Certificates](working-with-certificates.md). Assicurarsi che il certificato si trovi nell'archivio certificati Persone attendibili del computer locale. Per eseguire questa operazione, è possibile eseguire MMC. exe e selezionare la voce di menu **file**, **Aggiungi/Rimuovi snap-in** . Nella finestra di dialogo **Aggiungi o Rimuovi snap-** in selezionare lo **snap-in certificati** e fare clic su **Aggiungi**. Nella finestra di dialogo snap-in certificati selezionare **account computer**. Per impostazione predefinita, il certificato generato nell'esempio di sicurezza dei messaggi tramite nome utente sarà posizionato nella cartella Personale/Certificati,  Verrà elencato come "localhost" nella colonna rilasciato a nella finestra MMC. Trascinare e rilasciare il certificato nella cartella **persone attendibili** . In questo modo il certificato verrà considerato come attendibile da WCF quando viene effettuata l'autenticazione.
+    È possibile utilizzare il proprio certificato; è sufficiente modificare il codice in modo che faccia riferimento a tale certificato. Per ulteriori informazioni sulla creazione e sull'utilizzo di certificati, vedere [Working with Certificates](working-with-certificates.md). Assicurarsi che il certificato si trovi nell'archivio certificati Persone attendibili del computer locale. Per eseguire questa operazione, è possibile eseguire mmc.exe e selezionare la voce di menu **file**, **Aggiungi/Rimuovi snap-in** . Nella finestra di dialogo **Aggiungi o Rimuovi snap-** in selezionare lo **snap-in certificati** e fare clic su **Aggiungi**. Nella finestra di dialogo snap-in certificati selezionare **account computer**. Per impostazione predefinita, il certificato generato nell'esempio di sicurezza dei messaggi tramite nome utente sarà posizionato nella cartella Personale/Certificati,  Verrà elencato come "localhost" nella colonna rilasciato a nella finestra MMC. Trascinare e rilasciare il certificato nella cartella **persone attendibili** . In questo modo il certificato verrà considerato come attendibile da WCF quando viene effettuata l'autenticazione.
 
 ## <a name="to-call-the-service-passing-username-and-password"></a>Per chiamare il servizio passando nome utente e password
 

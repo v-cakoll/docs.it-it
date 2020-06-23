@@ -1,5 +1,6 @@
 ---
 title: Metodo Exception. PrepForRemoting (System)
+description: Esaminare il metodo Exception. PrepForRemoting in .NET. Il metodo aggiunge l'analisi dello stack sul lato server al messaggio prima che l'eccezione venga rigenerata nel client.
 ms.date: 10/08/2019
 topic_type:
 - apiref
@@ -9,12 +10,12 @@ api_location:
 - mscorlib.dll
 api_type:
 - Assembly
-ms.openlocfilehash: ce1c24578690a1643b7f5af0e44eaae95ed7b0a2
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 9ceb73499ae3bb308975e6db5b961bfe40165ba3
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214890"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105266"
 ---
 # <a name="exceptionprepforremoting-method"></a>Metodo Exception.PrepForRemoting
 
@@ -24,15 +25,15 @@ Conserva la traccia dello stack sul lato server aggiungendola al messaggio prima
 internal Exception PrepForRemoting();
 ```
 
-## <a name="returns"></a>Valori di codice restituiti
+## <a name="returns"></a>Restituisce
 
 <xref:System.Exception>  
 Istanza corrente di <xref:System.Exception>.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 > [!WARNING]
-> Il `Exception.PrepForRemoting` metodo è interno e non deve essere usato direttamente nel codice.
+> Il `Exception.PrepForRemoting` metodo è interno e non è destinato a essere utilizzato direttamente nel codice.
 >
 > Microsoft non supporta l'utilizzo di questo metodo in un'applicazione di produzione in qualsiasi circostanza.
 
@@ -40,6 +41,6 @@ Istanza corrente di <xref:System.Exception>.
 
 **Spazio dei nomi:** <xref:System>
 
-**Assembly:** mscorlib. dll (in mscorlib. dll)
+**Assembly:** mscorlib.dll (in mscorlib.dll)
 
 **Versioni .NET Framework:** Disponibile a partire da 1,0.

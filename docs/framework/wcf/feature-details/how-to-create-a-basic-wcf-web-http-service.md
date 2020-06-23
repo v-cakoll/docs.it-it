@@ -1,18 +1,19 @@
 ---
-title: 'Procedura: Creare un servizio HTTP Web WCF di base'
+title: 'Procedura: creare un servizio HTTP Web WCF'
+description: Informazioni su come creare un servizio che espone un endpoint Web in WCF. Gli endpoint Web inviano dati tramite XML o JSON. Nessuna busta SOAP.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-ms.openlocfilehash: e9646235f9423f2a4df9cfe09a5e83a91dcdcace
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 7481367f27d973ba809dff5ca1c4a4f168fbbb98
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895182"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247104"
 ---
-# <a name="how-to-create-a-basic-wcf-web-http-service"></a>Procedura: Creare un servizio HTTP Web WCF di base
+# <a name="how-to-create-a-basic-wcf-web-http-service"></a>Procedura: creare un servizio HTTP Web WCF
 
 Windows Communication Foundation (WCF) consente di creare un servizio che espone un endpoint Web. Gli endpoint Web inviano dati in XML o JSON, senza SOAP envelope. In questo argomento viene dimostrato come esporre un endpoint di questo tipo.
 
@@ -77,7 +78,7 @@ Windows Communication Foundation (WCF) consente di creare un servizio che espone
 
 ## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Per chiamare operazioni del servizio mappate a GET in Internet Explorer
 
-1. Aprire Internet Explorer e digitare "`http://localhost:8000/EchoWithGet?s=Hello, world!`" e premere INVIO. L'URL contiene l'indirizzo di base del servizio (`http://localhost:8000/`), l'indirizzo relativo dell'endpoint (""), l'operazione del servizio da chiamare ("EchoWithGet") e un punto interrogativo seguito da un elenco di parametri denominati separati da una e commerciale (&).
+1. Aprire Internet Explorer e digitare " `http://localhost:8000/EchoWithGet?s=Hello, world!` " e premere INVIO. L'URL contiene l'indirizzo di base del servizio ( `http://localhost:8000/` ), l'indirizzo relativo dell'endpoint (""), l'operazione del servizio da chiamare ("EchoWithGet") e un punto interrogativo seguito da un elenco di parametri denominati separati da una e commerciale (&).
 
 ## <a name="to-call-service-operations-in-code"></a>Per chiamare operazioni del servizio nel codice
 
@@ -119,4 +120,4 @@ Durante la compilazione di Service.cs fare riferimento a System.ServiceModel.dll
 - <xref:System.ServiceModel.Web.WebInvokeAttribute>
 - <xref:System.ServiceModel.Web.WebServiceHost>
 - <xref:System.ServiceModel.Description.WebHttpBehavior>
-- [Modello di programmazione HTTP Web di WCF](wcf-web-http-programming-model.md)
+- [Modello di programmazione HTTP Web WCF](wcf-web-http-programming-model.md)

@@ -1,17 +1,18 @@
 ---
 title: Uso dei domini dell'applicazione
+description: Usare i domini applicazione, che forniscono un'unità di isolamento per il Common Language Runtime (CLR). I domini applicazione vengono creati ed eseguiti all'interno di un processo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application domains, about
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-ms.openlocfilehash: 6ee02a3f27a645f19fd6a327052939586fac4aa9
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: df2a63716904ebfc6ee163121a1f07e53aa07514
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645432"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105186"
 ---
 # <a name="using-application-domains"></a>Uso dei domini dell'applicazione
 
@@ -30,7 +31,7 @@ Viene descritto come scaricare a livello di codice un dominio dell'applicazione.
 [Procedura: Configurare un dominio dell'applicazione](how-to-configure-an-application-domain.md)  
 Viene presentata un'introduzione alla configurazione di un dominio dell'applicazione.  
   
-[Recupero di informazioni di installazione da un dominio dell'applicazione](retrieve-setup-information.md)  
+[Recupero di informazioni di installazione da un dominio applicazione](retrieve-setup-information.md)  
 Viene descritto come recuperare informazioni di installazione da un dominio dell'applicazione.  
   
 [Procedura: Caricare assembly in un dominio dell'applicazione](how-to-load-assemblies-into-an-application-domain.md)  

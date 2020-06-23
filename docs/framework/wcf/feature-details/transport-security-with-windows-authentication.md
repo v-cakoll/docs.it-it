@@ -1,16 +1,17 @@
 ---
 title: Protezione del trasporto con l'autenticazione di Windows
+description: Esaminare questo scenario, che mostra un client/servizio WCF protetto dalla sicurezza di Windows. In questo esempio un servizio Intranet Visualizza le informazioni sulle risorse umane.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 6703da4f97cba38ee0dc334d3010ca509d1fb3ef
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b6134d4cbdff0c1adea704a7f3aaff7e40fd75ec
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598697"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244764"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Protezione del trasporto con l'autenticazione di Windows
 Nello scenario seguente vengono illustrati un client e un servizio Windows Communication Foundation (WCF) protetti dalla sicurezza di Windows. Per altre informazioni sulla programmazione, vedere [procedura: proteggere un servizio con credenziali di Windows](../how-to-secure-a-service-with-windows-credentials.md).  

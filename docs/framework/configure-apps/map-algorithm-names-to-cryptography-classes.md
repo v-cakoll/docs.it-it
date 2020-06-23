@@ -1,5 +1,6 @@
 ---
 title: Mapping di nomi di algoritmi a classi di crittografia
+description: Eseguire il mapping dei nomi degli algoritmi alle classi di crittografia in .NET. Uno sviluppatore dispone di quattro opzioni per la creazione di un oggetto di crittografia.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - mapping algorithm names
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 513000169504473aa6dd46feaca214f58502ffd0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5a1d7acdd34182dd82f4dce66d136c4ef4de6e95
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69912873"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105351"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Mapping di nomi di algoritmi a classi di crittografia
 Esistono quattro modi per creare un oggetto di crittografia usando il Windows SDK:  
@@ -32,7 +33,7 @@ Esistono quattro modi per creare un oggetto di crittografia usando il Windows SD
  Se non è rilevante l'algoritmo hash usato, lo sviluppatore può chiamare il <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> metodo, che restituisce un oggetto che implementa una trasformazione hash.  
   
 ## <a name="mapping-algorithm-names-in-configuration-files"></a>Mapping dei nomi degli algoritmi nei file di configurazione  
- Per impostazione predefinita, il runtime restituisce un <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> oggetto per tutti e quattro gli scenari. Un amministratore del computer può tuttavia modificare il tipo di oggetto restituito dai metodi negli ultimi due scenari. A tale scopo, è necessario eseguire il mapping di un nome di algoritmo descrittivo alla classe che si desidera utilizzare nel file di configurazione del computer (Machine. config).  
+ Per impostazione predefinita, il runtime restituisce un <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> oggetto per tutti e quattro gli scenari. Un amministratore del computer può tuttavia modificare il tipo di oggetto restituito dai metodi negli ultimi due scenari. A tale scopo, è necessario eseguire il mapping di un nome di algoritmo descrittivo alla classe che si desidera utilizzare nel file di configurazione del computer (Machine.config).  
   
  Nell'esempio seguente viene illustrato come configurare il runtime in modo che **System. Security. Cryptography. SHA1. Create**, **System. Security. CryptoConfig. CREATEFROMNAME ("SHA1")** e **System. Security. Cryptography. HashAlgorithm. Create** restituiscano un `MySHA1HashClass` oggetto.  
   
@@ -67,7 +68,7 @@ Esistono quattro modi per creare un oggetto di crittografia usando il Windows SD
   
  Per un elenco di nomi predefiniti e le classi a cui eseguono il mapping, vedere <xref:System.Security.Cryptography.CryptoConfig> .  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Servizi di crittografia](../../standard/security/cryptographic-services.md)
 - [Configurazione di classi di crittografia](configure-cryptography-classes.md)

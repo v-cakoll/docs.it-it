@@ -1,5 +1,6 @@
 ---
 title: Configurazione di classi di crittografia
+description: Informazioni su come gli amministratori di computer possono configurare gli algoritmi di crittografia e le implementazioni di algoritmi predefiniti usati da .NET e dalle applicazioni.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration files [.NET Framework], cryptography
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework application configuration, cryptography
 - default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
-ms.openlocfilehash: e53f4c5c9e24fb25b43b7f27b80ab984214eeac2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5d12aae31ec78f80bea7df1bb0f37ac78dc37de2
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69927777"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105072"
 ---
 # <a name="configuring-cryptography-classes"></a>Configurazione di classi di crittografia
 Il Windows SDK consente agli amministratori di computer di configurare gli algoritmi di crittografia e le implementazioni degli algoritmi predefiniti che vengono utilizzati dall'.NET Framework e dalle applicazioni scritte in modo appropriato.  Ad esempio, un'azienda che dispone di una propria implementazione di un algoritmo crittografico può rendere tale implementazione il valore predefinito anziché l'implementazione fornita nel Windows SDK. Sebbene le applicazioni gestite che usano la crittografia possano sempre scegliere di eseguire un'associazione esplicita a una particolare implementazione, è consigliabile creare oggetti crittografici usando il sistema di configurazione della crittografia.  

@@ -1,5 +1,6 @@
 ---
-title: Metodo XpsDocumentWriter.raise__WritingPrintTicketRequired (System.Windows.Xps)
+title: Metodo XpsDocumentWriter. raise__WritingPrintTicketRequired (System. Windows. Xps)
+description: Usare il Metodo XpsDocumentWriter. raise__WritingPrintTicketRequired, che genera l'evento WritingPrintTicketRequired per un documento XPS in .NET.
 ms.date: 12/12/2007
 api_location:
 - system.printing.dll
@@ -9,14 +10,14 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 4baa5a568f73f60e2448db968283e2b7b64844c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8227c65df69107578791e532f20a1b2560366611
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155648"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105042"
 ---
-# <a name="xpsdocumentwriterraise__writingprintticketrequired-method"></a>Metodo WritingPrintTicketRequired\_\_di XpsDocumentWriter.raise
+# <a name="xpsdocumentwriterraise__writingprintticketrequired-method"></a>XpsDocumentWriter. Raise, \_ \_ Metodo WritingPrintTicketRequired
 
 Genera l'evento <xref:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired>.
 
@@ -37,8 +38,8 @@ public void raise__WritingPrintTicketRequired (object value0,
 
 ## <a name="requirements"></a>Requisiti
 
-**Spazio dei nomi:**<xref:System.Windows.Xps>
+**Spazio dei nomi:** <xref:System.Windows.Xps>
 
-**Assemblaggio:** System.Printing (in system.printing.dll)
+**Assembly:** System. Printing (in system.printing.dll)
 
-Versioni di **.NET Framework:** 3.0
+**Versioni .NET Framework:** 3,0

@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: compilare un assembly su più file'
+title: 'Procedura: Creare un assembly su più file'
+description: Informazioni su come compilare (creare) un assembly su più file in .NET usando il codice di esempio per illustrare ogni passaggio della procedura.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -17,14 +18,14 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-ms.openlocfilehash: 0f8c6d57425657e321d80f9edffa20f27bc28770
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4c298284950ba2989bb73e6d3383b3c4024e6e7
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429561"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104947"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Procedura: compilare un assembly su più file
+# <a name="how-to-build-a-multifile-assembly"></a>Procedura: Creare un assembly su più file
 
 In questo articolo viene illustrato come creare un assembly su più file e viene visualizzato il codice che illustra ogni passaggio della procedura.
 
@@ -99,7 +100,7 @@ In questo articolo viene illustrato come creare un assembly su più file e viene
 
 3. Compilare tutti gli altri moduli, utilizzando le opzioni di compilatore necessarie per indicare gli altri moduli a cui si fa riferimento nel codice. Questo passaggio usa l'opzione del compilatore **/addmodule**.
 
-   Nell'esempio seguente, un modulo di codice denominato *client* dispone di un metodo `Main` del punto di ingresso che fa riferimento a un metodo nel modulo *Stringer. dll* creato nel passaggio 1.
+   Nell'esempio seguente, un modulo di codice denominato *client* dispone di un metodo del punto di ingresso `Main` che fa riferimento a un metodo nel modulo *Stringer.dll* creato nel passaggio 1.
 
    ```cpp
    #using "Stringer.netmodule"
@@ -209,11 +210,11 @@ In questo articolo viene illustrato come creare un assembly su più file e viene
 
     Al prompt dei comandi digitare il comando seguente:
 
-    **al** \<nome modulo *nome*> \<*modulo*>... **/Main:**\<*nome*> metodo **/out:**\<*nome*> file **/target:**\<*tipo di file di assembly*>
+    **al** \<*module name*> \<*module name*>... **/Main:** \<*method name*> **/out:** \<*file name*> **/target:**\<*assembly file type*>
 
     In questo comando gli argomenti *nome modulo* specificano il nome di ogni modulo da includere nell'assembly. L'opzione **/main:** specifica il nome del metodo che corrisponde al punto di ingresso dell'assembly. L'opzione **/out:** specifica il nome del file di output che contiene i metadati dell'assembly. L'opzione **/target:** specifica che l'assembly è un file eseguibile dell'applicazione console (*exe*), un file eseguibile di Windows (con*estensione win*) o un file di libreria (con*estensione LIB*).
 
-    Nell'esempio seguente, *al. exe* crea un assembly che è un eseguibile dell'applicazione console denominato *myAssembly. exe*. L'applicazione è costituita da due moduli denominati *client. netmodule* e *Stringer. netmodule*e il file eseguibile denominato *myAssembly. exe*, che contiene solo i metadati dell'assembly. Il punto di ingresso dell'assembly è il `Main` metodo nella classe `MainClientApp`, disponibile in *client. dll*.
+    Nell'esempio seguente *Al.exe* crea un assembly che è un eseguibile dell'applicazione console chiamato *myAssembly.exe*. L'applicazione è costituita da due moduli denominati *client. netmodule* e *Stringer. netmodule*e il file eseguibile denominato *myAssembly.exe*, che contiene solo i metadati dell'assembly. Il punto di ingresso dell'assembly è il `Main` metodo nella classe `MainClientApp` , disponibile in *Client.dll*.
 
     ```cmd
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe

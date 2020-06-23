@@ -1,16 +1,17 @@
 ---
 title: Abilitare o disabilitare i reindirizzamenti di binding generati automaticamente
+description: Vedere come abilitare o disabilitare il reindirizzamento di associazione automatico. Questa funzionalità influiscono sulle app desktop e sulle app Web destinate a .NET 4.5.1 o versione successiva.
 ms.date: 10/30/2018
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: edee95f6c3b2c2d74c4f1b68e0a65e5cb0e85f54
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69913039"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105385"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico
 
@@ -18,7 +19,7 @@ Quando si compilano app in Visual Studio destinate a .NET Framework 4.5.1 e vers
 
 ## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>Disabilitare i reindirizzamenti di binding automatici nelle app desktop
 
-I reindirizzamenti di binding automatici sono abilitati per impostazione predefinita per le app desktop di Windows destinate a .NET Framework 4.5.1 e versioni successive. I reindirizzamenti di binding vengono aggiunti al file di configurazione di output (**app. config**) quando l'app viene compilata ed esegue l'override dell'unificazione degli assembly che altrimenti potrebbe essere eseguita. Il file **app. config** di origine non viene modificato. È possibile disabilitare questa funzionalità modificando il file di progetto per l'app o deselezionando una casella di controllo nelle proprietà del progetto in Visual Studio.
+I reindirizzamenti di binding automatici sono abilitati per impostazione predefinita per le app desktop di Windows destinate a .NET Framework 4.5.1 e versioni successive. I reindirizzamenti di binding vengono aggiunti al file di configurazione di output (**app.config**) quando l'app viene compilata ed esegue l'override dell'unificazione di assembly che altrimenti potrebbe essere eseguita. Il file di **app.config** di origine non viene modificato. È possibile disabilitare questa funzionalità modificando il file di progetto per l'app o deselezionando una casella di controllo nelle proprietà del progetto in Visual Studio.
 
 ### <a name="disable-through-project-properties"></a>Disabilitare tramite le proprietà del progetto
 
@@ -85,9 +86,9 @@ Se si dispone di Visual Studio 2017 versione 15,7 o successiva, è possibile dis
 
 ## <a name="enable-automatic-binding-redirects-in-web-apps"></a>Abilitare i reindirizzamenti di binding automatici nelle app Web
 
-I reindirizzamenti di associazione automatici vengono implementati in modo diverso per le app Web. Poiché il file di configurazione di origine (**Web. config**) deve essere modificato per le app Web, i reindirizzamenti di binding non vengono aggiunti automaticamente al file di configurazione. Visual Studio notifica, tuttavia, eventuali conflitti di associazione ed è possibile aggiungere reindirizzamenti di associazione per risolverli. Poiché viene sempre richiesto di aggiungere reindirizzamenti di binding, non è necessario disabilitare in modo esplicito questa funzionalità per un'app Web.
+I reindirizzamenti di associazione automatici vengono implementati in modo diverso per le app Web. Poiché è necessario modificare il file di configurazione di origine (**web.config**) per le app Web, i reindirizzamenti di binding non vengono aggiunti automaticamente al file di configurazione. Visual Studio notifica, tuttavia, eventuali conflitti di associazione ed è possibile aggiungere reindirizzamenti di associazione per risolverli. Poiché viene sempre richiesto di aggiungere reindirizzamenti di binding, non è necessario disabilitare in modo esplicito questa funzionalità per un'app Web.
 
-Per aggiungere reindirizzamenti di binding a un file **Web. config** :
+Per aggiungere reindirizzamenti di binding a un file di **web.config** :
 
 1. In Visual Studio compilare l'app e cercare eventuali avvisi di compilazione.
 
@@ -95,11 +96,11 @@ Per aggiungere reindirizzamenti di binding a un file **Web. config** :
 
 2. In caso di conflitti di associazione a livello di assembly, viene visualizzato un avviso. Fare doppio clic sull'avviso oppure selezionare l'avviso e premere **invio**.
 
-   Viene visualizzata una finestra di dialogo che consente di aggiungere automaticamente i reindirizzamenti di binding necessari al file **Web. config** di origine.
+   Viene visualizzata una finestra di dialogo che consente di aggiungere automaticamente i reindirizzamenti di binding necessari al file di **web.config** di origine.
 
    ![Finestra di dialogo dell'autorizzazione reindirizzamento associazione](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [\<bindingRedirect>Elemento](./file-schema/runtime/bindingredirect-element.md)
 - [Reindirizzamento delle versioni di assembly](redirect-assembly-versions.md)

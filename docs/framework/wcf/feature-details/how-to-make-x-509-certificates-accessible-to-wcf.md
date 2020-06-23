@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: rendere accessibili a WCF i certificati X.509'
+description: Informazioni su come rendere un certificato X. 509 accessibile a WCF. Il codice dell'applicazione deve specificare il nome e il percorso dell'archivio certificati. Potrebbero essere presenti altri requisiti.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: e4f1aae021c4be49847b3b6dcd14b5a0a237c899
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5cc1118640bcf1262d88cb8cdb39939ae315cae3
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597046"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246870"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Procedura: rendere accessibili a WCF i certificati X.509
 Per rendere accessibile un certificato X. 509 a Windows Communication Foundation (WCF), il codice dell'applicazione deve specificare il nome e il percorso dell'archivio certificati. In alcuni casi l'identità del processo deve avere accesso al file contenente la chiave privata associata al certificato X.509. Per ottenere la chiave privata associata a un certificato X. 509 in un archivio certificati, WCF deve disporre delle autorizzazioni necessarie. Per impostazione predefinita solo il proprietario e l'account di sistema possono accedere alla chiave privata di un certificato.  
@@ -62,7 +63,7 @@ Per rendere accessibile un certificato X. 509 a Windows Communication Foundation
         |Servizio ospitato in IIS 6,0 (Windows Server 2003) o IIS 7,0 (Windows Vista).|NETWORK SERVICE|  
         |Servizio ospitato in IIS 5. X (Windows XP).|Controllato dall'elemento `<processModel>` nel file Machine.config. L'account predefinito è ASPNET.|  
   
-    5. Concedere l'accesso in lettura al file che contiene la chiave privata all'account con cui viene eseguito WCF, utilizzando uno strumento come icacls. exe.  
+    5. Concedere l'accesso in lettura al file che contiene la chiave privata all'account con cui viene eseguito WCF, usando uno strumento come icacls.exe.  
   
          Nell'esempio di codice seguente viene modificato l'elenco di controllo di accesso discrezionale (DACL) per il file specificato per concedere all'account del servizio di rete l'accesso in lettura (: R) al file.  
   

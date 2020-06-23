@@ -1,16 +1,17 @@
 ---
 title: Protezione del trasporto con l'autenticazione di base
+description: Esaminare questo scenario WCF, in cui viene illustrata l'autenticazione di base per un servizio e un client WCF. Il servizio richiede un certificato valido considerato attendibile dal client.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 7c83de70e404fe8304bc2e35c1bb5df9e42f95b7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f15a19feaed631a76948efd24ee225acf789cb2d
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576096"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244855"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Protezione del trasporto con l'autenticazione di base
 Nella figura seguente vengono illustrati un client e un servizio Windows Communication Foundation (WCF). Il server richiede un certificato X.509 valido che possa essere usato per SSL (Secure Sockets Layer) e i client devono ritenere attendibile il certificato del server. Il servizio Web dispone già di un'implementazione SSL usabile. Per ulteriori informazioni sull'abilitazione dell'autenticazione di base in Internet Information Services (IIS), vedere <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication> .  
