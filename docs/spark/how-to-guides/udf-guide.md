@@ -4,12 +4,12 @@ description: Informazioni su come implementare funzioni definite dall'utente (UD
 ms.date: 06/11/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 96597c7e2d45dfdf8406b0d3e80daad270996b97
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: fe3dec187f94f84adb1217c39ff6aabc4b4db1c5
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105601"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85142017"
 ---
 # <a name="create-user-defined-functions-udf-in-net-for-apache-spark"></a>Creare funzioni definite dall'utente (UDF) in .NET per Apache Spark
 
@@ -61,7 +61,7 @@ Per comprendere meglio come implementare le funzioni definite dall'utente, veder
 
 ## <a name="udf-serialization"></a>Serializzazione UDF
 
-Poiché le funzioni definite dall'utente sono funzioni che devono essere eseguite sui thread di lavoro, devono essere serializzate e inviate ai processi di lavoro come parte del payload dal driver. Il [delegato](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/), che è un riferimento al metodo, deve essere serializzato e la relativa [destinazione](https://docs.microsoft.com/en-us/dotnet/api/system.delegate.target?view=netframework-4.8) , ovvero l'istanza della classe in cui il delegato corrente richiama il metodo di istanza. Esaminare questo [esempio di codice in GitHub](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs#L149) per comprendere meglio il modo in cui viene eseguita la serializzazione UDF.
+Poiché le funzioni definite dall'utente sono funzioni che devono essere eseguite sui thread di lavoro, devono essere serializzate e inviate ai processi di lavoro come parte del payload dal driver. Il [delegato](../../csharp/programming-guide/delegates/index.md), che è un riferimento al metodo, deve essere serializzato e la relativa [destinazione](xref:System.Delegate.Target%2A), ovvero l'istanza della classe in cui il delegato corrente richiama il metodo di istanza. Esaminare questo [esempio di codice in GitHub](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs#L149) per comprendere meglio il modo in cui viene eseguita la serializzazione UDF.
 
 .NET per Apache Spark USA .NET Core, che non supporta la serializzazione dei delegati. Viene invece utilizzata la reflection per serializzare la destinazione in cui è definito il delegato. Quando più delegati sono definiti in un ambito comune, hanno una chiusura condivisa che diventa la destinazione della reflection per la serializzazione.
 
