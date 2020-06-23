@@ -1,16 +1,17 @@
 ---
 title: Windows Communication Foundation Tools
+description: Vengono fornite informazioni sugli strumenti WCF progettati per semplificare la creazione, la distribuzione e la gestione di applicazioni WCF. Eseguire questi strumenti da un prompt dei comandi.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF, tools
 - Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
-ms.openlocfilehash: edd54c93207456156ef2520a00ad567cd087d89c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: acc142e8e3108a827b63cf013b818d30b5dcaa52
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321363"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245969"
 ---
 # <a name="windows-communication-foundation-tools"></a>Windows Communication Foundation Tools
 Gli strumenti di Microsoft Windows Communication Foundation (WCF) sono progettati per semplificare la creazione, la distribuzione e la gestione di applicazioni WCF. Contenuto della sezione vengono fornite informazioni dettagliate su tali strumenti. Notare che gli strumenti non sono supportati.  

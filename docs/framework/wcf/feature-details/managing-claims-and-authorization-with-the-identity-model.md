@@ -1,5 +1,6 @@
 ---
 title: Gestione di attestazioni e autorizzazioni con il modello di identità
+description: Informazioni sui principali concetti di programmazione per il modello di identità WCF, un modello basato sulle attestazioni per l'esecuzione dell'autorizzazione.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authorization [WCF]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: f9138102435aab07e5c1771ce5dba85bacbcac99
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0d5687f8ac5021c008254f0f5cc453eda5e538c7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586351"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245128"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gestione di attestazioni e autorizzazioni con il modello di identità
 L'autorizzazione è il processo volto a determinare quali entità dispongono delle autorizzazioni per modificare, visualizzare o altrimenti accedere a una risorsa del computer. In un'azienda, ad esempio, è possibile che l'accesso ai file dei dipendenti sia consentito solo ai responsabili. Windows Communication Foundation (WCF) supporta due meccanismi per l'esecuzione dell'elaborazione delle autorizzazioni. Il primo meccanismo consente di controllare l'autorizzazione utilizzando costrutti Common Language Runtime (CLR) esistenti. Il secondo è un modello basato sulle attestazioni noto come *modello di identità*. WCF utilizza il modello di identità per creare attestazioni dai messaggi in ingresso. È possibile estendere le classi del modello di identità per supportare nuovi tipi di attestazione per schemi di autorizzazione personalizzati. In questo argomento viene presentata una panoramica dei principali concetti di programmazione del modello di identità, nonché un elenco delle classi più importanti utilizzate da tale funzionalità.  
@@ -75,7 +76,7 @@ L'autorizzazione è il processo volto a determinare quali entità dispongono del
 ## <a name="claims"></a>Claims  
  Il modello di identità è un sistema basato su attestazioni. Tali attestazioni descrivono le funzionalità associate a un'entità nel sistema, spesso un utente di tale sistema. Il set di attestazioni associato a una determinata entità può essere considerato come una chiave. Le particolari attestazioni definiscono la forma della chiave, analogamente a una chiave utilizzata per aprire la serratura di una porta. Le attestazioni vengono utilizzate per accedere alle risorse. L'accesso a una data risorsa protetta viene determinato confrontando le attestazioni necessarie per accedere alla risorsa con le attestazioni associate all'entità che ne tenta l'accesso.  
   
- Un'attestazione è l'espressione di un diritto rispetto a un particolare valore. Un diritto può riguardare, ad esempio, la lettura, la scrittura o l'esecuzione. Un valore potrebbe essere un database, un file, una cassetta postale o una proprietà. Le attestazioni dispongono inoltre di un tipo. La combinazione di tipo di attestazione e diritto fornisce il meccanismo che consente di specificare le funzionalità in relazione al valore. Ad esempio, un'attestazione di tipo "file" con diritto "Read" sul valore "Biography. doc" indica che l'entità a cui è associata tale attestazione ha accesso in lettura al file Biography. doc. Un'attestazione di tipo "Name" con diritto "PossessProperty" sul valore "Martin" indica che l'entità a cui è associata una tale attestazione possiede una proprietà Name con il valore "Martin".  
+ Un'attestazione è l'espressione di un diritto rispetto a un particolare valore. Un diritto può riguardare, ad esempio, la lettura, la scrittura o l'esecuzione. Un valore potrebbe essere un database, un file, una cassetta postale o una proprietà. Le attestazioni dispongono inoltre di un tipo. La combinazione di tipo di attestazione e diritto fornisce il meccanismo che consente di specificare le funzionalità in relazione al valore. Ad esempio, un'attestazione di tipo "file" con diritto "Read" sul valore "Biography.doc" indica che l'entità a cui è associata tale attestazione ha accesso in lettura al file Biography.doc. Un'attestazione di tipo "Name" con diritto "PossessProperty" sul valore "Martin" indica che l'entità a cui è associata una tale attestazione possiede una proprietà Name con il valore "Martin".  
   
  Sebbene nell'ambito del modello di identità siano definiti vari tipi di attestazioni e diritti, il sistema è estensibile, consentendo in questo modo ai vari sistemi basati sull'infrastruttura del modello di identità di definire tipi di attestazione e diritti aggiuntivi in base alle esigenze.  
   

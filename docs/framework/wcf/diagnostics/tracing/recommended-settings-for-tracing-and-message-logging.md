@@ -1,19 +1,20 @@
 ---
 title: Impostazioni consigliate per la traccia e la registrazione dei messaggi
+description: Informazioni sulle impostazioni di traccia e registrazione dei messaggi consigliate per diversi ambienti operativi in WCF.
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-ms.openlocfilehash: 9d2586570a3f590735c2a8e1ca176580886c8d92
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 71067a4d6f4cec65a148a8162c40e44d82b85784
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578916"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245326"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>Impostazioni consigliate per la traccia e la registrazione dei messaggi
 In questo argomento vengono illustrate le impostazioni consigliate di traccia e registrazione dei messaggi per diversi ambienti operativi.  
   
 ## <a name="recommended-settings-for-a-production-environment"></a>Impostazioni consigliate per un ambiente di produzione  
- Per un ambiente di produzione, se si usano origini di traccia WCF, impostare `switchValue` su Avviso. Se si usa l'origine di traccia WCF `System.ServiceModel`, impostare l'attributo `switchValue` su `Warning` e l'attributo `propagateActivity` su `true`. Se si usa un'origine di traccia definita dall'utente, impostare l'attributo `switchValue` su `Warning, ActivityTracing`. Questa operazione può essere eseguita manualmente tramite lo [strumento Editor di configurazione (SvcConfigEditor. exe)](../../configuration-editor-tool-svcconfigeditor-exe.md). Se non si prevede un calo delle prestazioni, è possibile impostare l'attributo `switchValue` su `Information` in tutti i casi prima menzionati, generando così una notevole quantità di dati di traccia. Nell'esempio seguente vengono illustrate queste impostazioni consigliate.  
+ Per un ambiente di produzione, se si usano origini di traccia WCF, impostare `switchValue` su Avviso. Se si usa l'origine di traccia WCF `System.ServiceModel`, impostare l'attributo `switchValue` su `Warning` e l'attributo `propagateActivity` su `true`. Se si usa un'origine di traccia definita dall'utente, impostare l'attributo `switchValue` su `Warning, ActivityTracing`. Questa operazione può essere eseguita manualmente tramite lo [strumento Editor di configurazione (SvcConfigEditor.exe)](../../configuration-editor-tool-svcconfigeditor-exe.md). Se non si prevede un calo delle prestazioni, è possibile impostare l'attributo `switchValue` su `Information` in tutti i casi prima menzionati, generando così una notevole quantità di dati di traccia. Nell'esempio seguente vengono illustrate queste impostazioni consigliate.  
   
 ```xml  
 <configuration>  

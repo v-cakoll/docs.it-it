@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 0d462fcc92fc1be5ddbc2e76237d8436219c7295
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8ae30b8c29dcf3aaa183ff295c7ee8592322797f
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504537"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141781"
 ---
 # <a name="proxy-element-network-settings"></a>Elemento \<proxy> (impostazioni di rete)
 Definisce un server proxy.  
@@ -28,11 +28,11 @@ Definisce un server proxy.
   
 ```xml  
 <proxy
-  autoDetect="true|false|unspecified"
-  bypassonlocal="true|false|unspecified"
+  autoDetect="True|False|Unspecified"
+  bypassonlocal="True|False|Unspecified"
   proxyaddress="uriString"
   scriptLocation="uriString"
-  usesystemdefault="true|false|unspecified"
+  usesystemdefault="True|False|Unspecified"
 />
 ```  
   
@@ -43,11 +43,11 @@ Definisce un server proxy.
   
 |**Attributo**|**Descrizione**|  
 |-------------------|---------------------|  
-|`autoDetect`|Specifica se il proxy viene rilevato automaticamente. Il valore predefinito è `unspecified`.|  
-|`bypassonlocal`|Specifica se il proxy viene ignorato per le risorse locali. Le risorse locali includono il server locale ( `http://localhost` , `http://loopback` o `http://127.0.0.1` ) e un URI senza un punto ( `http://webserver` ). Il valore predefinito è `unspecified`.|  
+|`autoDetect`|Specifica se il proxy viene rilevato automaticamente. Il valore predefinito è `Unspecified`.|  
+|`bypassonlocal`|Specifica se il proxy viene ignorato per le risorse locali. Le risorse locali includono il server locale ( `http://localhost` , `http://loopback` o `http://127.0.0.1` ) e un URI senza un punto ( `http://webserver` ). Il valore predefinito è `Unspecified`.|  
 |`proxyaddress`|Specifica l'URI del proxy da utilizzare.|  
 |`scriptLocation`|Specifica il percorso dello script di configurazione. Non usare l' `bypassonlocal` attributo con questo attributo. |  
-|`usesystemdefault`|Specifica se utilizzare le impostazioni proxy di Internet Explorer. Se è impostato su `true` , gli attributi successivi sostituiranno le impostazioni proxy di Internet Explorer. Il valore predefinito è `unspecified`.|  
+|`usesystemdefault`|Specifica se utilizzare le impostazioni proxy di Internet Explorer. Se è impostato su `True` , gli attributi successivi sostituiranno le impostazioni proxy di Internet Explorer. Il valore predefinito è `Unspecified`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  No.  
@@ -60,7 +60,7 @@ Definisce un server proxy.
   
 ## <a name="text-value"></a>Valore di testo  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L' `proxy` elemento definisce un server proxy per un'applicazione. Se questo elemento non è presente nel file di configurazione, il .NET Framework utilizzerà le impostazioni del proxy in Internet Explorer.  
   
  Il valore dell' `proxyaddress` attributo deve essere un URI (Uniform Resource Indicator) ben formato.  
@@ -82,9 +82,9 @@ Definisce un server proxy.
   <system.net>  
     <defaultProxy>  
       <proxy  
-        usesystemdefault="true"  
+        usesystemdefault="True"  
         proxyaddress="http://192.168.1.10:3128"  
-        bypassonlocal="true"  
+        bypassonlocal="True"  
       />  
     </defaultProxy>  
   </system.net>  

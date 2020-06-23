@@ -1,6 +1,6 @@
 ---
 title: Determinare le versioni di .NET Framework installate
-description: Usare il codice, Regedit. exe o PowerShell per individuare le versioni di .NET Framework installate in un computer eseguendo una query sul Registro di sistema di Windows.
+description: Usare il codice, regedit.exe o PowerShell per individuare le versioni di .NET Framework installate in un computer eseguendo una query sul Registro di sistema di Windows.
 ms.date: 02/03/2020
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: d25e4ae97877462b2a3b90e51262fb656921e392
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 122441e9238fd91199aed255b0125f69081c0a8c
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205492"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990136"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procedura: Determinare le versioni di .NET Framework installate
 
@@ -61,7 +61,7 @@ Il valore REG_DWORD di **rilascio** nel registro di sistema rappresenta la versi
 | .NET Framework 4.7     | In Windows 10 Creators Update: 460798<br />In tutti gli altri sistemi operativi Windows (inclusi altri sistemi operativi Windows 10): 460805 |
 | .NET Framework 4.7.1   | In Windows 10 Fall Creators Update e Windows Server versione 1709:461308<br/>In tutti gli altri sistemi operativi Windows (inclusi altri sistemi operativi Windows 10): 461310 |
 | .NET Framework 4.7.2   | In Windows 10 aprile 2018 aggiornamento e Windows Server, versione 1803:461808<br/>In tutti i sistemi operativi Windows diversi da Windows 10 aprile 2018 aggiornamento e Windows Server, versione 1803:461814 |
-| .NET Framework 4.8     | In Windows 10 maggio 2019 aggiornamento e Windows 10 novembre 2019 aggiornamento: 528040<br/>In Windows 10 maggio 2020 aggiornamento: 528209<br/>In tutti gli altri sistemi operativi Windows (inclusi altri sistemi operativi Windows 10): 528049 |
+| .NET Framework 4.8     | In Windows 10 maggio 2019 aggiornamento e Windows 10 novembre 2019 aggiornamento: 528040<br/>In Windows 10 maggio 2020 aggiornamento: 528372<br/>In tutti gli altri sistemi operativi Windows (inclusi altri sistemi operativi Windows 10): 528049 |
 
 ### <a name="minimum-version"></a>Versione minima
 
@@ -173,9 +173,9 @@ Nell'esempio seguente vengono individuate le .NET Framework da 1 a 4 versioni in
 
 Il .NET Framework CLR installato con .NET Framework viene sottoversione separatamente. Esistono due modi per rilevare la versione del .NET Framework CLR:
 
-- **Strumento Clrver. exe**
+- **Strumento Clrver.exe**
 
-  Utilizzare lo [strumento versione CLR (Clrver. exe)](../tools/clrver-exe-clr-version-tool.md) per determinare quali versioni di CLR sono installate in un computer. Aprire il [prompt dei comandi per gli sviluppatori per Visual Studio](../tools/developer-command-prompt-for-vs.md) e immettere `clrver` .
+  Utilizzare lo [strumento versione CLR (Clrver.exe)](../tools/clrver-exe-clr-version-tool.md) per determinare quali versioni di CLR sono installate in un computer. Aprire il [prompt dei comandi per gli sviluppatori per Visual Studio](../tools/developer-command-prompt-for-vs.md) e immettere `clrver` .
 
   Output di esempio:
 

@@ -1,5 +1,6 @@
 ---
-title: ConnectionGroup.m_ConnectionList Campo
+title: ConnectionGroup. m_ConnectionList campo
+description: Informazioni sul campo ConnectionGroup. m_ConnectionList in .NET, che contiene gli oggetti connessione che servono lo stesso URI e condividono i valori per altre proprietà.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
-ms.openlocfilehash: 8eb6f215c36e214f7095eeba90bf0aed66dfcea0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 478b2441c062e8df6f4e718bd66d7af329f20f12
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155850"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989731"
 ---
-# <a name="connectiongroupm_connectionlist-field"></a>ConnectionGroup.m\_ConnectionList Campo
+# <a name="connectiongroupm_connectionlist-field"></a>Campo di connessione ConnectionGroup. m \_
 
-`ConnectionGroup.m_ConnectionList`è <xref:System.Collections.ArrayList> un oggetto connessione che serve lo stesso URI e condivide gli stessi valori per alcune altre proprietà come la scadenza e l'autenticazione.
+`ConnectionGroup.m_ConnectionList`è un oggetto <xref:System.Collections.ArrayList> di oggetti Connection che serve lo stesso URI e condividono gli stessi valori per altre proprietà, ad esempio la scadenza e l'autenticazione.
 
 ## <a name="syntax"></a>Sintassi
   
@@ -28,14 +29,14 @@ private ArrayList m_ConnectionList
 ```
 
 > [!WARNING]
-> Il `ConnectionGroup.m_ConnectionList` campo è privato e non deve essere utilizzato direttamente nel codice.
+> Il `ConnectionGroup.m_ConnectionList` campo è privato e non è destinato a essere usato direttamente nel codice.
 >
-> Microsoft non supporta in nessun caso l'utilizzo di questo campo in un'applicazione di produzione.
+> Microsoft non supporta l'utilizzo di questo campo in un'applicazione di produzione in qualsiasi circostanza.
 
 ## <a name="requirements"></a>Requisiti
 
-**Spazio dei nomi:**<xref:System.Net>
+**Spazio dei nomi:** <xref:System.Net>
 
-**Assemblaggio:** Sistema (in System.dll)
+**Assembly:** Sistema (in System.dll)
 
-Versioni di **.NET Framework:** Disponibile dalla 2.0.
+**Versioni .NET Framework:** Disponibile a partire da 2,0.

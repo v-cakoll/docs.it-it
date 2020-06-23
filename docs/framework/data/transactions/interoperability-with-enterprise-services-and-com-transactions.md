@@ -1,20 +1,21 @@
 ---
 title: Interoperabilità con transazioni COM+ ed Enterprise Services
+description: Comprendere l'interoperabilità con i servizi Enterprise e le transazioni COM+ in .NET utilizzando lo spazio dei nomi System. Transactions.
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
-ms.openlocfilehash: 98890c4c054a5063f91e429b13cfd6bab9f3dc15
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebd6166fbd99ef102cf10ba1bcef9e3eb8aaa5da
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596864"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141901"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Interoperabilità con transazioni COM+ ed Enterprise Services
 Lo spazio dei nomi <xref:System.Transactions> supporta l'interoperabilità fra gli oggetti di transazione creati mediante questo spazio dei nomi e le transazioni create tramite COM+.  
   
  L'enumerazione <xref:System.Transactions.EnterpriseServicesInteropOption> consente di specificare il livello di interoperabilità con COM+ quando si crea una nuova istanza della classe <xref:System.Transactions.TransactionScope>.  
   
- Per impostazione predefinita, quando il codice dell'applicazione verifica statica <xref:System.Transactions.Transaction.Current%2A> proprietà, <xref:System.Transactions> tenta di individuare una transazione non corrente, o una <xref:System.Transactions.TransactionScope> oggetto che determina che <xref:System.Transactions.Transaction.Current%2A> è **null**. Se tale ricerca ha esito negativo, lo spazio dei nomi <xref:System.Transactions> tenta di individuare una transazione nel contesto COM+. Si noti che anche se lo spazio dei nomi <xref:System.Transactions> rileva una transazione nel contesto COM+, predilige comunque le transazioni native dello spazio dei nomi <xref:System.Transactions>.  
+ Per impostazione predefinita, quando il codice dell'applicazione controlla la <xref:System.Transactions.Transaction.Current%2A> proprietà statica, <xref:System.Transactions> tenta di cercare una transazione che è altrimenti aggiornata o un <xref:System.Transactions.TransactionScope> oggetto che impone <xref:System.Transactions.Transaction.Current%2A> **null**. Se tale ricerca ha esito negativo, lo spazio dei nomi <xref:System.Transactions> tenta di individuare una transazione nel contesto COM+. Si noti che anche se lo spazio dei nomi <xref:System.Transactions> rileva una transazione nel contesto COM+, predilige comunque le transazioni native dello spazio dei nomi <xref:System.Transactions>.  
   
 ## <a name="interoperability-levels"></a>Livelli di interoperabilità  
  L'enumerazione <xref:System.Transactions.EnterpriseServicesInteropOption> definisce i livelli di interoperabilità seguenti: <xref:System.Transactions.EnterpriseServicesInteropOption.None>, <xref:System.Transactions.EnterpriseServicesInteropOption.Full> e <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>.  
@@ -61,14 +62,14 @@ Lo spazio dei nomi <xref:System.Transactions> supporta l'interoperabilità fra g
   
  Nella tabella seguente vengono riportati il contesto di ES (Enterprise Services) e un ambito transazionale che richiede una transazione che utilizza l'enumerazione <xref:System.Transactions.EnterpriseServicesInteropOption>.  
   
-|Contesto di ES|nessuno|Automatico|Completo|  
+|Contesto di ES|nessuno|Automatico|Full|  
 |----------------|----------|---------------|----------|  
-|Contesto predefinito|Contesto predefinito|Contesto predefinito|Creazione di un nuovo <br />contesto transazionale|  
+|Contesto predefinito|Contesto predefinito|Contesto predefinito|Create new <br />contesto transazionale|  
 |Contesto non predefinito|Preservazione del contesto client|Creazione di un nuovo contesto transazionale|Creazione di un nuovo contesto transazionale|  
   
  Nella tabella seguente viene riportata la transazione di ambiente in funzione del contesto <xref:System.EnterpriseServices> e un ambito transazionale che richiede una transazione che utilizza l'enumerazione <xref:System.Transactions.EnterpriseServicesInteropOption>.  
   
-|Contesto di ES|nessuno|Automatico|Completo|  
+|Contesto di ES|nessuno|Automatico|Full|  
 |----------------|----------|---------------|----------|  
 |Contesto predefinito|ST|ST|ES|  
 |Contesto non predefinito|ST|ES|ES|  

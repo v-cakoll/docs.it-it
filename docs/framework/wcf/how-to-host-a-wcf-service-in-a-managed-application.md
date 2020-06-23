@@ -1,16 +1,17 @@
 ---
 title: "Procedura: ospitare un servizio WCF in un'applicazione gestita"
+description: Informazioni su come ospitare un servizio WCF all'interno di un'applicazione gestita creando un servizio indipendente ed eseguendone il test.
 ms.date: 09/17/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-ms.openlocfilehash: e3adcad6ba70aa64b797325cd45a043301d7e680
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 7d1d61b683f60a6c643d2a2f03d367a6ae6c6c15
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320972"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246168"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Procedura: ospitare un servizio WCF in un'app gestita
 
@@ -28,9 +29,9 @@ Nella procedura seguente viene illustrato come implementare un servizio indipend
 
 1. Creare una nuova applicazione console:
 
-   1. Aprire Visual Studio e scegliere **nuovo**  > **progetto** dal menu **file** .
+   1. Aprire Visual Studio e scegliere **nuovo**  >  **progetto** dal menu **file** .
 
-   2. Nell'elenco **modelli installati** selezionare **Visual C#**  o **Visual Basic**, quindi selezionare **desktop di Windows**.
+   2. Nell'elenco **modelli installati** selezionare **Visual C#** o **Visual Basic**, quindi selezionare **desktop di Windows**.
 
    3. Selezionare il modello **applicazione console** . Digitare `SelfHost` nella casella **nome** , quindi scegliere **OK**.
 
@@ -65,20 +66,20 @@ Nella procedura seguente viene illustrato come implementare un servizio indipend
     > [!NOTE]
     > In questo esempio vengono utilizzati endpoint predefiniti e per il servizio non è necessario alcun file di configurazione. Se non è specificato alcun endpoint, il runtime ne crea uno per ogni indirizzo di base per ciascun contratto di servizio implementato dal servizio. Per ulteriori informazioni sugli endpoint predefiniti, vedere [Configurazione semplificata](simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](./samples/simplified-configuration-for-wcf-services.md).
 
-7. Premere **Ctrl** +**MAIUSC** +**B** per compilare la soluzione.
+7. Premere **CTRL** + **MAIUSC** + **B** per compilare la soluzione.
 
-## <a name="test-the-service"></a>Eseguire il test del servizio
+## <a name="test-the-service"></a>Testare il servizio
 
-1. Premere **Ctrl** +**F5** per eseguire il servizio.
+1. Premere **CTRL** + **F5** per eseguire il servizio.
 
 2. Aprire il **client di prova WCF**.
 
     > [!TIP]
-    > Per aprire il **client di prova WCF**, aprire prompt dei comandi per gli sviluppatori per Visual Studio ed eseguire **WcfTestClient. exe**.
+    > Per aprire il **client di prova WCF**, aprire prompt dei comandi per gli sviluppatori per Visual Studio ed eseguire **WcfTestClient.exe**.
 
 3. Scegliere **Aggiungi servizio** dal menu **file** .
 
-4. Digitare `http://localhost:8080/hello` nella casella indirizzo e fare clic su **OK**.
+4. Digitare `http://localhost:8080/hello` nella casella Address, quindi fare clic su **OK**.
 
     > [!TIP]
     > Verificare che il servizio sia in esecuzione. In caso contrario, il passaggio non viene eseguito. Se nel codice è stato modificato l'indirizzo di base, in questo passaggio utilizzare l'indirizzo di base modificato.

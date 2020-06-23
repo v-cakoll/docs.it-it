@@ -1,5 +1,6 @@
 ---
-title: ServicePoint.m_ConnectionGroupList Campo
+title: ServicePoint. m_ConnectionGroupList campo
+description: Comprendere il campo ServicePoint. m_ConnectionGroupList, una tabella hash di gruppi di connessione che contengono una connessione per l'URI ServicePoint in .NET.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
-ms.openlocfilehash: 2b1b46085ed035b67fd01447727b406fe3895980
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ebfeb782147f21abfde536b8053fa15b1e1a602
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155895"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989714"
 ---
-# <a name="servicepointm_connectiongrouplist-field"></a>ServicePoint.m\_ConnectionGroupList Campo
+# <a name="servicepointm_connectiongrouplist-field"></a>Campo ServicePoint. m \_ ConnectionGroupList
 
-`ServicePoint.m_ConnectionGroupList`è <xref:System.Collections.Hashtable> un di gruppi di connessione, <xref:System.Net.ServicePoint>ognuno dei quali contiene una connessione per l'URI.
+`ServicePoint.m_ConnectionGroupList`è un oggetto <xref:System.Collections.Hashtable> di gruppi di connessione, ognuno dei quali contiene una connessione per l' <xref:System.Net.ServicePoint> URI di.
 
 ## <a name="syntax"></a>Sintassi
   
@@ -28,14 +29,14 @@ private Hashtable m_ConnectionGroupList
 ```
 
 > [!WARNING]
-> Il `ServicePoint.m_ConnectionGroupList` campo è privato e non deve essere utilizzato direttamente nel codice.
+> Il `ServicePoint.m_ConnectionGroupList` campo è privato e non è destinato a essere usato direttamente nel codice.
 >
-> Microsoft non supporta in nessun caso l'utilizzo di questo campo in un'applicazione di produzione.
+> Microsoft non supporta l'utilizzo di questo campo in un'applicazione di produzione in qualsiasi circostanza.
 
 ## <a name="requirements"></a>Requisiti
 
-**Spazio dei nomi:**<xref:System.Net>
+**Spazio dei nomi:** <xref:System.Net>
 
-**Assemblaggio:** Sistema (in System.dll)
+**Assembly:** Sistema (in System.dll)
 
-Versioni di **.NET Framework:** Disponibile dalla 2.0.
+**Versioni .NET Framework:** Disponibile a partire da 2,0.

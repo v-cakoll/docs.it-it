@@ -1,15 +1,16 @@
 ---
 title: <netTcpBinding>
+description: Rappresenta un'associazione protetta, affidabile e ottimizzata progettata solo per le comunicazioni tra computer WCF tramite TCP. La messaggistica affidabile è disattivata per impostazione predefinita.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: c43c141093c8287adb6d5a841a43ac893deefccd
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 95c2c691bf328050f3d189c790d111d2fdeb1bb0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74139335"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243997"
 ---
 # \<netTcpBinding>
 
@@ -147,11 +148,11 @@ L'associazione è specificata nei file di configurazione per il client e il serv
 </bindings>
 ```  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ServiceModel.NetTcpBinding>
 - <xref:System.ServiceModel.Configuration.NetTcpBindingElement>
-- [Binding](../../../wcf/bindings.md)
+- [Associazioni](../../../wcf/bindings.md)
 - [Configurazione di associazioni fornite dal sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Uso di associazioni per configurare servizi e client](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

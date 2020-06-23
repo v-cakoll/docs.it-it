@@ -1,16 +1,17 @@
 ---
 title: Ottenere dettagli sugli attributi di testo misti utilizzando l'automazione interfaccia utente
+description: Ottenere i dettagli dell'attributo di testo misto usando le classi di automazione interfaccia utente gestita nello spazio dei nomi System. Windows. Automation dell'API .NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d0e4c005-abd1-42bb-92a4-5faf87097311
-ms.openlocfilehash: 9f2cba1f602cedf3a13bd909b4dc2f1a7b4ab972
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 111d110be9365c4a58f2bd2b033c1ff4e3a6a95d
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443114"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903857"
 ---
 # <a name="obtain-mixed-text-attribute-details-using-ui-automation"></a>Ottenere dettagli sugli attributi di testo misti utilizzando l'automazione interfaccia utente
 > [!NOTE]
@@ -28,9 +29,9 @@ ms.locfileid: "74443114"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica di TextPattern di automazione interfaccia utente](ui-automation-textpattern-overview.md)
-- [Aggiungere contenuto a una casella di testo usando l'automazione interfaccia utente](add-content-to-a-text-box-using-ui-automation.md)
-- [Trovare ed evidenziare il testo usando l'automazione interfaccia utente](find-and-highlight-text-using-ui-automation.md)
-- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
-- [Ottenere attributi di testo usando l'automazione interfaccia utente](obtain-text-attributes-using-ui-automation.md)
+- [Cenni preliminari sul modello TextPattern di automazione interfaccia utente](ui-automation-textpattern-overview.md)
+- [Aggiungere contenuto a una casella di testo utilizzando l'automazione interfaccia utente](add-content-to-a-text-box-using-ui-automation.md)
+- [Trovare ed evidenziare il testo utilizzando l'automazione interfaccia utente](find-and-highlight-text-using-ui-automation.md)
+- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
+- [Ottenere attributi di testo mediante l'automazione interfaccia utente](obtain-text-attributes-using-ui-automation.md)

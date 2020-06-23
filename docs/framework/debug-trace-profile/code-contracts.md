@@ -1,5 +1,6 @@
 ---
 title: Contratti di codice
+description: Esplorare i contratti di codice, che consentono di specificare precondizioni, postcondizioni e invarianti di oggetti nel codice .NET.
 ms.date: 09/05/2018
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-ms.openlocfilehash: b60f992cf9d934ed622c89a49c491a80377fb6fe
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 60f794373af75bd3f745c224e0a8c7a84192e4c4
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216708"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904143"
 ---
 # <a name="code-contracts"></a>Contratti di codice
 
@@ -67,7 +68,7 @@ if (x == null) throw new ...
 Contract.EndContractBlock(); // All previous "if" checks are preconditions
 ```
 
-La condizione nel test precedente è una precondizione negata. La precondizione effettiva verrebbe `x != null`. Una precondizione negata è altamente limitata: deve essere scritta come mostrato nell'esempio precedente; ovvero non deve contenere clausole `else` e il corpo della clausola `then` deve essere una singola istruzione `throw`. Il test `if` è soggetto a regole di purezza e visibilità (vedere [Linee guida di utilizzo](#usage_guidelines)), ma l'espressione `throw` è soggetta solo a regole di purezza. Tuttavia, il tipo dell'eccezione generata deve essere visibile quanto il metodo in cui si verifica il contratto.
+La condizione nel test precedente è una precondizione negata. La precondizione effettiva è `x != null` . Una precondizione negata è altamente limitata: deve essere scritta come mostrato nell'esempio precedente; ovvero non deve contenere `else` clausole e il corpo della `then` clausola deve essere un'unica `throw` istruzione. Il test `if` è soggetto a regole di purezza e visibilità (vedere [Linee guida di utilizzo](#usage_guidelines)), ma l'espressione `throw` è soggetta solo a regole di purezza. Tuttavia, il tipo dell'eccezione generata deve essere visibile quanto il metodo in cui si verifica il contratto.
 
 ## <a name="postconditions"></a>Postconditions
 
@@ -101,7 +102,7 @@ I seguenti metodi possono essere usati solo all'interno di postcondizioni:
 
 - È possibile fare riferimento ai valori restituiti dai metodi nelle postcondizioni usando l'espressione `Contract.Result<T>()`, dove `T` viene sostituito dal tipo restituito del metodo. Quando il compilatore non è in grado di dedurre il tipo, è necessario fornirlo in modo esplicito. Il compilatore C#, ad esempio, non è in grado di dedurre i tipi per i metodi che non accettano argomenti, pertanto richiede la seguente postcondizione: `Contract.Ensures(0 <Contract.Result<int>())`. I metodi con un tipo restituito `void` non possono fare riferimento a `Contract.Result<T>()` nelle relative postcondizioni.
 
-- Un valore di prestato in una postcondizione fa riferimento al valore di un'espressione all'inizio di un metodo o di una proprietà. Usa l'espressione `Contract.OldValue<T>(e)`, dove `T` è il tipo di `e`. È possibile omettere l'argomento di tipo generico quando il compilatore è in grado di dedurre il tipo. Ad esempio, il C# compilatore deduce sempre il tipo perché accetta un argomento. Esistono diverse restrizioni su ciò che può verificarsi in `e` e i contesti in cui può essere visualizzata un'espressione precedente. Un'espressione Old non può contenere un'altra espressione Old. In particolare, un'espressione Old deve fare riferimento a un valore esistente nello stato di precondizione del metodo. In altre parole, deve essere un'espressione valutabile finché la precondizione del metodo resta `true`. Di seguito sono riportate diverse istanze di questa regola.
+- Un valore di prestato in una postcondizione fa riferimento al valore di un'espressione all'inizio di un metodo o di una proprietà. Usa l'espressione `Contract.OldValue<T>(e)`, dove `T` è il tipo di `e`. È possibile omettere l'argomento di tipo generico quando il compilatore è in grado di dedurre il tipo. Ad esempio, il compilatore C# deduce sempre il tipo perché accetta un argomento. Esistono diverse restrizioni su ciò che può verificarsi in `e` e i contesti in cui può apparire un'espressione precedente. Un'espressione Old non può contenere un'altra espressione Old. In particolare, un'espressione Old deve fare riferimento a un valore esistente nello stato di precondizione del metodo. In altre parole, deve essere un'espressione valutabile finché la precondizione del metodo resta `true`. Di seguito sono riportate diverse istanze di questa regola.
 
   - Il valore deve esistere nello stato di precondizione del metodo. Per fare riferimento a un campo in un oggetto, le precondizioni devono garantire che l'oggetto sia sempre non null.
 
@@ -145,7 +146,7 @@ I seguenti metodi possono essere usati solo all'interno di postcondizioni:
       Come per il metodo <xref:System.Diagnostics.Contracts.Contract.OldValue%2A>, è possibile omettere il parametro di tipo generico quando il compilatore è in grado di dedurre il tipo. Il rewriter del contratto sostituisce la chiamata al metodo con il valore del parametro `out`. Il metodo <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> può essere visualizzato solo nelle postcondizioni. L'argomento del metodo deve essere un parametro `out` o un campo del parametro `out` di una struttura. Quest'ultimo è utile anche in caso di riferimento a campi nella postcondizione di un costruttore della struttura.
 
       > [!NOTE]
-      > Attualmente, gli strumenti di analisi dei contratti di codice non verificano se i parametri `out` vengono inizializzati correttamente e ne ignorano la menzione nella postcondizione. Quindi, nell'esempio precedente, se la riga dopo il contratto avesse usato il valore `x` anziché assegnare un numero intero, un compilatore non avrebbe generato l'errore corretto. Tuttavia, in una build in cui il simbolo del preprocessore CONTRACTS_FULL non viene definito (ad esempio una build di rilascio), il compilatore genererà un errore.
+      > Attualmente, gli strumenti di analisi dei contratti di codice non verificano se i parametri `out` vengono inizializzati correttamente e ne ignorano la menzione nella postcondizione. Quindi, nell'esempio precedente, se la riga dopo il contratto avesse usato il valore `x` anziché assegnare un numero intero, un compilatore non avrebbe generato l'errore corretto. Tuttavia, in una build in cui il simbolo del preprocessore CONTRACTS_FULL non viene definito (ad esempio in una build di rilascio), il compilatore genererà un errore.
 
 ## <a name="invariants"></a>Invarianti
 
@@ -163,7 +164,7 @@ protected void ObjectInvariant ()
 }
 ```
 
-Le invarianti vengono definite in modo condizionale dal simbolo del preprocessore CONTRACTS_FULL. Durante il controllo in fase di esecuzione, le invarianti vengono controllate alla fine di ogni metodo pubblico. Se un'invariante menziona un metodo pubblico nella stessa classe, il controllo dell'invariante che avverrebbe normalmente alla fine di tale metodo viene disabilitato. Al contrario, il controllo viene eseguito solo alla fine della chiamata al metodo più esterna in quella classe. Ciò avviene anche se la classe viene immessa di nuovo a causa di una chiamata a un metodo in un'altra classe. Gli invarianti non vengono controllati per un finalizzatore di oggetti e un'implementazione di <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>.
+Le invarianti vengono definite in modo condizionale dal simbolo del preprocessore CONTRACTS_FULL. Durante il controllo in fase di esecuzione, le invarianti vengono controllate alla fine di ogni metodo pubblico. Se un'invariante menziona un metodo pubblico nella stessa classe, il controllo dell'invariante che avverrebbe normalmente alla fine di tale metodo viene disabilitato. Al contrario, il controllo viene eseguito solo alla fine della chiamata al metodo più esterna in quella classe. Ciò avviene anche se la classe viene immessa di nuovo a causa di una chiamata a un metodo in un'altra classe. Per gli invarianti non viene verificata la presenza di un finalizzatore di oggetti e di un' <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementazione.
 
 <a name="usage_guidelines"></a>
 
@@ -206,7 +207,7 @@ Gli strumenti dei contratti di codice presuppongono che i seguenti elementi di c
 
 ### <a name="visibility"></a>Visibilità
 
-Tutti i membri menzionati in un contratto devono essere visibili almeno quanto il metodo in cui vengono visualizzati. Un campo privato, ad esempio, non può essere menzionato in una precondizione per un metodo pubblico; i client non possono convalidare un simile contratto prima di chiamare il metodo. Tuttavia, se il campo è contrassegnato con <xref:System.Diagnostics.Contracts.ContractPublicPropertyNameAttribute>, è esente da queste regole.
+Tutti i membri menzionati in un contratto devono essere visibili almeno quanto il metodo in cui vengono visualizzati.  Un campo privato, ad esempio, non può essere menzionato in una precondizione per un metodo pubblico; i client non possono convalidare un simile contratto prima di chiamare il metodo. Tuttavia, se il campo è contrassegnato con <xref:System.Diagnostics.Contracts.ContractPublicPropertyNameAttribute>, è esente da queste regole.
 
 ## <a name="example"></a>Esempio
 

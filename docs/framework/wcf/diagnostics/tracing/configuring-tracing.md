@@ -1,15 +1,16 @@
 ---
 title: Configurazione delle funzionalità di traccia
+description: Informazioni su come abilitare la traccia, configurare le origini di traccia, impostare la traccia e la propagazione delle attività e impostare i listener di traccia per accedere alle tracce in WCF.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 2fbe5b48a9405c9236923ffec268683bdf570831
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 55d701ee6769099698d2fd869a1502d94237b5a8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579007"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245349"
 ---
 # <a name="configuring-tracing"></a>Configurazione delle funzionalità di traccia
 In questo argomento viene illustrato come attivare la funzionalità di traccia, configurare origini di traccia affinché vengano create tracce e impostati livelli di traccia, impostare traccia e propagazione di attività per supportare la correlazione tra tracce end-to-end e configurare i listener di traccia affinché accedano alle tracce.  
@@ -32,7 +33,7 @@ In questo argomento viene illustrato come attivare la funzionalità di traccia, 
   
  Se si usano punti di estendibilità WCF, ad esempio invoker di operazioni personalizzati, è necessario creare tracce personalizzate. Questo perché se si implementa un punto di estendibilità, WCF non può più creare le tracce standard nel percorso predefinito. Se non si implementa il supporto della traccia manuale creando tracce, è possibile che le tracce previste non vengano visualizzate.  
   
- È possibile configurare la traccia modificando il file di configurazione dell'applicazione, Web. config per le applicazioni ospitate sul Web o Appname. exe. config per le applicazioni indipendenti. Di seguito è riportato un esempio di modifica applicabile. Per ulteriori informazioni su queste impostazioni, vedere la sezione "configurazione dei listener di traccia per l'utilizzo di tracce".  
+ È possibile configurare la traccia modificando il file di configurazione dell'applicazione, Web.config per le applicazioni ospitate sul Web o Appname.exe.config per le applicazioni indipendenti. Di seguito è riportato un esempio di modifica applicabile. Per ulteriori informazioni su queste impostazioni, vedere la sezione "configurazione dei listener di traccia per l'utilizzo di tracce".  
   
 ```xml  
 <configuration>  
@@ -53,7 +54,7 @@ In questo argomento viene illustrato come attivare la funzionalità di traccia, 
 ```  
   
 > [!NOTE]
-> Per modificare il file di configurazione di un progetto di servizio WCF in Visual Studio, fare clic con il pulsante destro del mouse sul file di configurazione dell'applicazione, ovvero Web. config per le applicazioni ospitate sul Web o Appname. exe. config per l'applicazione self-hosted in **Esplora soluzioni**. Scegliere quindi la voce del menu di scelta rapida **modifica configurazione WCF** . Verrà avviato lo [strumento Editor di configurazione (SvcConfigEditor. exe)](../../configuration-editor-tool-svcconfigeditor-exe.md), che consente di modificare le impostazioni di configurazione per i servizi WCF usando un'interfaccia utente grafica.  
+> Per modificare il file di configurazione di un progetto di servizio WCF in Visual Studio, fare clic con il pulsante destro del mouse sul file di configurazione dell'applicazione, Web.config per le applicazioni ospitate sul Web o Appname.exe.config per l'applicazione self-hosted in **Esplora soluzioni**. Scegliere quindi la voce del menu di scelta rapida **modifica configurazione WCF** . Verrà avviato lo [strumento Editor di configurazione (SvcConfigEditor.exe)](../../configuration-editor-tool-svcconfigeditor-exe.md), che consente di modificare le impostazioni di configurazione per i servizi WCF usando un'interfaccia utente grafica.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Configurazione delle origini di traccia per la generazione di tracce  
  WCF definisce un'origine di traccia per ogni assembly. I listener definiti per tale origine accedono alle tracce generate all'interno di un assembly. Vengono definite le origini di traccia seguenti:  

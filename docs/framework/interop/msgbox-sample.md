@@ -1,5 +1,6 @@
 ---
 title: Esempio di MsgBox
+description: Vedere un esempio di passaggio di tipi stringa per valori come nei parametri usando MsgBox. Mostra quando usare i campi EntryPoint, CharSet e ExactSpelling in .NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - marshaling, MsgBox sample
 - data marshaling, MsgBox sample
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
-ms.openlocfilehash: b970a5a193f82ca141c030491febce5ef352eb70
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccf882e1f801dd18e5b65a4279fc580d927dd29d
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181354"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904091"
 ---
 # <a name="msgbox-sample"></a>Esempio di MsgBox
 Questo esempio illustra come passare i tipi stringa per valore come parametri in e quando usare i campi <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> e <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>.  

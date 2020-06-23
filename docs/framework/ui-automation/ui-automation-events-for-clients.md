@@ -1,16 +1,17 @@
 ---
 title: Eventi di automazione interfaccia utente per i client
+description: Informazioni su come gli eventi di automazione interfaccia utente Microsoft vengono usati dai client di automazione interfaccia utente in .NET. Automazione interfaccia utente consente ai client di sottoscrivere gli eventi di interesse.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: d7105e9211c35e7d6125c3017e8b4b829a25b128
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 84568cf228a30535ec603cdad5bddbfd5697be0a
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179910"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903740"
 ---
 # <a name="ui-automation-events-for-clients"></a>Eventi di automazione interfaccia utente per i client
 > [!NOTE]
@@ -23,9 +24,9 @@ ms.locfileid: "79179910"
  Una maggiore efficienza è ottenuta anche grazie alla possibilità di restare in ascolto di eventi solo in un ambito definito. Un client, ad esempio, può restare in ascolto di eventi di modifica dello stato attivo per tutti gli elementi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dell'albero o solo per un elemento e i relativi discendenti.  
   
 > [!NOTE]
-> Non presupporre che tutti i possibili eventi vengano generati da un provider di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Ad esempio, non tutte le modifiche alle proprietà causano la generato di eventi dai provider proxy standard per i controlli Windows Form e Win32.For example, not all property changes cause events to be raised by the standard proxy providers for Windows Forms and Win32 controls.  
+> Non presupporre che tutti i possibili eventi vengano generati da un provider di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Non tutte le modifiche alle proprietà, ad esempio, determinano la generazione di eventi da parte dei provider proxy standard per i controlli Windows Forms e Win32.  
   
- Per una visualizzazione [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] più ampia degli eventi, vedere [Cenni preliminari sugli eventi di automazione interfaccia utente.](ui-automation-events-overview.md)  
+ Per una visualizzazione più ampia degli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] eventi, vedere [Panoramica degli eventi di automazione interfaccia utente](ui-automation-events-overview.md).  
   
 <a name="Subscribing_to_Events"></a>
 ## <a name="subscribing-to-events"></a>Sottoscrizione di eventi  
@@ -55,7 +56,7 @@ ms.locfileid: "79179910"
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|Annulla la registrazione di un gestore eventi che era stato registrato usando <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>.|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|Annulla la registrazione di tutti i gestori eventi registrati.|  
   
- Per il codice di esempio, vedere [Subscribe to UI Automation Events](subscribe-to-ui-automation-events.md).  
+ Per un esempio di codice, vedere [sottoscrivere eventi di automazione interfaccia utente](subscribe-to-ui-automation-events.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

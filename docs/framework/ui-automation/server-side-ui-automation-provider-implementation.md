@@ -1,17 +1,18 @@
 ---
 title: Implementazione del provider di automazione interfaccia utente lato server
+description: Informazioni su come implementare un provider di automazione interfaccia utente sul lato server per un controllo personalizzato in .NET. L'implementazione per gli elementi WPF e non WPF è diversa.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - server-side UI Automation provider implementation
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 8a52d84f7152b9cb431ad0aa97c88b143463be2d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ea1b5e668e29d854233d4dde4c0e6152d591da97
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789620"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903896"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementazione del provider di automazione interfaccia utente lato server
 
@@ -20,11 +21,11 @@ ms.locfileid: "76789620"
 
 In questa sezione viene descritto come implementare un provider di automazione interfaccia utente sul lato server per un controllo personalizzato.
 
-L'implementazione per gli elementi Windows Presentation Foundation (WPF) e gli elementi non WPF (ad esempio quelli progettati per Windows Forms) è fondamentalmente diversa. Gli elementi WPF forniscono supporto per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tramite una classe derivata da <xref:System.Windows.Automation.Peers.AutomationPeer>. Gli elementi non WPF forniscono supporto tramite implementazioni di interfacce del provider.
+L'implementazione per gli elementi Windows Presentation Foundation (WPF) e gli elementi non WPF (ad esempio quelli progettati per Windows Forms) è fondamentalmente diversa. Gli elementi WPF forniscono supporto per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tramite una classe derivata da <xref:System.Windows.Automation.Peers.AutomationPeer> . Gli elementi non WPF forniscono supporto tramite implementazioni di interfacce del provider.
 
 <a name="Security_Considerations"></a>
 
-## <a name="security-considerations"></a>Considerazioni sulla sicurezza
+## <a name="security-considerations"></a>Considerazioni relative alla sicurezza
 
 I provider devono essere scritti in modo che possano operare in un ambiente parzialmente attendibile. Dato che UIAutomationClient.dll non è configurato per l'esecuzione con attendibilità parziale, il codice del provider non dovrebbe fare riferimento a tale assembly. In caso contrario, il codice potrebbe essere eseguito in un ambiente con attendibilità completa, ma poi generare errori in un ambiente parzialmente attendibile.
 
@@ -40,7 +41,7 @@ Per altre informazioni su questo argomento, vedere [Automazione interfaccia uten
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>Implementazione di provider da elementi non WPF
 
-I controlli personalizzati che non fanno parte del framework WPF, ma che sono scritti in codice gestito (spesso si tratta di controlli Windows Forms), forniscono supporto per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] mediante l'implementazione di interfacce. Ogni elemento deve implementare almeno una delle interfacce elencate nella prima tabella nella sezione successiva. Inoltre, se l'elemento supporta uno o più pattern di controllo, deve implementare l'interfaccia appropriata per ognuno di essi.
+I controlli personalizzati che non fanno parte del framework WPF, ma che sono scritti in codice gestito (spesso si tratta di controlli Windows Forms), offrono il supporto per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tramite l'implementazione di interfacce. Ogni elemento deve implementare almeno una delle interfacce elencate nella prima tabella nella sezione successiva. Inoltre, se l'elemento supporta uno o più pattern di controllo, deve implementare l'interfaccia appropriata per ognuno di essi.
 
 Il progetto del provider [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] deve fare riferimento agli assembly seguenti:
 
@@ -59,8 +60,8 @@ Ogni provider [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-ui
 |Interfaccia|Descrizione|
 |---------------|-----------------|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>|Fornisce funzionalità per un controllo semplice ospitato in una finestra, incluso il supporto per pattern di controllo e proprietà.|
-|<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|Eredita da <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>. Aggiunge la funzionalità per un elemento in un controllo complesso, inclusi lo spostamento all'interno del frammento, l'impostazione dello stato attivo e la restituzione del rettangolo delimitatore dell'elemento.|
-|<xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>|Eredita da <xref:System.Windows.Automation.Provider.IRawElementProviderFragment>. Aggiunge la funzionalità per l'elemento radice in un controllo complesso, inclusi l'individuazione di un elemento figlio in corrispondenza delle coordinate specificate e l'impostazione dello stato attivo per l'intero controllo.|
+|<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|Eredita dall'oggetto <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>. Aggiunge la funzionalità per un elemento in un controllo complesso, inclusi lo spostamento all'interno del frammento, l'impostazione dello stato attivo e la restituzione del rettangolo delimitatore dell'elemento.|
+|<xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>|Eredita dall'oggetto <xref:System.Windows.Automation.Provider.IRawElementProviderFragment>. Aggiunge la funzionalità per l'elemento radice in un controllo complesso, inclusi l'individuazione di un elemento figlio in corrispondenza delle coordinate specificate e l'impostazione dello stato attivo per l'intero controllo.|
 
 Le interfacce seguenti offrono ulteriori funzionalità, ma la loro implementazione non è richiesta.
 
@@ -115,9 +116,9 @@ I provider per i controlli basati su HWND in genere non richiedono di specificar
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>
 
 > [!NOTE]
-> Il valore <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> di un elemento semplice o di una radice di frammento ospitato in una finestra viene ottenuto dalla finestra. Tuttavia, gli elementi del frammento sotto la radice (ad esempio voci di elenco in una casella di riepilogo) devono fornire i propri identificatori. Per ulteriori informazioni, vedere <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
+> Il valore <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> di un elemento semplice o di una radice di frammento ospitato in una finestra viene ottenuto dalla finestra. Tuttavia, gli elementi del frammento sotto la radice (ad esempio voci di elenco in una casella di riepilogo) devono fornire i propri identificatori. Per altre informazioni, vedere <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
 >
-> Il <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> deve essere restituito per i provider ospitati in un controllo Windows Forms. In questo caso, il provider di finestra predefinito potrebbe non essere in grado di recuperare il valore corretto.
+> <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>Deve essere restituito per i provider ospitati in un controllo Windows Forms. In questo caso, il provider di finestra predefinito potrebbe non essere in grado di recuperare il valore corretto.
 >
 > Il valore <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> viene in genere fornito dal provider host. Ad esempio, se un controllo personalizzato è derivato da <xref:System.Windows.Forms.Control>, il nome è derivato dalla proprietà `Text` del controllo.
 
@@ -191,9 +192,9 @@ A tale scopo, il provider di radice del frammento per il controllo Rebar espone 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica dei provider di automazione interfaccia utente](ui-automation-providers-overview.md)
+- [Cenni preliminari sui provider di automazione interfaccia utente](ui-automation-providers-overview.md)
 - [Esporre un provider di automazione interfaccia utente lato server](expose-a-server-side-ui-automation-provider.md)
 - [Restituire proprietà da un provider di automazione interfaccia utente](return-properties-from-a-ui-automation-provider.md)
 - [Generare eventi da un provider di automazione interfaccia utente](raise-events-from-a-ui-automation-provider.md)
-- [Abilitare la navigazione in un provider di frammenti di automazione interfaccia utente](enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [Consentire la navigazione in un provider di frammenti di automazione interfaccia utente](enable-navigation-in-a-ui-automation-fragment-provider.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)

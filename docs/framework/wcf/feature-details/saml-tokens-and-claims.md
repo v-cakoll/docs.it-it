@@ -1,5 +1,6 @@
 ---
 title: Attestazioni e token SAML
+description: Informazioni su come WFC usa i token SAML per includere istruzioni che sono set di attestazioni effettuate da un'entità su un'altra entità.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: 6220365d5c43299a75d1e0fa8e46a7392b0ccaa2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c054e594af69def96879852a5145675b3123614a
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590371"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244946"
 ---
 # <a name="saml-tokens-and-claims"></a>Attestazioni e token SAML
 I *token* SAML (Security Assertion Markup Language) sono rappresentazioni XML di attestazioni. Per impostazione predefinita, i token SAML Windows Communication Foundation (WCF) usano negli scenari di sicurezza federati vengono *emessi token*.  

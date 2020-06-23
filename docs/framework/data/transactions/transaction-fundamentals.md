@@ -1,13 +1,14 @@
 ---
 title: Nozioni fondamentali sulle transazioni
+description: Esaminare le nozioni fondamentali sulle transazioni in .NET. Tutte le transazioni devono possedere le proprietà ACID di base (atomicità, coerenza, isolamento e durabilità).
 ms.date: 03/30/2017
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
-ms.openlocfilehash: ed5865121a32f05f9b58c0ca0fca475fe7b98723
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 49292172b07985d379bfa5d520798d7d97af5749
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346211"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141939"
 ---
 # <a name="transaction-fundamentals"></a>Nozioni fondamentali sulle transazioni
 Le transazioni consentono di associare più attività fra loro. Ad esempio, si supponga che un'applicazione esegua due attività. La prima consiste nel creare una nuova tabella in un database. La seconda consiste nel chiamare un oggetto specifico per raccogliere, formattare e inserire dati nella nuova tabella. Queste due attività sono correlate e persino interdipendenti, nel senso che la creazione di una tabella deve avvenire esclusivamente quando sono disponibili dei dati con cui riempirla. L'esecuzione di entrambe le attività nell'ambito di un'unica transazione ne garantisce la correlazione. Se si verifica un errore nella seconda attività, il sistema esegue il rollback della prima attività a un punto precedente alla creazione della nuova tabella.  
@@ -20,9 +21,9 @@ Le transazioni consentono di associare più attività fra loro. Ad esempio, si s
   
  Quando si sviluppa un'applicazione transazionale utilizzando le classi fornite dallo spazio dei nomi <xref:System.Transactions> non è necessario gestire manualmente i tipi di transazione da utilizzare o determinare la gestione transazioni coinvolta, in quanto queste problematiche vengono gestite automaticamente dall'infrastruttura <xref:System.Transactions>.  
   
- Quando si crea una transazione è possibile specificarne il livello di isolamento. Il livello di isolamento, definito dal <xref:System.Transactions.IsolationLevel> enum, determina il livello di accesso che altre transazioni avranno sui dati interessati dalla transazione.  
+ Quando si crea una transazione è possibile specificarne il livello di isolamento. Il livello di isolamento, definito dall' <xref:System.Transactions.IsolationLevel> enumerazione, determina il livello di accesso che altre transazioni avranno sui dati interessati dalla transazione.  
   
- È possibile creare transazioni utilizzando ADO.NET, <xref:System.EnterpriseServices>o il modello di programmazione transazionale fornito dallo spazio dei nomi <xref:System.Transactions>. Nell'argomento [funzionalità fornite da System. Transactions](features-provided-by-system-transactions.md) vengono illustrate le funzionalità che è possibile utilizzare per scrivere un'applicazione transazionale utilizzando lo spazio dei nomi <xref:System.Transactions>.  
+ È possibile creare transazioni utilizzando ADO.NET, <xref:System.EnterpriseServices> o il modello di programmazione transazionale fornito dallo <xref:System.Transactions> spazio dei nomi. Nell'argomento [funzionalità fornite da System. Transactions](features-provided-by-system-transactions.md) vengono illustrate le funzionalità che è possibile utilizzare per scrivere un'applicazione transazionale utilizzando lo <xref:System.Transactions> spazio dei nomi.  
   
 ## <a name="see-also"></a>Vedere anche
 

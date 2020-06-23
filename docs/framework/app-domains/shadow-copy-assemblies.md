@@ -1,17 +1,18 @@
 ---
 title: Creazione di copie replicate di assembly
+description: Esplorare la copia shadow degli assembly in .NET, in modo che quelli usati in un dominio dell'applicazione possano essere aggiornati senza scaricare il dominio dell'applicazione.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], shadow copying
 - application domains, shadow copying assemblies
 - shadow copying assemblies
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
-ms.openlocfilehash: 9fc8a4aeeeca40f71ed9114a9db40b9a56e5fe6b
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: a7ff72763dd26dbc50cd37e070c2d25ababa00f3
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204567"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104559"
 ---
 # <a name="shadow-copying-assemblies"></a>Creazione di copie replicate di assembly
 
@@ -74,7 +75,7 @@ All'avvio di un dominio applicazione che usa la creazione di copie shadow, si ve
 
 A partire da .NET Framework 4, il comportamento di avvio predefinito consiste nel confrontare direttamente la data e l'ora del file di ogni assembly nella directory dell'applicazione con la data e l'ora della copia nella directory della copia shadow. Se l'assembly è stato aggiornato, viene copiato usando la stessa procedura adottata nelle versioni precedenti di .NET Framework. In caso contrario, viene caricata la copia nella directory della copia shadow.
 
-Il miglioramento delle prestazioni risultante è maggiore per le applicazioni in cui gli assembly non vengono modificati di frequente e le modifiche vengono apportate in genere in un piccolo subset di assembly. Se la maggior parte degli assembly in un'applicazione viene modificata frequentemente, il nuovo comportamento predefinito potrebbe causare una regressione delle prestazioni. È possibile ripristinare il comportamento di avvio delle versioni precedenti del .NET Framework aggiungendo l' [ \<elemento> shadowCopyVerifyByTimestamp](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) al file di configurazione con `enabled="false"`.
+Il miglioramento delle prestazioni risultante è maggiore per le applicazioni in cui gli assembly non vengono modificati di frequente e le modifiche vengono apportate in genere in un piccolo subset di assembly. Se la maggior parte degli assembly in un'applicazione viene modificata frequentemente, il nuovo comportamento predefinito potrebbe causare una regressione delle prestazioni. È possibile ripristinare il comportamento di avvio delle versioni precedenti del .NET Framework aggiungendo l' [ \<shadowCopyVerifyByTimestamp> elemento](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) al file di configurazione con `enabled="false"` .
 
 <a name="ObsoleteMethods"></a>
 
@@ -88,4 +89,4 @@ La classe <xref:System.AppDomain> include diversi metodi, ad esempio <xref:Syste
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
-- [\<Elemento> shadowCopyVerifyByTimestamp](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+- [\<shadowCopyVerifyByTimestamp>Elemento](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)

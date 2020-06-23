@@ -1,5 +1,6 @@
 ---
-title: Connection.m_WriteList Campo
+title: Connection. m_WriteList campo
+description: Ottenere informazioni sul campo Connection. m_WriteList in .NET. Questo campo ArrayList include oggetti HttpWebRequest accodati per essere inviati tramite HTTP.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 235503c1-1d01-4f59-895f-ae2cf15b3345
-ms.openlocfilehash: 6c60831ddf23ce8ac9afcf244383d24732c3ef8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a627cb062036e3ab098c2d6e97f9a77ebfa75a33
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155837"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989596"
 ---
-# <a name="connectionm_writelist-field"></a>Connection.m\_WriteList Campo
+# <a name="connectionm_writelist-field"></a>Campo writeback di Connection. m \_
 
-`Connection.m_WriteList`è <xref:System.Collections.ArrayList> un <xref:System.Net.HttpWebRequest> oggetto che viene accodato per essere inviato tramite HTTP.
+`Connection.m_WriteList`è un oggetto <xref:System.Collections.ArrayList> di <xref:System.Net.HttpWebRequest> oggetti accodati per essere inviati tramite http.
 
 ## <a name="syntax"></a>Sintassi
   
@@ -28,14 +29,14 @@ private ArrayList m_WriteList
 ```
 
 > [!WARNING]
-> Il `Connection.m_WriteList` campo è privato e non deve essere utilizzato direttamente nel codice.
+> Il `Connection.m_WriteList` campo è privato e non è destinato a essere usato direttamente nel codice.
 >
-> Microsoft non supporta in nessun caso l'utilizzo di questo campo in un'applicazione di produzione.
+> Microsoft non supporta l'utilizzo di questo campo in un'applicazione di produzione in qualsiasi circostanza.
 
 ## <a name="requirements"></a>Requisiti
 
-**Spazio dei nomi:**<xref:System.Net>
+**Spazio dei nomi:** <xref:System.Net>
 
-**Assemblaggio:** Sistema (in System.dll)
+**Assembly:** Sistema (in System.dll)
 
-Versioni di **.NET Framework:** Disponibile dalla 2.0.
+**Versioni .NET Framework:** Disponibile a partire da 2,0.

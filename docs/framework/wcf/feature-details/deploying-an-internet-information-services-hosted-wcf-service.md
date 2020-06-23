@@ -1,13 +1,14 @@
 ---
 title: Distribuzione di un servizio WCF ospitato in Internet Information Services (IIS)
+description: Informazioni sulle attività necessarie per lo sviluppo e la distribuzione di un servizio WCF ospitato in IIS, a partire dalla verifica dell'installazione dei componenti
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 826a8798ada8f04173b047dc27829c384f79e2b8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 886fd9b8d8cf3059b1fd8679c5dd89ee015f2adf
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599243"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245093"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Distribuzione di un servizio WCF ospitato in Internet Information Services (IIS)
 
@@ -35,7 +36,7 @@ Per istruzioni sull'installazione di IIS in altri sistemi operativi, vedere [ins
 
 Il processo di installazione di .NET Framework registra automaticamente WCF con IIS se IIS è già presente nel computer. Se IIS viene installato dopo l'.NET Framework, è necessario eseguire un passaggio aggiuntivo per registrare WCF con IIS e ASP.NET. A tal fine, è possibile procedere come segue, a seconda del sistema operativo:
 
-- Windows 7 e Windows Server 2003: usare lo strumento di [registrazione ServiceModel (ServiceModelReg. exe)](../servicemodelreg-exe.md) per registrare WCF con IIS. Per usare questo strumento, digitare **ServiceModelReg. exe/i/x** nell' [prompt dei comandi per gli sviluppatori per Visual Studio](../../tools/developer-command-prompt-for-vs.md).
+- Windows 7 e Windows Server 2003: usare lo strumento di [registrazione ServiceModel (ServiceModelReg.exe)](../servicemodelreg-exe.md) per registrare WCF con IIS. Per usare questo strumento, digitare **ServiceModelReg.exe/i/x** nell' [prompt dei comandi per gli sviluppatori per Visual Studio](../../tools/developer-command-prompt-for-vs.md).
 
 - Windows 7: Infine, è necessario verificare che ASP.NET sia configurato per l'uso di .NET Framework versione 4 o successiva. A tale scopo, eseguire lo strumento ASPNET_Regiis con l' `–i` opzione. Per ulteriori informazioni, vedere [ASP.NET IIS Registration Tool](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)).
 
@@ -75,7 +76,7 @@ Per ulteriori informazioni sul modello di compilazione ASP.NET 2,0, vedere [Cenn
 
 ## <a name="configure-the-wcf-service"></a>Configurare il servizio WCF
 
-I servizi WCF ospitati in IIS memorizzano la propria configurazione nel file Web. config delle applicazioni. I servizi ospitati in IIS utilizzano gli stessi elementi di configurazione e la stessa sintassi dei servizi WCF ospitati all'esterno di IIS. I vincoli seguenti sono tuttavia specifici per l'ambiente host IIS:
+I servizi WCF ospitati in IIS memorizzano la propria configurazione nel file di Web.config applicazioni. I servizi ospitati in IIS utilizzano gli stessi elementi di configurazione e la stessa sintassi dei servizi WCF ospitati all'esterno di IIS. I vincoli seguenti sono tuttavia specifici per l'ambiente host IIS:
 
 - Indirizzi di base per i servizi ospitati in IIS.
 

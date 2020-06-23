@@ -1,5 +1,6 @@
 ---
-title: Metodo XpsDocumentWriter.raise__WritingCompleted (System.Windows.Xps)
+title: Metodo XpsDocumentWriter. raise__WritingCompleted (System. Windows. Xps)
+description: Comprendere il Metodo XpsDocumentWriter. raise__WritingCompleted, che genera l'evento WritingCompleted per un documento XPS (XML Paper Specification) in .NET.
 TOCTitle: raise__WritingCompleted Method
 ms.date: 12/12/2007
 api_location:
@@ -10,14 +11,14 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 5d4c11b20624b543ee5c366f5da15afb573fb22d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 287fa2286c7acd5061672453c5be11c3ff34ca80
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155674"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105240"
 ---
-# <a name="xpsdocumentwriterraise__writingcompleted-method"></a>Metodo WritingCompleted di\_\_XpsDocumentWriter.raise
+# <a name="xpsdocumentwriterraise__writingcompleted-method"></a>XpsDocumentWriter. Raise, \_ \_ Metodo WritingCompleted
 
 Genera l'evento <xref:System.Windows.Xps.XpsDocumentWriter.WritingCompleted>.
 
@@ -38,8 +39,8 @@ public void raise__WritingCompleted (object value0,
 
 ## <a name="requirements"></a>Requisiti
 
-**Spazio dei nomi:**<xref:System.Windows.Xps>
+**Spazio dei nomi:** <xref:System.Windows.Xps>
 
-**Assemblaggio:** System.Printing (in system.printing.dll)
+**Assembly:** System. Printing (in system.printing.dll)
 
-Versioni di **.NET Framework:** 3.0
+**Versioni .NET Framework:** 3,0

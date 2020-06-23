@@ -1,16 +1,17 @@
 ---
 title: "Procedura: implementare un'operazione del servizio asincrona"
+description: Informazioni sulla struttura di un'operazione asincrona del servizio in WFC. Un'operazione del servizio può essere implementata in modo asincrono o sincrono.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-ms.openlocfilehash: fd7a1399dd575ad1a4b6c95e0e0510670eb13b51
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 5f890bd5124e2353cecee37d163b7f2c65b87fde
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802299"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244621"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Procedura: implementare un'operazione del servizio asincrona
 Nelle applicazioni Windows Communication Foundation (WCF) un'operazione del servizio può essere implementata in modo asincrono o sincrono senza che venga dettata la modalità di chiamata del client. Ad esempio, le operazioni asincrone del servizio possono essere chiamate in modo sincrono e le operazioni sincrone del servizio possono essere chiamate in modo asincrono. Per un esempio in cui viene illustrato come chiamare un'operazione in modo asincrono in un'applicazione client, vedere [procedura: chiamare operazioni del servizio in modo asincrono](./feature-details/how-to-call-wcf-service-operations-asynchronously.md). Per ulteriori informazioni sulle operazioni sincrone e asincrone, vedere [progettazione di contratti di servizio](designing-service-contracts.md) e [operazioni sincrone e asincrone](synchronous-and-asynchronous-operations.md). In questo argomento viene descritta la struttura di base di un'operazione del servizio asincrona (il codice non è completo). Per un esempio completo del lato client e del servizio, vedere [asincrono](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100)).  
@@ -38,7 +39,7 @@ Nelle applicazioni Windows Communication Foundation (WCF) un'operazione del serv
   
     2. Un'operazione `BeginSampleMethod` asincrona.  
   
-    3. Una `BeginServiceAsyncMethod`asincrona /`EndServiceAsyncMethod` operazione.  
+    3. Coppia di `BeginServiceAsyncMethod` / `EndServiceAsyncMethod` operazioni asincrone.  
   
 2. Un'implementazione del servizio tramite un oggetto <xref:System.IAsyncResult?displayProperty=nameWithType>.  
   

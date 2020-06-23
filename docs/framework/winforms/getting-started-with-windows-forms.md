@@ -1,5 +1,6 @@
 ---
-title: Guida introduttiva
+title: Introduzione
+description: Informazioni su come usare Windows Forms per creare potenti applicazioni basate su Windows che visualizzano i dati, gestiscono l'input dell'utente e semplificano la distribuzione delle applicazioni.
 ms.date: 03/30/2017
 f1_keywords:
 - Designer_System.Windows.Forms.Design.FormDocumentDesigner
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - getting started [Windows Forms], Windows Forms
 ms.assetid: a031aa58-5027-4082-b590-df7c12c77dec
-ms.openlocfilehash: c5ea75bf826aa658269ec983b60e9dd2eb520ce0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: ac4f166ca264f2533c5f174273fe60dcb9622a29
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743477"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903597"
 ---
-# <a name="getting-started-with-windows-forms"></a>Introduzione a Windows Form
+# <a name="getting-started-with-windows-forms"></a>Guida introduttiva a Windows Form
 Con Windows Forms è possibile creare potenti applicazioni basate su Windows. Gli argomenti seguenti descrivono in dettaglio come sfruttare la potenza di Windows Forms per visualizzare i dati, gestire l'input dell'utente e distribuire le applicazioni in modo semplice e con una maggiore sicurezza.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
@@ -28,22 +29,22 @@ Con Windows Forms è possibile creare potenti applicazioni basate su Windows. Gl
  [Creazione di gestori eventi in Windows Form](creating-event-handlers-in-windows-forms.md)  
  Contiene collegamenti ad argomenti che descrivono come creare Windows Forms gestori di eventi.  
   
- [Regolazione delle dimensioni e della scala di Windows Form](adjusting-the-size-and-scale-of-windows-forms.md)  
+ [Regolazione delle dimensioni e della scala di Windows Forms](adjusting-the-size-and-scale-of-windows-forms.md)  
  Contiene collegamenti ad argomenti in cui viene illustrato come modificare le dimensioni e la scala dei Windows Forms.  
   
  [Modifica dell'aspetto di Windows Form](changing-the-appearance-of-windows-forms.md)  
  Contiene collegamenti ad argomenti che mostrano come cambiare l'aspetto delle applicazioni Windows Forms.  
   
- [Controlli Windows Form](./controls/index.md)  
+ [Controlli di Windows Forms](./controls/index.md)  
  Contiene collegamenti ad argomenti che illustrano come usare Windows Forms controlli e componenti di.  
   
- [Input dell'utente in Windows Forms](user-input-in-windows-forms.md)  
+ [Input dell'utente in Windows Form](user-input-in-windows-forms.md)  
  Contiene collegamenti ad argomenti che illustrano come gestire l'input dell'utente nelle applicazioni Windows Forms.  
   
  [Finestre di dialogo in Windows Form](dialog-boxes-in-windows-forms.md)  
  Contiene collegamenti ad argomenti che descrivono le diverse finestre di dialogo da utilizzare in Windows Forms.  
   
- [Associazione ai dati di Windows Form](windows-forms-data-binding.md)  
+ [Data binding di Windows Form](windows-forms-data-binding.md)  
  Contiene collegamenti ad argomenti che descrivono l'architettura di data binding Windows Forms e come usarla nelle applicazioni di Windows Forms.  
   
  [Sicurezza di Windows Form](windows-forms-security.md)  
@@ -52,7 +53,7 @@ Con Windows Forms è possibile creare potenti applicazioni basate su Windows. Gl
  [Distribuzione ClickOnce per Windows Form](clickonce-deployment-for-windows-forms.md)  
  Contiene collegamenti ad argomenti in cui viene descritto come distribuire facilmente Windows Forms applicazioni.  
   
- [Procedura: Accedere a raccolte con chiavi in Windows Form](how-to-access-keyed-collections-in-windows-forms.md)  
+ [Procedura: Accedere a raccolte con chiavi in Windows Forms](how-to-access-keyed-collections-in-windows-forms.md)  
  Viene illustrato come accedere alle raccolte con chiavi anziché indici.  
   
 ## <a name="related-sections"></a>Sezioni correlate  

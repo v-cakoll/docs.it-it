@@ -1,0 +1,72 @@
+---
+title: Classe QuotedPairReader (System.Net)
+ms.date: 06/12/2020
+ms.technology: dotnet-networking
+topic_type:
+- apiref
+api_name:
+- System.Net.QuotedPairReader
+- System.Net.QuotedPairReader.CountQuotedChars
+api_location:
+- System.dll
+api_type:
+- Assembly
+ms.openlocfilehash: 9b0bf835a34eecc651894f4336648b73a81b665c
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990375"
+---
+# <a name="quotedpairreader-class"></a>Classe QuotedPairReader
+
+Determina quali caratteri sono racchiusi tra virgolette (di escape) in una stringa racchiusa tra virgolette. Questa classe non può essere ereditata.
+
+```csharp
+internal static class QuotedPairReader
+```
+
+> [!WARNING]
+> Questa classe è interna e non è destinata all'uso diretto nel codice.
+>
+> Microsoft non supporta l'utilizzo di questa classe in un'applicazione di produzione in qualsiasi circostanza.
+
+## <a name="countquotedchars-method"></a>Metodo CountQuotedChars
+
+Conta il numero di caratteri racchiusi tra virgolette consecutive, incluse più barre rovesciate tra virgolette precedenti, nella stringa specificata. Ad esempio, data la stringa `a\\\b` e un indice di `4` , il metodo restituisce `4` , perché `b` è racchiuso tra virgolette, quindi le tre barre rovesciate precedenti.
+
+```csharp
+internal static int CountQuotedChars(string data, int index, bool permitUnicodeEscaping)
+```
+
+### <a name="parameters"></a>Parametri
+
+- `data` <xref:System.String>
+
+  Stringa di dati in cui contare i caratteri tra virgolette consecutive.
+
+- `index` <xref:System.Int32>
+
+  Posizione nella stringa specificata fino a e inclusi i caratteri tra virgolette consecutive da contare.
+
+- `permitUnicodeEscaping` <xref:System.Boolean>
+
+  `true`per consentire l'escape di caratteri Unicode; in caso contrario, `false` .
+
+### <a name="return-value"></a>Valore restituito
+
+<xref:System.Int32?displayProperty=nameWithType>
+
+`0`Se il carattere in corrispondenza dell'indice specificato non è preceduto da un carattere di escape; in caso contrario, il numero di caratteri racchiusi tra virgolette consecutive fino al carattere in `index` .
+
+### <a name="exceptions"></a>Eccezioni
+
+<xref:System.FormatException?displayProperty=nameWithType>
+
+Un carattere Unicode con escape è stato trovato ma non è consentito.
+
+## <a name="requirements"></a>Requisiti
+
+**Spazio dei nomi:** <xref:System.Net>
+
+**Assembly:** Sistema (in System.dll)
