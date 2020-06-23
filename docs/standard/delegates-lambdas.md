@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 43e896bfe267299d3b0cb12a8f71e42fe2c87a88
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 184c9f61fd8456b22e8ecb262c131793160b49b0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280790"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244010"
 ---
 # <a name="delegates-and-lambdas"></a>Delegati e lambda
 
@@ -108,7 +108,7 @@ public class Program
 
 È possibile osservare che il corpo del delegato è costituito da un set di espressioni, come qualsiasi altro delegato. Anziché essere una definizione separata, è stata introdotta _ad hoc_ nella chiamata al <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> metodo.
 
-Anche con questo approccio, tuttavia, rimane una parte considerevole di codice che è possibile eliminare. A tale scopo, vengono usate le *espressioni lambda*. Le espressioni lambda, o solo "lambda", sono state introdotte in C# 3,0 come uno dei componenti fondamentali di Language Integrated Query (LINQ). Si tratta semplicemente una sintassi più pratica per l'uso dei delegati. Dichiarano una firma e il corpo di un metodo, ma non hanno un'identità formale, a meno che non siano assegnati a un delegato. A differenza dei delegati, possono essere assegnate direttamente come parte sinistra della registrazione eventi o in diverse clausole e metodi LINQ.
+Anche con questo approccio, tuttavia, rimane una parte considerevole di codice che è possibile eliminare. A tale scopo, vengono usate le *espressioni lambda*. Le espressioni lambda, o solo "lambda", sono state introdotte in C# 3,0 come uno dei componenti fondamentali di Language Integrated Query (LINQ). Si tratta semplicemente una sintassi più pratica per l'uso dei delegati. Dichiarano una firma e il corpo di un metodo, ma non hanno un'identità formale, a meno che non siano assegnati a un delegato. A differenza dei delegati, possono essere assegnati direttamente come lato destro della registrazione degli eventi o in diversi metodi e clausole LINQ.
 
 Poiché un'espressione lambda è soltanto un modo diverso di specificare un delegato, è possibile riscrivere l'esempio precedente per usare un'espressione lambda anziché un delegato anonimo.
 

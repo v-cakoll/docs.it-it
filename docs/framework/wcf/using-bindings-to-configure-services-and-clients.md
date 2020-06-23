@@ -1,15 +1,16 @@
 ---
 title: Uso di associazioni per configurare servizi e client
+description: Le associazioni contengono informazioni di configurazione usate dai client o dai servizi WFC. Informazioni su come definire le associazioni e come specificare un'associazione per un endpoint del servizio.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: dd83072d3a1c76279fcc00ea5b0a4a41e278e10a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 60db37d4381191314e9d5588dd61015a7078e84d
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321506"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245934"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Uso di associazioni per configurare servizi e client
 Le associazioni sono oggetti che specificano i dettagli di comunicazione necessari per connettersi a un endpoint. In particolare, le associazioni contengono le informazioni di configurazione usate per creare il client o il runtime del servizio definendo le specifiche dei trasporti, i formati di trasmissione (codifica del messaggio) e i protocolli da usare per il relativo endpoint o canale client. Per creare un servizio Windows Communication Foundation (WCF) funzionante, ogni endpoint nel servizio richiede un'associazione. In questo argomento viene illustrato cosa sono le associazioni, come vengono definite e come viene specificata una particolare associazione per un endpoint.  
@@ -33,14 +34,14 @@ Le associazioni sono oggetti che specificano i dettagli di comunicazione necessa
   
 - <xref:System.ServiceModel.WSHttpBinding>: associazione di protocollo HTTP adatta alla connessione agli endpoint conformi ai protocolli e alle specifiche dei servizi Web.  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>: usa la codifica binaria .NET e le tecnologie di framing insieme al trasporto di Windows named pipe per connettersi ad altri endpoint WCF nello stesso computer.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Usa la codifica binaria .NET e le tecnologie di framing insieme al trasporto di Windows named pipe per connettersi ad altri endpoint WCF nello stesso computer.  
   
-- <xref:System.ServiceModel.NetMsmqBinding>: usa la codifica binaria .NET e le tecnologie di framing insieme a Accodamento messaggi (noto anche come MSMQ) per creare connessioni dei messaggi in coda con altri endpoint WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Usa la codifica binaria .NET e le tecnologie di framing insieme a Accodamento messaggi (noto anche come MSMQ) per creare connessioni dei messaggi in coda con altri endpoint WCF.  
   
  Per un elenco completo delle associazioni fornite dal sistema, con le descrizioni, vedere [associazioni fornite dal sistema](system-provided-bindings.md).  
   
 ## <a name="custom-bindings"></a>Associazioni personalizzate  
- Se la raccolta di associazioni fornite dal sistema non include la corretta combinazione di funzionalità richiesta da un'applicazione di servizio, è possibile creare un'associazione <xref:System.ServiceModel.Channels.CustomBinding>. Per ulteriori informazioni sugli elementi di un'associazione di <xref:System.ServiceModel.Channels.CustomBinding>, vedere [\<customBinding >](../configure-apps/file-schema/wcf/custombinding.md) e [associazioni personalizzate](./extending/custom-bindings.md).  
+ Se la raccolta di associazioni fornite dal sistema non include la corretta combinazione di funzionalità richiesta da un'applicazione di servizio, è possibile creare un'associazione <xref:System.ServiceModel.Channels.CustomBinding>. Per ulteriori informazioni sugli elementi di un' <xref:System.ServiceModel.Channels.CustomBinding> associazione, vedere [\<customBinding>](../configure-apps/file-schema/wcf/custombinding.md) e [associazioni personalizzate](./extending/custom-bindings.md).  
   
 ## <a name="using-bindings"></a>Uso di associazioni  
  L'utilizzo di associazioni comporta due passaggi di base:  
@@ -58,7 +59,7 @@ Le associazioni sono oggetti che specificano i dettagli di comunicazione necessa
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica della creazione di endpoint](endpoint-creation-overview.md)
+- [Cenni preliminari sulla creazione di endpoint](endpoint-creation-overview.md)
 - [Procedura: Specificare un'associazione al servizio nella configurazione](how-to-specify-a-service-binding-in-configuration.md)
 - [Procedura: Specificare un'associazione al servizio nel codice](how-to-specify-a-service-binding-in-code.md)
 - [Procedura: Specificare un'associazione al client nella configurazione](how-to-specify-a-client-binding-in-configuration.md)

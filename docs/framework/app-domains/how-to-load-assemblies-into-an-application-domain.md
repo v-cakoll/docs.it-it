@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: caricare assembly in un dominio applicazione'
+title: "Procedura: Caricare assembly in un dominio dell'applicazione"
+description: Informazioni su come caricare gli assembly in un dominio applicazione in .NET. Il modo consigliato consiste nell'usare il metodo Load statico (o condiviso) in System. Reflection. assembly.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - application domains, loading assemblies
 - loading assemblies
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
-ms.openlocfilehash: c560e2c5858de67442ccbcd18c8f92b142cc178d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c91c70625b79002e9297755dfdfac8aa6e283208
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119898"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104758"
 ---
-# <a name="how-to-load-assemblies-into-an-application-domain"></a>Procedura: caricare assembly in un dominio applicazione
+# <a name="how-to-load-assemblies-into-an-application-domain"></a>Procedura: Caricare assembly in un dominio dell'applicazione
 È possibile caricare un assembly in un dominio dell'applicazione in diversi modi. Il modo consigliato consiste nell'usare il metodo `static` (`Shared` in Visual Basic) <xref:System.Reflection.Assembly.Load%2A> della classe <xref:System.Reflection.Assembly?displayProperty=nameWithType>. Gli assembly possono essere caricati anche nei modi seguenti:  
   
 - Il metodo <xref:System.Reflection.Assembly.LoadFrom%2A> della classe <xref:System.Reflection.Assembly> carica un assembly dopo aver specificato il percorso del file. Se gli assembly vengono caricati usando questo metodo viene usato un contesto di caricamento diverso.  
@@ -50,5 +51,5 @@ ms.locfileid: "73119898"
 - [Programmazione con i domini dell'applicazione](application-domains.md#programming-with-application-domains)
 - [Reflection](../reflection-and-codedom/reflection.md)
 - [Uso dei domini dell'applicazione](use.md)
-- [Procedura: caricare assembly nel contesto Reflection-Only](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
+- [Procedura: Caricare assembly nel contesto Reflection-Only](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [Domini applicazione e assembly](application-domains.md#application-domains-and-assemblies)

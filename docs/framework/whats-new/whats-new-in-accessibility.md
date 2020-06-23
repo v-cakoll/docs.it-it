@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 4243599f44749e7b38ebe78ca88b8ec2a9390650
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 8a85614e441ba6e5782cbbbf5fe12432c053a101
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249721"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244153"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Nuove funzionalità di accessibilità in .NET Framework
 
@@ -22,7 +22,7 @@ Uno degli obiettivi di .NET Framework è rendere le applicazioni più accessibil
 
 È possibile configurare l'app per acconsentire esplicitamente alle funzionalità di accessibilità se l'app è destinata a .NET Framework 4.7 o a una versione precedente, ma viene eseguita in .NET Framework 4.7.1 o versione successiva. È anche possibile configurare l'app per usare le funzionalità legacy (e rinunciare alle funzionalità di accessibilità) se l'app è destinata a .NET Framework 4.7.1 o versioni successive. Ogni versione del .NET Framework che include funzionalità di accessibilità ha un'opzione di accessibilità specifica della versione, che è possibile aggiungere all' [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) elemento nella [`<runtime>`](../configure-apps/file-schema/runtime/index.md) sezione del file di configurazione dell'applicazione. Le opzioni supportate sono le seguenti:
 
-|Version|Opzione|
+|Versione|Opzione|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
@@ -78,9 +78,9 @@ Le applicazioni destinate alle versioni del .NET Framework a partire da 4.7.1 po
 
 - [Progettazione flussi di lavoro di Windows Workflow Foundation (WF)](#wf48)
 
-<a name="winforms48" />
+<a name="winforms48"></a>
 
-### <a name="windows-forms"></a>Windows Forms
+### <a name="windows-forms"></a>Windows Form
 
 In .NET Framework 4.8 Windows Forms aggiunge il supporto per le aree dinamiche e gli eventi di notifica a numerosi controlli usati di frequente. Aggiunge anche il supporto per le descrizioni comando quando l'utente passa a un controllo usando la tastiera.
 
@@ -169,7 +169,7 @@ La figura seguente mostra la descrizione comando visualizzata quando l'utente se
 
 ![Screenshot della descrizione comando quando l'utente passa al pulsante con la tastiera.](./media/whats-new-in-accessibility/select-tooltip-with-keyboard.png)
 
-<a name="wpf48" />
+<a name="wpf48"></a>
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
@@ -305,7 +305,7 @@ I valori automatici vengono forniti solo se l'applicazione è destinata a .NET F
 </configuration>
 ```
 
-<a name="wf48" />
+<a name="wf48"></a>
 
 ### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Progettazione dei flussi di lavoro di Windows Workflow Foundation (WF)
 
@@ -329,7 +329,7 @@ Se l'applicazione è destinata a .NET Framework 4.7.2 o versione precedente, è 
 
 <a name="winforms472"></a>
 
-### <a name="windows-forms"></a>Windows Forms
+### <a name="windows-forms"></a>Windows Form
 
 **Colori definiti dal sistema operativo nei temi a contrasto elevato**
 
@@ -709,4 +709,4 @@ Le modifiche all'accessibilità in Progettazione flussi di lavoro includono quan
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Novità di .NET Framework](index.md)
+- [Novità della .NET Framework](index.md)

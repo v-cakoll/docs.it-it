@@ -1,16 +1,17 @@
 ---
 title: Ridimensionamento automatico
+description: Informazioni su come il ridimensionamento automatico consente di visualizzare in modo appropriato un modulo e i relativi controlli, progettati su un computer, in un altro computer.
 ms.date: 06/15/2017
 helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: 96dbbb5ed20027e25f1bde89748710766ec06506
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 93d6b9097c85d7fa7ca88b405ee3d3654e51304b
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732383"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903688"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Scalabilità automatica in Windows Forms
 
@@ -40,13 +41,13 @@ Le versioni 1,0 e 1,1 del .NET Framework supportano il ridimensionamento automat
 
 Anche se questo meccanismo era sufficiente per la maggior parte degli scopi, tuttavia aveva i seguenti limiti:
 
-- Poiché la proprietà <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> rappresenta le dimensioni del carattere di base come valori integer, si verificano errori di arrotondamento che diventano evidenti quando un form viene ciclito attraverso più risoluzioni.
+- Poiché la <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> proprietà rappresenta le dimensioni del carattere di base come valori integer, si verificano errori di arrotondamento che diventano evidenti quando un form viene ciclito attraverso più risoluzioni.
 
 - Il ridimensionamento automatico era implementato solo nella classe <xref:System.Windows.Forms.Form> e non nella classe <xref:System.Windows.Forms.ContainerControl>. Di conseguenza, i controlli utente venivano ridimensionati in modo corretto solo quando il controllo utente era progettato con la stessa risoluzione del form e veniva inserito nel form in fase di progettazione.
 
 - I form e i controlli figlio potevano essere progettati simultaneamente da più sviluppatori solo se le risoluzioni dei computer erano le stesse. Allo stesso modo, l'ereditarietà di un form dipendeva dalla risoluzione associata al form padre.
 
-- Non è compatibile con i gestori di layout più recenti introdotti con la versione di .NET Framework 2,0, ad esempio <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel>.
+- Non è compatibile con i gestori di layout più recenti introdotti con la versione di .NET Framework 2,0, ad esempio <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel> .
 
 - Non supportava il ridimensionamento basato direttamente sulla risoluzione dello schermo necessaria per la compatibilità con il .NET Compact Framework.
 
@@ -105,4 +106,4 @@ Windows Form usa ora la seguente logica per ridimensionare automaticamente i for
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>
 - [Rendering dei controlli con stili visivi](./controls/rendering-controls-with-visual-styles.md)
-- [Procedura: Migliorare le prestazioni evitando il ridimensionamento automatico](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)
+- [Procedura: migliorare le prestazioni evitando l'adattamento automatico](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)

@@ -1,5 +1,6 @@
 ---
 title: Messaggi di errore Winmdexp.exe
+description: Informazioni sui messaggi di errore Winmdexp.exe (strumento di esportazione dei metadati di Windows Runtime), che vengono visualizzati solo durante il processo di compilazione se la compilazione .NET riesce.
 ms.date: 03/30/2017
 f1_keywords:
 - WME1095
@@ -157,21 +158,21 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-ms.openlocfilehash: e99bdd106c845964f63915c87617e30eb51488f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5fb5abe84d43df85be557a2bec2245284a74024b
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74447309"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904195"
 ---
 # <a name="winmdexpexe-error-messages"></a>Messaggi di errore Winmdexp.exe
 Il processo di compilazione chiama [Winmdexp.exe (strumento di esportazione di metadati di Windows Runtime)](winmdexp-exe-windows-runtime-metadata-export-tool.md) quando si usa il modello **Componente Windows Runtime** in Visual Studio 2012, quindi i messaggi di errore di Winmdexp.exe vengono visualizzati in **Elenco errori**. Winmdexp.exe viene utilizzato in un modulo compilato con l'opzione `/target:winmdobj`. Poiché viene richiesto come input un modulo compilato, i messaggi di errore vengono visualizzati solo se la compilazione viene eseguita correttamente.  
   
- I messaggi di errore sono progettati per contenere tutte le informazioni necessarie per affrontare le condizioni di errore segnalate. Tuttavia, per alcuni problemi sono richieste più informazioni di quelle presenti nel messaggio. Ulteriori informazioni sono disponibili nella [diagnosi delle condizioni](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))di errore dei componenti di Windows Runtime .  
+ I messaggi di errore sono progettati per contenere tutte le informazioni necessarie per affrontare le condizioni di errore segnalate. Tuttavia, per alcuni problemi sono richieste più informazioni di quelle presenti nel messaggio. Per ulteriori informazioni, vedere la pagina relativa alla [diagnosi delle condizioni di errore del componente Windows Runtime](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110)).  
   
- Se il problema non è illustrato nell'articolo e si ritiene che nel messaggio non siano contenute informazioni sufficienti per risolvere il problema, utilizzare il collegamento al feedback nell'articolo e includere il messaggio di errore. In alternativa, è possibile presentare un bug sul [sito Web della community degli sviluppatori.](https://developercommunity.visualstudio.com/) È anche possibile cercare altre informazioni nei [Forum di Microsoft](https://social.msdn.microsoft.com/Forums/).  
+ Se il problema non è illustrato nell'articolo e si ritiene che nel messaggio non siano contenute informazioni sufficienti per risolvere il problema, utilizzare il collegamento al feedback nell'articolo e includere il messaggio di errore. In alternativa, è possibile archiviare un bug nel [sito Web della community di sviluppatori](https://developercommunity.visualstudio.com/). È anche possibile cercare altre informazioni nei [Forum di Microsoft](https://social.msdn.microsoft.com/Forums/).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Winmdexp.exe (Strumento di esportazione di metadati di Windows Runtime)](winmdexp-exe-windows-runtime-metadata-export-tool.md)
-- [Diagnosi delle condizioni di errore di componenti Windows Runtime](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))
+- [Winmdexp.exe (strumento di esportazione dei metadati Windows Runtime)](winmdexp-exe-windows-runtime-metadata-export-tool.md)
+- [Diagnostica delle condizioni di errore dei componenti Windows Runtime](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))

@@ -1,16 +1,17 @@
 ---
 title: Utilizzo della classe Message
+description: Informazioni sulla classe Message, che è fondamentale per WCF. È necessario programmare direttamente usando la classe Message solo in alcuni scenari avanzati.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-ms.openlocfilehash: 142578ef76a70fed27dc0137378b59e228cd25c9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f806e257cfd3ccc5118a5783e2eda48eef4ba0bf
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585649"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246493"
 ---
 # <a name="using-the-message-class"></a>Utilizzo della classe Message
 La <xref:System.ServiceModel.Channels.Message> classe è fondamentale per Windows Communication Foundation (WCF). Tutte le comunicazioni tra client e servizi implicano in ultima istanza l'invio e la ricezione di istanze di <xref:System.ServiceModel.Channels.Message>.  
@@ -94,7 +95,7 @@ La <xref:System.ServiceModel.Channels.Message> classe è fondamentale per Window
  [!code-csharp[C_UsingTheMessageClass#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_usingthemessageclass/cs/source.cs#5)]
  [!code-vb[C_UsingTheMessageClass#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_usingthemessageclass/vb/source.vb#5)]  
   
- Due metodi di supporto aggiuntivi scrivono determinati tag di elemento iniziali SOAP. Questi metodi non accedono al corpo del messaggio, pertanto non modificano lo stato del messaggio. Sono inclusi:  
+ Due metodi di supporto aggiuntivi scrivono determinati tag di elemento iniziali SOAP. Questi metodi non accedono al corpo del messaggio, pertanto non modificano lo stato del messaggio. incluse le seguenti:  
   
 - <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A> scrive l'elemento del corpo iniziale, ad esempio, `<soap:Body>`.  
   

@@ -1,5 +1,6 @@
 ---
 title: Identità del servizio e autenticazione
+description: Informazioni sull'identità dell'endpoint di un servizio, un valore generato dal servizio WSDL, che WCF USA per autenticare il servizio.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 6c12c3aadf53f9fddef2f0b0124994db15565cb5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ae217b4a2c3432321c7ef2e663922a87b82acbea
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600374"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246571"
 ---
 # <a name="service-identity-and-authentication"></a>Identità del servizio e autenticazione
 L'identità dell' *endpoint* di un servizio è un valore generato dal Web Services Description Language di servizio (WSDL). Questo valore, propagato a tutti i client, viene utilizzato per autenticare il servizio. Dopo che il client ha avviato una comunicazione con un endpoint e il servizio è stato autenticato nel client, quest'ultimo confronta il valore dell'identità endpoint con il valore effettivo restituito dal processo di autenticazione dell'endpoint. La corrispondenza di questi due valori costituisce garanzia per il client di aver contattato l'endpoint del servizio previsto. Questa funzione funge da protezione contro il *phishing* evitando che un client venga reindirizzato a un endpoint ospitato da un servizio dannoso.  
@@ -32,7 +33,7 @@ L'identità dell' *endpoint* di un servizio è un valore generato dal Web Servic
   
  L'elaborazione dell'identità nel client è analoga all'autenticazione del client nel servizio. Un servizio protetto non esegue codice fino a quando non vengono autenticate le credenziali del client. Allo stesso modo, il client non invia messaggi al servizio fino a quando le credenziali del servizio non sono state autenticate in base a ciò che è noto in anticipo dai metadati del servizio.  
   
- La proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A> della classe <xref:System.ServiceModel.EndpointAddress> rappresenta l'identità del servizio chiamato dal client. Il servizio pubblica <xref:System.ServiceModel.EndpointAddress.Identity%2A> nei propri metadati. Quando lo sviluppatore client esegue lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) per l'endpoint del servizio, la configurazione generata contiene il valore della proprietà del servizio <xref:System.ServiceModel.EndpointAddress.Identity%2A> . L'infrastruttura WCF (se configurata con sicurezza) verifica che il servizio disponga dell'identità specificata.  
+ La proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A> della classe <xref:System.ServiceModel.EndpointAddress> rappresenta l'identità del servizio chiamato dal client. Il servizio pubblica <xref:System.ServiceModel.EndpointAddress.Identity%2A> nei propri metadati. Quando lo sviluppatore client esegue lo [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) nell'endpoint del servizio, la configurazione generata contiene il valore della proprietà del servizio <xref:System.ServiceModel.EndpointAddress.Identity%2A> . L'infrastruttura WCF (se configurata con sicurezza) verifica che il servizio disponga dell'identità specificata.  
   
 > [!IMPORTANT]
 > I metadati contengono l'identità prevista del servizio, pertanto è consigliabile esporre i metadati del servizio tramite mezzi di comunicazione protetti, ad esempio creando un endpoint HTTPS per il servizio. Per altre informazioni, vedere [procedura: proteggere gli endpoint dei metadati](how-to-secure-metadata-endpoints.md).  
@@ -64,7 +65,7 @@ L'identità dell' *endpoint* di un servizio è un valore generato dal Web Servic
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="specifying-identity-at-the-client"></a>Impostazione dell'identità nel client  
- In fase di progettazione uno sviluppatore client utilizza in genere lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) per generare la configurazione client. Il file di configurazione generato (destinato a essere utilizzato dal client) contiene l'identità del server. Ad esempio, il codice seguente viene generato da un servizio che specifica un'identità DNS, come illustrato nell'esempio precedente. Si noti che il valore dell'identità endpoint del client corrisponde a quello del servizio. In questo caso, quando il client riceve le credenziali Windows (Kerberos) per il servizio, si aspetta che il valore sia `contoso.com`.  
+ In fase di progettazione uno sviluppatore client utilizza in genere lo [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) per generare la configurazione client. Il file di configurazione generato (destinato a essere utilizzato dal client) contiene l'identità del server. Ad esempio, il codice seguente viene generato da un servizio che specifica un'identità DNS, come illustrato nell'esempio precedente. Si noti che il valore dell'identità endpoint del client corrisponde a quello del servizio. In questo caso, quando il client riceve le credenziali Windows (Kerberos) per il servizio, si aspetta che il valore sia `contoso.com`.  
 
  Se, invece di Windows, il servizio specifica un certificato come tipo di credenziale client, si prevede che la proprietà DNS del certificato corrisponda al valore `contoso.com` (oppure, se la proprietà DNS è `null`, il nome di soggetto del certificato deve essere `contoso.com`).  
   

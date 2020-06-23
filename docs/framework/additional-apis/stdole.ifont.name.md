@@ -1,5 +1,6 @@
 ---
 title: Proprietà IFont.Name (stdole)
+description: Ottenere informazioni di riferimento sulla proprietà IFont.Name in .NET. Questa proprietà di lettura/scrittura si trova nello spazio dei nomi stdole e nell'assembly stdole.
 ms.date: 02/22/2019
 topic_type:
 - apiref
@@ -11,12 +12,12 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: b74992174d244845e1db2b283d962f2b87071c91
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: bdc773956c15554b0700d78dcdc833d8111da896
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634419"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989502"
 ---
 # <a name="ifontname-property"></a>Proprietà IFont.Name
 
@@ -24,7 +25,7 @@ ms.locfileid: "65634419"
 string Name { get; set; }
 ```
 
-## <a name="property-value"></a>Valore della proprietà
+## <a name="property-value"></a>Valore proprietà
 
 <xref:System.String>\
 
@@ -32,4 +33,4 @@ string Name { get; set; }
 
 **Spazio dei nomi:** `stdole`
 
-**Assembly:** stdole (in stdole. dll)
+**Assembly:** stdole (in stdole.dll)

@@ -1,16 +1,17 @@
 ---
 title: Condivisione delle porte Net.TCP
+description: Informazioni su un protocollo basato su TCP per la comunicazione a prestazioni elevate e il servizio che consente la condivisione delle porte tra più processi utente in WCF.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: d9c6caa546d9f31f4e68b850dc1b1e750da2e93c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a9579c588906f509dd835d3c9b25571495d147e0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598762"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245245"
 ---
 # <a name="nettcp-port-sharing"></a>Condivisione delle porte Net.TCP
 Windows Communication Foundation (WCF) fornisce un nuovo protocollo di rete basato su TCP (NET. TCP://) per la comunicazione a prestazioni elevate. WCF introduce inoltre un nuovo componente di sistema, il servizio di condivisione delle porte net. TCP che consente la condivisione delle porte net. TCP tra più processi utente.  
@@ -22,7 +23,7 @@ Windows Communication Foundation (WCF) fornisce un nuovo protocollo di rete basa
   
  Il modello HTTP.SYS, in cui il traffico per molte applicazioni HTTP diverse viene reso multiplex su una sola porta TCP, è diventato lo standard sulla piattaforma Windows. Questo offre un punto di controllo comune per gli amministratori dei firewall, consentendo al contempo agli sviluppatori di applicazioni di ridurre al minimo i costi di distribuzione associati alla creazione di nuove applicazioni che possono fare uso della rete.  
   
- La possibilità di condividere porte tra più applicazioni HTTP caratterizza da molto tempo Internet Information Services (IIS). Tuttavia, era solo con l'introduzione del protocollo HTTP. SYS (il listener del protocollo HTTP in modalità kernel) con IIS 6,0 che questa infrastruttura è stata completamente generalizzata. In effetti, HTTP.SYS consente a processi utente arbitrari di condividere le porte TCP dedicate al traffico HTTP. Questa capacità consente a molte applicazioni HTTP di coesistere sullo stesso computer fisico in processi isolati, distinti e nel contempo condividere l'infrastruttura di rete richiesta per inviare e ricevere il traffico su TCP sulla porta 80. Il Servizio di condivisione porte Net.TCP consente alle applicazioni net.tcp di condividere lo stesso tipo di porta.  
+ La possibilità di condividere porte tra più applicazioni HTTP caratterizza da molto tempo Internet Information Services (IIS). Tuttavia, era solo con l'introduzione di HTTP.SYS (il listener del protocollo HTTP in modalità kernel) con IIS 6,0 che questa infrastruttura è stata interamente generalizzata. In effetti, HTTP.SYS consente a processi utente arbitrari di condividere le porte TCP dedicate al traffico HTTP. Questa capacità consente a molte applicazioni HTTP di coesistere sullo stesso computer fisico in processi isolati, distinti e nel contempo condividere l'infrastruttura di rete richiesta per inviare e ricevere il traffico su TCP sulla porta 80. Il Servizio di condivisione porte Net.TCP consente alle applicazioni net.tcp di condividere lo stesso tipo di porta.  
   
 ## <a name="port-sharing-architecture"></a>Architettura di condivisione delle porte  
  L'architettura di condivisione delle porte in WCF è costituita da tre componenti principali:  

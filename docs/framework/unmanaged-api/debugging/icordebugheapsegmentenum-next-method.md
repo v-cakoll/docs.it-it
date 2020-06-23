@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51625fd0-7399-49c7-b22b-5dfb05451fe6
 topic_type:
 - apiref
-ms.openlocfilehash: c9999961ec20a31cf82d5ad60104bcdd04c340d1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3d4e44eefaf99a40b9c4f1c45e7dd81192f8b607
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210176"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904273"
 ---
 # <a name="icordebugheapsegmentenumnext-method"></a>Metodo ICorDebugHeapSegmentEnum::Next
-Ottiene il numero specificato di istanze di [COR_HEAPOBJECT](cor-heapobject-structure.md) che contengono informazioni sulle aree di memoria dell'heap gestito.  
+Ottiene il numero specificato di istanze di [COR_SEGMENT](cor-segment-structure.md) che contengono informazioni sulle aree di memoria dell'heap gestito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,10 +39,10 @@ HRESULT Next(
  in Numero di segmenti da recuperare.  
   
  segmenti  
- out Matrice di puntatori, ciascuno dei quali punta a un oggetto [COR_HEAPOBJECT](cor-heapobject-structure.md) che fornisce informazioni su un'area di memoria nell'heap gestito.  
+ out Matrice di puntatori, ciascuno dei quali punta a un oggetto [COR_SEGMENT](cor-segment-structure.md) che fornisce informazioni su un'area di memoria nell'heap gestito.  
   
  pceltFetched  
- out Puntatore al numero di oggetti [COR_HEAPOBJECT](cor-heapobject-structure.md) effettivamente restituiti in `segments` . Questo valore può essere `null` se `celt` è 1.  
+ out Puntatore al numero di oggetti [COR_SEGMENT](cor-segment-structure.md) effettivamente restituiti in `segments` . Questo valore può essere `null` se `celt` è 1.  
   
 ## <a name="remarks"></a>Osservazioni  
   

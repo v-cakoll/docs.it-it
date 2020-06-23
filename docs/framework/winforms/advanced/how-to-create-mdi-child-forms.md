@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: creare form figlio MDI'
+description: Informazioni su come usare Visual Studio per creare un form figlio MDI (Multiple Document Interface) che visualizza un controllo RichTextBox.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,30 +10,30 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: b49d43e0e1123921cb3800f0d60193d0ea7b3924
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7fe5cde342f0f5ee078f888b7492cd4618bea5c4
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338589"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903181"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Procedura: creare form figlio MDI
 
 I form figlio MDI sono un elemento essenziale di [applicazioni con interfaccia a documenti multipli (MDI)](multiple-document-interface-mdi-applications.md), in quanto tali forme rappresentano il centro dell'interazione dell'utente.
 
-Nella procedura seguente si userà Visual Studio per creare un form figlio MDI che visualizza un controllo <xref:System.Windows.Forms.RichTextBox>, in modo analogo alla maggior parte delle applicazioni di elaborazione di testi. Sostituendo il controllo <xref:System.Windows.Forms> con altri controlli, ad esempio il controllo <xref:System.Windows.Forms.DataGridView> o una combinazione di controlli, è possibile creare finestre figlio MDI (e, per estensione, applicazioni MDI) con diverse possibilità.
+Nella procedura seguente si userà Visual Studio per creare un form figlio MDI che visualizza un <xref:System.Windows.Forms.RichTextBox> controllo, in modo analogo alla maggior parte delle applicazioni di elaborazione di testi. Sostituendo il <xref:System.Windows.Forms> controllo con altri controlli, ad esempio il <xref:System.Windows.Forms.DataGridView> controllo o una combinazione di controlli, è possibile creare finestre figlio MDI (e, per estensione, applicazioni MDI) con diverse possibilità.
 
 ## <a name="create-mdi-child-forms"></a>Creare form figlio MDI
 
-1. Creare un nuovo progetto di Windows Forms Application in Visual Studio. Nella finestra **Proprietà** per il form impostare la relativa proprietà <xref:System.Windows.Forms.Form.IsMdiContainer%2A> su `true` e la relativa proprietà `WindowsState` su `Maximized`.
+1. Creare un nuovo progetto di Windows Forms Application in Visual Studio. Nella finestra **Proprietà** per il form impostare la relativa <xref:System.Windows.Forms.Form.IsMdiContainer%2A> proprietà su `true` e la relativa `WindowsState` proprietà su `Maximized` .
 
    Il form viene così designato come contenitore MDI per le finestre figlio.
 
-2. Dalla `Toolbox` trascinare un controllo <xref:System.Windows.Forms.MenuStrip> nel form. Impostare la relativa proprietà `Text` su **file**.
+2. Dalla `Toolbox` trascinare un controllo <xref:System.Windows.Forms.MenuStrip> nel form. Impostarne la `Text` proprietà su **file**.
 
-3. Fare clic sui puntini di sospensione (...) accanto alla proprietà **Items** e fare clic su **Aggiungi** per aggiungere due voci di menu della barra degli strumenti figlio. Impostare la proprietà `Text` per questi elementi su **nuovo** e **finestra**.
+3. Fare clic sui puntini di sospensione (...) accanto alla proprietà **Items** e fare clic su **Aggiungi** per aggiungere due voci di menu della barra degli strumenti figlio. Impostare la `Text` proprietà per questi elementi su **nuovo** e **finestra**.
 
-4. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **Nuovo elemento**.
+4. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e quindi selezionare **Aggiungi** > **Nuovo elemento**.
 
 5. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **Windows Form** (in Visual Basic o in Visual C#) o **Windows Forms applicazione (.NET)** (in Visual C++) dal riquadro **modelli** . Nella casella **nome** assegnare al modulo il nome **Form2**. Selezionare **Apri** per aggiungere il modulo al progetto.
 
@@ -45,16 +46,16 @@ Nella procedura seguente si userà Visual Studio per creare un form figlio MDI c
 
 6. Dalla **casella degli strumenti**trascinare un controllo **RichTextBox** nel form.
 
-7. Nella finestra **Proprietà** impostare la proprietà `Anchor` su **Top, Left** e la proprietà `Dock` su **Fill**.
+7. Nella finestra **Proprietà** impostare la `Anchor` proprietà su **Top, Left** e la `Dock` proprietà su **Fill**.
 
    In questo modo il controllo <xref:System.Windows.Forms.RichTextBox> riempirà completamente l'area del form figlio MDI, anche quando viene ridimensionato.
 
-8. Fare doppio clic sulla **nuova** voce di menu per creare un gestore dell'evento <xref:System.Windows.Forms.Control.Click>.
+8. Fare doppio clic sulla **nuova** voce di menu per creare un <xref:System.Windows.Forms.Control.Click> gestore eventi.
 
 9. Inserire codice simile al seguente per creare un nuovo form figlio MDI quando l'utente fa clic sulla **nuova** voce di menu.
 
    > [!NOTE]
-   > Nell'esempio che segue il gestore eventi gestisce l'evento <xref:System.Windows.Forms.Control.Click> per `MenuItem2`. Tenere presente che, a seconda delle specifiche dell'architettura dell'applicazione, la **nuova** voce di menu potrebbe non essere `MenuItem2`.
+   > Nell'esempio che segue il gestore eventi gestisce l'evento <xref:System.Windows.Forms.Control.Click> per `MenuItem2`. Tenere presente che, a seconda delle specifiche dell'architettura dell'applicazione, la **nuova** voce di menu potrebbe non essere `MenuItem2` .
 
     ```vb
     Protected Sub MDIChildNew_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem2.Click
@@ -89,13 +90,13 @@ Nella procedura seguente si userà Visual Studio per creare un form figlio MDI c
        }
     ```
 
-   In C++aggiungere la seguente direttiva di `#include` all'inizio di Form1. h:
+   In C++ aggiungere la direttiva seguente `#include` all'inizio di Form1. h:
 
    ```cpp
    #include "Form2.h"
    ```
 
-10. Nell'elenco a discesa nella parte superiore della finestra **Proprietà** selezionare la striscia di menu che corrisponde alla striscia di menu **file** e impostare la proprietà <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> sulla finestra <xref:System.Windows.Forms.ToolStripMenuItem>.
+10. Nell'elenco a discesa nella parte superiore della finestra **Proprietà** selezionare la striscia di menu che corrisponde alla striscia di menu **file** e impostare la <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> proprietà sulla finestra <xref:System.Windows.Forms.ToolStripMenuItem> .
 
     In questo modo il menu **finestra** consente di mantenere un elenco di finestre figlio MDI aperte con un segno di spunta accanto alla finestra figlio attiva.
 
@@ -108,6 +109,6 @@ Nella procedura seguente si userà Visual Studio per creare un form figlio MDI c
 
 - [Applicazioni MDI (Interfaccia a documenti multipli, Multiple-Document Interface)](multiple-document-interface-mdi-applications.md)
 - [Procedura: Creare form padre MDI](how-to-create-mdi-parent-forms.md)
-- [Procedura: Determinare il figlio MDI attivo](how-to-determine-the-active-mdi-child.md)
-- [Procedura: Inviare dati al figlio MDI attivo](how-to-send-data-to-the-active-mdi-child.md)
+- [Procedura: determinare il figlio MDI attivo](how-to-determine-the-active-mdi-child.md)
+- [Procedura: inviare dati al figlio MDI attivo](how-to-send-data-to-the-active-mdi-child.md)
 - [Procedura: Disporre i form figlio MDI](how-to-arrange-mdi-child-forms.md)

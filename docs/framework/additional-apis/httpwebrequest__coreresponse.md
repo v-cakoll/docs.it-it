@@ -1,5 +1,6 @@
 ---
-title: HttpWebRequest._CoreResponse Campo
+title: HttpWebRequest. _CoreResponse campo
+description: Vedere il campo HttpWebRequest. _CoreResponse in .NET. Questo campo è un oggetto CoreResponseData o Exception che contiene il risultato dell'analisi della risposta HTTP.
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: b275f3eece96ac8a9ae3fb0ebd030c8d79e21fc1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5093ec7ed2c3b94931dcd622ae9ccdb42feffa18
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155921"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989749"
 ---
-# <a name="httpwebrequest_coreresponse-field"></a>HttpWebRequest. \_Campo CoreResponse
+# <a name="httpwebrequest_coreresponse-field"></a>HttpWebRequest. \_ Campo CoreResponse
 
-`HttpWebRequest._CoreResponse`è un oggetto [(coreResponseData](coreresponsedata.md) <xref:System.Exception>o un ) contenente il risultato dell'analisi della risposta HTTP.
+`HttpWebRequest._CoreResponse`è un oggetto ( [CoreResponseData](coreresponsedata.md) o <xref:System.Exception> ) contenente il risultato dell'analisi della risposta http.
 
 ## <a name="syntax"></a>Sintassi
   
@@ -28,14 +29,14 @@ private object _CoreResponse
 ```
 
 > [!WARNING]
-> Questa API non deve essere utilizzata direttamente nel codice. Al contrario, <xref:System.Diagnostics.DiagnosticSource> è necessario utilizzare un per eseguire l'hook del codice di rete. Vedere [Manuale dell'utente](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)di DiagnosticSource .
+> Questa API non è destinata all'uso diretto nel codice. È invece consigliabile usare un <xref:System.Diagnostics.DiagnosticSource> per associare il codice di rete. Vedere [il manuale dell'utente di DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 >
-> Microsoft non supporta in nessun caso l'utilizzo di questa classe in un'applicazione di produzione.
+> Microsoft non supporta l'utilizzo di questa classe in un'applicazione di produzione in qualsiasi circostanza.
 
 ## <a name="requirements"></a>Requisiti
 
-**Spazio dei nomi:**<xref:System.Net>
+**Spazio dei nomi:** <xref:System.Net>
 
-**Assemblaggio:** Sistema (in System.dll)
+**Assembly:** Sistema (in System.dll)
 
-Versioni di **.NET Framework:** Disponibile dalla 2.0.
+**Versioni .NET Framework:** Disponibile a partire da 2,0.

@@ -1,5 +1,6 @@
 ---
 title: Utilizzo della classe XmlSerializer
+description: Informazioni su XmlSerializer, utilizzato da WCF per serializzare i dati dell'applicazione in XML trasmessi tra client e servizi.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 2ef2d0eefb571f64040fabd16fd65fdfde7a626d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f7473de3f34ba543b4fabfe93167ea267f16dda5
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600205"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246382"
 ---
 # <a name="using-the-xmlserializer-class"></a>Utilizzo della classe XmlSerializer
 
@@ -40,7 +41,7 @@ Molti .NET Framework tipi rientrano nelle ultime due categorie e sono quindi ser
 
 WCF supporta inoltre la <xref:System.Xml.Serialization.XmlSerializer> classe. La <xref:System.Xml.Serialization.XmlSerializer> classe non è univoca per WCF. Si tratta dello stesso motore di serializzazione utilizzato dai servizi Web ASP.NET. La classe <xref:System.Xml.Serialization.XmlSerializer> supporta un set di tipi molto più ristretto rispetto alla classe <xref:System.Runtime.Serialization.DataContractSerializer>, ma garantisce un controllo maggiore sul contenuto XML risultante e un supporto maggiore dello standard XSD (XML Schema Definition Language). Inoltre, non richiede attributi dichiarativi sui tipi serializzabili. Per ulteriori informazioni, vedere l'argomento relativo alla serializzazione XML nella documentazione di .NET Framework. La classe <xref:System.Xml.Serialization.XmlSerializer> non supporta i tipi di contratto dati.
 
-Quando si usa Svcutil. exe o la funzionalità **Aggiungi riferimento al servizio** in Visual Studio per generare il codice client per un servizio di terze parti o per accedere a uno schema di terze parti, viene selezionato automaticamente un serializzatore appropriato. Se lo schema non è compatibile con <xref:System.Runtime.Serialization.DataContractSerializer>, viene selezionato <xref:System.Xml.Serialization.XmlSerializer>.
+Quando si usa Svcutil.exe o la funzionalità **Aggiungi riferimento al servizio** in Visual Studio per generare il codice client per un servizio di terze parti o per accedere a uno schema di terze parti, viene selezionato automaticamente un serializzatore appropriato. Se lo schema non è compatibile con <xref:System.Runtime.Serialization.DataContractSerializer>, viene selezionato <xref:System.Xml.Serialization.XmlSerializer>.
 
 ## <a name="manually-switching-to-the-xmlserializer"></a>Passaggio manuale a XmlSerializer
 
@@ -173,7 +174,7 @@ Quando si importa uno schema generato dai tipi `IXmlSerializable`, si verificano
 
 - Lo schema generato può essere uno schema del contratto dati valido come descritto in [riferimento allo schema del contratto dati](data-contract-schema-reference.md). In questo caso, lo schema può essere importato normalmente e vengono generati tipi del contratto dati normali.
 
-- Lo schema generato può non essere uno schema valido del contratto dati. Ad esempio, il metodo del provider dello schema può generare lo schema coinvolgendo gli attributi XML che non sono supportati nel modello del contratto dati. In questo caso, è possibile importare lo schema come tipi `IXmlSerializable`. Questa modalità di importazione non è attiva per impostazione predefinita, ma può essere abilitata facilmente, ad esempio con l' `/importXmlTypes` opzione della riga di comando per lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Questa operazione è descritta in dettaglio nello [schema di importazione per generare le classi](importing-schema-to-generate-classes.md). Si noti che è necessario interagire direttamente con XML per le istanze del tipo. Si può anche scegliere di usare una tecnologia di serializzazione diversa che supporti una gamma più ampia di schemi (vedere l'argomento relativo all'uso di `XmlSerializer`).
+- Lo schema generato può non essere uno schema valido del contratto dati. Ad esempio, il metodo del provider dello schema può generare lo schema coinvolgendo gli attributi XML che non sono supportati nel modello del contratto dati. In questo caso, è possibile importare lo schema come tipi `IXmlSerializable`. Questa modalità di importazione non è attiva per impostazione predefinita, ma può essere abilitata facilmente, ad esempio con l' `/importXmlTypes` opzione della riga di comando per lo [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Questa operazione è descritta in dettaglio nello [schema di importazione per generare le classi](importing-schema-to-generate-classes.md). Si noti che è necessario interagire direttamente con XML per le istanze del tipo. Si può anche scegliere di usare una tecnologia di serializzazione diversa che supporti una gamma più ampia di schemi (vedere l'argomento relativo all'uso di `XmlSerializer`).
 
 - Può essere necessario riusare i tipi `IXmlSerializable` esistenti nel proxy anziché generare tipi nuovi. In questo caso, è possibile usare la funzionalità dei tipi a cui è stato fatto riferimento descritta nell'argomento relativo all'importazione dello schema per generare i tipi per indicare il tipo da riusare. Questa procedura corrisponde all'uso dell'opzione `/reference` in svcutil.exe, che specifica l'assembly contenente i tipi da riutilizzare.
 

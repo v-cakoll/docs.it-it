@@ -1,16 +1,17 @@
 ---
 title: Sicurezza del trasporto con un client anonimo
+description: Esaminare questo scenario WCF, che utilizza la sicurezza del trasporto per autenticare un server utilizzando un certificato considerato attendibile dal client. Il client non è autenticato.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-ms.openlocfilehash: c3e44c87dfa70ac3a7acc5a83ac596efc22b6155
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 08cfb8c1a5581f17a251224430018764bed80b0f
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344750"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245011"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Sicurezza del trasporto con un client anonimo
 
@@ -24,17 +25,17 @@ Per ulteriori informazioni sull'utilizzo di un certificato con un servizio, vede
 
 |Caratteristica|Descrizione|
 |--------------------|-----------------|
-|Modalità di sicurezza|Transport|
+|Modalità di sicurezza|Trasporto|
 |Interoperabilità|Con i servizi Web e i client esistenti|
 |Autenticazione (server)<br /><br /> Autenticazione (client)|Sì<br /><br /> Livello applicazione (nessun supporto WCF)|
 |Integrità|Sì|
 |Riservatezza|Sì|
-|Transport|HTTPS|
-|Associazione|<xref:System.ServiceModel.WSHttpBinding>|
+|Trasporto|HTTPS|
+|Binding|<xref:System.ServiceModel.WSHttpBinding>|
 
-## <a name="service"></a>Servizio
+## <a name="service"></a>Service
 
-Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Effettuare una delle seguenti operazioni:
+Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:
 
 - Creare un servizio autonomo usando il codice senza alcuna configurazione.
 
@@ -47,7 +48,7 @@ Nel codice seguente viene illustrato come creare un endpoint utilizzando la prot
 [!code-csharp[c_SecurityScenarios#5](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#5)]
 [!code-vb[c_SecurityScenarios#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#5)]
 
-### <a name="configuration"></a>Configurazione di
+### <a name="configuration"></a>Configurazione
 
 Nel codice seguente viene impostato lo stesso endpoint utilizzando la configurazione. Il client non viene autenticato da alcun meccanismo ed è pertanto anonimo.
 
@@ -80,7 +81,7 @@ Nel codice seguente viene impostato lo stesso endpoint utilizzando la configuraz
 
 ## <a name="client"></a>Client
 
-Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Effettuare una delle seguenti operazioni:
+Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:
 
 - Creare un client autonomo usando il codice (e il codice client).
 
@@ -94,7 +95,7 @@ Il codice e la configurazione seguenti devono essere eseguiti in modo indipenden
 [!code-csharp[c_SecurityScenarios#6](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#6)]
 [!code-vb[c_SecurityScenarios#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#6)]
 
-### <a name="configuration"></a>Configurazione di
+### <a name="configuration"></a>Configurazione
 
 Per configurare il servizio, è possibile utilizzare la configurazione seguente anziché il codice.
 
@@ -125,5 +126,5 @@ Per configurare il servizio, è possibile utilizzare la configurazione seguente 
 
 - [Panoramica della sicurezza](security-overview.md)
 - [Sicurezza del trasporto WS](../samples/ws-transport-security.md)
-- [Panoramica della sicurezza del trasporto](transport-security-overview.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Panoramica sulla sicurezza del trasporto](transport-security-overview.md)
+- [Sicurezza e protezione](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

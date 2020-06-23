@@ -1,18 +1,19 @@
 ---
 title: Client di test WCF (WcfTestClient.exe)
+description: Informazioni sul client di prova WCF, che fornisce test di servizio senza problemi in combinazione con l'host del servizio WCF. Inviare i valori del test client e visualizzare le risposte del servizio.
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: ac89b234dfafe3f87f1423a04ce8e4dd6b44b991
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 4f636698c538809f89ee356159839a37b73adb57
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321181"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245661"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Client di test WCF (WcfTestClient.exe)
-Windows Communication Foundation (WCF) client di test (WcfTestClient. exe) è uno strumento GUI che consente agli utenti di immettere parametri di test, inviare tale input al servizio e visualizzare la risposta restituita dal servizio. Offre un'esperienza di test dei servizi senza problemi in combinazione con l'host del servizio WCF.
+Windows Communication Foundation (WCF) client di test (WcfTestClient.exe) è uno strumento GUI che consente agli utenti di immettere parametri di test, inviare tale input al servizio e visualizzare la risposta restituita dal servizio. Offre un'esperienza di test dei servizi senza problemi in combinazione con l'host del servizio WCF.
 
-È in genere possibile trovare il client di prova WCF (WcfTestClient. exe) nel percorso seguente: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE`-community può essere una delle "Enterprise", "Professional" o "community" a seconda del livello di Visual Studio installato.
+È in genere possibile trovare il client di prova WCF (WcfTestClient.exe) nel percorso seguente: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` -community può essere una delle "Enterprise", "Professional" o "community" a seconda del livello di Visual Studio installato.
 
 ## <a name="scenarios-for-using-test-client"></a>Scenari per l'uso di Client di test
 
@@ -30,9 +31,9 @@ Dopo aver creato un nuovo progetto di servizio WCF e premuto F5 per avviare il d
 
 ### <a name="outside-visual-studio"></a>All'esterno di Visual Studio
 
-È anche possibile richiamare il client di prova WCF (WcfTestClient. exe) all'esterno di Visual Studio per testare un servizio arbitrario su Internet. Per individuare lo strumento, passare al percorso seguente:
+È anche possibile richiamare il client di prova WCF (WcfTestClient.exe) al di fuori di Visual Studio per testare un servizio arbitrario su Internet. Per individuare lo strumento, passare al percorso seguente:
 
-`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` (dove la community può essere una delle "aziende", "Professional" o "community" a seconda del livello di Visual Studio installato nel computer)
+`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE`(dove la community può essere una delle "Enterprise", "Professional" o "community" a seconda del livello di Visual Studio installato nel computer)
 
 Per usare lo strumento, fare doppio clic sul nome del file per aprirlo da questo percorso oppure avviarlo da una riga di comando.
 
@@ -40,7 +41,7 @@ Il client di prova WCF accetta un numero arbitrario di URI come argomenti della 
 
 `wcfTestClient.exe URI1 URI2 …`
 
-Dopo aver aperto la finestra client di prova WCF, fare clic su **File** ->**Aggiungi servizio**e immettere l'indirizzo dell'endpoint del servizio che si desidera aprire.
+Dopo aver aperto la finestra client di test WCF, fare clic su **file** -> **Aggiungi servizio**e immettere l'indirizzo dell'endpoint del servizio che si desidera aprire.
 
 ## <a name="wcf-test-client-user-interface"></a>Interfaccia utente di Client di test WCF
 
@@ -87,13 +88,13 @@ Fare clic con il pulsante destro del mouse su **file di configurazione** nel riq
 
 Dopo aver salvato il file nell'editor di configurazione dei servizi, il client di prova WCF Visualizza un messaggio di avviso per informare che il file è stato modificato all'esterno e chiede se si desidera ricaricarlo.
 
-Se si seleziona **Sì**, il contenuto della configurazione nella scheda "client. dll. config" riflette le modifiche apportate nell'editor.
+Se si seleziona **Sì**, il contenuto della configurazione nella scheda "Client.dll.config" riflette le modifiche apportate nell'editor.
 
-Se si seleziona **No**, il contenuto della configurazione nella scheda "client. dll. config" rimarrà invariato e il contenuto modificato verrà salvato automaticamente nel file di origine.
+Se si seleziona **No**, il contenuto della configurazione nella scheda "Client.dll.config" rimane invariato e il contenuto modificato viene salvato automaticamente nel file di origine.
 
 #### <a name="restore-to-default-configuration"></a>Ripristinare la configurazione predefinita
 
-Se si desidera annullare tutte le modifiche e ripristinare la configurazione client predefinita, fare clic con il pulsante destro del mouse su **file di configurazione** nel riquadro sinistro e selezionare il menu di scelta rapida **Ripristina configurazione predefinita**. Il valore di configurazione predefinito viene caricato e il contenuto nella scheda "client. dll. config" viene ripristinato.
+Se si desidera annullare tutte le modifiche e ripristinare la configurazione client predefinita, fare clic con il pulsante destro del mouse su **file di configurazione** nel riquadro sinistro e selezionare il menu di scelta rapida **Ripristina configurazione predefinita**. Il valore di configurazione predefinito viene caricato e il contenuto nella scheda "Client.dll.config" viene ripristinato.
 
 #### <a name="validate-changes"></a>Convalidare le modifiche
 
@@ -103,9 +104,9 @@ Durante la generazione del proxy, la compilazione binaria o il richiamo del serv
 
 #### <a name="persist-client-configuration"></a>Rendere persistente la configurazione client
 
-Opzioni **->** **Opzioni** -> scheda**configurazione client** contiene un'opzione **Rigenera sempre la configurazione all'avvio dei servizi** , abilitata per impostazione predefinita. Questa opzione specifica che ogni volta che il client di prova WCF carica un servizio, rigenera un file di configurazione in base al contratto di servizio più recente e ai file app. config del servizio.
+La **Tools** -> **Options** -> scheda**configurazione client** opzioni strumenti contiene un'opzione **Rigenera sempre la configurazione all'avvio dei servizi** , abilitata per impostazione predefinita. Questa opzione specifica che ogni volta che il client di prova WCF carica un servizio, rigenera un file di configurazione in base al contratto di servizio e ai file di App.config del servizio più recenti.
 
-Se è stata modificata la configurazione client per il servizio WCF e si desidera utilizzare sempre questo file aggiornato per eseguire il debug del servizio, è possibile deselezionare l'opzione **Rigenera** . In questo modo, anche quando si aggiorna il servizio e si riapre il client di prova WCF, il file client. dll. config è quello che è stato aggiornato in precedenza anziché uno rigenerato in base al servizio aggiornato.
+Se è stata modificata la configurazione client per il servizio WCF e si desidera utilizzare sempre questo file aggiornato per eseguire il debug del servizio, è possibile deselezionare l'opzione **Rigenera** . In questo modo, anche quando si aggiorna il servizio e si riapre il client di prova WCF, il file di Client.dll.config è quello che è stato aggiornato in precedenza anziché uno rigenerato in base al servizio aggiornato.
 
 Potrebbe tuttavia essere necessario modificare il file di configurazione per renderlo coerente con il proxy rigenerato. Se il proxy e file di configurazione rigenerati non corrispondono perché un servizio è stato aggiornato, si verificheranno errori quando il servizio viene richiamato.
 
@@ -120,7 +121,7 @@ Potrebbe tuttavia essere necessario modificare il file di configurazione per ren
 
 #### <a name="add-service"></a>Aggiungere un servizio
 
-Fare clic su **File** ->**Aggiungi servizio** per aggiungere un servizio al client di prova WCF. Verrà quindi richiesto di digitare l'URI (indirizzo endpoint) del servizio da aggiungere. L'indirizzo del servizio può corrispondere a un indirizzo mex o a un indirizzo WSDL.
+Fare clic su **file** -> **Aggiungi servizio** per aggiungere un servizio al client di prova WCF. Verrà quindi richiesto di digitare l'URI (indirizzo endpoint) del servizio da aggiungere. L'indirizzo del servizio può corrispondere a un indirizzo mex o a un indirizzo WSDL.
 
 È anche possibile trovare un elenco di 10 endpoint dei servizi aggiunti di recente nel sottomenu **Servizi recenti** . Se si seleziona uno di essi, il servizio specificato viene aggiunto al client di prova WCF.
 
@@ -142,13 +143,13 @@ Durante il processo di generazione proxy, di compilazione binaria o di richiamo 
 
 ## <a name="location-of-files-generated-by-the-test-client"></a>Percorso dei file generati da Client di test
 
-Per impostazione predefinita, il client di prova WCF archivia il codice client e i file di configurazione generati nella cartella "%appdata%\Local\temp\Test Client Projects". Questa cartella viene eliminata dopo la chiusura del client di test WCF. Se un file di configurazione viene modificato nel client di prova WCF e l'opzione **Rigenera sempre la configurazione all'avvio dei servizi** è disabilitata, il file modificato viene copiato nella cartella "CachedConfig" in "My Documents\Test Client Projects" con un mapping ( Metadata-Address-to-file-name) file XML come indice.
+Per impostazione predefinita, il client di prova WCF archivia il codice client e i file di configurazione generati nella cartella "%appdata%\Local\temp\Test Client Projects". Questa cartella viene eliminata dopo la chiusura del client di test WCF. Se un file di configurazione viene modificato nel client di prova WCF e l'opzione **Rigenera sempre la configurazione all'avvio dei servizi** è disabilitata, il file modificato viene copiato nella cartella "CachedConfig" in "My Documents\Test Client Projects" con un file XML di mapping (Metadata-Address-to-file-name) come indice.
 
-È anche possibile avviare il client di prova WCF in una riga di comando, usare l'opzione `/ProjectPath` per specificare un nuovo percorso desiderato per archiviare i file generati oppure usare l'opzione `/RestoreProjectPath` per ripristinare il percorso predefinito. La sintassi è la seguente:
+È anche possibile avviare il client di prova WCF in una riga di comando, usare l' `/ProjectPath` opzione per specificare un nuovo percorso desiderato per archiviare i file generati oppure usare l' `/RestoreProjectPath` opzione per ripristinare il percorso predefinito. La sintassi è la seguente:
 
 `wcfTestClient.exe /ProjectPath [desired location]`
 
-L'esecuzione di questo comando non consente di aprire il client di prova WCF. ma solo la modifica del percorso della cartella. È possibile eseguire questo comando se il client di prova WCF è in esecuzione o meno. La nuova posizione viene applicata quando il client di test WCF viene riavviato. Le informazioni sul percorso possono essere salvate nel registro di sistema o nel file WcfTestClient. exe. Option nella cartella "%appdata%\Local\temp\Test Client Projects".
+L'esecuzione di questo comando non consente di aprire il client di prova WCF. ma solo la modifica del percorso della cartella. È possibile eseguire questo comando se il client di prova WCF è in esecuzione o meno. La nuova posizione viene applicata quando il client di test WCF viene riavviato. Le informazioni sul percorso possono essere salvate nel registro di sistema o nel file WcfTestClient.exe. Option nella cartella "%appdata%\Local\temp\Test Client Projects".
 
 ## <a name="features-supported-by-wcf-test-client"></a>Funzioni supportate da Client di prova WCF
 
@@ -180,7 +181,7 @@ Di seguito è riportato un elenco di funzionalità non supportate dal client di 
 
 È possibile chiudere il client di prova WCF nei modi seguenti:
 
-- Scegliere **Esci**dal menu **file** . In alternativa, nella finestra principale del client di prova WCF fare clic su **Chiudi**. Entrambe queste azioni arrestano anche l'host automatico del servizio WCF e arrestano il processo di debug di Visual Studio se il client di test WCF è stato avviato da Visual Studio.
+- Scegliere **Esci** dal menu **File**. In alternativa, nella finestra principale del client di prova WCF fare clic su **Chiudi**. Entrambe queste azioni arrestano anche l'host automatico del servizio WCF e arrestano il processo di debug di Visual Studio se il client di test WCF è stato avviato da Visual Studio.
 
 - Fare clic con il pulsante destro del mouse sull'icona **host del servizio WCF** nell'area di notifica, quindi scegliere **Esci.** Questo arresta l'host automatico del servizio WCF e il client di prova WCF e arresta il processo di debug di Visual Studio.
 

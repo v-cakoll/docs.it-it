@@ -8,22 +8,23 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: 369495322328350bc06827b87598160469d864bb
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 72a15736fd21d1d626f88e728d70b7dd7ee6768f
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307059"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990184"
 ---
 # <a name="application-settings-overview"></a>Cenni preliminari sulle impostazioni delle applicazioni
-Questo argomento descrive come creare e archiviare i dati delle impostazioni per conto dell'applicazione e degli utenti.
+
+Questo articolo illustra come creare e archiviare i dati delle impostazioni per conto dell'applicazione e degli utenti.
 
  La funzionalità Impostazioni applicazione di Windows Form semplifica le operazioni di creazione, archiviazione e gestione delle preferenze personalizzate a livello di applicazione e utente nel computer client. Le impostazioni dell'applicazione Windows Form consentono non solo di archiviare dati applicativi quali stringhe di connessione a database, ma anche dati specifici dell'utente, quali preferenze per l'applicazione. L'uso di Visual Studio o di codice gestito personalizzato consente di creare nuove impostazioni, leggerle e scriverle su disco, associarle a proprietà di form e convalidare i dati delle impostazioni prima di caricarle e salvarle.
 
  Le impostazioni dell'applicazione consentono agli sviluppatori di salvare lo stato nell'applicazione utilizzando codice personalizzato molto ridotto e sostituisce le proprietà dinamiche nelle versioni precedenti del .NET Framework. Contengono molti miglioramenti rispetto alle proprietà dinamiche, che sono di sola lettura, ad associazione tardiva e richiedono ulteriore programmazione personalizzata. Le classi di proprietà dinamiche sono state mantenute nel .NET Framework 2,0, ma sono semplicemente classi shell che eseguono il wrapping delle classi delle impostazioni dell'applicazione.
 
 ## <a name="what-are-application-settings"></a>Informazioni sulle impostazioni dell'applicazione.
- Le applicazioni Windows Form richiedono spesso dati di importanza fondamentale per l'esecuzione che tuttavia non è opportuno includere direttamente nel codice dell'applicazione. Se l'applicazione usa un servizio Web o un server di database, è consigliabile archiviare le informazioni in un file separato, in modo che sia possibile modificarle in futuro senza dover ricompilare. Analogamente, è possibile che le applicazioni richiedano di archiviare dati specifici per l'utente corrente. Molte applicazioni, ad esempio, dispongono di preferenze utente che ne personalizzano l'aspetto e il comportamento.
+ Le applicazioni Windows Forms spesso richiedono dati cruciali per l'esecuzione dell'applicazione, ma che non si desidera includere direttamente nel codice dell'applicazione. Se l'applicazione usa un servizio Web o un server di database, è possibile archiviare queste informazioni in un file separato, in modo che sia possibile modificarle in futuro senza ricompilare. Analogamente, è possibile che le applicazioni richiedano di archiviare dati specifici per l'utente corrente. Molte applicazioni, ad esempio, dispongono di preferenze utente che ne personalizzano l'aspetto e il comportamento.
 
  Le impostazioni dell'applicazione soddisfano entrambe le necessità in quanto costituiscono un semplice metodo per l'archiviazione di impostazioni tanto a livello di applicazione quanto a livello di utente nel computer client. Usando Visual Studio o un editor di codice è possibile definire un'impostazione per una data proprietà specificandone il nome, il tipo di dati e l'ambito (applicazione o utente). È anche possibile inserire impostazioni correlate in gruppi denominati per semplificarne l'impiego e la leggibilità. Una volta definite, le impostazioni assumono carattere permanente e vengono lette automaticamente in memoria in fase di esecuzione. Un'architettura modulare rende possibile la modifica del meccanismo di persistenza, ma per impostazione predefinita viene usato il file system locale.
 
@@ -41,7 +42,7 @@ Questo argomento descrive come creare e archiviare i dati delle impostazioni per
  Le impostazioni dell'applicazione non includono funzionalità incorporate per crittografare automaticamente le informazioni. Non archiviare mai informazioni correlate alla sicurezza, ad esempio password di database, in testo non crittografato. Se si vogliono archiviare informazioni riservate, lo sviluppatore dell'applicazione è responsabile di garantirne la sicurezza. Se si vogliono archiviare le stringhe di connessione, è consigliabile usare la sicurezza integrata di Windows e non ricorrere a password impostate come hardcoded nell'URL. Per altre informazioni, vedere [Code Access Security and ADO.NET](../../data/adonet/code-access-security.md).
 
 ## <a name="getting-started-with-application-settings"></a>Guida introduttiva alle impostazioni dell'applicazione
- Se si usa Visual Studio, per definire le impostazioni in Progettazione Windows Form usare la proprietà **(ApplicationSettings)** nella finestra **Proprietà** . Quando si definiscono le impostazioni in questo modo, viene creata automaticamente una classe wrapper gestita personalizzata che stabilisce un'associazione tra ogni impostazione e una proprietà di classe. Visual Studio stabilisce inoltre l'associazione tra l'impostazione e una proprietà su un form o controllo, in modo che le impostazioni del controllo vengano ripristinate automaticamente alla visualizzazione del form e salvate automaticamente alla chiusura.
+ Se si usa Visual Studio, per definire le impostazioni in Progettazione Windows Form usare la proprietà **(ApplicationSettings)** nella finestra **Proprietà** . Quando si definiscono le impostazioni in questo modo, Visual Studio crea automaticamente una classe wrapper gestita personalizzata che associa ogni impostazione a una proprietà della classe. Visual Studio stabilisce inoltre l'associazione tra l'impostazione e una proprietà su un form o controllo, in modo che le impostazioni del controllo vengano ripristinate automaticamente alla visualizzazione del form e salvate automaticamente alla chiusura.
 
  Se si desidera un controllo maggiore sulle impostazioni, è possibile definire una classe wrapper personalizzata per le impostazioni dell'applicazione. Questa operazione viene eseguita derivando una classe da <xref:System.Configuration.ApplicationSettingsBase>, aggiungendo una proprietà corrispondente a ogni impostazione e applicando attributi speciali alle proprietà. Per informazioni dettagliate sulla creazione di classi wrapper, vedere [Application Settings Architecture](application-settings-architecture.md).
 

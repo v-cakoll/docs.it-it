@@ -1,17 +1,18 @@
 ---
 title: Dettagli delle funzionalità di WCF
+description: Informazioni dettagliate sul controllo esteso offerto da WCF sulle funzioni di messaggistica di un'applicazione.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - features [WCF]
 - WCF, features
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
-ms.openlocfilehash: 80728cd5f677617e8727e9f8c4b0c4b85767975c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 308a32c73d33a4da2fd841ca7c330a42deb7d324
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596890"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246636"
 ---
 # <a name="wcf-feature-details"></a>Dettagli delle funzionalità di WCF
 Windows Communication Foundation (WCF) consente un controllo completo sulle funzioni di messaggistica di un'applicazione. Negli argomenti contenuti in questa sezione vengono descritte in dettaglio le funzionalità disponibili. Per ulteriori informazioni sulla programmazione di base, vedere [programmazione WCF di base](../basic-wcf-programming.md).  
@@ -68,7 +69,7 @@ Windows Communication Foundation (WCF) consente un controllo completo sulle funz
  [WCF Discovery](wcf-discovery.md)  
  Viene descritto il supporto per consentire ai servizi di essere individuabile in fase di runtime in una modalità interoperativa utilizzando il protocollo WS-Discovery.  
   
- [Routing](routing.md)  
+ [Routing.](routing.md)  
  Viene descritto il servizio di routing.  
   
 ## <a name="reference"></a>Informazioni di riferimento  

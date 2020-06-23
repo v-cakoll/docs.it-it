@@ -1,5 +1,6 @@
 ---
 title: Restituire proprietà da un provider di automazione interfaccia utente
+description: Vedere in che modo un provider di automazione interfaccia utente può restituire le proprietà di un elemento alle applicazioni client in .NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - properties, returned by UI Automation providers
 - UI Automation, providers returning properties
 ms.assetid: 5eba950e-b9e1-48eb-ab8e-b69db76bf589
-ms.openlocfilehash: 742c84bf0e8e9413c83048bce32f29b899c1d339
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 14a42c73d1dfb942a7e60ce7a72c3a5aea2b820c
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446868"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903833"
 ---
 # <a name="return-properties-from-a-ui-automation-provider"></a>Restituire proprietà da un provider di automazione interfaccia utente
 > [!NOTE]
@@ -30,5 +31,5 @@ ms.locfileid: "74446868"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica dei provider di automazione interfaccia utente](ui-automation-providers-overview.md)
+- [Cenni preliminari sui provider di automazione interfaccia utente](ui-automation-providers-overview.md)
 - [Implementazione del provider di automazione interfaccia utente lato server](server-side-ui-automation-provider-implementation.md)

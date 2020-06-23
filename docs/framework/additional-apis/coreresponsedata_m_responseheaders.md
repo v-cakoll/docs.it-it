@@ -1,5 +1,6 @@
 ---
-title: Campo CoreResponseData.m_ResponseHeaders
+title: CoreResponseData. m_ResponseHeaders campo
+description: Informazioni sul campo CoreResponseData. m_ResponseHeaders in .NET. Questo campo è un tipo WebHeaderCollection con le intestazioni associate alla risposta del server.
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 723df6dc2de978695608d106e3a01bde286fc4fe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7c7b896193cb81e9fc9e3ec28110359003a36728
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156103"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989794"
 ---
-# <a name="coreresponsedatam_responseheaders-field"></a>CoreResponseData.m\_ResponseHeaders Campo
+# <a name="coreresponsedatam_responseheaders-field"></a>CoreResponseData. m- \_ campo ResponseHeaders
 
-`CoreResponseData.m_ResponseHeaders`è <xref:System.Net.WebHeaderCollection> una delle intestazioni associate alla risposta del server.
+`CoreResponseData.m_ResponseHeaders`è un oggetto <xref:System.Net.WebHeaderCollection> di intestazioni associate alla risposta del server.
 
 ## <a name="syntax"></a>Sintassi
   
@@ -28,14 +29,14 @@ public WebHeaderCollection m_ResponseHeaders
 ```
 
 > [!WARNING]
-> Questa API non deve essere utilizzata direttamente nel codice. Al contrario, <xref:System.Diagnostics.DiagnosticSource> è necessario utilizzare un per eseguire l'hook del codice di rete. Vedere [Manuale dell'utente](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)di DiagnosticSource .
+> Questa API non è destinata all'uso diretto nel codice. È invece consigliabile usare un <xref:System.Diagnostics.DiagnosticSource> per associare il codice di rete. Vedere [il manuale dell'utente di DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 >
-> Microsoft non supporta in nessun caso l'utilizzo di questa classe in un'applicazione di produzione.
+> Microsoft non supporta l'utilizzo di questa classe in un'applicazione di produzione in qualsiasi circostanza.
 
 ## <a name="requirements"></a>Requisiti
 
-**Spazio dei nomi:**<xref:System.Net>
+**Spazio dei nomi:** <xref:System.Net>
 
-**Assemblaggio:** Sistema (in System.dll)
+**Assembly:** Sistema (in System.dll)
 
-Versioni di **.NET Framework:** Disponibile dalla 2.0.
+**Versioni .NET Framework:** Disponibile a partire da 2,0.

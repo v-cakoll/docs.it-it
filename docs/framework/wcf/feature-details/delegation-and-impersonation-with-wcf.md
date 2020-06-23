@@ -1,5 +1,6 @@
 ---
 title: Delega e rappresentazione con WCF
+description: Informazioni sui metodi di rappresentazione e delega usati da WCF per limitare l'accesso client alle risorse di un dominio del servizio.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: e491925fdbe8d44df8e0c64b563eb92569453e35
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7f8d3695a36a43ca6bf796b141c07f6d2d088354
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599256"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245076"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delega e rappresentazione con WCF
 La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l'accesso dei client alle risorse del dominio del servizio. Tali risorse possono essere risorse del computer, ad esempio file locali (rappresentazione), o risorse in un'altro computer, ad esempio una condivisione file (delega). Per un'applicazione di esempio, vedere [Impersonating the Client](../samples/impersonating-the-client.md). Per un esempio di come usare la rappresentazione, vedere [How to: Impersonate a Client on a Service](../how-to-impersonate-a-client-on-a-service.md).  
@@ -92,7 +93,7 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
   
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|Comportamento|  
 |---------------------------|------------------------------------------------|--------------|  
-|Obbligatoria|n/d|WCF rappresenta il chiamante|  
+|Necessario|n/d|WCF rappresenta il chiamante|  
 |Consentito|false|WCF non rappresenta il chiamante|  
 |Consentito|true|WCF rappresenta il chiamante|  
 |NotAllowed|false|WCF non rappresenta il chiamante|  

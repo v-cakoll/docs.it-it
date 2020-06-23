@@ -1,5 +1,6 @@
 ---
 title: Esempio della guida introduttiva
+description: Informazioni su come implementare un servizio tipico e un client tipico con WCF. Questo esempio è la base per tutti gli altri esempi di tecnologia di base.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: fc4a7e9acb15f77140732638b2982dd4a9dae9ce
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b23be1b33f227154b916429c063ec4106229bb3c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575186"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246233"
 ---
 # <a name="getting-started-sample"></a>Esempio della guida introduttiva
 
@@ -32,7 +33,7 @@ Nell'esempio Introduzione viene illustrato come implementare un servizio tipico 
 
 Il servizio descrive le operazioni che esegue in un contratto di servizio che espone pubblicamente come metadati. Il servizio contiene inoltre il codice per implementare le operazioni.
 
-Il client contiene una definizione del contratto di servizio e una classe proxy per accedere al servizio. Il codice proxy viene generato dai metadati del servizio mediante lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).
+Il client contiene una definizione del contratto di servizio e una classe proxy per accedere al servizio. Il codice proxy viene generato dai metadati del servizio utilizzando lo [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).
 
 In Windows Vista, il servizio è ospitato nel servizio Attivazione Windows (WAS). In Windows XP e Windows Server 2003, è ospitato da Internet Information Services (IIS) e ASP.NET. Ospitare un servizio in IIS o WAS consente l'attivazione automatica del servizio quando si esegue l'accesso per la prima volta.
 
@@ -174,7 +175,7 @@ Per impostazione predefinita il framework non espone metadati. Di conseguenza, i
 </system.serviceModel>
 ```
 
-Il client comunica utilizzando un tipo di contratto specificato utilizzando una classe client generata dallo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Questo client generato è contenuto nel file generatedClient.cs o generatedClient.vb. Questa utilità recupera metadati per un servizio specificato e genera un client che viene utilizzato dall'applicazione client per comunicare utilizzando un tipo di contratto specificato. Il servizio ospitato deve essere disponibile per generare il codice client, perché il servizio viene utilizzato per recuperare i metadati aggiornati.
+Il client comunica utilizzando un tipo di contratto specificato utilizzando una classe client generata dallo [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Questo client generato è contenuto nel file generatedClient.cs o generatedClient.vb. Questa utilità recupera metadati per un servizio specificato e genera un client che viene utilizzato dall'applicazione client per comunicare utilizzando un tipo di contratto specificato. Il servizio ospitato deve essere disponibile per generare il codice client, perché il servizio viene utilizzato per recuperare i metadati aggiornati.
 
  Eseguire il comando seguente dal prompt dei comandi SDK nella directory del client per generare il proxy tipizzato:
 

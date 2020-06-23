@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 30ed8314d8045a599207cb0195474fdfde41760d
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4ce32c766e7a454c1294eb38266a84602cf8e241
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768937"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245635"
 ---
 # <a name="isolated-storage"></a>Spazio di memorizzazione isolato
 <a name="top"></a> Per le applicazioni desktop, lo spazio di memorizzazione isolato è un meccanismo di archiviazione dati che offre isolamento e sicurezza definendo modi standardizzati di associare il codice ai dati salvati. La standardizzazione offre anche altri vantaggi. Gli amministratori possono utilizzare strumenti in grado di modificare l'archiviazione isolata per configurare lo spazio di archiviazione dei file, per impostare i criteri di sicurezza e per eliminare dati inutilizzati. Con lo spazio di memorizzazione isolato, non occorre più fornire al codice percorsi univoci per individuare posizioni sicure nel file system e i dati sono protetti da altre applicazioni che dispongono esclusivamente dell'accesso allo spazio di memorizzazione isolato. Non è necessario specificare informazioni hardcoded che indicano il percorso dell'area di archiviazione di un'applicazione.
@@ -105,6 +105,97 @@ L'utilizzo consentito specificato da <xref:System.Security.Permissions.IsolatedS
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser>|Come `AssemblyIsolationByUser`, ma l'archivio viene salvato in un percorso di cui verrà effettuato il roaming se i profili degli utenti mobili sono attivati e le quote non sono applicate.|Come `AssemblyIsolationByUser`, ma senza quote. Aumenta il rischio che i servizi vengano attaccati.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser>|Isolamento in base all'utente. In genere questo livello di autorizzazione viene utilizzato solo per gli strumenti di debug e di amministrazione.|L'accesso con questa autorizzazione consente al codice di visualizzare o rimuovere i file o le directory dell'archiviazione isolata di un utente, indipendentemente dall'isolamento dell'assembly. I rischi includono, tra l'altro, la fuga di informazioni e la perdita di dati.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.UnrestrictedIsolatedStorage>|Isolamento in base a tutti gli utenti, i domini e gli assembly. In genere questo livello di autorizzazione viene utilizzato solo per gli strumenti di debug e di amministrazione.|Questa autorizzazione crea la possibilità che vengano compromessi tutti gli archivi isolati di tutti gli utenti.|
+
+## <a name="safety-of-isolated-storage-components-with-regard-to-untrusted-data"></a>Sicurezza dei componenti dello spazio di memorizzazione isolato per quanto riguarda i dati non attendibili
+
+__Questa sezione si applica ai Framework seguenti:__
+
+- .NET Framework (tutte le versioni)
+- .NET Core 2.1 +
+- .NET 5.0 +
+
+Il .NET Framework e .NET Core offrono lo [spazio di memorizzazione isolato](/dotnet/standard/io/isolated-storage) come meccanismo per salvare in modo permanente i dati per un utente, un'applicazione o un componente. Si tratta di un componente legacy progettato principalmente per gli scenari di sicurezza dall'accesso di codice ora deprecati.
+
+È possibile usare diversi strumenti e API di archiviazione isolata per leggere i dati attraverso i confini del trust. Ad esempio, la lettura di dati da un ambito a livello di computer può aggregare i dati di altri account utente meno attendibili nel computer. I componenti o le applicazioni che leggono dagli ambiti di archiviazione isolata a livello di computer devono essere consapevoli delle conseguenze della lettura di questi dati.
+
+### <a name="security-sensitive-apis-which-can-read-from-the-machine-wide-scope"></a>API sensibili alla sicurezza che possono leggere dall'ambito a livello di computer
+
+Componenti o applicazioni che chiamano una delle API seguenti lette dall'ambito a livello di computer:
+
+ * [IsolatedStorageFile. GetEnumerator](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getenumerator), passaggio di un ambito che include il flag IsolatedStorageScope. Machine
+ * [IsolatedStorageFile. GetMachineStoreForApplication](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforapplication)
+ * [IsolatedStorageFile. GetMachineStoreForAssembly](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforassembly)
+ * [IsolatedStorageFile. GetMachineStoreForDomain](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestorefordomain)
+ * [IsolatedStorageFile. GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore), passaggio di un ambito che include il flag IsolatedStorageScope. Machine
+ * [IsolatedStorageFile. Remove](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove), passaggio di un ambito che include il `IsolatedStorageScope.Machine` flag
+
+Lo [strumento per lo spazio di memorizzazione isolato](/dotnet/framework/tools/storeadm-exe-isolated-storage-tool) `storeadm.exe` viene influenzato se viene chiamato con l' `/machine` opzione, come illustrato nel codice seguente:
+
+```txt
+storeadm.exe /machine [any-other-switches]
+```
+
+Lo strumento spazio di memorizzazione isolato viene fornito come parte di Visual Studio e .NET Framework SDK.
+
+Se l'applicazione non implica chiamate alle API precedenti o se il flusso di lavoro non comporta la chiamata `storeadm.exe` in questo modo, questo documento non è applicabile.
+
+### <a name="impact-in-multi-user-environments"></a>Effetti sugli ambienti multiutente
+
+Come indicato in precedenza, l'impatto sulla sicurezza di queste API risulta che i dati scritti da un ambiente di trust vengono letti da un ambiente di trust diverso. Lo spazio di memorizzazione isolato USA in genere uno dei tre percorsi per leggere e scrivere i dati:
+
+1. `%LOCALAPPDATA%\IsolatedStorage\`: Ad esempio, `C:\Users\<username>\AppData\Local\IsolatedStorage\` per `User` ambito.
+2. `%APPDATA%\IsolatedStorage\`: Ad esempio, `C:\Users\<username>\AppData\Roaming\IsolatedStorage\` per `User|Roaming` ambito.
+3. `%PROGRAMDATA%\IsolatedStorage\`: Ad esempio, `C:\ProgramData\IsolatedStorage\` per `Machine` ambito.
+
+Le prime due posizioni sono isolate per utente. Windows garantisce che diversi account utente nello stesso computer non possano accedere alle cartelle dei profili utente. Due account utente diversi che utilizzano gli `User` `User|Roaming` archivi o non vedranno i dati dell'altro e non possono interferire con i dati dell'altro.
+
+La terza posizione è condivisa tra tutti gli account utente nel computer. Account diversi possono leggere e scrivere in questo percorso e sono in grado di visualizzare i dati reciproci.
+
+I percorsi precedenti possono variare in base alla versione di Windows in uso.
+
+Si consideri ora un sistema multiutente con due utenti registrati, _Mallory_ e _Bob_. Mallory è in grado di accedere alla directory del profilo utente `C:\Users\Mallory\` e può accedere al percorso di archiviazione condiviso a livello di computer `C:\ProgramData\IsolatedStorage\` . Non riesce ad accedere alla directory del profilo utente di Bob `C:\Users\Bob\` .
+
+Se Mallory vuole attaccare Bob, potrebbe scrivere dati nel percorso di archiviazione a livello di computer, quindi provare a influenzare Bob nella lettura dall'archivio a livello di computer. Quando Bob esegue un'app che legge da questo archivio, l'app funzionerà sui dati di Mallory posizionati, ma dall'interno del contesto dell'account utente di Bob. Nella parte restante di questo documento vengono contemplate diversi vettori di attacco e le operazioni che le app possono eseguire per ridurre al minimo il rischio di questi attacchi.
+
+__Nota:__ Per poter eseguire tale attacco, Mallory richiede:
+
+* Un account utente nel computer.
+* Possibilità di inserire un file in una posizione nota nella file system.
+* Sapere che Bob a un certo punto eseguirà un'app che tenta di leggere i dati.
+
+Non si tratta di vettori di minaccia applicabili agli ambienti desktop a utente singolo standard, ad esempio i PC domestici o le workstation aziendali con singolo dipendente.
+
+#### <a name="elevation-of-privilege"></a>Elevazione dei privilegi
+
+Un attacco __di tipo elevazione dei privilegi__ si verifica quando l'app di Bob legge il file di Mallory e tenta automaticamente di eseguire un'azione in base al contenuto del payload. Si consideri un'app che legge il contenuto di uno script di avvio dall'archivio a livello di computer e passa tali contenuti a `Process.Start` . Se Mallory può inserire uno script dannoso all'interno dell'archivio a livello di computer, quando Bob avvia l'app:
+
+* L'app analizza e avvia lo script dannoso di Mallory _nel contesto del profilo utente di Bob_.
+* Accesso a Mallory Gaines all'account di Bob sul computer locale.
+
+#### <a name="denial-of-service"></a>Denial of Service
+
+Un attacco __Denial of Service__ si verifica quando l'app di Bob legge il file di Mallory e si arresta in modo anomalo o smette di funzionare correttamente. Si consideri di nuovo l'app citata in precedenza, che tenta di analizzare uno script di avvio dall'archivio a livello di computer. Se Mallory può inserire un file con contenuto non valido all'interno dell'archivio a livello di computer, potrebbe:
+
+* Far sì che l'app di Bob generi un'eccezione prima nel percorso di avvio.
+* Impedire l'avvio dell'app correttamente a causa dell'eccezione.
+
+Ha quindi negato a Bob la possibilità di avviare l'app con il proprio account utente.
+
+#### <a name="information-disclosure"></a>Divulgazione di informazioni
+
+Un attacco di __divulgazione di informazioni__ si verifica quando Mallory può ingannare Bob per rivelare il contenuto di un file a cui Mallory non ha normalmente accesso. Si tenga presente che Bob ha un file Secret *C:\Users\Bob\secret.txt* che Mallory desidera leggere. Conosce il percorso di questo file, ma non è in grado di leggerlo perché Windows non consente di accedere alla directory dei profili utente di Bob.
+
+Al contrario, Mallory inserisce un collegamento reale nell'archivio a livello di computer. Si tratta di un tipo speciale di file che non contiene alcun contenuto, bensì punta a un altro file su disco. Il tentativo di leggere il file di collegamento reale leggerà invece il contenuto del file di destinazione del collegamento. Dopo aver creato il collegamento reale, Mallory non è ancora in grado di leggere il contenuto del file perché non ha accesso alla destinazione ( `C:\Users\Bob\secret.txt` ) del collegamento. Tuttavia _, Bob ha_ accesso a questo file.
+
+Quando l'app Bob legge dall'archivio a livello di computer, ora legge inavvertitamente il contenuto del `secret.txt` file, proprio come se il file fosse presente nell'archivio a livello di computer. Quando l'app di Bob viene chiusa, se tenta di risalvare il file nell'archivio a livello di computer, verrà posizionata una copia effettiva del file nella directory * C:\ProgramData\IsolatedStorage \* Poiché questa directory è leggibile da qualsiasi utente nel computer, Mallory può ora leggere il contenuto del file.
+
+### <a name="best-practices-to-defend-against-these-attacks"></a>Procedure consigliate per la difesa da questi attacchi
+
+__Importante:__ Se nell'ambiente sono presenti più utenti __non__ attendibili reciprocamente, non chiamare l'API `IsolatedStorageFile.GetEnumerator(IsolatedStorageScope.Machine)` o richiamare lo strumento `storeadm.exe /machine /list` . Entrambi presuppongono che stiano operando su dati attendibili. Se un utente malintenzionato può effettuare il seeding di un payload dannoso nell'archivio a livello di computer, tale payload può causare un attacco di elevazione dei privilegi nel contesto dell'utente che esegue questi comandi.
+
+Se si opera in un ambiente multiutente, riconsiderare l'utilizzo di funzionalità di spazio di memorizzazione isolato che hanno come destinazione l'ambito del _computer_ . Se un'app deve leggere i dati da un percorso a livello di computer, preferisce leggere i dati da un percorso scrivibile solo da account amministratore. La `%PROGRAMFILES%` Directory e l' `HKLM` hive del registro di sistema sono esempi di percorsi scrivibili solo dagli amministratori e leggibili da tutti. I dati letti da tali percorsi vengono pertanto considerati attendibili.
+
+Se un'app deve usare l'ambito del _computer_ in un ambiente multiutente, convalidare il contenuto di tutti i file letti dall'archivio a livello di computer. Se l'app deserializza gli oggetti grafici da questi file, provare a usare serializzatori più sicuri, come `XmlSerializer` anziché serializzatori pericolosi come `BinaryFormatter` o `NetDataContractSerializer` . Prestare attenzione con gli oggetti grafici o gli oggetti grafici profondamente annidati che eseguono l'allocazione delle risorse in base al contenuto del file.
 
 <a name="isolated_storage_locations"></a>
 

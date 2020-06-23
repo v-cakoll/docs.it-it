@@ -11,12 +11,12 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 6200530ec9761438c8932803bf12c63c1445a37e
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 374d53346c964c5f8135c7e121bd3a2db8a8fd7b
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72847164"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989512"
 ---
 # <a name="connectstreamconnection-property"></a>Proprietà ConnectStream. Connection
 
@@ -30,13 +30,14 @@ internal Connection Connection { get; }
 
 ## <a name="property-value"></a>Valore proprietà
 
-`System.Net.Connection`  
-Oggetto Connection.
+`System.Net.Connection`
 
-## <a name="remarks"></a>Note
+Oggetto connessione.
+
+## <a name="remarks"></a>Commenti
 
 > [!WARNING]
-> Il `ConnectStream.Connection` proprietà è interno e non deve essere usato direttamente nel codice.
+> La `ConnectStream.Connection` proprietà è interna e non è destinata all'uso diretto nel codice.
 >
 > Microsoft non supporta l'utilizzo di questa proprietà in un'applicazione di produzione in qualsiasi circostanza.
 
@@ -44,6 +45,6 @@ Oggetto Connection.
 
 **Spazio dei nomi:** <xref:System.Net>
 
-**Assembly:** System (in System. dll)
+**Assembly:** Sistema (in System.dll)
 
 **Versioni .NET Framework:** Disponibile a partire da 1,0.

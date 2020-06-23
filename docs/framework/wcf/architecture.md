@@ -1,17 +1,18 @@
 ---
 title: Architettura di Windows Communication Foundation
+description: Informazioni sui livelli principali dell'architettura Windows Communication Foundation, inclusi contratti, runtime del servizio, messaggistica e attivazione & hosting.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], architecture
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: f34a05a436dd021f0d1fcc05f3a12a058123acdc
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: a07d5c4be2e36b8123e39a0a04d841797e34212b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320839"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245570"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Architettura di Windows Communication Foundation
 Nell'immagine seguente vengono illustrati i livelli principali dell'architettura Windows Communication Foundation (WCF).  

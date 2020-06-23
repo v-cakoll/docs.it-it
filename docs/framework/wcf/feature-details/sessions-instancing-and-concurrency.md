@@ -1,13 +1,14 @@
 ---
 title: Sessioni, istanze e concorrenza
+description: Informazioni su sessioni, istanze e concorrenza, su come usarle e sulle interazioni tra di esse in WFC.
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 070e9ed25e2c0cce1309fb27e3f6a02bb01f3d2c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 41eef5a962c702eebd6b9a34607b542ec6bbd97b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600322"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246545"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sessioni, istanze e concorrenza
 Una *sessione* è una correlazione di tutti i messaggi inviati tra due endpoint. La*creazione di istanze* fa riferimento al controllo della durata di oggetti servizio definiti dall'utente e di oggetti <xref:System.ServiceModel.InstanceContext> correlati. La*concorrenza* è il termine dato al controllo del numero di thread in esecuzione contemporaneamente in un <xref:System.ServiceModel.InstanceContext> .  
@@ -37,7 +38,7 @@ Una *sessione* è una correlazione di tutti i messaggi inviati tra due endpoint.
   
  Le applicazioni client e le applicazioni di servizio interagiscono con le sessioni in modi diversi. Le applicazioni client avviano sessioni e quindi ricevono ed elaborano i messaggi inviati all'interno della sessione. Le applicazioni di servizio possono utilizzare le sessioni come punto di estensibilità per aggiungere comportamenti. Ciò si ottiene utilizzando direttamente <xref:System.ServiceModel.InstanceContext> o implementando un provider di contesto dell'istanza personalizzato.  
   
-## <a name="instancing"></a>creazione di istanze  
+## <a name="instancing"></a>Instancing  
  Il comportamento delle istanze (impostato tramite la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> ) consente di controllare come viene creato <xref:System.ServiceModel.InstanceContext> in risposta ai messaggi in ingresso. Per impostazione predefinita, ogni <xref:System.ServiceModel.InstanceContext> viene associato a uno oggetto servizio definito dall'utente. In questo modo l'impostazione (nel caso predefinito) della proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> consente di controllare anche le istanze di oggetti servizio definiti dall'utente. L'enumerazione <xref:System.ServiceModel.InstanceContextMode> definisce le modalità di istanza.  
   
  Sono disponibili le modalità di istanza seguenti:  
@@ -113,5 +114,5 @@ public class CalculatorService : ICalculatorConcurrency
 - [Procedura: creare un servizio che richiede sessioni](how-to-create-a-service-that-requires-sessions.md)
 - [Procedura: Controllare le istanze del servizio](how-to-control-service-instancing.md)
 - [Concorrenza](../samples/concurrency.md)
-- [creazione di istanze](../samples/instancing.md)
+- [Instancing](../samples/instancing.md)
 - [Sessione](../samples/session.md)

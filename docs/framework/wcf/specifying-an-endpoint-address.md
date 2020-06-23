@@ -1,5 +1,6 @@
 ---
 title: Specifica di un indirizzo endpoint
+description: Informazioni su un indirizzo endpoint, una parte di un ServiceEndpoint in WCF. Tutte le comunicazioni con un servizio WCF avvengono tramite gli endpoint.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 5ec6432d2f9cc7bf8619f59bad470c6b2cb190e0
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: e1bd9e5a27d1bc86d2d3e04ee82221a27a4e1fa8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441019"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245985"
 ---
 # <a name="specifying-an-endpoint-address"></a>Specifica di un indirizzo endpoint
 
@@ -42,13 +43,13 @@ Quando si ospita il servizio in IIS, non si gestisce l'istanza di <xref:System.S
 
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Definizione degli indirizzi endpoint nella configurazione
 
-Per definire un endpoint in un file di configurazione, utilizzare l'elemento [ \< endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md) .
+Per definire un endpoint in un file di configurazione, usare l' [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md) elemento.
 
 [!code-xml[S_UEHelloWorld#5](./snippets/specifying-an-endpoint-address/serviceapp2.config#5)]
 
-Quando <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> viene chiamato il metodo, ovvero quando l'applicazione host tenta di avviare il servizio, il sistema cerca un elemento del>di [ \< servizio](../configure-apps/file-schema/wcf/service.md) con un attributo Name che specifica "UE". Samples. HelloService ". Se viene trovato l'elemento [ \< Service>](../configure-apps/file-schema/wcf/service.md) , il sistema carica la classe specificata e crea gli endpoint usando le definizioni di endpoint fornite nel file di configurazione. Questo meccanismo consente di caricare e avviare un servizio con due righe di codice, mentre tiene le informazioni sull'associazione e l'indirizzamento fuori dal codice. Il vantaggio di tale approccio è che queste modifiche possono essere apportate senza dover ricompilare o ridistribuire l'applicazione.
+Quando <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> viene chiamato il metodo, ovvero quando l'applicazione host tenta di avviare il servizio, il sistema cerca un [\<service>](../configure-apps/file-schema/wcf/service.md) elemento con un attributo Name che specifica "UE". Samples. HelloService ". Se l' [\<service>](../configure-apps/file-schema/wcf/service.md) elemento viene trovato, il sistema carica la classe specificata e crea gli endpoint usando le definizioni di endpoint fornite nel file di configurazione. Questo meccanismo consente di caricare e avviare un servizio con due righe di codice, mentre tiene le informazioni sull'associazione e l'indirizzamento fuori dal codice. Il vantaggio di tale approccio è che queste modifiche possono essere apportate senza dover ricompilare o ridistribuire l'applicazione.
 
-Le intestazioni facoltative vengono dichiarate in un [ \<>di intestazioni ](../configure-apps/file-schema/wcf/headers-element.md). Di seguito è riportato un esempio degli elementi utilizzati per specificare gli endpoint per un servizio in un file di configurazione che distingue tra due intestazioni: i client "Gold" `http://tempuri1.org/` e i client "standard" da `http://tempuri2.org/` . Il client che chiama questo servizio deve avere le [ \< intestazioni appropriate>](../configure-apps/file-schema/wcf/headers-element.md) nel file di configurazione.
+Le intestazioni facoltative vengono dichiarate in un oggetto [\<headers>](../configure-apps/file-schema/wcf/headers-element.md) . Di seguito è riportato un esempio degli elementi utilizzati per specificare gli endpoint per un servizio in un file di configurazione che distingue tra due intestazioni: i client "Gold" `http://tempuri1.org/` e i client "standard" da `http://tempuri2.org/` . Il client che chiama questo servizio deve avere il appropriato [\<headers>](../configure-apps/file-schema/wcf/headers-element.md) nel file di configurazione.
 
 [!code-xml[S_UEHelloWorld#1](./snippets/specifying-an-endpoint-address/serviceapp.config#1)]
 
