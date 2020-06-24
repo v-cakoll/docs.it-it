@@ -25,6 +25,10 @@
       href: tutorials/ml-sentiment-analysis.md
 - name: Guide pratiche
   items:
+    - name: Guida alla trasmissione
+      href: how-to-guides/broadcast-guide.md
+    - name: Guida alle funzioni definite dall'utente
+      href: how-to-guides/udf-guide.md
     - name: Eseguire il debug dell'applicazione
       href: how-to-guides/debug.md
     - name: Inviare processi a HDInsight
