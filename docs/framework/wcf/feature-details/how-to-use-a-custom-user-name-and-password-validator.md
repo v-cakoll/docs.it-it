@@ -120,7 +120,7 @@ Nel codice di esempio seguente viene dimostrato come creare un validator persona
 [!code-csharp[C_CustomUsernameAndPasswordValidator#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_customusernameandpasswordvalidator/cs/service.cs#2)]
 [!code-vb[C_CustomUsernameAndPasswordValidator#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#2)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>
 - [Procedura: usare provider di appartenenza ASP.NET](how-to-use-the-aspnet-membership-provider.md)

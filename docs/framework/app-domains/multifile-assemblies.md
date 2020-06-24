@@ -40,7 +40,7 @@ La scelta di creare un assembly su più file può essere consigliabile per varie
 
 Una volta creato l'assembly, è possibile firmare il file contenente il manifesto dell'assembly e, di conseguenza, l'assembly, oppure è possibile assegnare un nome sicuro al file e all'assembly e inserirlo nell'Global Assembly Cache.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Procedura: Creare un assembly su più file](build-multifile-assembly.md)
 - [Programmare con gli assembly](../../standard/assembly/index.md)

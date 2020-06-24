@@ -25,6 +25,6 @@ Le transazioni consentono di associare più attività fra loro. Ad esempio, si s
   
  È possibile creare transazioni utilizzando ADO.NET, <xref:System.EnterpriseServices> o il modello di programmazione transazionale fornito dallo <xref:System.Transactions> spazio dei nomi. Nell'argomento [funzionalità fornite da System. Transactions](features-provided-by-system-transactions.md) vengono illustrate le funzionalità che è possibile utilizzare per scrivere un'applicazione transazionale utilizzando lo <xref:System.Transactions> spazio dei nomi.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Funzionalità offerte da System.Transactions](features-provided-by-system-transactions.md)

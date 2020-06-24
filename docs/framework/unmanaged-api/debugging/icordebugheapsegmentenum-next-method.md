@@ -55,7 +55,7 @@ HRESULT Next(
   
  **Versioni .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Interfaccia ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md)
 - [Interfacce di debug](debugging-interfaces.md)

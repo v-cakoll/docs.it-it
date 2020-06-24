@@ -41,7 +41,7 @@ Ogni computer in cui è installato Common Language Runtime ha una cache di codic
   
  Gli assembly implementati nella Global Assembly Cache devono avere un nome sicuro. Quando si aggiunge un assembly alla Global Assembly Cache, vengono eseguiti controlli di integrità su tutti i file che compongono l'assembly. La cache esegue questi controlli di integrità per garantire che un assembly non sia stato manomesso, ad esempio quando un file è stato modificato ma il manifesto non riflette la modifica.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Assembly in .NET](../../standard/assembly/index.md)
 - [Utilizzo di assembly e della Global Assembly Cache](working-with-assemblies-and-the-gac.md)

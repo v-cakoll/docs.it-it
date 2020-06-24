@@ -242,7 +242,7 @@ public class CallingRESTSample
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Procedura: creare un servizio HTTP Web WCF](how-to-create-a-basic-wcf-web-http-service.md)
 - [Modello a oggetti per la programmazione HTTP Web di WCF](wcf-web-http-programming-object-model.md)

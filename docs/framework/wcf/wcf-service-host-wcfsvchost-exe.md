@@ -122,6 +122,6 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
 
 Per ulteriori informazioni su netsh.exe, vedere "[come utilizzare lo strumento Netsh.exe e le opzioni della riga di comando](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10))".
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Client di prova WCF (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)
