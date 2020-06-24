@@ -1,16 +1,17 @@
 ---
 title: 'Procedura: esporre un contratto a client SOAP e Web'
+description: Informazioni su come rendere disponibile un endpoint del server WFC per client SOAP e non SOAP. Per impostazione predefinita, gli endpoint sono disponibili solo per i client SOAP.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
-ms.openlocfilehash: fa02260976c710401a05cce3d723cc0f66804c6e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b1bdb7af51e0e2795c36865058fbeb34a716e3e2
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593132"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246974"
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Procedura: esporre un contratto a client SOAP e Web
 

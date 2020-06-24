@@ -1,16 +1,17 @@
 ---
 title: Creazione di un servizio dati WCF in Visual Studio
+description: Informazioni su come creare un servizio dati di esempio che usa WCF Data Services per esporre un feed OData in base a un database di esempio.
 ms.date: 08/24/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: 72e3b35465968674a20aa48262d3425a2190ff74
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 739cb6971209792724a2e939ca4f4821d5879c8c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802273"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247791"
 ---
 # <a name="create-the-data-service"></a>Creazione del servizio dati
 
@@ -28,25 +29,25 @@ In questo argomento viene creato un servizio dati di esempio che usa WCF Data Se
 
 1. Nel menu **File** in Visual Studio selezionare **Nuovo** > **Progetto**.
 
-1. Nella finestra di dialogo **nuovo progetto** , in Visual Basic o Visual C# selezionare la categoria **Web** , quindi selezionare **applicazione Web ASP.NET**.
+1. Nella finestra di dialogo **nuovo progetto** , in Visual Basic o Visual C# selezionare la categoria **Web** e quindi selezionare **applicazione Web ASP.NET**.
 
 1. Immettere `NorthwindService` come nome del progetto e quindi fare clic su **OK**.
 
 1. Nella finestra di dialogo **nuova applicazione Web ASP.NET** selezionare **vuoto** e quindi fare clic su **OK**.
 
-1. (Opzione facoltativa) Specificare un numero specifico di porta per l'applicazione Web. Nota: il numero di porta `12345` viene usato in questa serie di argomenti della Guida introduttiva.
+1. (Opzione facoltativa) Specificare un numero specifico di porta per l'applicazione Web. Nota: `12345` in questa serie di argomenti della Guida introduttiva viene usato il numero di porta.
 
     1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto ASP.NET appena creato, quindi scegliere **Proprietà**.
 
-    2. Selezionare la scheda **Web** e impostare il valore della casella di testo **porta specifica** su `12345`.
+    2. Selezionare la scheda **Web** e impostare il valore della casella di testo **porta specifica** su `12345` .
 
 ## <a name="define-the-data-model"></a>Definizione del modello di dati
 
-1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto ASP.NET, quindi scegliere **Aggiungi** > **nuovo elemento**.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto ASP.NET, quindi scegliere **Aggiungi**  >  **nuovo elemento**.
 
 2. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare la categoria di **dati** , quindi selezionare **ADO.NET Entity Data Model**.
 
-3. Per il nome del modello di dati, immettere `Northwind.edmx`.
+3. Per il nome del modello di dati, immettere `Northwind.edmx` .
 
 4. Nella **procedura guidata di Entity Data Model**selezionare **EF Designer from database**e quindi fare clic su **Next**.
 
@@ -54,7 +55,7 @@ In questo argomento viene creato un servizio dati di esempio che usa WCF Data Se
 
     - Se non è già stata configurata una connessione di database, fare clic su **nuova connessione** e creare una nuova connessione. Per altre informazioni, vedere [How to: Create Connections to SQL Server Databases](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). A questa istanza di SQL Server deve essere collegato il database Northwind di esempio.
 
-         \- oppure -
+         \- - oppure -
 
     - Se si dispone di una connessione al database già configurata per connettersi al database Northwind, selezionarla dall'elenco delle connessioni.
 
@@ -64,7 +65,7 @@ In questo argomento viene creato un servizio dati di esempio che usa WCF Data Se
 
 ## <a name="create-the-wcf-data-service"></a>Creare il servizio dati WCF
 
-1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto ASP.NET, quindi scegliere **Aggiungi** > **nuovo elemento**.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto ASP.NET, quindi scegliere **Aggiungi**  >  **nuovo elemento**.
 
 2. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare il modello di elemento **servizio dati WCF** dalla categoria **Web** .
 
@@ -73,7 +74,7 @@ In questo argomento viene creato un servizio dati di esempio che usa WCF Data Se
    > [!NOTE]
    > Il modello di **servizio dati WCF** è disponibile in visual studio 2015, ma non in visual studio 2017 o versioni successive.
 
-3. Per il nome del servizio, digitare `Northwind`.
+3. Per il nome del servizio, digitare `Northwind` .
 
      In Visual Studio verranno creati i file del markup XML e del codice per il nuovo servizio. Per impostazione predefinita, verrà visualizzata la finestra dell'editor del codice. In **Esplora soluzioni**il nome del servizio è Northwind con estensione *svc.cs* o *svc. vb*.
 

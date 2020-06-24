@@ -1,16 +1,17 @@
 ---
 title: 'Procedura: creare certificati temporanei da usare durante lo sviluppo'
+description: Informazioni su come usare un cmdlet di PowerShell per creare due certificati X. 509 temporanei da usare per lo sviluppo di un servizio o un client WCF sicuro.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 9e01ccb29ad017a2657ab08b54d7f01ef4564481
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 0a21548386639a9f6a8c8572e5d7928ffdb270d6
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964544"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247039"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Procedura: creare certificati temporanei da usare durante lo sviluppo
 
@@ -31,7 +32,7 @@ Il comando che segue crea un certificato autofirmato con un nome soggetto "RootC
 $rootcert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.19={text}CA=true") -KeyUsage CertSign,CrlSign,DigitalSignature
 ```
 
-È necessario esportare il certificato in un file PFX, in modo che possa essere importato nel punto in cui è necessario in un passaggio successivo. Quando si esporta un certificato con la chiave privata, per proteggerla è necessaria una password. La password viene salvata in una `SecureString` e si usa il cmdlet [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) per esportare il certificato con la chiave privata associata in un file PFX. Viene anche salvato solo il certificato pubblico in un file CRT usando il cmdlet [Export-Certificate](/powershell/module/pkiclient/export-certificate) .
+È necessario esportare il certificato in un file PFX, in modo che possa essere importato nel punto in cui è necessario in un passaggio successivo. Quando si esporta un certificato con la chiave privata, per proteggerla è necessaria una password. La password viene salvata in un `SecureString` e viene usato il cmdlet [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) per esportare il certificato con la chiave privata associata in un file PFX. Viene anche salvato solo il certificato pubblico in un file CRT usando il cmdlet [Export-Certificate](/powershell/module/pkiclient/export-certificate) .
 
 ```powershell
 [System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
@@ -42,7 +43,7 @@ Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 
 ## <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>Per creare un nuovo certificato firmato mediante un certificato dell'autorità radice
 
-Il comando che segue crea un certificato firmato dal `RootCA` con un nome soggetto "SignedByRootCA" usando la chiave privata dell'autorità emittente.
+Il comando che segue crea un certificato firmato da `RootCA` con un nome soggetto "SignedByRootCA" usando la chiave privata dell'autorità emittente.
 
 ```powershell
 $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
@@ -62,7 +63,7 @@ Se è stato creato un certificato autofirmato, è possibile installarlo nell'arc
 
 ### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>Per installare un certificato autofirmato nell'Autorità di certificazione radice attendibili
 
-1. Aprire lo snap-in del certificato. Per altre informazioni, vedere [Procedura: visualizzare certificati con lo snap-in MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
+1. Aprire lo snap-in del certificato. Per altre informazioni, vedere [Procedura: Visualizzare certificati con lo snap-in MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
 
 2. Aprire la cartella in cui archiviare il certificato, **Computer locale** o **Utente corrente**.
 
@@ -114,6 +115,6 @@ Assicurarsi di eliminare qualsiasi certificato temporaneo dell'autorità di radi
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Uso di certificati](working-with-certificates.md)
-- [Procedura: Visualizzare certificati con lo snap-in MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Working with Certificates](working-with-certificates.md)
+- [Procedura: visualizzare certificati con lo snap-in MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Securing Services and Clients](securing-services-and-clients.md)

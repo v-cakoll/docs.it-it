@@ -1,5 +1,6 @@
 ---
 title: Tipi conosciuti di contratto dati
+description: Informazioni sul modo in cui il modello del contratto dati usa la classe KnownTypeAttribute per specificare i tipi da includere durante la deserializzazione in WCF.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: b7d78def4d656dea59af5400c7ed7deeef28cd0c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 52b0caaaac976893dcf5ef5c228ccc4f53bdbe9e
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597449"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247481"
 ---
 # <a name="data-contract-known-types"></a>Tipi conosciuti di contratto dati
 La classe <xref:System.Runtime.Serialization.KnownTypeAttribute> consente di specificare, in anticipo, i tipi che devono essere presi in considerazione durante la deserializzazione. Per un esempio pratico, vedere l'esempio [Known Types](../samples/known-types.md) .  
@@ -67,7 +68,7 @@ La classe <xref:System.Runtime.Serialization.KnownTypeAttribute> consente di spe
  [!code-csharp[C_KnownTypeAttribute#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#4)]
  [!code-vb[C_KnownTypeAttribute#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#4)]  
   
-#### <a name="example-3"></a>Esempio 3:  
+#### <a name="example-3"></a>Esempio 3  
  Nell'esempio seguente, un <xref:System.Collections.Hashtable> memorizza internamente il contenuto come <xref:System.Object>. Per deserializzare correttamente una tabella hash, il motore di deserializzazione deve conoscere il set dei tipi possibili che possono verificarsi. In questo caso, si sa in anticipo che solo gli oggetti `Book` e `Magazine` vengono memorizzati in `Catalog`, pertanto vengono aggiunti utilizzando l'attributo <xref:System.Runtime.Serialization.KnownTypeAttribute> .  
   
  [!code-csharp[C_KnownTypeAttribute#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#5)]

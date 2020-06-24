@@ -1,15 +1,16 @@
 ---
 title: "Procedura: recuperare l'identificazione personale di un certificato"
+description: Informazioni su come specificare le attestazioni rilevate in un certificato X. 509, che è necessario quando si sviluppa un'applicazione WCF che usa certificati per l'autenticazione.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-ms.openlocfilehash: f59fad86287e89b0a573a6e3ee8420f384b0bc3b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 87c696323af442021af267f0d8c523418e2234f7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601205"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246779"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Procedura: recuperare l'identificazione personale di un certificato
 Quando si scrive un'applicazione Windows Communication Foundation (WCF) che usa un certificato X. 509 per l'autenticazione, è spesso necessario specificare le attestazioni trovate nel certificato. È, ad esempio, necessario fornire un'attestazione di identificazione personale in caso di utilizzo dell'enumerazione <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> nel metodo <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> . La ricerca del valore dell'attestazione richiede due passaggi. Aprire innanzitutto lo snap-in MMC (Microsoft Management Console) per i certificati. Vedere [procedura: visualizzare i certificati con lo snap-in MMC](how-to-view-certificates-with-the-mmc-snap-in.md). In secondo luogo, come descritto qui, trovare un certificato appropriato e copiarne l'identificazione personale (o altri valori di attestazione).  

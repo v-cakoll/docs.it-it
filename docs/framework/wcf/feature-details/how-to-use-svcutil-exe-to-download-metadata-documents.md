@@ -1,21 +1,22 @@
 ---
 title: 'Procedura: usare Svcutil.exe per scaricare documenti di metadati'
+description: Informazioni su come usare Svcutil.exe per scaricare i metadati dai servizi in esecuzione e salvarli in file locali.
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: c04b63fa4963a5df0f910da8702643a6484a4edd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 42df55fe7bbae6d8c977263e05053d8a8fa87aff
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596929"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246766"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Procedura: usare Svcutil.exe per scaricare documenti di metadati
-È possibile utilizzare Svcutil.exe per scaricare i metadati dai servizi in esecuzione e salvarli in file locali. Per gli schemi URL HTTP e HTTPS, Svcutil. exe tenta di recuperare i metadati utilizzando WS-MetadataExchange e l' [individuazione del servizio Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/fxx6cfx2(v=vs.100)). Per tutti gli altri schemi URL, Svcutil.exe utilizza solo WS-MetadataExchange.  
+È possibile utilizzare Svcutil.exe per scaricare i metadati dai servizi in esecuzione e salvarli in file locali. Per gli schemi URL HTTP e HTTPS, Svcutil.exe tenta di recuperare i metadati utilizzando WS-MetadataExchange e l' [individuazione del servizio Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/fxx6cfx2(v=vs.100)). Per tutti gli altri schemi URL, Svcutil.exe utilizza solo WS-MetadataExchange.  
   
  Per impostazione predefinita, Svcutil.exe utilizza le associazioni definite nella classe <xref:System.ServiceModel.Description.MetadataExchangeBindings>. Per configurare l'associazione utilizzata per WS-MetadataExchange, nel file di configurazione di Svcutil.exe (svcutil.exe.config) è necessario definire un endpoint client che utilizza il contratto `IMetadataExchange` e che ha lo stesso nome dello schema URI (Uniform Resource Identifier) dell'indirizzo dell'endpoint dei metadati.  
   
 > [!CAUTION]
-> Quando si esegue Svcutil. exe per ottenere i metadati per un servizio che espone due contratti di servizio diversi che contengono ciascuno un'operazione con lo stesso nome, Svcutil. exe Visualizza un errore che informa che "non è possibile ottenere metadati da...". Ad esempio, se si dispone di un servizio che espone un contratto di servizio denominato `ICarService` che dispone di un'operazione `Get(Car c)` e lo stesso servizio espone un contratto di servizio denominato `IBookService` che ha un'operazione `Get(Book b)` . Per ovviare al problema, effettuare una delle seguenti operazioni:
+> Quando si esegue Svcutil.exe per ottenere i metadati per un servizio che espone due contratti di servizio diversi che contengono ognuno un'operazione con lo stesso nome, Svcutil.exe Visualizza un errore che informa che "non è possibile ottenere i metadati da...". Ad esempio, se si dispone di un servizio che espone un contratto di servizio denominato `ICarService` che dispone di un'operazione `Get(Car c)` e lo stesso servizio espone un contratto di servizio denominato `IBookService` che ha un'operazione `Get(Book b)` . Per ovviare al problema, effettuare una delle seguenti operazioni:
 >
 > - Rinominare una delle operazioni.
 > - Impostare <xref:System.ServiceModel.OperationContractAttribute.Name%2A> su un nome diverso.
@@ -37,7 +38,7 @@ ms.locfileid: "84596929"
   
 3. L' `url` argomento <>specifica l'URL di un endpoint del servizio che fornisce metadati o a un documento di metadati ospitato online. L' `epr` argomento <> specifica il percorso di un file XML contenente un WS-Addressing `EndpointAddress` per un endpoint del servizio che supporta WS-MetadataExchange.  
   
- Per altre opzioni sull'uso di questo strumento per il download dei metadati, vedere [ServiceModel Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ Per altre opzioni sull'uso di questo strumento per il download dei metadati, vedere [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ## <a name="example"></a>Esempio  
  Con il comando seguente vengono scaricati i documenti di metadati da un servizio in esecuzione.  

@@ -1,16 +1,17 @@
 ---
 title: 'Procedura: ospitare un servizio WCF in un servizio Windows gestito'
+description: Informazioni su come creare un servizio WCF ospitato da un servizio Windows. Questa opzione di hosting è disponibile in tutte le versioni di Windows.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: dbd51abbc30b1010f7c4f206aad9a773eca0a714
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4e07aa7aac82fae5cfd1bfc759ef724cf87a873a
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593178"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246936"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Procedura: ospitare un servizio WCF in un servizio Windows gestito
 
@@ -110,7 +111,7 @@ Il codice del servizio include un'implementazione del contratto di servizio, una
     </configuration>
     ```
 
-     Fare clic con il pulsante destro del mouse sul file app. config nel **Esplora soluzioni** e selezionare **Proprietà**. In **copia nella directory di output** selezionare **copia se più recente**.
+     Fare clic con il pulsante destro del mouse sul file App.config nel **Esplora soluzioni** e selezionare **Proprietà**. In **copia nella directory di output** selezionare **copia se più recente**.
 
      In questo esempio vengono specificati in modo esplicito gli endpoint del file di configurazione. Se non vengono aggiunti endpoint al servizio, il runtime aggiunge gli endpoint predefiniti. In questo esempio, poiché il servizio ha <xref:System.ServiceModel.Description.ServiceMetadataBehavior> impostato su `true`, è anche abilitata la pubblicazione di metadati. Per altre informazioni su endpoint, associazioni e comportamenti predefiniti, vedere [Simplified Configuration](../simplified-configuration.md) (Configurazione semplificata) e [Simplified Configuration for WCF Services](../samples/simplified-configuration-for-wcf-services.md) (Configurazione semplificata per servizi WCF).
 

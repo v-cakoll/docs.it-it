@@ -1,16 +1,17 @@
 ---
 title: 'Procedura: attivare il flusso'
+description: Informazioni su come abilitare i messaggi trasmessi in flusso in WCF anziché sui trasferimenti predefiniti memorizzati nel buffer, che devono essere ricevuti completamente prima dell'elaborazione.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: c2c22ab699a996f4bc40d0b5f620ddd92ffe8059
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 538fd8634094aa6fbf097ddb94469d7bca749a63
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593230"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247026"
 ---
 # <a name="how-to-enable-streaming"></a>Procedura: attivare il flusso
 Windows Communication Foundation (WCF) può inviare messaggi utilizzando trasferimenti memorizzati nel buffer o con flusso. Nella modalità predefinita, ovvero trasferimento con memorizzazione nel buffer, un messaggio deve essere recapitato completamente prima che un destinatario possa leggerlo. Nella modalità di trasferimento con flusso, il destinatario può iniziare a elaborare il messaggio prima che esso venga recapitato completamente. La modalità di trasmissione con flusso è utile quando le informazioni passate sono lunghe e possono essere elaborate in serie. La modalità di trasmissione con flusso è utile anche quando il messaggio è troppo grande da memorizzare completamente nel buffer.  

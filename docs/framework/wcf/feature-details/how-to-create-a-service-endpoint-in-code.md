@@ -1,16 +1,17 @@
 ---
 title: 'Procedura: creare un endpoint del servizio nel codice'
+description: Informazioni su come implementare un servizio in una classe e definirne l'endpoint a livello di codice. In WCF gli endpoint vengono in genere definiti in un file di configurazione.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
-ms.openlocfilehash: 25ea843df7871d730926fe7b9aac9f21d58e263e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3b2ff2a17975bc381db61edc2c0f85f67edd3325
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598931"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247052"
 ---
 # <a name="how-to-create-a-service-endpoint-in-code"></a>Procedura: creare un endpoint del servizio nel codice
 In questo esempio viene definito un contratto `ICalculator` per un servizio di calcolatrice. Il servizio viene implementato nella classe `CalculatorService` e il relativo endpoint viene quindi definito in codice, dove si specifica che il servizio deve utilizzare la classe <xref:System.ServiceModel.BasicHttpBinding>.  

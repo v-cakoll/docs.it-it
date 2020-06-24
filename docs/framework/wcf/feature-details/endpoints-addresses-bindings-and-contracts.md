@@ -1,17 +1,18 @@
 ---
 title: 'Endpoint: indirizzi, associazioni e contratti'
+description: Informazioni sull'utilizzo di tutte le comunicazioni con un servizio WCF tramite gli endpoint del servizio, che forniscono ai client l'accesso alla funzionalità offerta dal servizio.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: 3ac7f0b165b99a1ed3702628958f7d4c7702f5b1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ce0874bfed716716b6fd1801b35a4266095cd752
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593516"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247312"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Endpoint: indirizzi, associazioni e contratti
 
@@ -41,7 +42,7 @@ Ogni endpoint è costituito dagli elementi seguenti:
 
   Per ulteriori informazioni, vedere [specifica di un indirizzo endpoint](../specifying-an-endpoint-address.md).
 
-- Associazione: l'associazione specifica la modalità di comunicazione con l'endpoint, vale a dire:
+- Associazione: l'associazione specifica la modalità di comunicazione con l'endpoint, Ad esempio:
 
   - Il protocollo di trasporto da utilizzare (ad esempio, TCP o HTTP).
 
@@ -88,8 +89,8 @@ Viene descritto come creare un endpoint del servizio nella configurazione.
 [Procedura: creare un endpoint di servizio nel codice](how-to-create-a-service-endpoint-in-code.md)\
 Viene descritto come creare un endpoint del servizio nel codice.
 
-[Procedura: utilizzare Svcutil. exe per convalidare il codice del servizio compilato](how-to-use-svcutil-exe-to-validate-compiled-service-code.md)\
-Viene descritto come rilevare errori in implementazioni e configurazioni del servizio senza ospitare il servizio utilizzando lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).
+[Procedura: usare Svcutil.exe per convalidare il codice del servizio compilato](how-to-use-svcutil-exe-to-validate-compiled-service-code.md)\
+Viene descritto come rilevare errori in implementazioni e configurazioni del servizio senza ospitare il servizio utilizzando lo [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).
 
 ## <a name="see-also"></a>Vedere anche
 

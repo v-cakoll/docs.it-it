@@ -1,13 +1,14 @@
 ---
 title: Restrizioni di accesso alle risorse in base ai livelli di attendibilità di sicurezza
+description: Comprendere i livelli di attendibilità di sicurezza nell'accesso alle risorse in .NET. Sono disponibili 3 livelli principali di attendibilità per System. Transactions.
 ms.date: 03/30/2017
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
-ms.openlocfilehash: 7070d82c430b762059153c544e26478dc2d7ae39
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 64f298460bde99181ab8dc8be13ae95aaa846299
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205878"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141952"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>Restrizioni di accesso alle risorse in base ai livelli di attendibilità di sicurezza
 Questo argomento descrive le restrizioni di accesso ai tipi di risorse esposti dallo spazio dei nomi <xref:System.Transactions>.  
@@ -16,7 +17,7 @@ Questo argomento descrive le restrizioni di accesso ai tipi di risorse esposti d
   
 - **AllowPartiallyTrustedCallers** (APTCA) per le applicazioni che utilizzano transazioni all'interno di un singolo dominio applicazione.  
   
-- **DistributedTransactionPermission** (DTP) per le applicazioni che utilizzano transazioni distribuite.  
+- **DistributedTransactionPermission** (DTP) per le applicazioni che usano transazioni distribuite.  
   
 - Per le risorse durevoli, le applicazioni di gestione della configurazione e le applicazioni di interoperabilità legacy.  
   
@@ -26,7 +27,7 @@ Questo argomento descrive le restrizioni di accesso ai tipi di risorse esposti d
 ## <a name="trust-levels"></a>Livelli di attendibilità  
   
 ### <a name="aptca-partial-trust"></a>AllowPartiallyTrustedCallers (attendibilità parziale)  
- L' <xref:System.Transactions> assembly può essere chiamato da codice parzialmente attendibile perché è stato contrassegnato con l'attributo **AllowPartiallyTrustedCallers** (APTCA). Questo attributo rimuove essenzialmente l'oggetto <xref:System.Security.Permissions.SecurityAction.LinkDemand> implicito per il set di autorizzazioni **FullTrust** che in caso contrario viene inserito automaticamente in ogni metodo accessibile pubblicamente in ogni tipo. Tuttavia, alcuni tipi e membri richiedono comunque autorizzazioni di livello superiore.  
+ L' <xref:System.Transactions> assembly può essere chiamato da codice parzialmente attendibile perché è stato contrassegnato con l'attributo **ALLOWPARTIALLYTRUSTEDCALLERS** (APTCA). Questo attributo rimuove essenzialmente l'oggetto implicito <xref:System.Security.Permissions.SecurityAction.LinkDemand> per il set di autorizzazioni **FullTrust** che in caso contrario viene inserito automaticamente in ogni metodo accessibile pubblicamente in ogni tipo. Tuttavia, alcuni tipi e membri richiedono comunque autorizzazioni di livello superiore.  
   
  L'attributo APTCA consente alle applicazioni di utilizzare transazioni in un contesto di attendibilità parziale all'interno di un solo dominio applicazione. Ciò consente di utilizzare le transazioni per cui non è stata eseguita l'escalation nonché le integrazioni volatili allo scopo di eseguire la gestione degli errori. Si consideri ad esempio un'applicazione che utilizza una tabella hash transazionale. I dati possono essere aggiunti e rimossi dalla tabella hash mediante un'unica transazione. Se in seguito viene eseguito il rollback della transazione, tutte le modifiche apportate alla tabella hash tramite tale transazione possono essere annullate.  
   

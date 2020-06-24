@@ -1,5 +1,6 @@
 ---
 title: Strumento Editor di configurazione (SvcConfigEditor.exe)
+description: Informazioni su come gestire le impostazioni per associazioni, comportamenti, servizi e diagnostica WCF mediante l'editor di configurazione dei servizi WCF.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration files, creating
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-ms.openlocfilehash: 3d482e2b03346c9443066c480575a1394324b9bf
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 258437ff616b969d40feabbfff364ad2cc6b25bc
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320699"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247649"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Strumento Editor di configurazione (SvcConfigEditor.exe)
 
@@ -61,20 +62,20 @@ L'interfaccia utente dell'Editor di configurazione dei servizi è suddivisa nell
 
 ### <a name="opening-a-configuration-file"></a>Apertura di un file di configurazione
 
-1. Avviare l'editor di configurazione dei servizi utilizzando una finestra di comando per passare al percorso di installazione di WCF e quindi digitare `SvcConfigEditor.exe`.
+1. Avviare l'editor di configurazione dei servizi utilizzando una finestra di comando per passare al percorso di installazione di WCF e quindi digitare `SvcConfigEditor.exe` .
 
 2. Scegliere **Apri** dal menu **file** e quindi fare clic sul tipo di file che si desidera gestire.
 
 3. Nella finestra di dialogo **Apri** passare al file specifico che si desidera gestire e fare doppio clic su di esso.
 
-Il visualizzatore segue automaticamente il percorso del merge delle configurazioni e crea una visualizzazione della configurazione unita. Ad esempio, la configurazione effettiva di un servizio non ospitato è una combinazione di Machine. config e app. config. Tutte le modifiche vengono applicate al file attivo in SvcConfigEditor. Se si desidera modificare un file specifico all'interno del percorso di merge delle configurazioni, è necessario aprirlo direttamente.
+Il visualizzatore segue automaticamente il percorso del merge delle configurazioni e crea una visualizzazione della configurazione unita. La configurazione effettiva di un servizio non ospitato, ad esempio, è costituita da una combinazione di Machine.config e App.config. Tutte le modifiche vengono applicate al file attivo in SvcConfigEditor. Se si desidera modificare un file specifico all'interno del percorso di merge delle configurazioni, è necessario aprirlo direttamente.
 
 > [!NOTE]
 > L'Editor di configurazione ricarica il file di configurazione attualmente aperto quando quest’ultimo è stato modificato fuori dell'Editor. Quando si verifica questa condizione, tutte le modifiche che non sono state salvate in modo durevole nell'Editor verranno perse. Se il nuovo caricamento si verifica costantemente, la causa più probabile è un servizio che accede continuamente al file di configurazione, ad esempio un software antivirus in esecuzione in background. Per risolvere questo problema, assicurarsi che l'Editor di configurazione sia l’unico processo solo che può accedere al file quando è aperto.
 
 ### <a name="services"></a>Servizi
 
-Il nodo **Servizi** Visualizza tutti i servizi attualmente assegnati nel file di configurazione. Ogni sottonodo dell'albero corrisponde a un sottoelemento dell'< `services` > elemento nel file di configurazione.
+Il nodo **Servizi** Visualizza tutti i servizi attualmente assegnati nel file di configurazione. Ogni sottonodo dell'albero corrisponde a un sottoelemento della <`services`> elemento nel file di configurazione.
 
 Quando si fa clic sul nodo **Servizi** , è possibile visualizzare o eseguire attività nella pagina di riepilogo del servizio nel riquadro dei **Dettagli** .
 
@@ -110,18 +111,18 @@ Per creare una nuova configurazione di endpoint di servizio, è possibile proced
 
 1. Fare clic sul nodo **host** .
 
-2. Fare clic su **nuovo...** nella sezione **indirizzi di base** .
+2. Fare clic sul pulsante **Nuovo** nella sezione **indirizzi di base** .
 
 3. Immettere l'indirizzo URI di base nella finestra di dialogo.
 
 4. Fare clic su **OK**.
 
 > [!NOTE]
-> Non è possibile modificare il valore di [\<baseAddressPrefixFilters >](../configure-apps/file-schema/wcf/baseaddressprefixfilters.md) all'interno di questo strumento. Per aggiungere o modificare questo elemento è necessario utilizzare un editor di testo o Visual Studio.
+> Non è possibile modificare il valore di [\<baseAddressPrefixFilters>](../configure-apps/file-schema/wcf/baseaddressprefixfilters.md) all'interno di questo strumento. Per aggiungere o modificare questo elemento è necessario utilizzare un editor di testo o Visual Studio.
 
 ### <a name="client"></a>Client
 
-Il nodo **client** Visualizza tutti gli endpoint client nel file di configurazione. Ogni sottonodo dell'albero corrisponde a un sottoelemento dell'< `client` > elemento nel file di configurazione.
+Il nodo **client** Visualizza tutti gli endpoint client nel file di configurazione. Ogni sottonodo dell'albero corrisponde a un sottoelemento dell'<`client`> elemento nel file di configurazione.
 
 Quando si fa clic sul nodo **client** , è possibile visualizzare o eseguire attività nella **pagina Riepilogo** client nel **riquadro dettagli**.
 
@@ -143,7 +144,7 @@ Per creare una nuova configurazione di endpoint client, è possibile procedere n
 
 Gli endpoint standard sono endpoint specializzati in cui uno o più aspetti dell'indirizzo, del contratto e dell'associazione sono impostati sui valori predefiniti.
 
-Tali impostazioni di configurazione vengono archiviate nel nodo **endpoint standard** . Il nodo **endpoint standard** Visualizza tutte le impostazioni dell'endpoint standard nel file di configurazione. Ogni sottonodo dell'albero corrisponde a un sottoelemento nell'elemento `<standardEndpoints>` nel file di configurazione.
+Tali impostazioni di configurazione vengono archiviate nel nodo **endpoint standard** . Il nodo **endpoint standard** Visualizza tutte le impostazioni dell'endpoint standard nel file di configurazione. Ogni sottonodo dell'albero corrisponde a un sottoelemento dell' `<standardEndpoints>` elemento nel file di configurazione.
 
 Quando si fa clic sul nodo **endpoint standard** , è possibile visualizzare o eseguire attività nella **pagina Riepilogo** endpoint standard nel **riquadro dettagli**.
 
@@ -181,7 +182,7 @@ Se si utilizza l'endpoint standard, viene visualizzato un messaggio di avviso qu
 
 Le configurazioni di associazione consentono di configurare le associazioni sugli endpoint. Tali impostazioni di configurazione vengono archiviate nel nodo di **associazione** . Gli endpoint fanno riferimento alle configurazioni di associazione in base al nome. Inoltre, più endpoint possono fare riferimento a una stessa configurazione di associazione.
 
-Nel nodo **associazioni** vengono visualizzate tutte le impostazioni di associazione nel file di configurazione. Ogni sottonodo dell'albero corrisponde a un sottoelemento nell'< `bindings` > elemento nel file di configurazione.
+Nel nodo **associazioni** vengono visualizzate tutte le impostazioni di associazione nel file di configurazione. Ogni sottonodo dell'albero corrisponde a un sottoelemento nel <`bindings`> elemento nel file di configurazione.
 
 Quando si fa clic sul nodo **Binding** , è possibile visualizzare o eseguire attività nella **pagina Riepilogo** binding nel **riquadro dettagli**.
 
@@ -199,11 +200,11 @@ Per creare una nuova configurazione dell’associazione, è possibile procedere 
 
 1. Selezionare l'associazione a cui si desidera aggiungere un elemento di estensione.
 
-2. Fare clic su **Aggiungi**.
+2. Scegliere **Aggiungi**.
 
 3. Nell'elenco di estensioni disponibili, selezionare l'estensione degli elementi di associazione che si desidera aggiungere. Per selezionare più elementi, premere contemporaneamente CTRL.
 
-4. Fare clic su **Aggiungi**.
+4. Scegliere **Aggiungi**.
 
 #### <a name="adjusting-the-extension-position-in-a-custom-binding"></a>Impostazione della posizione dell'estensione in un'associazione personalizzata
 
@@ -225,7 +226,7 @@ Un'associazione personalizzata è una raccolta di elementi di associazione organ
 
 ### <a name="diagnostics"></a>Diagnostica
 
-Nel nodo **diagnostica** vengono visualizzate tutte le impostazioni di diagnostica nel file di configurazione. Consente di attivare o disattivare i contatori delle prestazioni, abilitare o disabilitare Strumentazione gestione Windows (WMI), configurare la traccia WCF e configurare la registrazione dei messaggi WCF. Le impostazioni nel nodo **diagnostica** corrispondono alla sezione < `system.diagnostics` > e `<diagnostics>` sezione in `<system.serviceModel>` nel file di configurazione.
+Nel nodo **diagnostica** vengono visualizzate tutte le impostazioni di diagnostica nel file di configurazione. Consente di attivare o disattivare i contatori delle prestazioni, abilitare o disabilitare Strumentazione gestione Windows (WMI), configurare la traccia WCF e configurare la registrazione dei messaggi WCF. Le impostazioni nel nodo **diagnostica** corrispondono alla `system.diagnostics` sezione <> e alla `<diagnostics>` sezione nel `<system.serviceModel>` file di configurazione.
 
 Quando si fa clic sul nodo **diagnostica** , è possibile visualizzare o eseguire attività nella **pagina Riepilogo** diagnostica nel **riquadro dettagli**.
 
@@ -268,7 +269,7 @@ Quando si fa clic sul nodo **diagnostica** , è possibile visualizzare o eseguir
 > [!NOTE]
 > Se si desidera che i log di traccia e di messaggi vengano scaricati automaticamente quando l'applicazione viene chiusa, abilitare l'opzione di **scaricamento automatico** .
 
-Nella **pagina Riepilogo** diagnostica è possibile eseguire le attività più comuni per la configurazione della diagnostica. Tuttavia, se si desidera modificare manualmente le impostazioni dei listener e delle origini, è necessario espandere il nodo **diagnostica** e modificare le impostazioni nel nodo **registrazione messaggi**, **listener** e **origini** .
+Nella **Diagnostics** **pagina Riepilogo** diagnostica è possibile eseguire le attività più comuni per la configurazione della diagnostica. Tuttavia, se si desidera modificare manualmente le impostazioni dei listener e delle origini, è necessario espandere il nodo **diagnostica** e modificare le impostazioni nel nodo **registrazione messaggi**, **listener** e **origini** .
 
 #### <a name="enabling-wcf-custom-tracing-or-message-logging"></a>Abilitazione della traccia o della registrazione dei messaggi personalizzata di WCF
 
@@ -286,7 +287,7 @@ Nella **pagina Riepilogo** diagnostica è possibile eseguire le attività più c
 
 ### <a name="advanced"></a>Avanzate
 
-#### <a name="behaviors"></a>comportamenti
+#### <a name="behaviors"></a>Comportamenti
 
 Nel nodo **comportamenti** vengono visualizzati i comportamenti attualmente definiti nel file di configurazione.
 
@@ -308,11 +309,11 @@ Per creare una nuova configurazione di un comportamento, è possibile procedere 
 
 2. Selezionare il comportamento che si desidera modificare.
 
-3. Fare clic su **Aggiungi**.
+3. Scegliere **Aggiungi**.
 
 4. Nell'elenco di estensioni disponibili, selezionare l'estensione degli elementi del comportamento che si desidera aggiungere.
 
-5. Fare clic su **Aggiungi**.
+5. Scegliere **Aggiungi**.
 
 ##### <a name="adjusting-the-extension-position-in-a-behavior"></a>Impostazione della posizione dell'estensione in un Comportamento
 
@@ -356,7 +357,7 @@ Le nuove estensioni di binding, le estensioni degli elementi di binding, le este
 
 Selezionare uno dei nodi delle estensioni nei nodi avanzati:
 
-1. Fare clic su **Nuovo**.
+1. Fare clic su **New**.
 
 2. Immettere un nome e un tipo.
 
@@ -374,7 +375,7 @@ Un modo per creare un nuovo file di configurazione è tramite la Creazione guida
 
 #### <a name="creating-a-configuration-file"></a>Creazione di un file di configurazione
 
-1. Avviare l'editor di configurazione dei servizi utilizzando una finestra di comando per passare al percorso di installazione di WCF e quindi digitare `SvcConfigEditor.exe`.
+1. Avviare l'editor di configurazione dei servizi utilizzando una finestra di comando per passare al percorso di installazione di WCF e quindi digitare `SvcConfigEditor.exe` .
 
 2. Scegliere **Apri** dal menu **file** e fare clic su **eseguibile**, **servizio com+** o **Servizio WebHosted**, a seconda del tipo di file di configurazione che si desidera creare.
 
@@ -389,13 +390,13 @@ Un modo per creare un nuovo file di configurazione è tramite la Creazione guida
 
 ## <a name="configuring-com"></a>Configurazione di COM+
 
-L'Editor di configurazione dei servizi consente di creare un nuovo file di configurazione per un'applicazione COM+ esistente o di modificare una configurazione COM+ esistente. Il nodo del **contratto com** è visibile solo quando il < `comContract` sezione > è presente nel file di configurazione.
+L'Editor di configurazione dei servizi consente di creare un nuovo file di configurazione per un'applicazione COM+ esistente o di modificare una configurazione COM+ esistente. Il nodo del **contratto com** è visibile solo quando il <`comContract`> sezione è presente nel file di configurazione.
 
 ### <a name="creating-a-new-com-configuration"></a>Creazione di una nuova configurazione COM+
 
 Prima di creare una nuova configurazione COM+, verificare che l'applicazione COM+ sia stata installata in Servizi componenti e registrata nella Global Assembly Cache (GAC).
 
-1. Selezionare il menu **File** > **integra**  -> **applicazione com+.** Questa operazione determina la chiusura del file attualmente aperto. Se il file corrente contiene dati non salvati, verrà visualizzata la finestra di dialogo Salva. Viene quindi avviata l' **integrazione guidata com+** .
+1. Selezionare menu **file** -> **integrare**l'  ->  **applicazione com+.** Questa operazione determina la chiusura del file attualmente aperto. Se il file corrente contiene dati non salvati, verrà visualizzata la finestra di dialogo Salva. Viene quindi avviata l' **integrazione guidata com+** .
 
 2. Nella prima pagina, selezionare l'applicazione COM+ nell'albero. Se risulta impossibile individuare l'applicazione COM+ nell'albero, verificare che sia stata installata in Servizi componenti e registrata nella Global Assembly Cache (GAC).
 
@@ -409,7 +410,7 @@ Prima di creare una nuova configurazione COM+, verificare che l'applicazione COM
 
 ### <a name="editing-an-existing-com-configuration"></a>Modifica di una configurazione COM+ esistente
 
-1. Selezionare menu **file** -> **Apri**  -> **servizio com+** ...
+1. Selezionare il menu **file** > **Apri**  ->  **servizio com+**...
 
 2. Selezionare nell'elenco il servizio COM+ che si desidera modificare.
 

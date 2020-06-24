@@ -1,22 +1,23 @@
 ---
 title: Servizi duplex
+description: Informazioni su come creare un contratto di servizio duplex in WCF, che consente a entrambi gli endpoint di inviare messaggi tra loro tramite un canale creato dal client.
 ms.date: 05/09/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 4fd8b679dcd4ac9efce5fa915118736b15206068
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: a43bb63a0ccf1a34b79dce755c19f7ed4cb6c16c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834778"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247351"
 ---
 # <a name="duplex-services"></a>Servizi duplex
 
 Un contratto di servizio duplex è un modello di scambio di messaggi nel quale entrambi gli endpoint possono inviare messaggi l'uno all'altro in modo indipendente. Un servizio duplex, pertanto, può inviare messaggi all'endpoint client, fornendo un comportamento simile a quello degli eventi. Una comunicazione duplex ha luogo quando un client si connette a un servizio e fornisce a quest'ultimo un canale utilizzabile per inviare messaggi al client. Si noti che il comportamento simile a quello degli eventi di servizi duplex funziona solo all'interno di una sessione.
 
-Per creare un contratto duplex è necessario creare una coppia di interfacce. La prima è l'interfaccia del contratto di servizio che descrive le operazioni che un client può richiamare. Il<xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> contratto di servizio deve specificare un *contratto di callback* nella proprietà. Il contratto callback è l'interfaccia che definisce le operazioni che il servizio può chiamare sull'endpoint client. Un contratto duplex non richiede sessioni, sebbene le associazioni duplex fornite dal sistema le utilizzino.
+Per creare un contratto duplex è necessario creare una coppia di interfacce. La prima è l'interfaccia del contratto di servizio che descrive le operazioni che un client può richiamare. Il contratto di servizio deve specificare un *contratto di callback* nella <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> Proprietà. Il contratto callback è l'interfaccia che definisce le operazioni che il servizio può chiamare sull'endpoint client. Un contratto duplex non richiede sessioni, sebbene le associazioni duplex fornite dal sistema le utilizzino.
 
 Di seguito è riportato un esempio di contratto duplex.
 
@@ -33,7 +34,7 @@ Il client deve fornire una classe che implementi l'interfaccia callback del cont
 [!code-csharp[c_DuplexServices#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#2)]
 [!code-vb[c_DuplexServices#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#2)]
 
-Il client WCF generato per un contratto duplex richiede la fornitura di <xref:System.ServiceModel.InstanceContext> una classe durante la costruzione. Questa classe <xref:System.ServiceModel.InstanceContext> viene usata come sito per un oggetto che implementa l'interfaccia callback e gestisce i messaggi restituiti dal servizio. Una classe <xref:System.ServiceModel.InstanceContext> viene costruita con un'istanza della classe `CallbackHandler`. Questo oggetto gestisce i messaggi inviati dal servizio al client sull'interfaccia di callback.
+Il client WCF generato per un contratto duplex richiede la <xref:System.ServiceModel.InstanceContext> fornitura di una classe durante la costruzione. Questa classe <xref:System.ServiceModel.InstanceContext> viene usata come sito per un oggetto che implementa l'interfaccia callback e gestisce i messaggi restituiti dal servizio. Una classe <xref:System.ServiceModel.InstanceContext> viene costruita con un'istanza della classe `CallbackHandler`. Questo oggetto gestisce i messaggi inviati dal servizio al client sull'interfaccia di callback.
 
 [!code-csharp[c_DuplexServices#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#3)]
 [!code-vb[c_DuplexServices#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#3)]
@@ -87,10 +88,10 @@ Nel codice di esempio seguente viene illustrato come specificare l'indirizzo end
 ```
 
 > [!WARNING]
-> Il modello duplex non rileva automaticamente quando un servizio o un client chiude il canale. Quindi, se un client termina in modo imprevisto, per impostazione predefinita il servizio non riceve una notifica o se un servizio termina in modo imprevisto, il client non riceverà alcuna notifica. Se si utilizza un servizio disconnesso, viene generata <xref:System.ServiceModel.CommunicationException> l'eccezione. Client e servizi sono in grado di implementare il proprio protocollo per inviarsi vicendevolmente una notifica, se necessario. Per ulteriori informazioni sulla gestione degli errori, vedere la pagina relativa alla [gestione degli errori WCF](../wcf-error-handling.md).
+> Il modello duplex non rileva automaticamente quando un servizio o un client chiude il canale. Quindi, se un client termina in modo imprevisto, per impostazione predefinita il servizio non riceve una notifica o se un servizio termina in modo imprevisto, il client non riceverà alcuna notifica. Se si utilizza un servizio disconnesso, <xref:System.ServiceModel.CommunicationException> viene generata l'eccezione. Client e servizi sono in grado di implementare il proprio protocollo per inviarsi vicendevolmente una notifica, se necessario. Per ulteriori informazioni sulla gestione degli errori, vedere la pagina relativa alla [gestione degli errori WCF](../wcf-error-handling.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Duplex](../samples/duplex.md)
 - [Specifica del comportamento in fase di esecuzione dei client](../specifying-client-run-time-behavior.md)
-- [Procedura: Creare una channel factory e usarla per creare e gestire i canali](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [Procedura: creare una channel factory e usarla per la creazione e la gestione di canali](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

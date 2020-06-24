@@ -1,20 +1,21 @@
 ---
 title: Implementazione della gestione risorse
+description: Implementare uno strumento di gestione delle risorse in .NET. Un gestore di risorse gestisce le risorse utilizzate nelle transazioni. Una gestione transazioni coordina le azioni di Resource Manager.
 ms.date: 03/30/2017
 ms.assetid: d5c153f6-4419-49e3-a5f1-a50ae4c81bf3
-ms.openlocfilehash: f64a729f49d546dd16c25a2be1f9bd64a2ca8f63
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: bf40c6eaee35a5a548c6de4a286e46c4d4a66aca
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205955"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141849"
 ---
 # <a name="implementing-a-resource-manager"></a>Implementazione della gestione risorse
 Ogni risorsa utilizzata in una transazione viene gestita dalla gestione risorse, le cui azioni vengono coordinate dalla gestione transazioni. I gestori di risorse collaborano con la gestione transazioni allo scopo di garantire atomicità e isolamento all'applicazione. Alcuni esempi di gestori di risorse sono le code di messaggi durevoli, le tabelle hash in memoria e Microsoft SQL Server.  
   
  Un gestore di risorse gestisce dati durevoli o volatili. La durabilità (o la volatilità) di un gestore di risorse ne indica la capacità (o la non capacità) di ripristino in caso di errore. I gestori di risorse che supportano il ripristino in caso di errore salvano i dati in modo permanente in un archivio durevole durante la fase 1, ovvero la fase di preparazione. In questo modo, se il gestore di risorse diventa non disponibile, può reintegrarsi nella transazione non appena viene ripristinato e quindi eseguire le azioni appropriate in base alle notifiche ricevute dalla gestione transazioni. In generale, i gestori di risorse volatili gestiscono risorse volatili, come nel caso di una struttura di dati in memoria (ad esempio, una tabella hash transazionale in memoria), laddove i gestori di risorse durevoli gestiscono risorse che presentano un archivio di backup permanente, come nel caso di un database con archivio di backup su disco.  
   
- Per poter partecipare a una determinata transazione, una risorsa deve integrarsi in essa. La <xref:System.Transactions.Transaction> classe definisce un set di metodi i cui nomi iniziano con **integrazione** che forniscono questa funzionalità. I diversi metodi di integrazione corrispondono ai diversi tipi di integrazione che può avere un gestore di risorse. In particolare, i metodi <xref:System.Transactions.Transaction.EnlistVolatile%2A> vengono utilizzati per le risorse volatili, mentre i metodi <xref:System.Transactions.Transaction.EnlistDurable%2A> vengono utilizzati per le risorse durevoli. Per semplicità, dopo aver deciso se utilizzare il metodo <xref:System.Transactions.Transaction.EnlistDurable%2A> o il metodo <xref:System.Transactions.Transaction.EnlistVolatile%2A> a seconda del supporto di durabilità della risorsa utilizzata, è necessario integrare la risorsa nel protocollo 2PC (2-Phase Commit, commit a due fasi) implementando nel gestore di risorse l'interfaccia <xref:System.Transactions.IEnlistmentNotification>. Per altre informazioni su 2PC, vedere [commit di una transazione in un'unica fase e in più fasi](committing-a-transaction-in-single-phase-and-multi-phase.md).  
+ Per poter partecipare a una determinata transazione, una risorsa deve integrarsi in essa. La <xref:System.Transactions.Transaction> classe definisce un set di metodi i cui nomi iniziano con **integrazione** che forniscono questa funzionalità. I diversi **metodi di integrazione corrispondono** ai diversi tipi di integrazione che può avere un gestore di risorse. In particolare, i metodi <xref:System.Transactions.Transaction.EnlistVolatile%2A> vengono utilizzati per le risorse volatili, mentre i metodi <xref:System.Transactions.Transaction.EnlistDurable%2A> vengono utilizzati per le risorse durevoli. Per semplicità, dopo aver deciso se utilizzare il metodo <xref:System.Transactions.Transaction.EnlistDurable%2A> o il metodo <xref:System.Transactions.Transaction.EnlistVolatile%2A> a seconda del supporto di durabilità della risorsa utilizzata, è necessario integrare la risorsa nel protocollo 2PC (2-Phase Commit, commit a due fasi) implementando nel gestore di risorse l'interfaccia <xref:System.Transactions.IEnlistmentNotification>. Per altre informazioni su 2PC, vedere [commit di una transazione in un'unica fase e in più fasi](committing-a-transaction-in-single-phase-and-multi-phase.md).  
   
  L'integrazione in una determinata transazione garantisce al gestore di risorse di ricevere callback dalla gestione transazioni quando la transazione viene interrotta o quando ne viene eseguito il commit. Per ogni integrazione esiste un'istanza specifica della classe <xref:System.Transactions.IEnlistmentNotification>. In genere esiste un'unica integrazione per ogni transazione. È tuttavia possibile che un gestore di risorse scelga di integrarsi più volte nella stessa transazione.  
   
@@ -30,9 +31,9 @@ Ogni risorsa utilizzata in una transazione viene gestita dalla gestione risorse,
   
  In breve, il protocollo di commit a due fasi e i gestori di risorse collaborano per garantire l'atomicità e la durevolezza delle transazioni.  
   
- La classe <xref:System.Transactions.Transaction> fornisce inoltre il metodo <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> per eseguire l'integrazione PSPE (Promotable Single Phase Enlistment). Grazie a questo meccanismo, un gestore di risorse durevoli può ospitare e "possedere" una transazione di cui in seguito può eseguire l'escalation in modo che venga gestita dal gestore MSDTC, se necessario. Per altre informazioni, vedere [ottimizzazione tramite commit a fase singola e notifica a singola fase](optimization-spc-and-promotable-spn.md)promuovibile.  
+ La classe <xref:System.Transactions.Transaction> fornisce inoltre il metodo <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> per eseguire l'integrazione PSPE (Promotable Single Phase Enlistment). Grazie a questo meccanismo, un gestore di risorse durevoli può ospitare e "possedere" una transazione di cui in seguito può eseguire l'escalation in modo che venga gestita dal gestore MSDTC, se necessario. Per altre informazioni, vedere [ottimizzazione tramite commit a fase singola e notifica a singola fase promuovibile](optimization-spc-and-promotable-spn.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  I passaggi che in genere vengono eseguiti dai gestori di risorse sono descritti negli argomenti seguenti.  
   
  [Integrazione di risorse come partecipanti a una transazione](enlisting-resources-as-participants-in-a-transaction.md)  
