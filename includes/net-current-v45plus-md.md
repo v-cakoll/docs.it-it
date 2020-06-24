@@ -6,4 +6,4 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65636663"
 ---
-<span data-ttu-id="558eb-101">Disponibile dalla 4.5</span><span class="sxs-lookup"><span data-stu-id="558eb-101">Available since 4.5</span></span>
+<span data-ttu-id="8db8d-101">Disponibile dalla 4.5</span><span class="sxs-lookup"><span data-stu-id="8db8d-101">Available since 4.5</span></span>
