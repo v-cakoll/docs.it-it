@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: Il dotnet publish comando pubblica un progetto o una soluzione .NET Core in una directory.
 ms.date: 02/24/2020
-ms.openlocfilehash: 697746291a8b34a856433049fe7264ad0ea4af7a
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 61cfcf06586f3ac66526de69a17b8aef3cf0c795
+ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761902"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85365583"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -37,8 +37,8 @@ dotnet publish -h|--help
 `dotnet publish` compila l'applicazione, legge le relative dipendenze specificate nel file di progetto e pubblica il set di file risultante in una directory. L'output include gli asset seguenti:
 
 - Codice linguaggio intermedio (IL) in un assembly con un'estensione *dll*.
-- Un file con *estensione Deps. JSON* che include tutte le dipendenze del progetto.
-- Un file *. runtimeconfig. JSON* che specifica il runtime condiviso previsto dall'applicazione, nonché altre opzioni di configurazione per il runtime, ad esempio Garbage Collection tipo.
+- *.deps.jssu* file che include tutte le dipendenze del progetto.
+- *.runtimeconfig.jsnel* file che specifica il runtime condiviso previsto dall'applicazione, nonché altre opzioni di configurazione per il runtime, ad esempio Garbage Collection tipo.
 - Dipendenze dell'applicazione copiate dalla cache NuGet nella cartella di output.
 
 L'output del comando `dotnet publish` è pronto per la distribuzione in un sistema di hosting (ad esempio, un server, un PC, un Mac, un laptop) per l'esecuzione. È l'unico metodo supportato ufficialmente per preparare l'applicazione per la distribuzione. A seconda del tipo di distribuzione specificato dal progetto, nel sistema host il runtime condiviso di .NET Core può essere installato o meno. Per altre informazioni, vedere [pubblicare app .NET Core con il interfaccia della riga di comando di .NET Core](../deploying/deploy-with-cli.md).
@@ -49,7 +49,7 @@ L'output del comando `dotnet publish` è pronto per la distribuzione in un siste
 
 ### <a name="msbuild"></a>MSBuild
 
-Il comando `dotnet publish` chiama MSBuild che richiama la destinazione `Publish`. Tutti i parametri passati a `dotnet publish` vengono passati a MSBuild. I parametri `-c` e `-o` sono mappati rispettivamente alle proprietà `Configuration` e `OutputPath` di MSBuild.
+Il comando `dotnet publish` chiama MSBuild che richiama la destinazione `Publish`. Tutti i parametri passati a `dotnet publish` vengono passati a MSBuild. I parametri `-c` e `-o` sono mappati rispettivamente alle proprietà `Configuration` e `PublishDir` di MSBuild.
 
 Il `dotnet publish` comando accetta opzioni MSBuild, ad esempio `-p` per l'impostazione delle proprietà e `-l` per la definizione di un logger. È ad esempio possibile impostare una proprietà MSBuild utilizzando il formato: `-p:<NAME>=<VALUE>` . È anche possibile impostare le proprietà relative alla pubblicazione facendo riferimento a un file con *estensione pubxml* , ad esempio:
 
@@ -181,7 +181,7 @@ Per altre informazioni, vedere le seguenti risorse:
 
   Definisce il suffisso di versione che sostituirà l'asterisco (`*`) nel campo del file di progetto relativo alla versione.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 - Creare un [file binario multipiattaforma dipendente dal runtime](../deploying/index.md#produce-a-cross-platform-binary) per il progetto nella directory corrente:
 
@@ -225,7 +225,7 @@ Per altre informazioni, vedere le seguenti risorse:
   dotnet publish --no-dependencies
   ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Panoramica della pubblicazione di applicazioni .NET Core](../deploying/index.md)
 - [Pubblicare app .NET Core con il interfaccia della riga di comando di .NET Core](../deploying/deploy-with-cli.md)
