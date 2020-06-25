@@ -1,15 +1,15 @@
 ---
 title: Installare .NET Core in RHEL-.NET Core
 description: Vengono illustrati i vari modi per installare .NET Core SDK e il runtime di .NET Core in RHEL.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 7ae55f881cd0c877cf1db24be7a4ee23320e21a8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4a406fe1834c16bab9a5548b69206b51270b33fa
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84603041"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324715"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-rhel"></a>Installare .NET Core SDK o runtime di .NET Core in RHEL
 

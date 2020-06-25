@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 725441f5399f72b6457af461d51419c35077f4c2
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: d1ea0fc3573714347580a2aaded2d0f3118681a8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662914"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324171"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Come confrontare stringhe in C\#
 
@@ -41,7 +41,7 @@ eseguire un confronto ordinale con distinzione tra maiuscole e minuscole e, se n
 
 Il confronto ordinale predefinito non prende in considerazione le regole linguistiche quando si confrontano le stringhe. ma viene confrontato il valore binario di ogni oggetto <xref:System.Char> nelle due stringhe. Di conseguenza, anche il confronto ordinale predefinito prevede la distinzione tra maiuscole e minuscole.
 
-Si noti che il test per l'uguaglianza con <xref:System.String.Equals%2A?displayProperty=nameWithType> e gli `==` `!=` operatori e differisce dal confronto tra stringhe usando i <xref:System.String.CompareTo%2A?displayProperty=nameWithType> <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> metodi e. Mentre i test per l'uguaglianza eseguono un confronto ordinale con distinzione tra maiuscole e minuscole, i metodi di confronto eseguono un confronto con distinzione tra maiuscole e minuscole e con distinzione delle impostazioni cultura. Dato che i metodi di confronto predefiniti spesso eseguono diversi tipi di confronti, è consigliabile chiarire sempre l'intento del codice chiamando un overload che specifichi in modo esplicito il tipo di confronto da eseguire.
+Il test per l'uguaglianza con <xref:System.String.Equals%2A?displayProperty=nameWithType> e `==` gli `!=` operatori e differisce dal confronto tra stringhe usando i <xref:System.String.CompareTo%2A?displayProperty=nameWithType> <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> metodi e. Mentre i test per l'uguaglianza eseguono un confronto ordinale con distinzione tra maiuscole e minuscole, i metodi di confronto eseguono un confronto con distinzione tra maiuscole e minuscole e con distinzione delle impostazioni cultura. Dato che i metodi di confronto predefiniti spesso eseguono diversi tipi di confronti, è consigliabile chiarire sempre l'intento del codice chiamando un overload che specifichi in modo esplicito il tipo di confronto da eseguire.
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>Confronti ordinali senza distinzione tra maiuscole e minuscole
 
@@ -55,11 +55,11 @@ Quando si esegue un confronto ordinale senza distinzione tra maiuscole e minusco
 ## <a name="linguistic-comparisons"></a>Confronti linguistici
 
 Le stringhe possono anche essere ordinate in base alle regole linguistiche delle impostazioni cultura correnti.
-Questo ordinamento è detto anche "ordinamento di Word". Quando si esegue un confronto linguistico, è possibile che a determinati caratteri Unicode non alfanumerici venga assegnata una valenza specifica. Ad esempio il trattino "-" può avere una valenza ridotta, pertanto le parole "co-op"e "coop" vengono visualizzate l'una accanto all'altra nell'ordinamento. Alcuni caratteri Unicode possono anche essere equivalenti a una sequenza di istanze di <xref:System.Char>. L'esempio seguente usa la frase "Ballano per strada." in tedesco con "ss" (U+0073 U+0073) in una stringa e 'ß' (U+00DF) in un'altra. Dal punto di vista linguistico (in Windows), "ss" equivale al carattere tedesco Esszet "ß", sia nelle impostazioni cultura "en-US" che in quelle "de-DE".
+Questo ordinamento è detto anche "ordinamento di Word". Quando si esegue un confronto linguistico, è possibile che a determinati caratteri Unicode non alfanumerici venga assegnata una valenza specifica. Ad esempio, il trattino "-" può avere un peso ridotto in modo che "co-op" e "Coop" siano visualizzati uno accanto all'altro nell'ordinamento. Alcuni caratteri Unicode possono anche essere equivalenti a una sequenza di istanze di <xref:System.Char>. L'esempio seguente usa la frase "Ballano per strada." in tedesco con "ss" (U+0073 U+0073) in una stringa e 'ß' (U+00DF) in un'altra. Dal punto di vista linguistico (in Windows), "ss" equivale al carattere tedesco Esszet "ß", sia nelle impostazioni cultura "en-US" che in quelle "de-DE".
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet3":::
 
-Questo esempio dimostra che i confronti linguistici sono dipendenti dal sistema operativo. L'host della finestra interattiva è un host Linux. Il confronto linguistico e il confronto ordinale producono gli stessi risultati. Se si esegue lo stesso esempio in un host Windows viene visualizzato l'output seguente:
+Questo esempio dimostra che i confronti linguistici sono dipendenti dal sistema operativo. L'host della finestra interattiva è un host Linux. Il confronto linguistico e il confronto ordinale producono gli stessi risultati. Se si esegue lo stesso esempio in un host Windows, viene visualizzato l'output seguente:
 
 ```console
 <coop> is less than <co-op> using invariant culture
@@ -81,7 +81,7 @@ Le impostazioni cultura usate hanno effetto sui confronti linguistici. L'esempio
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet4":::
 
-In genere i confronti con rilevamento delle impostazioni cultura vengono usati per confrontare e ordinare stringhe immesse dagli utenti. I caratteri e le convenzioni di ordinamento di queste stringhe possono variare a seconda delle impostazioni locali del computer dell'utente. Anche stringhe che contengono caratteri identici potrebbero essere ordinate in modo diverso a seconda delle impostazioni cultura del thread corrente. Provare ad eseguire questo codice di esempio anche in locale, in un computer Windows. Si ottengono i risultati seguenti:
+In genere i confronti con rilevamento delle impostazioni cultura vengono usati per confrontare e ordinare stringhe immesse dagli utenti. I caratteri e le convenzioni di ordinamento di queste stringhe possono variare a seconda delle impostazioni locali del computer dell'utente. Anche stringhe che contengono caratteri identici potrebbero essere ordinate in modo diverso a seconda delle impostazioni cultura del thread corrente. Provare inoltre a eseguire questo codice di esempio localmente in un computer Windows e ottenere i risultati seguenti:
 
 ```console
 <coop> is less than <co-op> using en-US culture
@@ -92,7 +92,7 @@ In genere i confronti con rilevamento delle impostazioni cultura vengono usati p
 <co-op> is less than <cop> using ordinal comparison
 ```
 
-I confronti linguistici dipendono dalle impostazioni cultura correnti e dal sistema operativo. Tenere presente questo aspetto quando si lavora con confronti tra stringhe.
+I confronti linguistici dipendono dalle impostazioni cultura correnti e dal sistema operativo. Prendere in considerazione questo quando si lavora con i confronti tra stringhe.
 
 ## <a name="linguistic-sorting-and-searching-strings-in-arrays"></a>Ordinamento linguistico e ricerca di stringhe nelle matrici
 
@@ -102,13 +102,13 @@ Questo esempio illustra come ordinare una matrice di stringhe in base alle impos
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet5":::
 
-Quando la matrice è ordinata, è possibile cercare voci con una ricerca binaria. Una ricerca binaria inizia a metà della raccolta per determinare quale metà contiene la stringa cercata. Ogni confronto successivo divide a metà la parte rimanente della raccolta.  La matrice viene ordinata usando <xref:System.StringComparer.CurrentCulture?displayProperty=nameWithType>. La funzione locale `ShowWhere` visualizza informazioni sul punto in cui è stata trovata la stringa. Se la stringa non viene trovata, il valore restituito indica quale sarebbe la sua posizione se fosse stata trovata.
+Quando la matrice è ordinata, è possibile cercare voci con una ricerca binaria. Una ricerca binaria inizia a metà della raccolta per determinare quale metà contiene la stringa cercata. Ogni confronto successivo divide a metà la parte rimanente della raccolta.  La matrice viene ordinata usando <xref:System.StringComparer.CurrentCulture?displayProperty=nameWithType>. La funzione locale `ShowWhere` visualizza informazioni sul punto in cui è stata trovata la stringa. Se la stringa non viene trovata, il valore restituito indica la posizione in cui si trovava.
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet6":::
 
 ## <a name="ordinal-sorting-and-searching-in-collections"></a>Ordinamento e ricerca ordinali nelle raccolte
 
-Il codice seguente usa la classe della raccolta <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> per memorizzare le stringhe. Le stringhe vengono ordinate usando il metodo <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType>. Questo metodo richiede un delegato che confronta e ordina due stringhe. La funzione di confronto è resa disponibile dal metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType>. Eseguire l'esempio e osservare l'ordine. Questa operazione di ordinamento usa un ordinamento ordinale con distinzione tra maiuscole e minuscole. Per specificare regole di confronto diverse sarebbe necessario usare i metodi <xref:System.String.Compare%2A?displayProperty=nameWithType> statici.
+Il codice seguente usa la classe della raccolta <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> per memorizzare le stringhe. Le stringhe vengono ordinate usando il metodo <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType>. Questo metodo richiede un delegato che confronta e ordina due stringhe. La funzione di confronto è resa disponibile dal metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType>. Eseguire l'esempio e osservare l'ordine. Questa operazione di ordinamento utilizza un ordinamento ordinale con distinzione tra maiuscole e minuscole. Per specificare regole di confronto diverse sarebbe necessario usare i metodi <xref:System.String.Compare%2A?displayProperty=nameWithType> statici.
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet7":::
 
@@ -122,7 +122,7 @@ Le classi Collection, ad esempio <xref:System.Collections.Hashtable?displayPrope
 
 ## <a name="reference-equality-and-string-interning"></a>Uguaglianza di riferimenti e centralizzazione delle stringhe.
 
-<xref:System.Object.ReferenceEquals%2A> non è stato usato in nessun esempio. Questo metodo determina se due stringhe sono lo stesso oggetto. Questo può causare risultati incoerenti nei confronti tra stringhe. L'esempio seguente illustra la funzionalità di *centralizzazione delle stringhe* di C#. Quando un programma dichiara due o più variabili di stringa identiche, il compilatore le archivia tutte nello stesso percorso. Chiamando il metodo <xref:System.Object.ReferenceEquals%2A> è possibile vedere che le due stringhe si riferiscono effettivamente allo stesso oggetto in memoria. Per evitare la centralizzazione, usare il metodo <xref:System.String.Copy%2A?displayProperty=nameWithType>. Dopo la copia, le due stringhe hanno posizioni di archiviazione diverse anche se hanno lo stesso valore. Eseguire l'esempio seguente per verificare che le stringhe `a` e `b` sono *centralizzate*, ovvero condividono la stessa risorsa di archiviazione. Le stringhe `a` e `c` non lo sono.
+<xref:System.Object.ReferenceEquals%2A> non è stato usato in nessun esempio. Questo metodo determina se due stringhe sono lo stesso oggetto, che può causare risultati incoerenti nei confronti tra stringhe. L'esempio seguente illustra la funzionalità di *centralizzazione delle stringhe* di C#. Quando un programma dichiara due o più variabili di stringa identiche, il compilatore le archivia tutte nello stesso percorso. Chiamando il metodo <xref:System.Object.ReferenceEquals%2A> è possibile vedere che le due stringhe si riferiscono effettivamente allo stesso oggetto in memoria. Per evitare la centralizzazione, usare il metodo <xref:System.String.Copy%2A?displayProperty=nameWithType>. Dopo la copia, le due stringhe hanno posizioni di archiviazione diverse anche se hanno lo stesso valore. Eseguire l'esempio seguente per verificare che le stringhe `a` e `b` sono *centralizzate*, ovvero condividono la stessa risorsa di archiviazione. Le stringhe `a` e `c` non lo sono.
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet9":::
 
@@ -131,7 +131,7 @@ Le classi Collection, ad esempio <xref:System.Collections.Hashtable?displayPrope
 
 È possibile inserire una stringa nel pool interno oppure recuperare un riferimento a una stringa inserita nel pool interno chiamando il metodo <xref:System.String.Intern%2A?displayProperty=nameWithType>. Per determinare se una stringa è inserita nel pool interno, chiamare il metodo <xref:System.String.IsInterned%2A?displayProperty=nameWithType>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>
 - <xref:System.StringComparer?displayProperty=nameWithType>

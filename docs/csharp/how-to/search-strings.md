@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: f5fd61452d6f83bd035b5c6930bd09673c0ded23
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 34f9f2df11f9b7c51fcec2f8475a50ccf4c5e220
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662953"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324123"
 ---
 # <a name="how-to-search-strings"></a>Come cercare stringhe
 
@@ -23,11 +23,11 @@ Il tipo [string](../language-reference/builtin-types/reference-types.md#the-stri
 
 ## <a name="does-a-string-contain-text"></a>Una stringa contiene testo?
 
-I metodi <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.StartsWith%2A?displayProperty=nameWithType> e <xref:System.String.EndsWith%2A?displayProperty=nameWithType> cercano testo specifico in una stringa. L'esempio seguente illustra ognuno di questi metodi e una variante che usa una ricerca senza distinzione tra maiuscole e minuscole:
+I <xref:System.String.Contains%2A?displayProperty=nameWithType> <xref:System.String.StartsWith%2A?displayProperty=nameWithType> metodi, e <xref:System.String.EndsWith%2A?displayProperty=nameWithType> cercano un testo specifico in una stringa. Nell'esempio seguente vengono illustrati ognuno di questi metodi e una variante che utilizza una ricerca senza distinzione tra maiuscole e minuscole:
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs" id="Snippet1":::
 
-L'esempio precedente dimostra un aspetto importante per l'uso di questi metodi. Le ricerche **fanno distinzione tra maiuscole e minuscole** per impostazione predefinita. Usare il valore di enumerazione <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> per specificare una ricerca senza distinzione tra maiuscole e minuscole.
+L'esempio precedente dimostra un aspetto importante per l'uso di questi metodi. Le ricerche **fanno distinzione tra maiuscole e minuscole** per impostazione predefinita. Usare il <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> valore di enumerazione per specificare una ricerca senza distinzione tra maiuscole e minuscole.
 
 ## <a name="where-does-the-sought-text-occur-in-a-string"></a>Qual è la posizione del testo cercato in una stringa?
 
@@ -41,7 +41,7 @@ La classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithTyp
 
 L'esempio di codice seguente cerca la parola "the" o "their" in una frase, ignorando la combinazione di maiuscole e minuscole. Il metodo statico <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> esegue la ricerca. È necessario passare la stringa da cercare e i criteri di ricerca. In questo caso, un terzo argomento specifica una ricerca senza distinzione tra maiuscole e minuscole. Per altre informazioni, vedere <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.
 
-I criteri di ricerca descrivono il testo da cercare. La tabella seguente descrive ogni elemento dei criteri di ricerca. (Nella tabella seguente viene usata la barra singola `\` per la quale è necessario l'escape come `\\` in una stringa in C#).
+I criteri di ricerca descrivono il testo da cercare. La tabella seguente descrive ogni elemento dei criteri di ricerca. Nella tabella seguente viene usato il singolo oggetto `\` , che deve essere preceduto da un carattere di escape come `\\` in una stringa C#.
 
 | Modello  | Significato                          |
 |----------|----------------------------------|
@@ -72,7 +72,7 @@ Il codice seguente usa le espressioni regolari per convalidare il formato di ogn
 
 Questo singolo criterio di ricerca corrisponde a molte stringhe valide. Le espressioni regolari sono preferibili per eseguire ricerche o convalide in base a un modello, anziché a una singola stringa di testo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Guida per programmatori C#](../programming-guide/index.md)
 - [Stringhe](../programming-guide/strings/index.md)

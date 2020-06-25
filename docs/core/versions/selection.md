@@ -1,15 +1,15 @@
 ---
 title: Selezionare la versione di .NET Core da usare
 description: Informazioni su come .NET Core ricerca e sceglie automaticamente le versioni runtime per un programma. Questo articolo illustra anche come forzare una versione specifica.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 03/24/2020
-ms.openlocfilehash: 3c3d9b4ec5a68c88bdd0a45acfb49191f22abda4
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 5e855adc72f0e75e6f31643f8a8618e6d91be06e
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595728"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324348"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Selezionare la versione di .NET Core da usare
 
@@ -38,7 +38,7 @@ I comandi dell'SDK includono `dotnet new` e `dotnet run`. L'interfaccia della ri
 
 In casi rari potrebbe essere necessario usare una versione meno recente dell'SDK. La versione deve essere specificata in un file [*global.json*](../tools/global-json.md). I criteri dell'"uso della versione più recente" indicano che si usa solo il file *global.json* per specificare una versione di .NET Core SDK antecedente a quella installata, che è la più recente.
 
-Il file *global.json* può essere memorizzato in un punto qualsiasi della gerarchia di file. L'interfaccia della riga di comando cerca a ritroso il primo file *global.json* che trova partendo dalla directory di progetto. Si controlla a quali progetti si applica un determinato file *global.json* in base alla sua posizione nel file system. L'interfaccia della riga di comando .NET cerca ripetutamente un file *global.json* esplorando il percorso a ritroso partendo dalla directory di lavoro corrente. Il primo file *global.json* trovato specifica la versione usata. Se la versione dell'SDK è installata, verrà usata la versione. Se l'SDK specificato nel file *Global. JSON* non viene trovato, l'interfaccia della riga di comando di .NET usa le [regole di corrispondenza](../tools/global-json.md#matching-rules) per selezionare un SDK compatibile oppure ha esito negativo se non ne viene trovato nessuno.
+Il file *global.json* può essere memorizzato in un punto qualsiasi della gerarchia di file. L'interfaccia della riga di comando cerca a ritroso il primo file *global.json* che trova partendo dalla directory di progetto. Si controlla a quali progetti si applica un determinato file *global.json* in base alla sua posizione nel file system. L'interfaccia della riga di comando .NET cerca ripetutamente un file *global.json* esplorando il percorso a ritroso partendo dalla directory di lavoro corrente. Il primo file *global.json* trovato specifica la versione usata. Se la versione dell'SDK è installata, verrà usata la versione. Se l'SDK specificato nella *global.jssu* non viene trovato, l'interfaccia della riga di comando di .NET usa le [regole di corrispondenza](../tools/global-json.md#matching-rules) per selezionare un SDK compatibile oppure ha esito negativo se non ne viene trovato nessuno.
 
 L'esempio seguente mostra la sintassi del file *global.json*:
 
@@ -72,13 +72,13 @@ Il progetto viene compilato con le API definite in un **moniker del framework di
 <TargetFrameworks>netcoreapp3.0;net47</TargetFrameworks>
 ```
 
-Una determinata versione di SDK supporta un set fisso di framework, inclusivo del framework di destinazione del runtime con cui viene offerto. Ad esempio, .NET Core 3,0 SDK include il runtime di .NET Core 3,0, che è un'implementazione del Framework `netcoreapp3.0` di destinazione. .NET Core 3,0 SDK `netcoreapp2.1`supporta, `netcoreapp2.2`, `netcoreapp3.0`, ma non `netcoreapp3.1` (o versione successiva). Installare .NET Core 3,1 SDK per la compilazione di `netcoreapp3.1`.
+Una determinata versione di SDK supporta un set fisso di framework, inclusivo del framework di destinazione del runtime con cui viene offerto. Ad esempio, .NET Core 3,0 SDK include il runtime di .NET Core 3,0, che è un'implementazione del `netcoreapp3.0` Framework di destinazione. .NET Core 3,0 SDK supporta `netcoreapp2.1` ,, `netcoreapp2.2` `netcoreapp3.0` , ma non `netcoreapp3.1` (o versione successiva). Installare .NET Core 3,1 SDK per la compilazione di `netcoreapp3.1` .
 
-I framework di destinazione .NET Standard sono anche limitati al framework di destinazione del runtime fornito con SDK. .NET Core 3,1 SDK è limitato a `netstandard2.1`. Per altre informazioni, vedere [.NET Standard](../../standard/net-standard.md).
+I framework di destinazione .NET Standard sono anche limitati al framework di destinazione del runtime fornito con SDK. .NET Core 3,1 SDK è limitato a `netstandard2.1` . Per altre informazioni, vedere [.NET Standard](../../standard/net-standard.md).
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Roll forward delle app dipendenti dal framework
 
-Quando si esegue un'applicazione dall'origine con [`dotnet run`](../tools/dotnet-run.md), da una [**distribuzione dipendente dal Framework**](../deploying/index.md#publish-runtime-dependent) con [`dotnet myapp.dll`](../tools/dotnet.md#description)o da un [**eseguibile dipendente dal Framework**](../deploying/index.md#publish-runtime-dependent) con `myapp.exe`, il `dotnet` file eseguibile è l' **host** per l'applicazione.
+Quando si esegue un'applicazione dall'origine con [`dotnet run`](../tools/dotnet-run.md) , da una [**distribuzione dipendente dal Framework**](../deploying/index.md#publish-runtime-dependent) con [`dotnet myapp.dll`](../tools/dotnet.md#description) o da un [**eseguibile dipendente dal Framework**](../deploying/index.md#publish-runtime-dependent) con `myapp.exe` , il `dotnet` file eseguibile è l' **host** per l'applicazione.
 
 L'host sceglie la versione di patch più recente installata nel computer. Se ad esempio è stato specificato `netcoreapp3.0` nel file di progetto e `3.0.4` è il runtime .NET più recente installato, viene usato il runtime `3.0.4`.
 
@@ -115,7 +115,7 @@ Le distribuzioni autonome potrebbero richiedere una versione di patch specifica.
 
 L'elemento `RuntimeFrameworkVersion` sostituisce i criteri di versione predefiniti. Per le distribuzioni autonome, l'elemento `RuntimeFrameworkVersion` specifica l'*esatta* versione del framework di runtime. Per le applicazioni dipendenti dal framework, l'elemento `RuntimeFrameworkVersion` specifica la versione di framework di runtime *minima* richiesta.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Scaricare e installare .NET Core](../install/index.md).
 - [Come rimuovere il runtime e l'SDK di .NET Core](../install/remove-runtime-sdk-versions.md).

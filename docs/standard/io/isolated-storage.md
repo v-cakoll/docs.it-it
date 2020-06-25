@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 4ce32c766e7a454c1294eb38266a84602cf8e241
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: b9915faff2593cc51868c20e1a83a05ffca9f548
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245635"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325935"
 ---
 # <a name="isolated-storage"></a>Spazio di memorizzazione isolato
 <a name="top"></a> Per le applicazioni desktop, lo spazio di memorizzazione isolato è un meccanismo di archiviazione dati che offre isolamento e sicurezza definendo modi standardizzati di associare il codice ai dati salvati. La standardizzazione offre anche altri vantaggi. Gli amministratori possono utilizzare strumenti in grado di modificare l'archiviazione isolata per configurare lo spazio di archiviazione dei file, per impostare i criteri di sicurezza e per eliminare dati inutilizzati. Con lo spazio di memorizzazione isolato, non occorre più fornire al codice percorsi univoci per individuare posizioni sicure nel file system e i dati sono protetti da altre applicazioni che dispongono esclusivamente dell'accesso allo spazio di memorizzazione isolato. Non è necessario specificare informazioni hardcoded che indicano il percorso dell'area di archiviazione di un'applicazione.
@@ -122,12 +122,12 @@ Il .NET Framework e .NET Core offrono lo [spazio di memorizzazione isolato](/dot
 
 Componenti o applicazioni che chiamano una delle API seguenti lette dall'ambito a livello di computer:
 
- * [IsolatedStorageFile. GetEnumerator](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getenumerator), passaggio di un ambito che include il flag IsolatedStorageScope. Machine
- * [IsolatedStorageFile. GetMachineStoreForApplication](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforapplication)
- * [IsolatedStorageFile. GetMachineStoreForAssembly](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforassembly)
- * [IsolatedStorageFile. GetMachineStoreForDomain](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestorefordomain)
- * [IsolatedStorageFile. GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore), passaggio di un ambito che include il flag IsolatedStorageScope. Machine
- * [IsolatedStorageFile. Remove](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove), passaggio di un ambito che include il `IsolatedStorageScope.Machine` flag
+* [IsolatedStorageFile. GetEnumerator](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getenumerator), passaggio di un ambito che include il flag IsolatedStorageScope. Machine
+* [IsolatedStorageFile. GetMachineStoreForApplication](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforapplication)
+* [IsolatedStorageFile. GetMachineStoreForAssembly](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforassembly)
+* [IsolatedStorageFile. GetMachineStoreForDomain](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestorefordomain)
+* [IsolatedStorageFile. GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore), passaggio di un ambito che include il flag IsolatedStorageScope. Machine
+* [IsolatedStorageFile. Remove](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove), passaggio di un ambito che include il `IsolatedStorageScope.Machine` flag
 
 Lo [strumento per lo spazio di memorizzazione isolato](/dotnet/framework/tools/storeadm-exe-isolated-storage-tool) `storeadm.exe` viene influenzato se viene chiamato con l' `/machine` opzione, come illustrato nel codice seguente:
 
@@ -269,7 +269,7 @@ Molte applicazioni utilizzano un database per memorizzare e isolare dati. In que
 
 <a name="reference"></a>
 
-## <a name="reference"></a>Informazioni di riferimento
+## <a name="reference"></a>Riferimento
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType>
 

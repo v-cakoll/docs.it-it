@@ -2,12 +2,12 @@
 title: Script dotnet-install
 description: Informazioni sugli script DotNet-install per installare il .NET Core SDK e il runtime condiviso.
 ms.date: 04/30/2020
-ms.openlocfilehash: 464e6fafa1c2e661892bcb3b35ba172ca1d7e76b
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: d03877d76212f7b22de0a1075cf50fc75bd104b6
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141243"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324426"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Riferimento agli script dotnet-install
 
@@ -44,24 +44,47 @@ dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
 dotnet-install.sh --help
 ```
 
-## <a name="description"></a>Descrizione
+Lo script bash legge anche le opzioni PowerShell, che possono quindi essere usate con lo script in sistemi Linux/macOS.
 
-Gli `dotnet-install` script vengono usati per eseguire un'installazione non amministrativa del .NET Core SDK, che include il interfaccia della riga di comando di .NET Core e il runtime condiviso.
+## <a name="description"></a>Description
+
+Gli `dotnet-install` script eseguono un'installazione non amministrativa del .NET Core SDK, che include i interfaccia della riga di comando di .NET Core e il runtime condiviso. Sono disponibili due script:
+
+* Uno script di PowerShell che funziona in Windows.
+* Uno script bash che funziona in Linux/macOS.
+
+### <a name="purpose"></a>Scopo
+
+ L'uso previsto degli script è per gli scenari di integrazione continua (CI), in cui:
+
+* È necessario installare l'SDK senza l'intervento dell'utente e senza diritti di amministratore.
+* Non è necessario che l'installazione dell'SDK venga mantenute tra più esecuzioni CI.
+
+  Sequenza di eventi tipica:
+  * CI viene attivato.
+  * CI installa l'SDK usando uno di questi script.
+  * CI termina il suo lavoro e cancella i dati temporanei, inclusa l'installazione dell'SDK.
+
+Per configurare un ambiente di sviluppo o per eseguire app, usare i programmi di installazione anziché questi script.
+
+### <a name="recommended-version"></a>Versione consigliata
 
 Si consiglia di utilizzare la versione stabile degli script:
 
 - Bash (Linux/macOS):<https://dot.net/v1/dotnet-install.sh>
 - PowerShell (Windows):<https://dot.net/v1/dotnet-install.ps1>
 
-Gli script vengono usati principalmente negli scenari di automazione e nelle installazioni senza privilegi di amministratore. Sono disponibili due script: uno è uno script PowerShell, che funziona in Windows, e l'altro è uno script Bash, che funziona in Linux/macOS. Entrambi gli script hanno lo stesso comportamento. Lo script bash legge anche le opzioni PowerShell, che possono quindi essere usate con lo script in sistemi Linux/macOS.
+### <a name="script-behavior"></a>Comportamento dello script
 
-Gli script di installazione scaricano il file ZIP/tarball da destinazioni di compilazione dell'interfaccia della riga di comando e lo installano nel percorso predefinito o in un percorso specificato da `-InstallDir|--install-dir`. Per impostazione predefinita, lo script di installazione scarica e installa l'SDK. Se si vuole ottenere solo il runtime condiviso, è possibile specificare l'argomento `-Runtime|--runtime`.
+Entrambi gli script hanno lo stesso comportamento. Scaricano il file ZIP/tarball dalle gocce di compilazione dell'interfaccia della riga di comando e lo installano nel percorso predefinito o in un percorso specificato da `-InstallDir|--install-dir` .
 
-Per impostazione predefinita, lo script aggiunge il percorso di installazione a $PATH per la sessione corrente. Eseguire l'override di questo comportamento predefinito specificando l'argomento `-NoPath|--no-path`.
+Per impostazione predefinita, lo script di installazione scarica e installa l'SDK. Se si vuole ottenere solo il runtime condiviso, è possibile specificare l'argomento `-Runtime|--runtime`.
+
+Per impostazione predefinita, lo script aggiunge il percorso di installazione a $PATH per la sessione corrente. Eseguire l'override di questo comportamento predefinito specificando l'argomento `-NoPath|--no-path`. Lo script non imposta la `DOTNET_ROOT` variabile di ambiente.
 
 Prima di eseguire lo script, installare le [dipendenze](../install/dependencies.md) necessarie.
 
-È possibile installare una versione specifica usando l'argomento `-Version|--version`. La versione deve essere specificata come versione a tre parti (ad esempio, `2.1.0` ). Se non viene fornita, viene usata la versione `latest`.
+È possibile installare una versione specifica usando l'argomento `-Version|--version`. La versione deve essere specificata come numero di versione in tre parti, ad esempio `2.1.0` . Se la versione non è specificata, lo script installa la `latest` versione.
 
 Gli script di installazione non aggiornano il registro di sistema in Windows. Scaricano semplicemente i file binari compressi e li copiano in una cartella. Se si vogliono aggiornare i valori delle chiavi del registro di sistema, usare i programmi di installazione di .NET Core.
 
@@ -163,7 +186,7 @@ Gli script di installazione non aggiornano il registro di sistema in Windows. Sc
 
   Se non viene specificata, `-Version` viene impostata automaticamente su `latest`.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 - Installare la versione LTS (Long Term Support) più recente nel percorso predefinito:
 
@@ -229,7 +252,7 @@ Gli script di installazione non aggiornano il registro di sistema in Windows. Sc
   curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [.NET Core releases](https://github.com/dotnet/core/releases) (Versioni di .NET Core)
 - [.NET Core Runtime and SDK download archive](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) (Archivio di download per runtime e SDK di .NET Core)

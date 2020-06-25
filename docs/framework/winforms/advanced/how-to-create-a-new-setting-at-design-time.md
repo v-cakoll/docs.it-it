@@ -1,18 +1,19 @@
 ---
-title: 'Procedura: Creare una nuova impostazione in fase di progettazione'
+title: 'Procedura: creare una nuova impostazione in fase di progettazione'
+description: Informazioni su come creare una nuova impostazione di Windows Forms in fase di progettazione usando la finestra di progettazione delle impostazioni in Visual Studio.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: 35a7cd8cc1daaf76a25977751ddc9ec0709e5947
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ce37b42191999e29de2f2f7f7e7abfa0ec3f4d47
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037898"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325849"
 ---
-# <a name="how-to-create-a-new-setting-at-design-time"></a>Procedura: Crea una nuova impostazione in fase di progettazione
+# <a name="how-to-create-a-new-setting-at-design-time"></a>Procedura: creare una nuova impostazione in fase di progettazione
 
 È possibile creare una nuova impostazione in fase di progettazione usando la finestra di progettazione delle impostazioni in Visual Studio. Progettazione impostazioni è un'interfaccia di tipo Grid che consente di creare nuove impostazioni e specificare le proprietà per tali impostazioni. Per le nuove impostazioni, è necessario specificare il nome, il valore, il tipo e l'ambito. Una volta creata, l'impostazione è accessibile nel codice.
 
@@ -36,8 +37,8 @@ ms.locfileid: "69037898"
 
 4. Nella finestra di progettazione delle impostazioni impostare il **nome**, il **valore**, il **tipo**e l' **ambito** per l'impostazione. Ogni riga rappresenta una singola impostazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-- [Uso delle impostazioni applicazione e delle impostazioni utente](using-application-settings-and-user-settings.md)
-- [Cenni preliminari sulle impostazioni delle applicazioni](application-settings-overview.md)
-- [Procedura: Modificare il valore di un'impostazione esistente in fase di progettazione](how-to-change-the-value-of-an-existing-setting-at-design-time.md)
+- [Utilizzo delle impostazioni applicazione e delle impostazioni utente](using-application-settings-and-user-settings.md)
+- [Panoramica delle impostazioni dell'applicazione](application-settings-overview.md)
+- [Procedura: modificare il valore di un'impostazione esistente in fase di progettazione](how-to-change-the-value-of-an-existing-setting-at-design-time.md)

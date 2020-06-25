@@ -4,12 +4,12 @@ description: Informazioni sulle procedure consigliate per la scrittura di unit t
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 9115ff69b269e3723820fd8505d1a9f8ca278d12
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 8a879c16e48dfde617f9cd20f58cab96039361f0
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989369"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324473"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Procedure consigliate di testing unità con .NET Core e .NET Standard
 
@@ -24,7 +24,7 @@ A cura di [John Reese](https://reese.dev) con ringraziamenti speciali a [Roy Osh
 ### <a name="less-time-performing-functional-tests"></a>Meno tempo da dedicare all'esecuzione dei test funzionali
 I test funzionali sono costosi. Comportano, in genere, l'apertura dell'applicazione e l'esecuzione di una serie di passaggi che l'utente, o chi per lui, deve eseguire per convalidare il comportamento previsto. Questi passaggi potrebbero non essere sempre chiari per chi esegue il test, pertanto questi dovrà contattare qualcuno con maggiori conoscenze in materia per eseguire il test. Il test di semplici modifiche può richiedere solo alcuni secondi, che possono diventare minuti per modifiche più significative. Infine, questo processo deve essere ripetuto per ogni modifica apportata nel sistema.
 
-Gli unit test, invece, durano millisecondi, possono essere eseguiti facendo clic su un pulsante e non richiedono necessariamente una conoscenza approfondita del sistema. L'esito positivo o negativo del test è determinato dal test runner, non dai singoli utenti.
+Gli unit test, d'altra parte, accettano millisecondi, possono essere eseguiti alla pressione di un pulsante e non richiedono necessariamente alcuna conoscenza del sistema in grande. L'esito positivo o negativo del test è determinato dal test runner, non dai singoli utenti.
 
 ### <a name="protection-against-regression"></a>Protezione contro la regressione
 I difetti di regressione sono i difetti che vengono introdotti quando si apporta una modifica all'applicazione. È pratica comune per i tester testare non solo le nuove funzionalità, ma anche quelle già esistenti per verificare che le funzionalità implementate in precedenza continuino a funzionare come previsto.
@@ -53,14 +53,14 @@ La scrittura di test per il codice ha l'effetto di disaccoppiare naturalmente il
 
 Una percentuale di code coverage elevata è spesso associata a una maggiore qualità del codice. Tuttavia, la misurazione stessa *non è in grado* di determinare la qualità del codice. L'impostazione di un obiettivo code coverage percentuale eccessivamente ambizioso può essere controproducente. Immaginate un progetto complesso con migliaia di rami condizionali e immaginiamo di impostare un obiettivo del 95% code coverage. Attualmente il progetto mantiene il 90% code coverage. La quantità di tempo necessaria per tenere conto di tutti i casi perimetrali nel 5% rimanente potrebbe essere un'impresa massiccia e la proposta di valore diminuisce rapidamente.
 
-Una percentuale di code coverage elevata non è un indicatore di esito positivo, né implica una elevata qualità del codice. Jusst rappresenta la quantità di codice analizzata dagli unit test. Per ulteriori informazioni, vedere [unit testing code coverage](unit-testing-code-coverage.md).
+Una percentuale di code coverage elevata non è un indicatore di esito positivo, né implica una elevata qualità del codice. Rappresenta semplicemente la quantità di codice analizzata dagli unit test. Per ulteriori informazioni, vedere [unit testing code coverage](unit-testing-code-coverage.md).
 
 ## <a name="lets-speak-the-same-language"></a>Terminologia
-Il termine *mock* è purtroppo usato in modo improprio quando si parla di testing. Di seguito vengono definiti i tipi più comuni di *fake* per la scrittura di unit test:
+Il termine *simulazione* è purtroppo spesso usato per discutere dei test. I punti seguenti definiscono i tipi più comuni di *Fake* durante la scrittura di unit test:
 
-*Fake*: è un termine generico che può essere usato per descrivere uno stub o un mock. Il contesto di utilizzo determina se si tratta di uno stub o di un mock. Quindi, in altre parole, un fake può essere uno stub o un mock.
+*Fake* : un fake è un termine generico che può essere usato per descrivere uno stub o un oggetto fittizio. Il fatto che sia uno stub o una simulazione dipende dal contesto in cui viene usato. Quindi, in altre parole, un fake può essere uno stub o un mock.
 
-*Mock*: un mock è un oggetto del sistema che decide se uno unit test ha avuto esito positivo o meno. Un mock inizia come fake fino a quando non diventa l'oggetto di un'asserzione.
+*Mock*: un mock è un oggetto del sistema che decide se uno unit test ha avuto esito positivo o meno. Una simulazione inizia come un fake fino a quando non viene dichiarata in base a.
 
 *Stub*: è la sostituzione controllabile nel sistema di una dipendenza o di un collaboratore. Utilizzando uno stub è possibile testare il codice senza prendere direttamente in considerazione la dipendenza. Per impostazione predefinita, un fake è inizialmente uno stub.
 
@@ -75,7 +75,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Quanto segue è un esempio di stub che verrebbe chiamato mock. In questo caso, si tratta di stub. Si sta passando Order solo come mezzo per creare un'istanza di `Purchase` (il sistema sottoposto a test). Il nome `MockOrder` è anche estremamente fuorviante perché, anche in questo caso, l'ordine non è un mock.
+Quanto segue è un esempio di stub che verrebbe chiamato mock. In questo caso, si tratta di stub. Si sta passando Order solo come mezzo per creare un'istanza di `Purchase` (il sistema sottoposto a test). Anche il nome `MockOrder` è fuorviante perché l'ordine non è una simulazione.
 
 Un approccio migliore sarebbe
 
@@ -88,7 +88,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Rinominando la classe `FakeOrder` la si rende più generica e la si rende utilizzabile come mock o stub, a seconda del valore migliore per il tipo di test. Nell'esempio precedente, `FakeOrder` viene usato come stub. `FakeOrder` non viene usato in alcun modo durante l'asserzione. `FakeOrder` è stato passato alla classe `Purchase` unicamente per soddisfare i requisiti del costruttore.
+Rinominando la classe `FakeOrder` la si rende più generica e la si rende utilizzabile come mock o stub, a seconda del valore migliore per il tipo di test. Nell'esempio precedente, `FakeOrder` viene usato come stub. `FakeOrder` non viene usato in alcun modo durante l'asserzione. `FakeOrder`è stato passato alla `Purchase` classe per soddisfare i requisiti del costruttore.
 
 Per usarlo come mock, si potrebbe procedere così
 
@@ -157,7 +157,7 @@ L'input da usare in uno unit test deve essere il più semplice possibile per ver
 - I test diventano più adattabili alle modifiche future nella base codice.
 - I test hanno un comportamento più simile a quello dell'implementazione.
 
-Test che includono più informazioni rispetto a quelle necessarie per la verifica hanno maggiori probabilità di contenere errori e il loro intento risulta meno chiaro. Durante la scrittura dei test, è necessario concentrare l'attenzione sul comportamento. L'impostazione di proprietà aggiuntive per i modelli o l'uso di valori diversi da zero quando non sono necessari distoglie l'attenzione da ciò che si sta tentando di provare.
+Test che includono più informazioni rispetto a quelle necessarie per la verifica hanno maggiori probabilità di contenere errori e il loro intento risulta meno chiaro. Quando si scrivono i test, si desidera concentrarsi sul comportamento. L'impostazione di proprietà aggiuntive per i modelli o l'uso di valori diversi da zero quando non sono necessari distoglie l'attenzione da ciò che si sta tentando di provare.
 
 #### <a name="bad"></a>Scadente:
 [!code-csharp[BeforeMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
@@ -210,7 +210,7 @@ Se si richiede un oggetto o uno stato simile per i test, prediligere un metodo h
 
 - La lettura dei test è più agevole dal momento che la totalità del codice è visibile nel test.
 - Minore rischio di configurare troppo o troppo poco per il test specificato.
-- Minore rischio di condividere lo stato tra i test creando dipendenze non desiderate tra di essi.
+- Minor probabilità di condividere lo stato tra i test, creando dipendenze indesiderate tra di essi.
 
 Nel framework di testing unità, `Setup` viene chiamato prima di ogni unit test all'interno del gruppo di test. Mentre ad alcuni può apparire uno strumento utile, in realtà genera test troppo grandi e difficili da leggere. I requisiti per rendere ogni test operativo variano da test a test. Sfortunatamente, `Setup` obbliga a usare esattamente gli stessi requisiti per ogni test.
 
@@ -294,7 +294,7 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 Tenendo presente questo aspetto, quando si vede un metodo privato, trovare il metodo pubblico e scrivere i test su tale metodo. Unicamente perché un metodo privato restituisce il risultato previsto non implica che il sistema che chiama il metodo privato usi il risultato in modo corretto.
 
 ### <a name="stub-static-references"></a>Riferimenti statici negli stub
-Uno dei principi a cui uno unit test si deve attenere è che deve avere controllo completo del sistema sottoposto a test. Ciò può risultare problematico quando il codice di produzione include chiamate ai riferimenti statici (ad esempio `DateTime.Now`). Si consideri il codice seguente
+Uno dei principi a cui uno unit test si deve attenere è che deve avere controllo completo del sistema sottoposto a test. Questa operazione può risultare problematica quando il codice di produzione include chiamate a riferimenti statici (ad esempio, `DateTime.Now` ). Si consideri il codice seguente
 
 ```csharp
 public int GetDiscountedPrice(int price)

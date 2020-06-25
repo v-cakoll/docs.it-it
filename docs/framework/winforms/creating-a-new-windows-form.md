@@ -1,28 +1,29 @@
 ---
 title: Creazione di un nuovo Windows Form
+description: Trovare argomenti che introducono il vocabolario di base, le linee guida e le istruzioni da comprendere quando si inizia a creare una Windows Forms Application.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating a new form
 ms.assetid: c725559c-803e-4725-80fa-96aba93de29a
-ms.openlocfilehash: 409dd945ebd26d212f62745ce6751f7507641bb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f1ef899e46c804cb174814b0abbd9490ce6221d5
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009058"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325943"
 ---
 # <a name="creating-a-new-windows-form"></a>Creazione di un nuovo Windows Form
-Questo argomento contiene collegamenti ad argomenti che spiegano come creare la prima applicazione Windows Forms. Gli argomenti di questa sezione introducono anche alcuni termini di base e le linee guida che è opportuno conoscere quando si inizia creare un'applicazione Windows Form. Per altre informazioni sulle applicazioni Windows Form, i controlli utilizzabili in, eventi e la gestione degli eventi e su come gestire l'input da parte dell'utente, vedere l'elenco di argomenti correlati.  
+Questo argomento contiene collegamenti ad argomenti che spiegano come creare la prima applicazione Windows Forms. Gli argomenti di questa sezione introducono anche alcuni termini di base e le linee guida che è opportuno conoscere quando si inizia creare un'applicazione Windows Form. Per ulteriori informazioni sulle applicazioni Windows Forms, sui controlli utilizzabili, sugli eventi e sulla gestione degli eventi e su come gestire l'input dell'utente, vedere l'elenco di argomenti correlati.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Coordinate di Windows Form](windows-forms-coordinates.md).  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Coordinate Windows Forms](windows-forms-coordinates.md).  
  Descrive le coordinate client e dello schermo.  
   
- [Procedura: Creare un'applicazione di Windows Forms dalla riga di comando](how-to-create-a-windows-forms-application-from-the-command-line.md)  
+ [Procedura: Creare un'applicazione Windows Forms dalla riga di comando](how-to-create-a-windows-forms-application-from-the-command-line.md)  
  Descrive come creare un Windows Form di base e come compilarlo dalla riga di comando.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.Form>  
  Descrive la classe e contiene i collegamenti a tutti i relativi membri.  
   

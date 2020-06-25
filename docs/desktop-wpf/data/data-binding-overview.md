@@ -1,18 +1,18 @@
 ---
 title: Panoramica del data binding
 description: Informazioni sulle diverse origini dati che è possibile aggiungere al progetto in Windows Presentation Foundation per .NET Core. Le origini dati possono essere associati a elementi XAML per creare app dinamiche.
-author: thraka
+author: adegeo
 ms.date: 09/19/2019
 ms.author: adegeo
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 4f7119ab8286e80160a500481675f83dfaef7713
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 829c93e97990b87e6e568614236de9708ef080d9
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662979"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325751"
 ---
 # <a name="data-binding-overview-in-wpf"></a>Cenni preliminari sul data binding in WPF
 
@@ -438,11 +438,11 @@ Se al binding è associato un oggetto o se la <xref:System.Windows.Controls.Exce
 
 È possibile impostare la proprietà associata <xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType> su un oggetto correlato all'associazione per ricevere informazioni sullo stato di un'associazione specifica.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [Eseguire l'associazione ai risultati di una query LINQ](../../framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)
-- [Associazione dati](../../framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [Data Binding](../../framework/wpf/advanced/optimizing-performance-data-binding.md)
 - [Demo di data binding][data-binding-demo]
 - [Articoli sulle procedure](../../framework/wpf/data/data-binding-how-to-topics.md)
 - [Eseguire il binding a un'origine dati ADO.NET](../../framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)

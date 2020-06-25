@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: passare a un URL con il controllo WebBrowser'
+description: Informazioni su come usare il controllo Windows Forms WebBrowser. Navigate per passare a un URL specifico. Vengono inoltre fornite informazioni su come determinare quando viene caricato il nuovo documento.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], navigating to URLs
 - examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
-ms.openlocfilehash: f6cb26ff247bba75cc351d453314bade2d38d9f5
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: e6ad360cc73a84ca040869832bb59d354cb78bd5
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144838"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325576"
 ---
 # <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a>Procedura: passare a un URL con il controllo WebBrowser
 Nell'esempio di codice riportato di seguito viene illustrato come spostare il <xref:System.Windows.Forms.WebBrowser> controllo in un URL specifico.

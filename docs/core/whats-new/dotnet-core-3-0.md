@@ -3,15 +3,15 @@ title: Novità di .NET Core 3.0
 description: Informazioni sulle nuove funzionalità in .NET Core 3.0.
 dev_langs:
 - csharp
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 422cb7b20e2644ab44f9573f101fb6b53ab1dd2f
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 7caeaaa834dc827998d7d1bc3a25ba4e194996f4
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378830"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324416"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novità di .NET Core 3.0
 
@@ -257,14 +257,14 @@ Gli strumenti locali si basano sul nome file manifesto `dotnet-tools.json` nella
 
 Per gli strumenti sia locali che globali, è necessaria una versione compatibile del runtime. Molti strumenti attualmente presenti su NuGet.org hanno come destinazione .NET Core Runtime 2.1. Per installare questi strumenti a livello globale o locale, è comunque necessario installare il [runtime di NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
 
-### <a name="new-globaljson-options"></a>Nuove opzioni di Global. JSON
+### <a name="new-globaljson-options"></a>Nuove opzioni di global.json
 
-Il file *Global. JSON* include nuove opzioni che offrono maggiore flessibilità quando si tenta di definire quale versione del .NET Core SDK viene utilizzata. Le nuove opzioni sono:
+Il *global.jssu* file include nuove opzioni che offrono maggiore flessibilità quando si tenta di definire la versione del .NET Core SDK utilizzata. Le nuove opzioni sono:
 
 - `allowPrerelease`: Indica se il resolver SDK deve prendere in considerazione le versioni provvisorie quando si seleziona la versione dell'SDK da usare.
 - `rollForward`: Indica i criteri di rollforward da usare quando si seleziona una versione di SDK, come fallback quando manca una versione specifica dell'SDK o come direttiva per usare una versione successiva.
 
-Per altre informazioni sulle modifiche, inclusi i valori predefiniti, i valori supportati e le nuove regole di corrispondenza, vedere [Panoramica di Global. JSON](../tools/global-json.md).
+Per ulteriori informazioni sulle modifiche, inclusi i valori predefiniti, i valori supportati e le nuove regole di corrispondenza, vedere [global.json Overview](../tools/global-json.md).
 
 ### <a name="smaller-garbage-collection-heap-sizes"></a>Riduzione delle dimensioni heap del Garbage Collector
 
@@ -539,13 +539,13 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ### <a name="fast-built-in-json-support"></a>Supporto JSON predefinito rapido
 
-Gli utenti .NET si sono affidati principalmente a [Newtonsoft. JSON](https://www.newtonsoft.com/json) e ad altre librerie JSON più diffuse, che continuano a essere scelte efficaci. `Newtonsoft.Json`Usa le stringhe .NET come tipo di dati di base, che è UTF-16 dietro le quinte.
+Gli utenti .NET si sono affidati principalmente a [Newtonsoft.Jsin](https://www.newtonsoft.com/json) e ad altre librerie JSON più diffuse, che continuano a essere scelte efficaci. `Newtonsoft.Json`Usa le stringhe .NET come tipo di dati di base, che è UTF-16 dietro le quinte.
 
 Il nuovo supporto JSON incorporato è ad alte prestazioni e a bassa allocazione e funziona con testo JSON con codifica UTF-8. Per ulteriori informazioni sullo <xref:System.Text.Json> spazio dei nomi e sui tipi, vedere gli articoli seguenti:
 
 * [Serializzazione JSON in .NET-Panoramica](../../standard/serialization/system-text-json-overview.md)
 * [Come serializzare e deserializzare JSON in .NET](../../standard/serialization/system-text-json-how-to.md).
-* [Come eseguire la migrazione da Newtonsoft. JSON a System. Text. JSON](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Come eseguire la migrazione da Newtonsoft.Jsin System.Text.Js](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
 
 ### <a name="http2-support"></a>Supporto HTTP/2
 

@@ -1,15 +1,15 @@
 ---
 title: Differenze tra .NET Framework e .NET Core
 description: Vengono descritte le differenze tra l'implementazione .NET Framework di Windows Presentation Foundation (WPF) e .NET Core WPF. Quando si esegue la migrazione dell'app, è necessario prendere in considerazione queste incompatibilità.
-author: thraka
+author: adegeo
 ms.date: 09/21/2019
 ms.author: adegeo
-ms.openlocfilehash: 341e576f17c522fbcbb9c417176e9d4a13ab1b18
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 3bedc30046c36d4c5430feedf5854276ebaef8aa
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82072207"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325683"
 ---
 # <a name="differences-in-wpf"></a>Differenze in WPF
 
@@ -25,16 +25,16 @@ Alcune funzionalità di .NET Framework non sono supportate da .NET Core. Per ult
 
 ## <a name="nuget-package-references"></a>Riferimenti al pacchetto NuGet
 
-Se l'app .NET Framework elenca le dipendenze NuGet in un file *packages. config* , eseguire [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) la migrazione nel formato:
+Se l'app .NET Framework elenca le dipendenze NuGet in un file di *packages.config* , eseguire la migrazione nel [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) formato:
 
 1. In Visual Studio aprire il riquadro **Esplora soluzioni** .
-1. Nel progetto WPF, fare clic con il pulsante destro del mouse su **packages. config** > **migrate Packages. config a PackageReference**.
+1. Nel progetto WPF fare clic con il pulsante destro del mouse su **packages.config**  >  **migrate packages.config a PackageReference**.
 
 ![Aggiornamento a PackageReference](media/differences-from-net-framework/package-reference-migration.png)
 
-Verrà visualizzata una finestra di dialogo che mostra le dipendenze NuGet di primo livello calcolate e chiede quali altri pacchetti NuGet devono essere promossi al livello principale. Selezionare **OK** e il file *packages. config* verrà rimosso dal progetto e `<PackageReference>` gli elementi verranno aggiunti al file di progetto.
+Verrà visualizzata una finestra di dialogo che mostra le dipendenze NuGet di primo livello calcolate e chiede quali altri pacchetti NuGet devono essere promossi al livello principale. Selezionare **OK** e il file di *packages.config* verrà rimosso dal progetto e `<PackageReference>` gli elementi verranno aggiunti al file di progetto.
 
-Quando il progetto usa `<PackageReference>`, i pacchetti non vengono archiviati localmente in una cartella di *pacchetti* , vengono archiviati a livello globale. Aprire il file di progetto e rimuovere `<Analyzer>` tutti gli elementi che fanno riferimento alla cartella *pacchetti* . Questi analizzatori vengono inclusi automaticamente con i riferimenti ai pacchetti NuGet.
+Quando il progetto usa `<PackageReference>` , i pacchetti non vengono archiviati localmente in una cartella di *pacchetti* , vengono archiviati a livello globale. Aprire il file di progetto e rimuovere tutti `<Analyzer>` gli elementi che fanno riferimento alla cartella *pacchetti* . Questi analizzatori vengono inclusi automaticamente con i riferimenti ai pacchetti NuGet.
 
 ## <a name="code-access-security"></a>Sicurezza dall'accesso di codice
 
@@ -44,12 +44,12 @@ I tipi correlati alle CA definite pubblicamente sono stati spostati dagli assemb
 
 | Assembly di origine | Assembly di destinazione | Type                |
 | --------------- | --------------- | ------------------- |
-| *WindowsBase.dll* | *System. Security. Permissions. dll* | <xref:System.Security.Permissions.MediaPermission> <br /> <xref:System.Security.Permissions.MediaPermissionAttribute> <br /> <xref:System.Security.Permissions.MediaPermissionAudio> <br /> <xref:System.Security.Permissions.MediaPermissionImage> <br /> <xref:System.Security.Permissions.MediaPermissionVideo> <br /> <xref:System.Security.Permissions.WebBrowserPermission> <br /> <xref:System.Security.Permissions.WebBrowserPermissionAttribute> <br /> <xref:System.Security.Permissions.WebBrowserPermissionLevel> |
-| *System.Xaml.dll* | *System. Security. Permissions. dll* | <xref:System.Xaml.Permissions.XamlLoadPermission> |
-| *System.Xaml.dll* | *System. Windows. Extension. dll*    | <xref:System.Xaml.Permissions.XamlAccessLevel><br/> |
+| *WindowsBase.dll* | *System.Security.Permissions.dll* | <xref:System.Security.Permissions.MediaPermission> <br /> <xref:System.Security.Permissions.MediaPermissionAttribute> <br /> <xref:System.Security.Permissions.MediaPermissionAudio> <br /> <xref:System.Security.Permissions.MediaPermissionImage> <br /> <xref:System.Security.Permissions.MediaPermissionVideo> <br /> <xref:System.Security.Permissions.WebBrowserPermission> <br /> <xref:System.Security.Permissions.WebBrowserPermissionAttribute> <br /> <xref:System.Security.Permissions.WebBrowserPermissionLevel> |
+| *System.Xaml.dll* | *System.Security.Permissions.dll* | <xref:System.Xaml.Permissions.XamlLoadPermission> |
+| *System.Xaml.dll* | *System.Windows.Extension.dll*    | <xref:System.Xaml.Permissions.XamlAccessLevel><br/> |
 
 > [!NOTE]
-> Per ridurre al minimo l'attrito del porting, la funzionalità per l'archiviazione e il recupero delle informazioni correlate alle proprietà seguenti è `XamlAccessLevel` stata mantenuta nel tipo.
+> Per ridurre al minimo l'attrito del porting, la funzionalità per l'archiviazione e il recupero delle informazioni correlate alle proprietà seguenti è stata mantenuta nel `XamlAccessLevel` tipo.
 >
 > - `PrivateAccessToTypeName`
 > - `AssemblyNameString`

@@ -1,14 +1,14 @@
 ---
 title: Modelli personalizzati per dotnet new
 description: Informazioni sui modelli personalizzati per qualsiasi tipo di file o progetto .NET.
-author: thraka
+author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: 56fcbfbc168143007f0772ce8a12347f7e25e50b
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: cabe220917e7ff688a2c2d2df56d9bc7f8afdf56
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005316"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324508"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelli personalizzati per dotnet new
 
@@ -36,7 +36,7 @@ dotnet new --list
 Un modello è costituito dai componenti seguenti:
 
 - File e cartelle di origine.
-- Un file di configurazione (*template. JSON*).
+- Un file di configurazione (*template.json*).
 
 ### <a name="source-files-and-folders"></a>File e cartelle di origine
 
@@ -55,7 +55,7 @@ I file generati dal modello possono essere modificati in base alla logica e alle
 
 Il file *template.json* si trova in una cartella *.template.config* nella directory radice del modello. Il file fornisce informazioni di configurazione al motore del modello. Per la configurazione minima sono necessari i membri visualizzati nella tabella seguente, sufficiente per creare un modello funzionale.
 
-| Membro            | Type          | Descrizione |
+| Membro            | Type          | Description |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | Lo schema JSON per il file *template.json*. Gli editor che supportano gli schemi JSON abilitano le funzionalità di modifica JSON quando viene specificato lo schema. Ad esempio, [Visual Studio Code](https://code.visualstudio.com/) richiede questo membro per abilitare IntelliSense. Usare un valore di `http://json.schemastore.org/template`. |
 | `author`          | string        | L'autore del modello. |
@@ -251,7 +251,7 @@ Dopo l'installazione di un modello, usare il modello eseguendo il comando `dotne
 dotnet new <TEMPLATE>
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Creare un modello personalizzato per dotnet new (esercitazione)](../tutorials/cli-templates-create-item-template.md)
 - [Wiki del repository GitHub dotnet/templating](https://github.com/dotnet/templating/wiki)

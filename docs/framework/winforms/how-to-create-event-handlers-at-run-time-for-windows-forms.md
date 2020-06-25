@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: creare gestori eventi in fase di esecuzione'
+description: Informazioni su come creare un gestore eventi in fase di esecuzione con il Progettazione Windows Form in Visual Studio. Questa azione consente di connettere i gestori eventi in fase di esecuzione.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 0b496a3da77c5bcf7a08c435edba468a7c5809cb
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 857076c46377b3276154d9b193d4bbe51841828f
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739500"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325802"
 ---
-# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Procedura: Creare gestori eventi in fase di esecuzione per Windows Form
+# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Procedura: Creare gestori eventi in fase di esecuzione per Windows Forms
 
 Oltre a creare eventi usando il Progettazione Windows Form in Visual Studio, è anche possibile creare un gestore eventi in fase di esecuzione. Questa azione consente di connettere i gestori eventi in base alle condizioni nel codice in fase di esecuzione invece di connetterli all'avvio iniziale del programma.
 
@@ -29,7 +30,7 @@ Oltre a creare eventi usando il Progettazione Windows Form in Visual Studio, è 
 
 2. Aggiungere un metodo al modulo con la firma del metodo per l'evento che si desidera gestire.
 
-     Se ad esempio si gestisce l'evento <xref:System.Windows.Forms.Control.Click> di un controllo <xref:System.Windows.Forms.Button>, si creerà un metodo come il seguente:
+     Se, ad esempio, si stava gestendo l' <xref:System.Windows.Forms.Control.Click> evento di un <xref:System.Windows.Forms.Button> controllo, si creerebbe un metodo come il seguente:
 
     ```vb
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs)
@@ -57,7 +58,7 @@ Oltre a creare eventi usando il Progettazione Windows Form in Visual Studio, è 
 
 4. Stabilire per quale modulo o controllo si desidera creare un gestore eventi.
 
-5. In un metodo nella classe del modulo, aggiungere il codice che specifica il gestore eventi per gestire l'evento. Il codice seguente, ad esempio, specifica il gestore eventi `button1_Click` gestisce l'evento <xref:System.Windows.Forms.Control.Click> di un controllo <xref:System.Windows.Forms.Button>:
+5. In un metodo nella classe del modulo, aggiungere il codice che specifica il gestore eventi per gestire l'evento. Ad esempio, il codice seguente specifica che il gestore eventi `button1_Click` gestisce l' <xref:System.Windows.Forms.Control.Click> evento di un <xref:System.Windows.Forms.Button> controllo:
 
     ```vb
     AddHandler Button1.Click, AddressOf Button1_Click
@@ -73,8 +74,8 @@ Oltre a creare eventi usando il Progettazione Windows Form in Visual Studio, è 
 
      Il <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> metodo illustrato nel codice Visual Basic precedente stabilisce un gestore dell'evento click per il pulsante.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Creazione di gestori eventi in Windows Form](creating-event-handlers-in-windows-forms.md)
-- [Informazioni generali sui gestori eventi](event-handlers-overview-windows-forms.md)
+- [Panoramica sui gestori eventi](event-handlers-overview-windows-forms.md)
 - [Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic](../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

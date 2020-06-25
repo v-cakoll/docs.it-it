@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: aggiungere o rimuovere controlli da una raccolta in fase di esecuzione'
+description: Informazioni su come aggiungere e rimuovere controlli da qualsiasi controllo contenitore nei form, ad esempio il pannello o il controllo GroupBox, o anche il form stesso.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,15 +13,15 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 369946581847b4bdcf8bc658aeb94b14c529061c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6c3f2d1f42b130de4d808871265b50510cfb8f47
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182282"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325871"
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Procedura: aggiungere o rimuovere controlli da una raccolta in fase di esecuzione
-Attività comuni nello sviluppo di applicazioni sono l'aggiunta e la rimozione <xref:System.Windows.Forms.Panel> di <xref:System.Windows.Forms.GroupBox> controlli da qualsiasi controllo contenitore nei form (ad esempio il controllo o o o anche il form stesso). In fase di progettazione è possibile trascinare i controlli direttamente in un pannello o una casella di gruppo. In fase di esecuzione questi controlli mantengono una raccolta `Controls`, che tiene traccia di quali controlli vengono posizionati su essi.  
+Le attività comuni nello sviluppo di applicazioni sono l'aggiunta e la rimozione di controlli da qualsiasi controllo contenitore nei form, ad esempio il <xref:System.Windows.Forms.Panel> <xref:System.Windows.Forms.GroupBox> controllo o o anche il form stesso. In fase di progettazione è possibile trascinare i controlli direttamente in un pannello o una casella di gruppo. In fase di esecuzione questi controlli mantengono una raccolta `Controls`, che tiene traccia di quali controlli vengono posizionati su essi.  
   
 > [!NOTE]
 > L'esempio di codice seguente si applica a qualsiasi controllo che mantiene una raccolta di controlli al suo interno.  
@@ -33,7 +34,7 @@ Attività comuni nello sviluppo di applicazioni sono l'aggiunta e la rimozione <
   
 3. Aggiungere il controllo alla raccolta `Controls` del controllo padre.  
   
-     Esempio di codice seguente viene illustrato <xref:System.Windows.Forms.Button> come creare un'istanza del controllo. Richiede un form <xref:System.Windows.Forms.Panel> con un controllo e che il metodo `NewPanelButton_Click`di gestione degli eventi per il pulsante creato, , esista già.  
+     Nell'esempio di codice seguente viene illustrato come creare un'istanza del <xref:System.Windows.Forms.Button> controllo. Richiede un modulo con un <xref:System.Windows.Forms.Panel> controllo e che il metodo di gestione degli eventi per il pulsante creato, `NewPanelButton_Click` , esista già.  
   
     ```vb  
     Public NewPanelButton As New Button()  
@@ -66,11 +67,11 @@ Attività comuni nello sviluppo di applicazioni sono l'aggiunta e la rimozione <
   
 ### <a name="to-remove-controls-from-a-collection-programmatically"></a>Per rimuovere controlli da una raccolta a livello di codice  
   
-1. Rimuovere il gestore eventi dall'evento. In Visual Basic utilizzare la parola chiave [RemoveHandler Statement](../../../visual-basic/language-reference/statements/removehandler-statement.md) ; nel linguaggio C, utilizzare [l'operatore -.](../../../csharp/language-reference/operators/subtraction-operator.md)  
+1. Rimuovere il gestore eventi dall'evento. In Visual Basic usare la parola chiave dell' [istruzione RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md) . in C# usare l' [operatore-=](../../../csharp/language-reference/operators/subtraction-operator.md).  
   
 2. Usare il metodo `Remove` per eliminare il controllo desiderato dalla raccolta del pannello `Controls`.  
   
-3. Chiamare <xref:System.Windows.Forms.Control.Dispose%2A> il metodo per rilasciare tutte le risorse utilizzate dal controllo.  
+3. Chiamare il <xref:System.Windows.Forms.Control.Dispose%2A> metodo per rilasciare tutte le risorse usate dal controllo.  
   
     ```vb  
     Public Sub RemoveControl()  
@@ -100,7 +101,7 @@ Attività comuni nello sviluppo di applicazioni sono l'aggiunta e la rimozione <
     }  
     ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Windows.Forms.Panel>
 - [Controllo Panel](panel-control-windows-forms.md)

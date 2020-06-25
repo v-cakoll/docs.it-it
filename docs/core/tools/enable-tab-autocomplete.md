@@ -1,23 +1,23 @@
 ---
 title: Attivare il completamento con tasto TAB
 description: Questo articolo illustra come abilitare il completamento tramite tasto TAB nell'interfaccia della riga di comando di .NET Core per PowerShell, Bash e zsh.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 11/03/2019
-ms.openlocfilehash: 31328be14811760bc8d7fb527e0d55abfe6b1493
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 491e1ca34c20c3994a571fc2deff7392c6bdb3f2
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156751"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324385"
 ---
 # <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>Come abilitare il completamento tramite TAB per l'interfaccia della riga di comando di .NET Core
 
-**Questo articolo si applica a:** ✔️ .NET Core 2.1 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
 
-Questo articolo descrive come configurare il completamento tramite TAB per tre shell: PowerShell, Bash e zsh. Per altre shell, fare riferimento alla relativa documentazione su come configurare il completamento delle schede.
+Questo articolo descrive come configurare il completamento tramite TAB per tre shell: PowerShell, Bash e zsh. Per altre shell, fare riferimento alla relativa documentazione per informazioni su come configurare il completamento tramite tasto TAB.
 
-Una volta impostato, il completamento tramite tabulazione `dotnet` per l'interfaccia della riga di comando di .NET Core viene attivato digitando un comando nella shell e quindi premendo TAB. La riga di comando corrente viene inviata al comando `dotnet complete` e i risultati vengono elaborati dalla shell. Per testare i risultati senza abilitazione del completamento tramite TAB, inviare direttamente un elemento al comando `dotnet complete`. Ad esempio:
+Una volta configurato, il completamento tramite tasto TAB per la interfaccia della riga di comando di .NET Core viene attivato digitando un `dotnet` comando nella shell, quindi premendo il tasto TAB. La riga di comando corrente viene inviata al comando `dotnet complete` e i risultati vengono elaborati dalla shell. Per testare i risultati senza abilitazione del completamento tramite TAB, inviare direttamente un elemento al comando `dotnet complete`. Ad esempio:
 
 ```console
 > dotnet complete "dotnet a"
@@ -30,7 +30,7 @@ pack
 
 Se questo comando non funziona, assicurarsi che sia installato .NET Core 2.0 SDK o versioni successive. Se è installata la versione appropriata ma il comando non funziona, assicurarsi che il comando `dotnet` risolva in .NET Core 2.0 SDK o una versione successiva. Usare il comando `dotnet --version` per verificare la versione di `dotnet` in cui risolve il percorso corrente. Per altre informazioni, vedere [Selezionare la versione di .NET Core da usare](../versions/selection.md).
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 Gli esempi seguenti visualizzano risultati del completamento tramite TAB:
 

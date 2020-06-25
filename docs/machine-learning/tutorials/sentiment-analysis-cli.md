@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 06/03/2020
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: aab59463daad30748277602b9ab1d8ca2f3fa1f5
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: fcd325d518b276ccb042f3702db978e9189715b8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767676"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326028"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analizzare il sentiment usando l'interfaccia della riga di comando di ML.NET
 
@@ -175,7 +175,7 @@ Questi asset enumerati vengono descritti nei passaggi successivi dell'esercitazi
         ```
 
     - La riga di codice successiva usa il `ConsumeModel.Predict()` metodo sui dati di input specificati per eseguire una stima e restituire i risultati in base allo schema ModelOutput.cs.
-    - Le ultime righe del codice stampano il proprietà dei dati di esempio (in questo caso il commento), nonché la stima del sentimento e i punteggi corrispondenti per i sentimenti positivi (1) e il sentimento negativo (2).
+    - Le ultime righe di codice stampano le proprietà dei dati di esempio (in questo caso il commento), nonché la stima del sentimento e i punteggi corrispondenti per i sentimenti positivi (1) e il sentimento negativo (2).
 
 1. Eseguire il progetto, usando i dati di esempio originali caricati dalla prima riga del set di dati oppure i dati hardcoded personalizzati. Si dovrebbe ottenere una stima simile a:
 
@@ -223,7 +223,7 @@ In questa esercitazione sono state illustrate le procedure per:
 > - Comprendere il codice C# generato per l'esecuzione del modello (codice da usare nell'app per utenti finali)
 > - Esplorare il codice C# generato usato per eseguire il training del modello "qualità migliore" (a scopo di guadagno)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Automatizzare il training del modello con l'interfaccia della riga di comando di ML.NET](../automate-training-with-cli.md)
 - [Esercitazione: esecuzione di modelli ML.NET su app Web scalabili ASP.NET Core e WebAPI](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)

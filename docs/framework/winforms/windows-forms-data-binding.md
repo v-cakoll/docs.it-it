@@ -1,5 +1,6 @@
 ---
 title: Data binding
+description: Informazioni su come usare data binding in Windows Forms per visualizzare e modificare le informazioni di un'origine dati in controlli del modulo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms]
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-ms.openlocfilehash: 68871db848ab46b88865e668f27f09972e8debcf
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3dfce24147caf9b138916ca8dc3b7a9010439f58
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734619"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325548"
 ---
 # <a name="windows-forms-data-binding"></a>Data binding di Windows Form
 Data binding in Windows Form consente di visualizzare e modificare le informazioni da un'origine dati nei controlli del form. È possibile effettuare associazioni alle origini dati tradizionali e a quasi ogni struttura che contiene dati.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
- [Data binding e Windows Forms](data-binding-and-windows-forms.md)  
+ [Associazione dati e Windows Form](data-binding-and-windows-forms.md)  
  Fornisce una panoramica del data binding in Windows Form.  
   
  [Origini dati supportate da Windows Form](data-sources-supported-by-windows-forms.md)  
@@ -27,10 +28,10 @@ Data binding in Windows Form consente di visualizzare e modificare le informazio
  [Interfacce correlate al data binding](interfaces-related-to-data-binding.md)  
  Descrive molte delle interfacce usate con il data binding in Windows Form.  
   
- [Procedura: Esplorare dati in Windows Form](how-to-navigate-data-in-windows-forms.md)  
+ [Procedura: Esplorare dati in Windows Forms](how-to-navigate-data-in-windows-forms.md)  
  Mostra come spostarsi tra gli elementi in un'origine dati.  
   
- [Notifica delle modifiche nel data binding dei Windows Form](change-notification-in-windows-forms-data-binding.md)  
+ [Notifica delle modifiche nell'associazione dati dei Windows Form](change-notification-in-windows-forms-data-binding.md)  
  Descrive i vari tipi di notifica delle modifiche per il data binding in Windows Form.  
   
  [Procedura: Implementare l'interfaccia INotifyPropertyChanged](how-to-implement-the-inotifypropertychanged-interface.md)  
@@ -64,7 +65,7 @@ Data binding in Windows Form consente di visualizzare e modificare le informazio
  [Componente BindingSource](./controls/bindingsource-component.md)  
  Contiene un elenco di argomenti in cui viene illustrato come usare il componente <xref:System.Windows.Forms.BindingSource>.  
   
- [Controllo DataGridView](./controls/datagridview-control-windows-forms.md)  
+ [DataGridView (controllo)](./controls/datagridview-control-windows-forms.md)  
  Fornisce un elenco di argomenti in cui viene illustrato come usare un controllo Datagrid associabile.  
   
  Vedere anche [accesso ai dati in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).

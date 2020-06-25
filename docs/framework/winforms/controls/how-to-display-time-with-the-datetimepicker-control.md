@@ -1,5 +1,6 @@
 ---
-title: "Procedura: Visualizzare l'ora con il controllo DateTimePicker"
+title: "Procedura: visualizzare l'ora con il controllo DateTimePicker"
+description: Informazioni su come usare il controllo DateTimePicker Windows Forms per consentire agli utenti di selezionare una data e un'ora e di visualizzare la data e l'ora nel formato specificato.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - DateTimePicker control [Windows Forms], displaying time
 ms.assetid: 0c1c8b40-1b50-4301-a90c-39516775ccb1
-ms.openlocfilehash: 84f10540e7735ac1043e63eecda84161c10deeef
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: ab584367a189d05e567bb57d386c6bf629201102
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591728"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325588"
 ---
-# <a name="how-to-display-time-with-the-datetimepicker-control"></a>Procedura: Visualizzare l'ora con il controllo DateTimePicker
+# <a name="how-to-display-time-with-the-datetimepicker-control"></a>Procedura: visualizzare l'ora con il controllo DateTimePicker
 Se si vuole consentire agli utenti di selezionare una data e un'ora nell'applicazione e di visualizzare tali informazioni nel formato specificato, è possibile usare il controllo <xref:System.Windows.Forms.DateTimePicker>. La procedura seguente illustra come usare il controllo <xref:System.Windows.Forms.DateTimePicker> per visualizzare l'ora.  
   
 ### <a name="to-display-the-time-with-the-datetimepicker-control"></a>Per visualizzare l'ora con il controllo DateTimePicker  
@@ -42,6 +43,6 @@ Se si vuole consentire agli utenti di selezionare una data e un'ora nell'applica
   
 - Riferimenti agli assembly System, System.Data, System.Drawing e System.Windows.Forms.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Controllo DateTimePicker](datetimepicker-control-windows-forms.md)

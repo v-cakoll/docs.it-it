@@ -1,37 +1,37 @@
 ---
 title: Creare un pacchetto di modelli per dotnet new
 description: Informazioni su come creare un file csproj che compilerà un pacchetto di modelli per il comando dotnet new.
-author: thraka
+author: adegeo
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 5bc926861dd6a501d7c2d24bd5f7c4116cc78b2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25264fff42c47f5bb660f68f85dbb123b5b2608c
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503498"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324341"
 ---
-# <a name="tutorial-create-a-template-pack"></a>Esercitazione: Creare un pacchetto di modelliTutorial: Create a template pack
+# <a name="tutorial-create-a-template-pack"></a>Esercitazione: creare un pacchetto di modelli
 
-Con .NET Core è possibile creare e distribuire modelli per generare progetti, file e persino risorse. Questa esercitazione è la terza parte di una serie che illustra come creare, installare e disinstallare modelli da usare con il `dotnet new` comando.
+Con .NET Core è possibile creare e distribuire modelli per generare progetti, file e persino risorse. Questa esercitazione è la terza parte di una serie che illustra come creare, installare e disinstallare i modelli da usare con il `dotnet new` comando.
 
 In questa parte della serie si apprenderà come:
 
 > [!div class="checklist"]
 >
-> * Creare \*un progetto con estensione csproj per compilare un pacchetto di modelliCreate a .csproj project to build a template pack
+> * Creare un \* progetto. csproj per compilare un pacchetto di modelli
 > * Configurare il file di progetto per la creazione del pacchetto
 > * Installare un modello da un file di pacchetto NuGet
 > * Disinstallare un modello in base all'ID del pacchetto
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 * Completare la [parte 1](cli-templates-create-item-template.md) e la [parte 2](cli-templates-create-project-template.md) di questa serie di esercitazioni.
 
-  Questa esercitazione usa i due modelli creati nelle prime due parti di questa esercitazione. È possibile utilizzare un modello diverso, purché si copi il modello, come cartella, nella cartella _working/templates.\\ _
+  Questa esercitazione usa i due modelli creati nelle prime due parti di questa esercitazione. È possibile usare un modello diverso, purché si copi il modello, come cartella, nella cartella _working\templates \\ _ .
 
-* Aprire un terminale e passare alla cartella _di lavoro.\\ _
+* Aprire un terminale e passare alla cartella _di \\ lavoro_ .
 
 ## <a name="create-a-template-pack-project"></a>Creare un progetto per il pacchetto di modelli
 
@@ -49,7 +49,7 @@ Nel terminale passare alla cartella _working_. Creare un nuovo progetto e impost
 dotnet new console -n templatepack -o .
 ```
 
-Il `-n` parametro imposta il nome file _con estensione csproj_ su _templatepack.csproj_. Il `-o` parametro crea i file nella directory corrente. Viene visualizzato un risultato simile all'output seguente.
+Il `-n` parametro imposta il nome del file con _estensione csproj_ su _TemplatePack. csproj_. Il `-o` parametro consente di creare i file nella directory corrente. Viene visualizzato un risultato simile all'output seguente.
 
 ```dotnetcli
 dotnet new console -n templatepack -o .
@@ -187,7 +187,7 @@ Currently installed items:
 
 Eseguire `dotnet new -u AdatumCorporation.Utility.Templates` per disinstallare il modello. Il comando `dotnet new` restituirà informazioni che dovrebbero omettere i modelli installati in precedenza.
 
-Congratulazioni! È stato installato e disinstallato un pacchetto di modelli.
+A questo punto, È stato installato e disinstallato un pacchetto di modelli.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -6,30 +6,31 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: cea9c038896d07d526874e2ae4c33e479eaa3963
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 499af6d7b8de1decbcffefe0a3b1420cc548488a
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769132"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326038"
 ---
-# <a name="when-to-use-a-thread-safe-collection"></a>Quando utilizzare una raccolta thread-safe
-.NET Framework 4 introduce cinque nuovi tipi di raccolta creati specificamente per il supporto di operazioni di aggiunta e rimozione multithread. Per ottenere la thread safety, questi nuovi tipi usano vari nuovi meccanismi di sincronizzazione, sia di blocco che senza blocco. La sincronizzazione aggiunge sovraccarico a un'operazione. La quantità di sovraccarico dipende dal tipo di sincronizzazione usato, dal tipo di operazioni eseguite e da altri fattori, quali il numero di thread che provano ad accedere contemporaneamente alla raccolta.  
+# <a name="when-to-use-a-thread-safe-collection"></a>Quando usare una raccolta thread-safe
+
+In .NET Framework 4 sono stati introdotti cinque tipi di raccolta appositamente progettati per supportare operazioni di aggiunta e rimozione multithread. Per ottenere la thread safety, questi tipi utilizzano vari tipi di meccanismi di sincronizzazione efficienti e senza blocco. La sincronizzazione aggiunge sovraccarico a un'operazione. La quantità di sovraccarico dipende dal tipo di sincronizzazione usato, dal tipo di operazioni eseguite e da altri fattori, quali il numero di thread che provano ad accedere contemporaneamente alla raccolta.  
   
  In determinati scenari il sovraccarico della sincronizzazione è trascurabile e consente al tipo con multithread un'elaborazione molto più rapida e una miglior scalabilità rispetto al tipo equivalente non thread-safe se protetto da un blocco esterno. In altri scenari il sovraccarico può far sì che la scalabilità e le prestazioni del tipo thread-safe risultino uguali o più lente rispetto alla versione del tipo non thread-safe con blocco esterno.  
   
  Le sezioni seguenti offrono indicazioni generali su quando usare una raccolta thread-safe o una raccolta non thread-safe equivalente e provvista di un blocco specificato dall'utente per le operazioni di lettura e scrittura. Dato che le prestazioni possono variare in base a molti fattori, le indicazioni non sono specifiche e non sono necessariamente valide in qualsiasi circostanza. Se le prestazioni sono molto importanti, il modo migliore per determinare il tipo di raccolta da usare è la misurazione delle prestazioni in base alle configurazioni e ai carichi di lavoro di computer campione. In questo documento vengono usati i seguenti termini:  
   
- *Scenario producer-consumer puro*  
+ *Scenario producer-consumer puro*\
  Un qualsiasi thread esegue l'aggiunta o la rimozione di elementi, ma non entrambe le operazioni.  
   
- *Scenario producer-consumer misto*  
+ *Scenario producer-consumer misto*\
  Un qualsiasi thread esegue sia l'aggiunta che la rimozione di elementi.  
   
- *Aumento della velocità*  
+ *Aumento*\
  Prestazioni algoritmiche più veloci rispetto a un altro tipo nello stesso scenario.  
   
- *Scalabilità*  
+ *Scalabilità*\
  Miglioramento delle prestazioni proporzionale al numero di core nel computer. Un algoritmo con scalabilità viene eseguito più velocemente su otto core che su due core.  
   
 ## <a name="concurrentqueuet-vs-queuet"></a>Confronta tra ConcurrentQueue(T) e Queue(T)  
@@ -61,7 +62,7 @@ ms.locfileid: "84769132"
 ## <a name="blockingcollection"></a>BlockingCollection  
  Quando è necessaria la semantica di delimitazione e blocco, è probabile che l'esecuzione di <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> risulti più rapida di quella di qualsiasi implementazione personalizzata. Supporta anche funzionalità complete di annullamento, enumerazione e gestione eccezioni.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Raccolte thread-safe](index.md)

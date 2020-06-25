@@ -1,17 +1,17 @@
 ---
 title: Installare .NET Core SDK in Windows, Linux e macOS-.NET Core
 description: Informazioni su come installare .NET Core in Windows, Linux e macOS. Individuare le dipendenze necessarie per lo sviluppo di app .NET Core.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 05/04/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 9b170765740600641f96056adc08ff0b69a03338
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: a11d1eb3bae6affaa548407cbd68c166a30e99da
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768314"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324661"
 ---
 # <a name="install-the-net-core-sdk"></a>Installare il .NET Core SDK
 

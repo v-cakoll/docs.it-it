@@ -1,6 +1,6 @@
 ---
-title: Scelta tra DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo
-description: Informazioni su come scegliere tra i tipi DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo per rappresentare le informazioni di data e ora in .NET.
+title: Confrontare DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo
+description: Informazioni sulle differenze tra i tipi DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo per rappresentare le informazioni di data e ora in .NET.
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - time zones [.NET Framework], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-ms.openlocfilehash: 0b89d0fd36af00796105af50f51803c90cce2605
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 03d00fb802032b981a5ebe80f7166eba0fb54a60
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662810"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326049"
 ---
-# <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Scelta tra DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo
+# <a name="choose-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Scegliere tra DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo
 
-Le applicazioni .NET che usano informazioni su data e ora sono molto diversificate e possono usare tali informazioni in modi diversi. Gli utilizzi più comuni delle informazioni su data e ora includono uno o più dei seguenti:
+Le applicazioni .NET possono utilizzare le informazioni di data e ora in diversi modi. Gli utilizzi più comuni delle informazioni su data e ora includono:
 
 - Indicare solo una data, perché le informazioni sull'ora non sono importanti.
 
@@ -33,7 +33,7 @@ Le applicazioni .NET che usano informazioni su data e ora sono molto diversifica
 
 - Per recuperare informazioni su data e ora da origini esterne a .NET, in genere in cui le informazioni di data e ora vengono archiviate in un tipo di dati semplice.
 
-- Identificare in modo univoco e senza ambiguità un singolo momento. In alcune applicazioni è necessario che la data e l'ora siano non ambigue solo nel sistema host, in altre devono non esserlo in tutti i sistemi (ovvero, una data serializzata in un sistema può essere deserializzata in modo significativo e usata in un altro sistema in qualsiasi parte del mondo).
+- Identificare in modo univoco e senza ambiguità un singolo momento. Per alcune applicazioni è necessario che la data e l'ora siano non ambigue solo nel sistema host. Per altre app è necessario che non sia ambiguo tra i sistemi (ovvero, una data serializzata in un sistema può essere deserializzata in modo significativo e usata in un altro sistema in qualsiasi parte del mondo).
 
 - Mantenere più ore correlate, ad esempio l'ora locale del richiedente e l'ora di ricezione di una richiesta Web nel server.
 
@@ -48,7 +48,7 @@ Le applicazioni .NET che usano informazioni su data e ora sono molto diversifica
 
 Un valore <xref:System.DateTime> definisce una data e un'ora specifiche. Include una <xref:System.DateTime.Kind%2A> proprietà che fornisce informazioni limitate sul fuso orario a cui appartengono la data e l'ora. Il valore <xref:System.DateTimeKind> restituito dalla proprietà <xref:System.DateTime.Kind%2A> indica se il valore <xref:System.DateTime> rappresenta l'ora locale (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), l'ora UTC (Coordinated Universal Time) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) o un'ora non specificata (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).
 
-La struttura <xref:System.DateTime> è adatta per le applicazioni che hanno le caratteristiche seguenti:
+La <xref:System.DateTime> struttura è adatta per le applicazioni con una o più delle caratteristiche seguenti:
 
 - Usano solo date.
 
@@ -73,7 +73,7 @@ A meno che un determinato valore <xref:System.DateTime> non rappresenti un'ora U
 
 La struttura <xref:System.DateTimeOffset> rappresenta un valore di data e ora, insieme a un offset che indica la differenza di tale valore rispetto all'ora UTC. In questo modo, il valore identifica sempre senza ambiguità un singolo momento.
 
-Il tipo <xref:System.DateTimeOffset> include tutte le funzionalità del tipo <xref:System.DateTime> insieme alla compatibilità del fuso orario. Questo lo rende adatto per le applicazioni che eseguono le operazioni seguenti:
+Il tipo <xref:System.DateTimeOffset> include tutte le funzionalità del tipo <xref:System.DateTime> insieme alla compatibilità del fuso orario. Questo lo rende adatto per le applicazioni che:
 
 - Identificano in modo univoco e non ambiguo un singolo momento. Il tipo <xref:System.DateTimeOffset> può essere usato per definire senza ambiguità il significato di "adesso", per registrare data e ora delle transazioni, del sistema o degli eventi delle applicazioni, nonché registrare data e ora di creazione e modifica dei file.
 
@@ -82,14 +82,14 @@ Il tipo <xref:System.DateTimeOffset> include tutte le funzionalità del tipo <xr
 - Mantengono più date e ore correlate, purché vengano archiviate come due valori separati o due membri di una struttura.
 
 > [!NOTE]
-> Questi utilizzi per i valori <xref:System.DateTimeOffset> sono molto più comuni di quelli per i valori <xref:System.DateTime> . Di conseguenza, <xref:System.DateTimeOffset> deve essere considerato il tipo di data e ora predefinito per lo sviluppo di applicazioni.
+> Questi utilizzi per i valori <xref:System.DateTimeOffset> sono molto più comuni di quelli per i valori <xref:System.DateTime> . Di conseguenza, considerare <xref:System.DateTimeOffset> come il tipo di data e ora predefinito per lo sviluppo di applicazioni.
 
-Un valore <xref:System.DateTimeOffset> non è associato a un determinato fuso orario, ma può derivare da svariati fusi orari diversi. Per illustrare questo concetto, l'esempio seguente elenca i fusi orari cui può appartenere un certo numero di valori <xref:System.DateTimeOffset> (incluso un valore con ora solare Pacifico locale).
+Un <xref:System.DateTimeOffset> valore non è associato a un determinato fuso orario, ma può derivare da diversi fusi orari. L'esempio seguente elenca i fusi orari a cui può appartenere un certo numero di <xref:System.DateTimeOffset> valori (inclusa un'ora solare Pacifico locale).
 
 [!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
 [!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
 
-L'output mostra che ogni valore di data e ora nell'esempio può appartenere almeno a tre fusi orari diversi. Il valore <xref:System.DateTimeOffset> 6/10/2007 mostra che se un valore di data e ora rappresenta un orario con ora legale, il suo offset dall'ora UTC non corrisponde necessariamente all'offset UTC di base del fuso orario di origine o all'offset dall'ora UTC indicato nel nome visualizzato. Questo significa che poiché un singolo valore <xref:System.DateTimeOffset> non è strettamente collegato al proprio fuso orario, non può indicare la transizione di un fuso orario da e verso l'ora legale. Questo comportamento può rivelarsi particolarmente problematico quando vengono usate operazioni aritmetiche per date e ore per modificare un valore <xref:System.DateTimeOffset> . Per informazioni su come eseguire operazioni aritmetiche di data e ora in modo che tenga conto delle regole di rettifica del fuso orario, vedere [esecuzione di operazioni aritmetiche con date e ore](performing-arithmetic-operations.md).
+L'output mostra che ogni valore di data e ora nell'esempio può appartenere almeno a tre fusi orari diversi. Il <xref:System.DateTimeOffset> valore 6/10/2007 indica che se un valore di data e ora rappresenta un'ora legale, l'offset dall'ora UTC non corrisponde necessariamente all'offset UTC di base del fuso orario di origine o all'offset dall'ora UTC trovato nel nome visualizzato. Poiché un singolo <xref:System.DateTimeOffset> valore non è strettamente associato al fuso orario, non può riflettere la transizione di un fuso orario da e verso l'ora legale. Questa operazione può risultare problematica quando si utilizza l'aritmetica di data e ora per modificare un <xref:System.DateTimeOffset> valore. Per informazioni su come eseguire operazioni aritmetiche di data e ora in modo che tenga conto delle regole di rettifica del fuso orario, vedere [esecuzione di operazioni aritmetiche con date e ore](performing-arithmetic-operations.md).
 
 ## <a name="the-timespan-structure"></a>Struttura TimeSpan
 
@@ -117,8 +117,8 @@ La classe <xref:System.TimeZoneInfo> class represents any of the Earth's time zo
 
 In alcuni casi, per sfruttare tutti i vantaggi della classe <xref:System.TimeZoneInfo> possono essere necessarie attività aggiuntive di sviluppo. Se i valori di data e ora non sono strettamente collegati ai fusi orari a cui appartengono, è necessario ulteriore lavoro. A meno che l'applicazione non fornisca un meccanismo per collegare una data e un'ora al fuso orario associato, è facile che un determinato valore di data e ora venga dissociato dal fuso orario. Un metodo per collegare queste informazioni consiste nel definire una classe o una struttura che contiene sia i valori di data e ora sia l'oggetto fuso orario associato.
 
-L'uso del supporto per i fusi orari in .NET è possibile solo se il fuso orario cui appartengono la data e l'ora è noto quando viene creata un'istanza dell'oggetto data e ora. Questo è un caso piuttosto raro, in particolare nelle applicazioni Web o di rete.
+Per sfruttare i vantaggi del supporto dei fusi orari in .NET, è necessario avere a disposizione il fuso orario a cui appartiene un valore di data e ora quando viene creata un'istanza dell'oggetto data e ora. Il fuso orario è spesso sconosciuto, in particolare nelle app Web o di rete.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Date, ore e fusi orari](index.md)

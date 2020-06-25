@@ -3,16 +3,16 @@ title: Come modificare il contenuto di una stringa-Guida a C#
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: a32665b67cfa73aa7d4753a1427c6955827e1b86
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: e607a8a2e96a73f64463d75a75a2bfe3f518d118
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663005"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324174"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Come modificare il contenuto di una stringa in C\#
 
-Questo articolo illustra diverse tecniche per produrre un oggetto `string` modificando un oggetto `string` esistente. Tutte le tecniche illustrate restituiscono il risultato delle modifiche come nuovo oggetto `string`. Per maggior chiarezza, gli esempi archiviano il risultato in una nuova variabile. Quindi quando si esegue ogni esempio è possibile esaminare sia l'oggetto `string` originale che l'oggetto `string` derivante dalla modifica.
+Questo articolo illustra diverse tecniche per produrre un oggetto `string` modificando un oggetto `string` esistente. Tutte le tecniche illustrate restituiscono il risultato delle modifiche come nuovo oggetto `string`. Per dimostrare che le stringhe originali e modificate sono istanze distinte, gli esempi archiviano il risultato in una nuova variabile. È possibile esaminare l'originale `string` e il nuovo oggetto modificato `string` quando si eseguono tutti gli esempi.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -68,9 +68,9 @@ Poiché le stringhe non sono modificabili, negli esempi precedenti vengono creat
 
 :::code language="csharp" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet7":::
 
-È possibile modificare una stringa in un blocco fisso con codice non sicuro, ma è **fortemente** sconsigliata modificare il contenuto della stringa dopo la creazione di una stringa. In questo modo si interrompono le operazioni in modi imprevedibili. Se, ad esempio, un utente centralizza una stringa con lo stesso contenuto, otterrà la copia e non si aspetta che la stringa venga modificata.
+È possibile modificare una stringa in un blocco fisso con codice non sicuro, ma è **fortemente** sconsigliata modificare il contenuto della stringa dopo la creazione di una stringa. In questo modo si interrompono le operazioni in modi imprevedibili. Se, ad esempio, un utente esegue il interning di una stringa con lo stesso contenuto, otterrà la copia e non si prevede di modificare la stringa.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [.NET Framework espressioni regolari](../../standard/base-types/regular-expressions.md)
 - [Linguaggio di espressioni regolari-riferimento rapido](../../standard/base-types/regular-expression-language-quick-reference.md)

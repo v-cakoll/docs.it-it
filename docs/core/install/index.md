@@ -1,27 +1,27 @@
 ---
-title: Installare .NET Core in Windows, Linux e macOS - .NET Core
-description: Scopri dove e cosa installare per .NET Core nelle versioni Windows, Linux e macOS. Scopri le dipendenze necessarie per sviluppare, distribuire ed eseguire app .NET Core.
-author: thraka
+title: Installare .NET Core in Windows, Linux e macOS-.NET Core
+description: Informazioni su dove e cosa installare per .NET Core nelle versioni Windows, Linux e macOS. Individuare le dipendenze necessarie per lo sviluppo, la distribuzione e l'esecuzione di app .NET Core.
+author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 4a133393db28ac5c7fd2384c4b842483c7c30d6f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6dde0f76e23c106397ce6f6767f6edfbdc93152
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74836992"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324810"
 ---
 # <a name="download-and-install-net-core"></a>Scaricare e installare .NET Core
 
-In questo articolo vengono fornite informazioni su come scaricare e installare .NET Core.This article provides information on how to download and install .NET Core. Ci sono due parti di .NET Core, il **runtime** che viene usato per eseguire le applicazioni e **l'SDK** che viene usato per creare le applicazioni. L'SDK include il runtime.
+Questo articolo fornisce informazioni su come scaricare e installare .NET Core. Sono disponibili due parti per .NET Core, il **Runtime** usato per eseguire le app e l' **SDK** usato per creare le app. L'SDK include il runtime di.
 
-- Se sei un utente che ha bisogno di .NET Core per eseguire le app, vedi [Installare .NET Core Runtime.](runtime.md)
+- Se si è un utente che ha bisogno di .NET Core per eseguire le app, vedere [installare il runtime di .NET Core](runtime.md).
 
-- Se sei uno sviluppatore che ha bisogno di .NET Core per creare app, vedi [Installare .NET Core SDK](sdk.md).
+- Per gli sviluppatori che necessitano di .NET Core per creare app, vedere [installare il .NET Core SDK](sdk.md).
 
 > [!NOTE]
-> .NET Core SDK include il runtime.
+> Il .NET Core SDK include il runtime di.
 
 ## <a name="dependencies"></a>Dependencies
 
-.NET Core è supportato in Windows, Linux e macOS. Per un elenco completo dei requisiti, vedere [Sistemi operativi supportati](dependencies.md).
+.NET Core è supportato in Windows, Linux e macOS. Per un elenco completo dei requisiti, vedere [sistemi operativi supportati](dependencies.md).

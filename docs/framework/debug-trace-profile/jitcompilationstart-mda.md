@@ -1,6 +1,6 @@
 ---
-title: MDA jitCompilationStart
-description: Usare l'assistente al debug gestito jitCompilationStart, che viene avviato per segnalare il momento in cui il compilatore just-in-time (JIT) inizia a compilare una funzione .NET.
+title: Assistente al debug gestito jitCompilationStart
+description: L'assistente al debug gestito jitCompilationStart segnala quando il compilatore just-in-time (JIT) inizia a compilare una funzione .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT compilation
@@ -8,30 +8,31 @@ helpviewer_keywords:
 - JitCompilationStart MDA
 - managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
-ms.openlocfilehash: bf2d09f433f0b8e4056fecd1f4e82bf3b91dd2bc
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 13e20c1a940b7bfa777245ba35f3cc1b003d15b2
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904130"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325531"
 ---
 # <a name="jitcompilationstart-mda"></a>MDA jitCompilationStart
+
 L'assistente al debug gestito `jitCompilationStart` viene attivato per segnalare il momento in cui il compilatore JIT avvia la compilazione di una funzione.  
   
 ## <a name="symptoms"></a>Sintomi  
- Le dimensioni del working set per un programma che è già in formato di immagine nativa aumentano, perché mscorjit.dll viene caricato nel processo.  
+ Il working set dimensioni aumenta per un programma che è già in formato di immagine nativa, perché mscorjit.dll viene caricato nel processo.  
   
 ## <a name="cause"></a>Causa  
- Non tutti gli assembly da cui dipende il programma sono stati generati in formato nativo e quelli che lo sono non sono stati registrati correttamente.  
-  
+Non tutti gli assembly da cui dipende il programma sono stati generati in formato nativo oppure un assembly non è registrato correttamente.  
+
 ## <a name="resolution"></a>Risoluzione  
- L'abilitazione di questo assistente al debug gestito permette di determinare quale funzione è stata compilata tramite JIT. Determinare se l'assembly che contiene la funzione è stato generato in formato nativo e registrato correttamente.  
+ L'abilitazione di questo assistente al debug gestito consente di identificare la funzione compilata tramite JIT. Verificare che l'assembly che contiene la funzione venga generato in formato nativo e registrato correttamente.
   
-## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  
- Poiché questo assistente al debug gestito registra un messaggio appena prima della compilazione JIT di un metodo, la sua abilitazione ha un notevole impatto sulle prestazioni. Si noti che se un metodo è inline, l'assistente al debug gestito non genera un messaggio separato.  
+## <a name="effect-on-the-runtime"></a>Effetto sul runtime  
+ Poiché questo assistente al debug gestito registra un messaggio appena prima della compilazione JIT di un metodo, la sua abilitazione ha un notevole impatto sulle prestazioni. Se un metodo è inline, questo assistente al debug gestito non genererà un messaggio separato.  
   
 ## <a name="output"></a>Output  
- L'esempio di codice seguente mostra l'output di esempio. In questo caso, l'output mostra che nell'assembly Test il metodo "m" nella classe "ns2.CO" è stato compilato tramite JIT.  
+ L'esempio di codice seguente mostra l'output di esempio. In questo caso, l'output mostra che, nel test dell'assembly, il metodo "m" sulla classe "ns2.CO" è stato compilato tramite JIT.  
   
 ```output
 method name="Test!ns2.C0::m"  
@@ -156,7 +157,7 @@ namespace ns2
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)

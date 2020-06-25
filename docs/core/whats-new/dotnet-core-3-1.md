@@ -1,53 +1,53 @@
 ---
 title: Novità di .NET Core 3.1
-description: Informazioni sulle nuove funzionalità disponibili in .NET Core 3.1.Learn about the new features found in .NET Core 3.1.
+description: Informazioni sulle nuove funzionalità disponibili in .NET Core 3,1.
 dev_langs:
 - csharp
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: b52615a3fb288a6ca0622deb83f4db3c8e3587fb
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 2373b21e92c6ca68aac33684a9bd0912a2e642b3
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607906"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324268"
 ---
 # <a name="whats-new-in-net-core-31"></a>Novità di .NET Core 3.1
 
-In questo articolo vengono descritte le novità di .NET Core 3.1.This article describes what is new in .NET Core 3.1. Questa versione contiene piccoli miglioramenti a .NET Core 3.0, concentrandosi su correzioni piccole ma importanti. La funzionalità più importante di .NET Core 3.1 è che si tratta di una versione [di supporto a lungo termine (LTS).](#long-term-support)
+Questo articolo descrive le novità di .NET Core 3,1. Questa versione contiene miglioramenti secondari a .NET Core 3,0, con particolare attenzione alle piccole, ma importanti correzioni. La funzionalità più importante di .NET Core 3,1 è che si tratta di una versione di [supporto a lungo termine (LTS)](#long-term-support) .
 
-Se si usa Visual Studio 2019, è necessario eseguire l'aggiornamento a [Visual Studio 2019 versione 16.4 o successiva](https://visualstudio.microsoft.com/downloads/) per funzionare con i progetti .NET Core 3.1. Per informazioni sulle novità di Visual Studio versione 16.4, vedere [Novità di Visual Studio 2019 versione 16.4.](/visualstudio/releases/2019/release-notes-v16.4#whats-new-in-visual-studio-2019-version-164)
+Se si usa Visual Studio 2019, è necessario eseguire l'aggiornamento a [Visual studio 2019 versione 16,4 o successiva](https://visualstudio.microsoft.com/downloads/) per lavorare con i progetti .net core 3,1. Per informazioni sulle novità di Visual Studio versione 16,4, vedere Novità di [Visual studio 2019 versione 16,4](/visualstudio/releases/2019/release-notes-v16.4#whats-new-in-visual-studio-2019-version-164).
 
-Visual Studio per Mac supporta e include .NET Core 3.1 in Visual Studio per Mac 8.4.
+Visual Studio per Mac supporta inoltre e include .NET Core 3,1 in Visual Studio per Mac 8,4.
 
-Per ulteriori informazioni sulla versione, vedere l'annuncio di [.NET Core 3.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/).
+Per ulteriori informazioni sulla versione, vedere l' [annuncio di .NET Core 3,1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/).
 
-- [Scarica e inizia a usare .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1) su Windows, macOS o Linux.
+- [Scaricare e iniziare a usare .NET Core 3,1](https://dotnet.microsoft.com/download/dotnet-core/3.1) in Windows, MacOS o Linux.
 
 ## <a name="long-term-support"></a>Supporto a lungo termine
 
-.NET Core 3.1 è una versione LTS con il supporto di Microsoft per i prossimi tre anni. È consigliabile spostare le app in .NET Core 3.1.It's highly recommended that you move your apps to .NET Core 3.1. Il ciclo di vita corrente di altre versioni principali è il seguente:
+.NET Core 3,1 è una versione LTS con supporto Microsoft per i prossimi tre anni. Si consiglia vivamente di spostare le app in .NET Core 3,1. Il ciclo di vita corrente di altre versioni principali è il seguente:
 
-| Versione | Note |
+| Versione | Nota |
 | ------- | ---- |
-| .NET Core 3.0 | Fine del ciclo di vita il 3 marzo 2020.     |
-| .NET Core 2.2 | Fine del ciclo di vita il 23 dicembre 2019. |
-| .NET Core 2.1 | Fine del ciclo di vita il 21 agosto 2021.    |
+| .NET Core 3.0 | Fine vita il 3 marzo 2020.     |
+| .NET Core 2.2 | Fine vita il 23 dicembre 2019. |
+| .NET Core 2.1 | Fine del ciclo di vita del 21 agosto 2021.    |
 
-Per ulteriori informazioni, vedere i criteri di supporto di [.NET Core.](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)
+Per ulteriori informazioni, vedere i [criteri di supporto di .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
 
-## <a name="macos-apphost-and-notarization"></a>macOS appHost e notarizzazione
+## <a name="macos-apphost-and-notarization"></a>appHost e autenticazione macOS
 
-*Solo macOS*
+*solo macOS*
 
-A partire dal .NET Core SDK 3.1 non arizzato per macOS, l'impostazione appHost è disabilitata per impostazione predefinita. Per ulteriori informazioni, consultate la notificazione di [macOS Catalina e l'impatto sui download e sui progetti di .NET Core.](../install/macos-notarization-issues.md)
+A partire dalla .NET Core SDK autenticata 3,1 per macOS, l'impostazione appHost è disabilitata per impostazione predefinita. Per altre informazioni, vedere [la pagina relativa all'autenticazione di MacOS Catalina e l'effetto sui download e sui progetti di .NET Core](../install/macos-notarization-issues.md).
 
-Quando l'impostazione appHost è abilitata, .NET Core genera un eseguibile Mach-O nativo durante la compilazione o la pubblicazione. L'app viene eseguita nel contesto di appHost `dotnet run` quando viene eseguita dal codice sorgente con il comando o avviando direttamente l'eseguibile Mach-O.
+Quando è abilitata l'impostazione appHost, .NET Core genera un eseguibile nativo di Mach-O durante la compilazione o la pubblicazione. L'app viene eseguita nel contesto di appHost quando viene eseguita dal codice sorgente con il `dotnet run` comando oppure avviando direttamente il file eseguibile di Mach-O.
 
-Senza appHost, l'unico modo in cui un utente `dotnet <filename.dll>` può [avviare](../deploying/index.md#publish-runtime-dependent) un'app dipendente dal runtime è con il comando. Un appHost viene sempre creato quando si pubblica l'app [indipendente.](../deploying/index.md#publish-self-contained)
+Senza appHost, l'unico modo in cui un utente può avviare un'app [dipendente dal runtime](../deploying/index.md#publish-runtime-dependent) è con il `dotnet <filename.dll>` comando. Quando si pubblica l'app [autonoma](../deploying/index.md#publish-self-contained), viene sempre creato un APPHOST.
 
-Puoi configurare appHost a livello di progetto o attivare `dotnet` o `-p:UseAppHost` disattivare l'appHost per un comando specifico con il parametro:
+È possibile configurare appHost a livello di progetto o impostare il appHost per un `dotnet` comando specifico con il `-p:UseAppHost` parametro:
 
 - File di progetto
 
@@ -63,41 +63,41 @@ Puoi configurare appHost a livello di progetto o attivare `dotnet` o `-p:UseAppH
   dotnet run -p:UseAppHost=true
   ```
 
-Per ulteriori informazioni `UseAppHost` sull'impostazione, vedere [Proprietà MSBuild per Microsoft.NET.Sdk](../project-sdk/msbuild-props.md#useapphost).
+Per ulteriori informazioni sull' `UseAppHost` impostazione, vedere [Proprietà MSBuild per Microsoft. NET. SDK](../project-sdk/msbuild-props.md#useapphost).
 
 ## <a name="windows-forms"></a>Windows Form
 
 *Solo Windows*
 
 > [!WARNING]
-> Sono state apportate modifiche di rilievo in Windows Form.There are breaking changes in Windows Forms.
+> Sono state apportate modifiche di rilievo in Windows Forms.
 
-Controlli legacy sono stati inclusi in Windows Form che sono stati non disponibili nella casella degli strumenti di progettazione di Visual Studio per qualche tempo. Questi sono stati sostituiti con nuovi controlli in .NET Framework 2.0. Questi sono stati rimossi da Desktop SDK per .NET Core 3.1.
+I controlli legacy erano inclusi in Windows Forms che non erano disponibili nella casella degli strumenti di progettazione di Visual Studio per un certo periodo di tempo. Questi sono stati sostituiti con nuovi controlli nella .NET Framework 2,0. Questi elementi sono stati rimossi da desktop SDK per .NET Core 3,1.
 
-| Controllo rimosso | Sostituzione consigliata | API associate rimosse |
+| Rimozione del controllo | Sostituzione consigliata | API associate rimosse |
 | --------------- | ----------------------- | ----------------------- |
-| DataGrid        | <xref:System.Windows.Forms.DataGridView>      | Datagridcell<br/>Datagridrow<br/>DataGridTableCollection<br/>Datagridcolumncollection<br/>Datagridtablestyle<br/>Datagridcolumnstyle<br/>Oggetto DataGridLineStyle<br/>DataGridParentRowsLabel (Etichetta)DataGridParentRowsLabel<br/>DataGridParentRowsLabelStyle<br/>DataGridBoolColumn<br/>Datagridtextbox<br/>Gridcolumnstylescollection<br/>Gridtablestylescollection<br/>HitTestType (Tipo di HitTest) |
-| ToolBar         | <xref:System.Windows.Forms.ToolStrip>         | ToolBarAspetto |
-| Toolbarbutton   | <xref:System.Windows.Forms.ToolStripButton>   | ToolBarButtonClickEventArgs<br/>ToolBarButtonClickEventHandler<br/>ToolBarButtonStyle<br/>ToolBarTextAlign (Riga di dialogo) |
+| DataGrid        | <xref:System.Windows.Forms.DataGridView>      | DataGridCell<br/>DataGridRow<br/>DataGridTableCollection<br/>DataGridColumnCollection<br/>DataGridTableStyle<br/>DataGridColumnStyle<br/>DataGridLineStyle<br/>DataGridParentRowsLabel<br/>DataGridParentRowsLabelStyle<br/>DataGridBoolColumn<br/>DataGridTextBox<br/>GridColumnStylesCollection<br/>GridTableStylesCollection<br/>HitTestType |
+| ToolBar         | <xref:System.Windows.Forms.ToolStrip>         | ToolBarAppearance |
+| ToolBarButton   | <xref:System.Windows.Forms.ToolStripButton>   | ToolBarButtonClickEventArgs<br/>ToolBarButtonClickEventHandler<br/>ToolBarButtonStyle<br/>ToolBarTextAlign |
 | ContextMenu     | <xref:System.Windows.Forms.ContextMenuStrip>  |  |
-| :::no-loc text="Menu"::: | <xref:System.Windows.Forms.ToolStripDropDown><br/><xref:System.Windows.Forms.ToolStripDropDownMenu> | Menuitemcollection |
+| :::no-loc text="Menu"::: | <xref:System.Windows.Forms.ToolStripDropDown><br/><xref:System.Windows.Forms.ToolStripDropDownMenu> | MenuItemCollection |
 | MainMenu        | <xref:System.Windows.Forms.MenuStrip>         |  |
 | MenuItem        | <xref:System.Windows.Forms.ToolStripMenuItem> |  |
 
-È consigliabile aggiornare le applicazioni a .NET Core 3.1 e passare ai controlli di sostituzione. La sostituzione dei controlli è un processo semplice, essenzialmente "trova e sostituisci" sul tipo.
+Si consiglia di aggiornare le applicazioni a .NET Core 3,1 e di passare ai controlli sostitutivi. La sostituzione dei controlli è un processo semplice, sostanzialmente "trova e Sostituisci" sul tipo.
 
 ## <a name="ccli"></a>C++/CLI
 
 *Solo Windows*
 
-È stato aggiunto il supporto per la creazione di progetti in C, c/CLI, noti anche come progetti "gestiti in C). I file binari prodotti da questi progetti sono compatibili con .NET Core 3.0 e versioni successive.
+È stato aggiunto il supporto per la creazione di progetti C++/CLI (noti anche come "C++ gestiti"). I file binari prodotti da questi progetti sono compatibili con .NET Core 3,0 e versioni successive.
 
-Per aggiungere il supporto per il linguaggio C.NET/CLI in Visual Studio 2019 versione 16.4, installare lo sviluppo desktop con il carico di lavoro di [C.](/cpp/build/vscpp-step-0-installation?view=vs-2019#step-4---choose-workloads) Questo carico di lavoro aggiunge due modelli a Visual Studio:This workload adds two templates to Visual Studio:
+Per aggiungere il supporto per C++/CLI in Visual Studio 2019 versione 16,4, installare il [carico di lavoro sviluppo di applicazioni desktop con c++](/cpp/build/vscpp-step-0-installation?view=vs-2019#step-4---choose-workloads). Questo carico di lavoro aggiunge due modelli a Visual Studio:
 
-- CLR Class Library (.NET Core)
-- CLR Empty Project (.NET Core)
+- Libreria di classi CLR (.NET Core)
+- Progetto CLR vuoto (.NET Core)
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Esaminare le modifiche di rilievo tra .NET Core 3.0 e 3.1.Review the breaking changes between .NET Core 3.0 and 3.1.](../compatibility/3.0-3.1.md)
-- [Esaminare le modifiche di rilievo in .NET Core 3.1 per le applicazioni Windows Form.Review the breaking changes in .NET Core 3.1 for Windows Forms apps.](../compatibility/winforms.md#net-core-31)
+- [Esaminare le modifiche di rilievo tra .NET Core 3,0 e 3,1.](../compatibility/3.0-3.1.md)
+- [Esaminare le modifiche di rilievo apportate in .NET Core 3,1 per le app Windows Forms.](../compatibility/winforms.md#net-core-31)

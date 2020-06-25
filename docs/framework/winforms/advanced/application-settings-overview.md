@@ -1,5 +1,6 @@
 ---
 title: Cenni preliminari sulle impostazioni delle applicazioni
+description: Informazioni sulla funzionalità Impostazioni applicazione di Windows Forms, ad esempio su come creare e archiviare i dati delle impostazioni per conto dell'applicazione e degli utenti.
 ms.date: 03/30/2017
 f1_keywords:
 - ApplicationsSettingsOverview
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: 72a15736fd21d1d626f88e728d70b7dd7ee6768f
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 864cab72b26ff7989c570347fb88b4009e7d705a
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990184"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324224"
 ---
 # <a name="application-settings-overview"></a>Cenni preliminari sulle impostazioni delle applicazioni
 
@@ -48,7 +49,7 @@ Questo articolo illustra come creare e archiviare i dati delle impostazioni per 
 
  È anche possibile usare la classe <xref:System.Windows.Forms.Binding> per associare le impostazioni alle proprietà a livello di codice su form e controlli.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>

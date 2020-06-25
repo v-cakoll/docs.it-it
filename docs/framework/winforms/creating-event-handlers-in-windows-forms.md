@@ -1,5 +1,6 @@
 ---
 title: Creazione di gestori eventi
+description: Informazioni sul modo in cui gli eventi in Windows Forms possono essere assegnati a più gestori e sul modo in cui i metodi che gestiscono determinati eventi possono essere modificati dinamicamente.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - event handling [Windows Forms]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - events [Windows Forms], event handlers
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
-ms.openlocfilehash: 90acb3c7691acbcb528ae66692af67c2fb28eeaf
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4dca198be69c200ea8dfc741a43801bf8f631b9d
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742341"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326016"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Creazione di gestori eventi in Windows Form
 

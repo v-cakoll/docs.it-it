@@ -1,18 +1,18 @@
 ---
 title: Creare un modello di elemento per dotnet new - Interfaccia della riga di comando di .NET Core
 description: Informazioni su come creare un modello di elemento per il comando dotnet new. I modelli di elemento possono contenere un numero qualsiasi di file.
-author: thraka
+author: adegeo
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 5f4038e863d9bb59df470d3516c08fd2ad29c078
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b804d26b2f33d4d600c17de2f7f71101a0f9c98
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503552"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324377"
 ---
-# <a name="tutorial-create-an-item-template"></a>Esercitazione: Creare un modello di elementoTutorial: Create an item template
+# <a name="tutorial-create-an-item-template"></a>Esercitazione: creare un modello di elemento
 
 Con .NET Core è possibile creare e distribuire modelli per generare progetti, file e persino risorse. Questa esercitazione è la prima parte di una serie che illustra come creare, installare e disinstallare i modelli da usare con il comando `dotnet new`.
 
@@ -26,7 +26,7 @@ In questa parte della serie si apprenderà come:
 > * Testare un modello di elemento
 > * Disinstallare un modello di elemento
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 * [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download) o versioni successive.
 * Leggere l'articolo di riferimento [Modelli personalizzati per dotnet new](../tools/custom-templates.md).
@@ -41,7 +41,7 @@ Questa serie usa una "cartella di lavoro" in cui è contenuta l'origine del mode
 
 Prima di tutto creare la cartella padre. Il nome non è rilevante. Creare quindi una sottocartella denominata _working_. All'interno della cartella _working_ creare una sottocartella denominata _templates_.
 
-Creare poi una cartella nella cartella padre denominata _test_. La struttura delle cartelle dovrebbe essere simile alla seguente.
+Creare poi una cartella nella cartella padre denominata _test_. La struttura di cartelle dovrebbe essere simile alla seguente.
 
 ```console
 parent_folder
@@ -99,7 +99,7 @@ working
                 template.json
 ```
 
-Aprire il _file template.json_ con l'editor di testo preferito e incollare il codice JSON seguente e salvarlo.
+Aprire il _template.js_ con l'editor di testo preferito e incollare il codice JSON seguente e salvarlo.
 
 ```json
 {
@@ -122,8 +122,8 @@ L'elemento `classifications` rappresenta la colonna **tags** visualizzata quando
 
 Ora che è disponibile un file _.template.config/template.json_ valido, il modello è pronto per l'installazione. Nel terminale passare alla cartella _extensions_ ed eseguire il comando seguente per installare il modello che si trova nella cartella corrente:
 
-* **Su Windows**:`dotnet new -i .\`
-* **Su Linux o macOS**:`dotnet new -i ./`
+* **In Windows**:`dotnet new -i .\`
+* **In Linux o MacOS**:`dotnet new -i ./`
 
 Questo comando restituisce l'elenco dei modelli installati, che dovrebbe includere quello creato in questa esercitazione.
 
@@ -155,7 +155,7 @@ Ora che è stato installato un modello di elemento, è opportuno testarlo. Passa
 dotnet new console
 ```
 
-Si ottiene un output simile al seguente.
+Si otterrà un output simile al seguente.
 
 ```console
 The template "Console Application" was created successfully.
@@ -173,7 +173,7 @@ Eseguire il progetto con.
 dotnet run
 ```
 
-Viene visualizzato il seguente output.
+Si ottiene l'output seguente.
 
 ```console
 Hello World!
@@ -185,7 +185,7 @@ Eseguire quindi `dotnet new stringext` per generare il file _CommonExtensions.cs
 dotnet new stringext
 ```
 
-Viene visualizzato il seguente output.
+Si ottiene l'output seguente.
 
 ```console
 The template "Example templates: string extensions" was created successfully.
@@ -203,13 +203,13 @@ Eseguire di nuovo il programma per verificare che il risultato sia invertito.
 dotnet run
 ```
 
-Viene visualizzato il seguente output.
+Si ottiene l'output seguente.
 
 ```console
 !dlroW olleH
 ```
 
-Congratulazioni! È stato creato e distribuito un modello di elemento con .NET Core. Per prepararsi per la parte successiva di questa serie di esercitazioni, è necessario disinstallare il modello creato. Assicurarsi di eliminare anche tutti i file dalla cartella _test_. Verrà ripristinato uno stato pulito, pronto per la prossima sezione principale di questa esercitazione.
+A questo punto, È stato creato e distribuito un modello di elemento con .NET Core. Per prepararsi per la parte successiva di questa serie di esercitazioni, è necessario disinstallare il modello creato. Assicurarsi di eliminare anche tutti i file dalla cartella _test_. Verrà ripristinato uno stato pulito, pronto per la prossima sezione principale di questa esercitazione.
 
 ## <a name="uninstall-the-template"></a>Disinstallare il modello
 
@@ -219,7 +219,7 @@ Poiché il modello è stato installato usando un percorso di file, è necessario
 dotnet new -u
 ```
 
-Si ottiene un output simile al seguente.
+Si otterrà un output simile al seguente.
 
 ```console
 Template Instantiation Commands for .NET Core CLI
