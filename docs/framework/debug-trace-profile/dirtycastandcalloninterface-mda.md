@@ -1,5 +1,6 @@
 ---
 title: MDA dirtyCastAndCallOnInterface
+description: Esaminare l'assistente al debug gestito dirtyCastAndCallOnInterface, che viene richiamato quando le chiamate vtable ad associazione anticipata vengono eseguite sulle interfacce di classe con associazione tardiva.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), early bound calls AutoDispatch
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), early bound calls AutoDispatch
 - EarlyBoundCallOnAutorDispatchClassInteface MDA
 ms.assetid: aa388ed3-7e3d-48ea-a0b5-c47ae19cec38
-ms.openlocfilehash: 6e4f0074958e8a6a8ca322968e9c29e89481c0c8
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2ed5589909915a261a22c48490e469ae52659c8c
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216501"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416070"
 ---
 # <a name="dirtycastandcalloninterface-mda"></a>MDA dirtyCastAndCallOnInterface
 L'assistente al debug gestito `dirtyCastAndCallOnInterface` viene attivato quando viene tentata una chiamata ad associazione anticipata attraverso un vtable su un'interfaccia di classe contrassegnata solo per l'associazione tardiva.  
@@ -47,7 +48,7 @@ L'assistente al debug gestito `dirtyCastAndCallOnInterface` viene attivato quand
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
 - [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)

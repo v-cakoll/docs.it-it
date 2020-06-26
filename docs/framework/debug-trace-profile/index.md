@@ -1,5 +1,6 @@
 ---
 title: Debug, traccia e profilatura
+description: Informazioni su debug, traccia e profilatura in .NET. Vedere gli articoli relativi al debug JIT (just-in-Time), alla traccia e alla strumentazione di applicazioni e altro ancora.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging [.NET Framework]
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - troubleshooting applications [.NET Framework]
 - application development [.NET Framework], profiling
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
-ms.openlocfilehash: 1a43c7fbcb810b22ff9bc409c233d2b1da67370e
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 745f16652c02e3409e7fa7a48beacbf7e777e924
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217397"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415979"
 ---
 # <a name="debugging-tracing-and-profiling"></a>Debug, traccia e profilatura
 Per eseguire il debug di un'applicazione .NET Framework, l'ambiente del compilatore e di runtime deve essere configurato per consentire a un debugger di connettersi all'applicazione e di produrre simboli e mappe di linee, se possibile, per l'applicazione e il corrispondente Microsoft Intermediate Language (MSIL). Dopo il debug di un'applicazione gestita, è possibile eseguire la profilatura per migliorare le prestazioni. La profilatura valuta e descrive le righe del codice sorgente che generano il codice eseguito con maggiore frequenza e il tempo richiesto per eseguirle.  
@@ -26,7 +27,7 @@ Per eseguire il debug di un'applicazione .NET Framework, l'ambiente del compilat
  Il debug delle applicazioni .NET framework viene eseguito facilmente tramite Visual Studio, che gestisce molti dettagli della configurazione. Se Visual Studio non è installato, è possibile esaminare e migliorare le prestazioni delle applicazioni .NET Framework usando le classi di debug nello spazio dei nomi <xref:System.Diagnostics> di .NET Framework. Questo spazio dei nomi include le classi <xref:System.Diagnostics.Trace>, <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.TraceSource> per la traccia del flusso di esecuzione e le classi <xref:System.Diagnostics.Process>, <xref:System.Diagnostics.EventLog> e <xref:System.Diagnostics.PerformanceCounter> per il codice di profilatura.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
- [Abilitazione del debug ad associazione JIT](enabling-jit-attach-debugging.md)  
+ [Attivazione dell'esecuzione del debug ad associazione JIT](enabling-jit-attach-debugging.md)  
  Mostra come configurare il Registro di sistema per eseguire l'associazione JIT di un motore di debug in un'applicazione .NET Framework.  
   
  [Semplificazione del debug di un'immagine](making-an-image-easier-to-debug.md)  
@@ -48,5 +49,5 @@ Per eseguire il debug di un'applicazione .NET Framework, l'ambiente del compilat
  [Eseguire il debug di app ASP.NET o ASP.NET Core in Visual Studio](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)  
  Fornisce i prerequisiti e le istruzioni su come eseguire il debug di un'applicazione ASP.NET durante lo sviluppo o dopo la distribuzione.  
   
- [Guida di sviluppo](../development-guide.md)  
+ [Guida allo sviluppo](../development-guide.md)  
  Viene fornita una guida per tutte le aree e attività principali per lo sviluppo di applicazioni, quali la creazione, la configurazione, il debug, la sicurezza e la distribuzione dell'applicazione e informazioni su programmazione dinamica, interoperabilità, estendibilità, gestione della memoria e threading.

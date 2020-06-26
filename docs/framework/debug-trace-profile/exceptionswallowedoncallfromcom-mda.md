@@ -1,5 +1,6 @@
 ---
 title: MDA exceptionSwallowedOnCallFromCom
+description: Esaminare l'assistente al debug gestito di exceptionSwallowedOnCallFromCOM in .NET. Questo assistente al debug gestito si verifica se è stata generata un'eccezione, ma non esiste un modo efficace per segnalarlo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - messages, informational
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), exceptions
 - ExceptionSwallowedOnCallFromCOM MDA
 ms.assetid: 55d6ab12-f251-4aab-aa64-aacbe9d9f974
-ms.openlocfilehash: 4ccb03c9a8a473c10f15b00e64810b04f21504c9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 434f06cf953147d5c245e625db997bed6dbef700
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217520"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415953"
 ---
 # <a name="exceptionswallowedoncallfromcom-mda"></a>MDA exceptionSwallowedOnCallFromCom
 L'assistente al debug gestito `exceptionSwallowedOnCallFromCOM` viene attivato alla generazione di un'eccezione da parte del codice Common Language Runtime (CLR) chiamato da COM mediante un metodo che non presenta un tipo restituito HRESULT non gestito.  
@@ -44,7 +45,7 @@ L'assistente al debug gestito `exceptionSwallowedOnCallFromCOM` viene attivato a
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)

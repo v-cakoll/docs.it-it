@@ -1,5 +1,6 @@
 ---
 title: callbackOnCollectedDelegate (MDA)
+description: Esaminare l'assistente al debug gestito di callbackOnCollectedDelegate in .NET, che viene richiamato se si verifica un callback dopo che il delegato è stato sottoposta a Garbage Collection.
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - delegates [.NET Framework], garbage collection
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
-ms.openlocfilehash: d4ca777fa5b41433eec227762fe315f22ab33cf6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32f02a4e65455f11f3bfa9260caae8b4e48f494e
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174225"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416031"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>callbackOnCollectedDelegate (MDA)
 L'Assistente al debug gestito (MDA) `callbackOnCollectedDelegate` viene attivato se viene effettuato il marshalling di un delegato da un codice gestito a un codice non gestito, ad esempio un puntatore a funzione, e se viene inserito un callback in tale puntatore dopo che il delegato è stato sottoposto a Garbage Collection.  
@@ -109,7 +110,7 @@ public class Entry
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)

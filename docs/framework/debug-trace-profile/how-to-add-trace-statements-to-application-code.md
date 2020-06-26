@@ -1,5 +1,6 @@
 ---
 title: "Procedura: aggiungere istruzioni di traccia al codice dell'applicazione"
+description: Informazioni su come aggiungere istruzioni di traccia al codice dell'applicazione in .NET. I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'output nei listener.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-ms.openlocfilehash: 9903a0357d1d8ceade21b590fd54c8cab517f134
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c75a8775649aabe73b02187c4604d2eb3a8435b
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174745"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415888"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Procedura: aggiungere istruzioni di traccia al codice dell'applicazione
 I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'output nei listener: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert** e **Fail**. Questi metodi possono essere divisi in due categorie: **Write**, **WriteLine** e **Fail** generano tutti output in modo non condizionale, mentre **WriteIf**, **WriteLineIf** e **Assert** verificano una condizione booleana e scrivono o non scrivono il valore della condizione. **WriteIf** e **WriteLineIf** generano output se la condizione è `true` e **Assert** genera output se la condizione è `false`.  
@@ -82,7 +83,7 @@ I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'ou
     > [!NOTE]
     > È possibile usare **Assert** con operazioni di traccia e debug. In questo esempio viene restituito lo stack di chiamate nella raccolta **Listeners**. Per altre informazioni, vedere [Asserzioni nel codice gestito](/visualstudio/debugger/assertions-in-managed-code) e <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>

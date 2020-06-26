@@ -1,5 +1,6 @@
 ---
 title: MDA asynchronousThreadAbort
+description: Verificare il modo in cui viene attivato l'assistente al debug gestito asynchronousThreadAbort quando un thread tenta di inserire un'interruzione asincrona in un altro thread.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - asynchronous thread aborts
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-ms.openlocfilehash: d0c78e6d52ae4a5b3a24e0bb4278b2e8a1b98751
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 469372d57d9c21198353d171fec16458691eb25d
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217584"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415667"
 ---
 # <a name="asynchronousthreadabort-mda"></a>MDA asynchronousThreadAbort
 L'assistente al debug gestito `asynchronousThreadAbort` viene attivato quando un thread tenta di introdurre un'interruzione asincrona in un altro thread. `asynchronousThreadAbort` non viene invece attivato da interruzioni sincrone dei thread.
@@ -68,7 +69,7 @@ void FireMda()
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Threading.Thread>
 - [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)

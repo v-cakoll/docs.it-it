@@ -1,5 +1,6 @@
 ---
 title: MDA fatalExecutionEngineError
+description: Esaminare l'assistente al debug gestito di fatalExecutionEngineError in .NET, che può essere attivato a causa di una chiusura imprevista di un processo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - corrupted CLR
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - FatalExecutionEngineError MDA
 - managed debugging assistants (MDAs), fatal errors
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
-ms.openlocfilehash: e25c9ef6ec43089f1d85479d1afe301232ed1d4f
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 0806d2eaa1752c88bebd03304fbe5c8094416a48
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217498"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415927"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>MDA fatalExecutionEngineError
 L'assistente al debug gestito `fatalExecutionEngineError` viene attivato quando Common Language Runtime (CLR) rileva un errore irreversibile. Il processo viene terminato.  
@@ -71,7 +72,7 @@ L'assistente al debug gestito `fatalExecutionEngineError` viene attivato quando 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution.Cer>

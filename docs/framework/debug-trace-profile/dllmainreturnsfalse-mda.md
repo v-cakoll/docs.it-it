@@ -1,5 +1,6 @@
 ---
 title: MDA dllMainReturnsFalse
+description: Per informazioni sull'Assistente al debug gestito dllMainReturnsFalse, vedere .NET. Questo assistente al debug gestito viene attivato in caso di errore di inizializzazione DLL.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), DllMain returns false
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - DllMain function
 - MDAs (managed debugging assistants), DllMain returns false
 ms.assetid: e2abdd04-f571-4b97-8c16-2221b8588429
-ms.openlocfilehash: 0b413521e0a2dc06c2ff0be642f080eaf541202f
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 21d5e37d6823876e07cf5b2cbb881c1cf8b47b11
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216435"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416057"
 ---
 # <a name="dllmainreturnsfalse-mda"></a>MDA dllMainReturnsFalse
 L'assistente al debug gestito `dllMainReturnsFalse` viene attivato se la funzione `DllMain` gestita di un assembly utente, chiamata per il motivo DLL_PROCESS_ATTACH, restituisce FALSE.  
@@ -42,6 +43,6 @@ L'assistente al debug gestito `dllMainReturnsFalse` viene attivato se la funzion
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)

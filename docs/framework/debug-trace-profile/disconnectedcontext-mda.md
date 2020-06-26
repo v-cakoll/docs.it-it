@@ -1,5 +1,6 @@
 ---
 title: MDA disconnectedContext
+description: Esaminare l'assistente al debug gestito di disconnectedContext in .NET, che viene richiamato quando CLR tenta di eseguire la transizione a un apartment o a un contesto disconnesso.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DisconnectedContext MDA
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - context disconnections
 - managed debugging assistants (MDAs), disconnected context
 ms.assetid: 1887d31d-7006-4491-93b3-68fd5b05f71d
-ms.openlocfilehash: 3d04e304a6b30fe6fd4deeda5a97007f11ee7b13
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 0b24aadefab7a7cb2a5294f25e674d188beec814
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216540"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416083"
 ---
 # <a name="disconnectedcontext-mda"></a>MDA disconnectedContext
 L'assistente al debug gestito `disconnectedContext` è attivato quando CLR tenta la transizione a un apartment o contesto disconnesso durante la gestione di una richiesta relativa a un oggetto COM.  
@@ -44,7 +45,7 @@ L'assistente al debug gestito `disconnectedContext` è attivato quando CLR tenta
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)

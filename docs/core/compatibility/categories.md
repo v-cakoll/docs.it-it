@@ -1,24 +1,24 @@
 ---
-title: Categorie di modifiche che causano un'interruzione
-description: Informazioni sui modi in cui le modifiche che causano un'interruzione vengono categorizzate in .NET Core.
+title: Compatibilità
+description: Informazioni sui modi in cui le modifiche al codice possono influenzare la compatibilità in .NET.
 ms.date: 06/10/2019
-ms.openlocfilehash: b273ebbb82da803cde66ea34760aa1779c6c1ca5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1cf14b7ff4143367653bd1c305cc1dda6711f980
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093045"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415693"
 ---
-# <a name="breaking-change-categories"></a>Categorie di modifiche che causano un'interruzione
+# <a name="how-code-changes-can-affect-compatibility"></a>Come possono influenzare la compatibilità con le modifiche al codice
 
-Per *compatibilità* si intende la possibilità di compilare o eseguire codice in una versione di un'implementazione di .NET diversa da quella con cui il codice è stato sviluppato originariamente. Una particolare modifica può influire sulla compatibilità in sei modi diversi. I [singoli tipi di modifiche](index.md) considerati durante la valutazione della compatibilità rientrano nelle seguenti categorie:
+Per *compatibilità* si intende la possibilità di compilare o eseguire codice in una versione di un'implementazione di .NET diversa da quella con cui il codice è stato sviluppato originariamente. Una [particolare modifica](index.md) può influire sulla compatibilità in sei modi diversi:
 
-- [cambiamento comportamentale](#behavioral-change)
-- [compatibilità binaria](#binary-compatibility)
-- [compatibilità delle fonti](#source-compatibility)
-- [compatibilità in fase di progettazione](#design-time-compatibility)
-- [Compatibilità](#backwards-compatibility)
-- [compatibilità in avanti](#forward-compatibility) (non un obiettivo di .NET Core)
+- [Modifiche funzionali](#behavioral-change)
+- [Compatibilità binaria](#binary-compatibility)
+- [Compatibilità con l'origine](#source-compatibility)
+- [Compatibilità della fase di progettazione](#design-time-compatibility)
+- [Compatibilità con le versioni precedenti](#backwards-compatibility)
+- [Compatibilità](#forward-compatibility) con le edizioni (non obiettivo di .NET Core)
 
 ## <a name="behavioral-change"></a>Modifiche funzionali
 
@@ -42,7 +42,7 @@ La compatibilità della fase di progettazione si riferisce al mantenimento dell'
 
 La compatibilità con le versioni precedenti si riferisce alla capacità di un consumer esistente di un'API di supportare l'esecuzione su una nuova versione mantenendo invariato il comportamento. Sia le modifiche funzionali che quelle alla compatibilità binaria influiscono sulla compatibilità con le versioni precedenti. Se un consumer non supporta l'esecuzione o funziona in modo diverso quando viene eseguito con la versione più recente dell'API, l'API è *incompatibile con le versioni precedenti*.
 
-Le modifiche che influiscono sulla compatibilità con le versioni precedenti sono sconsigliate, poiché gli sviluppatori si aspettano la compatibilità con le versioni precedenti nelle versioni più recenti di un'API.
+Le modifiche che interessano la compatibilità con le versioni precedenti sono sconsigliate, poiché gli sviluppatori si aspettano la compatibilità con le versioni precedenti di un'API.
 
 ## <a name="forward-compatibility"></a>Compatibilità con le versioni successive
 
@@ -52,6 +52,6 @@ Il mantenimento della compatibilità con le versioni successive impedisce virtua
 
 Mantenere la compatibilità con le edizioni successive non è un obiettivo di .NET Core.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Valutare le modifiche che causano un'interruzione in .NET Core](index.md)

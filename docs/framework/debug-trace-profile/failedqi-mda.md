@@ -1,5 +1,6 @@
 ---
 title: MDA failedQI
+description: Esaminare l'assistente al debug gestito di failedQI in .NET, che può essere attivato quando un cast o una chiamata COM da un Runtime Callable Wrapper (RCW) ha esito negativo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - failed QueryInterface
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), failed QueryInterface
 - managed debugging assistants (MDAs), failed QueryInterface
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
-ms.openlocfilehash: 4c36ec514645a38ef1228e76bdf6dbd06e886bae
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2d7f14c67d47e58bcb88eab4621df63d7c598a7a
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217512"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415940"
 ---
 # <a name="failedqi-mda"></a>MDA failedQI
 L'assistente al debug gestito `failedQI` viene attivato quando il runtime chiama `QueryInterface` su un puntatore a interfaccia COM per conto di un Runtime Callable Wrapper (RWC) e la chiamata `QueryInterface` non riesce.  
@@ -48,7 +49,7 @@ L'assistente al debug gestito `failedQI` viene attivato quando il runtime chiama
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)

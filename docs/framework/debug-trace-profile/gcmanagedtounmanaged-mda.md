@@ -1,5 +1,6 @@
 ---
 title: MDA gcManagedToUnmanaged
+description: Esaminare l'assistente al debug gestito gcManagedToUnmanaged. Questo assistente al debug gestito può essere attivato a causa di Garbage Collection prematuri durante la transizione al codice non gestito.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), garbage collection
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - garbage collection, run-time errors
 ms.assetid: 7417f837-805e-4fed-a430-ca919c8421dc
-ms.openlocfilehash: f7e6334e20a6e0db1d52307a833de0ecd0d74cc4
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 76c621a1f2bb780d38228f2a84d4c77441774770
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217482"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415914"
 ---
 # <a name="gcmanagedtounmanaged-mda"></a>MDA gcManagedToUnmanaged
 L'assistente al debug gestito `gcManagedToUnmanaged` determina un'operazione di Garbage Collection ogni volta che un thread passa dal codice gestito al codice non gestito.  
@@ -47,7 +48,7 @@ L'assistente al debug gestito `gcManagedToUnmanaged` determina un'operazione di 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)
