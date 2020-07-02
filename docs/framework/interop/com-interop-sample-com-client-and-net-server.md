@@ -1,5 +1,6 @@
 ---
-title: 'Esempio di interoperabilità: client COM e server .NET'
+title: 'Esempio di interoperabilità COM: client COM e server .NET'
+description: Leggere un esempio di codice che illustra l'interazione di un client COM e di un server .NET che esegue calcoli ipotecari.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
-ms.openlocfilehash: 5a72f3f23f4601b8b0a2ee8c6f5df66ae0bc66a3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1a9c17cda6a6d129327b296e5d7d851902f78d35
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181509"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620885"
 ---
-# <a name="com-interop-sample-com-client-and-net-server"></a>Esempio di interoperabilità: client COM e server .NET
+# <a name="com-interop-sample-com-client-and-net-server"></a>Esempio di interoperabilità COM: client COM e server .NET
 Questo esempio illustra l'interazione di un [Client COM](#cpconcominteropsamplecomclientnetserveranchor1) e di un [server .NET](#cpconcominteropsamplecomclientnetserveranchor2) per l'esecuzione di calcoli per un mutuo. In questo esempio il client crea e chiama un'istanza della classe gestita `Loan`, passa quattro argomenti, uno dei quali uguale a zero, all'istanza e visualizza i calcoli. Diversi esempi di codice di questo esempio vengono presentati in vari punti della sezione.  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>

@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: connettere più eventi a un singolo gestore eventi'
+description: Informazioni su come connettere più eventi a un singolo gestore eventi in Windows Forms usando la visualizzazione eventi della Finestra Proprietà in C#.
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,15 +11,15 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 0591291522ab1da04fef90bf1c0a73cf33ba0518
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: cca85c223b46d9a82dbc3e34e3377fb83c075959
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739603"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621886"
 ---
-# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Procedura: Connettere più eventi a un unico gestore eventi in Windows Form
-Nella progettazione dell'applicazione, potrebbe essere necessario usare un singolo gestore eventi per più eventi o fare in modo che più eventi eseguano la stessa procedura. Ad esempio, si tratta spesso di un potente risparmio di tempo per fare in modo che un comando di menu generi lo stesso evento di un pulsante nel form, se espone la stessa funzionalità. A tale scopo, è possibile usare la vista eventi del Finestra Proprietà in C# o usare la parola chiave `Handles` e le caselle a discesa **nome classe** e **nome metodo** nell'editor del codice Visual Basic.  
+# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Procedura: Connettere più eventi a un unico gestore eventi in Windows Forms
+Nella progettazione dell'applicazione, potrebbe essere necessario usare un singolo gestore eventi per più eventi o fare in modo che più eventi eseguano la stessa procedura. Ad esempio, si tratta spesso di un potente risparmio di tempo per fare in modo che un comando di menu generi lo stesso evento di un pulsante nel form, se espone la stessa funzionalità. A tale scopo, è possibile usare la visualizzazione eventi del Finestra Proprietà in C# o la `Handles` parola chiave e le caselle a discesa **nome classe** e nome **Metodo** nell'editor del codice Visual Basic.  
   
 ### <a name="to-connect-multiple-events-to-a-single-event-handler-in-visual-basic"></a>Per connettere più eventi a un singolo gestore eventi in Visual Basic  
   
@@ -28,7 +29,7 @@ Nella progettazione dell'applicazione, potrebbe essere necessario usare un singo
   
 3. Nella casella di riepilogo a discesa **nome metodo** selezionare uno degli eventi che si desidera vengano gestiti dal gestore eventi.  
   
-4. L'editor di codice inserisce il gestore eventi appropriato e posiziona il punto di inserimento all'interno del metodo. Nell'esempio seguente è l'evento <xref:System.Windows.Forms.Control.Click> per il controllo <xref:System.Windows.Forms.Button>.  
+4. L'editor di codice inserisce il gestore eventi appropriato e posiziona il punto di inserimento all'interno del metodo. Nell'esempio seguente è l' <xref:System.Windows.Forms.Control.Click> evento per il <xref:System.Windows.Forms.Button> controllo.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -36,7 +37,7 @@ Nella progettazione dell'applicazione, potrebbe essere necessario usare un singo
     End Sub  
     ```  
   
-5. Aggiungere gli altri eventi che si desidera gestire alla clausola `Handles`.  
+5. Aggiungere gli altri eventi che si desidera gestire alla `Handles` clausola.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click, Button2.Click  
@@ -63,4 +64,4 @@ Nella progettazione dell'applicazione, potrebbe essere necessario usare un singo
 ## <a name="see-also"></a>Vedere anche
 
 - [Creazione di gestori eventi in Windows Form](creating-event-handlers-in-windows-forms.md)
-- [Informazioni generali sui gestori eventi](event-handlers-overview-windows-forms.md)
+- [Panoramica sui gestori eventi](event-handlers-overview-windows-forms.md)

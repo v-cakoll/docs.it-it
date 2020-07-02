@@ -1,5 +1,6 @@
 ---
 title: releaseHandleFailed (MDA)
+description: Esaminare l'assistente al debug gestito releaseHandleFailed, che può essere attivato a causa di perdite di risorse o di memoria in .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), handles
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-ms.openlocfilehash: 268acb01a6777315829378e6fd8c06c46d3136d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 167a304b4571aa35f758a2054caf6ae1c60a3c60
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803638"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed (MDA)
 L'assistente al debug gestito `releaseHandleFailed` viene attivato per notificare agli sviluppatori quando il metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> di una classe derivata da <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle> restituisce `false`.  
@@ -32,7 +33,7 @@ L'assistente al debug gestito `releaseHandleFailed` viene attivato per notificar
   
 - Qualsiasi errore che si verifica durante l'esecuzione del metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>, impedendo il rilascio della risorsa, costituisce un bug nell'implementazione del metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> stesso. È compito del programmatore assicurare che il contratto venga rispettato, anche se durante l'esecuzione viene chiamato codice creato da altri utenti.  
   
-## <a name="resolution"></a>Risoluzione  
+## <a name="resolution"></a>Soluzione  
  È necessario esaminare il codice che usa lo specifico tipo <xref:System.Runtime.InteropServices.SafeHandle> (o <xref:System.Runtime.InteropServices.CriticalHandle>) che ha generato la notifica dell'assistente al debug gestito per individuare i punti in cui il valore dell'handle non elaborato viene estratto da <xref:System.Runtime.InteropServices.SafeHandle> e copiato in un'altra posizione. Questa è la causa principale degli errori nelle implementazioni di <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle>, poiché l'uso del valore dell'handle non elaborato non viene più controllato da Common Language Runtime. Se successivamente la copia dell'handle non elaborato viene chiusa, può verificarsi un errore in una successiva chiamata a <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> poiché la chiusura viene tentata sullo stesso handle, ormai non più valido.  
   
  Esistono alcune situazioni in cui può verificarsi la duplicazione di un handle non corretto:  

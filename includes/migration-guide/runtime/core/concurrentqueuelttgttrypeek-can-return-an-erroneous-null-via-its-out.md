@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: a93fbbd787aa50f080337a6170cf8f56d0d24e31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 02a15f6b9c02002b60c568b9e1d871af49744092
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622049"
 ---
-### <a name="concurrentqueuettrypeek-can-return-an-erroneous-null-via-its-out-parameter"></a>ConcurrentQueue\<T>.TryPeek può restituire erroneamente un valore Null tramite il parametro di output
+### <a name="concurrentqueuelttgttrypeek-can-return-an-erroneous-null-via-its-out-parameter"></a>ConcurrentQueue&lt;T&gt;.TryPeek può restituire erroneamente un valore Null tramite il parametro di output
 
-|   |   |
-|---|---|
-|Dettagli|In alcuni scenari multithread, <xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=name> può restituire true, ma popolare il parametro di output con un valore null, anziché il valore corretto, restituito.|
-|Suggerimento|Questo problema è risolto in .NET Framework 4.5.1. L'aggiornamento a questa versione di .NET Framework consentirà di risolvere il problema.|
-|Ambito|Principale|
-|Versione|4.5|
-|Tipo|Runtime|
-|API interessate|<ul><li><xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Dettagli
+
+In alcuni scenari multithread, <xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=fullName> può restituire true, ma popolare il parametro di output con un valore null, anziché il valore corretto, restituito.
+
+#### <a name="suggestion"></a>Suggerimento
+
+Questo problema è risolto in .NET Framework 4.5.1. L'aggiornamento a questa versione di .NET Framework consentirà di risolvere il problema.
+
+| Nome    | Valore       |
+|:--------|:------------|
+| Scope   |Principale|
+|Version|4.5|
+|Type|Runtime
+
+#### <a name="affected-apis"></a>API interessate
+
+-<xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=nameWithType></li></ul>|

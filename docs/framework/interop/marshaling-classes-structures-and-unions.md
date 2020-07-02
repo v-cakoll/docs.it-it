@@ -1,5 +1,6 @@
 ---
 title: Marshalling di classi, strutture e unioni
+description: Esaminare come effettuare il marshalling di classi, strutture e unioni. Visualizzazione di esempi di classi di marshalling, strutture con strutture annidate, matrici di strutture e unioni.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-ms.openlocfilehash: 708ed6a232950cb69796f105f6f198749ed53a24
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 5e616b5bb513939cadd8fe5c72675ba0b6e070a3
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200015"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621522"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshalling di classi, strutture e unioni
 
@@ -101,7 +102,7 @@ Le strutture gestite `MyPerson`,`MyPerson2`, `MyPerson3` e `MyArrayStruct` hanno
 
 - `MyPerson` contiene solo membri stringa. Le stringhe vengono impostate sul formato ANSI dal campo [CharSet](specifying-a-character-set.md), quando viene passato alla funzione non gestita.
 
-- `MyPerson2`contiene un oggetto **IntPtr** per `MyPerson` la struttura. Il tipo **IntPtr** sostituisce il puntatore originale alla struttura non gestita poiché nelle applicazioni .NET Framework non vengono usati i puntatori a meno che il codice non sia contrassegnato come **unsafe**.
+- `MyPerson2`contiene un oggetto **IntPtr** per la `MyPerson` struttura. Il tipo **IntPtr** sostituisce il puntatore originale alla struttura non gestita poiché nelle applicazioni .NET Framework non vengono usati i puntatori a meno che il codice non sia contrassegnato come **unsafe**.
 
 - `MyPerson3` contiene `MyPerson` come struttura incorporata. È possibile semplificare una struttura incorporata in un'altra struttura posizionandone gli elementi direttamente nella struttura principale oppure mantenerla incorporata, come accade in questo esempio.
 
@@ -225,7 +226,7 @@ La classe `NativeMethods` contiene i prototipi per i metodi `TestUnion` e `TestU
 
 ## <a name="platform-sample"></a>Esempio Platform
 
-In alcuni scenari, `struct` i `union` layout e possono variare a seconda della piattaforma di destinazione. Si consideri, [`STRRET`](/windows/win32/api/shtypes/ns-shtypes-strret) ad esempio, il tipo se definito in uno scenario com:
+In alcuni scenari, `struct` i `union` layout e possono variare a seconda della piattaforma di destinazione. Si consideri, ad esempio, il [`STRRET`](/windows/win32/api/shtypes/ns-shtypes-strret) tipo se definito in uno scenario com:
 
 ```c++
 #include <pshpack8.h> /* Defines the packing of the struct */

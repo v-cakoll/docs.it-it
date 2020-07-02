@@ -1,5 +1,6 @@
 ---
 title: Traccia e strumentazione di applicazioni
+description: Traccia e strumentazione di applicazioni in .NET. La traccia consente di monitorare l'esecuzione dell'applicazione mentre è in esecuzione. La strumentazione consente di misurare il livello di prestazioni.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-ms.openlocfilehash: 2dcdbaf50ed053d43fc2df2c80fe7688e7b3e51f
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: d5484129ac17ee20aafe305bea5599f85903dfa2
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542611"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803547"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Traccia e strumentazione di applicazioni
 Tracciare è una delle azioni a cui è possibile ricorrere per monitorare l'esecuzione di un'applicazione mentre è attiva. È possibile aggiungere strumentazione di traccia e debug all'applicazione .NET Framework quando la si sviluppa e usare tale strumentazione sia mentre si sviluppa l'applicazione sia dopo la distribuzione. È possibile usare le classi <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> per registrare le informazioni sugli errori e sull'esecuzione dell'applicazione in log, file di testo o altri dispositivi per un'analisi successiva.  
@@ -29,7 +30,7 @@ Tracciare è una delle azioni a cui è possibile ricorrere per monitorare l'esec
   
 - **Debug** - Rilevamento e correzione di errori di programmazione in un'applicazione in fase di sviluppo. Per altre informazioni, vedere [Debug](/visualstudio/debugger/debugger-feature-tour).  
   
-- **Contatori delle prestazioni** - Componenti che consentono di tenere traccia delle prestazioni dell'applicazione. Per altre informazioni, vedere [i contatori delle prestazioni](performance-counters.md).  
+- **Contatori delle prestazioni** - Componenti che consentono di tenere traccia delle prestazioni dell'applicazione. Per ulteriori informazioni, vedere [contatori delle prestazioni](performance-counters.md).  
   
 - **Log eventi** - Componenti che consentono di ricevere e registrare i principali eventi durante l'esecuzione dell'applicazione. Per altre informazioni, vedere la classe <xref:System.Diagnostics.EventLog>.  
   
@@ -97,7 +98,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 7. Se si verifica un problema in fase di esecuzione, attivare l'opzione di traccia appropriata. Per altre informazioni, vedere [Configurazione delle opzioni di traccia](how-to-create-initialize-and-configure-trace-switches.md).  
   
-     Il codice di traccia scrive i messaggi di traccia in una destinazione specificata, ad esempio sullo schermo, in un file di testo o in un log eventi. Il tipo di listener incluso nella raccolta <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> determina la destinazione.  
+     Il codice di traccia scrive i messaggi di traccia in una destinazione specificata, ad esempio sullo schermo, in un file di testo o in un log eventi. Il tipo di listener incluso nella <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> raccolta determina la destinazione.  
   
 8. Analizzare i messaggi di traccia per identificare e comprendere il problema nell'applicazione.  
   
@@ -109,7 +110,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Con le istruzioni di traccia, è possibile evitare le complesse attività di analisi del codice sorgente originale, modifica, ricompilazione e tentativo di generare l'errore di run-time all'interno nell'ambiente di debug. Tenere presente che è possibile instrumentare un'applicazione non solo per visualizzare gli errori, ma anche per monitorare le prestazioni.  
   
 ## <a name="strategic-placement-of-trace-statements"></a>Posizionamento strategico delle istruzioni di traccia  
- È necessario prestare particolare attenzione quando si inseriscono le istruzioni di traccia da utilizzare durante la fase di esecuzione. È necessario valutare quali informazioni di traccia saranno necessarie in un'applicazione distribuita, in modo che tutti gli scenari di traccia probabili vengano adeguatamente coperti. Poiché le applicazioni che utilizzano la traccia variano in modo considerevole, non sono disponibili linee guida generali per l'inserimento strategico della traccia. Per altre informazioni sul posizionamento delle istruzioni di traccia, vedere [Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione](how-to-add-trace-statements-to-application-code.md).  
+ È necessario prestare particolare attenzione durante il posizionamento delle istruzioni di traccia da usare in fase di esecuzione. È necessario valutare quali informazioni di traccia saranno necessarie in un'applicazione distribuita, in modo da includere tutti gli scenari di traccia probabili. Poiché le applicazioni che usano la traccia variano notevolmente, tuttavia, non vi sono linee guida generali per il posizionamento strategico della traccia. Per altre informazioni sul posizionamento delle istruzioni di traccia, vedere [Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione](how-to-add-trace-statements-to-application-code.md).  
   
 ## <a name="output-from-tracing"></a>Output della traccia  
  L'output di traccia viene raccolto da oggetti denominati *listener*. Un listener è un oggetto che riceve l'output di traccia e lo scrive in un dispositivo di output (in genere una finestra, un log o un file di testo). Quando viene creato un listener di traccia, viene in genere aggiunto alla raccolta di proprietà <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>, in modo che possa ricevere tutti gli output di traccia.  
@@ -120,18 +121,18 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 |Metodo|Output|  
 |------------|------------|  
-|`Assert`|Il testo specificato oppure, se non è specificato, lo stack di chiamate. L'output viene scritto solo se la condizione specificata come argomento nell'istruzione `Assert` è **false**.|  
+|`Assert`|Il testo specificato oppure, se non è specificato, lo stack di chiamate. L'output viene scritto solo se la condizione specificata come argomento nell' `Assert` istruzione è **false**.|  
 |`Fail`|Il testo specificato oppure, se non è specificato, lo stack di chiamate.|  
 |`Write`|Il testo specificato.|  
-|`WriteIf`|Il testo specificato, se la condizione specificata come argomento nell'istruzione `WriteIf` viene soddisfatta.|  
+|`WriteIf`|Il testo specificato, se la condizione specificata come argomento nell' `WriteIf` istruzione viene soddisfatta.|  
 |`WriteLine`|Il testo specificato e un ritorno a capo.|  
-|`WriteLineIf`|Il testo specificato e un ritorno a capo, se la condizione specificata come argomento nell'istruzione `WriteLineIf` viene soddisfatta.|  
+|`WriteLineIf`|Il testo specificato e un ritorno a capo, se la condizione specificata come argomento nell' `WriteLineIf` istruzione viene soddisfatta.|  
   
- I messaggi descritti nella tabella precedente vengono ricevuti da tutti i listener nella raccolta di proprietà <xref:System.Diagnostics.Trace.Listeners%2A>, ma le azioni intraprese possono variare in base al tipo di listener che riceve il messaggio. Ad esempio, nel <xref:System.Diagnostics.DefaultTraceListener> viene visualizzata una finestra di dialogo di asserzione quando viene ricevuta una notifica `Fail` o non riuscita `Assert`, ma un <xref:System.Diagnostics.TextWriterTraceListener> scrive semplicemente l'output nel relativo flusso.  
+ I messaggi descritti nella tabella precedente vengono ricevuti da tutti i listener nella raccolta di proprietà <xref:System.Diagnostics.Trace.Listeners%2A>, ma le azioni intraprese possono variare in base al tipo di listener che riceve il messaggio. Ad esempio, in <xref:System.Diagnostics.DefaultTraceListener> viene visualizzata una finestra di dialogo di asserzione quando viene ricevuta una `Fail` notifica o non riuscita `Assert` , ma un oggetto <xref:System.Diagnostics.TextWriterTraceListener> scrive semplicemente l'output nel relativo flusso.  
   
  È possibile produrre risultati personalizzati implementando un listener personalizzato. Un listener di traccia personalizzato potrebbe, ad esempio, visualizzare i messaggi in una finestra di messaggio o connettersi a un database per aggiungere messaggi a una tabella. Tutti i listener personalizzati devono supportare i sei metodi indicati in precedenza. Per altre informazioni sulla creazione di listener definiti dallo sviluppatore, vedere <xref:System.Diagnostics.TraceListener> negli argomenti di riferimento su .NET Framework.  
   
- I metodi `Write` e `WriteLine` scrivono sempre il testo specificato. `Assert`, `WriteIf`e `WriteLineIf` richiedono un argomento booleano che controlla se scrivere il testo specificato; scrivono il testo specificato solo se l'espressione è **true** (per `WriteIf` e `WriteLineIf`) oppure **false** (per `Assert`). Il metodo `Fail` scrive sempre il testo specificato. Per altre informazioni, vedere [Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione](how-to-add-trace-statements-to-application-code.md) e gli argomenti di riferimento su .NET Framework.  
+ I `Write` `WriteLine` metodi e scrivono sempre il testo specificato. `Assert`, `WriteIf` e `WriteLineIf` richiedono un argomento booleano che controlla se scrivono o meno il testo specificato; scrivono il testo specificato solo se l'espressione è **true** (per `WriteIf` e `WriteLineIf` ) oppure **false** (per `Assert` ). Il `Fail` metodo scrive sempre il testo specificato. Per altre informazioni, vedere [Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione](how-to-add-trace-statements-to-application-code.md) e gli argomenti di riferimento su .NET Framework.  
   
 ## <a name="security-concerns"></a>Problemi di sicurezza  
  Se non si disabilitano la traccia e il debug prima di distribuire un'applicazione ASP.NET, l'applicazione può rivelare informazioni su se stessa che potrebbero venire sfruttate da un programma dannoso. Per altre informazioni, vedere [Procedura: Compilare in modo condizionale con traccia e debug](how-to-compile-conditionally-with-trace-and-debug.md), [Compilazione e creazione](/visualstudio/ide/compiling-and-building-in-visual-studio) e [Procedura: Creare, inizializzare e configurare opzioni di traccia](how-to-create-initialize-and-configure-trace-switches.md). Il debug può essere configurato anche tramite Internet Information Services (IIS).  
@@ -143,9 +144,9 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 - [Contratti di codice](code-contracts.md)
 - [Tipi di progetto C#, F# e Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
 - [Procedura: aggiungere istruzioni di traccia al codice dell'applicazione](how-to-add-trace-statements-to-application-code.md)
-- [Procedura: Compilare in modo condizionale con traccia e debug](how-to-compile-conditionally-with-trace-and-debug.md)
+- [Procedura: compilare in modo condizionale con traccia e debug](how-to-compile-conditionally-with-trace-and-debug.md)
 - [Procedura: Creare, inizializzare e configurare opzioni di traccia](how-to-create-initialize-and-configure-trace-switches.md)
 - [Procedura: creare e inizializzare origini di traccia](how-to-create-and-initialize-trace-sources.md)
-- [Procedura: Usare TraceSource e filtri con listener di traccia](how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [Procedura: utilizzare TraceSource e filtri con listener di traccia](how-to-use-tracesource-and-filters-with-trace-listeners.md)
 - [Listener di traccia](trace-listeners.md)
 - [Opzioni di traccia](trace-switches.md)

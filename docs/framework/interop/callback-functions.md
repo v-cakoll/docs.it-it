@@ -1,16 +1,17 @@
 ---
 title: Funzioni di callback
+description: Leggere le informazioni sulle funzioni di callback, ovvero codice con un'applicazione gestita che consente a una funzione di DLL non gestita di completare un'attività.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - callback function
 - platform invoke, calling unmanaged functions
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
-ms.openlocfilehash: 8b8bb4dff4f73247282060c0b4fd778ae0169b1f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e28756b5ed935aff83363b38d6f33982e87718b2
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181524"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621717"
 ---
 # <a name="callback-functions"></a>Funzioni di callback
 Una funzione di callback è il codice di un'applicazione gestita che agevola una funzione di DLL non gestita nel completamento di un'attività. Le chiamate a una funzione di callback passano indirettamente da un'applicazione gestita a una funzione di DLL, per poi tornare nuovamente all'implementazione gestita. Alcune delle numerose funzioni di DLL chiamate tramite platform invoke richiedono, per essere eseguite in modo corretto, una funzione di callback nel codice gestito.  
@@ -27,5 +28,5 @@ Una funzione di callback è il codice di un'applicazione gestita che agevola una
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: implementare funzioni di callback](how-to-implement-callback-functions.md)
+- [Procedura: Implementare funzioni di callback](how-to-implement-callback-functions.md)
 - [Chiamata a una funzione di DLL](calling-a-dll-function.md)

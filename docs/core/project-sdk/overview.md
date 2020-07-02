@@ -4,12 +4,12 @@ titleSuffix: ''
 description: Informazioni sugli SDK per progetti .NET Core.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: 67dede3caabd2967adca22e7563376c761829655
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 9db62ab7774e3dd71412fa346d78ae0c62a2f81f
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144239"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803041"
 ---
 # <a name="net-core-project-sdks"></a>SDK per progetti .NET Core
 
@@ -19,7 +19,7 @@ I progetti .NET Core sono associati a un Software Development Kit (SDK). Ogni *S
 
 Per .NET Core sono disponibili gli SDK seguenti:
 
-| ID | Descrizione | Repo|
+| ID | Descrizione | Repository|
 | - | - | - |
 | `Microsoft.NET.Sdk` | .NET Core SDK | <https://github.com/dotnet/sdk> |
 | `Microsoft.NET.Sdk.Web` | [SDK Web](/aspnet/core/razor-pages/web-sdk) di .NET Core | <https://github.com/aspnet/websdk> |
@@ -41,7 +41,7 @@ I progetti .NET Core sono basati sul formato [MSBuild](/visualstudio/msbuild/msb
 </Project>
 ```
 
-Per specificare un SDK che deriva da NuGet, includere la versione alla fine del nome o specificare il nome e la versione nel file *Global. JSON* .
+Per specificare un SDK che deriva da NuGet, includere la versione alla fine del nome o specificare il nome e la versione nella *global.jssu* file.
 
 ```xml
 <Project Sdk="MSBuild.Sdk.Extras/2.0.54">
@@ -91,7 +91,7 @@ La tabella seguente Mostra gli elementi e i [glob](https://en.wikipedia.org/wiki
 |-------------------|-------------------------------------------|---------------------------------------------------------------|--------------------------|
 | Compilazione           | \*\*/\*.cs (o altre estensioni del linguaggio) | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc  | N/D                      |
 | EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/D                      |
-| Nessuno              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx |
+| nessuno              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx |
 
 > [!NOTE]
 > `./bin` `./obj` Per impostazione predefinita, le cartelle e, che sono rappresentate dalle `$(BaseOutputPath)` `$(BaseIntermediateOutputPath)` proprietà e MSBuild, sono escluse dai glob. Le esclusioni sono rappresentate dalla proprietà `$(DefaultItemExcludes)` .
@@ -174,8 +174,8 @@ Per utilizzare una destinazione personalizzata nel progetto, aggiungere un `Pack
 
 È possibile configurare la modalità di utilizzo della destinazione personalizzata. Poiché si tratta di una destinazione MSBuild, può dipendere da una destinazione specificata, essere eseguita dopo un'altra destinazione oppure essere richiamata manualmente tramite il `dotnet msbuild -t:<target-name>` comando. Tuttavia, per offrire un'esperienza utente migliore, è possibile combinare gli strumenti per progetto e le destinazioni personalizzate. In questo scenario, lo strumento per progetto accetta qualsiasi parametro necessario e lo traduce nella [`dotnet msbuild`](../tools/dotnet-msbuild.md) chiamata necessaria che esegue la destinazione. È possibile visualizzare un esempio di questo tipo di sinergia nel repository degli [esempi di MVP Summit 2016 Hackathon](https://github.com/dotnet/MVPSummitHackathon2016) nel progetto [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-- [Installare .NET Core](../install/index.md)
+- [Installare .NET Core](../install/index.yml)
 - [Come usare gli SDK di progetto MSBuild](/visualstudio/msbuild/how-to-use-project-sdk)
 - [Creare pacchetti di destinazioni e oggetti personalizzati MSBuild con NuGet](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)

@@ -1,17 +1,17 @@
 ---
-title: 'Esercitazione: Prevedere i prezzi utilizzando la regressioneTutorial: Predict prices using regression'
+title: 'Esercitazione: stimare i prezzi tramite regressione'
 description: Questa esercitazione illustra come compilare un modello di regressione usando ML.NET per stimare i prezzi, in particolare le tariffe dei taxi di New York.
-ms.date: 09/30/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 91429383341cf718d38e636bd1d71dc25d30d20d
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 0a8ab9ca07d2d83f41b40a3f5782e8e7e201976f
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607971"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803235"
 ---
-# <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Esercitazione: Prevedere i prezzi usando la regressione con ML.NET
+# <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Esercitazione: stimare i prezzi usando la regressione con ML.NET
 
 Questa esercitazione illustra come creare un [modello di regressione](../resources/glossary.md#regression) usando ML.NET per stimare i prezzi, in particolare le tariffe dei taxi di New York.
 
@@ -27,7 +27,7 @@ In questa esercitazione verranno illustrate le procedure per:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o versione successiva o Visual Studio 2017 versione 15.6 o successiva con il carico di lavoro "sviluppo multipiattaforma .NET Core" installato.
+* [Visual studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o versione successiva o visual studio 2017 versione 15,6 o successiva con il carico di lavoro "sviluppo multipiattaforma .NET Core" installato.
 
 ## <a name="create-a-console-application"></a>Creare un'applicazione console
 
@@ -35,15 +35,17 @@ In questa esercitazione verranno illustrate le procedure per:
 
 1. Creare una directory *Data* nel progetto per archiviare il set di dati e i file di modello.
 
-1. Installare il pacchetto NuGet **Microsoft.ML:**
+1. Installare il pacchetto NuGet **Microsoft.ml** :
 
-    In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto e **scegliere Gestisci pacchetti NuGet**. Scegliere "nuget.org" come Origine del pacchetto, selezionare la scheda **Sfoglia**, trovare **Microsoft.ML**, selezionare il pacchetto nell'elenco e quindi selezionare il pulsante **Installa**. Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo **Accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati. Eseguire la stessa operazione per il pacchetto NuGet **Microsoft.ML.FastTree**.
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
+    In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto e scegliere **Gestisci pacchetti NuGet**. Scegliere "nuget.org" come Origine del pacchetto, selezionare la scheda **Sfoglia**, trovare **Microsoft.ML**, selezionare il pacchetto nell'elenco e quindi selezionare il pulsante **Installa**. Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo **Accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati. Eseguire la stessa operazione per il pacchetto NuGet **Microsoft.ML.FastTree**.
 
 ## <a name="prepare-and-understand-the-data"></a>Preparare e identificare i dati
 
 1. Scaricare i set di dati [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) e [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) e salvarli nella cartella *Data* creata nel passaggio precedente. Questi set di dati vengono usati per eseguire il training del modello di machine learning e quindi valutarne l'accuratezza. Questi set di dati sono originariamente ricavati dal [set di dati NYC TLC Taxi Trip](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
 
-1. In **Esplora soluzioni**fare clic \*con il pulsante destro del mouse su ognuno dei file CSV e scegliere **Proprietà**. In **Avanzate**, modificare il valore di **Copia nella directory** di output in Copia se **più recente**.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse su ognuno dei \* file con estensione CSV e scegliere **proprietà**. In **Avanzate**impostare il valore di **copia nella directory di output** su **copia se più recente**.
 
 1. Aprire il set di dati **taxi-fare-train.csv** e controllare le intestazioni di colonna nella prima riga. Esaminare ognuna delle colonne. Identificare i dati e decidere quali colonne sono **funzionalità** e qual è l'**etichetta**.
 
@@ -54,7 +56,7 @@ Il set di dati fornito contiene le colonne seguenti:
 * **vendor_id:** l'ID della società di taxi è una funzionalità.
 * **rate_code:** il tipo di tariffa del viaggio in taxi è una funzionalità.
 * **passenger_count:** il numero di passeggeri è una funzionalità.
-* **trip_time_in_secs:** il tempo impiegato per il viaggio. Si vuole stimare la tariffa del viaggio prima del termine. In quel momento, non sai quanto tempo ci vorrebbe il viaggio. Il tempo non è pertanto una funzionalità e si escluderà questa colonna dal modello.
+* **trip_time_in_secs:** il tempo impiegato per il viaggio. Si vuole stimare la tariffa del viaggio prima del termine. A questo punto, non si sa quanto tempo è necessario per il viaggio. Il tempo non è pertanto una funzionalità e si escluderà questa colonna dal modello.
 * **trip_distance:** la distanza del viaggio è una funzionalità.
 * **payment_type:** il metodo di pagamento (contanti o carta di credito) è una funzionalità.
 * **fare_amount:** la tariffa totale per il viaggio in taxi è l'etichetta.
@@ -75,7 +77,7 @@ Rimuovere la definizione di classe esistente e aggiungere il codice seguente, ch
 
 `TaxiTrip` è la classe dei dati di input e contiene le definizioni per ognuna delle colonne del set di dati. Usare l'attributo <xref:Microsoft.ML.Data.LoadColumnAttribute> per specificare gli indici delle colonne di origine nel set di dati.
 
-La classe `TaxiTripFarePrediction` rappresenta i risultati previsti. Ha un singolo campo `FareAmount`float, `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute> , con un attributo applicato. In caso di attività di regressione, la colonna **Score** contiene i valori di etichetta previsti.
+La classe `TaxiTripFarePrediction` rappresenta i risultati previsti. Dispone di un singolo campo float, `FareAmount` , a cui è `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute> applicato un attributo. Nel caso dell'attività di regressione, la colonna **Score** contiene i valori delle etichette stimate.
 
 > [!NOTE]
 > Usare il tipo `float` per rappresentare i valori a virgola mobile nelle classi di dati di input e di previsione.
@@ -130,11 +132,11 @@ ML.NET usa la [classe IDataView](xref:Microsoft.ML.IDataView) come un modo effic
 
 [!code-csharp[LoadTrainData](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#6 "loading training dataset")]
 
-Come si desidera prevedere la tariffa `FareAmount` di `Label` viaggio in taxi, la colonna è quella che si pronostica (l'output del modello). Utilizzare `CopyColumnsEstimator` la classe `FareAmount`transformation per copiare e aggiungere il codice seguente:
+Per prevedere la tariffa per le corse dei taxi, la `FareAmount` colonna è l'oggetto `Label` che verrà stimato (l'output del modello). Usare la `CopyColumnsEstimator` classe Transformation per copiare `FareAmount` e aggiungere il codice seguente:
 
 [!code-csharp[CopyColumnsEstimator](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#7 "Use the CopyColumnsEstimator")]
 
-L'algoritmo che forma il training del modello richiede funzionalità **numeriche,** pertanto è`VendorIdEncoded`necessario `RateCodeEncoded`trasformare i valori dei dati categorici (`VendorId`, `RateCode`, e `PaymentType`) in numeri ( , , e `PaymentTypeEncoded`). Per fare ciò usare la classe di trasformazione [OneHotEncodingTransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer), che assegna valori chiave numerica diversi ai differenti valori in ognuna delle colonne e quindi aggiungere il codice seguente:
+L'algoritmo che esegue il training del modello richiede funzionalità **numeriche** , pertanto è necessario trasformare i valori di dati categorici ( `VendorId` , `RateCode` e `PaymentType` ) in numeri ( `VendorIdEncoded` , `RateCodeEncoded` e `PaymentTypeEncoded` ). Per fare ciò usare la classe di trasformazione [OneHotEncodingTransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer), che assegna valori chiave numerica diversi ai differenti valori in ognuna delle colonne e quindi aggiungere il codice seguente:
 
 [!code-csharp[OneHotEncodingEstimator](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#8 "Use the OneHotEncodingEstimator")]
 
@@ -245,7 +247,7 @@ Usare `PredictionEngine` per stimare l'importo della tariffa aggiungendo il codi
 
 [!code-csharp[MakePredictionEngine](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#22 "Create the PredictionFunction")]
 
-Il [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API di convenienza, che consente di eseguire una stima su una singola istanza di dati. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)non è thread-safe. È accettabile utilizzare in ambienti a thread singolo o prototipi. Per migliorare le prestazioni e la `PredictionEnginePool` thread safety negli [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ambienti di produzione, usare il servizio, che crea un oggetto da utilizzare in tutta l'applicazione. Vedere questa guida su come [utilizzare `PredictionEnginePool` in un'API Web di base di ASP.NET.](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API di praticità, che consente di eseguire una stima su una singola istanza di dati. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)non è thread-safe. È accettabile usare in ambienti a thread singolo o prototipi. Per migliorare le prestazioni e thread safety negli ambienti di produzione, utilizzare il `PredictionEnginePool` servizio, che consente di creare un oggetto [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) di [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) oggetti da utilizzare nell'applicazione. Vedere questa guida su come [usare `PredictionEnginePool` in un'API Web di ASP.NET Core](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
 
 > [!NOTE]
 > L'estensione del servizio `PredictionEnginePool` è attualmente in anteprima.

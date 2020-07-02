@@ -1,34 +1,35 @@
 ---
 title: Guida alla distribuzione di .NET Framework per amministratori
+description: Leggere la guida alla distribuzione di .NET per gli amministratori. Usare queste informazioni per distribuire .NET versione 4,5 e le relative dipendenze di sistema in una rete.
 ms.date: 04/10/2018
 helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-ms.openlocfilehash: be15ce0b0bed37da6fe400e98bfdd118c48f7ba0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d58eac4f21e4f1069ac392aacb4e9818831e914c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716534"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622653"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guida alla distribuzione di .NET Framework per amministratori
 
-In questo articolo viene descritto come un amministratore di sistema può distribuire .NET Framework 4.5 e le relative dipendenze di sistema in una rete utilizzando Microsoft Endpoint Configuration Manager. L'articolo presuppone che tutti i computer client di destinazione soddisfino i requisiti minimi per .NET Framework. Per un elenco dei requisiti software e hardware per l'installazione di .NET Framework 4.5, vedere [Requisiti di sistema](../get-started/system-requirements.md).
+Questo articolo dettagliato descrive come un amministratore di sistema può distribuire il .NET Framework 4,5 e le relative dipendenze di sistema attraverso una rete usando Microsoft endpoint Configuration Manager. L'articolo presuppone che tutti i computer client di destinazione soddisfino i requisiti minimi per .NET Framework. Per un elenco dei requisiti software e hardware per l'installazione di .NET Framework 4.5, vedere [Requisiti di sistema](../get-started/system-requirements.md).
 
 > [!NOTE]
-> Il software a cui si fa riferimento in questo documento, inclusi, senza limitazioni, .NET Framework 4.5, Configuration Manager e Active Directory, sono tutti soggetti a termini e condizioni di licenza. Queste istruzioni presuppongono che tali condizioni di licenza siano state riviste e accettate dai licenziatari del software e non derogano ad alcuna condizione di tali contratti di licenza.
+> Il software a cui si fa riferimento nel presente documento, inclusi, a titolo esemplificativo, i .NET Framework 4,5, Configuration Manager e Active Directory, sono soggetti a condizioni di licenza. Queste istruzioni presuppongono che tali condizioni di licenza siano state riviste e accettate dai licenziatari del software e non derogano ad alcuna condizione di tali contratti di licenza.
 >
-> Per informazioni sul supporto per .NET Framework, vedere Criteri di supporto ufficiale di [.NET Framework](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) nel sito Web del supporto tecnico Microsoft.
+> Per informazioni sul supporto per la .NET Framework, vedere [.NET Framework i criteri di supporto ufficiale](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) nel sito web di supporto tecnico Microsoft.
 
 In questo argomento sono incluse le sezioni seguenti:
 
 - [Processo di distribuzione](#the_deployment_process)
 - [Distribuzione di .NET Framework](#deploying_in_a_test_environment)
-- [Creare una raccoltaCreate a collection](#creating_a_collection)
+- [Creare una raccolta](#creating_a_collection)
 - [Creare un pacchetto e un programma](#creating_a_package)
 - [Selezionare un punto di distribuzione](#select_dist_point)
-- [Distribuire il pacchettoDeploy the package](#deploying_package)
+- [Distribuire il pacchetto](#deploying_package)
 - [Risorse](#resources)
 - [Risoluzione dei problemi](#troubleshooting)
 
@@ -36,11 +37,11 @@ In questo argomento sono incluse le sezioni seguenti:
 
 ## <a name="the-deployment-process"></a>Processo di distribuzione
 
-Quando si dispone dell'infrastruttura di supporto, si usa Configuration Manager per distribuire il pacchetto ridistribuibile di .NET Framework nei computer della rete. La creazione dell'infrastruttura include la creazione e la definizione di cinque aree primarie: raccolte, un pacchetto e un programma per il software, punti di distribuzione e distribuzioni.
+Quando si dispone dell'infrastruttura di supporto sul posto, è possibile utilizzare Configuration Manager per distribuire il pacchetto ridistribuibile di .NET Framework nei computer della rete. La creazione dell'infrastruttura include la creazione e la definizione di cinque aree primarie: raccolte, un pacchetto e un programma per il software, punti di distribuzione e distribuzioni.
 
-- Le **raccolte** sono gruppi di risorse di Configuration Manager, ad esempio utenti, gruppi di utenti o computer, ai quali viene distribuito .NET Framework. Per altre informazioni, vedere Introduzione alle raccolte in Configuration Manager nella raccolta della documentazione di Configuration Manager.For more information, see [Introduction to collections in Configuration Manager](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections) in the Configuration Manager documentation library.
+- Le **raccolte** sono gruppi di risorse di Configuration Manager, ad esempio utenti, gruppi di utenti o computer, ai quali viene distribuito .NET Framework. Per ulteriori informazioni, vedere [Introduzione alle raccolte in Configuration Manager](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections) nella libreria della documentazione di Configuration Manager.
 
-- I **pacchetti e programmi** in genere rappresentano le applicazioni software da installare in un computer client, ma possono anche contenere singoli file, aggiornamenti o persino singoli comandi. Per altre informazioni, vedere [Pacchetti e programmi in Configuration Manager](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs) nella raccolta della documentazione di Configuration Manager.For more information, see Packages and programs in Configuration Manager in the Configuration Manager documentation library.
+- I **pacchetti e programmi** in genere rappresentano le applicazioni software da installare in un computer client, ma possono anche contenere singoli file, aggiornamenti o persino singoli comandi. Per ulteriori informazioni, vedere [pacchetti e programmi in Configuration Manager](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs) nella libreria della documentazione di Configuration Manager.
 
 - I **punti di distribuzione** sono ruoli di sistema dei siti di Configuration Manager nei quali sono archiviati i file necessari per l'esecuzione del software nei computer client. Quando il client di Configuration Manager riceve ed elabora una distribuzione software, contatta un punto di distribuzione per scaricare il contenuto associato al software e avviare il processo di installazione. Per altre informazioni, vedere [Concetti di base della gestione dei contenuti in Configuration Manager](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management) nella raccolta di documentazione di Configuration Manager.
 
@@ -53,7 +54,7 @@ Quando si dispone dell'infrastruttura di supporto, si usa Configuration Manager 
 
 ## <a name="deploying-the-net-framework"></a>Distribuzione di .NET Framework
 
-È possibile usare Configuration Manager per distribuire un'installazione invisibile all'utente di .NET Framework 4.5.NET Framework 4.5, in cui gli utenti non interagiscono con il processo di installazione. A tale scopo, seguire questa procedura:
+È possibile usare Configuration Manager per distribuire un'installazione invisibile all'utente del .NET Framework 4,5, in cui gli utenti non interagiscono con il processo di installazione. A tale scopo, seguire questa procedura:
 
 1. [Creare una raccolta](#creating_a_collection).
 
@@ -67,7 +68,7 @@ Quando si dispone dell'infrastruttura di supporto, si usa Configuration Manager 
 
 ### <a name="create-a-collection"></a>Creare una raccolta
 
-In questo passaggio selezionare i computer in cui verrà distribuito il pacchetto e il programma e raggrupparli in una raccolta dispositivi. Per creare una raccolta in Configuration Manager, è possibile usare le regole di appartenenza dirette (dove vengono specificati manualmente i membri della raccolta) oppure regole di query (dove Configuration Manager determina i membri della raccolta in base ai criteri specificati). Per altre informazioni sulle regole di appartenenza, incluse le query e le regole dirette, vedere Introduzione alle raccolte in Configuration Manager nella raccolta di documentazione di Configuration Manager.For more information about membership rules, including queries and direct rules, see [Introduction to collections in Configuration Manager](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections) in the Configuration Manager Documentation Library.
+In questo passaggio selezionare i computer in cui verrà distribuito il pacchetto e il programma e raggrupparli in una raccolta dispositivi. Per creare una raccolta in Configuration Manager, è possibile usare le regole di appartenenza dirette (dove vengono specificati manualmente i membri della raccolta) oppure regole di query (dove Configuration Manager determina i membri della raccolta in base ai criteri specificati). Per ulteriori informazioni sulle regole di appartenenza, incluse query e regole dirette, vedere [Introduzione alle raccolte in Configuration Manager](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections) nella libreria della documentazione di Configuration Manager.
 
 Per creare una raccolta:
 
@@ -161,7 +162,7 @@ Usare i passaggi seguenti per selezionare un punto di distribuzione per il pacch
 
 8. Completare la procedura guidata.
 
-Il pacchetto contiene tutte le informazioni necessarie per distribuire automaticamente .NET Framework 4.5. Prima di distribuire il pacchetto e il programma, verificare che sia stato installato nel punto di distribuzione. vedere la sezione "Monitoraggio dello stato del contenuto" di [Monitorare il contenuto distribuito con Configuration Manager](https://docs.microsoft.com/configmgr/core/servers/deploy/configure/monitor-content-you-have-distributed) nella raccolta di documentazione di Configuration Manager.See the "Content status monitoring" section of Monitor content you distribute with Configuration Manager in the Configuration Manager Documentation Library.
+Il pacchetto contiene tutte le informazioni necessarie per distribuire automaticamente .NET Framework 4.5. Prima di distribuire il pacchetto e il programma, verificare che sia stato installato nel punto di distribuzione. vedere la sezione "monitoraggio dello stato dei contenuti" di [monitorare il contenuto distribuito con Configuration Manager](https://docs.microsoft.com/configmgr/core/servers/deploy/configure/monitor-content-you-have-distributed) nella libreria della documentazione di Configuration Manager.
 
 <a name="deploying_package"></a>
 
@@ -208,7 +209,7 @@ Per altre informazioni riguardanti l'infrastruttura per testare la distribuzione
 
 - [Domain Name System (DNS)](/windows-server/networking/dns/dns-top)
 
-- [DHCP (Dynamic Host Configuration Protocol)](/windows-server/networking/technologies/dhcp/dhcp-top)
+- [Dynamic Host Configuration Protocol (DHCP)](/windows-server/networking/technologies/dhcp/dhcp-top)
 
 **SQL Server 2008:**
 
@@ -234,8 +235,8 @@ Per altre informazioni riguardanti l'infrastruttura per testare la distribuzione
 
 Durante l'installazione di .NET Framework vengono generati i seguenti file di log:
 
-- %temp% Microsoft .txt versione di .net *Framework*\*
-- %temp% Microsoft .html versione di .NET *Framework*\*
+- %temp%\Microsoft .NET Framework *Version* \* . txt
+- %temp%\Microsoft .NET Framework *Version* \* . html
 
 dove *versione* è la versione di .NET Framework che si sta installando, ad esempio 4.5 o 4.7.2.
 
@@ -279,4 +280,4 @@ Altri codici di errore:
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida alla distribuzione per gli sviluppatori](deployment-guide-for-developers.md)
-- [Requisiti di sistema](../get-started/system-requirements.md)
+- [System Requirements](../get-started/system-requirements.md)

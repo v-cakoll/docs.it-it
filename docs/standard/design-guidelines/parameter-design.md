@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-ms.openlocfilehash: 46c1b8f03d054a63ea837a73fd30eeed163ab0a4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e0bc52f5679a7771d5690be9f903e677ce611605
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290097"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621587"
 ---
 # <a name="parameter-design"></a>Progettazione di parametri
 
@@ -40,7 +40,7 @@ In questa sezione vengono fornite linee guida generali sulla progettazione dei p
 
  Ciò comunicherà meglio la relazione tra i metodi.
 
-### <a name="choose-between-enum-and-boolean-parameters"></a>Scegliere tra i parametri enum e Boolean
+### <a name="choosing-between-enum-and-boolean-parameters"></a>Scelta tra parametri enum e Boolean  
  ✔️ utilizzare enum se un membro avrebbe altrimenti due o più parametri booleani.
 
  ❌Non usare valori booleani, a meno che non si sia certi che non sarà mai necessario più di due valori.
@@ -49,7 +49,7 @@ In questa sezione vengono fornite linee guida generali sulla progettazione dei p
 
  ✔️ CONSIDERARE l'utilizzo di valori booleani per i parametri del costruttore che sono veri e propri a due Stati e vengono semplicemente utilizzati per inizializzare le proprietà booleane.
 
-### <a name="validate-arguments"></a>Convalida argomenti
+### <a name="validating-arguments"></a>Convalida degli argomenti
  ✔️ convalidare gli argomenti passati a membri pubblici, protetti o implementati in modo esplicito. Throw <xref:System.ArgumentException?displayProperty=nameWithType> , o una delle relative sottoclassi, se la convalida ha esito negativo.
 
  Si noti che la convalida effettiva non deve necessariamente essere eseguita nel membro pubblico o protetto. Potrebbe verificarsi a un livello inferiore in una routine privata o interna. Il punto principale è che l'intera superficie esposta agli utenti finali controlla gli argomenti.
@@ -66,10 +66,10 @@ In questa sezione vengono fornite linee guida generali sulla progettazione dei p
 
  Se il membro è sensibile alla sicurezza, è consigliabile creare una copia e quindi convalidare ed elaborare l'argomento.
 
-### <a name="pass-parameters"></a>Passare parametri
+### <a name="parameter-passing"></a>Passaggio dei parametri
  Dal punto di vista di una finestra di progettazione del Framework, sono disponibili tre gruppi principali di parametri: parametri per valore, `ref` parametri e parametri `out` .
 
- Quando un argomento viene passato tramite un parametro per valore, il membro riceve una copia dell'argomento effettivo passato. Se l'argomento è un tipo valore, viene inserita una copia dell'argomento nello stack. Se l'argomento è un tipo di riferimento, viene inserita una copia del riferimento nello stack. I linguaggi CLR più diffusi, ad esempio C#, Visual Basic e C++, per impostazione predefinita passano i parametri per valore.
+ Quando un argomento viene passato tramite un parametro per valore, il membro riceve una copia dell'argomento effettivo passato. Se l'argomento è un tipo valore, viene inserita una copia dell'argomento nello stack. Se l'argomento è un tipo di riferimento, viene inserita una copia del riferimento nello stack. I linguaggi CLR più diffusi, ad esempio C#, VB.NET e C++, per impostazione predefinita passano i parametri per valore.
 
  Quando un argomento viene passato tramite un `ref` parametro, il membro riceve un riferimento all'argomento effettivo passato. Se l'argomento è un tipo valore, viene inserito un riferimento all'argomento nello stack. Se l'argomento è un tipo di riferimento, nello stack viene inserito un riferimento al riferimento. `Ref`è possibile utilizzare i parametri per consentire al membro di modificare gli argomenti passati dal chiamante.
 
@@ -151,7 +151,7 @@ public class String {
 
  Ad esempio, non è necessario passare l'indice iniziale, perché per ottenere lo stesso risultato è possibile utilizzare l'aritmetica semplice del puntatore.
 
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*
+ *Parti &copy; 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*
 
  *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*
 

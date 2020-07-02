@@ -1,5 +1,6 @@
 ---
 title: Creazione di prototipi nel codice gestito
+description: Creare prototipi nel codice gestito .NET, in modo da poter accedere alle funzioni non gestite e usare campi attributo che annotano la definizione di metodo nel codice gestito.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-ms.openlocfilehash: 712040c3482b51c4dafe0ee87fdda8cd848fb7fc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 76b1a87c4513fdee21c5c3d5eba533b11e022e3a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622159"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Creazione di prototipi nel codice gestito
 Questo argomento descrive come accedere alle funzioni non gestite e introduce diversi campi attributo che annotano la definizione di metodo nel codice gestito. Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md).  
@@ -237,5 +238,5 @@ interface IDemandStubsItf
 - [Esempi di platform invoke](platform-invoke-examples.md)
 - [Considerazioni sulla sicurezza di platform invoke](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
 - [Identificazione delle funzioni nelle DLL](identifying-functions-in-dlls.md)
-- [Creating a Class to Hold DLL Functions](creating-a-class-to-hold-dll-functions.md) (Creazione di una classe contenente funzioni di DLL)
+- [Creazione di una classe che contenga le funzioni di DLL](creating-a-class-to-hold-dll-functions.md)
 - [Chiamata a una funzione di DLL](calling-a-dll-function.md)

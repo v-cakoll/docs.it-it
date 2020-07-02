@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: cc4d9c6a366cd0e5da4c3446536c93efdc9f5503
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 96db0d707cefed791d9c2c01a6615e9af5168cc5
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802988"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>Come verificare che .NET Core sia già installato
 
@@ -19,7 +19,7 @@ Questo articolo illustra come verificare quali versioni del runtime e dell'SDK d
 
 Installando un SDK viene installato il runtime corrispondente.
 
-Se un comando in questo articolo ha esito negativo, il runtime o l'SDK non è installato. Per altre informazioni, vedere [scaricare e installare .NET Core](index.md).
+Se un comando in questo articolo ha esito negativo, il runtime o l'SDK non è installato. Per ulteriori informazioni, vedere la pagina relativa all'installazione di articoli per [Windows](windows.md), [MacOS](macos.md)o [Linux](linux.md).
 
 ## <a name="check-sdk-versions"></a>Controllare le versioni dell'SDK
 
@@ -211,7 +211,7 @@ _/usr/local/share/dotnet/shared/{runtime-type}/{version}/_
 
 ::: zone-end
 
-## <a name="more-information"></a>Ulteriori informazioni
+## <a name="more-information"></a>Altre informazioni
 
 È possibile visualizzare sia le versioni dell'SDK che le versioni di runtime con il comando `dotnet --info` . Si otterranno anche altre informazioni relative all'ambiente, ad esempio la versione del sistema operativo e l'identificatore di runtime (RID).
 

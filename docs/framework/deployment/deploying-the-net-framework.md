@@ -1,16 +1,17 @@
 ---
 title: Distribuzione di .NET Framework
+description: Informazioni su come distribuire .NET per gli sviluppatori che desiderano installare .NET con le applicazioni e per gli amministratori che desiderano distribuire .NET in una rete.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, deploying
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
-ms.openlocfilehash: cc4f9c38138a37b6068d33ffa4229a955db08c07
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e9fef2af56ca278b0e326c15546ca9f849a3253
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716538"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622770"
 ---
 # <a name="deploying-the-net-framework"></a>Distribuzione di .NET Framework
 Questa sezione della documentazione di .NET Framework fornisce informazioni destinate agli sviluppatori che vogliono installare .NET Framework con le proprie applicazioni e agli amministratori che vogliono distribuire .NET Framework in una rete. Questa sezione tratta anche i problemi di attivazione e riavvio associati alla distribuzione e descrive come monitorare lo stato dell'installazione di .NET Framework.  
@@ -20,7 +21,7 @@ Questa sezione della documentazione di .NET Framework fornisce informazioni dest
  Illustra come gli sviluppatori possono installare .NET Framework nei computer dei rispettivi utenti con le rispettive applicazioni.  
   
  [Guida alla distribuzione per amministratori](guide-for-administrators.md)  
- Viene illustrato come un amministratore di sistema può distribuire .NET Framework e le relative dipendenze di sistema in una rete utilizzando Microsoft Endpoint Configuration Manager.  
+ Viene illustrato come un amministratore di sistema può distribuire il .NET Framework e le relative dipendenze di sistema attraverso una rete usando Microsoft endpoint Configuration Manager.  
   
  [Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](reducing-system-restarts.md)  
  Descrive il gestore di riavvio, che impedisce automaticamente il riavvio quando possibile, e viene illustrato come le applicazioni che installano .NET Framework possano usufruirne.  
@@ -36,4 +37,4 @@ Questa sezione della documentazione di .NET Framework fornisce informazioni dest
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida di sviluppo](../development-guide.md)
+- [Guida allo sviluppo](../development-guide.md)

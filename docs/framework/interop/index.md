@@ -1,5 +1,6 @@
 ---
 title: Interoperabilità con codice non gestito
+description: Verificare l'interoperabilità con codice non gestito. CLR si nasconde dai client e dai server in base alla differenza tra i modelli a oggetti dei componenti .NET e il codice non gestito.
 ms.date: 01/17/2018
 helpviewer_keywords:
 - unmanaged code, interoperation
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-ms.openlocfilehash: 12183f390a5178f038c6dd2122a72a33e31ae0ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1cebd75907fd202715cb337593186d248107bdbb
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457961"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621873"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Interoperabilità con codice non gestito
 
@@ -43,7 +44,7 @@ Descrive il mapping tra eccezioni e valori HRESULT.
 [Equivalenza del tipo e tipi di interoperabilità incorporati](type-equivalence-and-embedded-interop-types.md)  
 Descrive il modo in cui le informazioni sui tipi COM sono incorporate negli assembly e come Common Language Runtime determina l'equivalenza dei tipi COM incorporati.
 
-[Procedura: generare assembly di interoperabilità tramite Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
+[Procedura: Generare assembly di interoperabilità primari tramite Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
 Descrive come generare assembly di interoperabilità primari usando *Tlbimp.exe* (strumento di importazione di librerie dei tipi).
 
 [Procedura: Registrare assembly di interoperabilità primari](how-to-register-primary-interop-assemblies.md)  
@@ -52,7 +53,7 @@ Descrive come registrare gli assembly di interoperabilità primari prima di pote
 [Interoperabilità COM senza registrazione](registration-free-com-interop.md)  
 Descrive come l'interoperabilità COM consente di attivare componenti senza usare il Registro di sistema di Windows.
 
-[Procedura: configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione](configure-net-framework-based-com-components-for-reg.md)  
+[Procedura: Configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione](configure-net-framework-based-com-components-for-reg.md)  
 Descrive come creare un manifesto dell'applicazione e come creare e incorporare un manifesto del componente.
 
 ## <a name="related-sections"></a>Sezioni correlate

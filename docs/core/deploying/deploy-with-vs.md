@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 0fb21b09fbf97f9c9ac2bf2982c391b87e2debc1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7a4ffd5b1b58e6ea7fd46c676e139b77a126aa2b
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614357"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803027"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Distribuire app .NET Core con Visual Studio
 
@@ -32,7 +32,7 @@ Una distribuzione dipendente dal framework senza dipendenze di terze parti richi
 
 1. Creare il progetto.
 
-   Selezionare **file**  >  **nuovo**  >  **progetto**. Nella finestra di dialogo **Nuovo progetto** espandere le categorie di progetti del linguaggio (C# o Visual Basic) nel riquadro dei tipi di progetti **Installati**, scegliere il modello **.NET Core** e selezionare il modello **Console App (.NET Core)** (App console (.NET Core)) nel riquadro centrale. Immettere un nome di progetto, ad esempio "FDD", nella casella di testo **Nome**. Selezionare il pulsante **OK** .
+   Selezionare **File** > **New** (Nuovo)  > **Project** (Progetto). Nella finestra di dialogo **Nuovo progetto** espandere le categorie di progetti del linguaggio (C# o Visual Basic) nel riquadro dei tipi di progetti **Installati**, scegliere il modello **.NET Core** e selezionare il modello **Console App (.NET Core)** (App console (.NET Core)) nel riquadro centrale. Immettere un nome di progetto, ad esempio "FDD", nella casella di testo **Nome**. Selezionare il pulsante **OK** .
 
 1. Aggiungere il codice sorgente dell'applicazione.
 
@@ -43,7 +43,7 @@ Una distribuzione dipendente dal framework senza dipendenze di terze parti richi
 
 1. Creare una build di debug dell'app.
 
-   Selezionare **Compila**  >  **Compila soluzione**. È anche possibile compilare ed eseguire la build di debug dell'applicazione selezionando **debug**  >  **Avvia debug**.
+   Selezionare **Compila** > **Compila soluzione**. È anche possibile compilare ed eseguire la build di debug dell'applicazione selezionando **debug**  >  **Avvia debug**.
 
 1. Distribuire l'app.
 
@@ -83,7 +83,7 @@ La pubblicazione di una distribuzione autonoma senza dipendenze di terze parti c
 
 1. Creare il progetto.
 
-   Selezionare **file**  >  **nuovo**  >  **progetto**. Nella finestra di dialogo **Nuovo progetto** espandere le categorie di progetti del linguaggio (C# o Visual Basic) nel riquadro dei tipi di progetti **Installati**, scegliere il modello **.NET Core** e selezionare il modello **Console App (.NET Core)** (App console (.NET Core)) nel riquadro centrale. Immettere un nome di progetto, ad esempio "SCD" nella casella di testo **Nome**, quindi selezionare il pulsante **OK**.
+   Selezionare **File** > **New** (Nuovo)  > **Project** (Progetto). Nella finestra di dialogo **Nuovo progetto** espandere le categorie di progetti del linguaggio (C# o Visual Basic) nel riquadro dei tipi di progetti **Installati**, scegliere il modello **.NET Core** e selezionare il modello **Console App (.NET Core)** (App console (.NET Core)) nel riquadro centrale. Immettere un nome di progetto, ad esempio "SCD" nella casella di testo **Nome**, quindi selezionare il pulsante **OK**.
 
 1. Aggiungere il codice sorgente dell'applicazione.
 
@@ -98,11 +98,11 @@ La pubblicazione di una distribuzione autonoma senza dipendenze di terze parti c
 
    Per abilitare la modalità invariante fare clic con il pulsante destro del mouse sul progetto (non sulla soluzione) in **Esplora soluzioni** e selezionare **Modifica SCD.csproj** o **Modifica SCD.vbproj**. Aggiungere al file le seguenti righe evidenziate:
 
-   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=6-8)]
+   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=7-9)]
 
 1. Creare una build di debug dell'applicazione.
 
-   Selezionare **Compila**  >  **Compila soluzione**. È anche possibile compilare ed eseguire la build di debug dell'applicazione selezionando **debug**  >  **Avvia debug**. Questo passaggio di debug consente di identificare i problemi dell'applicazione quando è in esecuzione sulla piattaforma host. È tuttavia necessario testarla sulle singole piattaforme di destinazione.
+   Selezionare **Compila** > **Compila soluzione**. È anche possibile compilare ed eseguire la build di debug dell'applicazione selezionando **debug**  >  **Avvia debug**. Questo passaggio di debug consente di identificare i problemi dell'applicazione quando è in esecuzione sulla piattaforma host. È tuttavia necessario testarla sulle singole piattaforme di destinazione.
 
    Se è stata abilitata la modalità invariante della globalizzazione, verificare soprattutto se l'assenza di dati dipendenti dalle impostazioni cultura sia adatta per l'applicazione.
 
@@ -150,7 +150,7 @@ Per pubblicare l'app da Visual Studio eseguire le operazioni seguenti:
 
          1. Selezionare **Crea nuovo profilo** nella finestra di dialogo **Pubblica**.
 
-         1. Nella finestra di dialogo **Selezionare una destinazione di pubblicazione**, in **Scegliere una cartella** impostare il percorso su *bin\Release\PublishOutput\win10-x64*. Seleziona **OK**.
+         1. Nella finestra di dialogo **Selezionare una destinazione di pubblicazione**, in **Scegliere una cartella** impostare il percorso su *bin\Release\PublishOutput\win10-x64*. Selezionare **OK**.
 
          1. Selezionare il nuovo profilo (**FolderProfile1**) nell'elenco dei profili e assicurarsi che **Runtime di destinazione** sia `win10-x64`. In caso contrario, selezionare **Impostazioni**. Nella finestra di dialogo **Impostazioni profilo** impostare **Runtime di destinazione** su `win10-x64` e selezionare **Salva**. In caso contrario, selezionare **Annulla**.
 
@@ -192,9 +192,9 @@ Eseguire le operazioni seguenti per ogni piattaforma a cui è destinata l'applic
 
 1. Selezionare la posizione in cui Visual Studio pubblica l'applicazione.
 
-   Se si esegue la pubblicazione in una sola piattaforma, è possibile accettare il valore predefinito nella casella di testo **scegliere una cartella** . in questo modo viene pubblicata la distribuzione dipendente dal framework dell'applicazione nella directory del * \< progetto> directory \bin\release\netcoreapp2.1\publish* .
+   Se si esegue la pubblicazione in una sola piattaforma, è possibile accettare il valore predefinito nella casella di testo **scegliere una cartella** . in questo modo viene pubblicata la distribuzione dipendente dal framework dell'applicazione nella directory * \<project-directory> \bin\Release\netcoreapp2.1\publish*
 
-   Se esegue la pubblicazione in più di una piattaforma, aggiungere una stringa che identifica la piattaforma di destinazione. Se ad esempio si aggiunge la stringa "Linux" al percorso del file, Visual Studio pubblica la distribuzione dipendente dal framework dell'applicazione nella directory del * \< progetto> directory \bin\release\netcoreapp2.1\publish\linux* .
+   Se esegue la pubblicazione in più di una piattaforma, aggiungere una stringa che identifica la piattaforma di destinazione. Se ad esempio si aggiunge la stringa "Linux" al percorso del file, Visual Studio pubblica la distribuzione dipendente dal framework dell'applicazione nella directory * \<project-directory> \bin\Release\netcoreapp2.1\publish\linux*
 
 1. Creare il profilo selezionando l'icona dell'elenco a discesa accanto al pulsante **Pubblica** e selezionando **Crea profilo**. Selezionare il pulsante **Crea profilo** per creare il profilo.
 
@@ -216,7 +216,7 @@ Eseguire le operazioni seguenti per ogni piattaforma a cui è destinata l'applic
 
 Ripetere questi passaggi per definire eventuali piattaforme di destinazione dell'applicazione.
 
-I profili sono stati configurati e ora si è pronti per pubblicare l'applicazione. Per eseguire questa operazione:
+I profili sono stati configurati e ora si è pronti per pubblicare l'applicazione. A tale scopo, effettuare l'operazione seguente:
 
    1. Se la finestra **Pubblica** non è attualmente aperta, fare clic con il pulsante destro del mouse sul progetto (non sulla soluzione) in **Esplora soluzioni** e selezionare **Pubblica**.
 

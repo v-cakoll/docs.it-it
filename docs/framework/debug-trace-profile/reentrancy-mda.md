@@ -1,5 +1,6 @@
 ---
 title: rientranza (MDA)
+description: Esaminare l'MDA rientrante, che può essere attivato se l'heap oggetti è danneggiato o se si verificano altri errori gravi durante la transizione da codice nativo a codice gestito.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - unmanaged code, debugging
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - managed code, debugging
 - native debugging, MDAs
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
-ms.openlocfilehash: 5cbe8e843ad72785010240f3db30b1d344c80650
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f666e505b8382b0bec8dcfdb34c775850e46c429
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181770"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803105"
 ---
 # <a name="reentrancy-mda"></a>rientranza (MDA)
 L'assistente al debug gestito `reentrancy` viene attivato quando viene effettuato un tentativo di transizione da codice nativo a codice gestito nei casi in cui un precedente passaggio da codice gestito a nativo non è stato eseguito mediante una transizione ordinata.  
@@ -33,7 +34,7 @@ L'assistente al debug gestito `reentrancy` viene attivato quando viene effettuat
   
  Questo problema è sempre causato dal codice dell'applicazione.  
   
-## <a name="resolution"></a>Risoluzione  
+## <a name="resolution"></a>Soluzione  
  Esaminare l'analisi dello stack per il thread che ha attivato questo assistente al debug gestito.  Il thread sta cercando di eseguire una chiamata non valida nel codice gestito.  L'analisi dello stack indica il codice dell'applicazione che usa il punto di estendibilità, il codice del sistema operativo che fornisce il punto di estendibilità e il codice gestito interrotto dal punto di estendibilità.  
   
  Si noterà, ad esempio, che l'assistente al debug gestito viene attivato in un tentativo di chiamare il codice gestito da un gestore di eccezioni con vettori.  Nello stack sarà possibile vedere il codice di gestione delle eccezioni del sistema operativo e il codice gestito che genera un'eccezione come <xref:System.DivideByZeroException> o <xref:System.AccessViolationException>.  

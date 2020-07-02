@@ -1,5 +1,6 @@
 ---
 title: Stampa con anteprima di stampa
+description: Informazioni su come aggiungere servizi di anteprima di stampa all'applicazione tramite il Windows Forms controllo PrintPreviewDialog.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - printing [Windows Forms], with print preview
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
-ms.openlocfilehash: 1975c902fdb56326c763f2e2fc11e381ffc7fbd3
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: abcf77db40f648df1a0cd49922bb49e5c9407811
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621613"
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a>Procedura: stampare in Windows Form tramite l'anteprima di stampa
 Nella programmazione di Windows Form è comune offrire servizi di anteprima di stampa oltre che di stampa. Per aggiungere facilmente i servizi di anteprima di stampa all'applicazione, usare un controllo <xref:System.Windows.Forms.PrintPreviewDialog> in combinazione con la logica di gestione degli eventi <xref:System.Drawing.Printing.PrintDocument.PrintPage> per la stampa di un file.  
@@ -64,6 +65,6 @@ Nella programmazione di Windows Form è comune offrire servizi di anteprima di s
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: stampare un file di testo con più pagine in Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
-- [Supporto per la stampa in Windows Forms](windows-forms-print-support.md)
-- [Stampa più sicura in Windows Forms](../more-secure-printing-in-windows-forms.md)
+- [Procedura: stampare un file di testo con più pagine in Windows Form](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Supporto per la stampa in Windows Form](windows-forms-print-support.md)
+- [Stampa più protetta in Windows Form](../more-secure-printing-in-windows-forms.md)

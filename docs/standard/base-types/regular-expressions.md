@@ -1,7 +1,7 @@
 ---
-title: Espressioni regolari di .NET Framework
+title: Espressioni regolari .NET
 description: Usare espressioni regolari per trovare modelli di caratteri specifici, convalidare testo, lavorare con sottostringhe di testo & aggiungere stringhe estratte a una raccolta in .NET.
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: d9505cdfb57faf586c714aa7dd537210959f50d8
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: f57199c2ddf6569020554e74b6e70801844da641
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768833"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802897"
 ---
 # <a name="net-regular-expressions"></a>Espressioni regolari di .NET
 
@@ -67,6 +67,8 @@ Per altre informazioni sul linguaggio delle espressioni regolari, vedere [Lingua
 ## <a name="regular-expression-examples"></a>Esempi di espressioni regolari
 
 La classe <xref:System.String> include numerosi metodi di ricerca e sostituzione di stringhe che è possibile usare quando si vogliono individuare stringhe letterali in una stringa più grande. Le espressioni regolari sono utili per lo più quando si vuole individuare una di diverse sottostringhe in una stringa più grande o quando si vogliono identificare dei modelli in una stringa, come illustrato negli esempi seguenti.
+
+[!INCLUDE [regex](../../../includes/regex.md)]
 
 > [!TIP]
 > Lo spazio dei nomi <xref:System.Web.RegularExpressions> contiene un numero di oggetti di espressione regolare che implementano i modelli di espressione regolare predefiniti per l'analisi di stringhe da documenti HTML, XML e ASP.NET. Ad esempio, la classe <xref:System.Web.RegularExpressions.TagRegex> identifica i tag di inizio in una stringa e la classe <xref:System.Web.RegularExpressions.CommentRegex> identifica i commenti ASP.NET in una stringa.

@@ -1,5 +1,6 @@
 ---
 title: Listener di traccia
+description: Esplorare i listener di traccia, un meccanismo per la raccolta e la registrazione dei messaggi di traccia inviati in .NET. Un listener raccoglie, archivia e instrada i messaggi.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,15 +15,15 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
-ms.openlocfilehash: a51c046a296fbb62d21c7784cf7c1e78b700f3e9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: d08f86c782284a296090cf63e4b03c8d446a95fc
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216146"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803523"
 ---
 # <a name="trace-listeners"></a>Listener di traccia
-Quando si usa **Trace**, **Debug** e <xref:System.Diagnostics.TraceSource>, è necessario disporre di un meccanismo per la raccolta e la registrazione dei messaggi inviati. I messaggi di traccia vengono ricevuti dai *listener*. La funzione di un listener è quella di raccogliere, archiviare e indirizzare i messaggi di traccia. I listener dirigono l'output di traccia a una destinazione appropriata, ad esempio un log, una finestra o un file di testo.  
+Quando si usa **Trace**, **Debug** e <xref:System.Diagnostics.TraceSource>, è necessario disporre di un meccanismo per la raccolta e la registrazione dei messaggi inviati. I messaggi di traccia vengono ricevuti dai *listener*. Il compito di un listener è raccogliere, archiviare e inviare messaggi di errore. I listener indirizzano l'output di tracciatura a una destinazione appropriata, ad esempio un file di log, una finestra o un file di testo.  
   
  I listener sono disponibili per le classi **Debug**, **Trace** e <xref:System.Diagnostics.TraceSource>, ognuna delle quali può inviare il proprio output a un'ampia gamma di oggetti listener. Di seguito sono riportati i listener predefiniti comunemente usati:  
   
@@ -34,7 +35,7 @@ Quando si usa **Trace**, **Debug** e <xref:System.Diagnostics.TraceSource>, è n
   
 - <xref:System.Diagnostics.ConsoleTraceListener> reindirizza l'output di traccia o di debug all'output standard o al flusso di errori standard.  
   
-- Tramite l'oggetto <xref:System.Diagnostics.DelimitedListTraceListener> l'output di traccia o di debug viene indirizzato a un writer di testo, ad esempio un writer di flusso oppure a un flusso, ad esempio un flusso di file. L'output di traccia è in un formato di testo delimitato che usa il delimitatore specificato dalla proprietà <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>.  
+- Tramite l'oggetto <xref:System.Diagnostics.DelimitedListTraceListener> l'output di traccia o di debug viene indirizzato a un writer di testo, ad esempio un writer di flusso oppure a un flusso, ad esempio un flusso di file. L'output di traccia è in un formato di testo delimitato che usa il delimitatore specificato dalla <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> Proprietà.  
   
 - <xref:System.Diagnostics.XmlWriterTraceListener> reindirizza l'output di traccia o di debug come dati con codifica XML a un oggetto <xref:System.IO.TextWriter> o <xref:System.IO.Stream>, come <xref:System.IO.FileStream>.  
   

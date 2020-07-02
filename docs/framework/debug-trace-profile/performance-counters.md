@@ -1,21 +1,22 @@
 ---
 title: Contatori di prestazioni in .NET Framework
+description: Vedere informazioni sui contatori delle prestazioni in .NET. Sono disponibili contatori delle prestazioni per le eccezioni, l'interoperabilità, i compilatori JIT, il caricamento, la memoria, la rete, la sicurezza e altro ancora.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - performance, .NET Framework applications
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: 44a5d1cb70d294d720290a4754bb5f5cb47f79a4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3702e9d2e0a369f5391c16088202caf5d7ced7ea
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400022"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803703"
 ---
-# <a name="performance-counters-in-the-net-framework"></a>Contatori delle prestazioni in .NET Framework
+# <a name="performance-counters-in-the-net-framework"></a>Contatori delle prestazioni nel .NET Framework
 
-In questo argomento viene fornito un elenco dei contatori delle prestazioni disponibili in [Performance Monitor di Windows.](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)  
+In questo argomento viene fornito un elenco di contatori delle prestazioni che è possibile trovare in [Performance Monitor di Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
 
 ## <a name="exception-performance-counters"></a>Contatori delle prestazioni delle eccezioni  
  La categoria delle eccezioni CLR .NET della console Prestazioni include contatori che forniscono informazioni sulle eccezioni generate dall'applicazione. Nella tabella che segue vengono descritti tali contatori di prestazioni.  
@@ -23,7 +24,7 @@ In questo argomento viene fornito un elenco dei contatori delle prestazioni disp
 |Contatore delle prestazioni|Descrizione|  
 |-------------------------|-----------------|  
 |**Eccezioni**|Visualizza il numero totale di eccezioni generate dall'avvio dell'applicazione. Include sia le eccezioni .NET che quelle non gestite convertite in eccezioni .NET. Ad esempio, HRESULT restituito dal codice non gestito viene convertito in un eccezione nel codice gestito.<br /><br /> Questo contatore include sia le eccezioni gestite che non gestite. Le eccezioni rigenerate vengono conteggiate di nuovo.|  
-|**Eccezioni/sec**|Visualizza il numero di eccezioni generate al secondo. Include sia le eccezioni .NET che quelle non gestite convertite in eccezioni .NET. Ad esempio, HRESULT restituito dal codice non gestito viene convertito in un eccezione nel codice gestito.<br /><br /> Questo contatore include sia le eccezioni gestite che non gestite. Non rappresenta una media del tempo, ma visualizza la differenza tra i valori osservati per gli ultimi due campioni divisa per la durata dell'intervallo dei campioni. Questo contatore è un indicatore di potenziali problemi di prestazioni se viene generato un numero elevato (>100s).|  
+|**Eccezioni/sec**|Visualizza il numero di eccezioni generate al secondo. Include sia le eccezioni .NET che quelle non gestite convertite in eccezioni .NET. Ad esempio, HRESULT restituito dal codice non gestito viene convertito in un eccezione nel codice gestito.<br /><br /> Questo contatore include sia le eccezioni gestite che non gestite. Non rappresenta una media del tempo, ma visualizza la differenza tra i valori osservati per gli ultimi due campioni divisa per la durata dell'intervallo dei campioni. Questo contatore è un indicatore di potenziali problemi di prestazioni se viene generata una grande quantità di eccezioni (>centinaia).|  
 |**Filtri/sec**|Visualizza il numero di filtri eccezioni .NET eseguiti al secondo. Un filtro eccezioni esegue la valutazione a prescindere che l'eccezione sia gestita o meno.<br /><br /> Questo contatore non rappresenta una media del tempo, ma visualizza la differenza tra i valori osservati per gli ultimi due campioni divisa per la durata dell'intervallo dei campioni.|  
 |**Blocchi finally/sec**|Visualizza il numero di blocchi finally eseguiti al secondo. Un blocco finally viene eseguito in qualsiasi caso, a prescindere dal modo in cui è stato terminato il blocco try.  Vengono conteggiati solo i blocchi finally eseguiti per un'eccezione. I blocchi finally nei normali percorsi di codice non vengono conteggiati da questo contatore.<br /><br /> Questo contatore non rappresenta una media del tempo, ma visualizza la differenza tra i valori osservati per gli ultimi due campioni divisa per la durata dell'intervallo dei campioni.|  
 |**Frame da generato a gestito/sec**|Visualizza il numero di stack frame attraversati al secondo, dal frame che ha generato l'eccezione al frame che l'ha gestita. Il contatore viene reimpostato su zero quando viene immesso un gestore di eccezioni, quindi le eccezioni annidate visualizzano la profondità di stack da gestore a gestore.<br /><br /> Questo contatore non rappresenta una media del tempo, ma visualizza la differenza tra i valori osservati per gli ultimi due campioni divisa per la durata dell'intervallo dei campioni.|  
@@ -112,7 +113,7 @@ In questo argomento viene fornito un elenco dei contatori delle prestazioni disp
 |**Dimensione heap di generazione 1**|Visualizza il numero corrente di byte nella generazione 1. Questo contatore non visualizza la dimensione massima della generazione 1. Gli oggetti non vengono allocati direttamente in questa generazione, ma vengono promossi dalle Garbage Collection di generazione 0. Questo contatore viene aggiornato alla fine di una Garbage Collection, non a ogni allocazione.|  
 |**Byte di generazione 1 promossi/sec**|Visualizza il numero di byte al secondo promossi dalla generazione 1 alla generazione 2. In questo contatore non sono inclusi gli oggetti promossi solo perché in attesa di essere finalizzati.<br /><br /> La memoria viene promossa quando non è raccolta dalla Garbage Collection. Nessun elemento viene promosso dalla generazione 2 perché è quella meno recente. Questo contatore è un indicatore degli oggetti di durata molto lunga creati al secondo.<br /><br /> Questo contatore visualizza la differenza tra i valori osservati negli ultimi due esempi divisa per la durata dell'intervallo di campionamento.|  
 |**Dimensione heap di generazione 2**|Visualizza il numero corrente di byte nella generazione 2. Gli oggetti non vengono allocati direttamente in questa generazione, ma vengono promossi dalla generazione 1 durante le Garbage Collection di generazione 1 precedenti. Questo contatore viene aggiornato alla fine di una Garbage Collection, non a ogni allocazione.|  
-|**Dimensione heap Large Object**|Visualizza la dimensione corrente, in byte, dell'heap oggetti grandi. Gli oggetti maggiori di circa 85.000 byte vengono considerati come oggetti di grandi dimensioni dal Garbage Collector e vengono allocati direttamente in un heap speciale. Non sono promossi attraverso le generazioni. Questo contatore viene aggiornato alla fine di una Garbage Collection, non a ogni allocazione.|  
+|**Dimensione heap Large Object**|Consente di visualizzare le dimensioni correnti, in byte, dell'heap oggetti grandi. Gli oggetti che sono maggiori di circa 85.000 byte vengono trattati come oggetti di grandi dimensioni dal Garbage Collector e vengono allocati direttamente in un heap speciale. Non vengono promossi attraverso le generazioni. Questo contatore viene aggiornato alla fine di una Garbage Collection, non a ogni allocazione.|  
 |**ID di processo**|Viene visualizzato l'ID processo dell'istanza del processo CLR in fase di monitoraggio.|  
 |**Memoria di completamento promossa dalla generazione 0**|Visualizza i byte di memoria promossi dalla generazione 0 alla generazione 1 solo perché in attesa di essere completati. Questo contatore non è cumulativo, ma visualizza il valore rilevato al termine dell'ultima Garbage Collection.|  
 |**Memoria promossa dalla generazione 0**|Visualizza i byte di memoria non raccolti dalla Garbage Collection e promossi dalla generazione 0 alla generazione 1. In questo contatore non sono inclusi gli oggetti promossi solo perché in attesa di essere finalizzati. Questo contatore non è cumulativo, ma visualizza il valore rilevato al termine dell'ultima Garbage Collection.|  
@@ -230,4 +231,4 @@ for (int i = 0; i < Array.Length; i++)
 ## <a name="see-also"></a>Vedere anche
 
 - [Contatori delle prestazioni](performance-counters.md)
-- [Profilatura di runtime](runtime-profiling.md)
+- [Profilatura runtime](runtime-profiling.md)

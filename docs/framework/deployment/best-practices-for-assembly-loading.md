@@ -1,5 +1,6 @@
 ---
 title: Procedure consigliate per il caricamento di assembly
+description: Esplorare le procedure consigliate per il caricamento di assembly in .NET. Evitare problemi di identità del tipo che possono causare cast non validi, metodi mancanti e altre eccezioni.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies,binding
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: 7575c40edf47e977335bcc34fcd9e49debab0980
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8ee5243258ea1b853b4690b79ec032c46d1b3777
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803502"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Procedure consigliate per il caricamento di assembly
 Questo articolo illustra come evitare problemi di identità del tipo che possono causare eccezioni <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e altri errori. Nell'articolo vengono discussi i seguenti suggerimenti:  
@@ -28,7 +29,7 @@ Questo articolo illustra come evitare problemi di identità del tipo che possono
   
 - [Evitare il caricamento di un assembly in più contesti](#avoid_loading_into_multiple_contexts)  
   
-- [Evitare di caricare più versioni di un assembly nello stesso contesto](#avoid_loading_multiple_versions)  
+- [Evitare il caricamento di più versioni di un assembly nello stesso contesto](#avoid_loading_multiple_versions)  
   
 - [Considerare il passaggio al contesto di caricamento predefinito](#switch_to_default)  
   

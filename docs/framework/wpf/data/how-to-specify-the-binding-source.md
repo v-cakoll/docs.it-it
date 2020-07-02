@@ -1,5 +1,6 @@
 ---
 title: "Procedura: specificare l'origine del binding"
+description: Informazioni su come specificare l'origine del binding tramite questo esempio nell'Windows Presentation Foundation (WPF).
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: 4fde66b22bac6b4a2cfeb4eceb50027daadee387
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 02f27da007ebe8c5985f91b83adfba7d3d00219a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454361"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621665"
 ---
 # <a name="how-to-specify-the-binding-source"></a>Procedura: specificare l'origine del binding
 Nel data binding l'oggetto origine di binding fa riferimento all'oggetto da cui si ottengono i dati. Questo argomento descrive i vari modi per specificare l'origine del binding.  
@@ -37,11 +38,11 @@ Nel data binding l'oggetto origine di binding fa riferimento all'oggetto da cui 
   
  In alternativa, se si desidera specificare l'origine nei singoli binding in modo esplicito, sono disponibili le opzioni seguenti. Queste hanno precedenza sul contesto dei dati ereditato.  
   
-|proprietà|Descrizione|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
-|<xref:System.Windows.Data.Binding.Source%2A>|Usare questa proprietà per impostare l'origine su un'istanza di un oggetto. Se non è necessaria la funzionalità di definizione di un ambito in cui diverse proprietà ereditano lo stesso contesto dati, è possibile usare la proprietà <xref:System.Windows.Data.Binding.Source%2A> invece della proprietà `DataContext`. Per ulteriori informazioni, vedere <xref:System.Windows.Data.Binding.Source%2A>.|  
-|<xref:System.Windows.Data.Binding.RelativeSource%2A>|Risulta utile se si desidera specificare l'origine rispetto alla posizione in cui si trova la destinazione del binding. Alcuni scenari comuni in cui è possibile usare questa proprietà: se si desidera associare una proprietà dell'elemento a un'altra proprietà dello stesso elemento oppure se si definisce un binding in uno stile o un modello. Per ulteriori informazioni, vedere <xref:System.Windows.Data.Binding.RelativeSource%2A>.|  
-|<xref:System.Windows.Data.Binding.ElementName%2A>|Specificare una stringa che rappresenta l'elemento a cui si desidera eseguire il binding. Risulta utile se si desidera eseguire il binding alla proprietà di un altro elemento dell'applicazione, Ad esempio, se si vuole usare un <xref:System.Windows.Controls.Slider> per controllare l'altezza di un altro controllo nell'applicazione o se si vuole associare la <xref:System.Windows.Controls.ContentControl.Content%2A> del controllo alla proprietà <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> del controllo <xref:System.Windows.Controls.ListBox>. Per ulteriori informazioni, vedere <xref:System.Windows.Data.Binding.ElementName%2A>.|  
+|<xref:System.Windows.Data.Binding.Source%2A>|Usare questa proprietà per impostare l'origine su un'istanza di un oggetto. Se non è necessaria la funzionalità di definizione di un ambito in cui diverse proprietà ereditano lo stesso contesto dati, è possibile utilizzare la <xref:System.Windows.Data.Binding.Source%2A> proprietà anziché la `DataContext` Proprietà. Per altre informazioni, vedere <xref:System.Windows.Data.Binding.Source%2A>.|  
+|<xref:System.Windows.Data.Binding.RelativeSource%2A>|Risulta utile se si desidera specificare l'origine rispetto alla posizione in cui si trova la destinazione del binding. Alcuni scenari comuni in cui è possibile usare questa proprietà: se si desidera associare una proprietà dell'elemento a un'altra proprietà dello stesso elemento oppure se si definisce un binding in uno stile o un modello. Per altre informazioni, vedere <xref:System.Windows.Data.Binding.RelativeSource%2A>.|  
+|<xref:System.Windows.Data.Binding.ElementName%2A>|Specificare una stringa che rappresenta l'elemento a cui si desidera eseguire il binding. Risulta utile se si desidera eseguire il binding alla proprietà di un altro elemento dell'applicazione, Ad esempio, se si vuole usare un oggetto <xref:System.Windows.Controls.Slider> per controllare l'altezza di un altro controllo nell'applicazione o se si vuole associare l'oggetto <xref:System.Windows.Controls.ContentControl.Content%2A> del controllo alla <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> proprietà del <xref:System.Windows.Controls.ListBox> controllo. Per altre informazioni, vedere <xref:System.Windows.Data.Binding.ElementName%2A>.|  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -49,5 +50,5 @@ Nel data binding l'oggetto origine di binding fa riferimento all'oggetto da cui 
 - <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
 - [Ereditarietà del valore della proprietà](../advanced/property-value-inheritance.md)
 - [Panoramica sul data binding](../../../desktop-wpf/data/data-binding-overview.md)
-- [Panoramica sulle dichiarazioni di associazione](binding-declarations-overview.md)
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+- [Cenni preliminari sulle dichiarazioni di associazione](binding-declarations-overview.md)
+- [Procedure](data-binding-how-to-topics.md)

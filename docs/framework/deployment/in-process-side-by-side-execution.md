@@ -1,16 +1,17 @@
 ---
 title: Esecuzione side-by-side in-process
+description: Utilizzare l'hosting affiancato in-process per eseguire numerose versioni del Common Language Runtime (CLR) in un unico processo .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-ms.openlocfilehash: 5ca2f03576946a23b3133bbe7532d46c4ad758ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 078f2eaada8fac57138bef22d46218ef2ccda835
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622601"
 ---
 # <a name="in-process-side-by-side-execution"></a>Esecuzione side-by-side in-process
 A partire da .NET Framework 4, è possibile usare l'hosting side-by-side in-process per eseguire più versioni di Common Language Runtime (CLR) in un unico processo. Per impostazione predefinita, i componenti COM gestiti vengono eseguiti con la versione di .NET Framework con cui sono stati compilati, indipendentemente dalla versione di .NET Framework che viene caricata per il processo.  
@@ -50,15 +51,15 @@ A partire da .NET Framework 4, è possibile usare l'hosting side-by-side in-proc
   
 - **Scenario 1:** applicazione nativa che usa i componenti COM compilati con versioni precedenti di .NET Framework.  
   
-     Versioni di .NET Framework installate: .NET Framework 4 e tutte le altre versioni di .NET Framework utilizzate dai componenti COM.  
+     .NET Framework versioni installate: .NET Framework 4 e tutte le altre versioni del .NET Framework utilizzate dai componenti COM.  
   
      Cosa fare: in questo scenario, non eseguire alcuna operazione. I componenti COM verranno eseguiti con la versione di .NET Framework con la quale sono stati registrati.  
   
-- **Scenario 2:** applicazione gestita compilata con .NET Framework 2.0 SP1 che si preferisce eseguire con .NET Framework 2.0, ma è disposto a essere eseguito su .NET Framework 4 se non è presente la versione 2.0.  
+- **Scenario 2**: applicazione gestita compilata con la .NET Framework 2,0 SP1 che è preferibile eseguire con l'.NET Framework 2,0, ma che è disponibile per l'esecuzione in .NET Framework 4 se la versione 2,0 non è presente.  
   
-     Versioni di .NET Framework installate: una versione precedente di .NET Framework e .NET Framework 4.  
+     .NET Framework versioni installate: una versione precedente del .NET Framework e il .NET Framework 4.  
   
-     Cosa fare: nel [file di configurazione dell'applicazione](../configure-apps/index.md) contenuto nella directory dell'applicazione usare [l'elemento \<startup>](../configure-apps/file-schema/startup/startup-element.md) e [l'elemento \<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) impostati nel modo seguente:  
+     Cosa fare: nel file di [configurazione dell'applicazione](../configure-apps/index.md) nella directory dell'applicazione usare l' [ \<startup> elemento](../configure-apps/file-schema/startup/startup-element.md) e l' [ \<supportedRuntime> elemento](../configure-apps/file-schema/startup/supportedruntime-element.md) impostato come indicato di seguito:  
   
     ```xml  
     <configuration>  
@@ -69,9 +70,9 @@ A partire da .NET Framework 4, è possibile usare l'hosting side-by-side in-proc
     </configuration>  
     ```  
   
-- **Scenario 3:** Applicazione nativa che utilizza componenti COM compilati con versioni precedenti di .NET Framework che si desidera eseguire con .NET Framework 4.  
+- **Scenario 3:** Applicazione nativa che usa componenti COM compilati con le versioni precedenti del .NET Framework che si vuole eseguire con la .NET Framework 4.  
   
-     Versioni di .NET Framework installate: .NET Framework 4.  
+     .NET Framework versioni installate: .NET Framework 4.  
   
      Cosa fare: nel file di configurazione dell'applicazione contenuto nella directory dell'applicazione usare l'elemento `<startup>` con l'attributo `useLegacyV2RuntimeActivationPolicy` impostato su `true` e l'elemento `<supportedRuntime>` impostato nel modo seguente:  
   
@@ -173,5 +174,5 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ## <a name="see-also"></a>Vedere anche
 
-- [\<elemento> di avvio](../configure-apps/file-schema/startup/startup-element.md)
-- [\<supportedRuntime> elemento](../configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<startup>Elemento](../configure-apps/file-schema/startup/startup-element.md)
+- [\<supportedRuntime>Elemento](../configure-apps/file-schema/startup/supportedruntime-element.md)

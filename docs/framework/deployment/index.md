@@ -1,5 +1,6 @@
 ---
 title: Distribuzione di .NET Framework e delle applicazioni
+description: Introduzione alla distribuzione di .NET con l'applicazione. .NET fornisce applicazioni senza effetti, componenti privati per impostazione predefinita, condivisione del codice controllata e altro ancora.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deploying applications [.NET Framework], packaging
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cce888c962c9ab83c13cce4040eb9ba50270972d
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716469"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803501"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Distribuzione di .NET Framework e delle applicazioni
 
@@ -32,7 +33,7 @@ Usare i seguenti collegamenti ad altri argomenti di MSDN per informazioni specif
 
     - [programma di installazione Web](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
-    - [Offline installer](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [Programma di installazione offline](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
   - Modalità di installazione:
 
@@ -40,7 +41,7 @@ Usare i seguenti collegamenti ad altri argomenti di MSDN per informazioni specif
 
     - [Visualizzazione di un'interfaccia utente](deployment-guide-for-developers.md#chaining_default)
 
-  - [Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](reducing-system-restarts.md)
+  - [Riduzione del riavvii del sistema durante le installazioni di .NET Framework 4,5](reducing-system-restarts.md)
 
   - [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](../install/troubleshoot-blocked-installations-and-uninstallations.md)
 
@@ -64,7 +65,7 @@ Usare i seguenti collegamenti ad altri argomenti di MSDN per informazioni specif
 
 **Manutenzione**
 
-- Per informazioni generali, vedere il blog di [.NET Framework](https://devblogs.microsoft.com/dotnet/).
+- Per informazioni generali, vedere il [blog .NET Framework](https://devblogs.microsoft.com/dotnet/).
 
 - [Determinazione delle versioni](../migration-guide/how-to-determine-which-versions-are-installed.md)
 
@@ -160,10 +161,10 @@ La modalità di distribuzione delle applicazioni dipende anche da alcune conside
 
 |Titolo|Descrizione|
 |-----------|-----------------|
-|[Come il runtime individua gli assembly](how-the-runtime-locates-assemblies.md)|Descrive come Common Language Runtime determina l'assembly da usare per eseguire una richiesta di associazione.|
+|[Modalità di individuazione degli assembly da parte del runtime](how-the-runtime-locates-assemblies.md)|Descrive come Common Language Runtime determina l'assembly da usare per eseguire una richiesta di associazione.|
 |[Procedure consigliate per il caricamento di assembly](best-practices-for-assembly-loading.md)|Illustra come evitare problemi di identità del tipo che possono causare la generazione di eccezioni <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e altri errori.|
 |[Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](reducing-system-restarts.md)|Descrive il gestore di riavvio, che impedisce automaticamente il riavvio quando possibile, e viene illustrato come le applicazioni che installano .NET Framework possano usufruirne.|
-|[Guida alla distribuzione per amministratori](guide-for-administrators.md)|Viene illustrato come un amministratore di sistema può distribuire .NET Framework e le relative dipendenze di sistema in una rete utilizzando Microsoft Endpoint Configuration Manager.|
+|[Guida alla distribuzione per amministratori](guide-for-administrators.md)|Viene illustrato come un amministratore di sistema può distribuire il .NET Framework e le relative dipendenze di sistema attraverso una rete usando Microsoft endpoint Configuration Manager.|
 |[Guida alla distribuzione per gli sviluppatori](deployment-guide-for-developers.md)|Illustra come gli sviluppatori possono installare .NET Framework nei computer dei rispettivi utenti con le rispettive applicazioni.|
 |[Distribuzione di applicazioni, servizi e componenti](/visualstudio/deployment/deploying-applications-services-and-components)|Illustra le opzioni di distribuzione di Visual Studio, incluse le istruzioni per la pubblicazione di un'applicazione usando le tecnologie ClickOnce e Windows Installer.|
 |[Pubblicazione di applicazioni ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Descrive come creare il pacchetto di un'applicazione Windows Forms e distribuirla con ClickOnce nei computer client di una rete.|
@@ -173,4 +174,4 @@ La modalità di distribuzione delle applicazioni dipende anche da alcune conside
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida di sviluppo](../development-guide.md)
+- [Guida allo sviluppo](../development-guide.md)

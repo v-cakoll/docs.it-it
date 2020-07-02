@@ -1,5 +1,6 @@
 ---
 title: .NET Framework Client Profile
+description: Informazioni su .NET client profile, un subset di .NET fornito nella versione 4 e versioni precedenti di .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF [.NET Framework Client Profile]
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - profile [.NET Framework Client Profile]
 - .NET Framework Client Profile
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
-ms.openlocfilehash: 32fc29500a8a2e95b52ba16847020cdb390caceb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9678e49cd5f3c37f59c1e5a0eda668e5602fbcb5
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716568"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621743"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 .NET Client Profile è un subset di .NET Framework disponibile con NET Framework 4 e le versioni precedenti, ottimizzato per le applicazioni client. .NET Framework è una piattaforma di sviluppo per Windows, Windows Phone e Microsoft Azure e fornisce un ambiente di esecuzione applicazioni gestito e la libreria di classi .NET Framework. .NET Framework 4 e versioni precedenti offrono due opzioni di distribuzione: la versione completa di .NET Framework e Client Profile. Client Profile consente una distribuzione più veloce e pacchetti di installazione di dimensioni ridotte rispetto alla versione completa di .NET Framework.  
@@ -30,4 +31,4 @@ ms.locfileid: "75716568"
 - [.NET Framework Client Profile (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
 - [Panoramica del multitargeting di Visual Studio](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [Risoluzione dei problemi relativi agli errori di impostazione di .NET Framework come destinazione](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)
-- [Procedura: impostare come destinazione una versione di .NET Framework](/visualstudio/ide/visual-studio-multi-targeting-overview)
+- [Procedura: destinare una versione di .NET Framework](/visualstudio/ide/visual-studio-multi-targeting-overview)

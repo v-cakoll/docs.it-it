@@ -1,5 +1,6 @@
 ---
 title: Importazione di una libreria dei tipi come assembly
+description: Importare una libreria dei tipi che contiene le definizioni dei tipi COM come assembly. Informazioni su come creare metadati da una libreria dei tipi, ottenendo un assembly di interoperabilità.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-ms.openlocfilehash: e1a21175bcabc72b86a328d4f73ecec37140c304
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e5187e3c2ce533f25a38e93bc3715dd3e2e47c11
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107594"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622718"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importazione di una libreria dei tipi come assembly
 
@@ -75,10 +76,10 @@ Dopo aver individuato la libreria dei tipi che contiene l'implementazione del ti
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - [Esposizione di componenti COM a .NET Framework](exposing-com-components.md)
 - [Riepilogo della conversione da libreria dei tipi ad assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp. exe (utilità di importazione della libreria di tipi)](../tools/tlbimp-exe-type-library-importer.md)
+- [Tlbimp.exe (utilità di importazione della libreria di tipi)](../tools/tlbimp-exe-type-library-importer.md)
 - [Personalizzazione di wrapper standard](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
 - [Uso dei tipi COM nel codice gestito](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Compilazione di un progetto di interoperabilità](compiling-an-interop-project.md)
 - [Distribuzione di una applicazione di interoperabilità](deploying-an-interop-application.md)
-- [Procedura: aggiungere riferimenti alle librerie dei tipi](how-to-add-references-to-type-libraries.md)
+- [Procedura: Aggiungere riferimenti alle librerie dei tipi](how-to-add-references-to-type-libraries.md)
 - [Procedura: Generare assembly di interoperabilità da librerie dei tipi](how-to-generate-interop-assemblies-from-type-libraries.md)

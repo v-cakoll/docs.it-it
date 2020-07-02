@@ -1,5 +1,6 @@
 ---
 title: Identificazione delle funzioni nelle DLL
+description: Identificare le funzioni nelle DLL. L'identità di una funzione DLL è costituita da un nome di funzione o ordinale e dal nome del file DLL in cui è possibile trovare l'implementazione.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - platform invoke, identifying functions
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - identifying DLL functions
 - DLL functions
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
-ms.openlocfilehash: 1a94bb2020b07ba8405d901f46ec4a0687e79700
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 054d1351a9ee6adab17117c9f423aa26d0d9ed59
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121982"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622731"
 ---
 # <a name="identifying-functions-in-dlls"></a>Identificazione delle funzioni nelle DLL
 L'identità di una funzione di una DLL è costituita dagli elementi seguenti:  
@@ -47,6 +48,6 @@ L'identità di una funzione di una DLL è costituita dagli elementi seguenti:
 
 - [Utilizzo di funzioni di DLL non gestite](consuming-unmanaged-dll-functions.md)
 - [Specifica di un punto di ingresso](specifying-an-entry-point.md)
-- [Creating a Class to Hold DLL Functions](creating-a-class-to-hold-dll-functions.md) (Creazione di una classe contenente funzioni di DLL)
+- [Creazione di una classe che contenga le funzioni di DLL](creating-a-class-to-hold-dll-functions.md)
 - [Creazione di prototipi nel codice gestito](creating-prototypes-in-managed-code.md)
 - [Chiamata a una funzione di DLL](calling-a-dll-function.md)
