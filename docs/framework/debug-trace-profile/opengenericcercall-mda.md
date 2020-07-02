@@ -1,5 +1,6 @@
 ---
 title: openGenericCERCall (MDA)
+description: Vedere l'assistente al debug gestito openGenericCERCall, che può essere attivato se il codice CER non viene eseguito quando un thread viene interrotto o quando viene scaricato un dominio dell'applicazione.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), CER calls
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), CER calls
 - generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
-ms.openlocfilehash: 7492a4c0547680a6ace85a5f7c98567770f5575a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4df33b0cdf9759edec47f02b3feb671d03284ec8
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181773"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803937"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall (MDA)
 
@@ -29,13 +30,13 @@ Il codice dell'area a esecuzione vincolata non viene eseguito quando un thread v
 
 In fase di compilazione JIT, la creazione di un'istanza che contiene un tipo riferimento oggetto è rappresentativa solo perché il codice risultante è condiviso e ognuna delle variabili di tipo riferimento oggetto potrebbe essere qualsiasi tipo riferimento oggetto. Ciò può impedire la preparazione anticipata di alcune risorse in fase di esecuzione.
 
-In particolare, i metodi con variabili di tipo generico possono allocare risorse in background in modo differito. Queste sono note come voci di dizionario generiche. Ad esempio, per `List<T> list = new List<T>();` `T` l'istruzione where è una variabile di tipo generico, il runtime deve `List<Object>, List<String>`cercare ed eventualmente creare l'istanza esatta in fase di esecuzione, ad esempio , e così via. Questa operazione può non riuscire per svariati motivi non sotto il controllo dello sviluppatore, ad esempio memoria insufficiente.
+In particolare, i metodi con variabili di tipo generico possono allocare risorse in background in modo differito. Queste sono note come voci di dizionario generiche. Ad esempio, per l'istruzione in `List<T> list = new List<T>();` cui `T` è una variabile di tipo generico, è necessario che il runtime cerchi la ricerca ed eventualmente crei l'esatta creazione di un'istanza in fase di esecuzione, ad esempio, `List<Object>, List<String>` e così via. Questa operazione può non riuscire per svariati motivi non sotto il controllo dello sviluppatore, ad esempio memoria insufficiente.
 
 Questo assistente al debug gestito deve essere attivato solo in fase di compilazione JIT e non quando è prevista la creazione di un'istanza esatta.
 
 Quando viene attivato questo assistente al debug gestito, i sintomi più probabili sono il mancato funzionamento delle aree a esecuzione vincolata per le creazioni di istanze non valide. In effetti, il runtime non ha tentato di implementare un'area a esecuzione vincolata nelle circostanze che hanno causato l'attivazione dell'assistente al debug gestito. Pertanto, se lo sviluppatore usa la creazione d'istanza condivisa dell'area a esecuzione vincolata, gli errori di compilazione JIT, gli errori di caricamento di tipi generici o le interruzioni di thread all'interno dell'area a esecuzione vincolata prevista non vengono intercettati.
 
-## <a name="resolution"></a>Risoluzione
+## <a name="resolution"></a>Soluzione
 
 Non usare variabili di tipo generico che sono di tipo riferimento oggetto per i metodi che possono contenere un'area a esecuzione vincolata.
 
@@ -45,7 +46,7 @@ L'assistente al debug gestito non ha alcun effetto su CLR.
 
 ## <a name="output"></a>Output
 
-Di seguito è riportato un esempio di output da questo mando di proprietà:
+Di seguito è riportato un esempio di output di questo assistente al debug gestito:
   
  ```output
  Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.

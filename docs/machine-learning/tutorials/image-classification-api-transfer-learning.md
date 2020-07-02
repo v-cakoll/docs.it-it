@@ -3,15 +3,15 @@ title: 'Esercitazione: ispezione visiva automatizzata tramite trasferimento Lear
 description: Questa esercitazione illustra come usare Transfer learning per eseguire il training di un modello di apprendimento approfondito di TensorFlow in ML.NET usando l'API di rilevamento immagini per classificare le immagini di superfici concrete come incrinate o non incrinate.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 12/12/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2915259d7c7031b9e699c7fd0cf65cf723c41680
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 17fbb8c6714f3af47c0b554aec2c53c8046021bb
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144422"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803742"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Esercitazione: ispezione visiva automatizzata tramite il trasferimento dell'apprendimento con l'API di classificazione delle immagini ML.NET
 
@@ -81,7 +81,10 @@ Il modello con training pretrain usato in questa esercitazione è la variante a 
 Ora che si dispone di una conoscenza generale del trasferimento dell'apprendimento e dell'API di classificazione delle immagini, è il momento di compilare l'applicazione.
 
 1. Creare un' **applicazione console C# .NET Core** denominata "DeepLearning_ImageClassification_Binary".
-1. Installare il pacchetto NuGet **Microsoft.ml** versione **1.4.0** :
+1. Installare il pacchetto NuGet **Microsoft.ml** :
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     1. In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e selezionare **Gestisci pacchetti NuGet**.
     1. Scegliere "nuget.org" come origine del pacchetto.
     1. Selezionare la scheda **Sfoglia**.
@@ -89,7 +92,7 @@ Ora che si dispone di una conoscenza generale del trasferimento dell'apprendimen
     1. Cercare **Microsoft.ml**.
     1. Selezionare il pulsante **Installa**.
     1. Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo **Accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati.
-    1. Ripetere questi passaggi per i pacchetti NuGet **Microsoft. ml. Vision** versione **1.4.0**, **SciSharp. TensorFlow. Redist** Version **1.15.0**e **Microsoft. ml. ImageAnalytics** Version **1.4.0** .
+    1. Ripetere questi passaggi per i pacchetti NuGet **Microsoft. ml. Vision**, **SciSharp. TensorFlow. Redist**e **Microsoft. ml. ImageAnalytics** .
 
 ### <a name="prepare-and-understand-the-data"></a>Preparare e identificare i dati
 
@@ -378,7 +381,7 @@ Image: 7001-163.jpg | Actual Value: UD | Predicted Value: UD
 Image: 7001-210.jpg | Actual Value: UD | Predicted Value: UD
 ```
 
-Quando si verifica l'immagine *7001 -220. jpg* , è possibile notare che in realtà non è incrinato.
+Dopo l'ispezione dell'immagine *7001-220.jpg* , è possibile notare che in realtà non è incrinato.
 
 ![Immagine del set di dati SDNET2018 utilizzata per la stima](./media/image-classification-api-transfer-learning/predictedimage.jpg)
 

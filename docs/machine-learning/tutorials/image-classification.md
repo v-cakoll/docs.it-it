@@ -1,15 +1,15 @@
 ---
 title: 'Esercitazione: modello di classificazione delle immagini ML.NET da TensorFlow'
 description: Informazioni su come trasferire le informazioni da un modello TensorFlow esistente in un nuovo modello di classificazione delle immagini ML.NET. Il modello TensorFlow è stato sottoposto a training per classificare le immagini in un centinaio di categorie. Il modello ML.NET usa l'apprendimento del trasferimento per classificare le immagini in un minor numero di categorie più ampie.
-ms.date: 01/30/2020
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ae6094d5acd4d26482f3690e174d82bbf1807266
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 38fa349e743da54a21aeb65b76a0273a17c3fae7
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144435"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85804002"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Esercitazione: generare un modello di classificazione delle immagini ML.NET da un modello di TensorFlow con training preliminare
 
@@ -74,7 +74,7 @@ Viene eseguito il `Inception model` training per classificare le immagini in mil
 
 * Food
 * Giocattoli
-* Elettrodomestici
+* Appliance
 
 Questa esercitazione usa il modello di apprendimento avanzato del [modello](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip) TensorFlow, un modello di riconoscimento delle immagini più diffuso con training sul `ImageNet` set di dati. Il modello TensorFlow classifica intere immagini in mille classi, ad esempio "Umbrella", "Jersey" e "lavastoviglie".
 
@@ -122,12 +122,14 @@ Le immagini di training e di test si trovano nelle cartelle assets che verranno 
 
 1. Installare il **pacchetto NuGet Microsoft.ML**:
 
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     * In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e selezionare **Gestisci pacchetti NuGet**.
     * Scegliere "nuget.org" come origine del pacchetto, selezionare la scheda Sfoglia e cercare **Microsoft.ML**.
-    * Fare clic sull'elenco a discesa **Version (versione** ), selezionare il pacchetto **1.4.0** nell'elenco e selezionare il pulsante **Install (installa** ).
+    * Selezionare il pulsante **Installa**.
     * Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** .
     * Selezionare il pulsante **Accetto** nella finestra di dialogo **accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati.
-    * Ripetere questi passaggi per **Microsoft. ml. ImageAnalytics v 1.4.0**, **SciSharp. TensorFlow. Redist v 1.15.0** e **Microsoft. ml. TensorFlow v 1.4.0**.
+    * Ripetere questi passaggi per **Microsoft. ml. ImageAnalytics**, **SciSharp. TensorFlow. Redist** e **Microsoft. ml. TensorFlow**.
 
 ### <a name="download-assets"></a>Scaricare gli asset
 
