@@ -3,14 +3,14 @@ title: Esercitazione sull'elaborazione batch con .NET per Apache Spark
 description: Informazioni su come eseguire l'elaborazione batch con .NET per Apache Spark.
 author: mamccrea
 ms.author: mamccrea
-ms.date: 12/13/2019
+ms.date: 06/25/2020
 ms.topic: tutorial
-ms.openlocfilehash: b00f560317c085058d791e17954603670fccf60f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: dbc3ab5cc4bd7f438e9f3f8e5d36c764d785ce4b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594517"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618285"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>Esercitazione: elaborazione batch con .NET per Apache Spark
 
@@ -25,6 +25,8 @@ In questa esercitazione verranno illustrate le procedure per:
 > * Creare ed eseguire un'applicazione .NET per Apache Spark
 > * Leggere i dati in un frame di dati e prepararli per l'analisi
 > * Elaborare i dati con Spark SQL
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Prerequisiti
 

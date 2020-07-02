@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: edcd6cb6e0d3c3229304f29d3b569800da0a3a01
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 311adfdc98c766adf1e88ee9bc7e601d2cd13ba5
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235674"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620351"
 ---
 ### <a name="systemnetpeertopeercollaboration-unavailable-on-windows-8"></a>System.Net.PeerToPeer.Collaboration non disponibile in Windows 8
 
-|   |   |
-|---|---|
-|Dettagli|Lo spazio dei nomi System.Net.PeerToPeer.Collaboration non è disponibile in Windows 8 o versioni successive.|
-|Suggerimento|Le app che supportano Windows 8 o versioni successive devono essere aggiornate in modo da non dipendere da questo spazio dei nomi o i relativi membri.|
-|Ambito|Principale|
-|Versione|4.5|
-|Tipo|Runtime|
-|API interessate|<ul><li><xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Dettagli
+
+Lo spazio dei nomi System.Net.PeerToPeer.Collaboration non è disponibile in Windows 8 o versioni successive.
+
+#### <a name="suggestion"></a>Suggerimento
+
+Le app che supportano Windows 8 o versioni successive devono essere aggiornate in modo da non dipendere da questo spazio dei nomi o i relativi membri.
+
+| Nome    | Valore       |
+|:--------|:------------|
+| Scope   |Principale|
+|Version|4.5|
+|Type|Runtime
+
+#### <a name="affected-apis"></a>API interessate
+
+-<xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType></li></ul>|

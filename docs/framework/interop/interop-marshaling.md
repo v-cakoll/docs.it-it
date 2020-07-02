@@ -1,17 +1,18 @@
 ---
 title: Marshalling di interoperabilità
+description: Introduzione al marshalling di interoperabilità, che determina il modo in cui i dati vengono passati negli argomenti del metodo e i valori restituiti tra memoria gestita e non gestita durante le chiamate.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marshaling, COM interop
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-ms.openlocfilehash: 70514811a9d236dc485f64fc34297cdb057a1512
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ca733d59abc4ca3d9d470b054ee9e34b5084ae38
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124279"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618974"
 ---
 # <a name="interop-marshaling"></a>Marshalling di interoperabilità
 
@@ -119,9 +120,9 @@ Tra i servizi di runtime vengono inoltre forniti servizi remoti gestiti, utilizz
 
 |Titolo|Descrizione|
 |-----------|-----------------|
-|[Comportamento di marshalling predefinito](default-marshaling-behavior.md)|Descrive le regole usate dal servizio di marshalling di interoperabilità per effettuare il marshalling dei dati.|
+|[comportamento predefinito del marshalling](default-marshaling-behavior.md)|Descrive le regole usate dal servizio di marshalling di interoperabilità per effettuare il marshalling dei dati.|
 |[Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md)|Descrive come dichiarare i parametri dei metodi e passare gli argomenti alle funzioni esportate dalle librerie non gestite.|
-|[Dati di marshalling con interoperabilità COM](marshaling-data-with-com-interop.md)|Descrive come personalizzare i wrapper COM per modificare il comportamento di marshalling.|
+|[dati di marshalling con interoperabilità COM](marshaling-data-with-com-interop.md)|Descrive come personalizzare i wrapper COM per modificare il comportamento di marshalling.|
 |[Procedura: Eseguire la migrazione di codice gestito da DCOM a WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Descrive come eseguire la migrazione da DCOM a WCF.|
 |[Procedura: Eseguire il mapping di HRESULT ed eccezioni](how-to-map-hresults-and-exceptions.md)|Descrive come mappare le eccezioni personalizzate agli oggetti HRESULT e illustra le relazioni di mapping tra ogni oggetto HRESULT e la classe di eccezioni corrispondente in .NET Framework.|
 |[Interoperabilità tramite tipi generici](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|Descrive le azioni supportate quando si usano tipi generici per l'interoperabilità COM.|

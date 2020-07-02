@@ -2,12 +2,12 @@
 title: Programmazione asincrona in C#
 description: Panoramica del supporto del linguaggio C# per la programmazione asincrona con async, await, Task e Task<T>
 ms.date: 06/04/2020
-ms.openlocfilehash: fbbd08f8c0e650c366ca1d283825e629fcb952d7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 992ccd3a015653ea9ee13dfc309d47711ad0fca4
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446439"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619715"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>Programmazione asincrona con async e await
 
@@ -56,7 +56,7 @@ Si procederà ora ad aggiornare il codice in modo che il thread non venga blocca
 :::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" id="SnippetMain":::
 
 > [!IMPORTANT]
-> Il tempo totale trascorso è approssimativamente uguale a quello della versione iniziale di Synchonous. Il codice deve ancora sfruttare alcune delle funzionalità principali della programmazione asincrona.
+> Il tempo totale trascorso è approssimativamente uguale a quello della versione iniziale di Synchonous. Il codice è ancora in uso per sfruttare alcune delle funzionalità principali della programmazione asincrona.
 
 > [!TIP]
 > I corpi dei metodi di `FryEggsAsync` , `FryBaconAsync` e `ToastBreadAsync` sono stati aggiornati per restituire `Task<Egg>` `Task<Bacon>` rispettivamente, e `Task<Toast>` . I metodi vengono rinominati dalla versione originale per includere il suffisso "Async". Le rispettive implementazioni vengono visualizzate come parte della [versione finale](#final-version) più avanti in questo articolo.

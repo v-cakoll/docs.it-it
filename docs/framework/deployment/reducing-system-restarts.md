@@ -1,17 +1,18 @@
 ---
 title: Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5
+description: Informazioni su come ridurre i riavvii del sistema durante le installazioni di .NET 4,5. Potrebbe essere necessario riavviare se un'app .NET 4 è in uso durante l'installazione di .NET 4,5.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, reducing system restarts
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
-ms.openlocfilehash: 6261a883e7b99b7fd38da2a17ab4820c81552506
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bfde0c2f7297c048ba70062918e2281afbccf391
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716422"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618207"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5
 Il programma di installazione di .NET Framework 4.5 usa [Gestione riavvio](/windows/win32/rstmgr/about-restart-manager) per evitare ove possibile il riavvio del sistema durante l'installazione. Se il programma di installazione dell'app installa .NET Framework, può interagire con la Gestione riavvio per sfruttare i vantaggi di questa funzionalità. Per altre informazioni, vedere [Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)  
@@ -19,7 +20,7 @@ Il programma di installazione di .NET Framework 4.5 usa [Gestione riavvio](/wind
 ## <a name="reasons-for-a-restart"></a>Motivi di un riavvio  
  L'installazione di .NET Framework 4.5 richiede un riavvio del sistema se l'app .NET Framework 4 è in uso durante l'installazione, poiché .NET Framework 4.5 sostituisce i file di .NET Framework 4 e richiede che tali file siano disponibili durante l'installazione. In molti casi, il riavvio può essere evitato identificando e chiudendo le app .NET Framework 4 in uso prima dell'installazione. Tuttavia, alcune app di sistema non possono essere chiuse. In questi casi, non è possibile evitare un riavvio.  
   
-## <a name="end-user-experience"></a>Esperienza utente finale  
+## <a name="end-user-experience"></a>Esperienza dell'utente finale  
  Un utente finale che esegue un'installazione completa di .NET Framework 4.5può evitare un riavvio del sistema se il programma di installazione rileva le app .NET Framework 4 in uso. Un messaggio elenca tutte le app .NET Framework 4 in esecuzione e offre la possibilità di chiudere tali app prima dell'installazione. Se l'utente conferma la chiusura, queste applicazioni vengono arrestate dal programma di installazione e viene evitato il riavvio del sistema. Se l'utente non effettua alcuna selezione entro un determinato periodo di tempo, l'installazione continua senza chiudere alcuna app.  
   
  Se la Gestione riavvio rileva una situazione in cui è necessario riavviare il sistema anche se le app in esecuzione vengono chiuse, non viene visualizzato il messaggio.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 3d4315a09869b77b4ae8cbb43646f9a96280b678
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4715a27a94ac86c5e4955c0e8be95c6ee4a28507
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173471"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619702"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Riferimenti per C#)
 
@@ -141,7 +141,7 @@ Un'attività può essere in uno stato di errore perché si sono verificate più 
 
 ## <a name="example"></a>Esempio
 
-Nel seguente esempio, il blocco `try` contiene una chiamata al metodo `ProcessString` che potrebbe causare un'eccezione. La clausola `catch` contiene il gestore di eccezioni che visualizza solo un messaggio sullo schermo. Quando l'istruzione `throw` viene chiamata da `MyMethod`, il sistema cerca l'istruzione `catch` e visualizza il messaggio `Exception caught`.
+Nel seguente esempio, il blocco `try` contiene una chiamata al metodo `ProcessString` che potrebbe causare un'eccezione. La clausola `catch` contiene il gestore di eccezioni che visualizza solo un messaggio sullo schermo. Quando l'istruzione `throw` viene chiamata da `ProcessString`, il sistema cerca l'istruzione `catch` e visualizza il messaggio `Exception caught`.
 
 [!code-csharp[csrefKeywordsExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#2)]
 
@@ -179,10 +179,10 @@ Per altre informazioni, vedere la sezione [Istruzione try](~/_csharplang/spec/st
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida di riferimento a C](../index.md)
+- [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
 - [Istruzioni try, throw e catch (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
-- [generazione](throw.md)
-- [try...finally](try-finally.md)
+- [generare](throw.md)
+- [try-finally](try-finally.md)
 - [Procedura: Come generare in modo esplicito le eccezioni](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

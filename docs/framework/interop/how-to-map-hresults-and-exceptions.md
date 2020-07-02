@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: eseguire il mapping di HRESULT ed eccezioni'
+title: 'Procedura: Eseguire il mapping di HRESULT ed eccezioni'
+description: Vedere come eseguire il mapping dei valori HRESULT restituiti dai metodi COM alle eccezioni generate dai metodi .NET. Il runtime gestisce la transizione tra COM e .NET.
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: e186228d1dc9a42ddfe92428f7dfad29a5789095
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 827e79bdefcde7ae94567e5341ade76097dc8eaa
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181401"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619104"
 ---
-# <a name="how-to-map-hresults-and-exceptions"></a>Procedura: eseguire il mapping di HRESULT ed eccezioni
+# <a name="how-to-map-hresults-and-exceptions"></a>Procedura: Eseguire il mapping di HRESULT ed eccezioni
 I metodi COM segnalano gli errori restituendo HRESULT, mentre i metodi .NET li segnalano generando eccezioni. Il runtime gestisce la transizione tra questi due approcci. Ogni classe di eccezione in .NET Framework viene mappata a un HRESULT.  
   
  Le classi di eccezioni definite dall'utente possono specificare un HRESULT appropriato. Queste classi di eccezione possono modificare dinamicamente il valore HRESULT da restituire quando viene generata l'eccezione impostando il campo **HResult** per l'oggetto eccezione. Informazioni aggiuntive sull'eccezione vengono fornite al client tramite l'interfaccia **IErrorInfo**, implementata per l'oggetto .NET nel processo non gestito.  
@@ -133,8 +134,8 @@ CMyClass::MethodThatThrows
 |**ErrorCode**|HRESULT restituito dalla chiamata.|  
 |**HelpLink**|Se **IErrorInfo-> HelpContext** è diverso da zero, la stringa viene formata concatenando **IErrorInfo ->GetHelpFile** e "#" e **IErrorInfo ->GetHelpContext**. In caso contrario, la stringa viene restituita da **IErrorInfo ->GetHelpFile**.|  
 |**InnerException**|Sempre un riferimento null (**Nothing** in Visual Basic).|  
-|**Messaggio**|Stringa restituita da **IErrorInfo->GetDescription**.|  
-|**origine**|Stringa restituita da **IErrorInfo->GetSource**.|  
+|**Message**|Stringa restituita da **IErrorInfo->GetDescription**.|  
+|**Origine**|Stringa restituita da **IErrorInfo->GetSource**.|  
 |**StackTrace**|Analisi dello stack.|  
 |**TargetSite**|Nome del metodo che ha restituito il valore HRESULT in errore.|  
   

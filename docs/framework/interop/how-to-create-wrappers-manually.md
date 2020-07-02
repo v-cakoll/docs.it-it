@@ -1,17 +1,18 @@
 ---
-title: 'Procedura: creare wrapper manualmente'
+title: 'Procedura: Creare wrapper manualmente'
+description: Creazione manuale di wrapper di tipi COM. Utilizzare un file IDL esistente o una libreria dei tipi oppure creare dichiarazioni gestite ed esportare l'assembly in una libreria dei tipi.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-ms.openlocfilehash: a7818a1c08d8538acfacb22dc270d7ef23a7a582
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e562a7e963ff744bf9193821d54dd898db521464
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181433"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619585"
 ---
-# <a name="how-to-create-wrappers-manually"></a>Procedura: creare wrapper manualmente
+# <a name="how-to-create-wrappers-manually"></a>Procedura: Creare wrapper manualmente
 Se si decide di dichiarare manualmente i tipi COM nel codice sorgente gestito, è consigliabile iniziare con una libreria dei tipi o un file IDL esistente. Se non si ha il file IDL o non è possibile generare un file di libreria dei tipi, simulare i tipi COM mediante la creazione di dichiarazioni gestite e l'esportazione dell'assembly risultante in una libreria dei tipi.  
   
 ### <a name="to-simulate-com-types-from-managed-source"></a>Per simulare i tipi COM dall'origine gestita  
@@ -103,5 +104,5 @@ namespace SAServer
 - [Tipi di dati COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))
 - [Procedura: Modificare assembly di interoperabilità](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
 - [Riepilogo della conversione da libreria dei tipi ad assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp. exe (utilità di importazione della libreria di tipi)](../tools/tlbimp-exe-type-library-importer.md)
-- [Tlbexp. exe (utilità di esportazione della libreria di tipi)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Tlbimp.exe (utilità di importazione della libreria di tipi)](../tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe (utilità di esportazione della libreria di tipi)](../tools/tlbexp-exe-type-library-exporter.md)

@@ -4,12 +4,12 @@ description: Illustra le varie modalità di installazione di .NET Core SDK e del
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: eef724138f2b908bf8601a509d298a06e55fb13e
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ed4f5b914d03cfb072ee4ba168c67262e0d40c08
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324743"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619429"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>Installare .NET Core SDK o runtime di .NET Core in Ubuntu
 
@@ -201,16 +201,17 @@ sudo apt-get update; \
 
 Quando si installa con una gestione pacchetti, queste librerie vengono installate. Tuttavia, se si installa manualmente .NET Core o si pubblica un'app autonoma, è necessario assicurarsi che siano installate le librerie seguenti:
 
-- liblttng-ust0
-- libcurl3 (per 14.x e 16.x)
-- libcurl4 (per 18.x)
-- libssl1.0.0
-- libkrb5-3
-- zlib1g
+- libc6
+- libgcc1
+- libgssapi-krb5-2
 - libicu52 (per 14.X)
 - libicu55 (per 16.X)
-- libicu57 (per 17.X)
 - libicu60 (per 18.x)
+- libicu66 (per 20. x)
+- libssl 1.0.0 (per 14. x, 16. x)
+- libssl 1.1 (per 18. x, 20. x)
+- libstdc + + 6
+- zlib1g
 
 Per le app .NET Core che usano l'assembly *System. Drawing. Common* , è necessaria anche la dipendenza seguente:
 

@@ -1,5 +1,6 @@
 ---
 title: copia e blocco
+description: Esaminare il modo in cui il gestore di marshalling di interoperabilità può copiare o bloccare i dati sottoposti a marshalling. La copia di dati inserisce una copia dei dati da una posizione di memoria a un'altra.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pinning, interop marshaling
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-ms.openlocfilehash: f6db7d37293015911c1285d39e19bf7542a7ac59
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b7931813cd5254375eda81515f388c85c78fa284
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123635"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618779"
 ---
 # <a name="copying-and-pinning"></a>copia e blocco
 
@@ -80,6 +81,6 @@ Quando un oggetto <xref:System.Text.StringBuilder?displayProperty=nameWithType> 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)
+- [comportamento predefinito del marshalling](default-marshaling-behavior.md)
 - [Attributi direzionali](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Marshalling di interoperabilità](interop-marshaling.md)

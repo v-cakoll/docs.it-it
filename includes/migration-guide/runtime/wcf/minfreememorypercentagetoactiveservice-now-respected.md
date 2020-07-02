@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: fa472b3a142f55f0cbdd83eabbbb00bddd9786d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f8e5dee9e97956cea78b7c8ec999af1afe9ac66b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235635"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620364"
 ---
 ### <a name="minfreememorypercentagetoactiveservice-is-now-respected"></a>L'impostazione MinFreeMemoryPercentageToActiveService viene ora rispettata
 
-|   |   |
-|---|---|
-|Dettagli|Questa impostazione consente di stabilire la quantità minima di memoria che deve essere disponibile nel server per poter attivare un servizio WCF. È progettata in modo da prevenire le eccezioni <xref:System.OutOfMemoryException?displayProperty=name>. In .NET Framework 4.5 questa impostazione non ha alcun effetto. In .NET Framework 4.5.1 questa impostazione viene applicata.|
-|Suggerimento|Viene generata un'eccezione se la quantità di memoria libera disponibile sul server Web è inferiore alla percentuale definita dall'impostazione di configurazione. Alcuni servizi WCF correttamente avviati ed eseguiti in un ambiente di memoria limitato potrebbero avere esito negativo.|
-|Ambito|Secondario|
-|Versione|4.5.1|
-|Tipo|Runtime|
+#### <a name="details"></a>Dettagli
+
+Questa impostazione consente di stabilire la quantità minima di memoria che deve essere disponibile nel server per poter attivare un servizio WCF. È progettata in modo da prevenire le eccezioni <xref:System.OutOfMemoryException?displayProperty=fullName>. In .NET Framework 4.5 questa impostazione non ha alcun effetto. In .NET Framework 4.5.1 questa impostazione viene applicata.
+
+#### <a name="suggestion"></a>Suggerimento
+
+Viene generata un'eccezione se la quantità di memoria libera disponibile sul server Web è inferiore alla percentuale definita dall'impostazione di configurazione. Alcuni servizi WCF correttamente avviati ed eseguiti in un ambiente di memoria limitato potrebbero avere esito negativo.
+
+| Nome    | Valore       |
+|:--------|:------------|
+| Scope   |Minorenne|
+|Version|4.5.1|
+|Type|Runtime|

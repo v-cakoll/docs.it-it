@@ -1,5 +1,6 @@
 ---
-title: Determinare gli elementi selezionati nel controllo CheckedListBoxDetermine Checked Items in CheckedListBox Control
+title: Determinare gli elementi selezionati nel controllo CheckedListBox
+description: Informazioni su come determinare gli elementi selezionati nel controllo Windows Forms CheckedListBox scorrendo la raccolta archiviata nella proprietà CheckedItems.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +10,19 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 5d93a63e9c1c6aae91ecfe83590c59450a565afe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd8845ef83da7406ff4f1468506a23e3f4d386a0
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182198"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618350"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Procedura: rilevare gli elementi selezionati nel controllo CheckedListBox di Windows Form
-Quando si presentano dati <xref:System.Windows.Forms.CheckedListBox> in un controllo Windows Form, <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> è possibile scorrere l'insieme <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> archiviato nella proprietà oppure scorrere l'elenco utilizzando il metodo per determinare quali elementi vengono controllati. Il <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> metodo accetta un numero di `true` indice `false`dell'elemento come argomento e restituisce o . Contrariamente a quanto ci <xref:System.Windows.Forms.ListBox.SelectedItems%2A> <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> si potrebbe aspettare, le proprietà e non determinano quali elementi vengono controllati; determinano quali elementi sono evidenziati.  
+Quando si presentano dati in un <xref:System.Windows.Forms.CheckedListBox> controllo Windows Forms, è possibile scorrere la raccolta archiviata nella <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> proprietà o eseguire l'istruzione nell'elenco usando il <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> metodo per determinare quali elementi sono controllati. Il <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> metodo accetta un numero di indice dell'elemento come argomento e restituisce `true` o `false` . Contrariamente a quanto ci si potrebbe aspettare, le <xref:System.Windows.Forms.ListBox.SelectedItems%2A> proprietà e non <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> determinano quali elementi sono controllati; determinano quali elementi sono evidenziati.  
   
-### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>Per determinare gli elementi selezionati in un controllo CheckedListBoxTo determine checked items in a CheckedListBox control  
+### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>Per determinare gli elementi selezionati in un controllo CheckedListBox  
   
-1. Scorrere la <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> raccolta, a partire da 0 poiché la raccolta è in base zero. Si noti che questo metodo fornisce il numero di articolo nell'elenco degli elementi selezionati, non l'elenco complessivo. Quindi, se il primo elemento dell'elenco non è selezionato e il secondo elemento è selezionato, il codice seguente visualizzerà testo come "Elemento controllato 1 - MyListItem2".  
+1. Scorrere la <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> raccolta a partire da 0 perché la raccolta è in base zero. Si noti che questo metodo fornirà il numero dell'elemento nell'elenco degli elementi selezionati, non l'elenco generale. Se quindi il primo elemento dell'elenco non è selezionato e il secondo elemento è selezionato, il codice seguente visualizzerà un testo come "checked Item 1 = MyListItem2".  
   
     ```vb  
     ' Determine if there are any items checked.  
@@ -68,7 +69,7 @@ Quando si presentano dati <xref:System.Windows.Forms.CheckedListBox> in un contr
   
      - - oppure -  
   
-2. Eseguire la <xref:System.Windows.Forms.CheckedListBox.Items%2A> raccolta un'istruzione alla volta, a partire <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> da 0 poiché la raccolta è in base zero e chiamare il metodo per ogni elemento. Si noti che questo metodo vi darà il numero di elemento nell'elenco complessivo, quindi se il primo elemento nell'elenco non è selezionato e il secondo elemento è selezionato, verrà visualizzato qualcosa di simile "Elemento 2 - MyListItem2".  
+2. Eseguire l'istruzione nella <xref:System.Windows.Forms.CheckedListBox.Items%2A> raccolta a partire da 0 poiché la raccolta è in base zero e chiamare il <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> metodo per ogni elemento. Si noti che questo metodo fornirà il numero dell'elemento nell'elenco generale, pertanto se il primo elemento dell'elenco non è selezionato e il secondo elemento è selezionato, verrà visualizzato un messaggio simile al seguente: "Item 2 = MyListItem2".  
   
     ```vb  
     Dim i As Integer  

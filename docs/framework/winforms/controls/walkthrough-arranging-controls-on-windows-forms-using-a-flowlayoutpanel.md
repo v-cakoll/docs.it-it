@@ -1,5 +1,6 @@
 ---
 title: Disporre i controlli con FlowLayoutPanel
+description: Informazioni su come usare il controllo FlowLayoutPanel e il controllo TableLayoutPanel per fornire metodi intuitivi per disporre i controlli nel progetto Windows Forms.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms], walkthroughs
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: 6df0a910ee346f319fbee835e5e632808630a99e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: efcb38275be7b0cf94afb6b68aa139876f7cf5fd
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619286"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Procedura dettagliata: disposizione dei controlli in Windows Form utilizzando FlowLayoutPanel
 
@@ -20,7 +21,7 @@ Alcune applicazioni richiedono che il form abbia un layout che possa adattarsi a
 
 I controlli <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel> offrono modalità intuitive per disporre i controlli nel form. Entrambi i controlli forniscono una funzionalità configurabile e automatica per la verifica delle posizioni relative dei controlli figlio contenuti e funzionalità di layout dinamico in fase di esecuzione in modo che i controlli figlio possano essere ridimensionati e riposizionati quando le dimensioni del form padre cambiano. I pannelli layout possono essere annidati in altri pannelli layout per consentire la realizzazione di interfacce utente sofisticate.
 
-Il <xref:System.Windows.Forms.TableLayoutPanel> dispone il relativo contenuto in una griglia, fornendo una funzionalità simile all'elemento > della tabella HTML \<. Le celle vengono disposte in righe e colonne, e queste possono avere dimensioni diverse. Per altre informazioni, vedere [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
+<xref:System.Windows.Forms.TableLayoutPanel>Dispone il contenuto di una griglia, fornendo una funzionalità simile all' \<table> elemento HTML. Le celle vengono disposte in righe e colonne, e queste possono avere dimensioni diverse. Per altre informazioni, vedere [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
 
 <xref:System.Windows.Forms.FlowLayoutPanel> dispone i contenuti in una direzione di flusso specifica: orizzontale o verticale. Il contenuto può andare a capo da una riga a quella successiva o da una colonna a quella successiva. In alternativa, è possibile troncare il contenuto invece di usare il ritorno a capo. Le attività illustrate nella procedura dettagliata sono le seguenti:
 
@@ -46,7 +47,7 @@ Al termine, sarà possibile comprendere il ruolo svolto da queste importanti fun
 
 ## <a name="create-the-project"></a>Creare il progetto
 
-1. In Visual Studio creare un progetto di applicazione basato su Windows denominato "FlowLayoutPanelExample" (**file** > **nuovo** > **progetto** > **Visual C#**  o **Visual Basic** > **desktop classico** > Windows Forms **applicazione**).
+1. In Visual Studio creare un progetto di applicazione basato su Windows denominato "FlowLayoutPanelExample" (**file**  >  **nuovo**  >  **progetto**  >  **Visual C#** o **Visual Basic**  >  **desktop classico**  >  **Windows Forms applicazione**).
 
 2. Selezionare il form in **Progettazione form**.
 
@@ -150,7 +151,7 @@ Al termine, sarà possibile comprendere il ruolo svolto da queste importanti fun
 
 ### <a name="to-insert-a-control-using-the-caret"></a>Per inserire un controllo usando il cursore
 
-1. Trascinare un controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** nel controllo <xref:System.Windows.Forms.FlowLayoutPanel> e puntare sullo spazio tra i due controlli <xref:System.Windows.Forms.Button> . Si noti che viene disegnata una barra di inserimento, che indica il punto in cui verrà inserita la <xref:System.Windows.Forms.Button> quando viene rilasciata nel controllo <xref:System.Windows.Forms.FlowLayoutPanel>. Prima di rilasciare il nuovo controllo <xref:System.Windows.Forms.Button> in <xref:System.Windows.Forms.FlowLayoutPanel> , spostare il puntatore del mouse per osservare come si muove la barra di inserimento.
+1. Trascinare un controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** nel controllo <xref:System.Windows.Forms.FlowLayoutPanel> e puntare sullo spazio tra i due controlli <xref:System.Windows.Forms.Button> . Si noti che viene disegnata una barra di inserimento, che indica il punto <xref:System.Windows.Forms.Button> in cui verrà inserito quando viene rilasciato nel <xref:System.Windows.Forms.FlowLayoutPanel> controllo. Prima di rilasciare il nuovo controllo <xref:System.Windows.Forms.Button> in <xref:System.Windows.Forms.FlowLayoutPanel> , spostare il puntatore del mouse per osservare come si muove la barra di inserimento.
 
 2. Rilasciare il nuovo controllo <xref:System.Windows.Forms.Button> in <xref:System.Windows.Forms.FlowLayoutPanel> . Si noti che il nuovo controllo <xref:System.Windows.Forms.Button> non è allineato agli altri perché è specificato un valore differente per la proprietà <xref:System.Windows.Forms.Control.Margin%2A> .
 
@@ -172,7 +173,7 @@ Al termine, sarà possibile comprendere il ruolo svolto da queste importanti fun
 6. Rilasciare il pulsante del mouse. I tre controlli <xref:System.Windows.Forms.Button> vengono inseriti nel controllo <xref:System.Windows.Forms.FlowLayoutPanel> .
 
 ## <a name="next-steps"></a>Passaggi successivi
- È possibile ottenere un layout complesso usando i pannelli e i controlli di layout in combinazione. Per approfondire l'argomento, si consiglia di effettuare le seguenti operazioni:
+ È possibile ottenere un layout complesso usando i pannelli e i controlli di layout in combinazione. Alcuni suggerimenti per un'analisi più ampia dell'argomento includono:
 
 - Ridimensionare un controllo <xref:System.Windows.Forms.Button> per una dimensione più grande e notare l'effetto sul layout.
 
@@ -187,8 +188,8 @@ Al termine, sarà possibile comprendere il ruolo svolto da queste importanti fun
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [Procedura dettagliata: disposizione di controlli in Windows Form usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Panoramica sulla proprietà AutoSize](autosize-property-overview.md)
-- [Procedura: Ancorare i controlli in Windows Form](how-to-dock-controls-on-windows-forms.md)
-- [Procedura: Agganciare i controlli in Windows Form](how-to-anchor-controls-on-windows-forms.md)
-- [Procedura dettagliata: disposizione di controlli Windows Form usando spaziatura, margini e la proprietà AutoSize](windows-forms-controls-padding-autosize.md)
+- [Procedura dettagliata: disposizione dei controlli in Windows Form utilizzando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Cenni preliminari sulla proprietà AutoSize](autosize-property-overview.md)
+- [Procedura: ancorare i controlli in Windows Form](how-to-dock-controls-on-windows-forms.md)
+- [Procedura: agganciare i controlli in Windows Form](how-to-anchor-controls-on-windows-forms.md)
+- [Procedura dettagliata: Disposizione di controlli Windows Form con spaziatura, margini e la proprietà AutoSize](windows-forms-controls-padding-autosize.md)

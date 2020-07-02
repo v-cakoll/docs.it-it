@@ -1,6 +1,6 @@
 ---
 title: 'Procedura: impostare le descrizioni comandi per i controlli in un Windows Form in fase di progettazione'
-description: Informazioni su come impostare le descrizioni comandi per i controlli a livello o nel Progettazione Windows Form in Visual Studio.
+description: Informazioni su come impostare le descrizioni comandi per i controlli a livello di codice o nel Progettazione Windows Form in Visual Studio.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 15134b38d11de30d0e6a2f998f6ea266affc40d7
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 144ba5b6bffb4a538e345f7b2df4a453fc6fd63d
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325979"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618025"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Procedura: impostare le descrizioni comandi per i controlli in un Windows Form in fase di progettazione
 
@@ -75,7 +75,7 @@ ms.locfileid: "85325979"
 
 2. Nella finestra **Proprietà** eliminare il testo nella **Descrizione comando in ToolTip1**.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Cenni preliminari sul componente ToolTip](tooltip-component-overview-windows-forms.md)
 - [Procedura: modificare il ritardo del componente ToolTip di Windows Form](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)

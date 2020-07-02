@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: modificare colonne e righe in un controllo TableLayoutPanel'
+description: Informazioni su come utilizzare la finestra di dialogo stili colonna e riga per modificare le righe e le colonne dei controlli Windows Forms.
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor
@@ -8,27 +9,27 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], editing
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-ms.openlocfilehash: 4473b20eea57088104a51eb1b6c080219223d214
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: cfd2ca4be5d5a2658a9a129d911f1dba9670ccfd
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628644"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619351"
 ---
 # <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>Procedura: modificare colonne e righe in un controllo TableLayoutPanel
 
-Per modificare le righe e le colonne dei controlli, è possibile usare l'editor della raccolta del controllo <xref:System.Windows.Forms.TableLayoutPanel>, denominato finestra di dialogo **stili colonna e riga** .
+<xref:System.Windows.Forms.TableLayoutPanel>Per modificare le righe e le colonne dei controlli, è possibile utilizzare l'editor della raccolta del controllo, denominato finestra di dialogo **stili colonna e riga** .
 
 > [!NOTE]
-> Se si desidera che un controllo si estenda su più righe o colonne, impostare le proprietà `RowSpan` e `ColumnSpan` sul controllo. Per altre informazioni, vedere [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
+> Se si desidera che un controllo si estenda su più righe o colonne, impostare le `RowSpan` `ColumnSpan` proprietà e sul controllo. Per altre informazioni, vedere [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
 >
-> Se si desidera allineare un controllo all'interno di una cella o se si desidera che un controllo si estenda all'interno di una cella, utilizzare la proprietà <xref:System.Windows.Forms.Control.Anchor%2A> del controllo. Per altre informazioni, vedere [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
+> Se si desidera allineare un controllo all'interno di una cella o se si desidera che un controllo si estenda all'interno di una cella, utilizzare la proprietà del controllo <xref:System.Windows.Forms.Control.Anchor%2A> . Per altre informazioni, vedere [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
 
 ## <a name="to-edit-rows-and-columns"></a>Per modificare righe e colonne
 
 1. Trascinare un controllo <xref:System.Windows.Forms.TableLayoutPanel> dalla **Casella degli strumenti** al form.
 
-2. Fare clic sul glifo delle azioni della finestra di progettazione del controllo <xref:System.Windows.Forms.TableLayoutPanel> (![Small Black Arrow](./media/designer-actions-glyph.gif)) e selezionare **modifica righe e colonne** per aprire la finestra di dialogo **stili colonna e riga** . È anche possibile fare clic con il pulsante destro del mouse sul controllo <xref:System.Windows.Forms.TableLayoutPanel> e scegliere **modifica righe e colonne** dal menu di scelta rapida.
+2. Fare clic sul <xref:System.Windows.Forms.TableLayoutPanel> glifo azioni di progettazione del controllo ( ![ piccola freccia nera ](./media/designer-actions-glyph.gif) ) e selezionare **modifica righe e colonne** per aprire la finestra di dialogo **stili colonna e riga** . È anche possibile fare clic con il pulsante destro del mouse sul <xref:System.Windows.Forms.TableLayoutPanel> controllo e scegliere **modifica righe e colonne** dal menu di scelta rapida.
 
 3. Per aggiungere o rimuovere colonne, selezionare le **colonne** nella casella di riepilogo a discesa **tipo di membro** .
 

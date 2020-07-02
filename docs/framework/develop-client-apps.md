@@ -1,5 +1,6 @@
 ---
 title: Sviluppo di applicazioni client basate su Windows con .NET Framework
+description: Sviluppare applicazioni basate su Windows con .NET. È possibile utilizzare piattaforma UWP (Universal Windows Platform) (UWP), Windows Presentation Foundation (WPF) o Windows Forms.
 ms.date: 01/09/2018
 helpviewer_keywords:
 - client application services
@@ -13,43 +14,43 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: b6b5f47980e7c0c87128b9efb782e637ed7144f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5920ecfae60274a8a504e4d300e531fd8b512901
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79181641"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619390"
 ---
-# <a name="develop-client-applications-with-net-framework"></a>Sviluppare applicazioni client con .NET FrameworkDevelop client applications with .NET Framework
+# <a name="develop-client-applications-with-net-framework"></a>Sviluppare applicazioni client con .NET Framework
 
 Esistono diversi modi per sviluppare applicazioni basate su Windows con .NET Framework. È possibile usare uno di questi strumenti e framework:
 
 - [Piattaforma UWP (Universal Windows Platform)](/windows/uwp/)
 - [Windows Presentation Foundation (WPF)](./wpf/index.md)
-- [Windows Form](./winforms/index.md)
+- [Windows Forms](./winforms/index.md)
 
-In questa sezione sono contenuti articoli che descrivono come creare applicazioni basate su Windows utilizzando Windows Presentation Foundation o Windows Form. Tuttavia, è anche possibile creare applicazioni Web utilizzando .NET Framework e applicazioni client per computer o dispositivi resi disponibili tramite Microsoft Store (applicazioni UWP).
+Questa sezione contiene articoli che descrivono come creare applicazioni basate su Windows usando Windows Presentation Foundation o Windows Forms. Tuttavia, è anche possibile creare applicazioni Web usando .NET Framework e applicazioni client per computer o dispositivi resi disponibili tramite Microsoft Store (app UWP).
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Piattaforma Windows universale](/windows/uwp/)\
+[piattaforma UWP (Universal Windows Platform)](/windows/uwp/)\
 Viene descritto come creare applicazioni UWP che è possibile rendere disponibili agli utenti tramite Microsoft Store.
 
-[API .NET per le app UWP](/dotnet/api/index?view=dotnet-uwp-10.0)\
-Riferimento per i tipi .NET che supportano le app UWP.
+[API .NET per app UWP](/dotnet/api/index?view=dotnet-uwp-10.0)\
+Informazioni di riferimento sui tipi .NET che supportano le app UWP.
   
-[Sviluppare per più piattaformeDevelop for Multiple Platforms](../standard/cross-platform/index.md)\
-Vengono descritti i diversi metodi che è possibile utilizzare .NET Framework per la destinazione di più tipi di app client.
+[Sviluppare per più piattaforme](../standard/cross-platform/index.md)\
+Vengono descritti i diversi metodi che è possibile usare .NET Framework per la destinazione di più tipi di app client.
 
-[Introduzione ai siti Web ASP.NET](https://dotnet.microsoft.com/apps/aspnet/web-apps)\
+[Introduzione ai siti Web di ASP.NET](https://dotnet.microsoft.com/apps/aspnet/web-apps)\
 Vengono descritti i diversi modi in cui sviluppare app Web con ASP.NET.
 
-[API .NET per Silverlight per Windows Phone](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))\
-Elenca le API di .NET Framework che è possibile utilizzare per la creazione di app con Silverlight per Windows Phone.
+[API .NET per Windows Phone Silverlight](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))\
+Elenca .NET Framework API che è possibile usare per creare app con Windows Phone Silverlight.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [.NET Standard](../standard/net-standard.md)
 - [Panoramica](./get-started/overview.md)
-- [Guida di sviluppo](./development-guide.md)
-- [Applicazioni di servizio Windows](./windows-services/index.md)
+- [Guida allo sviluppo](./development-guide.md)
+- [Applicazioni di servizio di Windows](./windows-services/index.md)

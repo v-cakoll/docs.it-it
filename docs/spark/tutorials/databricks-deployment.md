@@ -1,15 +1,15 @@
 ---
 title: Distribuire un'applicazione .NET per Apache Spark in Databricks
 description: Informazioni su come distribuire un'applicazione .NET per Apache Spark in Databricks.
-ms.date: 05/12/2020
+ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4010f363e8ba606a7294ea32dc34587da6d6c8aa
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 9e0b99b6706bf51adaa6e3795d1c81179e14cb7a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618337"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Esercitazione: distribuire un'applicazione .NET per Apache Spark a databricks
 
@@ -23,6 +23,8 @@ In questa esercitazione verranno illustrate le procedure per:
 > - Pubblicare .NET per Apache Spark app.
 > - Creare un processo Spark e un cluster Spark.
 > - Eseguire l'app nel cluster Spark.
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -135,7 +137,7 @@ Successivamente, pubblicare il *mySparkApp* creato in [.NET per Apache Spark-int
 
    **In Windows:**
 
-   Passare a mySparkApp/bin/Release/netcoreapp 3.1/Ubuntu. 16.04-x64. Quindi, fare clic con il pulsante destro del mouse su cartella di **pubblicazione** e selezionare **Invia a > cartella compressa**. Assegnare alla nuova cartella il nome **Publish. zip**.
+   Passare a mySparkApp/bin/Release/netcoreapp 3.1/Ubuntu. 16.04-x64. Quindi, fare clic con il pulsante destro del mouse su cartella di **pubblicazione** e selezionare **Invia a > cartella compressa**. Assegnare alla nuova cartella il nome **publish.zip**.
 
    **In Linux eseguire il comando seguente:**
 
@@ -155,7 +157,7 @@ In questa sezione vengono caricati diversi file in DBFS in modo che il cluster d
    databricks fs cp Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/   Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
    ```
 
-2. Eseguire i comandi seguenti per caricare i file rimanenti che il cluster dovrà eseguire l'app: la cartella di pubblicazione compresso, *input. txt*e *Microsoft-Spark-2.4. x-0.3.1. jar*.
+2. Eseguire i comandi seguenti per caricare i file rimanenti che il cluster dovrà eseguire l'app: la cartella di pubblicazione compresso, *input.txt*e *Microsoft-Spark-2.4. x-0.3.1. jar*.
 
    ```console
    cd mySparkApp

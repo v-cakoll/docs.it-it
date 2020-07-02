@@ -1,5 +1,6 @@
 ---
 title: Marshalling predefinito per gli oggetti
+description: Informazioni sul marshalling predefinito per gli oggetti. Esaminare le opzioni di marshalling. Eseguire il marshalling di oggetti a interfacce o varianti, varianti a oggetti e varianti ByRef.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-ms.openlocfilehash: e0de715a3ed33eedf212fc3e0e9930c9cbaa0a38
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7b8f94f4dfd8e8b9e8e04df8de5f8266a8581a92
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123582"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618454"
 ---
 # <a name="default-marshaling-for-objects"></a>Marshalling predefinito per gli oggetti
 
@@ -116,7 +117,7 @@ struct ObjectHolder {
 
 ## <a name="marshaling-object-to-interface"></a>Marshalling dell'oggetto all'interfaccia
 
-Quando un oggetto viene esposto a COM come interfaccia, tale interfaccia è l'interfaccia di classe del tipo gestito <xref:System.Object> (interfaccia **_Object**). Questa interfaccia è tipizzata come **IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) o **IUnknown** (**UnmanagedType. IUnknown**) nella libreria dei tipi risultante. I client COM possono richiamare in modo dinamico i membri della classe gestita o eventuali membri implementati dalle classi derivate tramite l'interfaccia **_Object**. Il client può anche chiamare **QueryInterface** per ottenere le altre interfacce implementate in modo esplicito dal tipo gestito.
+Quando un oggetto viene esposto a COM come interfaccia, tale interfaccia è l'interfaccia di classe del tipo gestito <xref:System.Object> (interfaccia **_Object**). Questa interfaccia è tipizzata come **IDispatch** ( <xref:System.Runtime.InteropServices.UnmanagedType> ) o **IUnknown** (**UnmanagedType. IUnknown**) nella libreria dei tipi risultante. I client COM possono richiamare in modo dinamico i membri della classe gestita o eventuali membri implementati dalle classi derivate tramite l'interfaccia **_Object**. Il client può anche chiamare **QueryInterface** per ottenere le altre interfacce implementate in modo esplicito dal tipo gestito.
 
 ## <a name="marshaling-object-to-variant"></a>Marshalling dell'oggetto alla variante
 
@@ -235,12 +236,12 @@ La tabella seguente illustra i possibili valori per l'enumerazione **TypeCode** 
 |**TypeCode.Decimal**|**VT_DECIMAL**|
 |**TypeCode.DateTime**|**VT_DATE**|
 |**TypeCode.String**|**VT_BSTR**|
-|Non supportato.|**VT_INT**|
-|Non supportato.|**VT_UINT**|
-|Non supportato.|**VT_ARRAY**|
-|Non supportato.|**VT_RECORD**|
-|Non supportato.|**VT_CY**|
-|Non supportato.|**VT_VARIANT**|
+|Non supportata.|**VT_INT**|
+|Non supportata.|**VT_UINT**|
+|Non supportata.|**VT_ARRAY**|
+|Non supportata.|**VT_RECORD**|
+|Non supportata.|**VT_CY**|
+|Non supportata.|**VT_VARIANT**|
 
 Il valore della variante COM viene determinato chiamando l'interfaccia **IConvertible.To** *Type*, dove **To** *Type* è la routine di conversione che corrisponde al tipo restituito da **IConvertible.GetTypeCode**. Ad esempio, il marshalling di un oggetto che restituisce **TypeCode.Double** da **IConvertible.GetTypeCode** viene effettuato come variante COM di tipo **VT_R8**. Per ottenere il valore della variante (archiviata nel campo **dblVal** della variante COM), è possibile eseguire il cast all'interfaccia **IConvertible** e chiamare il metodo <xref:System.IConvertible.ToDouble%2A>.
 
@@ -274,7 +275,7 @@ Quando si effettua il marshalling di una variante a un oggetto, il tipo e a volt
 |**VT_ARRAY** &#124; **VT_**\*|<xref:System.Array?displayProperty=nameWithType>|
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|
 |**VT_RECORD**|Tipo valore boxed corrispondente.|
-|**VT_VARIANT**|Non supportato.|
+|**VT_VARIANT**|Non supportata.|
 
 I tipi di variante passati da COM al codice gestito e quindi di nuovo a COM potrebbero non conservare lo stesso tipo di variante per tutta la durata della chiamata. Si consideri che cosa accade quando una variante di tipo **VT_DISPATCH** viene passata da COM a .NET Framework. Durante il marshalling, la variante viene convertita in <xref:System.Object?displayProperty=nameWithType>. Se **Object** viene quindi passato nuovamente a COM, ne viene effettuato il marshalling a una variante di tipo **VT_UNKNOWN**. Non esiste garanzia che la variante prodotta quando viene effettuato il marshalling di un oggetto dal codice gestito a COM sarà dello stesso tipo della variante usata inizialmente per produrre l'oggetto.
 
@@ -312,16 +313,16 @@ La tabella seguente riepiloga le regole di propagazione per varianti e oggetti.
 
 |From|A|Modifiche propagate|
 |----------|--------|-----------------------------|
-|**Variante**  *v*|**Oggetto**  *o*|Never|
-|**Oggetto**  *o*|**Variante**  *v*|Never|
-|**Variante**   ***\****  *PV*|**Oggetto ref**  *o*|Sempre|
-|**Oggetto Ref**  *o*|**Variante**   ***\****  *PV*|Sempre|
-|**Variante**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Oggetto**  *o*|Never|
+|**Variante**  *v*|**Oggetto**  *o*|Mai|
+|**Oggetto**  *o*|**Variante**  *v*|Mai|
+|**Variante** ***\**** *PV*     |**Oggetto ref**  *o*|Sempre|
+|**Oggetto Ref**  *o*|**Variante** ***\**** *PV*     |Sempre|
+|**Variante**  *v* **(VT_BYREF** *&#124;* **VT_ \* )**|**Oggetto**  *o*|Mai|
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Oggetto ref**  *o*|Solo se il tipo non è stato modificato.|
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)
-- [Tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
+- [comportamento predefinito del marshalling](default-marshaling-behavior.md)
+- [tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
 - [Attributi direzionali](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [copia e blocco](copying-and-pinning.md)

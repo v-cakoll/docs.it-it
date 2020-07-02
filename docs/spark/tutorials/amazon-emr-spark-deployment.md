@@ -1,15 +1,15 @@
 ---
 title: Distribuire un'applicazione .NET per Apache Spark in Amazon EMR Spark
 description: Informazioni su come distribuire un'applicazione .NET per Apache Spark in Amazon EMR Spark.
-ms.date: 05/17/2019
+ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a1ff1ba4d5e855e0ac36b99b0c9d63adfaaaac1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c6cf26044693c5d923d11e1bbc72232e7009fe73
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73454940"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618259"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Distribuire un'applicazione .NET per Apache Spark in Amazon EMR Spark
 
@@ -24,7 +24,9 @@ In questa esercitazione verranno illustrate le procedure per:
 > * Distribuire l'app in Amazon EMR Spark
 > * Eseguire l'app
 
-## <a name="prerequisites"></a>Prerequisites
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
+
+## <a name="prerequisites"></a>Prerequisiti
 
 Prima di iniziare, eseguire le operazioni seguenti:
 
@@ -33,7 +35,7 @@ Prima di iniziare, eseguire le operazioni seguenti:
 
 ## <a name="prepare-worker-dependencies"></a>Preparare le dipendenze dei nodi di lavoro
 
-**Microsoft.Spark.Worker** è un componente back-end che si trova nei singoli nodi di lavoro del cluster Spark. Quando si vuole eseguire una funzione definita dall'utente C#, Spark deve comprendere come avviare CLR .NET per eseguire la funzione definita dall'utente. **Microsoft. Spark.Worker** offre una raccolta di classi per Spark che consentono di abilitare questa funzionalità.
+**Microsoft. Spark. Worker** è un componente back-end che risiede nei singoli nodi del ruolo di lavoro del cluster Spark. Quando si vuole eseguire una funzione definita dall'utente C#, Spark deve comprendere come avviare CLR .NET per eseguire la funzione definita dall'utente. **Microsoft. Spark.Worker** offre una raccolta di classi per Spark che consentono di abilitare questa funzionalità.
 
 1. Selezionare una versione netcoreapp Linux di [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) da distribuire nel cluster.
 
@@ -63,7 +65,7 @@ Prima di iniziare, eseguire le operazioni seguenti:
 
 4. Caricare gli elementi seguenti in un file system distribuito (ad esempio, S3) a cui può accedere il cluster:
 
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: questo jar è incluso come parte del pacchetto [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet e viene collocato nella directory di output di compilazione dell'app.
+   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Questo file jar è incluso nel pacchetto NuGet [Microsoft. Spark](https://www.nuget.org/packages/Microsoft.Spark/) e si trova nella directory di output di compilazione dell'app.
    * `<your app>.zip`
    * I file (come i file di dipendenza o i dati comuni accessibili a ogni ruolo di lavoro) o gli assembly (ad esempio le DLL che contengono funzioni definite dall'utente o librerie da cui dipende l'app), vengono inseriti nella directory di lavoro di ogni executor.
 

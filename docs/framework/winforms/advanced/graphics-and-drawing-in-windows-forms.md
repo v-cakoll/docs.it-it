@@ -1,5 +1,6 @@
 ---
 title: Grafica e disegno
+description: Informazioni sugli oggetti grafici, penna, pennello e colore e su come eseguire attività quali la creazione di forme, il disegno di testo o la visualizzazione di immagini in Windows Forms.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [Windows Forms]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - GDI+, using in managed code
 - drawing [Windows Forms]
 ms.assetid: 362532c5-1a06-4257-bdc8-723461009ede
-ms.openlocfilehash: 10ad18d38c84f6e447601ab6c8bf1a953dabb7cf
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 58d8cde6aa102225cf9e3c342efe37218c818307
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746410"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618402"
 ---
 # <a name="graphics-and-drawing-in-windows-forms"></a>Grafica e disegno in Windows Form
 Il Common Language Runtime utilizza un'implementazione avanzata di Windows Graphics Device Interface (GDI) denominato GDI+. Con GDI+ è possibile creare grafica, creare testo e modificare immagini grafiche come oggetti. GDI+ è progettato per offrire prestazioni e facilità di utilizzo. È possibile utilizzare GDI+ per eseguire il rendering di immagini grafiche in Windows Forms e controlli. Sebbene non sia possibile utilizzare GDI+ direttamente nei Web Form, è possibile visualizzare immagini grafiche tramite il controllo server Web Image.  
@@ -22,16 +23,16 @@ Il Common Language Runtime utilizza un'implementazione avanzata di Windows Graph
  Se si preferisce iniziare subito, vedere [Guida introduttiva alla programmazione grafica](getting-started-with-graphics-programming.md), che include argomenti su come usare il codice per disegnare linee, forme, testo e altro in Windows Form.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
- [Cenni preliminari sulla grafica](graphics-overview-windows-forms.md)  
+ [Panoramica sulla grafica](graphics-overview-windows-forms.md)  
  Fornisce un'introduzione alle classi gestite relative agli elementi grafici.  
   
  [Informazioni sul codice gestito GDI+](about-gdi-managed-code.md)  
  Fornisce informazioni sulle classi GDI+ gestite.  
   
- [Uso di classi grafiche gestite](using-managed-graphics-classes.md)  
+ [Utilizzo di classi grafiche gestite](using-managed-graphics-classes.md)  
  Viene illustrato come completare una serie di attività usando le classi gestite GDI+.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Informazioni di riferimento  
  <xref:System.Drawing>  
  Fornisce accesso alle funzionalità grafiche di base GDI+.  
   

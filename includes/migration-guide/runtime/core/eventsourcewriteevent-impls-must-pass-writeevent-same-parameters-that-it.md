@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 47d0aa554d88726caca35fa6bebe4d863fdc0695
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 662c140f019add66ff6605d47ad1f32c3f50d711
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804262"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620241"
 ---
 ### <a name="eventsourcewriteevent-impls-must-pass-writeevent-the-same-parameters-that-it-received-plus-id"></a>EventSource.WriteEvent impls deve passare a WriteEvent gli stessi parametri che ha ricevuto (oltre all'ID)
 
-|   |   |
-|---|---|
-|Dettagli|Il runtime applica ora il contratto che specifica quanto segue: Una classe derivata da <xref:System.Diagnostics.Tracing.EventSource?displayProperty=name> che definisce un metodo di eventi ETW deve chiamare il metodo <code>EventSource.WriteEvent</code> della classe di base con l'ID evento seguito dagli stessi argomenti passati al metodo eventi ETW.|
-|Suggerimento|Viene generata un'eccezione <xref:System.IndexOutOfRangeException?displayProperty=name> se un <xref:System.Diagnostics.Tracing.EventListener?displayProperty=name> legge i dati <xref:System.Diagnostics.Tracing.EventSource?displayProperty=name> in-process per un'origine evento che viola questo contratto.|
-|Ambito|Secondario|
-|Versione|4.5.1|
-|Tipo|Runtime|
+#### <a name="details"></a>Dettagli
+
+Il runtime applica ora il contratto che specifica quanto segue: Una classe derivata da <xref:System.Diagnostics.Tracing.EventSource?displayProperty=fullName> che definisce un metodo di eventi ETW deve chiamare il metodo <code>EventSource.WriteEvent</code> della classe di base con l'ID evento seguito dagli stessi argomenti passati al metodo eventi ETW.
+
+#### <a name="suggestion"></a>Suggerimento
+
+Viene generata un'eccezione <xref:System.IndexOutOfRangeException?displayProperty=fullName> se un <xref:System.Diagnostics.Tracing.EventListener?displayProperty=fullName> legge i dati <xref:System.Diagnostics.Tracing.EventSource?displayProperty=fullName> in-process per un'origine evento che viola questo contratto.
+
+| Nome    | Valore       |
+|:--------|:------------|
+| Scope   |Minorenne|
+|Version|4.5.1|
+|Type|Runtime|

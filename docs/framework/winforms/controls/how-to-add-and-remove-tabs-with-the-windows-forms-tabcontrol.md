@@ -1,5 +1,6 @@
 ---
 title: Aggiungere e rimuovere schede con TabControl
+description: Informazioni su come aggiungere e rimuovere schede con il controllo Windows Forms TabControl, che contiene due controlli TabPage. Accedere a queste schede tramite la proprietà TabPages.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +13,19 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
-ms.openlocfilehash: 8292d8441f9b47334b98736cf3282c846673dbb4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7e67d0bbc13bd7d9c8835dc6fb9b9c5c9333b8bf
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732713"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618077"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>Procedura: aggiungere e rimuovere schede tramite il controllo TabControl Windows Form
-Per impostazione predefinita, un controllo <xref:System.Windows.Forms.TabControl> contiene due controlli <xref:System.Windows.Forms.TabPage>. È possibile accedere a queste schede tramite la proprietà <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+Per impostazione predefinita, un <xref:System.Windows.Forms.TabControl> controllo contiene due <xref:System.Windows.Forms.TabPage> controlli. È possibile accedere a queste schede tramite la <xref:System.Windows.Forms.TabControl.TabPages%2A> Proprietà.  
   
 ### <a name="to-add-a-tab-programmatically"></a>Per aggiungere una scheda a livello di codice  
   
-- Usare il metodo <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> della proprietà <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+- Usare il <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> metodo della <xref:System.Windows.Forms.TabControl.TabPages%2A> Proprietà.  
   
     ```vb  
     Dim myTabPage As New TabPage()  
@@ -47,11 +48,11 @@ Per impostazione predefinita, un controllo <xref:System.Windows.Forms.TabControl
   
 ### <a name="to-remove-a-tab-programmatically"></a>Per rimuovere una scheda a livello di codice  
   
-- Per rimuovere le schede selezionate, utilizzare il metodo <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> della proprietà <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+- Per rimuovere le schede selezionate, utilizzare il <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> metodo della <xref:System.Windows.Forms.TabControl.TabPages%2A> Proprietà.  
   
      -oppure-  
   
-- Per rimuovere tutte le schede, usare il metodo <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> della proprietà <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+- Per rimuovere tutte le schede, usare il <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> metodo della <xref:System.Windows.Forms.TabControl.TabPages%2A> Proprietà.  
   
     ```vb  
     ' Removes the selected tab:  
@@ -76,7 +77,7 @@ Per impostazione predefinita, un controllo <xref:System.Windows.Forms.TabControl
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica del controllo TabControl](tabcontrol-control-overview-windows-forms.md)
-- [Procedura: Aggiungere un controllo a un oggetto TabPage](how-to-add-a-control-to-a-tab-page.md)
-- [Procedura: Disabilitare le schede](how-to-disable-tab-pages.md)
-- [Procedura: Modificare l'aspetto del controllo TabControl di Windows Form](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Cenni preliminari sul controllo TabControl](tabcontrol-control-overview-windows-forms.md)
+- [Procedura: aggiungere un controllo a un oggetto TabPage](how-to-add-a-control-to-a-tab-page.md)
+- [Procedura: disabilitare le schede](how-to-disable-tab-pages.md)
+- [Procedura: modificare l'aspetto del controllo TabControl Windows Form](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

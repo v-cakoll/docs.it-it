@@ -8,12 +8,12 @@ helpviewer_keywords:
 - callback methods
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
-ms.openlocfilehash: ad7774fd197db80ce84b3b8a5baa4e9ee06b6cef
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4000944c3b913f71bc18462cea9062e9237ae53f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289798"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619533"
 ---
 # <a name="events-and-callbacks"></a>Eventi e callback
 I callback sono punti di estensibilità che consentono a un Framework di richiamare il codice utente tramite un delegato. Questi delegati vengono in genere passati al Framework tramite un parametro di un metodo.
@@ -38,7 +38,7 @@ I callback sono punti di estensibilità che consentono a un Framework di richiam
 
  ✔️ tenere presente che chiamando un delegato si esegue codice arbitrario che potrebbe avere ripercussioni sulla sicurezza, la correttezza e la compatibilità.
 
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*
+ *Parti &copy; 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*
 
  *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*
 

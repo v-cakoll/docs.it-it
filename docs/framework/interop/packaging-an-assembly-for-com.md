@@ -1,5 +1,6 @@
 ---
 title: Creazione di un pacchetto di un assembly .NET Framework per COM
+description: Assemblare un assembly .NET per COM. Raccogliere l'elenco dei tipi che le applicazioni COM possono utilizzare, il controllo delle versioni e le istruzioni per la distribuzione e la libreria dei tipi.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - Reqasm.exe
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
-ms.openlocfilehash: 6866da283cc7cdd180aada252007d67bd72cd862
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4963892419fd1caec4483123f820d62967a87dd6
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124100"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620833"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>Creazione di un pacchetto di un assembly .NET Framework per COM
 
@@ -95,6 +96,6 @@ Lo [strumento di installazione dei servizi .NET (Regsvcs.exe)](../tools/regsvcs-
 - [Qualificazione di tipi .NET per l'interoperabilità](../../standard/native-interop/qualify-net-types-for-interoperation.md)
 - [Introduzione all'interfaccia della classe](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
 - [Considerazioni sulla sicurezza degli assembly](../../standard/assembly/security-considerations.md)
-- [Tlbexp. exe (utilità di esportazione della libreria di tipi)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Tlbexp.exe (utilità di esportazione della libreria di tipi)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Registrazione di assembly presso COM](registering-assemblies-with-com.md)
 - [Procedura: incorporare librerie dei tipi come risorse Win32 nelle applicazioni](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

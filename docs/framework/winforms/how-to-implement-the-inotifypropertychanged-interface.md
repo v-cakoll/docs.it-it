@@ -1,5 +1,6 @@
 ---
 title: "Procedura: Implementare l'interfaccia INotifyPropertyChanged"
+description: Informazioni su come implementare l'interfaccia INotifyPropertyChanged sugli oggetti business utilizzati in Windows Forms data binding.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], implementing
 ms.assetid: eac428af-b43b-46ac-80d9-1a5f88658725
-ms.openlocfilehash: cfdfb22fd854a8f630243e0f612761c71cb778d8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83d2ef32787d2dbcd877bc77dcede10111098f8a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802037"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619268"
 ---
 # <a name="how-to-implement-the-inotifypropertychanged-interface"></a>Procedura: Implementare l'interfaccia INotifyPropertyChanged
-Esempio di codice seguente viene illustrato come implementare il <xref:System.ComponentModel.INotifyPropertyChanged> interfaccia. Implementare questa interfaccia per gli oggetti business utilizzati nel data binding in Windows Form. Quando implementato, l'interfaccia comunica a un controllo associato le modifiche alle proprietà in un oggetto business.  
+Nell'esempio di codice riportato di seguito viene illustrato come implementare l' <xref:System.ComponentModel.INotifyPropertyChanged> interfaccia. Implementare questa interfaccia negli oggetti business utilizzati in Windows Forms data binding. Quando viene implementato, l'interfaccia comunica a un controllo associato la proprietà viene modificata in un oggetto business.  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[System.ComponentModel.IPropertyChangeExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.IPropertyChangeExample/CS/Form1.cs#1)]
@@ -24,6 +25,6 @@ Esempio di codice seguente viene illustrato come implementare il <xref:System.Co
 ## <a name="see-also"></a>Vedere anche
 
 - [Procedura: Applicare il modello PropertyNameChanged](how-to-apply-the-propertynamechanged-pattern.md)
-- [Data binding in Windows Form](windows-forms-data-binding.md)
-- [Procedura: Generare notifiche di modifica utilizzando un BindingSource e l'interfaccia INotifyPropertyChanged](./controls/raise-change-notifications--bindingsource.md)
-- [Notifica delle modifiche nel data binding dei Windows Form](change-notification-in-windows-forms-data-binding.md)
+- [Data binding di Windows Form](windows-forms-data-binding.md)
+- [Procedura: generare notifiche di modifica utilizzando un BindingSource e l'interfaccia INotifyPropertyChanged](./controls/raise-change-notifications--bindingsource.md)
+- [Notifica delle modifiche nell'associazione dati dei Windows Form](change-notification-in-windows-forms-data-binding.md)

@@ -1,5 +1,6 @@
 ---
 title: "Procedura: creare ed eseguire l'associazione a una classe ObservableCollection"
+description: Informazioni su come creare ed eseguire il binding a una raccolta che deriva dalla classe ObservableCollection in Windows Presentation Foundation.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +9,15 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 596f6ae71e83c5aa3b2b80764f68a8abf08cdb7b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 36e3d2d84aff0ab96c9b2914da28d4c968c32bac
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453525"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617869"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Procedura: creare ed eseguire l'associazione a una classe ObservableCollection
-In questo esempio viene illustrato come creare ed eseguire l'associazione a una raccolta che deriva dalla classe <xref:System.Collections.ObjectModel.ObservableCollection%601>, ovvero una classe Collection che fornisce notifiche quando gli elementi vengono aggiunti o rimossi.  
+In questo esempio viene illustrato come creare ed eseguire l'associazione a una raccolta che deriva dalla <xref:System.Collections.ObjectModel.ObservableCollection%601> classe, che è una classe di raccolte che fornisce notifiche quando gli elementi vengono aggiunti o rimossi.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente illustra l'implementazione di una raccolta `NameList`:  
@@ -136,14 +137,14 @@ End Class
  La definizione di `NameItemTemplate` non viene mostrata qui.  
   
 > [!NOTE]
-> Gli oggetti nella raccolta devono soddisfare i requisiti descritti in [Cenni preliminari sulle origini del binding](binding-sources-overview.md). In particolare, se si utilizza <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> (ad esempio, si desidera che il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] venga aggiornato quando le proprietà di origine cambiano in modo dinamico), è necessario implementare un meccanismo di notifica appropriato modificato per la proprietà, ad esempio l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged>.  
+> Gli oggetti nella raccolta devono soddisfare i requisiti descritti in [Cenni preliminari sulle origini del binding](binding-sources-overview.md). In particolare, se si utilizza <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> (ad esempio, si desidera che il venga [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aggiornato quando le proprietà di origine cambiano in modo dinamico), è necessario implementare un meccanismo di notifica appropriato modificato per la proprietà, ad esempio l' <xref:System.ComponentModel.INotifyPropertyChanged> interfaccia.  
   
  Per altre informazioni, vedere la sezione Associazione alle raccolte in [Panoramica sul data binding](../../../desktop-wpf/data/data-binding-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Ordinare i dati in una visualizzazione](how-to-sort-data-in-a-view.md)
-- [Filtrare i dati di una visualizzazione](how-to-filter-data-in-a-view.md)
-- [Ordinare e raggruppare dati con una visualizzazione in XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [Filtrare i dati in una visualizzazione](how-to-filter-data-in-a-view.md)
+- [Ordinare e raggruppare dati tramite una visualizzazione in XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
 - [Panoramica sul data binding](../../../desktop-wpf/data/data-binding-overview.md)
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+- [Procedure](data-binding-how-to-topics.md)

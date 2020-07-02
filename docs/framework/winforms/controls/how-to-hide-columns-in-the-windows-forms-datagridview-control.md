@@ -1,6 +1,6 @@
 ---
 title: Nascondi colonne nel controllo DataGridView
-description: Informazioni su come nascondere le colonne a livello nel controllo DataGridView Windows Forms impostando la proprietà DataGridViewColumn. Visible su false.
+description: Informazioni su come nascondere le colonne a livello di codice nel controllo DataGridView Windows Forms impostando la proprietà DataGridViewColumn. Visible su false.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], hiding columns
 - columns [Windows Forms], hiding
 ms.assetid: 3f94143a-2ef0-49a5-a22a-b2e6f9289642
-ms.openlocfilehash: 46d7faea76098406b8e0a91d22922bf9ca391e28
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 27e9f331151acd68d76233bc7dbb09c2d870afde
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325913"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618051"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control"></a>Procedura: nascondere le colonne nel controllo DataGridView di Windows Form
 A volte può essere necessario visualizzare solo alcune colonne tra quelle disponibili in un controllo <xref:System.Windows.Forms.DataGridView> Windows Form. Ad esempio, può essere necessario mostrare una colonna con gli stipendi dei dipendenti agli utenti con credenziali di gestione e nasconderla invece agli altri utenti. Oppure potrebbe essere necessario associare il controllo a un'origine dati contenente più colonne, di cui solo alcune devono essere visualizzate. In questo caso, si rimuovono in genere le colonne che non interessa visualizzare, invece di nasconderle.  
@@ -38,7 +38,7 @@ A volte può essere necessario visualizzare solo alcune colonne tra quelle dispo
   
 - Riferimenti agli assembly <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>
