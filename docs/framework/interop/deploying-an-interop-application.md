@@ -1,5 +1,6 @@
 ---
 title: Distribuzione di una applicazione di interoperabilità
+description: Distribuire un'applicazione di interoperabilità, che in genere include un assembly client .NET, assembly di interoperabilità di librerie dei tipi COM distinte e componenti COM registrati.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deploying applications [.NET Framework], interop
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - signed assemblies
 - COM interop, exposing COM components
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
-ms.openlocfilehash: 04f8e53220b2e0fa09735400ae84dcb8b1c3478a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 744307d4175d151d07acbedd5815e538307c8973
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123557"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617483"
 ---
 # <a name="deploying-an-interop-application"></a>Distribuzione di una applicazione di interoperabilità
 Un'applicazione di interoperabilità in genere include un assembly client .NET, uno o più assembly di interoperabilità che rappresentano librerie dei tipi COM distinte e uno o più componenti COM registrati. Visual Studio e Windows SDK forniscono strumenti per importare e convertire una libreria dei tipi in un assembly di interoperabilità, come illustrato in [Importazione di una libreria dei tipi come assembly](importing-a-type-library-as-an-assembly.md). Un'applicazione di interoperabilità può essere distribuita in due modi:  

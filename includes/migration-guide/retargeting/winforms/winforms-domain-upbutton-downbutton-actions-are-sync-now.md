@@ -1,18 +1,33 @@
 ---
-ms.openlocfilehash: e73fe48467ede501bae0ddd9362d9d55b3ca998b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: f75a652f15be6b0d184db20dc5cd8aafd80539fe
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774053"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614910"
 ---
 ### <a name="winforms-domain-upbutton-and-downbutton-actions-are-in-sync-now"></a>Azioni upbutton e downbutton del dominio di Windows Forms ora sincronizzate
 
-|   |   |
-|---|---|
-|Dettagli|In .NET Framework 4.7.1 e versioni precedenti, l'azione <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> del controllo <xref:System.Windows.Forms.DomainUpDown> viene ignorata se è presente testo del controllo e lo sviluppatore deve usare l'azione <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType> sul controllo prima di usare l'azione <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType>. A partire da .NET Framework 4.7.2 entrambe le azioni <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> e <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType> funzionano in modo indipendente in questo scenario e rimangono sincronizzate.|
-|Suggerimento|Perché un'applicazione possa usufruire di queste modifiche, è necessario che sia eseguita in .NET Framework 4.7.2 o versione successiva. L'applicazione può trarre vantaggio da queste modifiche in uno dei modi seguenti:<ul><li>Viene ricompilata per usare .NET Framework 4.7.2. Questa modifica è abilitata per impostazione predefinita nelle applicazioni Windows Forms che usano .NET Framework 4.7.2 o versione successiva.</li><li>Rifiuta esplicitamente il comportamento di scorrimento legacy aggiungendo l'[opzione AppContext](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) seguente alla sezione <code>&lt;runtime&gt;</code> del file app.config e impostandola su <code>false</code>, come illustrato nell'esempio seguente.</li></ul><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Forms.DomainUpDown.UseLegacyScrolling=false&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Ambito|Microsoft Edge|
-|Versione|4.7.2|
-|Tipo|Ridestinazione|
-|API interessate|<ul><li><xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType></li><li><xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Dettagli
+
+In .NET Framework 4.7.1 e versioni precedenti, l'azione <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> del controllo <xref:System.Windows.Forms.DomainUpDown> viene ignorata se è presente testo del controllo e lo sviluppatore deve usare l'azione <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType> sul controllo prima di usare l'azione <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType>. A partire da .NET Framework 4.7.2 entrambe le azioni <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> e <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType> funzionano in modo indipendente in questo scenario e rimangono sincronizzate.
+
+#### <a name="suggestion"></a>Suggerimento
+
+Perché un'applicazione possa usufruire di queste modifiche, è necessario che sia eseguita in .NET Framework 4.7.2 o versione successiva. L'applicazione può trarre vantaggio da queste modifiche in uno dei modi seguenti:
+
+- Viene ricompilata in modo da essere destinata a .NET Framework 4.7.2. Questa modifica è abilitata per impostazione predefinita nelle applicazioni Windows Forms che usano .NET Framework 4.7.2 o versione successiva.
+- Rifiuta esplicitamente il comportamento di scorrimento legacy aggiungendo l'[opzione AppContext](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) seguente alla sezione `<runtime>` del file app.config e impostandola su `false`, come illustrato nell'esempio seguente.
+
+<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Forms.DomainUpDown.UseLegacyScrolling=false&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>
+
+| Nome    | Valore       |
+|:--------|:------------|
+| Scope   | Microsoft Edge        |
+| Version | 4.7.2       |
+| Type    | Ridestinazione |
+
+#### <a name="affected-apis"></a>API interessate
+
+- <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType>

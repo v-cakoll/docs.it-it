@@ -1,19 +1,21 @@
 ---
 title: Inviare un .NET per Apache Spark processo a databricks
 description: Informazioni su come inviare un .NET per Apache Spark processo a databricks con Spark-Submit e set jar.
-ms.date: 05/11/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: a158110854f80921740954403a8fd51b30cbcb12
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: bebd170a689d8ae56aa6c55486d70354da2437ea
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379645"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617769"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>Inviare un .NET per Apache Spark processo a databricks
 
 È possibile eseguire .NET per Apache Spark processi nei cluster databricks, ma non è disponibile per l'utente. Esistono due modi per distribuire .NET per Apache Spark processo a databricks: `spark-submit` e impostare jar.
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="deploy-using-spark-submit"></a>Eseguire la distribuzione con Spark-Submit
 

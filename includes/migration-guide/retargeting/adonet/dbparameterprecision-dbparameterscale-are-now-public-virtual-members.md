@@ -1,18 +1,28 @@
 ---
-ms.openlocfilehash: 1721d32f8cdc9b6ea4b4732e38afa56a8a532600
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 063e10b0310880af255793215a80a5529a5db0ff
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59234729"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85616106"
 ---
 ### <a name="dbparameterprecision-and-dbparameterscale-are-now-public-virtual-members"></a>DbParameter.Precision e DbParameter.Scale sono ora membri virtuali pubblici
 
-|   |   |
-|---|---|
-|Dettagli|<xref:System.Data.Common.DbParameter.Precision> e <xref:System.Data.Common.DbParameter.Scale> sono implementati come proprietà virtuali pubbliche. Sostituiscono le corrispondenti implementazioni esplicite dell'interfaccia, <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Precision> e <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Scale>.|
-|Suggerimento|Quando si ricompila un provider di database ADO.NET, queste differenze richiederanno l'applicazione della parola chiave 'override' alle proprietà Precision e Scale. Questo è necessario solo quando si ricompilano i componenti. I file binari esistenti continueranno a funzionare.|
-|Ambito|Secondario|
-|Versione|4.5.1|
-|Tipo|Ridestinazione|
-|API interessate|<ul><li><xref:System.Data.Common.DbParameter.Precision?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbParameter.Scale?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Dettagli
+
+<xref:System.Data.Common.DbParameter.Precision> e <xref:System.Data.Common.DbParameter.Scale> sono implementati come proprietà virtuali pubbliche. Sostituiscono le corrispondenti implementazioni esplicite dell'interfaccia, <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Precision> e <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Scale>.
+
+#### <a name="suggestion"></a>Suggerimento
+
+Quando si ricompila un provider di database ADO.NET, queste differenze richiederanno l'applicazione della parola chiave 'override' alle proprietà Precision e Scale. Questo è necessario solo quando si ricompilano i componenti. I file binari esistenti continueranno a funzionare.
+
+| Nome    | Valore       |
+|:--------|:------------|
+| Scope   | Minorenne       |
+| Version | 4.5.1       |
+| Type    | Ridestinazione |
+
+#### <a name="affected-apis"></a>API interessate
+
+- <xref:System.Data.Common.DbParameter.Precision?displayProperty=nameWithType>
+- <xref:System.Data.Common.DbParameter.Scale?displayProperty=nameWithType>

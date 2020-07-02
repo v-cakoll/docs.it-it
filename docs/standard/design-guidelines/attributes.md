@@ -1,25 +1,24 @@
 ---
-title: Attributes
+title: Attributi
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-ms.openlocfilehash: 12a67d75a5f9642408cca69b2e3764a67f101549
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3c0e1b8c20042c085d4ace996a084cbd464d3b21
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280582"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617561"
 ---
-# <a name="attributes"></a>Attributes
-
+# <a name="attributes"></a>Attributi
 <xref:System.Attribute?displayProperty=nameWithType>è una classe di base utilizzata per definire attributi personalizzati.
 
- Gli attributi sono annotazioni che possono essere aggiunte a elementi di programmazione quali assembly, tipi, membri e parametri. Vengono archiviati nei metadati dell'assembly ed è possibile accedervi in fase di esecuzione usando le API di Reflection. Ad esempio, .NET definisce l' <xref:System.ObsoleteAttribute> attributo, che può essere applicato a un tipo o a un membro per indicare che il tipo o il membro è stato deprecato.
+ Gli attributi sono annotazioni che possono essere aggiunte a elementi di programmazione quali assembly, tipi, membri e parametri. Sono archiviati nei metadati dell'assembly ed è possibile accedervi in fase di esecuzione usando le API di Reflection. Il Framework, ad esempio, definisce <xref:System.ObsoleteAttribute> , che può essere applicato a un tipo o a un membro per indicare che il tipo o il membro è stato deprecato.
 
- Gli attributi possono avere una o più proprietà che contengono dati aggiuntivi correlati all'attributo. Ad esempio, `ObsoleteAttribute` potrebbe contenere informazioni aggiuntive sulla versione in cui un tipo o un membro è stato deprecato e una descrizione della nuova API che sostituisce l'API obsoleta.
+ Gli attributi possono avere una o più proprietà che contengono dati aggiuntivi correlati all'attributo. Ad esempio, `ObsoleteAttribute` potrebbe contenere informazioni aggiuntive sulla versione in cui un tipo o un membro è stato deprecato e la descrizione delle nuove API che sostituiscono l'API obsoleta.
 
  Quando l'attributo viene applicato, è necessario specificare alcune proprietà di un attributo. Queste proprietà sono denominate proprietà obbligatorie o argomenti obbligatori, perché sono rappresentate come parametri del costruttore posizionale. Ad esempio, la <xref:System.Diagnostics.ConditionalAttribute.ConditionString%2A> proprietà di <xref:System.Diagnostics.ConditionalAttribute> è una proprietà obbligatoria.
 

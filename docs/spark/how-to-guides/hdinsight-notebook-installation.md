@@ -1,141 +1,143 @@
 ---
-title: Installare .NET per Apache Spark nei blocchi appunti Jupyter nei cluster Spark di Azure HDInsightInstall .NET for Apache Spark on Jupyter notebooks on Azure HDInsight Spark clusters
-description: Informazioni su come installare .NET per Apache Spark nei blocchi appunti Jupyter di Azure HDInsight.Learn how to install .NET for Apache Spark on Azure HDInsight's Jupyter Notebooks.
-ms.date: 03/13/2020
+title: Installare .NET per Apache Spark nei notebook di Jupyter nei cluster Azure HDInsight Spark
+description: Informazioni su come installare .NET per Apache Spark nei notebook Jupyter di Azure HDInsight.
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 953bffe5f6ec56cd0adf4224afd2eedfe0001aa9
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 14babf7a551192b286f309393e3bbff25d4745d5
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607415"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617743"
 ---
-# <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Installare .NET per Apache Spark nei blocchi appunti Jupyter nei cluster Spark di Azure HDInsightInstall .NET for Apache Spark on Jupyter notebooks on Azure HDInsight Spark clusters
+# <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Installare .NET per Apache Spark nei notebook di Jupyter nei cluster Azure HDInsight Spark
 
-Questo articolo illustra come installare .NET per Apache Spark nei blocchi appunti Jupyter nei cluster Spark di Azure HDInsight.This article teaches you how to install .NET for Apache Spark on Jupyter notebooks on Azure HDInsight Spark clusters. È possibile distribuire .NET per Apache Spark nei cluster di Azure HDInsight tramite una combinazione della riga di comando e del portale di Azure (per altre informazioni, vedere [come distribuire un'applicazione .NET per Apache Spark in Azure HDInsight),](../tutorials/hdinsight-deployment.md)ma i notebook offrono un'esperienza più interattiva e iterativa.
+Questo articolo illustra come installare .NET per Apache Spark in notebook di Jupyter in Azure HDInsight Spark cluster. È possibile distribuire .NET per Apache Spark nei cluster Azure HDInsight tramite una combinazione della riga di comando e della portale di Azure (per altre informazioni, vedere [How to Deploy an .NET for Apache Spark Application to Azure HDInsight](../tutorials/hdinsight-deployment.md)), ma i notebook forniscono un'esperienza interattiva e iterativa.
 
-I cluster di Azure HDInsight sono già dotati di blocchi appunti Jupyter, pertanto è consigliabile configurare i blocchi appunti Jupyter per l'esecuzione di .NET per Apache Spark.Azure HDInsight clusters already have with Jupyter notebooks, so all you have to do is configure the Jupyter notebooks to run .NET for Apache Spark. Per usare .NET per Apache Spark nei blocchi appunti Jupyter, è necessario un REPL di C'è necessario per eseguire il codice C 'NET riga per riga e per mantenere lo stato di esecuzione quando necessario. [Try .NET](https://github.com/dotnet/try) è stato integrato come REPL ufficiale .NET.
+I cluster HDInsight di Azure sono già dotati di notebook di Jupyter, quindi è sufficiente configurare i notebook di Jupyter per eseguire .NET per Apache Spark. Per usare .NET per Apache Spark nei notebook di Jupyter, è necessario un REPL C# per eseguire il codice C# riga per riga e mantenere lo stato di esecuzione quando necessario. [Try .NET](https://github.com/dotnet/try) è stato integrato come repl .NET ufficiale.
 
 Per abilitare .NET per Apache Spark tramite l'esperienza Jupyter Notebooks, è necessario seguire alcuni passaggi manuali tramite [Ambari](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-manage-ambari) e inviare [azioni script](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux) nel cluster HDInsight Spark.
 
 > [!NOTE]
-> Questa funzionalità è *sperimentale* e non è supportata dal team di HDInsight Spark.This feature is experimental and is not supported by the HDInsight Spark team.
+> Questa funzionalità è *sperimentale* e non è supportata dal team di HDInsight Spark.
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Se non ne hai già uno, crea un cluster [Spark di Azure HDInsight.If](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-apache-spark-cluster-in-hdinsight) you don't already have one, create an Azure HDInsight Spark cluster.
+Se non ne è già presente uno, creare un cluster [Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-apache-spark-cluster-in-hdinsight) .
 
-1. Visitare il [portale di Azure](https://portal.azure.com) e selezionare Crea una **risorsa**.
+1. Visitare il [portale di Azure](https://portal.azure.com) e selezionare **+ Crea una risorsa**.
 
-1. Creare una nuova risorsa cluster di Azure HDInsight.Create a new Azure HDInsight cluster resource. Selezionare **Spark 2.4** e **HDI 4.0** durante la creazione del cluster.
+1. Creare una nuova risorsa cluster di Azure HDInsight. Selezionare **Spark 2,4** e **HDI 4,0** durante la creazione del cluster.
 
 ## <a name="install-net-for-apache-spark"></a>Installare .NET per Apache Spark
 
-Nel portale di Azure selezionare il **cluster HDInsight Spark** creato nel passaggio precedente.
+Nella portale di Azure selezionare il **cluster HDInsight Spark** creato nel passaggio precedente.
 
-### <a name="stop-the-livy-server"></a>Arrestare il server Livy
+### <a name="stop-the-livy-server"></a>Arrestare il server Livio
 
-1. Dal portale selezionare **Panoramica**, quindi **fare clic sulla home page di Ambari**. Se richiesto, immettere le credenziali di accesso per il cluster.
+1. Dal portale selezionare **Panoramica**, quindi selezionare **Ambari Home**. Se richiesto, immettere le credenziali di accesso per il cluster.
 
-   ![Arresta Livy Server](./media/hdinsight-notebook-installation/select-ambari.png)
+   ![Interrompi server Livio](./media/hdinsight-notebook-installation/select-ambari.png)
 
-2. Selezionare **Spark2** dal menu di navigazione a sinistra e selezionare **LIVY FOR SPARK2 SERVER**.
+2. Selezionare **Spark2** nel menu di spostamento a sinistra e selezionare **Livio per il server Spark2**.
 
-   ![Arresta Livy Server](./media/hdinsight-notebook-installation/select-livyserver.png)
+   ![Interrompi server Livio](./media/hdinsight-notebook-installation/select-livyserver.png)
 
-3. Selezionare **hn0... l'host**.
+3. Seleziona **hn0... host**.
 
-   ![Arresta Livy Server](./media/hdinsight-notebook-installation/select-host.png)
+   ![Interrompi server Livio](./media/hdinsight-notebook-installation/select-host.png)
 
-4. Selezionare i lipsiani accanto a **Livy per Spark2 Server** e selezionare **Arresta**. Quando richiesto, selezionare **OK** per procedere.
+4. Selezionare i puntini di sospensione accanto a **Livio per il server Spark2** e selezionare **Arresta**. Quando richiesto, selezionare **OK** per continuare.
 
-   Arrestare Livy per Spark2 Server.
-   ![Arresta Livy Server](./media/hdinsight-notebook-installation/stop-server.png)
+   Arrestare Livio per il server Spark2.
+   ![Interrompi server Livio](./media/hdinsight-notebook-installation/stop-server.png)
 
-5. Ripetere i passaggi precedenti per **hn1... l'host**.
+5. Ripetere i passaggi precedenti per **HN1... host**.
 
-### <a name="submit-an-hdinsight-script-action"></a>Inviare un'azione di script HDInsightSubmit an HDInsight script action
+### <a name="submit-an-hdinsight-script-action"></a>Inviare un'azione di script HDInsight
 
-1. Il `install-interactive-notebook.sh` è uno script che installa .NET per Apache Spark e apporta modifiche a Apache Livy e sparkmagic. Prima di inviare un'azione script a HDInsight, è necessario creare e caricare `install-interactive-notebook.sh`.
+1. `install-interactive-notebook.sh`È uno script che installa .NET per Apache Spark e apporta modifiche a Apache Livio e sparkmagic. Prima di inviare un'azione script a HDInsight, è necessario creare e caricare `install-interactive-notebook.sh` .
 
-   Creare un nuovo file denominato **install-interactive-notebook.sh** nel computer locale e incollare il contenuto di [install-interactive-notebook.sh contenuto](https://raw.githubusercontent.com/dotnet/spark/master/deployment/HDI-Spark/Notebooks/install-interactive-notebook.sh).
+   Creare un nuovo file denominato **Install-Interactive-notebook.sh** nel computer locale e incollare il contenuto del [contenuto di install-Interactive-notebook.sh](https://raw.githubusercontent.com/dotnet/spark/master/deployment/HDI-Spark/Notebooks/install-interactive-notebook.sh).
 
-   Caricare lo script in un URI accessibile dal cluster HDInsight.Upload the script to a [URI](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux#understand-script-actions) that's accessible from the HDInsight cluster. Ad esempio: `https://<my storage account>.blob.core.windows.net/<my container>/<some dir>/install-interactive-notebook.sh`.
+   Caricare lo script in un [URI](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux#understand-script-actions) accessibile dal cluster HDInsight. Ad esempio, `https://<my storage account>.blob.core.windows.net/<my container>/<some dir>/install-interactive-notebook.sh`
 
 2. Eseguire `install-interactive-notebook.sh` nel cluster usando [azioni script di HDInsight](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux).
 
-   Tornare al cluster HDI nel portale di Azure e selezionare **Azioni script** dalle opzioni a sinistra. Si invia un'azione di script per distribuire .NET per Apache Spark REPL nel cluster HDInsight Spark. Usare le seguenti impostazioni:
+   Tornare al cluster HDI nell'portale di Azure e selezionare **azioni script** dalle opzioni a sinistra. Si invia un'azione script per distribuire .NET per Apache Spark REPL nel cluster HDInsight Spark. Usare le seguenti impostazioni:
 
    |Proprietà  |Descrizione  |
    |---------|---------|
    | Tipo di script | Personalizzato |
-   | Nome | *Installare .NET per L'esperienza notebook interattiva di Apache Spark* |
+   | Name | *Installare .NET per Apache Spark esperienza interattiva del notebook* |
    | URI script Bash | URI in cui è stato caricato `install-interactive-notebook.sh`. |
-   | Tipo/i di nodo| Testa e lavoratore |
-   | Parametri | .NET per la versione Apache Spark. È possibile controllare .NET per le versioni di [Apache Spark](https://github.com/dotnet/spark/releases). Ad esempio, se si desidera installare Sparkdotnet versione 0.6.0, sarà `0.6.0`.
+   | Tipo/i di nodo| Head e worker |
+   | Parametri | .NET per Apache Spark versione. È possibile controllare [.NET per Apache Spark versioni](https://github.com/dotnet/spark/releases). Ad esempio, se si vuole installare Sparkdotnet versione 0.6.0, sarà `0.6.0` .
 
-   Passare al passaggio successivo quando accanto allo stato dell'azione di script vengono visualizzati dei segni di spunta verdi.
+   Passare al passaggio successivo quando vengono visualizzati segni di spunta verdi accanto allo stato dell'azione script.
 
-### <a name="start-the-livy-server"></a>Avviare il server Livy
+### <a name="start-the-livy-server"></a>Avviare il server Livio
 
-Seguire le istruzioni nella sezione [Stop Livy server](#stop-the-livy-server) per **avviare** (anziché **arrestare**) Il server Livy for Spark2 Server per gli host **hn0** e **hn1**.
+Seguire le istruzioni riportate nella sezione [arrestare il server Livio](#stop-the-livy-server) per **avviare** (anziché **arrestare**) il Livio per il server Spark2 per gli host **hn0** e **HN1**.
 
 ### <a name="set-up-spark-default-configurations"></a>Configurare le configurazioni predefinite di Spark
 
-1. Dal portale selezionare **Panoramica**, quindi **fare clic sulla home page di Ambari**. Se richiesto, immettere le credenziali di accesso del cluster.
+1. Dal portale selezionare **Panoramica**, quindi selezionare **Ambari Home**. Se richiesto, immettere le credenziali di accesso del cluster.
 
-2. Selezionare **Spark2** e **CONFIGS**. Selezionare quindi **Custom spark2-defaults**.
+2. Selezionare **Spark2** e **configs**. Quindi selezionare **Custom spark2-defaults**.
 
    ![Imposta configurazioni](./media/hdinsight-notebook-installation/spark-configs.png)
 
-3. Selezionare Aggiungi proprietà... per aggiungere le impostazioni predefinite Spark.Select **Add Property...** to add Spark default settings.
+3. Selezionare **Aggiungi proprietà** per aggiungere le impostazioni predefinite di Spark.
 
    ![Aggiungi proprietà](./media/hdinsight-notebook-installation/add-property.png)
 
-   Ci sono tre proprietà individuali. Aggiungerli uno alla volta utilizzando il tipo di proprietà TESTO in modalità di aggiunta di proprietà Single.Add them one at a time using the **TEXT** property type in Single property add mode. Verificare che non siano presenti spazi aggiuntivi prima o dopo una delle chiavi/valori.
+   Sono disponibili tre singole proprietà. Aggiungerli uno alla volta usando il tipo di proprietà **Text** in modalità di aggiunta di una singola proprietà. Verificare che non siano presenti spazi aggiuntivi prima o dopo una qualsiasi delle chiavi o dei valori.
 
    * **Proprietà 1**
-       * Chiave:&ensp;&ensp;`spark.dotnet.shell.command`
+       * Chiave&ensp;&ensp;`spark.dotnet.shell.command`
        * Valore: `/usr/share/dotnet-tools/dotnet-try,kernel-server,--default-kernel,csharp`
 
-   * **Proprietà 2** Utilizzare la versione di .NET per Apache Spark inclusa nell'azione script precedente.
-       * Chiave:&ensp;&ensp;`spark.dotnet.packages`
+   * **Proprietà 2** Usare la versione di .NET per Apache Spark inclusa nell'azione script precedente.
+       * Chiave&ensp;&ensp;`spark.dotnet.packages`
        * Valore: `["nuget: Microsoft.Spark, 0.6.0", "nuget: Microsoft.Spark.Extensions.Delta, 0.6.0"]`
 
    * **Proprietà 3**
-       * Chiave:&ensp;&ensp;`spark.dotnet.interpreter`
+       * Chiave&ensp;&ensp;`spark.dotnet.interpreter`
        * Valore: `try`
 
-   Ad esempio, l'immagine seguente acquisisce l'impostazione per l'aggiunta della proprietà 1:For example, the following image captures the setting for adding property 1:
+   Nell'immagine seguente, ad esempio, viene acquisita l'impostazione per l'aggiunta della proprietà 1:
 
    ![Imposta configurazioni](./media/hdinsight-notebook-installation/add-sparkconfig.png)
 
-   Dopo aver aggiunto le tre proprietà, selezionare **SALVA**. Se viene visualizzata una schermata di avviso dei suggerimenti di configurazione, selezionare **PROCEED ANYWAY**.
+   Dopo aver aggiunto le tre proprietà, selezionare **Salva**. Se viene visualizzata una schermata di avviso relativa alle raccomandazioni di configurazione, selezionare **continua comunque**.
 
 4. Riavviare i componenti interessati.
 
-   Dopo aver aggiunto le nuove proprietà, è necessario riavviare i componenti interessati dalle modifiche. Nella parte superiore selezionare **RESTART**, quindi **Riavvia tutto interessato** dall'elenco a discesa.
+   Dopo aver aggiunto le nuove proprietà, è necessario riavviare i componenti interessati dalle modifiche. Nella parte superiore selezionare **Riavvia**, quindi **riavviare tutti gli interessati** dall'elenco a discesa.
 
    ![Imposta configurazioni](./media/hdinsight-notebook-installation/restart-affected.png)
 
-   Quando richiesto, selezionare **CONFIRM RESTART ALL** per continuare, quindi fare clic su **OK** per terminare.
+   Quando richiesto, selezionare **Confirm REstart all** per continuare, quindi fare clic su **OK** per terminare.
 
-## <a name="submit-jobs-through-a-jupyter-notebook"></a>Inviare processi tramite un blocco appunti di Jupyter
+## <a name="submit-jobs-through-a-jupyter-notebook"></a>Inviare processi tramite un notebook di Jupyter
 
-Dopo aver completato i passaggi precedenti, è ora possibile inviare i processi .NET per Apache Spark tramite notebook Jupyter.
+Dopo aver completato i passaggi precedenti, è ora possibile inviare .NET per i processi di Apache Spark tramite notebook di Jupyter.
 
-1. Creare un nuovo blocco appunti .NET per Apache Spark. Avviare un blocco appunti Jupyter dal cluster HDI nel portale di Azure.Launch a Jupyter notebook from your HDI cluster in the Azure portal.
+1. Creare una nuova .NET per Apache Spark notebook. Avviare un notebook di Jupyter dal cluster HDI nel portale di Azure.
 
-   ![Lancia Jupyter Notebook](./media/hdinsight-notebook-installation/launch-notebook.png)
+   ![Avvia Jupyter Notebook](./media/hdinsight-notebook-installation/launch-notebook.png)
 
-   Selezionare quindi **Nuovo** > **.NET Spark (Cè)** per creare un blocco appunti.
+   Quindi, selezionare **nuovo**  >  **.NET Spark (C#)** per creare un notebook.
 
    ![Notebook Jupyter](./media/hdinsight-notebook-installation/create-sparkdotnet-notebook.png)
 
-2. Inviare processi utilizzando .NET per Apache Spark.
+2. Inviare processi con .NET per Apache Spark.
 
-   Usare il frammento di codice seguente per creare un oggetto DataFrame:Use the following code snippet to create a DataFrame:
+   Usare il frammento di codice seguente per creare un dataframe:
 
    ```csharp
    var df = spark.Range(0,5);
@@ -144,7 +146,7 @@ Dopo aver completato i passaggi precedenti, è ora possibile inviare i processi 
 
    ![Invia processo Spark](./media/hdinsight-notebook-installation/create-df.png)
 
-   Use the following code snippet to register a user-defined function (UDF) and use the UDF with DataFrames:
+   Usare il frammento di codice seguente per registrare una funzione definita dall'utente (UDF) e usare la funzione definita dall'utente con dataframe:
 
    ```csharp
    var myawesomeudf = Udf<int, string>((id) => $"hello {id}");
@@ -156,4 +158,4 @@ Dopo aver completato i passaggi precedenti, è ora possibile inviare i processi 
 ## <a name="next-steps"></a>Passaggi successivi
 
 * [Distribuire un'applicazione .NET per Apache Spark in Azure HDInsight](../tutorials/hdinsight-deployment.md)
-* [Documentazione di HDInsightHDInsight Documentation](https://docs.microsoft.com/azure/hdinsight/)
+* [Documentazione di HDInsight](https://docs.microsoft.com/azure/hdinsight/)

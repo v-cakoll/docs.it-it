@@ -1,72 +1,74 @@
 ---
-title: Analisi del sentiment con .NET per Apache Spark e ML.NET tutorial
-description: In questa esercitazione si apprenderà come usare ML.NET con .NET per Apache Spark per l'analisi del sentiment.
+title: Esercitazione sull'analisi dei sentimenti con .NET per Apache Spark e ML.NET
+description: In questa esercitazione si apprenderà come usare ML.NET con .NET per Apache Spark per l'analisi dei sentimenti.
 author: mamccrea
 ms.author: mamccrea
-ms.date: 03/25/2019
+ms.date: 06/25/2020
 ms.topic: tutorial
-ms.openlocfilehash: cdd1214c26a5d5a4b159df3a396ec6f36b9fc0dd
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: 69deb30419b98536fa309547d94f59bb266e413c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391258"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617580"
 ---
-# <a name="tutorial-sentiment-analysis-with-net-for-apache-spark-and-mlnet"></a>Esercitazione: Analisi del sentiment con .NET per Apache Spark e ML.NET
+# <a name="tutorial-sentiment-analysis-with-net-for-apache-spark-and-mlnet"></a>Esercitazione: analisi dei sentimenti con .NET per Apache Spark e ML.NET
 
-Questo tutorial ti insegna come eseguire l'analisi del sentiment delle recensioni online usando ML.NET e .NET per Apache Spark. [ML.NET](http://dot.net/ml) è un framework di apprendimento automatico gratuito, multipiattaforma e open source. È possibile usare ML.NET con .NET per Apache Spark per ridimensionare il training e la stima degli algoritmi di apprendimento automatico.
+Questa esercitazione illustra come eseguire l'analisi dei sentimenti delle revisioni online usando ML.NET e .NET per Apache Spark. [Ml.NET](http://dot.net/ml) è un framework gratuito, multipiattaforma open source di machine learning. È possibile usare ML.NET con .NET per Apache Spark per ridimensionare il training e la stima degli algoritmi di machine learning.
 
 In questa esercitazione verranno illustrate le procedure per:
 
 > [!div class="checklist"]
 >
-> * Creare un modello di analisi del sentiment usando ML.NET Model Builder in Visual Studio.Create a sentiment analysis model using ML.NET Model Builder in Visual Studio.
-> * Creare un'app console .NET per Apache Spark.Create a .NET for Apache Spark console app.
+> * Creare un modello di analisi dei sentimenti usando il generatore di modelli ML.NET in Visual Studio.
+> * Creare un'applicazione .NET per Apache Spark console.
 > * Scrivere e implementare una funzione definita dall'utente.
-> * Eseguire un'app console .NET per Apache Spark.
+> * Eseguire un'applicazione .NET per Apache Spark console.
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-* Se non è stata sviluppata un'applicazione .NET per Apache Spark in precedenza, iniziare con [l'esercitazione introduttiva](get-started.md) per acquisire familiarità con le nozioni di base. Completare tutti i prerequisiti per l'esercitazione introduttiva prima di continuare con questa esercitazione.
+* Se in precedenza non è stata sviluppata un'applicazione .NET per Apache Spark, iniziare con l' [esercitazione Introduzione](get-started.md) per acquisire familiarità con le nozioni di base. Completare tutti i prerequisiti per l'esercitazione Introduzione prima di continuare con questa esercitazione.
 
-* Questa esercitazione usa il ML.NET Model Builder (anteprima), un'interfaccia visiva disponibile in Visual Studio.This tutorial uses the ML.NET Model Builder (preview), a visual interface available in Visual Studio. Se non si dispone già di Visual Studio, è possibile [scaricare gratuitamente la versione Community di Visual Studio.](https://visualstudio.microsoft.com/downloads/)
+* Questa esercitazione usa il generatore di modelli ML.NET (anteprima), un'interfaccia visiva disponibile in Visual Studio. Se non si dispone già di Visual Studio, è possibile [scaricare gratuitamente la versione community di Visual Studio](https://visualstudio.microsoft.com/downloads/) .
 
-* [Scarica e installa](https://marketplace.visualstudio.com/items?itemName=MLNET.07) ML.NET Model Builder (anteprima).
+* [Scaricare e installare](https://marketplace.visualstudio.com/items?itemName=MLNET.07) Generatore di modelli ML.NET (anteprima).
 
-* Scaricare i set di dati [Yelptest.csv](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptest.csv) e [yelptrain.csv](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv) Yelp.
+* Scaricare i set di impostazioni di [yelptest.csv](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptest.csv) e [yelptrain.csv](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv) Yelp Review.
 
 ## <a name="review-the-data"></a>Esaminare i dati
 
-Il set di dati Yelp reviews contiene recensioni Yelp online su vari servizi. Aprire [yelptrain.csv](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv) e notare la struttura dei dati. La prima colonna contiene il testo della recensione e la seconda colonna contiene i punteggi di valutazione. Se il punteggio del sentiment è 1, la recensione è positiva e se il punteggio del sentiment è 0, la recensione è negativa.
+Il set di dati delle revisioni di Yelp contiene recensioni di Yelp online sui vari servizi. Aprire [yelptrain.csv](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv) e osservare la struttura dei dati. La prima colonna contiene il testo della revisione e la seconda colonna contiene i punteggi dei sentimenti. Se il Punteggio di valutazione è 1, la revisione è positiva e se il punteggio del sentimento è 0, la verifica è negativa.
 
-La tabella seguente contiene dati di esempio:The following table contains sample data:
+La tabella seguente contiene dati di esempio:
 
-|Testorevisione|Valutazione|
+|ReviewText|Valutazione|
 |-|-|
-|Wow... Mi è piaciuto molto questo posto.|    1|
+|Wow... Questo posto è stato apprezzato.|    1|
 |Crust is not good.|    0|
 
-## <a name="build-your-machine-learning-model"></a>Crea il tuo modello di apprendimento automatico
+## <a name="build-your-machine-learning-model"></a>Compilare il modello di Machine Learning
 
-1. Aprire Visual Studio e creare una nuova applicazione console di C . Denominare il progetto *MLSparkModel*.
+1. Aprire Visual Studio e creare una nuova app console C# (.NET Core). Denominare il progetto *MLSparkModel*.
 
-1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto *MLSparkModel.* Selezionare quindi **Aggiungi > Machine Learning**.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto *MLSparkModel* . Quindi selezionare **aggiungi > Machine Learning**.
 
-1. Nella ML.NET Model Builder selezionare il riquadro scenario **Analisi valutazione.**
+1. Dal generatore di modelli ML.NET selezionare il riquadro scenario **analisi del sentiment** .
 
-1. Nella pagina **Aggiungi dati** caricare il set di dati *yelptrain.csv.*
+1. Nella pagina **Aggiungi dati** caricare il set di dati *yelptrain.csv* .
 
-1. Scegli *Valutazione* dall'elenco a discesa **Colonne da pronostilare.**
+1. Scegliere *sentimento* dall'elenco **a discesa colonne da stimare** .
 
-1. Nella pagina **Treno** impostare l'ora di training su *60 secondi* e selezionare **Avvia formazione**. Si noti lo stato della formazione in **Progress**.
+1. Nella pagina **Train** impostare il tempo di training su *60 secondi* e selezionare **Avvia Training**. Si noti lo stato della formazione in **corso**.
 
-1. Al termine del training di Model Builder, **valutare** i risultati del training. È possibile digitare frasi nella casella di testo sotto **Provare il modello** e selezionare **Previsione** per visualizzare l'output.
+1. Una volta completato il training del generatore di modelli, **valutare** i risultati della formazione. È possibile digitare frasi nella casella di testo seguente **provare a usare il modello** e selezionare **stima** per visualizzare l'output.
 
-1. Selezionare **Codice** e quindi **Aggiungi progetti** per aggiungere il modello di Configurazione istantanea alla soluzione.
+1. Selezionare il **codice** e quindi selezionare **Aggiungi progetti** per aggiungere il modello ml alla soluzione.
 
-1. Si noti che vengono aggiunti due progetti alle soluzioni: **MLSparkModelML.ConsoleApp** e **MLSparkModelML.Model**.
+1. Si noti che per le soluzioni vengono aggiunti due progetti: **MLSparkModelML. ConsoleApp** e **MLSparkModelML. Model**.
 
-1. Fare doppio clic sul progetto *MLSpark* in C, quindi notare che è stato aggiunto il riferimento al progetto seguente.
+1. Fare doppio clic sul progetto *MLSpark* C# e notare che è stato aggiunto il seguente riferimento al progetto.
 
    ```xml
    <ItemGroup>
@@ -74,19 +76,19 @@ La tabella seguente contiene dati di esempio:The following table contains sample
    </ItemGroup>
    ```
 
-## <a name="create-a-console-app"></a>Creare un'app console
+## <a name="create-a-console-app"></a>Creare un'applicazione console
 
-Model Builder crea automaticamente un'app console.
+Generatore di modelli crea automaticamente un'app console.
 
-1. Fare clic con il pulsante destro del mouse su **MLSparkModelML.Console** in Esplora soluzioni e selezionare **Gestisci pacchetti NuGet**.
+1. Fare clic con il pulsante destro del mouse su **MLSparkModelML. console** in Esplora soluzioni e selezionare **Gestisci pacchetti NuGet**.
 
-1. Cercare **Microsoft.Spark** e installare il pacchetto. **Microsoft.ML** viene installato automaticamente da Model Builder.
+1. Cercare **Microsoft. Spark** e installare il pacchetto. **Microsoft.ml** viene automaticamente installato dal generatore di modelli.
 
-### <a name="create-a-sparksession"></a>Creare una SparkSessionCreate a SparkSession
+### <a name="create-a-sparksession"></a>Creare un SparkSession
 
-1. Aprire il file *di Program.cs* per **MLSparkModelML.ConsoleApp**. Questo file è stato generato automaticamente da Model Builder. Eliminare `using` le istruzioni, il contenuto del metodo `CreateSingleDataSample` Main() e l'area.
+1. Aprire il file *Program.cs* per **MLSparkModelML. ConsoleApp**. Questo file è stato generato automaticamente dal generatore di modelli. Eliminare le `using` istruzioni, il contenuto del metodo Main () e l' `CreateSingleDataSample` area.
 
-1. Aggiungere le `using` seguenti istruzioni aggiuntive all'inizio del *Program.cs:*
+1. Aggiungere le istruzioni aggiuntive seguenti `using` all'inizio di *Program.cs*:
 
    ```csharp
    using System;
@@ -97,9 +99,9 @@ Model Builder crea automaticamente un'app console.
    using MLSparkModelML.Model;
    ```
 
-1. Modificare `DATA_FILEPATH` il percorso del *file yelptest.csv*.
+1. Modificare il `DATA_FILEPATH` percorso del *yelptest.csv*.
 
-1. Aggiungere il codice `Main` seguente al metodo `SparkSession`per creare un nuovo oggetto . La sessione Spark è il punto di ingresso alla programmazione Spark con il Dataset e l'API DataFrame.
+1. Aggiungere il codice seguente al `Main` metodo per creare un nuovo oggetto `SparkSession` . La sessione Spark è il punto di ingresso per la programmazione di Spark con il set di dati e l'API dataframe.
 
    ```csharp
    SparkSession spark = SparkSession
@@ -108,11 +110,11 @@ Model Builder crea automaticamente un'app console.
         .GetOrCreate();
    ```
 
-   La chiamata all'oggetto *spark* creato in precedenza consente di accedere alle funzionalità Spark e DataFrame in tutto il programma.
+   La chiamata all'oggetto *Spark* creato in precedenza consente di accedere alle funzionalità di Spark e dataframe in tutto il programma.
 
-### <a name="create-a-dataframe-and-print-to-console"></a>Creare un frame di dati e stamparlo su consoleCreate a DataFrame and print to console
+### <a name="create-a-dataframe-and-print-to-console"></a>Creare un dataframe e stamparlo nella console
 
-Leggere i dati di revisione di Yelp dal file `DataFrame` *yelptest.csv* come file . Includi `header` `inferSchema` e opzioni. L'opzione `header` legge la prima riga di *yelptest.csv* come nomi di colonna anziché come dati. L'opzione `inferSchema` deduce i tipi di colonna in base ai dati.
+Leggere i dati della verifica di Yelp dal file di *yelptest.csv* come `DataFrame` . Includere `header` le `inferSchema` Opzioni e. L' `header` opzione legge la prima riga di *yelptest.csv* come nomi di colonna anziché come dati. L' `inferSchema` opzione deduce i tipi di colonna in base ai dati.
 
 ```csharp
 DataFrame df = spark
@@ -124,22 +126,22 @@ DataFrame df = spark
 df.Show();
 ```
 
-### <a name="register-a-user-defined-function"></a>Registrare una funzione definita dall'utenteRegister a user-defined function
+### <a name="register-a-user-defined-function"></a>Registrare una funzione definita dall'utente
 
-È possibile utilizzare funzioni definite dall'utente, *funzioni definite dall'utente,* nelle applicazioni Spark per eseguire calcoli e analisi sui dati. In questa esercitazione si userà ML.NET con una funzione definita dall'utente per valutare ogni revisione Yelp.In this tutorial, you use a share with a UDF to evaluate each Yelp review.
+È possibile usare UDF, *funzioni definite dall'utente*nelle applicazioni Spark per eseguire calcoli e analisi sui dati. In questa esercitazione si userà ML.NET con una funzione definita dall'utente per valutare ogni revisione di Yelp.
 
-Aggiungere il codice `Main` seguente al metodo per `MLudf`registrare una funzione definita dall'utente denominata .
+Aggiungere il codice seguente al `Main` metodo per registrare una funzione definita dall'utente denominata `MLudf` .
 
 ```csharp
 spark.Udf()
     .Register<string, bool>("MLudf", predict);
 ```
 
-Questa funzione definita dall'utente accetta una stringa di revisione Yelp come input e restituisce true o false rispettivamente per i sentimenti positivi o negativi. Utilizza il metodo *predict()* definito in un passaggio successivo.
+Questa funzione definita dall'utente accetta una stringa di verifica Yelp come input e restituisce true o false rispettivamente per i sentimenti positivi o negativi. Usa il metodo *Predict ()* definito in un passaggio successivo.
 
-### <a name="use-spark-sql-to-call-the-udf"></a>Usare Spark SQL per chiamare la funzione definita dall'utenteUse Spark SQL to call the UDF
+### <a name="use-spark-sql-to-call-the-udf"></a>Usare Spark SQL per chiamare la funzione definita dall'utente
 
-Ora che hai letto i dati e incorporato ML, utilizzare Spark SQL per chiamare la funzione definita dall'utente che eseguirà l'analisi del sentiment su ogni riga del frame di dati. Aggiungere il codice seguente al metodo `Main`:
+Ora che sono stati letti i dati e sono stati incorporati ML, usare Spark SQL per chiamare la funzione definita dall'utente che eseguirà l'analisi dei sentimenti in ogni riga del dataframe. Aggiungere il codice seguente al metodo `Main`:
 
 ```csharp
 // Use Spark SQL to call ML.NET UDF
@@ -155,9 +157,9 @@ sqlDf.Show(20, 0, false);
 spark.Stop();
 ```
 
-### <a name="create-predict-method"></a>Crea metodo predict()
+### <a name="create-predict-method"></a>Crea metodo Predict ()
 
-Aggiungere il codice `Main()` seguente prima del metodo. Questo codice è simile a quello prodotto da Model Builder in *ConsumeModel.cs*. Lo spostamento di questo metodo nella console carica il caricamento del modello ogni volta che si esegue l'app.
+Aggiungere il codice seguente prima del `Main()` metodo. Questo codice è simile a quello prodotto dal generatore di modelli in *ConsumeModel.cs*. Se si trasferisce questo metodo nella console, il caricamento del modello viene caricato ogni volta che si esegue l'app.
 
 ```csharp
 private static readonly PredictionEngine<ModelInput, ModelOutput> _predictionEngine;
@@ -182,20 +184,20 @@ static bool predict(string text)
 
 ## <a name="add-the-model-to-your-console-app"></a>Aggiungere il modello all'app console
 
-In Esplora soluzioni copiare il file *MLModel.zip* dal progetto **MLSparkModelML.Model** e incollarlo nel progetto **MLSparkModelML.ConsoleApp.** Un riferimento viene aggiunto automaticamente in *MLSparkModelML.ConsoleApp.csproj*.
+In Esplora soluzioni copiare il file di *MLModel.zip* dal progetto **MLSparkModelML. Model** e incollarlo nel progetto **MLSparkModelML. ConsoleApp** . Un riferimento viene aggiunto automaticamente in *MLSparkModelML. ConsoleApp. csproj*.
 
-## <a name="run-your-code"></a>Eseguire il codiceRun your code
+## <a name="run-your-code"></a>Eseguire il codice
 
-Utilizzare `spark-submit` per eseguire il codice. Passare alla cartella radice dell'app console usando il prompt dei comandi ed eseguire i comandi seguenti.
+Usare `spark-submit` per eseguire il codice. Passare alla cartella radice dell'app console usando il prompt dei comandi ed eseguire i comandi seguenti.
 
-Innanzitutto, pulisci e pubblica la tua app.
+Per prima cosa, pulire e pubblicare l'app.
 
 ```dotnetcli
 dotnet clean
 dotnet publish
 ```
 
-Passare quindi alla cartella di pubblicazione dell'app console ed eseguire il comando seguente. `spark-submit` Ricordarsi di aggiornare il comando con il percorso effettivo del file jar di Microsoft Spark.
+Passare quindi alla cartella di pubblicazione dell'app console ed eseguire il `spark-submit` comando seguente. Ricordarsi di aggiornare il comando con il percorso effettivo del file jar di Microsoft Spark.
 
 ```dotnetcli
 %SPARK_HOME%\bin\spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local microsoft-spark-2.4.x-0.10.0.jar dotnet MLSparkModelML.ConsoleApp.dll
@@ -203,10 +205,10 @@ Passare quindi alla cartella di pubblicazione dell'app console ed eseguire il co
 
 ## <a name="get-the-code"></a>Ottenere il codice
 
-Questa esercitazione è simile al codice dell'esempio [di analisi del sentiment con Big Data.This](https://github.com/dotnet/spark/tree/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment) tutorial is similar to the code from the Sentiment Analysis with Big Data example.
+Questa esercitazione è simile al codice dell'esempio [analisi del sentiment con Big Data](https://github.com/dotnet/spark/tree/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment) .
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 Passare all'articolo successivo per informazioni su come eseguire lo streaming strutturato con .NET per Apache Spark.
 > [!div class="nextstepaction"]
-> [Esercitazione: Streaming strutturato con .NET per Apache SparkTutorial: Structured Streaming with .NET for Apache Spark](streaming.md)
+> [Esercitazione: flusso strutturato con .NET per Apache Spark](streaming.md)

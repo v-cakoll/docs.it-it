@@ -1,19 +1,21 @@
 ---
 title: Distribuire .NET per Apache Spark Worker e i file binari delle funzioni definite dall'utente
 description: Informazioni su come distribuire .NET per Apache Spark di lavoro e binari di funzioni definite dall'utente.
-ms.date: 01/21/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 042f336431a1c8cad7d94cf10cbe64b72ddfce5b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 672a32c430bd702167a294d2b895ac1ac90bf67e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596461"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617717"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Distribuire .NET per Apache Spark Worker e i file binari delle funzioni definite dall'utente
 
 In questa procedura vengono fornite istruzioni generali su come distribuire .NET per i file binari di Apache Spark Worker e di funzioni definite dall'utente. Vengono fornite informazioni sulle variabili di ambiente da configurare, oltre ad alcuni parametri di uso comune per l'avvio di applicazioni con `spark-submit` .
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="configurations"></a>Configurazioni
 Nelle configurazioni sono illustrate le impostazioni generali per le variabili di ambiente e i parametri per distribuire .NET per i file binari di Apache Spark Worker e di funzioni definite dall'utente.
@@ -46,12 +48,12 @@ Quando l'applicazione Spark è in [bundle](https://spark.apache.org/docs/latest/
 
 ## <a name="frequently-asked-questions"></a>Domande frequenti
 ### <a name="when-i-run-a-spark-app-with-udfs-i-get-a-filenotfoundexception-error-what-should-i-do"></a>Quando si esegue un'app Spark con funzioni definite dall'utente, viene generato un errore ' FileNotFoundException '. Cosa devo fare?
-> **Errore:** [errore] [TaskRunner] [0] ProcessStream () non riuscito con eccezione: System. io. FileNotFoundException: assembly ' MySparkApp, Version = 1.0.0.0, Culture = neutral, PublicKeyToken = null ' file non trovato:' mySparkApp. dll '
+> **Errore:** [errore] [TaskRunner] [0] ProcessStream () non riuscito con eccezione: System. io. FileNotFoundException: assembly ' MySparkApp, Version = 1.0.0.0, Culture = neutral, PublicKeyToken = null ' file non trovato:' mySparkApp.dll'
 
 **Risposta:** Verificare che la `DOTNET_ASSEMBLY_SEARCH_PATHS` variabile di ambiente sia impostata correttamente. Deve corrispondere al percorso contenente il `mySparkApp.dll` .
 
 ### <a name="after-i-upgraded-my-net-for-apache-spark-version-and-reset-the-dotnet_worker_dir-environment-variable-why-do-i-still-get-the-following-ioexception-error"></a>Dopo l'aggiornamento di .NET per Apache Spark versione e la reimpostazione della `DOTNET_WORKER_DIR` variabile di ambiente, perché viene comunque ottenuto l' `IOException` errore seguente?
-> **Errore:** Attività persa 0,0 nella fase 11,0 (TID 24, localhost, driver Executor): Java. io. IOException: non è possibile eseguire il programma "Microsoft. Spark. Worker. exe": errore CreateProcess = 2, il sistema non riesce a trovare il file specificato.
+> **Errore:** Attività persa 0,0 nella fase 11,0 (TID 24, localhost, driver Executor): Java. io. IOException: non è possibile eseguire il programma "Microsoft.Spark.Worker.exe": errore CreateProcess = 2, il sistema non riesce a trovare il file specificato.
 
 **Risposta:** Provare a riavviare prima la finestra di PowerShell (o altre finestre di comando) in modo da poter usare i valori delle variabili di ambiente più recenti. Avviare quindi il programma.
 
