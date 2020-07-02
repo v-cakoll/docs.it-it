@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: Controllare un oggetto MediaElement usando uno storyboard'
+title: 'Procedura: controllare un MediaElement utilizzando uno storyboard'
+description: Controllare la riproduzione dei supporti usando uno storyboard in Windows Presentation Foundation (WPF). Si consideri questo esempio per la creazione di un semplice lettore multimediale.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,26 +12,26 @@ helpviewer_keywords:
 - media [WPF], controlling playback with Storyboards
 - playback of media [WPF], controlling with Storyboards
 ms.assetid: 6128ca77-b826-4e36-b968-6f237157c543
-ms.openlocfilehash: ae785e11b1da0f2c408b24021ad46ab071419378
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a5e41b9a28211495fd3374c1a51a655dd867bca
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032231"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853729"
 ---
-# <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a>Procedura: Controllare un oggetto MediaElement usando uno storyboard
-In questo esempio viene illustrato come controllare un <xref:System.Windows.Controls.MediaElement> tramite un <xref:System.Windows.Media.MediaTimeline> in un <xref:System.Windows.Media.Animation.Storyboard>.  
+# <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a>Procedura: controllare un MediaElement utilizzando uno storyboard
+Questo esempio Mostra come controllare un oggetto <xref:System.Windows.Controls.MediaElement> usando un oggetto <xref:System.Windows.Media.MediaTimeline> in un oggetto <xref:System.Windows.Media.Animation.Storyboard> .  
   
 ## <a name="example"></a>Esempio  
- Quando si usa un' <xref:System.Windows.Media.MediaTimeline> in un <xref:System.Windows.Media.Animation.Storyboard> per controllare l'intervallo di un <xref:System.Windows.Controls.MediaElement>, la funzionalità è identica alla funzionalità di altri <xref:System.Windows.Media.Animation.Timeline> oggetti, ad esempio le animazioni. Ad esempio, un <xref:System.Windows.Media.MediaTimeline> Usa <xref:System.Windows.Media.Animation.Timeline> le proprietà come il <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> proprietà per specificare quando deve essere avviata una <xref:System.Windows.Controls.MediaElement> (Avvia la riproduzione multimediale). Viene inoltre utilizzata la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> proprietà per specificare quanto tempo il <xref:System.Windows.Controls.MediaElement> è attivo (durata della riproduzione di contenuti multimediali). Per altre informazioni sull'uso <xref:System.Windows.Media.Animation.Timeline> gli oggetti con un <xref:System.Windows.Media.Animation.Storyboard>, vedere [Cenni preliminari sugli storyboard](storyboards-overview.md).  
+ Quando si utilizza un oggetto <xref:System.Windows.Media.MediaTimeline> in un oggetto <xref:System.Windows.Media.Animation.Storyboard> per controllare l'intervallo di un oggetto <xref:System.Windows.Controls.MediaElement> , la funzionalità è identica alla funzionalità di altri <xref:System.Windows.Media.Animation.Timeline> oggetti, ad esempio le animazioni. Un oggetto, ad esempio, <xref:System.Windows.Media.MediaTimeline> utilizza <xref:System.Windows.Media.Animation.Timeline> proprietà come la <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> proprietà per specificare quando avviare un <xref:System.Windows.Controls.MediaElement> (avvio della riproduzione multimediale). USA anche la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> proprietà per specificare per quanto tempo <xref:System.Windows.Controls.MediaElement> è attivo (durata della riproduzione dei supporti). Per ulteriori informazioni sull'utilizzo di <xref:System.Windows.Media.Animation.Timeline> oggetti con un <xref:System.Windows.Media.Animation.Storyboard> , vedere [Cenni preliminari sugli storyboard](storyboards-overview.md).  
   
- In questo esempio viene illustrato come creare un semplice lettore multimediale che usa un <xref:System.Windows.Media.MediaTimeline> per controllare la riproduzione. Media player include riproduzione, pausa, riprendere e arrestare i pulsanti. Il giocatore ha anche un <xref:System.Windows.Controls.Slider> controllo che agisce come un indicatore di stato.  
+ Questo esempio illustra come creare un semplice lettore multimediale che usa un <xref:System.Windows.Media.MediaTimeline> per controllare la riproduzione. Il lettore multimediale include i pulsanti Riproduci, Sospendi, Riprendi e arresta. Il lettore dispone anche di un <xref:System.Windows.Controls.Slider> controllo che funge da indicatore di stato.  
   
- L'esempio seguente crea il [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] per il lettore multimediale.  
+ Nell'esempio seguente viene creato [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] per il lettore multimediale.  
   
  [!code-xaml[MediaGallery_snip#MediaTimelineExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaTimelineExample.xaml#mediatimelineexamplewholepage)]  
   
- L'esempio seguente crea la funzionalità per l'indicatore di stato.  
+ Nell'esempio seguente viene creata la funzionalità per l'indicatore di stato.  
   
  [!code-csharp[MediaGallery_snip#CodeBehindMediaTimelineExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snip/CSharp/MediaTimelineExample.xaml.cs#codebehindmediatimelineexamplewholepage)]
  [!code-vb[MediaGallery_snip#CodeBehindMediaTimelineExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaTimelineExample.xaml.vb#codebehindmediatimelineexamplewholepage)]  
@@ -44,5 +45,5 @@ In questo esempio viene illustrato come controllare un <xref:System.Windows.Cont
 - [Cenni preliminari sugli storyboard](storyboards-overview.md)
 - [Cenni preliminari sulle animazioni con fotogrammi chiave](key-frame-animations-overview.md)
 - [Cenni preliminari sull'animazione](animation-overview.md)
-- [Procedure relative alle proprietà](audio-and-video-how-to-topics.md)
-- [Grafica e funzionalità multimediali](index.md)
+- [Procedure](audio-and-video-how-to-topics.md)
+- [Grafica e Multimedia](index.md)
