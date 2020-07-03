@@ -1,5 +1,6 @@
 ---
 title: Windows Presentation Foundation
+description: Informazioni sul modello di programmazione unificato in Windows Presentation Foundation (WPF) per la creazione di applicazioni desktop line-of-business in Windows.
 ms.date: 01/25/2018
 applies_to:
 - Windows 10
@@ -14,24 +15,24 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF]
 - WPF [WPF]
 ms.assetid: f667bd15-2134-41e9-b4af-5ced6fafab5d
-ms.openlocfilehash: 69cdae86a295793c8da6b7f663b22846ae2c32b2
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 078e747ab9237324aba8168b543b2347e845de81
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919361"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853407"
 ---
-# <a name="windows-presentation-foundation"></a><span data-ttu-id="6102a-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="6102a-102">Windows Presentation Foundation</span></span>
+# <a name="windows-presentation-foundation"></a><span data-ttu-id="06e00-103">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="06e00-103">Windows Presentation Foundation</span></span>
 
-<span data-ttu-id="6102a-103">Windows Presentation Foundation (WPF) fornisce agli sviluppatori un modello di programmazione unificato per la creazione di applicazioni desktop line-of-business in Windows.</span><span class="sxs-lookup"><span data-stu-id="6102a-103">Windows Presentation Foundation (WPF) provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>
+<span data-ttu-id="06e00-104">Windows Presentation Foundation (WPF) fornisce agli sviluppatori un modello di programmazione unificato per la creazione di applicazioni desktop line-of-business in Windows.</span><span class="sxs-lookup"><span data-stu-id="06e00-104">Windows Presentation Foundation (WPF) provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>
 
-- [<span data-ttu-id="6102a-104">Introduzione a WPF</span><span class="sxs-lookup"><span data-stu-id="6102a-104">Introduction to WPF</span></span>](introduction-to-wpf.md)
-- [<span data-ttu-id="6102a-105">Introduzione</span><span class="sxs-lookup"><span data-stu-id="6102a-105">Getting Started</span></span>](getting-started/index.md)
-- [<span data-ttu-id="6102a-106">Sviluppo applicazioni</span><span class="sxs-lookup"><span data-stu-id="6102a-106">Application Development</span></span>](app-development/index.md)
-- [<span data-ttu-id="6102a-107">Avanzate</span><span class="sxs-lookup"><span data-stu-id="6102a-107">Advanced</span></span>](advanced/index.md)
-- [<span data-ttu-id="6102a-108">Controlli</span><span class="sxs-lookup"><span data-stu-id="6102a-108">Controls</span></span>](controls/index.md)
-- [<span data-ttu-id="6102a-109">Dati</span><span class="sxs-lookup"><span data-stu-id="6102a-109">Data</span></span>](data/index.md)
-- [<span data-ttu-id="6102a-110">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="6102a-110">Graphics and Multimedia</span></span>](graphics-multimedia/index.md)
-- [<span data-ttu-id="6102a-111">Security</span><span class="sxs-lookup"><span data-stu-id="6102a-111">Security</span></span>](security-wpf.md)
-- [<span data-ttu-id="6102a-112">Esempi WPF</span><span class="sxs-lookup"><span data-stu-id="6102a-112">WPF Samples</span></span>](wpf-samples.md)
-- [<span data-ttu-id="6102a-113">Libreria di classi</span><span class="sxs-lookup"><span data-stu-id="6102a-113">Class Library</span></span>](class-library-wpf.md)
+- [<span data-ttu-id="06e00-105">Introduzione a WPF</span><span class="sxs-lookup"><span data-stu-id="06e00-105">Introduction to WPF</span></span>](introduction-to-wpf.md)
+- [<span data-ttu-id="06e00-106">Per iniziare</span><span class="sxs-lookup"><span data-stu-id="06e00-106">Getting Started</span></span>](getting-started/index.md)
+- [<span data-ttu-id="06e00-107">Sviluppo applicazioni</span><span class="sxs-lookup"><span data-stu-id="06e00-107">Application Development</span></span>](app-development/index.md)
+- [<span data-ttu-id="06e00-108">Avanzate</span><span class="sxs-lookup"><span data-stu-id="06e00-108">Advanced</span></span>](advanced/index.md)
+- [<span data-ttu-id="06e00-109">Controlli</span><span class="sxs-lookup"><span data-stu-id="06e00-109">Controls</span></span>](controls/index.md)
+- [<span data-ttu-id="06e00-110">Dati</span><span class="sxs-lookup"><span data-stu-id="06e00-110">Data</span></span>](data/index.md)
+- [<span data-ttu-id="06e00-111">Grafica e Multimedia</span><span class="sxs-lookup"><span data-stu-id="06e00-111">Graphics and Multimedia</span></span>](graphics-multimedia/index.md)
+- [<span data-ttu-id="06e00-112">Sicurezza</span><span class="sxs-lookup"><span data-stu-id="06e00-112">Security</span></span>](security-wpf.md)
+- [<span data-ttu-id="06e00-113">Esempi di WPF</span><span class="sxs-lookup"><span data-stu-id="06e00-113">WPF Samples</span></span>](wpf-samples.md)
+- [<span data-ttu-id="06e00-114">Libreria di classi</span><span class="sxs-lookup"><span data-stu-id="06e00-114">Class Library</span></span>](class-library-wpf.md)
