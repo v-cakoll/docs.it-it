@@ -1,20 +1,18 @@
-- name: Novità
-  href: index.yml
-  expanded: true
-  items:
-    - name: 2020
-      items:
-        - name: Mag
-          href: dotnet-2020-05.md
-        - name: April
-          href: dotnet-2020-04.md
-        - name: Marzo
-          href: dotnet-2020-03.md
-        - name: Febbraio
-          href: dotnet-2020-02.md
-        - name: January
-          href: dotnet-2020-01.md
-    - name: 2019
-      items:
-        - name: Dicembre
-          href: 2019-12.md
+name: Novità
+href: index.yml
+expanded: true
+items:
+  - name: 2020
+    items:
+      - name: Giugno
+        href: 2020-06.md
+      - name: Mag
+        href: dotnet-2020-05.md
+      - name: April
+        href: dotnet-2020-04.md
+      - name: Marzo
+        href: dotnet-2020-03.md
+      - name: Febbraio
+        href: dotnet-2020-02.md
+      - name: January
+        href: dotnet-2020-01.md
