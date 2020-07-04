@@ -3,12 +3,12 @@ title: Riferimento al comando CLI ML.NET
 description: Panoramica, esempi e riferimento per il comando auto-train nello strumento dell'interfaccia della riga di comando di ML.NET.
 ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 397f6fda8554024624b3ef630856dc8eca9696b2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4c6cb1346c16f6162077d3414140d693de9e0d8c
+ms.sourcegitcommit: 182c7b6c079ebcc0e1898dfd9e921b9ef472ea2c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594543"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946941"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>Riferimento ai comandi dell'interfaccia della riga di comando ML.NET
 
@@ -19,7 +19,7 @@ I `classification` `regression` comandi, e `recommendation` sono i comandi princ
 
 ## <a name="overview"></a>Panoramica
 
-Sintassi di esempio:
+Esempio di utilizzo:
 
 ```console
 mlnet regression --dataset "cars.csv" --label-col price
@@ -309,7 +309,7 @@ Verrà assegnato lo stesso nome anche al file di modello di ML.NET (file con est
 
 ## <a name="output-path"></a>Percorso di output
 
-`--output-path | -o` (string)
+`--output | -o` (string)
 
 Percorso o cartella radice in cui posizionare l'output generato. Il valore predefinito è la directory corrente.
 
@@ -327,7 +327,7 @@ I valori consentiti sono i seguenti:
 
 Per impostazione predefinita, lo strumento dell'interfaccia della riga di comando deve visualizzare un feedback minimo ( `minimal` ) quando funziona, ad esempio indicando che è funzionante e se possibile quanto tempo rimane o quale percentuale del tempo è stata completata.
 
-## <a name="help"></a>Guida
+## <a name="help"></a>Help
 
 `-h |--help`
 
