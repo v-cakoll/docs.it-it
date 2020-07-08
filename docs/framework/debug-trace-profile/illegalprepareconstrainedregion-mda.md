@@ -1,5 +1,6 @@
 ---
 title: MDA illegalPrepareConstrainedRegion
+description: Esaminare l'assistente al debug gestito illegalPrepareConstrainedRegion, che viene richiamato se una chiamata PrepareConstrainedRegions non è seguita da un'istruzione try.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PrepareConstrainedRegions method
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - IllegalPrepareConstrainedRegions MDA
 - MDAs (managed debugging assistants), illegal PrepareConstrainedRegions
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
-ms.openlocfilehash: b80d6160876834b22e8d9d1eb7112b8b67c15fcc
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: d6a0d1d95840ebd735806c5547730ae9e0b2aace
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216466"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051285"
 ---
 # <a name="illegalprepareconstrainedregion-mda"></a>MDA illegalPrepareConstrainedRegion
 L'assistente al debug gestito `illegalPrepareConstrainedRegion` viene attivato quando una chiamata al metodo <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> non precede immediatamente l'istruzione `try` del gestore di eccezioni. Poiché questa restrizione è a livello MSIL, è consentita la presenza di un'origine che non genera codice tra la chiamata e l'istruzione `try`, ad esempio commenti.  
@@ -22,9 +22,9 @@ L'assistente al debug gestito `illegalPrepareConstrainedRegion` viene attivato q
  Area a esecuzione vincolata che non viene mai considerata come tale, ma come semplice blocco di gestione delle eccezioni (`finally` o `catch`). Di conseguenza, l'area non viene eseguita nel caso di una condizione di memoria insufficiente o di interruzione del thread.  
   
 ## <a name="cause"></a>Causa  
- Il modello di preparazione per un'area a esecuzione vincolata non è stato applicato correttamente.  Si tratta di un evento di errore. La chiamata al metodo <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> utilizzata per contrassegnare i gestori di eccezioni come introduzione a una CER nel `catch`/`finally`/`fault`/i blocchi `filter` devono essere utilizzati immediatamente prima dell'istruzione `try`.  
+ Il modello di preparazione per un'area a esecuzione vincolata non è stato applicato correttamente.  Si tratta di un evento di errore. La <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> chiamata al metodo utilizzata per contrassegnare i gestori di eccezioni come introduzione a una CER nei `catch` / `finally` / `fault` / `filter` blocchi deve essere utilizzata immediatamente prima dell' `try` istruzione.  
   
-## <a name="resolution"></a>Risoluzione  
+## <a name="resolution"></a>Soluzione  
  Assicurarsi che la chiamata a <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> avvenga immediatamente prima dell'istruzione `try`.  
   
 ## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  

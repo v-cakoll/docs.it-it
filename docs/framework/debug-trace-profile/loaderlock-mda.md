@@ -1,5 +1,6 @@
 ---
 title: MDA loaderLock
+description: Esaminare l'assistente al debug gestito di loaderLock in .NET, che rileva i tentativi di esecuzione del codice gestito in un thread che contiene il blocco del caricatore del sistema operativo Windows.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-ms.openlocfilehash: cd77640a6566f3fd94631dac184ae5bc3ffab5d1
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 055b07a805c5f0b613519d6019950a9b249a4b38
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217346"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051622"
 ---
 # <a name="loaderlock-mda"></a>MDA loaderLock
 L'assistente al debug gestito `loaderLock` rileva i tentativi di esecuzione di codice gestito in un thread che contiene il blocco del caricatore del sistema operativo Microsoft Windows.  Qualsiasi esecuzione di questo tipo non è valida perché può comportare il verificarsi di deadlock e l'uso di DLL prima che siano state inizializzate dal caricatore del sistema operativo.  
@@ -32,7 +32,7 @@ L'assistente al debug gestito `loaderLock` rileva i tentativi di esecuzione di c
   
  Gli assembly C++ gestiti/non gestiti misti creati per .NET Framework versione 2.0 sono meno soggetti a questi problemi, in quanto sono associati allo stesso rischio minimo delle applicazioni che usano DLL non gestite che violano le regole del sistema operativo.  Ad esempio, se un punto di ingresso `DllMain` di una DLL non gestita chiama `CoCreateInstance` per ottenere un oggetto gestito che è stato esposto a COM, il risultato è un tentativo di eseguire codice gestito all'interno del blocco del caricatore. Per altre informazioni sui problemi relativi al blocco del caricatore in .NET Framework 2.0 e versioni successive, vedere [Initialization of Mixed Assemblies](/cpp/dotnet/initialization-of-mixed-assemblies) (Inizializzazione di assembly misti).  
   
-## <a name="resolution"></a>Risoluzione  
+## <a name="resolution"></a>Soluzione  
  In Visual C++ .NET 2002 e Visual C++ .NET 2003 le DLL compilate con l'opzione del compilatore `/clr` non possono causare un deadlock in modo non deterministico durante il caricamento. Questo problema è noto come blocco del caricatore o problema di caricamento di DLL miste. In Visual C++ 2005 e versioni successive sono stato rimossi quasi tutti gli aspetti non deterministici dal processo di caricamento di DLL miste. Tuttavia, esistono ancora alcuni scenari nei quali il blocco del caricatore può ancora verificarsi in modo deterministico. Per una descrizione dettagliata delle cause e delle soluzioni per i problemi relativi al blocco del caricatore rimanenti, vedere [Initialization of Mixed Assemblies](/cpp/dotnet/initialization-of-mixed-assemblies) (Inizializzazione di assembly misti). Se l'argomento non comprende il problema specifico relativo al blocco del caricatore, è necessario esaminare lo stack del thread per determinare il motivo per cui si verifica il blocco del caricatore e come correggere il problema. Esaminare l'analisi dello stack per il thread che ha attivato questo assistente al debug gestito.  Il thread sta tentando di eseguire una chiamata non valida nel codice gestito mentre mantiene il blocco del caricatore del sistema operativo.  Probabilmente si noterà un punto di ingresso `DllMain`, o uno equivalente, della DLL nello stack.  Le regole del sistema operativo per le attività valide all'interno di un punto di ingresso di questo tipo sono piuttosto limitate.  Queste regole impediscono qualsiasi esecuzione di codice gestito.  
   
 ## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  

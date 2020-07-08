@@ -1,5 +1,6 @@
 ---
 title: MDA invalidVariant
+description: Esaminare l'assistente al debug gestito invalidVariant, che viene richiamato se viene rilevata una variante non valida in una chiamata dal codice nativo/non gestito a quello gestito.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid variant
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - invalid VARIANT types
 - managed debugging assistants (MDAs), invalid variant
 ms.assetid: d273e070-d1b1-4a53-a9c7-7af837b04a3d
-ms.openlocfilehash: 8d686621ae4aa087e1b4f4bea9df7fc3de758d40
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: ab1233d9faa86ef1508fa8fe2b5af46cb37bd523
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216265"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051636"
 ---
 # <a name="invalidvariant-mda"></a>MDA invalidVariant
 L'assistente al debug gestito `invalidVariant` viene attivato quando viene rilevata una struttura `VARIANT` non valida durante una chiamata dal codice nativo o non gestito al codice gestito.  
@@ -24,7 +24,7 @@ L'assistente al debug gestito `invalidVariant` viene attivato quando viene rilev
 ## <a name="cause"></a>Causa  
  Il codice nativo passa al codice gestito una struttura `VARIANT` in un formato non corretto.  Il runtime tenta il marshalling di questa struttura `VARIANT` a un oggetto e, se non ritiene valida la struttura `VARIANT`, attiva l'assistente al debug gestito. Tra gli esempi di strutture `VARIANT` non valide sono incluse strutture `VARIANT` con `VARTYPE` VT_EMPTY &#124; VT_BYREF o strutture `VARIANT` con `VARTYPE` VT_VARIANT.  
   
-## <a name="resolution"></a>Risoluzione  
+## <a name="resolution"></a>Soluzione  
  Il codice nativo o non gestito che passa la struttura `VARIANT` deve verificare la correttezza del formato e dell'inizializzazione della struttura `VARIANT`.  
   
 ## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  

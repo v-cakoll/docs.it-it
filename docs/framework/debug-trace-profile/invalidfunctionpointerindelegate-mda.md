@@ -1,5 +1,6 @@
 ---
 title: invalidFunctionPointerInDelegate (MDA)
+description: Esaminare l'assistente al debug gestito invalidFunctionPointerInDelegate, che viene richiamato se viene passato un puntatore a funzione non valido per creare un delegato.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - invalidFunctionPointerInDelegate MDA
@@ -11,12 +12,11 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), marshaling
 - invalid function pointers
 ms.assetid: 99ae44f1-783e-49a9-9009-24f54bbd0f09
-ms.openlocfilehash: 723f51e14c314bde40c34d629ba7fc4f6276c633
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: a17427d117c62ba782af3c9549c84623a3013b06
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217371"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051740"
 ---
 # <a name="invalidfunctionpointerindelegate-mda"></a>invalidFunctionPointerInDelegate (MDA)
 L'assistente al debug gestito `invalidFunctionPointerInDelegate` viene attivato quando viene passato un puntatore a funzione non valido per costruire un delegato su un puntatore a funzione nativo.  
@@ -27,7 +27,7 @@ L'assistente al debug gestito `invalidFunctionPointerInDelegate` viene attivato 
 ## <a name="cause"></a>Causa  
  È stato specificato un puntatore a funzione non valido.  
   
-## <a name="resolution"></a>Risoluzione  
+## <a name="resolution"></a>Soluzione  
  Specificare un puntatore a funzione valido  
   
 ## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  

@@ -4,12 +4,11 @@ description: Informazioni sui tipi di tupla denominati e non denominati in C#
 ms.date: 05/15/2018
 ms.technology: csharp-fundamentals
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 497f95811677c300e1fadad65eb495dced7f2da3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
-ms.translationtype: MT
+ms.openlocfilehash: 0fb6f043857a9932b7a86f773cce812e0fd49dcb
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374616"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051857"
 ---
 # <a name="c-tuple-types"></a>Tipi tupla in C#
 
@@ -46,7 +45,7 @@ Questi nomi sono gli unici nomi che è possibile usare per le *tuple senza nome*
 La tupla nell'esempio precedente è stata inizializzata tramite costanti letterali e non avrà nomi di elemento creati con le *proiezioni dei nomi di campo di tupla* in C# 7.1.
 
 Tuttavia, quando si inizializza una tupla, è possibile usare nuove funzionalità del linguaggio che assegnano a ciascun campo un nome più semplice. In questo modo viene creata una *tupla con nome*.
-Le tuple con nome dispongono ancora di elementi denominati `Item1`, `Item2`, `Item3` e così via.
+Le tuple denominate contengono ancora elementi denominati `Item1` , `Item2` , `Item3` e così via.
 Hanno tuttavia anche sinonimi per eventuali elementi a cui l'utente ha assegnato un nome.
 Creare una tupla con nome specificando i nomi per ogni elemento. Un modo consiste nello specificare i nomi come parte dell'inizializzazione della tupla:
 
@@ -54,7 +53,7 @@ Creare una tupla con nome specificando i nomi per ogni elemento. Un modo consist
 
 I sinonimi vengono gestiti dal compilatore e dal linguaggio in modo che sia possibile usare efficacemente le tuple con nome. Gli editor e gli IDE possono leggere questi nomi semantici tramite le API di Roslyn. È possibile fare riferimento agli elementi di una tupla denominata tramite questi nomi semantici in qualsiasi punto dello stesso assembly. Il compilatore sostituisce i nomi definiti con equivalenti `Item*` durante la generazione dell'output compilato. Il Microsoft Intermediate Language (MSIL) compilato non include i nomi assegnati a questi elementi.
 
-A partire da C# 7.1, i nomi dei campi per una tupla possono essere forniti dalle variabili utilizzate per inizializzare la tupla. Si parla di **[inizializzatori di proiezione tupla](#tuple-projection-initializers)**. Il codice seguente crea una tupla denominata `accumulation` con elementi `count` (integer) e `sum` (double).
+A partire da C# 7.1, i nomi dei campi per una tupla possono essere forniti dalle variabili utilizzate per inizializzare la tupla. Il nome dei campi per le tuple viene definito **[inizializzatori di proiezione della tupla](#tuple-projection-initializers)**. Il codice seguente crea una tupla denominata `accumulation` con elementi `count` (integer) e `sum` (double).
 
 [!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
@@ -110,11 +109,11 @@ Infine, le tuple possono contenere tuple annidate. L'uguaglianza delle tuple con
 
 [!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
 
-È un errore di compilazione confrontare due tuple per verificarne l'uguaglianza (o la disuguaglianza) quando hanno forme diverse. Il compilatore non prova a decostruire le tuple annidate per confrontarle.
+Si tratta di un errore in fase di compilazione per confrontare due Tuple per verificarne l'uguaglianza o la disuguaglianza quando hanno forme diverse. Il compilatore non prova a decostruire le tuple annidate per confrontarle.
 
 ## <a name="assignment-and-tuples"></a>Assegnazione e tuple
 
-Il linguaggio supporta l'assegnazione tra tipi tupla con lo stesso numero di elementi, in cui ogni elemento sul lato destro può essere convertito in modo implicito nell'elemento sul lato sinistro corrispondente. Non vengono considerate altre conversioni per le assegnazioni. È un errore in fase di compilazione assegnare una tupla a un'altra quando hanno forme diverse. Il compilatore non tenterà la decostruzione di tuple annidate per assegnarle.
+Il linguaggio supporta l'assegnazione tra tipi tupla con lo stesso numero di elementi, in cui ogni elemento sul lato destro può essere convertito in modo implicito nell'elemento sul lato sinistro corrispondente. Non vengono considerate altre conversioni per le assegnazioni. Si tratta di un errore in fase di compilazione che consente di assegnare una tupla a un'altra quando hanno forme diverse. Il compilatore non tenterà la decostruzione di tuple annidate per assegnarle.
 Esaminiamo i tipi di assegnazioni consentiti tra i tipi di tupla.
 
 Considerare le variabili usate negli esempi seguenti:
@@ -147,12 +146,12 @@ Uno degli usi più comuni per le tuple è come valore restituito da metodo. Di s
 
 > [!NOTE]
 > Questi esempi calcolano la deviazione standard non corretta di esempio.
-> La formula di deviazione standard non corretta di esempio consiste nel dividere la somma dei quadrati delle differenze rispetto al valore medio per (N-1) invece di N, come fa il metodo di estensione `Average`. Per altre informazioni sulle differenze tra queste formule di deviazione standard, consultare un testo di statistica.
+> La formula di deviazione standard non corretta di esempio consiste nel dividere la somma dei quadrati delle differenze rispetto al valore medio per (N-1) invece di N, come fa il metodo di estensione `Average`.
 
 Il codice precedente segue la formula canonica per la deviazione standard. Genera la risposta corretta, ma si tratta di un'implementazione inefficiente. Questo metodo enumera la sequenza due volte: una volta per produrre la media e una volta per produrre la media del quadrato della differenza della media.
 Si noti che le query LINQ vengono valutate in modo differito, quindi il calcolo delle differenze rispetto al valore medio e la media tra tali differenze genera un'unica enumerazione.
 
-Esiste una formula alternativa che calcola la deviazione standard usando solo un'enumerazione della sequenza.  Questo calcolo produce due valori durante l'enumerazione della sequenza: la somma di tutti gli elementi nella sequenza e la somma di ogni valore quadrato:
+Esiste una formula alternativa che calcola la deviazione standard usando solo un'enumerazione della sequenza.  Questo calcolo produce due valori durante l'enumerazione della sequenza, ovvero la somma di tutti gli elementi nella sequenza e la somma di ogni valore quadrato:
 
 [!code-csharp[SumOfSquaresFormula](../../samples/snippets/csharp/tuples/statistics.cs#06_SumOfSquaresFormula "Compute Standard Deviation using the sum of squares")]
 

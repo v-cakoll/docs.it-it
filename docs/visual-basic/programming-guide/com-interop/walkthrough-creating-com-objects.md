@@ -8,17 +8,16 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: bb312317b2bbcb77bed9e3966db6d9fd5db79e4c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
-ms.translationtype: MT
+ms.openlocfilehash: 6ff23f73af384a1440bcebd4b6bac21714e01756
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396740"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051480"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Procedura dettagliata: creazione di oggetti COM con Visual Basic
 Quando si creano nuovi componenti o applicazioni, è consigliabile creare .NET Framework assembly. Tuttavia, Visual Basic facilita anche l'esposizione di un componente .NET Framework a COM. In questo modo è possibile fornire nuovi componenti per i gruppi di applicazioni precedenti che richiedono componenti COM. In questa procedura dettagliata viene illustrato come utilizzare Visual Basic per esporre .NET Framework oggetti come oggetti COM, sia con sia senza il modello di classe COM.  
   
- Il modo più semplice per esporre oggetti COM consiste nell'usare il modello di classe COM. Il modello di classe COM crea una nuova classe e quindi configura il progetto per generare la classe e il livello di interoperabilità come oggetto COM e registrarlo nel sistema operativo.  
+ Il modo più semplice per esporre oggetti COM consiste nell'usare il modello di classe COM. Questo modello crea una nuova classe, quindi configura il progetto per generare la classe con un livello di interoperabilità come oggetto COM e la registra con il sistema operativo.  
   
 > [!NOTE]
 > Sebbene sia anche possibile esporre una classe creata in Visual Basic come oggetto COM per il codice non gestito da usare, non è un vero oggetto COM e non può essere usata da Visual Basic. Per ulteriori informazioni, vedere [interoperabilità com nelle applicazioni .NET Framework](com-interoperability-in-net-framework-applications.md).  

@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: compilare in modo condizionale con traccia e debug'
+description: Informazioni su come compilare in modo condizionale con gli attributi condizionali TRACE e DEBUG durante la compilazione di un'applicazione .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace compiler options
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-ms.openlocfilehash: 2c3ec54535319f4c7507563a5976038ca40d20aa
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 8758b793866ec0317f91d636476d33bd001ddd78
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217460"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051220"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Procedura: compilare in modo condizionale con traccia e debug
 Quando si sottopone a debug l'applicazione durante la fase di sviluppo, sia l'output di tracciatura che l'output di debug vengono inviati alla finestra di output in Visual Studio. Tuttavia, per includere funzionalità di tracciatura in un'applicazione distribuita, è necessario compilare le applicazioni instrumentate con la direttiva del compilatore **TRACE** abilitata. In questo modo è possibile tracciare il codice da compilare nella versione di rilascio dell'applicazione. Se non si abilita la direttiva **TRACE**, tutto il codice di tracciatura verrà ignorato durante la compilazione e non sarà incluso nel codice eseguibile da distribuire.  
@@ -48,9 +48,9 @@ Quando si sottopone a debug l'applicazione durante la fase di sviluppo, sia l'ou
   
      Ad esempio, l'istruzione del compilatore che segue, immessa sulla riga di comando, includerà il codice di tracciatura in un eseguibile compilato:  
   
-     Per Visual Basic: **vbc-r:System.dll-d:Trace = true-d:debug = false MyApplication. vb**  
+     Per Visual Basic: **vbc -r:System.dll-d:Trace = true-d:debug = false MyApplication. vb**  
   
-     Per C#: **csc-r:System.dll-d:Trace-d:debug = false MyApplication.cs**  
+     Per C#: **csc -r:System.dll-d:Trace-d:debug = FALSE MyApplication.cs**  
   
     > [!TIP]
     > Per compilare più file dell'applicazione, lasciare uno spazio vuoto tra i nomi dei file, ad esempio: **MyApplication1.vb MyApplication2.vb MyApplication3.vb** o **MyApplication1.cs MyApplication2.cs MyApplication3.cs**.  
@@ -101,4 +101,4 @@ Impostare come commento la direttiva del compilatore.
 - [Listener di traccia](trace-listeners.md)
 - [Procedura: aggiungere istruzioni di traccia al codice dell'applicazione](how-to-add-trace-statements-to-application-code.md)
 - [Come impostare le variabili di ambiente per la riga di comando di Visual Studio](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [Procedura:Richiamare il compilatore da riga di comando](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+- [Procedura: Richiamare il compilatore da riga di comando](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

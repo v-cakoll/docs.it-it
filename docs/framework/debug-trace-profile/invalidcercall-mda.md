@@ -1,5 +1,6 @@
 ---
 title: MDA invalidCERCall
+description: Esaminare l'assistente al debug gestito invalidCERCall, che viene attivato se è presente una chiamata non valida all'interno del grafico dell'area a esecuzione vincolata (CER).
 ms.date: 03/30/2017
 helpviewer_keywords:
 - invalid CER calls
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-ms.openlocfilehash: f8e467401f7c50898613c7cf6eca68a8a705431a
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: dec32a81929d72274757b75cb03d6615d9fa948b
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217388"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051792"
 ---
 # <a name="invalidcercall-mda"></a>MDA invalidCERCall
 L'assistente al debug gestito `invalidCERCall` viene attivato quando all'interno del grafico delle aree a esecuzione vincolata è presente una chiamata a un metodo che non include alcun contratto di affidabilità o che include un contratto eccessivamente debole. Un contratto debole è un contratto che dichiara che il peggior stato di danneggiamento ha un ambito più vasto rispetto all'istanza passata alla chiamata, ovvero lo stato di <xref:System.AppDomain> o del processo può risultare danneggiato o il risultato non è sempre calcolabile in modo deterministico quando la chiamata avviene all'interno di un'area a esecuzione vincolata.  
@@ -31,7 +31,7 @@ L'assistente al debug gestito `invalidCERCall` viene attivato quando all'interno
   
  Poiché qualsiasi metodo con un contratto debole o inesistente può non riuscire in molti modi imprevisti, il runtime non tenta di rimuovere alcuno degli errori imprevisti dal metodo, introdotti, ad esempio, da una compilazione JIT inefficace, dal popolamento di dizionari di generics o da interruzioni dei thread. Di conseguenza, quando questo assistente al debug gestito viene attivato, indica che il runtime non ha incluso il metodo chiamato nell'area a esecuzione vincolata definita. Il grafico chiamate è stato terminato in questo nodo perché se si continua a preparare il sottoalbero, si rischia di contribuire a nascondere il possibile errore.  
   
-## <a name="resolution"></a>Risoluzione  
+## <a name="resolution"></a>Soluzione  
  Aggiungere un contratto di affidabilità valido alla funzione o evitare di usare questa chiamata di funzione.  
   
 ## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  

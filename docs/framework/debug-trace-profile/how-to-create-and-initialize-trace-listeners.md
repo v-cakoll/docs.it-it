@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: creare e inizializzare listener di traccia'
+description: Informazioni su come creare e inizializzare listener di traccia usando classi quali System. Diagnostics. DefaultTraceListener in .NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +12,11 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
-ms.openlocfilehash: ce0df0af32d6798c89c8db6761d18febc1c398bb
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 752306124e41a7fb7458daccc8c2891631eb9616
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217437"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051207"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>Procedura: creare e inizializzare listener di traccia
 

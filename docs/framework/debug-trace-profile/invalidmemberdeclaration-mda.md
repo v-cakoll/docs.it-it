@@ -1,5 +1,6 @@
 ---
 title: MDA invalidMemberDeclaration
+description: Esaminare l'assistente al debug gestito invalidMemberDeclaration, che viene richiamato se un HRESULT di errore viene restituito a COM senza chiamare il metodo gestito.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - invalid member declaration
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), marshaling
 - MDAs (managed debugging assistants), marshaling
 ms.assetid: a84dd9a3-d6cf-4824-989a-ecbbf443eeb4
-ms.openlocfilehash: 6033cd4178b2bc493794b5dcc527bc543ba24284
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 5dbfba2baec3263d91746c06379438e97a81f005
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216302"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051714"
 ---
 # <a name="invalidmemberdeclaration-mda"></a>MDA invalidMemberDeclaration
 L'assistente al debug gestito `invalidMemberDeclaration` viene attivato per segnalare un errore che si è verificato durante l'identificazione della modalità di marshalling dei parametri di un membro che deve essere chiamato da COM.  
@@ -24,7 +24,7 @@ L'assistente al debug gestito `invalidMemberDeclaration` viene attivato per segn
 ## <a name="cause"></a>Causa  
  La causa più probabile è la presenza di un attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> incompatibile in uno dei parametri.  
   
-## <a name="resolution"></a>Risoluzione  
+## <a name="resolution"></a>Soluzione  
  Specificare attributi <xref:System.Runtime.InteropServices.MarshalAsAttribute> validi nei parametri.  
   
 ## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  

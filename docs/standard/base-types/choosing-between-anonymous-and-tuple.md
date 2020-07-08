@@ -3,12 +3,11 @@ title: Scelta tra tipi anonimi e di tupla
 description: Informazioni su quando è opportuno scegliere tra tipi anonimi e tipo di tupla.
 ms.date: 07/01/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 24ab770d709b9f3968f4c7fe4b01eb0729dbd751
-ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
-ms.translationtype: MT
+ms.openlocfilehash: 2f927b59d7206dd0f405c11529f93b56a1c778a0
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854008"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052078"
 ---
 # <a name="choosing-between-anonymous-and-tuple-types"></a>Scelta tra tipi anonimi e di tupla
 
@@ -103,7 +102,7 @@ Potrebbe essere necessario utilizzare sempre <xref:System.ValueTuple> <xref:Syst
 
 ### <a name="key-differences"></a>Differenze principali
 
-| Nome                     | Modificatore di accesso | Type     | Nome proprietà personalizzata | Supporto per la decostruzione | Supporto dell'albero delle espressioni |
+| Nome                     | Modificatore di accesso | Type     | Nome del membro personalizzato | Supporto per la decostruzione | Supporto dell'albero delle espressioni |
 |--------------------------|-----------------|----------|----------------------|------------------------|-------------------------|
 | Tipi anonimi          | `internal`      | `class`  | ✔️                   | ❌                     | ✔️                     |
 | <xref:System.Tuple>      | `public`        | `class`  | ❌                   | ❌                     | ✔️                     |

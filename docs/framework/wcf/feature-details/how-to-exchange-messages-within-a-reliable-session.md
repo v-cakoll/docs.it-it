@@ -2,12 +2,11 @@
 title: 'Procedura: scambiare messaggi in una sessione affidabile'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 5b01ddfd95db2f7e88f9481265c348f4f16fbbee
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: MT
+ms.openlocfilehash: 39dd6636f80b107ced1caac29869c6c66e67e21e
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579476"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052039"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Procedura: scambiare messaggi in una sessione affidabile
 
@@ -27,13 +26,13 @@ Per la copia di origine di questo esempio, vedere [WS Reliable Session](../sampl
 
    [!code-csharp[c_HowTo_UseReliableSession#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1122)]
 
-1. Creare un file *Web. config* per configurare un endpoint per il `CalculatorService` che utilizza il <xref:System.ServiceModel.WSHttpBinding> con la sessione affidabile abilitata e il recapito ordinato dei messaggi necessari.
+1. Creare un file di *Web.config* per configurare un endpoint per il `CalculatorService` che utilizza il <xref:System.ServiceModel.WSHttpBinding> con la sessione affidabile abilitata e il recapito ordinato dei messaggi necessari.
 
    [!code-xml[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]
 
 1. Creare un file *Service. svc* contenente la riga:
 
-   ```
+   ```aspx-csharp
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
@@ -41,7 +40,7 @@ Per la copia di origine di questo esempio, vedere [WS Reliable Session](../sampl
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Configurare il client con WSHttpBinding per l'utilizzo di una sessione affidabile
 
-1. Utilizzare lo [strumento ServiceModel Metadata Utility Tool (*Svcutil. exe*)](../servicemodel-metadata-utility-tool-svcutil-exe.md) dalla riga di comando per generare codice dai metadati del servizio:
+1. Utilizzare lo [strumento ServiceModel Metadata Utility Tool (*Svcutil.exe*)](../servicemodel-metadata-utility-tool-svcutil-exe.md) dalla riga di comando per generare codice dai metadati del servizio:
 
    ```console
    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -55,7 +54,7 @@ Per la copia di origine di questo esempio, vedere [WS Reliable Session](../sampl
 
    [!code-csharp[C_HowTo_UseReliableSession#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1222)]
 
-1. *Svcutil. exe* genera inoltre la configurazione per il client che utilizza la <xref:System.ServiceModel.WSHttpBinding> classe. Denominare il file di configurazione *app. config* quando si usa Visual Studio.
+1. *Svcutil.exe* inoltre genera la configurazione per il client che utilizza la <xref:System.ServiceModel.WSHttpBinding> classe. Denominare il file di configurazione *App.config* quando si usa Visual Studio.
 
    [!code-xml[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]
 
@@ -67,7 +66,7 @@ Per la copia di origine di questo esempio, vedere [WS Reliable Session](../sampl
 
 ## <a name="example"></a>Esempio
 
-Diverse associazioni fornite dal sistema supportano sessioni affidabili per impostazione predefinita. Sono inclusi:
+Diverse associazioni fornite dal sistema supportano sessioni affidabili per impostazione predefinita. Tra queste sono incluse:
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 

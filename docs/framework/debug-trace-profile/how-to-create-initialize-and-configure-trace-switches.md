@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: Creare, inizializzare e configurare opzioni di traccia'
+description: Creare, inizializzare e configurare opzioni di traccia usando le classi System. Diagnostics. BooleanSwitch e System. Diagnostics. TraceSwitch in .NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +12,11 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-ms.openlocfilehash: 8bf3b974ff0ef9f719274ab684b3dce85295c917
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.openlocfilehash: 6a43e143abba96c841f04b7be9d482c55e78aa8f
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181836"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051324"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Procedura: Creare, inizializzare e configurare opzioni di traccia
 Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output di traccia.  
@@ -31,7 +31,7 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
   
 1. Definire un'opzione di tipo <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> o <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> e impostare il nome e la descrizione dell'opzione.  
   
-2. Configurare l'opzione di traccia. Per ulteriori informazioni, vedere [Configurazione delle opzioni di traccia](#configure).  
+2. Configurare l'opzione di traccia. Per ulteriori informazioni, vedere [configurazione delle opzioni di traccia](#configure).  
   
      Il codice seguente crea due opzioni, una per ogni tipo:  
   
@@ -52,7 +52,7 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
 ## <a name="configuring-trace-switches"></a>Configurazione di opzioni di traccia  
  Una volta distribuita l'applicazione, è ancora possibile attivare o disabilitare l'output di traccia configurando le opzioni di traccia dell'applicazione. Configurare un'opzione significa modificarne il valore da un'origine esterna una volta inizializzata. È possibile modificare i valori degli oggetti opzione mediante il file di configurazione. Si configura un'opzione di traccia per attivarla e disabilitarla oppure per impostarne il livello, determinando la quantità e il tipo di messaggi da inviare ai listener.  
   
- Le opzioni vengono configurate tramite il file CONFIG. In caso di applicazioni Web si tratta del file Web.config associato al progetto. In un'applicazione Windows, questo file è denominato (nome applicazione).exe.config. In un'applicazione distribuita, questo file deve trovarsi nella stessa cartella dell'eseguibile.  
+ Le opzioni vengono configurate tramite il file CONFIG. In caso di applicazioni Web si tratta del file Web.config associato al progetto. In un'applicazione Windows, questo file è denominato (nome applicazione) .exe.config. In un'applicazione distribuita, questo file deve trovarsi nella stessa cartella del file eseguibile.  
   
  Quando l'applicazione esegue il codice che crea un'istanza di un'opzione per la prima volta, viene verificata la presenza nel file di configurazione di informazioni sul livello di traccia relative all'opzione denominata. Il file di configurazione viene esaminato dal sistema di tracciatura solo una volta per ogni opzione, la prima volta che l'opzione in questione viene creata dall'applicazione.  
   
@@ -77,7 +77,7 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
   
          Verrà creato e aperto il file di configurazione dell'applicazione. Si tratta di un documento XML il cui elemento radice è `<configuration>.`  
   
-    - **Visual C#:** nella finestra di dialogo **Aggiungi nuovo elemento** fare clic su **File XML**. Denominare questo file **app.config**. Nell'editor XML, dopo la dichiarazione XML, aggiungere il codice XML seguente:  
+    - **Visual C#:** nella finestra di dialogo **Aggiungi nuovo elemento** fare clic su **File XML**. Assegnare al file il nome **app.config**. Nell'editor XML, dopo la dichiarazione XML, aggiungere il codice XML seguente:  
   
         ```xml  
         <configuration>  

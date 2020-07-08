@@ -1,5 +1,6 @@
 ---
 title: MDA invalidApartmentStateChange
+description: Informazioni sull'Assistente al debug gestito di invalidApartmentStateChange in .NET, che viene attivato in caso di problemi con lo stato dell'apartment COM.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid apartment state
@@ -11,12 +12,11 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-ms.openlocfilehash: 8acafcc2fba9a7d30cc77f25f06adaca7c79db32
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: c6f7b6a5e450d4167946d22b2ada268ea2b0135f
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217420"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051827"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>MDA invalidApartmentStateChange
 L'assistente al debug gestito `invalidApartmentStateChange` viene attivato quando si verificano due problemi diversi:  
@@ -37,7 +37,7 @@ L'assistente al debug gestito `invalidApartmentStateChange` viene attivato quand
   
 - Nel thread viene chiamato il metodo `CoUninitialize` (o il metodo `CoInitializeEx`) con un modello di concorrenza diverso.  
   
-## <a name="resolution"></a>Risoluzione  
+## <a name="resolution"></a>Soluzione  
  Impostare lo stato di apartment del thread prima dell'avvio dell'esecuzione oppure applicare l'attributo <xref:System.STAThreadAttribute> o <xref:System.MTAThreadAttribute> al metodo principale dell'applicazione.  
   
  Per la seconda causa, idealmente, il codice che chiama il metodo `CoUninitialize` deve essere modificato in modo da ritardare la chiamata finché il thread non sta per terminare e non vi sono RCW, né i rispettivi componenti COM sottostanti, ancora in uso da parte del thread. Tuttavia, se non è possibile modificare il codice che chiama il metodo `CoUninitialize`, nessun RCW può essere usato dai thread non inizializzati in questo modo.  

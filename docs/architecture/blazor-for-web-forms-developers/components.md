@@ -4,12 +4,11 @@ description: Informazioni su come creare componenti dell'interfaccia utente riut
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 1a5f6b63143c4fd7a276219b9c4877e9e355c996
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
-ms.translationtype: MT
+ms.openlocfilehash: f6528b1e68b49b6ee3949baca166f4806448718b
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378325"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051452"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Crea componenti dell'interfaccia utente riutilizzabili con blazer
 
@@ -79,16 +78,16 @@ La tabella seguente riepiloga le varie direttive Razor usate in blazer e i rispe
 
 |Direttiva    |Descrizione|Esempio|Web Form equivalenti|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |Aggiunge un attributo a livello di classe al componente.|`@attribute [Authorize]`|Nessuno|
+|`@attribute` |Aggiunge un attributo a livello di classe al componente.|`@attribute [Authorize]`|nessuno|
 |`@code`      |Aggiunge membri di classe al componente|`@code { ... }`|`<script runat="server">...</script>`|
 |`@implements`|Implementa l'interfaccia specificata.|`@implements IDisposable`|Usare il code-behind|
 |`@inherits`  |Eredita dalla classe di base specificata|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |Inserisce un servizio nel componente|`@inject IJSRuntime JS`|Nessuno|
+|`@inject`    |Inserisce un servizio nel componente|`@inject IJSRuntime JS`|nessuno|
 |`@layout`    |Specifica un componente di layout per il componente|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |Imposta lo spazio dei nomi per il componente|`@namespace MyNamespace`|Nessuno|
+|`@namespace` |Imposta lo spazio dei nomi per il componente|`@namespace MyNamespace`|nessuno|
 |`@page`      |Specifica la route per il componente|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |Specifica un parametro di tipo generico per il componente|`@typeparam TItem`|Usare il code-behind|
-|`@using`     |Specifica uno spazio dei nomi da inserire nell'ambito|`@using MyComponentNamespace`|Aggiungi spazio dei nomi in *Web. config*|
+|`@using`     |Specifica uno spazio dei nomi da inserire nell'ambito|`@using MyComponentNamespace`|Aggiungi spazio dei nomi in *web.config*|
 
 I componenti Razor fanno anche uso estensivo degli *attributi di direttiva* sugli elementi per controllare vari aspetti del modo in cui i componenti vengono compilati (gestione degli eventi, data binding, componenti & riferimenti agli elementi e così via). Tutti gli attributi di direttiva seguono una sintassi generica comune in cui i valori tra parentesi sono facoltativi:
 
@@ -146,7 +145,7 @@ Oltre al normale HTML, i componenti possono usare anche altri componenti come pa
 A differenza dei Web Form ASP.NET, componenti in Blazer:
 
 - Non usare un prefisso di elemento (ad esempio, `asp:` ).
-- Non richiedere la registrazione nella pagina o in *Web. config*.
+- Non richiedere la registrazione nella pagina o nel *web.config*.
 
 Si pensi ai componenti Razor come se fossero tipi .NET, perché si tratta esattamente di ciò che si tratta. Se viene fatto riferimento all'assembly contenente il componente, il componente sarà disponibile per l'utilizzo. Per portare lo spazio dei nomi del componente nell'ambito, applicare la `@using` direttiva:
 
@@ -602,8 +601,8 @@ L'output di questo componente è simile al seguente:
 ```html
 <h1>My list</h1>
 <ul>
-    <li>The message is: message1</li>
-    <li>The message is: message2</li>
+    <li><p>The message is: message1</p></li>
+    <li><p>The message is: message2</p></li>
 <ul>
 ```
 
