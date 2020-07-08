@@ -1,13 +1,12 @@
 ---
 title: Pubblicare un'applicazione console .NET Core usando Visual Studio Code
 description: La pubblicazione crea il set di file necessari per eseguire un'applicazione .NET Core.
-ms.date: 06/08/2020
-ms.openlocfilehash: 442d08c9b016407327ba30db0aae78b5cf6b6fe3
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
-ms.translationtype: MT
+ms.date: 07/04/2020
+ms.openlocfilehash: 8fd9975e8a88704b9dea45b40127c8dc03f7d09f
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701450"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051883"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>Esercitazione: pubblicare un'applicazione console .NET Core usando Visual Studio Code
 
@@ -112,4 +111,4 @@ Nei passaggi seguenti verranno esaminati i file creati dal processo di pubblicaz
 In questa esercitazione è stata pubblicata un'app console. Nell'esercitazione successiva verrà creata una libreria di classi.
 
 > [!div class="nextstepaction"]
-> [Creare una libreria di .NET Standard in Visual Studio per Mac](library-with-visual-studio-mac.md)
+> [Creare una libreria di .NET Standard in Visual Studio Code](library-with-visual-studio-code.md)

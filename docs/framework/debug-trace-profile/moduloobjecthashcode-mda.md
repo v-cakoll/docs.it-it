@@ -1,5 +1,6 @@
 ---
 title: moduloObjectHashcode (MDA)
+description: Esaminare l'assistente al debug gestito moduloObjectHashcode, che modifica la classe dell'oggetto per ottenere un valore di resto in un risultato del metodo GetHashCode.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), hashcode modulus
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - GetHashCode method
 - modulus of hashcodes
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
-ms.openlocfilehash: 65bbdfec2d7050d1b474a8186a9ea6e9bb93bd9e
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: a929ec2b9196f1f6cad0528fdf7323839a86fa55
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216186"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052065"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode (MDA)
 L'assistente al debug gestito `moduloObjectHashcode` modifica il comportamento della classe <xref:System.Object> per eseguire un'operazione modulo sul codice hash restituito dal metodo <xref:System.Object.GetHashCode%2A>. Il modulo predefinito per questo assistente al debug gestito è 1, che fa sì che <xref:System.Object.GetHashCode%2A> restituisca 0 per tutti gli oggetti.  
@@ -36,7 +36,7 @@ L'assistente al debug gestito `moduloObjectHashcode` modifica il comportamento d
   
  L'ordine di enumerazione da una <xref:System.Collections.Hashtable> può variare tra le diverse versioni di runtime se cambia l'algoritmo usato per calcolare i codici hash per la chiave. Per verificare se il programma ha una dipendenza dall'ordine di enumerazione delle chiavi o dei valori da una tabella hash, è possibile abilitare questo assistente al debug gestito.  
   
-## <a name="resolution"></a>Risoluzione  
+## <a name="resolution"></a>Soluzione  
  Non usare mai codici hash in sostituzione all'identità dell'oggetto. Implementare l'override del metodo <xref:System.Object.Equals%2A?displayProperty=nameWithType> per non confrontare i codici hash.  
   
  Non creare dipendenze dall'ordine di enumerazione delle chiavi o dei valori nelle tabelle hash.  
