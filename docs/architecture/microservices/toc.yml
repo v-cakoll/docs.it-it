@@ -10,7 +10,7 @@
           href: container-docker-introduction/docker-terminology.md
         - name: 'Contenitori, immagini e registri Docker'
           href: container-docker-introduction/docker-containers-images-registries.md
-    - name: Scegliere .NET Core o .NET Framework per i contenitori Docker
+    - name: Scelta di .NET Core o .NET Framework per i contenitori di Docker
       href: net-core-net-framework-containers/index.md
       items:
         - name: Indicazioni generali
@@ -25,7 +25,7 @@
           href: net-core-net-framework-containers/net-container-os-targets.md
         - name: Immagini Docker .NET ufficiali
           href: net-core-net-framework-containers/official-net-docker-images.md
-    - name: Progettazione di app basate su contenitori e microservizi
+    - name: Architettura di applicazioni basate su contenitori e microservizi
       href: architect-microservice-container-applications/index.md
       items:
         - name: Inserimento di applicazioni monolitiche nei contenitori
@@ -60,12 +60,12 @@
           href: architect-microservice-container-applications/resilient-high-availability-microservices.md
         - name: Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
           href: architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md
-    - name: Processo di sviluppo per le app basate su Docker
+    - name: Processo di sviluppo per le applicazioni basate su Docker
       href: docker-application-development-process/index.md
       items:
         - name: Flusso di lavoro di sviluppo per app Docker
           href: docker-application-development-process/docker-app-development-workflow.md
-    - name: Progettare e sviluppare app .NET basate su più contenitori e microservizi
+    - name: Progettazione e sviluppo di applicazioni .NET basate su più contenitori e microservizi
       href: multi-container-microservice-net-applications/index.md
       items:
         - name: Progettazione di un'applicazione orientata ai microservizi
@@ -88,7 +88,7 @@
           href: multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md
         - name: Implementazione di gateway API con Ocelot
           href: multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md
-    - name: Gestire la complessità aziendale in un microservizio con i modelli DDD e CQRS
+    - name: Gestione della complessità aziendale in un microservizio con i modelli DDD e CQRS
       href: microservice-ddd-cqrs-patterns/index.md
       items:
         - name: Applicazione di schemi CQRS e DDD semplificati in un microservizio
@@ -118,14 +118,14 @@
         - name: Progettazione del livello di persistenza dell'infrastruttura
           href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-design.md
         - name: Implementazione del livello di persistenza dell'infrastruttura con Entity Framework Core
-          href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-implemenation-entity-framework-core.md
+          href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-implementation-entity-framework-core.md
         - name: Uso di database NoSQL come infrastruttura di persistenza
           href: microservice-ddd-cqrs-patterns/nosql-database-persistence-infrastructure.md
         - name: Progettazione del livello dell'applicazione di microservizi e dell'API Web
           href: microservice-ddd-cqrs-patterns/microservice-application-layer-web-api-design.md
         - name: Implementazione del livello dell'applicazione di microservizi tramite l'API Web
           href: microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md
-    - name: Implementare app resilienti
+    - name: Implementazione di applicazioni resilienti
       href: implement-resilient-applications/index.md
       items:
         - name: Gestione degli errori parziali
@@ -144,7 +144,7 @@
           href: implement-resilient-applications/implement-circuit-breaker-pattern.md
         - name: Monitoraggio dell'integrità
           href: implement-resilient-applications/monitor-app-health.md
-    - name: Proteggere i microservizi e le app Web .NET
+    - name: Protezione di microservizi e applicazioni Web .NET
       href: secure-net-microservices-web-applications/index.md
       items:
         - name: Informazioni sull'autorizzazione in microservizi .NET e applicazioni Web
