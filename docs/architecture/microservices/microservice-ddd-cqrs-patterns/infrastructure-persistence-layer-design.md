@@ -2,16 +2,16 @@
 title: Progettazione del livello di persistenza dell'infrastruttura
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Esplorare lo schema repository nella progettazione del livello di persistenza dell'infrastruttura.
 ms.date: 10/08/2018
-ms.openlocfilehash: 1b2665e81ade60affa84563121c04bca08537f07
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 3c18582eb5db61a61b366c06f361d297e698b39a
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988479"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100847"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Progettare il livello di persistenza dell'infrastruttura
 
-I componenti di persistenza dei dati forniscono l'accesso ai dati ospitati entro i limiti di un microservizio, ovvero il database di un microservizio. Contengono l'implementazione effettiva di componenti come repository e classi di [unità di lavoro](https://martinfowler.com/eaaCatalog/unitOfWork.html), ad esempio gli oggetti Entity Framework (EF) <xref:Microsoft.EntityFrameworkCore.DbContext> personalizzati. DbContext di Entity Framework implementa sia lo schema Repository che lo schema Unit of Work.
+I componenti di persistenza dei dati consentono di accedere ai dati ospitati entro i limiti di un microservizio, ovvero il database di un microservizio. Contengono l'implementazione effettiva di componenti come repository e classi di [unità di lavoro](https://martinfowler.com/eaaCatalog/unitOfWork.html), ad esempio gli oggetti Entity Framework (EF) <xref:Microsoft.EntityFrameworkCore.DbContext> personalizzati. DbContext di Entity Framework implementa sia lo schema Repository che lo schema Unit of Work.
 
 ## <a name="the-repository-pattern"></a>Schema repository
 
@@ -23,7 +23,7 @@ Lo schema Repository è una modalità di utilizzo di un'origine dati ben documen
 
 ### <a name="define-one-repository-per-aggregate"></a>Definire un repository per ogni aggregazione
 
-Per ogni aggregazione o radice di aggregazione è necessario creare una classe di repository. In un microservizio che si basa su schemi progettuali basati su dominio (DDD, Domain-Driven Design), l'unico canale che è necessario usare per aggiornare il database deve essere il repository, Ciò è dovuto al fatto che hanno una relazione uno-a-uno con la radice di aggregazione, che controlla le invarianti dell'aggregazione e la coerenza transazionale. È possibile eseguire query sul database tramite altri canali (seguendo un approccio CQRS), perché le query non modificano lo stato del database. Tuttavia, l'area transazionale, ovvero gli aggiornamenti, deve sempre essere controllata dai repository e dalle radici di aggregazione.
+Per ogni aggregazione o radice di aggregazione è necessario creare una classe di repository. In un microservizio che si basa su schemi progettuali basati su dominio (DDD, Domain-Driven Design), l'unico canale che è necessario usare per aggiornare il database deve essere il repository, Poiché hanno una relazione uno-a-uno con la radice di aggregazione, che controlla le invarianti e la coerenza transazionale dell'aggregazione. È possibile eseguire query sul database tramite altri canali (seguendo un approccio CQRS), perché le query non modificano lo stato del database. Tuttavia, l'area transazionale, ovvero gli aggiornamenti, deve sempre essere controllata dai repository e dalle radici di aggregazione.
 
 In pratica, un repository consente di popolare i dati in memoria che provengono dal database sotto forma di entità di dominio. Quando le entità sono in memoria, è possibile modificarle e quindi salvarle in modo permanente nel database tramite le transazioni.
 
@@ -33,11 +33,11 @@ Se l'utente apporta modifiche, i dati da aggiornare proverranno dal livello di p
 
 È importante sottolineare di nuovo che è consigliabile definire un solo repository per ogni radice di aggregazione, come illustrato nella figura 7-17. Per raggiungere l'obiettivo della radice dell'aggregazione per mantenere la coerenza delle transazioni tra tutti gli oggetti all'interno dell'aggregazione, è consigliabile non creare mai un repository per ogni tabella nel database.
 
-![Diagramma che mostra le relazioni tra dominio e altre infrastrutture.](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
+![Diagramma che illustra le relazioni del dominio e di altre infrastrutture.](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
 
 **Figura 7-17**. Relazione tra repository, aggregazioni e tabelle del database
 
-Il diagramma precedente mostra le relazioni tra i livelli di dominio e infrastruttura: Buyer Aggregate dipende da IBuyerRepository e Order Aggregate dipende dalle interfacce IOrderRepository, queste interfacce vengono implementate nel livello Infrastructure dai repository corrispondenti che dipendono da UnitOfWork, anch'essi implementati in tale paese, che accedono alle tabelle nel livello Dati.
+Il diagramma precedente mostra le relazioni tra i livelli di dominio e infrastruttura: l'aggregazione del buyer dipende da IBuyerRepository e dall'aggregazione degli ordini dipende dalle interfacce IOrderRepository, queste interfacce vengono implementate nel livello infrastruttura dai repository corrispondenti che dipendono da UnitOfWork, anch ' esso implementato, che accede alle tabelle nel livello dati.
 
 ### <a name="enforce-one-aggregate-root-per-repository"></a>Applicare una radice di aggregazione per ogni repository
 
@@ -84,7 +84,7 @@ Le connessioni ai database possono non riuscire e, cosa ancora più importante, 
 
 In termini di separazione delle problematiche per gli unit test, la logica opera sulle entità di dominio in memoria. Si presuppone che la classe di repository abbia usato queste ultime. Una volta che la logica modifica le entità di dominio, si presuppone che la classe di repository le archivi in modo corretto. Il punto importante consiste nel creare unit test su un modello di dominio e la relativa logica di dominio. Le radici di aggregazione sono i limiti principali della coerenza in DDD.
 
-I repository implementati in eShopOnContainers si basano sull'implementazione DbContext di EF Core dei modelli di repository e unità di lavoro usando il rilevamento delle modifiche, in modo che non duplicano questa funzionalità.
+I repository implementati in eShopOnContainers si basano sull'implementazione DbContext di EF Core del repository e sui modelli di unità di lavoro utilizzando il rilevamento delle modifiche, quindi non duplicano questa funzionalità.
 
 ### <a name="the-difference-between-the-repository-pattern-and-the-legacy-data-access-class-dal-class-pattern"></a>Differenza tra lo schema Repository e lo schema legacy Data Access class (DAL class)
 
@@ -102,9 +102,9 @@ I repository personalizzati sono utili per i motivi citati in precedenza e rappr
 
 Ad esempio, Jimmy Bogard, quando ha fornito un feedback diretto per questa guida, ha affermato quanto segue:
 
-> Questo sarà probabilmente il mio più grande feedback. Io non sono davvero un fan di repository, soprattutto perché nascondono i dettagli importanti del meccanismo di persistenza sottostante. È per questo che vado per MediatR per i comandi, troppo. È possibile sfruttare tutte le potenzialità del livello di persistenza e spostare tutto il comportamento del dominio nelle radici di aggregazione. Di solito non voglio prendere in giro i miei repository - ho ancora bisogno di avere quel test di integrazione con la cosa reale. Andare cQRS significava che non avevamo più bisogno di repository.
+> Questo sarà probabilmente il mio feedback più importante. Non sono davvero un fan di repository, soprattutto perché nascondono i dettagli importanti del meccanismo di persistenza sottostante. Ecco perché scelgo anche Mediator per i comandi. È possibile sfruttare tutte le potenzialità del livello di persistenza e spostare tutto il comportamento del dominio nelle radici di aggregazione. In genere non voglio simulare i repository, ma è necessario eseguire il test di integrazione con la vera cosa. CQRS significa che non sono stati effettivamente necessari repository.
 
-I repository possono essere utili ma non sono fondamentali per la progettazione DDD come lo sono lo schema Aggregate e il modello di dominio avanzato. Pertanto, usare lo schema Repository se si ritiene opportuno. In ogni caso, si userà il modello di repository ogni volta che si utilizza EF Core anche se, in questo caso, il repository copre l'intero microservizio o contesto delimitato.
+I repository possono essere utili ma non sono fondamentali per la progettazione DDD come lo sono lo schema Aggregate e il modello di dominio avanzato. Pertanto, usare lo schema Repository se si ritiene opportuno. Tuttavia, verrà usato il modello di repository ogni volta che si usa EF Core anche se, in questo caso, il repository copre l'intero microservizio o il contesto delimitato.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
@@ -113,7 +113,7 @@ I repository possono essere utili ma non sono fondamentali per la progettazione 
 - **Edward Hieatt e Rob me. Modello di repository.** \
   <https://martinfowler.com/eaaCatalog/repository.html>
 
-- **Il modello Repository** \
+- **Modello di repository** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
 - **Eric Evans. Progettazione basata su domini: affrontare la complessità nel cuore del software.** (Libro; include una trattazione dello schema repository) \
@@ -124,9 +124,9 @@ I repository possono essere utili ma non sono fondamentali per la progettazione 
 - **Martin Fowler. Modello di unità di lavoro.** \
   <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
-- **Implementazione del repository e dei modelli di unità di lavoro in un'applicazione MVC ASP.NET** \
+- **Implementazione dei modelli di repository e unità di lavoro in un'applicazione MVC ASP.NET** \
   <https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
 >[!div class="step-by-step"]
->[Successivo](domain-events-design-implementation.md)
->[precedente](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[Precedente](domain-events-design-implementation.md) 
+> [Avanti](infrastructure-persistence-layer-implementation-entity-framework-core.md)

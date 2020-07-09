@@ -1,13 +1,16 @@
 ---
 title: Scelta tra tipi anonimi e di tupla
 description: Informazioni su quando è opportuno scegliere tra tipi anonimi e tipo di tupla.
+author: IEvangelist
+ms.author: dapine
 ms.date: 07/01/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2f927b59d7206dd0f405c11529f93b56a1c778a0
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 9140250ad1f48501bf1d2e53a1c179e6823f19cd
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052078"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100964"
 ---
 # <a name="choosing-between-anonymous-and-tuple-types"></a>Scelta tra tipi anonimi e di tupla
 

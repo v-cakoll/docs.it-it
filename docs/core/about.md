@@ -2,14 +2,17 @@
 title: Panoramica di .NET Core
 description: Informazioni sulle caratteristiche e la composizione di .NET Core e sul confronto con altre implementazioni di .NET.
 ms.date: 03/26/2020
-ms.openlocfilehash: e57451968ed8c4d5457acea084d3c6c9f998b8da
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: d5ef79fe5a8fbb56beae77edd01830fe6561fa51
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144526"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100730"
 ---
 # <a name="net-core-overview"></a>Panoramica di .NET Core
+
+> [!div class="button"]
+> [Download di .NET Core](https://dotnet.microsoft.com/download)
 
 .NET Core ha le caratteristiche seguenti:
 

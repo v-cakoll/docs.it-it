@@ -10,6 +10,7 @@ helpviewer_keywords:
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 ms.openlocfilehash: 8d55268f2b2106dde4e488a6f0271fd3b17349da
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86051649"
@@ -23,7 +24,7 @@ L'assistente al debug gestito `loadFromContext` viene attivato se viene caricato
 ## <a name="cause"></a>Causa  
  In genere, un assembly viene caricato nel contesto `LoadFrom` se è stato caricato da un percorso esterno al contesto `Load`, ad esempio la Global Assembly Cache o la proprietà <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType>.  
   
-## <a name="resolution"></a>Soluzione  
+## <a name="resolution"></a>Risoluzione  
  Configurare le applicazioni in modo che non siano più necessarie chiamate di <xref:System.Reflection.Assembly.LoadFrom%2A>. A questo scopo, è possibile usare le tecniche seguenti:  
   
 - Installare gli assembly nella Global Assembly Cache.  

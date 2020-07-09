@@ -3,12 +3,12 @@ title: 'Esercitazione: compilare il primo analizzatore con correzione del codice
 description: In questa esercitazione vengono fornite istruzioni dettagliate per creare un analizzatore e una correzione del codice con .NET Compiler Platform SDK (API Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 23ebf4befc75e08592890d85f2dda51251f59cd6
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: c70fcacc6cb30969e5c69ffd0954ac52e637a915
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396287"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100938"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Esercitazione: compilare il primo analizzatore con correzione del codice
 
@@ -17,6 +17,25 @@ ms.locfileid: "83396287"
 In questa esercitazione verrà esaminata la creazione di un **analizzatore** e una **correzione del codice** associato usando le API Roslyn. Un analizzatore è un modo per eseguire analisi del codice sorgente e segnalare un problema all'utente. Facoltativamente, un analizzatore può anche fornire una correzione del codice che rappresenta una modifica del codice sorgente per l'utente. In questa esercitazione verrà creato un analizzatore per trovare le dichiarazioni di variabili locali che potrebbero essere dichiarate tramite il modificatore `const` ma che lo non sono. La correzione del codice associata modifica tali dichiarazioni per aggiungere il modificatore `const`.
 
 ## <a name="prerequisites"></a>Prerequisiti
+
+> [!NOTE]
+> Il modello corrente di Visual Studio **Analyzer con correzione del codice (.NET standard)** contiene un bug noto e deve essere corretto in visual studio 2019 versione 16,7. I progetti nel modello non verranno compilati, a meno che non vengano apportate le modifiche seguenti:
+>
+> 1. Selezionare **strumenti**  >  **Opzioni**  >  **Gestione pacchetti NuGet**  >  **origini pacchetti**
+>    - Selezionare il pulsante più per aggiungere una nuova origine:
+>    - Impostare l' **origine** su `https://dotnet.myget.org/F/roslyn-analyzers/api/v3/index.json` e selezionare **Aggiorna**
+> 1. Dal **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto **MakeConst. vsix** e scegliere **modifica file di progetto** .
+>    - Aggiornare il `<AssemblyName>` nodo per aggiungere il `.Visx` suffisso:
+>      - `<AssemblyName>MakeConst.Vsix</AssemblyName>`
+>    - Aggiornare il `<ProjectReference>` nodo alla riga 41 per modificare il `TargetFramework` valore:
+>      - `<ProjectReference Update="@(ProjectReference)" AdditionalProperties="TargetFramework=netstandard2.0" />`
+> 1. Aggiornare il file *MakeConstUnitTests.cs* nel progetto *MakeConst. test* :
+>    - Modificare la riga 9 come riportato di seguito, Nota modifica dello spazio dei nomi:
+>      - `using Verify = Microsoft.CodeAnalysis.CSharp.Testing.MSTest.CodeFixVerifier<`
+>    - Modificare la riga 24 sul metodo seguente:
+>      - `await Verify.VerifyAnalyzerAsync(test);`
+>    - Modificare la riga 62 nel seguente metodo:
+>      - `await Verify.VerifyCodeFixAsync(test, expected, fixtest);`
 
 - [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
@@ -55,7 +74,7 @@ Per determinare se una variabile può essere resa una costante, è necessaria un
 - In **Visual C# > Estendibilità** scegliere **Analyzer with code fix (.NET Standard)** (Analizzatore con correzione del codice - .NET Standard).
 - Assegnare al progetto il nome "**MakeConst**" e fare clic su OK.
 
-Il modello di analizzatore con correzione del codice crea tre progetti: uno contiene l'analizzatore e la correzione del codice, il secondo è un progetto unit test e il terzo è il progetto VSIX. Il progetto di avvio predefinito è il progetto VSIX. Premere **F5** per avviare il progetto VSIX. Verrà avviata una seconda istanza di Visual Studio e sarà caricato il nuovo analizzatore.
+Il modello di analizzatore con correzione del codice crea tre progetti: uno contiene l'analizzatore e la correzione del codice, il secondo è un progetto unit test e il terzo è il progetto VSIX. Il progetto di avvio predefinito è il progetto VSIX. Premere <kbd>F5</kbd> per avviare il progetto VSIX. Verrà avviata una seconda istanza di Visual Studio e sarà caricato il nuovo analizzatore.
 
 > [!TIP]
 > Quando si esegue l'analizzatore, si avvia una seconda copia di Visual Studio. Questa seconda copia usa un diverso hive del Registro di sistema per archiviare le impostazioni. Questo consente di distinguere le impostazioni di visualizzazione nelle due copie di Visual Studio. È possibile scegliere un tema diverso per l'esecuzione sperimentale di Visual Studio. Inoltre, non eseguire il roaming delle impostazioni o accedere all'account di Visual Studio usando l'istanza sperimentale di Visual Studio. Ciò consente di mantenere diverse le impostazioni.
@@ -170,7 +189,7 @@ Il codice appena aggiunto garantisce che la variabile non viene modificata e qui
 context.ReportDiagnostic(Diagnostic.Create(Rule, context.Node.GetLocation()));
 ```
 
-È possibile controllare lo stato di avanzamento premendo **F5** per eseguire l'analizzatore. È possibile caricare l'applicazione console creata in precedenza e quindi aggiungere il codice di test seguente:
+È possibile controllare lo stato di avanzamento premendo <kbd>F5</kbd> per eseguire l'analizzatore. È possibile caricare l'applicazione console creata in precedenza e quindi aggiungere il codice di test seguente:
 
 ```csharp
 int x = 0;
@@ -251,7 +270,7 @@ Aggiungere il codice seguente alla fine del metodo `MakeConstAsync`:
 
 [!code-csharp[replace the declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceDocument  "Generate a new document by replacing the declaration")]
 
-A questo punto, è possibile provare la correzione del codice.  Premere F5 per eseguire il progetto dell'analizzatore in una seconda istanza di Visual Studio. Nella seconda istanza di Visual Studio creare un nuovo progetto di applicazione console C# e aggiungere alcune dichiarazioni di variabili locali inizializzate con valori costanti al metodo Main. Si noterà che vengono segnalate come avvisi, come indicato di seguito.
+A questo punto, è possibile provare la correzione del codice.  Premere <kbd>F5</kbd> per eseguire il progetto dell'analizzatore in una seconda istanza di Visual Studio. Nella seconda istanza di Visual Studio creare un nuovo progetto di applicazione console C# e aggiungere alcune dichiarazioni di variabili locali inizializzate con valori costanti al metodo Main. Si noterà che vengono segnalate come avvisi, come indicato di seguito.
 
 ![Avvisi relativi alla possibilità di usare una costante](media/how-to-write-csharp-analyzer-code-fix/make-const-warning.png)
 
@@ -310,7 +329,7 @@ Il codice precedente apporta anche due modifiche al codice che genera il risulta
 
 [!code-csharp[string constants for fix test](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
 
-Eseguire i due test per assicurarsi che vengano superati. In Visual Studio aprire **Esplora test** selezionando **Test** > **Windows** > **Esplora test**.  Fare clic sul collegamento **Esegui tutto**.
+Eseguire i due test per assicurarsi che vengano superati. In Visual Studio aprire **Esplora test** selezionando **Test** > **Windows** > **Esplora test**. Selezionare quindi il collegamento **Esegui tutto** .
 
 ## <a name="create-tests-for-valid-declarations"></a>Creare test per le dichiarazioni valide
 
@@ -503,12 +522,12 @@ Può sembrare necessaria una notevole quantità di codice, ma non è così. Sost
 using Microsoft.CodeAnalysis.Simplification;
 ```
 
-Eseguire i test. Avranno tutti esito positivo. Per concludere, è possibile eseguire l'analizzatore completato. Premere CTRL+F5 per eseguire il progetto dell'analizzatore in una seconda istanza di Visual Studio con l'estensione in anteprima di Roslyn caricata.
+Eseguire i test. Avranno tutti esito positivo. Per concludere, è possibile eseguire l'analizzatore completato. Premere <kbd>CTRL + F5</kbd> per eseguire il progetto dell'analizzatore in una seconda istanza di Visual Studio con l'estensione di anteprima Roslyn caricata.
 
 - Nella seconda istanza di Visual Studio creare un nuovo progetto di applicazione console C# e aggiungere `int x = "abc";` al metodo Main. Grazie alla correzione del primo bug, non dovrebbe essere segnalato alcun messaggio di avviso per questa dichiarazione di variabile locale (anche se si verifica un errore del compilatore come previsto).
 - Aggiungere quindi `object s = "abc";` al metodo Main. A causa della correzione del secondo bug, non dovrebbe essere segnalato alcun avviso.
 - Infine, aggiungere un'altra variabile locale che usa la parola chiave `var`. Si noterà che viene segnalato un avviso e viene visualizzato un suggerimento in basso a sinistra.
-- Spostare il cursore dell'editor sulla sottolineatura ondulata, quindi premere CTRL+. per visualizzare la correzione del codice suggerita. Dopo aver selezionato la correzione del codice, si noterà che la parola chiave var' viene gestita correttamente.
+- Spostare il punto di inserimento dell'editor sulla sottolineatura ondulata e premere <kbd>CTRL +</kbd>. per visualizzare la correzione del codice suggerita. Dopo aver selezionato la correzione del codice, si noterà che la parola chiave var' viene gestita correttamente.
 
 Infine, aggiungere il codice seguente:
 

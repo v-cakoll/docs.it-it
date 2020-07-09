@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/20/2020
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: ee5edc80d9c020dbbeced3fc36d3ff273036d7b1
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: b5643dd7eddefebc9cbf922ff5cce75d72dee4dd
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761889"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100899"
 ---
 # <a name="asynchronous-programming"></a>Programmazione asincrona
 
@@ -150,7 +150,7 @@ private async void OnSeeTheDotNetsButtonClick(object sender, RoutedEventArgs e)
     NetworkProgressBar.IsEnabled = true;
     NetworkProgressBar.Visibility = Visibility.Visible;
 
-    // The await operator suspends SeeTheDotNets_Click, returning control to its caller.
+    // The await operator suspends OnSeeTheDotNetsButtonClick(), returning control to its caller.
     // This is what allows the app to be responsive and not block the UI thread.
     var html = await getDotNetFoundationHtmlTask;
     int count = Regex.Matches(html, @"\.NET").Count;
@@ -248,7 +248,7 @@ Il blocco del thread corrente come mezzo per attendere il completamento di un og
 
 La restituzione di un oggetto `Task` dai metodi asincroni può introdurre colli di bottiglia delle prestazioni in determinati percorsi. `Task` è un tipo di riferimento, quindi usarlo significa allocare un oggetto. Nei casi in cui un metodo dichiarato con il `async` modificatore restituisce un risultato memorizzato nella cache o viene completato in modo sincrono, le allocazioni aggiuntive possono diventare un costo significativo in termini di tempo nelle sezioni del codice critiche per le prestazioni. Possono diventare onerose se si verificano in cicli ridotti. Per altre informazioni, vedere [tipi restituiti asincroni generalizzati](whats-new/csharp-7.md#generalized-async-return-types).
 
-* **Prendere in considerazione l'uso** di`ConfigureAwait(false)`
+* **Considerare l'uso dei moduli** `ConfigureAwait(false)`
 
 Una domanda comune è: "quando è consigliabile usare il <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType> metodo?". Il metodo consente a un' `Task` istanza di di configurare il relativo awaiter. Si tratta di una considerazione importante e l'impostazione non corretta potrebbe potenzialmente avere implicazioni in termini di prestazioni e persino deadlock. Per altre informazioni su `ConfigureAwait` , vedere le [domande frequenti su ConfigureAwait](https://devblogs.microsoft.com/dotnet/configureawait-faq).
 

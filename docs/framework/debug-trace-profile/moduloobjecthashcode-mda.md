@@ -13,6 +13,7 @@ helpviewer_keywords:
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 ms.openlocfilehash: a929ec2b9196f1f6cad0528fdf7323839a86fa55
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86052065"
@@ -36,7 +37,7 @@ L'assistente al debug gestito `moduloObjectHashcode` modifica il comportamento d
   
  L'ordine di enumerazione da una <xref:System.Collections.Hashtable> può variare tra le diverse versioni di runtime se cambia l'algoritmo usato per calcolare i codici hash per la chiave. Per verificare se il programma ha una dipendenza dall'ordine di enumerazione delle chiavi o dei valori da una tabella hash, è possibile abilitare questo assistente al debug gestito.  
   
-## <a name="resolution"></a>Soluzione  
+## <a name="resolution"></a>Risoluzione  
  Non usare mai codici hash in sostituzione all'identità dell'oggetto. Implementare l'override del metodo <xref:System.Object.Equals%2A?displayProperty=nameWithType> per non confrontare i codici hash.  
   
  Non creare dipendenze dall'ordine di enumerazione delle chiavi o dei valori nelle tabelle hash.  
