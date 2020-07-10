@@ -1,21 +1,23 @@
 ---
 title: Gestione dello stato
-description: Informazioni sugli approcci diversi per la gestione dello stato in ASP.NET Web Forms e blazer.
+description: Informazioni sui diversi approcci per la gestione dello stato nei Web Form ASP.NET e Blazor .
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
 ms.date: 09/11/2019
-ms.openlocfilehash: 7d2ac0e0f08723896b3b9b325ae545813d191400
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 390822ff93a928c84540505687472a361a0c5f4b
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183784"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173094"
 ---
-# <a name="state-management"></a><span data-ttu-id="0ddc6-103">Gestione dello stato</span><span class="sxs-lookup"><span data-stu-id="0ddc6-103">State management</span></span>
+# <a name="state-management"></a><span data-ttu-id="f307f-103">Gestione dello stato</span><span class="sxs-lookup"><span data-stu-id="f307f-103">State management</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="0ddc6-104">*Questo contenuto sarà presto disponibile.*</span><span class="sxs-lookup"><span data-stu-id="0ddc6-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="f307f-104">*Questo contenuto sarà presto disponibile.*</span><span class="sxs-lookup"><span data-stu-id="f307f-104">*This content is coming soon.*</span></span>
 
 <!--
 - View state
@@ -25,6 +27,6 @@ ms.locfileid: "71183784"
 -->
 
 >[!div class="step-by-step"]
-><span data-ttu-id="0ddc6-105">[Precedente](pages-routing-layouts.md)
->[Successivo](forms-validation.md)</span><span class="sxs-lookup"><span data-stu-id="0ddc6-105">[Previous](pages-routing-layouts.md)
+><span data-ttu-id="f307f-105">[Precedente](pages-routing-layouts.md) 
+> [Avanti](forms-validation.md)</span><span class="sxs-lookup"><span data-stu-id="f307f-105">[Previous](pages-routing-layouts.md)
 [Next](forms-validation.md)</span></span>
