@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: b86fe4fd91b395498926512650490f8d3a0383a1
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: ffda4ad93451d6991aeb20ed01511f16fd3e512b
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761837"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174153"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Espressioni lambda (Guida per programmatori C#)
 
@@ -141,7 +141,7 @@ Per altre informazioni su come creare e usare i metodi asincroni, vedere [progra
 
 ## <a name="lambda-expressions-and-tuples"></a>Espressioni lambda e tuple
 
-A partire da C# 7,0, il linguaggio C# fornisce supporto incorporato per le [Tuple](../../tuples.md). È possibile specificare una tupla come argomento di un'espressione lambda e l'espressione lambda può restituire una tupla. In alcuni casi, il compilatore C# usa l'inferenza del tipo per determinare i tipi di componenti della tupla.
+A partire da C# 7,0, il linguaggio C# fornisce supporto incorporato per le [Tuple](../../language-reference/builtin-types/value-tuples.md). È possibile specificare una tupla come argomento di un'espressione lambda e l'espressione lambda può restituire una tupla. In alcuni casi, il compilatore C# usa l'inferenza del tipo per determinare i tipi di componenti della tupla.
 
 Per definire una tupla, è necessario racchiudere tra parentesi un elenco di componenti delimitato da virgole. L'esempio riportato sotto usa una tupla con tre componenti per passare una sequenza di numeri a un'espressione lambda, la quale raddoppia ogni valore e restituisce una tupla con tre componenti che contiene il risultato delle moltiplicazioni.
 
@@ -151,7 +151,7 @@ In genere, i campi di una tupla sono denominati `Item1` , `Item2` e così via. �
 
 [!code-csharp-interactive[lambda and named tuples](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasAndTuples.cs#WithComponentName)]
 
-Per altre informazioni sulle tuple in C#, vedere [Tipi tupla in C#](../../tuples.md).
+Per altre informazioni sulle tuple C#, vedere [tipi di tupla](../../language-reference/builtin-types/value-tuples.md).
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>Espressioni lambda con operatori query standard
 

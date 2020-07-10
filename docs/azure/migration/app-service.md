@@ -2,17 +2,17 @@
 title: Eseguire la migrazione dell'app Web o del servizio .NET nel servizio app di Azure
 description: Informazioni sulla migrazione di un servizio o di un'app Web .NET da locale a servizio app Azure.
 ms.topic: conceptual
-ms.date: 08/11/2018
-ms.openlocfilehash: 8761642469b6f3d3c93d2e2e0fa7e02dbf3de6d7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.date: 07/08/2020
+ms.openlocfilehash: d208865942b49ae2d5437b8f2fcff294933af21b
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447004"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174309"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>Eseguire la migrazione dell'app Web o del servizio .NET nel servizio app di Azure
 
-Il [servizio app](https://docs.microsoft.com/azure/app-service/overview) è un servizio della piattaforma di calcolo completamente gestito ottimizzato per l'hosting di siti Web e applicazioni Web scalabili. Questo articolo fornisce informazioni su come trasferire in modalità Lift-and-Shift un'applicazione esistente per app Azure servizio, modifiche da considerare e risorse aggiuntive per [il passaggio al cloud](https://azure.microsoft.com/migration/web-applications/). La maggior parte dei siti Web (Web Form, MVC) e dei servizi (Web API, WCF) ASP.NET può passare direttamente al servizio app di Azure senza alcuna modifica. Alcuni possono necessitare di modifiche minori, mentre per altri possono occorrere alcune operazioni di refactoring.
+Il [servizio app](/azure/app-service/overview) è un servizio della piattaforma di calcolo completamente gestito ottimizzato per l'hosting di siti Web e applicazioni Web scalabili. Questo articolo fornisce informazioni su come trasferire in modalità Lift-and-Shift un'applicazione esistente per app Azure servizio, modifiche da considerare e risorse aggiuntive per [il passaggio al cloud](https://azure.microsoft.com/migration/web-applications/). La maggior parte dei siti Web (Web Form, MVC) e dei servizi (Web API, WCF) ASP.NET può passare direttamente al servizio app di Azure senza alcuna modifica. Alcuni possono necessitare di modifiche minori, mentre per altri possono occorrere alcune operazioni di refactoring.
 
 Informazioni introduttive [Pubblicare l'applicazione ASP.NET + SQL nel servizio app di Azure](https://tutorials.visualstudio.com/azure-webapp-migrate/intro).
 
@@ -22,10 +22,10 @@ Informazioni introduttive [Pubblicare l'applicazione ASP.NET + SQL nel servizio 
 
 Verificare l'accesso alle risorse locali perché potrebbe essere necessario eseguirne la migrazione o apportarvi modifiche. Di seguito sono riportate le opzioni per mitigare l'accesso alle risorse locali:
 
-* Creare una VPN che connetta il servizio app alle risorse locali usando le [rete virtuali di Azure](https://docs.microsoft.com/azure/app-service/web-sites-integrate-with-vnet).
-* Esporre i servizi locali in modo sicuro nel cloud senza modifiche al firewall usando [Inoltro di Azure](https://docs.microsoft.com/azure/service-bus-relay/relay-what-is-it).
+* Creare una VPN che connetta il servizio app alle risorse locali usando le [rete virtuali di Azure](/azure/app-service/web-sites-integrate-with-vnet).
+* Esporre i servizi locali in modo sicuro nel cloud senza modifiche al firewall usando [Inoltro di Azure](/azure/service-bus-relay/relay-what-is-it).
 * Eseguire la migrazione delle dipendenze in Azure, ad esempio un [database SQL](https://go.microsoft.com/fwlink/?linkid=863217).
-* Usare offerte di piattaforma distribuita come servizio nel cloud per ridurre le dipendenze. Ad esempio, invece di connettersi a un server di posta locale considerare la possibilità di usare [SendGrid](https://docs.microsoft.com/azure/sendgrid-dotnet-how-to-send-email).
+* Usare offerte di piattaforma distribuita come servizio nel cloud per ridurre le dipendenze. Ad esempio, invece di connettersi a un server di posta locale considerare la possibilità di usare [SendGrid](/azure/sendgrid-dotnet-how-to-send-email).
 
 ### <a name="port-bindings"></a>Binding delle porte
 
@@ -33,20 +33,20 @@ Il servizio app di Azure supporta la porta 80 per il traffico HTTP e la porta 44
 
 Per WCF sono supportati i binding seguenti:
 
-Binding | Note
---------|--------
-BasicHttp |
-WSHttp |
-WSDualHttpBinding | Il [supporto WebSocket](https://docs.microsoft.com/azure/app-service/web-sites-configure) deve essere abilitato.
-NetHttpBinding | Il [supporto WebSocket](https://docs.microsoft.com/azure/app-service/web-sites-configure) deve essere abilitato per i contratti duplex.
-NetHttpsBinding | Il [supporto WebSocket](https://docs.microsoft.com/azure/app-service/web-sites-configure) deve essere abilitato per i contratti duplex.
-BasicHttpContextBinding |
-WebHttpBinding |
-WSHttpContextBinding |
+| Associazione | Note |
+|--|--|
+| `BasicHttp` |  |
+| `WSHttp` |  |
+| `WSDualHttpBinding` | Il [supporto WebSocket](https://docs.microsoft.com/azure/app-service/web-sites-configure) deve essere abilitato. | Il [supporto WebSocket](/azure/app-service/web-sites-configure) deve essere abilitato. |
+| `NetHttpBinding` | Il [supporto WebSocket](https://docs.microsoft.com/azure/app-service/web-sites-configure) deve essere abilitato per i contratti duplex. | Il [supporto WebSocket](/azure/app-service/web-sites-configure) deve essere abilitato per i contratti duplex. |
+| `NetHttpsBinding` | Il [supporto WebSocket](https://docs.microsoft.com/azure/app-service/web-sites-configure) deve essere abilitato per i contratti duplex. | Il [supporto WebSocket](/azure/app-service/web-sites-configure) deve essere abilitato per i contratti duplex. |
+| `BasicHttpContextBinding` |  |
+| `WebHttpBinding` |  |
+| `WSHttpContextBinding` |  |
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>Autenticazione
 
-Il servizio app di Azure supporta l'autenticazione anonima per impostazione predefinita e l'autenticazione dei moduli quando prevista. L'autenticazione di Windows può essere usata eseguendo l'integrazione solo con Azure Active Directory e ADFS. [Altre informazioni su come integrare le directory locali con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
+Il servizio app di Azure supporta l'autenticazione anonima per impostazione predefinita e l'autenticazione dei moduli quando prevista. L'autenticazione di Windows può essere usata eseguendo l'integrazione solo con Azure Active Directory e ADFS. [Altre informazioni su come integrare le directory locali con Azure Active Directory](/azure/active-directory/connect/active-directory-aadconnect).
 
 ### <a name="assemblies-in-the-gac-global-assembly-cache"></a>Assembly nella Global Assembly Cache (GAC)
 
@@ -54,11 +54,11 @@ Questa funzionalità non è supportata. Si consiglia di copiare gli assembly nec
 
 ### <a name="iis-settings"></a>Impostazioni di IIS
 
-Tutti gli elementi che normalmente vengono configurati tramite applicationHost.config nell'applicazione ora possono essere configurati tramite il portale di Azure. Si applica a AppPool bit, Abilita/Disabilita WebSocket, versione pipeline gestita, versione .NET Framework (2.0/4.0) e così via. Per modificare le [impostazioni applicazione](https://docs.microsoft.com/azure/app-service/web-sites-configure), passare al [portale di Azure](https://portal.azure.com), aprire il pannello dell'app Web e quindi selezionare la scheda **Impostazioni applicazione**.
+Tutti gli elementi che normalmente vengono configurati tramite applicationHost.config nell'applicazione ora possono essere configurati tramite il portale di Azure. Si applica a AppPool bit, Abilita/Disabilita WebSocket, versione pipeline gestita, versione .NET Framework (2.0/4.0) e così via. Per modificare le [impostazioni applicazione](/azure/app-service/web-sites-configure), passare al [portale di Azure](https://portal.azure.com), aprire il pannello dell'app Web e quindi selezionare la scheda **Impostazioni applicazione**.
 
 #### <a name="iis5-compatibility-mode"></a>Modo di compatibilità IIS5
 
-La modalità di compatibilità IIS5 non è supportata. Nel servizio app Azure ogni app Web e tutte le applicazioni sottoposte a esecuzione nello stesso processo di lavoro con un set specifico di [pool di applicazioni](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc735247(v=ws.10)).
+La modalità di compatibilità IIS5 non è supportata. Nel servizio app Azure ogni app Web e tutte le applicazioni sottoposte a esecuzione nello stesso processo di lavoro con un set specifico di [pool di applicazioni](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc735247(v=ws.10)).
 
 #### <a name="iis7-schema-compliance"></a>Conformità dello schema IIS7+
 
@@ -74,7 +74,7 @@ Il servizio app di Azure non consente la registrazione di componenti COM nella p
 
 ### <a name="physical-directories"></a>Directory fisiche
 
-Il servizio app di Azure non consente l'accesso a unità fisiche. Potrebbe essere necessario usare [file di Azure](https://docs.microsoft.com/azure/storage/files/storage-files-introduction) per accedere ai file tramite SMB. [Archiviazione BLOB di Azure](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction) consente di archiviare i file per l'accesso tramite HTTPS.
+Il servizio app di Azure non consente l'accesso a unità fisiche. Potrebbe essere necessario usare [file di Azure](/azure/storage/files/storage-files-introduction) per accedere ai file tramite SMB. [Archiviazione BLOB di Azure](/azure/storage/blobs/storage-blobs-introduction) consente di archiviare i file per l'accesso tramite HTTPS.
 
 ### <a name="isapi-filters"></a>Filtri ISAPI
 
@@ -82,7 +82,7 @@ Il servizio app di Azure può supportare l'uso dei filtri ISAPI, tuttavia è nec
 
 ### <a name="https-bindings-and-ssl"></a>Binding HTTPS e SSL
 
-Non viene eseguita la migrazione dei binding HTTPS né i certificati SSL associati ai siti Web. [I certificati SSL possono essere tuttavia caricati manualmente](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-ssl) al termine della migrazione del sito.
+Non viene eseguita la migrazione dei binding HTTPS né i certificati SSL associati ai siti Web. [I certificati SSL possono essere tuttavia caricati manualmente](/azure/app-service/app-service-web-tutorial-custom-ssl) al termine della migrazione del sito.
 
 ### <a name="sharepoint-and-frontpage"></a>SharePoint e FrontPage
 
@@ -102,15 +102,15 @@ AAD non funziona con le app gratuite. Per usare Azure Active Directory, è neces
 
 ### <a name="monitoring-and-diagnostics"></a>Monitoraggio e diagnostica
 
-È improbabile che le soluzioni locali correnti per il monitoraggio e la diagnostica funzionino nel cloud. Azure fornisce tuttavia strumenti per la registrazione, il monitoraggio e la diagnostica per poter identificare i problemi delle app Web ed eseguirne il debug. È anche possibile abilitare la diagnostica per l'app Web nella configurazione e visualizzare i log registrati in Azure Application Insights. [Altre informazioni sull'abilitazione della registrazione diagnostica per le app Web](https://docs.microsoft.com/azure/app-service/web-sites-enable-diagnostic-log).
+È improbabile che le soluzioni locali correnti per il monitoraggio e la diagnostica funzionino nel cloud. Azure fornisce tuttavia strumenti per la registrazione, il monitoraggio e la diagnostica per poter identificare i problemi delle app Web ed eseguirne il debug. È anche possibile abilitare la diagnostica per l'app Web nella configurazione e visualizzare i log registrati in Azure Application Insights. [Altre informazioni sull'abilitazione della registrazione diagnostica per le app Web](/azure/app-service/web-sites-enable-diagnostic-log).
 
 ### <a name="connection-strings-and-application-settings"></a>Stringhe di connessione e impostazioni applicazione
 
-Considerare la possibilità di usare [Azure KeyVault](https://docs.microsoft.com/azure/key-vault/), un servizio che archivia in modo sicuro le informazioni riservate usate nell'applicazione. In alternativa, è possibile archiviare questi dati come impostazione del servizio app.
+Considerare la possibilità di usare [Azure KeyVault](/azure/key-vault/), un servizio che archivia in modo sicuro le informazioni riservate usate nell'applicazione. In alternativa, è possibile archiviare questi dati come impostazione del servizio app.
 
 ### <a name="dns"></a>DNS
 
-Potrebbe essere necessario aggiornare le configurazioni DNS in base ai requisiti dell'applicazione. Queste impostazioni DNS possono essere configurate nelle [impostazioni del dominio personalizzato](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-domain) del servizio app.
+Potrebbe essere necessario aggiornare le configurazioni DNS in base ai requisiti dell'applicazione. Queste impostazioni DNS possono essere configurate nelle [impostazioni del dominio personalizzato](/azure/app-service/app-service-web-tutorial-custom-domain) del servizio app.
 
 ## <a name="azure-app-service-with-windows-containers"></a>Servizio app di Azure i contenitori Windows
 

@@ -1,5 +1,6 @@
 ---
 title: Disporre gli oggetti su più livelli
+description: Informazioni su come eseguire il livello di oggetti su controlli Windows Forms e form figlio per creare interfacce utente più complesse.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1615b9c4df222edd95cda9bceae622ba6f1d8d78
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6269b09c56963fefd500b9e1e6c9d7f51f9619cf
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736348"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174510"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Procedura: eseguire il layer di oggetti su Windows Forms
 
@@ -34,9 +35,9 @@ Quando si crea un'interfaccia utente complessa o si utilizza un form con interfa
 
 ## <a name="to-layer-controls-programmatically"></a>Per livelli di controlli a livello di codice
 
-Usare i metodi <xref:System.Windows.Forms.Control.BringToFront%2A> e <xref:System.Windows.Forms.Control.SendToBack%2A> per modificare l'ordine z dei controlli.
+Usare i <xref:System.Windows.Forms.Control.BringToFront%2A> <xref:System.Windows.Forms.Control.SendToBack%2A> metodi e per modificare l'ordine z dei controlli.
 
-Se, ad esempio, un controllo <xref:System.Windows.Forms.TextBox>, `txtFirstName`, è sotto un altro controllo e si desidera utilizzarlo in primo piano, utilizzare il codice seguente:
+Se, ad esempio, un <xref:System.Windows.Forms.TextBox> controllo, `txtFirstName` , è sotto un altro controllo e si desidera utilizzarlo in primo piano, utilizzare il codice seguente:
 
 ```vb
 txtFirstName.BringToFront()
@@ -51,11 +52,11 @@ txtFirstName->BringToFront();
 ```
 
 > [!NOTE]
-> Windows Forms supporta il *contenimento del controllo*. Il contenimento dei controlli comporta l'inserimento di un numero di controlli all'interno di un controllo contenitore, ad esempio un numero di controlli <xref:System.Windows.Forms.RadioButton> all'interno di un controllo <xref:System.Windows.Forms.GroupBox>. È quindi possibile sovrapporre i controlli all'interno del controllo che lo contiene. Spostando la casella di gruppo si spostano anche i controlli, perché sono contenuti al suo interno.
+> Windows Forms supporta il *contenimento del controllo*. Il contenimento dei controlli comporta l'inserimento di un numero di controlli all'interno di un controllo contenitore, ad esempio un numero di <xref:System.Windows.Forms.RadioButton> controlli all'interno di un <xref:System.Windows.Forms.GroupBox> controllo. È quindi possibile sovrapporre i controlli all'interno del controllo che lo contiene. Spostando la casella di gruppo si spostano anche i controlli, perché sono contenuti al suo interno.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Controlli Windows Form](index.md)
+- [Controlli di Windows Forms](index.md)
 - [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli da utilizzare in Windows Form](controls-to-use-on-windows-forms.md)
 - [Controlli Windows Form per funzione](windows-forms-controls-by-function.md)

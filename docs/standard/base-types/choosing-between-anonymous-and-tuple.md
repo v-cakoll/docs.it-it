@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 07/01/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 9140250ad1f48501bf1d2e53a1c179e6823f19cd
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: 9c186133a639faf187c89d872856d860a20f5a2d
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100964"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174218"
 ---
 # <a name="choosing-between-anonymous-and-tuple-types"></a>Scelta tra tipi anonimi e di tupla
 
@@ -90,12 +90,7 @@ foreach (var (formatted, ticks) in
 }
 ```
 
-C# fornisce il supporto del linguaggio per le tuple con il <xref:System.ValueTuple> tipo e la semantica per:
-
-- [Assegnazione di Tuple](../../csharp/tuples.md#assignment-and-tuples)
-- [Decostruzione di Tuple](../../csharp/deconstruct.md) (non limitate a Tuple)
-- [Controlli di uguaglianza della tupla](../../csharp/tuples.md#equality-and-tuples)
-- [Inizializzatori di proiezione tupla](../../csharp/tuples.md#tuple-projection-initializers)
+Per ulteriori informazioni sulle tuple, vedere [tipi di tupla (riferimenti per C#)](../../csharp/language-reference/builtin-types/value-tuples.md) o [tuple (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/tuples.md).
 
 Gli esempi precedenti sono tutti funzionalmente equivalenti, tuttavia; l'usabilità e le implementazioni sottostanti sono lievemente irrilevanti.
 
@@ -105,7 +100,7 @@ Potrebbe essere necessario utilizzare sempre <xref:System.ValueTuple> <xref:Syst
 
 ### <a name="key-differences"></a>Differenze principali
 
-| Nome                     | Modificatore di accesso | Type     | Nome del membro personalizzato | Supporto per la decostruzione | Supporto dell'albero delle espressioni |
+| Nome                     | Modificatore di accesso | Tipo     | Nome del membro personalizzato | Supporto per la decostruzione | Supporto dell'albero delle espressioni |
 |--------------------------|-----------------|----------|----------------------|------------------------|-------------------------|
 | Tipi anonimi          | `internal`      | `class`  | ✔️                   | ❌                     | ✔️                     |
 | <xref:System.Tuple>      | `public`        | `class`  | ❌                   | ❌                     | ✔️                     |
@@ -127,5 +122,6 @@ Per gli sviluppatori che scelgono tra le tuple e i tipi anonimi, è necessario p
 
 - [Tipi anonimi](../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
 - [Alberi delle espressioni](../../csharp/expression-trees.md)
-- [Tipi di tupla](../../csharp/tuples.md)
+- [Tipi di tupla (riferimenti per C#)](../../csharp/language-reference/builtin-types/value-tuples.md)
+- [Tuple (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/tuples.md)
 - [Linee guida per la progettazione di tipi](../design-guidelines/type.md)

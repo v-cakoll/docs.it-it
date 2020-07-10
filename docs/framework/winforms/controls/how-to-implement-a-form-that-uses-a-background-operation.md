@@ -1,5 +1,6 @@
 ---
-title: "Procedura: Implementare un modulo che usa un'operazione in background"
+title: "Procedura: implementare un form che utilizza un'operazione in background"
+description: Informazioni su come implementare un Windows Form che usa un'operazione in background in modo che un'operazione possa continuare a essere eseguita mentre un'altra operazione continua.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
-ms.openlocfilehash: e06b18558f6b3fa3cef47613bbaef16fb7c740f0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 23bf4bc02fbf998d92dfce6d84e4e337cbefe7d9
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046197"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174523"
 ---
-# <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Procedura: Implementare un modulo che usa un'operazione in background
+# <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Procedura: implementare un form che utilizza un'operazione in background
 Nell'esempio di codice riportato di seguito viene creato un form che calcola numeri di Fibonacci. Il calcolo viene eseguito su un thread separato da quello dell'interfaccia utente, in modo che la risposta dell'interfaccia utente non venga ritardata dall'esecuzione del calcolo.  
   
  In Visual Studio è disponibile supporto completo per questa attività.  
   
- Vedere [anche procedura dettagliata: Implementazione di un form che utilizza un'operazione](walkthrough-implementing-a-form-that-uses-a-background-operation.md)in background.  
+ Vedere anche [Procedura dettagliata: implementazione di un modulo che usa un'operazione in background](walkthrough-implementing-a-form-that-uses-a-background-operation.md).  
   
 ## <a name="example"></a>Esempio  
  [!code-cpp[System.ComponentModel.BackgroundWorker#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#1)]
@@ -49,5 +50,5 @@ Nell'esempio di codice riportato di seguito viene creato un form che calcola num
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
-- [Panoramica sul modello asincrono basato su eventi](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [Suggerimenti per l'utilizzo del threading gestito](../../../standard/threading/managed-threading-best-practices.md)
+- [Cenni preliminari sul modello asincrono basato su eventi](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Procedure consigliate per il threading gestito](../../../standard/threading/managed-threading-best-practices.md)

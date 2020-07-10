@@ -3,21 +3,23 @@ title: Moduli, gestori e middleware
 description: Informazioni sulla gestione delle richieste HTTP con moduli, gestori e middleware.
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
 ms.date: 10/11/2019
-ms.openlocfilehash: 3ecc109c54f88b5b06a1474f7c6e262d426a78a9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ff2b3fd41316a1c8c20a0eed9a585e5fd2733af3
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337472"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173185"
 ---
 # <a name="modules-handlers-and-middleware"></a>Moduli, gestori e middleware
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Un'app ASP.NET Core si basa su una serie di *middleware*. Il middleware è costituito da gestori disposti in una pipeline per gestire le richieste e le risposte. In un'app Web Form, i gestori e i moduli HTTP risolvono problemi simili. In ASP.NET Core i moduli, i gestori, *Global.asax.cs*e il ciclo di vita dell'app vengono sostituiti con il middleware. In questo capitolo verrà illustrato il middleware nel contesto di un'app blazer.
+Un'app ASP.NET Core si basa su una serie di *middleware*. Il middleware è costituito da gestori disposti in una pipeline per gestire le richieste e le risposte. In un'app Web Form, i gestori e i moduli HTTP risolvono problemi simili. In ASP.NET Core i moduli, i gestori, *Global.asax.cs*e il ciclo di vita dell'app vengono sostituiti con il middleware. In questo capitolo verrà illustrato il middleware nel contesto di un' Blazor app.
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 La pipeline delle richieste ASP.NET Core è costituita da una sequenza di delegati di richiesta, chiamati uno dopo l'altro. Il diagramma seguente illustra il concetto. Il thread di esecuzione seguente le frecce nere.
 
@@ -35,18 +37,18 @@ ASP.NET 4. x include molti moduli. In modo analogo, ASP.NET Core dispone anche d
 
 La tabella seguente elenca i componenti e il middleware di sostituzione in ASP.NET Core.
 
-|Module                 |Modulo ASP.NET 4. x           |Opzione ASP.NET Core|
+|Modulo                 |Modulo ASP.NET 4. x           |Opzione ASP.NET Core|
 |-----------------------|-----------------------------|-------------------|
 |Errori HTTP            |`CustomErrorModule`          |[Middleware delle tabelle codici di stato](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
 |Documento predefinito       |`DefaultDocumentModule`      |[Middleware dei file predefiniti](/aspnet/core/fundamentals/static-files#serve-a-default-document)|
 |Esplorazione directory     |`DirectoryListingModule`     |[Middleware di esplorazione directory](/aspnet/core/fundamentals/static-files#enable-directory-browsing)|
 |Compressione dinamica    |`DynamicCompressionModule`   |[Middleware di compressione delle risposte](/aspnet/core/performance/response-compression)|
-|Traccia richieste non riuscite|`FailedRequestsTracingModule`|[Registrazione di ASP.NET Core](/aspnet/core/fundamentals/logging/index#tracesource-provider)|
+|Traccia richieste non riuscite|`FailedRequestsTracingModule`|[Registrazione ASP.NET Core](/aspnet/core/fundamentals/logging/index#tracesource-provider)|
 |Memorizzazione nella cache di file           |`FileCacheModule`            |[Middleware di memorizzazione nella cache delle risposte](/aspnet/core/performance/caching/middleware)|
 |Caching HTTP           |`HttpCacheModule`            |[Middleware di memorizzazione nella cache delle risposte](/aspnet/core/performance/caching/middleware)|
-|Registrazione HTTP           |`HttpLoggingModule`          |[Registrazione di ASP.NET Core](/aspnet/core/fundamentals/logging/index)|
+|Registrazione HTTP           |`HttpLoggingModule`          |[Registrazione ASP.NET Core](/aspnet/core/fundamentals/logging/index)|
 |Reindirizzamento HTTP       |`HttpRedirectionModule`      |[Middleware di riscrittura URL](/aspnet/core/fundamentals/url-rewriting)|
-|filtri ISAPI          |`IsapiFilterModule`          |[Middleware](/aspnet/core/fundamentals/middleware/index)|
+|Filtri ISAPI          |`IsapiFilterModule`          |[Middleware](/aspnet/core/fundamentals/middleware/index)|
 |ISAPI                  |`IsapiModule`                |[Middleware](/aspnet/core/fundamentals/middleware/index)|
 |Filtro richieste      |`RequestFilteringModule`     |[IRule middleware di riscrittura URL](/aspnet/core/fundamentals/url-rewriting#irule-based-rule)|
 |Riscrittura URL&#8224;   |`RewriteModule`              |[Middleware di riscrittura URL](/aspnet/core/fundamentals/url-rewriting)|
@@ -88,8 +90,8 @@ public class Startup
 }
 ```
 
-Il middleware può anche essere definito come classe, implementando l'interfaccia `IMiddleware` o seguendo la convenzione middleware. Per ulteriori informazioni, vedere la pagina relativa alla [scrittura di middleware ASP.NET Core personalizzati](/aspnet/core/fundamentals/middleware/write).
+Il middleware può anche essere definito come classe, implementando l' `IMiddleware` interfaccia o seguendo la convenzione middleware. Per ulteriori informazioni, vedere la pagina relativa alla [scrittura di middleware ASP.NET Core personalizzati](/aspnet/core/fundamentals/middleware/write).
 
 >[!div class="step-by-step"]
->[Precedente](data.md)
->[Successivo](config.md)
+>[Precedente](data.md) 
+> [Avanti](config.md)

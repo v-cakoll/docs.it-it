@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: Stampare un Windows Form'
+title: 'Procedura: stampare un Windows Form'
+description: Informazioni su come stampare una copia del Windows Form corrente a livello di codice usando il metodo CopyFromScreen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +11,15 @@ helpviewer_keywords:
 - printing a form
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
-ms.openlocfilehash: cd10e0a43ff37b921dc8e024d7a6a51fafbb0400
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b59ea4b5347903b36a166c4f8ac0d8d7db18635e
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591847"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174692"
 ---
-# <a name="how-to-print-a-windows-form"></a>Procedura: Stampare un Windows Form
-Come parte del processo di sviluppo, è in genere opportuno stampare una copia di Windows Form. Esempio di codice seguente viene illustrato come stampare una copia del modulo corrente usando il <xref:System.Drawing.Graphics.CopyFromScreen%2A> (metodo).  
+# <a name="how-to-print-a-windows-form"></a>Procedura: stampare un Windows Form
+Come parte del processo di sviluppo, in genere si desidera stampare una copia di Windows Form. Nell'esempio di codice riportato di seguito viene illustrato come stampare una copia del form corrente utilizzando il <xref:System.Drawing.Graphics.CopyFromScreen%2A> metodo.  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[System.Drawing.Graphics.CopyFromScreen#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/CS/Form1.cs#1)]
@@ -27,9 +28,9 @@ Come parte del processo di sviluppo, è in genere opportuno stampare una copia d
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Le seguenti condizioni possono generare un'eccezione:  
   
-- Non hai le autorizzazioni per accedere alla stampante.  
+- Non si dispone delle autorizzazioni necessarie per accedere alla stampante.  
   
-- Non è installata alcuna stampante.  
+- Nessuna stampante installata.  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Per eseguire questo esempio di codice, è necessario disporre dell'autorizzazione per accedere alla stampante utilizzata con il computer.  
@@ -38,4 +39,4 @@ Come parte del processo di sviluppo, è in genere opportuno stampare una copia d
 
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Procedura: Eseguire il rendering delle immagini con GDI+](how-to-render-images-with-gdi.md)
-- [Procedura: Stampare grafica in Windows Form](how-to-print-graphics-in-windows-forms.md)
+- [Procedura: stampare grafica in Windows Forms](how-to-print-graphics-in-windows-forms.md)

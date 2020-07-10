@@ -1,5 +1,6 @@
 ---
 title: Tipi di bitmap
+description: Informazioni sui tipi di bitmap e i formati di file grafici GDI+ supportati, tra cui BMP, JPG, GIF, PNG e TIFF.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - jpeg files
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: 2243c9ce2d8ba741143d301c38e8b88d7b196c98
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09b74ef476467b0bba5aac1f58db278b3898ef17
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914818"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174679"
 ---
 # <a name="types-of-bitmaps"></a>Tipi di bitmap
 Una bitmap è una matrice di bit che specificano il colore di ogni pixel in una matrice rettangolare di pixel. Il numero di bit dedicati a un singolo pixel determina il numero di colori che è possibile assegnare al pixel. Se, ad esempio, ogni pixel è rappresentato da 4 bit, a un determinato pixel può essere assegnato uno dei 16 colori diversi (2 ^ 4 = 16). Nella tabella seguente vengono illustrati alcuni esempi del numero di colori che possono essere assegnati a un pixel rappresentato da un numero specificato di bit.  
@@ -39,7 +40,7 @@ Una bitmap è una matrice di bit che specificano il colore di ogni pixel in una 
 |16|2^16 = 65,536|  
 |24|2^24 = 16,777,216|  
   
- I file su disco in cui sono archiviate le bitmap contengono in genere uno o più blocchi di informazioni che archiviano informazioni quali il numero di bit per pixel, il numero di pixel in ogni riga e il numero di righe nella matrice. Tale file potrebbe inoltre contenere una tabella dei colori (talvolta denominata tavolozza dei colori). Una tabella dei colori esegue il mapping dei numeri nella bitmap a colori specifici. Nella figura seguente viene illustrata un'immagine ingrandita insieme alla relativa bitmap e tabella dei colori. Ogni pixel è rappresentato da un numero a 4 bit, quindi sono presenti 2 ^ 4 = 16 colori nella tabella dei colori. Ogni colore nella tabella è rappresentato da un numero a 24 bit: 8 bit per il colore rosso, 8 bit per il verde e 8 bit per il blu. I numeri sono visualizzati in formato esadecimale (base 16): A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.  
+ I file su disco in cui sono archiviate le bitmap contengono in genere uno o più blocchi di informazioni che archiviano informazioni quali il numero di bit per pixel, il numero di pixel in ogni riga e il numero di righe nella matrice. Tale file potrebbe inoltre contenere una tabella dei colori (talvolta denominata tavolozza dei colori). Una tabella dei colori esegue il mapping dei numeri nella bitmap a colori specifici. Nella figura seguente viene illustrata un'immagine ingrandita insieme alla relativa bitmap e tabella dei colori. Ogni pixel è rappresentato da un numero a 4 bit, quindi sono presenti 2 ^ 4 = 16 colori nella tabella dei colori. Ogni colore della tabella è rappresentato da un numero a 24 bit: 8 bit per il rosso, 8 bit per il verde e 8 bit per il blu. I numeri sono visualizzati in formato esadecimale (base 16): A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.  
   
  ![Esempio di bitmap](./media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
   
@@ -66,11 +67,11 @@ Una bitmap è una matrice di bit che specificano il colore di ogni pixel in una 
   
  Il livello di compressione nelle immagini JPEG è configurabile, ma i livelli di compressione più elevati (file più piccoli) generano una perdita di informazioni maggiore. Un rapporto di compressione 20:1 produce spesso un'immagine che l'occhio umano trova difficile distinguere dall'originale. La figura seguente mostra un'immagine BMP e due immagini JPEG che sono state compresse da tale immagine BMP. Il primo file JPEG ha un rapporto di compressione di 4:1 e il secondo formato JPEG ha un rapporto di compressione di circa 8:1.  
   
- ![Esempi] di FileType (./media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
+ ![Esempi di Filetype](./media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
   
  La compressione JPEG non funziona bene per i disegni di linee, i blocchi di colore a tinta unita e i limiti acuti. Nella figura seguente viene illustrata una BMP insieme a due file JPEG e un file GIF. I file JPEG e GIF sono stati compressi da BMP. Il rapporto di compressione è 4:1 per GIF, 4:1 per il formato JPEG più piccolo e 8:3 per il file JPEG più grande. Si noti che il file GIF mantiene i limiti acuti lungo le righe, ma i file JPEG tendono a sfocare i limiti.  
   
- ![Tipi di tipo](./media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
+ ![Filetype](./media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
   
  JPEG è uno schema di compressione, non un formato di file. JPEG File Interchange Format (JFIF) è un formato di file comunemente usato per l'archiviazione e il trasferimento di immagini che sono state compresse in base allo schema JPEG. I file JFIF visualizzati dai Web browser usano l'estensione jpg.  
   

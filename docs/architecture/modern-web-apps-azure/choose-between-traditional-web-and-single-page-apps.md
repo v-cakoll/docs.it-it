@@ -3,13 +3,16 @@ title: Scegliere tra app Web tradizionali e a pagina singola
 description: Informazioni su come scegliere tra le app Web tradizionali e a pagina singola (SPAs) durante la compilazione di applicazioni Web.
 author: ardalis
 ms.author: wiwagn
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: 0aef42b78114a11c70456cb3122d3dcb5143f983
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 4fe889fe86d96a5b2ffa5bd879d2ec1801a3cf20
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662706"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174367"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Scegliere tra app Web tradizionali e a pagina singola
 
@@ -38,21 +41,21 @@ I framework delle applicazioni a pagina singola richiedono anche maggiori conosc
 
 I miglioramenti apportati all'esperienza utente grazie all'approccio SPA devono essere valutati in base a queste considerazioni.
 
-## <a name="blazor"></a>Blazor
+## Blazor
 
-ASP.NET Core 3.0 introduce un nuovo modello per la creazione di un'interfaccia utente avanzata, interattiva e componibile, denominata Blazor. Il lato server di Blazer consente agli sviluppatori di compilare l'interfaccia utente con C# e Razor sul server e l'interfaccia utente per essere connessa in modo interattivo al browser in tempo reale usando una connessione SignalR permanente.
+ASP.NET Core 3,0 introduce un nuovo modello per la creazione di un'interfaccia utente avanzata, interattiva e componibile denominata Blazor . Blazorlato server consente agli sviluppatori di compilare l'interfaccia utente con C# e Razor sul server e l'interfaccia utente per essere connessa in modo interattivo al browser in tempo reale tramite una connessione SignalR permanente.
 
-Blazer webassembly introduce un'altra opzione per le app blazer, consentendone l'esecuzione nel browser tramite webassembly. Poiché è reale .NET in esecuzione su webassembly, è possibile riutilizzare il codice e le librerie dalle parti lato server dell'applicazione.
+BlazorWebAssemblyintroduce un'altra opzione per Blazor le app, consentendo l'esecuzione nel browser tramite WebAssembly . Poiché è in esecuzione in .NET reale WebAssembly , è possibile riutilizzare il codice e le librerie dalle parti lato server dell'applicazione.
 
-Blazer offre una nuova, terza opzione da considerare quando si valuta se compilare un'applicazione Web puramente sottoposta a rendering del server o una SPA. Puoi creare comportamenti avanzati sul lato client di tipo SPA usando blazer, senza la necessità di uno sviluppo di JavaScript significativo. Le applicazioni Blazer possono chiamare le API per richiedere dati o eseguire operazioni sul lato server.
+Blazorfornisce una nuova, terza opzione da considerare quando si valuta se compilare un'applicazione Web con rendering puramente server o una SPA. È possibile creare comportamenti avanzati sul lato client di tipo SPA usando Blazor , senza la necessità di uno sviluppo di JavaScript significativo. Blazorle applicazioni possono chiamare le API per richiedere dati o eseguire operazioni sul lato server.
 
-Provare a compilare l'applicazione Web con blazer nei casi seguenti:
+Prendere in considerazione la creazione di un'applicazione Web con i casi seguenti Blazor :
 
 - L'applicazione deve esporre un'interfaccia utente avanzata
 
 - Il team ha più dimestichezza con lo sviluppo di .NET rispetto allo sviluppo di JavaScript o TypeScript
 
-Per altre informazioni su Blazor, vedere [Get started with Blazor](https://blazor.net/docs/get-started.html) (Introduzione a Blazor).
+Per ulteriori informazioni su, vedere la pagina relativa all' Blazor [Introduzione Blazor a ](https://blazor.net/docs/get-started.html).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Quando scegliere le app Web tradizionali
 
@@ -97,25 +100,25 @@ Per creare applicazioni a pagina singola è necessario avere dimestichezza con J
 
 Se si supporta già un'API Web per l'uso con altri client, può risultare meno oneroso creare un'implementazione di tipo applicazione a pagina singola che si avvale di tale API anziché riprodurre la logica nel formato lato server. Le applicazioni a pagina singola usano sistematicamente le API Web per eseguire query e aggiornare i dati quando gli utenti interagiscono con l'applicazione.
 
-## <a name="when-to-choose-blazor"></a>Quando scegliere il blazer
+## <a name="when-to-choose-blazor"></a>Quando scegliereBlazor
 
-Di seguito è riportata una spiegazione più dettagliata di quando scegliere blazer per l'app Web.
+Di seguito è riportata una spiegazione più dettagliata di quando scegliere Blazor per l'app Web.
 
 **L'applicazione deve esporre un'interfaccia utente avanzata**
 
-Come le Spa basate su JavaScript, le applicazioni Blazer possono supportare il comportamento di rich client senza ricaricamenti di pagina. Queste applicazioni sono più reattive agli utenti, recuperando solo i dati (o HTML) necessari per rispondere a una determinata interazione dell'utente. Progettato correttamente, le app Blazer lato server possono essere configurate per l'esecuzione come app Blazer sul lato client con modifiche minime quando questa funzionalità è supportata.
+Come le Spa basate su JavaScript, Blazor le applicazioni possono supportare il comportamento rich client senza ricaricamenti di pagina. Queste applicazioni sono più reattive agli utenti, recuperando solo i dati (o HTML) necessari per rispondere a una determinata interazione dell'utente. Progettato correttamente, Blazor le app lato server possono essere configurate per l'esecuzione come app sul lato client Blazor con modifiche minime quando questa funzionalità è supportata.
 
 **Il team ha più dimestichezza con lo sviluppo di .NET rispetto allo sviluppo di JavaScript o TypeScript**
 
-Molti sviluppatori sono più produttivi con .NET e Razor rispetto ai linguaggi lato client come JavaScript o TypeScript. Poiché il lato server dell'applicazione è già in fase di sviluppo con .NET, l'uso di Blazer garantisce a tutti gli sviluppatori .NET del team di comprendere e potenzialmente creare il comportamento del front-end dell'applicazione.
+Molti sviluppatori sono più produttivi con .NET e Razor rispetto ai linguaggi lato client come JavaScript o TypeScript. Poiché il lato server dell'applicazione è già in fase di sviluppo con .NET, l'utilizzo di Blazor garantisce a ogni sviluppatore .NET del team di comprendere e potenzialmente creare il comportamento del front-end dell'applicazione.
 
 ## <a name="decision-table"></a>Tabella decisionale
 
-La tabella decisionale seguente riepiloga alcuni dei fattori di base da considerare quando si sceglie tra un'applicazione Web tradizionale, una SPA o un'app blazer.
+La tabella decisionale seguente riepiloga alcuni dei fattori di base da considerare quando si sceglie tra un'applicazione Web tradizionale, una SPA o un' Blazor app.
 
-| **Fattore**                                           | **App Web tradizionale** | **Applicazione a pagina singola** | **App Blazer**  |
+| **Fattore**                                           | **App Web tradizionale** | **Applicazione a pagina singola** | **BlazorApp**  |
 | ---------------------------------------------------- | ----------------------- | --------------------------- | --------------- |
-| Il team deve conoscere JavaScript o TypeScript | **Minimal**             | **Richiesto**                | **Minimal**     |
+| Il team deve conoscere JavaScript o TypeScript | **Minima**             | **Obbligatorio**                | **Minima**     |
 | Supporto dei browser senza script                   | **Supportato**           | **Non supportato**           | **Supportato**   |
 | Comportamento minimo dell'applicazione lato client             | **Adeguato**         | **Eccessivo**                | **Validità**      |
 | Esigenza di un'interfaccia utente dettagliata e complessa            | **Limitato**             | **Adeguato**             | **Adeguato** |

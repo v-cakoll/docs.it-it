@@ -2,15 +2,15 @@
 title: ASP.NET Core modifiche di rilievo
 titleSuffix: ''
 description: Elenca le modifiche di rilievo in ASP.NET Core.
-ms.date: 06/23/2020
+ms.date: 07/08/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: cf6b2eb46504c12aa670ccfc68531598dd9705a3
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ca9e615e88964e1c37e9c0b721bca8c34bf671ac
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325449"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174393"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core modifiche di rilievo
 
@@ -27,6 +27,7 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 - [Autorizzazione: IAllowAnonymous rimosso da AuthorizationFilterContext. filters](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
 - [Autorizzazione: le implementazioni di IAuthorizationPolicyProvider richiedono un nuovo metodo](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
 - [Azure: pacchetti di integrazione di Azure con prefisso Microsoft rimossi](#azure-microsoft-prefixed-azure-integration-packages-removed)
+- [Blazer: spazi vuoti non significativi rimossi dai componenti in fase di compilazione](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
 - [Caching: la proprietà CompactOnMemoryPressure è stata rimossa](#caching-compactonmemorypressure-property-removed)
 - [Caching: Microsoft. Extensions. Caching. SqlServer usa il nuovo pacchetto SqlClient](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [Caching: i tipi di "pubternal" di ResponseCaching sono stati modificati in Internal](#caching-responsecaching-pubternal-types-changed-to-internal)
@@ -88,6 +89,10 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5,0
 
 [!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
+
+***
+
+[!INCLUDE[Blazor: Insignificant whitespace trimmed from components at compile time](~/includes/core-changes/aspnetcore/5.0/blazor-components-trim-insignificant-whitespace.md)]
 
 ***
 

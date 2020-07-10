@@ -1,5 +1,6 @@
 ---
 title: Eventi del mouse
+description: Informazioni su come ottenere la posizione del mouse dagli eventi del mouse e comprendere l'ordine in cui gli eventi click del mouse vengono generati nei controlli Windows Forms.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MouseLeave event [Windows Forms]
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 4909f56fc3935848fd18bc35c1cb56b5407a24c8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 640448109961ea5fdf3600ef9e72d7d10e8c9e49
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740970"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174380"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Eventi mouse in Windows Form
 
@@ -60,7 +61,7 @@ Di seguito è riportato l'ordine degli eventi generati per un doppio clic del pu
 
 5. Evento<xref:System.Windows.Forms.Control.MouseDown> .
 
-6. Evento<xref:System.Windows.Forms.Control.DoubleClick> . Può variare se il controllo in questione ha il bit di stile <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> impostato su `true`. Per altre informazioni sulla modalità di impostazione di un bit <xref:System.Windows.Forms.ControlStyles>, vedere il metodo <xref:System.Windows.Forms.Control.SetStyle%2A>.
+6. Evento<xref:System.Windows.Forms.Control.DoubleClick> . Può variare se il controllo in questione ha il bit di stile <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> impostato su `true`. Per altre informazioni sulla modalità di impostazione di un bit <xref:System.Windows.Forms.Control.SetStyle%2A>, vedere il metodo <xref:System.Windows.Forms.ControlStyles>.
 
 7. Evento<xref:System.Windows.Forms.Control.MouseDoubleClick> .
 

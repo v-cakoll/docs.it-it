@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: Ancorare e agganciare controlli figlio in un controllo FlowLayoutPanel'
+title: 'Procedura: ancorare e agganciare controlli figlio in un controllo FlowLayoutPanel'
+description: Informazioni su come agganciare e ancorare i controlli figlio a livello di codice in un Windows Forms controllo FlowLayoutPanel.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - layout [Windows Forms], child controls
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: 3e9a5be944e199254ddb9cee0772c4d55be8fb77
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b4fb3bf6d148a526a75926bd67c1f967286332bf
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046072"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174536"
 ---
-# <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Procedura: Ancorare e agganciare controlli figlio in un controllo FlowLayoutPanel
+# <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Procedura: ancorare e agganciare controlli figlio in un controllo FlowLayoutPanel
 
 Il controllo <xref:System.Windows.Forms.FlowLayoutPanel> supporta le proprietà <xref:System.Windows.Forms.Control.Anchor%2A> e <xref:System.Windows.Forms.Control.Dock%2A> nei controlli figlio.
 
@@ -22,7 +23,7 @@ Il controllo <xref:System.Windows.Forms.FlowLayoutPanel> supporta le proprietà 
 
 1. Creare un controllo <xref:System.Windows.Forms.FlowLayoutPanel> nel form.
 
-2. Impostare la <xref:System.Windows.Forms.Control.Width%2A> <xref:System.Windows.Forms.FlowLayoutPanel> proprietà del controllo su **300**e impostare la relativa <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> proprietà <xref:System.Windows.Forms.FlowDirection.TopDown>su.
+2. Impostare la proprietà <xref:System.Windows.Forms.Control.Width%2A> del <xref:System.Windows.Forms.FlowLayoutPanel> controllo su **300**e impostare la relativa proprietà <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> su <xref:System.Windows.Forms.FlowDirection.TopDown> .
 
 3. Creare due controlli <xref:System.Windows.Forms.Button> e inserirli nel controllo <xref:System.Windows.Forms.FlowLayoutPanel>.
 
@@ -42,11 +43,11 @@ Il controllo <xref:System.Windows.Forms.FlowLayoutPanel> supporta le proprietà 
 
 ## <a name="example"></a>Esempio
 
-La figura seguente illustra quattro pulsanti ancorati e agganciati rispetto al pulsante blu in un controllo <xref:System.Windows.Forms.FlowLayoutPanel>. L'elemento <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> è <xref:System.Windows.Forms.FlowDirection.LeftToRight>.
+La figura seguente illustra quattro pulsanti ancorati e agganciati rispetto al pulsante blu in un controllo <xref:System.Windows.Forms.FlowLayoutPanel>. Il <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> è <xref:System.Windows.Forms.FlowDirection.LeftToRight>.
 
 ![Ancoraggio FlowLayoutPanel](./media/net-flpanchorexp.gif "NET_FLPanchorExp")
 
-La figura seguente illustra quattro pulsanti ancorati e agganciati rispetto al pulsante blu in un controllo <xref:System.Windows.Forms.FlowLayoutPanel>. L'elemento <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> è <xref:System.Windows.Forms.FlowDirection.TopDown>.
+La figura seguente illustra quattro pulsanti ancorati e agganciati rispetto al pulsante blu in un controllo <xref:System.Windows.Forms.FlowLayoutPanel>. Il <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> è <xref:System.Windows.Forms.FlowDirection.TopDown>.
 
 ![Ancoraggio FlowLayoutPanel](./media/vs-flpanchor2.gif "VS_FLPanchor2")
 
@@ -64,4 +65,4 @@ L'esempio presenta i requisiti seguenti:
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
-- [Panoramica del controllo FlowLayoutPanel](flowlayoutpanel-control-overview.md)
+- [Cenni preliminari sul controllo FlowLayoutPanel](flowlayoutpanel-control-overview.md)

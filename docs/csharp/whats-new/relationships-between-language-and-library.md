@@ -2,12 +2,12 @@
 title: Relazione tra funzionalità del linguaggio e tipi di libreria | Microsoft Docs
 description: Le funzionalità del linguaggio spesso si basano sui tipi di libreria per l'implementazione. Comprendere la relazione.
 ms.date: 07/20/2017
-ms.openlocfilehash: dfae7972af0a251a92700d7d33bd6f971eb1870e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: abf15385da3756c35db2df822cc2e11e9edf5758
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "61706026"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174101"
 ---
 # <a name="relationships-between-language-features-and-library-types"></a>Relazioni tra funzionalità del linguaggio e tipi di libreria
 
@@ -21,7 +21,7 @@ Questa dipendenza dalla funzionalità della libreria standard fa parte del lingu
 
 La prima versione era semplice: il compilatore e la libreria standard erano forniti assieme ed esisteva una sola versione di ognuno.
 
-Nelle versioni successive del linguaggio C# sono stati aggiunti occasionalmente nuovi tipi o membri alle dipendenze. Alcuni esempi sono <xref:System.Runtime.CompilerServices.INotifyCompletion>, <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> o <xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>. C# 7.0 continua in questa direzione aggiungendo una dipendenza per <xref:System.ValueTuple> per implementare la funzionalità del linguaggio [tuple](../tuples.md).
+Nelle versioni successive del linguaggio C# sono stati aggiunti occasionalmente nuovi tipi o membri alle dipendenze. Alcuni esempi sono <xref:System.Runtime.CompilerServices.INotifyCompletion>, <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> o <xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>. C# 7.0 continua in questa direzione aggiungendo una dipendenza per <xref:System.ValueTuple> per implementare la funzionalità del linguaggio [tuple](../language-reference/builtin-types/value-tuples.md).
 
 Il team di progettazione del linguaggio si impegna per ridurre al minimo la superficie di tipi e membri richiesti in una libreria standard conforme. Tale obiettivo deve convivere con l'esigenza di realizzare una progettazione lineare che consenta il facile incorporamento delle nuove funzionalità della libreria nel linguaggio. Le versioni future di C# includeranno nuove funzionalità che richiedono nuovi tipi e membri in una libreria standard. È importante comprendere come gestire tali dipendenze nel lavoro di sviluppo.
 

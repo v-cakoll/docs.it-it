@@ -1,5 +1,6 @@
 ---
 title: Aggiungere funzionalità del browser Web all'app
+description: Informazioni su come aggiungere funzionalità del browser Web a una Windows Forms Application con il controllo WebBrowser.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 - Windows Forms, adding Web browser functionality
 ms.assetid: 3871f072-b57a-435b-9976-e5da28df04a7
-ms.openlocfilehash: 7cb789121f4aa9a1e7cef54f992d0697ce6dfc62
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: a5a33961ac8301bda86bb5f34e65ac159308987f
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543573"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174549"
 ---
 # <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>Come aggiungere funzionalità del browser Web a un Windows Forms Application
 

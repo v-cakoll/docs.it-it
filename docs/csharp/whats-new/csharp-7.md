@@ -3,12 +3,12 @@ title: Novità di C# 7.0 - Guida a C#
 description: Panoramica delle nuove funzionalità nella versione 7.0 del linguaggio C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: e78d680e19709bf3dd854531d5d9f6b7d6464f49
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 38b1afebf6d4fa69c46424c2d9a3631e8f3a8707
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392249"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174744"
 ---
 # <a name="whats-new-in-c-70"></a>Novità di C# 7.0
 
@@ -88,7 +88,7 @@ Può rendersi necessario decomprimere i membri di una tupla che sono stati resti
 
 [!code-csharp[DeconstructPoint](~/samples/snippets/csharp/new-in-7/program.cs#DeconstructPoint "Deconstruct a point")]
 
-Informazioni più approfondite sulle tuple sono disponibili nell'[articolo relativo alle tuple](../tuples.md).
+Per altre informazioni, vedere [tipi di tupla](../language-reference/builtin-types/value-tuples.md).
 
 ## <a name="discards"></a>Variabili discard
 

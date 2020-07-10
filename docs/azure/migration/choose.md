@@ -4,12 +4,12 @@ description: Informazioni sul percorso di migrazione ad Azure più adatto per l'
 author: CESARDELATORRE
 ms.author: cesardl
 ms.date: 03/01/2020
-ms.openlocfilehash: a8ad946b03f97272cb8685620858af6b21a372dc
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 162dc8eb87dfd78d050b93b1c24ac573d7092126
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "82072109"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174296"
 ---
 # <a name="choose-the-right-azure-hosting-option"></a>Scegliere l'opzione di hosting di Azure più adatta
 
@@ -28,7 +28,7 @@ Quando si esegue la migrazione ad Azure di applicazioni .NET Framework esistenti
 
 La tabella seguente include diversi confronti e suggerimenti per scegliere il percorso di migrazione di calcolo adatto per l'applicazione .NET esistente.
 
-|                 | Macchine virtuali di Azure | Servizio app di Azure | Contenitori Windows |
+|                 | Macchine virtuali di Azure | Servizio app di Azure | Contenitori di Windows |
 |-----------------|-----------|-------------------|--------------------|
 |Utilizzo      |<ul><li>L'applicazione dipende fortemente dal server e dalle installazioni MSI locali.</li><li>Si vuole semplificare il più possibile il percorso di migrazione dell'applicazione</li></ul>|L'app non dipende in alcun modo dal server, è solo un'app Web ASP.NET pulita (MVC, WebForm) o un'app a più livelli (API Web, WCF) che accede a un server di database. |<ul><li>L'applicazione ha dipendenze dal server originale, ma tali dipendenze possono essere incluse nell'immagine Windows di Docker.</li><li>Si vuole modernizzare l'app in modo che sia pronta per il [cloud devops](../../architecture/modernize-with-azure-containers/modernize-existing-apps-to-cloud-optimized/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md)</li></ul>|
 |Vantaggi  |<ul><li>Percorso di migrazione molto semplice</li><li>Ambiente familiare. L'ambiente di distribuzione è una macchina virtuale, quindi è simile ai server locali.</li></ul> |Manutenzione PaaS continua, massima semplicità di gestione e ridimensionamento delle app in Azure. |<ul><li>Preparato per il futuro, cloud DevOps-Ready con dipendenze incluse nei contenitori dell'app.</li><li>Non è necessario eseguire il refactoring del codice .NET/C #.</li></ul> |
@@ -46,7 +46,7 @@ Quando si esegue la migrazione di database relazionali ad Azure sono disponibili
 
 ## <a name="networking-and-security-considerations"></a>Considerazioni relative alla rete e alla sicurezza
 
-Quando si distribuiscono le applicazioni in un cloud pubblico come Microsoft Azure, potrebbe essere necessario isolare e proteggere determinate reti [creando reti perimetrali](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/), ad esempio una [rete perimetrale tra Azure e l'ambiente locale](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) o una [rete perimetrale tra Azure e Internet](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). Le reti perimetrali possono essere implementate con [Rete virtuale di Azure](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview).
+Quando si distribuiscono le applicazioni in un cloud pubblico come Microsoft Azure, potrebbe essere necessario isolare e proteggere determinate reti [creando reti perimetrali](/azure/architecture/reference-architectures/dmz/), ad esempio una [rete perimetrale tra Azure e l'ambiente locale](/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) o una [rete perimetrale tra Azure e Internet](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). Le reti perimetrali possono essere implementate con [Rete virtuale di Azure](/azure/virtual-network/virtual-networks-overview).
 
 Le reti virtuali di Azure consentono di:
 
@@ -57,15 +57,15 @@ Le reti virtuali di Azure consentono di:
 - Creare topologie di rete sofisticate con appliance virtuali
 - Ottieni un ambiente isolato e altamente sicuro per le tue applicazioni
 
-Per iniziare a creare la rete virtuale, vedere la [documentazione di Rete virtuale di Azure](https://docs.microsoft.com/azure/virtual-network/).
+Per iniziare a creare la rete virtuale, vedere la [documentazione di Rete virtuale di Azure](/azure/virtual-network/).
 
 ## <a name="authentication-and-authorization-considerations-when-migrating-to-azure"></a>Considerazioni relative all'autenticazione e all'autorizzazione quando si esegue la migrazione ad Azure
 
 Una delle preoccupazioni principali delle organizzazioni che passano al cloud è la sicurezza. La maggior parte delle aziende ha investito una notevole quantità di tempo, denaro e ingegneria nella progettazione e nello sviluppo di un modello di sicurezza ed è importante che siano in grado di sfruttare gli investimenti esistenti, ad esempio gli archivi di identità e le soluzioni Single Sign-On.
 
-Molte applicazioni .NET B2E aziendali esistenti in esecuzione in locale usano Active Directory per l'autenticazione e la gestione delle identità. Azure AD Connect consente di integrare le directory locali con Azure Active Directory. Per iniziare, vedere [Integrare le directory locali con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
+Molte applicazioni .NET B2E aziendali esistenti in esecuzione in locale usano Active Directory per l'autenticazione e la gestione delle identità. Azure AD Connect consente di integrare le directory locali con Azure Active Directory. Per iniziare, vedere [Integrare le directory locali con Azure Active Directory](/azure/active-directory/connect/active-directory-aadconnect).
 
-Per una maggiore pianificazione relativa ad Azure Active Directory, vedere [Requisiti per la soluzione ibrida di gestione delle identità](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-business-needs).
+Per una maggiore pianificazione relativa ad Azure Active Directory, vedere [Requisiti per la soluzione ibrida di gestione delle identità](/azure/active-directory/active-directory-hybrid-identity-design-considerations-business-needs).
 
 Le altre opzioni per il protocollo di autenticazione sono [OAuth](https://en.wikipedia.org/wiki/OAuth) e [OpenID](https://en.wikipedia.org/wiki/OpenID), che sono comuni nelle applicazioni rivolte agli utenti. Quando si usano database di identità autonomi, ad esempio un database SQL di identità ASP.NET di cui viene eseguito il wrapping con IdentityServer4 tramite OAuth, in genere non è necessaria la connettività ai database o alle directory locali.
 

@@ -2,12 +2,12 @@
 title: Novità di C# 8,0-Guida a C#
 description: Panoramica delle nuove funzionalità disponibili in C# 8.0.
 ms.date: 04/07/2020
-ms.openlocfilehash: 27c2d7e2d6f0e665e7abe4fdcfb94c140224cc89
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b4a9a1be0b0b60b0abda0b1f031dc648d831b46a
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895428"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174731"
 ---
 # <a name="whats-new-in-c-80"></a>Novità di C# 8.0
 
@@ -57,14 +57,14 @@ public struct Point
 }
 ```
 
-Come la maggior parte degli struct `ToString()` , il metodo non modifica lo stato. Si potrebbe indicare questa condizione aggiungendo il modificatore `readonly` alla dichiarazione di `ToString()`:
+Come la maggior parte degli struct, il `ToString()` metodo non modifica lo stato. Si potrebbe indicare questa condizione aggiungendo il modificatore `readonly` alla dichiarazione di `ToString()`:
 
 ```csharp
 public readonly override string ToString() =>
     $"({X}, {Y}) is {Distance} from the origin";
 ```
 
-La modifica precedente genera un avviso del compilatore, `ToString` perché accede alla `Distance` proprietà, che non è `readonly`contrassegnata come:
+La modifica precedente genera un avviso del compilatore, perché `ToString` accede alla `Distance` proprietà, che non è contrassegnata come `readonly` :
 
 ```console
 warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
@@ -76,9 +76,9 @@ Il compilatore genera un avviso quando deve creare una copia difensiva.  La `Dis
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-Si noti che `readonly` il modificatore è necessario in una proprietà di sola lettura. Il compilatore non presuppone `get` che le funzioni di accesso non modifichino lo stato; è necessario dichiarare `readonly` in modo esplicito. Le proprietà implementate automaticamente sono un'eccezione. il compilatore considererà tutti i Getter implementati automaticamente come `readonly`, quindi non è necessario aggiungere il `readonly` modificatore alle proprietà `X` e. `Y`
+Si noti che il `readonly` modificatore è necessario in una proprietà di sola lettura. Il compilatore non presuppone `get` che le funzioni di accesso non modifichino lo stato. è necessario dichiarare in `readonly` modo esplicito. Le proprietà implementate automaticamente sono un'eccezione. il compilatore considererà tutti i Getter implementati automaticamente come `readonly` , quindi non è necessario aggiungere il `readonly` modificatore alle `X` `Y` proprietà e.
 
-Il compilatore applica la regola che `readonly` i membri non modificano lo stato. Il metodo seguente non verrà compilato a meno che non `readonly` si rimuova il modificatore:
+Il compilatore applica la regola che i `readonly` membri non modificano lo stato. Il metodo seguente non verrà compilato a meno che non si rimuova il `readonly` modificatore:
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -90,7 +90,7 @@ public readonly void Translate(int xOffset, int yOffset)
 
 Questa funzionalità consente di specificare la finalità della progettazione in modo che il compilatore possa imporla e applicare le ottimizzazioni in base a tale finalità.
 
-Per ulteriori informazioni, vedere la [ `readonly` sezione membri di istanza](../language-reference/builtin-types/struct.md#readonly-instance-members) dell'articolo [tipi di struttura](../language-reference/builtin-types/struct.md) .
+Per ulteriori informazioni, vedere la sezione [ `readonly` membri di istanza](../language-reference/builtin-types/struct.md#readonly-instance-members) dell'articolo [tipi di struttura](../language-reference/builtin-types/struct.md) .
 
 ## <a name="default-interface-methods"></a>Metodi di interfaccia predefiniti
 
@@ -100,7 +100,7 @@ I metodi di interfaccia predefiniti interessano molti scenari ed elementi del li
 
 ## <a name="more-patterns-in-more-places"></a>Più criteri in più posizioni
 
-I **criteri di ricerca** offrono strumenti per fornire funzionalità dipendenti dalla forma su tipi di dati correlati ma diversi. In C# 7,0 è stata introdotta la sintassi per i modelli di [`is`](../language-reference/keywords/is.md) tipo e costanti [`switch`](../language-reference/keywords/switch.md) usando l'espressione e l'istruzione. Queste funzionalità rappresentano il primo passo per il supporto dei paradigmi di programmazione in cui i dati e la funzionalità sono separati. Man mano che il settore effettua la transizione verso più microservizi e altre architetture basate sul cloud, diventano necessari altri strumenti del linguaggio.
+I **criteri di ricerca** offrono strumenti per fornire funzionalità dipendenti dalla forma su tipi di dati correlati ma diversi. In C# 7,0 è stata introdotta la sintassi per i modelli di tipo e costanti usando l' [`is`](../language-reference/keywords/is.md) espressione e l' [`switch`](../language-reference/keywords/switch.md) istruzione. Queste funzionalità rappresentano il primo passo per il supporto dei paradigmi di programmazione in cui i dati e la funzionalità sono separati. Man mano che il settore effettua la transizione verso più microservizi e altre architetture basate sul cloud, diventano necessari altri strumenti del linguaggio.
 
 C# 8.0 espande questo vocabolario, in modo da poter usare più espressioni di criteri in più posizioni nel codice. Prendere in considerazione queste funzionalità quando i dati e le funzionalità sono separati. Prendere in considerazione i criteri di ricerca quando gli algoritmi dipendono da un fatto diverso dal tipo di runtime di un oggetto. Queste tecniche offrono un altro modo per esprimere le progettazioni.
 
@@ -176,7 +176,7 @@ public static RGBColor FromRainbowClassic(Rainbow colorBand)
 
 ### <a name="property-patterns"></a>Criteri per le proprietà
 
-I **criteri per le proprietà** consentono di individuare corrispondenze in base alle proprietà dell'oggetto esaminato. Si consideri un sito di e-commerce che deve calcolare le imposte sulle vendite in base all'indirizzo dell'acquirente. Tale calcolo non è un compito fondamentale di `Address` una classe. È soggetto a variazioni nel tempo, probabilmente più spesso rispetto a eventuali modifiche del formato dell'indirizzo. L'importo delle imposte sulle vendite dipende dalla proprietà `State` dell'indirizzo. Il metodo seguente usa i criteri per le proprietà per calcolare l'imposta sulle vendite dall'indirizzo e dal prezzo:
+I **criteri per le proprietà** consentono di individuare corrispondenze in base alle proprietà dell'oggetto esaminato. Si consideri un sito di e-commerce che deve calcolare le imposte sulle vendite in base all'indirizzo dell'acquirente. Tale calcolo non è un compito fondamentale di una `Address` classe. È soggetto a variazioni nel tempo, probabilmente più spesso rispetto a eventuali modifiche del formato dell'indirizzo. L'importo delle imposte sulle vendite dipende dalla proprietà `State` dell'indirizzo. Il metodo seguente usa i criteri per le proprietà per calcolare l'imposta sulle vendite dall'indirizzo e dal prezzo:
 
 ```csharp
 public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
@@ -194,7 +194,7 @@ I criteri di ricerca creano una sintassi concisa per esprimere questo algoritmo.
 
 ### <a name="tuple-patterns"></a>Criteri per le tuple
 
-Alcuni algoritmi dipendono da più input. I **criteri per le tuple** consentono di passare da un valore a un altro, espressi come [tupla](../tuples.md).  Il codice seguente illustra un'espressione switch per il gioco *rock, paper, scissors* (carta-forbice-sasso):
+Alcuni algoritmi dipendono da più input. I **criteri per le tuple** consentono di passare da un valore a un altro, espressi come [tupla](../language-reference/builtin-types/value-tuples.md).  Il codice seguente illustra un'espressione switch per il gioco *rock, paper, scissors* (carta-forbice-sasso):
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -322,7 +322,7 @@ In entrambi i casi, il compilatore genera la chiamata a `Dispose()`. Il compilat
 
 ## <a name="static-local-functions"></a>Funzioni locali statiche
 
-È ora possibile aggiungere il modificatore `static` alle funzioni locali per assicurarsi che tale funzione locale non acquisisca (faccia riferimento a) variabili dall'ambito di inclusione. In questo modo viene generato l'errore `CS8421` "A static local function can't contain a reference to \<variable>" (Una funzione locale statica non può fare riferimento a <variabile>).
+È ora possibile aggiungere il modificatore `static` alle funzioni locali per assicurarsi che tale funzione locale non acquisisca (faccia riferimento a) variabili dall'ambito di inclusione. In questo modo viene generato l'errore `CS8421`, "A static local function can't contain a reference to \<variable>." (Una funzione locale statica non può fare riferimento a 'variabile')
 
 Si consideri il codice seguente. La funzione locale `LocalFunction` accede alla variabile `y`, dichiarata nell'ambito di inclusione (il metodo `M`). Pertanto, non è possibile dichiarare `LocalFunction` con il modificatore `static`:
 
@@ -352,7 +352,7 @@ int M()
 
 ## <a name="disposable-ref-structs"></a>Struct ref Disposable
 
-Una `struct` dichiarata `ref` con il modificatore non può implementare alcuna interfaccia e <xref:System.IDisposable>pertanto non può implementare. Pertanto, per abilitare un `ref struct` per l'eliminazione, deve avere un metodo `void Dispose()` accessibile. Questa funzionalità si applica anche `readonly ref struct` alle dichiarazioni.
+Una `struct` dichiarata con il `ref` modificatore non può implementare alcuna interfaccia e pertanto non può implementare <xref:System.IDisposable> . Pertanto, per abilitare un `ref struct` per l'eliminazione, deve avere un metodo `void Dispose()` accessibile. Questa funzionalità si applica anche alle `readonly ref struct` dichiarazioni.
 
 ## <a name="nullable-reference-types"></a>Tipi riferimento nullable
 
@@ -394,11 +394,11 @@ await foreach (var number in GenerateSequence())
 }
 ```
 
-È possibile provare i flussi asincroni in autonomia nell'esercitazione dedicata alla [creazione e all'utilizzo di flussi asincroni](../tutorials/generate-consume-asynchronous-stream.md). Per impostazione predefinita, gli elementi del flusso vengono elaborati nel contesto acquisito. Se si desidera disabilitare l'acquisizione del contesto, utilizzare il metodo <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> di estensione. Per ulteriori informazioni sui contesti di sincronizzazione e sull'acquisizione del contesto corrente, vedere l'articolo sull' [utilizzo del modello asincrono basato su attività](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
+È possibile provare i flussi asincroni in autonomia nell'esercitazione dedicata alla [creazione e all'utilizzo di flussi asincroni](../tutorials/generate-consume-asynchronous-stream.md). Per impostazione predefinita, gli elementi del flusso vengono elaborati nel contesto acquisito. Se si desidera disabilitare l'acquisizione del contesto, utilizzare il <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> metodo di estensione. Per ulteriori informazioni sui contesti di sincronizzazione e sull'acquisizione del contesto corrente, vedere l'articolo sull' [utilizzo del modello asincrono basato su attività](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
 ## <a name="asynchronous-disposable"></a>Monouso asincrono
 
-A partire da C# 8,0, il linguaggio supporta i tipi monouso asincroni <xref:System.IAsyncDisposable?displayProperty=nameWithType> che implementano l'interfaccia. L'operando di `using` un'espressione può implementare <xref:System.IDisposable> o <xref:System.IAsyncDisposable>. Nel caso di `IAsyncDisposable`, il compilatore genera il codice per `await` l' <xref:System.Threading.Tasks.Task> oggetto restituito <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType>da. Per ulteriori informazioni, vedere l' [ `using` istruzione](../language-reference/keywords/using-statement.md).
+A partire da C# 8,0, il linguaggio supporta i tipi monouso asincroni che implementano l' <xref:System.IAsyncDisposable?displayProperty=nameWithType> interfaccia. L'operando di un' `using` espressione può implementare <xref:System.IDisposable> o <xref:System.IAsyncDisposable> . Nel caso di `IAsyncDisposable` , il compilatore genera il codice per `await` l'oggetto <xref:System.Threading.Tasks.Task> restituito da <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType> . Per ulteriori informazioni, vedere l' [ `using` istruzione](../language-reference/keywords/using-statement.md).
 
 ## <a name="indices-and-ranges"></a>Indici e intervalli
 
@@ -407,15 +407,15 @@ Gli indici e gli intervalli forniscono una sintassi concisa per l'accesso a sing
 Questo supporto per il linguaggio si basa su due nuovi tipi e due nuovi operatori:
 
 - <xref:System.Index?displayProperty=nameWithType> rappresenta un indice in una sequenza.
-- Indice dell'operatore `^`end, che specifica che un indice è relativo alla fine della sequenza.
+- Indice dell'operatore end `^` , che specifica che un indice è relativo alla fine della sequenza.
 - <xref:System.Range?displayProperty=nameWithType> rappresenta un intervallo secondario di una sequenza.
-- Operatore `..`Range, che specifica l'inizio e la fine di un intervallo come operandi.
+- Operatore Range `..` , che specifica l'inizio e la fine di un intervallo come operandi.
 
 Per iniziare, ecco come funzionano le regole per gli indici. Prendere in considerazione una matrice `sequence`. L'indice `0` è uguale a `sequence[0]`. L'indice `^0` è uguale a `sequence[sequence.Length]`. Si noti che `sequence[^0]` genera un'eccezione, proprio come `sequence[sequence.Length]`. Per qualsiasi numero `n`, l'indice `^n` è uguale a `sequence.Length - n`.
 
 Un intervallo specifica *inizio* e *fine* di un intervallo. L'inizio dell'intervallo è inclusivo, ma la fine dell'intervallo è esclusiva, ovvero l' *inizio* è incluso nell'intervallo, ma la *fine* non è inclusa nell'intervallo. L'intervallo `[0..^0]` rappresenta l'intero intervallo, proprio come `[0..sequence.Length]` rappresenta l'intero intervallo.
 
-Di seguito verranno esaminati alcuni esempi. Si consideri la matrice seguente, annotata con il relativo indice dall'inizio e dalla fine:
+Di seguito vengono illustrati alcuni esempi. Si consideri la matrice seguente, annotata con il relativo indice dall'inizio e dalla fine:
 
 ```csharp
 var words = new string[]
@@ -446,7 +446,7 @@ Il codice seguente crea un intervallo secondario con le parole "quick", "brown" 
 var quickBrownFox = words[1..4];
 ```
 
-Il codice seguente crea un intervallo secondario con "lazy" e "dog". Include `words[^2]` e `words[^1]`. L'indice `words[^0]` finale non è incluso:
+Il codice seguente crea un intervallo secondario con "lazy" e "dog". Include `words[^2]` e `words[^1]`. L'indice finale `words[^0]` non è incluso:
 
 ```csharp
 var lazyDog = words[^2..^0];
@@ -472,13 +472,13 @@ L'intervallo può quindi essere usato all'interno dei caratteri `[` e `]`:
 var text = words[phrase];
 ```
 
-Non solo le matrici supportano gli indici e gli intervalli. È anche possibile usare gli indici e gli intervalli [string](../language-reference/builtin-types/reference-types.md#the-string-type)con String <xref:System.Span%601>, o <xref:System.ReadOnlySpan%601>. Per altre informazioni, vedere [supporto dei tipi per indici e intervalli](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
+Non solo le matrici supportano gli indici e gli intervalli. È anche possibile usare gli indici e gli intervalli con [String](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> o <xref:System.ReadOnlySpan%601> . Per altre informazioni, vedere [supporto dei tipi per indici e intervalli](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
 
 È possibile ottenere maggiori informazioni su indici e intervalli nell'esercitazione [Indici e intervalli](../tutorials/ranges-indexes.md).
 
 ## <a name="null-coalescing-assignment"></a>Assegnazione di Unione null
 
-C# 8,0 introduce l'operatore `??=`di assegnazione di Unione null. È possibile usare l' `??=` operatore per assegnare il valore dell'operando destro all'operando sinistro solo se l'operando sinistro restituisce `null`.
+C# 8,0 introduce l'operatore di assegnazione di Unione null `??=` . È possibile usare l' `??=` operatore per assegnare il valore dell'operando destro all'operando sinistro solo se l'operando sinistro restituisce `null` .
 
 ```csharp
 List<int> numbers = null;
@@ -523,7 +523,7 @@ Per ulteriori informazioni, vedere [tipi non gestiti](../language-reference/buil
 
 ## <a name="stackalloc-in-nested-expressions"></a>Stackalloc nelle espressioni annidate
 
-A partire da C# 8,0, se il risultato di un'espressione [stackalloc](../language-reference/operators/stackalloc.md) è di <xref:System.Span%601?displayProperty=nameWithType> tipo <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> o, è possibile usare l' `stackalloc` espressione in altre espressioni:
+A partire da C# 8,0, se il risultato di un'espressione [stackalloc](../language-reference/operators/stackalloc.md) è di <xref:System.Span%601?displayProperty=nameWithType> <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> tipo o, è possibile usare l' `stackalloc` espressione in altre espressioni:
 
 ```csharp
 Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
@@ -533,4 +533,4 @@ Console.WriteLine(ind);  // output: 1
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>Miglioramento delle stringhe verbatim interpolate
 
-L' `$` ordine dei token `@` e nelle stringhe verbatim [interpolate](../language-reference/tokens/interpolated.md) può essere any: sia `$@"..."` che `@$"..."` sono stringhe verbatim interpolate valide. Nelle versioni precedenti di C# il `$` token deve essere visualizzato prima `@` del token.
+L'ordine dei `$` `@` token e nelle stringhe verbatim [interpolate](../language-reference/tokens/interpolated.md) può essere any: sia `$@"..."` che `@$"..."` sono stringhe verbatim interpolate valide. Nelle versioni precedenti di C# il `$` token deve essere visualizzato prima del `@` token.

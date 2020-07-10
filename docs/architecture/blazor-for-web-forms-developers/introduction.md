@@ -1,17 +1,20 @@
 ---
-title: Introduzione a blazer per gli sviluppatori di Web Form ASP.NET
-description: Introduzione a blazer e scrittura di app Web con stack completo con .NET
+title: Introduzione a Blazor per gli sviluppatori di Web form ASP.NET
+description: Introduzione Blazor e scrittura di app Web con stack completo con .NET
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 6c045cd9c4378bd19f97dd722db054c969491d0b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8ef2c7d66d50abb34e536b6333e3aa68ee2bb07d
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087928"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173133"
 ---
-# <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>Introduzione a blazer per gli sviluppatori di Web Form ASP.NET
+# <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>Introduzione a Blazor per gli sviluppatori di Web form ASP.NET
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -50,17 +53,17 @@ Tuttavia, i browser sono diventati piattaforme versatili. Implementano un numero
 
 Tuttavia, il bridging di due piattaforme e ecosistemi diversi, ovvero .NET e JavaScript, comporta un costo. Le competenze sono necessarie in due mondi paralleli con linguaggi, Framework e strumenti diversi. Il codice e la logica non possono essere facilmente condivisi tra client e server, causando una duplicazione e un sovraccarico di progettazione. Può anche essere difficile tenersi al passo con l'ecosistema JavaScript, che ha una cronologia di evoluzione a collo di rotta. Il Framework front-end e le preferenze dello strumento di compilazione cambiano rapidamente. Il settore ha osservato la progressione da grugnito a Gulp a Webpack e così via. Si è verificata la stessa varianza agitata con i Framework front-end, ad esempio jQuery, Knockout, angolare, React e VME. Tuttavia, dato il Monopoli del browser di JavaScript, c'era poca scelta. Ovvero, fino a quando la community Web non è stata insieme e ha causato un *miracolo* .
 
-## <a name="webassembly-fulfills-a-need"></a>Webassembly soddisfa una necessità
+## <a name="webassembly-fulfills-a-need"></a>WebAssemblysoddisfa una necessità
 
-In 2015, i principali fornitori di browser Uniti in un gruppo di community W3C hanno creato un nuovo standard Web aperto denominato webassembly. Webassembly è un codice byte per il Web. Se è possibile compilare il codice nel webassembly, è possibile eseguirlo in qualsiasi browser su qualsiasi piattaforma con velocità quasi nativa. Sforzi iniziali incentrati suC++C/. Il risultato è una dimostrazione drammatica dell'esecuzione di motori di grafica 3D nativi direttamente nel browser senza plug-in. Il webassembly è stato standardizzato e implementato da tutti i principali browser.
+In 2015, i principali fornitori di browser Uniti in un gruppo di community W3C hanno creato un nuovo standard Web aperto denominato WebAssembly . WebAssemblyè un codice byte per il Web. Se è possibile compilare il codice in WebAssembly , è possibile eseguirlo in qualsiasi browser su qualsiasi piattaforma con velocità quasi nativa. Sforzi iniziali incentrati su C/C++. Il risultato è una dimostrazione drammatica dell'esecuzione di motori di grafica 3D nativi direttamente nel browser senza plug-in. WebAssemblyè stato standardizzato e implementato da tutti i principali browser.
 
-Il lavoro per l'esecuzione di .NET su webassembly è stato annunciato alla fine del 2017 e dovrebbe essere fornito in 2020, incluso il supporto di .NET 5. La possibilità di eseguire il codice .NET direttamente nel browser consente lo sviluppo Web con stack completo con .NET.
+Il lavoro relativo all'esecuzione di .NET in WebAssembly è stato annunciato alla fine del 2017 e dovrebbe essere fornito in 2020, incluso il supporto di .NET 5. La possibilità di eseguire il codice .NET direttamente nel browser consente lo sviluppo Web con stack completo con .NET.
 
-## <a name="blazor-full-stack-web-development-with-net"></a>Blazer: sviluppo Web con stack completo con .NET
+## <a name="blazor-full-stack-web-development-with-net"></a>Blazor: sviluppo Web con stack completo con .NET
 
-In modo autonomo, la possibilità di eseguire il codice .NET in un browser non offre un'esperienza end-to-end per la creazione di app Web sul lato client. Ecco dove si trova blazer. Blazer è un Framework dell'interfaccia utente Web sul lato client C# basato su anziché su JavaScript. Blazer può essere eseguito direttamente nel browser tramite webassembly. Non è necessario alcun plug-in del browser. In alternativa, le app Blazer possono eseguire il lato server in .NET Core e gestire tutte le interazioni utente in una connessione in tempo reale con il browser.
+In modo autonomo, la possibilità di eseguire il codice .NET in un browser non offre un'esperienza end-to-end per la creazione di app Web sul lato client. Ecco dove Blazor entra. Blazorè un Framework dell'interfaccia utente Web sul lato client basato su C# anziché su JavaScript. Blazorpuò essere eseguito direttamente nel browser tramite WebAssembly . Non è necessario alcun plug-in del browser. In alternativa, le Blazor app possono eseguire il lato server in .NET Core e gestire tutte le interazioni utente in una connessione in tempo reale con il browser.
 
-Blazer offre un ottimo supporto per gli strumenti in Visual Studio e Visual Studio Code. Il Framework include anche un modello di componente completo dell'interfaccia utente e offre funzionalità predefinite per:
+Blazoroffre un ottimo supporto per gli strumenti in Visual Studio e Visual Studio Code. Il Framework include anche un modello di componente completo dell'interfaccia utente e offre funzionalità predefinite per:
 
 - Moduli e convalida
 - Inserimento di dipendenze
@@ -69,19 +72,19 @@ Blazer offre un ottimo supporto per gli strumenti in Visual Studio e Visual Stud
 - Debug nel browser
 - Interoperabilità JavaScript
 
-Blazer è molto comune con ASP.NET Web Forms. Entrambi i Framework offrono modelli di programmazione dell'interfaccia utente con stato basato su componenti e basati su eventi. La differenza di architettura principale consiste nel fatto che ASP.NET Web Forms viene eseguito solo sul server. Blazer può essere eseguito sul client nel browser. Tuttavia, se ci si trova da uno sfondo Web Form ASP.NET, c'è molto di più in grado di essere familiare. Blazer è una soluzione naturale per gli sviluppatori di Web Form ASP.NET che cercano un metodo per sfruttare lo sviluppo lato client e il futuro multipiattaforma open source di .NET.
+Blazorha molto in comune con ASP.NET Web Forms. Entrambi i Framework offrono modelli di programmazione dell'interfaccia utente con stato basato su componenti e basati su eventi. La differenza di architettura principale consiste nel fatto che ASP.NET Web Forms viene eseguito solo sul server. Blazorpuò essere eseguito sul client nel browser. Tuttavia, se si sta arrivando da uno sfondo Web Form ASP.NET, c'è molto da Blazor sentire familiare. Blazorè una soluzione naturale per gli sviluppatori di Web Form ASP.NET che cercano un metodo per sfruttare lo sviluppo lato client e il futuro multipiattaforma open source di .NET.
 
-Questo libro fornisce un'introduzione a blazer che si rivolge in modo specifico agli sviluppatori di Web Form ASP.NET. Ogni concetto di Blazer viene presentato nel contesto delle funzionalità e delle procedure di ASP.NET Web Forms analoghe. Al termine di questo libro, sarà possibile comprendere quanto segue:
+In questo libro viene fornita un'introduzione a Blazor che si rivolge in modo specifico agli sviluppatori di Web form ASP.NET. Ogni Blazor concetto viene presentato nel contesto delle funzionalità e delle procedure di ASP.NET Web Forms analoghe. Al termine di questo libro, sarà possibile comprendere quanto segue:
 
-- Come creare app blazer.
-- Funzionamento di Blazer.
-- In che modo Blazer si riferisce a .NET Core.
-- Strategie ragionevoli per la migrazione delle app Web Form ASP.NET esistenti a blazer laddove appropriato.
+- Come compilare le Blazor app.
+- Funzionamento Blazor .
+- Come Blazor si riferisce a .NET Core.
+- Strategie ragionevoli per la migrazione delle app Web Form ASP.NET esistenti a Blazor quando appropriato.
 
-## <a name="get-started-with-blazor"></a>Introduzione a blazer
+## <a name="get-started-with-blazor"></a>Introduzione ai Blazor
 
-Iniziare a usare blazer è facile. Passare a <https://blazor.net> e seguire i collegamenti per installare i modelli di progetto .NET Core SDK e Blaze appropriati. Sono inoltre disponibili istruzioni per la configurazione degli strumenti di Blazer in Visual Studio o Visual Studio Code.
+Per iniziare Blazor , è facile. Passare a <https://blazor.net> e seguire i collegamenti per installare il .NET Core SDK e i Blazor modelli di progetto appropriati. Sono inoltre disponibili istruzioni per la configurazione degli Blazor strumenti in Visual Studio o Visual Studio Code.
 
 >[!div class="step-by-step"]
->[Precedente](index.md)
->[Successivo](architecture-comparison.md)
+>[Precedente](index.md) 
+> [Avanti](architecture-comparison.md)

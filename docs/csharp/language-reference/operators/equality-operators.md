@@ -15,16 +15,16 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 7dd3e544dc03fb94577892b42aecd1a15a6621ac
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 011ef8b570a0bbbc38ec71df4286c3b08c3109da
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80110919"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174783"
 ---
 # <a name="equality-operators-c-reference"></a>Operatori di uguaglianza (Riferimenti per C#)
 
-Gli [ `==` operatori (uguaglianza)](#equality-operator-) e [ `!=` (disuguaglianza)](#inequality-operator-) controllano se i relativi operandi sono uguali o meno.
+Gli operatori [ `==` (uguaglianza)](#equality-operator-) e [ `!=` (disuguaglianza)](#inequality-operator-) verificano se gli operandi sono uguali o meno.
 
 ## <a name="equality-operator-"></a>Operatore di uguaglianza ==
 
@@ -37,13 +37,13 @@ Gli operandi dei [tipi valore predefiniti](../builtin-types/value-types.md#built
 [!code-csharp-interactive[value types equality](snippets/EqualityOperators.cs#ValueTypesEquality)]
 
 > [!NOTE]
-> Per `==`gli operatori , [ `<` `>`, , `<=`e `>=` ](comparison-operators.md) , se uno degli operandi non è un numero (<xref:System.Double.NaN?displayProperty=nameWithType> o <xref:System.Single.NaN?displayProperty=nameWithType>), il risultato dell'operazione è `false`. Questo significa che il valore `NaN` non è maggiore di, minore di, né uguale a qualsiasi altro valore `double` (o `float`), incluso `NaN`. Per altre informazioni ed esempi, vedere l'articolo di riferimento per <xref:System.Double.NaN?displayProperty=nameWithType> o <xref:System.Single.NaN?displayProperty=nameWithType>.
+> Per gli `==` operatori, [ `<` , `>` , `<=` e `>=` ](comparison-operators.md) , se uno degli operandi non è un numero ( <xref:System.Double.NaN?displayProperty=nameWithType> o <xref:System.Single.NaN?displayProperty=nameWithType> ), il risultato dell'operazione è `false` . Questo significa che il valore `NaN` non è maggiore di, minore di, né uguale a qualsiasi altro valore `double` (o `float`), incluso `NaN`. Per altre informazioni ed esempi, vedere l'articolo di riferimento per <xref:System.Double.NaN?displayProperty=nameWithType> o <xref:System.Single.NaN?displayProperty=nameWithType>.
 
 Due operandi dello stesso tipo [enum](../builtin-types/enum.md) sono uguali se i valori corrispondenti del tipo integrale sottostante sono uguali.
 
 I tipi [struct](../builtin-types/struct.md) definiti dall'utente non supportano l'operatore `==` per impostazione predefinita. Per supportare l'operatore `==`, un tipo struct definito dall'utente deve eseguirne l'[overload](operator-overloading.md).
 
-A partire da C# 7.3, gli operatori `==` e `!=` sono supportati da [tuple](../../tuples.md) C#. Per altre informazioni, vedere la sezione [Uguaglianza e tuple](../../tuples.md#equality-and-tuples) nell'articolo [Tipi tupla in C#](../../tuples.md).
+A partire da C# 7.3, gli operatori `==` e `!=` sono supportati da [tuple](../builtin-types/value-tuples.md) C#. Per altre informazioni, vedere la sezione [uguaglianza di Tuple](../builtin-types/value-tuples.md#tuple-equality) nell'articolo [tipi di tupla](../builtin-types/value-tuples.md) .
 
 ### <a name="reference-types-equality"></a>Uguaglianza dei tipi riferimento
 
@@ -83,7 +83,7 @@ Nell'esempio seguente viene illustrato l'uso dell'operatore `!=`:
 
 ## <a name="operator-overloadability"></a>Overload degli operatori
 
-Un tipo definito dall'utente può eseguire l'[overload](operator-overloading.md) degli operatori `==` e `!=`. Se un tipo esegue l'overload di uno dei due operatori, deve eseguire anche l'overload dell'altro.
+Un tipo definito dall'utente può eseguire l'[overload](operator-overloading.md) degli operatori `==` e `!=`. Se un tipo sovraccarica uno dei due operatori, deve anche eseguire l'overload dell'altro.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

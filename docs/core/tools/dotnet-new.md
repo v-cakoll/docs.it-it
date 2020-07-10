@@ -1,19 +1,22 @@
 ---
 title: Comando dotnet new
 description: Il comando dotnet new consente di creare nuovi progetti .NET Core in base al modello specificato.
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 04/10/2020
-ms.openlocfilehash: 39301ad95761848b60b45cb5c18ede937f70c32c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ec41b3b79ed5eded7c9124d3e4d95c658ee39580
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283975"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173120"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
 **Questo articolo si applica a:** ✔️ .net core 2,0 SDK e versioni successive
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name (Nome)
 
 `dotnet new`: crea un nuovo progetto, un file di configurazione o una soluzione sulla base del modello specificato.
 
@@ -74,8 +77,8 @@ Questo comando chiama il [motore del modello](https://github.com/dotnet/templati
 | Pagina Razor                                   | [pagina](#page)                   | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
-| App Server Blazer                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazer                            | 3.0        |
-| App webassembly Blazer                       | `blazorwasm`                    | [C#]         | Web/Blazer/webassembly                            | 3.1.300    |
+| BlazorApp Server                            | [blazorserver](#blazorserver)   | [C#]         | WebBlazor                            | 3.0        |
+| BlazorWebAssemblyApp di                       | `blazorwasm`                    | [C#]         | WebBlazor/WebAssembly                            | 3.1.300    |
 | Progetto ASP.NET Core vuoto                           | [Web](#web)                     | [C#], F#     | Web/Vuoto                             | 1.0        |
 | App Web ASP.NET Core (Model-View-Controller) | [MVC](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
 | App Web ASP.NET Core                         | [WebApp, Razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2,2, 2,0   |
@@ -105,7 +108,7 @@ Questo comando chiama il [motore del modello](https://github.com/dotnet/templati
 
 - **`-h|--help`**
 
-  Stampa la Guida per il comando. Può essere richiamato per il `dotnet new` comando stesso o per qualsiasi modello. Ad esempio: `dotnet new mvc --help`.
+  Stampa la Guida per il comando. Può essere richiamato per il `dotnet new` comando stesso o per qualsiasi modello. Ad esempio, `dotnet new mvc --help`.
 
 - **`-i|--install <PATH|NUGET_ID>`**
 
@@ -124,7 +127,7 @@ Questo comando chiama il [motore del modello](https://github.com/dotnet/templati
   Linguaggio del modello da creare. Il linguaggio accettato varia a seconda del modello. Vedere i valori predefiniti nella sezione [Argomenti](#arguments). Non è valido per alcuni modelli.
 
   > [!NOTE]
-  > Alcune shell interpretano `#` come un carattere speciale. In questi casi, racchiudere il valore del parametro Language tra virgolette. Ad esempio: `dotnet new console -lang "F#"`.
+  > Alcune shell interpretano `#` come un carattere speciale. In questi casi, racchiudere il valore del parametro Language tra virgolette. Ad esempio, `dotnet new console -lang "F#"`.
 
 - **`-n|--name <OUTPUT_NAME>`**
 
@@ -247,7 +250,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 - **`--exclude-launch-settings`**
 
-  Esclude *launchSettings. JSON* dal modello generato.
+  Esclude *launchSettings.js* dal modello generato.
 
 - **`--no-restore`**
 
@@ -378,7 +381,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 - **`--exclude-launch-settings`**
 
-  Esclude *launchSettings. JSON* dal modello generato.
+  Esclude *launchSettings.js* dal modello generato.
 
 - **`--no-https`**
 
@@ -398,7 +401,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 - **`--exclude-launch-settings`**
 
-  Esclude *launchSettings. JSON* dal modello generato.
+  Esclude *launchSettings.js* dal modello generato.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -477,7 +480,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 - **`--exclude-launch-settings`**
 
-  Esclude *launchSettings. JSON* dal modello generato.
+  Esclude *launchSettings.js* dal modello generato.
 
 - **`--no-https`**
 
@@ -525,7 +528,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 - **`--exclude-launch-settings`**
 
-  Esclude *launchSettings. JSON* dal modello generato.
+  Esclude *launchSettings.js* dal modello generato.
 
 - **`--no-restore`**
 
@@ -557,7 +560,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 - **`--exclude-launch-settings`**
 
-  Esclude *launchSettings. JSON* dal modello generato.
+  Esclude *launchSettings.js* dal modello generato.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -634,7 +637,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 - **`--exclude-launch-settings`**
 
-  Esclude *launchSettings. JSON* dal modello generato.
+  Esclude *launchSettings.js* dal modello generato.
 
 - **`--no-https`**
 
@@ -666,7 +669,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 - **`--sdk-version <VERSION_NUMBER>`**
 
-  Specifica la versione del .NET Core SDK da usare nel file *Global. JSON* .
+  Specifica la versione del .NET Core SDK da utilizzare nell' *global.jssul* file.
 
 ***
 
@@ -732,7 +735,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
   dotnet new -u
   ```
 
-- Creare un file *Global. JSON* nella directory corrente impostando la versione dell'SDK su 3.1.101:
+- Creare una *global.js* nella directory corrente impostando la versione dell'SDK su 3.1.101:
 
   ```dotnetcli
   dotnet new globaljson --sdk-version 3.1.101

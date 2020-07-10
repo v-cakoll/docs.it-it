@@ -2,13 +2,13 @@
 title: Eseguire la migrazione di un'app Web ASP.NET a una macchina virtuale di Azure
 description: Informazioni su come eseguire la migrazione di un'applicazione Web ASP.NET da locale a una macchina virtuale di Azure.
 ms.topic: how-to
-ms.date: 11/15/2017
-ms.openlocfilehash: cc9477de92e6105762636ed3a2241949e69ac8ea
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.date: 06/20/2020
+ms.openlocfilehash: 5ef340d020b72bebe46fe598fe68e7d02d0c0363
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "82072123"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174244"
 ---
 # <a name="migrate-an-aspnet-web-application-to-an-azure-virtual-machine"></a>Eseguire la migrazione di un'applicazione Web ASP.NET a una macchina virtuale di Azure
 
@@ -24,12 +24,12 @@ Queste esercitazioni illustrano i passaggi per creare una macchina virtuale (o e
 
 - Creare una macchina virtuale per l'applicazione ASP.NET in Azure usando una delle opzioni seguenti:
   - [Creare una nuova macchina virtuale per le applicazioni ASP.NET](https://go.microsoft.com/fwlink/?linkid=863237)
-  - [Eseguire la migrazione di una macchina virtuale VMWare locale esistente](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware)
-  - [Eseguire la migrazione di una macchina virtuale Hyper-V locale esistente](https://docs.microsoft.com/azure/migrate/tutorial-migrate-hyper-v)
+  - [Eseguire la migrazione di una macchina virtuale VMWare locale esistente](/azure/migrate/tutorial-migrate-vmware)
+  - [Eseguire la migrazione di una macchina virtuale Hyper-V locale esistente](/azure/migrate/tutorial-migrate-hyper-v)
 - [Pubblicare l'app usando Visual Studio](https://go.microsoft.com/fwlink/?linkid=863240)
-- [Creare una rete virtuale sicura per le VM](https://docs.microsoft.com/azure/virtual-network/virtual-network-get-started-vnet-subnet)
-- [Creare una pipeline di integrazione continua/distribuzione continua per l'applicazione](https://docs.microsoft.com/vsts/build-release/apps/cd/deploy-webdeploy-iis-deploygroups)
-- [Passare a un set di scalabilità di macchine virtuali per la scalabilità e la disponibilità elevata](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app)
+- [Creare una rete virtuale sicura per le VM](/azure/virtual-network/virtual-network-get-started-vnet-subnet)
+- [Creare una pipeline di integrazione continua/distribuzione continua per l'applicazione](/vsts/build-release/apps/cd/deploy-webdeploy-iis-deploygroups)
+- [Passare a un set di scalabilità di macchine virtuali per la scalabilità e la disponibilità elevata](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app)
 
 ## <a name="considerations"></a>Considerazioni
 
@@ -39,13 +39,13 @@ Le macchine virtuali sono il modo più semplice per eseguire la migrazione di un
 
 ### <a name="virtual-machine-size"></a>Dimensioni della macchina virtuale
 
-Scegliere per la macchina virtuale le dimensioni e il tipo ottimale per il carico di lavoro. Per altre informazioni, vedere [dimensioni per le macchine virtuali Windows in Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sizes).
+Scegliere per la macchina virtuale le dimensioni e il tipo ottimale per il carico di lavoro. Per altre informazioni, vedere [dimensioni per le macchine virtuali Windows in Azure](/azure/virtual-machines/windows/sizes).
 
 ### <a name="maintenance"></a>Manutenzione
 
-Come per un computer locale, l'utente è responsabile della manutenzione e dell'aggiornamento della macchina virtuale<sup>&#42;</sup>, ma, se l'applicazione può essere eseguita in un ambiente di piattaforma distribuita come servizio (PaaS), ad esempio il [Servizio app di Azure](https://docs.microsoft.com/azure/app-service/), o in un [contenitore](https://docs.microsoft.com/azure/app-service/containers/), non sarà più necessario.
+Come per un computer locale, l'utente è responsabile della manutenzione e dell'aggiornamento della macchina virtuale<sup>&#42;</sup>, ma, se l'applicazione può essere eseguita in un ambiente di piattaforma distribuita come servizio (PaaS), ad esempio il [Servizio app di Azure](/azure/app-service/), o in un [contenitore](/azure/app-service/containers/), non sarà più necessario.
 
-*<sup>&#42;</sup>[Gli aggiornamenti automatici del sistema operativo per i set di scalabilità di macchine virtuali](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade) sono attualmente disponibili come servizio in anteprima.*
+*<sup>&#42;</sup>[Gli aggiornamenti automatici del sistema operativo per i set di scalabilità di macchine virtuali](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade) sono attualmente disponibili come servizio in anteprima.*
 
 ### <a name="virtual-networks"></a>Reti virtuali
 
@@ -54,15 +54,15 @@ Le reti virtuali di Azure consentono di:
 - Creare un'infrastruttura ibrida facile da controllare
 - Usare indirizzi IP e server DNS personali
 - Creazione di un ambiente isolato e altamente sicuro per le applicazioni
-- Connettere la VM alla rete locale usando una delle diverse [opzioni di connettività](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways#s2smulti)
+- Connettere la VM alla rete locale usando una delle diverse [opzioni di connettività](/azure/vpn-gateway/vpn-gateway-about-vpngateways#s2smulti)
 - Integrare la macchina virtuale nella rete locale usando [ExpressRoute](https://azure.microsoft.com/services/expressroute/)
 
-Per iniziare, vedere la [documentazione sulla rete virtuale](https://docs.microsoft.com/azure/virtual-network/)
+Per iniziare, vedere la [documentazione sulla rete virtuale](/azure/virtual-network/)
 
 ### <a name="active-directory"></a>Active Directory
 Molte applicazioni usano Active Directory per l'autenticazione e la gestione delle identità.
 
-- Azure AD Connect consente di integrare le directory locali con Azure Active Directory. Per iniziare, vedere [Integrare le directory locali con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
+- Azure AD Connect consente di integrare le directory locali con Azure Active Directory. Per iniziare, vedere [Integrare le directory locali con Azure Active Directory](/azure/active-directory/connect/active-directory-aadconnect).
 - In alternativa, [ExpressRoute](https://azure.microsoft.com/services/expressroute/) consente alle applicazioni di accedere all'istanza di Active Directory locale.
 
 ### <a name="sql-databases"></a>DATABASE SQL
@@ -77,10 +77,10 @@ Se l'applicazione usa un database locale, l'app non potrà comunicare con il dat
 #### <a name="virtual-machine-scale-sets"></a>Set di scalabilità di macchine virtuali
 Per fare in modo che l'applicazione sia a disponibilità elevata e scalabile, eseguire la migrazione dell'immagine della VM a un set di scalabilità di macchine virtuali di Azure per migliorare la disponibilità e la scalabilità dell'applicazione. I set di scalabilità di macchine virtuali offrono la possibilità di usare una macchina virtuale esistente già configurata o di configurare una pipeline di compilazione per compilare un'immagine con l'applicazione.
 
-Per iniziare, vedere [Distribuire l'applicazione nei set di scalabilità di macchine virtuali](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app).
+Per iniziare, vedere [Distribuire l'applicazione nei set di scalabilità di macchine virtuali](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app).
 
 #### <a name="centralized-logging"></a>Registrazione centralizzata
-Quando si esegue l'applicazione in più istanze, prendere in considerazione la possibilità di archiviare i log in una posizione centralizzata, ad esempio [Archiviazione di Azure](https://docs.microsoft.com/azure/storage/).
+Quando si esegue l'applicazione in più istanze, prendere in considerazione la possibilità di archiviare i log in una posizione centralizzata, ad esempio [Archiviazione di Azure](/azure/storage/).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

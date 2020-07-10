@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 4ea002b690de877fd6f955c05eb8235f46e0a870
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: d93bdee8d5a057be0f405fe4334d7edbdc0649ec
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803216"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174406"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Esercitazione: prevedere la richiesta del servizio di noleggio biciclette con l'analisi delle serie temporali e ML.NET
 
@@ -33,7 +33,7 @@ In questa esercitazione verranno illustrate le procedure per:
 
 ## <a name="time-series-forecasting-sample-overview"></a>Panoramica dell'esempio di previsione delle serie temporali
 
-Questo esempio è un' **applicazione console C# .NET Core** che prevede la richiesta di noleggi di biciclette usando un algoritmo di analisi della serie temporale univariato noto come analisi a spettro singolo. Il codice per questo esempio è disponibile nel repository [DotNet/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) in GitHub.
+Questo esempio è un' **applicazione console C# .NET Core** che prevede la richiesta di noleggi di biciclette usando un algoritmo di analisi della serie temporale univariato noto come singola analisi dello spettro. Il codice per questo esempio è disponibile nel repository [DotNet/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) in GitHub.
 
 ## <a name="understand-the-problem"></a>Informazioni sul problema
 
@@ -41,7 +41,7 @@ Per eseguire un'operazione efficiente, gestione inventario gioca un ruolo fondam
 
 La tecnica per analizzare i dati usati in questa esercitazione è l'analisi della serie temporale univariata. L'analisi della serie temporale univariata esamina un'unica osservazione numerica in un periodo di tempo a intervalli specifici, ad esempio le vendite mensili.
 
-L'algoritmo usato in questa esercitazione è [Single Spectrum Analysis (SSA)](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf). La funzione SSA scompone una serie temporale in un set di componenti principali. Questi componenti possono essere interpretati come parti di un segnale che corrispondono a tendenze, rumore, stagionalità e molti altri fattori. Quindi, questi componenti vengono ricostruiti e usati per prevedere i valori in futuro.
+L'algoritmo usato in questa esercitazione è il [singolare Spectrum Analysis (SSA)](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf). La funzione SSA scompone una serie temporale in un set di componenti principali. Questi componenti possono essere interpretati come parti di un segnale che corrispondono a tendenze, rumore, stagionalità e molti altri fattori. Quindi, questi componenti vengono ricostruiti e usati per prevedere i valori in futuro.
 
 ## <a name="create-console-application"></a>Creare un'applicazione console
 
@@ -283,7 +283,7 @@ L'ispezione dei valori effettivi e previsti Mostra le relazioni seguenti:
 
 Sebbene i valori previsti non prevedano il numero esatto di affitti, forniscono un intervallo più limitato di valori che consentono a un'operazione di ottimizzare l'uso delle risorse.
 
-Congratulazioni! A questo punto è stato creato un modello di Machine Learning di serie temporali per prevedere la richiesta di noleggio di biciclette.
+La procedura è stata completata. A questo punto è stato creato un modello di Machine Learning di serie temporali per prevedere la richiesta di noleggio di biciclette.
 
 Il codice sorgente per questa esercitazione è reperibile nel repository [DotNet/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) .
 
