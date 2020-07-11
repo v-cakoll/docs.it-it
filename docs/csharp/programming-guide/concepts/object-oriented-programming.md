@@ -2,17 +2,18 @@
 title: Programmazione orientata a oggetti (C#)
 ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 98dd5147ab54375ec851ccd9b981a68098a53270
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 83140a9dbd16f60f04f50ba18c71099cdd862f15
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241890"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226634"
 ---
 # <a name="object-oriented-programming-c"></a>Programmazione orientata a oggetti (C#)
 
-C# offre un supporto completo per la programmazione orientata a oggetti che include incapsulamento, ereditarietà e polimorfismo.
+C# offre supporto completo per la programmazione orientata a oggetti, tra cui astrazione, incapsulamento, ereditarietà e polimorfismo.
 
+- *Astrazione* significa nascondere i dettagli superflui dai consumer dei tipi.
 - L'*incapsulamento* indica che un gruppo di proprietà, metodi e altri membri correlati vengono considerati come una singola unità o un singolo oggetto.
 - L'*ereditarietà* indica la capacità di creare nuove classi sulla base di una classe esistente.
 - Il *polimorfismo* indica la capacità di usare più classi in modo intercambiabile, anche se in ognuna di esse le stesse proprietà o gli stessi metodi sono implementati in modi diversi.
@@ -29,7 +30,7 @@ class SampleClass
 }
 ```
 
-C# fornisce anche tipi denominati *strutture* che risultano utili quando non è necessario il supporto per l'ereditarietà o il polimorfismo.
+C# fornisce anche tipi denominati *strutture* che risultano utili quando non è necessario il supporto per l'ereditarietà o il polimorfismo. Per ulteriori informazioni, vedere [scelta tra classi e struct](../../../standard/design-guidelines/choosing-between-class-and-struct.md).
 
 Per definire una struttura:
 
@@ -186,10 +187,10 @@ Sono disponibili i seguenti modificatori di accesso:
 
 | Modificatore di C# | Definizione |
 |--|--|
-| [pubblico](../../language-reference/keywords/public.md) | Il tipo o il membro è accessibile da altro codice nello stesso assembly o in un altro assembly che vi fa riferimento. |
-| [private](../../language-reference/keywords/private.md) | Il tipo o il membro è accessibile solo dal codice nella stessa classe. |
-| [protected](../../language-reference/keywords/protected.md) | Il tipo o il membro è accessibile solo dal codice nella stessa classe o in una classe derivata. |
-| [internal](../../language-reference/keywords/internal.md) | Il tipo o il membro è accessibile dal codice nello stesso assembly ma non da un altro assembly. |
+| [public](../../language-reference/keywords/public.md) | Il tipo o il membro è accessibile da altro codice nello stesso assembly o in un altro assembly che vi fa riferimento. |
+| [privata](../../language-reference/keywords/private.md) | Il tipo o il membro è accessibile solo dal codice nella stessa classe. |
+| [protetto](../../language-reference/keywords/protected.md) | Il tipo o il membro è accessibile solo dal codice nella stessa classe o in una classe derivata. |
+| [interno](../../language-reference/keywords/internal.md) | Il tipo o il membro è accessibile dal codice nello stesso assembly ma non da un altro assembly. |
 | [protected internal](../../language-reference/keywords/protected-internal.md) | Il tipo o il membro è accessibile dal codice nello stesso assembly o da una classe derivata in un altro assembly. |
 | [protetto privato](../../language-reference/keywords/private-protected.md) | Il tipo o membro è accessibile solo dal codice nella stessa classe o in una classe derivata all'interno dell'assembly della classe di base. |
 
@@ -400,6 +401,6 @@ class SampleClass
 
 Per ulteriori informazioni, vedere l'articolo della Guida alla programmazione sui [delegati](../delegates/index.md) e l'articolo di riferimento per il linguaggio sulla parola chiave [delegate](../../language-reference/builtin-types/reference-types.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Guida per programmatori C#](../index.md)

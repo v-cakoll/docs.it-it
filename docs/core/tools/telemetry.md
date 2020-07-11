@@ -3,12 +3,12 @@ title: Telemetria di .NET Core SDK
 description: Informazioni sulle funzionalità di telemetria degli strumenti di .NET Core SDK che raccolgono informazioni sull'utilizzo per l'analisi, i dati raccolti e il modo in cui disabilitarli.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: a79b791abc99331ff39f5e281ee0fdc62b258989
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 0917dae23588ccd1809252aaf484c397e84561c7
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507282"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226569"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria di .NET Core SDK
 
@@ -16,7 +16,7 @@ ms.locfileid: "79507282"
 
 I dati raccolti sono anonimi e vengono pubblicati in modo aggregato in base alla [licenza Creative Commons Attribution](https://creativecommons.org/licenses/by/4.0/).
 
-## <a name="scope"></a>Scope
+## <a name="scope"></a>Ambito
 
 `dotnet` ha due funzioni: eseguire le app ed eseguire i comandi dell'interfaccia della riga di comando. I dati di telemetria *non vengono raccolti* quando si usa `dotnet` per avviare un'applicazione nel formato seguente:
 
@@ -46,17 +46,17 @@ The .NET Core tools collect usage data in order to help us improve your experien
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
 
-Per disabilitare questo messaggio e il messaggio `DOTNET_NOLOGO` di `true`benvenuto di .NET Core, impostare la variabile di ambiente su . Si noti che questa variabile non ha alcun effetto sulla telemetria opt-out.
+Per disabilitare questo messaggio e il messaggio di benvenuto di .NET Core, impostare la `DOTNET_NOLOGO` variabile di ambiente su `true` . Si noti che questa variabile non ha alcun effetto sulla disattivazione della telemetria.
 
 ## <a name="data-points"></a>Punti dati
 
 La funzionalità di telemetria non raccoglie i dati personali, ad esempio nomi utente o indirizzi di posta elettronica. Non esegue l'analisi del codice e non estrae dati a livello di progetto, ad esempio nome, repository o autore. I dati vengono inviati ai server Microsoft in modo sicuro tramite la tecnologia [Monitoraggio di Azure](https://azure.microsoft.com/services/monitor/), conservati con accesso limitato e pubblicati in base a severi controlli di sicurezza da sistemi di [archiviazione di Azure](https://azure.microsoft.com/services/storage/) sicuri.
 
-La tutela della privacy è importante per Microsoft. Se si ritiene che la telemetria raccolga dati sensibili o che i dati siano gestiti in modo non sicuro o non appropriato, segnalare un problema nel repository [dotnet/cli](https://github.com/dotnet/cli/issues) o inviare un messaggio di posta elettronica a [dotnet@microsoft.com](mailto:dotnet@microsoft.com) per indagini più approfondite.
+La tutela della privacy è importante per Microsoft. Se si ritiene che la telemetria raccolga dati sensibili o che i dati siano gestiti in modo non sicuro o non appropriato, archiviare un problema nel repository [DotNet/SDK](https://github.com/dotnet/sdk/issues) o inviare un messaggio di posta elettronica a [dotnet@microsoft.com](mailto:dotnet@microsoft.com) per l'analisi.
 
 La funzionalità di telemetria raccoglie i dati seguenti:
 
-| Versioni dell'SDK | Dati |
+| Versioni dell'SDK | Data |
 |--------------|------|
 | Tutti          | Timestamp della chiamata. |
 | Tutti          | Comando richiamato (ad esempio, "build"), con hash a partire dalla versione 2.1. |
@@ -92,7 +92,7 @@ Alcuni comandi inviano dati aggiuntivi. Un subset di comandi invia il primo argo
 
 Un subset di comandi invia le opzioni selezionate se vengono usate, insieme ai relativi valori:
 
-| Opzione                  | Comandi:                                                                                       |
+| Opzione                  | Comandi                                                                                       |
 |-------------------------|------------------------------------------------------------------------------------------------|
 | `--verbosity`           | Tutti i comandi                                                                                   |
 | `--language`            | `dotnet new`                                                                                   |
@@ -130,13 +130,13 @@ at Microsoft.DotNet.Cli.Program.ProcessArgs(String[] args, ITelemetry telemetryC
 at Microsoft.DotNet.Cli.Program.Main(String[] args)
 ```
 
-### <a name="avoid-inadvertent-disclosure-of-information"></a>Evitare la divulgazione involontaria di informazioni
+### <a name="avoid-inadvertent-disclosure-of-information"></a>Evitare la divulgazione accidentale di informazioni
 
 I collaboratori di .NET Core e chiunque esegua una versione personalizzata di .NET Core SDK devono tenere conto del percorso del codice sorgente dell'SDK. Se si verifica un arresto anomalo durante l'uso di un'istanza di .NET Core SDK che rappresenta una compilazione di debug personalizzata o è configurata con file di simboli di compilazione personalizzati, il percorso del file di origine dell'SDK dal computer di compilazione viene raccolto come parte dell'analisi dello stack e non viene sottoposto ad hashing.
 
 Per questo motivo, le compilazioni personalizzate di .NET Core SDK non devono trovarsi in directory i cui nomi di percorso espongono informazioni personali o sensibili.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [.NET Core CLI Telemetry - 2019 Q2 Data](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2) (Telemetria dell'interfaccia della riga di comando di .NET Core - Dati T2 2019)
-- [Telemetry reference source (dotnet/cli repository)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry) (Origine riferimento di telemetria - repository dotnet/cli)
+- [Origine riferimento di telemetria (repository DotNet/SDK)](https://github.com/dotnet/sdk/tree/master/src/Cli/dotnet/Telemetry)
