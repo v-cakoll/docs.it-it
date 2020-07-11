@@ -10,13 +10,13 @@ metadata:
   ms.collection: collection
   author: BillWagner
   ms.author: wiwagn
-  ms.date: 04/21/2020
-  ms.openlocfilehash: e1f4da6baefc39281a6dd4a5558d9f961a8f98a5
-  ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+  ms.date: 07/10/2020
+  ms.openlocfilehash: d6ff1e976117bedd4a64b47a9856bbd64dff0080
+  ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82624930"
+  ms.lasthandoff: 07/10/2020
+  ms.locfileid: "86226647"
 highlightedContent:
   items:
   - title: Scaricare .NET
@@ -34,6 +34,9 @@ highlightedContent:
   - title: Documentazione delle novità di .NET
     itemType: whats-new
     url: whats-new/index.yml
+  - title: Azure per sviluppatori .NET
+    itemType: overview
+    url: azure/index.yml
 conceptualContent:
   title: '.NET: Libero. Multipiattaforma. Open source.'
   summary: 'Una piattaforma per sviluppatori per la creazione di tutti i tipi di app: Web, per dispositivi mobili, desktop, giochi, IoT e altro ancora. Supportato in Windows, Linux e macOS.'
