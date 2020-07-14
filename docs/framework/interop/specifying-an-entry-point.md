@@ -1,17 +1,18 @@
 ---
 title: Specifica di un punto di ingresso
+description: Viene illustrato come specificare un punto di ingresso che identifica la posizione di una funzione in una DLL. È possibile rinominare la funzione eseguendo il mapping del punto di ingresso a un altro nome.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - EntryPoint field
 - platform invoke, attribute fields
 - attribute fields in platform invoke, EntryPoint
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
-ms.openlocfilehash: c5f8f735dd3e8c359f88044a532c29303237acc8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5628c54103410d127c2f9c4f56e1c6f897ada754
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181305"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282021"
 ---
 # <a name="specifying-an-entry-point"></a>Specifica di un punto di ingresso
 

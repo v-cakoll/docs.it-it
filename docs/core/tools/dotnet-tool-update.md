@@ -116,7 +116,7 @@ Il `dotnet tool update` comando fornisce un modo per aggiornare gli strumenti di
 
   Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
 
-## <a name="examples"></a>Esempio
+## <a name="examples"></a>Esempi
 
 - **`dotnet tool update -g dotnetsay`**
 
@@ -142,7 +142,7 @@ Il `dotnet tool update` comando fornisce un modo per aggiornare gli strumenti di
 
   Aggiorna lo strumento globale [dotnetsay](https://www.nuget.org/packages/dotnetsay/) alla versione più bassa nell'intervallo specificato `(> 2.0.0 && < 2.1.4)` `2.1.0` . verrà installata la versione. Per altre informazioni sugli intervalli di controllo delle versioni semantico, vedere [intervalli di versione del pacchetto NuGet](/nuget/concepts/package-versioning#version-ranges).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Strumenti di .NET Core](global-tools.md)
 - [Versionamento Semantico](https://semver.org)

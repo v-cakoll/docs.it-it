@@ -1,5 +1,6 @@
 ---
 title: Panoramica sul modello di programmazione con attributi (MEF)
+description: Introduzione al modello di programmazione con attributi, che rappresenta il modello di programmazione predefinito per il Managed Extensibility Framework (MEF) in .NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-ms.openlocfilehash: c6b1093d2e821a55cc5513b077a270748a780b71
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: aea3a19ffe6f177901e5c0839b618bb36f573beb
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347633"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281368"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Panoramica sul modello di programmazione con attributi (MEF)
 
@@ -341,7 +342,7 @@ Se il costruttore di una parte necessita di un valore importato, tale oggetto no
 
 L'attributo `Import` specifica un requisito necessario per il funzionamento della parte. Se non è possibile soddisfare un'importazione, la composizione della parte avrà esito negativo e la parte non sarà disponibile.
 
-È possibile specificare che un'importazione è *facoltativa* usando la proprietà `AllowDefault` . In questo caso, la composizione avrà esito positivo anche se l'importazione non corrisponde ad alcuna esportazione disponibile e la proprietà importata verrà impostata sul valore predefinito per il tipo di`null` proprietà (per le `false` proprietà dell'oggetto, per i valori booleani o zero per le proprietà numeriche). La classe seguente usa un'importazione facoltativa.
+È possibile specificare che un'importazione è *facoltativa* usando la proprietà `AllowDefault` . In questo caso, la composizione avrà esito positivo anche se l'importazione non corrisponde ad alcuna esportazione disponibile e la proprietà importata verrà impostata sul valore predefinito per il tipo di proprietà (per le proprietà dell' `null` oggetto, `false` per i valori booleani o zero per le proprietà numeriche). La classe seguente usa un'importazione facoltativa.
 
 ```vb
 Public Class MyClass1

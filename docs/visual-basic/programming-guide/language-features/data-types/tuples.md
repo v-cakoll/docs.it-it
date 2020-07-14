@@ -72,7 +72,7 @@ Quando l'inferenza del nome campo ha esito negativo, Visual Basic non genera un 
 
 ## <a name="tuples-versus-structures"></a>Tuple e strutture
 
-Una tupla Visual Basic è un tipo di valore che è un'istanza di uno dei tipi generici **System. ValueTuple** . Ad esempio, la `holiday` tupla definita nell'esempio precedente è un'istanza della <xref:System.ValueTuple%603> struttura. È progettato per essere un contenitore leggero per i dati. Poiché la tupla ha lo scopo di semplificare la creazione di un oggetto con più elementi di dati, mancano alcune delle funzionalità che possono avere una struttura personalizzata. Queste includono:
+Una tupla Visual Basic è un tipo di valore che è un'istanza di uno dei tipi generici **System. ValueTuple** . Ad esempio, la `holiday` tupla definita nell'esempio precedente è un'istanza della <xref:System.ValueTuple%603> struttura. È progettato per essere un contenitore leggero per i dati. Poiché la tupla ha lo scopo di semplificare la creazione di un oggetto con più elementi di dati, mancano alcune delle funzionalità che possono avere una struttura personalizzata. Tra queste sono incluse:
 
 - Membri personalizzati. Non è possibile definire proprietà, metodi o eventi personalizzati per una tupla.
 
@@ -171,6 +171,6 @@ Nell'esempio seguente viene creata una tupla, viene convertita in un oggetto **t
 
 [!code-vb[Convert](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple2.vb#1)]
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti al linguaggio Visual Basic](index.md)

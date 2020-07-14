@@ -136,7 +136,7 @@ I collaboratori di .NET Core e chiunque esegua una versione personalizzata di .N
 
 Per questo motivo, le compilazioni personalizzate di .NET Core SDK non devono trovarsi in directory i cui nomi di percorso espongono informazioni personali o sensibili.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [.NET Core CLI Telemetry - 2019 Q2 Data](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2) (Telemetria dell'interfaccia della riga di comando di .NET Core - Dati T2 2019)
 - [Origine riferimento di telemetria (repository DotNet/SDK)](https://github.com/dotnet/sdk/tree/master/src/Cli/dotnet/Telemetry)

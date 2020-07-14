@@ -43,14 +43,14 @@ Dovrebbe venire visualizzato l'output seguente:
 Hello World!
 ```
 
-## <a name="contribute"></a>Collaborazione
+## <a name="contribute"></a>Collabora
 
 .NET Core è una piattaforma aperta. Tutti gli utenti sono invitati a partecipare.
 
 * Problemi relativi ai prodotti e alle domande [della community degli sviluppatori](https://developercommunity.visualstudio.com/spaces/61/index.html).
 * I contributi ai prodotti devono essere effettuati in uno dei repository del progetto, ad esempio [DotNet/Runtime](https://github.com/dotnet/runtime), [DotNet/SDK](https://github.com/dotnet/sdk), [DotNet/Rosyln](https://github.com/dotnet/roslyn)o [aspnetcore](https://github.com/dotnet/aspnetcore). Per altre informazioni, vedere [repository di .NET Core](https://github.com/dotnet/core/blob/master/Documentation/core-repos.md).
 
-## <a name="support"></a>Supporto
+## <a name="support"></a>Supporto tecnico
 
 .NET Core è supportato da Microsoft in Windows, macOS e Linux e da Red Hat su Red Hat Enterprise Linux.
 

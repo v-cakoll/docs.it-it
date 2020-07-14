@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 3e6f3a921238a5897c7aa4b6034be979724b7167
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 94f3db14046ad5d63975d0ca44425abed5d52062
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283442"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281537"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novità di .NET Core 2.1
 
@@ -21,7 +21,7 @@ ms.locfileid: "84283442"
 - [Distribuzione](#deployment)
 - [Windows Compatibility Pack](#windows-compatibility-pack)
 - [Miglioramenti della compilazione JIT](#jit-compiler-improvements)
-- [Modifiche all'API](#api-changes)
+- [Modifiche API](#api-changes)
 
 ## <a name="tooling"></a>Strumenti
 
@@ -177,17 +177,17 @@ Senza questi tipi, quando si passano elementi quali una parte di una matrice o u
 
 L'esempio seguente usa un'istanza <xref:System.Span%601> e un'istanza <xref:System.Memory%601> per fornire una visualizzazione virtuale di 10 elementi di una matrice.
 
-[!code-csharp[Span\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/program.cs)]
+[!code-csharp[Span\<T>](./snippets/dotnet-core-2-1/csharp/program.cs)]
 
-[!code-vb[Memory\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](./snippets/dotnet-core-2-1/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Compressione Brotli
 
 .NET Core 2.1 aggiunge il supporto per la compressione e la decompressione Brotli. Brotli è un algoritmo di compressione generico senza perdita di dati definito in [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) e supportato dalla maggior parte dei Web browser e dai principali server Web. È possibile usare la classe <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> basata sul flusso o le classi <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> e <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> basate sull'intervallo a prestazioni elevate. L'esempio seguente illustra la compressione con la classe <xref:System.IO.Compression.BrotliStream>:
 
-[!code-csharp[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/brotli.cs#1)]
+[!code-csharp[Brotli compression](./snippets/dotnet-core-2-1/csharp/brotli.cs#1)]
 
-[!code-vb[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
+[!code-vb[Brotli compression](./snippets/dotnet-core-2-1/vb/brotli.vb#1)]
 
 Il comportamento di <xref:System.IO.Compression.BrotliStream> è lo stesso di <xref:System.IO.Compression.DeflateStream> e <xref:System.IO.Compression.GZipStream>, che rende più facile convertire il codice che chiama queste API in <xref:System.IO.Compression.BrotliStream>.
 
@@ -245,7 +245,7 @@ In Windows è anche possibile scegliere di usare <xref:System.Net.Http.WinHttpHa
 
 In Linux e macOS è possibile configurare <xref:System.Net.Http.HttpClient> solo in base al processo. In Linux è necessario distribuire [libcurl](https://curl.haxx.se/libcurl/) se si vuole usare l'implementazione precedente di <xref:System.Net.Http.HttpClient> (installato con .NET Core 2.0).
 
-### <a name="breaking-changes"></a>Modifiche di rilievo
+### <a name="breaking-changes"></a>Modifiche che causano un'interruzione
 
 Per informazioni sulle modifiche di rilievo, vedere [modifiche di rilievo per la migrazione dalla versione 2,0 alla versione 2,1](../compatibility/2.0-2.1.md).
 

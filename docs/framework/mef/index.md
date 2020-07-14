@@ -1,5 +1,6 @@
 ---
 title: Managed Extensibility Framework (MEF)
+description: Esplorare il Managed Extensibility Framework (MEF), che consente agli sviluppatori di applicazioni di individuare e usare le estensioni senza configurazione in .NET 4 o versioni successive.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Managed Extensibility Framework, overview
 - MEF, overview
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
-ms.openlocfilehash: 9a601ac860ac3bf81dd01980b020470d3323772f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 00ed48f2202d4c04039ac264b1fe71474a02432e
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181278"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281251"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -70,7 +71,7 @@ Per scaricare il codice completo per questo esempio, vedere l' [esempio SimpleCa
 
 - Aggiungere un riferimento all' `System.ComponentModel.Composition` assembly in cui si trova MEF.
 
-- Aprire *Module1. vb* o *Program.cs* e aggiungere `Imports` istruzioni `using` o per `System.ComponentModel.Composition` e `System.ComponentModel.Composition.Hosting`. Questi due spazi dei nomi contengono i tipi MEF che saranno necessari per sviluppare un'applicazione estensibile.
+- Aprire *Module1. vb* o *Program.cs* e aggiungere `Imports` `using` istruzioni o per `System.ComponentModel.Composition` e `System.ComponentModel.Composition.Hosting` . Questi due spazi dei nomi contengono i tipi MEF che saranno necessari per sviluppare un'applicazione estensibile.
 
 - Se si usa Visual Basic, aggiungere la parola chiave `Public` alla riga in cui viene dichiarato il modulo `Module1`.
 
@@ -198,7 +199,7 @@ Poiché il contenitore di composizione sarà popolato con tutte le parti disponi
 
 Al livello dell'interfaccia utente (`Program`) non occorrono altre informazioni. È quindi possibile compilare il resto della logica dell'interfaccia utente nel metodo `Main`.
 
-Aggiungere il codice seguente al metodo `Main`:
+Aggiungere al metodo `Main` il codice seguente:
 
 ```vb
 Sub Main()
@@ -272,7 +273,7 @@ public interface IOperationData
 }
 ```
 
- In questo caso, i metadati per ogni operazione sono il simbolo che rappresenta tale operazione, ad esempio +,-, \*e così via. Per rendere disponibile l'operazione di addizione, aggiungere la classe seguente al modulo o allo spazio dei nomi `SimpleCalculator`:
+ In questo caso, i metadati per ogni operazione sono il simbolo che rappresenta tale operazione, ad esempio +,-, \* e così via. Per rendere disponibile l'operazione di addizione, aggiungere la classe seguente al modulo o allo spazio dei nomi `SimpleCalculator`:
 
 ```vb
 <Export(GetType(IOperation))>
@@ -387,7 +388,7 @@ private int FindFirstNonDigit(string s)
 }
 ```
 
-A questo punto è possibile compilare ed eseguire il progetto. In Visual Basic, accertarsi di aver aggiunto la parola chiave `Public` a `Module1`. Digitare un'operazione di addizione nella finestra della console, ad esempio "5+3". La calcolatrice restituirà i risultati. Se si usano altri operatori, viene visualizzato un messaggio che indica che l'operazione non è stata criteri.).
+A questo punto è possibile compilare ed eseguire il progetto. In Visual Basic, accertarsi di aver aggiunto la parola chiave `Public` a `Module1`. Digitare un'operazione di addizione nella finestra della console, ad esempio "5+3". La calcolatrice restituirà i risultati. Se si usano altri operatori, viene visualizzato un messaggio che indica che l'operazione non è stata il messaggio "Hello World!".
 
 ## <a name="extending-simplecalculator-using-a-new-class"></a>Estensione di SimpleCalculator mediante una nuova classe
 
@@ -425,9 +426,9 @@ Benché aggiungere classi al codice sorgente sia abbastanza semplice, MEF offre 
 
 Aggiungere al progetto SimpleCalculator una nuova directory denominata `Extensions`. Assicurarsi di aggiungerla a livello di progetto e non a livello di soluzione. Aggiungere quindi alla soluzione un nuovo progetto Libreria di classi denominato `ExtendedOperations`. Il nuovo progetto verrà compilato in un assembly separato.
 
-Aprire la finestra di progettazione Proprietà progetto per il progetto ExtendedOperations e **Compile** fare clic **sulla scheda Compila o compila.** modificare il percorso dell' **output di compilazione** o il **percorso di output** in modo che punti alla directory Extensions nella directory del progetto SimpleCalculator (*.. \SimpleCalculator\Extensions\\*).
+Aprire la finestra di progettazione Proprietà progetto per il progetto ExtendedOperations e **Compile** fare clic **sulla scheda Compila o compila.** modificare il percorso dell' **output di compilazione** o il **percorso di output** in modo che punti alla directory Extensions nella directory del progetto SimpleCalculator (*.. \SimpleCalculator\Extensions \\ *).
 
- In *Module1. vb* o *Program.cs*aggiungere la riga seguente al `Program` Costruttore:
+ In *Module1. vb* o *Program.cs*aggiungere la riga seguente al `Program` costruttore:
 
 ```vb
 catalog.Catalogs.Add(New DirectoryCatalog("C:\SimpleCalculator\SimpleCalculator\Extensions"))
@@ -437,7 +438,7 @@ catalog.Catalogs.Add(New DirectoryCatalog("C:\SimpleCalculator\SimpleCalculator\
 catalog.Catalogs.Add(new DirectoryCatalog("C:\\SimpleCalculator\\SimpleCalculator\\Extensions"));
 ```
 
-Sostituire il percorso di esempio con il percorso della directory Extensions. Il percorso assoluto è solo a scopo di debug. In un'applicazione di produzione è necessario usare un percorso relativo. A <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> questo punto, le parti presenti in tutti gli assembly nella directory Extensions verranno aggiunte al contenitore di composizione.
+Sostituire il percorso di esempio con il percorso della directory Extensions. Il percorso assoluto è solo a scopo di debug. In un'applicazione di produzione è necessario usare un percorso relativo. <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog>A questo punto, le parti presenti in tutti gli assembly nella directory Extensions verranno aggiunte al contenitore di composizione.
 
 Nel progetto ExtendedOperations aggiungere i riferimenti a SimpleCalculator e System.ComponentModel.Composition. Nel file di classe ExtendedOperations aggiungere un'istruzione `Imports` o `using` per System.ComponentModel.Composition. In Visual Basic aggiungere anche un'istruzione `Imports` per SimpleCalculator. Quindi, aggiungere la seguente classe al file di classe ExtendedOperations:
 

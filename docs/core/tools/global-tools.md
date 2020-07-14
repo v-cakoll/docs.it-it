@@ -274,7 +274,7 @@ dotnet <command> --help
 
 Se l'installazione o l'esecuzione di uno strumento non riesce, vedere [risolvere i problemi di utilizzo degli strumenti .NET Core](troubleshoot-usage-issues.md).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Esercitazione: creare uno strumento .NET Core usando il interfaccia della riga di comando di .NET Core](global-tools-how-to-create.md)
 - [Esercitazione: installare e usare uno strumento globale .NET Core usando il interfaccia della riga di comando di .NET Core](global-tools-how-to-use.md)

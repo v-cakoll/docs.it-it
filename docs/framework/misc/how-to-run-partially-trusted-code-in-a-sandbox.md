@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: eseguire codice parzialmente attendibile in un oggetto sandbox'
+description: Scopri come eseguire codice parzialmente attendibile in un ambiente sandbox in .NET. La classe AppDomain è un modo efficace per la sandboxing di applicazioni gestite.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: b2f5a72e747f6c71743a7b22fe9f1962ac2f6b53
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f186f1d901b51dd4c61ba6b22197465a41f2c44
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181185"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282034"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Procedura: eseguire codice parzialmente attendibile in un oggetto sandbox
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -88,7 +89,7 @@ AppDomain.CreateDomain( string friendlyName,
         params StrongName[] fullTrustAssemblies)  
     ```  
   
-     Ulteriori informazioni:  
+     Altre informazioni:  
   
     - Questo è l'unico overload del metodo <xref:System.AppDomain.CreateDomain%2A> che accetta un oggetto <xref:System.Security.PermissionSet> come parametro e pertanto l'unico overload che consente di caricare un'applicazione con un'impostazione di attendibilità parziale.  
   
@@ -114,7 +115,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     - È possibile usare una codebase che punta a una posizione che non contiene l'assembly.  
   
-    - È possibile eseguire la creazione in un oggetto <xref:System.Security.CodeAccessPermission.Assert%2A> per l'attendibilità totale (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), per poter creare un'istanza di una classe critica. (Questo accade ogni volta che l'assieme non ha segni di trasparenza e viene caricato come completamente attendibile.) Pertanto, è necessario prestare attenzione a creare solo codice attendibile con questa funzione ed è consigliabile creare solo istanze di classi completamente attendibili nel nuovo dominio applicazione.  
+    - È possibile eseguire la creazione in un oggetto <xref:System.Security.CodeAccessPermission.Assert%2A> per l'attendibilità totale (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), per poter creare un'istanza di una classe critica. Questa situazione si verifica ogni volta che l'assembly non presenta contrassegni di trasparenza e viene caricato come completamente attendibile. Pertanto, è necessario prestare attenzione a creare solo codice attendibile per questa funzione ed è consigliabile creare solo istanze di classi completamente attendibili nel nuovo dominio applicazione.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  

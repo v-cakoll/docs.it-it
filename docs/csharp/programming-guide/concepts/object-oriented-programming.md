@@ -188,9 +188,9 @@ Sono disponibili i seguenti modificatori di accesso:
 | Modificatore di C# | Definizione |
 |--|--|
 | [public](../../language-reference/keywords/public.md) | Il tipo o il membro è accessibile da altro codice nello stesso assembly o in un altro assembly che vi fa riferimento. |
-| [privata](../../language-reference/keywords/private.md) | Il tipo o il membro è accessibile solo dal codice nella stessa classe. |
-| [protetto](../../language-reference/keywords/protected.md) | Il tipo o il membro è accessibile solo dal codice nella stessa classe o in una classe derivata. |
-| [interno](../../language-reference/keywords/internal.md) | Il tipo o il membro è accessibile dal codice nello stesso assembly ma non da un altro assembly. |
+| [private](../../language-reference/keywords/private.md) | Il tipo o il membro è accessibile solo dal codice nella stessa classe. |
+| [protected](../../language-reference/keywords/protected.md) | Il tipo o il membro è accessibile solo dal codice nella stessa classe o in una classe derivata. |
+| [internal](../../language-reference/keywords/internal.md) | Il tipo o il membro è accessibile dal codice nello stesso assembly ma non da un altro assembly. |
 | [protected internal](../../language-reference/keywords/protected-internal.md) | Il tipo o il membro è accessibile dal codice nello stesso assembly o da una classe derivata in un altro assembly. |
 | [protetto privato](../../language-reference/keywords/private-protected.md) | Il tipo o membro è accessibile solo dal codice nella stessa classe o in una classe derivata all'interno dell'assembly della classe di base. |
 
@@ -299,7 +299,7 @@ public abstract class B { }
 Per altre informazioni, vedere:
 
 - [sealed](../../language-reference/keywords/sealed.md)
-- [astratta](../../language-reference/keywords/abstract.md)
+- [abstract](../../language-reference/keywords/abstract.md)
 
 ### <a name="overriding-members"></a>Override di membri
 
@@ -311,7 +311,7 @@ I seguenti modificatori consentono di controllare le modalità di override di pr
 |--|--|
 | [virtuale](../../language-reference/keywords/virtual.md) | Consente a un membro della classe di essere sottoposto a override in una classe derivata. |
 | [override](../../language-reference/keywords/override.md) | Esegue l'override di un membro virtuale (sottoponibile a override) definito nella classe base. |
-| [astratta](../../language-reference/keywords/abstract.md) | Richiede che un membro della classe venga sottoposto a override nella classe derivata. |
+| [abstract](../../language-reference/keywords/abstract.md) | Richiede che un membro della classe venga sottoposto a override nella classe derivata. |
 | [Modificatore new](../../language-reference/keywords/new-modifier.md) | Nasconde un membro ereditato da una classe base. |
 
 ## <a name="interfaces"></a>Interfacce
