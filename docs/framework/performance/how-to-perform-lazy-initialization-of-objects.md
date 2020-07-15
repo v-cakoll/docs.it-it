@@ -1,5 +1,6 @@
 ---
 title: "Procedura: eseguire l'inizializzazione lenta di oggetti"
+description: Vedere come eseguire l'inizializzazione differita di oggetti usando la classe System. Lazy <T> . L'inizializzazione differita indica che gli oggetti non vengono creati se non sono mai necessari.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
-ms.openlocfilehash: d89d19a7a3edb57dcd6c0e37e6688701da8b3713
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dbee0d8a5c3075ad7429feb92b87a566fdd35454
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180590"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309729"
 ---
-# <a name="how-to-perform-lazy-initialization-of-objects"></a><span data-ttu-id="3335b-102">Procedura: eseguire l'inizializzazione lenta di oggetti</span><span class="sxs-lookup"><span data-stu-id="3335b-102">How to: Perform Lazy Initialization of Objects</span></span>
-<span data-ttu-id="3335b-103">La classe <xref:System.Lazy%601?displayProperty=nameWithType> semplifica le operazioni di inizializzazione differita e creazione di istanze di oggetti.</span><span class="sxs-lookup"><span data-stu-id="3335b-103">The <xref:System.Lazy%601?displayProperty=nameWithType> class simplifies the work of performing lazy initialization and instantiation of objects.</span></span> <span data-ttu-id="3335b-104">L'inizializzazione di oggetti in modalità differita consente di evitare di doverli creare se non sono mai necessari oppure di posticiparne l'inizializzazione fino al primo accesso.</span><span class="sxs-lookup"><span data-stu-id="3335b-104">By initializing objects in a lazy manner, you can avoid having to create them at all if they are never needed, or you can postpone their initialization until they are first accessed.</span></span> <span data-ttu-id="3335b-105">Per altre informazioni, vedere [Inizializzazione differita](lazy-initialization.md).</span><span class="sxs-lookup"><span data-stu-id="3335b-105">For more information, see [Lazy Initialization](lazy-initialization.md).</span></span>  
+# <a name="how-to-perform-lazy-initialization-of-objects"></a><span data-ttu-id="88f3f-104">Procedura: eseguire l'inizializzazione lenta di oggetti</span><span class="sxs-lookup"><span data-stu-id="88f3f-104">How to: Perform Lazy Initialization of Objects</span></span>
+<span data-ttu-id="88f3f-105">La classe <xref:System.Lazy%601?displayProperty=nameWithType> semplifica le operazioni di inizializzazione differita e creazione di istanze di oggetti.</span><span class="sxs-lookup"><span data-stu-id="88f3f-105">The <xref:System.Lazy%601?displayProperty=nameWithType> class simplifies the work of performing lazy initialization and instantiation of objects.</span></span> <span data-ttu-id="88f3f-106">L'inizializzazione di oggetti in modalità differita consente di evitare di doverli creare se non sono mai necessari oppure di posticiparne l'inizializzazione fino al primo accesso.</span><span class="sxs-lookup"><span data-stu-id="88f3f-106">By initializing objects in a lazy manner, you can avoid having to create them at all if they are never needed, or you can postpone their initialization until they are first accessed.</span></span> <span data-ttu-id="88f3f-107">Per altre informazioni, vedere [Inizializzazione differita](lazy-initialization.md).</span><span class="sxs-lookup"><span data-stu-id="88f3f-107">For more information, see [Lazy Initialization](lazy-initialization.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3335b-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="3335b-106">Example</span></span>  
- <span data-ttu-id="3335b-107">L'esempio seguente mostra come inizializzare un valore con <xref:System.Lazy%601>.</span><span class="sxs-lookup"><span data-stu-id="3335b-107">The following example shows how to initialize a value with <xref:System.Lazy%601>.</span></span> <span data-ttu-id="3335b-108">Partire dal presupposto che la variabile differita potrebbe non essere necessaria, a seconda che esista altro codice che imposta la variabile `someCondition` su true o false.</span><span class="sxs-lookup"><span data-stu-id="3335b-108">Assume that the lazy variable might not be needed, depending on some other code that sets the `someCondition` variable to true or false.</span></span>  
+## <a name="example"></a><span data-ttu-id="88f3f-108">Esempio</span><span class="sxs-lookup"><span data-stu-id="88f3f-108">Example</span></span>  
+ <span data-ttu-id="88f3f-109">L'esempio seguente mostra come inizializzare un valore con <xref:System.Lazy%601>.</span><span class="sxs-lookup"><span data-stu-id="88f3f-109">The following example shows how to initialize a value with <xref:System.Lazy%601>.</span></span> <span data-ttu-id="88f3f-110">Partire dal presupposto che la variabile differita potrebbe non essere necessaria, a seconda che esista altro codice che imposta la variabile `someCondition` su true o false.</span><span class="sxs-lookup"><span data-stu-id="88f3f-110">Assume that the lazy variable might not be needed, depending on some other code that sets the `someCondition` variable to true or false.</span></span>  
   
 ```vb  
 Dim someCondition As Boolean = False  
@@ -68,13 +69,13 @@ End Sub
   }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="3335b-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="3335b-109">Example</span></span>  
- <span data-ttu-id="3335b-110">L'esempio seguente mostra come usare la classe <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> per inizializzare un tipo visibile solo per l'istanza dell'oggetto corrente nel thread corrente.</span><span class="sxs-lookup"><span data-stu-id="3335b-110">The following example shows how to use the <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> class to initialize a type that is visible only to the current object instance on the current thread.</span></span>  
+## <a name="example"></a><span data-ttu-id="88f3f-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="88f3f-111">Example</span></span>  
+ <span data-ttu-id="88f3f-112">L'esempio seguente mostra come usare la classe <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> per inizializzare un tipo visibile solo per l'istanza dell'oggetto corrente nel thread corrente.</span><span class="sxs-lookup"><span data-stu-id="88f3f-112">The following example shows how to use the <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> class to initialize a type that is visible only to the current object instance on the current thread.</span></span>  
   
  [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
  [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
-## <a name="see-also"></a><span data-ttu-id="3335b-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3335b-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="88f3f-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="88f3f-113">See also</span></span>
 
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
-- [<span data-ttu-id="3335b-112">Inizializzazione differita</span><span class="sxs-lookup"><span data-stu-id="3335b-112">Lazy Initialization</span></span>](lazy-initialization.md)
+- [<span data-ttu-id="88f3f-114">Inizializzazione differita</span><span class="sxs-lookup"><span data-stu-id="88f3f-114">Lazy Initialization</span></span>](lazy-initialization.md)
