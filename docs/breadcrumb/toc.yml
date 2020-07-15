@@ -435,11 +435,11 @@
             - name: Associazione dati
               tocHref: /dotnet/desktop-wpf/data
               topicHref: /dotnet/desktop-wpf/data/index
-        - name: 'Guida a C#'
+        - name: Guida a C#
           tocHref: /dotnet/csharp/
           topicHref: /dotnet/csharp/index
           items:
-            - name: 'Introduzione a C#'
+            - name: Introduzione a C#
               tocHref: /dotnet/csharp/tutorials/intro-to-csharp/
               topicHref: /dotnet/csharp/tutorials/intro-to-csharp/index
             - name: Introduzione
@@ -461,7 +461,7 @@
               tocHref: /dotnet/csharp/programming-guide/
               topicHref: /dotnet/csharp/programming-guide/index
               items:
-                - name: 'Contenuto di un programma C#'
+                - name: Contenuto di un programma C#
                   tocHref: /dotnet/csharp/programming-guide/inside-a-program/
                   topicHref: /dotnet/csharp/programming-guide/inside-a-program/index
                 - name: Matrici
@@ -562,25 +562,25 @@
                 - name: Errori del compilatore
                   tocHref: /dotnet/csharp/language-reference/compiler-messages/
                   topicHref: /dotnet/csharp/language-reference/compiler-messages/index
-                - name: 'Bozza di specifica C# 6.0'
+                - name: Bozza di specifica C# 6.0
                   tocHref: /dotnet/csharp/language-reference/language-specification/
                   topicHref: /dotnet/csharp/language-reference/language-specification/index
-                - name: 'Proposte per il linguaggio C# 7.0'
+                - name: Proposte per il linguaggio C# 7.0
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.0/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.0/index
-                - name: 'Proposte per il linguaggio C# 7.1'
+                - name: Proposte per il linguaggio C# 7.1
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.1/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.1/index
-                - name: 'Proposte per il linguaggio C# 7.2'
+                - name: Proposte per il linguaggio C# 7.2
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.2/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.2/index
-                - name: 'Proposte per il linguaggio C# 7.3'
+                - name: Proposte per il linguaggio C# 7.3
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.3/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.3/index
-                - name: 'Proposte per il linguaggio C# 8.0'
+                - name: Proposte per il linguaggio C# 8.0
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-8.0/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-8.0/index
-        - name: 'Guida a F#'
+        - name: Guida a F#
           tocHref: /dotnet/fsharp/
           topicHref: /dotnet/fsharp/index
         - name: Guida a Visual Basic
@@ -699,6 +699,6 @@
           tocHref: /dotnet/azure/
           topicHref: /dotnet/azure/index
           items:
-            - name: Azure SDK per .NET
-              tocHref: /dotnet/azure/sdk/
-              topicHref: /dotnet/azure/sdk/index
+            - name: Azure per sviluppatori .NET
+              tocHref: /dotnet/azure/
+              topicHref: /dotnet/azure/index
