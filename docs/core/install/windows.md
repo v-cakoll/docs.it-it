@@ -4,18 +4,18 @@ description: Informazioni sulle versioni di Windows in cui è possibile installa
 author: adegeo
 ms.author: adegeo
 ms.date: 06/22/2020
-ms.openlocfilehash: e26494de7e9246b241cb965d8d735a781aab5478
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 97f67d00b3eb4dafc55256aea51f4295bb0ef06a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85804492"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308949"
 ---
 # <a name="install-net-core-on-windows"></a>Installare .NET Core in Windows
 
 > [!div class="op_single_selector"]
 >
-> - [Eseguire l'installazione in Windows](windows.md)
+> - [Installare in Windows](windows.md)
 > - [Eseguire l'installazione in macOS](macos.md)
 > - [Installare in Linux](linux.md)
 
@@ -23,7 +23,8 @@ In questo articolo si apprenderà come installare .NET Core in Windows. .NET Cor
 
 La versione più recente di .NET Core è 3,1.
 
-[Scarica .NET Core.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Download di .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>Versioni supportate
 
@@ -71,15 +72,17 @@ Esegue .NET Core WPF e .NET Core Windows Forms app desktop per Windows. Include 
 *Runtime di .NET Core*\
 Questo runtime è il runtime più semplice e non include altri Runtime. È consigliabile installare sia *ASP.NET Core Runtime* che *Desktop Runtime* per la compatibilità ottimale con le app .NET Core.
 
-[Scaricare il runtime di .NET Core.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Scaricare il runtime di .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>Informazioni SDK
 
 L'SDK viene usato per creare e pubblicare app e librerie .NET Core. L'installazione dell'SDK include tutti e tre i [Runtime](#runtime-information): ASP.NET Core, desktop e .NET Core.
 
-[Scaricare .NET Core SDK.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Download di .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core)
 
-## <a name="dependencies"></a>Dependencies
+## <a name="dependencies"></a>Dipendenze
 
 <!-- markdownlint-disable MD025 -->
 <!-- markdownlint-disable MD024 -->
@@ -91,7 +94,7 @@ Con .NET Core 3,1 sono supportate le seguenti versioni di Windows:
 > [!NOTE]
 > Un `+` simbolo rappresenta la versione minima.
 
-| OS                            | Version                        | Architetture   |
+| Sistema operativo                            | Versione                        | Architetture   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Client Windows                | 8.1                            | x64, x86        |
 | Client Windows 10             | Versione 1609 +                  | x64, x86        |
@@ -109,7 +112,7 @@ Con .NET Core 3,0 sono supportate le seguenti versioni di Windows:
 > [!NOTE]
 > Un `+` simbolo rappresenta la versione minima.
 
-| OS                            | Version                        | Architetture   |
+| Sistema operativo                            | Versione                        | Architetture   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Client Windows                | 7 SP1 +, 8,1                    | x64, x86        |
 | Client Windows 10             | Versione 1607 +                  | x64, x86        |
@@ -127,7 +130,7 @@ Con .NET Core 2,2 sono supportate le seguenti versioni di Windows:
 > [!NOTE]
 > Un `+` simbolo rappresenta la versione minima.
 
-| OS                            | Version                        | Architetture   |
+| Sistema operativo                            | Versione                        | Architetture   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Client Windows                | 7 SP1 +, 8,1                    | x64, x86        |
 | Client Windows 10             | Versione 1607 +                  | x64, x86        |
@@ -143,7 +146,7 @@ Con .NET Core 2,1 sono supportate le seguenti versioni di Windows:
 > [!NOTE]
 > Un `+` simbolo rappresenta la versione minima.
 
-| OS                            | Version                        | Architetture   |
+| Sistema operativo                            | Versione                        | Architetture   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Client Windows                | 7 SP1 +, 8,1                    | x64, x86        |
 | Client Windows 10             | Versione 1607 +                  | x64, x86        |
@@ -218,7 +221,8 @@ Se Visual Studio è già installato, è possibile controllare la versione con i 
 
 Visual Studio è in grado di installare il .NET Core SDK e il runtime più recenti.
 
-- [Scaricare Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
+> [!div class="button"]
+> [Scaricare Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
 
 ### <a name="select-a-workload"></a>Selezionare un carico di lavoro
 

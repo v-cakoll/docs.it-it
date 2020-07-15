@@ -2,12 +2,12 @@
 title: Sicurezza di Azure per app native del cloud
 description: Architettura di app .NET cloud native per Azure | Sicurezza di Azure per le app cloud native
 ms.date: 05/13/2020
-ms.openlocfilehash: a39b64477eb9e896c6603e5609ede653bfee1e07
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 223d9e77aca611697958981bf2ee3a630fb9fffb
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614253"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374494"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Sicurezza di Azure per app native del cloud
 
@@ -66,7 +66,7 @@ Si tratta di un esempio perfetto di una destinazione di valore apparentemente ba
 
 .NET Framework è già un Framework abbastanza sicuro. Evita alcuni problemi del codice non gestito, ad esempio l'analisi delle estremità delle matrici. Il lavoro viene svolto attivamente per correggere i problemi di sicurezza non appena vengono individuati. Esiste anche un [programma di Bounty dei bug](https://www.microsoft.com/msrc/bounty) che consente ai ricercatori di individuare i problemi del Framework e di segnalarli anziché sfruttarli.
 
-Esistono diversi modi per rendere più sicuro il codice .NET. Le linee guida seguenti, ad esempio le [linee guida per la codifica sicura per .NET](https://docs.microsoft.com/dotnet/standard/security/secure-coding-guidelines) , sono un'operazione ragionevole da eseguire per garantire che il codice sia protetto da zero. [OWASP Top 10](https://owasp.org/www-project-top-ten/) è un'altra guida preziosa per la creazione di codice sicuro.
+Esistono diversi modi per rendere più sicuro il codice .NET. Le linee guida seguenti, ad esempio le [linee guida per la codifica sicura per .NET](../../standard/security/secure-coding-guidelines.md) , sono un'operazione ragionevole da eseguire per garantire che il codice sia protetto da zero. [OWASP Top 10](https://owasp.org/www-project-top-ten/) è un'altra guida preziosa per la creazione di codice sicuro.
 
 Il processo di compilazione è una posizione ideale per inserire gli strumenti di analisi per rilevare i problemi nel codice sorgente prima di crearli nell'ambiente di produzione. La maggior parte di ogni progetto ha dipendenze da altri pacchetti. Uno strumento che consente di analizzare i pacchetti obsoleti rileverà i problemi in una compilazione notturna. Anche quando si compilano immagini Docker, è utile controllare e verificare che l'immagine di base non abbia vulnerabilità note. Un altro aspetto da controllare è che nessuno ha accidentalmente archiviato le credenziali.
 

@@ -1,16 +1,17 @@
 ---
 title: Eventi ETW di monitoraggio delle risorse del dominio applicazione (ARM)
+description: Informazioni sugli eventi ETW di monitoraggio delle risorse del dominio applicazione (ARM) in .NET, ad esempio ThreadCreated, AppDomainMemAllocated, AppDomainMemSurvived e altro ancora.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ETW, application domain monitoring events
 - application domain monitoring events [.NET Framework]
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
-ms.openlocfilehash: 0e453b2bafffd9e07a1bdddd97282c5b97f5483d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d118b3196b019a804df5399464cb86f7492c61b0
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716221"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309781"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Eventi ETW di monitoraggio delle risorse del dominio applicazione (ARM)
 
@@ -29,17 +30,17 @@ La tabella seguente illustra la parola chiave e il livello Per altre informazion
 
 La tabella seguente mostra le informazioni sull'evento:
 
-|Event|ID evento|Generato quando|
+|Evento|ID evento|Generato quando|
 |-----------|--------------|-----------------|
 |`ThreadCreated`|85|Un thread è stato creato per il dominio applicazione.|
 
 La tabella seguente mostra i dati dell'evento:
 
-|Nome del campo|Tipo di dati|Descrizione|
+|Nome campo|Tipo di dati|Descrizione|
 |----------------|---------------|-----------------|
 |ThreadID|win:UInt64|ID del thread che è stato creato.|
 |AppDomainID|win:UInt64|Identificatore del dominio dell'applicazione per la quale l’attività thread viene segnalata.|
-|Flag|win:UInt32|Flag di creazione del thread.|
+|Flags|win:UInt32|Flag di creazione del thread.|
 |ManagedThreadIndex|win:UInt32|Indice gestito del thread che è stato creato.|
 |OSThreadID|win:UInt32|ID del sistema operativo che è stato creato.|
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|
@@ -54,13 +55,13 @@ La tabella seguente illustra la parola chiave e il livello:
 
 La tabella seguente mostra le informazioni sull'evento:
 
-|Event|ID evento|Generato quando|
+|Evento|ID evento|Generato quando|
 |-----------|--------------|-----------------|
 |`AppDomainMemAllocated`|83|Ogni 4 MB di memoria (approssimativamente) viene allocato nel dominio dell'applicazione.|
 
 La tabella seguente mostra i dati dell'evento:
 
-|Nome del campo|Tipo di dati|Descrizione|
+|Nome campo|Tipo di dati|Descrizione|
 |----------------|---------------|-----------------|
 |AppDomainID|win:UInt64|Identificatore del dominio dell'applicazione per la quale viene segnalato l’utilizzo della risorsa.|
 |Allocato|win:UInt64|Il numero totale di byte allocati in questo dominio applicazione, poiché è stato creato il dominio dell'applicazione (non viene sottratta la quantità di memoria liberata).|
@@ -76,13 +77,13 @@ La tabella seguente illustra la parola chiave e il livello:
 
 La tabella seguente mostra le informazioni sull'evento:
 
-|Event|ID evento|Generato quando|
+|Evento|ID evento|Generato quando|
 |-----------|--------------|-----------------|
 |`AppDomainMemSurvived`|84|Ogni operazione di Garbage Collection è stata terminata.|
 
 La tabella seguente mostra i dati dell'evento:
 
-|Nome del campo|Tipo di dati|Descrizione|
+|Nome campo|Tipo di dati|Descrizione|
 |----------------|---------------|-----------------|
 |AppDomainID|win:UInt64|Identificatore del dominio per la quale viene segnalato l’utilizzo della risorsa.|
 |Survived|win:UInt64|Il numero di byte rimasti dall'ultima raccolta e a cui fa riferimento il dominio applicazione corrente. Questo numero è preciso e completo dopo una raccolta completa, ma può essere incompleto dopo una raccolta temporanea.|
@@ -100,15 +101,15 @@ La tabella seguente illustra la parola chiave e il livello:
 
 La tabella seguente mostra le informazioni sull'evento:
 
-|Event|ID evento|Generato quando|
+|Evento|ID evento|Generato quando|
 |-----------|--------------|-----------------|
 |`ThreadAppDomainEnter`|87|Un thread immette un dominio applicazione.|
 
 La tabella seguente mostra i dati dell'evento:
 
-|Nome del campo|Tipo di dati|Descrizione|
+|Nome campo|Tipo di dati|Descrizione|
 |----------------|---------------|-----------------|
-|ThreadID|win:UInt64|L'identificatore del thread.|
+|ThreadID|win:UInt64|Identificatore del thread.|
 |AppDomainID|win:UInt64|L’identificatore di dominio applicazione.|
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|
 
@@ -123,15 +124,15 @@ La tabella seguente illustra la parola chiave e il livello:
 
 La tabella seguente mostra le informazioni sull'evento:
 
-|Event|ID evento|Generato quando|
+|Evento|ID evento|Generato quando|
 |-----------|--------------|-----------------|
 |`ThreadTerminated`|86|Termina un thread.|
 
 La tabella seguente mostra i dati dell'evento:
 
-|Nome del campo|Tipo di dati|Descrizione|
+|Nome campo|Tipo di dati|Descrizione|
 |----------------|---------------|-----------------|
-|ThreadID|win:UInt64|L'identificatore del thread.|
+|ThreadID|win:UInt64|Identificatore del thread.|
 |AppDomainID|win:UInt64|L’identificatore di dominio applicazione.|
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|
 

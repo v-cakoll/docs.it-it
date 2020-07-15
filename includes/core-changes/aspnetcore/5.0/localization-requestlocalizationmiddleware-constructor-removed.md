@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b1d4b69b7a8ed68cd688dfd0249d5107b80e67c4
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: db941229e02064ee856829417d6762aa17b0b926
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281343"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309151"
 ---
 ### <a name="localization-obsolete-constructor-removed-in-request-localization-middleware"></a>Localizzazione: Costruttore obsoleto rimosso nel middleware di localizzazione della richiesta
 
@@ -12,7 +12,7 @@ Il <xref:Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware> costru
 
 #### <a name="version-introduced"></a>Versione introdotta
 
-5.0
+5,0 Anteprima 8
 
 #### <a name="old-behavior"></a>Comportamento precedente
 

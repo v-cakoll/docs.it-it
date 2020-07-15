@@ -2,12 +2,12 @@
 title: Creare una libreria di classi .NET Standard usando Visual Studio Code
 description: Informazioni su come creare una libreria di classi .NET Standard usando Visual Studio Code.
 ms.date: 06/08/2020
-ms.openlocfilehash: f7d2319bcea58f63ca40e43ba39745bdf1b394ce
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 714b5cf2125f1d296adc4a4dc7d1b6c9420417ed
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701799"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308884"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>Esercitazione: creare una libreria di .NET Standard usando Visual Studio Code
 
@@ -172,7 +172,7 @@ Inizialmente, il nuovo progetto di app console non ha accesso alla libreria di c
 1. Eseguire il comando seguente:
 
    ```dotnetcli
-   dotnet add ShowCase/Showcase.csproj reference StringLibrary/StringLibrary.csproj
+   dotnet add ShowCase/ShowCase.csproj reference StringLibrary/StringLibrary.csproj
    ```
 
    L'output del terminale è simile all'esempio seguente:

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [.NET Framework], remoting
 - secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-ms.openlocfilehash: 029f9863ebed94805675b629be7eb10963a7b689
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 019773b19eaca2e4364fb79c40fdb923093d4e7e
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281394"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309365"
 ---
 # <a name="security-and-remoting-considerations"></a>Considerazioni sulla sicurezza e sui servizi remoti
 I servizi remoti consentono di impostare chiamate trasparenti tra domini applicazione, processi o computer. Lo stack di sicurezza per l'accesso di codice, tuttavia, non può superare i limiti del processo o del computer (viene applicato tra domini applicazione dello stesso processo).  
@@ -34,7 +34,7 @@ I servizi remoti consentono di impostare chiamate trasparenti tra domini applica
   
  Un dominio applicazione può forzare un altro dominio applicazione per caricare un assembly ed eseguire il codice contenuto chiamando un proxy in un oggetto ospitato nell’altro dominio applicazione. Per ottenere un proxy tra domini applicazione, il dominio applicazione che ospita l'oggetto deve distribuirne uno tramite un parametro di chiamata al metodo o un valore restituito. Oppure, se il dominio applicazione è stato appena creato, l'autore dispone di un proxy per l’oggetto <xref:System.AppDomain> per impostazione predefinita. Pertanto, per evitare di interrompere l'isolamento del codice, un dominio applicazione con un livello di attendibilità superiore non deve distribuire i riferimenti agli oggetti con marshalling per riferimento (istanze di classi derivate da <xref:System.MarshalByRefObject>) del proprio dominio ai domini applicazione con livelli di attendibilità inferiori.  
   
- In genere, il dominio applicazione predefinito crea domini applicazione figlio con un oggetto controllo in ognuno di essi. L'oggetto controllo gestisce il nuovo dominio applicazione e occasionalmente accetta gli ordini dal dominio applicazione predefinito, ma non è in grado di contattare direttamente il dominio. A volte il dominio applicazione predefinito chiama il proxy per l'oggetto controllo. Tuttavia, in alcuni casi l'oggetto controllo deve richiamare il dominio applicazione predefinito. In questi casi, il dominio applicazione predefinito passa un oggetto callback di marshalling per riferimento al costruttore dell'oggetto controllo. È responsabilità dell'oggetto controllo proteggere il proxy. Se l'oggetto controllo posiziona il proxy in un campo statico pubblico di una classe pubblica o espone pubblicamente il proxy, può attivarsi un pericoloso meccanismo che consente a un codice di richiamare il dominio applicazione predefinito. Per questo motivo, gli oggetti controllo vengono sempre considerati implicitamente attendibili per mantenere privato il proxy.  
+ In genere, il dominio applicazione predefinito crea domini applicazione figlio con un oggetto controllo in ognuno di essi. L'oggetto controllo gestisce il nuovo dominio applicazione e occasionalmente accetta gli ordini dal dominio applicazione predefinito, ma non è in grado di contattare direttamente il dominio. A volte il dominio applicazione predefinito chiama il proxy per l'oggetto controllo. Tuttavia, in alcuni casi l'oggetto controllo deve richiamare il dominio applicazione predefinito. In questi casi, il dominio applicazione predefinito passa un oggetto callback di marshalling per riferimento al costruttore dell'oggetto controllo. È responsabilità dell'oggetto controllo proteggere il proxy. Se l'oggetto controllo ha inserito il proxy in un campo statico pubblico di una classe pubblica o se il proxy è stato esposto pubblicamente, un meccanismo pericoloso affinché venga aperto un altro codice per richiamare il dominio applicazione predefinito. Per questo motivo, gli oggetti controllo vengono sempre considerati implicitamente attendibili per mantenere privato il proxy.  
   
 ## <a name="see-also"></a>Vedere anche
 

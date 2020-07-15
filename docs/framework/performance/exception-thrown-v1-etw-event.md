@@ -1,16 +1,17 @@
 ---
 title: Evento ETW di eccezione generata_V1
+description: Visualizzare informazioni dettagliate sull'evento ExceptionThrown_V1 ETW. I dati dell'evento, ad esempio i nomi dei campi, i tipi di dati e le descrizioni vengono forniti per le eccezioni generate.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ExceptionThrown_V1 event [.NET Framework]
 - ETW, ExceptionThrown_V1 event (CLR)
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
-ms.openlocfilehash: 80faf6e607755ee79c7ec17f2d7d3d5bdce822b7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f800a43d0ed2a82bc51a5e3a028b5fa1870df3fb
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716058"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309456"
 ---
 # <a name="exception-thrown_v1-etw-event"></a>Evento ETW di eccezione generata_V1
 Questo evento acquisisce informazioni sulle eccezioni generate.  
@@ -23,13 +24,13 @@ Questo evento acquisisce informazioni sulle eccezioni generate.
   
  La tabella seguente offre informazioni sull'evento.  
   
-|Event|ID evento|Generato quando|  
+|Evento|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`ExceptionThrown_V1`|80|Viene generata un'eccezione gestita.|  
   
  La tabella seguente mostra i dati degli eventi.  
   
-|Nome del campo|Tipo di dati|Descrizione|  
+|Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |Tipo di eccezione|win:UnicodeString|Tipo dell'eccezione, ad esempio `System.NullReferenceException`.|  
 |Messaggio dell'eccezione|win:UnicodeString|Messaggio effettivo dell'eccezione.|  

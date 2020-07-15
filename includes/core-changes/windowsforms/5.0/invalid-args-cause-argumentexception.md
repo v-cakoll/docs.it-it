@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: aab7d8538c875e35c832acc2a6c64beb84d4fb47
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 9f6703c77e17ac9376aee944b891f4635dc7632e
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84702441"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309149"
 ---
 ### <a name="winforms-methods-now-throw-argumentexception"></a>I metodi WinForms ora generano ArgumentException
 
@@ -16,13 +16,6 @@ In precedenza, il passaggio di argomenti di tipo imprevisto o non corretto a det
 
 La generazione di un oggetto è <xref:System.ArgumentException> conforme al comportamento del runtime .NET. Consente inoltre di migliorare l'esperienza di debug, comunicando chiaramente quale argomento non è valido.
 
-Nella tabella seguente sono elencati i metodi e i parametri interessati:
-
-| Metodo | Nome parametro | Condizione | Versione aggiunta |
-|-|-|-|-|
-| <xref:System.Windows.Forms.TabControl.GetToolTipText(System.Object)?displayProperty=fullName> | `item` | L'argomento non è di tipo <xref:System.Windows.Forms.TabPage> . | 5,0 Anteprima 1 |
-| <xref:System.Windows.Forms.DataFormats.GetFormat(System.String)?displayProperty=fullName> | `format` | L'argomento è `null` , <xref:System.String.Empty?displayProperty=nameWithType> o uno spazio vuoto. | 5,0 Preview 5 |
-
 #### <a name="version-introduced"></a>Versione introdotta
 
 .NET 5,0
@@ -32,14 +25,19 @@ Nella tabella seguente sono elencati i metodi e i parametri interessati:
 - Aggiornare il codice per impedire il passaggio di argomenti non validi.
 - Se necessario, gestire un oggetto <xref:System.ArgumentException> quando si chiama il metodo.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 Windows Form
 
 #### <a name="affected-apis"></a>API interessate
 
-- <xref:System.Windows.Forms.TabControl.GetToolTipText(System.Object)?displayProperty=fullName>
-- <xref:System.Windows.Forms.DataFormats.GetFormat(System.String)?displayProperty=fullName>
+Nella tabella seguente sono elencati i metodi e i parametri interessati:
+
+| Metodo | Nome parametro | Condizione | Versione aggiunta |
+|-|-|-|-|
+| <xref:System.Windows.Forms.TabControl.GetToolTipText(System.Object)?displayProperty=fullName> | `item` | L'argomento non è di tipo <xref:System.Windows.Forms.TabPage> . | Preview 1 |
+| <xref:System.Windows.Forms.DataFormats.GetFormat(System.String)?displayProperty=fullName> | `format` | L'argomento è `null` , <xref:System.String.Empty?displayProperty=nameWithType> o uno spazio vuoto. | Preview 5 |
+| <xref:System.Windows.Forms.InputLanguageChangedEventArgs.%23ctor(System.Globalization.CultureInfo,System.Byte)> | `culture` | Impossibile recuperare un oggetto `InputLanguage` per le impostazioni cultura specificate. | Anteprima 7 |
 
 <!-- 
 
@@ -47,5 +45,6 @@ Windows Form
 
 - `M:System.Windows.Forms.TabControl.GetToolTipText(System.Object)`
 - `M:System.Windows.Forms.DataFormats.GetFormat(System.String)`
+- `M:System.Windows.Forms.InputLanguageChangedEventArgs.%23ctor(System.Globalization.CultureInfo,System.Byte)`
 
 -->

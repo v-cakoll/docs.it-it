@@ -1,16 +1,17 @@
 ---
 title: Codice SecurityTransparent
+description: Comprendere lo scopo del modello di codice trasparente, come specificare il livello di trasparenza e l'imposizione della trasparenza nella sicurezza.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent code
 - security-transparent code
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
-ms.openlocfilehash: ca251ec3084d40269b107e7bd8bef708e8d49622
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: a167efe12b88f796fba4abc6d60ebffe4693709a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215818"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309846"
 ---
 # <a name="security-transparent-code"></a>Codice SecurityTransparent
 
@@ -33,7 +34,7 @@ L'obiettivo principale dell'imposizione della trasparenza è fornire un meccanis
 La trasparenza è stata introdotta in .NET Framework versione 2.0 per semplificare il modello di sicurezza e facilitare la scrittura e la distribuzione di librerie e applicazioni sicure. Il codice Transparent viene usato anche in Microsoft Silverlight per semplificare lo sviluppo di applicazioni parzialmente attendibili.
 
 > [!NOTE]
-> Quando si sviluppa un'applicazione parzialmente attendibile, è necessario tenere presenti i requisiti di autorizzazione per gli host di destinazione. È possibile sviluppare un'applicazione che usa risorse il cui uso non è consentito in alcuni host. Tale applicazione verrà compilata senza errori, ma non verrà eseguita correttamente quando verrà caricata nell'ambiente di hosting. Se l'applicazione è stata sviluppata con Visual Studio, è possibile attivare il debug in un ambiente parzialmente attendibile o in un set di autorizzazioni limitato dall'ambiente di sviluppo. Per altre informazioni, vedere [Procedura: Eseguire il debug di un'applicazione ClickOnce con autorizzazioni limitate](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). La funzionalità Elabora autorizzazioni fornita per le applicazioni ClickOnce è anche disponibile per le applicazioni parzialmente attendibili.
+> Quando si sviluppa un'applicazione parzialmente attendibile, è necessario tenere presenti i requisiti di autorizzazione per gli host di destinazione. È possibile sviluppare un'applicazione che usa risorse il cui uso non è consentito in alcuni host. Tale applicazione verrà compilata senza errori, ma non verrà eseguita correttamente quando verrà caricata nell'ambiente di hosting. Se l'applicazione è stata sviluppata con Visual Studio, è possibile attivare il debug in un ambiente parzialmente attendibile o in un set di autorizzazioni limitato dall'ambiente di sviluppo. Per altre informazioni, vedere [How to: Debug a ClickOnce Application with Restricted Permissions](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). La funzionalità Elabora autorizzazioni fornita per le applicazioni ClickOnce è anche disponibile per le applicazioni parzialmente attendibili.
 
 ## <a name="specifying-the-transparency-level"></a>Specifica del livello di trasparenza
 
@@ -41,7 +42,7 @@ L'attributo <xref:System.Security.SecurityRulesAttribute> a livello di assembly 
 
 I livelli sono elencati di seguito.
 
-- Livello 2 (<xref:System.Security.SecurityRuleSet.Level2>): regole di trasparenza .NET Framework 4.
+- Livello 2 ( <xref:System.Security.SecurityRuleSet.Level2> ): regole di trasparenza .NET Framework 4.
 
 - Livello 1 (<xref:System.Security.SecurityRuleSet.Level1>): regole di trasparenza di .NET Framework 2.0.
 

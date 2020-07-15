@@ -1,16 +1,17 @@
 ---
 title: Prestazioni di .NET Framework
+description: Progettare e pianificare le prestazioni delle applicazioni .NET. Usare gli strumenti forniti da Microsoft per misurare le prestazioni dell'app e apportare miglioramenti.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-ms.openlocfilehash: 47d85ae63f0594b778523425631ff54f9f3ca32f
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ee8260056bd87dfc66d96e394f9b93bb9427afd8
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504085"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309755"
 ---
 # <a name="net-framework-performance"></a>Prestazioni di .NET Framework
 Per garantire prestazioni ottimali, le prestazioni devono essere progettate e pianificate come qualsiasi altra funzionalità delle app. Gli strumenti messi a disposizione da Microsoft consentono di misurare le prestazioni delle app e, se necessario, migliorare l'uso della memoria, la velocità effettiva del codice e la velocità di risposta. Questo argomento contiene un elenco degli strumenti per l'analisi delle prestazioni forniti da Microsoft e collegamenti ad altri argomenti relativi alle prestazioni per aree specifiche dello sviluppo di applicazioni.  
@@ -43,8 +44,8 @@ Per garantire prestazioni ottimali, le prestazioni devono essere progettate e pi
   
 |Tipo di app|Vedere|  
 |--------------|---------|  
-|App .NET Framework per tutte le piattaforme|[Garbage Collection e prestazioni](../../standard/garbage-collection/performance.md)<br /><br /> [Suggerimenti per incrementare le prestazioni](performance-tips.md)|  
-|App di Windows 8. x Store scritte C++in C#, e Visual Basic|[Procedure consigliate per app di Windows Store scritte in C++, C# e Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
+|App .NET Framework per tutte le piattaforme|[Garbage Collection e prestazioni](../../standard/garbage-collection/performance.md)<br /><br /> [Suggerimenti sulle prestazioni](performance-tips.md)|  
+|App di Windows 8. x Store scritte in C++, C# e Visual Basic|[Procedure consigliate per app di Windows Store scritte in C++, C# e Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
 |Windows Presentation Foundation (WPF)|[Famiglia di prodotti per l'analisi delle prestazioni WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[Cenni preliminari sulle prestazioni di ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
   
@@ -55,4 +56,4 @@ Per garantire prestazioni ottimali, le prestazioni devono essere progettate e pi
 |[Memorizzazione nella cache in applicazioni .NET Framework](caching-in-net-framework-applications.md)|Descrive tecniche per la memorizzazione nella cache dei dati per migliorare le prestazioni dell'app.|  
 |[Inizializzazione differita](lazy-initialization.md)|Descrive come inizializzare gli oggetti quando necessario per migliorare le prestazioni, in particolare all'avvio dell'app.|  
 |[Affidabilità](reliability.md)|Contiene informazioni su come evitare eccezioni asincrone in un ambiente server.|  
-|[Scrittura di app con velocità di risposta e dimensioni elevate in .NET Framework](writing-large-responsive-apps.md)|Offre suggerimenti sulle prestazioni che derivano dalla riscrittura di compilatori C# e Visual Basic nel codice gestito e include diversi esempi concreti tratti dal compilatore C#.|
+|[Scrittura di app grandi e reattive in .NET Framework](writing-large-responsive-apps.md)|Offre suggerimenti sulle prestazioni che derivano dalla riscrittura di compilatori C# e Visual Basic nel codice gestito e include diversi esempi concreti tratti dal compilatore C#.|

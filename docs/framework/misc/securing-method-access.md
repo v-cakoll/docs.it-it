@@ -11,23 +11,23 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-ms.openlocfilehash: 287c3651be0272f1941fb2320640970d70a1bd0f
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: a7ef419cf3959cf7a3ffde874353dacd3815c81a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282048"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309391"
 ---
 # <a name="securing-method-access"></a>Protezione dell'accesso ai metodi
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Alcuni metodi potrebbero non essere adatti per consentire le chiamate da parte di codice non attendibile arbitrario. Tali metodi comportano diversi rischi: il metodo può fornire informazioni riservate; può ritenere valide tutte le informazioni passate; può non controllare gli errori sui parametri; con i parametri non corretti, potrebbe presentare problemi di funzionamento o causare danni. L'utente dovrebbe essere informato di questi casi e adottare le misure appropriate per proteggere il metodo.  
   
- In alcuni casi, potrebbe essere necessario limitare i metodi che non sono destinati all'uso pubblico, ma che devono comunque essere pubblici; ad esempio, nel caso di un'interfaccia che deve essere chiamata attraverso le proprie DLL e pertanto deve essere pubblica, ma che non si vuole esporre pubblicamente per evitare che i clienti la usino oppure per impedire che il codice dannoso sfrutti il punto di ingresso al componente. Un altro motivo comune per limitare un metodo non destinato all'uso pubblico (ma che deve essere pubblico) consiste nell'evitare di dover documentare e supportare quella che potrebbe essere un'interfaccia molto interna.  
+ In alcuni casi, potrebbe essere necessario limitare i metodi che non sono destinati all'uso pubblico, ma che devono comunque essere pubblici; ad esempio, nel caso di un'interfaccia che deve essere chiamata attraverso le proprie DLL e pertanto deve essere pubblica, ma che non si vuole esporre pubblicamente per evitare che i clienti la usino oppure per impedire che il codice dannoso sfrutti il punto di ingresso al componente. Un altro motivo comune per limitare un metodo non destinato all'uso pubblico (ma che deve essere pubblico) consiste nell'evitare di dover documentare e supportare quello che potrebbe essere un'interfaccia interna.  
   
  Il codice gestito offre diversi modi per limitare l'accesso ai metodi:  
   
-- Limitare l'ambito di accessibilità alla classe, all'assembly o alle classi derivate, se possono essere attendibili. Questo è il modo più semplice per limitare l'accesso del metodo. Si noti che, in generale, le classi derivate possono essere meno affidabili rispetto alla classe da cui derivano, anche se in alcuni casi condividono l'identità della classe padre. In particolare, non dedurre attendibilità dalla parola chiave **protected**, che non viene necessariamente utilizzata nel contesto di sicurezza.  
+- Limitare l'ambito di accessibilità alla classe, all'assembly o alle classi derivate, se possono essere attendibili. Questo è il modo più semplice per limitare l'accesso del metodo. In generale, le classi derivate possono essere meno attendibili rispetto alla classe da cui derivano, anche se in alcuni casi condividono l'identità della classe padre. In particolare, non dedurre attendibilità dalla parola chiave `protected` , che non viene necessariamente utilizzata nel contesto di sicurezza.  
   
 - Limitare l'accesso al metodo ai chiamanti di un'identità specificata, sostanzialmente, qualsiasi [evidenza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) particolare (nome sicuro, autore, zona e così via) scelta.  
   
@@ -56,7 +56,7 @@ public class Class1
 ```  
   
 ## <a name="excluding-classes-and-members-from-use-by-untrusted-code"></a>Esclusione di classi e membri dall'utilizzo da parte di codice non attendibile  
- Usare le dichiarazioni illustrate in questa sezione per impedire l'uso di specifiche classi e metodi, nonché proprietà ed eventi, da parte di codice parzialmente attendibile. Applicando tali dichiarazioni a una classe, è possibile applicare la protezione a tutti i relativi metodi, proprietà ed eventi. Si noti tuttavia che l'accesso al campo non è influenzato dalla protezione dichiarativa. Si noti inoltre che le richieste di collegamento aiutano a proteggere solo dai chiamanti immediati e potrebbero essere comunque soggette ad attacchi.  
+ Usare le dichiarazioni illustrate in questa sezione per impedire l'uso di specifiche classi e metodi, nonché proprietà ed eventi, da parte di codice parzialmente attendibile. Applicando queste dichiarazioni a una classe, si applica la protezione a tutti i relativi metodi, proprietà ed eventi. Tuttavia, l'accesso al campo non è influenzato dalla sicurezza dichiarativa. Si noti inoltre che le richieste di collegamento aiutano a proteggere solo dai chiamanti immediati e potrebbero essere comunque soggette ad attacchi.  
   
 > [!NOTE]
 > In .NET Framework 4 è stato introdotto un nuovo modello di trasparenza. Il [codice SecurityTransparent,](security-transparent-code-level-2.md) il modello di livello 2 identifica il codice sicuro con l' <xref:System.Security.SecurityCriticalAttribute> attributo. Il codice critico per la sicurezza richiede che chiamanti ed eredi siano completamente attendibili. Gli assembly in esecuzione con le regole di protezione dell'accesso al codice delle versioni precedenti di .NET Framework possono chiamare gli assembly di livello 2. In questo caso, gli attributi critici per la sicurezza verranno considerati come richieste di collegamento per l'attendibilità totale.  
@@ -237,7 +237,7 @@ class Implemented : ICanCastToMe
   
  Nelle versioni .NET Framework 1,0 e 1,1, è necessario essere a conoscenza di una sfumatura dell'accessibilità del sistema di tipi quando si conferma che il codice non è disponibile per altri assembly. Un metodo dichiarato **virtuale** e **interno** (che esegue l'overload di un elemento**Friend** in Visual Basic) può eseguire l'override della voce vtable della classe padre e può essere utilizzato solo dall'interno dello stesso assembly perché è interno. Tuttavia, l'accessibilità per l'override è determinata dalla parola chiave **Virtual** , che può essere sottoposta a override da un altro assembly, purché tale codice possa accedere alla classe stessa. Se la possibilità di un override presenta un problema, usare la sicurezza dichiarativa per correggerla o rimuovere la parola chiave **Virtual** se non è strettamente necessaria.  
   
- Si noti che anche se un compilatore di linguaggio impedisce questi override con un errore di compilazione, è possibile eseguire l'override per il codice scritto con altri compilatori.  
+ Anche se un compilatore di linguaggio impedisce tali sostituzioni con un errore di compilazione, è possibile che il codice scritto con altri compilatori esegua l'override.  
   
 ## <a name="see-also"></a>Vedere anche
 

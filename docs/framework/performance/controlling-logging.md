@@ -1,15 +1,16 @@
 ---
 title: Controllo della registrazione di .NET Framework
+description: Utilizzare Event Tracing for Windows (ETW) per controllare la registrazione .NET e gli eventi di registrazione Common Language Runtime (CLR). Usare strumenti come logman, Tracerpt e Xperf.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: e7d7d6e60b2f582a579f5811225f4027c37c7876
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 45d9244eb11b914fd203f24057e1b65c6bef18c2
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504107"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309586"
 ---
 # <a name="controlling-net-framework-logging"></a>Controllo della registrazione di .NET Framework
 
@@ -27,7 +28,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-Se il provider CLR non compare nell'elenco, è possibile installarlo in Windows Vista e nei sistemi operativi successivi tramite lo strumento da riga di comando [Wevtutil](/windows-server/administration/windows-commands/wevtutil) di Windows. Aprire la finestra del prompt dei comandi come amministratore. Modificare la directory dei messaggi di richiesta nella cartella .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET Version > \). Questa cartella contiene il file CLR-ETW.man. Al prompt dei comandi digitare il comando seguente per installare il provider CLR:
+Se il provider CLR non compare nell'elenco, è possibile installarlo in Windows Vista e nei sistemi operativi successivi tramite lo strumento da riga di comando [Wevtutil](/windows-server/administration/windows-commands/wevtutil) di Windows. Aprire la finestra del prompt dei comandi come amministratore. Modificare la directory dei messaggi di richiesta nella cartella .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64] \v4. \<.NET version> \ ). Questa cartella contiene il file CLR-ETW.man. Al prompt dei comandi digitare il comando seguente per installare il provider CLR:
 
 `wevtutil im CLR-ETW.man`
 

@@ -1,17 +1,18 @@
 ---
 title: Eventi ETW di CLR
+description: 'Vedere gli articoli sugli eventi ETW (Event Tracing for Windows) di Common Language Runtime (CLR). Sono disponibili due provider di eventi: provider di runtime e provider di rundown.'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-ms.openlocfilehash: e879dcf385acbc522c0a3573cfa374550ea23333
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 22a2f027462d67d5a933972a7420c5f0e38353e5
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504133"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309833"
 ---
 # <a name="clr-etw-events"></a>Eventi ETW di CLR
 Gli argomenti presenti in questa sezione descrivono gli eventi ETW (Event Tracing for Windows). A ogni evento sono associati una parola chiave e un livello, come descritto nell'argomento [Parole chiave e livelli ETW di CLR](clr-etw-keywords-and-levels.md). CLR dispone di due provider per gli eventi:  

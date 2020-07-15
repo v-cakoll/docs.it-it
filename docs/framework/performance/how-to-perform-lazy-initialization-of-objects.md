@@ -1,5 +1,6 @@
 ---
 title: "Procedura: eseguire l'inizializzazione lenta di oggetti"
+description: Vedere come eseguire l'inizializzazione differita di oggetti usando la classe System. Lazy <T> . L'inizializzazione differita indica che gli oggetti non vengono creati se non sono mai necessari.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
-ms.openlocfilehash: d89d19a7a3edb57dcd6c0e37e6688701da8b3713
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dbee0d8a5c3075ad7429feb92b87a566fdd35454
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180590"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309729"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>Procedura: eseguire l'inizializzazione lenta di oggetti
 La classe <xref:System.Lazy%601?displayProperty=nameWithType> semplifica le operazioni di inizializzazione differita e creazione di istanze di oggetti. L'inizializzazione di oggetti in modalità differita consente di evitare di doverli creare se non sono mai necessari oppure di posticiparne l'inizializzazione fino al primo accesso. Per altre informazioni, vedere [Inizializzazione differita](lazy-initialization.md).  

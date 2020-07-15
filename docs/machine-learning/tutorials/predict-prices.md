@@ -4,12 +4,12 @@ description: Questa esercitazione illustra come compilare un modello di regressi
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 27054e28f9a4fa628f0d7348d45528b690d7da83
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: beb48c9252b83cd693c351d39882b7ac9d08d882
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281771"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309716"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Esercitazione: stimare i prezzi usando la regressione con ML.NET
 
@@ -35,7 +35,7 @@ In questa esercitazione verranno illustrate le procedure per:
 
 1. Creare una directory *Data* nel progetto per archiviare il set di dati e i file di modello.
 
-1. Installare il pacchetto NuGet **Microsoft.ml** :
+1. Installare il pacchetto NuGet **Microsoft.ml** e **Microsoft. ml. FastTree** :
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
@@ -268,7 +268,7 @@ Per visualizzare la tariffa stimata della corsa specificata, aggiungere il codic
 
 Eseguire il programma per visualizzare la tariffa del taxi stimata per il test case.
 
-Congratulazioni! È stato creato un modello di machine learning per la stima delle tariffe delle corse in taxi e ne è stata valutata l'accuratezza, quindi il modello è stato usato per produrre stime. È possibile trovare il codice sorgente per questa esercitazione nel repository GitHub [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction).
+Congratulazioni. È stato creato un modello di machine learning per la stima delle tariffe delle corse in taxi e ne è stata valutata l'accuratezza, quindi il modello è stato usato per produrre stime. È possibile trovare il codice sorgente per questa esercitazione nel repository GitHub [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -2,12 +2,12 @@
 title: Migrazione dell'app di Windows Store a .NET Native
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 987669fc51eeaf7e3bdef3e91a2f1ce23164a055
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5e5c655d0e8d6f1730f27d35525692e110b3c80c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81389709"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309196"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Eseguire la migrazione dell'app di Windows Store a .NET Native
 
@@ -58,7 +58,7 @@ Il compilatore .NET Native può anche gestire i tipi generici comunemente usati 
 > [!NOTE]
 > È consigliabile testare accuratamente tutti i percorsi di codice dinamici quando si trasferisce l'app .NET Native.
 
-La configurazione predefinita per .NET Native è sufficiente per la maggior parte degli sviluppatori, ma alcuni sviluppatori potrebbero voler ottimizzare le loro configurazioni usando un file di direttive di runtime (Rd. Xml). Inoltre, in alcuni casi, il compilatore .NET Native non è in grado di determinare quali metadati devono essere disponibili per la reflection e si basa su hint, in particolare nei casi seguenti:
+La configurazione predefinita per .NET Native è sufficiente per la maggior parte degli sviluppatori, ma alcuni sviluppatori potrebbero voler ottimizzare le loro configurazioni usando un file di direttive di runtime (.rd.xml). Inoltre, in alcuni casi, il compilatore .NET Native non è in grado di determinare quali metadati devono essere disponibili per la reflection e si basa su hint, in particolare nei casi seguenti:
 
 - Alcuni costrutti come <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> e <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> non possono essere determinati staticamente.
 
@@ -79,7 +79,7 @@ In .NET Native:
 
 - La reflection privata su tipi e membri della libreria di classi .NET Framework non è supportata. È tuttavia possibile riflettere sui propri tipi e membri privati, nonché sui tipi e membri nelle librerie di terze parti.
 
-- La proprietà <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> restituisce correttamente `false` per un oggetto <xref:System.Reflection.ParameterInfo> che rappresenta un valore restituito. In .NET per applicazioni Windows Store, restituisce `true`. IL (Intermediate language) non supporta direttamente questa funzione, e quindi l'interpretazione viene lasciata al linguaggio.
+- La proprietà <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> restituisce correttamente `false` per un oggetto <xref:System.Reflection.ParameterInfo> che rappresenta un valore restituito. In .NET per applicazioni Windows Store, restituisce `true`. Intermediate Language (IL) non supporta direttamente questa operazione e l'interpretazione viene lasciata al linguaggio.
 
 - I membri pubblici sulle strutture <xref:System.RuntimeFieldHandle> e <xref:System.RuntimeMethodHandle> non sono supportati. Questi tipi sono supportati solo per LINQ, gli alberi delle espressioni e l'inizializzazione di matrice statica.
 
@@ -105,7 +105,7 @@ Nelle sezioni seguenti vengono elencati gli scenari e le API non supportati per 
 
 - [HttpClient](#HttpClient)
 
-- [Interop](#Interop)
+- [Interoperabilità](#Interop)
 
 - [API non supportate](#APIs)
 
@@ -278,7 +278,7 @@ Altre funzionalità di interoperabilità non supportate includono:
 
 - Delegati
 
-- Stringhe (Unicode, Ansi e HSTRING)
+- Stringhe (Unicode, ANSI e HSTRING)
 
 - Struct (`byref` e `byval`)
 
@@ -661,7 +661,7 @@ Usare gli strumenti di compilazione x86 usati per impostazione predefinita da Vi
 
 L'abilitazione di .NET Native in una libreria di unit test per un progetto di app di Windows Store non è supportata e causa la mancata compilazione del progetto.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Per iniziare](getting-started-with-net-native.md)
 - [Riferimento a file di configurazione di direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

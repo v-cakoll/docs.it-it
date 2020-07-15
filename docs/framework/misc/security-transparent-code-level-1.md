@@ -1,5 +1,6 @@
 ---
 title: Codice SecurityTransparent, livello 1
+description: Esaminare il modello di codice di trasparenza di livello 1, gli attributi di trasparenza e gli esempi di trasparenza della sicurezza.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: 6f6c6ecd9ecab8c531be971a0e7896994127beb8
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: c44fe3339f3bf24d266fa97487868ce090d51bb1
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645738"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309094"
 ---
 # <a name="security-transparent-code-level-1"></a>Codice SecurityTransparent, livello 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -59,7 +60,7 @@ ms.locfileid: "81645738"
 ## <a name="transparency-attributes"></a>Attributi di trasparenza  
  Nella tabella riportata di seguito vengono descritti i tre attributi da usare per annotare il codice per la trasparenza.  
   
-|Attributo|Description|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |<xref:System.Security.SecurityTransparentAttribute>|Consentito solo a livello di assembly. Identifica tutti i tipi e i membri nell'assembly come SecurityTransparent. L'assembly non può contenere codice SecurityCritical.|  
 |<xref:System.Security.SecurityCriticalAttribute>|Se usato a livello di assembly, senza la proprietà <xref:System.Security.SecurityCriticalAttribute.Scope%2A>, identifica tutto il codice nell'assembly come SecurityTransparent per impostazione predefinita, ma indica che l'assembly può contenere codice SecurityCritical.<br /><br /> Se usato a livello di classe, identifica la classe o il metodo come SecurityCritical, ma non i membri della classe. Per impostare tutti i membri come SecurityCritical, impostare la proprietà <xref:System.Security.SecurityCriticalAttribute.Scope%2A> su <xref:System.Security.SecurityCriticalScope.Everything>.<br /><br /> Se usato a livello di membro, l'attributo si applica solo a tale membro.<br /><br /> La classe o il membro identificato come SecurityCritical può eseguire le elevazioni dei privilegi. **Importante:**  Nella trasparenza di livello 1, i tipi e i membri critici per la sicurezza vengono considerati come critici per la sicurezza quando vengono chiamati dall'esterno dell'assembly. È necessario proteggere i tipi e i membri SecurityCritical con una richiesta di collegamento per l'attendibilità totale, per evitare l'elevazione dei privilegi non autorizzata.|  

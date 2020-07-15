@@ -8,12 +8,12 @@ helpviewer_keywords:
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-ms.openlocfilehash: 64c5b2455882ca121a6eeb0c0bbcbc4d04ed88cd
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 4338b3d0ab306501ea252407f386bdf89d191d6d
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281446"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309378"
 ---
 # <a name="securing-wrapper-code"></a>Protezione del codice wrapper
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -51,7 +51,7 @@ ms.locfileid: "86281446"
  Per evitare tali problemi di sicurezza, il Common Language Runtime estende il controllo in una richiesta di analisi dello stack completa su qualsiasi chiamata indiretta a un metodo, a un costruttore, a una proprietà o a un evento protetto da un **LinkDemand**. Questa protezione comporta costi in termini di prestazioni e richiede modifiche alla semantica del controllo di sicurezza. La richiesta di percorso stack completo potrebbe non riuscire se viene superato il più rapido controllo di un solo livello.  
   
 ## <a name="assembly-loading-wrappers"></a>Wrapper di caricamento assembly  
- Diversi metodi usati per caricare il codice gestito, tra cui <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, caricano gli assembly con l'evidenza del chiamante. Se si esegue il wrapping di uno di questi metodi, il sistema di sicurezza potrebbe usare le autorizzazioni del codice, invece delle autorizzazioni del chiamante del wrapper, per caricare gli assembly. Non è consigliabile consentire al codice considerato meno attendibile di caricare codice a cui sono state concesse autorizzazioni più elevate di quelle del chiamante del wrapper.  
+ Diversi metodi usati per caricare il codice gestito, tra cui <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, caricano gli assembly con l'evidenza del chiamante. Se si esegue il wrapping di uno di questi metodi, il sistema di sicurezza potrebbe usare le autorizzazioni del codice, invece delle autorizzazioni del chiamante del wrapper, per caricare gli assembly. Non consentire al codice meno attendibile di caricare il codice a cui vengono concesse autorizzazioni più elevate rispetto a quelle del chiamante al wrapper.  
   
  In questo modo il codice con attendibilità totale o con un'attendibilità considerevolmente maggiore di quella di un potenziale chiamante (incluso un chiamante con livello di autorizzazioni per Internet) potrebbe indebolire la sicurezza. Se il codice ha un metodo pubblico che accetta una matrice di byte e la passa a **assembly. Load**, creando in tal modo un assembly per conto del chiamante, potrebbe interrompere la protezione.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "86281446"
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
   
 ## <a name="demand-vs-linkdemand"></a>Demand e LinkDemand  
- La sicurezza dichiarativa offre due tipi di controlli di sicurezza che, pur essendo simili, eseguono verifiche molto diverse. È importante conoscerli entrambi perché la scelta sbagliata potrebbe indebolire la sicurezza o provocare una riduzione delle prestazioni.  
+ La sicurezza dichiarativa offre due tipi di controlli di sicurezza simili, ma eseguono controlli diversi. È opportuno comprendere entrambi i moduli, perché la scelta sbagliata può causare una perdita di sicurezza o di prestazioni.  
   
  La sicurezza dichiarativa offre i controlli di sicurezza seguenti:  
   

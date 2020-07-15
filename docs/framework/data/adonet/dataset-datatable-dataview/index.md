@@ -3,17 +3,18 @@ title: Oggetti DataSet, DataTable e DataView
 description: Vengono illustrati diversi modi per utilizzare un set di dati ADO.NET, una rappresentazione di dati residente in memoria che fornisce un modello di programmazione relazionale coerente.
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: f6562452261cbc1f7ee36fb264b858646a42e4f5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 53e12f701b9be1938d62f46bbeb6e63d95c03386
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286896"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374507"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>Oggetti DataSet, DataTable e DataView
+
 L'oggetto <xref:System.Data.DataSet> di ADO.NET è una rappresentazione di dati residente in memoria, che fornisce un modello di programmazione relazionale coerente indipendentemente dall'origine dati in esso contenuta. Un <xref:System.Data.DataSet> rappresenta un set completo di dati che include le tabelle in cui sono contenuti, ordinati e vincolati i dati e le relazioni tra le tabelle.  
   
- Per usare un <xref:System.Data.DataSet> sono disponibili numerosi metodi, che è possibile applicare singolarmente o in combinazione. è possibile:  
+Per usare un <xref:System.Data.DataSet> sono disponibili numerosi metodi, che è possibile applicare singolarmente o in combinazione. È possibile:  
   
 - Creare a livello di programmazione degli oggetti <xref:System.Data.DataTable>, <xref:System.Data.DataRelation> e <xref:System.Data.Constraint> all'interno di un <xref:System.Data.DataSet> e compilare le tabelle con i dati.  
   
@@ -21,9 +22,13 @@ L'oggetto <xref:System.Data.DataSet> di ADO.NET è una rappresentazione di dati 
   
 - Caricare e mantenere il contenuto del <xref:System.Data.DataSet> usando XML. Per altre informazioni, vedere [Uso di XML in un set di dati](using-xml-in-a-dataset.md).  
   
- Un <xref:System.Data.DataSet> tipizzato in modo sicuro può anche essere trasportato usando un servizio Web XML. Grazie alla struttura che lo caratterizza, il <xref:System.Data.DataSet> è ideale per il trasporto di dati tramite i servizi Web XML. Per una panoramica dei servizi Web XML, vedere [Panoramica dei servizi Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100)). Per un esempio di utilizzo di un <xref:System.Data.DataSet> da un servizio Web XML, vedere [Uso di un set di dati da un servizio Web XML](consuming-a-dataset-from-an-xml-web-service.md).  
+Un <xref:System.Data.DataSet> tipizzato in modo sicuro può anche essere trasportato usando un servizio Web XML. Grazie alla struttura che lo caratterizza, il <xref:System.Data.DataSet> è ideale per il trasporto di dati tramite i servizi Web XML. Per una panoramica dei servizi Web XML, vedere [Panoramica dei servizi Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100)). Per un esempio di utilizzo di un <xref:System.Data.DataSet> da un servizio Web XML, vedere [Uso di un set di dati da un servizio Web XML](consuming-a-dataset-from-an-xml-web-service.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione
+
+ [Indicazioni sulla sicurezza](security-guidance.md)  
+ Fornisce indicazioni sulla sicurezza per <xref:System.Data.DataSet> e <xref:System.Data.DataTable> .
+
  [Creazione di un set di dati](creating-a-dataset.md)  
  Viene descritta la sintassi per la creazione di un'istanza di un tipo <xref:System.Data.DataSet>.  
   
@@ -63,7 +68,8 @@ L'oggetto <xref:System.Data.DataSet> di ADO.NET è una rappresentazione di dati 
  [Utilizzo di un dataset da un servizio Web XML](consuming-a-dataset-from-an-xml-web-service.md)  
  Viene descritto come creare un servizio Web XML che usa un <xref:System.Data.DataSet> per trasportare i dati.  
   
-## <a name="related-sections"></a>Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate
+
  [Novità in ADO.NET](../whats-new.md)  
  Vengono descritte le nuove funzionalità di ADO.NET.  
   

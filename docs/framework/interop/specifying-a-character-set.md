@@ -11,14 +11,15 @@ helpviewer_keywords:
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-ms.openlocfilehash: a4f18431d89343a77ccf2b920edac485e7dcfca3
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 789753742d8714e481f038e323407cbab0499f6c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282125"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309794"
 ---
-# <a name="specifying-a-character-set"></a>Specifica di un set di caratteri
+# <a name="specify-a-character-set"></a>Specificare un set di caratteri
+
 Il campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> controlla il marshalling delle stringhe e determina in che modo la funzionalità platform invoke trova i nomi di funzione in una DLL. Questo argomento descrive entrambi i comportamenti.  
   
  Alcune API esportano due versioni delle funzioni che accettano argomenti stringa: narrow (ANSI) e wide (Unicode). L'API Windows, ad esempio, include i seguenti nomi di punto di ingresso per la funzione **MessageBox**:  
@@ -62,11 +63,12 @@ Il campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?display
   
 - La funzionalità platform invoke sceglie tra i formati ANSI e Unicode in fase di esecuzione, in base alla piattaforma di destinazione.  
   
-## <a name="specifying-a-character-set-in-visual-basic"></a>Specifica un set di caratteri in Visual Basic  
- L'esempio seguente dichiara la funzione **MessageBox** tre volte, ogni volta con un diverso comportamento per il set di caratteri. È possibile specificare il comportamento per il set di caratteri in Visual Basic aggiungendo la parola chiave **Ansi**, **Unicode** o **Auto** nell'istruzione di dichiarazione.  
-  
- Se si omette la parola chiave per il set di caratteri, come avviene nella prima istruzione di dichiarazione, il campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> usa il set di caratteri ANSI per impostazione predefinita. La seconda e la terza istruzione nell'esempio specificano in modo esplicito un set di caratteri con una parola chiave.  
-  
+## <a name="specify-a-character-set-in-visual-basic"></a>Specificare un set di caratteri in Visual Basic
+
+È possibile specificare il comportamento del set di caratteri in Visual Basic aggiungendo `Ansi` la `Unicode` `Auto` parola chiave, o all'istruzione di dichiarazione. Se si omette la parola chiave set di caratteri, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> per impostazione predefinita il campo viene impostato sul set di caratteri ANSI.
+
+L'esempio seguente dichiara la funzione **MessageBox** tre volte, ogni volta con un diverso comportamento per il set di caratteri. La prima istruzione omette la parola chiave del set di caratteri, quindi il set di caratteri predefinito è ANSI. La seconda e la terza istruzione specificano in modo esplicito un set di caratteri con una parola chiave.
+
 ```vb
 Friend Class NativeMethods
     Friend Declare Function MessageBoxA Lib "user32.dll" (
@@ -89,8 +91,9 @@ Friend Class NativeMethods
 End Class
 ```
   
-## <a name="specifying-a-character-set-in-c-and-c"></a>Specifica di un set di caratteri in C# e C++  
- Il campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> identifica il set di caratteri sottostante come ANSI o Unicode. Il set di caratteri controlla la modalità di marshalling degli argomenti stringa per un metodo. Usare una delle forme seguenti per indicare il set di caratteri:  
+## <a name="specify-a-character-set-in-c-and-c"></a>Specificare un set di caratteri in C# e C++
+
+Il campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> identifica il set di caratteri sottostante come ANSI o Unicode. Il set di caratteri controlla la modalità di marshalling degli argomenti stringa per un metodo. Usare una delle forme seguenti per indicare il set di caratteri:  
   
 ```csharp
 [DllImport("DllName", CharSet = CharSet.Ansi)]

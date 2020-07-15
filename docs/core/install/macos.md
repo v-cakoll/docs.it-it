@@ -4,18 +4,18 @@ description: Informazioni sulle versioni di macOS in cui è possibile installare
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: bb1a0fa24e2f6e8850cbe59378793ff846f04ba9
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 2900d98dbd30c51f689cdce37ea273ccc4f598b5
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85804491"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308923"
 ---
 # <a name="install-net-core-on-macos"></a>Installare .NET Core in macOS
 
 > [!div class="op_single_selector"]
 >
-> - [Eseguire l'installazione in Windows](windows.md)
+> - [Installare in Windows](windows.md)
 > - [Eseguire l'installazione in macOS](macos.md)
 > - [Installare in Linux](linux.md)
 
@@ -23,7 +23,8 @@ Questo articolo illustra come installare .NET Core in macOS. .NET Core è costit
 
 La versione più recente di .NET Core è 3,1.
 
-[Scarica .NET Core.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Download di .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>Versioni supportate
 
@@ -59,15 +60,17 @@ Esegue ASP.NET Core app. Include il runtime di .NET Core.
 *Runtime di .NET Core*\
 Questo runtime è il runtime più semplice e non include altri Runtime. Si consiglia di installare *ASP.NET Core Runtime* per la compatibilità ottimale con le app .NET Core.
 
-[Scaricare il runtime di .NET Core.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Scaricare il runtime di .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>Informazioni SDK
 
 L'SDK viene usato per creare e pubblicare app e librerie .NET Core. L'installazione dell'SDK include entrambi i [Runtime](#runtime-information): ASP.NET Core e .NET Core.
 
-[Scaricare .NET Core SDK.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Download di .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core)
 
-## <a name="dependencies"></a>Dependencies
+## <a name="dependencies"></a>Dipendenze
 
 .NET Core è supportato nelle versioni di macOS seguenti:
 
