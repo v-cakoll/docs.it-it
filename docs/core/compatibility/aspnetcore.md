@@ -2,15 +2,15 @@
 title: ASP.NET Core modifiche di rilievo
 titleSuffix: ''
 description: Elenca le modifiche di rilievo in ASP.NET Core.
-ms.date: 07/13/2020
+ms.date: 07/14/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 75f33e7d6d76206ebe46b1a229ccb152d79ddc61
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: b73492e0c2f60c2b214984d3987de1e9e6530847
+ms.sourcegitcommit: d4f7ba08f2a45a9dbef53be597eed6d4a9410f29
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309560"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86402004"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core modifiche di rilievo
 
@@ -71,6 +71,7 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 - [MVC: tipi modificati in Internal](#mvc-pubternal-types-changed-to-internal)
 - [MVC: shim di compatibilità API Web rimosso](#mvc-web-api-compatibility-shim-removed)
 - [Razor: la compilazione di runtime è stata spostata in un pacchetto](#razor-runtime-compilation-moved-to-a-package)
+- [Sicurezza: codifica del nome del cookie rimossa](#security-cookie-name-encoding-removed)
 - [Sicurezza: IdentityModel versioni del pacchetto NuGet aggiornate](#security-identitymodel-nuget-package-versions-updated)
 - [Stato sessione: API obsolete rimosse](#session-state-obsolete-apis-removed)
 - [Framework condiviso: rimozione di assembly da Microsoft. AspNetCore. app](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
@@ -138,6 +139,10 @@ In questa pagina sono documentate le modifiche di rilievo seguenti:
 ***
 
 [!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
+[!INCLUDE[Security: Cookie name encoding removed](~/includes/core-changes/aspnetcore/5.0/security-cookie-name-encoding-removed.md)]
 
 ***
 

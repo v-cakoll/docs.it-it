@@ -3,12 +3,12 @@ title: Linee guida sulla sicurezza di DataSet e DataTable
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: c6b32afeadccc3fd22d6611d282840233280440f
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: f78b52ede4ec76599d761e5188f39c3e9dae2a4f
+ms.sourcegitcommit: 98548968e89739a37625e72ddbd535fe1e11121e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86382458"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405292"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Linee guida sulla sicurezza di DataSet e DataTable
 
@@ -195,7 +195,8 @@ Una volta abilitata la modalità di controllo, è possibile usare _App.config_ p
 
 Per altre informazioni su `TraceSource` e `TraceListener` , vedere il documento [procedura: usare TraceSource e filtri con i listener di traccia](/dotnet/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners).
 
-**Nota**: l'esecuzione di un'app in modalità di controllo non è disponibile in .NET Core o in .NET 5,0 e versioni successive.
+> [!NOTE]
+> L'esecuzione di un'app in modalità di controllo non è disponibile in .NET Core o in .NET 5,0 e versioni successive.
 
 <a name="ratr"></a>
 
@@ -207,7 +208,7 @@ Se un'app deve rimuovere tutte le restrizioni di limitazione dei tipi da `DataSe
 * Le opzioni disponibili dipendono dal Framework a cui è destinata l'app.
 
 > [!WARNING]
-> La rimozione di tutte le restrizioni del tipo può introdurre un problema di sicurezza all'interno dell'app. Quando si usa questo meccanismo, assicurarsi che l'app **non** usi `DataSet` o `DataTable` per leggere input non attendibile. Per altre informazioni, vedere [CVE-2020-1147](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1147) e la sezione seguente intitolata [Safety per quanto riguarda l'input non attendibile](#swr).
+> La rimozione di tutte le restrizioni del tipo può introdurre un problema di sicurezza all'interno dell'app. Quando si usa questo meccanismo, assicurarsi che l'app **non** usi `DataSet` o `DataTable` per leggere input non attendibile. Per altre informazioni, vedere [CVE-2020-1147](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1147) e la sezione seguente intitolata [Safety per quanto riguarda l'input non attendibile](#swr).
 
 #### <a name="through-appcontext-configuration-net-framework-46---48-net-core-21-and-later-net-50-and-later"></a>Tramite la configurazione di AppContext (.NET Framework 4,6-4,8, .NET Core 2,1 e versioni successive, .NET 5,0 e versioni successive)
 
@@ -272,7 +273,7 @@ Se `AppContext` non è disponibile, i controlli di limitazione dei tipi possono 
 | **Chiave del Registro di sistema** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
 | **Nome del valore** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |
 | **Tipo di valore** | `REG_SZ` |
-| **Dati valore** | `true` |
+| **Dati del valore** | `true` |
 
 In un sistema operativo a 64 bit, questo valore deve essere aggiunto sia per la chiave a 64 bit (mostrata in precedenza) sia per la chiave 32 bit. La chiave a 32 bit si trova in `HKLM\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\AppContext` .
 
@@ -463,7 +464,8 @@ public class MyClass
 
 La deserializzazione di un oggetto `DataSet` o `DataTable` in questo modo da un BLOB JSON non attendibile non è sicura. Questo modello è vulnerabile a un attacco di tipo Denial of Service. Un attacco di questo tipo potrebbe causare l'arresto anomalo dell'app o il rendering non risponde.
 
-**Nota**: Microsoft non garantisce né supporta l'implementazione di librerie di terze parti come _Newtonsoft.Json_. Queste informazioni vengono fornite per completezza ed è accurate al momento della stesura di questo articolo.
+> [!NOTE]
+> Microsoft non garantisce né supporta l'implementazione di librerie di terze parti come _Newtonsoft.Json_. Queste informazioni vengono fornite per completezza ed è accurate al momento della stesura di questo articolo.
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>Deserializzare un DataSet o un DataTable tramite BinaryFormatter
 
