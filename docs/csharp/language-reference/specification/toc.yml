@@ -1,4 +1,4 @@
-- name: 'Bozza di specifica C# 6.0'
+- name: Bozza di specifica C# 6.0
   items:
     - name: Introduzione
       href: ../../../../_csharplang/spec/introduction.md
@@ -14,9 +14,9 @@
       href: ../../../../_csharplang/spec/conversions.md
     - name: Espressioni
       href: ../../../../_csharplang/spec/expressions.md
-    - name: Statements (Istruzioni)
+    - name: Istruzioni
       href: ../../../../_csharplang/spec/statements.md
-    - name: Namespaces
+    - name: Spazi dei nomi
       href: ../../../../_csharplang/spec/namespaces.md
     - name: Classi
       href: ../../../../_csharplang/spec/classes.md

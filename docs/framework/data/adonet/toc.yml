@@ -177,14 +177,14 @@
               href: loading-data-into-a-dataset.md
             - name: Download di database di esempio
               href: downloading-sample-databases-linq-to-dataset.md
-            - name: 'Procedura: creare un progetto LINQ to DataSet in Visual Studio'
+            - name: 'Procedura: Creare un progetto LINQ to DataSet in Visual Studio'
               href: how-to-create-a-linq-to-dataset-project-in-vs.md
         - name: Guida per programmatori
           href: programming-guide-linq-to-dataset.md
           items:
             - name: Query in LINQ to DataSet
               href: queries-in-linq-to-dataset.md
-            - name: Esecuzione di query su dataset
+            - name: Esecuzione di query su oggetti DataSet
               href: querying-datasets-linq-to-dataset.md
               items:
                 - name: Query su singola tabella
@@ -197,7 +197,7 @@
               href: comparing-datarows-linq-to-dataset.md
             - name: Creazione di un oggetto DataTable da una query
               href: creating-a-datatable-from-a-query-linq-to-dataset.md
-            - name: 'Procedura: implementare CopyToDataTable<T> in cui il tipo generico T non un oggetto DataRow'
+            - name: 'Procedura: Implementare CopyToDataTable<T> in cui il tipo generico T non è un oggetto DataRow'
               href: implement-copytodatatable-where-type-not-a-datarow.md
             - name: Metodi generici Field e SetField
               href: generic-field-and-setfield-methods-linq-to-dataset.md
@@ -214,11 +214,11 @@
                   href: querying-the-datarowview-collection-in-a-dataview.md
                 - name: Prestazioni di DataView
                   href: dataview-performance.md
-                - name: 'Procedura: associare un oggetto DataView a un controllo DataGridView Windows Form'
+                - name: 'Procedura: Associare un oggetto DataView a un controllo DataGridView di Windows Form'
                   href: how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md
             - name: Debug di query di LINQ to DataSet
               href: debugging-linq-to-dataset-queries.md
-            - name: Sicurezza
+            - name: Security
               href: security-linq-to-dataset.md
             - name: Esempi di LINQ to DataSet
               href: linq-to-dataset-examples.md
@@ -232,7 +232,7 @@
                       href: query-expression-syntax-examples-restriction-linq-to-dataset.md
                     - name: Partizionamento
                       href: query-expression-syntax-examples-partitioning.md
-                    - name: Ordinazioni
+                    - name: Ordering
                       href: query-expression-syntax-examples-ordering-linq-to-dataset.md
                     - name: Operatori di elemento
                       href: query-expression-syntax-examples-element-operators.md
@@ -247,7 +247,7 @@
                       href: method-based-query-syntax-examples-projection.md
                     - name: Partizionamento
                       href: method-based-query-syntax-examples-partitioning-linq.md
-                    - name: Ordinazioni
+                    - name: Ordering
                       href: method-based-query-syntax-examples-ordering-linq-to-dataset.md
                     - name: Operatori Set
                       href: method-based-query-syntax-examples-set-operators.md
@@ -266,11 +266,11 @@
   items:
     - name: Concetti chiave di Entity Data Model
       href: entity-data-model-key-concepts.md
-    - name: 'Entity Data Model: spazi dei nomi'
+    - name: 'Entity Data Model: Spazi dei nomi'
       href: entity-data-model-namespaces.md
     - name: 'Entity Data Model: tipi di dati primitivi'
       href: entity-data-model-primitive-data-types.md
-    - name: 'Entity Data Model: ereditarietà'
+    - name: 'Entity Data Model: Ereditarietà'
       href: entity-data-model-inheritance.md
     - name: entità finale dell'associazione
       href: association-end.md
@@ -302,7 +302,7 @@
       href: model-defined-function.md
     - name: proprietà di navigazione
       href: navigation-property.md
-    - name: Proprietà
+    - name: proprietà
       href: property.md
     - name: vincolo di integrità referenziale
       href: referential-integrity-constraint.md

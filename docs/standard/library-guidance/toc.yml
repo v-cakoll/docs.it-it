@@ -16,7 +16,7 @@
           href: sourcelink.md
         - name: Pubblicazione
           href: publish-nuget-package.md
-    - name: Versionamento
+    - name: Controllo delle versioni
       href: versioning.md
       items:
         - name: Modifiche che causano un'interruzione

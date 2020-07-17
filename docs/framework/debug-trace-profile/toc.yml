@@ -16,15 +16,15 @@
           href: how-to-create-initialize-and-configure-trace-switches.md
         - name: Listener di traccia
           href: trace-listeners.md
-        - name: 'Procedura: utilizzare TraceSource e filtri con listener di traccia'
+        - name: 'Procedura: Usare TraceSource e filtri con listener di traccia'
           href: how-to-use-tracesource-and-filters-with-trace-listeners.md
-        - name: 'Procedura: creare e inizializzare listener di traccia'
+        - name: 'Procedura: Creare e inizializzare listener di traccia'
           href: how-to-create-and-initialize-trace-listeners.md
-        - name: 'Procedura: creare e inizializzare origini di traccia'
+        - name: 'Procedura: Creare e inizializzare origini di traccia'
           href: how-to-create-and-initialize-trace-sources.md
-        - name: 'Procedura: aggiungere istruzioni di traccia al codice dell''applicazione'
+        - name: 'Procedura: Aggiungere istruzioni di traccia al codice dell''applicazione'
           href: how-to-add-trace-statements-to-application-code.md
-        - name: 'Procedura: compilare in modo condizionale con traccia e debug'
+        - name: 'Procedura: Compilare in modo condizionale con traccia e debug'
           href: how-to-compile-conditionally-with-trace-and-debug.md
     - name: Diagnostica degli errori tramite gli assistenti al debug gestito
       href: diagnosing-errors-with-managed-debugging-assistants.md
@@ -83,7 +83,7 @@
           href: loadfromcontext-mda.md
         - name: marshalCleanupError
           href: marshalcleanuperror-mda.md
-        - name: marshalling
+        - name: marshaling
           href: marshaling-mda.md
         - name: memberInfoCacheCreation
           href: memberinfocachecreation-mda.md
@@ -103,7 +103,7 @@
           href: pinvokestackimbalance-mda.md
         - name: raceOnRCWCleanup
           href: raceonrcwcleanup-mda.md
-        - name: rientranza
+        - name: reentrancy
           href: reentrancy-mda.md
         - name: releaseHandleFailed
           href: releasehandlefailed-mda.md

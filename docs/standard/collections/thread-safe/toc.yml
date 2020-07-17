@@ -3,17 +3,17 @@
   items:
     - name: Panoramica di BlockingCollection
       href: blockingcollection-overview.md
-    - name: Quando usare una raccolta thread-safe
+    - name: Quando utilizzare una raccolta thread-safe
       href: when-to-use-a-thread-safe-collection.md
     - name: 'Procedura: Aggiungere e rimuovere singoli elementi di un oggetto BlockingCollection'
       href: how-to-add-and-take-items.md
-    - name: 'Procedura: utilizzare ForEach per rimuovere elementi in un oggetto BlockingCollection'
+    - name: 'Procedura: Usare ForEach per rimuovere elementi in un oggetto BlockingCollection'
       href: how-to-use-foreach-to-remove.md
-    - name: 'Procedura: aggiungere e rimuovere elementi da un oggetto ConcurrentDictionary'
+    - name: 'Procedura: Aggiungere e rimuovere elementi da un oggetto ConcurrentDictionary'
       href: how-to-add-and-remove-items.md
     - name: 'Procedura: Aggiungere funzionalità di delimitazione e blocco a una raccolta'
       href: how-to-add-bounding-and-blocking.md
-    - name: 'Procedura: utilizzare matrici di raccolte di blocco in una pipeline'
+    - name: 'Procedura: Usare matrici di raccolte di blocco in una pipeline'
       href: how-to-use-arrays-of-blockingcollections.md
     - name: 'Procedura: Creare un pool di oggetti con un oggetto ConcurrentBag'
       href: how-to-create-an-object-pool.md

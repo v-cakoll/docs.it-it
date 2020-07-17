@@ -4,7 +4,7 @@
     - name: Grafica e disegno in Windows Form
       href: graphics-and-drawing-in-windows-forms.md
       items:
-        - name: Cenni preliminari sulla grafica
+        - name: Panoramica sulla grafica
           href: graphics-overview-windows-forms.md
           items:
             - name: Cenni preliminari sulla grafica
@@ -69,145 +69,145 @@
             - name: Guida introduttiva alla programmazione grafica
               href: getting-started-with-graphics-programming.md
               items:
-                - name: 'Procedura: creare oggetti Graphics per disegnare'
+                - name: 'Procedura: Creare oggetti Graphics per disegnare'
                   href: how-to-create-graphics-objects-for-drawing.md
-                - name: 'Procedura: creare un oggetto Pen'
+                - name: 'Procedura: Creare un oggetto Pen'
                   href: how-to-create-a-pen.md
-                - name: 'Procedura: impostare il colore di un oggetto Pen'
+                - name: 'Procedura: Impostare il colore di un oggetto Pen'
                   href: how-to-set-the-color-of-a-pen.md
-                - name: 'Procedura: creare un oggetto Solid Brush'
+                - name: 'Procedura: Creare un oggetto Solid Brush'
                   href: how-to-create-a-solid-brush.md
-                - name: 'Procedura: disegnare una linea in un Windows Form'
+                - name: 'Procedura: Disegnare una linea in un Windows Form'
                   href: how-to-draw-a-line-on-a-windows-form.md
-                - name: 'Procedura: creare una forma con contorno'
+                - name: 'Procedura: Disegnare una forma con contorno'
                   href: how-to-draw-an-outlined-shape.md
-                - name: 'Procedura: disegnare un rettangolo con riempimento in un Windows Form'
+                - name: 'Procedura: Disegnare un rettangolo pieno in un Windows Form'
                   href: how-to-draw-a-filled-rectangle-on-a-windows-form.md
-                - name: 'Procedura: disegnare un''ellisse con riempimento in un Windows Form'
+                - name: 'Procedura: Disegnare un''ellisse piena in un Windows Form'
                   href: how-to-draw-a-filled-ellipse-on-a-windows-form.md
-                - name: 'Procedura: disegnare testo in un Windows Form'
+                - name: 'Procedura: Disegnare testo in un Windows Form'
                   href: how-to-draw-text-on-a-windows-form.md
-                - name: 'Procedura: disegnare testo verticale in un Windows Form'
+                - name: 'Procedura: Disegnare testo verticale in un Windows Form'
                   href: how-to-draw-vertical-text-on-a-windows-form.md
-                - name: 'Procedura: eseguire il rendering delle immagini con GDI+'
+                - name: 'Procedura: Eseguire il rendering delle immagini con GDI+'
                   href: how-to-render-images-with-gdi.md
-                - name: 'Procedura: creare un Windows Form con una forma'
+                - name: 'Procedura: Creare un Windows Form con una forma'
                   href: how-to-create-a-shaped-windows-form.md
-                - name: 'Procedura: copiare i pixel per ridurre lo sfarfallio in Windows Form'
+                - name: 'Procedura: Copiare i pixel per ridurre lo sfarfallio nei Windows Form'
                   href: how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md
             - name: Utilizzo di un oggetto Pen per creare linee e forme
               href: using-a-pen-to-draw-lines-and-shapes.md
               items:
-                - name: 'Procedura: utilizzare un oggetto Pen per disegnare linee'
+                - name: 'Procedura: Usare un oggetto Pen per disegnare linee'
                   href: how-to-use-a-pen-to-draw-lines.md
-                - name: 'Procedura: utilizzare un oggetto Pen per disegnare rettangoli'
+                - name: 'Procedura: Usare un oggetto Pen per disegnare rettangoli'
                   href: how-to-use-a-pen-to-draw-rectangles.md
-                - name: 'Procedura: impostare la larghezza e l''allineamento di un oggetto Pen'
+                - name: 'Procedura: Impostare la larghezza e l''allineamento di un oggetto Pen'
                   href: how-to-set-pen-width-and-alignment.md
-                - name: 'Procedura: disegnare una linea con estremità'
+                - name: 'Procedura: Disegnare una linea con estremità'
                   href: how-to-draw-a-line-with-line-caps.md
-                - name: 'Procedura: unire linee'
+                - name: 'Procedura: Unire le linee'
                   href: how-to-join-lines.md
-                - name: 'Procedura: disegnare una linea tratteggiata personalizzata'
+                - name: 'Procedura: Disegnare una linea tratteggiata personalizzata'
                   href: how-to-draw-a-custom-dashed-line.md
-                - name: 'Procedura: disegnare una linea con riempimento a trama'
+                - name: 'Procedura: Disegnare una linea con riempimento a trama'
                   href: how-to-draw-a-line-filled-with-a-texture.md
             - name: Utilizzo di un oggetto Brush per il riempimento di forme
               href: using-a-brush-to-fill-shapes.md
               items:
-                - name: 'Procedura: riempire una forma con un colore a tinta unita'
+                - name: 'Procedura: Riempire una forma con un colore a tinta unita'
                   href: how-to-fill-a-shape-with-a-solid-color.md
-                - name: 'Procedura: riempire una forma con un motivo a tratteggio'
+                - name: 'Procedura: Riempire una forma con un motivo di tratteggio'
                   href: how-to-fill-a-shape-with-a-hatch-pattern.md
-                - name: 'Procedura: riempire una forma con una trama basata su un''immagine'
+                - name: 'Procedura: Riempire una forma con una trama basata su un''immagine'
                   href: how-to-fill-a-shape-with-an-image-texture.md
-                - name: 'Procedura: riempire una forma con immagini affiancate'
+                - name: 'Procedura: Riempire una forma con immagini affiancate'
                   href: how-to-tile-a-shape-with-an-image.md
             - name: Utilizzo di un pennello a sfumatura per il riempimento di forme
               href: using-a-gradient-brush-to-fill-shapes.md
               items:
-                - name: 'Procedura: creare una sfumatura lineare'
+                - name: 'Procedura: Creare una sfumatura lineare'
                   href: how-to-create-a-linear-gradient.md
-                - name: 'Procedura: creare una sfumatura percorso'
+                - name: 'Procedura: Creare una sfumatura percorso'
                   href: how-to-create-a-path-gradient.md
-                - name: 'Procedura: applicare la correzione gamma a una sfumatura'
+                - name: 'Procedura: Applicare la correzione gamma a una sfumatura'
                   href: how-to-apply-gamma-correction-to-a-gradient.md
             - name: 'Utilizzo di immagini, bitmap, icone e metafile'
               href: working-with-images-bitmaps-icons-and-metafiles.md
               items:
-                - name: 'Procedura: disegnare una bitmap esistente sullo schermo'
+                - name: 'Procedura: Disegnare una bitmap esistente sullo schermo'
                   href: how-to-draw-an-existing-bitmap-to-the-screen.md
-                - name: 'Procedura: caricare e visualizzare metafile'
+                - name: 'Procedura: Caricare e visualizzare metafile'
                   href: how-to-load-and-display-metafiles.md
-                - name: 'Procedura: ritagliare e adattare immagini'
+                - name: 'Procedura: Ritagliare e modificare le dimensioni di immagini'
                   href: how-to-crop-and-scale-images.md
-                - name: 'Procedura: ruotare, riflettere e inclinare immagini'
+                - name: 'Procedura: Ruotare, capovolgere e inclinare immagini'
                   href: how-to-rotate-reflect-and-skew-images.md
-                - name: 'Procedura: utilizzare la modalità di interpolazione per controllare la qualità dell''immagine durante l''adattamento'
+                - name: 'Procedura: Usare la modalità di interpolazione per controllare la qualità dell''immagine durante il ridimensionamento'
                   href: how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md
-                - name: 'Procedura: creare miniature'
+                - name: 'Procedura: Creare miniature'
                   href: how-to-create-thumbnail-images.md
-                - name: 'Procedura: migliorare le prestazioni evitando l''adattamento automatico'
+                - name: 'Procedura: Migliorare le prestazioni evitando il ridimensionamento automatico'
                   href: how-to-improve-performance-by-avoiding-automatic-scaling.md
-                - name: 'Procedura: leggere i metadati delle immagini'
+                - name: 'Procedura: Leggere i metadati delle immagini'
                   href: how-to-read-image-metadata.md
-                - name: 'Procedura: creare un oggetto Bitmap in fase di esecuzione'
+                - name: 'Procedura: Creare una bitmap in fase di esecuzione'
                   href: how-to-create-a-bitmap-at-run-time.md
-                - name: 'Procedura: estrarre l''icona associata a un file in Windows Form'
+                - name: 'Procedura: Estrarre l''icona associata a un file in Windows Form'
                   href: how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md
             - name: Linee e riempimenti con fusione alfa
               href: alpha-blending-lines-and-fills.md
               items:
-                - name: 'Procedura: disegnare linee opache e semitrasparenti'
+                - name: 'Procedura: Disegnare linee opache e semitrasparenti'
                   href: how-to-draw-opaque-and-semitransparent-lines.md
-                - name: 'Procedura: disegnare con pennelli opachi e semitrasparenti'
+                - name: 'Procedura: Disegnare con pennelli opachi e semitrasparenti'
                   href: how-to-draw-with-opaque-and-semitransparent-brushes.md
-                - name: 'Procedura: utilizzare la modalità di composizione per controllare la fusione alfa'
+                - name: 'Procedura: Usare la modalità di composizione per controllare la fusione alfa'
                   href: how-to-use-compositing-mode-to-control-alpha-blending.md
-                - name: 'Procedura: utilizzare una matrice di colori per impostare i valori alfa nelle immagini'
+                - name: 'Procedura: Usare una matrice di colori per impostare i valori alfa nelle immagini'
                   href: how-to-use-a-color-matrix-to-set-alpha-values-in-images.md
             - name: Utilizzo di tipi di carattere e testo
               href: using-fonts-and-text.md
               items:
-                - name: 'Procedura: creare caratteri e gruppi di caratteri'
+                - name: 'Procedura: Creare tipi di carattere e famiglie di caratteri'
                   href: how-to-construct-font-families-and-fonts.md
-                - name: 'Procedura: creare testo in una posizione specificata'
+                - name: 'Procedura: Disegnare testo in una posizione specificata'
                   href: how-to-draw-text-at-a-specified-location.md
-                - name: 'Procedura: creare testo disposto su più righe in un rettangolo'
+                - name: 'Procedura: Disegnare testo disposto su più righe in un rettangolo'
                   href: how-to-draw-wrapped-text-in-a-rectangle.md
-                - name: 'Procedura: creare testo con GDI'
+                - name: 'Procedura: Disegnare testo con GDI'
                   href: how-to-draw-text-with-gdi.md
-                - name: 'Procedura: allineare il testo creato'
+                - name: 'Procedura: Allineare il testo disegnato'
                   href: how-to-align-drawn-text.md
-                - name: 'Procedura: creare testo verticale'
+                - name: 'Procedura: Creare testo verticale'
                   href: how-to-create-vertical-text.md
-                - name: 'Procedura: impostare punti di tabulazione nel testo disegnato'
+                - name: 'Procedura: Impostare tabulazioni nel testo disegnato'
                   href: how-to-set-tab-stops-in-drawn-text.md
-                - name: 'Procedura: enumerare i tipi di carattere installati'
+                - name: 'Procedura: Enumerare i tipi di carattere installati'
                   href: how-to-enumerate-installed-fonts.md
-                - name: 'Procedura: creare una raccolta di caratteri privata'
+                - name: 'Procedura: Creare una raccolta di tipi di carattere privata'
                   href: how-to-create-a-private-font-collection.md
-                - name: 'Procedura: recuperare i criteri di misurazione dei caratteri'
+                - name: 'Procedura: Ottenere le misure dei tipi di carattere'
                   href: how-to-obtain-font-metrics.md
-                - name: 'Procedura: utilizzare l''antialiasing nel testo'
+                - name: 'Procedura: Usare l''antialiasing nel testo'
                   href: how-to-use-antialiasing-with-text.md
             - name: Costruzione e creazione di curve
               href: constructing-and-drawing-curves.md
               items:
-                - name: 'Procedura: disegnare spline di tipo Cardinal'
+                - name: 'Procedura: Disegnare cardinal spline'
                   href: how-to-draw-cardinal-splines.md
-                - name: 'Procedura: disegnare una singola spline di Bézier'
+                - name: 'Procedura: Disegnare una singola spline di Bézier'
                   href: how-to-draw-a-single-bezier-spline.md
-                - name: 'Procedura: disegnare una sequenza di spline di Bézier'
+                - name: 'Procedura: Disegnare una sequenza di spline di Bézier'
                   href: how-to-draw-a-sequence-of-bezier-splines.md
             - name: Costruzione e creazione di percorsi
               href: constructing-and-drawing-paths.md
               items:
-                - name: 'Procedura: creare figure da linee, curve e forme'
+                - name: 'Procedura: Creare figure da linee, curve e forme'
                   href: how-to-create-figures-from-lines-curves-and-shapes.md
-                - name: 'Procedura: riempire figure aperte'
+                - name: 'Procedura: Riempire figure aperte'
                   href: how-to-fill-open-figures.md
-                - name: 'Procedura: trasformare un percorso curvo in una linea'
+                - name: 'Procedura: Appiattire un percorso curvo in una linea'
                   href: how-to-flatten-a-curved-path-into-a-line.md
             - name: Utilizzo di trasformazioni nel codice gestito GDI+
               href: using-transformations-in-managed-gdi.md
@@ -226,35 +226,35 @@
             - name: Utilizzo delle regioni
               href: using-regions.md
               items:
-                - name: 'Procedura: eseguire l''hit testing utilizzando una regione'
+                - name: 'Procedura: Eseguire l''hit testing usando una regione'
                   href: how-to-use-hit-testing-with-a-region.md
-                - name: 'Procedura: definire l''area di visualizzazione utilizzando una regione'
+                - name: 'Procedura: Usare il ritaglio per definire una regione'
                   href: how-to-use-clipping-with-a-region.md
             - name: Ricolorazione di immagini
               href: recoloring-images.md
               items:
-                - name: 'Procedura: utilizzare una matrice di colori per trasformare un singolo colore'
+                - name: 'Procedura: Usare una matrice di colori per trasformare un singolo colore'
                   href: how-to-use-a-color-matrix-to-transform-a-single-color.md
-                - name: 'Procedura: convertire i colori delle immagini'
+                - name: 'Procedura: Convertire i colori delle immagini'
                   href: how-to-translate-image-colors.md
                 - name: Utilizzo delle trasformazioni per scalare i colori
                   href: using-transformations-to-scale-colors.md
-                - name: 'Procedura: ruotare i colori'
+                - name: 'Procedura: Ruotare i colori'
                   href: how-to-rotate-colors.md
-                - name: 'Procedura: variare le componenti cromatiche'
+                - name: 'Procedura: Variare le componenti cromatiche'
                   href: how-to-shear-colors.md
-                - name: 'Procedura: utilizzare una tabella di riassociazione cromatica'
+                - name: 'Procedura: Usare una tabella per modificare il mapping dei colori'
                   href: how-to-use-a-color-remap-table.md
             - name: Utilizzo di codificatori e decodificatori di immagini nel codice gestito GDI+
               href: using-image-encoders-and-decoders-in-managed-gdi.md
               items:
-                - name: 'Procedura: elencare i codificatori installati'
+                - name: 'Procedura: Elencare i codificatori installati'
                   href: how-to-list-installed-encoders.md
-                - name: 'Procedura: elencare i decodificatori installati'
+                - name: 'Procedura: Elencare i decodificatori installati'
                   href: how-to-list-installed-decoders.md
-                - name: 'Procedura: determinare i parametri supportati da un codificatore'
+                - name: 'Procedura: Determinare i parametri supportati da un codificatore'
                   href: how-to-determine-the-parameters-supported-by-an-encoder.md
-                - name: 'Procedura: convertire un''immagine BMP in un''immagine PNG'
+                - name: 'Procedura: Convertire un''immagine BMP in un''immagine PNG'
                   href: how-to-convert-a-bmp-image-to-a-png-image.md
                 - name: 'Procedura: Impostare il livello di compressione JPEG'
                   href: how-to-set-jpeg-compression-level.md
@@ -263,11 +263,11 @@
               items:
                 - name: Grafica a doppio buffer
                   href: double-buffered-graphics.md
-                - name: 'Procedura: ridurre lo sfarfallio nella grafica con il doppio buffering per form e controlli'
+                - name: 'Procedura: Ridurre lo sfarfallio nella grafica con il doppio buffering per form e controlli'
                   href: how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md
-                - name: 'Procedura: gestire manualmente le immagini memorizzate nel buffer'
+                - name: 'Procedura: Gestire manualmente la grafica memorizzata nel buffer'
                   href: how-to-manually-manage-buffered-graphics.md
-                - name: 'Procedura: eseguire il rendering manuale di grafica memorizzata nel buffer'
+                - name: 'Procedura: Eseguire il rendering manuale della grafica memorizzata nel buffer'
                   href: how-to-manually-render-buffered-graphics.md
     - name: Impostazioni delle applicazioni per Windows Form
       href: application-settings-for-windows-forms.md
@@ -283,51 +283,51 @@
         - name: Utilizzo delle impostazioni applicazione e delle impostazioni utente
           href: using-application-settings-and-user-settings.md
           items:
-            - name: 'Procedura: creare una nuova impostazione in fase di progettazione'
+            - name: 'Procedura: Creare una nuova impostazione in fase di progettazione'
               href: how-to-create-a-new-setting-at-design-time.md
-            - name: 'Procedura: modificare il valore di un''impostazione esistente in fase di progettazione'
+            - name: 'Procedura: Modificare il valore di un''impostazione esistente in fase di progettazione'
               href: how-to-change-the-value-of-an-existing-setting-at-design-time.md
-            - name: 'Procedura: modificare il valore di un''impostazione tra le sessioni dell''applicazione'
+            - name: 'Procedura: Modificare il valore di un''impostazione tra le sessioni dell''applicazione'
               href: how-to-change-the-value-of-a-setting-between-application-sessions.md
-            - name: 'Procedura: leggere le impostazioni in fase di esecuzione con C#'
+            - name: 'Procedura: Leggere le impostazioni in fase di esecuzione con C#'
               href: how-to-read-settings-at-run-time-with-csharp.md
-            - name: 'Procedura: scrivere le impostazioni utente in fase di esecuzione con C#'
+            - name: 'Procedura: Scrivere le impostazioni utente in fase di esecuzione con C#'
               href: how-to-write-user-settings-at-run-time-with-csharp.md
-            - name: 'Procedura: aggiungere più set di impostazioni all''applicazione in C#'
+            - name: 'Procedura: Aggiungere più set di impostazioni all''applicazione in C#'
               href: how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md
-        - name: 'Procedura: creare le impostazioni dell''applicazione'
+        - name: 'Procedura: Creare impostazioni applicazione'
           href: how-to-create-application-settings.md
-        - name: 'Procedura: convalidare le impostazioni applicazione'
+        - name: 'Procedura: Convalidare le impostazioni applicazione'
           href: how-to-validate-application-settings.md
     - name: Supporto per la stampa in Windows Form
       href: windows-forms-print-support.md
       items:
-        - name: 'Procedura: creare processi di stampa standard per Windows Form'
+        - name: 'Procedura: Creare processi di stampa standard per Windows Form'
           href: how-to-create-standard-windows-forms-print-jobs.md
-        - name: 'Procedura: acquisire l''input dell''utente da un elemento PrintDialog in fase di esecuzione'
+        - name: 'Procedura: Acquisire l''input dell''utente da un componente PrintDialog in fase di esecuzione'
           href: how-to-capture-user-input-from-a-printdialog-at-run-time.md
-        - name: 'Procedura: selezionare le stampanti connesse al computer dell''utente in Windows Form'
+        - name: 'Procedura: Selezionare le stampanti connesse al computer dell''utente in Windows Form'
           href: how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md
-        - name: 'Procedura: stampare grafica in Windows Form'
+        - name: 'Procedura: Stampare grafica in Windows Form'
           href: how-to-print-graphics-in-windows-forms.md
-        - name: 'Procedura: stampare un file di testo con più pagine in Windows Form'
+        - name: 'Procedura: Stampare un file di testo con più pagine in Windows Form'
           href: how-to-print-a-multi-page-text-file-in-windows-forms.md
-        - name: 'Procedura: completare processi di stampa in Windows Form'
+        - name: 'Procedura: Completare processi di stampa in Windows Form'
           href: how-to-complete-windows-forms-print-jobs.md
-        - name: 'Procedura: stampare un Windows Form'
+        - name: 'Procedura: Stampare un Windows Form'
           href: how-to-print-a-windows-form.md
-        - name: 'Procedura: stampare in Windows Form tramite l''anteprima di stampa'
+        - name: 'Procedura: Stampare in Windows Form tramite l''anteprima di stampa'
           href: how-to-print-in-windows-forms-using-print-preview.md
     - name: Supporto delle operazioni di trascinamento della selezione e degli Appunti
       href: drag-and-drop-operations-and-clipboard-support.md
       items:
         - name: 'Procedura dettagliata: Esecuzione di un''operazione di trascinamento della selezione in Windows Form'
           href: walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md
-        - name: 'Procedura: eseguire operazioni di trascinamento e rilascio tra applicazioni'
+        - name: 'Procedura: Eseguire operazioni di trascinamento della selezione tra applicazioni'
           href: how-to-perform-drag-and-drop-operations-between-applications.md
-        - name: 'Procedura: aggiungere dati agli Appunti'
+        - name: 'Procedura: Aggiungere dati agli Appunti'
           href: how-to-add-data-to-the-clipboard.md
-        - name: 'Procedura: recuperare dati dagli Appunti'
+        - name: 'Procedura: Recuperare dati dagli Appunti'
           href: how-to-retrieve-data-from-the-clipboard.md
     - name: Operazioni di rete nelle applicazioni Windows Forms
       href: networking-in-windows-forms-applications.md
@@ -345,9 +345,9 @@
       items:
         - name: Cenni preliminari su Windows Form e applicazioni non gestite
           href: windows-forms-and-unmanaged-applications-overview.md
-        - name: 'Procedura: supportare l''interoperabilità COM mediante la visualizzazione di ogni Windows Form nel relativo thread'
+        - name: 'Procedura: Supportare l''interoperabilità COM visualizzando ogni Windows Form nel proprio thread'
           href: how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md
-        - name: 'Procedura: supportare l''interoperabilità COM visualizzando un Windows Form con il metodo ShowDialog'
+        - name: 'Procedura: Supportare l''interoperabilità COM visualizzando un Windows Form con il metodo ShowDialog'
           href: com-interop-by-displaying-a-windows-form-shadow.md
     - name: Informazioni sul sistema e Windows Form
       href: system-information-and-windows-forms.md
@@ -358,42 +358,42 @@
     - name: Ereditarietà visiva di Windows Form
       href: windows-forms-visual-inheritance.md
       items:
-        - name: 'Procedura: ereditare Windows Form'
+        - name: 'Procedura: Ereditare Windows Form'
           href: how-to-inherit-windows-forms.md
-        - name: 'Procedura: ereditare form mediante la finestra di dialogo Selezione ereditarietà'
+        - name: 'Procedura: Ereditare form mediante la finestra di dialogo Selezione ereditarietà'
           href: how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md
         - name: Effetti della modifica dell'aspetto di un form di base
           href: effects-of-modifying-base-form-appearance.md
-        - name: 'Procedura dettagliata: dimostrazione dell''ereditarietà visiva'
+        - name: 'Procedura dettagliata: Dimostrazione dell''ereditarietà visiva'
           href: walkthrough-demonstrating-visual-inheritance.md
-        - name: 'Procedura: utilizzare modificatori e proprietà GenerateMember'
+        - name: 'Procedura: Usare modificatori e proprietà GenerateMember'
           href: how-to-use-the-modifiers-and-generatemember-properties.md
     - name: 'Applicazioni MDI (Interfaccia a documenti multipli, Multiple-Document Interface)'
       href: multiple-document-interface-mdi-applications.md
       items:
         - name: 'Procedura: Creare form padre MDI'
           href: how-to-create-mdi-parent-forms.md
-        - name: 'Procedura: creare form figlio MDI'
+        - name: 'Procedura: Creare form figlio MDI'
           href: how-to-create-mdi-child-forms.md
-        - name: 'Procedura: determinare il figlio MDI attivo'
+        - name: 'Procedura: Determinare il figlio MDI attivo'
           href: how-to-determine-the-active-mdi-child.md
-        - name: 'Procedura: inviare dati al figlio MDI attivo'
+        - name: 'Procedura: Inviare dati al figlio MDI attivo'
           href: how-to-send-data-to-the-active-mdi-child.md
-        - name: 'Procedura: disporre i form figlio MDI'
+        - name: 'Procedura: Disporre form figlio MDI'
           href: how-to-arrange-mdi-child-forms.md
     - name: Integrazione della Guida dell'utente in Windows Form
       href: integrating-user-help-in-windows-forms.md
       items:
         - name: 'Procedura: Visualizzare la Guida in un''applicazione Windows'
           href: how-to-provide-help-in-a-windows-application.md
-        - name: 'Procedura: visualizzare la Guida rapida'
+        - name: 'Procedura: Visualizzare la Guida rapida'
           href: how-to-display-pop-up-help.md
         - name: Visualizzazione della Guida relativa a un controllo tramite le descrizioni comandi
           href: control-help-using-tooltips.md
     - name: Accessibilità in Windows Form
       href: windows-forms-accessibility.md
       items:
-        - name: 'Procedura dettagliata: creazione di un''applicazione Windows ad Accesso facilitato'
+        - name: 'Procedura dettagliata: Creazione di un''applicazione Windows ad accesso facilitato'
           href: walkthrough-creating-an-accessible-windows-based-application.md
           items:
             - name: Proprietà nei controlli Windows Form che supportano le linee guida per l'accesso facilitato
@@ -401,13 +401,13 @@
     - name: Utilizzo di controlli WPF
       href: using-wpf-controls.md
       items:
-        - name: 'Procedura: copiare e incollare un controllo ElementHost in fase di progettazione'
+        - name: 'Procedura: Copiare e incollare un controllo ElementHost in fase di progettazione'
           href: how-to-copy-and-paste-an-elementhost-control-at-design-time.md
-        - name: 'Procedura dettagliata: disposizione del contenuto WPF in Windows Form in fase di progettazione'
+        - name: 'Procedura dettagliata: Disposizione del contenuto WPF in Windows Form in fase di progettazione'
           href: walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md
-        - name: 'Procedura dettagliata: creazione di nuovo contenuto WPF in Windows Form in fase di progettazione'
+        - name: 'Procedura dettagliata: Creazione di nuovo contenuto WPF in Windows Form in fase di progettazione'
           href: walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md
-        - name: 'Procedura dettagliata: assegnazione del contenuto WPF in Windows Form in fase di progettazione'
+        - name: 'Procedura dettagliata: Assegnazione del contenuto WPF in Windows Form in fase di progettazione'
           href: walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md
-        - name: 'Procedura dettagliata: applicazione di stili al contenuto WPF'
+        - name: 'Procedura dettagliata: Applicazione di stili a contenuto WPF'
           href: walkthrough-styling-wpf-content.md

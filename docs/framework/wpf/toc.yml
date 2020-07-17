@@ -14,7 +14,7 @@
   href: data/
 - name: Elementi grafici e multimediali
   href: graphics-multimedia/
-- name: Sicurezza
+- name: Security
   href: security-wpf.md
   items:
     - name: Sicurezza con attendibilità parziale in WPF
