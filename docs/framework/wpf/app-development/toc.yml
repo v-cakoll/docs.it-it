@@ -10,7 +10,7 @@
           href: pack-uris-in-wpf.md
         - name: Aggiungere una schermata iniziale in un'applicazione WPF
           href: how-to-add-a-splash-screen-to-a-wpf-application.md
-        - name: Utilizzare un dizionario di risorse dell'ambito dell'applicazione
+        - name: Usare un dizionario risorse con ambito di applicazione
           href: how-to-use-an-application-scope-resource-dictionary.md
         - name: Rendere persistenti e ripristinare le proprietà dell'ambito dell'applicazione nelle sessioni dell'applicazione
           href: persist-and-restore-application-scope-properties.md
@@ -80,9 +80,9 @@
         - name: Procedure relative
           href: how-to-topics.md
           items:
-            - name: 'Procedura: creare un componente aggiuntivo che restituisce un''interfaccia utente'
+            - name: Creare un componente aggiuntivo che restituisca un'interfaccia utente
               href: how-to-create-an-add-in-that-returns-a-ui.md
-            - name: Creare un componente aggiuntivo che costituisce un'interfaccia utente
+            - name: Creare un componente aggiuntivo che costituisca un'interfaccia utente
               href: how-to-create-an-add-in-that-is-a-ui.md
     - name: Hosting
       href: hosting-wpf-applications.md

@@ -7,16 +7,16 @@
         - name: Estensione dei client
           href: extending-clients.md
           items:
-            - name: 'Procedura: ispezionare o modificare i messaggi sul client'
+            - name: 'Procedura: Ispezionare o modificare i messaggi sul client'
               href: how-to-inspect-or-modify-messages-on-the-client.md
-            - name: 'Procedura: controllare o modificare i parametri'
+            - name: 'Procedura: Controllare o modificare i parametri'
               href: how-to-inspect-or-modify-parameters.md
         - name: Estensione di dispatcher
           href: extending-dispatchers.md
           items:
-            - name: 'Procedura: ispezionare e modificare i messaggi sul servizio'
+            - name: 'Procedura: Ispezionare e modificare i messaggi sul servizio'
               href: how-to-inspect-and-modify-messages-on-the-service.md
-            - name: 'Procedura: bloccare gli endpoint nell''organizzazione'
+            - name: 'Procedura: Bloccare gli endpoint nell''organizzazione'
               href: how-to-lock-down-endpoints-in-the-enterprise.md
         - name: Oggetti estensibili
           href: extensible-objects.md
@@ -32,7 +32,7 @@
         - name: Associazioni personalizzate
           href: custom-bindings.md
           items:
-            - name: 'Procedura: personalizzare un''associazione fornita dal sistema'
+            - name: 'Procedura: Personalizzare un''associazione basata sul sistema'
               href: how-to-customize-a-system-provided-binding.md
         - name: Creazione di associazioni definite dall'utente
           href: creating-user-defined-bindings.md
@@ -55,9 +55,9 @@
         - name: Sviluppo di canali
           href: developing-channels.md
           items:
-            - name: 'Servizio: listener del canale e canali'
+            - name: 'Servizio: Listener di canale e canali'
               href: service-channel-listeners-and-channels.md
-            - name: 'Client: channel factory e canali'
+            - name: 'Client: Channel factory e canali'
               href: client-channel-factories-and-channels.md
             - name: Creazione di una classe BindingElement
               href: creating-a-bindingelement.md
@@ -75,39 +75,39 @@
         - name: Credenziale personalizzata e convalida della credenziale
           href: custom-credential-and-credential-validation.md
           items:
-            - name: 'Procedura: creare credenziali client e del servizio personalizzate'
+            - name: 'Procedura dettagliata: Creazione di credenziali client e del servizio personalizzate'
               href: walkthrough-creating-custom-client-and-service-credentials.md
-            - name: 'Procedura: creare un servizio che usa un validator del certificato personalizzato'
+            - name: 'Procedura: Creare un servizio che usa un validator del certificato personalizzato'
               href: how-to-create-a-service-that-employs-a-custom-certificate-validator.md
-            - name: 'Procedura: creare un provider di token di sicurezza personalizzati'
+            - name: 'Procedura: Creare un provider di token di sicurezza personalizzati'
               href: how-to-create-a-custom-security-token-provider.md
-            - name: 'Procedura: creare un autenticatore del token di sicurezza personalizzato'
+            - name: 'Procedura: Creare un autenticatore del token di sicurezza personalizzato'
               href: how-to-create-a-custom-security-token-authenticator.md
         - name: Token personalizzati
           href: custom-tokens.md
           items:
-            - name: 'Procedura: creare un token personalizzato'
+            - name: 'Procedura: Creare un token personalizzato'
               href: how-to-create-a-custom-token.md
         - name: Autorizzazione personalizzata
           href: custom-authorization.md
           items:
-            - name: 'Procedura: creare un criterio di autorizzazione personalizzato'
+            - name: 'Procedura: Creare un criterio di autorizzazione personalizzato'
               href: how-to-create-a-custom-authorization-policy.md
-            - name: 'Procedura: creare un gestore autorizzazioni personalizzato per un servizio'
+            - name: 'Procedura: Creare un gestore autorizzazioni personalizzato per un servizio'
               href: how-to-create-a-custom-authorization-manager-for-a-service.md
-            - name: 'Procedura: creare un''attestazione personalizzata'
+            - name: 'Procedura: Creare un''attestazione personalizzata'
               href: how-to-create-a-custom-claim.md
-            - name: 'Procedura: confrontare le attestazioni'
+            - name: 'Procedura: Confrontare le attestazioni'
               href: how-to-compare-claims.md
-            - name: 'Procedura: creare l''identità di un''entità personalizzata'
+            - name: 'Procedura: Creare l''identità di un''entità personalizzata'
               href: how-to-create-a-custom-principal-identity.md
         - name: Override dell'identità di un servizio per l'autenticazione
           href: overriding-the-identity-of-a-service-for-authentication.md
-        - name: 'Procedura: creare un verificatore di identità client personalizzato'
+        - name: 'Procedura: Creare un verificatore di identità client personalizzato'
           href: how-to-create-a-custom-client-identity-verifier.md
-        - name: 'Procedura: usare certificati X.509 separati per la firma e la crittografia'
+        - name: 'Procedura: Usare certificati X.509 separati per la firma e la crittografia'
           href: how-to-use-separate-x-509-certificates-for-signing-and-encryption.md
-        - name: 'Procedura: modificare il provider di crittografia per la chiave privata di un certificato X.509'
+        - name: 'Procedura: Modificare il provider di crittografia per la chiave privata di un certificato X.509'
           href: change-cryptographic-provider-x509-certificate-private-key.md
     - name: Estensione del sistema di metadati
       href: extending-the-metadata-system.md
@@ -115,27 +115,27 @@
         - name: Esportazione di metadati personalizzati per un'estensione WCF
           href: exporting-custom-metadata-for-a-wcf-extension.md
           items:
-            - name: 'Procedura: esportare informazioni WSDL personalizzate'
+            - name: 'Procedura: Esportare informazioni WSDL personalizzate'
               href: how-to-export-custom-wsdl.md
-            - name: 'Procedura: esportare asserzioni di criteri personalizzate'
+            - name: 'Procedura: Esportare asserzioni di criteri personalizzate'
               href: how-to-export-custom-policy-assertions.md
         - name: Importazione di metadati personalizzati per un'estensione WCF
           href: importing-custom-metadata-for-a-wcf-extension.md
           items:
-            - name: 'Procedura: importare informazioni WSDL personalizzate'
+            - name: 'Procedura: Importare informazioni WSDL personalizzate'
               href: how-to-import-custom-wsdl.md
-            - name: 'Procedura: importare asserzioni di criteri personalizzati'
+            - name: 'Procedura: Importare asserzioni di criteri personalizzate'
               href: how-to-import-custom-policy-assertions.md
-            - name: 'Procedura: scrivere un''estensione per ServiceContractGenerator'
+            - name: 'Procedura: Scrivere un''estensione per ServiceContractGenerator'
               href: how-to-write-an-extension-for-the-servicecontractgenerator.md
         - name: Pubblicazione e recupero di metadati su un'associazione personalizzata
           href: publishing-and-retrieving-metadata-over-a-custom-binding.md
           items:
             - name: Associazioni WS-MetadataExchange
               href: ws-metadataexchange-bindings.md
-            - name: 'Procedura: configurare un''associazione WS-Metadata Exchange personalizzata'
+            - name: 'Procedura: Configurare un''associazione WS-Metadata Exchange personalizzata'
               href: how-to-configure-a-custom-ws-metadata-exchange-binding.md
-            - name: 'Procedura: recuperare metadati attraverso un''associazione non MEX'
+            - name: 'Procedura: Recuperare metadati attraverso un''associazione non MEX'
               href: how-to-retrieve-metadata-over-a-non-mex-binding.md
     - name: Estensione di codificatori e serializzatori
       href: extending-encoders-and-serializers.md

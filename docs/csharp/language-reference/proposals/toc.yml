@@ -1,6 +1,6 @@
 - name: Specifiche delle funzionalità più recenti
   items:
-    - name: 'C# 7.0 proposte specifiche'
+    - name: C# 7.0 proposte specifiche
       items:
         - name: Criteri di ricerca
           href: ../../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
@@ -14,7 +14,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.0/binary-literals.md
         - name: Separatori di cifre
           href: ../../../../_csharplang/proposals/csharp-7.0/digit-separators.md
-    - name: 'C# 7.1 proposte specifiche'
+    - name: C# 7.1 proposte specifiche
       items:
         - name: Metodo Main asincrono
           href: ../../../../_csharplang/proposals/csharp-7.1/async-main.md
@@ -24,7 +24,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
         - name: Criteri di ricerca con generics
           href: ../../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
-    - name: 'C# 7.2 proposte specifiche'
+    - name: C# 7.2 proposte specifiche
       items:
         - name: Riferimenti di sola lettura
           href: ../../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
@@ -38,7 +38,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
         - name: Separatore di cifra iniziale
           href: ../../../../_csharplang/proposals/csharp-7.2/leading-separator.md
-    - name: 'Proposte per la specifica C# 7.3'
+    - name: Proposte per la specifica C# 7.3
       items:
         - name: Vincoli di tipo generico non gestito
           href: ../../../../_csharplang/proposals/csharp-7.3/blittable.md
@@ -58,7 +58,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
         - name: Miglioramento dei candidati per l'overload
           href: ../../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
-    - name: 'C# 8.0 proposta di specifica'
+    - name: C# 8.0 proposta di specifica
       items:
         - name: Tipi riferimento Nullable - Proposta
           href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md

@@ -25,7 +25,7 @@
       href: middleware.md
     - name: Configurazione
       href: config.md
-    - name: Sicurezza
+    - name: Security
       href: security-authentication-authorization.md
     - name: Migrazione
       href: migration.md

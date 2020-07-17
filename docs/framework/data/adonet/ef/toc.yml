@@ -8,15 +8,15 @@
     - name: Generatore EDM (EdmGen.exe)
       href: edm-generator-edmgen-exe.md
       items:
-        - name: 'Procedura: utilizzare EdmGen.exe per generare i file di modello e di mapping'
+        - name: 'Procedura: Usare EdmGen.exe per generare i file di modello e di mapping'
           href: how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md
-        - name: 'Procedura: utilizzare EdmGen.exe per generare codice a livello oggetti'
+        - name: 'Procedura: Usare EdmGen.exe per generare codice a livello oggetti'
           href: how-to-use-edmgen-exe-to-generate-object-layer-code.md
-        - name: 'Procedura: utilizzare EdmGen.exe per convalidare file di modello e di mapping'
+        - name: 'Procedura: Usare EdmGen.exe per convalidare file di modello e di mapping'
           href: how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md
-    - name: 'Procedura: definire una stringa di connessione'
+    - name: 'Procedura: Definire la stringa di connessione'
       href: how-to-define-the-connection-string.md
-    - name: 'Procedura: definire file di modello e di mapping come risorse incorporate'
+    - name: 'Procedura: Definire i file di modello e di mapping come risorse incorporate'
       href: how-to-make-model-and-mapping-files-embedded-resources.md
     - name: Utilizzo di Data Definition Language
       href: working-with-data-definition-language.md
@@ -35,25 +35,25 @@
         - name: Provider EntityClient per Entity Framework
           href: entityclient-provider-for-the-entity-framework.md
           items:
-            - name: 'Procedura: compilare una stringa di connessione EntityConnection'
+            - name: 'Procedura: Compilare una stringa di connessione EntityConnection'
               href: how-to-build-an-entityconnection-connection-string.md
-            - name: 'Procedura: eseguire una query che restituisce risultati PrimitiveType'
+            - name: 'Procedura: Eseguire una query che restituisce risultati PrimitiveType'
               href: how-to-execute-a-query-that-returns-primitivetype-results.md
-            - name: 'Procedura: eseguire una query che restituisce risultati StructuralType'
+            - name: 'Procedura: Eseguire una query che restituisce risultati StructuralType'
               href: how-to-execute-a-query-that-returns-structuraltype-results.md
-            - name: 'Procedura: eseguire una query che restituisce risultati RefType'
+            - name: 'Procedura: Eseguire una query che restituisce risultati RefType'
               href: how-to-execute-a-query-that-returns-reftype-results.md
-            - name: 'Procedura: eseguire una query che restituisce tipi complessi'
+            - name: 'Procedura: Eseguire una query che restituisce tipi complessi'
               href: how-to-execute-a-query-that-returns-complex-types.md
-            - name: 'Procedura: eseguire una query che restituisce raccolte annidate'
+            - name: 'Procedura: Eseguire una query che restituisce raccolte annidate'
               href: how-to-execute-a-query-that-returns-nested-collections.md
-            - name: 'Procedura: eseguire una query Entity SQL con parametri tramite EntityCommand'
+            - name: 'Procedura: Eseguire una query Entity SQL con parametri tramite EntityCommand'
               href: how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md
-            - name: 'Procedura: eseguire una stored procedure con parametri tramite EntityCommand'
+            - name: 'Procedura: Eseguire una stored procedure con parametri tramite EntityCommand'
               href: how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md
-            - name: 'Procedura: eseguire una query polimorfica'
+            - name: 'Procedura: Eseguire una query polimorfica'
               href: how-to-execute-a-polymorphic-query.md
-            - name: 'Procedura: esplorare relazioni con l''operatore NAVIGATE'
+            - name: 'Procedura: Esplorare relazioni con l''operatore NAVIGATE'
               href: how-to-navigate-relationships-with-the-navigate-operator.md
         - name: SqlClient per Entity Framework
           href: sqlclient-for-the-entity-framework.md
@@ -92,7 +92,7 @@
               items:
                 - name: Architettura e progettazione
                   href: architecture-and-design.md
-                - name: 'Procedura dettagliata: generazione SQL'
+                - name: 'Procedura dettagliata: Generazione SQL'
                   href: walkthrough-sql-generation.md
         - name: Generazione di comandi SQL di modifica
           href: modification-sql-generation.md

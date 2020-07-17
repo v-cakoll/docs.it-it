@@ -352,7 +352,7 @@
           items:
             - name: Metodo DefineConstant2
               href: isymunmanagedwriter2-defineconstant2-method.md
-            - name: Metodo DefineGlobalVariable2
+            - name: Metodo DfineGlobalVariable2
               href: isymunmanagedwriter2-defineglobalvariable2-method.md
             - name: Metodo DefineLocalVariable2
               href: isymunmanagedwriter2-definelocalvariable2-method.md
