@@ -2,16 +2,16 @@
 title: Creare una libreria di classi .NET Standard usando Visual Studio per Mac
 description: Informazioni su come creare una libreria di classi .NET Standard usando Visual Studio per Mac.
 ms.date: 06/08/2020
-ms.openlocfilehash: 3a107fff2fd6aef5e06d9af3eac334fbf5688fa5
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 8e1e4ca3bc1b12d889b847d80318f3d6cd1bbe46
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713742"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416005"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-for-mac"></a>Esercitazione: creare una libreria di .NET Standard usando Visual Studio per Mac
 
-In questa esercitazione si creerà una semplice libreria di classi che contiene un singolo metodo di gestione delle stringhe. Viene implementato come metodo di [estensione](../../csharp/programming-guide/classes-and-structs/extension-methods.md) in modo che sia possibile chiamarlo come se fosse un membro della <xref:System.String> classe.
+In questa esercitazione viene creata una libreria di classi che contiene un singolo metodo di gestione delle stringhe. Viene implementato come metodo di [estensione](../../csharp/programming-guide/classes-and-structs/extension-methods.md) in modo che sia possibile chiamarlo come se fosse un membro della <xref:System.String> classe.
 
 La *libreria di classi* definisce tipi e metodi chiamati da un'applicazione. Una libreria di classi destinata a .NET Standard 2,1 può essere usata da un'applicazione destinata a qualsiasi implementazione di .NET che supporta la versione 2,1 di .NET Standard. Una volta completata la libreria di classi, è possibile distribuirla come componente di terze parti o come componente in bundle con una o più applicazioni.
 
@@ -23,7 +23,7 @@ La *libreria di classi* definisce tipi e metodi chiamati da un'applicazione. Una
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-* [Installare Visual Studio per Mac versione 8,6 o successiva](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Selezionare l'opzione per installare .NET Core. L'installazione di Novell è facoltativa per lo sviluppo di .NET Core. Per altre informazioni, vedere le seguenti risorse:
+* [Installare Visual Studio per Mac versione 8,6 o successiva](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Selezionare l'opzione per installare .NET Core. L'installazione di Novell è facoltativa per lo sviluppo di .NET Core. Per altre informazioni, vedere le risorse seguenti:
 
   * [Esercitazione: installare Visual Studio per Mac](/visualstudio/mac/installation).
   * [Versioni di MacOS supportate](../install/dependencies.md?pivots=os-macos).
@@ -39,7 +39,7 @@ Una soluzione di Visual Studio funge da contenitore per uno o più progetti. Cre
 
 1. Nella finestra di dialogo **nuovo progetto** nel nodo **multipiattaforma** Selezionare **libreria**, quindi selezionare il modello **libreria .NET standard** e fare clic su **Avanti**.
 
-   :::image type="content" source="media/library-with-visual-studio-mac/visual-studio-mac-new-project.png" alt-text="Finestra di dialogo Nuovo progetto":::
+   :::image type="content" source="media/library-with-visual-studio-mac/visual-studio-mac-new-project.png" alt-text="Finestra di dialogo nuovo progetto":::
 
 1. Nella finestra di dialogo **Configura la nuova libreria .NET standard** scegliere ".NET standard 2,1" e quindi fare clic su **Avanti**.
 

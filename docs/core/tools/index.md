@@ -1,22 +1,22 @@
 ---
 title: Interfaccia della riga di comando di .NET Core
 titleSuffix: ''
-description: Panoramica dell'interfaccia della riga di comando di .NET Core e delle relative funzionalità.
+description: Panoramica del interfaccia della riga di comando di .NET Core e delle relative funzionalità.
 ms.date: 02/13/2020
-ms.openlocfilehash: ac5988bacbef41326f2501a2cff6c3f5aa0be798
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: f92151c85b4816fef1859e84ad94945445db1854
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80110841"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415970"
 ---
 # <a name="net-core-cli-overview"></a>Panoramica dell'interfaccia della riga di comando di .NET Core
 
-**Questo articolo si applica a:** ✔️ .NET Core 2.1 SDK e versioni successive
+**Questo articolo si applica a:** ✔️ .net core 2,1 SDK e versioni successive
 
-L'interfaccia della riga di comando (CLI) di .NET Core è una catena di strumenti multipiattaforma per lo sviluppo, la compilazione, l'esecuzione e la pubblicazione di applicazioni .NET Core.
+L'interfaccia della riga di comando di .NET Core è una serie di procedure multipiattaforma per lo sviluppo, la compilazione, l'esecuzione e la pubblicazione di applicazioni .NET Core.
 
-L'interfaccia della riga di comando di .NET Core è inclusa in [.NET Core SDK.](../sdk.md) Per informazioni su come installare .NET Core SDK, vedere [Installare .NET Core SDK](../install/sdk.md).
+Il interfaccia della riga di comando di .NET Core è incluso nel [.NET Core SDK](../sdk.md). Per informazioni su come installare il .NET Core SDK, vedere [installare .NET Core](../install/windows.md).
 
 ## <a name="cli-commands"></a>Comandi dell'interfaccia della riga di comando
 
@@ -59,11 +59,11 @@ Per impostazione predefinita vengono installati i comandi seguenti:
 - [`tool install`](dotnet-tool-install.md)
 - [`tool list`](dotnet-tool-list.md)
 - [`tool update`](dotnet-tool-update.md)
-- [`tool restore`](global-tools.md#install-a-local-tool)Disponibile da .NET Core SDK 3.0.
-- [`tool run`](global-tools.md#invoke-a-local-tool)Disponibile da .NET Core SDK 3.0.
+- [`tool restore`](global-tools.md#install-a-local-tool)Disponibile a partire da .NET Core SDK 3,0.
+- [`tool run`](global-tools.md#invoke-a-local-tool)Disponibile a partire da .NET Core SDK 3,0.
 - [`tool uninstall`](dotnet-tool-uninstall.md)
 
-Gli strumenti sono applicazioni console installate da pacchetti NuGet e richiamate dal prompt dei comandi. È possibile scrivere strumenti da soli o installare strumenti scritti da terze parti. Gli strumenti sono noti anche come strumenti globali, strumenti per il percorso degli strumenti e strumenti locali. Per ulteriori informazioni, vedere [Panoramica degli strumenti .NET Core](global-tools.md).
+Gli strumenti sono applicazioni console installate da pacchetti NuGet e vengono richiamate dal prompt dei comandi. È possibile scrivere strumenti manualmente oppure installare gli strumenti scritti da terze parti. Gli strumenti sono noti anche come strumenti globali, strumenti per percorsi di strumenti e strumenti locali. Per altre informazioni, vedere [Cenni preliminari sugli strumenti di .NET Core](global-tools.md).
 
 ## <a name="command-structure"></a>Struttura dei comandi
 
@@ -87,7 +87,7 @@ Nel momento in cui si fornisce un comando al driver, `dotnet.exe` avvia il proce
 dotnet build
 ```
 
-Come prima operazione, il driver determina la versione dell'SDK da usare. Se non è presente alcun file [global.json,](global-json.md) viene utilizzata la versione più recente dell'SDK. Può essere una versione di anteprima o una versione stabile, a seconda di qual è la più recente disponibile nel computer.  Dopo aver determinato la versione del SDK il driver esegue il comando.
+Come prima operazione, il driver determina la versione dell'SDK da usare. Se non è presente alcun [global.jsnel](global-json.md) file, viene usata la versione più recente dell'SDK disponibile. Può essere una versione di anteprima o una versione stabile, a seconda di qual è la più recente disponibile nel computer.  Dopo aver determinato la versione del SDK il driver esegue il comando.
 
 ### <a name="command"></a>Comando
 
@@ -95,13 +95,13 @@ Il comando esegue un'azione. Ad esempio, `dotnet build` compila il codice. `dotn
 
 ### <a name="arguments"></a>Argomenti
 
-Gli argomenti passati alla riga di comando sono gli argomenti per il comando richiamato. Ad esempio, quando `dotnet publish my_app.csproj`si `my_app.csproj` esegue , l'argomento indica il `publish` progetto da pubblicare e viene passato al comando.
+Gli argomenti passati alla riga di comando sono gli argomenti per il comando richiamato. Ad esempio, quando si esegue `dotnet publish my_app.csproj` , l' `my_app.csproj` argomento indica il progetto da pubblicare e viene passato al `publish` comando.
 
 ### <a name="options"></a>Opzioni
 
-Le opzioni passate alla riga di comando sono le opzioni per il comando richiamato. Ad esempio, quando `dotnet publish --output /build_output`si `--output` esegue , l'opzione `publish` e il relativo valore vengono passati al comando.
+Le opzioni passate alla riga di comando sono le opzioni per il comando richiamato. Ad esempio, quando si esegue `dotnet publish --output /build_output` , l' `--output` opzione e il relativo valore vengono passati al `publish` comando.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [repository GitHub dotnet/sdk](https://github.com/dotnet/sdk/)
-- [.NET Core installation guide](../install/sdk.md) (Guida all'installazione di .NET Core)
+- [repository GitHub DotNet/SDK](https://github.com/dotnet/sdk/)
+- [.NET Core installation guide](../install/windows.md) (Guida all'installazione di .NET Core)

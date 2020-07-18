@@ -2,12 +2,12 @@
 title: Script dotnet-install
 description: Informazioni sugli script DotNet-install per installare il .NET Core SDK e il runtime condiviso.
 ms.date: 04/30/2020
-ms.openlocfilehash: d03877d76212f7b22de0a1075cf50fc75bd104b6
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: cecfbb86c4a2863161d3df7c78201fa8057abfe5
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324426"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415929"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Riferimento agli script dotnet-install
 
@@ -46,7 +46,7 @@ dotnet-install.sh --help
 
 Lo script bash legge anche le opzioni PowerShell, che possono quindi essere usate con lo script in sistemi Linux/macOS.
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrizione
 
 Gli `dotnet-install` script eseguono un'installazione non amministrativa del .NET Core SDK, che include i interfaccia della riga di comando di .NET Core e il runtime condiviso. Sono disponibili due script:
 
@@ -82,7 +82,7 @@ Per impostazione predefinita, lo script di installazione scarica e installa l'SD
 
 Per impostazione predefinita, lo script aggiunge il percorso di installazione a $PATH per la sessione corrente. Eseguire l'override di questo comportamento predefinito specificando l'argomento `-NoPath|--no-path`. Lo script non imposta la `DOTNET_ROOT` variabile di ambiente.
 
-Prima di eseguire lo script, installare le [dipendenze](../install/dependencies.md) necessarie.
+Prima di eseguire lo script, installare le [dipendenze](../install/windows.md#dependencies) necessarie.
 
 È possibile installare una versione specifica usando l'argomento `-Version|--version`. La versione deve essere specificata come numero di versione in tre parti, ad esempio `2.1.0` . Se la versione non è specificata, lo script installa la `latest` versione.
 
@@ -252,7 +252,7 @@ Gli script di installazione non aggiornano il registro di sistema in Windows. Sc
   curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [.NET Core releases](https://github.com/dotnet/core/releases) (Versioni di .NET Core)
 - [.NET Core Runtime and SDK download archive](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) (Archivio di download per runtime e SDK di .NET Core)

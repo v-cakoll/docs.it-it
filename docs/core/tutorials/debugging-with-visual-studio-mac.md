@@ -2,12 +2,12 @@
 title: Eseguire il debug di un'applicazione console .NET Core usando Visual Studio per Mac
 description: Informazioni su come eseguire il debug di un'app console .NET Core usando Visual Studio Mac.
 ms.date: 06/08/2020
-ms.openlocfilehash: 4941605923a9897d481aca4ec31408ab62e873f3
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 7e2a25266fab40b5ef1d0a38b8bbf06a6843746b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713819"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416019"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-for-mac"></a>Esercitazione: eseguire il debug di un'applicazione console .NET Core usando Visual Studio per Mac
 
@@ -15,7 +15,7 @@ In questa esercitazione sono stati introdotti gli strumenti di debug disponibili
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Questa esercitazione funziona con l'app console creata in [creare un'applicazione console .NET Core in Visual Studio per Mac](using-on-mac-vs.md).
+- Questa esercitazione funziona con l'app console creata in [creare un'applicazione console .NET Core in Visual Studio per Mac](with-visual-studio-mac.md).
 
 ## <a name="use-debug-build-configuration"></a>Usa configurazione build di debug
 
@@ -27,7 +27,7 @@ Per impostazione predefinita, Visual Studio usa la configurazione della build di
 
 1. Avviare Visual Studio per Mac.
 
-1. Aprire il progetto creato in [creare un'applicazione console .NET Core in Visual Studio per Mac](using-on-mac-vs.md).
+1. Aprire il progetto creato in [creare un'applicazione console .NET Core in Visual Studio per Mac](with-visual-studio-mac.md).
 
    La configurazione di compilazione corrente viene visualizzata sulla barra degli strumenti. La seguente immagine della barra degli strumenti Mostra che Visual Studio è configurato per compilare la versione di debug dell'app:
 

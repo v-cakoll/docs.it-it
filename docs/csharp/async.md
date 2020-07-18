@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/20/2020
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: b5643dd7eddefebc9cbf922ff5cce75d72dee4dd
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: bcea584ded6985a0ef166ab8e24672a19e27b0a3
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100899"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415976"
 ---
 # <a name="asynchronous-programming"></a>Programmazione asincrona
 
@@ -207,7 +207,7 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 }
 ```
 
-Sebbene produca una quantità minore di codice, è necessario prestare molta attenzione quando si combina LINQ con codice asincrono. Poiché LINQ usa un'esecuzione posticipata (lazy), le chiamate asincrone non verranno eseguite immediatamente come avviene in un ciclo `foreach` a meno che non si forzi la sequenza generata per l'iterazione con una chiamata a `.ToList()` o `.ToArray()`.
+Sebbene sia meno codice, prestare attenzione quando si combina LINQ con codice asincrono. Poiché LINQ usa un'esecuzione posticipata (lazy), le chiamate asincrone non verranno eseguite immediatamente come avviene in un ciclo `foreach` a meno che non si forzi la sequenza generata per l'iterazione con una chiamata a `.ToList()` o `.ToArray()`.
 
 ## <a name="important-info-and-advice"></a>Informazioni importanti e consigli
 

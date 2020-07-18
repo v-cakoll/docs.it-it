@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9af0bed8a779e1173f552e095f99ad7bf5123f14
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7ccd309c14b73af16487850d1785ecf9b0bb2d97
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "65639109"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86459355"
 ---
 > [!WARNING]
-> La serializzazione binaria può rappresentare un pericolo. Non deserializzare mai dati da un'origine non attendibile e non eseguire il round trip per i dati serializzati verso sistemi non sotto il proprio controllo.
+> La serializzazione binaria può rappresentare un pericolo. Per ulteriori informazioni, vedere la [Guida alla sicurezza di BinaryFormatter](../docs/standard/serialization/binaryformatter-security-guide.md).

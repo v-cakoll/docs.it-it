@@ -4,12 +4,12 @@ description: Come gestire i problemi di autenticazione e autenticazione con macO
 author: adegeo
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: cd3886b2e772a182156d212aefb9705a3fb5e17c
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 905a8b8a4a17836823b1c6574828acb08110d224
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324616"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415958"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>Autenticazione di macOS Catalina e l'effetto sui download e sui progetti di .NET Core
 
@@ -93,5 +93,4 @@ Se si vuole che l'applicazione venga eseguita in macOS Catalina (versione 10,15)
 ## <a name="next-steps"></a>Passaggi successivi
 
 - [Dipendenze e requisiti di .NET Core](dependencies.md).
-- [Installare il .NET Core SDK](sdk.md).
-- [Installare il runtime di .NET Core](runtime.md)
+- [Installare il runtime e l'SDK di .NET Core](macos.md).

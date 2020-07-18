@@ -3,12 +3,12 @@ title: Linee guida sulla sicurezza di DataSet e DataTable
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: f78b52ede4ec76599d761e5188f39c3e9dae2a4f
-ms.sourcegitcommit: 98548968e89739a37625e72ddbd535fe1e11121e
+ms.openlocfilehash: 2fbac625ae0049fc4c363977dc1d3fbcfb376025
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405292"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416202"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Linee guida sulla sicurezza di DataSet e DataTable
 
@@ -193,7 +193,7 @@ Una volta abilitata la modalità di controllo, è possibile usare _App.config_ p
 </configuration>
 ```
 
-Per altre informazioni su `TraceSource` e `TraceListener` , vedere il documento [procedura: usare TraceSource e filtri con i listener di traccia](/dotnet/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners).
+Per altre informazioni su `TraceSource` e `TraceListener` , vedere il documento [procedura: usare TraceSource e filtri con i listener di traccia](../../../debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md).
 
 > [!NOTE]
 > L'esecuzione di un'app in modalità di controllo non è disponibile in .NET Core o in .NET 5,0 e versioni successive.
@@ -236,7 +236,7 @@ In ASP.NET l' `<AppContextSwitchOverrides>` elemento non è disponibile. Al cont
 </configuration>
 ```
 
-Per ulteriori informazioni, vedere l' [\<AppContextSwitchOverrides>](/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) elemento.
+Per ulteriori informazioni, vedere l' [\<AppContextSwitchOverrides>](../../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) elemento.
 
 In .NET Core, .NET 5 e ASP.NET Core questa impostazione è controllata da _runtimeconfig.json_, come illustrato nel codice JSON seguente:
 
@@ -308,7 +308,7 @@ DataSet customers = new DataSet();
 adapter.Fill(customers, "Customers");
 ```
 
-L'esempio di codice precedente fa parte di un esempio più ampio rilevato durante il [popolamento di un DataSet da un oggetto DataAdapter](/dotnet/framework/data/adonet/populating-a-dataset-from-a-dataadapter).
+L'esempio di codice precedente fa parte di un esempio più ampio rilevato durante il [popolamento di un DataSet da un oggetto DataAdapter](../populating-a-dataset-from-a-dataadapter.md).
 
 > La maggior parte delle app può semplificare e presupporre che il livello di database sia attendibile. Tuttavia, se si ha la possibilità di [modellare le minacce](https://www.microsoft.com/securityengineering/sdl/threatmodeling) per le app, il modello di minaccia può considerare la presenza di un confine di trust tra l'applicazione (client) e il livello del database (Server). L'uso dell' [autenticazione reciproca](/sql/relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections) o dell' [autenticazione AAD](/azure/azure-sql/database/authentication-aad-overview) tra client e server è un modo per risolvere i rischi associati a questo. Nella parte restante di questa sezione viene illustrato il possibile risultato di un client che si connette a un server non attendibile.
 
@@ -487,4 +487,4 @@ Prendere in considerazione la sostituzione del modello a oggetti per usare [Enti
 * Offre [un ecosistema diversificato](/ef/core/providers/) di provider di database per semplificare la progettazione di query di database tramite i modelli a oggetti Entity Framework.
 * Offre protezioni predefinite per la deserializzazione dei dati da origini non attendibili.
 
-Per le app che usano `.aspx` gli endpoint SOAP, provare a modificare tali endpoint per l'uso di [WCF](/dotnet/framework/wcf/). WCF è una sostituzione più completa per i `.asmx` servizi Web. Gli endpoint WCF [possono essere esposti tramite SOAP](/dotnet/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients) per la compatibilità con i chiamanti esistenti.
+Per le app che usano `.aspx` gli endpoint SOAP, provare a modificare tali endpoint per l'uso di [WCF](/dotnet/framework/wcf/). WCF è una sostituzione più completa per i `.asmx` servizi Web. Gli endpoint WCF [possono essere esposti tramite SOAP](../../../wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) per la compatibilità con i chiamanti esistenti.

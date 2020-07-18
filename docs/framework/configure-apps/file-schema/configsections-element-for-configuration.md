@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-ms.openlocfilehash: 55116f1fe6fdffffea8f26d8a4de783c7305ada3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1e4bb7a7cfb0b140ca6d13c162708c3c30bd496d
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155349"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441687"
 ---
 # <a name="configsections-element-for-configuration"></a>Elemento \<configSections> per \<configuration>
 
@@ -22,7 +22,7 @@ Contiene la sezione di configurazione e le dichiarazioni dello spazio dei nomi.
 
 ## <a name="attributes"></a>Attributi
 
-nessuno
+Nessuno
 
 ## <a name="parent-element"></a>Elemento padre
 
@@ -36,8 +36,6 @@ nessuno
 | --- | ----------- |
 | [**\<section>**](section-element.md) | Contiene una dichiarazione della sezione di configurazione. |
 | [**\<sectionGroup>**](sectiongroup-element-for-configsections.md) | Definisce uno spazio dei nomi per le sezioni di configurazione. |
-| [**\<remove>**](remove-element-for-configsections.md) | Rimuove una sezione o un gruppo di sezioni predefinito. |
-| [**\<clear>**](clear-element-for-configsections.md) | Cancella tutte le sezioni e i gruppi di sezioni definiti in precedenza. |
 
 ## <a name="remarks"></a>Commenti
 
@@ -61,8 +59,8 @@ Nell'esempio seguente viene illustrato come definire una sezione di configurazio
 
 ## <a name="configuration-file"></a>File di configurazione
 
-Questo elemento può essere utilizzato nel file di configurazione dell'applicazione, nel file di configurazione del computer (*Machine. config*) e nei file *Web. config* che non sono a livello di directory dell'applicazione.
+Questo elemento può essere utilizzato nel file di configurazione dell'applicazione, nel file di configurazione del computer (*Machine.config*) e nei file *Web.config* che non si trovano a livello di directory dell'applicazione.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Schema del file di configurazione per il .NET Framework](index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 1dc9f3d261738a6dff0339c094c7aba5e32680ee
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 7519dce8ed17bc623173f30222296ffaa42b4341
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200054"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416067"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Sviluppare e distribuire WCF Data Services
 
@@ -63,14 +63,14 @@ Quando si sviluppa un servizio dati WCF come applicazione ASP.NET o sito Web ASP
 
     - Questo server non è in grado di gestire i flussi HTTP in blocchi, che vengono inviati per impostazione predefinita dal client WCF Data Services quando si accede a dati binari di grandi dimensioni dal servizio dati. Per ulteriori informazioni, vedere [provider di flussi](streaming-provider-wcf-data-services.md).
 
-    - Questo server presenta problemi di elaborazione del carattere punto`.`() in un URL, anche se questo carattere è supportato da WCF Data Services nei valori chiave.
+    - Questo server presenta problemi di elaborazione del carattere punto ( `.` ) in un URL, anche se questo carattere è supportato da WCF Data Services nei valori chiave.
 
     > [!TIP]
     > Anche se è possibile utilizzare il Server di sviluppo Visual Studio per testare i servizi dati durante lo sviluppo, è necessario testarli nuovamente dopo la distribuzione in un server Web che esegue IIS.
 
 3. **Ambiente di sviluppo di Azure**
 
-     Gli strumenti di Azure per Visual Studio includono un set integrato di strumenti per lo sviluppo di servizi di Azure in Visual Studio. Con questi strumenti è possibile sviluppare un servizio dati che può essere distribuito in Azure ed è possibile testare il servizio dati sul computer locale prima della distribuzione. Usare questi strumenti quando si usa Visual Studio per sviluppare un servizio dati in esecuzione nella piattaforma Azure. Per informazioni sull'installazione degli strumenti, vedere [strumenti di Azure per Visual Studio 2015](../../../azure/sdk/vs2015-install.md). Per ulteriori informazioni sullo sviluppo di un servizio dati in esecuzione in Azure, vedere il post sulla [distribuzione di un servizio OData in Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
+     Gli strumenti di Azure per Visual Studio includono un set integrato di strumenti per lo sviluppo di servizi di Azure in Visual Studio. Con questi strumenti è possibile sviluppare un servizio dati che può essere distribuito in Azure ed è possibile testare il servizio dati sul computer locale prima della distribuzione. Usare questi strumenti quando si usa Visual Studio per sviluppare un servizio dati in esecuzione nella piattaforma Azure. Per informazioni sull'installazione degli strumenti, vedere [strumenti di Azure per Visual Studio 2015](../../../azure/vs2015-install.md). Per ulteriori informazioni sullo sviluppo di un servizio dati in esecuzione in Azure, vedere il post sulla [distribuzione di un servizio OData in Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="development-tips"></a>Suggerimenti per lo sviluppo
 
@@ -115,7 +115,7 @@ WCF Data Services fornisce flessibilità di scelta per il processo che ospita il
 
 - **Azure**
 
-     È possibile distribuire un servizio dati in Azure usando [gli strumenti di Azure per Visual Studio](../../../azure/sdk/vs2015-install.md). Per ulteriori informazioni sulla distribuzione di un servizio dati in Azure, vedere [distribuzione di un servizio OData in Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
+     È possibile distribuire un servizio dati in Azure usando [gli strumenti di Azure per Visual Studio](../../../azure/vs2015-install.md). Per ulteriori informazioni sulla distribuzione di un servizio dati in Azure, vedere [distribuzione di un servizio OData in Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="deployment-considerations"></a>Considerazioni sulla distribuzione
 
