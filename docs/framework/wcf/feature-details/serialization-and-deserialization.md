@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: 3927c17a2548a094a63ffd95ff8a3701403de281
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: b770543eb09ed2edc1a028561e0cf41e74fab1cc
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244907"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86444495"
 ---
 # <a name="serialization-and-deserialization"></a>Serializzazione e deserializzazione
 Windows Communication Foundation (WCF) include un nuovo motore di serializzazione, ovvero <xref:System.Runtime.Serialization.DataContractSerializer> . Il viene <xref:System.Runtime.Serialization.DataContractSerializer> convertito tra .NET Framework oggetti e XML in entrambe le direzioni. In questo argomento viene illustrato il funzionamento del serializzatore.  
@@ -20,7 +20,13 @@ Windows Communication Foundation (WCF) include un nuovo motore di serializzazion
   
  Durante la deserializzazione di XML, il serializzatore utilizza le classi <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> . Supporta inoltre le <xref:System.Xml.XmlDictionaryReader> classi e <xref:System.Xml.XmlDictionaryWriter> per consentire la produzione di codice XML ottimizzato in alcuni casi, ad esempio quando si utilizza il formato XML binario WCF.  
   
- WCF include anche un serializzatore complementare, <xref:System.Runtime.Serialization.NetDataContractSerializer> . <xref:System.Runtime.Serialization.NetDataContractSerializer>È simile ai <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serializzatori e perché emette anche .NET Framework nomi di tipo come parte dei dati serializzati. Viene utilizzato quando gli stessi tipi sono condivisi alle estremità di serializzazione e deserializzazione. Sia <xref:System.Runtime.Serialization.DataContractSerializer> che <xref:System.Runtime.Serialization.NetDataContractSerializer> derivano da una classe di base comune, <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
+ WCF include anche un serializzatore complementare, <xref:System.Runtime.Serialization.NetDataContractSerializer> . <xref:System.Runtime.Serialization.NetDataContractSerializer>:
+
+* ***Non*** è protetto. Per ulteriori informazioni, vedere la [Guida alla sicurezza di BinaryFormatter](/dotnet/standard/serialization/binaryformatter-security-guide).
+* È simile ai <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serializzatori e perché emette anche .NET Framework nomi di tipo come parte dei dati serializzati.
+* Viene utilizzato quando gli stessi tipi sono condivisi durante la serializzazione e la fine della deserializzazione.
+
+ Sia <xref:System.Runtime.Serialization.DataContractSerializer> che <xref:System.Runtime.Serialization.NetDataContractSerializer> derivano da una classe base comune <xref:System.Runtime.Serialization.XmlObjectSerializer> .  
   
 > [!WARNING]
 > <xref:System.Runtime.Serialization.DataContractSerializer> serializza stringhe che contengono caratteri di controllo con un valore esadecimale inferiore a 20 come entità XML. Questo può causare un problema con un client non WCF durante l'invio di tali dati a un servizio WCF.  
@@ -231,7 +237,7 @@ Windows Communication Foundation (WCF) include un nuovo motore di serializzazion
   
  Possono tuttavia verificarsi numerosi problemi:  
   
-- Sicurezza Viene caricato qualsiasi tipo trovato nell'XML che viene deserializzato. Questo comportamento può essere sfruttato per forzare il caricamento di tipi dannosi. È consigliabile utilizzare `NetDataContractSerializer` con dati non attendibili solo se viene utilizzato un *gestore di associazione della serializzazione* (tramite la proprietà <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> o il parametro del costruttore). Il gestore di associazione consente che vengano caricati solo i tipi sicuri. Il meccanismo del gestore di associazione è identico a quello utilizzato dai tipi nello spazio dei nomi <xref:System.Runtime.Serialization> .  
+- Sicurezza. Viene caricato qualsiasi tipo trovato nell'XML che viene deserializzato. Questo comportamento può essere sfruttato per forzare il caricamento di tipi dannosi. È consigliabile utilizzare `NetDataContractSerializer` con dati non attendibili solo se viene utilizzato un *gestore di associazione della serializzazione* (tramite la proprietà <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> o il parametro del costruttore). Il gestore di associazione consente che vengano caricati solo i tipi sicuri. Il meccanismo del gestore di associazione è identico a quello utilizzato dai tipi nello spazio dei nomi <xref:System.Runtime.Serialization> .  
   
 - Controllo delle versioni. L'utilizzo di nomi di assembly e di tipo completi nell'XML limita rigidamente il modo in cui è possibile controllare le versioni dei tipi. Non è possibile modificare gli elementi seguenti: nomi dei tipi, spazi dei nomi, nomi degli assembly e versioni degli assembly. L'impostazione della proprietà <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> o del parametro del costruttore su <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> anziché sul valore predefinito di <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> consente di modificare la versione dell'assembly, fatta eccezione per i tipi di parametro generici.  
   
@@ -267,4 +273,4 @@ Windows Communication Foundation (WCF) include un nuovo motore di serializzazion
 - <xref:System.Runtime.Serialization.NetDataContractSerializer>
 - <xref:System.Runtime.Serialization.XmlObjectSerializer>
 - [Serializzazione binaria](../../../standard/serialization/binary-serialization.md)
-- [Types Supported by the Data Contract Serializer](types-supported-by-the-data-contract-serializer.md)
+- [Tipi supportati dal serializzatore dei contratti dati](types-supported-by-the-data-contract-serializer.md)

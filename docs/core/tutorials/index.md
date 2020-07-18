@@ -4,12 +4,12 @@ description: Seguire le esercitazioni per l'apprendimento di .NET Core per compi
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: a685b7d8d6c849cfea061a997780b9cafeb6d938
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c26d3e2e55723fed98f2013fe7131d2b06f910d2
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283728"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415938"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Scopri le esercitazioni su .NET Core e sugli strumenti di .NET Core SDK
 
@@ -42,7 +42,7 @@ Scegliere queste esercitazioni se si desidera utilizzare Visual Studio Code o un
 ## <a name="use-visual-studio-for-mac"></a>Usare Visual Studio per Mac
 
 - [Creare un'applicazione console](using-on-mac-vs.md)
-- [Creare una libreria e sottoporla a unit test](using-on-mac-vs-full-solution.md)
+- [Creare una libreria e sottoporla a unit test](library-with-visual-studio-mac.md)
 - [Installare e usare un pacchetto](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
 ## <a name="advanced-topics"></a>Argomenti avanzati
