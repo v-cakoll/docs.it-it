@@ -1,16 +1,17 @@
 ---
 title: Uso di foreach con matrici - Guida per programmatori C#
+description: L'istruzione foreach in C# scorre gli elementi di una matrice. Per le matrici unidimensionali, foreach elabora gli elementi in ordine di indice crescente.
 ms.date: 05/23/2018
 helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-ms.openlocfilehash: bb121b0f5d990ef6e596b34a45606e2abde6811a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d924a3ef3351cbb30b809a1542f35314ee721852
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705678"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474540"
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>Utilizzo di foreach con matrici (Guida per programmatori C#)
 
@@ -33,4 +34,4 @@ Con le matrici multidimensionali, tuttavia, l'uso di un ciclo [for](../../langua
 - [Matrici](index.md)
 - [Matrici unidimensionali](single-dimensional-arrays.md)
 - [Matrici multidimensionali](multidimensional-arrays.md)
-- [Matrici frastagliate](jagged-arrays.md)
+- [Matrici irregolari](jagged-arrays.md)

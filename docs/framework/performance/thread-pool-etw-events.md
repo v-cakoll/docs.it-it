@@ -1,16 +1,17 @@
 ---
 title: Eventi ETW del pool di thread
+description: Esaminare gli eventi ETW del pool di thread, che raccolgono informazioni sui thread in .NET. Gli eventi del pool di thread sono eventi del pool di thread di lavoro o eventi del pool di thread I/O.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-ms.openlocfilehash: 249d0607ddd280bcb4e9cf3ef34b28ff8ada3b04
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: d3059cec5007c24d41a4a779939d4990f19305ca
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240493"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475203"
 ---
 # <a name="thread-pool-etw-events"></a>Eventi ETW del pool di thread
 Questi eventi raccolgono informazioni sui thread di lavoro e di I/O.  
@@ -33,7 +34,7 @@ Questi eventi raccolgono informazioni sui thread di lavoro e di I/O.
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Event|ID evento|Generato quando|  
+|Evento|ID evento|Generato quando|  
 |-|-|-|  
 |`ThreadPoolWorkerThreadStart`|50|Viene creato un thread di lavoro.|  
 |`ThreadPoolWorkerThreadStop`|51|Viene arrestato un thread di lavoro.|  
@@ -42,7 +43,7 @@ Questi eventi raccolgono informazioni sui thread di lavoro e di I/O.
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome del campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |ActiveWorkerThreadCount|win:UInt32|Numero di thread di lavoro disponibili per l'elaborazione di lavoro, inclusi quelli che già elaborano il lavoro.|  
 |RetiredWorkerThreadCount|win:UInt32|Il numero di thread di lavoro che non sono disponibili per l'elaborazione di lavoro, ma che vengono mantenuti in riserva nel caso in cui più thread sono necessari in un secondo momento.|  
@@ -60,13 +61,13 @@ Questi eventi raccolgono informazioni sui thread di lavoro e di I/O.
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Event|ID evento|Descrizione|  
+|Evento|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|Fa riferimento alla raccolta di informazioni per un esempio, ovvero una misurazione della velocità effettiva con un livello determinato di concorrenza in un istante di tempo.|  
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome del campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |Velocità effettiva|win:Double|Numero di completamenti per unità di tempo.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
@@ -80,13 +81,13 @@ Questi eventi raccolgono informazioni sui thread di lavoro e di I/O.
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Event|ID evento|Descrizione|  
+|Evento|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|Registra una modifica nel controllo, quando l'algoritmo di inserimento thread (spostamento verso l’alto) determina che una modifica nel livello di concorrenza è attiva.|  
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome del campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |AverageThroughput|win:Double|Velocità effettiva Media di un campione di misurazioni.|  
 |NewWorkerThreadCount|win:UInt32|Nuovo numero di thread di lavoro attivi.|  
@@ -102,15 +103,15 @@ Questi eventi raccolgono informazioni sui thread di lavoro e di I/O.
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Event|ID evento|Descrizione|  
+|Evento|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|Raccoglie i dati nel pool di thread.|  
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome del campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
-|Duration|win:Double|Quantità di tempo, espresso in secondi, durante il quale sono state raccolte queste statistiche.|  
+|Durata|win:Double|Quantità di tempo, espresso in secondi, durante il quale sono state raccolte queste statistiche.|  
 |Velocità effettiva|win:Double|Numero medio di completamenti al secondo durante questo intervallo.|  
 |ThreadWave|win:Double|Riservato per utilizzo interno.|  
 |ThroughputWave|win:Double|Riservato per utilizzo interno.|  
@@ -134,13 +135,13 @@ Questi eventi raccolgono informazioni sui thread di lavoro e di I/O.
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Event|ID evento|Generato quando|  
+|Evento|ID evento|Generato quando|  
 |-|-|-|  
 |`IOThreadCreate_V1`|44|Viene creato un thread di I/O nel pool di thread.|  
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome del campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |Conteggio|win:UInt64|Numero di thread di I/O, tra cui il thread appena creato.|  
 |NumRetired|win:UInt64|Numero di thread di lavoro ritirato.|  
@@ -155,13 +156,13 @@ Questi eventi raccolgono informazioni sui thread di lavoro e di I/O.
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Event|ID evento|Generato quando|  
+|Evento|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`IOThreadRetire_V1`|46|Un thread di I/O diventa un candidato al ritiro.|  
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome del campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |Conteggio|win:UInt64|Numero di thread di I/O rimanenti nel pool di thread.|  
 |NumRetired|win:UInt64|Numero di thread di I/O ritirato.|  
@@ -176,13 +177,13 @@ Questi eventi raccolgono informazioni sui thread di lavoro e di I/O.
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Event|ID evento|Generato quando|  
+|Evento|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`IOThreadUnretire_V1`|47|Un thread di I/O viene ritirato a causa dell’I/O pervenuto entro un periodo di attesa dopo che il thread diventa un candidato al ritiro.|  
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome del campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |Conteggio|win:UInt64|Numero di thread di I/O nel pool di thread, incluso il presente.|  
 |NumRetired|win:UInt64|Numero di thread di I/O ritirato.|  
@@ -197,13 +198,13 @@ Questi eventi raccolgono informazioni sui thread di lavoro e di I/O.
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Event|ID evento|Generato quando|  
+|Evento|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`IOThreadTerminate`|45|Un thread di I/O viene terminato nel pool di thread.|  
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome del campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |Conteggio|win:UInt64|Numero di thread di I/O rimanenti nel pool di thread.|  
 |NumRetired|win:UInt64|Numero di thread di I/O ritirato.|  

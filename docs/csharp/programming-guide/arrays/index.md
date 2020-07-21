@@ -1,20 +1,21 @@
 ---
 title: Matrici - Guida per programmatori C#
+description: Archiviare più variabili dello stesso tipo in una struttura di dati di matrice in C#. Dichiarare una matrice specificando un tipo o specificando un oggetto per archiviare qualsiasi tipo.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: bbabc84c144e5b3415c19f346b890782e251662c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e302ff2e4c2488c4899c4eb99a666d2d322119ce
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715061"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474735"
 ---
 # <a name="arrays-c-programming-guide"></a>Matrici (Guida per programmatori C#)
 
-È possibile archiviare più variabili dello stesso tipo in una struttura di dati a matrice. Una matrice viene dichiarata specificando il tipo degli elementi. Se si desidera che la matrice memorizzi `object` elementi di qualsiasi tipo, è possibile specificare come tipo. Nel sistema di tipi unificato di C#, tutti i tipi, predefiniti e definiti dall'utente, i tipi riferimento e i tipi valore ereditano direttamente o indirettamente da <xref:System.Object>.
+È possibile archiviare più variabili dello stesso tipo in una struttura di dati a matrice. Una matrice viene dichiarata specificando il tipo degli elementi. Se si desidera che la matrice memorizzi elementi di qualsiasi tipo, è possibile specificare `object` come tipo. Nel sistema di tipi unificato di C#, tutti i tipi, predefiniti e definiti dall'utente, i tipi riferimento e i tipi valore ereditano direttamente o indirettamente da <xref:System.Object>.
 
 ```csharp
 type[] arrayName;
@@ -51,4 +52,4 @@ Le matrici hanno le proprietà seguenti:
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
-- [Raccolte](../concepts/collections.md)
+- [raccolte](../concepts/collections.md)

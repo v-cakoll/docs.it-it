@@ -1,16 +1,17 @@
 ---
 title: 'Mitigazione: Protocolli TLS'
+description: Informazioni sull'effetto e la mitigazione per le modifiche del protocollo TLS che iniziano con .NET Framework 4,6.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
-ms.openlocfilehash: 45225d73ac60564d3e22c73270faab6b4e04d697
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb5aab3361663d7b5401d7e68688265fbc65b36f
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457832"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475359"
 ---
 # <a name="mitigation-tls-protocols"></a>Mitigazione: Protocolli TLS
 A partire da .NET Framework 4.6, le classi <xref:System.Net.ServicePointManager?displayProperty=nameWithType> e <xref:System.Net.Security.SslStream?displayProperty=nameWithType> possono usare uno dei tre protocolli seguenti: Tls1.0, Tls1.1 o Tls 1.2. Il protocollo SSL 3.0 e la crittografia RC4 non sono supportati.  
@@ -32,7 +33,7 @@ A partire da .NET Framework 4.6, le classi <xref:System.Net.ServicePointManager?
   
      Poiché l'oggetto <xref:System.Net.ServicePointManager> viene inizializzato una sola volta, la definizione di queste impostazioni di compatibilità deve essere la prima attività eseguita dall'applicazione.  
   
-- Aggiungendo la riga seguente [ \<](../configure-apps/file-schema/runtime/runtime-element.md) alla sezione runtime>del file app.config:  
+- Aggiungendo la riga seguente alla [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) sezione del file di app.config:  
   
     ```xml  
     <AppContextSwitchOverrides value="Switch.System.Net.DontEnableSchUseStrongCrypto=true"/>  

@@ -1,16 +1,17 @@
 ---
 title: 'Migrazione: Normalizzazione del percorso'
+description: Informazioni sul modo in cui la normalizzazione dei percorsi in .NET Framework è cambiata a partire dalle app destinate a .NET Framework 4.6.2.
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-ms.openlocfilehash: 61c8eec2043aa2fb9309ee6052e27fc2c91c6c6a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89dcc46d9f266ffd3635dc0cc02b634720356eda
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181228"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475216"
 ---
 # <a name="mitigation-path-normalization"></a>Migrazione: Normalizzazione del percorso
-A partire dalle applicazioni destinate a .NET Framework 4.6.2, la normalizzazione del percorso in .NET Framework è stata modificata.  
+A partire dalle app destinate a .NET Framework 4.6.2, la normalizzazione del percorso nel .NET Framework è cambiata.  
   
 ## <a name="what-is-path-normalization"></a>Che cos'è la normalizzazione di un percorso?  
  La normalizzazione di un percorso include la modifica della stringa che identifica un file o il percorso in modo che sia conforme a un percorso valido sul sistema operativo di destinazione. In genere, la normalizzazione implica:  
@@ -43,7 +44,7 @@ Per le applicazioni destinate a .NET Framework 4.6.2 o versioni successive, ques
 Le applicazioni destinate a .NET Framework 4.6.1 e versioni precedenti ma in esecuzione in .NET Framework 4.6.2 o versioni successive non sono interessate da questa modifica.  
   
 ## <a name="mitigation"></a>Strategia di riduzione del rischio  
- Le app destinate a .NET Framework 4.6.2 o versioni successive possono rifiutare esplicitamente questa modifica e usare la normalizzazione legacy aggiungendo quanto segue alla sezione [ \<di>](../configure-apps/file-schema/runtime/runtime-element.md) di runtime del file di configurazione dell'applicazione:  
+ Le app destinate a .NET Framework 4.6.2 o versioni successive possono rifiutare esplicitamente questa modifica e usare la normalizzazione legacy aggiungendo quanto segue alla [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) sezione del file di configurazione dell'applicazione:  
   
 ```xml  
 <runtime>  
@@ -51,7 +52,7 @@ Le applicazioni destinate a .NET Framework 4.6.1 e versioni precedenti ma in ese
 </runtime>  
 ```  
   
-Le app destinate a .NET Framework 4.6.1 o versioni precedenti ma in esecuzione in .NET Framework 4.6.2 o versioni successive possono abilitare le modifiche alla normalizzazione del percorso aggiungendo la riga seguente alla sezione>di [ \<runtime](../configure-apps/file-schema/runtime/runtime-element.md) del file di configurazione dell'applicazione:  
+Le app destinate a .NET Framework 4.6.1 o versioni precedenti ma in esecuzione nel .NET Framework 4.6.2 o versioni successive possono abilitare le modifiche alla normalizzazione del percorso aggiungendo la riga seguente alla [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) sezione del file di configurazione dell'applicazione:  
   
 ```xml  
 <runtime>  

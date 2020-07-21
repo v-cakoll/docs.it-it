@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 9765d13191f862a2e92bb00aa66a92c3a64ac303
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: eb3a591ba7b58e187eb03e65a3da6dfb47c9475c
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446939"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473981"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opzioni del compilatore C# in ordine alfabetico
 
@@ -30,11 +30,11 @@ Le seguenti opzioni del compilatore sono ordinate alfabeticamente. Per un elenco
 |[-bugreport](bugreport-compiler-option.md)|Crea un file di report sui bug. Questo file verrà inviato con le informazioni sull'arresto anomalo se viene usato con -errorreport:prompt o -errorreport:send.|
 |[-selezionato](checked-compiler-option.md)|Fa generare al compilatore i controlli dell'overflow.|
 |-checksumalgorithm:\<alg>|Specifica l'algoritmo per il calcolo del checksum del file di origine archiviato nel file PDB.  I valori supportati sono: SHA256 (impostazione predefinita) o SHA1.<br>A causa di problemi di conflitto con SHA1, Microsoft consiglia SHA256. |
-|[-codepage](codepage-compiler-option.md)|Specifica la tabella di codici da utilizzare per l'apertura dei file di origine.|
+|[-tabella codici](codepage-compiler-option.md)|Specifica la tabella di codici da utilizzare per l'apertura dei file di origine.|
 |[-debug](debug-compiler-option.md)|Crea informazioni di debug.|
 |[-define](define-compiler-option.md)|Definisce i simboli di compilazione condizionale.|
 |[-delaysign](delaysign-compiler-option.md)|Ritarda la firma dell'assembly usando solo la parte pubblica della chiave con nome sicuro.|
-|[-deterministic](deterministic-compiler-option.md)|Fa sì che l'output del compilatore sia un assembly il cui contenuto binario è identico in tutte le compilazioni se gli input sono identici.|
+|[-deterministico](deterministic-compiler-option.md)|Fa sì che l'output del compilatore sia un assembly il cui contenuto binario è identico in tutte le compilazioni se gli input sono identici.|
 |[-doc](doc-compiler-option.md)|Specifica un file XML della documentazione da generare.|
 |-embed|Incorporare tutti i file di origine nel file PDB.|
 |incorporare\<file list>|Incorporare file specifici nel file PDB.|
@@ -77,7 +77,7 @@ Le seguenti opzioni del compilatore sono ordinate alfabeticamente. Per un elenco
 |[-risorsa](resource-compiler-option.md)|Incorpora la risorsa specificata.|
 |RuleSet\<file>|Specificare un file di set di regole che disabilita la diagnostica specifica.|
 |[-subsystemversion](subsystemversion-compiler-option.md)|Specifica la versione minima del sottosistema che può essere utilizzata dal file eseguibile.|
-|[-destinazione](target-compiler-option.md)|Specifica il formato del file di output tramite una delle quattro opzioni seguenti: [-target: appcontainerexe](target-appcontainerexe-compiler-option.md), [-target: exe](target-exe-compiler-option.md), [-target: Library](target-library-compiler-option.md), [-target: module](target-module-compiler-option.md), [-target: winexe](target-winexe-compiler-option.md), [-target: winmdobj](target-winmdobj-compiler-option.md).|
+|[-destinazione](target-compiler-option.md)|Specifica il formato del file di output usando una delle opzioni seguenti: [-target: appcontainerexe](target-appcontainerexe-compiler-option.md), [-target: exe](target-exe-compiler-option.md), [-target: Library](target-library-compiler-option.md), [-target: module](target-module-compiler-option.md), [-target: winexe](target-winexe-compiler-option.md), [-target: winmdobj](target-winmdobj-compiler-option.md).|
 |[-unsafe](unsafe-compiler-option.md)|Consente codice [unsafe](../keywords/unsafe.md).|
 |[-utf8output](utf8output-compiler-option.md)|Restituisce i messaggi del compilatore usando la codifica UTF-8.|
 |-version|Visualizza il numero di versione del compilatore ed esce.|

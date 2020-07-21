@@ -1,16 +1,17 @@
 ---
 title: Programmazione dinamica in .NET Framework
+description: Vedere collegamenti ad articoli sulla programmazione dinamica in .NET. Gli articoli riguardano la reflection, la creazione di assembly e metodi dinamici e altro ancora.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, dynamic programming
 - dynamic programming [.NET Framework]
 ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
-ms.openlocfilehash: 687f077cb609a2185fcb044c33bce5c636522381
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd0a46dc9e0c2228c97ba995d9d1acda206e95f9
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73130090"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474007"
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>Programmazione dinamica in .NET Framework
 In questa sezione della documentazione sono fornite informazioni sulla programmazione dinamica in .NET Framework.  

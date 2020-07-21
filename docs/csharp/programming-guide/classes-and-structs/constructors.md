@@ -1,17 +1,18 @@
 ---
 title: Costruttori - Guida per programmatori C#
+description: Un costruttore in C# viene chiamato quando viene creata una classe o uno struct. Utilizzare i costruttori per impostare i valori predefiniti, limitare la creazione di istanze e scrivere codice flessibile e di facile lettura.
 ms.date: 05/05/2017
 helpviewer_keywords:
 - constructors [C#]
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 8eedfaed111f01cc2ec55a2f42df66d4588bd42f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4a731e648143f5e0ecf8860625962d8baa29fe26
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399791"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474904"
 ---
 # <a name="constructors-c-programming-guide"></a>Costruttori (Guida per programmatori C#)
 
@@ -19,7 +20,7 @@ Quando si crea una [classe](../../language-reference/keywords/class.md) o uno [s
 
 ## <a name="parameterless-constructors"></a>Costruttori senza parametri
   
-Se non si fornisce un costruttore per la classe, per impostazione predefinita viene creato un costruttore che crea un'istanza dell'oggetto e imposta le variabili membro sui valori predefiniti, come elencato nell'articolo [Valori predefiniti dei tipi c'è.](../../language-reference/builtin-types/default-values.md) Se non si fornisce un costruttore per lo struct, il linguaggio Cè si basa su un *costruttore implicito senza parametri* per inizializzare automaticamente ogni campo sul valore predefinito. Per ulteriori informazioni ed esempi, vedere [Costruttori di](instance-constructors.md)istanza .  
+Se non si specifica un costruttore per la classe, C# ne crea uno per impostazione predefinita che crea un'istanza dell'oggetto e imposta le variabili membro sui valori predefiniti elencati nell'articolo [valori predefiniti di tipi C#](../../language-reference/builtin-types/default-values.md) . Se non si specifica un costruttore per lo struct, C# si basa su un *costruttore senza parametri implicito* per inizializzare automaticamente ogni campo sul valore predefinito. Per ulteriori informazioni ed esempi, vedere [costruttori di istanze](instance-constructors.md).  
 
 ## <a name="constructor-syntax"></a>Sintassi del costruttore
 
@@ -33,7 +34,7 @@ Se un costruttore può essere implementato come istruzione unica, è possibile u
 
 ## <a name="static-constructors"></a>Costruttori statici
 
-Tutti gli esempi precedenti hanno illustrato costruttori di istanza, che creano un nuovo oggetto. Una classe o uno struct può avere anche un costruttore statico, che inizializza i membri statici del tipo.  I costruttori statici non hanno parametri. Se non si fornisce un costruttore statico per inizializzare i campi statici, il compilatore C'è inizializzare i campi statici sul valore predefinito, come elencato nell'articolo [Valori predefiniti dei tipi C](../../language-reference/builtin-types/default-values.md) .
+Tutti gli esempi precedenti hanno illustrato costruttori di istanza, che creano un nuovo oggetto. Una classe o uno struct può avere anche un costruttore statico, che inizializza i membri statici del tipo.  I costruttori statici non hanno parametri. Se non si fornisce un costruttore statico per inizializzare i campi statici, il compilatore C# Inizializza i campi statici sul valore predefinito come elencato nell'articolo [valori predefiniti di tipi C#](../../language-reference/builtin-types/default-values.md) .
 
 L'esempio seguente usa un costruttore statico per inizializzare un campo statico.
 
@@ -46,9 +47,9 @@ L'esempio seguente usa un costruttore statico per inizializzare un campo statico
 Per altre informazioni, vedere [Costruttori statici](./static-constructors.md).  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
- [Uso dei costruttori](./using-constructors.md)  
+ [Utilizzo di costruttori](./using-constructors.md)  
   
- [Costruttori di istanze](./instance-constructors.md)  
+ [Costruttori di istanza](./instance-constructors.md)  
   
  [Costruttori privati](./private-constructors.md)  
   
@@ -61,5 +62,5 @@ Per altre informazioni, vedere [Costruttori statici](./static-constructors.md).
 - [Guida per programmatori C#](../index.md)
 - [Classi e struct](./index.md)
 - [Finalizzatori](./destructors.md)
-- [Statico](../../language-reference/keywords/static.md)
-- [Perché gli inizializzatori vengono eseguiti nell'ordine opposto come costruttori? Prima parte](https://docs.microsoft.com/archive/blogs/ericlippert/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)
+- [static](../../language-reference/keywords/static.md)
+- [Perché gli inizializzatori vengono eseguiti nell'ordine opposto come costruttori? Parte 1](https://docs.microsoft.com/archive/blogs/ericlippert/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)

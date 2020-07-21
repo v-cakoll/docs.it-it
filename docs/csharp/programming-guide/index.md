@@ -1,5 +1,6 @@
 ---
 title: Guida per programmatori C#
+description: Usare queste risorse per informazioni dettagliate sulle funzionalità principali del linguaggio C# e sulle funzionalità accessibili a C# tramite .NET.
 ms.date: 05/02/2017
 f1_keywords:
 - cs.langref
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: df69d895dee51f1bad1fb6164fcb18996ee3eef4
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: e2127b91efb5a77497ce22e0f2934fab98f015af
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241656"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473877"
 ---
 # <a name="c-programming-guide"></a>Guida per programmatori C#
 
@@ -72,7 +73,7 @@ In questa sezione vengono fornite informazioni dettagliate sulle principali funz
   
  [Assembly in .NET](../../standard/assembly/index.md)  
   
- [Attributi](./concepts/attributes/index.md)  
+ [Attributes (Attributi)](./concepts/attributes/index.md)  
   
  [raccolte](./concepts/collections.md)  
   

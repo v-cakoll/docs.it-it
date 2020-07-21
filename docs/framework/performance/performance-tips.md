@@ -1,5 +1,6 @@
 ---
 title: Suggerimenti sulle prestazioni .NET
+description: Esplorare i suggerimenti sulle prestazioni per migliorare la velocità di esecuzione di un programma in .NET. Vedere Suggerimenti per la conversione boxing e unboxing, le stringhe e i distruttori.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - C# language, performance
@@ -9,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 12e8d9398a1cf76267f4e8441845007da17949cd
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 2b3be8b42b5046e52074236de01ca312a0a9a361
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937905"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474267"
 ---
 # <a name="net-performance-tips"></a>Suggerimenti sulle prestazioni .NET
 Il termine *prestazioni* si riferisce in genere alla velocità di esecuzione di un programma. In alcuni casi, è possibile aumentare la velocità di esecuzione seguendo determinate regole di base nel codice sorgente. In alcuni programmi, è importante esaminare attentamente il codice e usare i profiler per verificare che venga eseguito il più velocemente possibile. In altri programmi, non è necessario eseguire questa ottimizzazione perché il codice viene eseguito con una velocità ragionevole così com'è scritto. In questo articolo sono elencate alcune aree in cui si verificano comunemente problemi di prestazioni e vengono proposti suggerimenti per migliorarle, oltre a collegamenti ad altri argomenti dedicati alle prestazioni. Per altre informazioni sulla pianificazione e la misurazione delle prestazioni, vedere [Prestazioni](index.md)  
@@ -28,7 +29,7 @@ Il termine *prestazioni* si riferisce in genere alla velocità di esecuzione di 
 ## <a name="destructors"></a>Distruttori  
  Non usare distruttori vuoti. Quando una classe contiene un distruttore, viene creata una voce nella coda Finalize. Quando si chiama il distruttore, viene richiamato Garbage Collector per elaborare la coda. Se il distruttore è vuoto, si verifica semplicemente un calo di prestazioni. Per altre informazioni, vedere [Distruttori](../../csharp/programming-guide/classes-and-structs/destructors.md) e [Durata degli oggetti: come creare ed eliminare definitivamente oggetti](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
-## <a name="other-resources"></a>Altre risorse  
+## <a name="other-resources"></a>Risorse aggiuntive  
   
 - [Writing Faster Managed Code: Know What Things Cost](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973852(v=msdn.10)) (Scrittura di codice gestito più veloce: essere consapevoli dei costi)  
   

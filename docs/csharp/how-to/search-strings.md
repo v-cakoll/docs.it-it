@@ -1,17 +1,18 @@
 ---
 title: Come cercare stringhe (Guida a C#)
+description: Informazioni su due strategie per la ricerca di testo nelle stringhe in C#. I metodi della classe String cercano un testo specifico. Le espressioni regolari consentono di cercare modelli nel testo.
 ms.date: 02/21/2018
 helpviewer_keywords:
 - searching strings [C#]
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: 34f9f2df11f9b7c51fcec2f8475a50ccf4c5e220
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 17bf6e080542242d30791b70ffbf00b05f03a7b0
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324123"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473994"
 ---
 # <a name="how-to-search-strings"></a>Come cercare stringhe
 
@@ -72,7 +73,7 @@ Il codice seguente usa le espressioni regolari per convalidare il formato di ogn
 
 Questo singolo criterio di ricerca corrisponde a molte stringhe valide. Le espressioni regolari sono preferibili per eseguire ricerche o convalide in base a un modello, anziché a una singola stringa di testo.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../programming-guide/index.md)
 - [Stringhe](../programming-guide/strings/index.md)

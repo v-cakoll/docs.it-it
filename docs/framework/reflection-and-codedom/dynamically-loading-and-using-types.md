@@ -1,5 +1,6 @@
 ---
 title: Caricamento e utilizzo dinamico dei tipi
+description: Caricare e utilizzare in modo dinamico i tipi in .NET. Utilizzare la reflection, che fornisce l'infrastruttura utilizzata dai compilatori di linguaggio per implementare l'associazione tardiva implicita.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-ms.openlocfilehash: 940f334ec6a42c4d8da461d634051ff979b8f98d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 39a4a9a2ff77cb900db7f39a55dc17a5b8c62cf3
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130257"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475086"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Caricamento e utilizzo dinamico dei tipi
 La reflection offre l'infrastruttura usata dai compilatori di linguaggi per implementare l'associazione tardiva implicita. L'associazione è il processo di individuazione della dichiarazione (ovvero l'implementazione) che corrisponde a un tipo specificato in modo univoco. Quando questo processo avviene in fase di esecuzione piuttosto che in fase di compilazione, esso viene chiamato associazione tardiva. Visual Basic consente di usare l'associazione tardiva implicita nel codice. Il compilatore Visual Basic chiama un metodo helper che usa la reflection per ottenere il tipo di oggetto. Gli argomenti passati al metodo helper determinano la chiamata, in fase di esecuzione, del metodo appropriato. Questi argomenti sono l'istanza (un oggetto) su cui richiamare il metodo, il nome del metodo richiamato (una stringa) e gli argomenti passati al metodo richiamato (una matrice di oggetti).  

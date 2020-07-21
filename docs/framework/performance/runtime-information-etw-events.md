@@ -1,23 +1,24 @@
 ---
 title: Eventi ETW di informazione di runtime
+description: Vedere eventi ETW di informazioni di runtime, che registrano lo SKU, il numero di versione, il modo in cui il runtime è stato attivato (inclusi i parametri della riga di comando), il GUID e altro ancora.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - runtime information events [.NET Framework]
 - ETW, runtime information events
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
-ms.openlocfilehash: 2927ed088ba6c9e46b9676d55d0046575e23cfb1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 385519229bdb76841cdf592d95e96d2288ec5e1a
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715948"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474228"
 ---
 # <a name="runtime-information-etw-events"></a>Eventi ETW di informazione di runtime
 Questi eventi ETW registrano informazioni sul runtime, inclusi lo SKU, il numero della versione, la modalità di attivazione del runtime, i parametri della riga di comando con cui è stato avviato il runtime, il GUID (se applicabile) e altre informazioni rilevanti. Se più runtime sono in esecuzione all'interno di un processo, le informazioni fornite da questi eventi (ClrInstanceID) consentono di distinguere tra i runtime.  
   
  La tabella seguente mostra i due eventi di informazioni sui runtime. Gli eventi possono essere generati con qualsiasi parola chiave o maschera. Per altre informazioni, vedere [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).  
   
-|Event|ID evento|Provider|Descrizione|  
+|Evento|ID evento|Provider|Descrizione|  
 |-----------|--------------|--------------|-----------------|  
 |`RuntimeInformationEvent`|187|CLRRuntime|Generato quando viene caricato un runtime.|  
 |`RuntimeInformationDCStart`|187|CLRRundown|Enumera i runtime caricati.|  

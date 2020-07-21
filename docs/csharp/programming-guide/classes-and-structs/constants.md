@@ -1,19 +1,20 @@
 ---
 title: Costanti - Guida per programmatori C#
+description: Le costanti in C# sono valori letterali in fase di compilazione, che non cambiano dopo la compilazione del programma. Solo i tipi incorporati in C# possono essere costanti.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: 85f6684617b893bdd85eb5b530aa2481941fbc5d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd42dcd62bb46898c20f14cdc893b8f5801894f2
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093552"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474982"
 ---
 # <a name="constants-c-programming-guide"></a>Costanti (Guida per programmatori C#)
-Le costanti sono valori non modificabili, che sono noti nella fase di compilazione e non cambiano per la durata del programma. Le costanti vengono dichiarate con il modificatore [const](../../language-reference/keywords/const.md). Solo i [tipi incorporati](../../language-reference/builtin-types/built-in-types.md) di C, esclusi <xref:System.Object?displayProperty=nameWithType> `const`, possono essere dichiarati come . I tipi definiti dall'utente, incluse le classi, gli struct e le matrici, non possono essere `const`. Usare il modificatore [readonly](../../language-reference/keywords/readonly.md) per creare una classe, una matrice o uno struct che viene inizializzato una sola volta in fase di runtime (ad esempio in un costruttore) e successivamente non può più essere modificato.  
+Le costanti sono valori non modificabili, che sono noti nella fase di compilazione e non cambiano per la durata del programma. Le costanti vengono dichiarate con il modificatore [const](../../language-reference/keywords/const.md). Solo i [tipi incorporati](../../language-reference/builtin-types/built-in-types.md) C# (esclusi <xref:System.Object?displayProperty=nameWithType> ) possono essere dichiarati come `const` . I tipi definiti dall'utente, incluse le classi, gli struct e le matrici, non possono essere `const`. Usare il modificatore [readonly](../../language-reference/keywords/readonly.md) per creare una classe, una matrice o uno struct che viene inizializzato una sola volta in fase di runtime (ad esempio in un costruttore) e successivamente non può più essere modificato.  
   
  C# non supporta metodi, proprietà o eventi `const`.  
   
@@ -51,5 +52,5 @@ Le costanti sono valori non modificabili, che sono noti nella fase di compilazio
 - [Classi e struct](./index.md)
 - [Proprietà](./properties.md)
 - [Tipi](../types/index.md)
-- [Readonly](../../language-reference/keywords/readonly.md)
+- [ReadOnly](../../language-reference/keywords/readonly.md)
 - [Immutability in C# Part One: Kinds of Immutability](https://docs.microsoft.com/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability) (Immutabilità in C# - Parte 1: tipi di immutabilità)

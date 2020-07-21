@@ -1,14 +1,15 @@
 ---
 title: Come modificare il contenuto di una stringa-Guida a C#
+description: Esaminare esempi di diverse tecniche per modificare il contenuto di una stringa esistente in C#, che restituisce un nuovo oggetto stringa.
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: e607a8a2e96a73f64463d75a75a2bfe3f518d118
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ecce8857befc66353deea341d81f8c6e4313b951
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324174"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473968"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Come modificare il contenuto di una stringa in C\#
 
@@ -70,7 +71,7 @@ Poiché le stringhe non sono modificabili, negli esempi precedenti vengono creat
 
 È possibile modificare una stringa in un blocco fisso con codice non sicuro, ma è **fortemente** sconsigliata modificare il contenuto della stringa dopo la creazione di una stringa. In questo modo si interrompono le operazioni in modi imprevedibili. Se, ad esempio, un utente esegue il interning di una stringa con lo stesso contenuto, otterrà la copia e non si prevede di modificare la stringa.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [.NET Framework espressioni regolari](../../standard/base-types/regular-expressions.md)
 - [Linguaggio di espressioni regolari-riferimento rapido](../../standard/base-types/regular-expression-language-quick-reference.md)

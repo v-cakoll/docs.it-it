@@ -1,15 +1,16 @@
 ---
 title: Scrittura di app grandi e reattive in .NET Framework
+description: Scrivi app .NET di grandi dimensioni e reattive che elaborano una grande quantità di dati, ad esempio file o database.
 ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 57f65feff5260cb83df5354f5d7ee1bad0babb3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b1c9ab25299fcbafca6aba7b13217713a941ce8
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180587"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475190"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Scrittura di app grandi e reattive in .NET Framework
 
@@ -24,7 +25,7 @@ Grazie a .NET Framework è possibile ottenere una produttività elevata per la c
   
  Quando gli utenti finali interagiscono con l'app, si aspettano che sia reattiva. La digitazione o la gestione dei comandi non devono essere mai bloccate. Le informazioni di supporto devono essere visualizzate rapidamente o scomparire se l'utente continua a digitare. L'app deve evitare di bloccare il thread dell'interfaccia utente con calcoli di lunga durata, che potrebbero dare l'impressione di lentezza dell'app.
   
- Per ulteriori informazioni sui compilatori Roslyn, vedere [SDK della piattaforma del compilatore .NET](../../csharp/roslyn-sdk/index.md).
+ Per ulteriori informazioni sui compilatori Roslyn, vedere [il .NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md).
   
 ## <a name="just-the-facts"></a>Considerazioni essenziali  
  Quando si ottimizzano le prestazioni e si creano app .NET Framework reattive, occorre prestare attenzione alle considerazioni seguenti.
@@ -38,7 +39,7 @@ Grazie a .NET Framework è possibile ottenere una produttività elevata per la c
  È consigliabile definire obiettivi per le prestazioni relative a esperienze utente o scenari chiave dell'app e scrivere test per la misurazione delle prestazioni. Esaminare i test che rilevano errori applicando un metodo scientifico: usare i profili come indicazione, definire ipotesi sulla natura del problema e testare le ipotesi tramite un esperimento o una modifica del codice. Stabilire misure iniziali per le prestazioni nel tempo grazie a testing regolare, in modo da potere isolare le modifiche che provocano una regressione nelle prestazioni. Un approccio rigoroso alle operazioni relative alle prestazioni permette di evitare di perdere tempo con aggiornamenti di codice superflui.
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Considerazione 3: La qualità degli strumenti è essenziale  
- Gli strumenti efficaci permettono di individuare rapidamente i problemi principali a livello di prestazioni (CPU, memoria o disco) e semplificano l'individuazione del codice che provoca tali colli di bottiglia. Microsoft fornisce una varietà di strumenti per le prestazioni, ad esempio [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) e [PerfView](https://www.microsoft.com/download/details.aspx?id=28567).
+ Gli strumenti efficaci permettono di individuare rapidamente i problemi principali a livello di prestazioni (CPU, memoria o disco) e semplificano l'individuazione del codice che provoca tali colli di bottiglia. Microsoft fornisce un'ampia gamma di strumenti per le prestazioni, ad esempio [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) e [PerfView](https://www.microsoft.com/download/details.aspx?id=28567).
   
  PerfView è uno strumento gratuito e straordinariamente efficace che permette di concentrarsi sui problemi essenziali, ad esempio I/O del disco, eventi GC e memoria. È possibile acquisire eventi ETW ([Event Tracing for Windows](../wcf/samples/etw-tracing.md)) relativi alle prestazioni e visualizzare con facilità le informazioni specifiche per app, processi, stack e thread. PerfView mostra la quantità e il tipo di memoria allocata dall'app e le quantità di memoria allocate da quali funzioni o stack di chiamata. Per informazioni dettagliate, vedere gli esaurienti argomenti, demo e video inclusi con lo strumento (ad esempio le [esercitazioni relative a PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) su Channel 9).
   
@@ -196,7 +197,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc...
 ```  
   
- La prima versione di `WriteFormattedDocComment()` esegue l'allocazione di una matrice, alcune sottostringhe e una sottostringa ritagliata, insieme a una matrice di `params` vuota. Ha anche controllato per "///". Il codice rivisto usa solo l'indicizzazione e non esegue alcuna allocazione. Trova il primo carattere che non è uno spazio vuoto e quindi controlla carattere per carattere per vedere se la stringa inizia con "///". Il nuovo `IndexOfFirstNonWhiteSpaceChar` codice <xref:System.String.TrimStart%2A> viene utilizzato al posto di per restituire il primo indice (dopo un indice iniziale specificato) in cui si verifica un carattere diverso da uno spazio vuoto. La correzione non è completa, ma è semplice intuire come applicare correzioni simili per ottenere una soluzione completa. Applicando questo approccio a tutto il codice sarà possibile rimuovere tutte le allocazioni in `WriteFormattedDocComment()`.
+ La prima versione di `WriteFormattedDocComment()` esegue l'allocazione di una matrice, alcune sottostringhe e una sottostringa ritagliata, insieme a una matrice di `params` vuota. È stata verificata anche la presenza di "///". Il codice rivisto usa solo l'indicizzazione e non esegue alcuna allocazione. Trova il primo carattere che non è uno spazio vuoto, quindi controlla il carattere per carattere per verificare se la stringa inizia con "///". Il nuovo codice usa `IndexOfFirstNonWhiteSpaceChar` anziché <xref:System.String.TrimStart%2A> per restituire il primo indice (dopo un indice iniziale specificato) in cui si verifica un carattere diverso da uno spazio vuoto. La correzione non è completa, ma è semplice intuire come applicare correzioni simili per ottenere una soluzione completa. Applicando questo approccio a tutto il codice sarà possibile rimuovere tutte le allocazioni in `WriteFormattedDocComment()`.
   
  **Esempio 4: StringBuilder**  
   
@@ -277,9 +278,9 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  Questa semplice strategia per la memorizzazione nella cache rispetta le indicazioni per una progettazione ottimale della cache, poiché prevede un limite per le dimensioni. La quantità di codice, tuttavia, è superiore rispetto all'originale e ciò comporta maggiori costi di gestione. È consigliabile adottare la strategia per la memorizzazione nella cache solo se si sono verificati problemi di prestazioni e se PerfView ha mostrato che le allocazioni di <xref:System.Text.StringBuilder> contribuiscono in modo significativo a questi problemi.
   
 ### <a name="linq-and-lambdas"></a>LINQ ed espressioni lambda  
-Language-Integrated Query (LINQ), in combinazione con le espressioni lambda, è un esempio di una funzionalità di produttività. Tuttavia, il suo utilizzo può avere un impatto significativo sulle prestazioni nel tempo e potrebbe essere necessario riscrivere il codice.
+LINQ (Language-Integrated Query), insieme alle espressioni lambda, è un esempio di funzionalità di produttività. Tuttavia, il suo utilizzo potrebbe avere un impatto significativo sulle prestazioni nel tempo e potrebbe essere necessario riscrivere il codice.
   
- **Esempio 5: Espressioni lambda, List\<T> e IEnumerable\<T>**  
+ **Esempio 5: espressioni lambda, List \<T> e IEnumerable\<T>**  
   
  Questo esempio usa [LINQ e il codice di stile funzionale](https://docs.microsoft.com/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming) per individuare un simbolo nel modello del compilatore, a partire da una stringa di nome:  
   
@@ -413,7 +414,7 @@ class Compilation { /*...*/
   
  **Correzione per l'esempio 6**  
   
- Per rimuovere <xref:System.Threading.Tasks.Task> l'allocazione completata, è possibile memorizzare nella cache l'oggetto Task con il risultato completato:  
+ Per rimuovere l' <xref:System.Threading.Tasks.Task> allocazione completata, è possibile memorizzare nella cache l'oggetto attività con il risultato completato:  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -465,9 +466,9 @@ class Compilation { /*...*/
 ## <a name="see-also"></a>Vedere anche
 
 - [Video di presentazione di questo argomento](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
-- [Guida per principianti alla profilazione delle prestazioni](/visualstudio/profiling/beginners-guide-to-performance-profiling)
+- [Guida per principianti alla profilatura delle prestazioni](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [Prestazioni](index.md)
 - [Suggerimenti sulle prestazioni di .NET](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
 - [Esercitazioni di Channel 9 su PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md)
-- [repo dotnet/roslyn su GitHub](https://github.com/dotnet/roslyn)
+- [repository DotNet/Roslyn su GitHub](https://github.com/dotnet/roslyn)

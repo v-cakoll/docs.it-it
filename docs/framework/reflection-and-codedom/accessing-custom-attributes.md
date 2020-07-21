@@ -1,5 +1,6 @@
 ---
 title: Accesso ad attributi personalizzati
+description: Accedere agli attributi personalizzati in .NET. Dopo aver associato gli attributi agli elementi del programma, è possibile usare la reflection per eseguire query sull'esistenza e sui valori.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - attributes [.NET Framework], accessing
 - reflection, custom attributes
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
-ms.openlocfilehash: a5651e9dc8cf40e737dd523ec5d29e876a9c0765
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1197fc5149e144d293deda1173e82ca2dadeda7d
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130306"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475138"
 ---
 # <a name="accessing-custom-attributes"></a>Accesso ad attributi personalizzati
 Dopo che gli attributi sono stati associati a elementi del programma, è possibile verificarne l'esistenza ed esaminarne i valori tramite reflection. In .NET Framework versioni 1.0 e 1.1 gli attributi personalizzati vengono esaminati nel contesto di esecuzione. .NET Framework versione 2.0 offre un nuovo contesto di caricamento di sola reflection, che consente di esaminare il codice che non può essere caricato per l'esecuzione.  
@@ -75,4 +76,4 @@ public class LocalizationExtenderProvider
 - <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
 - [Visualizzazione delle informazioni sul tipo](viewing-type-information.md)
-- [Security Considerations for Reflection](security-considerations-for-reflection.md) (Considerazioni sulla sicurezza per reflection)
+- [Considerazioni sulla sicurezza in relazione alla reflection](security-considerations-for-reflection.md)

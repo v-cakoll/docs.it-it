@@ -1,16 +1,17 @@
 ---
 title: Tipi anonimi - Guida per programmatori C#
+description: I tipi anonimi in C# incapsulano un set di proprietà di sola lettura in un oggetto senza dover definire in modo esplicito un tipo. Il compilatore genera un nome.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 63bc5560ba19ff36764465a6b89b81c13beec97a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccdee1a86ab0c292721e69346cb7cedb03d4c28b
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170338"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474501"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Tipi anonimi (Guida per programmatori C#)
 
@@ -28,7 +29,7 @@ var v = new { Amount = 108, Message = "Hello" };
 Console.WriteLine(v.Amount + v.Message);  
 ```  
   
- I tipi anonimi vengono in genere usati nella clausola [select](../../language-reference/keywords/select-clause.md) di un'espressione di query per restituire un subset delle proprietà da ogni oggetto della sequenza di origine. Per ulteriori informazioni sulle query, vedere [LINQ in C.](../../linq/index.md)  
+ I tipi anonimi vengono in genere usati nella clausola [select](../../language-reference/keywords/select-clause.md) di un'espressione di query per restituire un subset delle proprietà da ogni oggetto della sequenza di origine. Per ulteriori informazioni sulle query, vedere [LINQ in C#](../../linq/index.md).  
   
  I tipi anonimi contengono una o più proprietà pubbliche di sola lettura. Non sono validi altri tipi di membri della classe, ad esempio metodi o eventi. L'espressione usata per inizializzare una proprietà non può essere `null`, una funzione anonima o un tipo di puntatore.  
   
@@ -58,6 +59,6 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
-- [Inizializzatori di oggetto e di raccoltaObject and Collection Initializers](./object-and-collection-initializers.md)
-- [Introduzione a LINQ in C #](../concepts/linq/index.md)
+- [Inizializzatori di oggetto e di raccolta](./object-and-collection-initializers.md)
+- [Nozioni di base su LINQ in C#](../concepts/linq/index.md)
 - [LINQ in C#](../../linq/index.md)

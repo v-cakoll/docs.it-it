@@ -1,16 +1,17 @@
 ---
 title: Eventi ETW di traccia JIT
+description: Informazioni sugli eventi ETW di traccia just-in-time (JIT). Questi eventi raccolgono informazioni relative all'esito positivo o negativo dell'incorporamento JIT e delle chiamate tail JIT.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-ms.openlocfilehash: 37bfd09516589f3422ee005233e576b110ef1288
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 568fc942cd0e2188c530d2befb6260083757ec72
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716000"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474462"
 ---
 # <a name="jit-tracing-etw-events"></a>Eventi ETW di traccia JIT
 Questi eventi raccolgono informazioni relative all'esito positivo o negativo dell'incorporamento Just-In-Time (JIT) e delle chiamate tail JIT.
@@ -20,13 +21,13 @@ Questi eventi raccolgono informazioni relative all'esito positivo o negativo del
 ### <a name="methodjitinliningfailed-event"></a>Evento MethodJitInliningFailed
  La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Dettagliato (5)|  
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Event|ID evento|Generato quando|  
+|Evento|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|L'incorporamento JIT non è riuscito.|  
   
@@ -50,13 +51,13 @@ Questi eventi raccolgono informazioni relative all'esito positivo o negativo del
 ### <a name="methodjitinliningsucceeded-event"></a>MethodJitInliningSucceeded Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Dettagliato (5)|  
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Event|ID evento|Generato quando|  
+|Evento|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|L'incorporamento del metodo è riuscito.|  
   
@@ -80,13 +81,13 @@ Questi eventi raccolgono informazioni relative all'esito positivo o negativo del
 ### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Dettagliato (5)|  
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Event|ID evento|Generato quando|  
+|Evento|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|La chiamata tail al metodo non è riuscita.|  
   
@@ -110,13 +111,13 @@ Questi eventi raccolgono informazioni relative all'esito positivo o negativo del
 ### <a name="methodjittailcallsucceeded-event"></a>MethodJITTailCallSucceeded Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Dettagliato (5)|  
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Event|ID evento|Generato quando|  
+|Evento|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|La chiamata tail al metodo è riuscita.|  
   

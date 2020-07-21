@@ -1,16 +1,17 @@
 ---
 title: Matrici multidimensionali - Guida per programmatori C#
+description: Le matrici in C# possono avere più di una dimensione. In questa dichiarazione di esempio viene creata una matrice bidimensionale di quattro righe e due colonne.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], multidimensional
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
-ms.openlocfilehash: ee5fae36ff844fadad7e1b6a766020319b67a83c
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: a2f204c0866672b317569fbc620aa8af60829ffd
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021752"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475008"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>Matrici multidimensionali (Guida per programmatori C#)
 
@@ -28,7 +29,7 @@ Le matrici possono avere più di una dimensione. La dichiarazione seguente, ad e
   
  [!code-csharp[csProgGuideArrays#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#13)]  
   
- È inoltre possibile inizializzare la matrice senza specificare il rango.  
+ È anche possibile inizializzare la matrice senza specificare il rango.  
   
  [!code-csharp[csProgGuideArrays#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#14)]  
   
@@ -50,7 +51,7 @@ Le matrici possono avere più di una dimensione. La dichiarazione seguente, ad e
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida alla programmazione in C](../index.md)
+- [Guida per programmatori C#](../index.md)
 - [Matrici](./index.md)
 - [Matrici unidimensionali](./single-dimensional-arrays.md)
 - [Matrici irregolari](./jagged-arrays.md)

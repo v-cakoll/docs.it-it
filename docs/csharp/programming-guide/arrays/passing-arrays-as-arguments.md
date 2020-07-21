@@ -1,15 +1,16 @@
 ---
 title: Passaggio di matrici come argomenti - Guida per programmatori C#
+description: Le matrici in C# possono essere passate come argomenti ai parametri del metodo. Le matrici, infatti, sono tipi di parametri e il metodo può quindi modificare il valore degli elementi.
 ms.date: 07/05/2018
 helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
-ms.openlocfilehash: 2e53008910a9062ada25680eb4b8e54a225fd226
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 68f174421e56e2cf082fe670f93c4f6627d7c17b
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705691"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474631"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>Passaggio di matrici come argomenti (Guida per programmatori C#)
 
@@ -61,4 +62,4 @@ Nell'esempio seguente, una matrice bidimensionale di Integer viene inizializzata
 - [Matrici](index.md)
 - [Matrici unidimensionali](single-dimensional-arrays.md)
 - [Matrici multidimensionali](multidimensional-arrays.md)
-- [Matrici frastagliate](jagged-arrays.md)
+- [Matrici irregolari](jagged-arrays.md)

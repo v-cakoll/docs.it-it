@@ -1,5 +1,6 @@
 ---
 title: Classi e membri delle classi astratte e sealed - Guida per programmatori C#
+description: La parola chiave abstract in C# crea classi incomplete e membri di classe. La parola chiave sealed impedisce l'ereditarietà delle classi virtuali o dei membri della classe precedenti.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - abstract classes [C#]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: 07738031f1dec05424f7c3756f49a8f1f9a2c44b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 391a8ccbb1fbe6626d1cd5a4b6fcfd9ace3506e6
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714999"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474488"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Classi e membri delle classi astratte e sealed (Guida per programmatori C#)
 La parola chiave [abstract](../../language-reference/keywords/abstract.md) consente di creare classi e membri di [classe](../../language-reference/keywords/class.md), che sono incompleti e devono essere implementati in una classe derivata.  
@@ -53,5 +54,5 @@ La parola chiave [abstract](../../language-reference/keywords/abstract.md) conse
 - [Classi e struct](./index.md)
 - [Ereditarietà](./inheritance.md)
 - [Metodi](./methods.md)
-- [Campi](./fields.md)
+- [Fields](./fields.md)
 - [Come definire proprietà astratte](./how-to-define-abstract-properties.md)

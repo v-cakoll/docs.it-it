@@ -1,5 +1,6 @@
 ---
 title: Procedure consigliate per l'ottimizzazione dell'affidabilità
+description: Vedere le procedure consigliate per l'affidabilità nelle applicazioni server basate su host .NET, ad esempio SQL Server. Impedire che si verifichino perdite di risorse o che vengano arrestate.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marking locks
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-ms.openlocfilehash: bd51ea1b79ac1dbd89a862f3961cc8508a87f301
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 134b71153f95dffd4525f307d291ce4389e0ce60
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715975"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474241"
 ---
 # <a name="reliability-best-practices"></a>Procedure consigliate per l'ottimizzazione dell'affidabilità
 
@@ -239,7 +240,7 @@ Per SQL Server, tutti i metodi usati per introdurre la sincronizzazione o il thr
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>Non bloccare a tempo indefinito nel codice non gestito
 
-L'inserimento di un blocco nel codice non gestito invece che in quello gestito può determinare un attacco Denial of Service perché CLR non è in grado di interrompere il thread.  Un thread bloccato impedisce a CLR di scaricare <xref:System.AppDomain>, se non mediante l'esecuzione di operazioni assolutamente non sicure.  Il blocco mediante una primitiva di sincronizzazione di Windows è un esempio chiaro di qualcosa che non è consentito.  Il blocco in una chiamata a `ReadFile` in un socket deve essere evitato se possibile. idealmente, l'API Windows deve fornire un meccanismo per il timeout di un'operazione come questa.
+L'inserimento di un blocco nel codice non gestito invece che in quello gestito può determinare un attacco Denial of Service perché CLR non è in grado di interrompere il thread.  Un thread bloccato impedisce a CLR di scaricare <xref:System.AppDomain>, se non mediante l'esecuzione di operazioni assolutamente non sicure.  Il blocco mediante una primitiva di sincronizzazione di Windows è un esempio chiaro di qualcosa che non è consentito.  Il blocco in una chiamata a `ReadFile` in un socket deve essere evitato se possibile. idealmente, l'API Windows deve fornire un meccanismo per il timeout di un'operazione di questo tipo.
 
 Tutti i metodi che effettuano chiamate nel codice nativo dovrebbero usare una chiamata Win32 con un valore finito e ragionevole di timeout.  Anche se autorizzato a specificare il timeout, l'utente non deve avere la possibilità di impostare un timeout infinito, a meno che non abbia autorizzazioni di sicurezza specifiche.  Come indicazione generale, tenere presente che, se un metodo si blocca per più di circa 10 secondi, sarà necessario usare una versione che supporta i timeout oppure disporre di supporto CLR aggiuntivo.
 
@@ -275,7 +276,7 @@ Prendere in considerazione l'opportunità di modificare tutti i punti in cui ven
 
 #### <a name="code-analysis-rule"></a>Regola di analisi codice
 
-Esaminare tutti i blocchi catch nel codice gestito che intercettano tutti gli oggetti o tutte le eccezioni.  In C#, questo significa contrassegnare sia `catch` {} che `catch(Exception)` {}.  Prendere in considerazione l'opportunità di rendere molto specifico il tipo di eccezione oppure esaminare il codice per assicurarsi che non si verifichino comportamenti non corretti qualora venga intercettata un'eccezione di tipo imprevisto.
+Esaminare tutti i blocchi catch nel codice gestito che intercettano tutti gli oggetti o tutte le eccezioni.  In C# questo significa contrassegnare sia `catch` {} che `catch(Exception)` {} .  Prendere in considerazione l'opportunità di rendere molto specifico il tipo di eccezione oppure esaminare il codice per assicurarsi che non si verifichino comportamenti non corretti qualora venga intercettata un'eccezione di tipo imprevisto.
 
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>Non presupporre che un thread gestito sia un thread Win32, ovvero una fibra
 
@@ -314,4 +315,4 @@ In questo modo, il compilatore JIT prepara tutto il codice nel blocco finally pr
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.ConstrainedExecution>
-- [Programmazione per SQL Server e attributi di protezione host](sql-server-programming-and-host-protection-attributes.md)
+- [programmazione per SQL Server e attributi di protezione host](sql-server-programming-and-host-protection-attributes.md)

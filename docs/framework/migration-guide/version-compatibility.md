@@ -1,5 +1,6 @@
 ---
 title: Compatibilità tra le versioni in .NET Framework
+description: Informazioni sulla compatibilità tra le versioni di .NET Framework, inclusa la compatibilità con le versioni precedenti e l'esecuzione side-by-side.
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: c3bc92b89a46fc947b4d7e67644930374eeab2e4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: dfdc5a977b69af8aa3a0d33ed8b833745cf6bf11
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796002"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475502"
 ---
 # <a name="version-compatibility"></a>Compatibilità tra versioni
 
@@ -22,7 +23,7 @@ Per compatibilità con le versioni precedenti si intende che un'app sviluppata p
 
 Per impostazione predefinita, un'app viene eseguita sulla versione di .NET Framework per cui è stata creata. Se tale versione non è presente e il file di configurazione dell'app non definisce le versioni supportate, potrebbe verificarsi un errore di inizializzazione di .NET Framework. In questo caso, il tentativo di esecuzione dell'app avrà esito negativo.
 
-Per definire le versioni specifiche in cui viene eseguita l'app, aggiungere uno o più [ \<elementi>supportedRuntime](../configure-apps/file-schema/startup/supportedruntime-element.md) al file di configurazione dell'app. Ogni elemento `<supportedRuntime>` elenca una versione supportata del runtime, con il primo che specifica la versione preferita e l'ultimo che specifica l'ultima versione nell'elenco delle preferenze.
+Per definire le versioni specifiche in cui viene eseguita l'app, aggiungere uno o più [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) elementi al file di configurazione dell'app. Ogni elemento `<supportedRuntime>` elenca una versione supportata del runtime, con il primo che specifica la versione preferita e l'ultimo che specifica l'ultima versione nell'elenco delle preferenze.
 
 ```xml
 <configuration>
@@ -41,7 +42,7 @@ Un'app, diversamente da un componente, può controllare la versione di .NET Fram
 
 A causa di questa restrizione, le garanzie di compatibilità sono particolarmente importanti per i componenti. A partire da .NET Framework 4, è possibile specificare il livello di compatibilità di un componente in più versioni applicando l'attributo <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=nameWithType> a tale componente. Gli strumenti possono usare questo attributo per rilevare le possibili violazioni della garanzia di compatibilità in versioni future di un componente.
 
-## <a name="backward-compatibility"></a>compatibilità con versioni precedenti
+## <a name="backward-compatibility"></a>Compatibilità con le versioni precedenti
 
 .NET Framework 4.5 e versioni successive sono compatibili con le versioni precedenti delle app create con le versioni precedenti di .NET Framework. In altre parole, le app e i componenti creati con le versioni precedenti funzioneranno senza applicare alcuna modifica in .NET Framework 4.5 e versioni successive. Tuttavia, per impostazione predefinita, le app vengono eseguite sulla versione di Common Language Runtime per la quale sono state sviluppate, pertanto potrebbe essere necessario fornire un file di configurazione per far sì che l'app venga eseguita in .NET Framework 4.5 o versioni successive. Per altre informazioni, vedere la sezione [Compatibilità tra le versioni per app](#Apps) in questo articolo.
 
@@ -59,7 +60,7 @@ Se l'app o il componente non funziona come previsto in .NET Framework 4.5 (e ver
 
 - Se si sta eseguendo la ricompilazione del codice sorgente esistente per l'esecuzione in .NET Framework 4.5 o nelle relative versioni intermedie oppure si sta sviluppando una nuova versione di un'app o di un componente destinato a .NET Framework 4.5 o alle relative versioni intermedie da una codebase sorgente esistente, vedere [Elementi obsoleti nella libreria di classi .NET Framework](../whats-new/whats-obsolete.md) per i tipi e i membri obsoleti e applicare la soluzione alternativa descritta. (Il codice compilato precedentemente continuerà a essere in esecuzione sui tipi e i membri contrassegnati come obsoleti).
 
-- Se si determina che una modifica in .NET Framework 4.5 ha interrotto l'app, vedere [Schema delle impostazioni di runtime](../configure-apps/file-schema/runtime/index.md) e in particolare l'[elemento \<AppContextSwitchOverrides>](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) per stabilire se è possibile usare un'impostazione di runtime nel file di configurazione dell'app per ripristinare il comportamento precedente.
+- Se si determina che una modifica nel .NET Framework 4,5 ha danneggiato l'app, controllare lo [schema delle impostazioni di runtime](../configure-apps/file-schema/runtime/index.md)e, in particolare, l' [ \<AppContextSwitchOverrides> elemento](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), per stabilire se è possibile usare un'impostazione di runtime nel file di configurazione dell'app per ripristinare il comportamento precedente.
 
 - Se si verifica un problema non documentato, segnalarlo nel [sito della community degli sviluppatori .NET](https://developercommunity.visualstudio.com/spaces/61/index.html) oppure nel [repository GitHub Microsoft/dotnet](https://github.com/microsoft/dotnet/issues).
 

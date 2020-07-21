@@ -1,16 +1,17 @@
 ---
 title: Eventi ETW del caricatore
+description: Esaminare gli eventi ETW del caricatore, che includono eventi del dominio dell'applicazione, eventi dell'assembly del caricatore CLR, eventi del modulo, eventi del modulo del dominio CLR ed eventi di intervallo del modulo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-ms.openlocfilehash: 0f8f96cf73882ef6556e5b9e64cf9adf389a2318
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8220e8e773409be76bc7522d57551f1bddb90e5d
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180556"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474358"
 ---
 # <a name="loader-etw-events"></a>Eventi ETW del caricatore
 Questi eventi raccolgono le informazioni relative al caricamento e allo scaricamento di domini applicazioni, assembly e moduli.  
@@ -20,7 +21,7 @@ Questi eventi raccolgono le informazioni relative al caricamento e allo scaricam
 ## <a name="application-domain-events"></a>Eventi del dominio applicazioni
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Event|Level|  
+|Parola chiave per la generazione dell'evento|Evento|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AppDomainLoad_V1` e `AppDomainUnLoad_V1`|Informativo (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Informativo (4)|  
@@ -28,7 +29,7 @@ Questi eventi raccolgono le informazioni relative al caricamento e allo scaricam
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Event|ID evento|Descrizione|  
+|Evento|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
 |`AppDomainLoad_V1` (registrato per tutti i domini applicazioni)|156|Generato se un dominio applicazioni viene creato nel corso di un processo.|  
 |`AppDomainUnLoad_V1`|157|Generato se un dominio applicazioni viene eliminato nel corso di un processo.|  
@@ -37,7 +38,7 @@ Questi eventi raccolgono le informazioni relative al caricamento e allo scaricam
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome del campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|Identificatore univoco per un dominio applicazioni.|  
 |AppDomainFlags|win:UInt32|0x1: dominio predefinito.<br /><br /> 0x2: eseguibile.<br /><br /> 0x4: dominio applicazioni, bit 28-31: condivisione dei criteri di questo dominio.<br /><br /> 0: dominio condiviso.|  
@@ -48,7 +49,7 @@ Questi eventi raccolgono le informazioni relative al caricamento e allo scaricam
 ## <a name="clr-loader-assembly-events"></a>Eventi assembly del caricatore CLR  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Event|Level|  
+|Parola chiave per la generazione dell'evento|Evento|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AssemblyLoad` e `AssemblyUnload`|Informativo (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Informativo (4)|  
@@ -56,7 +57,7 @@ Questi eventi raccolgono le informazioni relative al caricamento e allo scaricam
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Event|ID evento|Descrizione|  
+|Evento|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|Generato quando viene caricato un assembly.|  
 |`AssemblyUnload_V1`|155|Generato quando viene scaricato un assembly.|  
@@ -65,7 +66,7 @@ Questi eventi raccolgono le informazioni relative al caricamento e allo scaricam
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome del campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |AssemblyID|win:UInt64|ID univoco per l'assembly.|  
 |AppDomainID|win:UInt64|ID del dominio dell'assembly.|  
@@ -77,7 +78,7 @@ Questi eventi raccolgono le informazioni relative al caricamento e allo scaricam
 ## <a name="module-events"></a>Eventi modulo
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Event|Level|  
+|Parola chiave per la generazione dell'evento|Evento|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`ModuleLoad_V2` e `ModuleUnload_V2`|Informativo (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Informativo (4)|  
@@ -86,7 +87,7 @@ Questi eventi raccolgono le informazioni relative al caricamento e allo scaricam
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Event|ID evento|Descrizione|  
+|Evento|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|Generato se un modulo viene caricato nel corso di un processo.|  
 |`ModuleUnload_V2`|153|Generato se un modulo viene scaricato nel corso di un processo.|  
@@ -95,7 +96,7 @@ Questi eventi raccolgono le informazioni relative al caricamento e allo scaricam
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome del campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|ID univoco per il modulo.|  
 |AssemblyID|win:UInt64|ID dell'assembly in cui si trova il modulo.|  
@@ -122,7 +123,7 @@ Questi eventi raccolgono le informazioni relative al caricamento e allo scaricam
 ## <a name="clr-domain-module-events"></a>Eventi modulo del dominio CLR
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Event|Level|  
+|Parola chiave per la generazione dell'evento|Evento|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|Informativo (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Informativo (4)|  
@@ -130,7 +131,7 @@ Questi eventi raccolgono le informazioni relative al caricamento e allo scaricam
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Event|ID evento|Descrizione|  
+|Evento|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|Generato quando un modulo viene caricato per un dominio applicazioni.|  
 |`DomainModuleDCStart_V1`|151|Enumera i moduli caricati per un dominio applicazioni durante un rundown di avvio e viene registrato per tutti i domini applicazioni.|  
@@ -138,7 +139,7 @@ Questi eventi raccolgono le informazioni relative al caricamento e allo scaricam
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome del campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|Identifica l'assembly al quale appartiene il modulo.|  
 |AssemblyID|win:UInt64|ID dell'assembly in cui si trova il modulo.|  
@@ -152,7 +153,7 @@ Questi eventi raccolgono le informazioni relative al caricamento e allo scaricam
 ## <a name="module-range-events"></a>Eventi di intervallo modulo
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Event|Level|  
+|Parola chiave per la generazione dell'evento|Evento|Level|  
 |-----------------------------------|-----------|-----------|  
 |`PerfTrackKeyWord`)|`ModuleRange`|Informativo (4)|  
 |`PerfTrackKeyWord`|`ModuleRangeDCStart`|Informativo (4)|  
@@ -160,7 +161,7 @@ Questi eventi raccolgono le informazioni relative al caricamento e allo scaricam
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Event|ID evento|Descrizione|  
+|Evento|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
 |`ModuleRange`|158|Questo evento è presente se un'immagine del generatore di immagini native (NGen) è stata ottimizzata con IBC e contiene informazioni sulle sezioni critiche dell'immagine NGen.|  
 |`ModuleRangeDCStart`|160|Evento `ModuleRange` generato all'avvio di un rundown.|  
@@ -168,7 +169,7 @@ Questi eventi raccolgono le informazioni relative al caricamento e allo scaricam
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome del campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |ClrInstanceID|win:UInt16|Identifica in modo univoco un'istanza specifica di CLR in un processo se vengono caricate più istanze di CLR.|  
 |ModuleID|win:UInt64|Identifica l'assembly al quale appartiene il modulo.|  

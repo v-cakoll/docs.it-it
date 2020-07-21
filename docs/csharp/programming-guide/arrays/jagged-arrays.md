@@ -1,16 +1,17 @@
 ---
 title: Matrici irregolari - Guida per programmatori C#
+description: Una matrice di matrici in C# è una matrice i cui elementi sono matrici di dimensioni e dimensioni diverse. Informazioni su come dichiarare, inizializzare e accedere a matrici di matrici.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 56013f0143d5efcb31a476909cb6e92504ff0dbc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40da9fbda34aef4e69ebf2ae20485e883b79f871
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705704"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474683"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Matrici irregolari (Guida per programmatori C#)
 
