@@ -1,5 +1,6 @@
 ---
 title: Specifica di nomi di tipo completi
+description: Per un input valido per le operazioni di reflection, usare nomi di tipo completi, che includono specifiche del nome di assembly, specifiche dello spazio dei nomi e nomi di tipi.
 ms.date: 02/21/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-ms.openlocfilehash: 707c71482196d789ed9a88db34af048ec57734fb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ff33b6abd31a82c6b80aa794564c5c48648cde63
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130023"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865229"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Specifica di nomi di tipo completi
 
@@ -143,7 +144,7 @@ Le informazioni minime necessarie in una specifica di nome di assembly è il nom
 
 |Nome proprietà|Descrizione|Valori consentiti|
 |-------------------|-----------------|----------------------|
-|**Versione**|Numero di versione dell'assembly|*Major.Minor.Build.Revision*, dove *Major*, *Minor*, *Build* e *Revision* sono numeri interi compresi tra 0 e 65535.|
+|**Version**|Numero di versione dell'assembly|*Major.Minor.Build.Revision*, dove *Major*, *Minor*, *Build* e *Revision* sono numeri interi compresi tra 0 e 65535.|
 |**PublicKey**|Chiave pubblica completa|Valore di stringa della chiave pubblica completa in formato esadecimale. Specificare un riferimento Null (**Nothing** in Visual Basic) per indicare in modo esplicito un assembly privato.|
 |**PublicKeyToken**|Token di chiave pubblica (hash a 8 byte della chiave pubblica completa)|Valore di stringa del token della chiave pubblica in formato esadecimale. Specificare un riferimento Null (**Nothing** in Visual Basic) per indicare in modo esplicito un assembly privato.|
 |**Impostazioni cultura**|Impostazioni cultura dell'assembly|Impostazioni cultura dell'assembly in formato RFC 1766 o "neutral" per gli assembly indipendenti dal linguaggio (non satellite).|
@@ -187,7 +188,7 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
 
 ## <a name="specifying-generic-types"></a>Specifica di tipi generici
 
-SimpleTypeSpec\`NUMERO rappresenta un tipo generico aperto con parametri di tipo generico compresi tra 1 e *n*. Ad esempio, per ottenere un riferimento al tipo generico aperto List\<T> o al tipo generico chiuso\<String>, usare ``Type.GetType("System.Collections.Generic.List`1")``. Per ottenere un riferimento al tipo generico Dictionary\<TKey,TValue>, usare ``Type.GetType("System.Collections.Generic.Dictionary`2")``.
+SimpleTypeSpec\`NUMERO rappresenta un tipo generico aperto con parametri di tipo generico compresi tra 1 e *n*. Per ottenere, ad esempio, un riferimento all'elenco di tipi generici aperti \<T> o all'elenco di tipi generici chiusi \<String> , usare ``Type.GetType("System.Collections.Generic.List`1")`` per ottenere un riferimento al dizionario di tipo generico \<TKey,TValue> , usare ``Type.GetType("System.Collections.Generic.Dictionary`2")`` .
 
 ## <a name="specifying-pointers"></a>Specifica dei puntatori
 
@@ -214,7 +215,7 @@ Si noti che dal punto di vista del runtime, `MyArray[] != MyArray[*]`, ma per le
 
 Per **ModuleBuilder. GetType**, `MyArray[0..5]` indica una matrice a dimensione singola con dimensione 6, limite inferiore 0. `MyArray[4…]` indica una matrice unidimensionale di dimensioni sconosciute e limite inferiore pari a 4.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Reflection.AssemblyName>
 - <xref:System.Reflection.Emit.ModuleBuilder>

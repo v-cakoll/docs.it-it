@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/20/2020
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: bcea584ded6985a0ef166ab8e24672a19e27b0a3
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 35ba90f978b1993f80451a28a4cd08129afddd85
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415976"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864501"
 ---
 # <a name="asynchronous-programming"></a>Programmazione asincrona
 
@@ -221,7 +221,7 @@ Con la programmazione asincrona è necessario tenere presenti alcuni dettagli ch
 
 Si tratta della convenzione utilizzata in .NET per distinguere più facilmente i metodi sincroni e asincroni. Alcuni metodi che non vengono chiamati in modo esplicito dal codice, ad esempio i gestori eventi o i metodi del controller web, non sono necessariamente applicabili. Poiché non vengono chiamati in modo esplicito dal codice, il fatto di essere espliciti sulla denominazione non è altrettanto importante.
 
-* `async void`**deve essere usato solo per i gestori eventi.**
+* `async void` **deve essere usato solo per i gestori eventi.**
 
 `async void` è l'unico modo per consentire ai gestori eventi asincroni di funzionare correttamente, poiché gli eventi non hanno tipi restituiti (quindi non possono usare `Task` e `Task<T>`). Qualsiasi altro uso di `async void` non segue il modello TAP e può essere difficile da usare, ad esempio:
 
@@ -254,7 +254,7 @@ Una domanda comune è: "quando è consigliabile usare il <xref:System.Threading.
 
 * **Scrivere codice con meno dettagli sullo stato**
 
-Non dipendono dallo stato degli oggetti globali o dall'esecuzione di determinati metodi. È preferibile dipendere dai valori restituiti dei metodi. Perché?
+Non dipendono dallo stato degli oggetti globali o dall'esecuzione di determinati metodi. È preferibile dipendere dai valori restituiti dei metodi. Questo problema dipende
 
 * Sarà più facile valutare il codice.
 * Sarà più facile testare il codice.

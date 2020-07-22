@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: definire un metodo generico tramite reflection emit'
+title: 'Procedura: Definire un metodo generico tramite reflection emit'
+description: Definire un metodo generico con Reflection Emit. Un esempio crea un metodo generico con due parametri di tipo. Un secondo esempio Mostra come creare il corpo del metodo.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - reflection emit, generic methods
 - generics [.NET Framework], dynamic types
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
-ms.openlocfilehash: d16f6728b01583fe3ffb8d892522f3892444c537
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3b85fb480e5862daa3b2800f75392adbe92348f2
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130167"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865138"
 ---
-# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Procedura: definire un metodo generico tramite reflection emit
+# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Procedura: Definire un metodo generico tramite reflection emit
 
 La prima procedura illustra come creare un metodo generico semplice con due parametri di tipo e come applicare a questi ultimi vincoli speciali, di interfaccia e di classe.
 
@@ -164,7 +165,7 @@ L'esempio di codice include il codice sorgente equivalente al metodo creato. Il 
 [!code-csharp[GenericMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#1)]
 [!code-vb[GenericMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#1)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Reflection.Emit.MethodBuilder>
 - [Procedura: Definire un tipo generico tramite reflection emit](how-to-define-a-generic-type-with-reflection-emit.md)

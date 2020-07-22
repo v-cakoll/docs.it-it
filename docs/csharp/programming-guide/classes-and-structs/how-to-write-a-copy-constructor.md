@@ -1,18 +1,19 @@
 ---
-title: Come scrivere un costruttore di copia - Guida per programmatori C
+title: Come scrivere un costruttore di copia-Guida per programmatori C#
+description: Informazioni su come scrivere un costruttore di copia in C# che accetta un'istanza della classe e restituisce una nuova istanza con i valori dell'input.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# Language, copy constructor
 - copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
-ms.openlocfilehash: aa6feb1b07f491a90a78684e254910d387b9bccd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: beb2fcfaa36303eeaabd5278cf5e7a128282270e
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714849"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864228"
 ---
-# <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>Come scrivere un costruttore di copia (Guida per programmatori C
+# <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>Come scrivere un costruttore di copia (Guida per programmatori C#)
 C# non include un costruttore di copia per gli oggetti. È tuttavia possibile scriverne uno manualmente.  
   
 ## <a name="example"></a>Esempio  
@@ -20,7 +21,7 @@ C# non include un costruttore di copia per gli oggetti. È tuttavia possibile sc
   
  [!code-csharp[csProgGuideObjects#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#16)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.ICloneable>
 - [Guida per programmatori C#](../index.md)

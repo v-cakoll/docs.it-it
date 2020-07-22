@@ -1,18 +1,19 @@
 ---
-title: Come implementare una classe leggera con le proprietà implementate automaticamente - Guida per programmatori C
+title: Come implementare una classe Lightweight con proprietà implementate automaticamente (Guida per programmatori C#)
+description: Informazioni su come creare una classe leggera non modificabile in C# che incapsula le proprietà implementate automaticamente. Esistono due approcci di implementazione.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 6d121f6be768d41d22ea01d871662913b2daae2b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de9034772bad1f28e27abe01595309dd84ddc3e7
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170273"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864566"
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Come implementare una classe leggera con le proprietà implementate automaticamente (Guida per programmatori C
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Come implementare una classe Lightweight con proprietà implementate automaticamente (Guida per programmatori C#)
 
 Questo esempio mostra come creare una classe leggera non modificabile che serve solo a incapsulare un set di proprietà implementate automaticamente. Usare questo genere di costrutto invece di una struct quando è necessario usare la semantica del tipo riferimento.
 
@@ -21,9 +22,9 @@ Questo esempio mostra come creare una classe leggera non modificabile che serve 
 - È possibile dichiarare la funzione di accesso [set](../../language-reference/keywords/set.md) come [privata](../../language-reference/keywords/private.md).  La proprietà è impostabile solo all'interno del tipo è, ma non è modificabile per i consumer.
 
   Quando si dichiara una funzione di accesso `set` privata, non è possibile usare un inizializzatore di oggetto per inizializzare la proprietà. È necessario usare un costruttore o un metodo factory.
-- È possibile dichiarare solo la funzione di accesso [get,](../../language-reference/keywords/get.md) che rende la proprietà non modificabile ovunque tranne che nel costruttore del tipo.
+- È possibile dichiarare solo la funzione di accesso [Get](../../language-reference/keywords/get.md) , che rende la proprietà non modificabile ovunque tranne che nel costruttore del tipo.
 
-Nell'esempio seguente viene illustrato come una proprietà con solo get funzione di accesso differisce da una con get e private set.
+Nell'esempio seguente viene illustrato il modo in cui una proprietà con solo la funzione di accesso get è diversa da una con Get e private set.
 
 ```csharp
 class Contact
@@ -145,8 +146,8 @@ public class Program
 
 Il compilatore crea campi sottostanti per ogni proprietà implementate automaticamente. I campi non sono accessibili direttamente dal codice sorgente.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Proprietà](./properties.md)
 - [struct](../../language-reference/builtin-types/struct.md)
-- [Inizializzatori di oggetto e di raccoltaObject and Collection Initializers](./object-and-collection-initializers.md)
+- [Inizializzatori di oggetto e di raccolta](./object-and-collection-initializers.md)

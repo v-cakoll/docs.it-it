@@ -1,18 +1,19 @@
 ---
-title: Come definire le proprietà astratte - Guida per programmatori C
+title: Come definire le proprietà astratte-guida per programmatori C#
+description: Informazioni su come definire le proprietà astratte in C#. La dichiarazione di una proprietà astratta indica che una classe supporta una proprietà. Le classi derivate implementano le funzioni di accesso.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: c46f36133b68a550a17cf882844fd2481eee8851
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4db71721495857c634e8090b986704d8a592b4e2
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705613"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864397"
 ---
-# <a name="how-to-define-abstract-properties-c-programming-guide"></a>Come definire le proprietà astratte (Guida per programmatori C
+# <a name="how-to-define-abstract-properties-c-programming-guide"></a>Come definire proprietà astratte (Guida per programmatori C#)
 L'esempio seguente mostra come definire proprietà di tipo [abstract](../../language-reference/keywords/abstract.md). La dichiarazione di una proprietà astratta non fornisce un'implementazione delle funzioni di accesso della proprietà. Dichiara che la classe supporta le proprietà, ma l'implementazione delle funzioni di accesso viene demandata alle classi derivate. L'esempio seguente illustra come implementare le proprietà astratte ereditate da una classe di base.  
   
  L'esempio include tre file, ognuno dei quali viene compilato singolarmente e al cui assembly risultante viene fatto riferimento nella compilazione successiva:  
@@ -34,7 +35,7 @@ L'esempio seguente mostra come definire proprietà di tipo [abstract](../../lang
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
-- I modificatori della proprietà vengono inseriti nella dichiarazione della proprietà stessa. Ad esempio:  
+- I modificatori della proprietà vengono inseriti nella dichiarazione della proprietà stessa. ad esempio:  
   
     ```csharp  
     public abstract double Area  
@@ -52,7 +53,7 @@ L'esempio seguente mostra come definire proprietà di tipo [abstract](../../lang
   
  [!code-csharp[csProgGuideInheritance#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#3)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Guida per programmatori C#](../index.md)
 - [Classi e struct](./index.md)

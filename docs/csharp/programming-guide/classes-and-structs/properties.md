@@ -1,5 +1,6 @@
 ---
 title: Proprietà - Guida per programmatori C#
+description: Una proprietà in C# è un membro che usa i metodi delle funzioni di accesso per leggere, scrivere o calcolare il valore di un campo privato come se fosse un membro dati pubblico.
 ms.date: 03/10/2017
 f1_keywords:
 - cs.properties
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: ee530e981e0c85302b2b11cc739d6c51d6650ddd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 231e8e6a11f2655ccdea5489f054910a1ecf2586
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170104"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863942"
 ---
 # <a name="properties-c-programming-guide"></a>Proprietà (Guida per programmatori C#)
 
@@ -67,13 +68,13 @@ Se una proprietà ha entrambe le funzioni di accesso `get` e `set`, entrambe le 
   
 - [Limitazione dell'accessibilità delle funzioni di accesso](./restricting-accessor-accessibility.md)  
   
-- [Proprietà implementate automaticamenteAuto-Implemented Properties](./auto-implemented-properties.md)  
+- [Proprietà implementate automaticamente](./auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 
 Per altre informazioni, vedere [Tipi integrali](~/_csharplang/spec/classes.md#properties) in [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Guida per programmatori C#](../index.md)
 - [Utilizzo delle proprietà](./using-properties.md)

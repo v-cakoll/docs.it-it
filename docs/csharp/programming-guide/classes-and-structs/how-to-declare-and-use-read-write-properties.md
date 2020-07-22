@@ -1,5 +1,6 @@
 ---
-title: Come dichiarare e utilizzare le proprietà di lettura di scrittura - Guida per programmatori C
+title: Come dichiarare e usare le proprietà di lettura/scrittura-Guida per programmatori C#
+description: Informazioni su come usare le proprietà di lettura/scrittura in C#. Questo esempio include due proprietà, ognuna delle quali dispone di funzioni di accesso get e set, quindi le proprietà sono di lettura/scrittura.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - get accessor [C#], declaring properties
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 4b9db5f15746ab9a1f42239150c6783154723371
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 08bdaa9446491d473cfb16e3b82bac41d7af5b79
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170286"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864449"
 ---
-# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Come dichiarare e utilizzare le proprietà di scrittura in lettura (Guida per programmatori C
+# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Come dichiarare e usare le proprietà di lettura/scrittura (Guida per programmatori C#)
 Le proprietà offrono i vantaggi dei membri dati pubblici senza i rischi associati all'accesso non protetto, non controllato e non verificato ai dati di un oggetto. Ciò si ottiene tramite le *funzioni di accesso*, ovvero metodi speciali che assegnano e recuperano valori dal membro dati sottostante. La funzione di accesso [set](../../language-reference/keywords/set.md) consente l'assegnazione di valori ai membri dati, mentre la funzione di accesso [get](../../language-reference/keywords/get.md) recupera i valori dei membri dati.  
   
  Questo esempio mostra una classe `Person` con due proprietà: `Name` (string) e `Age` (int). Entrambe le proprietà forniscono le funzioni di accesso `get` e `set`, quindi vengono considerate proprietà di lettura/scrittura.  
@@ -54,7 +55,7 @@ person.SetAge(person.GetAge() + 1);
   
  Si noti che il metodo `ToString` non viene usato in modo esplicito nel programma. Viene richiamato per impostazione predefinita dalle chiamate a `WriteLine`.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Guida per programmatori C#](../index.md)
 - [Proprietà](./properties.md)

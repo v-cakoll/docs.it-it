@@ -1,5 +1,6 @@
 ---
-title: 'Procedura dettagliata: creazione di codice in scenari di attendibilità parziale'
+title: 'Procedura dettagliata: Creazione di codice in scenari di attendibilità parziale'
+description: Vedere come creare codice in scenari di attendibilità parziale. La reflection emit usa le stesse API, ma alcune funzionalità richiedono autorizzazioni speciali in codice parzialmente attendibile.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
-ms.openlocfilehash: fd420c9754494b95c55df403edec87743572db03
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 70adb3ce67b45459b18741948092a912f6173731
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129984"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865190"
 ---
-# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Procedura dettagliata: creazione di codice in scenari di attendibilità parziale
+# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Procedura dettagliata: Creazione di codice in scenari di attendibilità parziale
 
 La reflection emit usa le stesse API in scenari di attendibilità sia parziale che completa, ma alcune funzionalità richiedono autorizzazioni speciali nel codice parzialmente attendibile. Inoltre, la reflection emit include una funzionalità, i metodi dinamici ospitati in modo anonimo, progettata per l'uso in situazioni di attendibilità parziale da parte di assembly trasparenti per la sicurezza.
 
@@ -208,7 +209,7 @@ Nell'esempio viene aggiunto <xref:System.Security.Permissions.ReflectionPermissi
 
 - Viene eseguito il primo overload del metodo `AccessPrivateMethod` e i controlli di visibilità JIT vengono ignorati. Il metodo dinamico viene compilato ed eseguito correttamente, poiché l'assembly che genera il codice è lo stesso assembly che contiene il metodo privato. Di conseguenza, i livelli di attendibilità sono uguali. Se l'applicazione che contiene la classe `Worker` ha diversi assembly, l'esito del processo sarà lo stesso per tutti gli assembly, poiché sono tutti allo stesso livello di attendibilità.
 
-- Viene eseguito il secondo overload del metodo `AccessPrivateMethod` e i controlli di visibilità JIT vengono di nuovo ignorati. Questa volta il metodo dinamico ha esito negativo quando viene compilato, perché tenta di accedere `internal` `FirstChar` alla proprietà della <xref:System.String> classe. L'assembly che contiene la classe <xref:System.String> è completamente attendibile. Si trova quindi a un livello di attendibilità superiore rispetto all'assembly che genera il codice.
+- Viene eseguito il secondo overload del metodo `AccessPrivateMethod` e i controlli di visibilità JIT vengono di nuovo ignorati. Questa volta il metodo dinamico ha esito negativo quando viene compilato, perché tenta di accedere alla `internal` `FirstChar` proprietà della <xref:System.String> classe. L'assembly che contiene la classe <xref:System.String> è completamente attendibile. Si trova quindi a un livello di attendibilità superiore rispetto all'assembly che genera il codice.
 
 Questo confronto spiega come <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> consente al codice parzialmente attendibile di ignorare i controlli di visibilità per altro codice parzialmente attendibile senza compromettere la sicurezza del codice attendibile.
 
@@ -221,7 +222,7 @@ Questo confronto spiega come <xref:System.Security.Permissions.ReflectionPermiss
 
 - Se si compila questo esempio di codice in Visual Studio, è necessario modificare il nome della classe in modo che includa lo spazio dei nomi quando si passa la classe al metodo <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. Per impostazione predefinita, lo spazio dei nomi è il nome del progetto. Ad esempio, se il progetto è "PartialTrust", il nome della classe deve essere "PartialTrust.Worker".
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Problemi di sicurezza nella reflection emit](security-issues-in-reflection-emit.md)
 - [Procedura: eseguire codice parzialmente attendibile in un oggetto sandbox](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

@@ -1,16 +1,17 @@
 ---
 title: Passaggio di parametri di tipo di riferimento - Guida per programmatori C#
+description: Quando si passa un parametro di tipo riferimento per valore in C#, i dati nell'oggetto a cui si fa riferimento possono cambiare, ma non il valore del riferimento stesso.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: 6fa0e60fafabaa9fb04cdc5d5bf3f9e29490e84f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64a4735eded7a468549862b3221b4fbd0966e64d
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714712"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864709"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Passaggio di parametri di tipo di riferimento (Guida per programmatori C#)
 Una variabile di un [tipo riferimento](../../language-reference/keywords/reference-types.md) non contiene direttamente i dati, ma solo un riferimento a essi. Quando si passa un parametro di tipo riferimento per valore, è possibile modificare i dati appartenenti all'oggetto di riferimento, ad esempio il valore del membro di una classe. Non è tuttavia possibile modificare il valore del riferimento stesso. Ad esempio, non è possibile usare lo stesso riferimento per allocare memoria per un nuovo oggetto e per renderlo persistente all'esterno del metodo. In questo caso, è necessario passare il parametro usando la parola chiave [ref](../../language-reference/keywords/ref.md) o [out](../../language-reference/keywords/out-parameter-modifier.md). Per semplicità, negli esempi seguenti viene usato `ref`.  
@@ -38,11 +39,11 @@ Una variabile di un [tipo riferimento](../../language-reference/keywords/referen
   
  Per altre informazioni sulle stringhe, vedere [Stringhe](../../language-reference/builtin-types/reference-types.md).  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Guida per programmatori C#](../index.md)
 - [Passaggio di parametri](./passing-parameters.md)
 - [ref](../../language-reference/keywords/ref.md)
 - [in](../../language-reference/keywords/in-parameter-modifier.md)
-- [Cambio](../../language-reference/keywords/out.md)
+- [out](../../language-reference/keywords/out.md)
 - [Tipi di riferimento](../../language-reference/keywords/reference-types.md)

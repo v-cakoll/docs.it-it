@@ -1,5 +1,6 @@
 ---
 title: Classi statiche e membri di classi statiche - Guida per programmatori C#
+description: Non è possibile creare un'istanza delle classi statiche in C#. È possibile accedere ai membri di una classe statica usando il nome della classe.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, static members
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 71cbf8278b3a8092e93a8ae3d8be291540f16cc3
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 4f187d772d2f2e4375fbe3cfdc8c48af691f1c7c
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990107"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863877"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Classi statiche e membri di classi statiche (Guida per programmatori C#)
 
@@ -88,11 +89,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 
 Per altre informazioni, vedere [Classi statiche](~/_csharplang/spec/classes.md#static-classes) e [Membri statici e di istanza](~/_csharplang/spec/classes.md#static-and-instance-members) nella [specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Guida per programmatori C#](../index.md)
-- [statico](../../language-reference/keywords/static.md)
+- [static](../../language-reference/keywords/static.md)
 - [Classi](./classes.md)
-- [classe](../../language-reference/keywords/class.md)
+- [class](../../language-reference/keywords/class.md)
 - [Costruttori statici](./static-constructors.md)
 - [Costruttori di istanza](./instance-constructors.md)

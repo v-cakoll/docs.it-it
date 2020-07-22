@@ -1,5 +1,6 @@
 ---
 title: Considerazioni sulla sicurezza in relazione alla reflection
+description: Informazioni sulle considerazioni relative alla sicurezza per la reflection in .NET. Il recupero di informazioni su tipi e membri è consentito, ma l'accesso ai membri presenta restrizioni.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - permissions [.NET Framework], reflection
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-ms.openlocfilehash: 1bdaf3abd39797274236ace4cb2967d2e7d199b2
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 0465cbd5ceb7d4f44bb6d10865fcbd17b8ed7af6
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644191"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865255"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerazioni sulla sicurezza in relazione alla reflection
 
@@ -69,7 +70,7 @@ A partire da .NET Framework 4, Common Language Runtime determina il livello di t
 |--------------------|------------------------|----------------------------|---------------------------|
 |Critico|`true`|`false`|`false`|
 |Critico per la sicurezza|`true`|`true`|`false`|
-|Trasparente|`false`|`false`|`true`|
+|Modalità trasparente|`false`|`false`|`true`|
 
 Usare queste proprietà è molto più semplice che non esaminare le annotazioni di sicurezza di un assembly e dei suoi tipi, controllare il livello di attendibilità corrente e tentare di duplicare le regole del runtime. Lo stesso tipo, ad esempio, può essere critico per la sicurezza quando viene eseguito dalla riga di comando, oppure trasparente per la sicurezza quando viene eseguito in un dominio applicazione in modalità sandbox.
 
@@ -110,7 +111,7 @@ Per la serializzazione, <xref:System.Security.Permissions.SecurityPermission> co
 
 - A partire da .NET Framework 2.0, l'uso della reflection per ottenere informazioni su tipi e membri non pubblici non richiede alcuna autorizzazione. Nelle versioni precedenti è necessario usare <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>

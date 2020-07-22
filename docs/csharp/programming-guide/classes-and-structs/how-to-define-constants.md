@@ -1,16 +1,17 @@
 ---
 title: Come definire le costanti in C#
+description: Informazioni su come definire le costanti in C#, ovvero i campi i cui valori vengono impostati in fase di compilazione. Usare le costanti per fornire nomi significativi per i valori speciali.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
-ms.openlocfilehash: 15526655de8af6fed464376db1ac761468215210
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: afa2799cf76f976e332f91b631dc90e2799a0aa0
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75337661"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864644"
 ---
 # <a name="how-to-define-constants-in-c"></a>Come definire le costanti in C\#
 Le costanti sono campi i cui valori vengono impostati in fase di compilazione e non possono mai essere modificati. Usare le costanti per specificare nomi significativi invece di valori letterali numerici ("numeri chiave") per valori particolari.  
@@ -27,6 +28,6 @@ Le costanti sono campi i cui valori vengono impostati in fase di compilazione e 
   
  L'uso del qualificatore del nome della classe consente di fare in modo che tutti gli utenti che usano la costante comprendano che si tratta di una costante e che non può essere modificata.  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Classi e struct](./index.md)

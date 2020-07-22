@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: esaminare e creare istanze di tipi generici tramite reflection'
+title: 'Procedura: Esaminare e creare istanze di tipi generici tramite reflection'
+description: Vedere come esaminare e creare istanze di tipi generici con Reflection. Usare le proprietà IsGenericType, IsGenericParameter e GenericParameterPosition.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - reflection, generic types
 - generics [.NET Framework], reflection
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
-ms.openlocfilehash: 62e4e066740d0422f8f7045b043a5725278c209c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b57a0ed0c809da442dc9fcf202ad364060971f80
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130128"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865099"
 ---
-# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Procedura: esaminare e creare istanze di tipi generici tramite reflection
+# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Procedura: Esaminare e creare istanze di tipi generici tramite reflection
 Le informazioni sui tipi generici vengono ottenute esattamente come quelle relative ad altri tipi, ovvero esaminando un oggetto <xref:System.Type> che rappresenta il tipo generico. La differenza principale è data dal fatto che un tipo generico dispone di un elenco di oggetti <xref:System.Type> che rappresentano i relativi parametri di tipo generico. La prima procedura in questa sezione esamina i tipi generici.  
   
  È possibile creare un oggetto <xref:System.Type> che rappresenta un tipo costruito associando argomenti di tipo ai parametri di tipo di una definizione di tipo generico. Questo concetto è illustrato nella seconda procedura.  
@@ -113,7 +114,7 @@ Le informazioni sui tipi generici vengono ottenute esattamente come quelle relat
  [!code-csharp[HowToGeneric#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#1)]
  [!code-vb[HowToGeneric#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#1)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Type>
 - <xref:System.Reflection.MethodInfo>

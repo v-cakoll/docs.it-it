@@ -1,16 +1,17 @@
 ---
 title: Passaggio di parametri di tipo di valore - Guida per programmatori C#
+description: Quando si passa una variabile di tipo valore a un metodo per valore in C#, le modifiche non hanno effetto sui dati originali. Per modificare il valore, passare per riferimento.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-ms.openlocfilehash: 13982254922d72337feeb502d2c84ebb42cf27bb
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 84829722cfb0b7ce71aff36f27a7c97cfa07ad5e
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004556"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864696"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>Passaggio di parametri di tipo di valore (Guida per programmatori C#)
 Una variabile [di tipo valore](../../language-reference/builtin-types/value-types.md) contiene direttamente i dati, mentre una variabile [di tipo riferimento](../../language-reference/keywords/reference-types.md) contiene un riferimento ai dati. Quando si passa una variabile di tipo valore a un metodo per valore, si passa una copia della variabile al metodo. Tutte le modifiche apportate al parametro che si verificano all'interno del metodo non hanno alcun effetto sui dati originali archiviati nella variabile dell'argomento. Se si vuole che il metodo chiamato modifichi il valore dell'argomento, è necessario passarlo per riferimento usando la parola chiave [ref](../../language-reference/keywords/ref.md) o [out](../../language-reference/keywords/out-parameter-modifier.md). È inoltre possibile usare la parola chiave [in](../../language-reference/keywords/in-parameter-modifier.md) per passare un parametro di valore per riferimento per evitare la copia, garantendo che il valore non verrà modificato. Per semplicità, negli esempi seguenti viene usato `ref`.  
@@ -38,7 +39,7 @@ Una variabile [di tipo valore](../../language-reference/builtin-types/value-type
   
  [!code-csharp[csProgGuideParameters#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#6)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Guida per programmatori C#](../index.md)
 - [Passaggio di parametri](./passing-parameters.md)

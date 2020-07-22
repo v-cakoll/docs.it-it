@@ -1,5 +1,6 @@
 ---
 title: Argomenti denominati e facoltativi - Guida per programmatori C#
+description: Gli argomenti denominati in C# specificano gli argomenti per nome, non per la posizione. Gli argomenti facoltativi possono essere omessi.
 ms.date: 07/20/2015
 f1_keywords:
 - namedParameter_CSharpKeyword
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 15b685248730c1f742035612a201d97d180bbc41
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 46b9dc23644e68aea2767f2b990fe7f243a4f357
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399812"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864982"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argomenti denominati e facoltativi (Guida per programmatori C#)
 In C# 4 sono stati introdotti gli argomenti denominati e facoltativi. Gli *argomenti denominati* consentono di specificare un argomento per un particolare parametro associando l'argomento al nome del parametro anziché alla posizione del parametro nell'elenco di parametri. Gli *argomenti facoltativi* consentono di omettere gli argomenti per alcuni parametri. Entrambe le tecniche possono essere usate con i metodi, gli indicizzatori, i costruttori e i delegati.  
@@ -50,7 +51,7 @@ In C# 4 sono stati introdotti gli argomenti denominati e facoltativi. Gli *argom
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- Gli argomenti posizionali che seguono qualsiasi argomento denominato non in ordine non sono validi.
+ Gli argomenti posizionali che seguono gli argomenti denominati non ordinati non sono validi.
 
  ```csharp
  // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.
@@ -112,7 +113,7 @@ In C# 4 sono stati introdotti gli argomenti denominati e facoltativi. Gli *argom
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- Per ulteriori informazioni ed esempi, vedere [Come utilizzare gli argomenti denominati e facoltativi nella programmazione](./how-to-use-named-and-optional-arguments-in-office-programming.md) di Office e Come accedere agli oggetti di interoperabilità di Office utilizzando le funzionalità di [C.](../interop/how-to-access-office-onterop-objects.md)  
+ Per altre informazioni ed esempi, vedere [come usare gli argomenti denominati e facoltativi nella programmazione di Office](./how-to-use-named-and-optional-arguments-in-office-programming.md) e [come accedere agli oggetti di interoperabilità di Office usando le funzionalità di C#](../interop/how-to-access-office-onterop-objects.md).  
   
 ## <a name="overload-resolution"></a>Overload Resolution  
  L'uso di argomenti denominati e facoltativi influisce sulla risoluzione dell'overload nei modi seguenti:  
@@ -126,9 +127,9 @@ In C# 4 sono stati introdotti gli argomenti denominati e facoltativi. Gli *argom
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Come usare argomenti denominati e facoltativi nella programmazione di Office](./how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [Utilizzo del tipo dinamico](../types/using-type-dynamic.md)
-- [Uso dei costruttori](./using-constructors.md)
-- [Uso degli indicizzatori](../indexers/using-indexers.md)
+- [Utilizzo di costruttori](./using-constructors.md)
+- [Utilizzo degli indicizzatori](../indexers/using-indexers.md)

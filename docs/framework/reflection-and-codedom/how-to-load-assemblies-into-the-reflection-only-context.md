@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: caricare assembly nel contesto Reflection-Only'
+title: 'Procedura: Caricare assembly nel contesto Reflection-Only'
+description: Vedere un esempio di come caricare gli assembly nel contesto di sola reflection in .NET. Esaminare gli assembly compilati per altre piattaforme o versioni .NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - assemblies [.NET Framework], reflection-only loader context
 - reflection-only loader context
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
-ms.openlocfilehash: cac6b3b3adf070ad6070e5c5941653f20dedd907
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 92f847f6c61ba39bf8621af6080baccfdabe514a
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130109"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865073"
 ---
-# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Procedura: caricare assembly nel contesto Reflection-Only
+# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Procedura: Caricare assembly nel contesto Reflection-Only
 
 Il contesto di caricamento di sola reflection consente di esaminare gli assembly compilati per altre piattaforme o altre versioni di .NET Framework. Il codice caricato in questo contesto può essere solo esaminato e non eseguito. Di conseguenza, poiché i costruttori non possono essere eseguiti, non è possibile creare oggetti. Non essendo possibile eseguire il codice, le dipendenze non vengono caricate automaticamente. Per esaminarle, è necessario caricarle manualmente.
 

@@ -1,16 +1,17 @@
 ---
 title: Variabili locali tipizzate in modo implicito - Guida per programmatori C#
+description: La parola chiave var in C# indica al compilatore di dedurre il tipo della variabile dall'espressione sul lato destro dell'istruzione di inizializzazione.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 842f73b7af9671157495df961f5db22702ae897e
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 6badb8588dedda80227ab38bee027cf2890c8672
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240707"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864215"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Variabili locali tipizzate in modo implicito - Guida per programmatori C#
 
@@ -68,7 +69,7 @@ Alle dichiarazioni di variabili tipizzate in modo implicito si applicano le rest
 
 - Se un tipo denominato `var` rientra nell'ambito, la parola chiave `var` si risolverà in tale nome di tipo e non verrà trattata come parte di una dichiarazione di variabile locale tipizzata in modo implicito.
 
-La tipizzazione implicita con la parola chiave `var` può essere applicata solo alle variabili nell'ambito del metodo locale. La tipizzazione implicita non è disponibile per i campi di classe perché il compilatore C# riscontrerebbe un paradosso logico durante l'elaborazione del codice: il compilatore deve conoscere il tipo del campo, ma è in grado di determinare il tipo solo dopo che l'espressione di assegnazione è stata analizzata e l'espressione non può essere valutata senza conoscere il tipo. Esaminare il codice seguente:
+La tipizzazione implicita con la parola chiave `var` può essere applicata solo alle variabili nell'ambito del metodo locale. La tipizzazione implicita non è disponibile per i campi di classe perché il compilatore C# riscontrerebbe un paradosso logico durante l'elaborazione del codice: il compilatore deve conoscere il tipo del campo, ma è in grado di determinare il tipo solo dopo che l'espressione di assegnazione è stata analizzata e l'espressione non può essere valutata senza conoscere il tipo. Osservare il codice seguente:
 
 ```csharp
 private var bookTitles;
@@ -90,7 +91,7 @@ La parola chiave `var` può essere utile anche quando il tipo specifico della va
 
 L'uso di `var` consente di semplificare il codice, ma il suo uso dovrebbe essere limitato ai casi in cui è necessario o quando rende il codice più facile da leggere. Per altre informazioni su quando usare `var` correttamente, vedere la sezione [variabili locali tipizzate in modo implicito](../inside-a-program/coding-conventions.md#implicitly-typed-local-variables) nell'articolo linee guida per il codice C#.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Riferimenti per C#](../../language-reference/index.md)
 - [Matrici tipizzate in modo implicito](../arrays/implicitly-typed-arrays.md)

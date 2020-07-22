@@ -1,16 +1,17 @@
 ---
 title: Oggetti - Guida per programmatori C#
+description: C# usa una definizione di classe o struct per definire i tipi di oggetti. In un linguaggio orientato a oggetti, ad esempio C#, un programma è costituito da oggetti che interagiscono dinamicamente.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: a9411557e9177c8dbed45ec25984d574479da0de
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: b54db325c568dec702e4e50c3c265286662092fe
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241786"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864761"
 ---
 # <a name="objects-c-programming-guide"></a>Oggetti (Guida per programmatori C#)
 Una definizione di classe o struct è simile a un progetto iniziale in cui vengono specificate le funzionalità del tipo. Un oggetto è essenzialmente un blocco di memoria che è stato allocato e configurato in base al progetto iniziale. Un programma può creare molti oggetti della stessa classe. Gli oggetti, definiti anche istanze, possono essere archiviati in una variabile denominata o in una matrice o raccolta. Il codice client è il codice che usa queste variabili per chiamare i metodi e accedere alle proprietà pubbliche dell'oggetto. In un linguaggio orientato a oggetti come C#, il programma tipico è costituito da più oggetti che interagiscono dinamicamente.  
@@ -58,12 +59,12 @@ Una definizione di classe o struct è simile a un progetto iniziale in cui vengo
   
 - [Events](../events/index.md)  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Guida per programmatori C#](../index.md)
 - [object](../../language-reference/builtin-types/reference-types.md)
 - [Ereditarietà](./inheritance.md)
-- [classe](../../language-reference/keywords/class.md)
+- [class](../../language-reference/keywords/class.md)
 - [Tipi di struttura](../../language-reference/builtin-types/struct.md)
 - [Operatore New](../../language-reference/operators/new-operator.md)
 - [Common Type System](../../../standard/base-types/common-type-system.md)

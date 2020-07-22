@@ -1,5 +1,6 @@
 ---
 title: Creare i file di risorse per le app .NET
+description: Creare file di risorse per le app .NET. Consente di compilare file di testo con risorse di tipo stringa, file XML o binari a livello di codice o file XML con dati di tipo stringa, immagine o oggetto.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-ms.openlocfilehash: b679539be1aeb593124eb35a235bcc578decb4c0
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 4730a14e499c75176d7ba7c8378626070d5211e9
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111777"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865177"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Creare i file di risorse per le app .NET
 
 È possibile includere risorse, ad esempio stringhe, immagini o dati di oggetti, all'interno di file di risorse per renderli facilmente disponibili per l'applicazione. In .NET Framework è possibile creare file di risorse in cinque modi diversi:
 
-- Creare un file di testo contenente risorse stringa. È possibile usare il [generatore di file di risorse (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) per convertire il file di testo in un file di risorse binario con estensione resources. È quindi possibile incorporare il file di risorse binario in un eseguibile dell'applicazione o in una libreria di applicazioni usando un compilatore di linguaggio oppure è possibile incorporarlo in un assembly satellite tramite [assembly linker (al. exe)](../tools/al-exe-assembly-linker.md). Per altre informazioni, vedere la sezione [Risorse in file di testo](creating-resource-files-for-desktop-apps.md#TextFiles).
+- Creare un file di testo contenente risorse stringa. È possibile usare il [generatore di file di risorse (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) per convertire il file di testo in un file di risorse binario con estensione resources. È quindi possibile incorporare il file di risorse binario in un eseguibile dell'applicazione o in una libreria di applicazioni usando un compilatore di linguaggio oppure è possibile incorporarlo in un assembly satellite tramite [assembly linker (Al.exe)](../tools/al-exe-assembly-linker.md). Per altre informazioni, vedere la sezione [Risorse in file di testo](creating-resource-files-for-desktop-apps.md#TextFiles).
 
 - Creare un file di risorse XML con estensione resx contenente stringhe, immagini o dati di oggetto. È possibile usare il [generatore di file di risorse (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) per convertire il file con estensione resx in un file di risorse binario con estensione resources. È quindi possibile incorporare il file di risorse binario in un file eseguibile o in una libreria dell'applicazione tramite un compilatore del linguaggio. In alternativa, è possibile incorporare il file di risorse in un assembly satellite tramite [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md). Per altre informazioni, vedere la sezione [Risorse nei file con estensione resx](creating-resource-files-for-desktop-apps.md#ResxFiles).
 
@@ -58,7 +59,7 @@ name2=value2
 
  Il formato dei file di risorse con estensione txt e restext è identico. L'estensione restext serve semplicemente a rendere immediatamente identificabili i file di testo come file di risorse basati su testo.
 
- Le risorse stringa sono visualizzate come coppie *name/value*, dove *name* è una stringa che identifica la risorsa e *value* è la stringa di risorsa che viene restituita quando si passa *name* a un metodo di recupero quale <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>. *name* e *value* devono essere separati da un segno di uguale (=). Ad esempio:
+ Le risorse stringa sono visualizzate come coppie *name/value*, dove *name* è una stringa che identifica la risorsa e *value* è la stringa di risorsa che viene restituita quando si passa *name* a un metodo di recupero quale <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>. *name* e *value* devono essere separati da un segno di uguale (=). ad esempio:
 
 ```text
 FileMenuName=File
@@ -70,13 +71,13 @@ HelpMenuName=Help
 > [!CAUTION]
 > Non usare file di risorse per archiviare password, informazioni sensibili per la sicurezza o dati personali.
 
- Stringhe vuote, ovvero risorse il cui valore è <xref:System.String.Empty?displayProperty=nameWithType>, sono consentite nei file di testo. Ad esempio:
+ Stringhe vuote, ovvero risorse il cui valore è <xref:System.String.Empty?displayProperty=nameWithType>, sono consentite nei file di testo. ad esempio:
 
 ```text
 EmptyString=
 ```
 
- A partire da .NET Framework 4,5 e in tutte le versioni di .NET Core, i file di testo supportano `#ifdef`la compilazione condizionale con il *simbolo*... `#endif` e `#if !` *Symbol*... `#endif` costrutti. È quindi possibile usare l'opzione `/define` con il [generatore di file di risorse (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) per definire i simboli. Ogni risorsa richiede un proprio `#ifdef` *simbolo*... `#endif` `#if !` *simbolo*o... `#endif` costrutto. Se si usa un'istruzione `#ifdef` e *simbolo* è definito, la risorsa associata è inclusa nel file con estensione resources. In caso contrario, non è inclusa. Se si usa un'istruzione `#if !` e *simbolo* non è definito, la risorsa associata è inclusa nel file con estensione resources. In caso contrario, non è inclusa.
+ A partire da .NET Framework 4,5 e in tutte le versioni di .NET Core, i file di testo supportano la compilazione condizionale con i costrutti symbol.. `#ifdef` *symbol*. `#endif` e `#if !` *Symbol*... `#endif` . È quindi possibile usare l'opzione `/define` con il [generatore di file di risorse (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) per definire i simboli. Ogni risorsa richiede un costrutto symbol... `#ifdef` *symbol* `#endif` o `#if !` *Symbol*.. `#endif` .. Se si usa un'istruzione `#ifdef` e *simbolo* è definito, la risorsa associata è inclusa nel file con estensione resources. In caso contrario, non è inclusa. Se si usa un'istruzione `#if !` e *simbolo* non è definito, la risorsa associata è inclusa nel file con estensione resources. In caso contrario, non è inclusa.
 
  Nei file di testo i commenti sono facoltativi e sono preceduti da un punto e virgola (;) o da un segno di cancelletto (#) all'inizio della riga. Le righe che contengono i commenti possono trovarsi in qualsiasi punto del file. I commenti non sono inclusi in un file con estensione resources compilato creato tramite il [generatore di file di risorse (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md).
 
@@ -92,13 +93,13 @@ CancelButton=Cancel
 
  Se il file di testo contiene occorrenze duplicate di *name*, il [generatore di file di risorse (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) visualizza un avviso e ignora il secondo nome.
 
- il *valore* non può contenere caratteri `\n` di nuova riga, ma è possibile usare caratteri di escape in stile linguaggio C, ad esempio per `\t` rappresentare una nuova riga e per rappresentare una scheda. È anche possibile includere un carattere barra rovesciata se è preceduto da un carattere di\\\\Escape, ad esempio "". Sono anche consentite le stringhe vuote.
+ il *valore* non può contenere caratteri di nuova riga, ma è possibile usare caratteri di escape in stile linguaggio C, ad esempio `\n` per rappresentare una nuova riga e `\t` per rappresentare una scheda. È anche possibile includere un carattere barra rovesciata se è preceduto da un carattere di escape, ad esempio " \\ \\ ". Sono anche consentite le stringhe vuote.
 
  Salvare le risorse in formato di file di testo usando la codifica UTF-8 o la codifica UTF-16 nell'ordine dei byte little-endian o big-endian. Il [generatore di file di risorse (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md), tuttavia, che consente di convertire un file con estensione txt in un file con estensione resources, per impostazione predefinita considera i file come salvati con la codifica UTF-8. Se si vuole che Resgen.exe riconosca un file come salvato con la codifica UTF-16, è necessario includere un byte order mark Unicode (U + FEFF) all'inizio del file.
 
  Per incorporare un file di risorse in formato testo in un assembly .NET, è necessario convertire il file in un file di risorse binario (con estensione resources) tramite il [generatore di file di risorse (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md). È quindi possibile incorporare il file con estensione resources in un assembly .NET tramite un compilatore del linguaggio. In alternativa, è possibile incorporare il file in un assembly satellite tramite [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md).
 
- Nell'esempio seguente viene usato un file di risorse in formato testo denominato GreetingResources.txt per un'applicazione console "Hello World" semplice. Il file di testo definisce due stringhe `prompt` , `greeting`e, che richiedono all'utente di immettere il proprio nome e visualizzare un messaggio di saluto.
+ Nell'esempio seguente viene usato un file di risorse in formato testo denominato GreetingResources.txt per un'applicazione console "Hello World" semplice. Il file di testo definisce due stringhe, `prompt` e `greeting` , che richiedono all'utente di immettere il proprio nome e visualizzare un messaggio di saluto.
 
 ```text
 # GreetingResources.txt
@@ -186,7 +187,7 @@ csc greeting.cs -resource:GreetingResources.resources
 > [!NOTE]
 > Non usare file di risorse per archiviare password, informazioni sensibili per la sicurezza o dati personali.
 
- Nell'esempio seguente viene creato a livello di codice un file con estensione resources denominato CarResources.resources contenente sei stringhe, un'icona e due oggetti definiti dall'applicazione, ovvero due oggetti `Automobile`. La `Automobile` classe, che viene definita e di cui viene creata un'istanza nell'esempio, viene <xref:System.SerializableAttribute> contrassegnata con l'attributo, che consente di renderla permanente dal formattatore di serializzazione binaria.
+ Nell'esempio seguente viene creato a livello di codice un file con estensione resources denominato CarResources.resources contenente sei stringhe, un'icona e due oggetti definiti dall'applicazione, ovvero due oggetti `Automobile`. La `Automobile` classe, che viene definita e di cui viene creata un'istanza nell'esempio, viene contrassegnata con l' <xref:System.SerializableAttribute> attributo, che consente di renderla permanente dal formattatore di serializzazione binaria.
 
  [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)]
  [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]
@@ -202,7 +203,7 @@ Se si aggiungono risorse localizzate, assegnarvi lo stesso nome di file radice d
 
 In fase di compilazione, Visual Studio prima converte i file con estensione resx di un progetto in file di risorse binari con estensione resources e li archivia in una sottodirectory della directory *obj* del progetto. Visual Studio incorpora ogni file di risorse che non contiene risorse localizzate nell'assembly principale generato dal progetto. Se tutti i file di risorse contengono risorse localizzate, Visual Studio li incorpora in assembly satellite separati per ognuna delle impostazioni cultura localizzate e archivia quindi ogni assembly satellite in una directory il cui nome corrisponde alle impostazioni cultura localizzate. Ad esempio, le risorse localizzate per l'inglese (Stati Uniti) vengono archiviate in un assembly satellite nella sottodirectory en-US.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Resources>
 - [Risorse nelle applicazioni desktop](index.md)

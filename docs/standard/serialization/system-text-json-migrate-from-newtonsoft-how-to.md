@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fe370b34d311816a815f3b2d419751ac7871f013
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 78a47b01cc8fba4cb45a686adad901784552c1c1
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "83703586"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865333"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Come eseguire la migrazione da Newtonsoft.Json aSystem.Text.Json
 
@@ -73,13 +73,13 @@ Nella tabella seguente sono elencate le `Newtonsoft.Json` funzionalità e gli `S
 | Metodo `JsonConvert.PopulateObject`                   | ⚠️[Non supportato, soluzione alternativa](#populate-existing-objects) |
 | `ObjectCreationHandling`impostazione globale               | ⚠️[Non supportato, soluzione alternativa](#reuse-rather-than-replace-properties) |
 | Aggiungi a raccolte senza Setter                    | ⚠️[Non supportato, soluzione alternativa](#add-to-collections-without-setters) |
-| `PreserveReferencesHandling`impostazione globale           | ❌ [Non supportate](#preserve-object-references-and-handle-loops) |
-| `ReferenceLoopHandling`impostazione globale                | ❌ [Non supportate](#preserve-object-references-and-handle-loops) |
-| Supporto per `System.Runtime.Serialization` gli attributi | ❌ [Non supportate](#systemruntimeserialization-attributes) |
-| `MissingMemberHandling`impostazione globale                | ❌ [Non supportate](#missingmemberhandling) |
-| Consenti nomi di proprietà senza virgolette                   | ❌ [Non supportate](#json-strings-property-names-and-string-values) |
-| Consenti virgolette singole intorno ai valori stringa              | ❌ [Non supportate](#json-strings-property-names-and-string-values) |
-| Consenti valori JSON non stringa per le proprietà di stringa    | ❌ [Non supportate](#non-string-values-for-string-properties) |
+| `PreserveReferencesHandling`impostazione globale           | ❌[Non supportato](#preserve-object-references-and-handle-loops) |
+| `ReferenceLoopHandling`impostazione globale                | ❌[Non supportato](#preserve-object-references-and-handle-loops) |
+| Supporto per `System.Runtime.Serialization` gli attributi | ❌[Non supportato](#systemruntimeserialization-attributes) |
+| `MissingMemberHandling`impostazione globale                | ❌[Non supportato](#missingmemberhandling) |
+| Consenti nomi di proprietà senza virgolette                   | ❌[Non supportato](#json-strings-property-names-and-string-values) |
+| Consenti virgolette singole intorno ai valori stringa              | ❌[Non supportato](#json-strings-property-names-and-string-values) |
+| Consenti valori JSON non stringa per le proprietà di stringa    | ❌[Non supportato](#non-string-values-for-string-properties) |
 
 Non si tratta di un elenco completo di `Newtonsoft.Json` funzionalità. L'elenco include molti degli scenari richiesti nei [problemi di GitHub](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) o nei post [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) . Se si implementa una soluzione alternativa per uno degli scenari elencati qui che attualmente non contiene codice di esempio e se si desidera condividere la soluzione, selezionare **Questa pagina** nella sezione **commenti e suggerimenti** nella parte inferiore della pagina. Questo crea un problema nel repository GitHub della documentazione e lo elenca nella sezione **feedback** in questa pagina.
 
@@ -318,11 +318,27 @@ Per rendere la deserializzazione non riuscita se non è presente alcuna `Date` p
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverter.cs)]
 
-Registrare questo convertitore personalizzato [usando un attributo della classe poco](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) o [aggiungendo il convertitore](system-text-json-converters-how-to.md#registration-sample---converters-collection) alla <xref:System.Text.Json.JsonSerializerOptions.Converters> raccolta.
+Registrare questo convertitore personalizzato [aggiungendo il convertitore](system-text-json-converters-how-to.md#registration-sample---converters-collection) alla <xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType> raccolta.
 
-Se si segue questo modello, non passare l'oggetto Options quando si chiama o in modo ricorsivo <xref:System.Text.Json.JsonSerializer.Serialize%2A> <xref:System.Text.Json.JsonSerializer.Deserialize%2A> . L'oggetto options contiene la <xref:System.Text.Json.JsonSerializerOptions.Converters%2A> raccolta. Se lo si passa a `Serialize` o `Deserialize` , il convertitore personalizzato chiama se stesso, rendendo un ciclo infinito che restituisce un'eccezione di overflow dello stack. Se le opzioni predefinite non sono realizzabili, creare una nuova istanza delle opzioni con le impostazioni necessarie. Questo approccio sarà lento perché ogni nuova istanza viene memorizzata nella cache in modo indipendente.
+Questo modello di chiamata ricorsiva del convertitore richiede la registrazione del convertitore tramite <xref:System.Text.Json.JsonSerializerOptions> , non tramite un attributo. Se si registra il convertitore usando un attributo, il convertitore personalizzato esegue una chiamata in modo ricorsivo a se stesso. Il risultato è un ciclo infinito che termina in un'eccezione di overflow dello stack.
 
-Il codice del convertitore precedente è un esempio semplificato. Se è necessario gestire gli attributi (ad esempio, [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) o opzioni diverse, ad esempio i codificatori personalizzati, è necessaria una logica aggiuntiva. Il codice di esempio non gestisce inoltre le proprietà per le quali viene impostato un valore predefinito nel costruttore. Questo approccio non distingue gli scenari seguenti:
+Quando si registra il convertitore usando l'oggetto options, evitare un ciclo infinito senza passare l'oggetto Options quando si chiama o in modo ricorsivo <xref:System.Text.Json.JsonSerializer.Serialize%2A> <xref:System.Text.Json.JsonSerializer.Deserialize%2A> . L'oggetto options contiene la <xref:System.Text.Json.JsonSerializerOptions.Converters%2A> raccolta. Se lo si passa a `Serialize` o `Deserialize` , il convertitore personalizzato chiama se stesso, rendendo un ciclo infinito che restituisce un'eccezione di overflow dello stack. Se le opzioni predefinite non sono realizzabili, creare una nuova istanza delle opzioni con le impostazioni necessarie. Questo approccio sarà lento perché ogni nuova istanza viene memorizzata nella cache in modo indipendente.
+
+È disponibile un modello alternativo che può usare `JsonConverterAttribute` la registrazione per la classe da convertire. Con questo approccio, il codice del convertitore chiama `Serialize` o `Deserialize` su una classe che deriva dalla classe da convertire. Alla classe derivata non è applicato alcun oggetto `JsonConverterAttribute` . Nell'esempio seguente di questa alternativa:
+
+* `WeatherForecastWithRequiredPropertyConverterAttribute`è la classe da deserializzare e a cui è `JsonConverterAttribute` applicato.
+* `WeatherForecastWithoutRequiredPropertyConverterAttribute`è la classe derivata che non dispone dell'attributo Converter.
+* Il codice nel convertitore chiama `Serialize` e `Deserialize` on `WeatherForecastWithoutRequiredPropertyConverterAttribute` per evitare un ciclo infinito. Questo approccio comporta un costo in termini di prestazioni per la serializzazione a causa della creazione di un'istanza di oggetto aggiuntiva e della copia dei valori delle proprietà.
+
+Di seguito sono riportati i `WeatherForecast*` tipi:
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithReqPptyConverterAttr)]
+
+Ecco il convertitore:
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverterForAttributeRegistration.cs)]
+
+Il convertitore di proprietà necessario richiede una logica aggiuntiva se è necessario gestire attributi come [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) o opzioni diverse, ad esempio i codificatori personalizzati. Il codice di esempio non gestisce inoltre le proprietà per le quali viene impostato un valore predefinito nel costruttore. Questo approccio non distingue gli scenari seguenti:
 
 * Una proprietà non è presente in JSON.
 * Una proprietà per un tipo che non ammette i valori null è presente nel codice JSON, ma il valore è l'impostazione predefinita per il tipo, ad esempio zero per un oggetto `int` .
@@ -391,7 +407,7 @@ Registrare questo convertitore personalizzato [usando un attributo della classe]
 Se si usa un convertitore personalizzato che segue l'esempio precedente:
 
 * Il `OnDeserializing` codice non ha accesso alla nuova istanza poco. Per modificare la nuova istanza POCO all'inizio della deserializzazione, inserire il codice nel costruttore POCO.
-* Non passare l'oggetto Options quando si chiama o in modo ricorsivo `Serialize` `Deserialize` . L'oggetto options contiene la `Converters` raccolta. Se lo si passa a `Serialize` o `Deserialize` , verrà usato il convertitore, rendendo un ciclo infinito che restituisce un'eccezione di overflow dello stack.
+* Evitare un ciclo infinito registrando il convertitore nell'oggetto Options e non passando l'oggetto Options quando si chiama o in modo ricorsivo `Serialize` `Deserialize` . Per altre informazioni, vedere la sezione [proprietà obbligatorie](#required-properties) più indietro in questo articolo.
 
 ### <a name="public-and-non-public-fields"></a>Campi pubblici e non pubblici
 
@@ -472,7 +488,7 @@ public JsonElement LookAndLoad(JsonElement source)
 
 Il codice precedente prevede un oggetto `JsonElement` che contiene una `fileName` Proprietà. Viene aperto il file JSON e viene creato un oggetto `JsonDocument` . Il metodo presuppone che il chiamante voglia lavorare con l'intero documento, quindi restituisce l'oggetto `Clone` di `RootElement` .
 
-Se si riceve una `JsonElement` classe e si restituisce un sottoelemento, non è necessario restituire un oggetto `Clone` del sottoelemento. Il chiamante è responsabile di mantenere attivo l'oggetto `JsonDocument` a cui appartiene l'oggetto passato `JsonElement` . Ad esempio:
+Se si riceve una `JsonElement` classe e si restituisce un sottoelemento, non è necessario restituire un oggetto `Clone` del sottoelemento. Il chiamante è responsabile di mantenere attivo l'oggetto `JsonDocument` a cui appartiene l'oggetto passato `JsonElement` . ad esempio:
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)

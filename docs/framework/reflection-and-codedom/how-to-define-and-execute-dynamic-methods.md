@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: definire ed eseguire metodi dinamici'
+title: 'Procedura: Definire ed eseguire metodi dinamici'
+description: Vedere come definire ed eseguire metodi dinamici in .NET. Visualizzazione di esempi di un metodo dinamico semplice e di un metodo dinamico associato a un'istanza di una classe.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
-ms.openlocfilehash: 7da9d0bea755b90f73077fcd56558ed66a80e2eb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7c68be91deb59ea9439e81561f50b7cc40766a45
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130144"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865112"
 ---
-# <a name="how-to-define-and-execute-dynamic-methods"></a>Procedura: definire ed eseguire metodi dinamici
+# <a name="how-to-define-and-execute-dynamic-methods"></a>Procedura: Definire ed eseguire metodi dinamici
 Le procedure seguenti illustrano come definire ed eseguire un metodo dinamico semplice e un metodo dinamico associato a un'istanza di una classe. Per altre informazioni sui metodi dinamici, vedere la classe <xref:System.Reflection.Emit.DynamicMethod> e [Scenari relativi a metodi dinamici della reflection emit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>Per definire ed eseguire un metodo dinamico  
@@ -112,7 +113,7 @@ Le procedure seguenti illustrano come definire ed eseguire un metodo dinamico se
  [!code-csharp[DynamicMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#1)]
  [!code-vb[DynamicMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - <xref:System.Reflection.Emit.DynamicMethod>
 - [Uso della reflection emit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))

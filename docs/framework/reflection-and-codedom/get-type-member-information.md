@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: ottenere informazioni sul tipo e sui membri tramite reflection'
+title: 'Procedura: Ottenere informazioni su tipi e membri tramite reflection'
+description: Informazioni su come ottenere informazioni sul tipo e sui membri con la reflection, usando lo spazio dei nomi System. Reflection.
 ms.date: 09/03/2019
 helpviewer_keywords:
 - reflection, obtaining member information
@@ -9,15 +10,15 @@ dev_langs:
 - cpp
 - csharp
 - vb
-ms.openlocfilehash: 9ffc173bbd0ed12eedea0c191f6d39baf181793a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fa7af39c0addb328944a03236c26982301caf722
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130209"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865320"
 ---
-# <a name="how-to-get-type-and-member-information-by-using-reflection"></a>Procedura: ottenere informazioni sul tipo e sui membri tramite reflection
-Lo <xref:System.Reflection> spazio dei nomi contiene molti metodi per ottenere informazioni sui tipi e sui relativi membri. Questo articolo illustra uno di questi metodi, <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>. Per altre informazioni, vedere [Cenni preliminari sulla reflection](reflection.md).
+# <a name="how-to-get-type-and-member-information-by-using-reflection"></a>Procedura: Ottenere informazioni su tipi e membri tramite reflection
+Lo <xref:System.Reflection> spazio dei nomi contiene molti metodi per ottenere informazioni sui tipi e sui relativi membri. Questo articolo illustra uno di questi metodi, <xref:System.Type.GetMembers%2A?displayProperty=nameWithType> . Per altre informazioni, vedere [Cenni preliminari sulla reflection](reflection.md).
   
 ## <a name="example"></a>Esempio
 
@@ -27,7 +28,7 @@ Nell'esempio seguente vengono ottenute informazioni sul tipo e sui membri tramit
 [!code-csharp[Get type members](../../../samples/snippets/standard/reflection/memberinfo/gettypemembers.cs)]
 [!code-vb[Get type members](../../../samples/snippets/standard/reflection/memberinfo/gettypemembers.vb)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Programma con domini applicazione](../app-domains/application-domains.md#programming-with-application-domains)
 - [Reflection](reflection.md)

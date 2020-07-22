@@ -1,14 +1,15 @@
 ---
 title: Funzioni locali - Guida per programmatori C#
+description: Le funzioni locali in C# sono metodi privati annidati in un altro membro e possono essere chiamati dal membro contenitore.
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 200fbd097b7c71a1cd392d62622955528a80fd66
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 9987d6d5ad57c1dceb3a4bffbae22a81c240c794
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102944"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864527"
 ---
 # <a name="local-functions-c-programming-guide"></a>Funzioni locali (Guida per programmatori C#)
 
@@ -26,9 +27,9 @@ A partire dalla versione 7.0, C# supporta le *funzioni locali*. Le funzioni loca
 Le funzioni locali, tuttavia, non possono essere dichiarate all'interno di un membro con corpo di espressione.
 
 > [!NOTE]
-> In alcuni casi, è possibile usare un'espressione lambda per implementare le funzionalità supportate anche da una funzione locale. Per un confronto, vedere [Funzioni locali e espressioni lambda](#local-functions-vs-lambda-expressions).
+> In alcuni casi, è possibile usare un'espressione lambda per implementare le funzionalità supportate anche da una funzione locale. Per un confronto, vedere [funzioni locali rispetto alle espressioni lambda](#local-functions-vs-lambda-expressions).
 
-Le funzioni locali rendono chiaro l'obiettivo del codice. Chiunque legga il codice può vedere che il metodo non è richiamabile se non dal metodo che lo contiene. Per i progetti in team, le funzioni locali impediscono anche a un altro sviluppatore di chiamare per errore il metodo direttamente da un altro punto della classe o dello struct.
+Le funzioni locali rendono chiaro l'obiettivo del codice. Chiunque legga il codice può vedere che il metodo non è richiamabile, ad eccezione del metodo contenitore. Per i progetti in team, le funzioni locali impediscono anche a un altro sviluppatore di chiamare per errore il metodo direttamente da un altro punto della classe o dello struct.
 
 ## <a name="local-function-syntax"></a>Sintassi delle funzioni locali
 
@@ -42,10 +43,10 @@ Le funzioni locali possono usare i modificatori [async](../../language-reference
 
 Tutte le variabili locali definite nel membro contenitore, inclusi i relativi parametri di metodo, sono accessibili nella funzione locale.
 
-A differenza di una definizione di metodo, una definizione di funzione locale non può includere il modificatore di accesso ai membri. Poiché tutte le funzioni locali sono private, l'integrazione di un modificatore di accesso come la parola chiave `private` genera l'errore del compilatore CS0106: "Il modificatore 'private' non è valido per questo elemento".
+Diversamente da una definizione di metodo, una definizione di funzione locale non può includere il modificatore di accesso ai membri. Poiché tutte le funzioni locali sono private, l'integrazione di un modificatore di accesso come la parola chiave `private` genera l'errore del compilatore CS0106: "Il modificatore 'private' non è valido per questo elemento".
 
 > [!NOTE]
-> Nelle versioni precedenti alla versione 8.0 `static` di C, le funzioni locali non possono includere il modificatore. L'integrazione della parola chiave `static` genera l'errore del compilatore CS0106: "Il modificatore 'private' non è valido per questo elemento".
+> Prima di C# 8,0, le funzioni locali non possono includere il `static` modificatore. L'integrazione della parola chiave `static` genera l'errore del compilatore CS0106: "Il modificatore 'private' non è valido per questo elemento".
 
 Non è possibile, inoltre, applicare attributi alla funzione locale o ai relativi parametri e parametri di tipo.
 
@@ -89,7 +90,7 @@ Confrontare l'implementazione con una versione che usa le espressioni lambda:
 
 Le funzioni locali hanno nomi. Le espressioni lambda sono metodi anonimi che vengono assegnati a variabili di tipo `Func` o `Action`. Quando si dichiara una funzione locale, i tipi di argomento e il tipo restituito fanno parte della dichiarazione della funzione. Anziché far parte del corpo dell'espressione lambda, i tipi di argomento e il tipo restituito fanno parte della dichiarazione del tipo di variabile dell'espressione lambda. Queste due differenze possono avere come risultato una maggiore chiarezza del codice.
 
-Le funzioni locali hanno regole diverse per l'assegnazione certa rispetto alle espressioni lambda. A una dichiarazione di funzione locale si può fare riferimento da qualsiasi posizione di codice nel cui ambito la funzione si trova. Un'espressione lambda deve essere assegnata a una variabile delegata prima che sia possibile accedervi (o chiamare tramite il delegato che fa riferimento all'espressione lambda). Si noti che la versione che usa `nthFactorial` l'espressione lambda deve dichiarare e inizializzare l'espressione lambda prima di definirla. In caso contrario, si verifica un errore di compilazione per fare riferimento a `nthFactorial` prima di assegnarla. Queste differenze fanno sì che gli algoritmi ricorsivi sino più facili da creare usando funzioni locali. È possibile dichiarare e definire una funzione locale che chiama se stessa. Le espressioni lambda devono essere dichiarate e a queste deve essere assegnato un valore predefinito prima che sia possibile riassegnarle a un corpo che fa riferimento alla stessa espressione lambda.
+Le funzioni locali hanno regole diverse per l'assegnazione certa rispetto alle espressioni lambda. A una dichiarazione di funzione locale si può fare riferimento da qualsiasi posizione di codice nel cui ambito la funzione si trova. Un'espressione lambda deve essere assegnata a una variabile delegata prima che sia possibile accedervi o chiamarla tramite il delegato che fa riferimento all'espressione lambda. Si noti che la versione che usa l'espressione lambda deve dichiarare e inizializzare l'espressione lambda `nthFactorial` prima di definirla. In caso contrario, si verifica un errore di compilazione per fare riferimento a `nthFactorial` prima di assegnarla. Queste differenze fanno sì che gli algoritmi ricorsivi sino più facili da creare usando funzioni locali. È possibile dichiarare e definire una funzione locale che chiama se stessa. Le espressioni lambda devono essere dichiarate e a queste deve essere assegnato un valore predefinito prima che sia possibile riassegnarle a un corpo che fa riferimento alla stessa espressione lambda.
 
 Le regole di assegnazione certa influiscono anche su tutte le variabili acquisite dalla funzione locale o dall'espressione lambda. Sia le regole delle funzioni locali che quelle delle espressioni lambda richiedono che tutte le variabili acquisite siano assegnate in modo certo nel momento in cui la funzione locale o l'espressione lambda viene convertita in delegato. La differenza è che le espressioni lambda vengono convertite in delegati quando vengono dichiarate. Le funzioni locali vengono convertite in delegati solo quando vengono usate come delegati. Se si dichiara una funzione locale e si fa riferimento a questa solo chiamandola come un metodo, non verrà convertita in delegato. Tale regola consente di dichiarare una funzione locale in qualsiasi posizione comoda all'interno dell'ambito che la comprende. È una pratica comune dichiarare funzioni locali alla fine del metodo padre, dopo le istruzioni Return.
 
@@ -127,6 +128,6 @@ Come ultimo vantaggio, non illustrato in questo esempio, le funzioni locali poss
 
 Sebbene le funzioni locali possano apparire ridondanti rispetto alle espressioni lambda, in realtà hanno finalità e usi diversi. Le funzioni locali sono più efficienti nel caso si voglia scrivere una funzione che viene chiamata solo dal contesto di un altro metodo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Metodi](methods.md)

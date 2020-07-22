@@ -1,17 +1,18 @@
 ---
 title: Classi e metodi parziali - Guida per programmatori C#
+description: Classi e metodi parziali in C# suddividono la definizione di una classe, una struttura, un'interfaccia o un metodo su due o più file di origine.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 50b192d5a7416a982f41d0c3ac13e9c1bfe3397c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 792159786131654d6ee0363f7ab7b87ac50d32bb
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399819"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864748"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classi e metodi parziali (Guida per programmatori C#)
 
@@ -52,9 +53,9 @@ Sono equivalenti alle dichiarazioni seguenti:
 
 Gli elementi seguenti vengono uniti da tutte le definizioni di tipi parziali:
 
-- XML (commenti)
+- Commenti in XML
 
-- interfacce
+- interfaces
 
 - attributi di parametri di tipo generico
 
@@ -92,15 +93,15 @@ Quando si usano le definizioni parziali di classi è necessario rispettare diver
 
   - [pubblico](../../language-reference/keywords/public.md)
 
-  - [Privato](../../language-reference/keywords/private.md)
+  - [privata](../../language-reference/keywords/private.md)
 
-  - [Protetto](../../language-reference/keywords/protected.md)
+  - [protected](../../language-reference/keywords/protected.md)
 
-  - [Interno](../../language-reference/keywords/internal.md)
+  - [interno](../../language-reference/keywords/internal.md)
 
-  - [astratto](../../language-reference/keywords/abstract.md)
+  - [astratta](../../language-reference/keywords/abstract.md)
 
-  - [Sigillato](../../language-reference/keywords/sealed.md)
+  - [sealed](../../language-reference/keywords/sealed.md)
 
   - classi base
 
@@ -169,7 +170,7 @@ partial void onNameChanged()
 
 Per altre informazioni, vedere [Tipi parziali](~/_csharplang/spec/classes.md#partial-types) in [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Guida per programmatori C#](../index.md)
 - [Classi](./classes.md)

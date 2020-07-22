@@ -4,12 +4,12 @@ description: Illustra le varie modalità di installazione di .NET Core SDK e del
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: ed4f5b914d03cfb072ee4ba168c67262e0d40c08
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: c590bd89b718a5cd31dae9f83049eac910cb4049
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619429"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863891"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>Installare .NET Core SDK o runtime di .NET Core in Ubuntu
 
@@ -30,11 +30,11 @@ La tabella seguente è un elenco delle versioni di .NET Core attualmente support
 | Ubuntu                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 Preview (solo installazione manuale) |
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [20,04 (LTS)](#2004-) | ✔️ 2,1        | ✔️ 3,1        | Anteprima di ✔️ 5,0 |
-| ✔️ [19,10](#1910-)       | ✔️ 2,1        | ✔️ 3,1        | Anteprima di ✔️ 5,0 |
+| ❌[19,10](#1910-)       | ✔️ 2,1        | ✔️ 3,1        | Anteprima di ✔️ 5,0 |
 | ❌[19,04](#1904-)       | ✔️ 2,1        | ✔️ 3,1        | ❌Anteprima 5,0 |
 | ❌[18,10](#1810-)       | ✔️ 2,1        | ❌3,1        | ❌Anteprima 5,0 |
 | ✔️ [18,04 (LTS)](#1804-) | ✔️ 2,1        | ✔️ 3,1        | Anteprima di ✔️ 5,0 |
-| ❌ [17.10](#1710-)       | ✔️ 2,1        | ❌3,1        | ❌Anteprima 5,0 |
+| ❌[17,10](#1710-)       | ✔️ 2,1        | ❌3,1        | ❌Anteprima 5,0 |
 | ❌ [17.04](#1704-)       | ✔️ 2,1        | ❌3,1        | ❌Anteprima 5,0 |
 | ❌[16,10](#1610-)       | ❌2,1        | ❌3,1        | ❌Anteprima 5,0 |
 | ✔️ [16,04 (LTS)](#1604-) | ✔️ 2,1        | ✔️ 3,1        | Anteprima di ✔️ 5,0 |
@@ -60,7 +60,9 @@ sudo dpkg -i packages-microsoft-prod.deb
 
 [!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
 
-## <a name="1910-"></a>19,10 ✔️
+## <a name="1910-"></a>19,10❌
+
+[!INCLUDE [linux-not-supported](includes/linux-not-supported-ubuntu.md)]
 
 [!INCLUDE [linux-prep-intro-apt](includes/linux-prep-intro-apt.md)]
 
@@ -197,7 +199,7 @@ sudo apt-get update; \
 
 [!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
 
-## <a name="dependencies"></a>Dependencies
+## <a name="dependencies"></a>Dipendenze
 
 Quando si installa con una gestione pacchetti, queste librerie vengono installate. Tuttavia, se si installa manualmente .NET Core o si pubblica un'app autonoma, è necessario assicurarsi che siano installate le librerie seguenti:
 
