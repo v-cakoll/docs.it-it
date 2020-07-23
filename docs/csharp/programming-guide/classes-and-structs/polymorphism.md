@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 2a1ca4c498c5885c7d34475405ac83c4cccecd6f
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 59b5f5d2d5a8f274845607aeca370c316670bd68
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864124"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925449"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guida per programmatori C#)
 
@@ -39,7 +39,7 @@ In C# ogni tipo è polimorfico perché tutti i tipi, incluso i tipi definiti dal
 
 ### <a name="virtual-members"></a>Membri virtuali
 
-Quando una classe derivata eredita da una classe base, ottiene tutti i metodi, i campi, le proprietà e gli eventi della classe di base. La finestra di progettazione della classe derivata può scegliere diverse opzioni per il comportamento dei metodi virtuali:
+Quando una classe derivata eredita da una classe base, ottiene tutti i metodi, i campi, le proprietà e gli eventi della classe di base. La finestra di progettazione della classe derivata ha scelte diverse per il comportamento dei metodi virtuali:
 
 - La classe derivata può eseguire l'override dei membri virtuali della classe di base, definendo un nuovo comportamento.
 - La classe derivata eredita il metodo della classe base più vicino senza eseguirne l'override, mantenendo il comportamento esistente ma abilitando ulteriori classi derivate per eseguire l'override del metodo.
@@ -61,7 +61,7 @@ Se si vuole che la classe derivata disponga di un membro con lo stesso nome di u
 
 [!code-csharp[New method overview example](~/samples/snippets/csharp/objectoriented/Inheritance.cs#NewMethods)]
 
-È possibile accedere ai membri nascosti della classe base dal codice client eseguendo il cast dell'istanza della classe derivata a un'istanza della classe di base. ad esempio:
+È possibile accedere ai membri nascosti della classe base dal codice client eseguendo il cast dell'istanza della classe derivata a un'istanza della classe di base. Ad esempio:
 
 [!code-csharp[New method overview usage](~/samples/snippets/csharp/objectoriented/Inheritance.cs#UseNewMethods)]
 
@@ -113,7 +113,7 @@ Per altre informazioni, vedere [base](../../language-reference/keywords/base.md)
 - [Sapere quando utilizzare le parole chiave Override e New](./knowing-when-to-use-override-and-new-keywords.md)
 - [Come eseguire l'override del metodo ToString](./how-to-override-the-tostring-method.md)
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
 - [Ereditarietà](./inheritance.md)

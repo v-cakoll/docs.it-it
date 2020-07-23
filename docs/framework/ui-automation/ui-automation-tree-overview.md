@@ -1,16 +1,17 @@
 ---
 title: Panoramica dell'albero di automazione dell'interfaccia utente
+description: Leggi una panoramica sugli alberi di automazione interfaccia utente. Informazioni sulle diverse visualizzazioni di un albero di automazione interfaccia utente, ad esempio la visualizzazione non elaborata, la visualizzazione controlli e la visualizzazione contenuto.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: a0b888e8ecc80e3739c583931a86da3cdb7242d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ffe4b4e6157f5bff3284d6978e0ec28641cf72d
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179457"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924552"
 ---
 # <a name="ui-automation-tree-overview"></a>Panoramica dell'albero di automazione dell'interfaccia utente
 > [!NOTE]
@@ -18,7 +19,7 @@ ms.locfileid: "79179457"
   
  Prodotti e script di test di assistive technology esplorano l'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per raccogliere informazioni sull'[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] e i relativi elementi.  
   
- All'interno della [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] struttura ad<xref:System.Windows.Automation.AutomationElement.RootElement%2A>albero è presente un elemento radice ( ) che rappresenta il desktop corrente e i cui elementi figlio rappresentano le finestre dell'applicazione. Ognuno di questi elemento figlio può contenere elementi che rappresentano parti dell'[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], ad esempio menu, pulsanti, barre degli strumenti e caselle di riepilogo. Tali elementi, a loro volta, possono contenere altri elementi, ad esempio voci di elenco.  
+ All'interno dell' [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] albero è presente un elemento radice ( <xref:System.Windows.Automation.AutomationElement.RootElement%2A> ) che rappresenta il desktop corrente e i cui elementi figlio rappresentano le finestre dell'applicazione. Ognuno di questi elemento figlio può contenere elementi che rappresentano parti dell'[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], ad esempio menu, pulsanti, barre degli strumenti e caselle di riepilogo. Tali elementi, a loro volta, possono contenere altri elementi, ad esempio voci di elenco.  
   
  L'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] non è una struttura fissa e viene visualizzata raramente in modo completo perché potrebbe contenere migliaia di elementi. Parti dell'albero vengono compilate in base alle esigenze e la struttura può subire modifiche man mano che vengono aggiunti, spostati o rimossi elementi.  
   
@@ -36,7 +37,7 @@ ms.locfileid: "79179457"
   
 <a name="uiautomation_raw_view"></a>
 ### <a name="raw-view"></a>Visualizzazione non elaborata  
- La visualizzazione non elaborata dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] è l'albero completo degli oggetti <xref:System.Windows.Automation.AutomationElement> di cui il desktop è la radice. La visualizzazione non elaborata riproduce la struttura a livello di codice nativa di un'applicazione ed è pertanto la visualizzazione più dettagliata disponibile. Costituisce inoltre la base sulla quale vengono compilate le altre visualizzazioni dell'albero. Poiché questa visualizzazione [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] dipende dal framework sottostante, la visualizzazione non elaborata di un [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] pulsante avrà una visualizzazione non elaborata diversa rispetto a un pulsante Win32.  
+ La visualizzazione non elaborata dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] è l'albero completo degli oggetti <xref:System.Windows.Automation.AutomationElement> di cui il desktop è la radice. La visualizzazione non elaborata riproduce la struttura a livello di codice nativa di un'applicazione ed è pertanto la visualizzazione più dettagliata disponibile. Costituisce inoltre la base sulla quale vengono compilate le altre visualizzazioni dell'albero. Poiché questa vista dipende dal [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Framework sottostante, la visualizzazione non elaborata di un [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] pulsante avrà una visualizzazione non elaborata diversa da quella di un pulsante Win32.  
   
  La visualizzazione non elaborata si ottiene cercando elementi senza specificare proprietà o usando <xref:System.Windows.Automation.TreeWalker.RawViewWalker> per esplorare l'albero.  
   

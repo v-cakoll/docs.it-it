@@ -1,5 +1,6 @@
 ---
 title: Membri obsoleti - .NET Framework
+description: Vedere l'elenco di membri dei tipi obsoleti in .NET 4,5 e versioni successive. I membri dei tipi sono raggruppati per assembly. I membri dei tipi obsoleti sono esclusi.
 ms.custom: updateeachrelease
 ms.date: 10/17/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: 64bbcd099016dd3d11fea2eaba81ae4559ba6762
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: c0e320b8499fec0c56d2e3560bf6f64194f73dad
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243076"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925826"
 ---
 # <a name="obsolete-members-in-net-framework"></a>Membri obsoleti in .NET Framework
 
@@ -664,7 +665,7 @@ In questo articolo non sono elencati i membri dei tipi obsoleti. Per un elenco d
 
 ## <a name="iehostdll-and-ieexecexe"></a>IEHost.dll e IEExec.exe
 
-Gli assembly IEHost. dll e IEExec. exe sono stati rimossi dal .NET Framework. Tutti i relativi tipi e i relativi membri sono obsoleti e non sono supportati in .NET Framework 4,5 e versioni successive. Questi assembly sono usati per eseguire l'hosting dei controlli Windows Form ed eseguire i file eseguibili in Internet Explorer. Le alternative a questa tecnologia includono ClickOnce, le applicazioni browser XAML (XBAP) e Microsoft Silverlight.
+Gli assembly IEHost.dll e IEExec.exe sono stati rimossi dal .NET Framework. Tutti i relativi tipi e i relativi membri sono obsoleti e non sono supportati in .NET Framework 4,5 e versioni successive. Questi assembly sono usati per eseguire l'hosting dei controlli Windows Form ed eseguire i file eseguibili in Internet Explorer. Le alternative a questa tecnologia includono ClickOnce, le applicazioni browser XAML (XBAP) e Microsoft Silverlight.
 
 ## <a name="isymwrapperdll"></a>ISymWrapper.dll
 

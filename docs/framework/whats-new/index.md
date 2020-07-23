@@ -1,5 +1,6 @@
 ---
 title: Novità di .NET Framework
+description: Vedere Novità di diverse versioni di .NET Framework. Leggere un riepilogo delle nuove funzionalità e dei miglioramenti principali in ogni versione.
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ee67e6577c5ad2486a483e3593e4d0a8ecbb0407
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 42f872bba87a88fc92a37879e815ee7068407cf7
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244439"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925592"
 ---
 # <a name="whats-new-in-net-framework"></a>Novità di .NET Framework
 
@@ -153,7 +154,7 @@ Esempi e parametri di query:
 
 - OnThrottlePercentExceeded: `https://contoso:81/Service1?health&OnThrottlePercentExceeded= 70:350,95:500`
 
-  Specifica la percentuale {1-100} che attiva la risposta e il relativo codice di risposta HTTP {599-200}. Esempio:
+  Specifica la percentuale {1-100} che attiva la risposta e il relativo codice di risposta HTTP {599-200}. In questo esempio:
 
   - Se la percentuale è maggiore di 95, viene restituito un codice di risposta HTTP 500.
 
@@ -350,9 +351,9 @@ Il supporto della decompressione mediante le API di Windows è abilitato per imp
 
 **API aggiuntive della raccolta**
 
-.NET Framework 4.7.2 aggiunge varie API nuove ai tipi <xref:System.Collections.Generic.SortedSet%601> e <xref:System.Collections.Generic.HashSet%601>. incluse le seguenti:
+.NET Framework 4.7.2 aggiunge varie API nuove ai tipi <xref:System.Collections.Generic.SortedSet%601> e <xref:System.Collections.Generic.HashSet%601>. Queste includono:
 
-- Metodi `TryGetValue`, che estendono il modello Try usato in altri tipi di raccolta per questi due tipi. Sono disponibili i seguenti metodi:
+- Metodi `TryGetValue`, che estendono il modello Try usato in altri tipi di raccolta per questi due tipi. I metodi sono:
 
   - [public bool HashSet\<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
   - [public bool SortedSet\<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
@@ -741,7 +742,7 @@ A partire da .NET Framework 4.7, WCF consente di configurare TLS 1.1 o TLS 1.2, 
 
 **Miglioramento dell'affidabilità le applicazioni WCF e della serializzazione WCF**
 
-WCF include un numero di modifiche al codice che eliminano le race condition, migliorando così le prestazioni e l'affidabilità delle opzioni di serializzazione. incluse le seguenti:
+WCF include un numero di modifiche al codice che eliminano le race condition, migliorando così le prestazioni e l'affidabilità delle opzioni di serializzazione. Queste includono:
 
 - Supporto migliorato per la combinazione di codice sincrono e asincrono nelle chiamate a **SocketConnection.BeginRead** e **SocketConnection.Read**.
 - Maggiore affidabilità durante l'interruzione di una connessione con **SharedConnectionListener** e **DuplexChannelBinder**.
@@ -750,7 +751,7 @@ WCF include un numero di modifiche al codice che eliminano le race condition, mi
 
 <a name="wf47"></a>
 
-#### <a name="windows-forms"></a>Windows Form
+#### <a name="windows-forms"></a>Windows Forms
 
 In .NET Framework 4.7 Windows Form migliora il supporto per i monitor con valori DPI alti.
 
@@ -1308,7 +1309,7 @@ SqlClient ora offre automaticamente connessioni più veloci a un gruppo di dispo
 
 Windows Presentation Foundation include molti miglioramenti e cambiamenti.
 
-**prestazioni migliorate**
+**Miglioramento delle prestazioni**
 
 Il ritardo di attivazione degli eventi tocco è stato risolto in .NET Framework 4.6.1. Inoltre, l'inserimento di un controllo <xref:System.Windows.Controls.RichTextBox> non blocca più il thread di rendering durante l'input veloce.
 
@@ -1970,7 +1971,7 @@ In .NET Framework 4.5 vengono forniti diversi miglioramenti e nuove funzionalit�
 
 ### <a name="web"></a>Web
 
-In ASP.NET 4.5 e 4.5.1 vengono aggiunti associazione di modelli per Web Form, supporto di WebSocket, gestori asincroni, miglioramenti delle prestazioni e molte altre funzionalità. Per altre informazioni, vedere le seguenti risorse:
+In ASP.NET 4.5 e 4.5.1 vengono aggiunti associazione di modelli per Web Form, supporto di WebSocket, gestori asincroni, miglioramenti delle prestazioni e molte altre funzionalità. Per altre informazioni, vedere le risorse seguenti:
 
 - [ASP.NET 4.5 e Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
 

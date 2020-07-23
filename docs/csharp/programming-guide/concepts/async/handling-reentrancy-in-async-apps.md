@@ -1,13 +1,14 @@
 ---
 title: Gestione della reentrancy nelle app asincrone (C#)
+description: Informazioni su come gestire la rientranza nelle applicazioni asincrone C#, che fa riferimento alla reimmissione di un'operazione asincrona prima del completamento con possibili risultati imprevisti.
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: e03e0f6ecd8e74dd8518f84ec03c76c1ef5b9ee6
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: fdd440d167b95268a5ae6de0e57a32f0fad66b7c
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241812"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925241"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Gestione della reentrancy nelle app asincrone (C#)
 

@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Informazioni sul ripristino delle dipendenze e degli strumenti specifici per il progetto tramite il comando dotnet-restore.
 ms.date: 02/27/2020
-ms.openlocfilehash: 276fad896a6a8a647ed05a9de8c582d463d9ab8f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 7b456e28505a07c03936c9006c8631848fd4672c
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005317"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925476"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -48,10 +48,10 @@ In alcuni casi potrebbe essere scomodo eseguire il ripristino NuGet implicito co
 
 Per ripristinare le dipendenze, NuGet necessita dei feed in cui si trovano i pacchetti. I feed vengono forniti in genere tramite il file di configurazione *nuget.config*. Quando viene installato il .NET Core SDK, viene fornito un file di configurazione predefinito. Per specificare feed aggiuntivi, effettuare una delle operazioni seguenti:
 
-- Creare il proprio file *NuGet. config* nella directory del progetto. Per altre informazioni, vedere [configurazioni di NuGet comuni](/nuget/consume-packages/configuring-nuget-behavior) e [differenze di NuGet. config](#nugetconfig-differences) più avanti in questo articolo.
+- Creare un file di *nuget.config* personalizzato nella directory del progetto. Per altre informazioni, vedere [configurazioni comuni di NuGet](/nuget/consume-packages/configuring-nuget-behavior) e [nuget.config differenze](#nugetconfig-differences) più avanti in questo articolo.
 - Usare i `dotnet nuget` comandi come [`dotnet nuget add source`](dotnet-nuget-add-source.md) .
 
-È possibile eseguire l'override dei feed *NuGet. config* con l' `-s` opzione.
+È possibile eseguire l'override dei feed di *nuget.config* con l' `-s` opzione.
 
 Per informazioni sull'utilizzo dei feed autenticati, vedere Utilizzo [di pacchetti da feed autenticati](/nuget/consume-packages/consuming-packages-authenticated-feeds).
 
@@ -119,7 +119,7 @@ Esistono tre impostazioni specifiche che `dotnet restore` ignora:
 
 - **`--lock-file-path <LOCK_FILE_PATH>`**
 
-  Percorso di output in cui viene scritto il file di blocco del progetto. Per impostazione predefinita, questo valore è *PROJECT_ROOT \Packages.Lock.JSON*.
+  Percorso di output in cui viene scritto il file di blocco del progetto. Per impostazione predefinita, questa opzione è *PROJECT_ROOT\packages.lock.js*.
 
 - **`--locked-mode`**
 
@@ -161,10 +161,10 @@ Esistono tre impostazioni specifiche che `dotnet restore` ignora:
   dotnet restore
   ```
 
-- Ripristinare le dipendenze e gli strumenti per il `app1` progetto trovato nel percorso specificato:
+- Ripristinare le dipendenze e gli strumenti per il progetto `app1` che si trova nel percorso specificato:
 
   ```dotnetcli
-  dotnet restore ~/projects/app1/app1.csproj
+  dotnet restore ./projects/app1/app1.csproj
   ```
 
 - Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente usando il percorso del file fornito come origine:

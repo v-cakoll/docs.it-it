@@ -1,12 +1,13 @@
 ---
 title: Attributi (C#)
+description: Informazioni su come usare gli attributi per associare metadati o informazioni dichiarative con il codice in C#. Un attributo può essere sottoposto a query in fase di esecuzione tramite reflection.
 ms.date: 04/26/2018
-ms.openlocfilehash: 358285a39f72ad3ddf1b265e20b443308375d074
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 5c57838b649531d8e8fe89919771adf8830e7f54
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241578"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924985"
 ---
 # <a name="attributes-c"></a>Attributi (C#)
 
@@ -72,7 +73,7 @@ Nella tabella seguente sono elencati i possibili valori di `target`.
 |`assembly`|Intero assembly|
 |`module`|Modulo di assembly corrente|
 |`field`|Campo in una classe o uno struct|
-|`event`|Event|
+|`event`|Evento|
 |`method`|Metodo o funzioni di accesso alle proprietà `get` e `set`|
 |`param`|Parametri del metodo o parametri della funzione di accesso alla proprietà `set`|
 |`property`|Proprietà|
@@ -127,5 +128,5 @@ Per altre informazioni, vedere:
 
 - [Guida per programmatori C#](../../index.md)
 - [Reflection (C#)](../reflection.md)
-- [Attributi](../../../../standard/attributes/index.md)
+- [Attributes (Attributi)](../../../../standard/attributes/index.md)
 - [Uso degli attributi in C#](../../../tutorials/attributes.md)

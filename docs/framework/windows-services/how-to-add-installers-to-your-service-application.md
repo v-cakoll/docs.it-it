@@ -1,5 +1,6 @@
 ---
-title: "Procedura: aggiungere programmi di installazione all'applicazione di servizio"
+title: "Procedura: Aggiungere programmi di installazione all'applicazione di servizio"
+description: Vedere come aggiungere programmi di installazione all'applicazione di servizio. Visual Studio spedisce i componenti di installazione che possono installare le risorse associate alle app di servizio.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: 99e2376c50f0b47cc21002b2926818707188805e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f82dd6635555ccb8fcbcdf63cba2495084194731
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053644"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925644"
 ---
-# <a name="how-to-add-installers-to-your-service-application"></a>Procedura: aggiungere programmi di installazione all'applicazione di servizio
+# <a name="how-to-add-installers-to-your-service-application"></a>Procedura: Aggiungere programmi di installazione all'applicazione di servizio
 Visual Studio include componenti di installazione che consentono di installare le risorse associate alle applicazioni di servizio. I componenti di installazione registrano un singolo servizio nel sistema in cui viene installato e informazione Gestione controllo servizi dell'esistenza del servizio. Quando si lavora con un'applicazione di servizio, è possibile selezionare un collegamento nella finestra Proprietà per aggiungere automaticamente i programmi di installazione appropriati al progetto.  
   
 > [!NOTE]
@@ -64,5 +65,5 @@ Visual Studio include componenti di installazione che consentono di installare l
 
 - [Introduzione alle applicazioni di servizio Windows](introduction-to-windows-service-applications.md)
 - [Procedura: installare e disinstallare servizi](how-to-install-and-uninstall-services.md)
-- [Procedura: avviare servizi](how-to-start-services.md)
-- [Procedura: specificare il contesto di sicurezza per i servizi](how-to-specify-the-security-context-for-services.md)
+- [Procedura: Avviare servizi](how-to-start-services.md)
+- [Procedura: Specificare il contesto di sicurezza per i servizi](how-to-specify-the-security-context-for-services.md)

@@ -1,5 +1,6 @@
 ---
 title: Architettura di programmazione delle applicazioni di servizio
+description: Informazioni sull'architettura di programmazione delle applicazioni di servizio. Le applicazioni di servizio Windows sono basate su una classe che eredita da System. ServiceProcess. ServiceBase.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: 1c197b487f1cb7596f507f663fe3f1fb83857cbd
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c59ccc5a8b2f11fda9c4734487092c1aabb74908
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053493"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925579"
 ---
 # <a name="service-application-programming-architecture"></a>Architettura di programmazione delle applicazioni di servizio
 Le applicazioni di servizio Windows sono basate su una classe che eredita dalla classe <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Eseguire l'override dei metodi da questa classe e definirne le funzionalità per determinare il comportamento del servizio.  
@@ -49,7 +50,7 @@ Le applicazioni di servizio Windows sono basate su una classe che eredita dalla 
 > [!NOTE]
 > Questi metodi rappresentano gli stati che assume il servizio durante il ciclo di vita. Il servizio passa da uno stato al successivo. Ad esempio, il servizio non risponderà mai a un comando <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> prima della chiamata di <xref:System.ServiceProcess.ServiceBase.OnStart%2A>.  
   
- Esistono vari altri metodi e proprietà interessanti. incluse le seguenti:  
+ Esistono vari altri metodi e proprietà interessanti. Queste includono:  
   
 - Metodo <xref:System.ServiceProcess.ServiceBase.Run%2A> nella classe <xref:System.ServiceProcess.ServiceBase>. Questo è il punto di ingresso principale per il servizio. Quando si crea un servizio usando il modello Servizio Windows, il codice viene inserito all'interno del metodo `Main` dell'applicazione per eseguire il servizio. Il codice è simile al seguente:  
   
@@ -69,4 +70,4 @@ Le applicazioni di servizio Windows sono basate su una classe che eredita dalla 
 ## <a name="see-also"></a>Vedere anche
 
 - [Introduzione alle applicazioni di servizio Windows](introduction-to-windows-service-applications.md)
-- [Procedura: creare servizi Windows](how-to-create-windows-services.md)
+- [Procedura: Creare servizi Windows](how-to-create-windows-services.md)

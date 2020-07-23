@@ -2,12 +2,12 @@
 title: Comando dotnet tool list
 description: Il comando DotNet Tool List elenca gli strumenti di .NET Core installati nel computer.
 ms.date: 02/14/2020
-ms.openlocfilehash: 7ca894ab0f5daf0118ff92fb39e0118b952b3d83
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4035c5be233232e53c6d7150485f737108c1e18d
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768274"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925462"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -37,7 +37,7 @@ Il `dotnet tool list` comando fornisce un modo per elencare tutti gli strumenti 
 
 * Per elencare gli strumenti globali installati nel percorso predefinito, usare l' `--global` opzione
 * Per elencare gli strumenti globali installati in un percorso personalizzato, utilizzare l' `--tool-path` opzione.
-* Per elencare gli strumenti locali, uno strumento locale. utilizzare l' `--local` opzione o omettere `--global` le `--tool-path` Opzioni, e `--local` .
+* Per elencare gli strumenti locali, utilizzare l' `--local` opzione oppure omettere le `--global` `--tool-path` Opzioni, e `--local` .
 
 **Gli strumenti locali sono disponibili a partire da .NET Core SDK 3,0.**
 

@@ -1,13 +1,14 @@
 ---
 title: Modello di programmazione asincrona dell'attività con async e await (C#)
+description: Informazioni su quando e come usare la programmazione asincrona basata su attività, un approccio semplificato alla programmazione asincrona in C#.
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 90bee745a393ac35ac968e9f4f6b6c83ad8fbb46
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: ddda97e9c77473120ed32b0e224b07d7c4d71b1e
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990081"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925137"
 ---
 # <a name="task-asynchronous-programming-model"></a>Modello di programmazione asincrona attività
 
@@ -170,7 +171,7 @@ Un metodo asincrono contiene in genere una o più occorrenze di un `await` opera
 
 `async` e `await` sono parole chiave contestuali. Per ulteriori informazioni ed esempi, vedere gli argomenti seguenti:
 
-- [async](../../../language-reference/keywords/async.md)
+- [Async](../../../language-reference/keywords/async.md)
 - [await](../../../language-reference/operators/await.md)
 
 ## <a name="return-types-and-parameters"></a><a name="BKMK_ReturnTypesandParameters"></a>Tipi restituiti e parametri
@@ -263,7 +264,7 @@ Il codice seguente è il file *MainWindow.XAML.cs* dell'applicazione WPF descrit
 
 ## <a name="see-also"></a>Vedere anche
 
-- [async](../../../language-reference/keywords/async.md)
+- [Async](../../../language-reference/keywords/async.md)
 - [await](../../../language-reference/operators/await.md)
 - [Programmazione asincrona](../../../async.md)
 - [Panoramica asincrona](../../../../standard/async.md)

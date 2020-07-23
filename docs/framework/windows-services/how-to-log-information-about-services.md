@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: registrare informazioni sui servizi'
+title: 'Procedura: Registrare informazioni sui servizi'
+description: Sapere come registrare le informazioni sui servizi. Impostare la proprietà AutoLog se si desidera che il progetto di servizio Windows interagisca con il registro eventi dell'applicazione.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: 3c974d5a98f8056e45899b109878e5a28ab2938e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6ebce5464dc25ba4101b3898ee791714f8efc5d6
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053613"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925748"
 ---
-# <a name="how-to-log-information-about-services"></a>Procedura: registrare informazioni sui servizi
+# <a name="how-to-log-information-about-services"></a>Procedura: Registrare informazioni sui servizi
 Per impostazione predefinita, tutti i progetti di servizio di Windows possono interagire con il log eventi dell'applicazione in cui possono scrivere informazioni ed eccezioni. È possibile usare la proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> per indicare se si vuole fornire questa funzionalità nell'applicazione. Per impostazione predefinita, la registrazione è attivata per tutti i servizi creati con il modello di progetto di servizio di Windows. È possibile usare un form statico della classe <xref:System.Diagnostics.EventLog> per scrivere le informazioni sul servizio in un log senza dover creare un'istanza di un componente <xref:System.Diagnostics.EventLog> o registrare manualmente un'origine.  
   
  Il programma di installazione del servizio registra automaticamente ogni servizio nel progetto come origine valida degli eventi con il registro applicazioni sul computer in cui è installato il servizio, quando la registrazione è attivata. Il servizio registra informazioni ogni volta che viene avviato, arrestato, sospeso, riavviato, installato o disinstallato, oltre a registrare tutti gli errori che si verificano. Non è necessario scrivere nessun codice per scrivere voci nel registro quando si usa il comportamento predefinito, perché è il servizio a farlo automaticamente.  

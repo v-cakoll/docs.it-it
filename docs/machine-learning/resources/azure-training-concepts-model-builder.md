@@ -5,12 +5,12 @@ ms.topic: reference
 ms.date: 06/01/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: d9eb5560ef33f8f80dbe53e17087c606a8697378
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8622b580b7925adfd7895317815021f57960e9ee
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289473"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924578"
 ---
 # <a name="model-builder-azure-training-resources"></a>Risorse di formazione di Azure per generatore di modelli
 
@@ -56,7 +56,7 @@ Per creare un'area di lavoro di Azure Machine Learning, sono necessari gli eleme
 
 ## <a name="training"></a>Formazione
 
-Il training in Azure è disponibile solo per lo scenario di classificazione delle immagini del generatore di modelli. L'algoritmo usato per il training di questi modelli è una rete neurale profonda basata sull'architettura ResNet50. Il processo di training richiede tempo e la quantità di tempo può variare a seconda delle dimensioni del calcolo selezionato e della quantità di dati. La prima volta che si esegue il training di un modello, è possibile prevedere un tempo di training leggermente più lungo perché è necessario effettuare il provisioning delle risorse. È possibile tenere traccia dello stato di avanzamento delle esecuzioni selezionando il collegamento "monitora esecuzione corrente in portale di Azure" in Visual Studio.
+Il training in Azure è disponibile solo per lo scenario di classificazione delle immagini del generatore di modelli. L'algoritmo usato per il training di questi modelli è una rete neurale profonda basata sull'architettura ResNet50. Il processo di training richiede tempo e la quantità di tempo può variare a seconda delle dimensioni del calcolo selezionato e della quantità di dati. È possibile tenere traccia dello stato di avanzamento delle esecuzioni selezionando il collegamento "monitora esecuzione corrente in portale di Azure" in Visual Studio.
 
 ## <a name="results"></a>Risultati
 
@@ -66,8 +66,8 @@ Al termine del training, verranno aggiunti due progetti alla soluzione con i suf
 - *Modello*: un'applicazione .NET standard C# che contiene i modelli di dati che definiscono lo schema dei dati del modello di input e di output, nonché gli asset seguenti:
 
   - bestModel. Onnx: una versione serializzata del modello nel formato Open Neural Network Exchange (ONNX). ONNX è un formato Open Source per i modelli di intelligenza artificiale che supporta l'interoperabilità tra Framework come ML.NET, PyTorch e TensorFlow.
-  - bestModelMap. JSON: elenco di categorie utilizzate per eseguire stime per eseguire il mapping dell'output del modello a una categoria di testo.
-  - MLModel. zip: una versione serializzata della pipeline di stima ML.NET che utilizza la versione serializzata del modello *bestModel. Onnx* per eseguire stime ed eseguire il mapping degli output utilizzando il `bestModelMap.json` file.
+  - bestModelMap.json: elenco di categorie utilizzate per eseguire stime per eseguire il mapping dell'output del modello a una categoria di testo.
+  - MLModel.zip: una versione serializzata della pipeline di stima ML.NET che utilizza la versione serializzata del modello *bestModel. Onnx* per eseguire stime ed eseguire il mapping degli output utilizzando il `bestModelMap.json` file.
 
 ## <a name="use-the-machine-learning-model"></a>Usare il modello di Machine Learning
 

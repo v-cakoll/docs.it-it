@@ -1,19 +1,20 @@
 ---
-title: 'Procedura: avviare servizi'
+title: 'Procedura: Avviare servizi'
+description: Scopri diversi modi per avviare i servizi. Dopo l'installazione di un servizio, è necessario avviarlo. L'avvio chiama il metodo OnStart sulla classe del servizio.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: 75fd3aba88bdffbe536ad5dab14996913d0a9d22
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4a2f9b291e60b12b1465fbb6bbbd1604572359a7
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053577"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925722"
 ---
-# <a name="how-to-start-services"></a>Procedura: avviare servizi
+# <a name="how-to-start-services"></a>Procedura: Avviare servizi
 
 Dopo l'installazione di un servizio, è necessario avviarlo. Con l'avvio viene chiamato il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> per la classe del servizio. In genere, il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> definisce le operazioni utili che verranno eseguite dal servizio. Dopo l'avvio, un servizio rimane attivo fino a quando non viene sospeso o arrestato manualmente.
 
@@ -81,5 +82,5 @@ Per determinare se un servizio deve essere avviato manualmente o automaticamente
 ## <a name="see-also"></a>Vedere anche
 
 - [Introduzione alle applicazioni di servizio Windows](introduction-to-windows-service-applications.md)
-- [Procedura: creare servizi Windows](how-to-create-windows-services.md)
-- [Procedura: aggiungere programmi di installazione all'applicazione di servizio](how-to-add-installers-to-your-service-application.md)
+- [Procedura: Creare servizi Windows](how-to-create-windows-services.md)
+- [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](how-to-add-installers-to-your-service-application.md)

@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: specificare il contesto di sicurezza per i servizi'
+title: 'Procedura: Specificare il contesto di sicurezza per i servizi'
+description: Specificare il contesto di sicurezza per i servizi. I servizi eseguiti nel contesto dell'account di sistema predefinito hanno altri diritti di accesso alle risorse di sistema rispetto all'utente connesso.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, security
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: dd2a9c4485e151d4cb1c9d5ae3a95a69fcc416d4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4ed531cb520a781fd38f8bf5491da6948901a1d5
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053589"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925735"
 ---
-# <a name="how-to-specify-the-security-context-for-services"></a>Procedura: specificare il contesto di sicurezza per i servizi
+# <a name="how-to-specify-the-security-context-for-services"></a>Procedura: Specificare il contesto di sicurezza per i servizi
 Per impostazione predefinita, i servizi vengono eseguiti in un contesto di sicurezza diverso rispetto a quello dell'utente connesso. I servizi vengono eseguiti nel contesto dell'account di sistema predefinito, chiamato `LocalSystem`, che concede privilegi di accesso diversi per le risorse di sistema rispetto all'account utente. È possibile modificare questo comportamento per specificare un account utente diverso nell'ambito del quale eseguire il servizio.  
   
  Per impostare il contesto di sicurezza, è necessario modificare la proprietà <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> per il processo in cui viene eseguito il servizio. Questa proprietà consente di impostare il servizio su uno di quattro tipi di account:  
@@ -47,5 +48,5 @@ Per impostazione predefinita, i servizi vengono eseguiti in un contesto di sicur
 ## <a name="see-also"></a>Vedere anche
 
 - [Introduzione alle applicazioni di servizio Windows](introduction-to-windows-service-applications.md)
-- [Procedura: aggiungere programmi di installazione all'applicazione di servizio](how-to-add-installers-to-your-service-application.md)
-- [Procedura: creare servizi Windows](how-to-create-windows-services.md)
+- [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](how-to-add-installers-to-your-service-application.md)
+- [Procedura: Creare servizi Windows](how-to-create-windows-services.md)

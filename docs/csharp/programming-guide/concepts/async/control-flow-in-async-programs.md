@@ -1,13 +1,14 @@
 ---
 title: Flusso di controllo in programmi asincroni (C#)
+description: Informazioni sul flusso di controllo in un semplice programma C# asincrono per comprendere come scrivere e gestire i programmi asincroni usando le parole chiave async e await.
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 99f80a86f14179c5f270064a9f96e35f8611ef13
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3946db958466a9f9914a5fa7b37c0db3a64d4b3d
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70204438"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925371"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Flusso di controllo in programmi asincroni (C#)
 
@@ -58,7 +59,7 @@ public partial class MainWindow : Window
 }
 ```
 
-Ognuna delle posizioni con etichetta da "ONE" a "SIX" visualizza informazioni sullo stato corrente del programma. Viene generato l'output seguente:
+Ognuna delle posizioni con etichetta da "ONE" a "SIX" visualizza informazioni sullo stato corrente del programma. Viene prodotto l'output seguente:
 
 ```output
 ONE:   Entering startButton_Click.
@@ -101,9 +102,9 @@ Length of the downloaded string: 33946.
 
 1. Decomprimere il file scaricato e quindi avviare Visual Studio.
 
-2. Nella barra dei menu scegliere**Apri** > **progetto/soluzione** **apri file** > .
+2. Sulla barra dei menu scegliere **file**  >  **Apri**  >  **progetto/soluzione**.
 
-3. Passare alla cartella che contiene il codice di esempio decompresso, aprire il file di soluzione (sln) e quindi premere **F5** per compilare ed eseguire il progetto.
+3. Passare alla cartella che include il codice di esempio decompresso, aprire il file di soluzione (con estensione sln), quindi premere il tasto **F5** per compilare ed eseguire il progetto.
 
 ### <a name="create-the-program-yourself"></a>Creare il programma autonomamente
 
@@ -113,11 +114,11 @@ Per eseguire il progetto, effettuare i passaggi seguenti:
 
 1. Avviare Visual Studio.
 
-2. Nella barra dei menu scegliere **File** > **Nuovo** > **progetto**.
+2. Sulla barra dei menu scegliere **file**  >  **nuovo**  >  **progetto**.
 
      Verrà visualizzata la finestra di dialogo **Nuovo progetto** .
 
-3. Scegliere la categoria**Desktop di Windows** **di** > **Visual C,** > quindi scegliere **App WPF** dall'elenco dei modelli di progetto.
+3. Scegliere la categoria **installato**  >  **Visual C#**  >  **Windows Desktop** , quindi scegliere **app WPF** dall'elenco dei modelli di progetto.
 
 4. Immettere `AsyncTracer` come nome del progetto, quindi scegliere il pulsante **OK**.
 
@@ -238,7 +239,7 @@ Per eseguire il progetto, effettuare i passaggi seguenti:
 
 10. Premere **F5** per eseguire il programma e quindi scegliere il pulsante **Avvia**.
 
-    Viene visualizzato l'output seguente:
+    Compare l'output seguente:
 
     ```output
     ONE:   Entering startButton_Click.
@@ -306,7 +307,7 @@ string urlContents = await getStringTask;
 
  L'immagine che segue illustra il flusso di controllo da `client.GetStringAsync` all'assegnazione a `getStringTask` e dalla creazione di `getStringTask` all'applicazione di un operatore await.
 
- ![Fase TRE](./media/asynctrace-three.png "AsyncTrace-TreAsyncTrace-Three")
+ ![TERZO passaggio](./media/asynctrace-three.png "AsyncTrace-tre")
 
  L'espressione await sospende `AccessTheWebAsync` finché non viene restituito `client.GetStringAsync`. Nel frattempo il controllo viene restituito al chiamante di `AccessTheWebAsync`, `startButton_Click`.
 
@@ -341,7 +342,7 @@ int contentLength = await getLengthTask;
 
  Nella figura seguente le frecce indicano il flusso di controllo dall'espressione await in `AccessTheWebAsync` all'assegnazione di un valore a `getLengthTask`, seguita dall'elaborazione normale in `startButton_Click` finché si è in attesa di `getLengthTask`.
 
- ![Passo QUATTRO](./media/asynctrace-four.png "AsyncTrace-FOUR")
+ ![Passaggio quattro](./media/asynctrace-four.png "AsyncTrace-quattro")
 
 ### <a name="step-five"></a>Passaggio CINQUE
 
@@ -358,7 +359,7 @@ FIVE:  Back in AccessTheWebAsync.
 
  L'immagine seguente illustra il trasferimento del controllo dopo il completamento di `client.GetStringAsync` (e `getStringTask`).
 
- ![Passaggio CINQUE](./media/asynctrace-five.png "AsyncTrace-FIVE")
+ ![Passaggio CINQUE](./media/asynctrace-five.png "AsyncTrace-cinque")
 
  `AccessTheWebAsync` viene eseguita fino al completamento e il controllo viene restituito a `startButton_Click`, che è in attesa del completamento.
 
@@ -383,7 +384,7 @@ int contentLength = await getLengthTask;
 
  La figura seguente illustra la restituzione del controllo da `AccessTheWebAsync` a `startButton_Click`.
 
- ![Passaggio SEI](./media/asynctrace-six.png "AsyncTrace-SIX")
+ ![Passaggio SEI](./media/asynctrace-six.png "AsyncTrace-sei")
 
 ## <a name="see-also"></a>Vedere anche
 

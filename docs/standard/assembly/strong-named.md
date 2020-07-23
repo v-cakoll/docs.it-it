@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strong-named assemblies, about strong-named assemblies
 - assemblies [.NET Framework], strong-named
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
-ms.openlocfilehash: a2db0efcb57226a757796c311309ce8f749a398b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 069e42af6f8d49363d0264c0f6167b4afa3acd61
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378608"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925657"
 ---
 # <a name="strong-named-assemblies"></a>Assembly con nomi sicuri
 
@@ -21,7 +21,7 @@ L'assegnazione di un nome sicuro a un assembly permette di creare un'identità u
 
 Per generare un assembly con nome sicuro usare la chiave privata corrispondente alla chiave pubblica distribuita con l'assembly, oltre all'assembly stesso. L'assembly include il relativo manifesto, che a sua volta contiene i nomi e gli hash di tutti i file che costituiscono l'assembly. Gli assembly che hanno lo stesso nome sicuro devono essere uguali.
 
-È possibile assegnare nomi sicuri agli assembly usando Visual Studio o uno strumento da riga di comando. Per altre informazioni, vedere [procedura: firmare un assembly con un nome sicuro](sign-strong-name.md) o [sn. exe (strumento nome sicuro)](../../framework/tools/sn-exe-strong-name-tool.md).
+È possibile assegnare nomi sicuri agli assembly usando Visual Studio o uno strumento da riga di comando. Per altre informazioni, vedere [procedura: firmare un assembly con un nome sicuro](sign-strong-name.md) o un [Sn.exe (strumento nome sicuro)](../../framework/tools/sn-exe-strong-name-tool.md).
 
 Nel creare un assembly con nome sicuro è necessario includere il nome in formato testo semplice dell'assembly, il numero di versione, le informazioni facoltative relative alle impostazioni cultura, una firma digitale e la chiave pubblica corrispondente alla chiave privata usata per apporre la firma.
 
@@ -30,9 +30,7 @@ Nel creare un assembly con nome sicuro è necessario includere il nome in format
 
 ## <a name="why-strong-name-your-assemblies"></a>Perché assegnare nomi sicuri agli assembly?
 
-Quando si fa riferimento a un assembly con nome sicuro, ci si aspettano determinate garanzie, quali il controllo delle versioni e la protezione dei nomi. Nel .NET Framework, gli assembly con nome sicuro possono essere installati nel Global Assembly Cache, che è necessario per abilitare alcuni scenari.
-
-Gli assembly con nome sicuro risultano utili negli scenari seguenti:
+Per .NET Framework, gli assembly con nome sicuro sono utili negli scenari seguenti:
 
 - Per abilitare il riferimento agli assembly da parte degli assembly con nome sicuro o per concedere a un `friend` l'accesso all'assembly da altri assembly con nome sicuro.
 
@@ -42,11 +40,13 @@ Gli assembly con nome sicuro risultano utili negli scenari seguenti:
 
 - Si vuole centralizzare la manutenzione per l'app applicando i criteri dell'editore, che significa che l'assembly deve essere installato nella Global Assembly Cache.
 
-Se si è uno sviluppatore open source e si desiderano i vantaggi di identità di un assembly con nome sicuro, è consigliabile archiviare la chiave privata associata a un assembly nel sistema di controllo del codice sorgente.
+Per .NET Core, gli assembly con nome sicuro non forniscono vantaggi materiali.
+
+Se si è uno sviluppatore open source e si desiderano i vantaggi di identità di un assembly con nome sicuro per una migliore compatibilità con .NET Framework, provare a archiviare la chiave privata associata a un assembly nel sistema di controllo del codice sorgente.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Assembly Cache globale](../../framework/app-domains/gac.md)
 - [Procedura: firmare un assembly con un nome sicuro](sign-strong-name.md)
-- [Sn. exe (strumento nome sicuro)](../../framework/tools/sn-exe-strong-name-tool.md)
+- [Sn.exe (strumento nome sicuro)](../../framework/tools/sn-exe-strong-name-tool.md)
 - [Creare e usare gli assembly con nome sicuro](create-use-strong-named.md)

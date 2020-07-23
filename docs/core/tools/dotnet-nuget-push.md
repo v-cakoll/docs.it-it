@@ -3,12 +3,12 @@ title: Comando dotnet nuget push
 description: Il comando dotnet nuget push effettua il push di un pacchetto nel server e lo pubblica.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 1e7831de4c041591b3602e405418f89f1d1d27d1
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 608cd05d94dd6b5cdc53d582cfaa0407f011ff37
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895461"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925514"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -22,7 +22,7 @@ ms.locfileid: "82895461"
 
 ```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output]
-    [--interactive] [-k|--api-key <API_KEY>] [-n|--no-symbols]
+    [--interactive] [-k|--api-key <API_KEY>] [-n|--no-symbols true]
     [--no-service-endpoint] [-s|--source <SOURCE>] [--skip-duplicate]
     [-sk|--symbol-api-key <API_KEY>] [-ss|--symbol-source <SOURCE>]
     [-t|--timeout <TIMEOUT>]
@@ -30,13 +30,13 @@ dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output]
 dotnet nuget push -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrizione
 
 Il comando `dotnet nuget push` effettua il push di un pacchetto nel server e lo pubblica. Il comando di push usa dettagli del server e delle credenziali presenti nel file di configurazione NuGet o nella catena di file di configurazione del sistema. Per altre informazioni sui file di configurazione, vedere [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior) (Configurazione del comportamento di NuGet). La configurazione predefinita di NuGet si ottiene caricando *%AppData%\NuGet\NuGet.config* (Windows) o *$HOME/.local/share* (Linux/macOS) e quindi caricando qualsiasi file *nuget.config* o *.nuget\nuget.config* dalla directory radice dell'unità nella directory corrente.
 
-Il comando effettua il push di un pacchetto esistente. Non crea un pacchetto. Per creare un pacchetto, usare [`dotnet pack`](dotnet-pack.md).
+Il comando effettua il push di un pacchetto esistente. Non crea un pacchetto. Per creare un pacchetto, usare [`dotnet pack`](dotnet-pack.md) .
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argomenti
 
 - **`ROOT`**
 
@@ -64,7 +64,7 @@ Il comando effettua il push di un pacchetto esistente. Non crea un pacchetto. Pe
 
   Chiave API per il server.
 
-- **`-n|--no-symbols`**
+- **`-n|--no-symbols true`**
 
   Non effettua il push dei simboli (anche se presenti).
 

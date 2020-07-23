@@ -1,17 +1,18 @@
 ---
 title: Tipi obsoleti in .NET Framework
+description: Vedere l'elenco dei tipi obsoleti in .NET Framework 4,5 e .NET 4,6, organizzati per assembly. Sono inoltre elencate le alternative consigliate.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework 4.5, obsolete types
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-ms.openlocfilehash: b7932a553f39e1f1da2a3946878d6224099da8da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29df80fcefc2565850b026bebd30802dc77e1896
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74802687"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925813"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipi obsoleti in .NET Framework
 
@@ -271,18 +272,18 @@ Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly d
 
 |Type|Message|
 |----------|-------------|
-|<xref:System.Web.Configuration.PassportAuthentication?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito [dall'account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
+|<xref:System.Web.Configuration.PassportAuthentication?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall' [account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
 |<xref:System.Web.Mail.MailAttachment?displayProperty=nameWithType>|L'alternativa consigliata è <xref:System.Net.Mail.Attachment?displayProperty=nameWithType>.|
 |<xref:System.Web.Mail.MailEncoding?displayProperty=nameWithType>|L'alternativa consigliata è <xref:System.Net.Mime.TransferEncoding?displayProperty=nameWithType>.|
 |<xref:System.Web.Mail.MailFormat?displayProperty=nameWithType>|L'alternativa consigliata è <xref:System.Net.Mail.MailMessage.IsBodyHtml%2A?displayProperty=nameWithType>.|
 |<xref:System.Web.Mail.MailMessage?displayProperty=nameWithType>|L'alternativa consigliata è <xref:System.Net.Mail.MailMessage?displayProperty=nameWithType>.|
 |<xref:System.Web.Mail.MailPriority?displayProperty=nameWithType>|L'alternativa consigliata è <xref:System.Net.Mail.MailPriority?displayProperty=nameWithType>.|
 |<xref:System.Web.Mail.SmtpMail?displayProperty=nameWithType>|L'alternativa consigliata è <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>.|
-|<xref:System.Web.Security.PassportAuthenticationEventArgs?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito [dall'account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
-|<xref:System.Web.Security.PassportAuthenticationEventHandler?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito [dall'account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
-|<xref:System.Web.Security.PassportAuthenticationModule?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito [dall'account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
-|<xref:System.Web.Security.PassportIdentity?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito [dall'account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
-|<xref:System.Web.Security.PassportPrincipal?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito [dall'account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
+|<xref:System.Web.Security.PassportAuthenticationEventArgs?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall' [account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
+|<xref:System.Web.Security.PassportAuthenticationEventHandler?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall' [account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
+|<xref:System.Web.Security.PassportAuthenticationModule?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall' [account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
+|<xref:System.Web.Security.PassportIdentity?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall' [account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
+|<xref:System.Web.Security.PassportPrincipal?displayProperty=nameWithType>|Questo tipo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall' [account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index)|
 |<xref:System.Web.UI.ObjectConverter?displayProperty=nameWithType>|L'alternativa consigliata è <xref:System.Convert?displayProperty=nameWithType> e <xref:System.String.Format%2A?displayProperty=nameWithType>.|
 
 [Torna all'inizio](#introduction)

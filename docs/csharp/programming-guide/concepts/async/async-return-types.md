@@ -1,13 +1,14 @@
 ---
 title: Tipi restituiti async (C#)
+description: Informazioni sui tipi restituiti che i metodi asincroni possono avere in C# con esempi di codice per ogni tipo e risorse aggiuntive.
 ms.date: 04/14/2020
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: c2584f1e285a7ab76eb43f9a211a8d2a51c2c55e
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 954e449356819595a3a974a6dece5349e53ec88a
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761876"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925384"
 ---
 # <a name="async-return-types-c"></a>Tipi restituiti async (C#)
 
@@ -21,7 +22,7 @@ I metodi asincroni possono avere i seguenti tipi restituiti:
 
 Per altre informazioni sulla funzionalità dei metodi asincroni, vedere [Asynchronous Programming with async and await (C#)](./index.md) (Programmazione asincrona con async e await (C#)).  
   
-## <a name="tasktresult-return-type"></a>Tipo restituito  Task\<TResult\>  
+## <a name="tasktresult-return-type"></a>\<TResult\>Tipo restituito dell'attività  
 Il <xref:System.Threading.Tasks.Task%601> tipo restituito viene usato per un metodo asincrono che contiene un'istruzione [Return](../../../language-reference/keywords/return.md) (C#) in cui l'operando è `TResult` .  
   
 Nell'esempio seguente il metodo asincrono `GetLeisureHours` contiene un'istruzione `return` che restituisce un valore intero. La dichiarazione del metodo deve quindi specificare un tipo restituito di `Task<int>`.  Il metodo asincrono <xref:System.Threading.Tasks.Task.FromResult%2A> è un segnaposto per un'operazione che restituisce una stringa.
@@ -74,7 +75,7 @@ Dato che <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%
   
 :::code language="csharp" source="./snippets/async-return-types/async-valuetask.cs":::
 
-## <a name="async-streams-with-iasyncenumerablet"></a>Flussi asincroni con IAsyncEnumerable \< T\>
+## <a name="async-streams-with-iasyncenumerablet"></a>Flussi asincroni con IAsyncEnumerable\<T\>
 
 A partire da C# 8,0, un metodo asincrono può restituire un *flusso asincrono*, rappresentato da <xref:System.Collections.Generic.IAsyncEnumerable%601> . Un flusso asincrono fornisce un modo per enumerare gli elementi letti da un flusso quando gli elementi vengono generati in blocchi con chiamate asincrone ripetute. Nell'esempio seguente viene illustrato un metodo asincrono che genera un flusso asincrono:
 
@@ -87,5 +88,5 @@ Nell'esempio precedente le righe vengono lette da una stringa in modo asincrono.
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
 - [Procedura dettagliata: accesso al Web tramite async e await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Flusso di controllo nei programmi asincroni (C#)](./control-flow-in-async-programs.md)
-- [async](../../../language-reference/keywords/async.md)
-- [attendono](../../../language-reference/operators/await.md)
+- [Async](../../../language-reference/keywords/async.md)
+- [await](../../../language-reference/operators/await.md)

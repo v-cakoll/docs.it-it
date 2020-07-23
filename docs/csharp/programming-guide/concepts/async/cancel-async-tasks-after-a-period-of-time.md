@@ -1,13 +1,14 @@
 ---
 title: Annullare attività asincrone dopo un periodo di tempo (C#)
+description: Usare il metodo CancellationTokenSource. CancelAfter in C# per pianificare l'annullamento di tutte le attività associate non completate entro un periodo di tempo in questo esempio.
 ms.date: 07/20/2015
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: 110c4700d0d2afc87f9144bf258cdd4991f107f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f32af1d893c60ac17648f60fa3aa90adaa0383e8
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70204343"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925292"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>Annullare attività asincrone dopo un periodo di tempo (C#)
 
@@ -24,13 +25,13 @@ Questo esempio viene aggiunto al codice sviluppato in [Annullare un'attività as
 
 1. Decomprimere il file scaricato e quindi avviare Visual Studio.
 
-2. Nella barra dei menu scegliere**Apri** > **progetto/soluzione** **apri file** > .
+2. Sulla barra dei menu scegliere **file**  >  **Apri**  >  **progetto/soluzione**.
 
 3. Nella finestra di dialogo **Apri progetto** aprire la cartella che contiene il codice di esempio che è stato decompresso e aprire il file di soluzione (SLN) per AsyncFineTuningCS.
 
 4. In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **CancelAfterTime** e scegliere **Imposta come progetto di avvio**.
 
-5. Premere **F5** per eseguire il progetto. In alternativa, premere **CTRL**+**F5** per eseguire il progetto senza eseguirne il debug.
+5. Premere **F5** per eseguire il progetto. Oppure premere **CTRL** + **F5** per eseguire il progetto senza eseguirne il debug).
 
 6. Eseguire il programma più volte per verificare che l'output visualizzi il contenuto per tutti i siti Web, per nessun sito Web o per alcuni siti Web.
 

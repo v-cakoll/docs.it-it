@@ -9,12 +9,12 @@ helpviewer_keywords:
 - threads and fibers [.NET]
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-ms.openlocfilehash: 6ab0cc7c1ec2f7bbc633ac966dd18ab3ea7a395b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de823297540d5ce3740a26614dbb9a82881decf3
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127548"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924383"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Threading gestito e non gestito in Windows
 
@@ -23,9 +23,6 @@ La gestione di tutti i thread viene eseguita tramite la classe <xref:System.Thre
  Quando un thread non gestito accede al runtime tramite, ad esempio, un oggetto COM Callable Wrapper, il sistema verifica l'archivio locale dei thread del thread in questione per trovare un oggetto <xref:System.Threading.Thread> gestito interno. Se ne viene trovato uno, all'ambiente di esecuzione è già nota la presenza di questo thread. Se non ne vengono trovati, tuttavia, il runtime compila un nuovo oggetto <xref:System.Threading.Thread> e lo installa nell'archivio locale dei thread del thread in questione.  
   
  Nel threading gestito, <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> rappresenta l'identificazione del thread gestito stabile. Per la durata del thread, questo non entrerà in conflitto con il valore di altri thread, indipendentemente dal dominio dell'applicazione da cui si è ottenuto il valore.  
-  
-> [!NOTE]
-> L'oggetto **ThreadId** di un sistema operativo non ha una relazione fissa con un thread gestito, perché un host non gestito può controllare la relazione tra thread gestiti e non gestiti. Nello specifico, un host sofisticato può usare l'API Fiber per pianificare molti thread gestiti sullo stesso thread del sistema operativo o spostare un thread gestito tra thread diversi del sistema operativo.  
   
 ## <a name="mapping-from-win32-threading-to-managed-threading"></a>Mapping dal threading di Win32 al threading gestito
 
@@ -48,7 +45,7 @@ La gestione di tutti i thread viene eseguita tramite la classe <xref:System.Thre
   
 ## <a name="managed-threads-and-com-apartments"></a>Thread gestiti e apartment COM
 
-Un thread gestito può essere contrassegnato per indicare che ospita un apartment [a thread singolo](/windows/desktop/com/single-threaded-apartments) o [a thread multipli](/windows/desktop/com/multithreaded-apartments). Per altre informazioni sull'architettura del threading COM, vedere [Processi, thread e apartment.](/windows/desktop/com/processes--threads--and-apartments) I <xref:System.Threading.Thread.GetApartmentState%2A> <xref:System.Threading.Thread.SetApartmentState%2A> <xref:System.Threading.Thread.TrySetApartmentState%2A> metodi , e <xref:System.Threading.Thread> della classe restituiscono e assegnano lo stato apartment di un thread. Se lo stato non è stato impostato, <xref:System.Threading.Thread.GetApartmentState%2A> restituisce <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
+Un thread gestito può essere contrassegnato per indicare che ospita un apartment [a thread singolo](/windows/desktop/com/single-threaded-apartments) o [a thread multipli](/windows/desktop/com/multithreaded-apartments). Per ulteriori informazioni sull'architettura di threading COM, vedere [processi, thread e Apartment](/windows/desktop/com/processes--threads--and-apartments). I <xref:System.Threading.Thread.GetApartmentState%2A> <xref:System.Threading.Thread.SetApartmentState%2A> metodi, e <xref:System.Threading.Thread.TrySetApartmentState%2A> della <xref:System.Threading.Thread> classe restituiscono e assegnano lo stato dell'Apartment di un thread. Se lo stato non è stato impostato, <xref:System.Threading.Thread.GetApartmentState%2A> restituisce <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
   
  La proprietà può essere impostata solo quando il thread è nello stato <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> e solo una volta per ogni thread.  
   

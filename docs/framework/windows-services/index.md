@@ -1,5 +1,6 @@
 ---
 title: Sviluppo di applicazioni di servizio Windows
+description: Vedere collegamenti ad articoli in cui viene illustrato come sviluppare app di servizio Windows tramite Visual Studio o .NET SDK.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ServiceInstaller class, Windows Service applications
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - .NET applications, Windows applications
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
-ms.openlocfilehash: 61f969c22ac06bd6ed20ccfa9124db3bb35d0692
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed02d523c21c51df2ed886843fdb71c075c93c30
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71053548"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925696"
 ---
 # <a name="develop-windows-service-apps"></a>Sviluppare app di servizio Windows
 
@@ -39,7 +40,7 @@ Offre un esempio di creazione di un servizio in Visual Basic e Visual C#.
 
 Illustra gli elementi del linguaggio utilizzati usati programmazione dei servizi.
 
-[Procedura: creare servizi Windows](how-to-create-windows-services.md)
+[Procedura: Creare servizi Windows](how-to-create-windows-services.md)
 
 Descrive il processo di creazione e configurazione dei servizi Windows usando il modello di progetto per servizi Windows.
 

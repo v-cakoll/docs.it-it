@@ -1,5 +1,6 @@
 ---
 title: "Esercitazione: creare un'app di servizio Windows"
+description: In questa esercitazione si creerà un'app di servizio Windows in Visual Studio che scrive messaggi in un log eventi. Aggiungere funzionalità, impostare lo stato, aggiungere programmi di installazione e altro ancora.
 ms.date: 03/27/2019
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: e5ff40d8413acf64e7a8a129a7b268f58780d591
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 487a974af2280a02b83fe685324c9464df705585
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053475"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925631"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Esercitazione: creare un'app di servizio Windows
 
@@ -51,11 +52,11 @@ Rinominare il servizio da **Service1** a **MyNewService**.
 
 2. Nella finestra popup selezionare **Sì**.
 
-    ![Domanda sulla ridenominazione](./media/windows-service-rename.png "Domanda sulla ridenominazione del servizio di Windows")
+    ![Rinomina richiesta](./media/windows-service-rename.png "Richiesta di ridenominazione del servizio Windows")
 
 3. Nella scheda **Progettazione** selezionare **Proprietà** dal menu di scelta rapida. Nella finestra **Proprietà** cambiare il valore di **ServiceName** in *MyNewService*.
 
-    ![Proprietà del servizio](./media/windows-service-properties.png "Proprietà del servizio di Windows")
+    ![Proprietà del servizio](./media/windows-service-properties.png "Proprietà del servizio Windows")
 
 4. Selezionare **Salva tutto** dal menu **File**.
 
@@ -340,7 +341,7 @@ Prima di eseguire un servizio di Windows, è necessario installarlo, ovvero regi
 
      Questo testo, che viene visualizzato nella colonna **Descrizione** della finestra **Servizi**, descrive il servizio all'utente.
 
-    ![Descrizione del servizio nella finestra Servizi. ](./media/windows-service-description.png "Descrizione del servizio")
+    ![Descrizione del servizio nella finestra servizi.](./media/windows-service-description.png "Descrizione del servizio")
 
 6. Aggiungere testo alla proprietà <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A>, ad esempio, *MyNewService Display Name* (Nome visualizzato di MyNewService).
 
@@ -350,7 +351,7 @@ Prima di eseguire un servizio di Windows, è necessario installarlo, ovvero regi
 
 8. Al termine, la finestra **Proprietà** dovrebbe avere l'aspetto della figura seguente:
 
-     ![Proprietà del programma di installazione per un servizio di Windows](./media/windows-service-installer-properties.png "Proprietà del programma di installazione di un servizio di Windows")
+     ![Proprietà del programma di installazione per un servizio Windows](./media/windows-service-installer-properties.png "Proprietà del programma di installazione del servizio Windows")
 
 9. Nella visualizzazione **Progettazione** per **ProjectInstaller** scegliere **serviceProcessInstaller1** per un progetto Visual C# o **ServiceProcessInstaller1** per un progetto Visual Basic e quindi scegliere **Proprietà** dal menu di scelta rapida. Impostare la proprietà <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> su <xref:System.ServiceProcess.ServiceAccount.LocalSystem> dall'elenco a discesa.
 
@@ -482,7 +483,7 @@ Una volta compilato il servizio Windows, è possibile installarlo. Per installar
 
     Se il servizio viene installato correttamente, il comando segnala l'esito positivo.
 
-    Se il sistema non riesce a trovare *installutil.exe*, assicurarsi che sia presente nel computer in uso. Questo strumento viene installato con il .NET Framework alla cartella *%windir%\Microsoft.NET\Framework [64\\&lt;&gt;] versione del Framework*. Il percorso predefinito per la versione a 64 bit, ad esempio, è *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
+    Se il sistema non riesce a trovare *installutil.exe*, assicurarsi che sia presente nel computer in uso. Questo strumento viene installato con il .NET Framework alla cartella *%windir%\Microsoft.NET\Framework [64] \\ &lt; versione &gt; del Framework*. Il percorso predefinito per la versione a 64 bit, ad esempio, è *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
 
     Se il processo **installutil.exe** ha esito negativo, controllare il log di installazione per determinarne il motivo. Per impostazione predefinita, il log è nella stessa cartella del file eseguibile del servizio. L'installazione può non riuscire se:
     - La classe <xref:System.ComponentModel.RunInstallerAttribute> non è presente nella classe `ProjectInstaller`.
@@ -493,7 +494,7 @@ Per altre informazioni, vedere [How to: install and Uninstall Services](how-to-i
 
 ## <a name="start-and-run-the-service"></a>Avviare ed eseguire il servizio
 
-1. In Windows aprire l'app desktop **Servizi**. Premere **Windows**+**R** per aprire la casella **Esegui** , immettere *Services. msc*, quindi premere **invio** o fare clic su **OK**.
+1. In Windows aprire l'app desktop **Servizi**. Premere **Windows** + **R** per aprire la **casella Esegui** , immettere *Services. msc*, quindi premere **invio** o fare clic su **OK**.
 
      Il servizio verrà elencato in **Servizi**, in ordine alfabetico in base al nome visualizzato impostato.
 
@@ -546,7 +547,7 @@ Dopo aver creato il servizio, è possibile:
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Applicazioni di servizi di Windows](index.md)
-- [Introduzione alle applicazioni di servizio di Windows](introduction-to-windows-service-applications.md)
-- [Procedura: Eseguire il debug di applicazioni di servizio di Windows](how-to-debug-windows-service-applications.md)
+- [Applicazioni di servizio Windows](index.md)
+- [Introduzione alle applicazioni di servizio Windows](introduction-to-windows-service-applications.md)
+- [Procedura: eseguire il debug di applicazioni di servizio Windows](how-to-debug-windows-service-applications.md)
 - [Servizi (Windows)](/windows/desktop/Services/services)

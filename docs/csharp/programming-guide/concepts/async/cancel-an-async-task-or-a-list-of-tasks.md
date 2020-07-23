@@ -1,13 +1,14 @@
 ---
 title: Annullare un'attività asincrona o un elenco di attività (C#)
+description: Usare questi esempi per aggiungere un pulsante che annulla un'applicazione asincrona prima del completamento. Questa applicazione C# Scarica il contenuto di uno o più siti Web.
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 93526f772f79e993767fd8f29087b6caf4e29468
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 21bdbc3bc7c3b752fab160429d71356fb87d9976
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595725"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925346"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Annullare un'attività asincrona o un elenco di attività (C#)
 
@@ -28,7 +29,7 @@ Il primo esempio associa il pulsante **Annulla** con un'attività di download si
 
 1. Decomprimere il file scaricato e quindi avviare Visual Studio.
 
-2. Nella barra dei menu scegliere**Apri** > **progetto/soluzione** **apri file** > .
+2. Sulla barra dei menu scegliere **file**  >  **Apri**  >  **progetto/soluzione**.
 
 3. Nella finestra di dialogo **Apri progetto** aprire la cartella che contiene il codice di esempio che è stato decompresso e aprire il file di soluzione (SLN) per AsyncFineTuningCS.
 
@@ -148,7 +149,7 @@ Il primo esempio associa il pulsante **Annulla** con un'attività di download si
 
 1. Decomprimere il file scaricato e quindi avviare Visual Studio.
 
-2. Nella barra dei menu scegliere**Apri** > **progetto/soluzione** **apri file** > .
+2. Sulla barra dei menu scegliere **file**  >  **Apri**  >  **progetto/soluzione**.
 
 3. Nella finestra di dialogo **Apri progetto** aprire la cartella che contiene il codice di esempio che è stato decompresso e aprire il file di soluzione (SLN) per AsyncFineTuningCS.
 
@@ -156,7 +157,7 @@ Il primo esempio associa il pulsante **Annulla** con un'attività di download si
 
 5. Premere **F5** per eseguire il progetto.
 
-     Scegliere i tasti **Ctrl**+**F5** per eseguire il progetto senza eseguirne il debug.
+     Premere il **tasto CTRL** + **F5** per eseguire il progetto senza eseguirne il debug.
 
 Se non si vuole scaricare il progetto, è possibile rivedere i file MainWindow.xaml.cs alla fine di questo argomento.
 

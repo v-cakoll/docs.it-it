@@ -1,17 +1,18 @@
 ---
-title: Come creare un'unione C/C
+title: Come creare un'Unione C/C++ usando gli attributi (C#)
+description: Informazioni su come usare gli attributi per personalizzare il layout di struct nella memoria in C#. In questo esempio viene implementato l'equivalente di un'Unione da C/C++.
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: ff8ce560444581a28b257820573224f89a274cd9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 766a070105441630dfd8fecf7b9f68fa6818fe50
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141579"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925072"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Come creare un'unione C/C
+# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Come creare un'Unione C/C++ usando gli attributi (C#)
 
-Utilizzando gli attributi, è possibile personalizzare il modo in cui gli struct vengono disposti in memoria. Ad esempio, tramite gli attributi `StructLayout(LayoutKind.Explicit)` e `FieldOffset` è possibile creare una struttura che in C/C++ è nota come unione.
+Usando gli attributi, è possibile personalizzare la disposizione dei struct in memoria. Ad esempio, tramite gli attributi `StructLayout(LayoutKind.Explicit)` e `FieldOffset` è possibile creare una struttura che in C/C++ è nota come unione.
 
 ## <a name="example"></a>Esempio
 
@@ -74,7 +75,7 @@ I due campi integer, `i1` e `i2`, condividono le stesse posizioni di memoria di 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
 - [Guida per programmatori C#](../../index.md)
-- [Attributi](../../../../standard/attributes/index.md)
+- [Attributes (Attributi)](../../../../standard/attributes/index.md)
 - [Reflection (C#)](../reflection.md)
 - [Attributi (C#)](index.md)
 - [Creazione di attributi personalizzati (C#)](creating-custom-attributes.md)

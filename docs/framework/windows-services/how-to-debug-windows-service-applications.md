@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: eseguire il debug di applicazioni di servizio per Windows'
+title: 'Procedura: Eseguire il debug di applicazioni di servizio di Windows'
+description: Informazioni su come eseguire il debug di applicazioni di servizio Windows, che non sono semplici da eseguire il debug come altri tipi di applicazioni di Visual Studio.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging Windows Service applications
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 860f2ae22eb6510dc1f1a454ae3e51ccb366078b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: fb58f2ff4f480347f0f233ecd9a619cf287cfdfd
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053628"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925761"
 ---
-# <a name="how-to-debug-windows-service-applications"></a>Procedura: eseguire il debug di applicazioni di servizio per Windows
+# <a name="how-to-debug-windows-service-applications"></a>Procedura: Eseguire il debug di applicazioni di servizio di Windows
 Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione controllo servizi e non dall'interno di Visual Studio, il debug di un servizio non è semplice come quello di altri tipi di applicazioni di Visual Studio. Per eseguire il debug di un servizio, è necessario avviare il servizio e connettere un debugger al processo in cui viene eseguito. È quindi possibile eseguire il debug dell'applicazione tramite tutte le funzionalità di debug standard di Visual Studio.  
   
 > [!CAUTION]
@@ -117,5 +118,5 @@ Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione c
 
 - [Introduzione alle applicazioni di servizio Windows](introduction-to-windows-service-applications.md)
 - [Procedura: installare e disinstallare servizi](how-to-install-and-uninstall-services.md)
-- [Procedura: avviare servizi](how-to-start-services.md)
+- [Procedura: Avviare servizi](how-to-start-services.md)
 - [Debug di un servizio](/windows/desktop/Services/debugging-a-service)

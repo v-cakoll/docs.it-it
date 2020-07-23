@@ -1,13 +1,14 @@
 ---
 title: Uso della funzionalità Async per l'accesso ai file (C#)
+description: Informazioni su come usare la funzionalità Async per accedere ai file in C#. È possibile chiamare i metodi asincroni senza usare i callback o suddividere il codice tra i metodi.
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: 8e0a62c2263ed3fd11eb4accb54978ef439ac010
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: eb67bd408fe37b99e6c5ffdc2550e8f95110d7eb
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396952"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925124"
 ---
 # <a name="using-async-for-file-access-c"></a>Uso della funzionalità Async per l'accesso ai file (C#)
 È possibile usare la funzionalità Async per accedere ai file. Con la funzionalità Async è possibile chiamare i metodi asincroni senza usare callback o suddividere il codice in più metodi o espressioni lambda. Per rendere asincrono il codice sincrono, è sufficiente chiamare un metodo asincrono anziché un metodo sincrono e aggiungere alcune parole chiave al codice.  

@@ -1,5 +1,6 @@
 ---
 title: Utilizzare la proprietà AutomationID
+description: Esaminare gli scenari e il codice di esempio che illustra come e quando usare la proprietà AutomationID per trovare un elemento all'interno dell'albero di automazione interfaccia utente.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: a07a9c9bf6b0bf1e2f8ce56653a90a3aad3c4b2f
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 9e6dd3935a1b4d15690e1dfecd73e9b07330ec6c
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741381"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924526"
 ---
 # <a name="use-the-automationid-property"></a>Utilizzare la proprietà AutomationID
 > [!NOTE]
@@ -31,11 +32,11 @@ ms.locfileid: "75741381"
  Sono stati identificati tre scenari principali dell'applicazione client di automazione interfaccia utente, che richiedono l'uso di <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> per ottenere risultati accurati e coerenti quando si cercano elementi.  
   
 > [!NOTE]
-> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> è supportato da tutti gli elementi di automazione interfaccia utente nella visualizzazione controlli, eccetto le finestre dell'applicazione di primo livello, gli elementi di automazione interfaccia utente derivati da controlli [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] che non hanno un ID o x:Uid e gli elementi di automazione interfaccia utente derivati da controlli Win32 che non hanno un ID controllo.  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>è supportato da tutti gli elementi di automazione interfaccia utente nella visualizzazione controlli, eccetto le finestre dell'applicazione di primo livello, gli elementi di automazione interfaccia utente derivati da [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] controlli senza ID o x:UID e gli elementi di automazione interfaccia utente derivati da controlli Win32 che non hanno un ID controllo.  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Usare un oggetto AutomationID univoco e individuabile per trovare un elemento specifico nell'albero di automazione interfaccia utente  
   
-- Usare uno strumento come Spy interfaccia utente per segnalare la <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> di un elemento [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] di interesse. Questo valore può quindi essere copiato e incollato in un'applicazione client, ad esempio uno script di test, per il successivo test automatizzato. Questo approccio riduce e semplifica il codice necessario per identificare e individuare un elemento in fase di esecuzione.  
+- Usare uno strumento come UI Spy per segnalare il <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> di un [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elemento di interesse. Questo valore può quindi essere copiato e incollato in un'applicazione client, ad esempio uno script di test, per il successivo test automatizzato. Questo approccio riduce e semplifica il codice necessario per identificare e individuare un elemento in fase di esecuzione.  
   
 > [!CAUTION]
 > In generale, è consigliabile cercare di ottenere solo elementi figlio diretti di <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Una ricerca dei discendenti può scorrere centinaia o anche migliaia di elementi, con la possibilità che venga generato un overflow dello stack. Per ottenere un elemento specifico a un livello inferiore, è consigliabile avviare la ricerca dalla finestra dell'applicazione o da un contenitore a un livello inferiore.  
@@ -59,5 +60,5 @@ ms.locfileid: "75741381"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
-- [Panoramica dell'albero di automazione interfaccia utente](ui-automation-tree-overview.md)
-- [Trovare un elemento di automazione interfaccia utente in base a una condizione proprietà](find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Panoramica dell'albero di automazione dell'interfaccia utente](ui-automation-tree-overview.md)
+- [Trovare un elemento di automazione interfaccia utente in base a una proprietà](find-a-ui-automation-element-based-on-a-property-condition.md)

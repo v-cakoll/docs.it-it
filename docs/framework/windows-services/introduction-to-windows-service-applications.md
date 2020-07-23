@@ -1,5 +1,6 @@
 ---
 title: Introduzione alle applicazioni di servizio Windows
+description: Leggi un'introduzione alle applicazioni di servizio Windows. I servizi consentono di creare applicazioni eseguibili con esecuzione prolungata che vengono eseguite nelle proprie sessioni di Windows.
 ms.date: 03/30/2017
 f1_keywords:
 - ServiceController
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: 8ff1adaa025dc11417c3dcfdaf42ea203828be57
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 13bd1f42776ac76a43a83667465ac0ca277e3452
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053514"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925670"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Introduzione alle applicazioni di servizio Windows
 I servizi Microsoft Windows, noti in precedenza come servizi NT, consentono di creare applicazioni eseguibili di lunga durata in esecuzione in sessioni Windows dedicate. Questi servizi possono essere avviati automaticamente all'avvio del computer, possono essere sospesi e riavviati e non visualizzano alcuna interfaccia utente. Queste funzionalità rendono i servizi ideali per l'uso in un server o per fornire funzionalità di lunga durata che non interferiscono con gli altri utenti che lavorano sullo stesso computer. È anche possibile eseguire i servizi nel contesto di sicurezza di un account utente specifico diverso dall'utente connesso o dall'account computer predefinito. Per altre informazioni sui servizi e le sessioni di Windows, vedere la documentazione di Windows SDK.  
@@ -82,11 +83,11 @@ I servizi Microsoft Windows, noti in precedenza come servizi NT, consentono di c
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Applicazioni di servizio Windows](index.md)
+- [Applicazioni di servizio di Windows](index.md)
 - [Architettura di programmazione delle applicazioni di servizio](service-application-programming-architecture.md)
-- [Procedura: creare servizi Windows](how-to-create-windows-services.md)
+- [Procedura: Creare servizi Windows](how-to-create-windows-services.md)
 - [Procedura: installare e disinstallare servizi](how-to-install-and-uninstall-services.md)
-- [Procedura: avviare servizi](how-to-start-services.md)
-- [Procedura: eseguire il debug di applicazioni di servizio Windows](how-to-debug-windows-service-applications.md)
+- [Procedura: Avviare servizi](how-to-start-services.md)
+- [Procedura: Eseguire il debug di applicazioni di servizio di Windows](how-to-debug-windows-service-applications.md)
 - [Procedura dettagliata: creazione di un'applicazione di servizio Windows in Progettazione componenti](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
-- [Procedura: aggiungere programmi di installazione all'applicazione di servizio](how-to-add-installers-to-your-service-application.md)
+- [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](how-to-add-installers-to-your-service-application.md)

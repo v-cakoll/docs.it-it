@@ -1,13 +1,14 @@
 ---
 title: Concetti di programmazione (C#)
+description: Usare le risorse in questa sezione per comprendere i concetti di programmazione nel linguaggio C#, inclusa la programmazione orientata a oggetti.
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: 96545d37697299983aab42d13c7f3bc054d64678
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 8b0b69abd3c23a968e34905cea93f99e044668ce
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240681"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924916"
 ---
 # <a name="programming-concepts-c"></a>Concetti di programmazione (C#)
 Questa sezione illustra i concetti della programmazione in linguaggio C#.  

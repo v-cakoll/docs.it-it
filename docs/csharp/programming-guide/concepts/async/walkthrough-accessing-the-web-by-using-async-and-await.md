@@ -1,13 +1,14 @@
 ---
 title: 'Procedura dettagliata: accesso al Web con Async e Await (C#)'
+description: Questa procedura dettagliata converte un'applicazione sincrona in una soluzione asincrona in C# che usa le funzionalità Async e await.
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: edc45f252b75c742afe4f073ca7dd92d9784d2c4
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: d643793bfcdeaaeff56dd252c510d197a45442f9
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240644"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925111"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Procedura dettagliata: accesso al Web con Async e Await (C#)
 
@@ -691,8 +692,8 @@ namespace AsyncExampleWPF
 ## <a name="see-also"></a>Vedere anche
 
 - [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hh300224(v=vs.110)) (Esempio asincrono: accesso alla procedura dettagliata Web (C# e Visual Basic)
-- [async](../../../language-reference/keywords/async.md)
-- [attendono](../../../language-reference/operators/await.md)
+- [Async](../../../language-reference/keywords/async.md)
+- [await](../../../language-reference/operators/await.md)
 - [Programmazione asincrona con async e await (C#)](./index.md)
 - [Tipi restituiti async (C#)](./async-return-types.md)
 - [Programmazione asincrona basata su attività](https://www.microsoft.com/download/details.aspx?id=19957)

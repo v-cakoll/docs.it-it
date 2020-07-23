@@ -1,13 +1,14 @@
 ---
 title: Come eseguire più richieste Web in parallelo tramite Async e await (C#)
+description: Informazioni su come separare la creazione di un'attività usando l'operatore await in C#, anziché applicarla quando viene creata un'attività.
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 0cfc1d6d1d59dc74fcf5990abb0a9d980a83d7b0
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 899dfd9165d199a67a5178bb351081ee544b231f
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241799"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925163"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Come eseguire più richieste Web in parallelo tramite Async e await (C#)
 In un metodo asincrono, le attività vengono avviate al momento della creazione. L'operatore [await](../../../language-reference/operators/await.md) viene applicato all'attività nel punto del metodo in cui l'elaborazione non può continuare finché l'attività non viene completata. Spesso un'attività viene attesa non appena viene creata, come illustrato nell'esempio seguente.  
