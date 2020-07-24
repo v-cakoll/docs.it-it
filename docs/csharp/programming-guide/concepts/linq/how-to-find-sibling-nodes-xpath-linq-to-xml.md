@@ -1,15 +1,16 @@
 ---
-title: Come trovare i nodi di pari livello (XPath-LINQ to XML) (C
+title: Come trovare nodi di pari livello (XPath-LINQ to XML) (C#)
+description: In questo esempio di C# viene confrontato XPath con LINQ to XML per trovare tutti gli elementi di pari livello di un nodo con un nome specifico.
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: c201dcea5e6d148ae0998eb27d4e42df5b15309f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2936fc4ad088580a9644f79f1797e679fe877e00
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169207"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105220"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Come trovare i nodi di pari livello (XPath-LINQ to XML) (C
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Come trovare nodi di pari livello (XPath-LINQ to XML) (C#)
 Può essere necessario trovare tutti i gli elementi di pari livello di un nodo che hanno un nome specifico. La raccolta risultante può includere il nodo di contesto, se anche quest'ultimo ha il nome specifico.  
   
  L'espressione XPath è:  

@@ -1,15 +1,16 @@
 ---
-title: Come eseguire una query per i caratteri in una stringa (LINQ) (C
+title: Come eseguire una query per i caratteri in una stringa (LINQ) (C#)
+description: È possibile eseguire una query su una stringa come una sequenza di caratteri in LINQ. In questo esempio C# viene eseguita una query su una stringa per determinare il numero di cifre numeriche che contiene.
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: d85e488a38a6167505732103b4c540cade6ea9bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3512be7c30843fcd8e881eab59761706a84a3ac8
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345672"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104552"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Come eseguire una query per i caratteri in una stringa (LINQ) (C
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Come eseguire una query per i caratteri in una stringa (LINQ) (C#)
 Poiché la classe <xref:System.String> implementa l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601>, è possibile eseguire una query su qualsiasi stringa come una sequenza di caratteri. Tuttavia, questo uso di LINQ non è comune. Per le operazioni con criteri di ricerca complessi, usare la classe <xref:System.Text.RegularExpressions.Regex>.  
   
 ## <a name="example"></a>Esempio  
@@ -60,4 +61,4 @@ class QueryAString
 ## <a name="see-also"></a>Vedere anche
 
 - [LINQ e stringhe (C#)](./linq-and-strings.md)
-- [Come combinare le query LINQ con le espressioni regolari (C](./how-to-combine-linq-queries-with-regular-expressions.md)
+- [Come combinare query LINQ con espressioni regolari (C#)](./how-to-combine-linq-queries-with-regular-expressions.md)

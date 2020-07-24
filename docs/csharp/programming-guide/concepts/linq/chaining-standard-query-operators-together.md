@@ -1,13 +1,14 @@
 ---
 title: Concatenamento di operatori di query standard (C#)
+description: Questo esempio mostra in che modo gli operatori di query standard possono essere concatenati anche in C#. La query non materializza i risultati intermedi.
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: 37df654b2bfdcc135460e5ded2ceec1eca33b35a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 41a7e4c7910c783d07181fe16254b0cac6902794
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70204213"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104076"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>Concatenamento di operatori di query standard (C#)
 Questo è l'argomento finale dell'[Esercitazione: concatenamento di query (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)  

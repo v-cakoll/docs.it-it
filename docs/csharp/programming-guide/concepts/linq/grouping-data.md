@@ -1,13 +1,14 @@
 ---
 title: Raggruppamento dei dati (C#)
+description: Il raggruppamento inserisce i dati in gruppi di elementi che condividono un attributo. Informazioni sui metodi dell'operatore query standard in LINQ in C# che raggruppano gli elementi dati.
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 7ef3d3c9097d7a9478605565518ac8975feb9fe2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e1bca1d360b0f44a081cf2770118a0551629b5b
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635743"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103681"
 ---
 # <a name="grouping-data-c"></a>Raggruppamento dei dati (C#)
 Il raggruppamento consiste nell'inserire i dati in gruppi in modo che gli elementi in ogni gruppo condividano un attributo comune.  
@@ -64,8 +65,8 @@ foreach (var group in query)
 - <xref:System.Linq>
 - [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Panoramica degli operatori di query standard)
 - [Clausola group](../../../language-reference/keywords/group-clause.md)
-- [Creare un gruppo nidificato](../../../linq/create-a-nested-group.md)
-- [Come raggruppare i file in base all'estensione (LINQ) (C](./how-to-group-files-by-extension-linq.md)
-- [Raggruppare i risultati delle query](../../../linq/group-query-results.md)
+- [Creare un gruppo annidato](../../../linq/create-a-nested-group.md)
+- [Come raggruppare i file per estensione (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
+- [Raggruppare i risultati di una query](../../../linq/group-query-results.md)
 - [Eseguire una sottoquery su un'operazione di raggruppamento](../../../linq/perform-a-subquery-on-a-grouping-operation.md)
-- [Come dividere un file in molti file utilizzando i gruppi (LINQ) (C](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Come suddividere un file in molti file usando i gruppi (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

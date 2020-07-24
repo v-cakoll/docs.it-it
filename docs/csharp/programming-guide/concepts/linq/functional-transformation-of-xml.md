@@ -1,13 +1,14 @@
 ---
 title: Trasformazione funzionale di XML (C#)
+description: Informazioni su come modificare i documenti XML utilizzando l'approccio di trasformazione funzionale puro in C# e il modo in cui differisce da un approccio procedurale.
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: 83ecd97f9319027dc50f346abf7a9888b5c23862
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4ccc6859f3663eb3760c7faeaf115a5e88a2278a
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75336802"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103664"
 ---
 # <a name="functional-transformation-of-xml-c"></a>Trasformazione funzionale di XML (C#)
 In questo argomento viene illustrato l'approccio alla modifica di documenti XML basato sulla trasformazione funzionale pure. Tale approccio viene quindi messo a confronto con un approccio procedurale.  
@@ -28,9 +29,9 @@ In questo argomento viene illustrato l'approccio alla modifica di documenti XML 
   
  LINQ to XML fornisce gli strumenti necessari per codificare trasformazioni funzionali pure in modo espressivo e potente all'interno di codice C# o Visual Basic. Ad esempio, in molti degli esempi della documentazione di LINQ to XML viene usato un approccio funzionale pure. Anche nell'esercitazione [Tutorial: Manipulating Content in a WordprocessingML Document (C#)](./shape-of-wordprocessingml-documents.md) (Esercitazione: modifica del contenuto in un documento Wordprocessing (C#)) LINQ to XML viene usato con un approccio funzionale per modificare le informazioni in un documento di Microsoft Word.  
   
- Per un confronto più completo di LINQ to XMLLINQ to XML con altre tecnologie Microsoft XML, vedere [LINQ to XML e Altre tecnologie XML](./linq-to-xml-vs-other-xml-technologies.md).  
+ Per un confronto più completo tra LINQ to XML e altre tecnologie XML Microsoft, vedere [LINQ to XML rispetto ad altre tecnologie XML](./linq-to-xml-vs-other-xml-technologies.md).  
   
-XSLT è lo strumento consigliato per effettuare trasformazioni basate su documenti in cui il documento di origine è caratterizzato da una struttura irregolare. Tuttavia, anche LINQ to XML è in grado di eseguire trasformazioni basate su documenti. Per ulteriori informazioni, vedere Come utilizzare le annotazioni per trasformare gli alberi [LINQ to XML LINQ to XML in uno stile XSLT (C )](./how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md).
+XSLT è lo strumento consigliato per effettuare trasformazioni basate su documenti in cui il documento di origine è caratterizzato da una struttura irregolare. Tuttavia, anche LINQ to XML è in grado di eseguire trasformazioni basate su documenti. Per altre informazioni, vedere [come usare le annotazioni per trasformare alberi LINQ to XML in uno stile XSLT (C#)](./how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md).
   
 ## <a name="see-also"></a>Vedere anche
 

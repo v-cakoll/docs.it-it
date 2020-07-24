@@ -1,13 +1,14 @@
 ---
 title: Operazioni di aggregazione (C#)
+description: Informazioni sui metodi per l'esecuzione di un'operazione di aggregazione. Un'operazione di aggregazione calcola un singolo valore da una raccolta di valori.
 ms.date: 07/20/2015
 ms.assetid: 6fc035e5-7639-48b8-bc7f-b093dd31b039
-ms.openlocfilehash: ea32becbb7ad0d3944eaea7b1b5448342ed438a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3d5a52249520478571db2fcfd7aa5d10fb013565
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347553"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104310"
 ---
 # <a name="aggregation-operations-c"></a>Operazioni di aggregazione (C#)
 Un'operazione di aggregazione calcola un singolo valore da una raccolta di valori. Un esempio di operazione di aggregazione è rappresentato dal calcolo della temperatura media giornaliera dai valori della temperatura giornaliera di un mese.  
@@ -28,12 +29,12 @@ Un'operazione di aggregazione calcola un singolo valore da una raccolta di valor
 |LongCount|Conta gli elementi in una raccolta di grandi dimensioni e, facoltativamente, solo gli elementi che soddisfano una funzione di predicato.|Non applicabile.|<xref:System.Linq.Enumerable.LongCount%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LongCount%2A?displayProperty=nameWithType>|  
 |Max|Determina il valore massimo in una raccolta.|Non applicabile.|<xref:System.Linq.Enumerable.Max%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Max%2A?displayProperty=nameWithType>|  
 |Min|Determina il valore minimo in una raccolta.|Non applicabile.|<xref:System.Linq.Enumerable.Min%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Min%2A?displayProperty=nameWithType>|  
-|SUM|Calcola la somma dei valori in una raccolta.|Non applicabile.|<xref:System.Linq.Enumerable.Sum%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Sum%2A?displayProperty=nameWithType>|  
+|Somma|Calcola la somma dei valori in una raccolta.|Non applicabile.|<xref:System.Linq.Enumerable.Sum%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Sum%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Linq>
 - [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Panoramica degli operatori di query standard)
-- [Come calcolare i valori delle colonne in un file di testo CSV (LINQ) (C](./how-to-compute-column-values-in-a-csv-text-file-linq.md)
-- [Come eseguire una query per il file o i file più grandi in un albero di directory (LINQ) (C](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
-- [Come eseguire una query per il numero totale di byte in un set di cartelle (LINQ) (C )](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)
+- [Come calcolare i valori di colonna in un file di testo CSV (LINQ) (C#)](./how-to-compute-column-values-in-a-csv-text-file-linq.md)
+- [Come eseguire una query per il file o i file più grandi in un albero di directory (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
+- [Come eseguire una query per il numero totale di byte in un set di cartelle (LINQ) (C#)](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)

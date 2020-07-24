@@ -1,15 +1,16 @@
 ---
-title: Come confrontare il contenuto di due cartelle (LINQ) (C
+title: Come confrontare il contenuto di due cartelle (LINQ) (C#)
+description: Questo esempio illustra tre modi per confrontare gli elenchi di file usando le query LINQ in C#. Adattare queste tecniche per confrontare sequenze di oggetti di qualsiasi tipo.
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: 44dc97d6d48bed5e8b4d0376838e4dada2e8300c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3cdac57d3d746aa2290c51d1263a7d42dc3463e0
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169402"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105328"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Come confrontare il contenuto di due cartelle (LINQ) (C
+# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Come confrontare il contenuto di due cartelle (LINQ) (C#)
 In questo esempio vengono illustrati tre modi per confrontare due elenchi di file:  
   
 - Eseguendo una query su un valore booleano che specifica se i due elenchi di file sono identici.  

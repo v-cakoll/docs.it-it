@@ -1,13 +1,14 @@
 ---
 title: Esempio di concatenamento di query (C#)
+description: Questo esempio mostra cosa accade quando si concatenano due query che usano l'esecuzione posticipata e la valutazione lazy in C#.
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: 45e3a4f341ca8eb06ff0f553e0f933956e6c6546
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0cfcfe1c8f537778fd1ef909277d95d83991af51
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70205422"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105539"
 ---
 # <a name="chaining-queries-example-c"></a>Esempio di concatenamento di query (C#)
 In questo esempio, basato sull'esempio precedente, vengono illustrati gli effetti del concatenamento di due query che usano l'esecuzione posticipata e la valutazione lazy.  

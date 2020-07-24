@@ -1,15 +1,16 @@
 ---
-title: Come calcolare i valori intermedi (C )
+title: Come calcolare valori intermedi (C#)
+description: In questo LINQ to XML esempio in C# viene illustrato come calcolare valori intermedi che possono essere utilizzati per l'ordinamento, il filtro e la selezione.
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
-ms.openlocfilehash: 3ead3bfb02f7c9192db96996c1f1e01a86a4191a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fc648f20550de13735a1f6da6b2f811fd0d39004
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141444"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103617"
 ---
-# <a name="how-to-calculate-intermediate-values-c"></a>Come calcolare i valori intermedi (C )
+# <a name="how-to-calculate-intermediate-values-c"></a>Come calcolare valori intermedi (C#)
 In questo esempio viene illustrato come calcolare valori intermedi che è possibile usare in operazioni di ordinamento, filtro e selezione.  
   
 ## <a name="example"></a>Esempio  
@@ -29,7 +30,7 @@ foreach (decimal ex in extensions)
     Console.WriteLine(ex);  
 ```  
   
- L'output del codice è il seguente:  
+ Questo codice genera l'output seguente:  
   
 ```output  
 55.92  
@@ -57,7 +58,7 @@ foreach (decimal ex in extensions)
     Console.WriteLine(ex);  
 ```  
   
- L'output del codice è il seguente:  
+ Questo codice genera l'output seguente:  
   
 ```output  
 55.92  

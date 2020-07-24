@@ -1,15 +1,16 @@
 ---
-title: Come eseguire trasformazioni di streaming di testo in xml (C )How to perform streaming transformations of text to XML (C
+title: Come eseguire trasformazioni del flusso di testo in XML (C#)
+description: Informazioni su come eseguire una trasformazione del flusso di testo in XML in C#, in cui il file di testo viene trasmesso una riga alla volta e viene usata una query LINQ per elaborare il file di testo.
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-ms.openlocfilehash: 496535b7f868095a62be2b72b1eea2b082e00a44
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f933064be70d39b59cf7dbe51b4ee92e5226647a
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345800"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104743"
 ---
-# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Come eseguire trasformazioni di streaming di testo in xml (C )How to perform streaming transformations of text to XML (C
+# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Come eseguire trasformazioni del flusso di testo in XML (C#)
 
 Uno degli approcci disponibili per l'elaborazione di un file di testo consiste nello scrivere un metodo di estensione che genera un flusso del file di testo, una riga alla volta, tramite il costrutto `yield return`. È quindi possibile scrivere una query LINQ che elabora il file di testo in modo posticipato lazy. Se poi si usa <xref:System.Xml.Linq.XStreamingElement> per il flusso di output, è possibile creare una trasformazione del file di testo in XML che usa una quantità minima di memoria, indipendentemente dalle dimensioni del file di testo di origine.
 

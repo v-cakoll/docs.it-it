@@ -1,15 +1,16 @@
 ---
-title: Come modificare lo spazio dei nomi per un'intera struttura ad albero XML (C
+title: Come modificare lo spazio dei nomi per un intero albero XML (C#)
+description: Informazioni su come modificare a livello di codice lo spazio dei nomi per un elemento o un attributo in LINQ to XML in C#.
 ms.date: 07/20/2015
 ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
-ms.openlocfilehash: 6462cbb5001682b6a464c1446f8ae6de3c5669d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0bf4c9d8f3cf569f14b654dfd0c4291a7eb647df
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141515"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105376"
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Come modificare lo spazio dei nomi per un'intera struttura ad albero XML (C
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Come modificare lo spazio dei nomi per un intero albero XML (C#)
 È talvolta necessario cambiare a livello di codice lo spazio dei nomi per un elemento o un attributo. Questa operazione è particolarmente agevole con LINQ to XML. È possibile impostare la proprietà <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType>. Non è possibile impostare la proprietà <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType>, tuttavia è possibile copiare gli attributi in un nuovo oggetto <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, rimuovere gli attributi esistenti e quindi aggiungere quelli nuovi inclusi nello spazio dei nomi desiderato.  
   
  Per altre informazioni, vedere [Panoramica degli spazi dei nomi (LINQ to XML)](namespaces-overview-linq-to-xml.md).  

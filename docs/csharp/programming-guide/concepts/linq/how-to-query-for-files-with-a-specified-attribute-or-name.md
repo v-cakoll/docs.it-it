@@ -1,15 +1,16 @@
 ---
-title: Come eseguire una query per i file con un attributo o un nome specificato (C
+title: Come eseguire una query per i file con un attributo o un nome specifico (C#)
+description: Informazioni su come usare LINQ in C# per trovare i file con un'estensione di file specifica in una struttura di directory e come restituire il file più recente o meno recente.
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: fc6456f159887b7ad109e8ad48f0f79999d53e09
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9820b96e19d805b792e18ff242e64dfb6cf4a606
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168869"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104495"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Come eseguire una query per i file con un attributo o un nome specificato (C
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Come eseguire una query per i file con un attributo o un nome specifico (C#)
 In questo esempio viene illustrato come trovare tutti i file con un'estensione del nome specificata, come ad esempio "txt", in un albero di directory specificato. Viene anche illustrato come restituire il file più recente o meno recente nell'albero in base all'ora di creazione.  
   
 ## <a name="example"></a>Esempio  

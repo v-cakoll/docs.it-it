@@ -1,13 +1,14 @@
 ---
 title: Applicabilità della trasformazione funzionale (C#)
+desciption: Learn about functional transformation. See how this approach to LINQ and other processes where the focus is on transforming data from one form to another.
 ms.date: 07/20/2015
 ms.assetid: c78107bd-b006-4574-a3d4-bbf808388ff3
-ms.openlocfilehash: bc2678354bb45f1ed0a4076f278f52d0ee7d350e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b507e0ad5c09478c3427f87d32a21d8facf1b7a0
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594879"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105565"
 ---
 # <a name="applicability-of-functional-transformation-c"></a>Applicabilità della trasformazione funzionale (C#)
 Le trasformazioni funzionali pure sono applicabili in un'ampia varietà di situazioni.  

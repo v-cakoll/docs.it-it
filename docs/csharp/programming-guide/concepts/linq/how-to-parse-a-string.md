@@ -1,21 +1,22 @@
 ---
-title: Come analizzare una stringa (C )How to parse a string (C
+title: Come analizzare una stringa (C#)
+description: Informazioni su come analizzare una stringa per creare un albero XML in C#. Informazioni su come accedere a dati specifici nel codice XML analizzato.
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: 79821eb9e5cd7187ac3c2a93f85eaae45c5c48ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a4664e090b6a44c52c519e61b66ccdc5d59a71f1
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345804"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104809"
 ---
-# <a name="how-to-parse-a-string-c"></a>Come analizzare una stringa (C )How to parse a string (C
+# <a name="how-to-parse-a-string-c"></a>Come analizzare una stringa (C#)
 
 Questo argomento illustra come analizzare una stringa per creare una struttura ad albero XML in C#.
 
 ## <a name="example"></a>Esempio
 
-Il seguente codice in c'è viene illustrato come analizzare una stringa XML:The following C's code shows how to parse an XML string:
+Il codice C# seguente illustra come analizzare una stringa XML:
 
 ```csharp
 XElement contacts = XElement.Parse(
@@ -47,7 +48,7 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);
 ```
 
-Il `Contacts` nodo radice `Contact` ha due nodi. Per accedere ad alcuni dati specifici nel codice XML analizzato, utilizzate il metodo [XElement.Elements(),](xref:System.Xml.Linq.XContainer.Elements) che in questo caso restituisce gli elementi figlio del nodo radice. `Contacts` L'esempio seguente stampa `Contact` il primo nodo nella console:
+Il `Contacts` nodo radice ha due `Contact` nodi. Per accedere ad alcuni dati specifici nel codice XML analizzato, usare il metodo [XElement. Elements ()](xref:System.Xml.Linq.XContainer.Elements) , che in questo caso restituisce gli elementi figlio del `Contacts` nodo radice. Nell'esempio seguente il primo nodo viene stampato nella `Contact` console:
 
 ```csharp
 List<XElement> contactNodes = contacts.Elements("Contact").ToList();
@@ -56,4 +57,4 @@ Console.WriteLine(contactNodes[0]);
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Come trovare un elemento con un attributo specifico (c'è)How to find an element with a specific attribute (C](how-to-find-an-element-with-a-specific-attribute.md)
+- [Come trovare un elemento con un attributo specifico (C#)](how-to-find-an-element-with-a-specific-attribute.md)

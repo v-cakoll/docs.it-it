@@ -1,13 +1,14 @@
 ---
 title: Aggiunta di elementi, attributi e nodi a un albero XML (C#)
+description: Informazioni sui metodi per aggiungere contenuto come elementi, attributi, commenti, istruzioni di elaborazione e testo a un albero XML esistente.
 ms.date: 07/20/2015
 ms.assetid: db911e4f-40aa-499a-9500-a9763bb6df56
-ms.openlocfilehash: 20d8d9d9c592f5f570d7c94298dcee41763c1f1f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78a84401494e2d4280799632fa42dc95574e3e10
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169575"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105552"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>Aggiunta di elementi, attributi e nodi a un albero XML (C#)
 È possibile aggiungere contenuto (elementi, attributi, commenti, istruzioni di elaborazione, testo e CDATA) a un albero XML esistente.  
@@ -62,7 +63,7 @@ Console.WriteLine(xmlTree);
 ```  
   
 ### <a name="comments"></a>Commenti  
- L'output del codice è il seguente:  
+ Questo codice genera l'output seguente:  
   
 ```xml  
 <Root>  

@@ -1,15 +1,16 @@
 ---
-title: Come combinare le query LINQ con le espressioni regolari (C
+title: Come combinare query LINQ con espressioni regolari (C#)
+description: Questo esempio crea un'espressione regolare per la corrispondenza nelle stringhe di testo usando la classe Regex in C#.
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: 104e63adb9c07a75077b92654afd791b6c82d8de
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: af63d096e3c2f19ed557180d82d606989a016120
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169429"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105346"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Come combinare le query LINQ con le espressioni regolari (C
+# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Come combinare query LINQ con espressioni regolari (C#)
 In questo esempio viene illustrato come usare la classe <xref:System.Text.RegularExpressions.Regex> per creare un'espressione regolare per una corrispondenza più complessa nelle stringhe di testo. La query LINQ consente di filtrare esattamente i file che si vuole cercare tramite l'espressione regolare e di dare forma ai risultati.  
   
 ## <a name="example"></a>Esempio  

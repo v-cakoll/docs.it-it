@@ -1,15 +1,16 @@
 ---
-title: Come controllare i prefissi degli spazi dei nomi (C )(LINQ to XML)How to control namespace prefixes (C'è) (LINQ to XML)
+title: Come controllare i prefissi degli spazi dei nomi (C#) (LINQ to XML)
+description: Informazioni su come controllare i prefissi degli spazi dei nomi durante la serializzazione di un albero XML in LINQ to XML in C#. Alcune situazioni richiedono il controllo dei prefissi degli spazi dei nomi.
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
-ms.openlocfilehash: 9f43c0804d8c830fa75f1e1390cb578c5f5d5106
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b0c5cbfa7488f3a7105595830ef6765e6bfb1f12
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141376"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105302"
 ---
-# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Come controllare i prefissi degli spazi dei nomi (C )(LINQ to XML)How to control namespace prefixes (C'è) (LINQ to XML)
+# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Come controllare i prefissi degli spazi dei nomi (C#) (LINQ to XML)
 In questo argomento viene descritto come controllare i prefissi degli spazi dei nomi durante la serializzazione di un albero XML.  
   
  In molte situazioni non è necessario controllare i prefissi degli spazi dei nomi.  

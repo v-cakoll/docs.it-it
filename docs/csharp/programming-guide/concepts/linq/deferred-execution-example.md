@@ -1,13 +1,14 @@
 ---
 title: Esempio di esecuzione posticipata (C#)
+description: Vedere come l'esecuzione posticipata e la valutazione lazy influiscono sull'esecuzione delle query di LINQ to XML in C#.
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-ms.openlocfilehash: 0816594ad016f19af4c97198160b4bafb9b4b8b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 65ba4cc150f2fc9d8f44aee352987ea0eeaab0a5
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70204126"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103956"
 ---
 # <a name="deferred-execution-example-c"></a>Esempio di esecuzione posticipata (C#)
 In questo argomento vengono illustrati gli effetti dell'esecuzione posticipata e della valutazione lazy sulle query LINQ to XML.  

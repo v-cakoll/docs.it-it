@@ -1,15 +1,16 @@
 ---
-title: Come eseguire una query per il file o i file più grandi in un albero di directory (LINQ) (C
+title: Come eseguire una query per il file o i file più grandi in un albero di directory (LINQ) (C#)
+description: Questo esempio C# mostra cinque query LINQ correlate alle dimensioni del file in byte. È possibile modificarli per eseguire una query su altre proprietà dell'oggetto FileInfo.
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: ed7d610bd292be4062db89f3c94af280e851141f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c06c6017d6fd1efd6412729c5df63a2b819908a6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168765"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104378"
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Come eseguire una query per il file o i file più grandi in un albero di directory (LINQ) (C
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Come eseguire una query per il file o i file più grandi in un albero di directory (LINQ) (C#)
 Questo esempio illustra cinque query relative alla dimensione dei file in byte:  
   
 - Come recuperare la dimensione in byte del file più grande.  

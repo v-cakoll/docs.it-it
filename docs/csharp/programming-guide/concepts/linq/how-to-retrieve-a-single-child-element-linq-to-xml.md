@@ -1,15 +1,16 @@
 ---
-title: Come recuperare un singolo elemento figlio (LINQ to XML) (C
+title: Come recuperare un singolo elemento figlio (LINQ to XML) (C#)
+description: Informazioni su come usare LINQ to XML per recuperare un singolo elemento figlio in base al nome. In questo esempio di C# il metodo Element restituisce il primo elemento figlio specificato.
 ms.date: 07/20/2015
 ms.assetid: ce37db9e-76fa-46eb-b4cc-e8f32d22ad90
-ms.openlocfilehash: 0e10cf230a73e6419f2d9c663766f9a24a0930af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c3a044f30cf2e411bdff52586c7a370b626f41bc
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347467"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103284"
 ---
-# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>Come recuperare un singolo elemento figlio (LINQ to XML) (C
+# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>Come recuperare un singolo elemento figlio (LINQ to XML) (C#)
 In questo argomento viene illustrato come recuperare un singolo elemento figlio, dato il relativo nome. Quando si conosce il nome dell'elemento figlio e si ha la certezza che ne esista solo uno con tale nome, può risultare utile recuperare un singolo elemento, anziché una raccolta.  
   
  Il metodo <xref:System.Xml.Linq.XContainer.Element%2A> restituisce il primo elemento <xref:System.Xml.Linq.XElement> figlio con l'oggetto <xref:System.Xml.Linq.XName> specificato.  

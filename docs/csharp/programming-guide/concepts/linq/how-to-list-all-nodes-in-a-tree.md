@@ -1,22 +1,23 @@
 ---
-title: Come elencare tutti i nodi in un albero (C )How to list all nodes in a tree (C'è)
+title: Come elencare tutti i nodi in un albero (C#)
+description: Informazioni su come elencare tutti i nodi in un albero eseguendo un'espressione XPath usando LINQ to XML in C#. È possibile vedere come un metodo o una proprietà influisca sull'albero.
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: e1b37c1d0801f2924e6811e630094524331a0d86
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28400712154138fa474665a796b77572b095fe13
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345873"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104975"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Come elencare tutti i nodi in un albero (C )How to list all nodes in a tree (C'è)
+# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Come elencare tutti i nodi in un albero (C#)
 
 A volte risulta utile elencare tutti i nodi di un albero, ad esempio quando si desidera identificare gli effetti esatti di una proprietà o metodo sull'albero. Uno degli approcci disponibili per elencare tutti i nodi in formato testuale consiste nel generare un'espressione XPath che identifica in modo esatto e specifico qualsiasi nodo nell'albero.
 
 Non risulta particolarmente utile eseguire espressioni XPath tramite [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Le espressioni XPath hanno prestazioni inferiori rispetto alle query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e le query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sono molto più potenti. Tuttavia, XPath è efficace per identificare i nodi nell'albero XML.
 
 ## <a name="example"></a>Esempio
- In questo esempio `GetXPath` viene illustrata una funzione denominata che genera un'espressione XPath specifica per qualsiasi nodo nella struttura ad albero XML. Genera espressioni XPath appropriate anche quando i nodi sono inclusi in uno spazio dei nomi. Le espressioni XPath vengono generate usando prefissi di spazio dei nomi.
+ In questo esempio viene illustrata una funzione denominata `GetXPath` che genera un'espressione XPath specifica per qualsiasi nodo nell'albero XML. Genera espressioni XPath appropriate anche quando i nodi sono inclusi in uno spazio dei nomi. Le espressioni XPath vengono generate usando prefissi di spazio dei nomi.
 
  Nell'esempio viene quindi creata un piccolo albero XML che contiene un esempio di diversi tipi di nodi. Vengono quindi scorsi i nodi discendenti e viene stampata l'espressione XPath per ogni nodo.
 

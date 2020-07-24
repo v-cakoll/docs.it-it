@@ -1,13 +1,14 @@
 ---
 title: costruzione funzionale (LINQ to XML) (C#)
+description: Informazioni sul modo in cui l'interfaccia di programmazione LINQ to XML consente la costruzione funzionale, la possibilità di creare un albero XML in un'unica istruzione in C#.
 ms.date: 07/20/2015
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
-ms.openlocfilehash: e55b0010a5f75eee8137d1e9bcefc573b5e07e72
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f209a7ef2a4597ec8eeccb3083b77223a27e7a65
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635756"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103771"
 ---
 # <a name="functional-construction-linq-to-xml-c"></a>costruzione funzionale (LINQ to XML) (C#)
 In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è disponibile una potente funzionalità per la creazione di elementi XML, denominata *costruzione funzionale*. Per costruzione funzionale si intende la possibilità di creare una struttura ad albero XML in un'unica istruzione.  
@@ -38,7 +39,7 @@ XElement contacts =
     );  
 ```  
   
- Queste funzionalità consentono inoltre di scrivere codice che utilizza i risultati delle query LINQ quando si crea una struttura ad albero XML, come indicato di seguito:These features also enable you to write code that uses the results of LINQ queries when you create an XML tree, as follows:  
+ Queste funzionalità consentono inoltre di scrivere codice che utilizza i risultati delle query LINQ quando si crea un albero XML, come indicato di seguito:  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  

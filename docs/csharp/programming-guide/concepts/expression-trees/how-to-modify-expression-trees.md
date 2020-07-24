@@ -1,20 +1,21 @@
 ---
-title: Come modificare gli alberi delle espressioni (c'è)How to modify expression trees (C
+title: Come modificare gli alberi delle espressioni (C#)
+description: Informazioni su come modificare un albero delle espressioni creando una copia di un albero delle espressioni esistente e apportando le modifiche necessarie.
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
-ms.openlocfilehash: e921c594497d02f5eb16cc60294e947e83636d7a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 45aea18e253811d4e5c60f23f7f8496d4358f64c
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73969895"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105602"
 ---
-# <a name="how-to-modify-expression-trees-c"></a>Come modificare gli alberi delle espressioni (c'è)How to modify expression trees (C
+# <a name="how-to-modify-expression-trees-c"></a>Come modificare gli alberi delle espressioni (C#)
 In questo argomento viene illustrato come modificare un albero delle espressioni. Gli alberi delle espressioni non sono modificabili, il che significa che non possono essere modificati direttamente. Per modificare un albero delle espressioni, è necessario creare una copia dell'albero esistente e solo in seguito apportare le modifiche necessarie. È possibile usare la classe <xref:System.Linq.Expressions.ExpressionVisitor> per attraversare un albero delle espressioni esistente e copiare ogni nodo visitato.  
   
 ### <a name="to-modify-an-expression-tree"></a>Per modificare un albero delle espressioni  
   
-1. Creare un nuovo progetto **Applicazione console.**  
+1. Creare un nuovo progetto di **applicazione console** .  
   
 2. Aggiungere al file una direttiva `using` per lo spazio dei nomi `System.Linq.Expressions`.  
   
@@ -72,5 +73,5 @@ In questo argomento viene illustrato come modificare un albero delle espressioni
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Come eseguire gli alberi delle espressioni (c'è)How to execute expression trees (C](./how-to-execute-expression-trees.md)
+- [Come eseguire gli alberi delle espressioni (C#)](./how-to-execute-expression-trees.md)
 - [Alberi delle espressioni (C#)](./index.md)

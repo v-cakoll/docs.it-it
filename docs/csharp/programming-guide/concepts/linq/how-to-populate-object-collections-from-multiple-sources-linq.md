@@ -1,15 +1,16 @@
 ---
-title: Come popolare le raccolte di oggetti da più origini (LINQ) (C
+title: Come popolare le raccolte di oggetti da più origini (LINQ) (C#)
+description: Informazioni su come unire dati da origini diverse in una sequenza di nuovi tipi usando LINQ in C#. In questi esempi vengono utilizzati tipi anonimi e denominati.
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 3d841e5ca25afde94674af0fedc9a824c382be5b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9dc9f98ae09e0fe3437b5d2ccab32b3dbcd93714
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345761"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104719"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Come popolare le raccolte di oggetti da più origini (LINQ) (C
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Come popolare le raccolte di oggetti da più origini (LINQ) (C#)
 
 In questo esempio viene illustrato come unire dati da origini diverse in una sequenza di tipi nuovi.
 
@@ -18,7 +19,7 @@ In questo esempio viene illustrato come unire dati da origini diverse in una seq
 
 ## <a name="to-create-the-data-file"></a>Per creare il file di dati
 
-Copiare i file names.csv e scores.csv nella cartella del progetto, come descritto in [Come unire il contenuto da file diversi (LINQ) (Cè)](./how-to-join-content-from-dissimilar-files-linq.md).
+Copiare i file names.csv e scores.csv nella cartella del progetto, come descritto in [come unire il contenuto da file non analoghi (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Esempio
 
@@ -142,5 +143,5 @@ foreach (var student in queryNamesScores2)
 ## <a name="see-also"></a>Vedere anche
 
 - [LINQ e stringhe (C#)](./linq-and-strings.md)
-- [Inizializzatori di oggetto e di raccoltaObject and Collection Initializers](../../classes-and-structs/object-and-collection-initializers.md)
+- [Inizializzatori di oggetto e di raccolta](../../classes-and-structs/object-and-collection-initializers.md)
 - [Tipi anonimi](../../classes-and-structs/anonymous-types.md)

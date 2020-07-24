@@ -1,5 +1,6 @@
 ---
 title: Trasformazioni dati con LINQ (C#)
+description: Informazioni su come usare le query LINQ in C# per trasformare i dati. È possibile modificare la sequenza ordinando e raggruppando e creando nuovi tipi utilizzando la clausola SELECT.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], data transformations
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: d20f5d826620ad8654ddf1e9471ecc894b2c0391
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6844cf2aa589f7516a9e40bc604c5f907ec6d311
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408523"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104025"
 ---
 # <a name="data-transformations-with-linq-c"></a>Trasformazioni dati con LINQ (C#)
 LINQ (Language-Integrated Query) non riguarda solo il recupero dei dati. È anche un potente strumento per la trasformazione dei dati. Utilizzando una query LINQ, è possibile utilizzare una sequenza di origine come input e modificarla in molti modi per creare una nuova sequenza di output. È possibile modificare la sequenza senza modificare gli elementi con operazioni di ordinamento e raggruppamento. Ma probabilmente la funzionalità più potente delle query LINQ è la possibilità di creare nuovi tipi. Questa operazione viene eseguita nella clausola [select](../../../language-reference/keywords/select-clause.md). Ad esempio, è possibile effettuare le attività seguenti:  
@@ -108,4 +109,4 @@ LINQ (Language-Integrated Query) non riguarda solo il recupero dei dati. È anch
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 - [LINQ to XML (C#)](./linq-to-xml-overview.md)
 - [Espressioni di query LINQ](../../../linq/index.md)
-- [Clausola select](../../../language-reference/keywords/select-clause.md)
+- [clausola SELECT](../../../language-reference/keywords/select-clause.md)

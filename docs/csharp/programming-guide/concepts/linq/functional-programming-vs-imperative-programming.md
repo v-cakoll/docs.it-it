@@ -1,18 +1,19 @@
 ---
-title: Programmazione funzionale e programmazione imperativa (C )Functional Programming vs.
+title: Programmazione funzionale e programmazione imperativa (C#)
+description: Questo articolo mette a confronto la programmazione funzionale in C# con l'approccio procedurale. La programmazione funzionale impone l'immutabilità tramite funzioni pure.
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: a163a62912ed2a44d6ea8cad5bc536f03343f15c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc421d654e532293b522dab9d43920d0fffd7b92
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594323"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103750"
 ---
-# <a name="functional-programming-vs-imperative-programming-c"></a>Programmazione funzionale e programmazione imperativa (C )Functional Programming vs.
+# <a name="functional-programming-vs-imperative-programming-c"></a>Programmazione funzionale e programmazione imperativa (C#)
 In questo argomento vengono presentate le differenze tra la programmazione funzionale e la più tradizionale programmazione imperativa (procedurale).  
   
-## <a name="functional-programming-vs-imperative-programming"></a>Programmazione imperativa e funzionale  
+## <a name="functional-programming-vs-imperative-programming"></a>Differenze tra programmazione funzionale e programmazione imperativa  
  Il paradigma della *programmazione funzionale* è stato creato espressamente per supportare un approccio funzionale puro alla risoluzione di problemi. La programmazione funzionale è un tipo di *programmazione dichiarativa*. Al contrario, la maggior parte dei linguaggi più diffusi, compresi i linguaggi di programmazione orientata a oggetti (OOP), quali C#, Visual Basic, C++ e Java, è progettata principalmente per supportare la programmazione (procedurale) *imperativa*.  
   
  Con un approccio imperativo lo sviluppatore scrive codice in cui vengono descritti in dettaglio i passaggi esatti che devono essere eseguiti dal computer per raggiungere l'obiettivo. Questo tipo di programmazione viene a volte definito *algoritmica*. Al contrario, un approccio funzionale implica la composizione del problema come set di funzioni da eseguire. È necessario definire con attenzione l'input e l'output di ogni funzione. Nella tabella seguente sono descritte alcune delle differenze generali tra questi due approcci.  

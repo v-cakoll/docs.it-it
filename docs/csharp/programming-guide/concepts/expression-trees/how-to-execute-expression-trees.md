@@ -1,15 +1,16 @@
 ---
-title: Come eseguire gli alberi delle espressioni (c'è)How to execute expression trees (C
+title: Come eseguire gli alberi delle espressioni (C#)
+description: Informazioni su come eseguire un albero delle espressioni per restituire un valore o eseguire un'azione, ad esempio la chiamata a un metodo.
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: e7d408ea154572dc8b45d2e67bca3f05837868d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e306da545ba6c6275f36b8f6dd4e98bb91ed54e
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73969886"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105622"
 ---
-# <a name="how-to-execute-expression-trees-c"></a>Come eseguire gli alberi delle espressioni (c'è)How to execute expression trees (C
+# <a name="how-to-execute-expression-trees-c"></a>Come eseguire gli alberi delle espressioni (C#)
 In questo argomento viene illustrato come eseguire un albero delle espressioni. L'esecuzione di un albero delle espressioni può restituire un valore o può eseguire solo un'azione, ad esempio la chiamata a un metodo.  
   
  Possono essere eseguite solo gli alberi delle espressioni che rappresentano espressioni lambda. Gli alberi delle espressioni che rappresentano espressioni lambda sono di tipo <xref:System.Linq.Expressions.LambdaExpression> o <xref:System.Linq.Expressions.Expression%601>. Per eseguire gli alberi delle espressioni, chiamare il metodo <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> per creare un delegato eseguibile e quindi richiamare il delegato.  
@@ -49,4 +50,4 @@ Console.WriteLine(result);
 ## <a name="see-also"></a>Vedere anche
 
 - [Alberi delle espressioni (C#)](./index.md)
-- [Come modificare gli alberi delle espressioni (c'è)How to modify expression trees (C](./how-to-modify-expression-trees.md)
+- [Come modificare gli alberi delle espressioni (C#)](./how-to-modify-expression-trees.md)

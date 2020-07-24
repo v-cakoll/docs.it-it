@@ -1,13 +1,14 @@
 ---
 title: Creazione di interfacce generiche varianti (C#)
+description: Informazioni su come creare interfacce generiche variant con parametri di tipo generico covariante o controvariante.
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: a8e3e010c0e5d5490aee35603cad4fd6c1dc29e0
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 38b32784b681e748cd508c3d431fd4b18ec2c81a
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990045"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105727"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>Creazione di interfacce generiche varianti (C#)
 
@@ -146,7 +147,7 @@ interface ICovariant<out T> { }
 
 Quando si implementano le interfacce generiche varianti, la varianza può talvolta causare ambiguità. Tale ambiguità dovrebbe essere evitata.
 
-Ad esempio, se si implementa in modo esplicito la stessa interfaccia generica variante con parametri di tipo generico diversi in una sola classe, è possibile creare ambiguità. Il compilatore non genera un errore in questo caso, ma non viene specificato quale implementazione dell'interfaccia verrà scelta in fase di esecuzione. Questa ambiguità potrebbe causare bug sottili nel codice. Si prenda in considerazione il seguente esempio di codice.
+Ad esempio, se si implementa in modo esplicito la stessa interfaccia generica variante con parametri di tipo generico diversi in una sola classe, è possibile creare ambiguità. Il compilatore non genera un errore in questo caso, ma non viene specificato quale implementazione dell'interfaccia verrà scelta in fase di esecuzione. Questa ambiguità potrebbe causare bug sottili nel codice. Osservare l'esempio di codice seguente.
 
 ```csharp
 // Simple class hierarchy.

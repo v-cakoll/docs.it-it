@@ -1,15 +1,16 @@
 ---
-title: Come proiettare un nuovo tipo (LINQ to XML) (C
+title: Come proiettare un nuovo tipo (LINQ to XML) (C#)
+description: Informazioni su come creare query in LINQ to XML in C# che restituiscono IEnumerable <T> di tipi oltre a XElement, String o int, descritti in altri esempi.
 ms.date: 07/20/2015
 ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
-ms.openlocfilehash: 5205a0c56651271dea0181ed96518c0e9d7f95f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 013ea852a64b77c04ac583b4d9b71e8006cd4976
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168993"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104641"
 ---
-# <a name="how-to-project-a-new-type-linq-to-xml-c"></a>Come proiettare un nuovo tipo (LINQ to XML) (C
+# <a name="how-to-project-a-new-type-linq-to-xml-c"></a>Come proiettare un nuovo tipo (LINQ to XML) (C#)
 
 Negli altri esempi di questa sezione sono state illustrate query che restituiscono risultati sotto forma di <xref:System.Collections.Generic.IEnumerable%601> di <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> di `string` e <xref:System.Collections.Generic.IEnumerable%601> di `int`. Si tratta di tipi di risultati comuni, ma non sono appropriati per tutti gli scenari. In molti casi le query dovranno restituire un oggetto <xref:System.Collections.Generic.IEnumerable%601> di un altro tipo.
 
@@ -49,7 +50,7 @@ class Program {
 }
 ```
 
-In questo <xref:System.Xml.Linq.XContainer.Element%2A> esempio viene utilizzato il metodo che è stato introdotto nell'argomento [Come recuperare un singolo elemento figlio (LINQ to XML) (Cè)](how-to-retrieve-a-single-child-element-linq-to-xml.md). Vengono inoltre usati i cast per recuperare i valori degli elementi restituiti dal metodo <xref:System.Xml.Linq.XContainer.Element%2A>.  
+Questo esempio usa il <xref:System.Xml.Linq.XContainer.Element%2A> metodo introdotto nell'argomento [come recuperare un singolo elemento figlio (LINQ to XML) (C#)](how-to-retrieve-a-single-child-element-linq-to-xml.md). Vengono inoltre usati i cast per recuperare i valori degli elementi restituiti dal metodo <xref:System.Xml.Linq.XContainer.Element%2A>.  
 
 Nell'esempio viene prodotto l'output seguente:
 

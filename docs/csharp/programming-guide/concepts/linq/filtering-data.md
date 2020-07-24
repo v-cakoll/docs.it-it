@@ -1,13 +1,14 @@
 ---
 title: Filtro di dati (C#)
+description: Il filtro, noto anche come selezione, limita i risultati in base a una condizione. Informazioni sui metodi dell'operatore query standard in LINQ in C# che eseguono il filtro.
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: 74399244990f8ff2deaa1d10576ea94a57c16bee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f9f6d691da73b566e5135f6692c87ba3a8978005
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346986"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103926"
 ---
 # <a name="filtering-data-c"></a>Filtro di dati (C#)
 Il filtro si riferisce all'operazione in base alla quale il set di risultati viene limitato in modo da contenere solo gli elementi che corrispondono a una condizione specificata. È anche noto come selezione.  
@@ -49,8 +50,8 @@ foreach (string str in query)
 
 - <xref:System.Linq>
 - [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Panoramica degli operatori di query standard)
-- [clausola where](../../../language-reference/keywords/where-clause.md)
-- [Specificare dinamicamente i filtri dei predicati in fase di esecuzioneDynamically specify predicate filters at runtime](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
-- [Come eseguire una query sui metadati di un assembly con Reflection (LINQ) (C](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [Come eseguire una query per i file con un attributo o un nome specificato (C](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [Come ordinare o filtrare i dati di testo in base a parole o campi (LINQ) (C](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [clausola WHERE](../../../language-reference/keywords/where-clause.md)
+- [Specificare dinamicamente i filtri dei predicati in fase di esecuzione](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
+- [Come eseguire una query sui metadati di un assembly tramite reflection (LINQ) (C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [Come eseguire una query per i file con un attributo o un nome specifico (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [Come ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

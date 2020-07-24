@@ -1,13 +1,14 @@
 ---
 title: Concetti e terminologia (trasformazione funzionale) (C#)
+description: Le funzionalità di programmazione funzionale semplificano la trasformazione del codice XML. Informazioni sui concetti e sulla terminologia delle trasformazioni funzionali pure in C#.
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: 3e2ecc4c2f70700ae92ee36b6f122059b922332e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee972b376f0d0898b7681049b9641b43780ed353
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70040639"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103984"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Concetti e terminologia (trasformazione funzionale) (C#)
 
@@ -36,7 +37,7 @@ La *programmazione funzionale* è un approccio di programmazione che supporta di
 
 Dal punto di vista storico, i linguaggi di programmazione funzionale generici, tra cui ML, Scheme, Haskell e F# sono stati oggetto di interesse principalmente della comunità accademica. Sebbene sia sempre stato possibile scrivere trasformazioni funzionali pure in C#, le difficoltà associate a tale operazione ne hanno scoraggiato l'uso. Nelle recenti versioni di C#, tuttavia, nuovi costrutti di linguaggio, quali le espressioni lambda e l'inferenza dei tipi contribuiscono a rendere la programmazione funzionale più semplice e produttiva.
 
-Per ulteriori informazioni sulla programmazione funzionale, vedere [Programmazione funzionale e programmazione imperativa (C )](./functional-programming-vs-imperative-programming.md).
+Per altre informazioni sulla programmazione funzionale, vedere [programmazione funzionale e programmazione imperativa (C#)](./functional-programming-vs-imperative-programming.md).
 
 #### <a name="domain-specific-fp-languages"></a>Strumenti della programmazione funzionale specifici per il dominio
 
@@ -62,7 +63,7 @@ Set strutturato di dati, in genere di tipo uniforme. Per essere compatibile con 
 tupla (tipi anonimi) \
 Concetto matematico. Corrisponde a una sequenza finita di oggetti, ognuno di un tipo specifico, Una tupla è anche nota come elenco ordinato. I tipi anonimi costituiscono un'implementazione del linguaggio di questo concetto e consentono di dichiarare un tipo di classe senza nome e contemporaneamente di creare un'istanza di un oggetto di tale tipo.
 
-Per ulteriori informazioni, vedere [Tipi anonimi](../../classes-and-structs/anonymous-types.md).
+Per ulteriori informazioni, vedere [tipi anonimi](../../classes-and-structs/anonymous-types.md).
 
 inferenza dei tipi (tipizzazione implicita) \
 Capacità di un compilatore di determinare il tipo di una variabile anche in mancanza di una dichiarazione di tipo esplicita.
@@ -79,4 +80,4 @@ Queste funzionalità del linguaggio saranno usate negli esempi di codice di tutt
 ## <a name="see-also"></a>Vedere anche
 
 - [Introduzione alle trasformazioni funzionali pure (C#)](./introduction-to-pure-functional-transformations.md)
-- [Programmazione funzionale e programmazione imperativa (C )Functional Programming vs.](./functional-programming-vs-imperative-programming.md)
+- [Programmazione funzionale e programmazione imperativa (C#)](./functional-programming-vs-imperative-programming.md)

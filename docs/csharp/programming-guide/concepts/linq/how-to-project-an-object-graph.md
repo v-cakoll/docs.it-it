@@ -1,15 +1,16 @@
 ---
-title: Come proiettare un oggetto grafico (C
+title: Come proiettare un oggetto grafico (C#)
+description: Informazioni su come proiettare, o popolare, un oggetto grafico da XML in C#. Il codice di esempio popola un oggetto grafico con le classi di un file XML di esempio.
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: eafb3d9064159c43fc98e0b241f0045465fca824
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c2ea0e06d9a46a1b19236eae021a2a153fea1d4
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168960"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104620"
 ---
-# <a name="how-to-project-an-object-graph-c"></a>Come proiettare un oggetto grafico (C
+# <a name="how-to-project-an-object-graph-c"></a>Come proiettare un oggetto grafico (C#)
 In questo argomento viene illustrato come proiettare, ovvero popolare, un oggetto grafico da XML.  
   
 ## <a name="example"></a>Esempio  
@@ -214,7 +215,7 @@ class Program {
 }  
 ```  
   
- In questo esempio, il risultato della query <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem`LINQ viene restituito come un oggetto . Gli elementi della classe `PurchaseOrder` sono di tipo <xref:System.Collections.Generic.IEnumerable%601> di `PurchaseOrderItem`. Il codice usa il metodo di estensione <xref:System.Linq.Enumerable.ToList%2A> per creare una raccolta <xref:System.Collections.Generic.List%601> dai risultati della query.  
+ In questo esempio, il risultato della query LINQ viene restituito come <xref:System.Collections.Generic.IEnumerable%601> di `PurchaseOrderItem` . Gli elementi della classe `PurchaseOrder` sono di tipo <xref:System.Collections.Generic.IEnumerable%601> di `PurchaseOrderItem`. Il codice usa il metodo di estensione <xref:System.Linq.Enumerable.ToList%2A> per creare una raccolta <xref:System.Collections.Generic.List%601> dai risultati della query.  
   
  Questo esempio produce il seguente output:  
   

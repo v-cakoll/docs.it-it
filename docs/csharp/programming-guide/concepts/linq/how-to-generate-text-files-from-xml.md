@@ -1,15 +1,16 @@
 ---
-title: Come generare file di testo da XML (C
+title: Come generare file di testo da XML (C#)
+description: Informazioni su come generare un file con estensione CSV da un file XML in C#. Questo esempio usa la sintassi del metodo e l'operatore di aggregazione.
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 9ca76cf955e07bdcc8e095b30f6fadc74edba739
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6e9ce803ddfac3f1609d60a4f51661232cbb2f4
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345924"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105055"
 ---
-# <a name="how-to-generate-text-files-from-xml-c"></a>Come generare file di testo da XML (C
+# <a name="how-to-generate-text-files-from-xml-c"></a>Come generare file di testo da XML (C#)
 In questo esempio viene illustrato come generare un file CSV con valori delimitati da virgole da un file XML.  
   
 ## <a name="example"></a>Esempio  
@@ -44,7 +45,7 @@ string csv =
 Console.WriteLine(csv);  
 ```  
   
- L'output del codice è il seguente:  
+ Questo codice genera l'output seguente:  
   
 ```output  
 GREAL,Great Lakes Food Market,Howard Snyder,Marketing Manager,(503) 555-7555,2732 Baker Blvd.,Eugene,OR,97403,USA  

@@ -1,15 +1,16 @@
 ---
-title: Come eseguire una query per frasi che contengono un set specificato di parole (LINQ) (C
+title: Come eseguire una query per trovare frasi che contengono un set specificato di parole (LINQ) (C#)
+description: Informazioni su come usare LINQ in C# per trovare frasi in un file di testo che contengono corrispondenze per ogni set di parole, che può essere popolato in fase di esecuzione.
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: df279f57d9965d796397cbcf7a0f3ba05bf9e5c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c334c7948f19fb857709ff04a83e1dae56fc69da
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168856"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104530"
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Come eseguire una query per frasi che contengono un set specificato di parole (LINQ) (C
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Come eseguire una query per trovare frasi che contengono un set specificato di parole (LINQ) (C#)
 Questo esempio illustra come trovare frasi in un file di testo che contengono corrispondenze per ogni set di parole specificato. Sebbene la matrice dei termini di ricerca sia hardcoded in questo esempio, può essere anche popolata in modo dinamico durante il runtime. In questo esempio la query restituisce le frasi che contengono le parole "Historically", "data" e "integrated".  
   
 ## <a name="example"></a>Esempio  

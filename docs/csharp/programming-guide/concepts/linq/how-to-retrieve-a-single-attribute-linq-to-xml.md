@@ -1,15 +1,16 @@
 ---
-title: Come recuperare un singolo attributo (LINQ to XML) (C
+title: Come recuperare un singolo attributo (LINQ to XML) (C#)
+description: Informazioni su come usare LINQ to XML recuperare un singolo attributo di un elemento in C#, in base al nome dell'attributo.
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: 830a7be24702b6037ac62471060fbe49d8ded598
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4efcae5324ad5a2e4664e68e35e15ec2053daece
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168713"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103430"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Come recuperare un singolo attributo (LINQ to XML) (C
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Come recuperare un singolo attributo (LINQ to XML) (C#)
 In questo argomento viene illustrato come recuperare un singolo attributo di un elemento, dato il relativo nome. Questa procedura è utile per la scrittura di espressioni di query in cui si desidera trovare un elemento con un attributo specifico.  
   
  Il metodo <xref:System.Xml.Linq.XElement.Attribute%2A> della classe <xref:System.Xml.Linq.XElement> restituisce l'attributo <xref:System.Xml.Linq.XAttribute> con il nome specificato.  
@@ -35,7 +36,7 @@ foreach (XElement el in elList)
   
  In questo esempio vengono individuati tutti i discendenti dell'albero denominato `Phone` e quindi l'attributo denominato `type`.  
   
- L'output del codice è il seguente:  
+ Questo codice genera l'output seguente:  
   
 ```output  
 home  
@@ -61,7 +62,7 @@ foreach (XElement el in elList)
     Console.WriteLine((string)el.Attribute("type"));  
 ```  
   
- L'output del codice è il seguente:  
+ Questo codice genera l'output seguente:  
   
 ```output  
 home  
@@ -90,7 +91,7 @@ foreach (XElement el in elList)
     Console.WriteLine((string)el.Attribute(aw + "type"));  
 ```  
   
- L'output del codice è il seguente:  
+ Questo codice genera l'output seguente:  
   
 ```output  
 home  

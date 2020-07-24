@@ -1,15 +1,16 @@
 ---
-title: Come trovare l'elemento di pari livello immediatamente precedente (XPath-LINQ to XML) (C
+title: Come trovare l'elemento di pari livello immediatamente precedente (XPath-LINQ to XML) (C#)
+description: In questo esempio di C# viene confrontato XPath con LINQ to XML per individuare l'elemento di pari livello immediatamente precedente a un nodo.
 ms.date: 07/20/2015
 ms.assetid: 74c06201-0b1b-4b5e-b3ac-0092980614e6
-ms.openlocfilehash: 1e5aece41021642d43b7f6f7b78bb105156ee4ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eaee7f1205ce0d0b2a9c2c41d96ba532573a1384
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74140998"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105206"
 ---
-# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>Come trovare l'elemento di pari livello immediatamente precedente (XPath-LINQ to XML) (C
+# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>Come trovare l'elemento di pari livello immediatamente precedente (XPath-LINQ to XML) (C#)
 A volte è necessario trovare l'elemento di pari livello immediatamente precedente a un nodo. A causa della differenza nella semantica dei predicati di posizione per gli assi di pari livello precedenti in XPath rispetto a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], si tratta di uno dei confronti più interessanti.  
   
 ## <a name="example"></a>Esempio  

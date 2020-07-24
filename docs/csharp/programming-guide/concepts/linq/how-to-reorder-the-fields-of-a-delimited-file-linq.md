@@ -1,15 +1,16 @@
 ---
-title: Come riordinare i campi di un file delimitato (LINQ) (C
+title: Come riordinare i campi di un file delimitato (LINQ) (C#)
+description: Informazioni su come ridisporre i campi in un file con estensione CSV in LINQ in C#. Nell'esempio vengono modificati gli ordini di colonne, vengono uniti in colonne e le righe vengono ordinate in base a un valore di colonna.
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: 6bc502ff12a908edf43f9ff7f5f63f98c3ff29c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3ebc56b418d2732a296896a19d770136a56e2fbb
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347651"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103412"
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Come riordinare i campi di un file delimitato (LINQ) (C
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Come riordinare i campi di un file delimitato (LINQ) (C#)
 Un file con valori delimitati da virgole (CSV) è un file di testo che spesso viene usato per archiviare dati di un foglio di calcolo o altri dati tabulari rappresentati da righe e colonne. Usando il metodo <xref:System.String.Split%2A> per separare i campi, è molto semplice eseguire una query e modificare i file CSV tramite LINQ. In effetti la stessa tecnica può essere usata per riordinare le parti di qualsiasi riga di testo strutturata, non solo i file CSV.  
   
  Nell'esempio seguente vengono usate tre colonne per rappresentare "cognome", "nome" e "ID" di alcuni studenti. I campi sono in ordine alfabetico in base ai cognomi degli studenti. La query genera una nuova sequenza in cui la colonna ID viene visualizzata per prima, seguita da una seconda colonna che combina il nome e il cognome dello studente. Le righe vengono riordinate in base al campo ID. I risultati vengono salvati in un nuovo file e i dati originali non vengono modificati.  
@@ -82,4 +83,4 @@ Creare un progetto di applicazione console C# con direttive `using` per gli spaz
 
 - [LINQ e stringhe (C#)](./linq-and-strings.md)
 - [Directory di file e LINQ (C#)](./linq-and-file-directories.md)
-- [Come generare xml da file CSV (C](./how-to-generate-xml-from-csv-files.md)
+- [Come generare XML da file CSV (C#)](./how-to-generate-xml-from-csv-files.md)

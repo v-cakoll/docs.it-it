@@ -1,16 +1,17 @@
 ---
-title: Come eseguire una query per i file duplicati in un albero di directory (LINQ) (C
+title: Come eseguire una query per i file duplicati in un albero di directory (LINQ) (C#)
+description: Informazioni su come usare LINQ in C# per eseguire query per i nomi di file duplicati in directory diverse e su come eseguire una query per i file la cui dimensione e i tempi di ultima scrittura corrispondono.
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 0578d6c85c7d2e38c840c278c7ad2775467ac741
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 72acb0e0823138821d321ed3845ff7ac137aee0c
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168882"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104564"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Come eseguire una query per i file duplicati in un albero di directory (LINQ) (C
-Talvolta i file con lo stesso nome possono trovarsi in più di una cartella. Ad esempio, nella cartella di installazione di Visual Studio diverse cartelle hanno un file readme.htm. In questo esempio viene illustrato come eseguire una query per trovare tali nomi di file duplicati in una cartella radice specificata. Nel secondo esempio viene illustrato come eseguire una query per i file le cui dimensioni e LastWrite volte corrispondono anche.  
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Come eseguire una query per i file duplicati in un albero di directory (LINQ) (C#)
+Talvolta i file con lo stesso nome possono trovarsi in più di una cartella. Ad esempio, nella cartella di installazione di Visual Studio diverse cartelle hanno un file readme.htm. In questo esempio viene illustrato come eseguire una query per trovare tali nomi di file duplicati in una cartella radice specificata. Nel secondo esempio viene illustrato come eseguire una query per i file la cui dimensione e i tempi di ultima scrittura corrispondono.  
   
 ## <a name="example"></a>Esempio  
   

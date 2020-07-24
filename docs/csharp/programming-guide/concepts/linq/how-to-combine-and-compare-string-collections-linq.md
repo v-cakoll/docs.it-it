@@ -1,15 +1,16 @@
 ---
-title: Come combinare e confrontare raccolte di stringhe (LINQ) (C
+title: Come combinare e confrontare raccolte di stringhe (LINQ) (C#)
+description: Questo esempio unisce i file che contengono righe di testo. Informazioni su come eseguire una concatenazione semplice, un'Unione e un'intersezione tra i set di righe in LINQ in C#.
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: f73a31e109933a4b6dd0078934d89d3bb770de5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bfbdb9a0a3d531b56578b242c91596d9e41b6cd6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169454"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105360"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Come combinare e confrontare raccolte di stringhe (LINQ) (C
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Come combinare e confrontare raccolte di stringhe (LINQ) (C#)
 In questo esempio viene illustrato come unire i file che contengono righe di testo e quindi ordinare i risultati. In particolare viene illustrato come eseguire una concatenazione semplice, un'unione e un'intersezione su due set di righe di testo.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Per impostare il progetto e i file di testo  

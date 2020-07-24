@@ -1,15 +1,16 @@
 ---
-title: Come creare un documento con spazi dei nomi (C )(LINQ to XML)How to create a document with namespaces (C'è) (LINQ to XML)
+title: Come creare un documento con spazi dei nomi (C#) (LINQ to XML)
+description: Informazioni su come creare un documento con uno spazio dei nomi in LINQ to XML in C# usando un oggetto XNamespace per combinare lo spazio dei nomi con il nome locale.
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: 429b0b0b41f2201b983f931e469b25ff406b91ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6472baefc73285af1c6dca0bfe7d874003940fc4
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141330"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103400"
 ---
-# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Come creare un documento con spazi dei nomi (C )(LINQ to XML)How to create a document with namespaces (C'è) (LINQ to XML)
+# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Come creare un documento con spazi dei nomi (C#) (LINQ to XML)
 In questo argomento viene illustrato come creare documenti con spazi dei nomi.  
   
 ## <a name="example"></a>Esempio  
