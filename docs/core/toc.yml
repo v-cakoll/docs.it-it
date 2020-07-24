@@ -5,7 +5,7 @@ items:
     href: introduction.md
   - name: Panoramica di .NET Core
     href: about.md
-  - name: Installazione di
+  - name: Installazione
     items:
       - name: Panoramica
         href: install/index.yml
@@ -57,7 +57,7 @@ items:
         href: whats-new/dotnet-core-2-1.md
       - name: Novità di .NET Core 2.0
         href: whats-new/dotnet-core-2-0.md
-  - name: Modifiche che causano un'interruzione
+  - name: Modifiche di rilievo
     displayName: app compatibility
     href: compatibility/
   - name: Esercitazioni
@@ -168,7 +168,7 @@ items:
     items:
       - name: Panoramica
         href: project-sdk/overview.md
-      - name: Riferimento
+      - name: Informazioni di riferimento
         items:
           - name: Microsoft.NET.Sdk
             href: project-sdk/msbuild-props.md
@@ -182,7 +182,7 @@ items:
     items:
       - name: Panoramica
         href: tools/index.md
-      - name: Riferimento
+      - name: Informazioni di riferimento
         items:
           - name: dotnet
             href: tools/dotnet.md
@@ -304,6 +304,10 @@ items:
         items:
           - name: Eseguire il debug di una perdita di memoria
             href: diagnostics/debug-memory-leak.md
+          - name: Eseguire il debug dell'uso elevato della CPU
+            href: diagnostics/debug-highcpu.md
+          - name: Eseguire il debug di un deadlock
+            href: diagnostics/debug-deadlock.md
   - name: Strumenti aggiuntivi per .NET Core
     items:
       - name: Panoramica
@@ -394,7 +398,7 @@ items:
         href: ../desktop-wpf/migration/convert-project-from-net-framework.md
       - name: Convertire progetti C++/CLI
         href: porting/cpp-cli.md
-  - name: Unit test
+  - name: Testing unità
     displayName: 'xUnit,NUnit,MSTest,unit testing,testing'
     items:
       - name: Panoramica
