@@ -1,18 +1,19 @@
 ---
-title: Come contare le occorrenze di una parola in una stringa (LINQ) (C
+title: Come contare le occorrenze di una parola in una stringa (LINQ) (C#)
+description: Questo esempio usa una query LINQ in C# per conteggiare le occorrenze di una parola specificata in una stringa. Usa il metodo Split per creare una matrice di parole.
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
-ms.openlocfilehash: 9c3ac2e0d44d52e437586a4d105a022f75c1dc54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1621e776510e366aa779f1d45468be34b3dec373
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169325"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103365"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a><span data-ttu-id="d990d-102">Come contare le occorrenze di una parola in una stringa (LINQ) (C</span><span class="sxs-lookup"><span data-stu-id="d990d-102">How to count occurrences of a word in a string (LINQ) (C#)</span></span>
-<span data-ttu-id="d990d-103">Questo esempio illustra come usare una query LINQ per contare le occorrenze di una parola specifica all'interno di una stringa.</span><span class="sxs-lookup"><span data-stu-id="d990d-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="d990d-104">Si noti che per eseguire il conteggio viene prima chiamato il metodo <xref:System.String.Split%2A> per creare una matrice di parole.</span><span class="sxs-lookup"><span data-stu-id="d990d-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="d990d-105">Il metodo <xref:System.String.Split%2A> influisce negativamente sulle prestazioni.</span><span class="sxs-lookup"><span data-stu-id="d990d-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="d990d-106">Se l'unica operazione da eseguire sulla stringa è il conteggio delle parole, è consigliabile usare il metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A> o <xref:System.String.IndexOf%2A>.</span><span class="sxs-lookup"><span data-stu-id="d990d-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="d990d-107">Se tuttavia le prestazioni non rappresentano un problema critico o se la frase è già stata suddivisa per sottoporla ad altri tipi di query, anche LINQ costituisce una scelta appropriata per contare le parole o le frasi.</span><span class="sxs-lookup"><span data-stu-id="d990d-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a><span data-ttu-id="70205-104">Come contare le occorrenze di una parola in una stringa (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="70205-104">How to count occurrences of a word in a string (LINQ) (C#)</span></span>
+<span data-ttu-id="70205-105">Questo esempio illustra come usare una query LINQ per contare le occorrenze di una parola specifica all'interno di una stringa.</span><span class="sxs-lookup"><span data-stu-id="70205-105">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="70205-106">Si noti che per eseguire il conteggio viene prima chiamato il metodo <xref:System.String.Split%2A> per creare una matrice di parole.</span><span class="sxs-lookup"><span data-stu-id="70205-106">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="70205-107">Il metodo <xref:System.String.Split%2A> influisce negativamente sulle prestazioni.</span><span class="sxs-lookup"><span data-stu-id="70205-107">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="70205-108">Se l'unica operazione da eseguire sulla stringa è il conteggio delle parole, è consigliabile usare il metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A> o <xref:System.String.IndexOf%2A>.</span><span class="sxs-lookup"><span data-stu-id="70205-108">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="70205-109">Se tuttavia le prestazioni non rappresentano un problema critico o se la frase è già stata suddivisa per sottoporla ad altri tipi di query, anche LINQ costituisce una scelta appropriata per contare le parole o le frasi.</span><span class="sxs-lookup"><span data-stu-id="70205-109">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d990d-108">Esempio</span><span class="sxs-lookup"><span data-stu-id="d990d-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="70205-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="70205-110">Example</span></span>  
   
 ```csharp  
 class CountWords  
@@ -54,9 +55,9 @@ class CountWords
 */  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="d990d-109">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="d990d-109">Compiling the Code</span></span>  
- <span data-ttu-id="d990d-110">Creare un progetto di applicazione console C# con direttive `using` per gli spazi dei nomi System.Linq e System.IO.</span><span class="sxs-lookup"><span data-stu-id="d990d-110">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="70205-111">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="70205-111">Compiling the Code</span></span>  
+ <span data-ttu-id="70205-112">Creare un progetto di applicazione console C# con direttive `using` per gli spazi dei nomi System.Linq e System.IO.</span><span class="sxs-lookup"><span data-stu-id="70205-112">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d990d-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d990d-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="70205-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="70205-113">See also</span></span>
 
-- [<span data-ttu-id="d990d-112">LINQ e stringhe (C#)</span><span class="sxs-lookup"><span data-stu-id="d990d-112">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="70205-114">LINQ e stringhe (C#)</span><span class="sxs-lookup"><span data-stu-id="70205-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)

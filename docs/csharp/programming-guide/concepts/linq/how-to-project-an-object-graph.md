@@ -1,19 +1,20 @@
 ---
-title: Come proiettare un oggetto grafico (C
+title: Come proiettare un oggetto grafico (C#)
+description: Informazioni su come proiettare, o popolare, un oggetto grafico da XML in C#. Il codice di esempio popola un oggetto grafico con le classi di un file XML di esempio.
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: eafb3d9064159c43fc98e0b241f0045465fca824
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c2ea0e06d9a46a1b19236eae021a2a153fea1d4
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168960"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104620"
 ---
-# <a name="how-to-project-an-object-graph-c"></a><span data-ttu-id="cd0d7-102">Come proiettare un oggetto grafico (C</span><span class="sxs-lookup"><span data-stu-id="cd0d7-102">How to project an object graph (C#)</span></span>
-<span data-ttu-id="cd0d7-103">In questo argomento viene illustrato come proiettare, ovvero popolare, un oggetto grafico da XML.</span><span class="sxs-lookup"><span data-stu-id="cd0d7-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
+# <a name="how-to-project-an-object-graph-c"></a><span data-ttu-id="5f672-104">Come proiettare un oggetto grafico (C#)</span><span class="sxs-lookup"><span data-stu-id="5f672-104">How to project an object graph (C#)</span></span>
+<span data-ttu-id="5f672-105">In questo argomento viene illustrato come proiettare, ovvero popolare, un oggetto grafico da XML.</span><span class="sxs-lookup"><span data-stu-id="5f672-105">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cd0d7-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="cd0d7-104">Example</span></span>  
- <span data-ttu-id="cd0d7-105">Nel codice seguente un oggetto grafico viene popolato con le classi `Address`, `PurchaseOrder` e `PurchaseOrderItem` del [File XML di esempio: tipico ordine di acquisto (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) Documento XML.</span><span class="sxs-lookup"><span data-stu-id="cd0d7-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML document.</span></span>  
+## <a name="example"></a><span data-ttu-id="5f672-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="5f672-106">Example</span></span>  
+ <span data-ttu-id="5f672-107">Nel codice seguente un oggetto grafico viene popolato con le classi `Address`, `PurchaseOrder` e `PurchaseOrderItem` del [File XML di esempio: tipico ordine di acquisto (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) Documento XML.</span><span class="sxs-lookup"><span data-stu-id="5f672-107">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML document.</span></span>  
   
 ```csharp  
 class Address  
@@ -214,9 +215,9 @@ class Program {
 }  
 ```  
   
- <span data-ttu-id="cd0d7-106">In questo esempio, il risultato della query <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem`LINQ viene restituito come un oggetto .</span><span class="sxs-lookup"><span data-stu-id="cd0d7-106">In this example, the result of the LINQ query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="cd0d7-107">Gli elementi della classe `PurchaseOrder` sono di tipo <xref:System.Collections.Generic.IEnumerable%601> di `PurchaseOrderItem`.</span><span class="sxs-lookup"><span data-stu-id="cd0d7-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="cd0d7-108">Il codice usa il metodo di estensione <xref:System.Linq.Enumerable.ToList%2A> per creare una raccolta <xref:System.Collections.Generic.List%601> dai risultati della query.</span><span class="sxs-lookup"><span data-stu-id="cd0d7-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
+ <span data-ttu-id="5f672-108">In questo esempio, il risultato della query LINQ viene restituito come <xref:System.Collections.Generic.IEnumerable%601> di `PurchaseOrderItem` .</span><span class="sxs-lookup"><span data-stu-id="5f672-108">In this example, the result of the LINQ query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="5f672-109">Gli elementi della classe `PurchaseOrder` sono di tipo <xref:System.Collections.Generic.IEnumerable%601> di `PurchaseOrderItem`.</span><span class="sxs-lookup"><span data-stu-id="5f672-109">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="5f672-110">Il codice usa il metodo di estensione <xref:System.Linq.Enumerable.ToList%2A> per creare una raccolta <xref:System.Collections.Generic.List%601> dai risultati della query.</span><span class="sxs-lookup"><span data-stu-id="5f672-110">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
   
- <span data-ttu-id="cd0d7-109">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="cd0d7-109">The example produces the following output:</span></span>  
+ <span data-ttu-id="5f672-111">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="5f672-111">The example produces the following output:</span></span>  
   
 ```output  
 PurchaseOrderNumber: 99503  
@@ -255,7 +256,7 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cd0d7-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cd0d7-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5f672-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5f672-112">See also</span></span>
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>

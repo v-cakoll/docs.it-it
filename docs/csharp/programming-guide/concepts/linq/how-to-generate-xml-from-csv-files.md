@@ -1,21 +1,22 @@
 ---
-title: Come generare xml da file CSV (C
+title: Come generare XML da file CSV (C#)
+description: Informazioni su come usare LINQ e LINQ to XML in C# per generare codice XML da un file con estensione CSV. La query usa una clausola Let per suddividere le stringhe in matrici di campi.
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
-ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2fc9954a51fc1f2979c6cce13805ed15cdb88741
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635808"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105182"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="896e0-102">Come generare xml da file CSV (C</span><span class="sxs-lookup"><span data-stu-id="896e0-102">How to generate XML from CSV files (C#)</span></span>
-<span data-ttu-id="896e0-103">In questo esempio viene illustrato come utilizzare [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Language-Integrated Query (LINQ) e generare un file XML da un file con valori delimitati da virgole (CSV).</span><span class="sxs-lookup"><span data-stu-id="896e0-103">This example shows how to use Language-Integrated Query (LINQ) and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
+# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="2fd80-104">Come generare XML da file CSV (C#)</span><span class="sxs-lookup"><span data-stu-id="2fd80-104">How to generate XML from CSV files (C#)</span></span>
+<span data-ttu-id="2fd80-105">Questo esempio illustra come usare LINQ (Language Integrated Query) e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] per generare un file XML da un file con valori delimitati da virgole (CSV).</span><span class="sxs-lookup"><span data-stu-id="2fd80-105">This example shows how to use Language-Integrated Query (LINQ) and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="896e0-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="896e0-104">Example</span></span>  
- <span data-ttu-id="896e0-105">Il codice seguente esegue una query LINQ su una matrice di stringhe.</span><span class="sxs-lookup"><span data-stu-id="896e0-105">The following code performs a LINQ query on an array of strings.</span></span>  
+## <a name="example"></a><span data-ttu-id="2fd80-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="2fd80-106">Example</span></span>  
+ <span data-ttu-id="2fd80-107">Nel codice seguente viene eseguita una query LINQ su una matrice di stringhe.</span><span class="sxs-lookup"><span data-stu-id="2fd80-107">The following code performs a LINQ query on an array of strings.</span></span>  
   
- <span data-ttu-id="896e0-106">Nella query viene usata la clausola `let` per suddividere ogni stringa in una matrice di campi.</span><span class="sxs-lookup"><span data-stu-id="896e0-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
+ <span data-ttu-id="2fd80-108">Nella query viene usata la clausola `let` per suddividere ogni stringa in una matrice di campi.</span><span class="sxs-lookup"><span data-stu-id="2fd80-108">The query uses the `let` clause to split each string into an array of fields.</span></span>  
   
 ```csharp  
 // Create the text file.  
@@ -48,7 +49,7 @@ XElement cust = new XElement("Root",
 Console.WriteLine(cust);  
 ```  
   
- <span data-ttu-id="896e0-107">L'output del codice è il seguente:</span><span class="sxs-lookup"><span data-stu-id="896e0-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="2fd80-109">Questo codice genera l'output seguente:</span><span class="sxs-lookup"><span data-stu-id="2fd80-109">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  

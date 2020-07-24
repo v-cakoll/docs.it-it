@@ -1,19 +1,20 @@
 ---
-title: Come popolare una struttura ad albero XML dal file system (C
+title: Come popolare un albero XML dalla file system (C#)
+description: Informazioni su come popolare un albero XML dal file system in C#. In questo esempio viene popolato un codice XML, quindi viene eseguita una query sull'albero per calcolare le dimensioni totali di tutti i file.
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: beb44be1a787fa09b091aa48022dbb5b10c4632b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 676261656be7d306294c9912b75edcb51a31cccc
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345776"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104755"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a><span data-ttu-id="785ee-102">Come popolare una struttura ad albero XML dal file system (C</span><span class="sxs-lookup"><span data-stu-id="785ee-102">How to populate an XML tree from the file system (C#)</span></span>
-<span data-ttu-id="785ee-103">Un'applicazione utile e comune degli alberi XML è data dall'utilizzo come archivio dati nome/valore gerarchico.</span><span class="sxs-lookup"><span data-stu-id="785ee-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="785ee-104">È possibile popolare un albero XML con dati gerarchici e quindi eseguirvi query, trasformarla e, se necessario, serializzarla.</span><span class="sxs-lookup"><span data-stu-id="785ee-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="785ee-105">In questo scenario di utilizzo molte delle caratteristiche semantiche specifiche di XML, quali gli spazi dei nomi e il comportamento degli spazi vuoti, non sono rilevanti.</span><span class="sxs-lookup"><span data-stu-id="785ee-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="785ee-106">L'albero XML viene invece usato come piccolo database gerarchico in memoria per singolo utente.</span><span class="sxs-lookup"><span data-stu-id="785ee-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a><span data-ttu-id="bc35e-104">Come popolare un albero XML dalla file system (C#)</span><span class="sxs-lookup"><span data-stu-id="bc35e-104">How to populate an XML tree from the file system (C#)</span></span>
+<span data-ttu-id="bc35e-105">Un'applicazione utile e comune degli alberi XML è data dall'utilizzo come archivio dati nome/valore gerarchico.</span><span class="sxs-lookup"><span data-stu-id="bc35e-105">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="bc35e-106">È possibile popolare un albero XML con dati gerarchici e quindi eseguirvi query, trasformarla e, se necessario, serializzarla.</span><span class="sxs-lookup"><span data-stu-id="bc35e-106">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="bc35e-107">In questo scenario di utilizzo molte delle caratteristiche semantiche specifiche di XML, quali gli spazi dei nomi e il comportamento degli spazi vuoti, non sono rilevanti.</span><span class="sxs-lookup"><span data-stu-id="bc35e-107">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="bc35e-108">L'albero XML viene invece usato come piccolo database gerarchico in memoria per singolo utente.</span><span class="sxs-lookup"><span data-stu-id="bc35e-108">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="785ee-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="785ee-107">Example</span></span>  
- <span data-ttu-id="785ee-108">Nell'esempio seguente un albero XML viene popolato dal file system locale tramite la ricorsione.</span><span class="sxs-lookup"><span data-stu-id="785ee-108">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="785ee-109">Viene quindi eseguita una query sull'albero per calcolare le dimensioni totali di tutti i file dell'albero.</span><span class="sxs-lookup"><span data-stu-id="785ee-109">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
+## <a name="example"></a><span data-ttu-id="bc35e-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="bc35e-109">Example</span></span>  
+ <span data-ttu-id="bc35e-110">Nell'esempio seguente un albero XML viene popolato dal file system locale tramite la ricorsione.</span><span class="sxs-lookup"><span data-stu-id="bc35e-110">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="bc35e-111">Viene quindi eseguita una query sull'albero per calcolare le dimensioni totali di tutti i file dell'albero.</span><span class="sxs-lookup"><span data-stu-id="bc35e-111">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
   
 ```csharp  
 class Program  
@@ -46,7 +47,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="785ee-110">In questo esempio viene prodotto un output simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="785ee-110">This example produces output similar to the following:</span></span>  
+ <span data-ttu-id="bc35e-112">In questo esempio viene prodotto un output simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="bc35e-112">This example produces output similar to the following:</span></span>  
   
 ```xml  
 <Dir Name="Tmp">  
