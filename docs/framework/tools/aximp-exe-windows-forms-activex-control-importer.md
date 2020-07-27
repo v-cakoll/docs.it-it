@@ -1,5 +1,6 @@
 ---
 title: Aximp.exe (utilità di importazione di controlli ActiveX di Windows Form)
+description: Informazioni Aximp.exe Windows Forms utilità di importazione del controllo ActiveX. Questo strumento converte le definizioni dei tipi in una libreria dei tipi COM per ActiveX in Windows Forms.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ActiveX controls, hosting in Windows Forms
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: 6d58d1df81780c3033eab7c1ac3e860adeb374b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d4fd6762195078963b43392178996a61f90feb94
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180421"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167340"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (utilità di importazione di controlli ActiveX di Windows Form)
 L'utilità di importazione di controlli ActiveX converte in un controllo Windows Form le definizioni dei tipi in una libreria di tipi COM per un controllo ActiveX.  
@@ -36,13 +37,13 @@ aximp [options]{file.dll | file.ocx}
   
 |Argomento|Descrizione|  
 |--------------|-----------------|  
-|*ﬁle*|Nome del file di origine contenente il controllo ActiveX da convertire. L'argomento del file deve avere l'estensione .dll oppure .ocx.|  
+|*file*|Nome del file di origine contenente il controllo ActiveX da convertire. L'argomento del file deve avere l'estensione .dll oppure .ocx.|  
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |`/delaysign`|Specifica ad Aximp.exe di firmare il controllo risultante utilizzando la firma ritardata. È necessario specificare questa opzione con l'opzione `/keycontainer:`, `/keyfile:` o `/publickey:`. Per altre informazioni sulla firma ritardata, vedere [Ritardo della firma di un assembly](../../standard/assembly/delay-sign.md).|  
 |`/help`|Visualizza la sintassi e le opzioni di comando dello strumento.|  
-|`/keycontainer:`*containerName (nomecontenitore)*|Firma il controllo risultante con un nome sicuro usando la coppia di chiavi pubblica/privata presente nel contenitore di chiavi specificato da *containerName*.|  
+|`/keycontainer:`*containerName*|Firma il controllo risultante con un nome sicuro usando la coppia di chiavi pubblica/privata presente nel contenitore di chiavi specificato da *containerName*.|  
 |`/keyfile:`*nome file*|Firma il controllo risultante con un nome sicuro usando la coppia di chiavi pubblica/privata ufficiale del server di pubblicazione trovata in *filename*.|  
 |`/nologo`|Evita la visualizzazione del messaggio di avvio Microsoft.|  
 |`/out:`*nome file*|Specifica il nome dell'assembly da creare.|  

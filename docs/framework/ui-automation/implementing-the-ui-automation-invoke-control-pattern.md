@@ -1,17 +1,18 @@
 ---
 title: Implementazione del pattern di controllo Invoke di automazione interfaccia utente
+description: Leggere linee guida e convenzioni per implementare il pattern di controllo Invoke nell'automazione interfaccia utente. Vedere Membri obbligatori per l'interfaccia IInvokeProvider.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Invoke control pattern
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-ms.openlocfilehash: 30ae83aa4b73f36afce1251387598ef9b61816d8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b464b3ab5cd2b0789798f8b865b946c5eae017eb
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435165"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166168"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>Implementazione del pattern di controllo Invoke di automazione interfaccia utente
 
@@ -51,7 +52,7 @@ Quando si implementa il pattern di controllo pattern, tenere presenti le linee g
 
 - Un elemento può scomparire dall'albero [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] subito dopo essere stato richiamato. Di conseguenza, la richiesta di informazioni dall'elemento fornito dal callback di evento potrebbe avere esito negativo. La prelettura delle informazioni memorizzate nella cache rappresenta la soluzione alternativa consigliata.
 
-- I controlli possono implementare più pattern di controllo. Ad esempio, il controllo colore riempimento sulla barra degli strumenti di Microsoft Excel implementa i pattern di controllo <xref:System.Windows.Automation.InvokePattern> e <xref:System.Windows.Automation.ExpandCollapsePattern>. <xref:System.Windows.Automation.ExpandCollapsePattern> espone il menu e <xref:System.Windows.Automation.InvokePattern> riempie la selezione attiva con il colore selezionato.
+- I controlli possono implementare più pattern di controllo. Ad esempio, il controllo colore riempimento sulla barra degli strumenti di Microsoft Excel implementa i <xref:System.Windows.Automation.InvokePattern> <xref:System.Windows.Automation.ExpandCollapsePattern> pattern di controllo e. <xref:System.Windows.Automation.ExpandCollapsePattern> espone il menu e <xref:System.Windows.Automation.InvokePattern> riempie la selezione attiva con il colore selezionato.
 
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
 
@@ -61,7 +62,7 @@ Le proprietà e i metodi seguenti sono obbligatori per l'implementazione di <xre
 
 |Membri obbligatori|Tipo di membro|Note|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|metodo|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> è una chiamata asincrona e deve restituire immediatamente un valore senza bloccarsi.<br /><br /> Questo comportamento è particolarmente critico per i controlli che direttamente o indirettamente avviano una finestra di dialogo quando vengono chiamati. Qualsiasi client di automazione interfaccia utente che ha generato l'evento rimarrà bloccato fino a quando non viene chiusa la finestra di dialogo modale.|
+|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|method|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> è una chiamata asincrona e deve restituire immediatamente un valore senza bloccarsi.<br /><br /> Questo comportamento è particolarmente critico per i controlli che direttamente o indirettamente avviano una finestra di dialogo quando vengono chiamati. Qualsiasi client di automazione interfaccia utente che ha generato l'evento rimarrà bloccato fino a quando non viene chiusa la finestra di dialogo modale.|
 
 <a name="Exceptions"></a>
 
@@ -75,9 +76,9 @@ I provider devono generare le eccezioni seguenti.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
+- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
-- [Invoke a Control Using UI Automation](invoke-a-control-using-ui-automation.md)
-- [Panoramica dell'albero di automazione interfaccia utente](ui-automation-tree-overview.md)
-- [Usare la memorizzazione nella cache in automazione interfaccia utente](use-caching-in-ui-automation.md)
+- [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
+- [Richiamare un controllo utilizzando automazione interfaccia utente](invoke-a-control-using-ui-automation.md)
+- [Panoramica dell'albero di automazione dell'interfaccia utente](ui-automation-tree-overview.md)
+- [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](use-caching-in-ui-automation.md)

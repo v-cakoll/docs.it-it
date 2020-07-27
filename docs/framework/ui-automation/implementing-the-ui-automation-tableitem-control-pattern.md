@@ -1,17 +1,18 @@
 ---
 title: Implementazione del pattern di controllo TableItem di automazione interfaccia utente
+description: Esaminare le linee guida e le convenzioni per implementare il pattern di controllo TableItem in automazione interfaccia utente. Conosce i membri obbligatori per l'interfaccia ITableItemProvider.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Table Item
 - UI Automation, Table Item control pattern
 - TableItem control pattern
 ms.assetid: ac178408-1485-436f-8d3e-eee3bf80cb24
-ms.openlocfilehash: f35b491c31e8725eac0025dfd6815079d0ea9b79
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3d6d31fe0e041fbba147df14d290a775188755f2
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180070"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163522"
 ---
 # <a name="implementing-the-ui-automation-tableitem-control-pattern"></a>Implementazione del pattern di controllo TableItem di automazione interfaccia utente
 > [!NOTE]
@@ -24,15 +25,15 @@ ms.locfileid: "79180070"
 <a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>Linee guida e convenzioni di implementazione  
   
-- Per la funzionalità correlata degli elementi della griglia, vedere Implementazione del pattern di controllo [GridItem di automazione interfaccia utente.](implementing-the-ui-automation-griditem-control-pattern.md)  
+- Per la funzionalità degli elementi della griglia correlata, vedere [implementazione del pattern di controllo GridItem di automazione interfaccia utente](implementing-the-ui-automation-griditem-control-pattern.md).  
   
 <a name="Required_Members_for_ITableItemProvider"></a>
 ## <a name="required-members-for-itableitemprovider"></a>Membri obbligatori per ITableItemProvider  
   
 |Membro obbligatorio|Tipo di membro|Note|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetColumnHeaderItems%2A>|Metodo|nessuno|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetRowHeaderItems%2A>|Metodo|nessuno|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetColumnHeaderItems%2A>|Metodo|Nessuno|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetRowHeaderItems%2A>|Metodo|Nessuno|  
   
  Questo pattern di controllo non è associato a proprietà o eventi.  
   
@@ -42,10 +43,10 @@ ms.locfileid: "79180070"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
 - [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
 - [Implementazione del pattern di controllo Table di automazione interfaccia utente](implementing-the-ui-automation-table-control-pattern.md)
 - [Implementazione del pattern di controllo GridItem di automazione interfaccia utente](implementing-the-ui-automation-griditem-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Panoramica dell'albero di automazione dell'interfaccia utente](ui-automation-tree-overview.md)
 - [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](use-caching-in-ui-automation.md)

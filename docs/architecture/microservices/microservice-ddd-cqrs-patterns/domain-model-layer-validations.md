@@ -2,12 +2,12 @@
 title: Progettazione di convalide nel livello del modello di dominio
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni sui concetti chiave delle convalide del modello di dominio.
 ms.date: 10/08/2018
-ms.openlocfilehash: 94df2d6441581fbbae479da2524d6ffce2037d68
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: f1e2d7430c642ad47f79cdd34d3a65e2cc70e239
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100912"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164281"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Progettare convalide nel livello del modello di dominio
 
@@ -15,9 +15,9 @@ In DDD le regole di convalida possono essere considerate invariabili. Lo scopo p
 
 Le entità di dominio devono essere sempre entità valide. Alcune invariabili per un oggetto devono essere sempre true. Ad esempio, la quantità di un oggetto di tipo articolo dell'ordine deve essere sempre un numero intero positivo e tale oggetto deve includere anche un nome di articolo e il prezzo. L'applicazione delle invariabili è quindi responsabilità delle entità di dominio, in particolare per la radice dell'aggregazione, e l'oggetto entità non può esistere senza essere valido. Le regole delle invariabili vengono semplicemente espresse come contratti e vengono generate eccezioni o notifiche in caso di violazione.
 
-È infatti possibile che vengano generati molti bug perché gli oggetti hanno uno stato non previsto. Greg Young fornisce una spiegazione eccellente in una [discussione online](https://jeffreypalermo.com/2009/05/the-fallacy-of-the-always-valid-entity/):
+È infatti possibile che vengano generati molti bug perché gli oggetti hanno uno stato non previsto. Questa [discussione online](http://codebetter.com/gregyoung/2009/05/22/always-valid/) è una spiegazione efficace di Greg Young.
 
-Si supponga che sia disponibile un SendUserCreationEmailService che accetta un valore UserProfile. È necessario stabilire come razionalizzare il fatto che il nome non sia Null in tale servizio. È ad esempio possibile controllarlo di nuovo oppure è semplicemente possibile non controllare e augurarsi che il nome sia stato convalidato prima dell'invio. Usando TDD è ovviamente consigliabile scrivere prima di tutto un test in modo che venga generato un errore in caso di invio di un cliente con nome Null. Quando tuttavia si scrivono ripetutamente test di questo tipo, ci si rende conto che se non si consente mai al nome di essere Null non sarebbe necessario scrivere i test.
+Si supponga che sia disponibile un SendUserCreationEmailService che accetta un valore UserProfile. È necessario stabilire come razionalizzare il fatto che il nome non sia Null in tale servizio. È ad esempio possibile controllarlo di nuovo oppure è semplicemente possibile non controllare e augurarsi che il nome sia stato convalidato prima dell'invio. Usando TDD è ovviamente consigliabile scrivere prima di tutto un test in modo che venga generato un errore in caso di invio di un cliente con nome Null. Tuttavia, una volta ricominciate a scrivere questi tipi di test, ci rendiamo conto... "Attendi se il nome non è mai consentito per diventare null, non sono disponibili tutti questi test".
 
 ## <a name="implement-validations-in-the-domain-model-layer"></a>Implementare convalide nel livello del modello di dominio
 

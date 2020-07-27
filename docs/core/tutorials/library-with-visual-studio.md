@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: ef9c62b0378e1064d8cfd90a8c59aed74ea312b2
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 69259b1d47a8e30945c578db10c6d697c81fa261
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701565"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164403"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>Esercitazione: creare una libreria di .NET Standard con Visual Studio
 
@@ -111,7 +111,7 @@ Inizialmente, il nuovo progetto di app console non ha accesso alla libreria di c
 
    ![Menu di scelta rapida del progetto di Visual Studio per impostare il progetto di avvio](media/library-with-visual-studio/set-startup-project-context-menu.png)
 
-1. Premere <kbd>MAIUSC</kbd> + <kbd>F5</kbd> per compilare ed eseguire il programma senza debug.
+1. Premere <kbd>CTRL</kbd> + <kbd>F5</kbd> per compilare ed eseguire il programma senza debug.
 
    ![Barra degli strumenti del progetto di Visual Studio con il pulsante debug](media/library-with-visual-studio/visual-studio-project-toolbar.png)
 

@@ -1,17 +1,18 @@
 ---
 title: Implementazione del pattern di controllo GridItem di automazione interfaccia utente
+description: Informazioni sulle linee guida e le convenzioni per implementare il pattern di controllo GridItemPattern per gli elementi della griglia nell'automazione interfaccia utente. Vedere Membri obbligatori per IGridItemProvider.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, GridItem
 - UI Automation GridItem control pattern
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
-ms.openlocfilehash: d561587e6bb98ba857b27ba89b4c1a45ba964ffd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e0a0c616f3f0cf9bc091e4fbb496d71ab8550bd3
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180192"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165816"
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>Implementazione del pattern di controllo GridItem di automazione interfaccia utente
 > [!NOTE]
@@ -39,11 +40,11 @@ ms.locfileid: "79180192"
   
 |Membri obbligatori|Tipo di membro|Note|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Proprietà|nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Proprietà|Nessuno|  
   
  Questo pattern di controllo non è associato a metodi o eventi.  
   
@@ -53,9 +54,9 @@ ms.locfileid: "79180192"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
 - [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
 - [Implementazione del pattern di controllo Grid di automazione interfaccia utente](implementing-the-ui-automation-grid-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Panoramica dell'albero di automazione dell'interfaccia utente](ui-automation-tree-overview.md)
 - [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](use-caching-in-ui-automation.md)

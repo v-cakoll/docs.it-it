@@ -1,17 +1,18 @@
 ---
 title: Implementazione del pattern di controllo Selection di automazione interfaccia utente
+description: Esaminare le linee guida e le convenzioni per l'implementazione del pattern di controllo Selection nell'automazione interfaccia utente. Vedere Membri obbligatori per l'interfaccia ISelectionProvider.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Selection control pattern
 - UI Automation, Selection control pattern
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
-ms.openlocfilehash: 083a4bb56fe76c1d65015ffabf741d7e1953d2ff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d3854a401ae6179be4e4e75d86964108d83b0ccf
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180126"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163582"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>Implementazione del pattern di controllo Selection di automazione interfaccia utente
 > [!NOTE]
@@ -29,12 +30,12 @@ ms.locfileid: "79180126"
   
 - I controlli che presentano un intervallo minimo, massimo e continuo, ad esempio il controllo dispositivo di scorrimento **Volume** , deve implementare <xref:System.Windows.Automation.Provider.IRangeValueProvider> anziché <xref:System.Windows.Automation.Provider.ISelectionProvider>.  
   
-- I controlli a selezione singola <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>che gestiscono i controlli figlio che implementano , ad esempio il dispositivo di scorrimento <xref:System.Windows.Automation.Provider.ISelectionProvider> **Risoluzione dello schermo** nella finestra di dialogo Proprietà dello **schermo** o il controllo di selezione Selezione **colori** di Microsoft Word (illustrato di seguito), devono implementare ; i loro figli <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> <xref:System.Windows.Automation.Provider.ISelectionItemProvider>dovrebbero attuare sia che .  
+- I controlli a selezione singola che gestiscono i controlli figlio che implementano <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot> , ad esempio il dispositivo di scorrimento **risoluzione schermo** nella finestra di dialogo **proprietà di visualizzazione** o il controllo selezione selezione **colori** da Microsoft Word (illustrato di seguito), devono implementare. <xref:System.Windows.Automation.Provider.ISelectionProvider> i relativi elementi figlio devono implementare <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> e <xref:System.Windows.Automation.Provider.ISelectionItemProvider> .  
   
  ![Selezione colori con il giallo evidenziato](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Esempio di mapping delle stringhe dei campioni colore  
   
-- I menu non supportano <xref:System.Windows.Automation.SelectionPattern>. Se si utilizzano voci di menu che includono sia grafica che testo (ad esempio le voci del **riquadro** di anteprima nel menu **Visualizza** in Microsoft Outlook) ed è necessario trasmettere lo stato, è necessario implementare <xref:System.Windows.Automation.Provider.IToggleProvider>.  
+- I menu non supportano <xref:System.Windows.Automation.SelectionPattern>. Se si utilizzano voci di menu che includono grafica e testo, ad esempio gli elementi del **riquadro di anteprima** nel menu **Visualizza** in Microsoft Outlook, ed è necessario indicare lo stato, è necessario implementare <xref:System.Windows.Automation.Provider.IToggleProvider> .  
   
 <a name="Required_Members_for_ISelectionProvider"></a>
 ## <a name="required-members-for-iselectionprovider"></a>Membri obbligatori per ISelectionProvider  
@@ -44,7 +45,7 @@ Esempio di mapping delle stringhe dei campioni colore
 |----------------------|----------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Proprietà|Deve supportare gli eventi modificati dalla proprietà tramite <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> e <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Proprietà|Deve supportare gli eventi modificati dalla proprietà tramite <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> e <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>.|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Metodo|nessuno|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Metodo|Nessuno|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Event|Generato quando una selezione in un contenitore ha subito modifiche significative e richiede l'invio di un numero di eventi di aggiunta e rimozione maggiore rispetto a quanto definito mediante la costante <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> .|  
   
  Le proprietà <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> e <xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A> possono essere dinamiche. Ad esempio, lo stato iniziale di un controllo potrebbe prevedere la selezione di nessun elemento per impostazione predefinita, a indicare che <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> è `false`. Tuttavia, dopo aver selezionato un elemento, il controllo deve sempre avere almeno un elemento selezionato. Analogamente, in casi rari, un controllo potrebbe consentire la selezione di più elementi durante l'inizializzazione e successivamente consentire solo selezioni singole.  
@@ -60,9 +61,9 @@ Esempio di mapping delle stringhe dei campioni colore
   
 ## <a name="see-also"></a>Vedere anche
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
 - [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
 - [Implementazione del pattern di controllo SelectionItem di automazione interfaccia utente](implementing-the-ui-automation-selectionitem-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Panoramica dell'albero di automazione dell'interfaccia utente](ui-automation-tree-overview.md)
 - [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](use-caching-in-ui-automation.md)

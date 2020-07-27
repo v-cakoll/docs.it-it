@@ -1,15 +1,16 @@
 ---
-title: Modifica dell'albero XML in memoria e costruzione funzionale (LINQ to XML) (C
+title: Modifica dell'albero XML in memoria rispetto alla costruzione funzionale (LINQ to XML) (C#)
+description: Questi esempi modificano la forma di un documento XML modificando il sistema e usando LINQ to XML costruzione funzionale in C#.
 ms.date: 07/20/2015
 ms.assetid: b5afc31d-a325-4ec6-bf17-0ff90a20ffca
-ms.openlocfilehash: 55eb95585bdd5d2c52175cacae2e6d049bd06f69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7a2e3d2ddcd452cf6a58e9d5cc886f3e8b8dd325
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66484561"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165778"
 ---
-# <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>Modifica dell'albero XML in memoria e costruzione funzionale (LINQ to XML) (C
+# <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>Modifica dell'albero XML in memoria rispetto alla costruzione funzionale (LINQ to XML) (C#)
 La modifica di un albero XML sul posto è un approccio tradizionale per cambiare la forma di un documento XML. In una tipica applicazione un documento viene caricato in un archivio dati quale DOM o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], viene usata un'interfaccia di programmazione per inserire o eliminare nodi oppure per modificarne il contenuto, quindi il file XML viene salvato in un file o trasmesso tramite una rete.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] consente di adottare un altro approccio che risulta utile in molti scenari: la *costruzione funzionale*. Nella costruzione funzionale la modifica di dati viene considerata come un problema di trasformazione, anziché come una modifica dettagliata di un archivio dati. Se è possibile trasformare in modo efficiente una rappresentazione di dati da un formato a un altro, il risultato è identico a quello ottenuto modificando un archivio dati in modo da cambiarne la forma. Un aspetto importante dell'approccio della costruzione funzionale riguarda il passaggio dei risultati delle query ai costruttori <xref:System.Xml.Linq.XDocument> e <xref:System.Xml.Linq.XElement>.  
@@ -42,7 +43,7 @@ root.Attributes().Remove();
 Console.WriteLine(root);  
 ```  
   
- L'output del codice è il seguente:  
+ Questo codice genera l'output seguente:  
   
 ```xml  
 <Root>  

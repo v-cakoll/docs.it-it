@@ -2,12 +2,12 @@
 title: Aggiunte al formato csproj per .NET Core
 description: Informazioni sulle differenze tra i file csproj esistenti e .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: fadc6de43f522129970e48bc72914cf187fe3f82
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 619f6121d9d476726c3d422e50737ff3d622f444
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607706"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164926"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Aggiunte al formato csproj per .NET Core
 
@@ -15,7 +15,7 @@ Questo documento descrive le modifiche aggiunte ai file di progetto nell'ambito 
 
 ## <a name="implicit-package-references"></a>Riferimenti impliciti al pacchetto
 
-È possibile fare riferimento ai metapacchetti in modo implicito in base ai framework di destinazione specificati nella proprietà `<TargetFramework>` o `<TargetFrameworks>` del file di progetto. `<TargetFrameworks>` viene ignorato se è specificato `<TargetFramework>`, indipendentemente dall'ordine. Per ulteriori informazioni, consultate [Pacchetti, metapacchetti e framework.](../packages.md)
+È possibile fare riferimento ai metapacchetti in modo implicito in base ai framework di destinazione specificati nella proprietà `<TargetFramework>` o `<TargetFrameworks>` del file di progetto. `<TargetFrameworks>` viene ignorato se è specificato `<TargetFramework>`, indipendentemente dall'ordine.
 
 ```xml
  <PropertyGroup>
@@ -41,9 +41,9 @@ Poiché si fa riferimento ai metapacchetti `Microsoft.NETCore.App` o `NETStandar
 
 ## <a name="implicit-version-for-some-package-references"></a>Versione implicita per alcuni riferimenti al pacchetto
 
-La maggior [`<PackageReference>`](#packagereference) parte degli `Version` utilizzi richiede l'impostazione dell'attributo per specificare la versione del pacchetto NuGet da utilizzare. Se però si usa .NET Core 2.1 o 2.2 e si fa riferimento a [Microsoft.AspNetCore.App](/aspnet/core/fundamentals/metapackage-app) o [Microsoft.AspNetCore.All](/aspnet/core/fundamentals/metapackage), l'attributo non è necessario. .NET Core SDK può selezionare automaticamente la versione dei pacchetti che deve essere usata.
+Per la maggior parte degli utilizzi di [`<PackageReference>`](#packagereference) è necessario impostare l' `Version` attributo per specificare la versione del pacchetto NuGet da usare. Se però si usa .NET Core 2.1 o 2.2 e si fa riferimento a [Microsoft.AspNetCore.App](/aspnet/core/fundamentals/metapackage-app) o [Microsoft.AspNetCore.All](/aspnet/core/fundamentals/metapackage), l'attributo non è necessario. .NET Core SDK può selezionare automaticamente la versione dei pacchetti che deve essere usata.
 
-### <a name="recommendation"></a>Recommendation
+### <a name="recommendation"></a>Raccomandazione
 
 Quando si fa riferimento ai pacchetti `Microsoft.AspNetCore.App` o `Microsoft.AspNetCore.All`, non specificarne la versione. Se si specifica una versione, l'SDK potrebbe visualizzare l'avviso NETSDK1071. Per non visualizzare più questo avviso, rimuovere la versione del pacchetto come nell'esempio seguente:
 
@@ -74,7 +74,7 @@ La tabella seguente mostra gli elementi e i [GLOB](https://en.wikipedia.org/wiki
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | Compilazione           | \*\*/\*.cs (o altre estensioni del linguaggio) | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc  | N/D                      |
 | EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/D                      |
-| nessuno              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx   |
+| Nessuno              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx   |
 
 > [!NOTE]
 > Il criterio **GLOB Exclude** esclude sempre le cartelle `./bin` e `./obj`, rappresentate rispettivamente dalle proprietà MSBuild `$(BaseOutputPath)` e `$(BaseIntermediateOutputPath)`. Nel complesso, tutte le esclusioni sono rappresentate da `$(DefaultItemExcludes)`.
@@ -125,13 +125,13 @@ Se il progetto contiene più framework di destinazione, i risultati del comando 
 
 ### <a name="sdk-attribute"></a>Attributo Sdk
 
-L'elemento radice `<Project>` del file con estensione *csproj* ha un nuovo attributo, denominato `Sdk`. `Sdk` specifica l'SDK che viene usato dal progetto. l'SDK, come descritto dal [documento sui livelli](cli-msbuild-architecture.md), è un set di [attività](/visualstudio/msbuild/msbuild-tasks) e [destinazioni](/visualstudio/msbuild/msbuild-targets) di MSBuild che consente di compilare codice .NET Core. Per .NET Core sono disponibili i seguenti SDK:
+L'elemento radice `<Project>` del file con estensione *csproj* ha un nuovo attributo, denominato `Sdk`. `Sdk` specifica l'SDK che viene usato dal progetto. l'SDK, come descritto dal [documento sui livelli](cli-msbuild-architecture.md), è un set di [attività](/visualstudio/msbuild/msbuild-tasks) e [destinazioni](/visualstudio/msbuild/msbuild-targets) di MSBuild che consente di compilare codice .NET Core. Per .NET Core sono disponibili gli SDK seguenti:
 
 1. .NET Core SDK con l'ID di `Microsoft.NET.Sdk`
 2. .NET Core Web SDK con l'ID di `Microsoft.NET.Sdk.Web`
 3. .NET Core Razor Class Library SDK con l'ID di `Microsoft.NET.Sdk.Razor`
-4. Il servizio di lavoro .NET `Microsoft.NET.Sdk.Worker` Core con ID di (dal .NET Core 3.0)
-5. I .NET Core WinForms e `Microsoft.NET.Sdk.WindowsDesktop` WPF con id di (da .NET Core 3.0)
+4. Il servizio del ruolo di lavoro di .NET Core con ID `Microsoft.NET.Sdk.Worker` (a partire da .net core 3,0)
+5. WinForms di .NET Core e WPF con ID (a `Microsoft.NET.Sdk.WindowsDesktop` partire da .net core 3,0)
 
 Per usare gli strumenti di .NET Core e compilare il codice, è necessario impostare l'attributo `Sdk` su uno di questi ID nell'elemento `<Project>`.
 
@@ -145,7 +145,7 @@ Un elemento `<PackageReference>` specifica una [dipendenza NuGet nel progetto](/
 
 #### <a name="version"></a>Versione
 
-L'attributo `Version` obbligatorio specifica la versione del pacchetto da ripristinare. L'attributo rispetta le regole dello schema dell'intervallo di [versioni NuGet.](/nuget/concepts/package-versioning#version-ranges) Il comportamento predefinito è una versione minima, una corrispondenza inclusiva. Ad esempio, `Version="1.2.3"` specificare è equivalente `[1.2.3, )` alla notazione NuGet e significa che il pacchetto risolto avrà la versione 1.2.3 se disponibile o superiore in caso contrario.
+L'attributo `Version` obbligatorio specifica la versione del pacchetto da ripristinare. L'attributo rispetta le regole dello schema di [intervallo di versioni NuGet](/nuget/concepts/package-versioning#version-ranges) . Il comportamento predefinito è una versione minima e una corrispondenza inclusiva. Ad esempio, `Version="1.2.3"` se si specifica è equivalente alla notazione NuGet `[1.2.3, )` e il pacchetto risolto avrà la versione 1.2.3 se disponibile o superiore in caso contrario.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets e PrivateAssets
 
@@ -156,15 +156,15 @@ L'attributo `ExcludeAssets` specifica gli asset appartenenti al pacchetto specif
 L'attributo `PrivateAssets` specifica gli asset appartenenti al pacchetto specificato da `<PackageReference>` che devono essere usati, indicando inoltre che non devono essere trasmessi al progetto successivo. Gli asset `Analyzers`, `Build` e `ContentFiles` sono privati per impostazione predefinita quando questo attributo non è presente.
 
 > [!NOTE]
-> `PrivateAssets`è equivalente all'elemento*xproj* `SuppressParent` *project.json.*/
+> `PrivateAssets`equivale al *project.jssull'* / elemento*xproj* `SuppressParent` .
 
 Questi attributi possono contenere uno o più degli elementi seguenti, separati dal carattere punto e virgola `;` se ne vengono elencati vari:
 
-- `Compile`– il contenuto della cartella *lib* è disponibile per la compilazione.
-- `Runtime`– il contenuto della cartella *di runtime* viene distribuito.
+- `Compile`: i contenuti della cartella *lib* sono disponibili per la compilazione.
+- `Runtime`: il contenuto della cartella di *Runtime* viene distribuito.
 - `ContentFiles`: vengono usati i contenuti della cartella *contentfiles*.
-- `Build`– vengono utilizzati gli oggetti di scena/destinazioni nella cartella di *compilazione.*
-- `Native`– il contenuto delle risorse native viene copiato nella cartella di *output* per il runtime.
+- `Build`: vengono usati i props/targets nella cartella *Build* .
+- `Native`: i contenuti degli asset nativi vengono copiati nella cartella di *output* per il Runtime.
 - `Analyzers`: vengono usati gli analizzatori.
 
 In alternativa, l'attributo può contenere:
@@ -180,11 +180,11 @@ Un elemento `<DotNetCliToolReference>` specifica lo strumento dell'interfaccia d
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-Si `DotNetCliToolReference` noti che è [ora deprecato](https://github.com/dotnet/announcements/issues/107) a favore di [.NET Core Local Tools](https://aka.ms/local-tools).
+Si noti che `DotNetCliToolReference` è [ora deprecato](https://github.com/dotnet/announcements/issues/107) a favore degli [strumenti locali di .NET Core](https://aka.ms/local-tools).
 
 #### <a name="version"></a>Versione
 
-`Version` specifica la versione del pacchetto da ripristinare. L'attributo rispetta le regole dello schema di [numerazione delle versioni NuGet](/nuget/create-packages/dependency-versions#version-ranges). Il comportamento predefinito è una versione minima, una corrispondenza inclusiva. Ad esempio, `Version="1.2.3"` specificare è equivalente `[1.2.3, )` alla notazione NuGet e significa che il pacchetto risolto avrà la versione 1.2.3 se disponibile o superiore in caso contrario.
+`Version` specifica la versione del pacchetto da ripristinare. L'attributo rispetta le regole dello schema di [numerazione delle versioni NuGet](/nuget/create-packages/dependency-versions#version-ranges). Il comportamento predefinito è una versione minima e una corrispondenza inclusiva. Ad esempio, `Version="1.2.3"` se si specifica è equivalente alla notazione NuGet `[1.2.3, )` e il pacchetto risolto avrà la versione 1.2.3 se disponibile o superiore in caso contrario.
 
 ### <a name="runtimeidentifiers"></a>Identificatori di runtime
 
@@ -227,7 +227,7 @@ L'esempio seguente specifica i fallback solo per la destinazione `netcoreapp2.1`
 
 ## <a name="build-events"></a>Eventi di compilazione
 
-Il modo in cui gli eventi di pre-compilazione e post-compilazione vengono specificati nel file di progetto è stato modificato. Le proprietà PreBuildEvent e PostBuildEvent non sono consigliate nel formato di progetto in stile SDK, perché le macro come .(ProjectDir) non vengono risolte. Ad esempio, il codice seguente non è più supportato:For example, the following code is no longer supported:
+Il modo in cui vengono specificati gli eventi di pre-compilazione e post-compilazione nel file di progetto è stato modificato. Le proprietà PreBuildEvent e PostBuildEvent non sono consigliate nel formato di progetto in stile SDK, perché le macro come $ (ProjectDir) non vengono risolte. Il codice seguente, ad esempio, non è più supportato:
 
 ```xml
 <PropertyGroup>
@@ -235,7 +235,7 @@ Il modo in cui gli eventi di pre-compilazione e post-compilazione vengono specif
 </PropertyGroup>
 ```
 
-Nei progetti di tipo SDK, utilizzare `PreBuild` `PostBuild` una destinazione `BeforeTargets` MSBuild denominata o e impostare la proprietà for `PreBuild` o la `AfterTargets` proprietà per `PostBuild`. Per l'esempio precedente, utilizzare il codice seguente:For the preceding example, use the following code:
+Nei progetti in stile SDK usare una destinazione MSBuild denominata `PreBuild` o `PostBuild` e impostare la `BeforeTargets` proprietà per `PreBuild` o la `AfterTargets` proprietà per `PostBuild` . Per l'esempio precedente, usare il codice seguente:
 
 ```xml
 <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
@@ -248,11 +248,11 @@ Nei progetti di tipo SDK, utilizzare `PreBuild` `PostBuild` una destinazione `Be
 ```
 
 > [!NOTE]
->È possibile usare qualsiasi nome per le destinazioni MSBuild, ma l'IDE di Visual Studio riconosce e didestinazione, pertanto è consigliabile usare tali nomi in modo da poter modificare i comandi nell'IDE di Visual Studio.You can use any name for the MSBuild targets, but the Visual Studio IDE recognizes `PreBuild` and `PostBuild` targets, so we recommend using those names so that you can edit the commands in the Visual Studio IDE.
+>È possibile usare qualsiasi nome per le destinazioni di MSBuild, ma l'IDE di Visual Studio riconosce le `PreBuild` `PostBuild` destinazioni e, quindi è consigliabile usare questi nomi in modo che sia possibile modificare i comandi nell'IDE di Visual Studio.
 
 ## <a name="nuget-metadata-properties"></a>Proprietà dei metadati NuGet
 
-Con lo spostamento in MSBuild, sono stati spostati i metadati di input utilizzati durante la creazione del pacchetto NuGet dai file *project.json* a *.csproj.* Gli input sono proprietà di MSBuild, quindi devono trovarsi all'interno di un gruppo `<PropertyGroup>`. Di seguito è riportato l'elenco delle proprietà utilizzate come `dotnet pack` input `Pack` per il processo di compressione quando si utilizza il comando o la destinazione MSBuild che fa parte dell'SDK:
+Con il passaggio a MSBuild, i metadati di input usati durante la compressione di un pacchetto NuGet da *project.jsnei* file con *estensione csproj* sono stati spostati. Gli input sono proprietà di MSBuild, quindi devono trovarsi all'interno di un gruppo `<PropertyGroup>`. Di seguito è riportato l'elenco delle proprietà usate come input per il processo di compressione quando si usa il `dotnet pack` comando o la `Pack` destinazione MSBuild che fa parte dell'SDK:
 
 ### <a name="ispackable"></a>IsPackable
 
@@ -272,7 +272,7 @@ Titolo del pacchetto facilmente comprensibile per l'utente, usato di solito per 
 
 ### <a name="authors"></a>Autori
 
-Elenco di autori di pacchetti separati da punto e virgola, che corrispondono ai nomi dei profili in nuget.org. Questi vengono visualizzati nella raccolta NuGet nuget.org e vengono utilizzati per fare riferimento incrociato ai pacchetti dagli stessi autori.
+Elenco delimitato da punti e virgola di autori di pacchetti, corrispondenti ai nomi di profilo in nuget.org. Questi vengono visualizzati nella raccolta NuGet in nuget.org e vengono usati per fare riferimento a pacchetti con gli stessi autori.
 
 ### <a name="packagedescription"></a>PackageDescription
 
@@ -280,7 +280,7 @@ Descrizione lunga del pacchetto per la visualizzazione dell'interfaccia utente.
 
 ### <a name="description"></a>Descrizione
 
-Descrizione lunga per l'assembly. Se `PackageDescription` non viene specificato, questa proprietà viene utilizzata anche come descrizione del pacchetto.
+Descrizione lunga per l'assembly. Se `PackageDescription` viene omesso, questa proprietà viene utilizzata anche come descrizione del pacchetto.
 
 ### <a name="copyright"></a>Copyright
 
@@ -292,7 +292,7 @@ Valore booleano che specifica se il client deve richiedere al consumer di accett
 
 ### <a name="developmentdependency"></a>DevelopmentDependency
 
-Valore booleano che specifica se il pacchetto è contrassegnato come dipendenza di solo sviluppo, che impedisce che il pacchetto venga incluso come dipendenza in altri pacchetti. Con PackageReference (NuGet 4.8) questo flag significa anche che gli asset in fase di compilazione vengono esclusi dalla compilazione. Per altre informazioni, vedere [Supporto di DevelopmentDependency per PackageReference](https://github.com/NuGet/Home/wiki/DevelopmentDependency-support-for-PackageReference).
+Valore booleano che specifica se il pacchetto è contrassegnato come dipendenza solo per lo sviluppo, impedendo che il pacchetto venga incluso come dipendenza in altri pacchetti. Con PackageReference (NuGet 4.8 +), questo flag indica anche che gli asset in fase di compilazione sono esclusi dalla compilazione. Per altre informazioni, vedere [Supporto di DevelopmentDependency per PackageReference](https://github.com/NuGet/Home/wiki/DevelopmentDependency-support-for-PackageReference).
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
@@ -325,7 +325,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 Percorso di un file di licenza all'interno del pacchetto se si usa una licenza a cui non è stato assegnato un identificatore SPDX oppure una licenza personalizzata (in caso contrario, è preferibile l'elemento `PackageLicenseExpression`)
 
-Sostituisce `PackageLicenseUrl`, non può `PackageLicenseExpression`essere combinato con e richiede Visual Studio versione 15.9.4 e .NET SDK 2.1.502 o 2.2.101 o versione successiva.
+Sostituisce `PackageLicenseUrl` , non può essere combinato con `PackageLicenseExpression` e richiede Visual Studio versione 15.9.4 e .NET SDK 2.1.502 o 2.2.101 o versioni successive.
 
 Sarà necessario assicurarsi che il file di licenza venga incluso nel pacchetto aggiungendolo in modo esplicito al progetto, come in questo esempio di utilizzo:
 
@@ -370,7 +370,7 @@ Valore booleano che indica se il processo di creazione del pacchetto deve creare
 
 ### <a name="istool"></a>IsTool
 
-Specifica se tutti i file di output devono essere copiati nella cartella *tools* anziché nella cartella *lib*. Questo valore è `DotNetCliTool`diverso da un `PackageType` oggetto , specificato impostando il file nel file *con estensione csproj.*
+Specifica se tutti i file di output devono essere copiati nella cartella *tools* anziché nella cartella *lib*. Si tratta di un valore diverso da `DotNetCliTool` , che viene specificato impostando `PackageType` nel file con *estensione csproj* .
 
 ### <a name="repositoryurl"></a>RepositoryUrl
 
@@ -384,7 +384,7 @@ Specifica il tipo dell'archivio. Il valore predefinito è "git".
 Specifica il nome del ramo di origine nel repository. Quando il progetto viene incluso in un pacchetto NuGet, viene aggiunto ai metadati del pacchetto.
 
 ### <a name="repositorycommit"></a>RepositoryCommit
-Commit o insieme di modifiche facoltativo per indicare l'origine con cui è stato compilato il pacchetto. `RepositoryUrl`deve essere specificato anche per questa proprietà da includere. Quando il progetto viene incluso in un pacchetto NuGet, questo commit o insieme di modifiche viene aggiunto ai metadati del pacchetto.
+Commit o insieme di modifiche facoltativo del repository per indicare l'origine su cui è stato compilato il pacchetto. `RepositoryUrl`per includere questa proprietà, è necessario specificare anche. Quando il progetto viene incluso in un pacchetto NuGet, questo commit o insieme di modifiche viene aggiunto ai metadati del pacchetto.
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis
 
@@ -396,7 +396,7 @@ Specifica la versione minima del client NuGet, imposta da nuget.exe e da Gestion
 
 ### <a name="includebuildoutput"></a>IncludeBuildOutput
 
-Questo valore booleano specifica se gli assembly di output di compilazione devono essere compressi o meno nel file *nupkg.*
+Questo valore booleano specifica se gli assembly di output di compilazione devono essere compressi nel file con *estensione nupkg* o meno.
 
 ### <a name="includecontentinpack"></a>IncludeContentInPack
 
@@ -431,7 +431,7 @@ Gli [attributi dell'assembly](../../standard/assembly/set-attributes.md) che in 
 
 ### <a name="properties-per-attribute"></a>Proprietà dei singoli attributi
 
-Come illustrato nella tabella seguente, ogni attributo ha una proprietà che controlla il contenuto e un altro che ne disabilita la generazione:
+Come illustrato nella tabella seguente, ogni attributo dispone di una proprietà che ne controlla il contenuto e un'altra che disabilita la generazione:
 
 | Attributo                                                      | Proprietà               | Proprietà da disabilitare                             |
 |----------------------------------------------------------------|------------------------|-------------------------------------------------|

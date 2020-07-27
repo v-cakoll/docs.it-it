@@ -1,17 +1,18 @@
 ---
 title: Implementazione del pattern di controllo Window di automazione interfaccia utente
+description: Esaminare le linee guida e le convenzioni per implementare il pattern di controllo Window in automazione interfaccia utente. Conosce i membri obbligatori per l'interfaccia IWindowProvider.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Window
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: dd677ca9f610d463acc7c69f99767bd7b8781589
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1d7429f86896947a10b73965caa7d771f54490b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180038"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168183"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implementazione del pattern di controllo Window di automazione interfaccia utente
 > [!NOTE]
@@ -19,7 +20,7 @@ ms.locfileid: "79180038"
   
  In questo argomento vengono presentate le linee guida e le convenzioni per l'implementazione di <xref:System.Windows.Automation.Provider.IWindowProvider>, incluse le informazioni relative a proprietà, metodi ed eventi di <xref:System.Windows.Automation.WindowPattern> . Alla fine della panoramica sono elencati collegamenti ad altro materiale di riferimento.  
   
- Il <xref:System.Windows.Automation.WindowPattern> pattern di controllo viene utilizzato per supportare i controlli che forniscono funzionalità fondamentali basate su finestre all'interno di un'interfaccia utente grafica (GUI) tradizionale. Esempi di controlli che devono implementare questo pattern di controllo includono finestre dell'applicazione di primo livello, finestre figlio mDI (Multiple Document Interface), controlli riquadro diviso ridimensionabili, finestre di dialogo modali e finestre della Guida a fumetto.  
+ Il <xref:System.Windows.Automation.WindowPattern> pattern di controllo viene usato per supportare i controlli che forniscono funzionalità fondamentali basate su finestra all'interno di un'interfaccia utente grafica (GUI) tradizionale. Esempi di controlli che devono implementare questo pattern di controllo sono le finestre dell'applicazione di primo livello, le finestre figlio dell'interfaccia a documenti multipli (MDI), i controlli del riquadro suddiviso ridimensionabili, le finestre di dialogo modali e le finestre della guida del fumetto.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>Linee guida e convenzioni di implementazione  
@@ -41,17 +42,17 @@ ms.locfileid: "79180038"
   
 |Membro obbligatorio|Tipo di membro|Note|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Metodo|nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Metodo|nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Metodo|nessuno|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Event|nessuno|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Event|nessuno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Metodo|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Metodo|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Metodo|Nessuno|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Event|Nessuno|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Event|Nessuno|  
 |<xref:System.Windows.Automation.WindowInteractionState>|Event|Non è garantito che sia <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>
@@ -60,13 +61,13 @@ ms.locfileid: "79180038"
   
 |Tipo di eccezione|Condizione|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> - Quando un controllo non supporta un comportamento richiesto.- When a control does not support a requested behavior.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> - Quando il parametro non è un numero valido.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -Quando un controllo non supporta un comportamento richiesto.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -Quando il parametro non è un numero valido.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
 - [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Panoramica dell'albero di automazione dell'interfaccia utente](ui-automation-tree-overview.md)
 - [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](use-caching-in-ui-automation.md)

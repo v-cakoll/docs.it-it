@@ -1,5 +1,6 @@
 ---
 title: Scorrere il testo utilizzando automazione interfaccia utente
+description: Vedere un esempio di come attraversare il contenuto di testo di un documento usando l'automazione interfaccia utente Microsoft, in incrementi di TextUnit.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - text, traversing
 - traversing text
 ms.assetid: 3ddb3b7b-1d6b-4dba-8678-5a68e868aadb
-ms.openlocfilehash: 71df7c8f9dde388ffc4445389e105a4ad686539f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0b4269d043fd6cd0cc5da9825714aab4ead701f9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441870"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168097"
 ---
 # <a name="traverse-text-using-ui-automation"></a>Scorrere il testo utilizzando automazione interfaccia utente
 > [!NOTE]
@@ -39,8 +40,8 @@ ms.locfileid: "74441870"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica di TextPattern di automazione interfaccia utente](ui-automation-textpattern-overview.md)
-- [Aggiungere contenuto a una casella di testo usando l'automazione interfaccia utente](add-content-to-a-text-box-using-ui-automation.md)
-- [Trovare ed evidenziare il testo usando l'automazione interfaccia utente](find-and-highlight-text-using-ui-automation.md)
-- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
+- [Cenni preliminari sul modello TextPattern di automazione interfaccia utente](ui-automation-textpattern-overview.md)
+- [Aggiungere contenuto a una casella di testo utilizzando l'automazione interfaccia utente](add-content-to-a-text-box-using-ui-automation.md)
+- [Trovare ed evidenziare il testo utilizzando l'automazione interfaccia utente](find-and-highlight-text-using-ui-automation.md)
+- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
+- [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)

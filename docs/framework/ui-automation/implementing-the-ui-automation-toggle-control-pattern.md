@@ -1,17 +1,18 @@
 ---
 title: Implementazione del pattern di controllo Toggle di automazione interfaccia utente
+description: Esaminare linee guida e convenzioni per implementare il pattern di controllo di attivazione/disattività in automazione interfaccia utente. Conosce i membri obbligatori per l'interfaccia IToggleProvider.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Toggle control pattern
 - control patterns, Toggle
 - UI Automation, Toggle control pattern
 ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
-ms.openlocfilehash: 5f64842d31d46af3d648b9b570d1cfb210e2910a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f9ae850a560101582b5f1a461de19f260ef59798
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180056"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168033"
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a>Implementazione del pattern di controllo Toggle di automazione interfaccia utente
 > [!NOTE]
@@ -39,8 +40,8 @@ ms.locfileid: "79180056"
   
 |Membro obbligatorio|Tipo di membro|Note|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|Metodo|nessuno|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|Proprietà|nessuno|  
+|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|Metodo|Nessuno|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|Proprietà|Nessuno|  
   
  Questo pattern di controllo non è associato a eventi.  
   
@@ -50,9 +51,9 @@ ms.locfileid: "79180056"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
 - [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
 - [Ottenere lo stato di attivazione/disattivazione di una casella di controllo utilizzando l'automazione interfaccia utente](get-the-toggle-state-of-a-check-box-using-ui-automation.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Panoramica dell'albero di automazione dell'interfaccia utente](ui-automation-tree-overview.md)
 - [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](use-caching-in-ui-automation.md)

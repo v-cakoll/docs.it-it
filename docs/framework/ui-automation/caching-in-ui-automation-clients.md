@@ -1,16 +1,17 @@
 ---
 title: Memorizzazione nella cache dei client di automazione interfaccia utente
+description: Ottenere informazioni dettagliate sulla memorizzazione nella cache nei client di automazione interfaccia utente in .NET. La memorizzazione nella cache è definita come pre-recupero dei dati.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 186ed77594aadab9e3f49ef30e559e159aee1b60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4fbb4acabebea54015b11cefdf8a37c7e2dc93f5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180282"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168252"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Memorizzazione nella cache dei client di automazione interfaccia utente
 > [!NOTE]
@@ -20,7 +21,7 @@ ms.locfileid: "79180282"
   
  In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]la memorizzazione nella cache corrisponde al recupero preliminare dei dati. I dati diventano quindi accessibili senza un'ulteriore comunicazione tra processi. La memorizzazione nella cache in genere viene usata dalle applicazioni client di automazione interfaccia utente per recuperare in massa proprietà e pattern di controllo. Le informazioni vengono quindi recuperate dalla cache in base alle necessità. L'applicazione aggiorna periodicamente la cache, in genere come risposta a eventi indicanti che è cambiato qualcosa nell' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .  
   
- I vantaggi della memorizzazione nella cache sono più evidenti con i controlli Windows Presentation Foundation (WPF) e i controlli personalizzati che dispongono di provider di automazione interfaccia utente sul lato server. L'accesso ai provider sul lato client, ad esempio i provider predefiniti per i controlli Win32, è meno vantaggioso.  
+ I vantaggi della memorizzazione nella cache sono molto evidenti con i controlli Windows Presentation Foundation (WPF) e i controlli personalizzati con provider di automazione interfaccia utente lato server. Il vantaggio è minore quando si accede ai provider lato client, ad esempio i provider predefiniti per i controlli Win32.  
   
  La memorizzazione nella cache si verifica quando l'applicazione attiva un elemento <xref:System.Windows.Automation.CacheRequest> e quindi usa un metodo o una proprietà che restituisce un elemento <xref:System.Windows.Automation.AutomationElement>, ad esempio <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. I metodi della classe <xref:System.Windows.Automation.TreeWalker> sono un'eccezione. La memorizzazione nella cache viene eseguita solo se un elemento <xref:System.Windows.Automation.CacheRequest> viene specificato come parametro (ad esempio, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>.  
   
@@ -56,7 +57,7 @@ ms.locfileid: "79180282"
 ## <a name="activating-the-cacherequest"></a>Attivazione di CacheRequest  
  La memorizzazione nella cache viene eseguita solo quando gli oggetti <xref:System.Windows.Automation.AutomationElement> vengono recuperati mentre un oggetto <xref:System.Windows.Automation.CacheRequest> è attivo per il thread corrente. Esistono due diverse modi per attivare un oggetto <xref:System.Windows.Automation.CacheRequest>.  
   
- Il modo consueto consiste nel chiamare <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Questo metodo restituisce un oggetto che implementa <xref:System.IDisposable>. La richiesta rimane attiva finché esiste l'oggetto <xref:System.IDisposable> . Il modo più semplice per controllare la durata dell'oggetto consiste nell'includere la chiamata all'interno di un `using` blocco (C) o `Using` (Visual Basic). In questo modo la richiesta verrà sicuramente estratta dallo stack anche se verrà generata un'eccezione.  
+ Il modo consueto consiste nel chiamare <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Questo metodo restituisce un oggetto che implementa <xref:System.IDisposable>. La richiesta rimane attiva finché esiste l'oggetto <xref:System.IDisposable> . Il modo più semplice per controllare la durata dell'oggetto consiste nel racchiudere la chiamata all'interno di un `using` blocco (C#) o `Using` (Visual Basic). In questo modo la richiesta verrà sicuramente estratta dallo stack anche se verrà generata un'eccezione.  
   
  Un altro modo, utile quando si vuole annidare le richieste della cache, consiste nel chiamare <xref:System.Windows.Automation.CacheRequest.Push%2A>, che inserisce la richiesta in uno stack e la attiva. La richiesta rimane attiva finché viene rimossa dallo stack da <xref:System.Windows.Automation.CacheRequest.Pop%2A>. La richiesta diventa temporaneamente inattiva se viene effettuato il push di un'altra richiesta nello stack. Solo la richiesta principale dello stack è attiva.  
   
@@ -103,6 +104,6 @@ ms.locfileid: "79180282"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [UI Automation Events for Clients](ui-automation-events-for-clients.md)
+- [Eventi di automazione interfaccia utente per i client](ui-automation-events-for-clients.md)
 - [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](use-caching-in-ui-automation.md)
 - [Esempio FetchTimer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

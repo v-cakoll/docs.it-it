@@ -1,15 +1,16 @@
 ---
-title: LINQ to XML e DOM (C )
+title: LINQ to XML rispetto a DOM (C#)
+description: Informazioni sulle differenze principali tra LINQ to XML e l'API di programmazione XML W3C Document Object Model (DOM).
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: 92d0da494829d57517d52fe93a3cbcf1398fdbe4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f5fc3fd7869079d47d7c9031e3668afeed7a117b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168389"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165345"
 ---
-# <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML e DOM (C )
+# <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML rispetto a DOM (C#)
 Questa sezione descrive alcune delle differenze principali tra [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e l'API di programmazione XML attualmente più diffusa, ovvero DOM (Document Object Model) W3C.  
   
 ## <a name="new-ways-to-construct-xml-trees"></a>Nuove modalità di creazione degli alberi XML  
@@ -105,7 +106,7 @@ doc.AppendChild(name);
  Un altro problema di DOM è che non consente di modificare il nome di un nodo. È invece necessario creare un nuovo nodo e copiarvi tutti i nodi figlio, perdendo l'identità del nodo originale. In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] questo problema viene evitato grazie alla possibilità di impostare la proprietà <xref:System.Xml.Linq.XName> in un nodo.  
   
 ## <a name="static-method-support-for-loading-xml"></a>Supporto dei metodi statici per il caricamento di XML  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] consente di caricare XML usando metodi statici anziché metodi di istanza, semplificando le operazioni di caricamento e analisi. Per ulteriori informazioni, vedere [Come caricare il codice XML da un file (C)](./how-to-load-xml-from-a-file.md).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] consente di caricare XML usando metodi statici anziché metodi di istanza, semplificando le operazioni di caricamento e analisi. Per ulteriori informazioni, vedere [come caricare XML da un file (C#)](./how-to-load-xml-from-a-file.md).  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>Rimozione del supporto per i costrutti DTD  
  In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] la programmazione XML risulta ulteriormente semplificata tramite la rimozione del supporto per entità e riferimenti di entità. Oltre a essere complessa, la gestione di entità viene utilizzata raramente. Rimuovendone il supporto è possibile riscontrare un aumento delle prestazioni e un'interfaccia di programmazione semplificata. Quando un albero [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] viene popolato, tutte le entità DTD vengono espanse.  
@@ -129,7 +130,7 @@ doc.AppendChild(name);
  Gli elementi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] supportano un set estensibile di annotazioni. Questa funzione è utile per tenere traccia di varie informazioni su un elemento, ad esempio informazioni sullo schema, informazioni su se l'elemento è associato a un'interfaccia utente o altri tipi di informazioni specifiche dell'applicazione. Per altre informazioni, vedere [Annotazioni LINQ to XML](./linq-to-xml-annotations.md).  
   
 ## <a name="support-for-schema-information"></a>Supporto per le informazioni sullo schema  
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] supporta la convalida XSD tramite i metodi di estensione nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType>. È possibile verificare che un albero XML sia conforme a un XSD. È possibile popolare l'albero XML con le informazioni sulla convalida post-schema. Per ulteriori informazioni, vedere [Come eseguire la convalida mediante XSD](./how-to-validate-using-xsd-linq-to-xml.md) e <xref:System.Xml.Schema.Extensions>.
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] supporta la convalida XSD tramite i metodi di estensione nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType>. È possibile verificare che un albero XML sia conforme a un XSD. È possibile popolare l'albero XML con le informazioni sulla convalida post-schema. Per ulteriori informazioni, vedere [come eseguire la convalida utilizzando XSD](./how-to-validate-using-xsd-linq-to-xml.md) e <xref:System.Xml.Schema.Extensions> .
   
 ## <a name="see-also"></a>Vedere anche
 

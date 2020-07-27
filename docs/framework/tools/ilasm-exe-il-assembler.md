@@ -1,5 +1,6 @@
 ---
 title: Ilasm.exe (Assembler IL)
+description: Iniziare a usare Ilasm.exe, l'assembler IL. Questo strumento genera un file eseguibile di tipo PE da Intermediate Language (IL).
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MSIL generators
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-ms.openlocfilehash: cb995e78e534048043886070536ef0dd0a45c057
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1a85b3bf9509ffba6c2331d14196a6bef2bfa080
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73105096"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166983"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Assembler IL)
 
@@ -36,9 +37,9 @@ ilasm [options] filename [[options]filename...]
 
 | Argomento | Descrizione |
 | -------- | ----------- |
-|`filename`|Nome del file di origine .il. Questo file è formato da direttive di dichiarazione di metadati e istruzioni IL simboliche. È possibile fornire più argomenti di file di origine per produrre un unico file PE con *Ilasm. exe*. **Nota:** Verificare che l'ultima riga di codice nel file di origine con estensione il includa uno spazio vuoto finale o un carattere di fine riga.|
+|`filename`|Nome del file di origine .il. Questo file è formato da direttive di dichiarazione di metadati e istruzioni IL simboliche. È possibile fornire più argomenti di file di origine per produrre un unico file PE con *Ilasm.exe*. **Nota:** Verificare che l'ultima riga di codice nel file di origine con estensione il includa uno spazio vuoto finale o un carattere di fine riga.|
 
-| Opzione | Description |
+| Opzione | Descrizione |
 | ------ | ----------- |
 |**/32bitpreferred**|Crea un'immagine con preferenza per i 32 bit (PE32).|
 |**/Alignment:**`integer`|Imposta FileAlignment sul valore specificato da `integer` nell'intestazione NT facoltativa. Se la direttiva IL .alignment è specificata nel file, questa opzione ne esegue l'override.|
@@ -59,17 +60,17 @@ ilasm [options] filename [[options]filename...]
 |**/Key** @`keySource`|Compila `filename` con una firma sicura usando la chiave privata prodotta in `keySource`.|
 |**/Listing**|Produce un file di elenco sull'output standard. Se si omette questa opzione, non verrà prodotto alcun file di elenco.<br /><br /> Questo parametro non è supportato in .NET Framework 2.0 o versione successiva.|
 |**/MDV:**`versionString`|Imposta la stringa di versione dei metadati.|
-|**/MSV:** `major`.`minor`|Imposta la versione del flusso di metadati, dove `major` e `minor` sono numeri interi.|
+|**/MSV:** `major` .`minor`|Imposta la versione del flusso di metadati, dove `major` e `minor` sono numeri interi.|
 |**/noautoinherit**|Disabilita l'ereditarietà predefinita da <xref:System.Object> quando non è specificata alcuna classe base.|
 |**/nocorstub**|Elimina la generazione dello stub CORExeMain.|
 |**/nologo**|Evita la visualizzazione del messaggio di avvio Microsoft.|
-|**/output:**`file.ext`|Specifica il nome e l'estensione del file di output. Per impostazione predefinita, il nome del file di output corrisponde al nome del primo file di origine. L'estensione predefinita è *. exe*. Se si specifica l'opzione **/dll** , l'estensione predefinita sarà *. dll*. **Nota:** Se si specifica **/output**: myfile. dll, non viene impostata l'opzione **/dll** . Se non si specifica **/dll**, il risultato sarà un file eseguibile denominato *MyFile. dll*.|
+|**/output:**`file.ext`|Specifica il nome e l'estensione del file di output. Per impostazione predefinita, il nome del file di output corrisponde al nome del primo file di origine. L'estensione predefinita è *. exe*. Se si specifica l'opzione **/dll** , l'estensione predefinita sarà *. dll*. **Nota:** Se si specifica **/output**:myfile.dll non viene impostata l'opzione **/dll** . Se non si specifica **/dll**, il risultato sarà un file eseguibile denominato *myfile.dll*.|
 |**/Optimize**|Ottimizza le istruzioni long convertendole in short. Ad esempio, `br` viene convertito in `br.s`.|
 |**/pe64**|Crea un'immagine a 64 bit (PE32+).<br /><br /> Se non è specificato il processore di destinazione, l'impostazione predefinita è `/itanium`.|
 |**/PDB**|Crea un file PDB senza abilitare la traccia delle informazioni di debug.|
 |**/quiet**|Specifica la modalità non interattiva. Non visualizza informazioni sullo stato dell'assembly.|
-|**/Resource:**`file.res`|Include il file di risorse specificato \*nel formato res nel file con *estensione exe* o *dll* risultante. È possibile specificare un unico file .res con l'opzione **/resource** .|
-|**/ssver:** `int`.`int`|Imposta il numero di versione del sottosistema nell'intestazione NT facoltativa. Per **/appcontainer** e **/arm** il numero minimo di versione è 6.02.|
+|**/Resource:**`file.res`|Include il file di risorse specificato nel \* formato res nel file con *estensione exe* o *dll* risultante. È possibile specificare un unico file .res con l'opzione **/resource** .|
+|**/ssver:** `int` .`int`|Imposta il numero di versione del sottosistema nell'intestazione NT facoltativa. Per **/appcontainer** e **/arm** il numero minimo di versione è 6.02.|
 |**/stack:**`stackSize`|Imposta su `stackSize`il valore di SizeOfStackReserve nell'intestazione NT facoltativa.|
 |**/stripreloc**|Specifica che non sono necessarie rilocazioni di base.|
 |**/SUBSYSTEM:**`integer`|Imposta il sottosistema sul valore specificato da `integer` nell'intestazione NT facoltativa. Se la direttiva IL .subsystem è specificata nel file, questo comando ne esegue l'override. Per un elenco di valori validi per `integer`, vedere winnt.h, IMAGE_SUBSYSTEM.|
@@ -77,30 +78,30 @@ ilasm [options] filename [[options]filename...]
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|
 
 > [!NOTE]
-> Tutte le opzioni per *Ilasm. exe* non fanno distinzione tra maiuscole e minuscole e vengono riconosciute dalle prime tre lettere. Ad esempio, **/LIS** è equivalente a **/Listing** e **/res**: myresfile. res è equivalente a **/Resource**: myresfile. res. Le opzioni che specificano gli argomenti accettano due punti (:) o un segno di uguale (=) come separatore tra l'opzione e l'argomento. Ad esempio, **/output**:*file. ext* equivale a **/output**=*file. ext*.
+> Tutte le opzioni per *Ilasm.exe* non fanno distinzione tra maiuscole e minuscole e vengono riconosciute dalle prime tre lettere. Ad esempio, **/LIS** è equivalente a **/Listing** e **/res**: myresfile. res è equivalente a **/Resource**: myresfile. res. Le opzioni che specificano gli argomenti accettano due punti (:) o un segno di uguale (=) come separatore tra l'opzione e l'argomento. Ad esempio, **/output**:*file. ext* equivale a **/output** = *file. ext*.
 
 ## <a name="remarks"></a>Osservazioni
 
-L'assembler IL consente ai fornitori di strumenti di progettare e implementare generatori IL. Con *Ilasm. exe*, gli sviluppatori di strumenti e compilatori possono concentrarsi su il e sulla generazione di metadati senza preoccuparsi di emettere il nel formato di file PE.
+L'assembler IL consente ai fornitori di strumenti di progettare e implementare generatori IL. Utilizzando *Ilasm.exe*, gli sviluppatori di strumenti e compilatori possono concentrarsi su il e sulla generazione di metadati senza preoccuparsi di emettere il nel formato di file PE.
 
-Analogamente ad altri compilatori destinati al runtime, ad esempio C# e Visual Basic, *Ilasm. exe* non produce file oggetto intermedi e non richiede una fase di collegamento per creare un file PE.
+Analogamente ad altri compilatori destinati al runtime, ad esempio C# e Visual Basic, *Ilasm.exe* non produce file oggetto intermedi e non richiede una fase di collegamento per creare un file PE.
 
-L'assembler IL è in grado di esprimere tutte le funzionalità esistenti per IL e i metadati dei linguaggi di programmazione destinati al runtime. In questo modo il codice gestito scritto in uno qualsiasi di questi linguaggi di programmazione può essere espresso in modo adeguato nell'assembler IL e compilato con *Ilasm. exe*.
+L'assembler IL è in grado di esprimere tutte le funzionalità esistenti per IL e i metadati dei linguaggi di programmazione destinati al runtime. In questo modo, il codice gestito scritto in uno qualsiasi di questi linguaggi di programmazione può essere espresso in modo adeguato nell'assembler IL e compilato con *Ilasm.exe*.
 
 > [!NOTE]
 > È possibile che la compilazione abbia esito negativo se nell'ultima riga di codice del file di origine con estensione il non è presente uno spazio vuoto finale o un carattere di fine riga.
 
-È possibile utilizzare *Ilasm. exe* insieme allo strumento complementare Ildasm. [*exe*](ildasm-exe-il-disassembler.md). *Ildasm. exe* accetta un file PE che contiene IL codice il e crea un file di testo adatto come input per *Ilasm. exe*. Questo è utile, ad esempio, quando si compila codice in un linguaggio di programmazione che non supporta tutti gli attributi dei metadati del runtime. Dopo aver compilato il codice ed eseguito l'output tramite *Ildasm. exe*, il file di testo il risultante può essere modificato manualmente per aggiungere gli attributi mancanti. È quindi possibile eseguire questo file di testo tramite *Ilasm. exe* per produrre un file eseguibile finale.
+È possibile utilizzare *Ilasm.exe* insieme allo strumento complementare, [*Ildasm.exe*](ildasm-exe-il-disassembler.md). *Ildasm.exe* accetta un file PE che contiene IL codice il e crea un file di testo appropriato come input per *Ilasm.exe*. Questo è utile, ad esempio, quando si compila codice in un linguaggio di programmazione che non supporta tutti gli attributi dei metadati del runtime. Dopo aver compilato il codice ed eseguito l'output tramite *Ildasm.exe*, il file di testo il risultante può essere modificato manualmente per aggiungere gli attributi mancanti. È quindi possibile eseguire questo file di testo tramite il *Ilasm.exe* per produrre un file eseguibile finale.
 
 È inoltre possibile ricorrere a questa tecnica per produrre un unico file PE sulla base di più file PE generati da diversi compilatori.
 
 > [!NOTE]
 > Attualmente non è possibile avvalersi di questa tecnica con file PE contenenti codice nativo incorporato, ad esempio file PE prodotti da Visual C++.
 
-Per fare in modo che questo utilizzo combinato di *Ildasm. exe* e *Ilasm. exe* sia il più accurato possibile, per impostazione predefinita l'assembler non sostituisce le codifiche brevi per quelle lunghe che potrebbero essere state scritte nelle origini il (o che potrebbero essere emesse da un altro compilatore). Utilizzare l'opzione **/optimize** per sostituire le codifiche short quando possibile.
+Per fare in modo che questo utilizzo combinato di *Ildasm.exe* e *Ilasm.exe* il più accurato possibile, per impostazione predefinita l'assembler non sostituisce le codifiche brevi per quelle lunghe che potrebbero essere state scritte nelle origini il (o che potrebbero essere emesse da un altro compilatore). Utilizzare l'opzione **/optimize** per sostituire le codifiche short quando possibile.
 
 > [!NOTE]
-> *Ildasm. exe* opera solo su file su disco. e non su file installati nella Global Assembly Cache.
+> *Ildasm.exe* funziona solo su file su disco. e non su file installati nella Global Assembly Cache.
 
 Per altre informazioni sulla grammatica di IL, vedere il file asmparse.grammar in Windows SDK.
 
@@ -157,7 +158,7 @@ Il comando che segue assembla il file IL *myTestFile.il* e produce il file *.dll
 ilasm myTestFile /dll /output:myNewTestFile.dll
 ```
 
-L'esempio di codice seguente illustra un'applicazione molto semplice che visualizza "Hello World!" nella console. È possibile compilare questo codice e quindi utilizzare lo strumento [*Ildasm. exe*](ildasm-exe-il-disassembler.md) per generare un file il.
+L'esempio di codice seguente illustra un'applicazione molto semplice che visualizza "Hello World!" sulla console. È possibile compilare questo codice e quindi utilizzare lo strumento [*Ildasm.exe*](ildasm-exe-il-disassembler.md) per generare un file il.
 
 ```csharp
 using System;
@@ -171,7 +172,7 @@ public class Hello
 }
 ```
 
-L'esempio di codice IL riportato di seguito corrisponde al precedente esempio di codice C#. È possibile compilare questo codice in un assembly mediante lo strumento IL Assembler. Gli esempi di codice IL e C# visualizzano entrambi "Hello World!" nella console.
+L'esempio di codice IL riportato di seguito corrisponde al precedente esempio di codice C#. È possibile compilare questo codice in un assembly mediante lo strumento IL Assembler. Gli esempi di codice IL e C# visualizzano entrambi "Hello World!" sulla console.
 
 ```il
 // Metadata version: v2.0.50215
@@ -228,6 +229,6 @@ L'esempio di codice IL riportato di seguito corrisponde al precedente esempio di
 ## <a name="see-also"></a>Vedere anche
 
 - [Strumenti](index.md)
-- [*Ildasm. exe* (disassembler il)](ildasm-exe-il-disassembler.md)
+- [*Ildasm.exe* (disassembler il)](ildasm-exe-il-disassembler.md)
 - [Processo di esecuzione gestita](../../standard/managed-execution-process.md)
 - [Prompt dei comandi](developer-command-prompt-for-vs.md)

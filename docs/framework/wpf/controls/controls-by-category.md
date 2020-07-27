@@ -1,20 +1,21 @@
 ---
 title: Controlli per categoria
+description: Esaminare Windows Presentation Foundation controlli raggruppati in categorie, che consentono di selezionare il controllo appropriato confrontando controlli simili.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 5958793015d409678b67cdc7eedcb4289f5e885c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 226e037dc26f817b96a5aa869565f08ee6ff6574
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636211"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166286"
 ---
 # <a name="controls-by-category"></a>Controlli per categoria
 I controlli Windows Presentation Foundation (WPF) possono essere raggruppati logicamente in diverse categorie. che consentono di selezionare il controllo appropriato per ogni scenario grazie alla possibilità di vedere quali controlli dispongono di modelli di utilizzo o funzionalità simili.  
   
-## <a name="layout"></a>Formato  
+## <a name="layout"></a>Layout  
  I controlli di layout consentono di gestire le dimensioni, la posizione e la disposizione degli elementi figlio.  
   
 - <xref:System.Windows.Controls.Border>  
@@ -56,7 +57,7 @@ I controlli Windows Presentation Foundation (WPF) possono essere raggruppati log
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>Pulsanti  
- I pulsanti sono uno dei controlli più semplici dell'interfaccia utente. Le applicazioni in genere eseguono alcune attività nell'evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click> quando un utente fa clic su di essi.  
+ I pulsanti sono uno dei controlli più semplici dell'interfaccia utente. Le applicazioni in genere eseguono un'attività nell' <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento quando un utente fa clic su di essi.  
   
 - <xref:System.Windows.Controls.Button>  
   
@@ -78,7 +79,7 @@ I controlli Windows Presentation Foundation (WPF) possono essere raggruppati log
   
 - <xref:System.Windows.Controls.DatePicker>  
   
-## <a name="menus"></a>Menus  
+## <a name="menus"></a>Menu  
  I menu consentono di raggruppare azioni correlate o fornire assistenza contestuale.  
   
 - <xref:System.Windows.Controls.ContextMenu>  
@@ -100,7 +101,7 @@ I controlli Windows Presentation Foundation (WPF) possono essere raggruppati log
   
 - <xref:System.Windows.Controls.Slider>  
   
-## <a name="navigation"></a>Navigazione  
+## <a name="navigation"></a>Spostamento  
  I controlli per la navigazione migliorano o estendono l'esperienza di navigazione dell'applicazione creando frame di destinazione o conferendo all'applicazione un aspetto a schede.  
   
 - <xref:System.Windows.Controls.Frame>  
@@ -161,7 +162,7 @@ I controlli Windows Presentation Foundation (WPF) possono essere raggruppati log
   
 - <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="media"></a>Elemento multimediale  
+## <a name="media"></a>Contenuti multimediali  
  WPF include il supporto integrato per l'hosting di contenuto audio e video, nonché [codec] per i formati di immagine più diffusi.  
   
 - <xref:System.Windows.Controls.Image>  

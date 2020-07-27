@@ -1,16 +1,17 @@
 ---
 title: Clrver.exe (Strumento della versione CLR)
+description: Esaminare Clrver.exe, lo strumento della versione CLR. Questo strumento segnala tutte le versioni installate del Common Language Runtime (CLR) nel computer.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Clrver.exe
 - CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
-ms.openlocfilehash: bfc612ef5455e1b4a03d15fd99a8a1873d2c7c08
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e914034819418df00438c454e209e6c86779ba3c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715791"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167273"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (Strumento della versione CLR)
 Lo strumento della versione CLR (Clrver.exe) segnala tutte le versioni di CRL (Common Language Runtime) installate nel computer.  
@@ -30,7 +31,7 @@ clrver [option]
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |`-all`|Visualizza tutti i processi sul computer che utilizzano CLR.|  
-|*Pid*|Visualizza le versioni di CLR utilizzate dal processo con l'ID processo (PID) specificato.|  
+|*PID*|Visualizza le versioni di CLR utilizzate dal processo con l'ID processo (PID) specificato.|  
 |`-?`|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
 ## <a name="remarks"></a>Osservazioni  

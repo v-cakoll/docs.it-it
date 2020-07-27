@@ -1,5 +1,6 @@
 ---
 title: Creazione di pacchetti e distribuzione delle risorse nelle app .NET
+description: Creare un pacchetto e distribuire le risorse nelle app .NET usando un assembly principale (hub) e gli assembly satellite (spoke). Un spoke contiene risorse localizzate ma senza codice.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-ms.openlocfilehash: d64e3b5201e34541fdafa5724b0c7e8c3f6c0c0d
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 7b06ca4444b75f0a7002323b32732dd4f855f692
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243050"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166189"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Creazione di pacchetti e distribuzione delle risorse nelle app .NET
 
@@ -53,7 +54,7 @@ Questo modello presenta diversi vantaggi:
 Quando si includono nel pacchetto le risorse dell'applicazione è necessario denominarle in base alle convenzioni previste dal Common Language Runtime. Il runtime identifica una risorsa in base al nome delle impostazioni cultura. A ogni set di impostazioni cultura viene assegnato un nome univoco, in genere una combinazione di un nome impostazioni cultura di due lettere minuscole associato a una lingua e (se necessario) un nome impostazioni cultura secondarie di due lettere maiuscole associato a un paese o a una regione. Il nome delle impostazioni cultura secondarie segue il nome delle impostazioni cultura ed è separato da un trattino (-). Ad esempio ja-JP corrisponde al giapponese parlato in Giappone, en-US corrisponde all'inglese parlato negli Stati Uniti d'America, de-DE corrisponde al tedesco parlato in Germania, de-AT corrisponde al tedesco parlato in Austria. Vedere la colonna **Language tag** (Tag di lingua) nell'[elenco di nomi di lingua/area geografica supportati da Windows](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). I nomi delle impostazioni cultura seguono lo standard definito da [BCP 47](https://tools.ietf.org/html/bcp47).
 
 > [!NOTE]
-> Esistono alcune eccezioni per i nomi delle impostazioni cultura di due lettere, ad `zh-Hans` esempio per il cinese (semplificato).
+> Esistono alcune eccezioni per i nomi delle impostazioni cultura di due lettere, ad esempio `zh-Hans` per il cinese (semplificato).
 
 > [!NOTE]
 > Per informazioni sulla creazione di file di risorse, vedere [Creazione di file di risorse](creating-resource-files-for-desktop-apps.md) e [Creazione di assembly satellite](creating-satellite-assemblies-for-desktop-apps.md).
@@ -71,7 +72,7 @@ Per migliorare le prestazioni di ricerca, applicare l'attributo <xref:System.Res
 Il processo di fallback per le risorse di .NET Framework include i passaggi seguenti:
 
 > [!TIP]
-> Potrebbe essere possibile usare l' [ \<](../configure-apps/file-schema/runtime/relativebindforresources-element.md) elemento di configurazione relativeBindForResources>per ottimizzare il processo di fallback delle risorse e il processo mediante il quale il runtime esegue il probe degli assembly di risorse. Per altre informazioni vedere la sezione [Ottimizzazione del processo di fallback delle risorse](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
+> Potrebbe essere possibile usare l' [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) elemento di configurazione per ottimizzare il processo di fallback delle risorse e il processo mediante il quale il runtime esegue il probe degli assembly di risorse. Per altre informazioni vedere la sezione [Ottimizzazione del processo di fallback delle risorse](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
 
 1. Il runtime ricerca nella [Global Assembly Cache](../app-domains/gac.md) un assembly corrispondente alle impostazioni cultura richieste per l'applicazione.
 
@@ -116,7 +117,7 @@ Se si verificano le seguenti condizioni, è possibile ottimizzare il processo co
 
 - Il codice dell'applicazione non gestisce l'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.
 
-È possibile ottimizzare il probe per gli assembly satellite includendo l' `enabled` `true` [ \<elemento relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) e impostando il relativo attributo su nel file di configurazione dell'applicazione, come illustrato nell'esempio seguente.
+È possibile ottimizzare il probe per gli assembly satellite includendo l' [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) elemento e impostando il relativo `enabled` attributo su `true` nel file di configurazione dell'applicazione, come illustrato nell'esempio seguente.
 
 ```xml
 <configuration>
@@ -126,7 +127,7 @@ Se si verificano le seguenti condizioni, è possibile ottimizzare il processo co
 </configuration>
 ```
 
-Il probe ottimizzato per gli assembly satellite è una funzionalità che richiede il consenso esplicito. In altri termini il runtime segue le fasi documentate in [Processo di fallback per le risorse](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) salvo se nel file di configurazione dell'applicazione è presente l'elemento [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) e l'attributo `enabled` di tale elemento è impostato su `true`. In questo caso il processo di probe di un assembly satellite viene modificato come segue:
+Il probe ottimizzato per gli assembly satellite è una funzionalità che richiede il consenso esplicito. In altre termini, il runtime segue i passaggi descritti nel [processo di fallback delle risorse](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) , a meno che l' [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) elemento non sia presente nel file di configurazione dell'applicazione e il relativo `enabled` attributo sia impostato su `true` . In questo caso il processo di probe di un assembly satellite viene modificato come segue:
 
 - Il runtime usa il percorso dell'assembly del codice padre per il probe dell'assembly satellite. Se l'assembly padre è installato nella Global Assembly Cache il runtime esegue il probe nella cache ma non nella directory dell'applicazione. Se l'assembly padre è installato in una directory dell'applicazione il runtime esegue il probe nella directory dell'applicazione ma non nella Global Assembly Cache.
 
@@ -232,6 +233,6 @@ Vincoli di tempo o di budget potrebbero rendere difficile la creazione di un set
 ## <a name="see-also"></a>Vedere anche
 
 - [Risorse nelle applicazioni desktop](index.md)
-- [Global assembly cache](../app-domains/gac.md)
+- [Global Assembly Cache](../app-domains/gac.md)
 - [Creazione dei file di risorsa](creating-resource-files-for-desktop-apps.md)
 - [Creazione di assembly satellite](creating-satellite-assemblies-for-desktop-apps.md)

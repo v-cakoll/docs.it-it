@@ -2,12 +2,12 @@
 title: Comando dotnet list package
 description: Il comando "dotnet list package" offre un'opzione utile per visualizzare un elenco dei riferimenti al pacchetto per un progetto o una soluzione.
 ms.date: 02/14/2020
-ms.openlocfilehash: 12d64600d178ea8cf490a0d6917e67bd3d8c6d21
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 7157e56860936d10aa322854a589ae89e2bc0826
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463668"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164751"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -21,6 +21,7 @@ ms.locfileid: "81463668"
 
 ```dotnetcli
 dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
+    [--deprecated]
     [--framework <FRAMEWORK>] [--highest-minor] [--highest-patch]
     [--include-prerelease] [--include-transitive] [--interactive]
     [--outdated] [--source <SOURCE>]
@@ -28,7 +29,7 @@ dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
 dotnet list package -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrizione
 
 Il comando `dotnet list package` offre un'opzione utile per visualizzare un elenco di tutti i riferimenti al pacchetto NuGet per un progetto o una soluzione specifica. Occorre prima di tutto compilare il progetto in modo da avere le risorse che il comando dovrà elaborare. L'esempio seguente mostra l'output del comando `dotnet list package` per il progetto [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis):
 
@@ -66,7 +67,7 @@ Project 'HelloPlugin' has the following package references
    > PluginBase            1.0.0
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argomenti
 
 `PROJECT | SOLUTION`
 
@@ -78,6 +79,10 @@ File di progetto o di soluzione su cui eseguire le operazioni. Se non specificat
 
   Origini NuGet da usare per cercare i pacchetti più recenti. Richiede l'opzione `--outdated`.
 
+- **`--deprecated`**
+
+  Visualizza i pacchetti che sono stati deprecati.
+
 - **`--framework <FRAMEWORK>`**
 
   Visualizza solo i pacchetti validi per il [framework di destinazione](../../standard/frameworks.md) specificato. Per specificare più framework, ripetere l'opzione più volte. Ad esempio: `--framework netcoreapp2.2 --framework netstandard2.0`.
@@ -88,15 +93,15 @@ File di progetto o di soluzione su cui eseguire le operazioni. Se non specificat
 
 - **`--highest-minor`**
 
-  Prende in considerazione solo i pacchetti con il numero di versione principale corrispondente quando si cercano i pacchetti più recenti. Richiede l'opzione `--outdated`.
+  Prende in considerazione solo i pacchetti con il numero di versione principale corrispondente quando si cercano i pacchetti più recenti. Richiede l' `--outdated` `--deprecated` opzione o.
 
 - **`--highest-patch`**
 
-  Prende in considerazione solo i pacchetti con i numeri di versione principale e secondaria corrispondenti quando si cercano i pacchetti più recenti. Richiede l'opzione `--outdated`.
+  Prende in considerazione solo i pacchetti con i numeri di versione principale e secondaria corrispondenti quando si cercano i pacchetti più recenti. Richiede l' `--outdated` `--deprecated` opzione o.
 
 - **`--include-prerelease`**
 
-  Prende in considerazione i pacchetti con versioni non definitive quando si cercano i pacchetti più recenti. Richiede l'opzione `--outdated`.
+  Prende in considerazione i pacchetti con versioni non definitive quando si cercano i pacchetti più recenti. Richiede l' `--outdated` `--deprecated` opzione o.
 
 - **`--include-transitive`**
 
@@ -112,9 +117,9 @@ File di progetto o di soluzione su cui eseguire le operazioni. Se non specificat
 
 - **`-s|--source <SOURCE>`**
 
-  Origini NuGet da usare per cercare i pacchetti più recenti. Richiede l'opzione `--outdated`.
+  Origini NuGet da usare per cercare i pacchetti più recenti. Richiede l' `--outdated` `--deprecated` opzione o.
 
-## <a name="examples"></a>Esempio
+## <a name="examples"></a>Esempi
 
 - Elencare i riferimenti al pacchetto di un progetto specifico:
 

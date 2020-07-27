@@ -1,17 +1,18 @@
 ---
 title: Supporto di automazione interfaccia utente per il tipo di controllo Edit
+description: Ottenere informazioni sul supporto di automazione interfaccia utente per il tipo di controllo Edit. Informazioni sulla struttura ad albero, le proprietà, i pattern di controllo e gli eventi di richiesti.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control types, Edit
 - Edit control type
 - UI Automation, Edit control type
 ms.assetid: 6db9d231-c0a0-4e17-910e-ac80357f774f
-ms.openlocfilehash: cdbb400d438231689fe35c4bff2bd2946b6bed80
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6c404786d58cfcb4cc7dabd982eea33694b7cd0b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789500"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167943"
 ---
 # <a name="ui-automation-support-for-the-edit-control-type"></a>Supporto di automazione interfaccia utente per il tipo di controllo Edit
 
@@ -22,7 +23,7 @@ In questo argomento vengono fornite informazioni sul supporto di [!INCLUDE[TLA2#
 
 I controlli di modifica consentono a un utente di visualizzare e modificare una semplice riga di testo senza il supporto del formato RTF.
 
-Nelle sezioni seguenti vengono definiti la struttura ad albero, le proprietà, i pattern di controllo e gli eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per il tipo di controllo di modifica. I requisiti [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] si applicano a tutti i controlli di modifica, sia [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 che Windows Forms.
+Nelle sezioni seguenti vengono definiti la struttura ad albero, le proprietà, i pattern di controllo e gli eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per il tipo di controllo di modifica. I [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requisiti di si applicano a tutti i controlli di modifica, sia [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Win32 che Windows Forms.
 
 <a name="Required_UI_Automation_Tree_Structure"></a>
 
@@ -32,7 +33,7 @@ Nella tabella seguente viene illustrata la visualizzazione controlli e la visual
 
 |Visualizzazione controlli|Visualizzazione contenuto|
 |------------------|------------------|
-|Edit|Edit|
+|Modifica|Modifica|
 
 I controlli che implementano il tipo di controllo di modifica non includeranno alcuna barra di scorrimento nella visualizzazione controlli dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] perché si tratta di un controllo a riga singola. In alcuni scenari di layout una singola riga di testo può essere interrotta da un ritorno a capo. Il tipo di controllo di modifica è ideale per contenere piccole quantità di testo modificabile o selezionabile.
 
@@ -50,7 +51,7 @@ La tabella seguente elenca le proprietà di [!INCLUDE[TLA2#tla_uiautomation](../
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Vedere le note.|Se il controllo può ricevere lo stato attivo, deve supportare questa proprietà.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Vedere le note.|Il nome del controllo di modifica viene in genere generato da un'etichetta di testo statico. Se non è presente alcuna etichetta di testo statico, un valore di proprietà per `Name` deve essere assegnato dallo sviluppatore dell'applicazione. La proprietà `Name` non deve mai includere il contenuto testuale del controllo di modifica.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Vedere le note.|Se è presente un'etichetta di testo statico associata al controllo, questa proprietà deve esporre un riferimento a tale controllo. Se il controllo testo è un sottocomponente di un altro controllo, non avrà una proprietà `LabeledBy` impostata.|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Edit|Questo valore è uguale per tutti i framework dell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Modifica|Questo valore è uguale per tutti i framework dell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"edit"|Stringa localizzata corrispondente al tipo di controllo Edit.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Il controllo di modifica viene sempre incluso nella visualizzazione contenuto dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Il controllo di modifica viene sempre incluso nella visualizzazione controlli dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|
@@ -64,11 +65,11 @@ La tabella seguente elenca i pattern di controllo che devono essere supportati d
 
 |Pattern di controllo/proprietà del pattern di controllo|Supporto/valore|Note|
 |-----------------------------------------------|--------------------|-----------|
-|<xref:System.Windows.Automation.Provider.ITextProvider>|A seconda dei casi|I controlli di modifica devono supportare il pattern di controllo Text in quanto le informazioni testuali dettagliate devono sempre essere disponibili per i client.|
-|<xref:System.Windows.Automation.Provider.IValueProvider>|A seconda dei casi|Tutti i controlli di modifica che accettano una stringa devono esporre il pattern Value.|
+|<xref:System.Windows.Automation.Provider.ITextProvider>|Dipende da|I controlli di modifica devono supportare il pattern di controllo Text in quanto le informazioni testuali dettagliate devono sempre essere disponibili per i client.|
+|<xref:System.Windows.Automation.Provider.IValueProvider>|Dipende da|Tutti i controlli di modifica che accettano una stringa devono esporre il pattern Value.|
 |<xref:System.Windows.Automation.Provider.IValueProvider.IsReadOnly%2A>|Vedere le note.|Questa proprietà deve essere impostata per indicare se il controllo può avere un valore impostato a livello di codice oppure se è modificabile dall'utente.|
 |<xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>|Vedere le note.|Questa proprietà restituirà il contenuto testuale del controllo di modifica. Se `IsPasswordProperty` è impostata su `true`, questa proprietà deve generare `InvalidOperationException` quando richiesto.|
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|A seconda dei casi|Tutti i controlli di modifica che accettano un intervallo numerico devono esporre il pattern di controllo RangeValue.|
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Dipende da|Tutti i controlli di modifica che accettano un intervallo numerico devono esporre il pattern di controllo RangeValue.|
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.Minimum%2A>|Vedere le note.|Questa proprietà deve essere il valore più piccolo su cui può essere impostato il contenuto del controllo di modifica.|
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.Maximum%2A>|Vedere le note.|Questa proprietà deve essere il valore più grande su cui può essere impostato il contenuto del controllo di modifica.|
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.SmallChange%2A>|Vedere le note.|Questa proprietà deve indicare il numero di cifre decimali che è possibile impostare per il valore. Se il controllo di modifica accetta solo valori integer, impostare `SmallChangeProperty` su 1. Se il controllo di modifica accetta un intervallo compreso tra 1,0 e 2,0, impostare `SmallChangeProperty` su 0,1. Se il controllo di modifica accetta un intervallo compreso tra 1,0 e 2,0, impostare `SmallChangeProperty` su 0,001.|
@@ -83,26 +84,26 @@ La tabella seguente elenca gli eventi dell' [!INCLUDE[TLA2#tla_uiautomation](../
 
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Supporto|Note|
 |---------------------------------------------------------------------------------|-------------|-----------|
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Richiesto|nessuna|
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|Richiesto|nessuna|
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|Richiesto|nessuna|
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Richiesto|nessuna|
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Richiesto|nessuna|
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Richiesto|nessuna|
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> .|Richiesto|nessuna|
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> .|A seconda dei casi|nessuna|
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> .|Mai|nessuna|
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> .|Mai|nessuna|
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> .|Mai|nessuna|
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> .|Mai|nessuna|
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> .|Mai|nessuna|
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> .|Mai|nessuna|
-|Evento di modifica della proprietà<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> .|A seconda dei casi|Se il controllo supporta il pattern di controllo RangeValue, deve supportare questo evento.|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Richiesto|nessuna|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Richiesto|nessuna|
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Richiesto|Nessuno|
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|Richiesto|Nessuno|
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|Richiesto|Nessuno|
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Richiesto|Nessuno|
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Richiesto|Nessuno|
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Richiesto|Nessuno|
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> .|Richiesto|Nessuno|
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> .|Dipende da|Nessuno|
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> .|Mai|Nessuno|
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> .|Mai|Nessuno|
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> .|Mai|Nessuno|
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> .|Mai|Nessuno|
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> .|Mai|Nessuno|
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> .|Mai|Nessuno|
+|Evento di modifica della proprietà<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> .|Dipende da|Se il controllo supporta il pattern di controllo RangeValue, deve supportare questo evento.|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Richiesto|Nessuno|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Richiesto|Nessuno|
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Automation.ControlType.Edit>
-- [Panoramica dei tipi di controllo per l'automazione interfaccia utente](ui-automation-control-types-overview.md)
-- [Panoramica di automazione interfaccia utente](ui-automation-overview.md)
+- [Cenni preliminari sui tipi di controllo per l'automazione interfaccia utente](ui-automation-control-types-overview.md)
+- [Cenni preliminari su automazione interfaccia utente](ui-automation-overview.md)

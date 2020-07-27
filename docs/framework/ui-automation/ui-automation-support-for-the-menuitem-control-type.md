@@ -1,17 +1,18 @@
 ---
 title: Supporto per automazione interfaccia utente del tipo di controllo MenuItem
+description: Ottenere informazioni sul supporto di automazione interfaccia utente per il tipo di controllo MenuItem. Informazioni sulla struttura ad albero, le proprietà, i pattern di controllo e gli eventi di richiesti.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control types, Menu Item
 - Menu Item control type
 - UI Automation, Menu Item control type
 ms.assetid: 54bce311-3d23-40b9-ba90-1bdbdaf8fbba
-ms.openlocfilehash: ab050b3d515be325694d6e92ef1891d44cb309c7
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 248fdacee42c3a67c6c3b2d5792b774dfdc8408f
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789443"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166019"
 ---
 # <a name="ui-automation-support-for-the-menuitem-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo MenuItem
 
@@ -22,7 +23,7 @@ In questo argomento vengono fornite informazioni sul supporto di [!INCLUDE[TLA#t
 
 Un controllo menu consente l'organizzazione gerarchica degli elementi associati a comandi e gestori eventi. In una tipica applicazione di Microsoft Windows, una barra dei menu contiene diverse voci di menu (ad esempio **file**, **modifica**e **finestra**), mentre ogni voce di menu Visualizza un menu. Un menu contiene una raccolta di voci di menu (ad esempio **Nuovo**, **Apri**e **Chiudi**), che può essere espansa per visualizzare altre voci di menu che, se selezionate, consentono di eseguire un'azione specifica. Una voce di menu può trovarsi in un menu, una barra dei menu o una barra degli strumenti.
 
-Nelle sezioni seguenti vengono definiti la struttura ad albero, le proprietà, i pattern di controllo e gli eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per il tipo di controllo MenuItem. I requisiti [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] si applicano a tutti i controlli elenco, sia [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 che Windows Forms.
+Nelle sezioni seguenti vengono definiti la struttura ad albero, le proprietà, i pattern di controllo e gli eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per il tipo di controllo MenuItem. I [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requisiti di si applicano a tutti i controlli elenco, sia [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Win32 che Windows Forms.
 
 <a name="Required_UI_Automation_Tree_Structure"></a>
 
@@ -42,9 +43,9 @@ Per la visualizzazione contenuto, la voce Menu è assente dall'albero di [!INCLU
 
 ## <a name="required-ui-automation-properties"></a>Proprietà di automazione interfaccia utente obbligatorie
 
-La tabella seguente elenca le proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] il cui valore o la cui definizione è particolarmente rilevante per i controlli MenuItem. Per ulteriori informazioni sulle proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [UI Automation Properties for clients](ui-automation-properties-for-clients.md).
+La tabella seguente elenca le proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] il cui valore o la cui definizione è particolarmente rilevante per i controlli MenuItem. Per altre informazioni sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] proprietà, vedere [proprietà di automazione interfaccia utente per i client](ui-automation-properties-for-clients.md).
 
-|Gli|Valore|Descrizione|
+|Proprietà|Valore|Descrizione|
 |--------------|-----------|-----------------|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Vedere le note.|Il valore di questa proprietà deve essere univoco in tutti i controlli in un'applicazione.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Vedere le note.|Il rettangolo più esterno che contiene l'intero controllo.|
@@ -65,10 +66,10 @@ La tabella seguente elenca i pattern di controllo per l' [!INCLUDE[TLA2#tla_uiau
 
 |Proprietà del pattern di controllo|Supporto|Note|
 |------------------------------|-------------|-----------|
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|A seconda dei casi|Se il controllo può essere espanso o compresso, implementare <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>.|
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|A seconda dei casi|Se il controllo esegue un singolo comando o una singola azione, implementare <xref:System.Windows.Automation.Provider.IInvokeProvider>.|
-|<xref:System.Windows.Automation.Provider.IToggleProvider>|A seconda dei casi|Se il controllo rappresenta un'opzione che può essere attivata o disattivata, implementare <xref:System.Windows.Automation.Provider.IToggleProvider>.|
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|A seconda dei casi|Se il controllo viene usato per effettuare una selezione da un elenco di opzioni tra voci di menu, implementare <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.|
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Dipende da|Se il controllo può essere espanso o compresso, implementare <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>.|
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Dipende da|Se il controllo esegue un singolo comando o una singola azione, implementare <xref:System.Windows.Automation.Provider.IInvokeProvider>.|
+|<xref:System.Windows.Automation.Provider.IToggleProvider>|Dipende da|Se il controllo rappresenta un'opzione che può essere attivata o disattivata, implementare <xref:System.Windows.Automation.Provider.IToggleProvider>.|
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Dipende da|Se il controllo viene usato per effettuare una selezione da un elenco di opzioni tra voci di menu, implementare <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.|
 
 <a name="UI_Automation_Events_for_Menu_Item"></a>
 
@@ -76,12 +77,12 @@ La tabella seguente elenca i pattern di controllo per l' [!INCLUDE[TLA2#tla_uiau
 
 La tabella seguente elenca gli eventi dell' [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] associati al controllo MenuItem.
 
-|Event|Supporto|Descrizione|
+|Event|Supporto|Spiegazione|
 |-----------|-------------|-----------------|
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|A seconda dei casi|Deve essere generato se il controllo supporta il pattern di controllo Invoke.|
-|Evento di modifica della proprietà<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> .|A seconda dei casi|Deve essere generato se il controllo supporta il pattern di controllo Toggle.|
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> .|A seconda dei casi|Deve essere generato se il controllo supporta il pattern di controllo ExpandCollapse.|
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|A seconda dei casi|nessuna.|
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Dipende da|Deve essere generato se il controllo supporta il pattern di controllo Invoke.|
+|Evento di modifica della proprietà<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> .|Dipende da|Deve essere generato se il controllo supporta il pattern di controllo Toggle.|
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> .|Dipende da|Deve essere generato se il controllo supporta il pattern di controllo ExpandCollapse.|
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Dipende da|No.|
 
 <a name="Required_UI_Automation_Events"></a>
 
@@ -91,17 +92,17 @@ La tabella seguente elenca gli eventi dell' [!INCLUDE[TLA2#tla_uiautomation](../
 
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Supporto/valore|Note|
 |---------------------------------------------------------------------------------|--------------------|-----------|
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|A seconda dei casi|nessuna|
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|A seconda dei casi|nessuna|
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|A seconda dei casi|nessuna|
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|A seconda dei casi|nessuna|
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Richiesto|nessuna|
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Richiesto|nessuna|
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Richiesto|nessuna|
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> .|A seconda dei casi|nessuna|
-|Evento di modifica della proprietà<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> .|A seconda dei casi|nessuna|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Richiesto|nessuna|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Richiesto|nessuna|
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Dipende da|Nessuno|
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Dipende da|Nessuno|
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Dipende da|Nessuno|
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Dipende da|Nessuno|
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Richiesto|Nessuno|
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Richiesto|Nessuno|
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Richiesto|Nessuno|
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> .|Dipende da|Nessuno|
+|Evento di modifica della proprietà<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> .|Dipende da|Nessuno|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Richiesto|Nessuno|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Richiesto|Nessuno|
 
 <a name="Legacy_Issues"></a>
 
@@ -112,6 +113,6 @@ Il pattern di attivazione/disattivazione sarà supportato solo quando la voce di
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Automation.ControlType.MenuItem>
-- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
-- [Panoramica dei tipi di controllo per l'automazione interfaccia utente](ui-automation-control-types-overview.md)
-- [Panoramica di automazione interfaccia utente](ui-automation-overview.md)
+- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
+- [Cenni preliminari sui tipi di controllo per l'automazione interfaccia utente](ui-automation-control-types-overview.md)
+- [Cenni preliminari su automazione interfaccia utente](ui-automation-overview.md)

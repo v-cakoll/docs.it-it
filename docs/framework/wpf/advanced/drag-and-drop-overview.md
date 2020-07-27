@@ -1,5 +1,6 @@
 ---
 title: Cenni preliminari sul trascinamento della selezione
+description: Informazioni sul supporto del trascinamento della selezione nelle applicazioni Windows Presentation Foundation, che consente agli utenti di trascinare oggetti in un'area dell'interfaccia utente.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: dd42af77300a7a93bbcbfa4c8f1fc365fc3f5da1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 63384e79d8a198e4cc9507ca3266c484c0506e2c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185973"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168077"
 ---
 # <a name="drag-and-drop-overview"></a>Cenni preliminari sul trascinamento della selezione
 Questo argomento fornisce una panoramica del supporto per il trascinamento della selezione nelle applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Per trascinamento della selezione si intende di solito un metodo di trasferimento dei dati, in cui si usa un mouse (o un altro dispositivo di puntamento) per selezionare uno o più oggetti, si trascinano questi oggetti su un obiettivo di rilascio desiderato nell'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] e li si rilascia.  
@@ -28,9 +29,9 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
  Il tipo e il numero di oggetti che possono essere manipolati con un trascinamento della selezione sono del tutto arbitrari. Ad esempio file, cartelle e selezioni di contenuto sono alcuni degli oggetti più comuni manipolati con operazioni di trascinamento della selezione.  
   
- Le particolari azioni eseguite durante un'operazione di trascinamento della selezione sono specifiche dell'applicazione e spesso dipendono dal contesto.  Ad esempio, se si trascina una selezione di file da una cartella a un'altra sullo stesso dispositivo di archiviazione, i file vengono spostati per impostazione predefinita, mentre il trascinamento di file da una condivisione UNC (Universal Naming Convention) viene copiato per impostazione predefinita.  
+ Le particolari azioni eseguite durante un'operazione di trascinamento della selezione sono specifiche dell'applicazione e spesso dipendono dal contesto.  Ad esempio, il trascinamento di una selezione di file da una cartella a un'altra nello stesso dispositivo di archiviazione consente di spostare i file per impostazione predefinita, mentre il trascinamento dei file da una condivisione Universal Naming Convention (UNC) a una cartella locale copia i file per impostazione predefinita.  
   
- Le funzionalità di trascinamento della selezione fornite da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono estremamente flessibili e personalizzabili, per poter supportare svariati scenari di trascinamento.  Il trascinamento della selezione supporta la manipolazione di oggetti in una sola applicazione o tra applicazioni diverse. Anche il trascinamento [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] della selezione tra le applicazioni e altre applicazioni Windows è completamente supportato.  
+ Le funzionalità di trascinamento della selezione fornite da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono estremamente flessibili e personalizzabili, per poter supportare svariati scenari di trascinamento.  Il trascinamento della selezione supporta la manipolazione di oggetti in una sola applicazione o tra applicazioni diverse. Anche il trascinamento e la rimozione tra [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni e altre applicazioni Windows sono completamente supportati.  
   
  In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], qualsiasi <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> può partecipare al trascinamento della selezione. Gli eventi e i metodi necessari per le operazioni di trascinamento della selezione vengono definiti nella classe <xref:System.Windows.DragDrop>. Le classi <xref:System.Windows.UIElement> e <xref:System.Windows.ContentElement> contengono alias per gli eventi associati <xref:System.Windows.DragDrop> in modo che gli eventi appaiano nell'elenco dei membri della classe quando un oggetto <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> viene ereditato come elemento di base. I gestori eventi associati a questi eventi vengono associati all'evento associato <xref:System.Windows.DragDrop> sottostante e ricevono la stessa istanza di dati dell'evento. Per altre informazioni, vedere l'evento <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType>.  
   
@@ -218,6 +219,6 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Clipboard>
-- [Procedura dettagliata: abilitare il trascinamento della selezione in un controllo utente](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
-- [Argomenti relativi alle procedure](drag-and-drop-how-to-topics.md)
+- [Procedura dettagliata: Abilitare il trascinamento della selezione in un controllo utente](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [Procedure relative](drag-and-drop-how-to-topics.md)
 - [Trascinamento della selezione](drag-and-drop.md)

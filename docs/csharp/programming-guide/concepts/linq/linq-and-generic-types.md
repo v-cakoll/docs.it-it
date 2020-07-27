@@ -1,17 +1,18 @@
 ---
 title: LINQ e tipi generici (C#)
+description: Informazioni sui concetti di base dei tipi generici in C# che supportano le query.  Le query LINQ sono basate su tipi generici.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], generic types
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 2cbff0b31cac091a57ea35cbd01535b7d0c4b78a
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 98054a4a21704293faa1194dac342bc48aef138d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241760"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165634"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ e tipi generici (C#)
 Le query LINQ sono basate su tipi generici, introdotti nella versione 2,0 di .NET Framework. Non è necessaria una conoscenza approfondita dei generics per poter iniziare a scrivere le query. È tuttavia importante comprendere due concetti di base:  

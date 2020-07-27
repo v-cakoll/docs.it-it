@@ -1,5 +1,6 @@
 ---
 title: Stili e modelli di ComboBox
+description: Informazioni sugli stili e i modelli per il controllo ComboBox Windows Presentation Foundation. Modificare il ControlTemplate per dare al controllo un aspetto univoco.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ComboBox [WPF], styles and templates
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: af7f8a544af5e9892a8f3f059048bbfd113d2491
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 5e929bafeaf849b4b5682a17ca51cb0aab963613
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865359"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165915"
 ---
 # <a name="combobox-styles-and-templates"></a>Stili e modelli di ComboBox
 In questo argomento vengono descritti gli stili e i modelli per il <xref:System.Windows.Controls.ComboBox> controllo. È possibile modificare l'impostazione predefinita <xref:System.Windows.Controls.ControlTemplate> per dare al controllo un aspetto univoco. Per altre informazioni, vedere [creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
@@ -22,7 +23,7 @@ In questo argomento vengono descritti gli stili e i modelli per il <xref:System.
 ## <a name="combobox-parts"></a>Parti ComboBox  
  Nella tabella seguente sono elencate le parti denominate per il <xref:System.Windows.Controls.ComboBox> controllo.  
   
-|Parte|Tipo|Descrizione|  
+|Parte|Type|Descrizione|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|Contiene il testo di <xref:System.Windows.Controls.ComboBox> .|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Elenco a discesa che contiene gli elementi nella casella combinata.|  
@@ -59,7 +60,7 @@ In questo argomento vengono descritti gli stili e i modelli per il <xref:System.
 |MouseOver|CommonStates|Il puntatore del mouse è posizionato sul <xref:System.Windows.Controls.ComboBoxItem> controllo.|  
 |Con stato attivo|FocusStates|Il controllo ha lo stato attivo.|  
 |Con stato non attivo|FocusStates|Il controllo non ha lo stato attivo.|  
-|Opzione selezionata|SelectionStates|L'elemento è attualmente selezionato.|  
+|Selezionato|SelectionStates|L'elemento è attualmente selezionato.|  
 |Deselezionato|SelectionStates|L'elemento non è selezionato.|  
 |SelectedUnfocused|SelectionStates|L'elemento è selezionato, ma non ha uno stato attivo.|  
 |Valido|ValidationStates|Il controllo Usa la <xref:System.Windows.Controls.Validation> classe e la <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `false` .|  
@@ -77,7 +78,7 @@ In questo argomento vengono descritti gli stili e i modelli per il <xref:System.
   
  Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>

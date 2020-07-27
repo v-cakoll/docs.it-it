@@ -1,5 +1,6 @@
 ---
 title: Ottenere pattern di controllo supportati per automazione interfaccia utente
+description: Vedere un esempio che illustra come recuperare gli oggetti pattern di controllo supportati dagli elementi di automazione interfaccia utente.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - UI Automation, getting control patterns
 - getting, control patterns
 ms.assetid: 006c54c9-50bf-48d9-a855-9d62eb95603a
-ms.openlocfilehash: b1da13cf5eb39a61f40848a5f199cfd39b16d7c7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f2905b81a1af2f86c78b082f0241e2181c384d25
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435643"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164154"
 ---
 # <a name="get-supported-ui-automation-control-patterns"></a>Ottenere pattern di controllo supportati per automazione interfaccia utente
 > [!NOTE]
@@ -45,4 +46,4 @@ ms.locfileid: "74435643"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
+- [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)

@@ -1,5 +1,6 @@
 ---
 title: Sottoscrivere gli eventi di automazione interfaccia utente
+description: Vedere come sottoscrivere gli eventi generati dai provider di automazione interfaccia utente. Il codice di esempio registra un gestore eventi per l'evento generato quando un controllo viene richiamato.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - events, subscribing to
 - listening for events
 ms.assetid: b688effa-b3e8-4b05-944d-05ed89a245aa
-ms.openlocfilehash: a5effd1d7a3cfaba5e068087b3008903e58b6739
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8f456702657c70837c6137e3e60335110361bcd9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432987"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163529"
 ---
 # <a name="subscribe-to-ui-automation-events"></a>Sottoscrivere gli eventi di automazione interfaccia utente
 > [!NOTE]
@@ -40,4 +41,4 @@ ms.locfileid: "74432987"
 - <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>
 - <xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>
 - <xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>
-- [Panoramica degli eventi di automazione interfaccia utente](ui-automation-events-overview.md)
+- [Cenni preliminari sugli eventi di automazione interfaccia utente](ui-automation-events-overview.md)

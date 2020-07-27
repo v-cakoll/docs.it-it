@@ -1,5 +1,6 @@
 ---
 title: Cenni preliminari sull'esecuzione di comandi
+description: Informazioni sul comando, un meccanismo di input in Windows Presentation Foundation che consente la gestione dell'input a un livello più semantico rispetto all'input del dispositivo.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 3477e6a9eda40edeadaab9cd6d3de2f016250fc8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f7d12fbf0de9b1546f15061ab7eb1318378bbbb
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186206"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168125"
 ---
 # <a name="commanding-overview"></a>Cenni preliminari sull'esecuzione di comandi
 <a name="introduction"></a> I comandi sono un meccanismo di input in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] che consente la gestione dell'input a un livello più semantico rispetto all'input dei dispositivi. Sono esempi di comandi le operazioni **Copia**, **Taglia** e **Incolla** disponibili in molte applicazioni.  
@@ -71,7 +72,7 @@ ms.locfileid: "79186206"
  Nell'esempio precedente, il comando <xref:System.Windows.Input.ApplicationCommands.Paste%2A> corrisponde al comando, <xref:System.Windows.Controls.MenuItem> è l'origine del comando, <xref:System.Windows.Controls.TextBox> è la destinazione del comando e l'associazione del comando viene fornita dal controllo <xref:System.Windows.Controls.TextBox>.  È importante notare che non sempre l'oggetto <xref:System.Windows.Input.CommandBinding> viene fornito dal controllo che rappresenta la classe di destinazione del comando.  Molto spesso è lo sviluppatore dell'applicazione che deve creare <xref:System.Windows.Input.CommandBinding>. In altri casi, può esistere un collegamento tra <xref:System.Windows.Input.CommandBinding> e un predecessore della destinazione del comando.  
   
 <a name="Commands"></a>
-### <a name="commands"></a>Comandi:  
+### <a name="commands"></a>Comandi  
  I comandi in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vengono creati tramite l'implementazione dell'interfaccia <xref:System.Windows.Input.ICommand>.  <xref:System.Windows.Input.ICommand> espone due metodi, <xref:System.Windows.Input.ICommand.Execute%2A> e <xref:System.Windows.Input.ICommand.CanExecute%2A>, e un evento, <xref:System.Windows.Input.ICommand.CanExecuteChanged>. <xref:System.Windows.Input.ICommand.Execute%2A> esegue le azioni associate al comando. <xref:System.Windows.Input.ICommand.CanExecute%2A> determina se il comando può essere eseguito nella destinazione corrente del comando stesso. <xref:System.Windows.Input.ICommand.CanExecuteChanged> viene generato se il gestore che centralizza le operazioni di comando rileva una modifica nell'origine del comando che potrebbe invalidare un comando generato ma non ancora eseguito dall'associazione del comando.  L'implementazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di <xref:System.Windows.Input.ICommand> è la classe <xref:System.Windows.Input.RoutedCommand> e costituisce l'obiettivo di questa panoramica.  
   
  Le origini di input principali di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono il mouse, la tastiera, l'input penna e i comandi indirizzati.  La maggior parte degli input orientati al dispositivo usano un oggetto <xref:System.Windows.RoutedEvent> per notificare agli oggetti di una pagina dell'applicazione che si è verificato un evento di input.  <xref:System.Windows.Input.RoutedCommand> non è diverso.  I metodi <xref:System.Windows.Input.RoutedCommand.Execute%2A> e <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> di <xref:System.Windows.Input.RoutedCommand> non contengono la logica dell'applicazione per il comando, ma generano eventi indirizzati che effettuano il tunneling e il bubbling attraverso la struttura ad albero degli elementi finché non rilevano un oggetto con <xref:System.Windows.Input.CommandBinding>.  <xref:System.Windows.Input.CommandBinding> contiene i gestori per questi eventi e sono i gestori a eseguire il comando.  Per altre informazioni sul routing di eventi in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vedere [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md).  
@@ -173,9 +174,9 @@ ms.locfileid: "79186206"
 ## <a name="command-library"></a>Libreria dei comandi  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre un set di comandi predefiniti.  La libreria dei comandi è costituita dalle classi seguenti: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Documents.EditingCommands> e <xref:System.Windows.Input.ComponentCommands>.  Queste classi forniscono comandi quali <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.NavigationCommands.BrowseBack%2A> e <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>, <xref:System.Windows.Input.MediaCommands.Play%2A>, <xref:System.Windows.Input.MediaCommands.Stop%2A> e <xref:System.Windows.Input.MediaCommands.Pause%2A>.  
   
- Molti di questi comandi includono un set di associazioni di input predefinite.  Ad esempio, se si specifica che l'applicazione gestisce il comando di copia, si ottiene automaticamente l'associazione da tastiera "CTRL-C" Si ottengono anche associazioni per altri dispositivi di input, ad esempio i movimenti penna di Tablet PC e le informazioni vocali.  
+ Molti di questi comandi includono un set di associazioni di input predefinite.  Se ad esempio si specifica che l'applicazione gestisce il comando copy, si ottiene automaticamente il tasto di scelta rapida "CTRL + C". si ottengono anche binding per altri dispositivi di input, ad esempio i movimenti di penna di Tablet PC e le informazioni vocali.  
   
- Quando si fa riferimento ai comandi delle diverse librerie dei comandi usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], in genere è possibile omettere il nome della classe di libreria che espone la proprietà del comando statico. Di solito i nomi dei comandi sono stringhe non ambigue ed esistono tipi proprietari che forniscono un raggruppamento logico di comandi, ma che non sono necessari per la risoluzione dell'ambiguità. Ad esempio, è possibile specificare `Command="Cut"` anziché il più dettagliato `Command="ApplicationCommands.Cut"`. Si tratta di un meccanismo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pratico che è incorporato nel processore per <xref:System.Windows.Input.ICommand>i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] comandi (più precisamente, è un comportamento del convertitore di tipi di , che il processore fa riferimento in fase di caricamento).  
+ Quando si fa riferimento ai comandi delle diverse librerie dei comandi usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], in genere è possibile omettere il nome della classe di libreria che espone la proprietà del comando statico. Di solito i nomi dei comandi sono stringhe non ambigue ed esistono tipi proprietari che forniscono un raggruppamento logico di comandi, ma che non sono necessari per la risoluzione dell'ambiguità. Ad esempio, è possibile specificare `Command="Cut"` anziché il più dettagliato `Command="ApplicationCommands.Cut"`. Si tratta di un meccanismo pratico incorporato nel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processore per i comandi (più precisamente, si tratta di un comportamento del convertitore di tipi di <xref:System.Windows.Input.ICommand> , a cui il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processore fa riferimento in fase di caricamento).  
   
 <a name="creating_commands"></a>
 ## <a name="creating-custom-commands"></a>Creazione di comandi personalizzati  

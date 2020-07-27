@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 2d3ede97b372dd8922a10a377f69155a12f88bda
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5eb9d5127dffd2e80349352ad7a4b57f8848d56b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447134"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165791"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formati dei percorsi di file nei sistemi Windows
 
@@ -31,7 +31,7 @@ Un percorso DOS standard può essere costituito da tre componenti:
 
 Se sono presenti tutti e tre i componenti, il percorso è assoluto. Se non si specifica alcun volume o lettera di unità e il nome della directory inizia con il [carattere separatore di directory](<xref:System.IO.Path.DirectorySeparatorChar>), il percorso è relativo dalla radice dell'unità corrente. In caso contrario, il percorso è relativo alla directory corrente. La tabella seguente illustra alcuni percorsi possibili di directory e file.
 
-|Percorso  |Descrizione  |
+|Path  |Descrizione  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | Percorso file assoluto dalla radice dell'unità C: |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Percorso assoluto dalla radice dell'unità corrente. |
@@ -63,7 +63,7 @@ I percorsi UNC (Universal Naming Convention), che vengono usati per accedere all
 
 Di seguito sono riportati alcuni esempi di percorsi UNC:
 
-|Percorso  |Descrizione  |
+|Path  |Descrizione  |
 | -- | -- |
 | `\\system07\C$\` | Directory radice dell'unità C: in `system07`. |
 | `\\Server2\Share\Test\Foo.txt` | File Foo.txt nella directory Test del volume \\\\Server2\\Share.|
@@ -124,7 +124,7 @@ Quasi tutti i percorsi passati alle API di Windows sono normalizzati. Durante la
 
 Questa normalizzazione avviene in modo implicito, ma è possibile eseguirla in modo esplicito chiamando il metodo <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>, che esegue il wrapping di una chiamata alla [funzione GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea). È anche possibile chiamare la [funzione GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) di Windows direttamente tramite P/Invoke.
 
-### <a name="identifying-the-path"></a>Identificazione del percorso
+### <a name="identify-the-path"></a>Identificare il percorso
 
 Il primo passaggio nella normalizzazione del percorso consiste nell'identificare il tipo di percorso. I percorsi rientrano in una delle categorie seguenti:
 
@@ -138,13 +138,13 @@ Il primo passaggio nella normalizzazione del percorso consiste nell'identificare
 
 Il tipo di percorso determina se una directory corrente viene applicata o meno in qualche modo. Definisce inoltre qual è la "radice" del percorso.
 
-### <a name="handling-legacy-devices"></a>Gestione dei dispositivi legacy
+### <a name="handle-legacy-devices"></a>Gestire i dispositivi legacy
 
 Se il percorso è un dispositivo DOS legacy come `CON`, `COM1` o `LPT1`, viene convertito in un percorso del dispositivo anteponendo `\\.\` e viene restituito.
 
 Un percorso che inizia con il nome di un dispositivo legacy viene sempre interpretato come dispositivo legacy dal metodo <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType>. Ad esempio, il percorso del dispositivo DOS per `CON.TXT` è `\\.\CON` e il percorso del dispositivo DOS per `COM1.TXT\file1.txt` è `\\.\COM1`.
 
-### <a name="applying-the-current-directory"></a>Applicazione della directory corrente
+### <a name="apply-the-current-directory"></a>Applica la directory corrente
 
 Se un percorso non è completo, Windows applica la directory corrente. I percorsi UNC e dei dispositivi non hanno la directory corrente applicata e neanche un'unità completa con il separatore C:\\.
 
@@ -157,11 +157,11 @@ Se il percorso inizia con un elemento diverso da un separatore, vengono applicat
 > [!IMPORTANT]
 > I percorsi relativi sono pericolosi nelle applicazioni multithreading (vale a dire, la maggior parte delle applicazioni) perché la directory corrente è un'impostazione specifica per il processo. Qualsiasi thread può modificare la directory corrente in qualsiasi momento. A partire da .NET Core 2.1, è possibile chiamare il metodo <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> per ottenere un percorso assoluto da un percorso relativo e il percorso base (directory corrente) in base a cui si procede alla risoluzione.
 
-### <a name="canonicalizing-separators"></a>Conversione in forma canonica dei separatori
+### <a name="canonicalize-separators"></a>Separatori Canonicalize
 
 Tutte le barre (`/`) sono convertite nel separatore di Windows standard, la barra rovesciata (`\`). Se sono presenti, una serie di barre che seguono le prime due vengono compresse in una singola barra.
 
-### <a name="evaluating-relative-components"></a>Valutazione dei componenti relativi
+### <a name="evaluate-relative-components"></a>Valuta componenti relativi
 
 Mentre il percorso viene elaborato, vengono valutati tutti i componenti o i segmenti costituiti da un punto singolo o doppio (`.` o `..`):
 
@@ -171,7 +171,7 @@ Mentre il percorso viene elaborato, vengono valutati tutti i componenti o i segm
 
    Le directory padre vengono rimosse solo se non sono oltre la radice del percorso. La radice del percorso dipende dal tipo di percorso. Si tratta dell'unità (`C:\`) per i percorsi DOS, del server/condivisione per i percorsi UNC (`\\Server\Share`) e del prefisso del percorso del dispositivo per i percorsi del dispositivo (`\\?\` o `\\.\`).
 
-### <a name="trimming-characters"></a>Eliminazione di caratteri
+### <a name="trim-characters"></a>Trim (caratteri)
 
 Insieme ai separatori e ai segmenti relativi rimossi in precedenza, durante la normalizzazione vengono rimossi alcuni caratteri aggiuntivi:
 
@@ -184,7 +184,7 @@ Insieme ai separatori e ai segmenti relativi rimossi in precedenza, durante la n
    > [!IMPORTANT]
    > Non creare **mai** una directory o un nome file con uno spazio finale. Gli spazi finali possono rendere difficile o impossibile l'accesso a una directory e le applicazioni riscontrano in genere un errore quando si tenta di gestire directory o file i cui nomi includono spazi finali.
 
-## <a name="skipping-normalization"></a>Esclusione della normalizzazione
+## <a name="skip-normalization"></a>Ignora normalizzazione
 
 Normalmente, qualsiasi percorso passato a un'API di Windows viene effettivamente passato alla [funzione GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) e normalizzato. Un'eccezione degna di nota è quando il percorso di un dispositivo inizia con un punto interrogativo anziché con un punto. A meno che il percorso non inizi esattamente con `\\?\` (si noti l'uso della barra rovesciata canonica), viene normalizzato.
 
@@ -222,4 +222,4 @@ crea una directory denominata TeStDiReCtOrY. Se si rinomina una directory o un f
 [!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
 [!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
-Tuttavia, nei confronti tra i nomi di file e directory non viene fatta distinzione tra maiuscole e minuscole. Se si cerca un file denominato "test.txt", le API del file system .NET non fanno distinzione tra maiuscole e minuscole nel confronto. Test.txt, TEST.TXT, test.TXT e qualsiasi altra combinazione di lettere maiuscole e minuscole corrisponderanno a "test.txt".
+Tuttavia, nei confronti tra i nomi di file e directory non viene fatta distinzione tra maiuscole e minuscole. Se si cerca un file denominato "test.txt", le API del file system .NET non fanno distinzione tra maiuscole e minuscole nel confronto. "Test.txt", "TEST.TXT", "test.TXT" e qualsiasi altra combinazione di lettere maiuscole e minuscole corrisponderanno a "test.txt".

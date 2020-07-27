@@ -1,5 +1,6 @@
 ---
 title: Ottenere attributi di testo mediante l'automazione interfaccia utente
+description: Informazioni su come ottenere gli attributi di testo usando l'automazione interfaccia utente. Vedere un esempio di codice che ottiene gli attributi di testo da un intervallo di testo.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - UI Automation, getting text attributes
 - text attributes, getting
 ms.assetid: fdefc6c3-b836-4cfe-8dec-1484bfdc5551
-ms.openlocfilehash: c338f858f1715d23cad96919db4a21a6ba49710f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b48f773e27088ba4b33ad01b299d77a0992a9159
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446919"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168000"
 ---
 # <a name="obtain-text-attributes-using-ui-automation"></a>Ottenere attributi di testo mediante l'automazione interfaccia utente
 > [!NOTE]
@@ -36,9 +37,9 @@ ms.locfileid: "74446919"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica di TextPattern di automazione interfaccia utente](ui-automation-textpattern-overview.md)
-- [Aggiungere contenuto a una casella di testo usando l'automazione interfaccia utente](add-content-to-a-text-box-using-ui-automation.md)
-- [Trovare ed evidenziare il testo usando l'automazione interfaccia utente](find-and-highlight-text-using-ui-automation.md)
-- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
-- [Ottenere dettagli sugli attributi di testo misti usando l'automazione interfaccia utente](obtain-mixed-text-attribute-details-using-ui-automation.md)
+- [Cenni preliminari sul modello TextPattern di automazione interfaccia utente](ui-automation-textpattern-overview.md)
+- [Aggiungere contenuto a una casella di testo utilizzando l'automazione interfaccia utente](add-content-to-a-text-box-using-ui-automation.md)
+- [Trovare ed evidenziare il testo utilizzando l'automazione interfaccia utente](find-and-highlight-text-using-ui-automation.md)
+- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
+- [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
+- [Ottenere dettagli sugli attributi di testo misti utilizzando l'automazione interfaccia utente](obtain-mixed-text-attribute-details-using-ui-automation.md)

@@ -1,17 +1,18 @@
 ---
 title: Implementazione del pattern di controllo Value di automazione interfaccia utente
+description: Esaminare le linee guida e le convenzioni per implementare il pattern di controllo value nell'automazione interfaccia utente. Conosce i membri obbligatori per l'interfaccia IValueProvider.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Value
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: eb77f26bbe3546a3f90804c3648f8547fb6abad0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a15c0b50996e2c0dfdc937bc9565d5f9ba20c992
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180082"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168206"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implementazione del pattern di controllo Value di automazione interfaccia utente
 > [!NOTE]
@@ -36,7 +37,7 @@ Esempio di elemento elenco modificabile
   
 - <xref:System.Windows.Automation.Provider.IValueProvider> non supporta il recupero delle informazioni di formattazione o dei valori delle sottostringhe. Implementare <xref:System.Windows.Automation.Provider.ITextProvider> in questi scenari.  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider>deve essere implementato da controlli quali il controllo di selezione **Selezione colori** di Microsoft Word (illustrato di seguito), che supporta il mapping delle stringhe tra un valore di colore (ad esempio, "giallo") e una struttura RGB interna equivalente.  
+- <xref:System.Windows.Automation.Provider.IValueProvider>deve essere implementato da controlli come il controllo di selezione della selezione **colori** da Microsoft Word (illustrato di seguito), che supporta il mapping delle stringhe tra un valore di colore (ad esempio, "Yellow") e una struttura RGB interna equivalente.  
   
  ![Selezione colori con il giallo evidenziato](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Esempio di mapping delle stringhe dei campioni colore  
@@ -49,9 +50,9 @@ Esempio di mapping delle stringhe dei campioni colore
   
 |Membri obbligatori|Tipo di membro|Note|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Metodo|nessuno|  
+|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Metodo|Nessuno|  
   
 <a name="Exceptions"></a>
 ## <a name="exceptions"></a>Eccezioni  
@@ -59,15 +60,15 @@ Esempio di mapping delle stringhe dei campioni colore
   
 |Tipo di eccezione|Condizione|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> - Se le informazioni specifiche delle impostazioni locali vengono passate a un controllo in un formato non corretto, ad esempio una data formattata in modo non corretto.|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> - Se un nuovo valore non può essere convertito da una stringa in un formato riconosciuto dal controllo.- If a new value cannot be converted from a string to a format the control recognizes.|  
-|<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> - Quando si tenta di modificare un controllo che non è abilitato.- When an attempt to manipulate a control that is not enabled.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -Se le informazioni specifiche delle impostazioni locali vengono passate a un controllo in un formato non corretto, ad esempio una data formattata in modo errato.|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -Se un nuovo valore non può essere convertito da una stringa a un formato riconosciuto dal controllo.|  
+|<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -Quando viene effettuato un tentativo di modificare un controllo non abilitato.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
 - [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
-- [Esempio di inserimento di testo di ValuePattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Esempio di testo di inserimento ValuePattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
+- [Panoramica dell'albero di automazione dell'interfaccia utente](ui-automation-tree-overview.md)
 - [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](use-caching-in-ui-automation.md)

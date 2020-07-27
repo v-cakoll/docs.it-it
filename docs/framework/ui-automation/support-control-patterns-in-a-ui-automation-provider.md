@@ -1,5 +1,6 @@
 ---
 title: Supportare pattern di controllo in un provider di automazione interfaccia utente
+description: Informazioni su come implementare i pattern di controllo di supporto in un provider di automazione interfaccia utente in modo che le applicazioni client possano modificare i controlli e ottenere dati da essi.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - control patterns, supporting in UI Automation provider
 - UI Automation, supporting control patterns in provider
 ms.assetid: 0d635c35-ffa8-4dc8-bbc9-12fcd5445776
-ms.openlocfilehash: 1200ebd42884220d2611729b87f4bf51e7a903a1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 82300499520be6b820b361ebdeb56bbf3716afab
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446826"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163506"
 ---
 # <a name="support-control-patterns-in-a-ui-automation-provider"></a>Supportare pattern di controllo in un provider di automazione interfaccia utente
 
@@ -37,12 +38,12 @@ Nell'esempio seguente viene illustrata un'implementazione di <xref:System.Window
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrata un'implementazione <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> che restituisce la classe che implementa <xref:System.Windows.Automation.Provider.ISelectionProvider>. La maggior parte dei controlli casella di riepilogo supporta anche altri pattern, ma in questo esempio viene restituito un riferimento null (`Nothing` in Microsoft Visual Basic .NET) per tutti gli altri identificatori di criteri.
+Nell'esempio seguente viene illustrata un'implementazione <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> che restituisce la classe che implementa <xref:System.Windows.Automation.Provider.ISelectionProvider>. La maggior parte dei controlli casella di riepilogo supporta anche altri pattern, ma in questo esempio viene restituito un riferimento null ( `Nothing` in Microsoft Visual Basic .NET) per tutti gli altri identificatori di criteri.
 
 [!code-csharp[UIAFragmentProvider_snip#120](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#120)]
 [!code-vb[UIAFragmentProvider_snip#120](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#120)]
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica dei provider di automazione interfaccia utente](ui-automation-providers-overview.md)
+- [Cenni preliminari sui provider di automazione interfaccia utente](ui-automation-providers-overview.md)
 - [Implementazione del provider di automazione interfaccia utente lato server](server-side-ui-automation-provider-implementation.md)

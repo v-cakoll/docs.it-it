@@ -1,16 +1,17 @@
 ---
 title: Cenni preliminari sulle proprietà di automazione interfaccia utente
+description: Vedere un'ampia panoramica delle proprietà di automazione interfaccia utente Microsoft. Informazioni sugli identificatori di proprietà, sulle proprietà per categoria, localizzazione e proprietà ed eventi.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: 8a44fd89017002ae51d9b15a22bac97668d0ff90
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17d780c059530be8c91890302ea4066de2d4aa73
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179862"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163213"
 ---
 # <a name="ui-automation-properties-overview"></a>Cenni preliminari sulle proprietà di automazione interfaccia utente
 > [!NOTE]
@@ -30,7 +31,7 @@ ms.locfileid: "79179862"
   
  Gli oggetti<xref:System.Windows.Automation.AutomationProperty> che rappresentano particolari proprietà sono disponibili come campi in diverse classi. Per motivi di sicurezza, i provider di automazione interfaccia utente ottengono questi oggetti da un set separato di classi contenute in Uiautomationtypes.dll.  
   
- Nella tabella seguente le proprietà vengono classificate in base alle classi che contengono gli <xref:System.Windows.Automation.AutomationProperty>ID.  
+ La tabella seguente classifica le proprietà in base alle classi che contengono gli <xref:System.Windows.Automation.AutomationProperty> ID.  
   
 |Tipologie di proprietà|I client ottengono gli ID da|I provider ottengono gli ID da|  
 |-------------------------|--------------------------|----------------------------|  
@@ -53,7 +54,7 @@ ms.locfileid: "79179862"
   
 <a name="Properties_by_Category"></a>
 ## <a name="properties-by-category"></a>Proprietà per categoria  
- Nelle tabelle seguenti sono classificate le proprietà <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.AutomationElementIdentifiers>i cui ID si trovano in e . Queste proprietà sono comuni a tutti i controlli. È probabile che quasi tutte siano statiche per tutto il ciclo di vita dell'applicazione del provider. Le proprietà più dinamiche sono associate ai pattern di controllo.  
+ Le tabelle seguenti classificano le proprietà i cui ID sono disponibili in <xref:System.Windows.Automation.AutomationElement> e <xref:System.Windows.Automation.AutomationElementIdentifiers> . Queste proprietà sono comuni a tutti i controlli. È probabile che quasi tutte siano statiche per tutto il ciclo di vita dell'applicazione del provider. Le proprietà più dinamiche sono associate ai pattern di controllo.  
   
  La colonna **Accesso a proprietà** elenca tutte le altre funzioni di accesso per ogni proprietà, oltre a <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> e <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>. Per altre informazioni su come ottenere le proprietà in un'applicazione client, vedere [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   

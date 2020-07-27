@@ -1,16 +1,17 @@
 ---
 title: Cenni preliminari sui tipi di controllo per l'automazione interfaccia utente
+description: Leggere una panoramica dei tipi di controllo di automazione interfaccia utente, che sono identificatori noti che possono essere usati per indicare il tipo di controllo rappresentato da un elemento.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, control types
 - control types, UI Automation
 ms.assetid: 75159ef8-bd43-4d13-acb7-1f1fe9253160
-ms.openlocfilehash: 643c89e8f6c5e34aa1fb3c5c7c6c750c72046277
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 204e950fca74c4f7bd2c13dc8a8891152954c071
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179926"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166129"
 ---
 # <a name="ui-automation-control-types-overview"></a>Cenni preliminari sui tipi di controllo per l'automazione interfaccia utente
 > [!NOTE]
@@ -42,7 +43,7 @@ ms.locfileid: "79179926"
   
 - [Supporto di automazione interfaccia utente per il tipo di controllo CheckBox](ui-automation-support-for-the-checkbox-control-type.md)  
   
-- [Supporto per automazione interfaccia utente del tipo di controllo ComboBox](ui-automation-support-for-the-combobox-control-type.md)  
+- [Supporto di automazione interfaccia utente per il tipo di controllo ComboBox](ui-automation-support-for-the-combobox-control-type.md)  
   
 - [Supporto di automazione interfaccia utente per il tipo di controllo DataGrid](ui-automation-support-for-the-datagrid-control-type.md)  
   
@@ -76,7 +77,7 @@ ms.locfileid: "79179926"
   
 - [Supporto per automazione interfaccia utente del tipo di controllo ProgressBar](ui-automation-support-for-the-progressbar-control-type.md)  
   
-- [Supporto per automazione interfaccia utente del tipo di controllo RadioButton](ui-automation-support-for-the-radiobutton-control-type.md)  
+- [Supporto di automazione interfaccia utente per il tipo di controllo RadioButton](ui-automation-support-for-the-radiobutton-control-type.md)  
   
 - [Supporto per automazione interfaccia utente del tipo di controllo ScrollBar](ui-automation-support-for-the-scrollbar-control-type.md)  
   
@@ -104,7 +105,7 @@ ms.locfileid: "79179926"
   
 - [Supporto per l'automazione interfaccia utente del tipo di controllo ToolBar](ui-automation-support-for-the-toolbar-control-type.md)  
   
-- [Supporto per automazione dell'interfaccia utente del tipo di controllo ToolTip](ui-automation-support-for-the-tooltip-control-type.md)  
+- [Supporto per l'automazione dell'interfaccia utente del tipo di controllo ToolTip](ui-automation-support-for-the-tooltip-control-type.md)  
   
 - [Supporto per automazione interfaccia utente del tipo di controllo Tree](ui-automation-support-for-the-tree-control-type.md)  
   

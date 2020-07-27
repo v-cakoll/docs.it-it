@@ -3,12 +3,12 @@ title: Glossario .NET
 description: Significato di termini selezionati usati nella documentazione di .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 11ab0de4757a23c940ae04418a5a82ea79f71761
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 529b1d9142ddf7982a6712c355c10666f0414d73
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287454"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163118"
 ---
 # <a name="net-glossary"></a>Glossario .NET
 
@@ -139,8 +139,6 @@ Le parole libreria e [framework](#framework) vengono spesso usate come sinonimi.
 ## <a name="metapackage"></a>metapacchetto
 
 Pacchetto NuGet che non contiene una propria libreria, ma è costituito da un elenco di dipendenze. Facoltativamente, i pacchetti inclusi possono stabilire l'API per un framework di destinazione.
-
-Vedere [pacchetti, metapacchetti e Framework](../core/packages.md)
 
 ## <a name="mono"></a>Mono
 

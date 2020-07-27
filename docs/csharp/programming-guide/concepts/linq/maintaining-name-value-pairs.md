@@ -1,13 +1,14 @@
 ---
 title: Gestione di coppie nome/valore (C#)
+description: LINQ to XML contiene metodi che semplificano la gestione delle coppie nome/valore, sia come attributi che come set di elementi figlio.
 ms.date: 07/20/2015
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
-ms.openlocfilehash: 9c42a154a4c3ed1463e428faab4c7d33197ef4a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 92a45d160cbb1ef470d93bf740d0b6f584681e72
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69591709"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165275"
 ---
 # <a name="maintaining-namevalue-pairs-c"></a>Gestione di coppie nome/valore (C#)
 In molte applicazioni è necessario gestire informazioni che è preferibile mantenere come coppie nome/valore. Queste informazioni potrebbero essere di configurazione o impostazioni globali. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] include alcuni metodi che consentono di mantenere facilmente coppie nome/valore. È possibile mantenere le informazioni come attributi o come un set di elementi figlio.  

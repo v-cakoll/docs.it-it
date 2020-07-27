@@ -1,5 +1,6 @@
 ---
 title: Consentire la navigazione in un provider di frammenti di automazione interfaccia utente
+description: Vedere un esempio che illustra come abilitare la navigazione in un provider di automazione interfaccia utente per un elemento che si trova all'interno di un frammento.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, enabling navigation in provider
 - navigation, enabling in UI Automation provider
 ms.assetid: 3cb6092a-58c9-4ca0-84a5-0e54d5d00a0d
-ms.openlocfilehash: 264a24646f7a3c3b5b20e94fa0ed98a1341f8273
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bf9e43e9d70b9191fba93e5efa4eae544196c735
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435759"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168483"
 ---
 # <a name="enable-navigation-in-a-ui-automation-fragment-provider"></a>Consentire la navigazione in un provider di frammenti di automazione interfaccia utente
 > [!NOTE]
@@ -29,5 +30,5 @@ ms.locfileid: "74435759"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica dei provider di automazione interfaccia utente](ui-automation-providers-overview.md)
+- [Cenni preliminari sui provider di automazione interfaccia utente](ui-automation-providers-overview.md)
 - [Implementazione del provider di automazione interfaccia utente lato server](server-side-ui-automation-provider-implementation.md)

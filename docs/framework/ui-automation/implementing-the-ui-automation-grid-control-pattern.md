@@ -1,17 +1,18 @@
 ---
 title: Implementazione del pattern di controllo Grid di automazione interfaccia utente
+description: Informazioni sulle linee guida e le convenzioni per l'implementazione del pattern di controllo Grid GridPattern nell'automazione interfaccia utente. Informazioni su come implementare l'interfaccia IGridProvider.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, grid
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-ms.openlocfilehash: 04f3ee1e01054df6a13ab2391e14a6a7f7274bb9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c7aae8e8070c989c4b36e0581aa5f48f51416f97
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180221"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165879"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>Implementazione del pattern di controllo Grid di automazione interfaccia utente
 > [!NOTE]
@@ -48,9 +49,9 @@ Esempio di controllo griglia con coordinate vuote
   
 |Membri obbligatori|Type|Note|  
 |----------------------|----------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Metodo|nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Metodo|Nessuno|  
   
  Questo pattern di controllo non è associato a eventi.  
   
@@ -60,14 +61,14 @@ Esempio di controllo griglia con coordinate vuote
   
 |Tipo di eccezione|Condizione|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> - Se la coordinata di <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> riga richiesta è maggiore <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>di o se la coordinata della colonna è maggiore di .|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> - Se una delle coordinate di riga o di colonna richieste è minore di zero.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -Se la coordinata di riga richiesta è maggiore di <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> o la coordinata di colonna è maggiore di <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A> .|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -Se una delle coordinate della riga o della colonna richiesta è minore di zero.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
 - [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
 - [Implementazione del pattern di controllo GridItem di automazione interfaccia utente](implementing-the-ui-automation-griditem-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Panoramica dell'albero di automazione dell'interfaccia utente](ui-automation-tree-overview.md)
 - [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](use-caching-in-ui-automation.md)

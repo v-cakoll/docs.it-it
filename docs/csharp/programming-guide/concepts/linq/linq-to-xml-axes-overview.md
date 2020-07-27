@@ -1,13 +1,14 @@
 ---
 title: Panoramica degli assi LINQ to XML (C#)
+description: Informazioni sui metodi dell'asse in C#, detti anche assi. È possibile eseguire una query su un albero XML in LINQ per trovare elementi e attributi e recuperarne i valori tramite gli assi.
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-ms.openlocfilehash: c8b64731925f37d54bded62fae4ccae9933ffbe9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bbda844e8cb2e3b1ff116fd834c6ab1fdd20c1f8
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635522"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165445"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>Panoramica degli assi LINQ to XML (C#)
 Dopo aver creato un albero XML o aver caricato un documento XML in un albero XML, è possibile eseguire query su di essa per cercare elementi e attributi e recuperarne i valori. Per recuperare le raccolte vengono usati i *metodi dell'asse*, detti anche *assi*. Alcuni degli assi sono metodi delle classi <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XDocument> che restituiscono raccolte <xref:System.Collections.Generic.IEnumerable%601>. Alcuni degli assi sono metodi di estensione della classe <xref:System.Xml.Linq.Extensions>. Gli assi implementati come metodi di estensione operano sulle raccolte e restituiscono raccolte.  
@@ -16,7 +17,7 @@ Dopo aver creato un albero XML o aver caricato un documento XML in un albero XML
   
  Oltre ai metodi dell'asse, che restituiscono raccolte, sono disponibili altri due metodi usati frequentemente nelle query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Il metodo <xref:System.Xml.Linq.XContainer.Element%2A> restituisce un singolo oggetto <xref:System.Xml.Linq.XElement>. Il metodo <xref:System.Xml.Linq.XElement.Attribute%2A> restituisce un singolo oggetto <xref:System.Xml.Linq.XAttribute>.  
   
- Per molti scopi, le query LINQLINQ forniscono il modo più efficace per esaminare una struttura ad albero, estrarne i dati e trasformarla. Le query LINQ operino su <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement> oggetti che <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XAttribute> implementano <xref:System.Collections.Generic.IEnumerable%601>, e sulla [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] restituzione degli assi delle raccolte e delle raccolte. Tali raccolte sono necessarie per l'esecuzione delle query.  
+ Per molti scopi, le query LINQ forniscono il modo più potente per esaminare un albero, estrarre dati da esso e trasformarlo. Le query LINQ operano su oggetti che implementano <xref:System.Collections.Generic.IEnumerable%601> , mentre gli [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] assi restituiscono <xref:System.Collections.Generic.IEnumerable%601> di <xref:System.Xml.Linq.XElement> raccolte e <xref:System.Collections.Generic.IEnumerable%601> di <xref:System.Xml.Linq.XAttribute> raccolte. Tali raccolte sono necessarie per l'esecuzione delle query.  
   
  Oltre ai metodi dell'asse che recuperano raccolte di elementi e attributi, sono disponibili altri metodi dell'asse che consentono di scorrere l'albero con maggior dettaglio. Ad esempio, anziché gestire elementi e attributi, è possibile operare sui nodi dell'albero. I nodi costituiscono un livello di granularità più preciso rispetto a elementi e attributi. Quando usano i nodi, è possibile esaminare commenti XML, nodi di tipo text, istruzioni di elaborazione e altro ancora. Questa funzionalità è ad esempio utile per chi intende scrivere il codice per un elaboratore di testo e desidera salvare i documenti in formato XML. Tuttavia, la maggior parte dei programmatori XML è interessata principalmente a elementi, attributi e ai relativi valori.  
   

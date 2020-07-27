@@ -1,5 +1,6 @@
 ---
 title: Panoramica sugli oggetti incorporati e TextPattern
+description: Leggere una panoramica del modo in cui automazione interfaccia utente espone oggetti incorporati, o elementi figlio, all'interno di un documento di testo o di un contenitore usando TextPattern e TextPatternRange.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, TextPattern class
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: 7a3338a08d06320acdc2acb0647bc91541448d7d
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 0a06fb72b280fc61faeb12f6f2c3a05d957ec7b9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201062"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163557"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Panoramica sugli oggetti incorporati e TextPattern
 > [!NOTE]
@@ -98,7 +99,7 @@ Esempi di regolazione di un intervallo di testo per Move() ed ExpandToEnclosingU
 |<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> con i parametri (TextUnit.Word, 1).|Sposta l'estensione dell'intervallo di intervallo di testo ad "http", poiché il testo del collegamento ipertestuale è costituito da parole singole. In questo caso, il collegamento ipertestuale non viene considerato come oggetto singolo.<br /><br /> L'URL {[http]} è incorporato nel testo.|  
   
 <a name="Image"></a>
-### <a name="image"></a>Image  
+### <a name="image"></a>Immagine  
  **Esempio 1: intervallo di testo che contiene un'immagine incorporata**  
   
  {L' ![esempio image Embedded Image](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") è incorporato nel testo}.  
@@ -154,7 +155,7 @@ Esempi di regolazione di un intervallo di testo per Move() ed ExpandToEnclosingU
 - <xref:System.Windows.Automation.Text.TextPatternRange>
 - <xref:System.Windows.Automation.Provider.ITextProvider>
 - <xref:System.Windows.Automation.Provider.ITextRangeProvider>
-- [Accedere agli oggetti incorporati usando l'automazione interfaccia utente](access-embedded-objects-using-ui-automation.md)
+- [Accedere agli oggetti incorporati utilizzando l'automazione interfaccia utente](access-embedded-objects-using-ui-automation.md)
 - [Esporre il contenuto di una tabella utilizzando l'automazione interfaccia utente](expose-the-content-of-a-table-using-ui-automation.md)
 - [Scorrere il testo utilizzando automazione interfaccia utente](traverse-text-using-ui-automation.md)
 - [Esempio di ricerca e selezione di TextPattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)

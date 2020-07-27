@@ -1,17 +1,18 @@
 ---
 title: CorFlags.exe (strumento di conversione CorFlags)
+description: Comprendere CorFlags.exe, lo strumento di conversione CorFlags. Questo strumento consente di configurare la sezione CorFlags dell'intestazione di un'immagine eseguibile portatile.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CorFlags conversion tool
 - CorFlags.exe
 - portable executable files, CorFlags section
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
-ms.openlocfilehash: e1251b6660db45f3af4f6e57114b1b10da18bd0a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: da5efadd63cc03f6f6e4eecf3115865ca3643b39
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73129855"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167224"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (strumento di conversione CorFlags)
 Lo strumento di conversione CorFlags consente di configurare la sezione CorFlags dell'intestazione di un'immagine eseguibile di tipo PE.  

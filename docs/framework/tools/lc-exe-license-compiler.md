@@ -1,5 +1,6 @@
 ---
 title: Lc.exe (Compilatore licenze)
+description: Utilizzare Lc.exe, il compilatore delle licenze. Questo strumento legge i file di testo che contengono informazioni sulla licenza e crea un file binario da incorporare in un eseguibile CLR come risorsa.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Lc.exe
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 464514a241cc35fc821049ba0c29bec108d88253
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 45a80ba7c3e24c0f419758315b2d2daafd3890f4
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180402"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164248"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Compilatore licenze)
 Il Compilatore licenze legge file di testo contenenti informazioni sulla licenza e produce un file binario che è possibile incorporare come risorsa in un eseguibile di Common Language Runtime.  
@@ -41,7 +42,7 @@ targetPE /complist:filename [-outdir:path]
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |**/complist:** *filename*|Specifica il nome di un file contenente l'elenco dei componenti provvisti di licenza da includere nel file LICENSES. A ciascun componente viene fatto riferimento mediante il nome completo, specificando un solo componente per riga.<br /><br /> Se si usa la riga di comando sarà possibile specificare un file separato per ciascun form del progetto. Lc.exe accetta più file di input e produce un unico file LICENSES.|  
-|**/h**[**elp**]|Visualizza la sintassi e le opzioni di comando dello strumento.|  
+|**/h**[**ELP**]|Visualizza la sintassi e le opzioni di comando dello strumento.|  
 |**/i:** *modulo*|Specifica i moduli contenenti i componenti elencati nel file **/complist**. Per specificare più moduli, usare più flag **/i**.|  
 |**/nologo**|Evita la visualizzazione del messaggio di avvio Microsoft.|  
 |**/outDir:** *percorso*|Specifica la directory in cui inserire il file LICENSES di output.|  
@@ -95,5 +96,5 @@ lc @response.rsp
 ## <a name="see-also"></a>Vedere anche
 
 - [Strumenti](index.md)
-- [Al.exe (Assembly Linker)](al-exe-assembly-linker.md)
+- [Al.exe (assembly linker)](al-exe-assembly-linker.md)
 - [Prompt dei comandi](developer-command-prompt-for-vs.md)
