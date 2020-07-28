@@ -1,5 +1,6 @@
 ---
 title: Cenni preliminari sugli eventi di automazione interfaccia utente
+description: Vedere una panoramica della notifica degli eventi di automazione interfaccia utente Microsoft. Esaminare i tipi di eventi, gli identificatori degli eventi di automazione interfaccia utente e gli argomenti degli eventi di automazione interfaccia utente.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, providers
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: 495e7d29c814164f4235d18569477b856cb09045
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f51a31a433986822a9dba22bf8f17ade00bbb76
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179890"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168086"
 ---
 # <a name="ui-automation-events-overview"></a>Cenni preliminari sugli eventi di automazione interfaccia utente
 > [!NOTE]
@@ -83,6 +84,6 @@ ms.locfileid: "79179890"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [UI Automation Events for Clients](ui-automation-events-for-clients.md)
+- [Eventi di automazione interfaccia utente per i client](ui-automation-events-for-clients.md)
 - [Implementazione del provider di automazione interfaccia utente lato server](server-side-ui-automation-provider-implementation.md)
 - [Sottoscrivere gli eventi di automazione interfaccia utente](subscribe-to-ui-automation-events.md)

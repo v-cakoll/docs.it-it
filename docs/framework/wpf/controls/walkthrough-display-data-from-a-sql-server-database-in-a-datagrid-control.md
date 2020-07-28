@@ -1,5 +1,6 @@
 ---
 title: 'Procedura dettagliata: Visualizzare i dati di un database di SQL Server in un controllo DataGrid'
+description: Per informazioni su come ottenere dati da un database di SQL Server e visualizzarli in un controllo Windows Presentation Foundation DataGrid, usare questa procedura dettagliata.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: 1398d8408a0b85d6603d638312e92ba35c5e77d3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cc41979c869021c9c363f3f68ce590d4702e068c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591033"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167555"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Procedura dettagliata: visualizzare i dati di un database di SQL Server in un controllo DataGrid
 
@@ -47,7 +48,7 @@ Per completare questa procedura dettagliata, è necessario disporre dei componen
 
 6. Nella schermata scegliere la connessione dati specificare la connessione al database di AdventureWorksLT2008. Per ulteriori informazioni, vedere [la finestra di dialogo scegliere la connessione dati](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399244(v=vs.100)).
 
-    Verificare che il nome sia `AdventureWorksLT2008Entities` e che la casella di controllo **Salva le impostazioni di connessione dell'entità in app. config come** sia selezionata, quindi fare clic su **Avanti**.
+    Verificare che il nome sia `AdventureWorksLT2008Entities` e che la casella di controllo **Salva le impostazioni di connessione dell'entità in App.Config come** sia selezionata, quindi fare clic su **Avanti**.
 
 7. Nella schermata Seleziona oggetti di database espandere il nodo tabelle e selezionare le tabelle **Product** e **ProductCategory** .
 

@@ -1,5 +1,6 @@
 ---
 title: Creare un provider di automazione interfaccia utente lato client
+description: Vedere un esempio di come creare un provider di automazione interfaccia utente lato client. Nell'esempio viene implementato un provider lato client semplice per una finestra della console.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, creating client-side provider
 - client-side UI Automation provider, creating
 ms.assetid: d91edaf2-be28-41ec-a508-af421cb43c3d
-ms.openlocfilehash: 79accd23392ff9e1e8157348f7a1042ee2b3cc47
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a25966d0f11e409bd4e53f944fc2528360327039
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433657"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168477"
 ---
 # <a name="create-a-client-side-ui-automation-provider"></a>Creare un provider di automazione interfaccia utente lato client
 > [!NOTE]
@@ -29,5 +30,5 @@ ms.locfileid: "74433657"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica dei provider di automazione interfaccia utente](ui-automation-providers-overview.md)
+- [Cenni preliminari sui provider di automazione interfaccia utente](ui-automation-providers-overview.md)
 - [Registrare un assembly di provider lato client](register-a-client-side-provider-assembly.md)

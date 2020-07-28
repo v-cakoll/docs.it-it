@@ -1,17 +1,18 @@
 ---
 title: Implementazione del pattern di controllo Table di automazione interfaccia utente
+description: Esaminare le linee guida e le convenzioni per implementare il pattern di controllo Table nell'automazione interfaccia utente. Conosce i membri obbligatori per l'interfaccia ITableProvider.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Table control pattern
 - control patterns, Table
 - TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
-ms.openlocfilehash: 0b3d000112060550734890ad3c4063a26c320b04
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e88ddee04ba887daf1929d855526cd0d062f78d5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180108"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168243"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>Implementazione del pattern di controllo Table di automazione interfaccia utente
 > [!NOTE]
@@ -32,9 +33,9 @@ ms.locfileid: "79180108"
 - Le intestazioni di riga e colonna possono includere un'intestazione principale nonché intestazioni di supporto.  
   
 > [!NOTE]
-> Questo concetto diventa evidente in un foglio di calcolo di Microsoft Excel in cui un utente ha definito una colonna "Nome". Questa colonna contiene ora due intestazioni, ovvero l'intestazione "Nome" definita dall'utente e la designazione alfanumerica per tale colonna assegnata dall'applicazione.  
+> Questo concetto diventa evidente in un foglio di calcolo di Microsoft Excel in cui un utente ha definito una colonna "First Name". Questa colonna contiene ora due intestazioni, ovvero l'intestazione "Nome" definita dall'utente e la designazione alfanumerica per tale colonna assegnata dall'applicazione.  
   
-- Vedere Implementazione del pattern di controllo [griglia di automazione interfaccia utente](implementing-the-ui-automation-grid-control-pattern.md) per le funzionalità della griglia correlata.  
+- Vedere [implementazione del pattern di controllo Grid di automazione interfaccia utente](implementing-the-ui-automation-grid-control-pattern.md) per la funzionalità della griglia correlata.  
   
  ![Tabella con elementi di intestazione complessi](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 Esempio di tabella con intestazioni di colonna complesse  
@@ -48,9 +49,9 @@ Esempio di tabella con la proprietà RowOrColumnMajor definita in modo ambiguo
   
 |Membri obbligatori|Tipo di membro|Note|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|Metodo|nessuno|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Metodo|nessuno|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|Metodo|Nessuno|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Metodo|Nessuno|  
   
  Questo pattern di controllo non è associato a eventi.  
   
@@ -60,10 +61,10 @@ Esempio di tabella con la proprietà RowOrColumnMajor definita in modo ambiguo
   
 ## <a name="see-also"></a>Vedere anche
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
 - [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
 - [Implementazione del pattern di controllo TableItem di automazione interfaccia utente](implementing-the-ui-automation-tableitem-control-pattern.md)
 - [Implementazione del pattern di controllo Grid di automazione interfaccia utente](implementing-the-ui-automation-grid-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Panoramica dell'albero di automazione dell'interfaccia utente](ui-automation-tree-overview.md)
 - [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](use-caching-in-ui-automation.md)

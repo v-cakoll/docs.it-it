@@ -1,5 +1,6 @@
 ---
 title: 'Procedura: Usare caratteri speciali in XAML'
+description: Informazioni sulla sintassi per la codifica di caratteri speciali in formato di file UTF-8 Unicode in Visual Studio per l'uso nei file XAML in Windows Presentation Foundation.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Unicode UTF-8 file format
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], special characters
 - special characters [WPF]
 ms.assetid: a57776d1-f353-4794-afa0-bfa3c712ed1c
-ms.openlocfilehash: 59449637bb45f6b75462b6809c354af7972fc2e7
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ac2388fd96aa26ddd99408ac9f847ce517958568
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740836"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168361"
 ---
 # <a name="how-to-use-special-characters-in-xaml"></a>Procedura: Usare caratteri speciali in XAML
 I file di markup creati in Visual Studio vengono salvati automaticamente nel formato di file UTF-8 Unicode, il che significa che la maggior parte dei caratteri speciali, ad esempio i contrassegni accentati, sono codificati correttamente. Tuttavia, esiste un set di caratteri speciali di uso comune che viene gestito diversamente. Questi caratteri speciali seguono lo standard XML World Wide Web Consortium (W3C) per la codifica.  
