@@ -2,12 +2,12 @@
 title: Aggiunte al formato csproj per .NET Core
 description: Informazioni sulle differenze tra i file csproj esistenti e .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 619f6121d9d476726c3d422e50737ff3d622f444
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: ea57b66d9a2e5cb69fe82e9a4bcf68625af546fd
+ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164926"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87251205"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Aggiunte al formato csproj per .NET Core
 
@@ -180,7 +180,7 @@ Un elemento `<DotNetCliToolReference>` specifica lo strumento dell'interfaccia d
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-Si noti che `DotNetCliToolReference` è [ora deprecato](https://github.com/dotnet/announcements/issues/107) a favore degli [strumenti locali di .NET Core](https://aka.ms/local-tools).
+Si noti che `DotNetCliToolReference` è [ora deprecato](https://github.com/dotnet/announcements/issues/107) a favore degli [strumenti locali di .NET Core](./global-tools.md#install-a-local-tool).
 
 #### <a name="version"></a>Versione
 

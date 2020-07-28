@@ -1,28 +1,28 @@
 ---
 title: .NET Standard
-description: Informazioni su .NET Standard, le relative versioni e le implementazioni di .NET che lo supportano.
+description: Informazioni sulle .NET Standard, le versioni e le implementazioni di .NET che lo supportano.
 ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 34074b420547cff802f1835656540be7b8eb58b4
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: b52d69756d85e3e422b798c3ac7d53de3b538b8d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607480"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167414"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.NET Standard](https://github.com/dotnet/standard) è una specifica formale delle API .NET che devono essere disponibili in tutte le implementazioni di .NET. La motivazione alla base di .NET Standard è stabilire una maggiore uniformità nell'ecosistema .NET. [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) continua a stabilire l'uniformità per il comportamento di implementazione di .NET e mentre ECMA 335 specifica un piccolo set di librerie standard, la specifica .NET Standard comprende una gamma più ampia di API .NET.
+[.NET standard](https://github.com/dotnet/standard) è una specifica formale delle API .NET che devono essere disponibili in tutte le implementazioni di .NET. La motivazione alla base .NET Standard consiste nel definire una maggiore uniformità nell'ecosistema .NET. [Ecma 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) continua a stabilire uniformità per il comportamento di implementazione di .NET e, mentre ECMA 335 specifica un piccolo set di librerie standard, la specifica .NET standard include una gamma più ampia di API .NET.
 
-.NET Standard consente i seguenti scenari chiave:
+.NET Standard Abilita gli scenari principali seguenti:
 
 - Definisce un set uniforme di API BCL per tutte le implementazioni di .NET da implementare, indipendentemente dal carico di lavoro.
 - Consente agli sviluppatori di creare librerie portabili utilizzabili in più implementazioni di .NET usando questo stesso set di API.
 - Riduce o addirittura elimina la compilazione condizionale del codice sorgente condiviso a causa di API .NET (solo per API del sistema operativo).
 
-Le diverse implementazioni di .NET specificano come destinazione determinate versioni di .NET Standard. Ogni versione dell'implementazione di .NET annuncia la versione .NET Standard più recente supportata, implicando che sono supportate anche le versioni precedenti. Ad esempio, .NET Framework 4.6 implementa .NET Standard 1.3, il che significa che espone tutte le API definite in .NET Standard versioni da 1.0 a 1.3. Analogamente, .NET Framework 4.6.1 implementa .NET Standard 1.4, mentre .NET Core 1.0 implementa .NET Standard 1.6.
+Le diverse implementazioni di .NET specificano come destinazione determinate versioni di .NET Standard. Ogni versione dell'implementazione di .NET annuncia la versione .NET Standard più recente supportata, implicando che sono supportate anche le versioni precedenti. Ad esempio, .NET Framework 4,6 implementa .NET Standard 1,3, il che significa che espone tutte le API definite in .NET Standard versioni da 1,0 a 1,3. Analogamente, .NET Framework 4.6.1 implementa .NET Standard 1,4, mentre .NET Core 1,0 implementa .NET Standard 1,6.
 
 ## <a name="net-implementation-support"></a>Supporto per le implementazioni di .NET
 
@@ -76,15 +76,15 @@ Un componente specifico, ad esempio `System.Runtime`, descrive quanto segue:
 Vengono forniti elementi derivati per facilitare le operazioni di lettura e abilitare alcuni scenari di sviluppo (ad esempio l'uso di un compilatore).
 
 - [Elenco di API in markdown](https://github.com/dotnet/standard/tree/master/docs/versions)
-- Assembly di riferimento, distribuiti come [pacchetti NuGet](../core/packages.md) e utilizzati come riferimento dal metapacchetto [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/).
+- Assembly di riferimento, distribuiti come pacchetti NuGet e utilizzati come riferimento dal metapacchetto [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/).
 
 ### <a name="package-representation"></a>Rappresentazione dei pacchetti
 
-Il principale veicolo di distribuzione degli assembly di riferimento di .NET Standard sono i [pacchetti NuGet](../core/packages.md). Le implementazioni vengono distribuite con modalità diverse, appropriate per ogni implementazione di .NET.
+Il principale veicolo di distribuzione degli assembly di riferimento di .NET Standard sono i pacchetti NuGet. Le implementazioni vengono distribuite con modalità diverse, appropriate per ogni implementazione di .NET.
 
 I pacchetti NuGet hanno come destinazione uno o più [framework](frameworks.md). I pacchetti di .NET Standard hanno come destinazione il framework ".NET Standard". È possibile definire come destinazione il framework .NET Standard usando il `netstandard` [TFM (Target Framework Moniker) compatto](frameworks.md) (ad esempio `netstandard1.4`). Le librerie che devono essere eseguite in più runtime devono avere come destinazione questo framework. Per il set più ampio di API, indicare `netstandard2.0` come destinazione poiché il numero di API è più che raddoppiato tra .NET Standard 1.6 e 2.0.
 
-Il [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) metapacchetto fa riferimento al set completo di pacchetti NuGet che definiscono .NET Standard.The metapackage references the complete set of NuGet packages that define .NET Standard.  Il modo più comune per definire `netstandard` come destinazione consiste nel fare riferimento a questo metapacchetto. Questo metapacchetto descrive e fornisce l'accesso alle circa 40 librerie .NET e alle API associate che definiscono .NET Standard. Per accedere ad API aggiuntive, è possibile fare riferimento ad altri pacchetti che hanno come destinazione `netstandard`.
+Il [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) metapacchetto fa riferimento al set completo di pacchetti NuGet che definiscono .NET standard.  Il modo più comune per definire `netstandard` come destinazione consiste nel fare riferimento a questo metapacchetto. Questo metapacchetto descrive e fornisce l'accesso alle circa 40 librerie .NET e alle API associate che definiscono .NET Standard. Per accedere ad API aggiuntive, è possibile fare riferimento ad altri pacchetti che hanno come destinazione `netstandard`.
 
 ### <a name="versioning"></a>Controllo delle versioni
 
@@ -100,9 +100,9 @@ Il controllo delle versioni di .NET Standard è importante per l'uso. Data una v
 - Usare librerie che dipendono dalla stessa versione di .NET Standard o da versioni precedenti.
 - Se viene individuata una libreria che dipende da una versione successiva di .NET Standard, è necessario adottare la stessa versione oppure decidere di non usare tale libreria.
 
-## <a name="target-net-standard"></a>Standard .NET di destinazione
+## <a name="target-net-standard"></a>.NET Standard di destinazione
 
-È possibile [creare librerie .NET Standard](../core/tutorials/libraries.md) usando una combinazione del framework `netstandard` e del metapacchetto NETStandard.Library. È possibile visualizzare esempi di destinazione di [.NET Standard con strumenti .NET Core](../core/packages.md).
+È possibile [creare librerie .NET Standard](../core/tutorials/libraries.md) usando una combinazione del framework `netstandard` e del metapacchetto NETStandard.Library.
 
 ## <a name="net-framework-compatibility-mode"></a>Modalità di compatibilità di .NET Framework
 
@@ -112,13 +112,13 @@ Per altre informazioni, vedere [Modalità di compatibilità di .NET Framework](.
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>Librerie .NET Standard e Visual Studio
 
-Per compilare librerie .NET Standard in Visual Studio, assicurarsi di avere installato [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o Visual Studio 2017 versione 15.3 o successiva in Windows o [Visual Studio per Mac versione 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) o successiva in macOS.
+Per compilare .NET Standard librerie in Visual Studio, assicurarsi di avere installato [Visual studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o visual studio 2017 versione 15,3 o successiva in Windows oppure [Visual Studio per Mac versione 7,1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) o successiva installata in MacOS.
 
 Se si devono usare le librerie .NET Standard 2.0 solo nei propri progetti, è anche possibile usare Visual Studio 2015. Tuttavia, deve essere installato il client NuGet versione 3.6 o successiva. È possibile scaricare il client NuGet per Visual Studio 2015 dalla pagina di [download di NuGet](https://www.nuget.org/downloads).
 
 ## <a name="comparison-to-portable-class-libraries"></a>Confronto con le librerie di classi portabili
 
-.NET Standard sostituisce le [librerie di classi portabili](./cross-platform/cross-platform-development-with-the-portable-class-library.md). .NET Standard migliora l'esperienza di creazione di librerie portabili curando una BCL standard e stabilendo una maggiore uniformità tra le implementazioni di .NET di conseguenza. Una libreria che ha come destinazione .NET Standard è una libreria di classi portabile o una "libreria di classi portabile basata su .NET Standard". Le librerie di classi portabili esistenti sono "librerie di classi portabili basate sul profilo".
+.NET Standard sostituisce le [librerie di classi portabili](./cross-platform/cross-platform-development-with-the-portable-class-library.md). .NET Standard migliora l'esperienza di creazione delle librerie portabili curando una BCL standard e stabilendo come risultato una maggiore uniformità tra le implementazioni di .NET. Una libreria che ha come destinazione .NET Standard è una libreria di classi portabile o una "libreria di classi portabile basata su .NET Standard". Le librerie di classi portabili esistenti sono "librerie di classi portabili basate sul profilo".
 
 .NET Standard e i profili delle librerie di classi portabili sono stati creati per scopi simili, ma presentano differenze significative.
 
@@ -130,7 +130,7 @@ Differenze:
 
 - .NET Standard è un set curato di API, mentre i profili delle librerie di classi portabili sono definiti da intersezioni delle piattaforme esistenti.
 - La definizione delle versioni di .NET Standard è lineare, mentre quella dei profili delle librerie di classi portabili non lo è.
-- I profili PCL rappresentano le piattaforme Microsoft mentre .NET Standard è indipendente dalla piattaforma.
+- I profili PCL rappresentano piattaforme Microsoft, mentre .NET Standard è indipendente dalla piattaforma.
 
 ### <a name="pcl-compatibility"></a>Compatibilità della libreria di classi portabile
 
@@ -161,6 +161,6 @@ Le librerie di classi portabili basate sul profilo inserite in un pacchetto come
 
 ## <a name="see-also"></a>Vedere anche
 
-- [.NET Standard Versions (Versioni di .NET Standard)](https://github.com/dotnet/standard/blob/master/docs/versions.md)
-- [Creare una libreria .NET StandardBuild a .NET Standard library](../core/tutorials/library-with-visual-studio.md)
+- [Versioni .NET Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md)
+- [Compilazione di una libreria di .NET Standard](../core/tutorials/library-with-visual-studio.md)
 - [Specifica di destinazioni multipiattaforma](./library-guidance/cross-platform-targeting.md)

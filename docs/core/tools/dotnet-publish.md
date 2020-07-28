@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: Il dotnet publish comando pubblica un progetto o una soluzione .NET Core in una directory.
 ms.date: 02/24/2020
-ms.openlocfilehash: 61cfcf06586f3ac66526de69a17b8aef3cf0c795
-ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
+ms.openlocfilehash: 59fdbfa875dad13963ae198acc6a31b537279dfe
+ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365583"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87251179"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -54,10 +54,12 @@ Il comando `dotnet publish` chiama MSBuild che richiama la destinazione `Publish
 Il `dotnet publish` comando accetta opzioni MSBuild, ad esempio `-p` per l'impostazione delle proprietà e `-l` per la definizione di un logger. È ad esempio possibile impostare una proprietà MSBuild utilizzando il formato: `-p:<NAME>=<VALUE>` . È anche possibile impostare le proprietà relative alla pubblicazione facendo riferimento a un file con *estensione pubxml* , ad esempio:
 
 ```dotnetcli
-dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
+dotnet publish -p:PublishProfile=FolderProfile
 ```
 
-Per altre informazioni, vedere le seguenti risorse:
+Nell'esempio precedente viene usato il file *FolderProfile. pubxml* presente nella cartella * \<project_folder> /Properties/PublishProfiles* . Se si specifica un percorso e un'estensione di file durante l'impostazione della `PublishProfile` proprietà, questi verranno ignorati. Per impostazione predefinita, MSBuild cerca nella cartella *Properties/PublishProfiles* e presuppone l'estensione di file *pubxml* . Per specificare il percorso e il nome file, inclusa l'estensione, impostare la `PublishProfileFullPath` proprietà anziché la `PublishProfile` Proprietà.
+
+Per altre informazioni, vedere le risorse seguenti:
 
 - [Riferimenti alla riga di comando di MSBuild](/visualstudio/msbuild/msbuild-command-line-reference)
 - [Profili di pubblicazione di Visual Studio (con estensione pubxml) per la distribuzione di app ASP.NET Core](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
@@ -181,7 +183,7 @@ Per altre informazioni, vedere le seguenti risorse:
 
   Definisce il suffisso di versione che sostituirà l'asterisco (`*`) nel campo del file di progetto relativo alla versione.
 
-## <a name="examples"></a>Esempio
+## <a name="examples"></a>Esempi
 
 - Creare un [file binario multipiattaforma dipendente dal runtime](../deploying/index.md#produce-a-cross-platform-binary) per il progetto nella directory corrente:
 
@@ -225,7 +227,7 @@ Per altre informazioni, vedere le seguenti risorse:
   dotnet publish --no-dependencies
   ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Panoramica della pubblicazione di applicazioni .NET Core](../deploying/index.md)
 - [Pubblicare app .NET Core con il interfaccia della riga di comando di .NET Core](../deploying/deploy-with-cli.md)

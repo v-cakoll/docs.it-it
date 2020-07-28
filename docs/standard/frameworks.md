@@ -1,17 +1,17 @@
 ---
-title: Framework di destinazione nei progetti in stile SDK - .NETTarget frameworks in SDK-style projects - .NET
+title: Framework di destinazione nei progetti di tipo SDK-.NET
 description: Informazioni sui framework di destinazione per app e librerie di .NET Core.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 33beb5606cbf857cc41b739f256482b0298f1fb1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c1fd3a6fe07526d9f6828851c591ed0155c79a19
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400554"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164295"
 ---
-# <a name="target-frameworks-in-sdk-style-projects"></a>Framework di destinazione nei progetti in stile SDKTarget frameworks in SDK-style projects
+# <a name="target-frameworks-in-sdk-style-projects"></a>Framework di destinazione nei progetti di tipo SDK
 
 Quando si specifica come destinazione un framework in un'app o in una libreria, si specifica il set di API da rendere disponibile all'app o alla libreria. Per specificare il framework di destinazione nel file di progetto, usare i moniker framework di destinazione.
 
@@ -27,10 +27,10 @@ Per i framework di destinazione basati su pacchetti, ad esempio .NET Standard e 
 
 La tabella seguente definisce i framework di destinazione più comuni, il modo in cui vengono creati i relativi riferimenti e le versioni [.NET Standard](net-standard.md) implementate da tali pacchetti. Queste versioni di framework di destinazione sono le versioni stabili più recenti. Non sono visualizzate le versioni non definitive. Un moniker framework di destinazione è un formato di token standardizzato per specificare il framework di destinazione di un'app o di una libreria .NET.
 
-| Framework di destinazione      | Ultima versione <br/> Versione stabile | Moniker della versione di .NET Framework di destinazione (TFM, Target Framework Moniker) | Implementato <br/> Versione standard di .NET |
+| Framework di destinazione      | Più recente <br/> Versione stabile | Moniker della versione di .NET Framework di destinazione (TFM, Target Framework Moniker) | Implementato <br/> Versione standard di .NET |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
-| .NET Standard         | 2.1                         | netstandard2.1                 | N/D                                     |
-| .NET Core             | 3.1                         | netcoreapp3.1                  | 2.1                                     |
+| .NET Standard         | 2.1                         | netstandard 2.1                 | N/D                                     |
+| .NET Core             | 3.1                         | netcoreapp 3.1                  | 2.1                                     |
 | .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Versioni supportate dei framework di destinazione
@@ -39,8 +39,8 @@ Un framework di destinazione viene in genere specificato come riferimento da un 
 
 | Framework di destinazione           | Moniker framework di destinazione |
 | -------------------------- | --- |
-| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>netstandard2.1 |
-| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp3.0<br>netcoreapp3.1 |
+| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>netstandard 2.1 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp 3.0<br>netcoreapp 3.1 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Windows Store              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
@@ -50,7 +50,7 @@ Un framework di destinazione viene in genere specificato come riferimento da un 
 
 ## <a name="how-to-specify-target-frameworks"></a>Come specificare framework di destinazione
 
-I framework di destinazione sono specificati nel file di progetto. Quando viene specificato un singolo framework di destinazione, usare l'elemento **TargetFramework**. Il file di progetto dell'app console seguente illustra come scegliere come destinazione .NET Core 3.0 come destinazione:The following console app project file demonstrates how to target .NET Core 3.0:
+I framework di destinazione sono specificati nel file di progetto. Quando viene specificato un singolo framework di destinazione, usare l'elemento **TargetFramework**. Il file di progetto di app console seguente illustra come definire come destinazione .NET Core 3,0:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -106,7 +106,7 @@ public class MyClass
 }
 ```
 
-Il sistema di compilazione è a conoscenza dei simboli del preprocessore che rappresentano i framework di destinazione mostrati nella tabella Versioni del framework di [destinazione supportate](#supported-target-framework-versions) quando si usano progetti di tipo SDK. Quando si usa un simbolo che rappresenta un moniker framework di destinazione di .NET Standard o .NET Core, sostituire il punto con un carattere di sottolineatura e sostituire le lettere minuscole con lettere maiuscole, ad esempio il simbolo per `netstandard1.4` è `NETSTANDARD1_4`).
+Il sistema di compilazione è in grado di riconoscere i simboli del preprocessore che rappresentano i Framework di destinazione mostrati nella tabella [versioni di destinazione supportate](#supported-target-framework-versions) quando si usano progetti in stile SDK. Quando si usa un simbolo che rappresenta un moniker framework di destinazione di .NET Standard o .NET Core, sostituire il punto con un carattere di sottolineatura e sostituire le lettere minuscole con lettere maiuscole, ad esempio il simbolo per `netstandard1.4` è `NETSTANDARD1_4`).
 
 L'elenco completo di simboli del preprocessore per il framework di destinazione di .NET Core è:
 
@@ -129,7 +129,6 @@ I framework di destinazione seguenti sono deprecati. I pacchetti che hanno come 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Pacchetti, metapacchetti e framework](../core/packages.md)
 - [Sviluppo di librerie con strumenti multipiattaforma](../core/tutorials/libraries.md)
 - [.NET Standard](net-standard.md)
 - [Controllo delle versioni di .NET Core](../core/versions/index.md)

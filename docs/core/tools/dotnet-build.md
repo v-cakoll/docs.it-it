@@ -2,12 +2,12 @@
 title: Comando dotnet build
 description: Il comando dotnet build consente di compilare un progetto e tutte le relative dipendenze.
 ms.date: 02/14/2020
-ms.openlocfilehash: 5375df61dbf8e9b4db8772b0e2767e9bca0bb254
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 6f33b449301f40949ff5dfe4077564344a9de8ec
+ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840910"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87251166"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -23,20 +23,20 @@ ms.locfileid: "83840910"
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
     [-f|--framework <FRAMEWORK>] [--force] [--interactive] [--no-dependencies]
     [--no-incremental] [--no-restore] [--nologo] [-o|--output <OUTPUT_DIRECTORY>]
-    [-r|--runtime <RUNTIME_IDENTIFIER>] [-s|--source <SOURCE>]
+    [-r|--runtime <RUNTIME_IDENTIFIER>] [--source <SOURCE>]
     [-v|--verbosity <LEVEL>] [--version-suffix <VERSION_SUFFIX>]
 
 dotnet build -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrizione
 
 Il comando `dotnet build` compila il progetto e le relative dipendenze in un set di file binari. I file binari includono il codice del progetto nei file Intermediate Language (IL) con estensione *. dll* .  A seconda del tipo di progetto e delle impostazioni, è possibile includere altri file, ad esempio:
 
 - Eseguibile che può essere usato per eseguire l'applicazione, se il tipo di progetto è un file eseguibile destinato a .NET Core 3,0 o versione successiva.
 - File di simboli usati per il debug con estensione *PDB* .
-- Un file con *estensione Deps. JSON* , che elenca le dipendenze dell'applicazione o della libreria.
-- Un file *. runtimeconfig. JSON* che specifica il runtime condiviso e la relativa versione per un'applicazione.
+- *.deps.jssu* file, che elenca le dipendenze dell'applicazione o della libreria.
+- *.runtimeconfig.jsnel* file, che specifica il runtime condiviso e la relativa versione per un'applicazione.
 - Altre librerie da cui dipende il progetto (tramite i riferimenti al progetto o i riferimenti ai pacchetti NuGet).
 
 Per i progetti eseguibili destinati a versioni precedenti a .NET Core 3,0, le dipendenze della libreria da NuGet non vengono in genere copiate nella cartella di output.  Vengono risolti dalla cartella pacchetti globali NuGet in fase di esecuzione. Per queste ragioni, il prodotto di `dotnet build` non è pronto per essere trasferito in un altro computer per l'esecuzione. Per creare una versione dell'applicazione che può essere distribuita, è necessario pubblicarla, ad esempio con il comando [DotNet Publish](dotnet-publish.md) . Per altre informazioni, vedere [distribuzione di applicazioni .NET Core](../deploying/index.md).
@@ -121,7 +121,7 @@ File di progetto o di soluzione da compilare. Se non viene specificato alcun fil
 
   Specifica il runtime di destinazione. Per un elenco degli identificatori di runtime (RID, Runtime Identifier), vedere il [catalogo RID](../rid-catalog.md).
 
-- **`-s|--source <SOURCE>`**
+- **`--source <SOURCE>`**
 
   URI dell'origine del pacchetto NuGet da usare durante l'operazione di ripristino.
 
