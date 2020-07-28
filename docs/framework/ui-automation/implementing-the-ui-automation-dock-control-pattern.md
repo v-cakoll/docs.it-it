@@ -1,17 +1,18 @@
 ---
 title: Implementazione del pattern di controllo Dock di automazione interfaccia utente
+description: Informazioni su come implementare il pattern di controllo Dock di automazione interfaccia utente. Usare il pattern di controllo DockPattern per esporre le proprietà di ancoraggio di un controllo. Implementare IDockProvider.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, dock
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-ms.openlocfilehash: b1213791609245209fa37e3cdcb0876c963bfeb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8080d78c7bded3cb884f92948eb1259cda5544dc
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180201"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165896"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>Implementazione del pattern di controllo Dock di automazione interfaccia utente
 > [!NOTE]
@@ -42,8 +43,8 @@ Esempio di ancoraggio da Visual Studio dove la finestra "Visualizzazione classi"
   
 |Membri obbligatori|Tipo di membro|Note|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Metodo|nessuno|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Metodo|Nessuno|  
   
  Questo pattern di controllo non è associato a eventi.  
   
@@ -53,12 +54,12 @@ Esempio di ancoraggio da Visual Studio dove la finestra "Visualizzazione classi"
   
 |Tipo di eccezione|Condizione|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> - Quando un controllo non è in grado di eseguire lo stile di ancoraggio richiesto.- When a control is not able to execute the requested dock style.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -Quando un controllo non è in grado di eseguire lo stile di ancoraggio richiesto.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
 - [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Panoramica dell'albero di automazione dell'interfaccia utente](ui-automation-tree-overview.md)
 - [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](use-caching-in-ui-automation.md)

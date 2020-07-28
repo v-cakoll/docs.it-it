@@ -1,5 +1,6 @@
 ---
 title: Automazione interfaccia utente e Microsoft Active Accessibility
+description: Comprendere le differenze tra automazione interfaccia utente e Microsoft Active Accessibility, la soluzione precedente per rendere accessibili le applicazioni.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Active Accessibility
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 9aa975cf3c6e60fbcc759adbf5a991930bff36d6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0685a3f89a6578433641aaf78717f4ff377ff2f9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144786"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164062"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Automazione interfaccia utente e Microsoft Active Accessibility
 > [!NOTE]
@@ -79,8 +80,8 @@ Active Accessibility è basato sul Component Object Model (COM) con supporto per
 |ROLE_SYSTEM_LISTITEM|Elemento di dati|  
 |ROLE_SYSTEM_DOCUMENT|Document|  
 |ROLE_SYSTEM_TEXT|Modifica|  
-|ROLE_SYSTEM_GROUPING|Gruppo|  
-|ROLE_SYSTEM_LIST|Header|  
+|ROLE_SYSTEM_GROUPING|Group|  
+|ROLE_SYSTEM_LIST|Intestazione|  
 |ROLE_SYSTEM_COLUMNHEADER|Voce di intestazione|  
 |ROLE_SYSTEM_LINK|Hyperlink|  
 |ROLE_SYSTEM_GRAPHIC|Immagine|  
@@ -90,14 +91,14 @@ Active Accessibility è basato sul Component Object Model (COM) con supporto per
 |ROLE_SYSTEM_MENUBAR|Barra dei menu|  
 |ROLE_SYSTEM_MENUITEM|Voce di menu|  
 |ROLE_SYSTEM_PANE|Riquadro|  
-|ROLE_SYSTEM_PROGRESSBAR|Indicatore di stato|  
+|ROLE_SYSTEM_PROGRESSBAR|Barra di stato|  
 |ROLE_SYSTEM_RADIOBUTTON|Pulsante di opzione|  
 |ROLE_SYSTEM_SCROLLBAR|Barra di scorrimento|  
 |ROLE_SYSTEM_SEPARATOR|Separatore|  
 |ROLE_SYSTEM_SLIDER|Dispositivo di scorrimento|  
 |ROLE_SYSTEM_SPINBUTTON|Spinner|  
 |ROLE_SYSTEM_SPLITBUTTON|Pulsante di menu combinato|  
-|ROLE_SYSTEM_STATUSBAR|Barra di stato|  
+|ROLE_SYSTEM_STATUSBAR|Status bar|  
 |ROLE_SYSTEM_PAGETABLIST|Scheda|  
 |ROLE_SYSTEM_PAGETAB|Voce di scheda|  
 |ROLE_SYSTEM_TABLE|Tabella|  
@@ -124,7 +125,7 @@ Active Accessibility è basato sul Component Object Model (COM) con supporto per
   
  Nella tabella seguente è illustrata la corrispondenza tra le proprietà nei due modelli.  
   
-|Funzione di accesso alla proprietà Active Accessibility|ID proprietà di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Commenti|  
+|Funzione di accesso alla proprietà Active Accessibility|ID proprietà di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Osservazioni|  
 |-----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|-------------|  
 |`get_accKeyboardShortcut`|<xref:System.Windows.Automation.AutomationElement.AccessKeyProperty> o <xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|`AccessKeyProperty` ha la precedenza se sono presenti entrambe.|  
 |`get_accName`|<xref:System.Windows.Automation.AutomationElement.NameProperty>||  
@@ -160,7 +161,7 @@ Active Accessibility è basato sul Component Object Model (COM) con supporto per
   
  Gli Stati seguenti non sono stati implementati dalla maggior parte dei server di controllo Active Accessibility o non hanno equivalenti in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
-|Stato Active Accessibility|Commenti|  
+|Stato Active Accessibility|Osservazioni|  
 |-----------------------------------------------------------------------|-------------|  
 |STATE_SYSTEM_BUSY|Non disponibile in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_DEFAULT|Non disponibile in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
@@ -249,6 +250,6 @@ Active Accessibility è basato sul Component Object Model (COM) con supporto per
   
  Il modello di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] rimuove la necessità che i provider effettuino chiamate ad altro codice di provider. Tutta l'aggregazione necessaria viene completata dal servizio di base di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Nozioni fondamentali sull'automazione interfaccia utente](index.md)

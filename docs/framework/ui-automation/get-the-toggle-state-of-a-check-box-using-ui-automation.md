@@ -1,5 +1,6 @@
 ---
 title: Ottenere lo stato di attivazione/disattivazione di una casella di controllo utilizzando l'automazione interfaccia utente
+description: Vedere un esempio di codice che illustra come ottenere lo stato di attivazione o disattivione di un controllo, ad esempio una casella di controllo, usando automazione interfaccia utente Microsoft.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - check boxes, getting toggle states of
 - getting, toggle states of check boxes
 ms.assetid: 84fc31a3-175f-4e93-90a0-dd29d89b77ce
-ms.openlocfilehash: d4a3fa01dcfee2eafbb6dbd46cd67bed9e874a73
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 36ec205a572fd6c9e52eec9d2c3e0618ddb0a07b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435591"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164148"
 ---
 # <a name="get-the-toggle-state-of-a-check-box-using-ui-automation"></a>Ottenere lo stato di attivazione/disattivazione di una casella di controllo utilizzando l'automazione interfaccia utente
 > [!NOTE]
@@ -23,7 +24,7 @@ ms.locfileid: "74435591"
  In questo argomento viene illustrato come utilizzare [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] per ottenere lo stato di attivazione o disabilitazione di un controllo.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene usato il metodo <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> della classe <xref:System.Windows.Automation.AutomationElement> per ottenere un oggetto <xref:System.Windows.Automation.TogglePattern> da un controllo e restituire la relativa proprietà <xref:System.Windows.Automation.ToggleState>.  
+ In questo esempio viene usato il <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> metodo della <xref:System.Windows.Automation.AutomationElement> classe per ottenere un <xref:System.Windows.Automation.TogglePattern> oggetto da un controllo e restituirne la <xref:System.Windows.Automation.ToggleState> Proprietà.  
   
  [!code-csharp[NavigatingWithTreeWalker#1200](../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigatingWithTreeWalker/CSharp/ClientClass.cs#1200)]
  [!code-vb[NavigatingWithTreeWalker#1200](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigatingWithTreeWalker/visualbasic/clientclass.vb#1200)]

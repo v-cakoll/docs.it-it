@@ -1,16 +1,17 @@
 ---
 title: Pattern di controllo di automazione interfaccia utente per i client
+description: Leggi una panoramica sui pattern di controllo per i client di automazione interfaccia utente. Usare i pattern di controllo per accedere alle informazioni sull'interfaccia utente (UI).
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: 1ee0df5b133f08ec3cf6ba617c80c480e207ddf6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f2def328228a30ace6d0edc0661d6e79f237d6f4
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179954"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163877"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Pattern di controllo di automazione interfaccia utente per i client
 > [!NOTE]
@@ -34,13 +35,13 @@ ms.locfileid: "79179954"
   
 <a name="uiautomation_properties_on_control_patterns"></a>
 ## <a name="retrieving-properties-on-control-patterns"></a>Recupero delle proprietà per i pattern di controllo  
- I client possono recuperare i valori delle proprietà dei pattern di controllo con una chiamata a <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> o a <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> e con il cast dell'oggetto restituito a un tipo appropriato. Per altre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] informazioni sulle proprietà, vedere [Proprietà di automazione interfaccia utente per i client.](ui-automation-properties-for-clients.md)  
+ I client possono recuperare i valori delle proprietà dei pattern di controllo con una chiamata a <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> o a <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> e con il cast dell'oggetto restituito a un tipo appropriato. Per altre informazioni sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] proprietà, vedere [proprietà di automazione interfaccia utente per i client](ui-automation-properties-for-clients.md).  
   
- Oltre ai `GetPropertyValue` metodi, i valori delle proprietà possono essere recuperati tramite [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] le funzioni di accesso CLR (Common Language Runtime) per accedere alle proprietà in un modello.  
+ Oltre ai `GetPropertyValue` metodi, i valori delle proprietà possono essere recuperati tramite le funzioni di accesso Common Language Runtime (CLR) per accedere alle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] proprietà di un modello.  
   
 <a name="uiautomation_with_variable_patterns"></a>
 ## <a name="controls-with-variable-patterns"></a>Controlli con pattern variabili  
- Alcuni tipi di controllo supportano pattern diversi a seconda dello stato del controllo o del modo in cui questo viene usato. Esempi di controlli che possono avere motivi variabili sono le visualizzazioni elenco (anteprime, riquadri, icone, elenco, dettagli), grafici di Microsoft Excel (pie, linea, barra, valore della cella con una formula), l'area del documento di Microsoft Word (Normale, Layout Web, Struttura, Layout di stampa, Stampa Anteprima) e gli skin di Microsoft Windows Media Player.  
+ Alcuni tipi di controllo supportano pattern diversi a seconda dello stato del controllo o del modo in cui questo viene usato. Esempi di controlli che possono avere pattern variabili sono le visualizzazioni elenco (anteprime, riquadri, icone, elenchi, dettagli), i grafici di Microsoft Excel (a torta, a linee, a barre, il valore della cella con una formula), l'area documento di Microsoft Word (normale, layout Web, struttura, layout di stampa, anteprima di stampa) e le interfacce Media Player Microsoft Windows.  
   
  I controlli che implementano i tipi di controllo personalizzati possono disporre di qualsiasi set di pattern di controllo necessario per la rappresentazione delle funzionalità dei controlli stessi.  
   
@@ -51,6 +52,6 @@ ms.locfileid: "79179954"
 - [Richiamare un controllo utilizzando automazione interfaccia utente](invoke-a-control-using-ui-automation.md)
 - [Ottenere lo stato di attivazione/disattivazione di una casella di controllo utilizzando l'automazione interfaccia utente](get-the-toggle-state-of-a-check-box-using-ui-automation.md)
 - [Mapping dei pattern di controllo per i client di automazione interfaccia utente](control-pattern-mapping-for-ui-automation-clients.md)
-- [Esempio di inserimento di testo TextPattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
+- [Esempio di testo di inserimento TextPattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
 - [Esempio di ricerca e selezione di TextPattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)
 - [Esempio InvokePattern, ExpandCollapsePattern e TogglePattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)
