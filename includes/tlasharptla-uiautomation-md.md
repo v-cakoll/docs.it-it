@@ -6,4 +6,4 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65670124"
 ---
-<span data-ttu-id="66eab-101">Automazione interfaccia utente Microsoft</span><span class="sxs-lookup"><span data-stu-id="66eab-101">Microsoft UI Automation</span></span>
+<span data-ttu-id="40c8f-101">Automazione interfaccia utente Microsoft</span><span class="sxs-lookup"><span data-stu-id="40c8f-101">Microsoft UI Automation</span></span>
